@@ -1,0 +1,3 @@
+@()If you’re unsure an email is from HMRC:
+- Do not reply to it or click on any links
+- Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'
