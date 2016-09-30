@@ -14,18 +14,20 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.controllers
+package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
-import uk.gov.hmrc.play.microservice.controller.BaseController
-import uk.gov.hmrc.play.http.logging.MdcLoggingExecutionContext._
-import play.api.mvc._
-import scala.concurrent.Future
+import play.api.libs.json._
 
-object MicroserviceHelloWorld extends MicroserviceHelloWorld
+case class RenderRequest(parameters: Map[String, String])
 
-trait MicroserviceHelloWorld extends BaseController {
+object RenderRequest {
 
-	def hello() = Action.async { implicit request =>
-		Future.successful(Ok("Hello world"))
-	}
+  implicit val reads = Json.reads[RenderRequest]
 }
+
+object RenderResult {
+
+  implicit val writes = Json.writes[RenderResult]
+}
+
+case class RenderResult(plain: String, html: String, fromAddress: String, subject: String, service: String)
