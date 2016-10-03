@@ -16,23 +16,18 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
-import uk.gov.hmrc.hmrcemailrenderer.services.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 
 object TemplateLocator extends TemplateLocator {
-
   val all: Seq[TemplateGroup] = Seq(
     DigitalContactTemplates
   )
-
 }
 
 trait TemplateLocator {
-
   def all: Seq[TemplateGroup]
 
   def findTemplate(templateId: String): Option[MessageTemplate] =
-    all
-      .flatMap(_.templates)
-      .find(template => template.templateId == templateId)
+    all.flatMap(_.templates).find(template => template.templateId == templateId)
 }

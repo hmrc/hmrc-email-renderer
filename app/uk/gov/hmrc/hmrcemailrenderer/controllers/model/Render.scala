@@ -21,12 +21,10 @@ import play.api.libs.json._
 case class RenderRequest(parameters: Map[String, String])
 
 object RenderRequest {
-
   implicit val reads = Json.reads[RenderRequest]
 }
 
 object RenderResult {
-
   implicit val writes = Json.writes[RenderResult]
 }
 

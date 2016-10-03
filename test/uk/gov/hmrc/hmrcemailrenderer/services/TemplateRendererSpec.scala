@@ -16,9 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import org.mockito.Mockito.when
+import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.Service.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.test.UnitSpec
@@ -27,26 +28,21 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
   "The template renderer" should {
 
-    "render an existing template" in new TestCase {
+    "render an existing template using the common parameters" in new TestCase {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Some(validRenderedResult)
+      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Some(Right(validRenderedResult))
     }
 
     "return None if the template is not found" in new TestCase {
-
       when(locatorMock.findTemplate("unknown")).thenReturn(None)
       templateRenderer.render("unknown", Map.empty) shouldBe None
     }
 
-    "throw an exception if it can't render the template" in new TestCase {
-      intercept[MissingTemplateParameterException] {
-        when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-        templateRenderer.render(templateId, Map.empty)
-      }.getMessage shouldBe "No value for 'KEY'"
-    }
+    "return error message in Left if it can't render the template" in new TestCase {
+      val errorMessage = ErrorMessage("key not found: KEY")
+      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
 
-    "append the pre configured common parameters" in new TestCase {
-      pending
+      templateRenderer.render(templateId, Map.empty) shouldBe Some(Left(errorMessage))
     }
   }
 
@@ -72,8 +68,8 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       fromAddress = "from@test",
       service = "sa",
       subject = "a subject",
-      plain = "Test template with parameter value: VALUE",
-      html = "<p>Test template with parameter value: VALUE</p>"
+      plain = "Test template with parameter value: VALUE using common parameters: commonValue",
+      html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>"
     )
   }
 

@@ -18,9 +18,8 @@ package uk.gov.hmrc.hmrcemailrenderer.controllers
 
 import play.api.libs.json.Json
 import play.api.mvc._
-import uk.gov.hmrc.hmrcemailrenderer.controllers.model.{RenderRequest, RenderResult}
-import uk.gov.hmrc.hmrcemailrenderer.services.{MissingTemplateParameterException, TemplateRenderer}
-import uk.gov.hmrc.play.http.BadRequestException
+import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
+import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.microservice.controller.BaseController
 
 import scala.concurrent.Future
@@ -30,24 +29,16 @@ object RendererController extends RendererController {
 }
 
 trait RendererController extends BaseController {
-
-  import RenderRequest.reads
-  import RenderResult.writes
-
   def templateRenderer: TemplateRenderer
 
   def renderTemplate(templateId: String) = Action.async(parse.json) {
     implicit request =>
       withJsonBody[RenderRequest](body =>
-
-        try {
-          templateRenderer.render(templateId, body.parameters) match {
-            case Some(renderedTemplate) => Future.successful(Ok(Json.toJson(renderedTemplate)))
-            case None => Future.successful(NotFound)
+        Future.successful(templateRenderer.render(templateId, body.parameters) map {
+            case Right(result) => Ok(Json.toJson(result))
+            case Left(errorReason) => BadRequest(Json.toJson(errorReason))
           }
-        } catch {
-          case e: MissingTemplateParameterException => throw new BadRequestException(e.getMessage)
-        }
-      )
+          getOrElse(NotFound)
+      ))
   }
 }
