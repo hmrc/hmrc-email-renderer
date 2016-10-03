@@ -16,14 +16,52 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
+import org.scalatest.mock.MockitoSugar
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.services._
+import uk.gov.hmrc.hmrcemailrenderer.templates.Service.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplateLocatorSpec extends UnitSpec {
+class TemplateLocatorSpec extends UnitSpec with MockitoSugar {
 
   "The template locator" should {
 
-    "loop through all groups and return the first template matching the provided template id" in {pending}
-    "return none if the template is not found" in {pending}
+    "loop through all groups and return the first template matching the provided template id" in new TestCase {
+      templateLocator.findTemplate("template-templateGroup-1-2").get.templateId shouldBe "template-templateGroup-1-2"
+      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress shouldBe "from@test"
+      templateLocator.findTemplate("template-templateGroup-1-2").get.service shouldBe SelfAssessment
+    }
+
+    "return none if the template is not found" in new TestCase {
+      templateLocator.findTemplate("template-templateGroup-10-2") shouldBe None
+    }
+  }
+
+  trait TestCase {
+    def messageTemplates(templateName: String): Seq[MessageTemplate] = (1 to 5) map { i =>
+      MessageTemplate(
+        templateId = s"template-$templateName-$i",
+        fromAddress = "from@test",
+        service = SelfAssessment,
+        subject = "a subject",
+        plainTemplate = txt.templateSample.apply,
+        htmlTemplate = html.templateSample.apply
+      )
+    }
+
+    val templateGroups = (1 to 5) map { i =>
+      new TemplateGroup {
+        val templateName = s"templateGroup-$i"
+
+        override def title: String = templateName
+
+        override def templates: Seq[MessageTemplate] = messageTemplates(templateName)
+      }
+    }
+
+    val templateLocator = new TemplateLocator {
+      override def all: Seq[TemplateGroup] = templateGroups
+    }
   }
 
 }

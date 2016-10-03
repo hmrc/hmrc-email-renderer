@@ -20,25 +20,5 @@ sealed trait Service {
   val name: String
 }
 object Service {
-
-  case object ApiDeveloperHub                     extends Service { override val name = "api" }
-  case object SelfAssessment                      extends Service { override val name = "sa" }
-  case object DigitalFormsService                 extends Service { override val name = "dfs" }
-  case object AnnualTaxSummary                    extends Service { override val name = "ats" }
-  case object Childcare                           extends Service { override val name = "cc" }
-  case object FriendsAndFamily                    extends Service { override val name = "fandf" }
-  case object TaxCreditsService                   extends Service { override val name = "tcs" }
-  case object PayAsYouEarn                        extends Service { override val name = "paye" }
-  case object NationalInsuranceAndStatePension    extends Service { override val name = "nisp" }
-  case object TaxAllowanceForMarriedCouples       extends Service { override val name = "tamc" }
-  case object CompanyAccountsTaxOnline            extends Service { override val name = "cato" }
-  case object InheritanceTax                      extends Service { override val name = "iht" }
-  case object Agent                               extends Service { override val name = "agent" }
-  case object AgentOptInExclude                   extends Service { override val name = "agent-optin-exclude" }
-  case object AgentOptInRejoin                    extends Service { override val name = "agent-optin-rejoin" }
-  case object GuaranteedMinimumPension            extends Service { override val name = "gmp"}
-  case object AlcoholWholesalerRegistrationScheme extends Service { override val name = "awrs"}
-  case object Generic                             extends Service { override val name = "generic" }
-  case object RentalAndLeaseDetails               extends Service { override val name = "rald" }
-  case object BusinessRates                       extends Service { override val name = "bars" }
+  case object SelfAssessment extends Service { override val name = "sa" }
 }

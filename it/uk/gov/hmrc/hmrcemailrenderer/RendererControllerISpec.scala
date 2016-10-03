@@ -30,7 +30,7 @@ class RendererControllerISpec extends ServiceSpec with WithFakeApplication with 
       val response = WS.url(resource(s"/templates/verifyEmailAddress"))
         .post(Json.obj("parameters" -> Map.empty[String, String])).futureValue
       response.status shouldBe 400
-      response.body should include ("No value for 'verificationLink'")
+      response.body should include ("key not found: verificationLink")
     }
   }
 

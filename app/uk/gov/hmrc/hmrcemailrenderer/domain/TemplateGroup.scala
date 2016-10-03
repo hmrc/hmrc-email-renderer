@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates
-
-import uk.gov.hmrc.hmrcemailrenderer.services.MessageTemplate
+package uk.gov.hmrc.hmrcemailrenderer.domain
 
 trait TemplateGroup {
   def title: String

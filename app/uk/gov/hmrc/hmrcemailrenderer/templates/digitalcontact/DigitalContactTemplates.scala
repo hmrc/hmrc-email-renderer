@@ -16,9 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import uk.gov.hmrc.hmrcemailrenderer.services.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
 import uk.gov.hmrc.hmrcemailrenderer.templates.Service.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateGroup
 
 object DigitalContactTemplates extends TemplateGroup {
   override val title = "Self Assessment"

@@ -17,41 +17,17 @@
 package uk.gov.hmrc.hmrcemailrenderer.services
 
 import play.api.Play
-import play.twirl.api.{Format, HtmlFormat, TxtFormat}
+import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.templates.{Service, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.domain.ErrorMessage
+import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.config.RunMode
 
-
-trait TemplateRenderer {
-
-  def commonParameters: Map[String, String]
-
-  def locator: TemplateLocator
-
-  def render(templateId: String, parameters: Map[String, String]): Option[RenderResult] = {
-    val allParams = commonParameters ++ parameters
-    locator.findTemplate(templateId).map(template =>
-      RenderResult(
-        plain = render(template.plainTemplate, allParams),
-        html = render(template.htmlTemplate, allParams),
-        fromAddress = template.fromAddress,
-        subject = template.subject(allParams),
-        service = template.service.name
-      )
-    )
-  }
-
-  private def render (template: Map[String, String] => Format[_] #Appendable, params: Map[String, String]): String =
-    template (params.withDefault (name => throw new MissingTemplateParameterException (name) ) ).toString
-
-}
-
+import scala.util.{Failure, Success, Try}
 
 object TemplateRenderer extends TemplateRenderer with RunMode {
 
   val locator = TemplateLocator
-
   lazy val commonParameters: Map[String, String] = {
     import play.api.Play.current
 
@@ -62,30 +38,34 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
   }
 }
 
-case class MessageTemplate(templateId: String,
-                           fromAddress: String,
-                           service: Service,
-                           subject: Subject,
-                           plainTemplate: Body.Plain,
-                           htmlTemplate: Body.Html)
+trait TemplateRenderer {
 
-case class Subject(f: Map[String, String] => String) {
-  def apply(p: Map[String, String]) = f(p)
+  def commonParameters: Map[String, String]
+
+  def locator: TemplateLocator
+
+  def render(templateId: String, parameters: Map[String, String]): Option[Either[ErrorMessage, RenderResult]] = {
+    val allParams = commonParameters ++ parameters
+    locator.findTemplate(templateId).map(template =>
+      for {
+        plainText <- render(template.plainTemplate, allParams).right
+        htmlText <- render(template.htmlTemplate, allParams).right
+      } yield
+      RenderResult(
+        plain = plainText,
+        html = htmlText,
+        fromAddress = template.fromAddress,
+        subject = template.subject(allParams),
+        service = template.service.name
+      )
+    )
+  }
+
+  private def render (template: Map[String, String] => Format[_] #Appendable, params: Map[String, String]): Either[ErrorMessage, String] =
+    Try(template (params)) match {
+      case Success(output) => Right(output.toString)
+      case Failure(error) => Left(ErrorMessage(error.getMessage))
+    }
 }
 
-object Subject {
 
-  import scala.language.implicitConversions
-
-  implicit def subjectFromPlainString(text: String): Subject = Subject(_ => text)
-
-  implicit def subjectFromFunction(f: Map[String, String] => String): Subject = Subject(f)
-}
-
-object Body {
-
-  type Plain = Map[String, Any] => TxtFormat.Appendable
-  type Html = Map[String, Any] => HtmlFormat.Appendable
-}
-
-case class MissingTemplateParameterException(parameterName: String) extends RuntimeException(s"No value for '$parameterName'")

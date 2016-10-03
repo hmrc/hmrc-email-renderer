@@ -24,8 +24,8 @@ import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.Result
 import play.api.test.FakeRequest
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.services.{MissingTemplateParameterException, TemplateRenderer}
-import uk.gov.hmrc.play.http.BadRequestException
+import uk.gov.hmrc.hmrcemailrenderer.domain.ErrorMessage
+import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.test.{UnitSpec, WithFakeApplication}
 
 import scala.concurrent.Future
@@ -33,14 +33,10 @@ import scala.concurrent.Future
 
 class RenderControllerSpec extends UnitSpec with WithFakeApplication with MockitoSugar with ScalaFutures with IntegrationPatience {
 
-
   "POST /templates/:templateid" should {
-
-
     "return 200 and the rendered template with parameters" in new TestCase {
-
       Mockito.when(templateRendererMock.render("a-template-id", Map("key" -> "value")))
-        .thenReturn(Some(RenderResult("plain body", "<html>html body</hmtl>", "from@test", "subject", "sa")))
+        .thenReturn(Some(Right(RenderResult("plain body", "<html>html body</hmtl>", "from@test", "subject", "sa"))))
 
       val result: Future[Result] = controller.renderTemplate("a-template-id")(fakeRequest("a-template-id", Map("key" -> "value")))
       status(result) shouldBe Status.OK
@@ -62,20 +58,16 @@ class RenderControllerSpec extends UnitSpec with WithFakeApplication with Mockit
     }
 
     "return 400 if the template fails to render" in new TestCase {
-
       Mockito.when(templateRendererMock.render("a-template-id", Map.empty))
-        .thenThrow(new MissingTemplateParameterException("missing-parameter"))
+        .thenReturn(Some(Left(ErrorMessage("No value for 'missing-parameter'"))))
 
-      intercept[BadRequestException] {
-        controller.renderTemplate("a-template-id")(fakeRequest("a-template-id", Map.empty))
-      }.getMessage shouldBe "No value for 'missing-parameter'"
+      val result: Future[Result] = controller.renderTemplate("a-template-id")(fakeRequest("a-template-id", Map.empty))
+      status(result) shouldBe Status.BAD_REQUEST
+      (jsonBodyOf(result).futureValue \ "reason").as[String] shouldBe "No value for 'missing-parameter'"
     }
-
-
   }
 
-  class TestCase {
-
+  trait TestCase {
     def fakeRequest(templateId: String, parameters: Map[String, String]) =
       FakeRequest("POST", s"/template/$templateId").withBody(Json.obj("parameters" -> parameters))
 
@@ -84,8 +76,5 @@ class RenderControllerSpec extends UnitSpec with WithFakeApplication with Mockit
     val controller = new RendererController {
       override def templateRenderer: TemplateRenderer = templateRendererMock
     }
-
-
   }
-
 }
