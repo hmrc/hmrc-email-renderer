@@ -12,13 +12,25 @@ class RendererControllerISpec extends ServiceSpec with WithFakeApplication with 
 
   "The controller" should {
 
-    "render the verifyEmailAddress template" in {
-
+    "render the verifyEmailAddress template and return OK" in {
       val response = WS.url(resource(s"/templates/verifyEmailAddress"))
         .post(Json.obj("parameters" -> Map("verificationLink" -> "/abc"))).futureValue
       response.status shouldBe 200
       response.body should include ("Verify your email address")
       response.body should include ("/abc")
+    }
+
+    "return NOT_FOUND when the template is not found" in {
+      val response = WS.url(resource(s"/templates/nonExistentTemplateId"))
+        .post(Json.obj("parameters" -> Map.empty[String, String])).futureValue
+      response.status shouldBe 404
+    }
+
+    "return BAD_REQUEST when the parameters for the template are not present" in {
+      val response = WS.url(resource(s"/templates/verifyEmailAddress"))
+        .post(Json.obj("parameters" -> Map.empty[String, String])).futureValue
+      response.status shouldBe 400
+      response.body should include ("No value for 'verificationLink'")
     }
   }
 
