@@ -19,13 +19,11 @@ package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 import play.api.libs.json._
 
 case class RenderRequest(parameters: Map[String, String])
-
 object RenderRequest {
   implicit val reads = Json.reads[RenderRequest]
 }
 
+case class RenderResult(plain: String, html: String, fromAddress: String, subject: String, service: String)
 object RenderResult {
   implicit val writes = Json.writes[RenderResult]
 }
-
-case class RenderResult(plain: String, html: String, fromAddress: String, subject: String, service: String)

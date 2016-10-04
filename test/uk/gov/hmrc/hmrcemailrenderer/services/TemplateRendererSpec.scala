@@ -19,8 +19,8 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.Service.SelfAssessment
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -30,38 +30,37 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
     "render an existing template using the common parameters" in new TestCase {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Some(Right(validRenderedResult))
+      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Right(validRenderedResult)
     }
 
     "return None if the template is not found" in new TestCase {
       when(locatorMock.findTemplate("unknown")).thenReturn(None)
-      templateRenderer.render("unknown", Map.empty) shouldBe None
+      templateRenderer.render("unknown", Map.empty) shouldBe Left(MissingTemplateId("unknown"))
     }
 
     "return error message in Left if it can't render the template" in new TestCase {
-      val errorMessage = ErrorMessage("key not found: KEY")
+      val errorMessage = TemplateRenderFailure("key not found: KEY")
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
 
-      templateRenderer.render(templateId, Map.empty) shouldBe Some(Left(errorMessage))
+      templateRenderer.render(templateId, Map.empty) shouldBe Left(errorMessage)
     }
   }
 
   class TestCase {
     val locatorMock = mock[TemplateLocator]
     val templateRenderer = new TemplateRenderer {
-
       override def locator: TemplateLocator = locatorMock
 
       override def commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
     }
     val templateId = "a-template-id"
-    val validTemplate = MessageTemplate(
+    val validTemplate = MessageTemplate.create(
       templateId = templateId,
       fromAddress = "from@test",
       service = SelfAssessment,
       subject = "a subject",
-      plainTemplate = txt.templateSample.apply,
-      htmlTemplate = html.templateSample.apply
+      plainTemplate = txt.templateSample.f,
+      htmlTemplate = html.templateSample.f
     )
 
     val validRenderedResult = RenderResult(
