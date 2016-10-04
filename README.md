@@ -31,20 +31,20 @@ Responds with status:
 
 * 200 When the template is rendered successfully
 
- ```
+ ```json
 {
     "plain": "Rendered template in text format",
     "html": "Rendered template in HTML format",
     "fromAddress": "From address to be used for this email when sending",
     "subject": "Email subject to use", 
-    "service": "For which service i.e., sa/paye etc this template belongs to"
+    "service": "The regime (i.e. - sa/paye/etc) that this template belongs to"
 }
  ```
-* 404 When the template ID is not present
+* 404 When the template with the provided ID cannot be resolved.
  
-* 400 When the parameters in the request are not sufficient for rendering the template
+* 400 When an insufficient set of parameters for rendering the template is specified in the request. Only the first missing value is reported.
 
- ```
+ ```json
 {
     "status": "Rendering of template failed",
     "reason": "key not found: param10"
