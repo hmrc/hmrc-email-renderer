@@ -19,6 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.controllers
 import play.api.libs.json.Json
 import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.microservice.controller.BaseController
 
@@ -29,16 +30,17 @@ object RendererController extends RendererController {
 }
 
 trait RendererController extends BaseController {
+
   def templateRenderer: TemplateRenderer
 
-  def renderTemplate(templateId: String) = Action.async(parse.json) {
-    implicit request =>
-      withJsonBody[RenderRequest](body =>
-        Future.successful(templateRenderer.render(templateId, body.parameters) map {
-            case Right(result) => Ok(Json.toJson(result))
-            case Left(errorReason) => BadRequest(Json.toJson(errorReason))
-          }
-          getOrElse(NotFound)
-      ))
+  def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
+    withJsonBody[RenderRequest] { renderReq =>
+      val result = templateRenderer.render(templateId, renderReq.parameters) match {
+        case Right(rendered) => Ok(Json.toJson(rendered))
+        case Left(MissingTemplateId(_)) => NotFound
+        case Left(x@TemplateRenderFailure(_)) => BadRequest(Json.toJson(x))
+      }
+      Future.successful(result)
+    }
   }
 }

@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 import org.scalatest.mock.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
 import uk.gov.hmrc.hmrcemailrenderer.services._
-import uk.gov.hmrc.hmrcemailrenderer.templates.Service.SelfAssessment
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
 
 class TemplateLocatorSpec extends UnitSpec with MockitoSugar {
@@ -39,13 +39,13 @@ class TemplateLocatorSpec extends UnitSpec with MockitoSugar {
 
   trait TestCase {
     def messageTemplates(templateName: String): Seq[MessageTemplate] = (1 to 5) map { i =>
-      MessageTemplate(
+      MessageTemplate.create(
         templateId = s"template-$templateName-$i",
         fromAddress = "from@test",
         service = SelfAssessment,
         subject = "a subject",
-        plainTemplate = txt.templateSample.apply,
-        htmlTemplate = html.templateSample.apply
+        plainTemplate = txt.templateSample.f,
+        htmlTemplate = html.templateSample.f
       )
     }
 

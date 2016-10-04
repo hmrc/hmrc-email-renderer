@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 import play.api.Play
 import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.ErrorMessage
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.config.RunMode
 
@@ -44,27 +44,24 @@ trait TemplateRenderer {
 
   def locator: TemplateLocator
 
-  def render(templateId: String, parameters: Map[String, String]): Option[Either[ErrorMessage, RenderResult]] = {
+  def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
-    locator.findTemplate(templateId).map(template =>
-      for {
-        plainText <- render(template.plainTemplate, allParams).right
-        htmlText <- render(template.htmlTemplate, allParams).right
-      } yield
-      RenderResult(
-        plain = plainText,
-        html = htmlText,
-        fromAddress = template.fromAddress,
-        subject = template.subject(allParams),
-        service = template.service.name
-      )
-    )
+    for {
+      template  <- locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
+      plainText <- render(template.plainTemplate, allParams).right
+      htmlText  <- render(template.htmlTemplate, allParams).right
+    } yield RenderResult(plain = plainText,
+                         html = htmlText,
+                         fromAddress = template.fromAddress,
+                         subject = template.subject(allParams),
+                         service = template.service.name)
   }
 
-  private def render (template: Map[String, String] => Format[_] #Appendable, params: Map[String, String]): Either[ErrorMessage, String] =
+  private def render(template: Map[String, String] => Format[_]#Appendable,
+                     params: Map[String, String]): Either[ErrorMessage, String] =
     Try(template (params)) match {
       case Success(output) => Right(output.toString)
-      case Failure(error) => Left(ErrorMessage(error.getMessage))
+      case Failure(error) => Left(TemplateRenderFailure(error.getMessage))
     }
 }
 

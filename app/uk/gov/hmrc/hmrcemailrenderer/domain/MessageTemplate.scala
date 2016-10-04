@@ -16,37 +16,50 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.domain
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, Writes}
 import play.twirl.api.{HtmlFormat, TxtFormat}
-import uk.gov.hmrc.hmrcemailrenderer.templates.Service
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
 
 case class MessageTemplate(templateId: String,
                            fromAddress: String,
-                           service: Service,
+                           service: ServiceIdentifier,
                            subject: Subject,
                            plainTemplate: Body.Plain,
                            htmlTemplate: Body.Html)
+object MessageTemplate {
+  def create(templateId: String,
+             fromAddress: String,
+             service: ServiceIdentifier,
+             subject: String,
+             plainTemplate: Body.Plain,
+             htmlTemplate: Body.Html) =
+    MessageTemplate(templateId, fromAddress, service, Subject.fromPlainString(subject), plainTemplate, htmlTemplate)
 
+  def create(templateId: String,
+             fromAddress: String,
+             service: ServiceIdentifier,
+             subject: Map[String, String] => String,
+             plainTemplate: Body.Plain,
+             htmlTemplate: Body.Html) =
+    MessageTemplate(templateId, fromAddress, service, Subject(subject), plainTemplate, htmlTemplate)
+}
 case class Subject(f: Map[String, String] => String) {
   def apply(p: Map[String, String]) = f(p)
 }
-
 object Subject {
-
-  import scala.language.implicitConversions
-
-  implicit def subjectFromPlainString(text: String): Subject = Subject(_ => text)
-
-  implicit def subjectFromFunction(f: Map[String, String] => String): Subject = Subject(f)
+  def fromPlainString(text: String): Subject = Subject(_ => text)
 }
-
 object Body {
-
   type Plain = Map[String, Any] => TxtFormat.Appendable
   type Html = Map[String, Any] => HtmlFormat.Appendable
 }
 
-case class ErrorMessage(reason: String, status:String = "Rendering of template failed")
-object ErrorMessage {
-  implicit val format = Json.format[ErrorMessage]
+sealed trait ErrorMessage extends Product with Serializable
+final case class MissingTemplateId(templateId: String) extends ErrorMessage
+final case class TemplateRenderFailure(reason: String) extends ErrorMessage
+object TemplateRenderFailure {
+  implicit val writes: Writes[TemplateRenderFailure] =
+    Writes[TemplateRenderFailure] { failure =>
+      Json.obj("reason" -> failure.reason, "status" -> "Rendering of template failed")
+    }
 }
