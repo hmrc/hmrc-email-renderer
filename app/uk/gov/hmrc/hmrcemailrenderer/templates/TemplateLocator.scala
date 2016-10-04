@@ -14,18 +14,20 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.controllers
+package uk.gov.hmrc.hmrcemailrenderer.templates
 
-import uk.gov.hmrc.play.microservice.controller.BaseController
-import uk.gov.hmrc.play.http.logging.MdcLoggingExecutionContext._
-import play.api.mvc._
-import scala.concurrent.Future
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 
-object MicroserviceHelloWorld extends MicroserviceHelloWorld
+object TemplateLocator extends TemplateLocator {
+  val all: Seq[TemplateGroup] = Seq(
+    DigitalContactTemplates
+  )
+}
 
-trait MicroserviceHelloWorld extends BaseController {
+trait TemplateLocator {
+  def all: Seq[TemplateGroup]
 
-	def hello() = Action.async { implicit request =>
-		Future.successful(Ok("Hello world"))
-	}
+  def findTemplate(templateId: String): Option[MessageTemplate] =
+    all.flatMap(_.templates).find(template => template.templateId == templateId)
 }
