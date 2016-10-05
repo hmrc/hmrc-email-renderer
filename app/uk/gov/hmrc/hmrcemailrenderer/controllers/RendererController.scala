@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.controllers
 
+import play.api.Logger
 import play.api.libs.json.Json
 import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
@@ -38,7 +39,9 @@ trait RendererController extends BaseController {
       val result = templateRenderer.render(templateId, renderReq.parameters) match {
         case Right(rendered) => Ok(Json.toJson(rendered))
         case Left(MissingTemplateId(_)) => NotFound
-        case Left(x@TemplateRenderFailure(_)) => BadRequest(Json.toJson(x))
+        case Left(x@TemplateRenderFailure(_)) =>
+          Logger.warn(s"Failed to render message, reason: ${x.reason}")
+          BadRequest(Json.toJson(x))
       }
       Future.successful(result)
     }
