@@ -16,6 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
+import com.ning.http.util.Base64
+import org.apache.commons.codec.Charsets
 import play.api.Play
 import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
@@ -50,8 +52,8 @@ trait TemplateRenderer {
       template  <- locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
       plainText <- render(template.plainTemplate, allParams).right
       htmlText  <- render(template.htmlTemplate, allParams).right
-    } yield RenderResult(plain = plainText,
-                         html = htmlText,
+    } yield RenderResult(plain = Base64.encode(plainText.getBytes(Charsets.UTF_8)),
+                         html = Base64.encode(htmlText.getBytes(Charsets.UTF_8)),
                          fromAddress = template.fromAddress,
                          subject = template.subject(allParams),
                          service = template.service.name)
