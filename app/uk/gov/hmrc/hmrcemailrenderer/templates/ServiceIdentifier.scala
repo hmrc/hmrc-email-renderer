@@ -17,8 +17,12 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 sealed trait ServiceIdentifier extends Product with Serializable {
-  val name: String
+  def name: String
+  def title: String
 }
 object ServiceIdentifier {
-  case object SelfAssessment extends ServiceIdentifier { override val name = "sa" }
+  case object SelfAssessment extends ServiceIdentifier {
+    override val title = "Self Assessment"
+    override val name  = "sa"
+  }
 }

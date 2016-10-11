@@ -16,13 +16,12 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
-import org.scalatest.mock.MockitoSugar
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplateLocatorSpec extends UnitSpec with MockitoSugar {
+class TemplateLocatorSpec extends UnitSpec {
 
   "The template locator" should {
 
@@ -49,18 +48,8 @@ class TemplateLocatorSpec extends UnitSpec with MockitoSugar {
       )
     }
 
-    val templateGroups = (1 to 5) map { i =>
-      new TemplateGroup {
-        val templateName = s"templateGroup-$i"
-
-        override def title: String = templateName
-
-        override def templates: Seq[MessageTemplate] = messageTemplates(templateName)
-      }
-    }
-
     val templateLocator = new TemplateLocator {
-      override def all: Seq[TemplateGroup] = templateGroups
+      override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
     }
   }
 

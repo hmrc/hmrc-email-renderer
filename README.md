@@ -51,6 +51,24 @@ Responds with status:
 }
  ```
 
+### Preview Mode
+
+Templates can be fiddly to get right as they can ordinarily only be viewed by actually generating an email and sending it. To work around this you can preview templates **during development** by running the micro-service from sbt:
+
+```bash
+cd $WORKSPACE/hmrc-email-renderer
+sbt -Dhttp.port=8300 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
+```
+
+You should be able to list all the templates available for preview from [http://localhost:8300/templates/test-only/preview](http://localhost:8300/templates/test-only/preview).
+
+Note that to render logos correctly the assets frontend also needs to be started using
+
+```bash
+sm --start ASSETS_FRONTEND -f
+```
+
+
 ### License
 
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html")

@@ -10,4 +10,8 @@
 # Failing to follow this rule may result in test routes deployed in production.
 
 # Add all the application routes to the prod.routes file
-->         /                          prod.Routes
+->         /                                                        prod.Routes
+GET        /templates/test-only/preview                             preview.PreviewController.previewHome
+GET        /templates/test-only/preview/html/:templateId            preview.PreviewController.previewHtml(templateId)
+GET        /templates/test-only/preview/text/:templateId            preview.PreviewController.previewText(templateId)
+GET        /templates/test-only/preview/source/:templateId          preview.PreviewController.previewSource(templateId)
