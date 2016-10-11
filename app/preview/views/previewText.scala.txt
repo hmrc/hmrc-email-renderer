@@ -1,0 +1,3 @@
+@import preview.Preview
+@(templateId: String, queryString: Map[String, Seq[String]])
+@{Preview.plain(templateId, queryString)}

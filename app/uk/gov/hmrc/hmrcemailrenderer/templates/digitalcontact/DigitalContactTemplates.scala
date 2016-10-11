@@ -16,15 +16,14 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
-object DigitalContactTemplates extends TemplateGroup {
-  override val title = "Self Assessment"
-
+object DigitalContactTemplates {
   val defaultFromAddress = "HMRC paperless <noreply@tax.service.gov.uk>"
 
-  override val templates  = Seq(
+  val messageTemplates  = Seq(
     MessageTemplate.create(
       templateId = "verifyEmailAddress",
       fromAddress = defaultFromAddress,
@@ -34,4 +33,7 @@ object DigitalContactTemplates extends TemplateGroup {
       htmlTemplate  = html.verifyEmailAddress.f
     )
   )
+
+  val templates: Map[ServiceIdentifier, Seq[MessageTemplate]] =
+    Map(SelfAssessment -> messageTemplates)
 }
