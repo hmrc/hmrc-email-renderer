@@ -17,7 +17,10 @@ class RendererControllerISpec extends ServiceSpec with WithFakeApplication with 
         "staticAssetVersion" -> ""
       )
 
-      WS.url(resource(s"/templates/verifyEmailAddress")).post(Json.obj("parameters" -> params)) should have(
+      val response = WS.url(resource(s"/templates/verifyEmailAddress")).post(Json.obj("parameters" -> params))
+      val jsonResponse = response.json
+      println(s"JsonResponse!!!!!! ${jsonResponse}")
+      response should have(
         status(200),
         jsonProperty(__ \ "fromAddress", "HMRC paperless <noreply@tax.service.gov.uk>"),
         jsonProperty(__ \ "subject", "HMRC paperless notifications: verify your email address"),
