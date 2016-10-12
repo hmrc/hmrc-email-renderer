@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemp
 
 trait TemplateLocator {
   def templateGroups: Map[ServiceIdentifier, Seq[MessageTemplate]] =
-    DigitalContactTemplates.templates
+    Map(ServiceIdentifier.SelfAssessment -> DigitalContactTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 

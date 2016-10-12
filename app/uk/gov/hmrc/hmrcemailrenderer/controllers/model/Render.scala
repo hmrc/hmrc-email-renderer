@@ -16,6 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
+import com.ning.http.util.Base64
+import org.apache.commons.codec.Charsets
 import play.api.libs.json._
 
 case class RenderRequest(parameters: Map[String, String])
@@ -25,5 +27,15 @@ object RenderRequest {
 
 case class RenderResult(plain: String, html: String, fromAddress: String, subject: String, service: String)
 object RenderResult {
-  implicit val writes = Json.writes[RenderResult]
+  private def base64Encoded(value: String) = Base64.encode(value.getBytes(Charsets.UTF_8))
+
+  implicit val writes = Writes[RenderResult] { (toRender: RenderResult) =>
+    Json.obj(
+      "plain" -> base64Encoded(toRender.plain),
+      "html" -> base64Encoded(toRender.html),
+      "fromAddress" -> toRender.fromAddress,
+      "subject" -> toRender.subject,
+      "service" -> toRender.service
+    )
+  }
 }

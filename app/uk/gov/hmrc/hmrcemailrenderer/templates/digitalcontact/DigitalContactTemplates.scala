@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 object DigitalContactTemplates {
   val defaultFromAddress = "HMRC paperless <noreply@tax.service.gov.uk>"
 
-  val messageTemplates  = Seq(
+  val templates = Seq(
     MessageTemplate.create(
       templateId = "verifyEmailAddress",
       fromAddress = defaultFromAddress,
@@ -33,7 +33,4 @@ object DigitalContactTemplates {
       htmlTemplate  = html.verifyEmailAddress.f
     )
   )
-
-  val templates: Map[ServiceIdentifier, Seq[MessageTemplate]] =
-    Map(SelfAssessment -> messageTemplates)
 }
