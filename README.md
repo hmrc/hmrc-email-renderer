@@ -60,7 +60,7 @@ cd $WORKSPACE/hmrc-email-renderer
 sbt -Dhttp.port=8300 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
 ```
 
-You should be able to list all the templates available for preview from [http://localhost:8300/templates/test-only/preview](http://localhost:8300/templates/test-only/preview).
+You should be able to list all the templates available for preview from [http://localhost:8300/hmrc-email-renderer/test-only/preview](http://localhost:8300/hmrc-email-renderer/test-only/preview).
 
 Note that to render logos correctly the assets frontend also needs to be started using
 
