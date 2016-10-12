@@ -16,8 +16,6 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import com.google.common.base.Charsets
-import com.ning.http.util.Base64
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
@@ -69,8 +67,8 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       fromAddress = "from@test",
       service = "sa",
       subject = "a subject",
-      plain = Base64.encode("Test template with parameter value: VALUE using common parameters: commonValue".getBytes(Charsets.UTF_8)),
-      html = Base64.encode("<p>Test template with parameter value: VALUE using common parameters: commonValue</p>".getBytes(Charsets.UTF_8))
+      plain = "Test template with parameter value: VALUE using common parameters: commonValue",
+      html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>"
     )
   }
 
