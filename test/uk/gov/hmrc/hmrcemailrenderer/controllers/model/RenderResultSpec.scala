@@ -25,7 +25,7 @@ import org.scalacheck.{Arbitrary, Gen}
 class RenderResultSpec extends UnitSpec with GeneratorDrivenPropertyChecks {
   "RenderResult" should {
 
-    implicit val nonEmptyStringGen = Arbitrary.arbString.arbitrary.suchThat(_.nonEmpty)
+    implicit val nonEmptyStrings: Arbitrary[String] = Arbitrary(Arbitrary.arbString.arbitrary.suchThat(_.nonEmpty))
 
     def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
 
