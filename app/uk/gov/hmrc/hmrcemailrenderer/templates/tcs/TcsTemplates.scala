@@ -16,20 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.tcs
 
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.TaxCreditsService
-import uk.gov.hmrc.hmrcemailrenderer.templates._
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TaxCreditsService
 
-object TcsTemplates extends TemplateGroup with HmrcTemplate {
-  val title = "TCS"
-
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "tcs_renewal_confirmation",
-      regime = TaxCreditsService,
+object TcsTemplates  {
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "tcs_renewal_confirmation",
+      fromAddress = "HMRC Tax Credits Service <noreply@tax.service.gov.uk>",
+      service  = TaxCreditsService,
       subject = "Your tax credits renewal has been received",
-      plainTemplate = txt.newTcsRenewalConfirmationMessageAlert.apply,
-      htmlTemplate = html.newTcsRenewalConfirmationMessageAlert.apply,
-      fromAddress = taxCreditServiceTeamAddress)
+      plainTemplate = txt.newTcsRenewalConfirmationMessageAlert.applf,
+      htmlTemplate = html.newTcsRenewalConfirmationMessageAlert.f)
   )
 }

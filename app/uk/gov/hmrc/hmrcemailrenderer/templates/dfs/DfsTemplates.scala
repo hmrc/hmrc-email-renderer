@@ -16,49 +16,46 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.dfs
 
-import uk.gov.hmrc.email.services.BodyTemplate.Subject
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.DigitalFormsService
-import uk.gov.hmrc.hmrcemailrenderer.templates.{GovUkTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalFormsService
 
-object DfsTemplates extends TemplateGroup with GovUkTemplate {
-   val title = "DFS"
+object DfsTemplates {
 
-   def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "dfs_submission_success_r39_2015",
-      regime = DigitalFormsService,
+   val template = Seq(
+    MessageTemplate.create(
+      templateId = "dfs_submission_success_r39_2015",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
       subject = "R39: Claim a Tax Refund submission confirmation",
-      plainTemplate = txt.dfsSubmissionConfirmationEmail.apply,
-      htmlTemplate = html.dfsSubmissionConfirmationEmail.apply,
-      fromAddress = govUkTeamAddress),
-      SimpleMessageTemplate(
-      id = "dfs_submission_success_cis_2015",
-      regime = DigitalFormsService,
+      plainTemplate = txt.dfsSubmissionConfirmationEmail.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmail.f),
+     MessageTemplate.create(
+      templateId = "dfs_submission_success_cis_2015", 
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
       subject = "Subcontractor registration submission confirmation",
-      plainTemplate = txt.dfsSubmissionConfirmationEmailCIS.apply,
-      htmlTemplate = html.dfsSubmissionConfirmationEmailCIS.apply,
-      fromAddress = govUkTeamAddress),
-     SimpleMessageTemplate(
-       id = "dfs_submission_success_sptu_2015",
-       regime = DigitalFormsService,
+      plainTemplate = txt.dfsSubmissionConfirmationEmailCIS.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailCIS.f),
+     MessageTemplate.create(
+       templateId = "dfs_submission_success_sptu_2015",
+       fromAddress = govUkTeamAddress,
+       service = DigitalFormsService,
        subject = "State Pension top up (Class3A) submission confirmation",
-       plainTemplate = txt.dfsSubmissionConfirmationEmailSPTU.apply,
-       htmlTemplate = html.dfsSubmissionConfirmationEmailSPTU.apply,
-       fromAddress = govUkTeamAddress),
-     SimpleMessageTemplate(
-       id = "dfs_submission_success_generic_2015",
-       regime = DigitalFormsService,
-       subject = Subject(p => s"${p("subject")}" ),
-       plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric.apply,
-       htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric.apply,
-       fromAddress = govUkTeamAddress),
-     SimpleMessageTemplate(
-       id = "dfs_submission_success_empty_turn_around_time_2015",
-       regime = DigitalFormsService,
-       subject = Subject(p => s"${p("subject")}" ),
-       plainTemplate = txt.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.apply,
-       htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.apply,
-       fromAddress = govUkTeamAddress)
+       plainTemplate = txt.dfsSubmissionConfirmationEmailSPTU.f,
+       htmlTemplate = html.dfsSubmissionConfirmationEmailSPTU.f),
+     MessageTemplate.create(
+       templateId = "dfs_submission_success_generic_2015",
+       fromAddress = govUkTeamAddress,
+       service = DigitalFormsService,
+       subject = _.apply("subject"),
+       plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric.f,
+       htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric.f),
+     MessageTemplate.create(
+       templateId = "dfs_submission_success_empty_turn_around_time_2015",
+       fromAddress = govUkTeamAddress,
+       service = DigitalFormsService,
+       subject = _.apply("subject"),
+       plainTemplate = txt.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f,
+       htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f)
   )
 }

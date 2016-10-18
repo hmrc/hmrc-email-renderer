@@ -14,19 +14,9 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.childcareschemesinterest
+package uk.gov.hmrc.hmrcemailrenderer
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
+package object templates {
 
-object ChildcareSchemesInterestTemplates {
-  val templates = Seq(
-    MessageTemplate.create(
-      templateId = "childcare_schemes_interest_email",
-      fromAddress = govUkTeamAddress,
-      service = Childcare,
-      subject = "Your interest new childcare support schemes",
-      plainTemplate = txt.csiEmailRegistration.f,
-      htmlTemplate = html.csiEmailRegistration.f)
-  )
+  val govUkTeamAddress = "Gov.uk Team <noreply@tax.service.gov.uk>"
 }

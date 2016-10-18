@@ -16,20 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.childcarecalculator
 
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.Childcare
-import uk.gov.hmrc.hmrcemailrenderer.templates.{GovUkTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
 
-object childcareTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "ChildcareCalculator"
-
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "childcare_registration_email",
-      regime = Childcare,
+object childcareTemplates {
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "childcare_registration_email",
+      fromAddress = govUkTeamAddress,
+      service = Childcare,
       subject = "Registration of interest email",
-      plainTemplate = txt.childcareRegistrationEmail.apply,
-      htmlTemplate = html.childcareRegistrationEmail.apply,
-      fromAddress = govUkTeamAddress)
+      plainTemplate = txt.childcareRegistrationEmail.f,
+      htmlTemplate = html.childcareRegistrationEmail.f)
   )
 }

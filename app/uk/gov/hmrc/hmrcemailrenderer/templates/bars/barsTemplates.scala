@@ -16,25 +16,21 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.bars
 
-import uk.gov.hmrc.email.services.BodyTemplate._
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates._
-import Regime.BusinessRates
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.BusinessRates
 
-object BarsTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "BARS"
+object BarsTemplates  {
 
-  private def getBARefCode(params : Params) =
-    params.get("baRefNumber").getOrElse("No BA CODE") + ""
+  private val getBARefCode: Map[String, String] => String =
+    _.get("baRefNumber").getOrElse("No BA CODE")
 
-
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "bars_alert",
-      regime = BusinessRates,
-      subject = Subject(getBARefCode),
-      plainTemplate = txt.bars.apply,
-      htmlTemplate = html.bars.apply,
-      fromAddress = "Business Rates <noreply@tax.service.gov.uk>")
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "bars_alert",
+      fromAddress = "Business Rates <noreply@tax.service.gov.uk>",
+      service = BusinessRates,
+      subject = getBARefCode,
+      plainTemplate = txt.bars.f,
+      htmlTemplate = html.bars.f)
   )
 }

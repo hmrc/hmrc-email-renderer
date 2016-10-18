@@ -16,20 +16,18 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.cc
 
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.Childcare
-import uk.gov.hmrc.hmrcemailrenderer.templates.{GovUkTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
 
-object CcTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "CC"
+object CcTemplates {
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "cc_registration_email",
-      regime = Childcare,
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "cc_registration_email",
+      fromAddress = govUkTeamAddress,
+      service = Childcare,
       subject = "Your interest in Tax-Free Childcare",
-      plainTemplate = txt.ccRegistrationEmail.apply,
-      htmlTemplate = html.ccRegistrationEmail.apply,
-      fromAddress = govUkTeamAddress)
+      plainTemplate = txt.ccRegistrationEmail.f,
+      htmlTemplate = html.ccRegistrationEmail.f)
   )
 }
