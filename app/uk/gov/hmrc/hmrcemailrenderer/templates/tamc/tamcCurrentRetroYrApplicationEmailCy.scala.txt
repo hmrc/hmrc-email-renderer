@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+
+Cadarnhad o'ch cais am Lwfans Priodasol
+
+Yr hyn sy'n digwydd nesaf
+
+Y flwyddyn dreth bresennol
+
+Os yw eich partner yn talu treth trwy TWE, bydd yn cael ei hysbysu o'i god treth newydd drwy'r post. Rhoddwn wybod i'w gyflogwr a bydd eich Lwfans Priodasol yn cychwyn pan fydd yn dechrau defnyddio'r cod treth newydd hwn. Os ydych yn gwneud cais ran o'r ffordd drwy'r flwyddyn dreth, bydd ei Lwfans Priodasol yn cael i ôl-ddyddio i ddechrau'r flwyddyn dreth bresennol.
+
+Os yw eich partner yn llenwi Ffurflen Dreth Hunanasesiad, caiff ei fil treth ei addasu er mwyn cynnwys Lwfans Priodasol pan fydd yn cyflwyno'i Ffurflen Dreth.
+
+Bydd eich Lwfans Priodasol yn parhau'n awtomatig hyd nes eich bod chi neu eich partner yn ei ganslo, neu nad ydych bellach yn gymwys fel cwpl.
+
+Flynyddoedd treth cynharach
+
+Blynyddoedd treth cynharachBydd CThEM yn gwirio a ydych yn gymwys cyn prosesu eich cais.
+
+Os yw eich partner yn talu treth trwy TWE, anfonwn siec ato drwy'r post ar gyfer bob blwyddyn dreth yr ydych yn gymwys ar ei chyfer.
+
+Os yw eich partner yn llenwi Ffurflen Dreth Hunanasesiad, byddwn yn anfon siec drwy'r post neu'n didynnu'r swm o'i fil treth nesaf (mae hyn yn dibynnu ar y dewis y mae wedi'i gofrestru gyda CThEM).
+
+Nid oes angen i chi gysylltu â ni.
+
+Gallwch roi gwybod i ni am unrhyw newidiadau i'ch amgylchiadau yn https://www.gov.uk/marriage-allowance-guide/if-your-circumstances-change.
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

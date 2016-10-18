@@ -1,0 +1,28 @@
+@(params: Map[String, Any])@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "") {
+
+@if(!params("greeting").asInstanceOf[String].isEmpty) {
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("greeting")},</p>
+
+}
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{params("confirmation")}.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your reference is @{params("submissionReference")}.</p>
+@if(params.isDefinedAt("paragraphOne")) {
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+    params("paragraphOne")
+    }.</p>
+}
+@if(params.isDefinedAt("paragraphTwo")) {
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+    params("paragraphTwo")
+    }.</p>
+}
+@if(params.get("warningInformation").exists(_ == "true")) {
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If we need any further details, we'll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won't ask for your personal details by email.</p>
+}
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Yours sincerely,</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">HM Revenue and Customs</p>
+
+}

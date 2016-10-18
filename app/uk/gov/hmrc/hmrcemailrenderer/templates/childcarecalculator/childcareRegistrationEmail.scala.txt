@@ -1,0 +1,11 @@
+@(params: Map[String, Any])Thanks for your interest in Tax-Free Childcare or the additional free childcare hours
+
+Tax-Free Childcare and the additional free childcare hours are being introduced in 2017.
+
+We'll email you again with information on how to apply.
+
+You don’t need to contact us.
+
+From Childcare Calculator
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

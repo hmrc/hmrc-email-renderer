@@ -1,0 +1,10 @@
+@(params: Map[String, Any])
+A collaborator has been removed from your application
+
+@{params("email")} has been removed from @{params("applicationName")} by another admin.
+
+They can no longer access this application.
+
+From HMRC API Developer Hub
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

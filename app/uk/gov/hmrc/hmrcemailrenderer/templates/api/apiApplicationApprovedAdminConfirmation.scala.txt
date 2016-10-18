@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Verify your email address
+
+Your application name @{params("applicationName")} has been approved.
+
+We need you to verify this email account again for security purposes. You’ll then be able to access production credentials.
+
+Click on the link below to verify your email account.
+
+@{params("developerHubLink")}
+
+This link expires in 90 days.
+
+From HMRC API Developer Hub
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

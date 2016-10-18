@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Rejoin the HMRC Agent Services
+
+Dear @{params("name")}
+
+You’ve told us that you want to rejoin the new Agent Services.
+
+Click on the link below and sign in to your service to begin the switching process.
+
+@{params("verificationLink")}
+
+This unique link will only work once, so make sure you finish the process in one go.
+
+From HMRC Agent Services
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

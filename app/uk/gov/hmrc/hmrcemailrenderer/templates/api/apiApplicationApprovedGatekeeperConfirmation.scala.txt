@@ -1,0 +1,9 @@
+@(params: Map[String, Any])Application name approved
+
+You approved the application name @{params("applicationName")} for use on the HMRC API Developer Hub.
+
+We’ve sent an email to @{params("email")} to confirm this.
+
+From HMRC API Developer Hub
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

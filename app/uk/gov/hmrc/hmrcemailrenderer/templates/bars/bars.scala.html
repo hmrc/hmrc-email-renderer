@@ -1,0 +1,96 @@
+
+@(params: Map[String, Any])
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <title>Valuation Office Agency</title>
+    </head>
+
+    <body style="font-family: Helvetica, Arial, sans-serif;margin: 0;background-color: #DEE0E2;">
+
+        <div style="background-color: #DEE0E2;padding:30px 0;">
+
+            <center>
+                <table style="max-width:600px;color:#000000;margin:auto;">
+                    <tr>
+                        <td width="100%" style="padding:0;margin:0;">
+
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0b0c0c">
+                                <tr>
+                                    <td width="100%" height="53px">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="padding-top:1px;">
+                                            <tr>
+                                                <td width="35" style="padding:5px 0 0 20px;">
+                                                    <img src="@{params("staticAssetUrlPrefix")}@{params("staticAssetVersion")}/images/gov.uk_logotype_crown.png" alt="GOV.UK" border="0" style="width: 35px;height: 31px;border: none;">
+                                                </td>
+                                                <td width="6"></td>
+                                                <td style="color: white !important;font-weight: bold;font-size: 30px;padding-top:1px;text-align:left;"><span>GOV.</span>UK</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+                                <tr>
+                                    <td width="100%">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-top:10px solid #005ea5;">
+                                            <tr>
+                                                <td width="100%">
+                                                    <table width="100%" style="padding:25px 20px 20px 20px;">
+
+                                                            <tr>
+                                                                <td width="100%">
+                                                                    <h1 style="font-weight: bold;font-size: 36px;line-height: 1.041666667;margin:0;padding: 0 0 30px 0; text-align:left"><b> Valuation Office Agency</b></h1>
+                                                                </td>
+                                                            </tr>
+                                                        <tr>
+                                                            <td width="100%" style="text-align:left;color:#000000 !important;">
+                                                                <h3><u><b>BA Code</b></u></h3>
+                                                                <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"><h2>@params("baRefNumber")</h2></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100%" style="text-align:left;color:#000000 !important;">
+                                                                <h3><u><b>File Name</b></u></h3>
+                                                                <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"><h2>@params("fileName")</h2></p>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100%" style="text-align:left;color:#000000 !important;">
+                                                                <h3><u><b>Date Submitted</b></u></h3>
+                                                                <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"><h2> @params("dateSubmitted")</h2></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="100%" style="text-align:left;color:#000000 !important;">
+                                                                <h3><u><b>Errors</b></u></h3>
+                                                                <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"><h2> @params("errorList")</h2></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+            </center>
+
+        </div>
+
+    </body>
+</html>
+
+
+
+
+

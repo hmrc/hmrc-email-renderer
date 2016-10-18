@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "Someone’s asked if you’ll become their Trusted Helper") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("helperFirstName")} @{params("helperLastName")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("helpeeFirstName")} @{params("helpeeLastName")} has asked you to become their Trusted Helper and help with their tax online.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Trusted Helper is an online service from HM Revenue and Customs (HMRC) which allows people to help their friends and family manage their tax affairs online.</p>
+<h2 id="before-you-start" style="margin: 0 0 30px; font-size: 24px;">Before you start</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll need your National Insurance number to hand.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll also need to set up an account with GOV.UK Verify, if you don’t already have one.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to accept @{params("helpeeFirstName")}’s request for help.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="https://www.gov.uk/help-friends-family-tax" style="color: #005EA5;">https://www.gov.uk/help-friends-family-tax</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">You have 28 days to respond.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Trusted Helper</p>
+}

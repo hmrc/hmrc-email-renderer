@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Lwfans Priodasol yn cael ei ganslo
+
+Caiff eich Lwfans Priodasol ei ddileu ar @{params("endDate")}, sef diwedd y flwyddyn dreth .
+
+Yr hyn sy'n digwydd nesaf
+
+Os yw eich cyn-bartner yn talu treth trwy TWE, byddwn yn newid ei god treth ac yn ei hysbysu o'i god treth newydd drwy'r post. Rhoddwn wybod i'w gyflogwr i ddechrau defnyddio'r cod treth newydd hwn o ddechrau'r flwyddyn dreth newydd ar @{params("startDate")}.
+
+Os yw eich cyn-bartner yn llenwi Ffurflen Dreth Hunanasesiad, byddwn yn dychwelyd y lwfans iddo ar ddiwedd y flwyddyn dreth bresennol ar @{params("endDate")}. Caiff ei Lwfans Personol ei addasu ar @{params("startDate")}.
+
+Nid oes angen i chi gysylltu â ni. Gallwch wirio statws eich Lwfans Priodasol yn eich cyfrif treth personol yn www.gov.uk/personal-tax-account.
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

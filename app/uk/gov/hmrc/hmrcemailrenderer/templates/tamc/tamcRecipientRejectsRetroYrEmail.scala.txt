@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Marriage Allowance cancelled
+
+Your Marriage Allowance has been removed.
+
+What happens next
+
+We’ll return the allowance to your partner.
+
+Cancelling Marriage Allowance could result in you not paying enough tax. We’ll let you know if you’ve paid the right amount when we check your pay and tax information at the end of the tax year. If you’ve underpaid, we’ll collect the tax you owe by adjusting your tax code.
+
+There is no need to contact us. You can check the status of your Marriage Allowance on your personal tax account at www.gov.uk/personal-tax-account
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

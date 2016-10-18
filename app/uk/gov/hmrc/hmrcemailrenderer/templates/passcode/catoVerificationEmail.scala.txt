@@ -1,0 +1,21 @@
+@(params: Map[String, Any])Start using HMRC Company Accounts and Tax Online
+
+Our reference: CATO PB 14
+
+You registered your interest in using Company Accounts and Tax Online. This service is now available to use.
+
+Before you start
+
+You’ll need your Government Gateway details to sign in.
+
+You’ll also need your Companies House details if you’re filing your accounts with Companies House at the same time.
+
+Click on the link below to access the service.
+
+@{params("verificationLink")}
+
+Don’t delete this email, as you’ll need to use this link each time you want to access the service.
+
+From Company Accounts and HMRC Tax Online
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

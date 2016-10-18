@@ -1,0 +1,11 @@
+@(params: Map[String, Any])You’ve been added to an application
+
+You’ve been given @{params("role")} rights over @{params("applicationName")}.
+
+To register with the HMRC API Developer Hub, click on the link below.
+
+@{params("developerHubLink")}
+
+From HMRC API Developer Hub
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
