@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.dfs
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalFormsService
-
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 object DfsTemplates {
 
    val template = Seq(

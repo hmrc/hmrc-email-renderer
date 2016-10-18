@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.awrs
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AlcoholWholesalerRegistrationScheme
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object AwrsTemplates  {
 
