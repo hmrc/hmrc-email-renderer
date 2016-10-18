@@ -17,13 +17,14 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.tcs
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TaxCreditsService
 
 object TcsTemplates  {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "tcs_renewal_confirmation",
-      fromAddress = "HMRC Tax Credits Service <noreply@tax.service.gov.uk>",
+      fromAddress = FromAddress.noReply("HMRC Tax Credits Service"),
       service  = TaxCreditsService,
       subject = "Your tax credits renewal has been received",
       plainTemplate = txt.newTcsRenewalConfirmationMessageAlert.f,
