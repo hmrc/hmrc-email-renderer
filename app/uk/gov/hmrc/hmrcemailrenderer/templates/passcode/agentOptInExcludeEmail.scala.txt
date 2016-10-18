@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Go back to using the original HMRC online services
+
+Dear @{params("name")}
+
+You’ve told us that you want to stop using the new Agent Services and go back to the original HMRC online services.
+
+After you switch back, you’ll be able to use all your usual online services, but you won’t be able to access your employer client's liabilities and payments information anymore.
+
+If you want to rejoin the new Agent Services in future, you must email aoss-team.mailbox@@hmrc.gsi.gov.uk with the subject line: Request to rejoin the new Agent Services.
+
+Click on the link below and sign in to your service to begin the switching process.
+
+@{params("verificationLink")}
+
+This unique link will only work once, so make sure you finish the process in one go.
+
+From HMRC Agent Services
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

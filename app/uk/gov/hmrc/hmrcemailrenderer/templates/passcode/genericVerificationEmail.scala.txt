@@ -1,0 +1,11 @@
+@(params: Map[String, Any])Thanks for agreeing to help
+
+This email contains a link to the service that you’ve agreed to test.
+
+Click on the link below to access the service.
+
+@{params("verificationLink")}
+
+From HMRC
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Your Income Tax estimate has changed
+
+Dear @{params("fullName")}
+
+Your Income Tax estimate has changed.
+
+Sign in to Check your Income Tax to see your new estimated taxable income, income tax and tax code.
+
+For security reasons, we have not included a link with this email.
+
+Why you got this email
+
+You chose to get email notifications about your Income Tax.
+
+This means we send you an email when your Income Tax estimate changes.
+
+From HMRC Check your Income Tax
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

@@ -1,0 +1,29 @@
+@(params: Map[String, Any])Start using HMRC GMP checker
+
+Dear Pension Scheme Administrator
+
+You registered your interest in using the GMP checker. This service is now available to use.
+
+You’ll be able to use the GMP checker when a pension scheme member:
+
+leaves the scheme
+
+divorces
+
+transfers
+
+You’ll receive results from the service in real time.
+
+Before you start
+
+You’ll need your Government Gateway details to sign in.
+
+Click on the link below to access the service.
+
+@{params("verificationLink")}
+
+Don’t delete this email, as you’ll need to use this link each time you want to access the service.
+
+From HMRC GMP checker
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

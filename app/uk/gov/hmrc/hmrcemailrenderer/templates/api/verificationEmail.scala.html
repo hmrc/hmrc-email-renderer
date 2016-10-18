@@ -1,0 +1,7 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "Verify your email address") {
+<p style="margin: 0 0 30px; font-size: 19px;">You’ve registered with the HMRC API Developer Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to verify your email address.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC API Developer Hub</p>
+}

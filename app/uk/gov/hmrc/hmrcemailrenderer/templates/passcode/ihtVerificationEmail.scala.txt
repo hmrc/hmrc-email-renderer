@@ -1,0 +1,43 @@
+@(params: Map[String, Any])Start using HMRC Inheritance Tax Online Service
+
+Dear @{params("name")}
+
+The Inheritance Tax Online Service is now available to use.
+
+Before you start
+
+You’ll need your Government Gateway details to sign in.
+
+You’ll also need to register to use the service and tell HMRC the following:
+
+details about yourself and the person who has died
+
+details about anyone else applying to the Probate Service, including National Insurance numbers and contact details
+
+You’ll also need to tell us about the deceased’s estate, including:
+
+what they owned when they died
+
+any gifts they gave away in the last 7 years before they died
+
+any debts owed from the estate
+
+The service will calculate the total value of the estate, but you’ll need to provide valuations of what the deceased owned and owed.
+
+Click on the link below to access the service.
+
+@{params("verificationLink")}
+
+You can save your progress and come back to continue the process at any time.
+
+Getting help
+
+We recommend that you read the Inheritance Tax guidance notes, which give more information about completing an Inheritance Tax estate report. They’re available through the link above.
+
+You can get additional help by contacting ihtonline.privatebeta@@hmrc.gsi.gov.uk.
+
+You should already have received an email with all of the details you need to apply to the Probate Service for a grant of representation. You can only apply to the Probate Service when you’ve completed the Inheritance Tax process. This is because you’ll need details from the service to finish your Probate Application Form (PA1).
+
+From HMRC Inheritance Tax
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

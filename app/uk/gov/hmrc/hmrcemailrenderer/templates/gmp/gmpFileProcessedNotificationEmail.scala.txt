@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Your HMRC GMP checker calculation is ready
+
+Your reference: @{params("fileUploadReference")}
+
+The GMP checker calculation you submitted on @{params("uploadDate")} is now ready.
+
+Go to the GMP checker to view it. You’ll need to sign in using the same Government Gateway details you used to submit the calculation.
+
+For security reasons, we have not included a link with this email.
+
+Your results will be deleted after 30 days.
+
+So that you know this email is genuine, the last three digits of your ID are @{params("userId")}.
+
+From HMRC GMP checker
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

@@ -1,0 +1,35 @@
+@(params: Map[String, Any])Apply for HMRC Marriage Allowance
+
+Dear @{params("name")}
+
+You registered your interest in applying for Marriage Allowance. This service is now available to use.
+
+As a couple you may benefit by up to £212 a year.
+
+Before you start
+
+You’ll need your own and your partner’s national insurance numbers.
+
+You’ll also need a way to prove your identity. This can be one of the following:
+
+your passport number and expiry date
+
+the last 4 digits of the account that your child benefit, tax credits or pension is paid into
+
+the last 4 digits of an account that pays you interest
+
+details from your P60
+
+details from any of your 3 most recent payslips
+
+Click on the link below to start your application.
+
+@{params("verificationLink")}
+
+Don’t delete this email, as you’ll need to use this link each time you want to access your application. You can use this link up to 6 times.
+
+This link is personal to you, so please do not share it with others unless they’re applying on your behalf.
+
+From HMRC Marriage Allowance
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

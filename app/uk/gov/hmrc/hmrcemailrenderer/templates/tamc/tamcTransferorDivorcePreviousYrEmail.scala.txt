@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+
+Your Marriage Allowance has been removed from @{params("endDate")}, the end of the tax year you divorced.
+
+What happens next
+
+If your former partner pays tax through PAYE, we’ll change their tax code and send them notification of their new tax code in the post. We’ll tell their employer and your Marriage Allowance will stop when they begin using this new code.
+
+If they complete a Self Assessment tax return, we’ll remove Marriage Allowance from @{params("endDate")}, the end of the tax year you divorced. Their Personal Allowance will be adjusted from @{params("startDate")}.
+
+There is no need to contact us. You can check the status of your Marriage Allowance on your personal tax account at www.gov.uk/personal-tax-account
+
+@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}

@@ -1,0 +1,16 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "Alcohol Wholesaler Registration Scheme (AWRS) application submission confirmation") {
+    <p @pStyle>Your application for @{params("organisationName")} has been received on the @{params("submissionDate")}.</p>
+    <p @pStyle>Your application reference number is @{params("applicationReference")}. This is not your AWRS registration number.</p>
+    <p @pStyle>What happens next</p>
+    <p @pStyle>
+        <ul>
+            <li>We will review and check your application, which might take some time.</li>
+            <li>There is no need to contact HMRC, you will be notified before 1 April 2017.</li>
+            <li>We will initially contact you by phone if we need to discuss your application or book a visit. Further communication can be by email, post or a visit.</li>
+            <li>If approved, your business will receive an AWRS registration number confirming that you are an approved alcohol wholesaler.</li>
+        </ul>
+    </p>
+    <p @pStyle>Remember to keep your Government Gateway user ID and password safe as you will need them if you need to make changes. If your circumstances change you must update your application.</p>
+    <p @pStyle>From HMRC Alcohol Wholesaler Registration Scheme</p>
+}
