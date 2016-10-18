@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.childcareschemesinterest
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object ChildcareSchemesInterestTemplates {
   val templates = Seq(

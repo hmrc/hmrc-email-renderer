@@ -18,10 +18,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.rald
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
-import views.{html, txt}
 
 object RaldTemplates {
-
   val templates = Seq(
     MessageTemplate.create(
       templateId = "rald_alert",

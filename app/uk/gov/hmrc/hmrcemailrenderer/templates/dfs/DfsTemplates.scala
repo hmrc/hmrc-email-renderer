@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalFormsSer
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 object DfsTemplates {
 
-   val template = Seq(
+   val templates = Seq(
     MessageTemplate.create(
       templateId = "dfs_submission_success_r39_2015",
       fromAddress = govUkTeamAddress,

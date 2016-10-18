@@ -21,12 +21,6 @@ sealed trait ServiceIdentifier extends Product with Serializable {
   def title: String
 }
 object ServiceIdentifier {
-  case object SelfAssessment extends ServiceIdentifier {
-    override val title = "Self Assessment"
-    override val name  = "sa"
-  }
-
-
   case object ApiDeveloperHub extends ServiceIdentifier {
     override val name = "api"
     override val title = "API Platform"
@@ -51,7 +45,6 @@ object ServiceIdentifier {
     override val title = "CC"
     override val name = "cc"
   }
-
 
   case object DigitalFormsService extends ServiceIdentifier {
     override val title = "DFS"
@@ -83,6 +76,11 @@ object ServiceIdentifier {
     override val name = "rald"
   }
 
+  case object SelfAssessment extends ServiceIdentifier {
+    override val title = "Self Assessment"
+    override val name  = "sa"
+  }
+
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier {
     override val title = "TAMC"
     override val name = "tamc"
@@ -94,13 +92,6 @@ object ServiceIdentifier {
   }
 }
 /*
-case object ApiDeveloperHub                     extends ServiceIdentifier { override val name = "api" }
-  case object SelfAssessment                      extends ServiceIdentifier { override val name = "sa" }
-
-  case object AnnualTaxSummary                    extends ServiceIdentifier { override val name = "ats" }
-
-
-
 
   case object NationalInsuranceAndStatePension    extends ServiceIdentifier { override val name = "nisp" }
 
@@ -110,7 +101,6 @@ case object ApiDeveloperHub                     extends ServiceIdentifier { over
   case object AgentOptInExclude                   extends ServiceIdentifier { override val name = "agent-optin-exclude" }
   case object AgentOptInRejoin                    extends ServiceIdentifier { override val name = "agent-optin-rejoin" }
 
-  case object AlcoholWholesalerRegistrationScheme extends ServiceIdentifier { override val name = "awrs"}
 
 
 
