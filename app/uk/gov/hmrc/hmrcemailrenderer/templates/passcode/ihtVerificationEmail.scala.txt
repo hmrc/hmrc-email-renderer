@@ -40,4 +40,4 @@ You should already have received an email with all of the details you need to ap
 
 From HMRC Inheritance Tax
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

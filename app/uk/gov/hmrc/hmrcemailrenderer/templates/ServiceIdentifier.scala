@@ -25,4 +25,10 @@ object ServiceIdentifier {
     override val title = "Self Assessment"
     override val name  = "sa"
   }
+
+
+  case object ApiDeveloperHub extends ServiceIdentifier {
+    override val name = "api"
+    override val title = "API Platform"
+  }
 }

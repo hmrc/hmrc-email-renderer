@@ -12,4 +12,4 @@ Gallai canslo'r Lwfans Priodasol arwain atoch yn peidio â thalu digon o dreth. 
 
 Nid oes angen i chi gysylltu â ni. Gallwch wirio statws eich Lwfans Priodasol yn eich cyfrif treth personol yn www.gov.uk/personal-tax-account.
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "Someone’s asked if you’ll become their Trusted Helper") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Someone’s asked if you’ll become their Trusted Helper") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("helperFirstName")} @{params("helperLastName")}</p>
 <p style="margin: 0 0 30px; font-size: 19px;">@{params("helpeeFirstName")} @{params("helpeeLastName")} has asked you to become their Trusted Helper and help with their tax online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Trusted Helper is an online service from HM Revenue and Customs (HMRC) which allows people to help their friends and family manage their tax affairs online.</p>

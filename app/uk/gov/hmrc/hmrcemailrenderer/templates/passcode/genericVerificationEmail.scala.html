@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "Thanks for agreeing to help") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Thanks for agreeing to help") {
 <p style="margin: 0 0 30px; font-size: 19px;">This email contains a link to the service that you’ve agreed to test.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to access the service.</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>

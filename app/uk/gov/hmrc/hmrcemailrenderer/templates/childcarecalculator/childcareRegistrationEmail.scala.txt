@@ -8,4 +8,4 @@ You don’t need to contact us.
 
 From Childcare Calculator
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

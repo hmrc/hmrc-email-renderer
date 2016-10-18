@@ -12,4 +12,4 @@ Your revised notice of tax coding will show in your personal account within 24 h
 
 There is no need to contact us.
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

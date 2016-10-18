@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "We’ve received your HMRC GMP checker calculation file") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We’ve received your HMRC GMP checker calculation file") {
 <p style="margin: 0 0 30px; font-size: 19px;">Your reference: @{params("fileUploadReference")}</p>
 <p style="margin: 0 0 30px; font-size: 19px;">It’s being processed and we’ll email you when the results are ready.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">This should take no longer than 72 hours.</p>
