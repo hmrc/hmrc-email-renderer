@@ -16,4 +16,4 @@ This unique link will only work once, so make sure you finish the process in one
 
 From HMRC Agent Services
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

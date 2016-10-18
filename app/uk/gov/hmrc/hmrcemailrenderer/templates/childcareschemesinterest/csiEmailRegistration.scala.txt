@@ -4,4 +4,4 @@ We'll email you in 2017 when 30 hours a week free childcare and Tax-Free Childca
 
 From HM Government
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -13,4 +13,4 @@ Remember to keep your Government Gateway user ID and password safe as you will n
 
 From HMRC Alcohol Wholesaler Registration Scheme
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

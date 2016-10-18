@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Your Annual Tax Summary is ready
 
-@uk.gov.hmrc.email.templates.helpers.txt.salutation(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 Thank you for completing your Self Assessment tax return.
 
@@ -16,4 +16,4 @@ Ruth Owen
 
 Personal Tax Director General
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

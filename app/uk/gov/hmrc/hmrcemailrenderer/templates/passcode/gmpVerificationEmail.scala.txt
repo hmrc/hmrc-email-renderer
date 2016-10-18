@@ -26,4 +26,4 @@ Don’t delete this email, as you’ll need to use this link each time you want 
 
 From HMRC GMP checker
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

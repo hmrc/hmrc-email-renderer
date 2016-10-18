@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.email.templates.helpers.html.template_main(params, "Go back to using the original HMRC online services") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Go back to using the original HMRC online services") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
 <p style="margin: 0 0 30px; font-size: 19px;">You’ve told us that you want to stop using the new Agent Services and go back to the original HMRC online services.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">After you switch back, you’ll be able to use all your usual online services, but you won’t be able to access your employer client's liabilities and payments information anymore.</p>

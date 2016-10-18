@@ -16,4 +16,4 @@ Bydd eich hysbysiad o god treth ddiwygiedig i'w weld yn eich cyfrif treth person
 
 Nid oes angen i chi gysylltu â ni. Gallwch wirio statws eich Lwfans Priodasol yn eich cyfrif treth personol yn www.gov.uk/personal-tax-account.
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -8,4 +8,4 @@ To register with the HMRC API Developer Hub, click on the link below.
 
 From HMRC API Developer Hub
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -32,4 +32,4 @@ This link is personal to you, so please do not share it with others unless theyâ
 
 From HMRC Marriage Allowance
 
-@{uk.gov.hmrc.email.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
