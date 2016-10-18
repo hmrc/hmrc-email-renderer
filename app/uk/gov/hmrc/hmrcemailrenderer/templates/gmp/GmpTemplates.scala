@@ -21,8 +21,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GuaranteedMinimumPension
 
 object GmpTemplates {
-
-
   private val gmp_upload_reference_received_for_subject: Map[String, String] => String =
     _.get("fileUploadReference").map(fileUploadReference => s"Your file $fileUploadReference has been received.").
       getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
@@ -35,21 +33,25 @@ object GmpTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
-        templateId = "gmp_bulk_upload_received",
-        fromAddress = from,
-        service = GuaranteedMinimumPension,
-        subject = gmp_upload_reference_received_for_subject,
-        plainTemplate = txt.gmpFileReceivedNotificationEmail.f,
-        htmlTemplate = html.gmpFileReceivedNotificationEmail.f
-        ),
+      templateId = "gmp_bulk_upload_received",
+      fromAddress = from,
+      service = GuaranteedMinimumPension,
+      subject = gmp_upload_reference_received_for_subject,
+      plainTemplate = txt.gmpFileReceivedNotificationEmail.f,
+      htmlTemplate = html.gmpFileReceivedNotificationEmail.f),
     MessageTemplate.create(
-        templateId = "gmp_bulk_upload_processed",
-        fromAddress = from,
-        service = GuaranteedMinimumPension,
-        subject = gmp_upload_reference_processed_for_subject,
-        plainTemplate = txt.gmpFileProcessedNotificationEmail.f,
-        htmlTemplate = html.gmpFileProcessedNotificationEmail.f
-        )
-    )
-
+      templateId = "gmp_bulk_upload_processed",
+      fromAddress = from,
+      service = GuaranteedMinimumPension,
+      subject = gmp_upload_reference_processed_for_subject,
+      plainTemplate = txt.gmpFileProcessedNotificationEmail.f,
+      htmlTemplate = html.gmpFileProcessedNotificationEmail.f),
+    MessageTemplate.create(
+      templateId = "gmp_access_invitation_template_id",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = GuaranteedMinimumPension,
+      subject = "Your check a GMP link",
+      plainTemplate = txt.gmpVerificationEmail.f,
+      htmlTemplate = html.gmpVerificationEmail.f)
+  )
 }

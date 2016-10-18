@@ -66,6 +66,11 @@ object ServiceIdentifier {
     override val name = "generic"
   }
 
+  case object InheritanceTax extends ServiceIdentifier {
+    override val title = "Inheritance Tax"
+    override val name = "iht"
+  }
+
   case object PayAsYouEarn extends ServiceIdentifier {
     override val title = "PAYE"
     override val name = "paye"
@@ -96,14 +101,9 @@ object ServiceIdentifier {
   case object NationalInsuranceAndStatePension    extends ServiceIdentifier { override val name = "nisp" }
 
   case object CompanyAccountsTaxOnline            extends ServiceIdentifier { override val name = "cato" }
-  case object InheritanceTax                      extends ServiceIdentifier { override val name = "iht" }
   case object Agent                               extends ServiceIdentifier { override val name = "agent" }
   case object AgentOptInExclude                   extends ServiceIdentifier { override val name = "agent-optin-exclude" }
   case object AgentOptInRejoin                    extends ServiceIdentifier { override val name = "agent-optin-rejoin" }
-
-
-
-
 }
 
  */

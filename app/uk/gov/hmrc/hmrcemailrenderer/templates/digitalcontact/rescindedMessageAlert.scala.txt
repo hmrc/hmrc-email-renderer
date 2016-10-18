@@ -1,0 +1,11 @@
+@(params: Map[String, Any])We sent you messages in error
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+You received one or more messages on 16 July 2015 from HMRC as a result of an IT error. These messages have now been withdrawn.
+
+We apologise for any concern this might have caused.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

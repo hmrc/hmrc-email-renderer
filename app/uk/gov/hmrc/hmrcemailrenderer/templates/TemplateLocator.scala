@@ -29,6 +29,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.iht.IhtTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
@@ -44,6 +45,7 @@ trait TemplateLocator {
         DigitalFormsService -> DfsTemplates.templates,
         FriendsAndFamily -> FandFTemplates.templates,
         GuaranteedMinimumPension -> GmpTemplates.templates,
+        InheritanceTax -> IhtTemplates.templates,
         PayAsYouEarn -> PayeTemplates.templates,
         RentalAndLeaseDetails -> RaldTemplates.templates,
         SelfAssessment -> DigitalContactTemplates.templates,
