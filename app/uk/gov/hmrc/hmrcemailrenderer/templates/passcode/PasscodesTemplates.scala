@@ -56,27 +56,6 @@ object PasscodesTemplates  {
       plainTemplate = passcode.txt.agentOptInRejoinEmail.apply,
       htmlTemplate = passcode.html.agentOptInRejoinEmail.apply,
       fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "tamc_access_invitation_template_id",
-      regime = TaxAllowanceForMarriedCouples,
-      subject = "Your HMRC Marriage Allowance link",
-      plainTemplate = passcode.txt.tamcVerificationEmail.apply,
-      htmlTemplate = passcode.html.tamcVerificationEmail.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "iht_access_invitation_template_id",
-      regime = InheritanceTax,
-      subject = "How to access HMRC’s Inheritance Tax Online service",
-      plainTemplate = passcode.txt.ihtVerificationEmail.apply,
-      htmlTemplate = passcode.html.ihtVerificationEmail.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "gmp_access_invitation_template_id",
-      regime = GuaranteedMinimumPension,
-      subject = "Your check a GMP link",
-      plainTemplate = passcode.txt.gmpVerificationEmail.apply,
-      htmlTemplate = passcode.html.gmpVerificationEmail.apply,
-      fromAddress = govUkTeamAddress)
   )
   */
 }

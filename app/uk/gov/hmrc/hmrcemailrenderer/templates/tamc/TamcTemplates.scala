@@ -21,7 +21,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TaxAllowanceFor
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object TamcTemplates {
-
   val templates = Seq(
     MessageTemplate.create(
       templateId = "tamc_confirmation_template_id",
@@ -190,6 +189,14 @@ object TamcTemplates {
       service = TaxAllowanceForMarriedCouples,
       subject = "Eich newid i Lwfans Priodas",
       plainTemplate = txt.tamcRecipientRejectsRetroYrEmailCy.f,
-      htmlTemplate = html.tamcRecipientRejectsRetroYrEmailCy.f)
+      htmlTemplate = html.tamcRecipientRejectsRetroYrEmailCy.f),
+    MessageTemplate.create(
+      templateId = "tamc_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = TaxAllowanceForMarriedCouples,
+      subject = "Your HMRC Marriage Allowance link",
+      plainTemplate = txt.tamcVerificationEmail.f,
+      htmlTemplate = html.tamcVerificationEmail.f)
+
   )
 }
