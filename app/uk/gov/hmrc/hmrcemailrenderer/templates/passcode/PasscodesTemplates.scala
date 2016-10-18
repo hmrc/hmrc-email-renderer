@@ -16,13 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.passcode
 
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime._
-import uk.gov.hmrc.hmrcemailrenderer.templates.{GovUkTemplate, TemplateGroup, passcode}
+object PasscodesTemplates  {
+// TODO Something odd going on here revisit DC-607
 
-object PasscodesTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "Passcodes"
-
+  /*
   def subGroups = Seq(
     SimpleMessageTemplate(
       id = "generic_access_invitation_template_id",
@@ -81,4 +78,5 @@ object PasscodesTemplates extends TemplateGroup with GovUkTemplate {
       htmlTemplate = passcode.html.gmpVerificationEmail.apply,
       fromAddress = govUkTeamAddress)
   )
+  */
 }

@@ -16,39 +16,37 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.gmp
 
-import uk.gov.hmrc.email.services.BodyTemplate._
-import uk.gov.hmrc.email.services.{MissingTemplateParameterException, SimpleMessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.GuaranteedMinimumPension
-import uk.gov.hmrc.hmrcemailrenderer.templates.{GovUkTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GuaranteedMinimumPension
 
-object GmpTemplates extends TemplateGroup with GovUkTemplate {
+object GmpTemplates {
 
-  val title = "GMP"
   val from = "GMP Checker <noreply@tax.service.gov.uk>"
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-        id = "gmp_bulk_upload_received",
-        regime = GuaranteedMinimumPension,
-        subject = Subject(gmp_upload_reference_received_for_subject),
-        plainTemplate = txt.gmpFileReceivedNotificationEmail.apply,
-        htmlTemplate = html.gmpFileReceivedNotificationEmail.apply,
-        fromAddress = from
+  val templates = Seq(
+    MessageTemplate.create(
+        templateId = "gmp_bulk_upload_received",
+        fromAddress = from,
+        service = GuaranteedMinimumPension,
+        subject = gmp_upload_reference_received_for_subject,
+        plainTemplate = txt.gmpFileReceivedNotificationEmail.f,
+        htmlTemplate = html.gmpFileReceivedNotificationEmail.f
         ),
-    SimpleMessageTemplate(
-        id = "gmp_bulk_upload_processed",
-        regime = GuaranteedMinimumPension,
-        subject = Subject(gmp_upload_reference_processed_for_subject),
-        plainTemplate = txt.gmpFileProcessedNotificationEmail.apply,
-        htmlTemplate = html.gmpFileProcessedNotificationEmail.apply,
-        fromAddress = from
+    MessageTemplate.create(
+        templateId = "gmp_bulk_upload_processed",
+        fromAddress = from,
+        service = GuaranteedMinimumPension,
+        subject = gmp_upload_reference_processed_for_subject,
+        plainTemplate = txt.gmpFileProcessedNotificationEmail.f,
+        htmlTemplate = html.gmpFileProcessedNotificationEmail.f
         )
     )
 
-  private def gmp_upload_reference_received_for_subject(params : Params) =
-    params.get("fileUploadReference").map(fileUploadReference => s"Your file $fileUploadReference has been received.").getOrElse(throw new MissingTemplateParameterException("fileUploadReference"))
+  private val gmp_upload_reference_received_for_subject: Map[String, String] => String =
+    _.get("fileUploadReference").map(fileUploadReference => s"Your file $fileUploadReference has been received.").
+      getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
 
-  private def gmp_upload_reference_processed_for_subject(params : Params) =
-   params.get("fileUploadReference").map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.").getOrElse(throw new MissingTemplateParameterException("fileUploadReference"))
-
+  private val gmp_upload_reference_processed_for_subject: Map[String, String] => String =
+   _.get("fileUploadReference").map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.").
+     getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
 }

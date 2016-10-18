@@ -16,41 +16,39 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.awrs
 
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.AlcoholWholesalerRegistrationScheme
-import uk.gov.hmrc.hmrcemailrenderer.templates.{GovUkTemplate, TemplateGroup}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AlcoholWholesalerRegistrationScheme
 
-object AwrsTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "AWRS"
+object AwrsTemplates  {
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "awrs_notification_template_reg_change",
-      regime = AlcoholWholesalerRegistrationScheme,
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_reg_change",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
       subject = "AWRS registration change",
-      plainTemplate = txt.awrsNotificationEmailRegChange.apply,
-      htmlTemplate = html.awrsNotificationEmailRegChange.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "awrs_notification_template_app_change",
-      regime = AlcoholWholesalerRegistrationScheme,
+      plainTemplate = txt.awrsNotificationEmailRegChange.f,
+      htmlTemplate = html.awrsNotificationEmailRegChange.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_app_change",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
       subject = "AWRS application change",
-      plainTemplate = txt.awrsNotificationEmailAppChange.apply,
-      htmlTemplate = html.awrsNotificationEmailAppChange.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "awrs_notification_template_comfirmation_api4",
-      regime = AlcoholWholesalerRegistrationScheme,
+      plainTemplate = txt.awrsNotificationEmailAppChange.f,
+      htmlTemplate = html.awrsNotificationEmailAppChange.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api4",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
       subject = "AWRS application confirmation",
-      plainTemplate = txt.awrsNotificationConfirmationAPI4.apply,
-      htmlTemplate = html.awrsNotificationConfirmationAPI4.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "awrs_notification_template_comfirmation_api6",
-      regime = AlcoholWholesalerRegistrationScheme,
+      plainTemplate = txt.awrsNotificationConfirmationAPI4.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI4.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api6",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
       subject = "AWRS amendment confirmation",
-      plainTemplate = txt.awrsNotificationConfirmationAPI6.apply,
-      htmlTemplate = html.awrsNotificationConfirmationAPI6.apply,
-      fromAddress = govUkTeamAddress)
+      plainTemplate = txt.awrsNotificationConfirmationAPI6.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI6.f)
   )
 }

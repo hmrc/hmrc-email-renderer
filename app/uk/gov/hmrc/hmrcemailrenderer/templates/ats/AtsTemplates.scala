@@ -16,24 +16,22 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ats
 
-import uk.gov.hmrc.email.services.BodyTemplate.{Params, Subject}
-import uk.gov.hmrc.email.services.{MissingTemplateParameterException, SimpleMessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.{TemplateGroup, GovUkTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.AnnualTaxSummary
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummary
 
-object AtsTemplates extends {
-  val title = "ATS"
+object AtsTemplates {
 
-  private def ats_year_for_subject(params : Params) =
-    params.get("taxYear").map(year => s"Your Annual Tax Summary for $year is now ready").getOrElse(throw new MissingTemplateParameterException("taxYear"))
+  private val ats_year_for_subject: Map[String, String] => String =
+    _.get("taxYear").map(year => s"Your Annual Tax Summary for $year is now ready").
+      getOrElse(throw new RuntimeException("Missing parameter taxYear"))
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "annual_tax_summaries_message_alert",
-      regime = AnnualTaxSummary,
-      subject = Subject(ats_year_for_subject),
-      plainTemplate = txt.annualTaxSummariesMessageAlert.apply,
-      htmlTemplate = html.annualTaxSummariesMessageAlert.apply,
-      fromAddress = " HMRC Your Annual Tax Summary <noreply@tax.service.gov.uk>")
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "annual_tax_summaries_message_alert",
+      fromAddress = " HMRC Your Annual Tax Summary <noreply@tax.service.gov.uk>",
+      service = AnnualTaxSummary,
+      subject = ats_year_for_subject,
+      plainTemplate = txt.annualTaxSummariesMessageAlert.f,
+      htmlTemplate = html.annualTaxSummariesMessageAlert.f)
   )
 }

@@ -16,35 +16,34 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.fandf
 
-import uk.gov.hmrc.email.services.BodyTemplate.Subject
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.FriendsAndFamily
-import uk.gov.hmrc.hmrcemailrenderer.templates._
-import uk.gov.hmrc.email.services.BodyTemplate.Params
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.FriendsAndFamily
 
-object FandFTemplates extends TemplateGroup with HmrcTemplate {
-  val title = "FANDF"
+object FandFTemplates  {
 
-  private def ask_help_subject(params : Params) =
+  val trustedHelpersTeamAddress = "HMRC Trusted Helpers <noreply@tax.service.gov.uk>"
+  val taxCreditServiceTeamAddress = "HMRC Tax Credits Service <noreply@tax.service.gov.uk>"
+
+  private def ask_help_subject(params : Map[String, String]) =
     params.get("helpeeFirstName").flatMap(fname => params.get("helpeeLastName").map(lname => s"$fname $lname " )).getOrElse("Someone ") +"would like your help with tax online"
 
-  private def offer_help_subject(params : Params) =
+  private def offer_help_subject(params : Map[String, String]) =
     params.get("helperFirstName").flatMap(fname => params.get("helperLastName").map(lname => s"$fname $lname " )).getOrElse("Someone ") +"wants to help you with your tax online"
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "fandf_ask_help_notification",
-      regime = FriendsAndFamily,
-      subject = Subject(ask_help_subject),
-      plainTemplate = txt.newFandFAskHelpMessageAlert.apply,
-      htmlTemplate = html.newFandFAskHelpMessageAlert.apply,
-      fromAddress = trustedHelpersTeamAddress),
-    SimpleMessageTemplate(
-      id = "fandf_offer_help_notification",
-      regime = FriendsAndFamily,
-      subject = Subject(offer_help_subject),
-      plainTemplate = txt.newFandFOfferHelpMessageAlert.apply,
-      htmlTemplate = html.newFandFOfferHelpMessageAlert.apply,
-      fromAddress = trustedHelpersTeamAddress)
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "fandf_ask_help_notification",
+      fromAddress = trustedHelpersTeamAddress,
+      service = FriendsAndFamily,
+      subject = ask_help_subject(_),
+      plainTemplate = txt.newFandFAskHelpMessageAlert.f,
+      htmlTemplate = html.newFandFAskHelpMessageAlert.f),
+    MessageTemplate.create(
+      templateId = "fandf_offer_help_notification",
+      fromAddress = trustedHelpersTeamAddress,
+      service = FriendsAndFamily,
+      subject = offer_help_subject(_),
+      plainTemplate = txt.newFandFOfferHelpMessageAlert.f,
+      htmlTemplate = html.newFandFOfferHelpMessageAlert.f)
   )
 }

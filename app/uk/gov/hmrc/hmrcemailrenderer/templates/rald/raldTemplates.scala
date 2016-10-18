@@ -16,21 +16,19 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.rald
 
-import uk.gov.hmrc.email.services.SimpleMessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.PayAsYouEarn
-import uk.gov.hmrc.hmrcemailrenderer.templates._
-import Regime.RentalAndLeaseDetails
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
+import views.{html, txt}
 
-object RaldTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "RALD"
+object RaldTemplates {
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "rald_alert",
-      regime = RentalAndLeaseDetails,
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "rald_alert",
+      fromAddress = "Rent and Lease Details <noreply@tax.service.gov.uk>",
+      service = RentalAndLeaseDetails,
       subject = "Your saved Rent and Lease details expires in 90 days.",
-      plainTemplate = txt.rald.apply,
-      htmlTemplate = html.rald.apply,
-      fromAddress = "Rent and Lease Details <noreply@tax.service.gov.uk>")
+      plainTemplate = txt.rald.f,
+      htmlTemplate = html.rald.f)
   )
 }

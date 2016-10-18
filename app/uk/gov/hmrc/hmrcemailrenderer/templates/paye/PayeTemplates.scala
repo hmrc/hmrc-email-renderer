@@ -16,20 +16,18 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
-import uk.gov.hmrc.email.services.{BodyTemplate, SimpleMessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.Regime.PayAsYouEarn
-import uk.gov.hmrc.hmrcemailrenderer.templates._
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
 
-object PayeTemplates extends TemplateGroup with GovUkTemplate {
-  val title = "PAYE"
+object PayeTemplates  {
 
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "tax_estimate_message_alert",
-      regime = PayAsYouEarn,
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "tax_estimate_message_alert",
+      fromAddress = " HMRC Check your Income Tax service <noreply@tax.service.gov.uk>",
+      service  = PayAsYouEarn,
       subject = "Your Income Tax estimate has changed",
-      plainTemplate = txt.newTaxEstimateMessageAlert.apply,
-      htmlTemplate = html.newTaxEstimateMessageAlert.apply,
-      fromAddress = " HMRC Check your Income Tax service <noreply@tax.service.gov.uk>")
+      plainTemplate = txt.newTaxEstimateMessageAlert.f,
+      htmlTemplate = html.newTaxEstimateMessageAlert.f)
   )
 }
