@@ -26,7 +26,7 @@ object TcsTemplates  {
       fromAddress = "HMRC Tax Credits Service <noreply@tax.service.gov.uk>",
       service  = TaxCreditsService,
       subject = "Your tax credits renewal has been received",
-      plainTemplate = txt.newTcsRenewalConfirmationMessageAlert.applf,
+      plainTemplate = txt.newTcsRenewalConfirmationMessageAlert.f,
       htmlTemplate = html.newTcsRenewalConfirmationMessageAlert.f)
   )
 }

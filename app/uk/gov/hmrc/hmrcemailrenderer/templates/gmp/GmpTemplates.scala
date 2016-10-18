@@ -21,6 +21,15 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GuaranteedMinim
 
 object GmpTemplates {
 
+
+  private val gmp_upload_reference_received_for_subject: Map[String, String] => String =
+    _.get("fileUploadReference").map(fileUploadReference => s"Your file $fileUploadReference has been received.").
+      getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
+
+  private val gmp_upload_reference_processed_for_subject: Map[String, String] => String =
+    _.get("fileUploadReference").map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.").
+      getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
+  
   val from = "GMP Checker <noreply@tax.service.gov.uk>"
 
   val templates = Seq(
@@ -42,11 +51,4 @@ object GmpTemplates {
         )
     )
 
-  private val gmp_upload_reference_received_for_subject: Map[String, String] => String =
-    _.get("fileUploadReference").map(fileUploadReference => s"Your file $fileUploadReference has been received.").
-      getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
-
-  private val gmp_upload_reference_processed_for_subject: Map[String, String] => String =
-   _.get("fileUploadReference").map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.").
-     getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
 }

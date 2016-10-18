@@ -15,7 +15,7 @@
  */
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.passcode
-
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 object PasscodesTemplates  {
 // TODO Something odd going on here revisit DC-607
 

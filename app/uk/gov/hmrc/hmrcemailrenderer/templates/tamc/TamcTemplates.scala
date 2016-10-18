@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tamc
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TaxAllowanceForMarriedCouples
-import uk.gov.hmrc.hmrcemailrenderer.templates._
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object TamcTemplates {
 

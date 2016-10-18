@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
-object childcareTemplates {
+object ChildcareTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "childcare_registration_email",
