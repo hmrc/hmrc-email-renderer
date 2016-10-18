@@ -14,19 +14,24 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.rald
+package uk.gov.hmrc.hmrcemailrenderer.templates.bars
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.BusinessRates
 
-object RaldTemplates {
+object BarsTemplates  {
+
+  private val getBARefCode: Map[String, String] => String =
+    _.getOrElse("baRefNumber", "No BA CODE")
+
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "rald_alert",
-      fromAddress = "Rent and Lease Details <noreply@tax.service.gov.uk>",
-      service = RentalAndLeaseDetails,
-      subject = "Your saved Rent and Lease details expires in 90 days.",
-      plainTemplate = txt.rald.f,
-      htmlTemplate = html.rald.f)
+      templateId = "bars_alert",
+      fromAddress = FromAddress.noReply("Business Rates"),
+      service = BusinessRates,
+      subject = getBARefCode,
+      plainTemplate = txt.bars.f,
+      htmlTemplate = html.bars.f)
   )
 }

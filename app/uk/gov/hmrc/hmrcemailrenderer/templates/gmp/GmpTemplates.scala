@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.gmp
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GuaranteedMinimumPension
 
 object GmpTemplates {
@@ -30,7 +31,7 @@ object GmpTemplates {
     _.get("fileUploadReference").map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.").
       getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
   
-  val from = "GMP Checker <noreply@tax.service.gov.uk>"
+  val from = FromAddress.noReply("GMP Checker")
 
   val templates = Seq(
     MessageTemplate.create(

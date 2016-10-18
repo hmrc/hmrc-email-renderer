@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
 
 object PayeTemplates  {
@@ -24,7 +25,7 @@ object PayeTemplates  {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "tax_estimate_message_alert",
-      fromAddress = " HMRC Check your Income Tax service <noreply@tax.service.gov.uk>",
+      fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
       service  = PayAsYouEarn,
       subject = "Your Income Tax estimate has changed",
       plainTemplate = txt.newTaxEstimateMessageAlert.f,

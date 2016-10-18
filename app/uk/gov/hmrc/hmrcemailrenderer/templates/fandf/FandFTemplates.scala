@@ -17,12 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.fandf
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.FriendsAndFamily
 
 object FandFTemplates  {
-
-  val trustedHelpersTeamAddress = "HMRC Trusted Helpers <noreply@tax.service.gov.uk>"
-  val taxCreditServiceTeamAddress = "HMRC Tax Credits Service <noreply@tax.service.gov.uk>"
+  val trustedHelpersTeamAddress = FromAddress.noReply("HMRC Trusted Helpers")
 
   private def ask_help_subject(params : Map[String, String]) =
     params.get("helpeeFirstName").flatMap(fname => params.get("helpeeLastName").map(lname => s"$fname $lname " )).getOrElse("Someone ") +"would like your help with tax online"

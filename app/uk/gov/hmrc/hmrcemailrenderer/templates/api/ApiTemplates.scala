@@ -18,18 +18,18 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
-
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
 /**
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  val title = "API Platform"
-
+  val from = FromAddress.noReply("HMRC API Developer")
+  
   val templates = Seq(
     MessageTemplate.create(
       templateId = "apiDeveloperEmailVerification",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "Verify your email address",
       plainTemplate = txt.verificationEmail.f,
@@ -38,14 +38,14 @@ object ApiTemplates {
     MessageTemplate.create(
       templateId = "apiDeveloperPasswordReset",
       service = ApiDeveloperHub,
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       subject = "Reset your password",
       plainTemplate = txt.passwordResetEmail.f,
       htmlTemplate = html.passwordResetEmail.f
     ),
     MessageTemplate.create(
       templateId = "apiDeveloperChangedPasswordConfirmation",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "You have reset your password",
       plainTemplate = txt.passwordChangedConfirmationEmail.f,
@@ -53,7 +53,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.f,
@@ -61,7 +61,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
@@ -69,7 +69,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiAddedDeveloperAsCollaboratorNotification",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "A collaborator has been added to your application",
       plainTemplate = txt.apiAddedDeveloperAsCollaboratorNotification.f,
@@ -77,7 +77,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiRemovedCollaboratorConfirmation",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "You have been removed from an application",
       plainTemplate = txt.apiRemovedCollaboratorConfirmation.f,
@@ -85,7 +85,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiRemovedCollaboratorNotification",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "A collaborator has been removed from your application",
       plainTemplate = txt.apiRemovedCollaboratorNotification.f,
@@ -93,7 +93,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiApplicationApprovedGatekeeperConfirmation",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedGatekeeperConfirmation.f,
@@ -101,7 +101,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiApplicationApprovedAdminConfirmation",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "Application name approved: Verify your email address",
       plainTemplate = txt.apiApplicationApprovedAdminConfirmation.f,
@@ -109,7 +109,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiApplicationApprovedNotification",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedNotification.f,
@@ -117,7 +117,7 @@ object ApiTemplates {
     ),
     MessageTemplate.create(
       templateId = "apiApplicationRejectedNotification",
-      fromAddress = "HMRC API Developer Hub <noreply@tax.service.gov.uk>",
+      fromAddress = from,
       service = ApiDeveloperHub,
       subject = "Application not approved",
       plainTemplate = txt.apiApplicationRejectedNotification.f,

@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.ats
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummary
 
 object AtsTemplates {
@@ -28,7 +29,7 @@ object AtsTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "annual_tax_summaries_message_alert",
-      fromAddress = " HMRC Your Annual Tax Summary <noreply@tax.service.gov.uk>",
+      fromAddress = FromAddress.noReply("HMRC Your Annual Tax Summary"),
       service = AnnualTaxSummary,
       subject = ats_year_for_subject,
       plainTemplate = txt.annualTaxSummariesMessageAlert.f,
