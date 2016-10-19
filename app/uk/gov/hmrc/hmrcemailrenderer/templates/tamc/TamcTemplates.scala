@@ -189,14 +189,6 @@ object TamcTemplates {
       service = TaxAllowanceForMarriedCouples,
       subject = "Eich newid i Lwfans Priodas",
       plainTemplate = txt.tamcRecipientRejectsRetroYrEmailCy.f,
-      htmlTemplate = html.tamcRecipientRejectsRetroYrEmailCy.f),
-    MessageTemplate.create(
-      templateId = "tamc_access_invitation_template_id",
-      fromAddress = govUkTeamAddress,
-      service = TaxAllowanceForMarriedCouples,
-      subject = "Your HMRC Marriage Allowance link",
-      plainTemplate = txt.tamcVerificationEmail.f,
-      htmlTemplate = html.tamcVerificationEmail.f)
-
+      htmlTemplate = html.tamcRecipientRejectsRetroYrEmailCy.f)
   )
 }

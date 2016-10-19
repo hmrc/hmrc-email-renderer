@@ -45,13 +45,6 @@ object GmpTemplates {
       service = GuaranteedMinimumPension,
       subject = gmp_upload_reference_processed_for_subject,
       plainTemplate = txt.gmpFileProcessedNotificationEmail.f,
-      htmlTemplate = html.gmpFileProcessedNotificationEmail.f),
-    MessageTemplate.create(
-      templateId = "gmp_access_invitation_template_id",
-      fromAddress = FromAddress.govUkTeamAddress,
-      service = GuaranteedMinimumPension,
-      subject = "Your check a GMP link",
-      plainTemplate = txt.gmpVerificationEmail.f,
-      htmlTemplate = html.gmpVerificationEmail.f)
+      htmlTemplate = html.gmpFileProcessedNotificationEmail.f)
   )
 }

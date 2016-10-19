@@ -56,6 +56,27 @@ object PasscodesTemplates {
       service = Generic,
       subject = "Your HMRC service test link",
       plainTemplate = txt.genericVerificationEmail.f,
-      htmlTemplate = html.genericVerificationEmail.f)
+      htmlTemplate = html.genericVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "iht_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = InheritanceTax,
+      subject = "How to access HMRC’s Inheritance Tax Online service",
+      plainTemplate = txt.ihtVerificationEmail.f,
+      htmlTemplate = html.ihtVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "tamc_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = TaxAllowanceForMarriedCouples,
+      subject = "Your HMRC Marriage Allowance link",
+      plainTemplate = txt.tamcVerificationEmail.f,
+      htmlTemplate = html.tamcVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "gmp_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = GuaranteedMinimumPension,
+      subject = "Your check a GMP link",
+      plainTemplate = txt.gmpVerificationEmail.f,
+      htmlTemplate = html.gmpVerificationEmail.f)
   )
 }
