@@ -1,0 +1,29 @@
+@(params: Map[String, Any])Start using new HMRC Agent Services
+
+Dear @{params("name")}
+
+You registered your interest in using new HMRC Agent Services. This service is now available to use.
+
+You’ll be able to:
+
+use a simpler, clearer design to navigate around your services
+
+see your clients’ PAYE payments and liabilities accounts
+
+Before you start
+
+You’ll need your Government Gateway details to sign in.
+
+Click on the link below to access the service.
+
+@{params("verificationLink")}
+
+Don’t delete this email, as you’ll need to use this link each time you want to access the service.
+
+As this is a work in progress, you’ll be redirected back to the original HMRC website for some services.
+
+You can complete a survey about the new service when you sign out.
+
+From HMRC Agent Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

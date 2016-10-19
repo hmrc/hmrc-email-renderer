@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Someone’s offered to become your Trusted Helper
+
+Dear @{params("helpeeFirstName")} @{params("helpeeLastName")}
+
+@{params("helperFirstName")} @{params("helperLastName")} has offered to become your Trusted Helper and help with your tax online.
+
+Trusted Helper is an online service from HM Revenue and Customs (HMRC) which allows people to help their friends and family manage their tax affairs online.
+
+Before you start
+
+You’ll need your National Insurance number to hand.
+
+You’ll also need to set up an account with GOV.UK Verify, if you don’t already have one.
+
+Click on the link below to accept @{params("helperFirstName")}’s offer to help you.
+
+https://www.gov.uk/help-friends-family-tax
+
+You have 28 days to respond.
+
+From HMRC Trusted Helper
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

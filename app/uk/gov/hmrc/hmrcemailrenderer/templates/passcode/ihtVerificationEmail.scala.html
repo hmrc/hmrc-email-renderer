@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Start using HMRC Inheritance Tax Online Service") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">The Inheritance Tax Online Service is now available to use.</p>
+<h2 id="before-you-start" style="margin: 0 0 30px; font-size: 24px;">Before you start</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll need your Government Gateway details to sign in.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll also need to register to use the service and tell HMRC the following:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>details about yourself and the person who has died</li>
+    <li>details about anyone else applying to the Probate Service, including National Insurance numbers and contact details</li>
+</ul>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll also need to tell us about the deceased’s estate, including:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>what they owned when they died</li>
+    <li>any gifts they gave away in the last 7 years before they died</li>
+    <li>any debts owed from the estate</li>
+</ul>
+<p style="margin: 0 0 30px; font-size: 19px;">The service will calculate the total value of the estate, but you’ll need to provide valuations of what the deceased owned and owed.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to access the service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can save your progress and come back to continue the process at any time.</p>
+<h2 id="getting-help" style="margin: 0 0 30px; font-size: 24px;">Getting help</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">We recommend that you read the Inheritance Tax guidance notes, which give more information about completing an Inheritance Tax estate report. They’re available through the link above.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can get additional help by contacting <a href="mailto:ihtonline.privatebeta@@hmrc.gsi.gov.uk" style="color: #005EA5;">ihtonline.privatebeta@@hmrc.gsi.gov.uk</a>.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You should already have received an email with all of the details you need to apply to the Probate Service for a grant of representation. You can only apply to the Probate Service when you’ve completed the Inheritance Tax process. This is because you’ll need details from the service to finish your Probate Application Form (PA1).</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Inheritance Tax</p>
+}

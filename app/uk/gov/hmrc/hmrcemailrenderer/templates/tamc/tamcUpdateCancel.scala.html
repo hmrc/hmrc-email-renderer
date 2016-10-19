@@ -1,0 +1,16 @@
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
+
+<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">Marriage Allowance cancelled</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your Marriage Allowance will be removed on @{params("endDate")}, at the end of the current tax year.</p>
+
+<p style="font-size: 22px; line-height: 1.315789474; margin: 0 0 30px 0;">What happens next</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If your partner pays tax through PAYE, we&rsquo;ll change their tax code and send them notification of their new tax code in the post. We&rsquo;ll tell their employer and your Marriage Allowance will stop when they begin using this new code from the start of the new tax year on @{params("startDate")}.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If they complete a Self Assessment tax return, we&rsquo;ll remove Marriage Allowance at the end of the current tax year on @{params("endDate")}. Their Personal Allowance will be adjusted on @{params("startDate")}.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">There is no need to contact us. You can check the status of your Marriage Allowance on your personal tax account at www.gov.uk/personal-tax-account</p>
+
+}
+

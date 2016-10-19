@@ -1,0 +1,14 @@
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Annual Tax Summary is ready", footerMessage = Some(footer)) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Thank you for completing your Self Assessment tax return.</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">There's a summary in your HMRC online account showing ‎how much tax and National Insurance you have paid and how Government spends it.</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Sign in and check the messages‎ in your online account to see your personal summary.</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Tax summaries are for information only so you don't need to contact HMRC.</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Yours sincerely</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Ruth Owen</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Personal Tax Director General</p>
+}
+
+@footer = {
+To manage your paperless notifications - sign in to your HMRC online account.
+}

@@ -1,0 +1,11 @@
+@(params: Map[String, Any])Verify your email address
+
+Your application name @{params("applicationName")} has been approved.
+
+The admin who submitted the name needs to verify their email address again. This is for security purposes.
+
+The application will then be able to access production credentials.
+
+From HMRC API Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

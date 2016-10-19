@@ -28,9 +28,9 @@ class PreviewSpec extends UnitSpec {
         MessageTemplate.create(id, "", ServiceIdentifier.SelfAssessment, id, (_ => ???): Body.Plain, (_ => ???): Body.Html)
       }
 
-      val result = PreviewGroup.createPreviewGroup(ServiceIdentifier.SelfAssessment, templates)
+      val result = PreviewGroup.createPreviewGroup("Self Assessment", templates)
 
-      result.name shouldBe ServiceIdentifier.SelfAssessment.title
+      result.name shouldBe "Self Assessment"
       result.items should contain only(
         PreviewListItem("does not exist", "does not exist", Map.empty),
         PreviewListItem("also does not exist", "also does not exist", Map.empty)

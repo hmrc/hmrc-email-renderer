@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Verify your email address") {
+<p style="margin: 0 0 30px; font-size: 19px;">Your application name <strong>@{params("applicationName")}</strong> has been approved.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We need you to verify this email account again for security purposes. You’ll then be able to access production credentials.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to verify your email account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("developerHubLink")}" style="padding-bottom:10px;color:#005ea5;text-decoration:underline;">@{params("developerHubLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">This link expires in 90 days.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC API Developer Hub</p>
+}

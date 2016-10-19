@@ -1,0 +1,11 @@
+@(params: Map[String, Any])We’ve received your HMRC GMP checker calculation file
+
+Your reference: @{params("fileUploadReference")}
+
+It’s being processed and we’ll email you when the results are ready.
+
+This should take no longer than 72 hours.
+
+From HMRC GMP checker
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

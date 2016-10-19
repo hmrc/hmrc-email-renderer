@@ -1,0 +1,20 @@
+@(params: Map[String, Any])Your tax credits renewal has been received
+
+Your online reference number is @{params("renewalReference")}
+
+You do not need to do anything else
+
+Do not send us your renewal pack through the post, as this will delay your renewal.
+
+What happens next
+
+We will work out how much tax credits you:
+
+- should have got
+- will get from @{params("startDate")} to @{params("endDate")}, unless your claim has ended
+
+We will send you an award notice that you should get by @{params("noticeDate")}.
+
+From HMRC Tax Credits
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

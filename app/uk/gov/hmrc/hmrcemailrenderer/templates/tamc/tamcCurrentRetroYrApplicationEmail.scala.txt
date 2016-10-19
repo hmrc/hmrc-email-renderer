@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+
+Confirmation of your Marriage Allowance application
+
+What happens next
+
+Current tax year
+
+If your partner pays tax through PAYE they will receive notification of their new tax code in the post. We’ll tell their employer and your Marriage Allowance will start when they begin using this new code. If you are claiming part way through the tax year, their Marriage Allowance will be backdated to the start of the current tax year.
+
+If your partner completes a Self Assessment tax return, their tax bill will be adjusted to include Marriage Allowance when they file their return.
+
+Your Marriage Allowance will automatically continue until you or your partner cancel it, or you’re no longer eligible as a couple.
+
+Earlier tax years
+
+HMRC will check your eligibility before processing your application.
+
+If your partner pays tax through PAYE, we'll send them a cheque in the post for each tax year you are eligible for.
+
+If your partner completes a Self Assessment tax return, we'll send a cheque in the post or deduct the amount from their next tax bill (depending on the preference they've registered with HMRC).
+
+There is no need to contact us.
+
+You can let us know about any changes to your circumstances at https://www.gov.uk/marriage-allowance-guide/if-your-circumstances-change.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

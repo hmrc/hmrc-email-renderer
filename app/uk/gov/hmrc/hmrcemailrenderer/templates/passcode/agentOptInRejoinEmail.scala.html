@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rejoin the HMRC Agent Services") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ve told us that you want to rejoin the new Agent Services.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below and sign in to your service to begin the switching process.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">This unique link will only work once, so make sure you finish the process in one go.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Agent Services</p>
+}

@@ -1,0 +1,12 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Start using HMRC Company Accounts and Tax Online") {
+<p style="margin: 0 0 30px; font-size: 19px;">Our reference: CATO PB 14</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You registered your interest in using Company Accounts and Tax Online. This service is now available to use.</p>
+<h2 id="before-you-start" style="margin: 0 0 30px; font-size: 24px;">Before you start</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll need your Government Gateway details to sign in.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll also need your Companies House details if you’re filing your accounts with Companies House at the same time.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to access the service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Don’t delete this email, as you’ll need to use this link each time you want to access the service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From Company Accounts and HMRC Tax Online</p>
+}

@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Your Annual Tax Summary is ready
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Thank you for completing your Self Assessment tax return.
+
+There's a summary in your HMRC online account showing ‎how much tax and National Insurance you have paid and how Government spends it.
+
+Sign in and check the messages‎ in your online account to see your personal summary.
+
+Tax summaries are for information only so you don't need to contact HMRC.
+
+Yours sincerely
+
+Ruth Owen
+
+Personal Tax Director General
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

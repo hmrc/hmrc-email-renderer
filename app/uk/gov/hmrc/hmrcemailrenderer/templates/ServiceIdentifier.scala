@@ -18,11 +18,25 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 
 sealed trait ServiceIdentifier extends Product with Serializable {
   def name: String
-  def title: String
 }
 object ServiceIdentifier {
-  case object SelfAssessment extends ServiceIdentifier {
-    override val title = "Self Assessment"
-    override val name  = "sa"
-  }
+  case object Agent extends ServiceIdentifier { override val name = "agent" }
+  case object AgentOptInExclude extends ServiceIdentifier { override val name = "agent-optin-exclude" }
+  case object AgentOptInRejoin extends ServiceIdentifier { override val name = "agent-optin-rejoin" }
+  case object AlcoholWholesalerRegistrationScheme extends ServiceIdentifier { override val name = "awrs" }
+  case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
+  case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
+  case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
+  case object Childcare extends ServiceIdentifier { override val name = "cc" }
+  case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
+  case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
+  case object FriendsAndFamily extends ServiceIdentifier { override val name = "fandf" }
+  case object GuaranteedMinimumPension extends ServiceIdentifier { override val name = "gmp" }
+  case object Generic extends ServiceIdentifier { override val name = "generic" }
+  case object InheritanceTax extends ServiceIdentifier { override val name = "iht" }
+  case object PayAsYouEarn extends ServiceIdentifier { override val name = "paye" }
+  case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
+  case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
+  case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
+  case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
 }

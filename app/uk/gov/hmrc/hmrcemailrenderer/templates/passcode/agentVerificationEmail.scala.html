@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Start using new HMRC Agent Services") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You registered your interest in using new HMRC Agent Services. This service is now available to use.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll be able to:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>use a simpler, clearer design to navigate around your services</li>
+    <li>see your clients’ PAYE payments and liabilities accounts</li>
+</ul>
+<h2 id="before-you-start" style="margin: 0 0 30px; font-size: 24px;">Before you start</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll need your Government Gateway details to sign in.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to access the service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a>)</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Don’t delete this email, as you’ll need to use this link each time you want to access the service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">As this is a work in progress, you’ll be redirected back to the original HMRC website for some services.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can complete a survey about the new service when you sign out.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Agent Services</p>
+}
