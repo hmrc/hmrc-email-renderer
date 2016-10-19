@@ -15,47 +15,47 @@
  */
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.passcode
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-object PasscodesTemplates  {
-// TODO Something odd going on here revisit DC-607
 
-  /*
-  def subGroups = Seq(
-    SimpleMessageTemplate(
-      id = "generic_access_invitation_template_id",
-      regime = Generic,
-      subject = "Your HMRC service test link",
-      plainTemplate = passcode.txt.genericVerificationEmail.apply,
-      htmlTemplate = passcode.html.genericVerificationEmail.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "cato_access_invitation_template_id",
-      regime = CompanyAccountsTaxOnline,
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier._
+
+object PasscodesTemplates {
+  val templates = Seq(
+    MessageTemplate.create(
+      templateId = "cato_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = CompanyAccountsTaxOnline,
       subject = "A new method of filing your Accounts and Company Tax Return",
-      plainTemplate = passcode.txt.catoVerificationEmail.apply,
-      htmlTemplate = passcode.html.catoVerificationEmail.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "agents_access_invitation_template_id",
-      regime = Agent,
-      subject = "Invite: Test and view your clients’ PAYE for employers accounts",
-      plainTemplate = passcode.txt.agentVerificationEmail.apply,
-      htmlTemplate = passcode.html.agentVerificationEmail.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "agents_opt_in_exclude_template_id",
-      regime = AgentOptInExclude,
+      plainTemplate = txt.catoVerificationEmail.f,
+      htmlTemplate = html.catoVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "agents_opt_in_exclude_template_id",
+      fromAddress = govUkTeamAddress,
+      service = AgentOptInExclude,
       subject = "Switch back from Agent Services to the original HMRC online services",
-      plainTemplate = passcode.txt.agentOptInExcludeEmail.apply,
-      htmlTemplate = passcode.html.agentOptInExcludeEmail.apply,
-      fromAddress = govUkTeamAddress),
-    SimpleMessageTemplate(
-      id = "agents_opt_in_rejoin_template_id",
-      regime = AgentOptInRejoin,
+      plainTemplate = txt.agentOptInExcludeEmail.f,
+      htmlTemplate = html.agentOptInExcludeEmail.f),
+    MessageTemplate.create(
+      templateId = "agents_opt_in_rejoin_template_id",
+      fromAddress = govUkTeamAddress,
+      service = AgentOptInRejoin,
       subject = "Rejoin the new Agent Services from HMRC",
-      plainTemplate = passcode.txt.agentOptInRejoinEmail.apply,
-      htmlTemplate = passcode.html.agentOptInRejoinEmail.apply,
-      fromAddress = govUkTeamAddress),
+      plainTemplate = txt.agentOptInRejoinEmail.f,
+      htmlTemplate = html.agentOptInRejoinEmail.f),
+    MessageTemplate.create(
+      templateId = "agents_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = Agent,
+      subject = "Invite: Test and view your clients’ PAYE for employers accounts",
+      plainTemplate = txt.agentVerificationEmail.f,
+      htmlTemplate = html.agentVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "generic_access_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = Generic,
+      subject = "Your HMRC service test link",
+      plainTemplate = txt.genericVerificationEmail.f,
+      htmlTemplate = html.genericVerificationEmail.f)
   )
-  */
 }

@@ -101,8 +101,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
         "staticAssetVersion" -> "version",
         "staticAssetUrlPrefix" -> "prefix"
       )
-      compareContent("newMessageAlert_SS300", params)(sa300Templates)
-      compareContent("newMessageAlert_SA300", params)(sa300Templates)
+      compareContent("newMessageAlert_SS300", params)(digitalContactTemplate)
+      compareContent("newMessageAlert_SA300", params)(digitalContactTemplate)
     }
 
     "include SA309 templates" in new TemplateComparison {
@@ -178,12 +178,6 @@ trait TemplateLoader {
 
   def messageTemplateF(id: String): Seq[MessageTemplate] => Option[(HtmlTemplate, TextTemplate)] =
     _.collectFirst { case x: MessageTemplate if x.templateId == id => (x.htmlTemplate, x.plainTemplate) }
-
-  def sa300Templates(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
-    messageTemplateF(templateId)(DigitalContactTemplates.templates)
-
-  def sa316Templates(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
-    messageTemplateF(templateId)(DigitalContactTemplates.templates)
 
   def digitalContactTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(DigitalContactTemplates.templates)

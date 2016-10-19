@@ -17,7 +17,6 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier._
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
@@ -30,28 +29,31 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemp
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.iht.IhtTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 
 trait TemplateLocator {
-  def templateGroups: Map[ServiceIdentifier, Seq[MessageTemplate]] =
-    Map(ApiDeveloperHub -> ApiTemplates.templates,
-        AnnualTaxSummary -> AtsTemplates.templates,
-        AlcoholWholesalerRegistrationScheme -> AwrsTemplates.templates,
-        BusinessRates -> BarsTemplates.templates,
-        (Childcare, CcTemplates.templates ++ ChildcareTemplates.templates ++ ChildcareSchemesInterestTemplates.templates),
-        DigitalFormsService -> DfsTemplates.templates,
-        FriendsAndFamily -> FandFTemplates.templates,
-        GuaranteedMinimumPension -> GmpTemplates.templates,
-        InheritanceTax -> IhtTemplates.templates,
-        PayAsYouEarn -> PayeTemplates.templates,
-        RentalAndLeaseDetails -> RaldTemplates.templates,
-        SelfAssessment -> DigitalContactTemplates.templates,
-        TaxAllowanceForMarriedCouples -> TamcTemplates.templates,
-        TaxCreditsService -> TcsTemplates.templates
-    )
+  def templateGroups: Map[String, Seq[MessageTemplate]] =
+    Map("API Platform"             -> ApiTemplates.templates,
+        "ATS"                      -> AtsTemplates.templates,
+        "AWRS"                     -> AwrsTemplates.templates,
+        "BARS"                     -> BarsTemplates.templates,
+        "CC"                       -> CcTemplates.templates,
+        "ChildcareCalculator"      -> ChildcareTemplates.templates,
+        "ChildcareSchemesInterest" -> ChildcareSchemesInterestTemplates.templates,
+        "DFS"                      -> DfsTemplates.templates,
+        "FANDF"                    -> FandFTemplates.templates,
+        "Passcodes"                -> PasscodesTemplates.templates,
+        "GMP"                      -> GmpTemplates.templates,
+        "Inheritance Tax"          -> IhtTemplates.templates,
+        "PAYE"                     -> PayeTemplates.templates,
+        "RALD"                     -> RaldTemplates.templates,
+        "Self Assessment"          -> DigitalContactTemplates.templates,
+        "TAMC"                     -> TamcTemplates.templates,
+        "TCS"                      -> TcsTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 
