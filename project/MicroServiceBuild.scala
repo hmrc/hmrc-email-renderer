@@ -20,6 +20,7 @@ private object AppDependencies {
     "uk.gov.hmrc"       %% "play-json-logger"       % "2.1.1",
     "uk.gov.hmrc"       %% "domain"                 % "3.7.0",
     "uk.gov.hmrc"       %% "emailaddress"           % "1.1.0",
+    "org.jsoup"         %  "jsoup"                  % "1.7.3"             % "test",
     "uk.gov.hmrc"       %% "hmrctest"               % "1.8.0"             % "test, it",
     "uk.gov.hmrc"       %% "http-verbs-test"        % "0.1.0"             % "test, it",
     "org.scalatest"     %% "scalatest"              % "2.2.6"             % "test, it",

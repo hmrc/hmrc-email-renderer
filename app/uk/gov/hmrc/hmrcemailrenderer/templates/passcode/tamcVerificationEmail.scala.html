@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Apply for HMRC Marriage Allowance") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You registered your interest in applying for Marriage Allowance. This service is now available to use.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">As a couple you may benefit by up to &pound;212 a year.</p>
+<h2 id="before-you-start" style="margin: 0 0 30px; font-size: 24px;">Before you start</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll need your own and your partner’s national insurance numbers.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You’ll also need a way to prove your identity. This can be one of the following:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>your passport number and expiry date</li>
+    <li>the last 4 digits of the account that your child benefit, tax credits or pension is paid into</li>
+    <li>the last 4 digits of an account that pays you interest</li>
+    <li>details from your P60</li>
+    <li>details from any of your 3 most recent payslips</li>
+</ul>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to start your application.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Don’t delete this email, as you’ll need to use this link each time you want to access your application. You can use this link up to 6 times.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This link is personal to you, so please do not share it with others unless they’re applying on your behalf.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Marriage Allowance</p>
+}

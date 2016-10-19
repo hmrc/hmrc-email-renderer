@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Thanks for using the new Marriage Allowance service. Your transfer was successful.
+
+We’ll reduce your Personal Allowance by £1,060 and increase your spouse or civil partner's allowance by the same amount. This will apply for the current tax year and will continue into future tax years.
+
+If your spouse or civil partner usually completes a Self Assessment return, we’ll write to them to confirm the transfer.
+
+If they’re employed and pay tax via PAYE, we’ll send them a revised notice of tax coding by post in due course.
+
+Your revised notice of tax coding will show in your personal account within 24 hours.
+
+There is no need to contact us.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

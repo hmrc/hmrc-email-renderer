@@ -1,0 +1,11 @@
+@(params: Map[String, Any])You’ve stopped paperless notifications
+
+You’ve chosen to stop paperless notifications.
+
+Your notifications will now be sent in the post.
+
+You can choose to go paperless again at any time through your HMRC online account.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+
+Dear @{params("name")},
+
+HM Revenue and Customs (HMRC) has received your claim for a tax refund.
+
+Your reference is @{params("submissionReference")}.
+
+If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed.
+If you’re not entitled to a refund we will write and explain the reason why.
+We will contact you by letter or phone if any further information is required. We will not request further information from you by email.
+ 
+You’ll normally receive a response within 35 days.
+ 
+Yours sincerely,
+ 
+HM Revenue and Customs
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

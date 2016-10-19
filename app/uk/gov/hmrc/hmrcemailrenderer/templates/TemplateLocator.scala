@@ -17,11 +17,41 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cc.CcTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.childcarecalculator.ChildcareTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.childcareschemesinterest.ChildcareSchemesInterestTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 
 trait TemplateLocator {
-  def templateGroups: Map[ServiceIdentifier, Seq[MessageTemplate]] =
-    Map(ServiceIdentifier.SelfAssessment -> DigitalContactTemplates.templates)
+  def templateGroups: Map[String, Seq[MessageTemplate]] =
+    Map("API Platform"               -> ApiTemplates.templates,
+        "ATS"                        -> AtsTemplates.templates,
+        "AWRS"                       -> AwrsTemplates.templates,
+        "BARS"                       -> BarsTemplates.templates,
+        "CC"                         -> CcTemplates.templates,
+        "Childcare Calculator"       -> ChildcareTemplates.templates,
+        "Childcare Schemes Interest" -> ChildcareSchemesInterestTemplates.templates,
+        "DFS"                        -> DfsTemplates.templates,
+        "FANDF"                      -> FandFTemplates.templates,
+        "Passcodes"                  -> PasscodesTemplates.templates,
+        "GMP"                        -> GmpTemplates.templates,
+        "PAYE"                       -> PayeTemplates.templates,
+        "RALD"                       -> RaldTemplates.templates,
+        "Self Assessment"            -> DigitalContactTemplates.templates,
+        "TAMC"                       -> TamcTemplates.templates,
+        "TCS"                        -> TcsTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 

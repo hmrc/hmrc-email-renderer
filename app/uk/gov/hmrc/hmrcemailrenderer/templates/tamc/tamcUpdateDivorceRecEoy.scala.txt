@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Marriage Allowance cancelled
+
+Your Marriage Allowance will be removed on @{params("endDate")}, at the end of the tax year.
+
+What happens next
+
+If your former partner pays tax through PAYE, we’ll change their tax code and send them notification of their new tax code in the post. We’ll tell their employer to start using this new code from the start of the new tax year on @{params("startDate")}.
+
+If they complete a Self Assessment tax return, we’ll return the allowance to them at the end of the current tax year on @{params("endDate")}. Their Personal Allowance will be adjusted on @{params("startDate")}.
+
+There is no need to contact us. You can check the status of your Marriage Allowance on your personal tax account at www.gov.uk/personal-tax-account
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

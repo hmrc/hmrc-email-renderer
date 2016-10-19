@@ -1,0 +1,10 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application not approved") {
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>@{params("applicationName")}</strong> has not been approved to access production credentials on the HMRC API Developer Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This is because the name of the application does not meet our guidelines for the following reason:</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("reason")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can view our guidelines by clicking the link below.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("guidelinesUrl")}" style="color: #005EA5;">@{params("guidelinesUrl")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Submit a new name if you still want to access production credentials.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC API Developer Hub</p>
+}

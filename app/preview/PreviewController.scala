@@ -47,8 +47,8 @@ object PreviewController extends BaseController {
 
 final case class PreviewGroup private(name: String, items: Seq[PreviewListItem])
 object PreviewGroup {
-  def createPreviewGroup(serviceIdentifier: ServiceIdentifier, templates: Seq[MessageTemplate]) =
-    PreviewGroup(serviceIdentifier.title, templates.map { template =>
+  def createPreviewGroup(title: String, templates: Seq[MessageTemplate]) =
+    PreviewGroup(title, templates.map { template =>
       val params = TemplateParams.exampleParams.getOrElse(template.templateId, Map.empty)
       PreviewListItem(template.templateId, template.subject(params), params)
     })

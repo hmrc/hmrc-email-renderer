@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+Alcohol Wholesaler Registration Scheme (AWRS) registration status update
+
+Dear @{params("name")}
+
+We’ve updated your AWRS registration status.
+
+To view it, sign in to your HMRC online account.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Alcohol Wholesaler Registration Scheme
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

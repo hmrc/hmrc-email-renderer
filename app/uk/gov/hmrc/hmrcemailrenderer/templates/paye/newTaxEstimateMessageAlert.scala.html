@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Income Tax estimate has changed") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("fullName")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your Income Tax estimate has changed.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Sign in to Check your Income Tax to see your new estimated taxable income, income tax and tax code.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link with this email.</p>
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Why you got this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You chose to get email notifications about your Income Tax.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This means we send you an email when your Income Tax estimate changes.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Check your Income Tax</p>
+}

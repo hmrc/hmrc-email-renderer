@@ -1,0 +1,8 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Verify your new email address") {
+<p style="margin: 0 0 30px; font-size: 19px;">You need to verify your new email address for paperless notifications.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you do not do this, your notifications will continue to go to your old email address.  </p>
+<p style="margin: 0 0 30px; font-size: 19px;">To verify your email address, click the link below.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}"style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+}
