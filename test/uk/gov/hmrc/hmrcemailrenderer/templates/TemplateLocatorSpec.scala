@@ -39,13 +39,12 @@ class TemplateLocatorSpec extends UnitSpec {
       TemplateLocator.templateGroups.keys should contain only (
         "API Platform",
         "Self Assessment",
-        "Inheritance Tax",
         "Passcodes",
         "TAMC",
         "DFS",
         "CC",
-        "ChildcareCalculator",
-        "ChildcareSchemesInterest",
+        "Childcare Calculator",
+        "Childcare Schemes Interest",
         "PAYE",
         "FANDF",
         "ATS",
@@ -54,11 +53,10 @@ class TemplateLocatorSpec extends UnitSpec {
         "RALD",
         "BARS",
         "TCS"
-        )
+      )
     }
 
     "enumerate all template identifiers" in {
-
       TemplateLocator.all.map(_.templateId) should contain only (
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
@@ -137,8 +135,7 @@ class TemplateLocatorSpec extends UnitSpec {
         "gmp_bulk_upload_processed",
         "rald_alert",
         "bars_alert",
-        "tcs_renewal_confirmation"
-        )
+        "tcs_renewal_confirmation")
     }
 
   }
