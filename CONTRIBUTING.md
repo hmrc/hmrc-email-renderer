@@ -55,7 +55,7 @@ Please review these guidelines carefully before submitting new or changed hmrc e
 If you'd like to add a template to the hmrc email template service, then:
 
 1. Create an XXXTemplates object in your new folder (under templates folder) e.g. DigitalContactTemplates
-2. If it doesn't already exist, add a new entry in templateGroups for your regime or service in the `TemplateLocator` scale file
+2. If it doesn't already exist, create a new service identifier for your regime and add a new entry in templateGroups in the `TemplateLocator` scala file.
 4. Create two templates for rendering your message :
   * `.scala.txt` for the plain-text version
   * `.scala.html` for the html version
@@ -85,3 +85,4 @@ It's also really important to **discuss with the DC team how many messages you e
 * Your code is up to date with current `master`
 * That `sbt clean test it:test` passes happily
 * Your templates look right when rendered - use the [preview mode](/README.md#preview-development)
+* **Note: we will fail any PR with failing tests.**
