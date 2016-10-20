@@ -310,7 +310,9 @@ object TemplateParams {
       "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
       "errorList" -> "Brap Brap"
     ),
-
+    "register_your_company_verification_email" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
     "indefensible_upgrades" -> (newMessageAlert_Names),
     "indefensible_upgrades_with_dates" -> (newMessageAlert_Names)

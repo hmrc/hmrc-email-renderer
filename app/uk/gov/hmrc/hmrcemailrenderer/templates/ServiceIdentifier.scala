@@ -35,6 +35,7 @@ object ServiceIdentifier {
   case object Generic extends ServiceIdentifier { override val name = "generic" }
   case object InheritanceTax extends ServiceIdentifier { override val name = "iht" }
   case object PayAsYouEarn extends ServiceIdentifier { override val name = "paye" }
+  case object RegisterYourCompany extends ServiceIdentifier { override val name = "register-your-company" }
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
   case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }

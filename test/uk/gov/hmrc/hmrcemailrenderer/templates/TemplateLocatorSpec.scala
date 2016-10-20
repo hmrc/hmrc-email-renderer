@@ -52,7 +52,8 @@ class TemplateLocatorSpec extends UnitSpec {
         "GMP",
         "RALD",
         "BARS",
-        "TCS"
+        "TCS",
+        "register-your-company"
       )
     }
 
@@ -135,7 +136,8 @@ class TemplateLocatorSpec extends UnitSpec {
         "gmp_bulk_upload_processed",
         "rald_alert",
         "bars_alert",
-        "tcs_renewal_confirmation")
+        "tcs_renewal_confirmation",
+        "register_your_company_verification_email")
     }
 
   }
