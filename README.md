@@ -9,12 +9,12 @@ Manages the rendering of parameterised email using templates.
 
 | Path                         | Supported Methods | Description  |
 | ---------------------------- | ----------------  | ------------ |
-| ```/templates/:templateId``` | POST              | Renders the email template for the  given template ID[More...](#post-templatestemplateId) |
+| ```/templates/:templateId``` | POST              | Renders the email template for the given template Id[More...](#post-templatestemplateId) |
 
 
 ### POST /templates/:templateId
 
-Renders the email template for the  given template ID and returns the rendered template details.
+Renders the email template for the  given template Id and returns the rendered template details.
 
 Example request body - parameters with String type key and values.
 
@@ -40,7 +40,7 @@ Responds with status:
     "service": "The regime (i.e. - sa/paye/etc) that this template belongs to"
 }
  ```
-* 404 When the template with the provided ID cannot be resolved.
+* 404 When the template with the provided template Id cannot be resolved.
  
 * 400 When an insufficient set of parameters for rendering the template is specified in the request. Only the first missing value is reported.
 
@@ -57,10 +57,10 @@ Templates can be fiddly to get right as they can ordinarily only be viewed by ac
 
 ```bash
 cd $WORKSPACE/hmrc-email-renderer
-sbt -Dhttp.port=8300 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
+sbt -Dhttp.port=8950 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
 ```
 
-You should be able to list all the templates available for preview from [http://localhost:8300/hmrc-email-renderer/test-only/preview](http://localhost:8300/hmrc-email-renderer/test-only/preview).
+You should be able to list all the templates available for preview from [http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview).
 
 Note that to render logos correctly the assets frontend also needs to be started using
 
@@ -68,6 +68,17 @@ Note that to render logos correctly the assets frontend also needs to be started
 sm --start ASSETS_FRONTEND -f
 ```
 
+#### Quick Preview
+Alternatively, you can do a preview of emails by starting the service using `sm` to preview the source, snapshot or release versions of the micro-service.
+
+```bash
+sm --start ASSETS_FRONTEND -f
+sm --start EMAIL [-f|-r]
+```
+
+Again, list the templates can then be previewed from
+
+[http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview)
 
 ### License
 
