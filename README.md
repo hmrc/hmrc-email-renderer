@@ -5,11 +5,17 @@
 
 
 Manages the rendering of parameterised email using templates. 
+
+
+| **Note: Before sending a pull request with template changes, please look at our [guidelines](/CONTRIBUTING.md).** |
+| --- |
+
+
 ## API
 
 | Path                         | Supported Methods | Description  |
 | ---------------------------- | ----------------  | ------------ |
-| ```/templates/:templateId``` | POST              | Renders the email template for the given template Id[More...](#post-templatestemplateId) |
+| ```/templates/:templateId``` | POST              | Renders the email template for the given template Id [More...](#post-templatestemplateId) |
 
 
 ### POST /templates/:templateId
