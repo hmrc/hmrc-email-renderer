@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 import org.mockito.Mockito._
 import org.scalatest.mock.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.test.UnitSpec
@@ -48,19 +48,22 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
   class TestCase {
     val locatorMock = mock[TemplateLocator]
+    val templateId = "a-template-id"
+
     val templateRenderer = new TemplateRenderer {
       override def locator: TemplateLocator = locatorMock
 
       override def commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
     }
-    val templateId = "a-template-id"
+
     val validTemplate = MessageTemplate.create(
       templateId = templateId,
       fromAddress = "from@test",
       service = SelfAssessment,
       subject = "a subject",
       plainTemplate = txt.templateSample.f,
-      htmlTemplate = html.templateSample.f
+      htmlTemplate = html.templateSample.f,
+      MessagePriority.Urgent
     )
 
     val validRenderedResult = RenderResult(
@@ -68,7 +71,8 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       service = "sa",
       subject = "a subject",
       plain = "Test template with parameter value: VALUE using common parameters: commonValue",
-      html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>"
+      html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
+      priority = MessagePriority.Urgent
     )
   }
 

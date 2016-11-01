@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
@@ -30,7 +30,8 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: verify your email address",
       plainTemplate = txt.verifyEmailAddress.f,
-      htmlTemplate  = html.verifyEmailAddress.f
+      htmlTemplate  = html.verifyEmailAddress.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "changeOfEmailAddress",
@@ -38,7 +39,9 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: change of email address",
       plainTemplate = txt.changeOfEmailAddress.f,
-      htmlTemplate = html.changeOfEmailAddress.f),
+      htmlTemplate = html.changeOfEmailAddress.f,
+      priority = MessagePriority.Urgent
+    ),
     MessageTemplate.create(
       templateId = "digitalOptOutConfirmation",
       fromAddress = defaultFromAddress,
@@ -52,7 +55,9 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: verify your new email address",
       plainTemplate = txt.changeOfEmailAddressNewAddress.f,
-      htmlTemplate = html.changeOfEmailAddressNewAddress.f),
+      htmlTemplate = html.changeOfEmailAddressNewAddress.f,
+      priority = MessagePriority.Urgent
+    ),
     MessageTemplate.create(
       templateId = "newMessageAlert",
       fromAddress = defaultFromAddress,
@@ -94,28 +99,36 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: new message",
       plainTemplate = txt.newMessageAlert.f,
-      htmlTemplate = html.newMessageAlert.f),
+      htmlTemplate = html.newMessageAlert.f,
+      priority = MessagePriority.Background
+    ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SS300",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSS300.f,
-      htmlTemplate = html.newMessageAlertSS300.f),
+      htmlTemplate = html.newMessageAlertSS300.f,
+      priority = MessagePriority.Background
+    ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA300",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSA300.f,
-      htmlTemplate = html.newMessageAlertSA300.f),
+      htmlTemplate = html.newMessageAlertSA300.f,
+      priority = MessagePriority.Background
+    ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA316",
       fromAddress = FromAddress.noReply("HMRC Self Assessment"),
       service = SelfAssessment,
       subject = "File your Self Assessment return",
       plainTemplate = txt.newMessageAlertSA316_A.f,
-      htmlTemplate = html.newMessageAlertSA316_A.f)
+      htmlTemplate = html.newMessageAlertSA316_A.f,
+      priority = MessagePriority.Background
+    )
 
   )
 }

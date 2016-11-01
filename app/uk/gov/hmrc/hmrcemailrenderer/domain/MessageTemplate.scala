@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.domain
 
 import play.api.libs.json.{Json, Writes}
 import play.twirl.api.{HtmlFormat, TxtFormat}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
 
 case class MessageTemplate(templateId: String,
@@ -25,15 +26,59 @@ case class MessageTemplate(templateId: String,
                            service: ServiceIdentifier,
                            subject: Subject,
                            plainTemplate: Body.Plain,
-                           htmlTemplate: Body.Html)
+                           htmlTemplate: Body.Html,
+                           priority: MessagePriority)
 object MessageTemplate {
+
+  def create(templateId: String,
+             fromAddress: String,
+             service: ServiceIdentifier,
+             subject: String,
+             plainTemplate: Body.Plain,
+             htmlTemplate: Body.Html,
+             priority: MessagePriority) =
+    MessageTemplate(
+      templateId,
+      fromAddress,
+      service,
+      Subject.fromPlainString(subject),
+      plainTemplate,
+      htmlTemplate,
+      priority
+    )
+
   def create(templateId: String,
              fromAddress: String,
              service: ServiceIdentifier,
              subject: String,
              plainTemplate: Body.Plain,
              htmlTemplate: Body.Html) =
-    MessageTemplate(templateId, fromAddress, service, Subject.fromPlainString(subject), plainTemplate, htmlTemplate)
+    MessageTemplate(
+      templateId,
+      fromAddress,
+      service,
+      Subject.fromPlainString(subject),
+      plainTemplate,
+      htmlTemplate,
+      MessagePriority.Standard
+    )
+
+  def create(templateId: String,
+             fromAddress: String,
+             service: ServiceIdentifier,
+             subject: Map[String, String] => String,
+             plainTemplate: Body.Plain,
+             htmlTemplate: Body.Html,
+             priority: MessagePriority) =
+    MessageTemplate(
+      templateId,
+      fromAddress,
+      service,
+      Subject(subject),
+      plainTemplate,
+      htmlTemplate,
+      priority
+    )
 
   def create(templateId: String,
              fromAddress: String,
@@ -41,7 +86,15 @@ object MessageTemplate {
              subject: Map[String, String] => String,
              plainTemplate: Body.Plain,
              htmlTemplate: Body.Html) =
-    MessageTemplate(templateId, fromAddress, service, Subject(subject), plainTemplate, htmlTemplate)
+    MessageTemplate(
+      templateId,
+      fromAddress,
+      service,
+      Subject(subject),
+      plainTemplate,
+      htmlTemplate,
+      MessagePriority.Standard
+    )
 }
 case class Subject(f: Map[String, String] => String) {
   def apply(p: Map[String, String]) = f(p)

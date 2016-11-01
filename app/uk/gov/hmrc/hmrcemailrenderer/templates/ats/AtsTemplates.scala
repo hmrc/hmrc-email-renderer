@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ats
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummary
 
@@ -33,6 +33,8 @@ object AtsTemplates {
       service = AnnualTaxSummary,
       subject = ats_year_for_subject,
       plainTemplate = txt.annualTaxSummariesMessageAlert.f,
-      htmlTemplate = html.annualTaxSummariesMessageAlert.f)
+      htmlTemplate = html.annualTaxSummariesMessageAlert.f,
+      priority = MessagePriority.Background
+    )
   )
 }

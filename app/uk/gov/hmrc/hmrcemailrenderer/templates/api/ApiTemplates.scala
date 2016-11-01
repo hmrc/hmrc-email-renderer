@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
@@ -25,7 +25,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   */
 object ApiTemplates {
   val from = FromAddress.noReply("HMRC API Developer")
-  
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "apiDeveloperEmailVerification",
@@ -33,7 +33,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "Verify your email address",
       plainTemplate = txt.verificationEmail.f,
-      htmlTemplate = html.verificationEmail.f
+      htmlTemplate = html.verificationEmail.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiDeveloperPasswordReset",
@@ -41,7 +42,8 @@ object ApiTemplates {
       fromAddress = from,
       subject = "Reset your password",
       plainTemplate = txt.passwordResetEmail.f,
-      htmlTemplate = html.passwordResetEmail.f
+      htmlTemplate = html.passwordResetEmail.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiDeveloperChangedPasswordConfirmation",
@@ -49,7 +51,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "You have reset your password",
       plainTemplate = txt.passwordChangedConfirmationEmail.f,
-      htmlTemplate = html.passwordChangedConfirmationEmail.f
+      htmlTemplate = html.passwordChangedConfirmationEmail.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
@@ -57,7 +60,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.f,
-      htmlTemplate = html.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.f
+      htmlTemplate = html.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
@@ -65,7 +69,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
-      htmlTemplate = html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f
+      htmlTemplate = html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiAddedDeveloperAsCollaboratorNotification",
@@ -73,7 +78,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "A collaborator has been added to your application",
       plainTemplate = txt.apiAddedDeveloperAsCollaboratorNotification.f,
-      htmlTemplate = html.apiAddedDeveloperAsCollaboratorNotification.f
+      htmlTemplate = html.apiAddedDeveloperAsCollaboratorNotification.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiRemovedCollaboratorConfirmation",
@@ -81,7 +87,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "You have been removed from an application",
       plainTemplate = txt.apiRemovedCollaboratorConfirmation.f,
-      htmlTemplate = html.apiRemovedCollaboratorConfirmation.f
+      htmlTemplate = html.apiRemovedCollaboratorConfirmation.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiRemovedCollaboratorNotification",
@@ -89,7 +96,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "A collaborator has been removed from your application",
       plainTemplate = txt.apiRemovedCollaboratorNotification.f,
-      htmlTemplate = html.apiRemovedCollaboratorNotification.f
+      htmlTemplate = html.apiRemovedCollaboratorNotification.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiApplicationApprovedGatekeeperConfirmation",
@@ -97,7 +105,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedGatekeeperConfirmation.f,
-      htmlTemplate = html.apiApplicationApprovedGatekeeperConfirmation.f
+      htmlTemplate = html.apiApplicationApprovedGatekeeperConfirmation.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiApplicationApprovedAdminConfirmation",
@@ -105,7 +114,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "Application name approved: Verify your email address",
       plainTemplate = txt.apiApplicationApprovedAdminConfirmation.f,
-      htmlTemplate = html.apiApplicationApprovedAdminConfirmation.f
+      htmlTemplate = html.apiApplicationApprovedAdminConfirmation.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiApplicationApprovedNotification",
@@ -113,7 +123,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedNotification.f,
-      htmlTemplate = html.apiApplicationApprovedNotification.f
+      htmlTemplate = html.apiApplicationApprovedNotification.f,
+      priority = MessagePriority.Urgent
     ),
     MessageTemplate.create(
       templateId = "apiApplicationRejectedNotification",
@@ -121,7 +132,8 @@ object ApiTemplates {
       service = ApiDeveloperHub,
       subject = "Application not approved",
       plainTemplate = txt.apiApplicationRejectedNotification.f,
-      htmlTemplate = html.apiApplicationRejectedNotification.f
+      htmlTemplate = html.apiApplicationRejectedNotification.f,
+      priority = MessagePriority.Urgent
     )
   )
 }
