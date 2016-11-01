@@ -19,13 +19,21 @@ package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 import com.ning.http.util.Base64
 import org.apache.commons.codec.Charsets
 import play.api.libs.json._
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 
 case class RenderRequest(parameters: Map[String, String])
+
 object RenderRequest {
   implicit val reads = Json.reads[RenderRequest]
 }
 
-case class RenderResult(plain: String, html: String, fromAddress: String, subject: String, service: String)
+case class RenderResult(plain: String,
+                        html: String,
+                        fromAddress: String,
+                        subject: String,
+                        service: String,
+                        priority: MessagePriority)
+
 object RenderResult {
   private def base64Encoded(value: String) = Base64.encode(value.getBytes(Charsets.UTF_8))
 
@@ -35,7 +43,8 @@ object RenderResult {
       "html" -> base64Encoded(toRender.html),
       "fromAddress" -> toRender.fromAddress,
       "subject" -> toRender.subject,
-      "service" -> toRender.service
+      "service" -> toRender.service,
+      "priority" -> toRender.priority.toString.toLowerCase
     )
   }
 }

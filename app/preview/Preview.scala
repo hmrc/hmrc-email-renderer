@@ -32,10 +32,10 @@ trait Preview {
     extractPlainText.orElse(handleErrors)(renderer.render(templateId, flattenParameterValues(parameters)))
 
   private val extractHtml: PartialFunction[RenderedResult, String] =
-    { case Right(RenderResult(_, html, _, _, _)) => html }
+    { case Right(RenderResult(_, html, _, _, _, _)) => html }
 
   private val extractPlainText: PartialFunction[RenderedResult, String] =
-    { case Right(RenderResult(plain, _, _, _, _)) => plain }
+    { case Right(RenderResult(plain, _, _, _, _, _)) => plain }
 
   private val handleErrors: PartialFunction[RenderedResult, String] = {
     case Left(MissingTemplateId(templateId)) =>

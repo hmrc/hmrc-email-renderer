@@ -21,6 +21,7 @@ import org.scalatest.prop.GeneratorDrivenPropertyChecks
 import play.api.libs.json._
 import uk.gov.hmrc.play.test.UnitSpec
 import org.scalacheck.{Arbitrary, Gen}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 
 class RenderResultSpec extends UnitSpec with GeneratorDrivenPropertyChecks {
   "RenderResult" should {
@@ -30,7 +31,16 @@ class RenderResultSpec extends UnitSpec with GeneratorDrivenPropertyChecks {
     def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
 
     "have the plain and html fields Base64 encoded when rendered as JSON" in forAll { (plain: String, html: String) =>
-      val result = Json.toJson(RenderResult(plain, html, "fromAddress", "subject", "service"))
+      val result = Json.toJson(
+        RenderResult(
+          plain,
+          html,
+          "fromAddress",
+          "subject",
+          "service",
+          MessagePriority.Standard
+        )
+      )
 
       decode((result \ "plain").as[String]) shouldBe plain
       decode((result \ "html").as[String]) shouldBe html

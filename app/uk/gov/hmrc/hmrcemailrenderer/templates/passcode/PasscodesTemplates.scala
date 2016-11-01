@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.passcode
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier._
 
@@ -28,7 +28,9 @@ object PasscodesTemplates {
       service = CompanyAccountsTaxOnline,
       subject = "A new method of filing your Accounts and Company Tax Return",
       plainTemplate = txt.catoVerificationEmail.f,
-      htmlTemplate = html.catoVerificationEmail.f),
+      htmlTemplate = html.catoVerificationEmail.f,
+      priority = MessagePriority.Urgent
+    ),
     MessageTemplate.create(
       templateId = "agents_opt_in_exclude_template_id",
       fromAddress = govUkTeamAddress,
@@ -56,7 +58,9 @@ object PasscodesTemplates {
       service = Generic,
       subject = "Your HMRC service test link",
       plainTemplate = txt.genericVerificationEmail.f,
-      htmlTemplate = html.genericVerificationEmail.f),
+      htmlTemplate = html.genericVerificationEmail.f,
+      priority = MessagePriority.Urgent
+    ),
     MessageTemplate.create(
       templateId = "iht_access_invitation_template_id",
       fromAddress = govUkTeamAddress,

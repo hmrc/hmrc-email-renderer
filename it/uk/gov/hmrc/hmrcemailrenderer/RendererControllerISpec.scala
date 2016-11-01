@@ -12,14 +12,10 @@ class RendererControllerISpec extends ServiceSpec with WithFakeApplication with 
   "POST /templates/:templateId" should {
     "return 200 and yield the rendered template data when supplied a valid templateId" in {
       val params = Map(
-        "verificationLink" -> "/abc",
-        "staticAssetUrlPrefix" -> "",
-        "staticAssetVersion" -> ""
+        "verificationLink" -> "/abc"
       )
 
       val response = WS.url(resource(s"/templates/verifyEmailAddress")).post(Json.obj("parameters" -> params))
-      val jsonResponse = response.json
-      println(s"JsonResponse!!!!!! ${jsonResponse}")
       response should have(
         status(200),
         jsonProperty(__ \ "fromAddress", "HMRC paperless <noreply@tax.service.gov.uk>"),
