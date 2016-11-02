@@ -36,7 +36,7 @@ object MessageTemplate {
              subject: String,
              plainTemplate: Body.Plain,
              htmlTemplate: Body.Html,
-             priority: MessagePriority) =
+             priority: MessagePriority = MessagePriority.Standard) =
     MessageTemplate(
       templateId,
       fromAddress,
@@ -47,29 +47,13 @@ object MessageTemplate {
       priority
     )
 
-  def create(templateId: String,
-             fromAddress: String,
-             service: ServiceIdentifier,
-             subject: String,
-             plainTemplate: Body.Plain,
-             htmlTemplate: Body.Html) =
-    MessageTemplate(
-      templateId,
-      fromAddress,
-      service,
-      Subject.fromPlainString(subject),
-      plainTemplate,
-      htmlTemplate,
-      MessagePriority.Standard
-    )
-
-  def create(templateId: String,
-             fromAddress: String,
-             service: ServiceIdentifier,
-             subject: Map[String, String] => String,
-             plainTemplate: Body.Plain,
-             htmlTemplate: Body.Html,
-             priority: MessagePriority) =
+  def createWithDynamicSubject(templateId: String,
+                               fromAddress: String,
+                               service: ServiceIdentifier,
+                               subject: Map[String, String] => String,
+                               plainTemplate: Body.Plain,
+                               htmlTemplate: Body.Html,
+                               priority: MessagePriority = MessagePriority.Standard) =
     MessageTemplate(
       templateId,
       fromAddress,
@@ -78,27 +62,13 @@ object MessageTemplate {
       plainTemplate,
       htmlTemplate,
       priority
-    )
-
-  def create(templateId: String,
-             fromAddress: String,
-             service: ServiceIdentifier,
-             subject: Map[String, String] => String,
-             plainTemplate: Body.Plain,
-             htmlTemplate: Body.Html) =
-    MessageTemplate(
-      templateId,
-      fromAddress,
-      service,
-      Subject(subject),
-      plainTemplate,
-      htmlTemplate,
-      MessagePriority.Standard
     )
 }
+
 case class Subject(f: Map[String, String] => String) {
   def apply(p: Map[String, String]) = f(p)
 }
+
 object Subject {
   def fromPlainString(text: String): Subject = Subject(_ => text)
 }

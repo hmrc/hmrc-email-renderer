@@ -27,7 +27,7 @@ object AtsTemplates {
       getOrElse(throw new RuntimeException("Missing parameter taxYear"))
 
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "annual_tax_summaries_message_alert",
       fromAddress = FromAddress.noReply("HMRC Your Annual Tax Summary"),
       service = AnnualTaxSummary,

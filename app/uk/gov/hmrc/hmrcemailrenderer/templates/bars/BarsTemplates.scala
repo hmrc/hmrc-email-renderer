@@ -26,7 +26,7 @@ object BarsTemplates  {
     _.getOrElse("baRefNumber", "No BA CODE")
 
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "bars_alert",
       fromAddress = FromAddress.noReply("Business Rates"),
       service = BusinessRates,

@@ -30,14 +30,14 @@ object FandFTemplates  {
     params.get("helperFirstName").flatMap(fname => params.get("helperLastName").map(lname => s"$fname $lname " )).getOrElse("Someone ") +"wants to help you with your tax online"
 
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "fandf_ask_help_notification",
       fromAddress = trustedHelpersTeamAddress,
       service = FriendsAndFamily,
       subject = ask_help_subject(_),
       plainTemplate = txt.newFandFAskHelpMessageAlert.f,
       htmlTemplate = html.newFandFAskHelpMessageAlert.f),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "fandf_offer_help_notification",
       fromAddress = trustedHelpersTeamAddress,
       service = FriendsAndFamily,
