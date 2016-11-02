@@ -43,14 +43,14 @@ object DfsTemplates {
        subject = "State Pension top up (Class3A) submission confirmation",
        plainTemplate = txt.dfsSubmissionConfirmationEmailSPTU.f,
        htmlTemplate = html.dfsSubmissionConfirmationEmailSPTU.f),
-     MessageTemplate.create(
+     MessageTemplate.createWithDynamicSubject(
        templateId = "dfs_submission_success_generic_2015",
        fromAddress = govUkTeamAddress,
        service = DigitalFormsService,
        subject = _.apply("subject"),
        plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric.f,
        htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric.f),
-     MessageTemplate.create(
+     MessageTemplate.createWithDynamicSubject(
        templateId = "dfs_submission_success_empty_turn_around_time_2015",
        fromAddress = govUkTeamAddress,
        service = DigitalFormsService,

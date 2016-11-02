@@ -32,14 +32,14 @@ object GmpTemplates {
   val from = FromAddress.noReply("GMP Checker")
 
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "gmp_bulk_upload_received",
       fromAddress = from,
       service = GuaranteedMinimumPension,
       subject = gmp_upload_reference_received_for_subject,
       plainTemplate = txt.gmpFileReceivedNotificationEmail.f,
       htmlTemplate = html.gmpFileReceivedNotificationEmail.f),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "gmp_bulk_upload_processed",
       fromAddress = from,
       service = GuaranteedMinimumPension,
