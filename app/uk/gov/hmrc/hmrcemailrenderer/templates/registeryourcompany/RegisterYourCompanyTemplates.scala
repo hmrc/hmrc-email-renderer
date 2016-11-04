@@ -28,6 +28,13 @@ object RegisterYourCompanyTemplates {
       service = RegisterYourCompany,
       subject = "Register your company: verify your email address",
       plainTemplate = txt.registerYourCompanyVerificationEmail.f,
-      htmlTemplate = html.registerYourCompanyVerificationEmail.f)
+      htmlTemplate = html.registerYourCompanyVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "register_your_company_welcome_email",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "Register your company - Welcome",
+      plainTemplate = txt.registerYourCompanyWelcomeEmail.f,
+      htmlTemplate = html.registerYourCompanyWelcomeEmail.f)
     )
 }
