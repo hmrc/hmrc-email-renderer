@@ -1,6 +1,6 @@
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
+@(params: Map[String, Any])
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Thanks for using the new Marriage Allowance service. Your transfer was successful.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Thanks for using the new Marriage Allowance service. Your transfer was successful.") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We&rsquo;ll reduce your personal allowance by &pound;1,060 and increase your spouse or civil partner&rsquo;s allowance by the same amount. This will apply for the current tax year and will continue into future tax years.</p>
 
@@ -8,7 +8,9 @@
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If they&rsquo;re employed and pay tax via PAYE, we&rsquo;ll send them a revised notice of tax coding by post in due course.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">There is no need to contact us.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">There&rsquo;s no need to contact us.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Marriage Allowance</p>
 
 }
 

@@ -10,6 +10,8 @@ If they’re employed and pay tax via PAYE, we’ll send them a revised notice o
 
 Your revised notice of tax coding will show in your personal account within 24 hours.
 
-There is no need to contact us.
+There’s no need to contact us.
+
+From HMRC Marriage Allowance
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
