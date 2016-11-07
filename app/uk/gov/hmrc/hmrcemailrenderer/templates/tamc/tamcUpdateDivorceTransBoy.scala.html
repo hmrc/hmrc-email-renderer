@@ -1,6 +1,6 @@
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
+@(params: Map[String, Any])
 
-<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">Marriage Allowance cancelled</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Marriage Allowance cancelled") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your Marriage Allowance has been cancelled from @{params("startDate")}, the start of the current tax year.</p>
 
@@ -11,7 +11,6 @@
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If they complete a Self Assessment tax return, we&rsquo;ll remove Marriage Allowance from the start of the current tax year on @{params("startDate")}.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Cancelling Marriage Allowance could result in your former partner not paying enough tax. We&rsquo;ll let them know if they&rsquo;ve paid the right amount when we check their pay and tax information at the end of the tax year. If they&rsquo;ve underpaid, we&rsquo;ll collect the tax they owe by adjusting their tax code.</p>
-
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your revised notice of tax coding will show in your personal tax account within 24 hours.</p>
 

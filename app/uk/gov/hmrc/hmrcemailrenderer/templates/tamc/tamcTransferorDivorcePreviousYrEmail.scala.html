@@ -1,6 +1,6 @@
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
+@(params: Map[String, Any])
 
-<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">Marriage Allowance cancelled</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Marriage Allowance cancelled") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your Marriage Allowance has been cancelled from @{params("endDate")}, the end of the tax year you divorced.</p>
 
