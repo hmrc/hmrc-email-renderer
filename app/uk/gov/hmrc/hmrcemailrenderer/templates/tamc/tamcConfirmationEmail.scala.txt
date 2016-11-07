@@ -8,8 +8,6 @@ If your spouse or civil partner usually completes a Self Assessment return, we�
 
 If they’re employed and pay tax via PAYE, we’ll send them a revised notice of tax coding by post in due course.
 
-There’s no need to contact us.
-
-From HMRC Marriage Allowance
+There is no need to contact us.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
