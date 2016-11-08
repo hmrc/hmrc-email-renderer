@@ -2,7 +2,7 @@
 
 Marriage Allowance cancelled
 
-Your Marriage Allowance has been removed from @{params("startDate")}, the start of the current tax year.
+Your Marriage Allowance has been cancelled from @{params("startDate")}, the start of the current tax year.
 
 What happens next
 
@@ -14,6 +14,10 @@ Cancelling Marriage Allowance could result in your former partner not paying eno
 
 Your revised notice of tax coding will show in your personal tax account within 24 hours.
 
-There is no need to contact us. You can check the status of your Marriage Allowance on your personal tax account at www.gov.uk/personal-tax-account
+There’s no need to contact us. You can check the status of your Marriage Allowance on your personal tax account by clicking the link below.
+
+www.gov.uk/personal-tax-account
+
+From HMRC Marriage Allowance
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

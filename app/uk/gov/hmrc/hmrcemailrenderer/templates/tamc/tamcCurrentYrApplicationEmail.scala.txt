@@ -6,12 +6,14 @@ What happens next
 
 If your partner pays tax through PAYE they will receive notification of their new tax code in the post. We’ll tell their employer and your Marriage Allowance will start when they begin using this new code. If you are claiming part way through the tax year, their Marriage Allowance will be backdated to the start of the current tax year.
 
-If your partner completes a Self Assessment tax return, their tax bill will be adjusted to include Marriage Allowance when they file their return
+If your partner completes a Self Assessment tax return, their tax bill will be adjusted to include Marriage Allowance when they file their return.
 
 Your Marriage Allowance will automatically continue until you or your partner cancel it, or you are no longer eligible as a couple.
 
-There is no need to contact us.
+You can let us know about any changes to your circumstances by clicking the link below.
 
-You can let us know about any changes to your circumstances at https://www.gov.uk/marriage-allowance-guide/if-your-circumstances-change.
+https://www.gov.uk/marriage-allowance-guide/if-your-circumstances-change
+
+From HMRC Marriage Allowance
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

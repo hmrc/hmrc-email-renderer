@@ -2,7 +2,7 @@
 
 Marriage Allowance cancelled
 
-Your Marriage Allowance will be removed on @{params("endDate")}, at the end of the current tax year.
+Your Marriage Allowance will be cancelled on @{params("endDate")}, at the end of the current tax year.
 
 What happens next
 
@@ -10,6 +10,12 @@ If your partner pays tax through PAYE, we’ll change their tax code and send th
 
 If they complete a Self Assessment tax return, we’ll remove Marriage Allowance at the end of the current tax year on @{params("endDate")}. Their Personal Allowance will be adjusted on @{params("startDate")}.
 
-There is no need to contact us. You can check the status of your Marriage Allowance on your personal tax account at www.gov.uk/personal-tax-account.
+Your revised notice of tax coding will show in your personal tax account within 24 hours.
+
+There’s no need to contact us. You can check the status of your Marriage Allowance on your personal tax account by clicking the link below.
+
+www.gov.uk/personal-tax-account
+
+From HMRC Marriage Allowance
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
