@@ -137,7 +137,8 @@ class TemplateLocatorSpec extends UnitSpec {
         "rald_alert",
         "bars_alert",
         "tcs_renewal_confirmation",
-        "register_your_company_verification_email")
+        "register_your_company_verification_email",
+        "register_your_company_welcome_email")
     }
 
   }
