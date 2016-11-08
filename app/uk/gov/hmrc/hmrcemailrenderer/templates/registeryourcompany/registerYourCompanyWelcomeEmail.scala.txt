@@ -1,4 +1,4 @@
-@(params: Map[String, Any])
+@(params: Map[String, Any])Register your company
 
 You're getting this email because you've signed up to register a company using our private beta service.
 

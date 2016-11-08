@@ -6,6 +6,6 @@ To verify your email address click the link below:
 
 @{params("verificationLink")}
 
-A joint service from HMRC and Companies House
+HMRC and Companies House
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
