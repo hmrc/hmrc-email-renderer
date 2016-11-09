@@ -24,7 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  val from = FromAddress.noReply("HMRC API Developer")
+  val from = FromAddress.noReply("HMRC API Developer Hub")
 
   val templates = Seq(
     MessageTemplate.create(
