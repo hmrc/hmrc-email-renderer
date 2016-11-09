@@ -6,6 +6,6 @@ To continue your registration - or to review your application - use the link bel
 
 @{params("returnLink")}
 
-HMRC and Companies House
+From HMRC and Companies House
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
