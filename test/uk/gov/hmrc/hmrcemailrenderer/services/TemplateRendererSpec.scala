@@ -63,7 +63,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       subject = "a subject",
       plainTemplate = txt.templateSample.f,
       htmlTemplate = html.templateSample.f,
-      MessagePriority.Urgent
+      Some(MessagePriority.Urgent)
     )
 
     val validRenderedResult = RenderResult(
@@ -72,7 +72,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       subject = "a subject",
       plain = "Test template with parameter value: VALUE using common parameters: commonValue",
       html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
-      priority = MessagePriority.Urgent
+      priority = Some(MessagePriority.Urgent)
     )
   }
 

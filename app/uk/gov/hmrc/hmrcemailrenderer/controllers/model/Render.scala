@@ -32,7 +32,7 @@ case class RenderResult(plain: String,
                         fromAddress: String,
                         subject: String,
                         service: String,
-                        priority: MessagePriority)
+                        priority: Option[MessagePriority])
 
 object RenderResult {
   private def base64Encoded(value: String) = Base64.encode(value.getBytes(Charsets.UTF_8))
@@ -43,8 +43,7 @@ object RenderResult {
       "html" -> base64Encoded(toRender.html),
       "fromAddress" -> toRender.fromAddress,
       "subject" -> toRender.subject,
-      "service" -> toRender.service,
-      "priority" -> toRender.priority.toString.toLowerCase
-    )
+      "service" -> toRender.service
+    ) ++ toRender.priority.fold(Json.obj()) { priority => Json.obj("priority" -> priority.toString.toLowerCase) }
   }
 }

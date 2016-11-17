@@ -29,7 +29,7 @@ object PasscodesTemplates {
       subject = "A new method of filing your Accounts and Company Tax Return",
       plainTemplate = txt.catoVerificationEmail.f,
       htmlTemplate = html.catoVerificationEmail.f,
-      priority = MessagePriority.Urgent
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "agents_opt_in_exclude_template_id",
@@ -59,7 +59,7 @@ object PasscodesTemplates {
       subject = "Your HMRC service test link",
       plainTemplate = txt.genericVerificationEmail.f,
       htmlTemplate = html.genericVerificationEmail.f,
-      priority = MessagePriority.Urgent
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "iht_access_invitation_template_id",

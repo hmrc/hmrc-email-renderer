@@ -34,7 +34,7 @@ object AtsTemplates {
       subject = ats_year_for_subject,
       plainTemplate = txt.annualTaxSummariesMessageAlert.f,
       htmlTemplate = html.annualTaxSummariesMessageAlert.f,
-      priority = MessagePriority.Background
+      priority = Some(MessagePriority.Background)
     )
   )
 }

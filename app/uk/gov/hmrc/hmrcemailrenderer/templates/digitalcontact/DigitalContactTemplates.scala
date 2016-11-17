@@ -31,7 +31,7 @@ object DigitalContactTemplates {
       subject = "HMRC paperless notifications: verify your email address",
       plainTemplate = txt.verifyEmailAddress.f,
       htmlTemplate  = html.verifyEmailAddress.f,
-      priority = MessagePriority.Urgent
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "changeOfEmailAddress",
@@ -40,7 +40,7 @@ object DigitalContactTemplates {
       subject = "HMRC paperless notifications: change of email address",
       plainTemplate = txt.changeOfEmailAddress.f,
       htmlTemplate = html.changeOfEmailAddress.f,
-      priority = MessagePriority.Urgent
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "digitalOptOutConfirmation",
@@ -56,7 +56,7 @@ object DigitalContactTemplates {
       subject = "HMRC paperless notifications: verify your new email address",
       plainTemplate = txt.changeOfEmailAddressNewAddress.f,
       htmlTemplate = html.changeOfEmailAddressNewAddress.f,
-      priority = MessagePriority.Urgent
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert",
@@ -100,7 +100,7 @@ object DigitalContactTemplates {
       subject = "HMRC paperless notifications: new message",
       plainTemplate = txt.newMessageAlert.f,
       htmlTemplate = html.newMessageAlert.f,
-      priority = MessagePriority.Background
+      priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SS300",
@@ -109,7 +109,7 @@ object DigitalContactTemplates {
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSS300.f,
       htmlTemplate = html.newMessageAlertSS300.f,
-      priority = MessagePriority.Background
+      priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA300",
@@ -118,7 +118,7 @@ object DigitalContactTemplates {
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSA300.f,
       htmlTemplate = html.newMessageAlertSA300.f,
-      priority = MessagePriority.Background
+      priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA316",
@@ -127,8 +127,7 @@ object DigitalContactTemplates {
       subject = "File your Self Assessment return",
       plainTemplate = txt.newMessageAlertSA316_A.f,
       htmlTemplate = html.newMessageAlertSA316_A.f,
-      priority = MessagePriority.Background
+      priority = Some(MessagePriority.Background)
     )
-
   )
 }
