@@ -31,19 +31,11 @@ class RenderResultSpec extends UnitSpec with GeneratorDrivenPropertyChecks {
     def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
 
     "have the plain and html fields Base64 encoded when rendered as JSON" in forAll { (plain: String, html: String) =>
-      val result = Json.toJson(
-        RenderResult(
-          plain,
-          html,
-          "fromAddress",
-          "subject",
-          "service",
-          MessagePriority.Standard
-        )
-      )
+      val result = Json.toJson(RenderResult(plain, html, "fromAddress", "subject", "service", None))
 
       decode((result \ "plain").as[String]) shouldBe plain
       decode((result \ "html").as[String]) shouldBe html
+      (result \ "priority").asOpt[String] shouldBe None
     }
   }
 }
