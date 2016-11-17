@@ -26,7 +26,7 @@ object ChildcareSchemesInterestTemplates {
       templateId = "childcare_schemes_interest_email",
       fromAddress = govUkTeamAddress,
       service = Childcare,
-      subject = "Your interest new childcare support schemes",
+      subject = "Your interest in new childcare support schemes",
       plainTemplate = txt.csiEmailRegistration.f,
       htmlTemplate = html.csiEmailRegistration.f)
   )
