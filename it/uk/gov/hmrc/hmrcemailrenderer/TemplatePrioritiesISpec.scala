@@ -28,15 +28,12 @@ class TemplatePrioritiesISpec extends ServiceSpec
         }
     }
 
-    forAll(TestTemplates.standard) {
-      (templateId, params) =>
-        s"have correct standard priorities for templateId '$templateId'" in {
-          val response = WS.url(resource(s"/templates/$templateId")).post(Json.obj("parameters" -> params))
-          response should have(
-            status(200),
-            jsonProperty(__ \ "priority", "standard")
-          )
-        }
+    forAll(TestTemplates.standard) { (templateId, params) =>
+      s"not supply a priority for templateId '$templateId'" in {
+        val response = WS.url(resource(s"/templates/$templateId")).post(Json.obj("parameters" -> params)).futureValue
+        response.status shouldBe 200
+        (response.json \ "priority").asOpt[String] shouldBe None
+      }
     }
 
     forAll(TestTemplates.background) {
