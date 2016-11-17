@@ -44,6 +44,6 @@ object RenderResult {
       "fromAddress" -> toRender.fromAddress,
       "subject" -> toRender.subject,
       "service" -> toRender.service
-    ) ++ toRender.priority.fold(Json.obj()) { priority => Json.obj("priority" -> priority.toString.toLowerCase) }
+    ) ++ toRender.priority.fold(Json.obj()) { priority => Json.obj("priority" -> priority.toString) }
   }
 }
