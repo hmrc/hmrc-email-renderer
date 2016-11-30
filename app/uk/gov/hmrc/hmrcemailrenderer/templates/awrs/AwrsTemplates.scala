@@ -50,6 +50,20 @@ object AwrsTemplates  {
       service = AlcoholWholesalerRegistrationScheme,
       subject = "AWRS amendment confirmation",
       plainTemplate = txt.awrsNotificationConfirmationAPI6.f,
-      htmlTemplate = html.awrsNotificationConfirmationAPI6.f)
+      htmlTemplate = html.awrsNotificationConfirmationAPI6.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api4_new_business",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS application confirmation",
+      plainTemplate = txt.awrsNotificationConfirmationAPI4NewBusiness.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI4NewBusiness.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api6_new_business",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS amendment confirmation",
+      plainTemplate = txt.awrsNotificationConfirmationAPI6NewBusiness.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI6NewBusiness.f)
   )
 }

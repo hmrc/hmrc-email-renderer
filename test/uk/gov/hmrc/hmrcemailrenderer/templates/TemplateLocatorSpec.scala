@@ -132,6 +132,8 @@ class TemplateLocatorSpec extends UnitSpec {
         "awrs_notification_template_app_change",
         "awrs_notification_template_comfirmation_api4",
         "awrs_notification_template_comfirmation_api6",
+        "awrs_notification_template_comfirmation_api4_new_business",
+        "awrs_notification_template_comfirmation_api6_new_business",
         "gmp_bulk_upload_received",
         "gmp_bulk_upload_processed",
         "rald_alert",
