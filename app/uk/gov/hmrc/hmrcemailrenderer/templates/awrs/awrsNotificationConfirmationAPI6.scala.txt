@@ -4,8 +4,8 @@ Alcohol Wholesaler Registration Scheme (AWRS) amendment confirmation
 Your amendment for @{params("organisationName")} has been received on the @{params("submissionDate")}.
 
 What happens next
-- We will review and check your application amendments (reference @{params("applicationReference")}).
-- HMRC will contact you to discuss your amended application.
+- Continue trading as normal while we review and check your amended application.
+- We will review and check your application amendments (reference @{params("applicationReference")}). HMRC will contact you to discuss your amended application.
 
 More detailed information can be found in the the guidance.
 
