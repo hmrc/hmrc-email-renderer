@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AlcoholWholesalerRegistrationScheme
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
-object AwrsTemplates  {
+object AwrsTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
@@ -41,29 +41,43 @@ object AwrsTemplates  {
       templateId = "awrs_notification_template_comfirmation_api4",
       fromAddress = govUkTeamAddress,
       service = AlcoholWholesalerRegistrationScheme,
-      subject = "AWRS application confirmation",
+      subject = "AWRS application confirmation - existing business",
       plainTemplate = txt.awrsNotificationConfirmationAPI4.f,
       htmlTemplate = html.awrsNotificationConfirmationAPI4.f),
-    MessageTemplate.create(
-      templateId = "awrs_notification_template_comfirmation_api6",
-      fromAddress = govUkTeamAddress,
-      service = AlcoholWholesalerRegistrationScheme,
-      subject = "AWRS amendment confirmation",
-      plainTemplate = txt.awrsNotificationConfirmationAPI6.f,
-      htmlTemplate = html.awrsNotificationConfirmationAPI6.f),
     MessageTemplate.create(
       templateId = "awrs_notification_template_comfirmation_api4_new_business",
       fromAddress = govUkTeamAddress,
       service = AlcoholWholesalerRegistrationScheme,
-      subject = "AWRS application confirmation",
+      subject = "AWRS application confirmation - new business",
       plainTemplate = txt.awrsNotificationConfirmationAPI4NewBusiness.f,
       htmlTemplate = html.awrsNotificationConfirmationAPI4NewBusiness.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api6",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS amendment confirmation - existing business (approved)",
+      plainTemplate = txt.awrsNotificationConfirmationAPI6.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI6.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api6_pending",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS amendment confirmation - existing business (pending)",
+      plainTemplate = txt.awrsNotificationConfirmationAPI6Pending.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI6Pending.f),
     MessageTemplate.create(
       templateId = "awrs_notification_template_comfirmation_api6_new_business",
       fromAddress = govUkTeamAddress,
       service = AlcoholWholesalerRegistrationScheme,
-      subject = "AWRS amendment confirmation",
+      subject = "AWRS amendment confirmation - new business (approved)",
       plainTemplate = txt.awrsNotificationConfirmationAPI6NewBusiness.f,
-      htmlTemplate = html.awrsNotificationConfirmationAPI6NewBusiness.f)
+      htmlTemplate = html.awrsNotificationConfirmationAPI6NewBusiness.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_comfirmation_api6_new_business_pending",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS amendment confirmation - new business (pending)",
+      plainTemplate = txt.awrsNotificationConfirmationAPI6NewBusinessPending.f,
+      htmlTemplate = html.awrsNotificationConfirmationAPI6NewBusinessPending.f)
   )
 }

@@ -4,7 +4,6 @@ Alcohol Wholesaler Registration Scheme (AWRS) amendment confirmation
 Your amendment for @{params("organisationName")} has been received on the @{params("submissionDate")}.
 
 What happens next
-- You cannot trade until an AWRS registration number is issued. It will take at least 45 days from your submission date to issue your registration number.
 - We will review and check your application amendments (reference @{params("applicationReference")}). HMRC will contact you to discuss your amended application.
 
 More detailed information can be found in the the guidance.

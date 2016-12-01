@@ -6,8 +6,9 @@ Your application for @{params("organisationName")} has been received on the @{pa
 Your application reference number is @{params("applicationReference")}. This is not your AWRS registration number.
 
 What happens next
-- You cannot trade until an AWRS registration number is issued.
-- It will take at least 45 days from your submission to make a decision on your application.
+- Continue trading as normal while we review and check your application, which may take some time.
+- There is no need to contact HMRC, you will be notified before 1 April 2017.
+- If approved, your business will receive an AWRS registration number confirming that you are an approved alcohol wholesaler.
 
 More detailed information can be found in the the guidance.
 
