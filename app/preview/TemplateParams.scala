@@ -108,7 +108,27 @@ object TemplateParams {
       "submissionDate" -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
+    "awrs_notification_template_comfirmation_api4_new_business" -> Map(
+      "organisationName" -> "Booze Inc.",
+      "submissionDate" -> "12 March 2016",
+      "applicationReference" -> "123456789012"
+    ),
     "awrs_notification_template_comfirmation_api6" -> Map(
+      "organisationName" -> "Booze Inc.",
+      "submissionDate" -> "12 March 2016",
+      "applicationReference" -> "123456789012"
+  ),
+    "awrs_notification_template_comfirmation_api6_pending" -> Map(
+      "organisationName" -> "Booze Inc.",
+      "submissionDate" -> "12 March 2016",
+      "applicationReference" -> "123456789012"
+  ),
+    "awrs_notification_template_comfirmation_api6_new_business" -> Map(
+      "organisationName" -> "Booze Inc.",
+      "submissionDate" -> "12 March 2016",
+      "applicationReference" -> "123456789012"
+    ),
+    "awrs_notification_template_comfirmation_api6_new_business_pending" -> Map(
       "organisationName" -> "Booze Inc.",
       "submissionDate" -> "12 March 2016",
       "applicationReference" -> "123456789012"

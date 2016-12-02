@@ -1,11 +1,13 @@
 @(params: Map[String, Any])
-Alcohol Wholesaler Registration Scheme (AWRS) amendment confirmation
+Alcohol Wholesaler Registration Scheme (AWRS) application submission confirmation
 
-Your amendment for @{params("organisationName")} has been received on the @{params("submissionDate")}.
+Your application for @{params("organisationName")} has been received on the @{params("submissionDate")}.
+
+Your application reference number is @{params("applicationReference")}. This is not your AWRS registration number.
 
 What happens next
-- We will review and check your application amendments (reference @{params("applicationReference")}).
-- HMRC will contact you to discuss your amended application.
+- You cannot trade until an AWRS registration number is issued.
+- It will take up to 45 days from your submission to make a decision on your application.
 
 More detailed information can be found in the guidance on GOV.UK.
 

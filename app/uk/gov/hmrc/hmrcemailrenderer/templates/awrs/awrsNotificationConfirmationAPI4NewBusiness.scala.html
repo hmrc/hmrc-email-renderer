@@ -1,11 +1,12 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Alcohol Wholesaler Registration Scheme (AWRS) amendment confirmation") {
-    <p @pStyle>Your amendment for @{params("organisationName")} has been received on the @{params("submissionDate")}.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Alcohol Wholesaler Registration Scheme (AWRS) application submission confirmation") {
+    <p @pStyle>Your application for @{params("organisationName")} has been received on the @{params("submissionDate")}.</p>
+    <p @pStyle>Your application reference number is @{params("applicationReference")}. This is not your AWRS registration number.</p>
     <p @pStyle>What happens next</p>
     <p @pStyle>
         <ul>
-            <li>We will review and check your application amendments (reference  @{params("applicationReference")}).</li>
-            <li>HMRC will contact you to discuss your amended application.</li>
+            <li>You cannot trade until an AWRS registration number is issued.</li>
+            <li>It will take up to 45 days from your submission to make a decision on your application.</li>
         </ul>
     </p>
     <p @pStyle>More detailed information can be found in the guidance on GOV.UK.</p>
