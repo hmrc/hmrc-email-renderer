@@ -14,6 +14,6 @@ Remember to keep your Government Gateway user ID and password safe as you will n
 
 Excise Notice 2002 Section 10.4 has a full list of changes and the circumstances where you need to immediately inform us.
 
-From HMRC Alcohol Wholesaler Registration Scheme
+From the HMRC Alcohol Wholesaler Registration Scheme
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
