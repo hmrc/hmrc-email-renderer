@@ -5,10 +5,10 @@ Your amendment for @{params("organisationName")} has been received on the @{para
 
 What happens next
 - You cannot trade until an AWRS registration number is issued.
-- It will take at least 45 days from your submission date to issue your registration number.
+- It will take up to 45 days from your initial submission to make a decision on your application.
 - We will review and check your application amendments (reference @{params("applicationReference")}). HMRC will contact you to discuss your amended application.
 
-More detailed information can be found in the the guidance.
+More detailed information can be found in the guidance on GOV.UK.
 
 Remember to keep your Government Gateway user ID and password safe as you will need them if you need to make changes. If your circumstances change you must update your application.
 

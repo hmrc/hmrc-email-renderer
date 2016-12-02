@@ -6,7 +6,7 @@ Your amendment for @{params("organisationName")} has been received on the @{para
 What happens next
 - We will review and check your application amendments (reference @{params("applicationReference")}). HMRC will contact you to discuss your amended application.
 
-More detailed information can be found in the the guidance.
+More detailed information can be found in the guidance on GOV.UK.
 
 Remember to keep your Government Gateway user ID and password safe as you will need them if you need to make changes. If your circumstances change you must update your application.
 
