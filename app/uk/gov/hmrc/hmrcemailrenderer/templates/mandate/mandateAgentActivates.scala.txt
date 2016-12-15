@@ -1,4 +1,4 @@
-@(params: Map[String, Any])@if(params("name").toString.trim.nonEmpty)
+@(params: Map[String, Any])
 
 Your agent has now accepted your request, they now has the authority to act for you on ATED.
 

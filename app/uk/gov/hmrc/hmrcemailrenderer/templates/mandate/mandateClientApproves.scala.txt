@@ -1,4 +1,4 @@
-@(params: Map[String, Any])@if(params("name").toString.trim.nonEmpty)
+@(params: Map[String, Any])
 
 Your client has requested you to act as their agent.
 
