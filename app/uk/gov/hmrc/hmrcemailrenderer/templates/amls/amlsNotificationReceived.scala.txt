@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Anti-Money Laundering Supervision
+New Message
 
 You have a new message from HMRC.
 To view it - sign into your online account for anti-money laundering supervision.
