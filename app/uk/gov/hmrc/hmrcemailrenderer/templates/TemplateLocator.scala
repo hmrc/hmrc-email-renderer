@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
@@ -40,6 +41,7 @@ trait TemplateLocator {
     Map("API Platform"               -> ApiTemplates.templates,
         "ATS"                        -> AtsTemplates.templates,
         "AWRS"                       -> AwrsTemplates.templates,
+        "AMLS"                       -> AmlsTemplates.templates,
         "BARS"                       -> BarsTemplates.templates,
         "CC"                         -> CcTemplates.templates,
         "Childcare Calculator"       -> ChildcareTemplates.templates,
