@@ -1,0 +1,16 @@
+@(params: Map[String, Any])
+
+You’ve got a new message from HMRC.
+You have a new message from HMRC about your anti-money laundering supervision.
+To view it, sign into your HMRC online account using the link you were given when you were invited to register online for supervision.
+For security reasons, we have not included a link with this email.
+
+Why you got this email
+
+You gave this contact email address when you signed up for anti-money laundering supervision.
+This means we send you an email to let you know you have a new message in your account.
+From HMRC Anti-Money Laundering Supervision
+
+If you’re unsure an email is from HMRC:
+do not reply to it or click any links
+forward it to phishing@@hmrc.gsi.gov.uk
