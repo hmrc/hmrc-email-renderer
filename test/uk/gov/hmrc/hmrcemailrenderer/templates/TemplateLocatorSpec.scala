@@ -39,6 +39,7 @@ class TemplateLocatorSpec extends UnitSpec {
       TemplateLocator.templateGroups.keys should contain only (
         "API Platform",
         "Self Assessment",
+        "AMLS",
         "Passcodes",
         "TAMC",
         "DFS",
@@ -80,6 +81,7 @@ class TemplateLocatorSpec extends UnitSpec {
         "newMessageAlert_SS300",
         "newMessageAlert_SA300",
         "newMessageAlert_SA309",
+        "amls_notification_received_template",
         "rescindedMessageAlert",
         "verificationReminder",
         "generic_access_invitation_template_id",
