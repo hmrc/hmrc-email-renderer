@@ -1,0 +1,5 @@
+@(params: Map[String, Any])
+
+Your agent has removed you as their ATED agent. If you think this is an error, ask your agent to add your company details again.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
