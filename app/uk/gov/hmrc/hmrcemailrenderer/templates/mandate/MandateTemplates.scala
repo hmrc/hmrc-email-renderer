@@ -19,6 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.mandate
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Mandate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
+
 object MandateTemplates {
 
   val templates = Seq(
@@ -35,6 +36,28 @@ object MandateTemplates {
       service = Mandate,
       subject = "Your agent has now accepted your request",
       plainTemplate = txt.mandateAgentActivates.f,
-      htmlTemplate = html.mandateAgentActivates.f)
+      htmlTemplate = html.mandateAgentActivates.f),
+    MessageTemplate.create(
+      templateId = "agent_rejects_mandate",
+      fromAddress = govUkTeamAddress,
+      service = Mandate,
+      subject = "Your agent has rejected your request",
+      plainTemplate = txt.mandateAgentRejects.f,
+      htmlTemplate = html.mandateAgentRejects.f),
+    MessageTemplate.create(
+      templateId = "agent_removes_mandate",
+      fromAddress = govUkTeamAddress,
+      service = Mandate,
+      subject = "Your agent has removed you as a client",
+      plainTemplate = txt.mandateAgentRemoves.f,
+      htmlTemplate = html.mandateAgentRemoves.f),
+    MessageTemplate.create(
+      templateId = "client_removes_mandate",
+      fromAddress = govUkTeamAddress,
+      service = Mandate,
+      subject = "A client has cancelled your request",
+      plainTemplate = txt.mandateClientRemoves.f,
+      htmlTemplate = html.mandateClientRemoves.f)
   )
+
 }
