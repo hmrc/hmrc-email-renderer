@@ -36,7 +36,7 @@ class TemplateLocatorSpec extends UnitSpec {
     }
 
     "enumerate all titles" in {
-      TemplateLocator.templateGroups.keys should contain only (
+      TemplateLocator.templateGroups.keys should contain only(
         "API Platform",
         "Self Assessment",
         "Passcodes",
@@ -53,12 +53,13 @@ class TemplateLocatorSpec extends UnitSpec {
         "RALD",
         "BARS",
         "TCS",
-        "register-your-company"
+        "register-your-company",
+        "Mandate"
       )
     }
 
     "enumerate all template identifiers" in {
-      TemplateLocator.all.map(_.templateId) should contain only (
+      TemplateLocator.all.map(_.templateId) should contain only(
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
         "apiDeveloperChangedPasswordConfirmation",
@@ -142,7 +143,12 @@ class TemplateLocatorSpec extends UnitSpec {
         "bars_alert",
         "tcs_renewal_confirmation",
         "register_your_company_verification_email",
-        "register_your_company_welcome_email")
+        "register_your_company_welcome_email",
+        "client_approves_mandate",
+        "agent_activates_mandate",
+        "agent_rejects_mandate",
+        "agent_removes_mandate",
+        "client_removes_mandate")
     }
 
   }

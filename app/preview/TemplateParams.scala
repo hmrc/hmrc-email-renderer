@@ -29,6 +29,8 @@ object TemplateParams {
     "recipientName_honours" -> "PA"
   )
 
+  val testServiceUpdate = "[Service Name] update"
+
   val exampleParams = Map(
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
@@ -117,12 +119,12 @@ object TemplateParams {
       "organisationName" -> "Booze Inc.",
       "submissionDate" -> "12 March 2016",
       "applicationReference" -> "123456789012"
-  ),
+    ),
     "awrs_notification_template_comfirmation_api6_pending" -> Map(
       "organisationName" -> "Booze Inc.",
       "submissionDate" -> "12 March 2016",
       "applicationReference" -> "123456789012"
-  ),
+    ),
     "awrs_notification_template_comfirmation_api6_new_business" -> Map(
       "organisationName" -> "Booze Inc.",
       "submissionDate" -> "12 March 2016",
@@ -338,6 +340,22 @@ object TemplateParams {
     ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
     "indefensible_upgrades" -> (newMessageAlert_Names),
-    "indefensible_upgrades_with_dates" -> (newMessageAlert_Names)
+    "indefensible_upgrades_with_dates" -> (newMessageAlert_Names),
+
+    "client_approves_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_activates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_rejects_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_removes_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "client_removes_mandate" -> Map(
+      "service" -> testServiceUpdate
+    )
   )
 }
