@@ -29,6 +29,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mandate.MandateTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
@@ -55,7 +56,8 @@ trait TemplateLocator {
         "register-your-company"      -> RegisterYourCompanyTemplates.templates,
         "Self Assessment"            -> DigitalContactTemplates.templates,
         "TAMC"                       -> TamcTemplates.templates,
-        "TCS"                        -> TcsTemplates.templates)
+        "TCS"                        -> TcsTemplates.templates,
+        "Mandate"                    -> MandateTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 
