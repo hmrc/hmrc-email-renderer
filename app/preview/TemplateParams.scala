@@ -29,7 +29,7 @@ object TemplateParams {
     "recipientName_honours" -> "PA"
   )
 
-  val testServiceUpdate = "[Service Name] update"
+  val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
     "apiDeveloperEmailVerification" -> Map(

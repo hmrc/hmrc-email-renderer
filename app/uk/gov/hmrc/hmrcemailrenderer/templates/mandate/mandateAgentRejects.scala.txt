@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+@{params("service")} update
+
 Your agent has rejected your request to act as their ATED agent. If you think this is an error, ask your agent to add your company details again.
 
 From HMRC
