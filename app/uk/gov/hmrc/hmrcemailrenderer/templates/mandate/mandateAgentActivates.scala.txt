@@ -2,7 +2,7 @@
 
 @{params("service")} update
 
-Your agent has now accepted your request, they now have the authority to act for you on ATED.
+Your agent has now accepted your request, they now have the authority to act for you on @{params("service")}.
 
 From HMRC
 

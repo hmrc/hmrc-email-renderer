@@ -2,7 +2,7 @@
 
 @{params("service")} update
 
-Your client has cancelled your request to act as their ATED agent. If you think this is an error, try adding your client again.
+Your client has cancelled your request to act as their @{params("service")} agent. If you think this is an error, try adding your client again.
 
 From HMRC
 
