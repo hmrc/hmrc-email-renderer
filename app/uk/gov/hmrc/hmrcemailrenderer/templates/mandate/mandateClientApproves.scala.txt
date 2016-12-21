@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+@{params("service")} update
+
 Your client has requested you to act as their agent.
 
 You can accept the client by going to your ATED online service and clicking the accept button.

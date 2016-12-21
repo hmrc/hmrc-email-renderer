@@ -1,6 +1,8 @@
 @(params: Map[String, Any])
 
-Your agent has now accepted your request, they now has the authority to act for you on ATED.
+@{params("service")} update
+
+Your agent has now accepted your request, they now have the authority to act for you on ATED.
 
 From HMRC
 
