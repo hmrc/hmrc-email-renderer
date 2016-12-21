@@ -63,6 +63,16 @@ If you'd like to add a template to the hmrc email template service, then:
   * If you just have a static template, you can use `MessageTemplate`. 
 5. That's it!
 
+## Content recommendations
+
+One of our priorities is to make sure that the content of our emails doesn't lead the user to mark the messatge as spam. Here are some recommendations we came up with:
+
+* **Salutation in the email**: if the data is available in your service, it's good to include a salutation at the beginning of the email (e.g. Dear Mr. John Smith...)
+* **Avoid using acronyms**: in the message body make sure you are using the full name (e.g. "Self Assessment" instead of "SA")
+* When closing a message, **specify your identity within the HMRC organisation**: we usually recommend a closing line that looks like: https://github.com/hmrc/hmrc-email-renderer/blob/master/app/uk/gov/hmrc/hmrcemailrenderer/templates/digitalcontact/newMessageAlertSA316_A_detailed.scala.html#L10  It is important to clearly identify the sender as much as possible. It's strongly discouraged the closing form "from HMRC".
+* Help the user understanding **why he's receiving the message**: we use to add some information about why they are receiving this email, it helps to avoid the recipient to mark it as spam, for example: https://github.com/hmrc/hmrc-email-renderer/blob/master/app/uk/gov/hmrc/hmrcemailrenderer/templates/digitalcontact/newMessageAlertSA316_A_detailed.scala.html#L8-L9
+* Last but not least: **review the content** for typos or grammar mistakes.
+
 ## Links in templates
 
 For security reasons, it is currently **HMRC policy that there are no links in emails**, either in HTML or plain text, hyperlinked or not.
