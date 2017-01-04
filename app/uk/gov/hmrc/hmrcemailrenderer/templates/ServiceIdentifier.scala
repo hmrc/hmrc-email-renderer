@@ -24,6 +24,7 @@ object ServiceIdentifier {
   case object AgentOptInExclude extends ServiceIdentifier { override val name = "agent-optin-exclude" }
   case object AgentOptInRejoin extends ServiceIdentifier { override val name = "agent-optin-rejoin" }
   case object AlcoholWholesalerRegistrationScheme extends ServiceIdentifier { override val name = "awrs" }
+  case object AntiMoneyLaunderingSupervision extends ServiceIdentifier { override val name = "amls" }
   case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
   case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
   case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
@@ -40,4 +41,5 @@ object ServiceIdentifier {
   case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
+  case object Mandate extends ServiceIdentifier { override val name = "agent-client-mandate" }
 }
