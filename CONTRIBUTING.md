@@ -36,7 +36,7 @@ Once you've got your code changes done and a pull request created, it's time to 
     2. Do the changes clearly indicate what they are trying to achieve?
     2. Are the changes aligned with our coding standards and our architectural approach?
     3. Are the changes compatible with other in-flight changes to the Repository?
-    4. Do the changes introduec any new operational concerns e.g. performance, security?
+    4. Do the changes introduce any new operational concerns e.g. performance, security?
 6. The Owning Team accepts or rejects the Pull Request
 7. If rejected, the Pull Requestor asks the Owning Team for feedback
 8. If accepted, the Owning Team merges the changes into the Repository and creates a new release
@@ -65,13 +65,18 @@ If you'd like to add a template to the hmrc email template service, then:
 
 ## Content recommendations
 
-One of our priorities is to make sure that the content of our emails doesn't lead the user to mark the messatge as spam. Here are some recommendations we came up with:
+One of our priorities is to make sure that the content of our emails doesn't lead the user to mark the message as spam. Here are some recommendations we came up with:
 
-* **Salutation in the email**: if the data is available in your service, it's good to include a salutation at the beginning of the email (e.g. Dear Mr. John Smith...)
-* **Avoid using acronyms**: in the message body make sure you are using the full name (e.g. "Self Assessment" instead of "SA")
-* When closing a message, **specify your identity within the HMRC organisation**: we usually recommend a closing line that looks like: https://github.com/hmrc/hmrc-email-renderer/blob/master/app/uk/gov/hmrc/hmrcemailrenderer/templates/digitalcontact/newMessageAlertSA316_A_detailed.scala.html#L10  It is important to clearly identify the sender as much as possible. It's strongly discouraged the closing form "from HMRC".
-* Help the user understanding **why he's receiving the message**: we use to add some information about why they are receiving this email, it helps to avoid the recipient to mark it as spam, for example: https://github.com/hmrc/hmrc-email-renderer/blob/master/app/uk/gov/hmrc/hmrcemailrenderer/templates/digitalcontact/newMessageAlertSA316_A_detailed.scala.html#L8-L9
-* Last but not least: **review the content** for typos or grammar mistakes.
+![Alt text](doc/content_guidelines.png?raw=true "Content guidelines")
+
+1. This is the only part of the template that can be customized 
+2. Title should clearly indicate the purpose of the email
+3. **Salutation in the email**: If the data is available in your service, please include a salutation at the beginning of the email (e.g. Dear Mr Rich The Cat ...)
+4. **Avoid using acronyms**: Throughout the message body please make sure you are using the full name (e.g. "Self Assessment" instead of "SA")
+5. Help the user understand **why he's receiving the message**: Information about why the user is receiving the email prevents marking the email as spam
+6. When closing a message, **specify your identity within the HMRC organisation**: It is important to clearly identify the sender. For example, "From HMRC Self Assessment". Please do not use "From HMRC" to end the message.
+7. Last but not least: **Review the content** for typos and grammar mistakes
+
 
 ## Links in templates
 
