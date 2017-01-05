@@ -14,24 +14,22 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.bars
+package uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.BusinessRates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OffPayroll
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
-object BarsTemplates  {
-
-  private val getBARefCode: Map[String, String] => String =
-    _.getOrElse("baRefNumber", "No BA CODE")
+object OffPayrollTemplates {
 
   val templates = Seq(
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "bars_alert",
-      fromAddress = FromAddress.noReply("Business Rates"),
-      service = BusinessRates,
-      subject = getBARefCode,
-      plainTemplate = txt.bars.f,
-      htmlTemplate = html.bars.f)
+    MessageTemplate.create(
+      templateId = "offpayroll_private_beta_invitation",
+      fromAddress = govUkTeamAddress,
+      service = OffPayroll,
+      subject = "You have been invited to the Off Payroll Beta",
+      plainTemplate = txt.offpayrollPrivateBetaInvitation.f,
+      htmlTemplate = html.offpayrollPrivateBetaInvitation.f)
   )
+
 }
