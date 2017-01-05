@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 HM Revenue & Customs
+ * Copyright 2017 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -57,7 +58,8 @@ trait TemplateLocator {
         "Self Assessment"            -> DigitalContactTemplates.templates,
         "TAMC"                       -> TamcTemplates.templates,
         "TCS"                        -> TcsTemplates.templates,
-        "Mandate"                    -> MandateTemplates.templates)
+        "Mandate"                    -> MandateTemplates.templates,
+        "Off Payroll"                -> OffPayrollTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 

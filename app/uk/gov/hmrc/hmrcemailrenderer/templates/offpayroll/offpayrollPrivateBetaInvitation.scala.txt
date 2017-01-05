@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+
+You have been invited to the Off Payroll private beta.
+
+Why you got this email
+
+You gave this contact email address when you signed up for the Off Payroll private beta.
+You will soon be contacted with the link to the service, as well as your unique pincode used to login to the service.
+Please note, the service is in beta and is subject to content changes during and after the private beta.
+From HMRC Off Payroll
+
+If you’re unsure an email is from HMRC:
+do not reply to it or click any links
+forward it to phishing@@hmrc.gsi.gov.uk
