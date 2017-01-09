@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 HM Revenue & Customs
+ * Copyright 2017 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,4 +42,7 @@ object ServiceIdentifier {
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
   case object Mandate extends ServiceIdentifier { override val name = "agent-client-mandate" }
+  case object OffPayroll extends ServiceIdentifier { override val name = "off-payroll" }
+
+
 }
