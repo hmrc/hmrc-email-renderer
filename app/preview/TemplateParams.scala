@@ -356,6 +356,10 @@ object TemplateParams {
     ),
     "client_removes_mandate" -> Map(
       "service" -> testServiceUpdate
+    ),
+    "offpayroll_private_beta_invitation" -> Map(
+      "fullName" -> "Mr Joe Bloggs",
+      "verificationLink" -> exampleLinkWithRandomId
     )
   )
 }
