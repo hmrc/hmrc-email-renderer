@@ -26,7 +26,8 @@ private object AppDependencies {
     "org.scalatest"     %% "scalatest"              % "2.2.6"             % "test, it",
     "org.scalacheck"    %% "scalacheck"             % "1.12.5"            % "test, it",
     "org.pegdown"       %  "pegdown"                % "1.6.0"             % "test, it",
-    "com.typesafe.play" %% "play-test"              % PlayVersion.current % "test, it"
+    "com.typesafe.play" %% "play-test"              % PlayVersion.current % "test, it",
+    "org.scalatestplus" %% "play"                   % "1.2.0"             % "test"
   )
 }
 
