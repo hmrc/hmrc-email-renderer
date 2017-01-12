@@ -2,7 +2,7 @@
 
 @{params("service")} update
 
-Your agent has removed you as their @{params("service")} agent. If you think this is an error, ask your agent to add your company details again.
+Your agent has removed you as their client for the @{params("service")}. If you think this is an error, ask your agent to add your company details again.
 
 From HMRC
 
