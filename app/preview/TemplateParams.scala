@@ -358,7 +358,7 @@ object TemplateParams {
       "service" -> testServiceUpdate
     ),
     "offpayroll_private_beta_invitation" -> Map(
-      "fullName" -> "Mr Joe Bloggs",
+      "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     )
   )
