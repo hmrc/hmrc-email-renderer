@@ -152,6 +152,7 @@ class TemplateLocatorSpec extends UnitSpec {
         "agent_rejects_mandate",
         "agent_removes_mandate",
         "client_removes_mandate",
+        "client_cancels_active_mandate",
         "offpayroll_private_beta_invitation")
     }
 
