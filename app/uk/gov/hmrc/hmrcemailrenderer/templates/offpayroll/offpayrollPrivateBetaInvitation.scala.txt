@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Dear @{params("fullName")}
+Dear @{params("name")}
 
 The Off Payroll private beta is now available
 
