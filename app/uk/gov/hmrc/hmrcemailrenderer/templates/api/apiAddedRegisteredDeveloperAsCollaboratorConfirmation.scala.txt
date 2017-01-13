@@ -6,6 +6,6 @@ Sign in to the HMRC API Developer Hub to access the application.
 
 For security reasons, we have not included a link with this email.
 
-From HMRC API Developer Hub
+From HMRC @{params("developerHubTitle")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
