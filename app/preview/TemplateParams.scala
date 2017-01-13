@@ -367,6 +367,7 @@ object TemplateParams {
     "gg_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
-    )
+    ),
+    "customs_declaration_success" -> newMessageAlert_Names
   )
 }
