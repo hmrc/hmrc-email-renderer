@@ -19,36 +19,35 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 import junit.framework.TestCase
 import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
 
-class ApiAddedDeveloperAsCollaboratorNotificationSpec extends PlaySpec with OneAppPerTest {
+class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec with OneAppPerTest {
 
-  val email = "email@email.com"
   val applicationName = "Application Name"
   val role = "role"
   val developerHubTitle = "Developer Hub Title"
 
-  val templateParams = Map("email" -> email, "applicationName" -> applicationName, "role" -> role,
+  val templateParams = Map("applicationName" -> applicationName, "role" -> role,
                            "developerHubTitle" -> developerHubTitle,
                            "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
 
   "htmlView" must {
     "render as" in new TestCase {
-      val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorNotification.render(templateParams)
+      val renderedHtml = api.html.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedHtml.contentType must include("text/html")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
-                                     "</strong> has been added to <strong>" + applicationName +
-                                     "</strong> by another admin.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They now have " + role +
-                                     " rights over the application.</p>")
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
+                                   " rights over <strong>" + applicationName + "</strong>.</p>")
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC API Developer Hub to access the application.</p>")
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">For security reasons, we have not included a link with this email.</p>")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle)
     }
   }
 
   "textView" must {
     "render as" in new TestCase {
-      val renderedTxt = api.txt.apiAddedDeveloperAsCollaboratorNotification.render(templateParams)
+      val renderedTxt = api.txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedTxt.contentType must include("text/plain")
-      renderedTxt.body must include(email + " has been added to " + applicationName + " by another admin.")
-      renderedTxt.body must include("They now have " + role + " rights over the application.")
+      renderedTxt.body must include("You’ve been given " + role + " rights over " + applicationName + ".")
+      renderedTxt.body must include("Sign in to the HMRC API Developer Hub to access the application.")
+      renderedTxt.body must include("For security reasons, we have not included a link with this email.")
       renderedTxt.body must include("From HMRC " + developerHubTitle)
     }
   }

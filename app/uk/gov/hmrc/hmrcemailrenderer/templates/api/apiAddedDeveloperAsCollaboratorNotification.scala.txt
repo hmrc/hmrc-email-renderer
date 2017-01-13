@@ -4,6 +4,6 @@
 
 They now have @{params("role")} rights over the application.
 
-From @{params("developerHubTitle")}
+From HMRC @{params("developerHubTitle")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

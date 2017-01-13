@@ -40,7 +40,8 @@ object TemplateParams {
     ),
     "apiAddedRegisteredDeveloperAsCollaboratorConfirmation" -> Map(
       "role" -> "admin",
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation" -> Map(
       "role" -> "admin",
