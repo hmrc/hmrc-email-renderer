@@ -1,3 +1,6 @@
+@import play.api.Play
+@import play.api.Play.current
+
 @(params: Map[String, Any], title: String, showHeading1: Boolean = true, footerMessage: Option[Html] = None, showHmrcBanner: Boolean = true)(content: Html)
 <!DOCTYPE html>
 <html>
@@ -14,14 +17,16 @@
   <td style="font-family: Helvetica, Arial, sans-serif;">
     <table width="100%" cellspacing="0" cellpadding="0" style="background: #000000;">
       <tr>
-        <td width="30" style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px #005EA5;">
-          <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">
-            <img src="@{params("staticAssetUrlPrefix")}@{params("staticAssetVersion")}/images/gov.uk_logotype_crown.png" width="30" alt="" style="margin: 6px 6px 0 20px;">
-          </a>
-        </td>
-        <td style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px #005EA5;">
-          <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">GOV.UK</a>
-        </td>
+        @defining(Play.configuration.getString("border.color").getOrElse("#005EA5")) { color =>
+          <td width="30" style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px @color;">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">
+              <img src="@{params("staticAssetUrlPrefix")}@{params("staticAssetVersion")}/images/gov.uk_logotype_crown.png" width="30" alt="" style="margin: 6px 6px 0 20px;">
+            </a>
+          </td>
+          <td style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px @color;">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">GOV.UK</a>
+          </td>
+        }
       </tr>
     </table>
   </td>
