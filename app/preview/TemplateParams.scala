@@ -50,7 +50,8 @@ object TemplateParams {
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
       "email" -> "joe.bloggs@gmail.com",
       "role" -> "admin",
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiRemovedCollaboratorConfirmation" -> Map(
       "applicationName" -> "Test Application"

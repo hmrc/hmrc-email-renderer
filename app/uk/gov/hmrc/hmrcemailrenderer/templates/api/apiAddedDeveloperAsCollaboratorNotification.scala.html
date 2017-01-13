@@ -2,5 +2,5 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A collaborator has been added to your application") {
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>@{params("email")}</strong> has been added to <strong>@{params("applicationName")}</strong> by another admin.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">They now have @{params("role")} rights over the application.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC API Developer Hub</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From @{params("developerHubTitle")}</p>
 }
