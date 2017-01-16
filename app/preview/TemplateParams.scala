@@ -38,6 +38,9 @@ object TemplateParams {
     "apiDeveloperPasswordReset" -> Map(
       "resetPasswordLink" -> exampleLinkWithRandomId
     ),
+    "apiDeveloperChangedPasswordConfirmation" -> Map(
+      "developerHubTitle" -> "Developer Hub Title"
+    ),
     "apiAddedRegisteredDeveloperAsCollaboratorConfirmation" -> Map(
       "role" -> "admin",
       "applicationName" -> "Test Application",
