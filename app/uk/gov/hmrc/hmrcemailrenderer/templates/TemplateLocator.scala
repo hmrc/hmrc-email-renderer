@@ -28,15 +28,16 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.childcareschemesinterest.Childcar
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.gg.GgTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mandate.MandateTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -50,6 +51,7 @@ trait TemplateLocator {
         "Childcare Schemes Interest" -> ChildcareSchemesInterestTemplates.templates,
         "DFS"                        -> DfsTemplates.templates,
         "FANDF"                      -> FandFTemplates.templates,
+        "GG"                         -> GgTemplates.templates,
         "Passcodes"                  -> PasscodesTemplates.templates,
         "GMP"                        -> GmpTemplates.templates,
         "PAYE"                       -> PayeTemplates.templates,
