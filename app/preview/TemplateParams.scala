@@ -33,7 +33,8 @@ object TemplateParams {
 
   val exampleParams = Map(
     "apiDeveloperEmailVerification" -> Map(
-      "verificationLink" -> exampleLinkWithRandomId
+      "verificationLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiDeveloperPasswordReset" -> Map(
       "resetPasswordLink" -> exampleLinkWithRandomId,
