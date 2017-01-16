@@ -36,7 +36,8 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "apiDeveloperPasswordReset" -> Map(
-      "resetPasswordLink" -> exampleLinkWithRandomId
+      "resetPasswordLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiDeveloperChangedPasswordConfirmation" -> Map(
       "developerHubTitle" -> "Developer Hub Title"

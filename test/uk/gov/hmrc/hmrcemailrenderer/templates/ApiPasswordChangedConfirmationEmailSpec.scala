@@ -19,9 +19,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 import junit.framework.TestCase
 import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
 
-class ApiPasswordChangedConfirmationEmailSpec  extends PlaySpec with OneAppPerTest {
+class ApiPasswordChangedConfirmationEmailSpec extends PlaySpec with OneAppPerTest {
 
-  val applicationName = "Application Name"
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("developerHubTitle" -> developerHubTitle,
