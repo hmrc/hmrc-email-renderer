@@ -84,6 +84,14 @@ For security reasons, it is currently **HMRC policy that there are no links in e
 
 This is because there is no guaranteed way to stop an email reader, plain text or HTML based, from spotting a http://wherever.com/some-url link and turning it into a hyperlink - this has been researched extensively. The only permissible exception to this under policy is verification links, which are vital for proving a customer's address.
 
+## Placeholder template for testing
+It is possible that you need to have your template available for testing but you haven't finalised the template content yet.  
+If that is the case we are willing to merge your Pull Request as long as there is a line right after the title (point 2 in the above image) that advises the user about it.
+For example:
+```html
+<h4>This is a test email only. Should you receive this email please ignore it</h4>
+```
+
 ## Sending Volumes
 
 It's also really important to **discuss with the DC team how many messages you expect to send, and when.** We monitor the flow of email very carefully to ensure that deliverability of HMRC email is a good as it can be.
