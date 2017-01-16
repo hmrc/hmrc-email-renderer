@@ -1,9 +1,11 @@
 @(params: Map[String, Any])Your account has been created
 
+Dear @params("full_name"),
+
 Your Government Gateway User ID is:
 @params("user_id")
 
 Keep this email safe, you'll need your User ID whenever you sign in.
-From HMRC
+From HMRC - Government Gateway
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
