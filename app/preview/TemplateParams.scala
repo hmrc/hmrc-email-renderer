@@ -357,6 +357,9 @@ object TemplateParams {
     "client_removes_mandate" -> Map(
       "service" -> testServiceUpdate
     ),
+    "client_cancels_active_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
     "offpayroll_private_beta_invitation" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
