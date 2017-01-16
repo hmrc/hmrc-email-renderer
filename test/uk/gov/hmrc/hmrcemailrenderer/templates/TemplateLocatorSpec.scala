@@ -48,6 +48,7 @@ class TemplateLocatorSpec extends UnitSpec {
         "Childcare Schemes Interest",
         "PAYE",
         "FANDF",
+        "GG",
         "ATS",
         "AWRS",
         "GMP",
@@ -153,7 +154,8 @@ class TemplateLocatorSpec extends UnitSpec {
         "agent_removes_mandate",
         "client_removes_mandate",
         "client_cancels_active_mandate",
-        "offpayroll_private_beta_invitation")
+        "offpayroll_private_beta_invitation",
+        "gg_userid_notification")
     }
 
   }
