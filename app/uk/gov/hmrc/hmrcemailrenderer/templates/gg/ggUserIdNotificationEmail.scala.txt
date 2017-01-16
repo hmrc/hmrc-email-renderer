@@ -5,6 +5,10 @@ Dear @params("full_name"),
 Your Government Gateway User ID is:
 @params("user_id")
 
+Why you got this email
+
+You have registered for a new Government Gateway account.
+
 Keep this email safe, you'll need your User ID whenever you sign in.
 From HMRC - Government Gateway
 
