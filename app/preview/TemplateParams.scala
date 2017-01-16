@@ -365,7 +365,8 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "gg_userid_notification" -> Map(
-      "user_id"->"914657894302"
+      "user_id" -> "914657894302",
+      "full_name" -> "Joe Bloggs"
     )
   )
 }
