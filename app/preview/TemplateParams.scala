@@ -363,6 +363,10 @@ object TemplateParams {
     "offpayroll_private_beta_invitation" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "gg_userid_notification" -> Map(
+      "user_id" -> "914657894302",
+      "full_name" -> "Joe Bloggs"
     )
   )
 }
