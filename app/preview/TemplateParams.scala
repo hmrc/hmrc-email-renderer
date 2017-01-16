@@ -61,7 +61,8 @@ object TemplateParams {
     ),
     "apiRemovedCollaboratorNotification" -> Map(
       "email" -> "joe.bloggs@gmail.com",
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiApplicationApprovedGatekeeperConfirmation" -> Map(
       "email" -> "joe.bloggs@gmail.com",
