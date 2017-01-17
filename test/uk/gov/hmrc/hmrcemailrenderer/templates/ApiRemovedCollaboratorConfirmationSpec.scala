@@ -25,7 +25,6 @@ class ApiRemovedCollaboratorConfirmationSpec extends PlaySpec with OneAppPerTest
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("applicationName" -> applicationName,
-    "developerHubTitle" -> developerHubTitle,
     "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
 
   "htmlView" must {
@@ -33,20 +32,34 @@ class ApiRemovedCollaboratorConfirmationSpec extends PlaySpec with OneAppPerTest
       val renderedHtml = api.html.apiRemovedCollaboratorConfirmation.render(templateParams)
       renderedHtml.contentType must include("text/html")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been removed from <strong>" +
-                                     applicationName + "</strong> on the HMRC " + developerHubTitle + ".</p>")
+        applicationName + "</strong> on the HMRC API Developer Hub.</p>")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You can no longer access this application.</p>")
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
+    }
+    "render with developerHubTitle" in new TestCase {
+      val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
+      val renderedHtml = api.html.apiRemovedCollaboratorConfirmation.render(templateParamsPlus)
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been removed from <strong>" +
+        applicationName + "</strong> on the HMRC " + developerHubTitle + ".</p>")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
+  }
 
-    "textView" must {
-      "render as" in new TestCase {
-        val renderedTxt = api.txt.apiRemovedCollaboratorConfirmation.render(templateParams)
-        renderedTxt.contentType must include("text/plain")
-        renderedTxt.body must include("You’ve been removed from " + applicationName +
-                                      " on the HMRC " + developerHubTitle + ".")
-        renderedTxt.body must include("You can no longer access this application.")
-        renderedTxt.body must include("From HMRC " + developerHubTitle)
-      }
+  "textView" must {
+    "render as" in new TestCase {
+      val renderedTxt = api.txt.apiRemovedCollaboratorConfirmation.render(templateParams)
+      renderedTxt.contentType must include("text/plain")
+      renderedTxt.body must include("You’ve been removed from " + applicationName +
+        " on the HMRC API Developer Hub.")
+      renderedTxt.body must include("You can no longer access this application.")
+      renderedTxt.body must include("From HMRC API Developer Hub")
+    }
+    "render with developerHubTitle" in new TestCase {
+      val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
+      val renderedTxt = api.txt.apiRemovedCollaboratorConfirmation.render(templateParamsPlus)
+      renderedTxt.body must include("You’ve been removed from " + applicationName +
+        " on the HMRC " + developerHubTitle + ".")
+      renderedTxt.body must include("From HMRC " + developerHubTitle)
     }
   }
 }

@@ -26,7 +26,6 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("applicationName" -> applicationName, "role" -> role,
-                           "developerHubTitle" -> developerHubTitle,
                            "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
 
   "htmlView" must {
@@ -36,9 +35,16 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
                                      " rights over <strong>" + applicationName + "</strong>.</p>")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC " +
-                                     developerHubTitle + " to access the application.</p>")
+                                     "API Developer Hub to access the application.</p>")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">For security reasons, we have not included a link with this email.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle)
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub")
+    }
+    "render with developerHubTitle" in new TestCase {
+      val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
+      val renderedHtml = api.html.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC " +
+                                     developerHubTitle + " to access the application.</p>")
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 
@@ -47,8 +53,14 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec
       val renderedTxt = api.txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedTxt.contentType must include("text/plain")
       renderedTxt.body must include("You’ve been given " + role + " rights over " + applicationName + ".")
-      renderedTxt.body must include("Sign in to the HMRC " + developerHubTitle + " to access the application.")
+      renderedTxt.body must include("Sign in to the HMRC API Developer Hub to access the application.")
       renderedTxt.body must include("For security reasons, we have not included a link with this email.")
+      renderedTxt.body must include("From HMRC API Developer Hub")
+    }
+    "render with developerHubTitle" in new TestCase {
+      val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
+      val renderedTxt = api.txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
+      renderedTxt.body must include("Sign in to the HMRC " + developerHubTitle + " to access the application.")
       renderedTxt.body must include("From HMRC " + developerHubTitle)
     }
   }
