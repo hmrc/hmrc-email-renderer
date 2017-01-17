@@ -27,7 +27,6 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends PlaySpec with OneA
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("email" -> email, "applicationName" -> applicationName, "role" -> role,
-                           "developerHubTitle" -> developerHubTitle,
                            "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
 
   "htmlView" must {
@@ -39,7 +38,12 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends PlaySpec with OneA
                                      "</strong> by another admin.</p>")
       renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They now have " + role +
                                      " rights over the application.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle)
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub")
+    }
+    "render with developerHubTitle" in new TestCase {
+      val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
+      val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorNotification.render(templateParamsPlus)
+      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 
@@ -49,6 +53,11 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends PlaySpec with OneA
       renderedTxt.contentType must include("text/plain")
       renderedTxt.body must include(email + " has been added to " + applicationName + " by another admin.")
       renderedTxt.body must include("They now have " + role + " rights over the application.")
+      renderedTxt.body must include("From HMRC API Developer Hub")
+    }
+    "render with developerHubTitle" in new TestCase {
+      val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
+      val renderedTxt = api.txt.apiAddedDeveloperAsCollaboratorNotification.render(templateParamsPlus)
       renderedTxt.body must include("From HMRC " + developerHubTitle)
     }
   }
