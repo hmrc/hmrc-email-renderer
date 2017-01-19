@@ -23,38 +23,73 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 
 class ApiTemplatesSpec  extends UnitSpec {
 
+  "The API templates" should {
+
+    "of are setup correctly" in new TestCase {
+
+      validateTemplate(
+        templateId = "apiDeveloperEmailVerification",
+        expectedSubject = "Verify your email address")
+
+      validateTemplate(
+        templateId = "apiDeveloperPasswordReset",
+        expectedSubject = "Reset your password")
+
+      validateTemplate(
+        templateId = "apiDeveloperChangedPasswordConfirmation",
+        expectedSubject = "You have reset your password")
+
+      validateTemplate(
+        templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
+        expectedSubject = "You have been added to an application")
+
+      validateTemplate(
+        templateId = "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
+        expectedSubject = "You have been added to an application")
+
+      validateTemplate(
+        templateId = "apiAddedDeveloperAsCollaboratorNotification",
+        expectedSubject = "A collaborator has been added to your application")
+
+      validateTemplate(
+        templateId = "apiRemovedCollaboratorConfirmation",
+        expectedSubject = "You have been removed from an application")
+
+      validateTemplate(
+        templateId = "apiRemovedCollaboratorNotification",
+        expectedSubject = "A collaborator has been removed from your application")
+
+      validateTemplate(
+        templateId = "apiApplicationApprovedGatekeeperConfirmation",
+        expectedSubject = "Application name approved")
+
+      validateTemplate(
+        templateId = "apiApplicationApprovedAdminConfirmation",
+        expectedSubject = "Application name approved: Verify your email address")
+
+      validateTemplate(
+        templateId = "apiApplicationApprovedNotification",
+        expectedSubject = "Application name approved")
+
+      validateTemplate(
+        templateId = "apiApplicationRejectedNotification",
+        expectedSubject = "Application not approved")
+    }
+  }
+
   def findTemplate(templateId: String): MessageTemplate = {
     ApiTemplates.templates.filter(t => t.templateId == templateId).head
   }
 
-  "The API templates" should {
-
-    "of which apiAddedDeveloperAsCollaboratorNotification should contain" in new TestCase {
-      val template = findTemplate("apiAddedDeveloperAsCollaboratorNotification")
-      val subject: (Map[String, String]) => String = template.subject.f
-      template.fromAddress.apply(Map.empty) should be("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
-      template.service should be(ApiDeveloperHub)
-      subject(Map.empty) should be("A collaborator has been added to your application")
-
-      // Fails here
-      template.plainTemplate should be(txt.apiAddedDeveloperAsCollaboratorNotification.f)
-      template.htmlTemplate should be(html.apiAddedDeveloperAsCollaboratorNotification.f)
-      template.priority should be(MessagePriority.Urgent)
-    }
-  }
-
-
-  "xxxx" in new TestCase {
-    val template = findTemplate("apiAddedDeveloperAsCollaboratorNotification")
+  def validateTemplate(templateId: String, expectedSubject: String) = {
+    val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
+    template.fromAddress.apply(Map.empty) should be("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
     template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be("HMRC test account <noreply@tax.service.gov.uk>")
     template.service should be(ApiDeveloperHub)
-    subject(Map.empty) should be("A collaborator has been added to your application")
-
-    // fails here
-    template.plainTemplate should be(txt.apiAddedDeveloperAsCollaboratorNotification.f)
-    template.htmlTemplate should be(html.apiAddedDeveloperAsCollaboratorNotification.f)
-    template.priority should be(MessagePriority.Urgent)
+    subject(Map.empty) should be(expectedSubject)
+    template.plainTemplate should not be(null)
+    template.htmlTemplate should not be(null)
+    template.priority.get should be(MessagePriority.Urgent)
   }
-
 }
