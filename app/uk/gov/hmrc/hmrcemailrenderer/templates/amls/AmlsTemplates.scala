@@ -17,8 +17,8 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.amls
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AntiMoneyLaunderingSupervision
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object AmlsTemplates {
 
