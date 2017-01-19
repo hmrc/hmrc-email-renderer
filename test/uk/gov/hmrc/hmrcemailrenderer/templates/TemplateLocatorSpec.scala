@@ -27,7 +27,7 @@ class TemplateLocatorSpec extends UnitSpec {
 
     "loop through all groups and return the first template matching the provided template id" in new TestCase {
       templateLocator.findTemplate("template-templateGroup-1-2").get.templateId shouldBe "template-templateGroup-1-2"
-      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress shouldBe "from@test"
+      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress.apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
       templateLocator.findTemplate("template-templateGroup-1-2").get.service shouldBe SelfAssessment
     }
 
@@ -169,7 +169,7 @@ class TemplateLocatorSpec extends UnitSpec {
     def messageTemplates(templateName: String): Seq[MessageTemplate] = (1 to 5) map { i =>
       MessageTemplate.create(
         templateId = s"template-$templateName-$i",
-        fromAddress = "from@test",
+        FromAddress.noReply("from@test"),
         service = SelfAssessment,
         subject = "a subject",
         plainTemplate = txt.templateSample.f,
