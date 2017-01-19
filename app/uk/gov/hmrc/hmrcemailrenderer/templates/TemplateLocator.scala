@@ -25,6 +25,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cc.CcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcarecalculator.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcareschemesinterest.ChildcareSchemesInterestTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
@@ -61,7 +62,8 @@ trait TemplateLocator {
         "TAMC"                       -> TamcTemplates.templates,
         "TCS"                        -> TcsTemplates.templates,
         "Mandate"                    -> MandateTemplates.templates,
-        "Off Payroll"                -> OffPayrollTemplates.templates)
+        "Off Payroll"                -> OffPayrollTemplates.templates,
+        "Customs"                    -> CustomsTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 

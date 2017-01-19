@@ -57,7 +57,8 @@ class TemplateLocatorSpec extends UnitSpec {
         "TCS",
         "register-your-company",
         "Mandate",
-        "Off Payroll"
+        "Off Payroll",
+        "Customs"
       )
     }
 
@@ -155,7 +156,11 @@ class TemplateLocatorSpec extends UnitSpec {
         "client_removes_mandate",
         "client_cancels_active_mandate",
         "offpayroll_private_beta_invitation",
-        "gg_userid_notification")
+        "gg_userid_notification",
+        "customs_validation_success",
+        "customs_payment_required",
+        "customs_payment_success",
+        "customs_declaration_success")
     }
 
   }
