@@ -21,11 +21,46 @@ import org.joda.time.format.DateTimeFormat
 import org.jsoup.Jsoup
 import play.twirl.api.{HtmlFormat, TxtFormat}
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.play.test.{UnitSpec, WithFakeApplication}
 
 class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication with TemplateLoader {
 
   "Templates for which the text and html content are identical" should {
+
+    "include customs_declaration_success" in new TemplateComparison {
+      val params = Map(
+        "recipientName_title" -> "title",
+        "recipientName_surname" -> "b",
+        "staticAssetVersion" -> "version",
+        "staticAssetUrlPrefix" -> "prefix"
+      )
+      compareContent("customs_declaration_success", params)(customsTemplate)
+    }
+
+    "include customs_validation_success" in new TemplateComparison {
+      val params = Map(
+        "staticAssetVersion" -> "version",
+        "staticAssetUrlPrefix" -> "prefix"
+      )
+      compareContent("customs_validation_success", params)(customsTemplate)
+    }
+
+    "include customs_payment_required" in new TemplateComparison {
+      val params = Map(
+        "staticAssetVersion" -> "version",
+        "staticAssetUrlPrefix" -> "prefix"
+      )
+      compareContent("customs_payment_required", params)(customsTemplate)
+    }
+
+    "include customs_payment_success" in new TemplateComparison {
+      val params = Map(
+        "staticAssetVersion" -> "version",
+        "staticAssetUrlPrefix" -> "prefix"
+      )
+      compareContent("customs_payment_success", params)(customsTemplate)
+    }
 
     "include newMessageAlert" in new TemplateComparison {
       val params = Map(
@@ -181,6 +216,9 @@ trait TemplateLoader {
 
   def digitalContactTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(DigitalContactTemplates.templates)
+
+  def customsTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
+    messageTemplateF(templateId)(CustomsTemplates.templates)
 
 }
 
