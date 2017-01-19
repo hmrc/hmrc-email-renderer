@@ -156,6 +156,7 @@ class TemplateLocatorSpec extends UnitSpec {
         "client_removes_mandate",
         "client_cancels_active_mandate",
         "offpayroll_private_beta_invitation",
+        "offpayroll_private_beta_final",
         "gg_userid_notification",
         "customs_validation_success",
         "customs_payment_required",

@@ -1,0 +1,59 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "The first version of the employment status service is ready for you to test") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">The first version of the employment status service is ready for you to test.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">This email includes all the information you'll need to use the service and give us your feedback</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><h2>What the service is for</h2></p>
+    
+    <p style="margin: 0 0 30px; font-size: 19px;">This is a new tool that can help people find out if a worker is employed or self-employed for tax purposes.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">It could be used by:</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">
+        <ul>
+            <li>a worker providing a service</li>
+            <li>a person or company hiring a worker</li>
+            <li>an agency that is paying a worker</li>
+        </ul>
+    </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">This version is just for testing purposes so you shouldn't rely on the results it gives.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Results will not be legally binding so you should carry on using existing methods for checking contracts.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">We'll be adding more features to the next version of the service.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><h2>How to start testing</h2></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">This link will take you straight to the test version of the service:</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>Please don't share this link with other people.</b></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">We'll be monitoring how the service is used by invitees and may need to restrict access.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><h2>How to give us your feedback</h2></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">If you want to comment on any question please click the feedback link next to it. This will open a form for you to tell us what you think. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You'll also find a form at the end of the service. You can use this to give us general feedback or tell us your thoughts on the results you got.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">The more feedback you give us, the better we can make the nest version of this service.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><h2>How long testing lasts</h2></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You can try this service as many times as you like until 30 days have passed.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">After that we'll make and test a second version of the service based on the feedback we get.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for your help and feedback,</p>
+
+    <p style="margin: 0 0 0px; font-size: 19px;"><b>Rhys Hobbs</b></p>
+    <p style="margin: 0 0 0px; font-size: 19px;">Digital Service Manager</p>
+    <p style="margin: 0 0 0px; font-size: 19px;">Personal Tax Customer Product and Process</p>
+
+}
