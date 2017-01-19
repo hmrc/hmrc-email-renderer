@@ -44,6 +44,5 @@ object ServiceIdentifier {
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
   case object Mandate extends ServiceIdentifier { override val name = "agent-client-mandate" }
   case object OffPayroll extends ServiceIdentifier { override val name = "off-payroll" }
-
-
+  case object Customs extends ServiceIdentifier { override val name = "cds" }
 }

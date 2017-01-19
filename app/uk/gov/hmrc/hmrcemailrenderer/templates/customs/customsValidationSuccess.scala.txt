@@ -1,0 +1,8 @@
+@(params: Map[String, Any])Status Change in your Supplementary Declaration
+This is a test email only. Should you receive this email please ignore it
+
+Your Supplementary Declaration has been validated successfully.
+
+From HMRC Customs
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
