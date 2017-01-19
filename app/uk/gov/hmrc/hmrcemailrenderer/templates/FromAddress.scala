@@ -21,7 +21,7 @@ case class FromAddress(f: Map[String, String] => String) {
 }
 
 object FromAddress {
-  def noReply(name: String) = s"$name <noreply@tax.service.gov.uk>"
+  def noReply(name: String): String = s"$name <noreply@tax.service.gov.uk>"
 
   lazy val govUkTeamAddress = noReply("Gov.uk Team")
 }
