@@ -33,31 +33,41 @@ object TemplateParams {
 
   val exampleParams = Map(
     "apiDeveloperEmailVerification" -> Map(
-      "verificationLink" -> exampleLinkWithRandomId
+      "verificationLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiDeveloperPasswordReset" -> Map(
-      "resetPasswordLink" -> exampleLinkWithRandomId
+      "resetPasswordLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
+    ),
+    "apiDeveloperChangedPasswordConfirmation" -> Map(
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedRegisteredDeveloperAsCollaboratorConfirmation" -> Map(
       "role" -> "admin",
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation" -> Map(
       "role" -> "admin",
       "applicationName" -> "Test Application",
-      "developerHubLink" -> exampleLinkWithRandomId
+      "developerHubLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
       "email" -> "joe.bloggs@gmail.com",
       "role" -> "admin",
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiRemovedCollaboratorConfirmation" -> Map(
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiRemovedCollaboratorNotification" -> Map(
       "email" -> "joe.bloggs@gmail.com",
-      "applicationName" -> "Test Application"
+      "applicationName" -> "Test Application",
+      "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiApplicationApprovedGatekeeperConfirmation" -> Map(
       "email" -> "joe.bloggs@gmail.com",
@@ -367,6 +377,7 @@ object TemplateParams {
     "gg_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
-    )
+    ),
+    "customs_declaration_success" -> newMessageAlert_Names
   )
 }
