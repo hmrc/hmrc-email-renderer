@@ -27,7 +27,7 @@ object OffPayrollTemplates {
       templateId = "offpayroll_private_beta_invitation",
       fromAddress = govUkTeamAddress,
       service = OffPayroll,
-      subject = "You have been invited to the Off Payroll Beta",
+      subject = "Test the new employment status service",
       plainTemplate = txt.offpayrollPrivateBetaInvitation.f,
       htmlTemplate = html.offpayrollPrivateBetaInvitation.f)
   )
