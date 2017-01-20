@@ -18,16 +18,18 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
 object SalutationHelper {
 
+  def capitalised(param: Option[Any]) =
+    param.map { value =>
+      val buffer = scala.collection.mutable.ArrayBuffer.empty[Char]
+      value.toString.copyToBuffer(buffer)
+      buffer.zipWithIndex.map { case (char, idx) =>
+        if (idx == 0 || !buffer(idx - 1).isLetter) char.toUpper
+        else char.toLower
+      }.mkString
+    }
+
   def salutationFrom(params: Map[String, Any]): String = {
-    def capitalised(param: Option[Any]) =
-      param.map { value =>
-        val buffer = scala.collection.mutable.ArrayBuffer.empty[Char]
-        value.toString.copyToBuffer(buffer)
-        buffer.zipWithIndex.map { case (char, idx) =>
-          if (idx == 0 || !buffer(idx - 1).isLetter) char.toUpper
-          else char.toLower
-        }.mkString
-      }
+
 
     val salutationParams: List[Option[String]] = List(
       capitalised(params.get("recipientName_title")),
