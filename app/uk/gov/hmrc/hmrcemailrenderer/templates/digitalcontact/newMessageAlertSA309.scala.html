@@ -1,0 +1,12 @@
+@(params: Map[String, Any])
+@import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.SA309SalutationHelper._
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You’ve got a new message from HMRC") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, Some(salutationFrom(params)))
+<p style="margin: 0 0 30px; font-size: 19px;">You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">To view it, sign in to your HMRC online account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link with this email.</p>
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Why you got this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You chose to get paperless notifications instead of letters by post.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This means we send you an email to let you know you have a new message in your account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Self Assessment</p>
+}

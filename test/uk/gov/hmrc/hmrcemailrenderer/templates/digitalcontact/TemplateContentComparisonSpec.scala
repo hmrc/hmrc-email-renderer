@@ -169,30 +169,6 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
 
   }
 
-  "SA309 template" should {
-    "have the same content as a standard new message" in  {
-
-      def renderTemplate(id: String) = {
-        val params = Map(
-          "recipientName_title" -> "title",
-          "recipientName_forename" -> "forename",
-          "recipientName_secondForename" -> "a",
-          "recipientName_surname" -> "b",
-          "recipientName_honours" -> "c",
-          "staticAssetVersion" -> "version",
-          "staticAssetUrlPrefix" -> "prefix"
-        )
-
-        digitalContactTemplate(id).map { case (html, text) => (html(params).toString(), text(params).toString()) }
-      }
-
-      val Some((renderedNewMsgHtml,renderedNewMsgText)) =  renderTemplate("newMessageAlert")
-      val Some((renderedSA309Html,renderedSA309Text)) =  renderTemplate("newMessageAlert_SA309")
-
-      renderedNewMsgHtml shouldBe renderedSA309Html
-      renderedNewMsgText shouldBe renderedSA309Text
-    }
-  }
 
   trait TemplateComparison {
     def compareContent(id: String, params: Map[String, String])(getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
