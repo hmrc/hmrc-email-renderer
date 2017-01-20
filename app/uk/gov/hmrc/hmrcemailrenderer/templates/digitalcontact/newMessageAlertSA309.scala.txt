@@ -7,14 +7,6 @@ You have a new message from HMRC to let you know the deadline for completing a p
 
 To view it, sign in to your HMRC online account.
 
-For security reasons, we have not included a link with this email.
-
-Why you got this email
-
-You chose to get paperless notifications instead of letters by post.
-
-This means we send you an email to let you know you have a new message in your account.
-
-From HMRC Self Assessment
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
