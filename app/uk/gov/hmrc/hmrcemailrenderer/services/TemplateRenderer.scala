@@ -53,7 +53,7 @@ trait TemplateRenderer {
     } yield RenderResult(
       plainText,
       htmlText,
-      template.fromAddress,
+      template.fromAddress(allParams),
       template.subject(allParams),
       template.service.name,
       template.priority

@@ -16,6 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
+case class FromAddress(f: Map[String, String] => String) {
+  def apply(p: Map[String, String]) = f(p)
+}
+
 object FromAddress {
   def noReply(name: String): String = s"$name <noreply@tax.service.gov.uk>"
 
