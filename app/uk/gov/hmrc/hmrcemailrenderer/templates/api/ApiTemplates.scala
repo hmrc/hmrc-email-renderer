@@ -24,111 +24,114 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  val from = FromAddress.noReply("HMRC API Developer Hub")
-
+  private def extractFromAddress(params : Map[String, String]): String = {
+    val sender = params.get("developerHubTitle").getOrElse("API Developer Hub")
+    FromAddress.noReply(s"HMRC $sender")
+  }
+  
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiDeveloperEmailVerification",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "Verify your email address",
       plainTemplate = txt.verificationEmail.f,
       htmlTemplate = html.verificationEmail.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiDeveloperPasswordReset",
       service = ApiDeveloperHub,
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       subject = "Reset your password",
       plainTemplate = txt.passwordResetEmail.f,
       htmlTemplate = html.passwordResetEmail.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiDeveloperChangedPasswordConfirmation",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "You have reset your password",
       plainTemplate = txt.passwordChangedConfirmationEmail.f,
       htmlTemplate = html.passwordChangedConfirmationEmail.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.f,
       htmlTemplate = html.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
       htmlTemplate = html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiAddedDeveloperAsCollaboratorNotification",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "A collaborator has been added to your application",
       plainTemplate = txt.apiAddedDeveloperAsCollaboratorNotification.f,
       htmlTemplate = html.apiAddedDeveloperAsCollaboratorNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiRemovedCollaboratorConfirmation",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "You have been removed from an application",
       plainTemplate = txt.apiRemovedCollaboratorConfirmation.f,
       htmlTemplate = html.apiRemovedCollaboratorConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiRemovedCollaboratorNotification",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "A collaborator has been removed from your application",
       plainTemplate = txt.apiRemovedCollaboratorNotification.f,
       htmlTemplate = html.apiRemovedCollaboratorNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationApprovedGatekeeperConfirmation",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedGatekeeperConfirmation.f,
       htmlTemplate = html.apiApplicationApprovedGatekeeperConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationApprovedAdminConfirmation",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "Application name approved: Verify your email address",
       plainTemplate = txt.apiApplicationApprovedAdminConfirmation.f,
       htmlTemplate = html.apiApplicationApprovedAdminConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationApprovedNotification",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedNotification.f,
       htmlTemplate = html.apiApplicationApprovedNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationRejectedNotification",
-      fromAddress = from,
+      fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "Application not approved",
       plainTemplate = txt.apiApplicationRejectedNotification.f,

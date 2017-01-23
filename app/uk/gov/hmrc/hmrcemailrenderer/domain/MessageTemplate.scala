@@ -19,10 +19,10 @@ package uk.gov.hmrc.hmrcemailrenderer.domain
 import play.api.libs.json.{Json, Writes}
 import play.twirl.api.{HtmlFormat, TxtFormat}
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
+import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
 
 case class MessageTemplate(templateId: String,
-                           fromAddress: String,
+                           fromAddress: FromAddress,
                            service: ServiceIdentifier,
                            subject: Subject,
                            plainTemplate: Body.Plain,
@@ -39,7 +39,7 @@ object MessageTemplate {
              priority: Option[MessagePriority] = None) =
     MessageTemplate(
       templateId,
-      fromAddress,
+      FromAddress(_ => fromAddress),
       service,
       Subject.fromPlainString(subject),
       plainTemplate,
@@ -56,9 +56,26 @@ object MessageTemplate {
                                priority: Option[MessagePriority] = None) =
     MessageTemplate(
       templateId,
-      fromAddress,
+      FromAddress(_ => fromAddress),
       service,
       Subject(subject),
+      plainTemplate,
+      htmlTemplate,
+      priority
+    )
+
+  def createWithDynamicFromAddress(templateId: String,
+                               fromAddress: Map[String, String] => String,
+                               service: ServiceIdentifier,
+                               subject: String,
+                               plainTemplate: Body.Plain,
+                               htmlTemplate: Body.Html,
+                               priority: Option[MessagePriority] = None) =
+    MessageTemplate(
+      templateId,
+      FromAddress(fromAddress),
+      service,
+      Subject.fromPlainString(subject),
       plainTemplate,
       htmlTemplate,
       priority

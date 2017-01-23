@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates
+package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
+import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 class ApiPasswordChangedConfirmationEmailSpec extends PlaySpec with OneAppPerTest {
 
