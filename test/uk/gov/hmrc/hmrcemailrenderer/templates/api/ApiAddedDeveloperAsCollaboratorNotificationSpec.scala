@@ -28,7 +28,8 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends PlaySpec with OneA
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("email" -> email, "applicationName" -> applicationName, "role" -> role,
-                           "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
+                           "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1",
+                            "borderColour" -> "#005EA5")
 
   "htmlView" must {
     "render as" in new TestCase {

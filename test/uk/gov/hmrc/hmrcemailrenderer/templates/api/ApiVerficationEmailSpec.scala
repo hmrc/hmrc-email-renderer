@@ -26,7 +26,7 @@ class ApiVerficationEmailSpec  extends PlaySpec with OneAppPerTest {
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("verificationLink" -> verificationLink,
-    "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
+    "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> "#005EA5")
 
   "htmlView" must {
     "render as" in new TestCase {
