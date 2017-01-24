@@ -118,7 +118,6 @@ class TemplatePrioritiesISpec extends ServiceSpec
       ("templateIds", "params"),
       ("newMessageAlert", Map[String, String]()),
       ("verificationReminder", Map[String, String]("verificationLink" -> "/abc")),
-      ("indefensibleUpgrade", Map[String, String]()),
       ("digitalOptOutConfirmation", Map[String, String]())
     )
   }

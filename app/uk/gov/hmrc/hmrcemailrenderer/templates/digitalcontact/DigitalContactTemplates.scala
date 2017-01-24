@@ -80,20 +80,6 @@ object DigitalContactTemplates {
       plainTemplate = txt.verificationReminder.f,
       htmlTemplate = html.verificationReminder.f),
     MessageTemplate.create(
-      templateId = "indefensibleUpgrade",
-      fromAddress = defaultFromAddress,
-      service = SelfAssessment,
-      subject = "Action needed on your HMRC account",
-      plainTemplate = txt.indefensibleUpgrade.f,
-      htmlTemplate = html.indefensibleUpgrade.f),
-    MessageTemplate.create(
-      templateId = "indefensibleUpgradeWithDate",
-      fromAddress = defaultFromAddress,
-      service = SelfAssessment,
-      subject = "Action needed before 1st April on your HMRC account",
-      plainTemplate = txt.indefensibleUpgradeWithDate.f,
-      htmlTemplate = html.indefensibleUpgradeWithDate.f),
-    MessageTemplate.create(
       templateId = "newMessageAlert_SA309",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,

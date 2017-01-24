@@ -123,25 +123,6 @@ class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader {
       compareContent("verificationReminder", params)(digitalContactTemplate)
     }
 
-    "include indefensibleUpgrade" in new TemplateComparison {
-      val params = Map(
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
-
-      compareContent("indefensibleUpgrade", params)(digitalContactTemplate)
-    }
-
-    "include indefensibleUpgradeWithDate" in new TemplateComparison {
-      val params = Map(
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
-      compareContent("indefensibleUpgradeWithDate", params)(digitalContactTemplate)
-    }
-
     "include SA300 templates" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
