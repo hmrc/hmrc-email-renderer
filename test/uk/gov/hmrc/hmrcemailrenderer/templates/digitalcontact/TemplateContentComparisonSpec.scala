@@ -22,9 +22,9 @@ import org.jsoup.Jsoup
 import play.twirl.api.{HtmlFormat, TxtFormat}
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
-import uk.gov.hmrc.play.test.{UnitSpec, WithFakeApplication}
+import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication with TemplateLoader {
+class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader {
 
   "Templates for which the text and html content are identical" should {
 
@@ -33,7 +33,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
         "recipientName_title" -> "title",
         "recipientName_surname" -> "b",
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("customs_declaration_success", params)(customsTemplate)
     }
@@ -41,7 +42,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include customs_validation_success" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("customs_validation_success", params)(customsTemplate)
     }
@@ -49,7 +51,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include customs_payment_required" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("customs_payment_required", params)(customsTemplate)
     }
@@ -57,7 +60,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include customs_payment_success" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("customs_payment_success", params)(customsTemplate)
     }
@@ -70,7 +74,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
         "recipientName_surname" -> "b",
         "recipientName_honours" -> "c",
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("newMessageAlert", params)(digitalContactTemplate)
     }
@@ -78,7 +83,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include changeOfEmailAddress" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("changeOfEmailAddress", params)(digitalContactTemplate)
     }
@@ -86,7 +92,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include digitalOptOutConfirmation" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("digitalOptOutConfirmation", params)(digitalContactTemplate)
     }
@@ -99,7 +106,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
         "recipientName_surname" -> "b",
         "recipientName_honours" -> "c",
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
 
       compareContent("rescindedMessageAlert", params)(digitalContactTemplate)
@@ -109,7 +117,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
       val params = Map(
         "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate()),
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("verificationReminder", params)(digitalContactTemplate)
     }
@@ -117,7 +126,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include indefensibleUpgrade" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
 
       compareContent("indefensibleUpgrade", params)(digitalContactTemplate)
@@ -126,7 +136,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include indefensibleUpgradeWithDate" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("indefensibleUpgradeWithDate", params)(digitalContactTemplate)
     }
@@ -134,7 +145,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
     "include SA300 templates" in new TemplateComparison {
       val params = Map(
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
       compareContent("newMessageAlert_SS300", params)(digitalContactTemplate)
       compareContent("newMessageAlert_SA300", params)(digitalContactTemplate)
@@ -148,7 +160,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
         "recipientName_surname" -> "b",
         "recipientName_honours" -> "c",
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
 
       compareContent("newMessageAlert_SA309", params)(digitalContactTemplate)
@@ -161,7 +174,8 @@ class TemplateContentComparisonSpec extends UnitSpec with WithFakeApplication wi
         "recipientName_secondForename" -> "a",
         "recipientName_honours" -> "c",
         "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix"
+        "staticAssetUrlPrefix" -> "prefix",
+        "borderColour" -> "#005EA5"
       )
 
       compareContent("newMessageAlert_SA316", params)(digitalContactTemplate)

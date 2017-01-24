@@ -17,41 +17,25 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import junit.framework.TestCase
-import org.scalatest.TestData
 import org.scalatestplus.play._
-import play.api.test.{FakeApplication}
 import play.twirl.api.Html
 
-trait BorderSpec extends PlaySpec with OneAppPerTest {
+trait RenderedEmailSpec extends PlaySpec with OneAppPerTest {
 
-  def assertBorder(expectedColor: String) = {
-    val renderValues = Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
+  def assertRenderedBorderMatchesGivenColor(expectedColor: String) = {
+    val renderValues = Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> expectedColor)
+
     val result = helpers.html.template_main.render(renderValues, "Test", true, None, true, Html("<html></html>"))
+
     result.body must include("<td width=\"30\" style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColor)
     result.body must include("<td style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColor)
     result.contentType must include( "text/html" )
   }
-}
-
-class BorderFromConfigSpec extends BorderSpec  {
-
-  override def newAppForTest(testData: TestData) =
-    FakeApplication(additionalConfiguration = Map("border.color" -> "#012345"))
 
   "emailRenderedView" must {
-    "have a border color from config" in new TestCase {
-      app.configuration.getString("border.color") mustBe Some("#012345")
-      assertBorder("#012345")
-    }
-  }
-}
-
-class BorderFromDefaultSpec extends BorderSpec {
-
-  "emailRenderedView" must {
-    "have a default border color" in new TestCase {
-      app.configuration.getString("border.color") mustBe None
-      assertBorder("#005EA5")
+    "have a border color from parameter config passed to the template" in new TestCase {
+      assertRenderedBorderMatchesGivenColor("#012345")
+      assertRenderedBorderMatchesGivenColor("#005EA5")
     }
   }
 }
