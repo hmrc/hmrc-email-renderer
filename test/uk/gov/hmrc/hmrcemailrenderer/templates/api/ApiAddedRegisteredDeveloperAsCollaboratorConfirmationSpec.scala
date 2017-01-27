@@ -17,17 +17,18 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
+import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec with OneAppPerTest {
+class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec {
 
   val applicationName = "Application Name"
   val role = "role"
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("applicationName" -> applicationName, "role" -> role,
-                           "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1")
+                           "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1",
+                           "borderColour" -> "#005EA5")
 
   "htmlView" must {
     "render as" in new TestCase {

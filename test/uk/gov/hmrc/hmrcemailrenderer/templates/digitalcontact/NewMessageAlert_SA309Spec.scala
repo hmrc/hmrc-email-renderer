@@ -17,13 +17,13 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.scalatest.EitherValues
-import uk.gov.hmrc.play.test.{UnitSpec, WithFakeApplication}
+import uk.gov.hmrc.play.test.UnitSpec
 
-class NewMessageAlert_SA309Spec extends UnitSpec with WithFakeApplication with EitherValues with TemplateLoader {
+class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with TemplateLoader {
 
   "NewMessageAlert_SA309" should {
 
-    val commonParameters: Map[String, String] = Map("staticAssetVersion" -> "version", "staticAssetUrlPrefix" -> "prefix")
+    val commonParameters: Map[String, String] = Map("staticAssetVersion" -> "version", "staticAssetUrlPrefix" -> "prefix", "borderColour" -> "#005EA5")
     val templateSA309 = DigitalContactTemplates.templates.find(_.templateId == "newMessageAlert_SA309").get
 
 
