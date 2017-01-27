@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
+import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec with OneAppPerTest {
+class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec {
 
   val applicationName = "Application Name"
   val role = "role"

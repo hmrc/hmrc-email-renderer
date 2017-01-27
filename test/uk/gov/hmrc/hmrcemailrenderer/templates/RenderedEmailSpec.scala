@@ -20,22 +20,22 @@ import junit.framework.TestCase
 import org.scalatestplus.play._
 import play.twirl.api.Html
 
-trait RenderedEmailSpec extends PlaySpec with OneAppPerTest {
+trait RenderedEmailSpec extends PlaySpec {
 
-  def assertRenderedBorderMatchesGivenColor(expectedColor: String) = {
-    val renderValues = Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> expectedColor)
+  def assertRenderedBorderMatchesGivenColour(expectedColour: String) = {
+    val renderValues = Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> expectedColour)
 
     val result = helpers.html.template_main.render(renderValues, "Test", true, None, true, Html("<html></html>"))
 
-    result.body must include("<td width=\"30\" style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColor)
-    result.body must include("<td style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColor)
+    result.body must include("<td width=\"30\" style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColour)
+    result.body must include("<td style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColour)
     result.contentType must include( "text/html" )
   }
 
   "emailRenderedView" must {
-    "have a border color from parameter config passed to the template" in new TestCase {
-      assertRenderedBorderMatchesGivenColor("#012345")
-      assertRenderedBorderMatchesGivenColor("#005EA5")
+    "have a border colour from parameter config passed to the template" in new TestCase {
+      assertRenderedBorderMatchesGivenColour("#012345")
+      assertRenderedBorderMatchesGivenColour("#005EA5")
     }
   }
 }
