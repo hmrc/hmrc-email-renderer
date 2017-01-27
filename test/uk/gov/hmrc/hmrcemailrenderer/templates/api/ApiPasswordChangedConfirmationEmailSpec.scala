@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
+import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiPasswordChangedConfirmationEmailSpec extends PlaySpec with OneAppPerTest {
+class ApiPasswordChangedConfirmationEmailSpec extends PlaySpec {
 
   val developerHubTitle = "Developer Hub Title"
 

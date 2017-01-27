@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.{OneAppPerTest, PlaySpec}
+import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiDeveloperPasswordResetSpec extends PlaySpec with OneAppPerTest {
+class ApiDeveloperPasswordResetSpec extends PlaySpec {
 
   val resetPasswordLink = "http://reset.password.com"
   val developerHubTitle = "Developer Hub Title"
