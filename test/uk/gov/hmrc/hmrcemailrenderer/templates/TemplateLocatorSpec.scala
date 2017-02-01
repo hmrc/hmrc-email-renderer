@@ -16,27 +16,28 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
-import org.scalatestplus.play.{OneAppPerSuite, PlaySpec}
+import org.scalatestplus.play.OneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
+import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplateLocatorSpec extends PlaySpec with OneAppPerSuite {
+class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
   "The template locator" should {
 
     "loop through all groups and return the first template matching the provided template id" in new TestCase {
-      templateLocator.findTemplate("template-templateGroup-1-2").get.templateId mustBe "template-templateGroup-1-2"
-      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress.apply(Map.empty) mustBe "from@test <noreply@tax.service.gov.uk>"
-      templateLocator.findTemplate("template-templateGroup-1-2").get.service mustBe SelfAssessment
+      templateLocator.findTemplate("template-templateGroup-1-2").get.templateId shouldBe "template-templateGroup-1-2"
+      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress.apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
+      templateLocator.findTemplate("template-templateGroup-1-2").get.service shouldBe SelfAssessment
     }
 
     "return none if the template is not found" in new TestCase {
-      templateLocator.findTemplate("template-templateGroup-10-2") mustBe None
+      templateLocator.findTemplate("template-templateGroup-10-2") shouldBe None
     }
 
     "enumerate all titles" in {
-      TemplateLocator.templateGroups.keys must contain only(
+      TemplateLocator.templateGroups.keys should contain only(
         "API Platform",
         "Self Assessment",
         "AMLS",
@@ -63,7 +64,7 @@ class TemplateLocatorSpec extends PlaySpec with OneAppPerSuite {
     }
 
     "enumerate all template identifiers" in {
-      TemplateLocator.all.map(_.templateId) must contain only(
+      TemplateLocator.all.map(_.templateId) should contain only(
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
         "apiDeveloperChangedPasswordConfirmation",
