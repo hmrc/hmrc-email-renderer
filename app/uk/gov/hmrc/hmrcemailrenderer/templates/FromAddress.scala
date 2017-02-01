@@ -16,12 +16,19 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
+import play.api.Play
+
 case class FromAddress(f: Map[String, String] => String) {
   def apply(p: Map[String, String]) = f(p)
 }
 
 object FromAddress {
-  def noReply(name: String): String = s"$name <noreply@tax.service.gov.uk>"
+  import play.api.Play.current
+
+  lazy val replyDomain = Play.configuration.getString("fromAddress.domain").
+    getOrElse(throw new IllegalArgumentException("Missing config for key - fromAddress.domain"))
+
+  def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 
   lazy val govUkTeamAddress = noReply("Gov.uk Team")
 }
