@@ -16,12 +16,13 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
+import org.scalatestplus.play.OneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplateLocatorSpec extends UnitSpec {
+class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
   "The template locator" should {
 
