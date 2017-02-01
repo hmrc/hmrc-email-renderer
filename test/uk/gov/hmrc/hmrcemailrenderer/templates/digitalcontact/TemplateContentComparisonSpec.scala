@@ -19,12 +19,12 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 import org.joda.time.LocalDate
 import org.joda.time.format.DateTimeFormat
 import org.jsoup.Jsoup
+import org.scalatestplus.play.{OneAppPerSuite, PlaySpec}
 import play.twirl.api.{HtmlFormat, TxtFormat}
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
-import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader {
+class TemplateContentComparisonSpec extends PlaySpec with TemplateLoader with OneAppPerSuite{
 
   "Templates for which the text and html content are identical" should {
 
@@ -171,7 +171,7 @@ class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader {
         case Some((htmlTemplate, textTemplate)) =>
           val html = TemplateContentNormalisation.html(htmlTemplate(params))
           val text = TemplateContentNormalisation.text(textTemplate(params))
-          html shouldBe s"GOV.UK HM Revenue & Customs $text"
+          html mustBe s"GOV.UK HM Revenue & Customs $text"
 
         case _ => fail(s"could not locate template with id $id")
       }
