@@ -17,11 +17,12 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.{OneAppPerSuite, PlaySpec}
+import org.scalatestplus.play.OneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
+import uk.gov.hmrc.play.test.UnitSpec
 
-class ApiTemplatesSpec extends PlaySpec with OneAppPerSuite {
+class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
   "The API templates" should {
 
@@ -84,12 +85,12 @@ class ApiTemplatesSpec extends PlaySpec with OneAppPerSuite {
   def validateTemplate(templateId: String, expectedSubject: String) = {
     val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
-    template.fromAddress.apply(Map.empty) mustBe ("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
-    template.fromAddress.apply(Map("developerHubTitle" -> "test account")) mustBe("HMRC test account <noreply@tax.service.gov.uk>")
-    template.service mustBe(ApiDeveloperHub)
-    subject(Map.empty) mustBe(expectedSubject)
-    template.plainTemplate mustNot be(null)
-    template.htmlTemplate mustNot be(null)
-    template.priority.get mustBe(MessagePriority.Urgent)
+    template.fromAddress.apply(Map.empty) should be ("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
+    template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be("HMRC test account <noreply@tax.service.gov.uk>")
+    template.service should be(ApiDeveloperHub)
+    subject(Map.empty) should be(expectedSubject)
+    template.plainTemplate should not be(null)
+    template.htmlTemplate should not be(null)
+    template.priority.get should be(MessagePriority.Urgent)
   }
 }
