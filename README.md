@@ -79,7 +79,7 @@ Alternatively, you can do a preview of emails by starting the service using `sm`
 
 ```bash
 sm --start ASSETS_FRONTEND -f
-sm --start EMAIL [-f|-r]
+sm --start HMRC_EMAIL_RENDERER [-f|-r]
 ```
 
 Again, list the templates can then be previewed from
