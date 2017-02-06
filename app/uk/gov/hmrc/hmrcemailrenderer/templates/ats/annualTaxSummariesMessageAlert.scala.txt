@@ -1,19 +1,18 @@
 @(params: Map[String, Any])Your Annual Tax Summary is ready
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsSalutationHelper
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, Some(AtsSalutationHelper.salutationFrom(params)))
 
 Thank you for completing your Self Assessment tax return.
 
-There's a summary in your HMRC online account showing ‎how much tax and National Insurance you have paid and how Government spends it.
+Your annual tax summary is now online. It shows ‎how much tax and National Insurance you have paid and how Government spends it.
 
-Sign in and check the messages‎ in your online account to see your personal summary.
+You can find the summary by signing into your tax account, looking in the self assessment section and selecting 'find out how your tax is spent'.
 
-Tax summaries are for information only so you don't need to contact HMRC.
-
-Yours sincerely
+Tax summaries are for information only so there's no need to take any further action.
 
 Ruth Owen
 
-Personal Tax Director General
+Director General, HMRC Customer Services
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
