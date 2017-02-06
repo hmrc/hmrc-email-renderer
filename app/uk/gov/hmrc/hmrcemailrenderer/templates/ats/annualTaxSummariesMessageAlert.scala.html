@@ -1,12 +1,12 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsSalutationHelper
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Annual Tax Summary is ready", footerMessage = Some(footer)) {
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, Some(AtsSalutationHelper.salutationFrom(params)))
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Thank you for completing your Self Assessment tax return.</p>
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">There's a summary in your HMRC online account showing ‎how much tax and National Insurance you have paid and how Government spends it.</p>
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Sign in and check the messages‎ in your online account to see your personal summary.</p>
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Tax summaries are for information only so you don't need to contact HMRC.</p>
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Yours sincerely</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Your annual tax summary is now online. It shows ‎how much tax and National Insurance you have paid and how Government spends it.</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">You can find the summary by signing into your tax account, looking in the self assessment section and selecting 'find out how your tax is spent'.</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Tax summaries are for information only so there's no need to take any further action.</p>
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Ruth Owen</p>
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Personal Tax Director General</p>
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Director General, HMRC Customer Services</p>
 }
 
 @footer = {
