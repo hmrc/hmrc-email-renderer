@@ -29,7 +29,7 @@ class AtsSalutationHelperSpec extends UnitSpec {
       salutation shouldBe "Dear John"
     }
 
-    "return 'Dear Title Surname' if first name is present" in {
+    "return 'Dear Title Surname' if first name is not present, and surname/title are present" in {
 
       val salutationParams: Map[String, Any] = Map("recipientName_title" -> "Mr", "recipientName_surname" -> "Doe")
 
