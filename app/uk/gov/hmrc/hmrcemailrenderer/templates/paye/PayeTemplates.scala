@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority._
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
@@ -29,6 +30,8 @@ object PayeTemplates  {
       service  = PayAsYouEarn,
       subject = "Your Income Tax estimate has changed",
       plainTemplate = txt.newTaxEstimateMessageAlert.f,
-      htmlTemplate = html.newTaxEstimateMessageAlert.f)
+      htmlTemplate = html.newTaxEstimateMessageAlert.f,
+      priority = Some(Background)
+    )
   )
 }
