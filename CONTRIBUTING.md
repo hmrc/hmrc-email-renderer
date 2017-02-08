@@ -94,13 +94,11 @@ For example:
 
 ## Volumes and priority recommendations
 
-As explained in the `email` service documentation, the developer can specify for each template use case, which is the most suitable queue: priority, background or default:
+As explained in the `email` service documentation, the developer can specify for each template use case, which is the most suitable priority: urgent, background or standard:
 
-- **Priority** queue: all emails saved in this queue will be sent immediately (meaning that no throttling is applied). For this reason, this queue is typically used for **transactional/verification emails**, or whenever the client system expects the user to receive an email promptly. This queue is **not** meant to be used **for batches**.
-- **Background** queue: the typical use case for this queue is when, from a business point of view, **big batches** (tens of thousands) of emails need to be sent.
-- **Default** queue: this queue is used to process reasonably **small sets of emails** (e.g. few thousands), and is the queue that will be used if no other queue is specified.
-
-*Note:* if you need to send out 100.000 emails, and you plan to send small batches of 1000 each, you should still use the **background queue**. 
+- **Urgent** priority: all emails will be sent immediately (meaning that no throttling is applied). For this reason, this priority is typically used for **transactional/verification emails**, or whenever the client system expects the user to receive an email promptly. This is **not** meant to be used **for batches**.
+- **Background** priority: the typical use case for this is when, from a business point of view, **big batches** (tens of thousands) of emails need to be sent.
+- **Standard** priority: this is used to process reasonably **small batches of emails** (e.g. few thousands), and is the priority that will be used if no other is specified.
 
 It's also really important to **discuss with the DC team how many messages you expect to send, and when.** We monitor the flow of email very carefully to ensure that deliverability of HMRC email is a good as it can be.
 
