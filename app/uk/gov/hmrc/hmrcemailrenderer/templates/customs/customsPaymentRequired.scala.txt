@@ -2,6 +2,9 @@
 This is a test email only. Should you receive this email please ignore it
 
 Your Supplementary Declaration requires payment.
+The following is the payment details for your supplementary declaration:
+
+@params("details")
 
 From HMRC Customs
 
