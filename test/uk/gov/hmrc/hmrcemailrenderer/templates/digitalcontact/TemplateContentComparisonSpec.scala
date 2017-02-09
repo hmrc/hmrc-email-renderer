@@ -31,8 +31,7 @@ class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader with On
 
     "include customs_declaration_success" in new TemplateComparison {
       val params = Map(
-        "recipientName_title" -> "title",
-        "recipientName_surname" -> "b",
+        "details" -> "details",
         "staticAssetVersion" -> "version",
         "staticAssetUrlPrefix" -> "prefix",
         "borderColour" -> "#005EA5"
@@ -42,6 +41,7 @@ class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader with On
 
     "include customs_validation_success" in new TemplateComparison {
       val params = Map(
+        "details" -> "details",
         "staticAssetVersion" -> "version",
         "staticAssetUrlPrefix" -> "prefix",
         "borderColour" -> "#005EA5"
@@ -51,6 +51,7 @@ class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader with On
 
     "include customs_payment_required" in new TemplateComparison {
       val params = Map(
+        "details" -> "details",
         "staticAssetVersion" -> "version",
         "staticAssetUrlPrefix" -> "prefix",
         "borderColour" -> "#005EA5"
@@ -60,6 +61,7 @@ class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader with On
 
     "include customs_payment_success" in new TemplateComparison {
       val params = Map(
+        "details" -> "details",
         "staticAssetVersion" -> "version",
         "staticAssetUrlPrefix" -> "prefix",
         "borderColour" -> "#005EA5"
