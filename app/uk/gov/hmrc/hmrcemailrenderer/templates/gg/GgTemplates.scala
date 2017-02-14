@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.gg
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GovernmentGateway
 
@@ -29,6 +29,7 @@ object GgTemplates {
       service = GovernmentGateway,
       subject = "Government Gateway User ID",
       plainTemplate = txt.ggUserIdNotificationEmail.f,
-      htmlTemplate = html.ggUserIdNotificationEmail.f)
+      htmlTemplate = html.ggUserIdNotificationEmail.f,
+      priority = Some(MessagePriority.Urgent))
   )
 }
