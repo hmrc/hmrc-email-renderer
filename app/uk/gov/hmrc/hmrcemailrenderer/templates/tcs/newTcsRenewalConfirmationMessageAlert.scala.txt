@@ -1,19 +1,34 @@
-@(params: Map[String, Any])Your tax credits renewal has been received
+@(params: Map[String, Any]) @{params("customerName")}, your tax credits renewal has been received
 
 Your online reference number is @{params("renewalReference")}
 
-You do not need to do anything else
+What you can do next
 
-Do not send us your renewal pack through the post, as this will delay your renewal.
+You must:
+
+@if(params("isMultiple") == "true"){
+    - complete your @{params("claimCount")} remaining annual reviews to finish your renewal.
+    - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
+      For the helpline number, visit www.gov.uk/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
+ } else {
+    - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
+      For the helpline number, visit www.gov.uk/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
+ }
+
+ You can also:
+
+ - check the status of your renewal
+ - complete this review again if you think you made a mistake
 
 What happens next
 
 We will work out how much tax credits you:
 
-- should have got
-- will get from @{params("startDate")} to @{params("endDate")}, unless your claim has ended
+- should have got in your award period
+- will get from @{params("startDate")} to @{params("endDate")}, unless your claim has ended,
+  and send you an award notice that you should get by @{params("noticeDate")}
 
-We will send you an award notice that you should get by @{params("noticeDate")}.
+If the amount was wrong, we will pay you the right amount or ask you to pay back any extra money.
 
 From HMRC Tax Credits
 
