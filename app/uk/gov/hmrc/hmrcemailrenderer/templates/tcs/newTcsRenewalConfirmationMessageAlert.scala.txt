@@ -1,21 +1,27 @@
-@(params: Map[String, Any]) @{params("customerName")}, your tax credits renewal has been received
+@(params: Map[String, Any])Your tax credits renewal has been received
 
 Your online reference number is @{params("renewalReference")}
 
 What you can do next
 
-You must:
+@if(params("anyEstimates") == "true"){
 
-@if(params("isMultiple") == "true"){
-    - complete your @{params("claimCount")} remaining annual reviews to finish your renewal.
-    - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-      For the helpline number, visit www.gov.uk/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
- } else {
-    - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-      For the helpline number, visit www.gov.uk/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
+    You must:
+
+    @if(params("isMultiple") == "true"){
+        - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
+        - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
+     } else {
+        - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
+     }
+} else {
+    @if(params("isMultiple") == "true"){
+        You must:
+        - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
  }
+}
 
- You can also:
+ You can:
 
  - check the status of your renewal
  - complete this review again if you think you made a mistake

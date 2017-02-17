@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, {params("customerName")} + ", your tax credits renewal has been received", true, footerMessage = None, true) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your tax credits renewal has been received", true, footerMessage = None, true) {
 
 <p style="font-size: 24px;line-height: 1.315789474; margin: 0 0 30px 0;">
     Your reference number is
@@ -7,21 +7,28 @@
 </p>
 
 <h2>What you can do next</h2>
-<p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
-@if(params("isMultiple") == "true"){
-<ul>
-    <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("claimCount")} remaining annual reviews to finish your renewal.</li>
-    <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-        For the helpline number, visit www.gov.uk/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries</li>
-</ul>
+@if(params("anyEstimates") == "true"){
+    <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+    @if(params("isMultiple") == "true"){
+        <ul>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
+        </ul>
+    } else {
+        <ul>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
+        </ul>
+    }
 } else {
-<ul>
-    <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-        For the helpline number, visit www.gov.uk/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries</li>
-</ul>
+@if(params("isMultiple") == "true"){
+    <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+    <ul>
+        <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
+    </ul>
+}
 }
 
-<p style="font-size: 16px;line-height: 1.315789474;">You can also:</p>
+<p style="font-size: 16px;line-height: 1.315789474;">You can:</p>
 <ul>
     <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">check the status of your renewal</li>
     <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete this review again if you think you made a mistake</li>
@@ -40,5 +47,5 @@
 <p style="font-size: 16px;line-height: 1.315789474; margin: 0 0 30px 0;">If the amount was wrong, we will pay you the right amount or ask you to pay back any extra money.</p>
 
 <p style="font-size: 16px;line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Tax Credits</p>
-}   <!--TODO: Need to confirm what the notice date is-->
+}
 
