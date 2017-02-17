@@ -311,13 +311,13 @@ object TemplateParams {
       "helpeeFirstName" -> "John"
     ),
     "tcs_renewal_confirmation" -> Map(
-      "customerName" -> "Elisha Green",
       "renewalReference" -> "123 456 789 123 456",
       "startDate" -> "6 April 2016",
       "endDate" -> "5 April 2017",
       "noticeDate" -> "21 October 2016",
       "isMultiple" -> "true",
-      "claimCount" -> "2"
+      "incompleteClaims" -> "2",
+      "anyEstimates" -> "true"
     ),
     "iht_access_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
