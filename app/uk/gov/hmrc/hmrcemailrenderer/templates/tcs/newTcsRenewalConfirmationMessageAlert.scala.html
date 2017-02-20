@@ -9,7 +9,7 @@
 <h2>What you can do next</h2>
 @if(params("anyEstimates") == "true"){
     <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
-    @if(params("isMultiple") == "true"){
+    @if((params("isMultiple") == "true") && (params("incompleteClaims") != "0")){
         <ul>
             <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
             <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
@@ -20,7 +20,7 @@
         </ul>
     }
 } else {
-@if(params("isMultiple") == "true"){
+@if((params("isMultiple") == "true") && (params("incompleteClaims") != "0")){
     <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
     <ul>
         <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
