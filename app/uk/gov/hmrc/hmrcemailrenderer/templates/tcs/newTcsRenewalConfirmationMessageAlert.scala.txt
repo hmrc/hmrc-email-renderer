@@ -8,14 +8,14 @@ What you can do next
 
     You must:
 
-    @if(params("isMultiple") == "true"){
+    @if((params("isMultiple") == "true") && (params("incompleteClaims") != "0")){
         - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
         - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
      } else {
         - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
      }
 } else {
-    @if(params("isMultiple") == "true"){
+    @if((params("isMultiple") == "true") && (params("incompleteClaims") != "0")){
         You must:
         - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
  }
