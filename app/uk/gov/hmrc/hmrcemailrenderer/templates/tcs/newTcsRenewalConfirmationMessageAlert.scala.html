@@ -7,25 +7,80 @@
 </p>
 
 <h2>What you can do next</h2>
-@if(params("anyEstimates") == "true"){
+@if((params("isMultiple") == "true") && (params("anyEstimates") != "0") && (params("anyEstimates") != "1")){
     <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
-    @if((params("isMultiple") == "true") && (params("incompleteClaims") != "0")){
+    @if(((params("incompleteClaims") != "0") && (params("incompleteClaims") != "1"))){
+        <ul>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.</li>
+        </ul>
+    } else {
+        @if(params("incompleteClaims") == "1"){
+            <ul>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.</li>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.</li>
+            </ul>
+        } else {
+            <ul>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.</li>
+            </ul>
+        }
+    }
+}
+
+@if((params("isMultiple") == "true") && (params("anyEstimates") == "1")){
+    <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+    @if((params("incompleteClaims") != "1") && (params("incompleteClaims") != "0")){
         <ul>
             <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
             <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
         </ul>
     } else {
-        <ul>
-            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
-        </ul>
+        @if(params("incompleteClaims") == "1"){
+            <ul>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.</li>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
+            </ul>
+        } else {
+            @if(params("incompleteClaims") == "0"){
+                <ul>
+                    <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
+                </ul>
+            }
+        }
     }
-} else {
-@if((params("isMultiple") == "true") && (params("incompleteClaims") != "0")){
-    <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
-    <ul>
-        <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
-    </ul>
 }
+
+@if((params("isMultiple") == "true") && (params("anyEstimates") == "0")){
+    @if((params("incompleteClaims") != "1") && (params("incompleteClaims") != "0")){
+        <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+        <ul>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.</li>
+        </ul>
+    } else {
+        @if(params("incompleteClaims") == "1") {
+            <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+            <ul>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.</li>
+            </ul>
+        }
+    }
+}
+
+@if(params("isMultiple") == "false"){
+    @if((params("anyEstimates") != "0") && (params("anyEstimates") != "1")){
+        <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+        <ul>
+            <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.</li>
+        </ul>
+    } else {
+        @if(params("anyEstimates") == "1") {
+            <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
+            <ul>
+                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.</li>
+            </ul>
+        }
+    }
 }
 
 <p style="font-size: 16px;line-height: 1.315789474;">You can:</p>
@@ -41,7 +96,7 @@
 <ul>
     <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">should have got in your award period</li>
     <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">will get from @{params("startDate")} to @{params("endDate")}, unless your claim has ended,
-        and send you an award notice that you should get by @params("noticeDate")</li>
+        and send you an award notice that you should get by @{params("noticeDate")}</li>
 </ul>
 
 <p style="font-size: 16px;line-height: 1.315789474; margin: 0 0 30px 0;">If the amount was wrong, we will pay you the right amount or ask you to pay back any extra money.</p>

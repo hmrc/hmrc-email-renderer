@@ -317,7 +317,7 @@ object TemplateParams {
       "noticeDate" -> "21 October 2016",
       "isMultiple" -> "true",
       "incompleteClaims" -> "2",
-      "anyEstimates" -> "true"
+      "anyEstimates" -> "1"
     ),
     "iht_access_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
