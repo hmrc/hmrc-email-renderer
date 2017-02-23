@@ -1,11 +1,7 @@
-@(params: Map[String, Any])Thanks for your interest in Tax-Free Childcare or the additional free childcare hours
+@(params: Map[String, Any])You told us you’re interested in childcare support schemes launching in 2017
 
-Tax-Free Childcare and the additional free childcare hours are being introduced in 2017.
+We'll email you when they’re available with details of how to apply.
 
-We'll email you again with information on how to apply.
-
-You don’t need to contact us.
-
-From Childcare Calculator
+From HM Government
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
