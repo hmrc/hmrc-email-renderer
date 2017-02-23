@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.awrs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AlcoholWholesalerRegistrationScheme
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -85,6 +85,7 @@ object AwrsTemplates {
       service = AlcoholWholesalerRegistrationScheme,
       subject = "Verify your email address",
       plainTemplate = txt.awrsEmailVerification.f,
-      htmlTemplate = html.awrsEmailVerification.f)
+      htmlTemplate = html.awrsEmailVerification.f,
+      priority = Some(MessagePriority.Urgent))
   )
 }
