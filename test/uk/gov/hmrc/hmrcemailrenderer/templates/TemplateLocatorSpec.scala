@@ -143,6 +143,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "awrs_notification_template_comfirmation_api6_pending",
         "awrs_notification_template_comfirmation_api6_new_business",
         "awrs_notification_template_comfirmation_api6_new_business_pending",
+        "awrs_email_verification",
         "gmp_bulk_upload_received",
         "gmp_bulk_upload_processed",
         "rald_alert",

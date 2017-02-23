@@ -78,6 +78,13 @@ object AwrsTemplates {
       service = AlcoholWholesalerRegistrationScheme,
       subject = "AWRS amendment confirmation",
       plainTemplate = txt.awrsNotificationConfirmationAPI6NewBusinessPending.f,
-      htmlTemplate = html.awrsNotificationConfirmationAPI6NewBusinessPending.f)
+      htmlTemplate = html.awrsNotificationConfirmationAPI6NewBusinessPending.f),
+    MessageTemplate.create(
+      templateId = "awrs_email_verification",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "Verify your email address",
+      plainTemplate = txt.awrsEmailVerification.f,
+      htmlTemplate = html.awrsEmailVerification.f)
   )
 }
