@@ -145,6 +145,9 @@ object TemplateParams {
       "submissionDate" -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
+    "awrs_email_verification" -> Map(
+      "verificationLink" -> "http://host:8080/your/link/d2cbc3df-1895-45c8-9e22-1e79a087ad78"
+    ),
     "tamc_confirmation_template_id" -> Map(
       "full_name" -> "Mr Joe Bloggs"
     ),
