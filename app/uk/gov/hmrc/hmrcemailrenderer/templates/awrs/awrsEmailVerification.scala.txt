@@ -7,6 +7,6 @@ Click the link to verify your email address.
 
 @{params("verificationLink")}
 
-From the HMRC Alcohol Wholesaler Registration Scheme team
+From the HMRC Alcohol Wholesaler Registration Scheme team.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
