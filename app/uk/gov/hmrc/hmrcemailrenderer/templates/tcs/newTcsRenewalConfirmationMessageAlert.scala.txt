@@ -1,62 +1,26 @@
-@(params: Map[String, Any])Your tax credits renewal has been received
+@(params: Map[String, Any])Your tax credits renewal for @{params("awardStartDate")} to @{params("awardEndDate")} has been received
 
 Your online reference number is @{params("renewalReference")}
 
 What you can do next
 
-@if((params("isMultiple") == "true") && (params("anyEstimates") != "0") && (params("anyEstimates") != "1")){
+@if(params("incompleteClaims") != "0" || params("anyEstimates") != "0"){
     You must:
-    @if(((params("incompleteClaims") != "0") && (params("incompleteClaims") != "1"))){
-        - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
-        - contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.
-    } else {
-        @if(params("incompleteClaims") == "1"){
-            - complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.
-            - contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.
-        } else {
-            - contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.
-        }
+}
+
+@if(params("incompleteClaims") != "1" && params("incompleteClaims") != "0"){
+    - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
+} else {
+    @if(params("incompleteClaims") == "1"){
+        - complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.
     }
 }
 
-@if((params("isMultiple") == "true") && (params("anyEstimates") == "1")){
-    You must:
-    @if((params("incompleteClaims") != "1") && (params("incompleteClaims") != "0")){
-        - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
-        - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-    } else {
-        @if(params("incompleteClaims") == "1"){
-            - complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.
-            - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-        } else {
-            @if(params("incompleteClaims") == "0"){
-                - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-            }
-        }
-    }
-}
-
-@if((params("isMultiple") == "true") && (params("anyEstimates") == "0")){
-    @if((params("incompleteClaims") != "1") && (params("incompleteClaims") != "0")){
-        You must:
-        - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
-    } else {
-        @if(params("incompleteClaims") == "1") {
-            You must:
-            - complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.
-        }
-    }
-}
-
-@if(params("isMultiple") == "false"){
-    @if((params("anyEstimates") != "0") && (params("anyEstimates") != "1")){
-        You must:
-        - contact the tax credits helpline to tell us the actual amount for the estimates you gave by 31 January 2017.
-    } else {
-        @if(params("anyEstimates") == "1") {
-            You must:
-            - contact the tax credits helpline to tell us the actual amount for the estimate you gave by 31 January 2017.
-        }
+@if(params("anyEstimates") != "1" && params("anyEstimates") != "0"){
+    - contact us to tell us the actual amount for the estimates you gave by 31 January 2018. For contact details, search for ‘tax credits general enquiries’.
+} else {
+    @if(params("anyEstimates") == "1"){
+        - contact us to tell us the actual amount for the estimate you gave by 31 January 2018. For contact details, search for ‘tax credits general enquiries’
     }
 }
 
