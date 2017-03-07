@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.tcs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TaxCreditsService
 
@@ -28,6 +28,7 @@ object TcsTemplates  {
       service  = TaxCreditsService,
       subject = "Your tax credits renewal has been received",
       plainTemplate = txt.newTcsRenewalConfirmationMessageAlert.f,
-      htmlTemplate = html.newTcsRenewalConfirmationMessageAlert.f)
+      htmlTemplate = html.newTcsRenewalConfirmationMessageAlert.f,
+      priority = Some(MessagePriority.Urgent))
   )
 }
