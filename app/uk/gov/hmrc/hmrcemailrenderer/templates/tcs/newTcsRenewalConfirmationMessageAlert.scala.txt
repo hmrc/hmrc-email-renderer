@@ -1,33 +1,22 @@
-@(params: Map[String, Any])Your tax credits renewal for @{params("awardStartDate")} to @{params("awardEndDate")} has been received
+@(params: Map[String, Any])Your tax credits declaration for @{params("awardStartDate")} to @{params("awardEndDate")} has been received
 
-Your online reference number is @{params("renewalReference")}
+Dear @{params("customerFName")}
+
+Your reference number is @{params("renewalReference")}
 
 What you can do next
 
-@if(params("incompleteClaims") != "0" || params("anyEstimates") != "0"){
-    You must:
-}
-
-@if(params("incompleteClaims") != "1" && params("incompleteClaims") != "0"){
-    - complete your @{params("incompleteClaims")} remaining annual reviews to finish your renewal.
-} else {
-    @if(params("incompleteClaims") == "1"){
-        - complete your @{params("incompleteClaims")} remaining annual review to finish your renewal.
-    }
-}
-
-@if(params("anyEstimates") != "1" && params("anyEstimates") != "0"){
-    - contact us to tell us the actual amount for the estimates you gave by 31 January 2018. For contact details, search for ‘tax credits general enquiries’.
-} else {
-    @if(params("anyEstimates") == "1"){
-        - contact us to tell us the actual amount for the estimate you gave by 31 January 2018. For contact details, search for ‘tax credits general enquiries’
-    }
-}
+@defining((params("incompleteClaims").toString.toInt, params("anyEstimates").toString.toInt)) { case (ic, ae) =>
+        @if(ic > 0 || ae > 0){
+            You must:
+                @if(ic > 0) {- complete your @ic remaining annual review@if(ic > 1){s} to finish your renewal}
+                @if(ae > 0) {- contact us to tell us the actual amount for the estimate@if(ae > 1){s} you gave by @{params("contactDeadline")}. For contact details, search for 'tax credits general enquiries'}
+        }}
 
  You can:
 
- - check the status of your renewal
- - complete this review again if you think you made a mistake
+ - log into tax credits and check the status of your renewal
+ - complete this declaration again if you think you made a mistake
 
 What happens next
 
