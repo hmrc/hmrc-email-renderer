@@ -314,14 +314,14 @@ object TemplateParams {
       "helpeeFirstName" -> "John"
     ),
     "tcs_renewal_confirmation" -> Map(
-      "awardStartDate" -> "6 April 2016",
-      "awardEndDate" -> "10 January 2017",
+      "awardStartDate" -> "6 April 2017",
+      "awardEndDate" -> "10 January 2018",
       "customerFName" -> "Elisha",
       "renewalReference" -> "123 456 789 123 456",
       "startDate" -> "6 April 2016",
       "endDate" -> "5 April 2017",
       "contactDeadline" -> "31 January 2018",
-      "noticeDate" -> "21 October 2016",
+      "noticeDate" -> "21 October 2017",
       "incompleteClaims" -> "2",
       "anyEstimates" -> "1"
     ),
