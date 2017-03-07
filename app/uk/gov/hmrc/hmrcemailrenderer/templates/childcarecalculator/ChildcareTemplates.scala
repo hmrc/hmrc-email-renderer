@@ -26,7 +26,7 @@ object ChildcareTemplates {
       templateId = "childcare_registration_email",
       fromAddress = govUkTeamAddress,
       service = Childcare,
-      subject = "Registration of interest email",
+      subject = "2017 Childcare support schemes",
       plainTemplate = txt.childcareRegistrationEmail.f,
       htmlTemplate = html.childcareRegistrationEmail.f)
   )
