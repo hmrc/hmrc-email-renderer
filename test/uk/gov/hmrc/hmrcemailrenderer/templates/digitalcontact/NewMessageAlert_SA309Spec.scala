@@ -19,13 +19,13 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader}
 import uk.gov.hmrc.play.test.UnitSpec
 
-class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with TemplateLoader {
+class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
 
   "NewMessageAlert_SA309" should {
 
-    val commonParameters: Map[String, String] = Map("staticAssetVersion" -> "version", "staticAssetUrlPrefix" -> "prefix", "borderColour" -> "#005EA5")
     val templateSA309: MessageTemplate = MessageTemplate.create(
       templateId = "newMessageAlert_SA309",
       fromAddress = "HMRC paperless norepoy@tax.service.gov.uk",
