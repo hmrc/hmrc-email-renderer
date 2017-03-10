@@ -6,8 +6,9 @@ Your application for @{params("organisationName")} has been received on the @{pa
 Your application reference number is @{params("applicationReference")}. This is not your AWRS registration number.
 
 What happens next
-- Continue trading as normal while we review and check your application, which may take some time.
-- There is no need to contact HMRC, you will be notified before 1 April 2017.
+- There is no need to contact HMRC, you will be notified of the outcome of your application in due course. You may not receive a decision before 1 April 2017.
+- From 1 April 2017, you must not trade in wholesale alcohol if you do not have an AWRS approval from HMRC.
+- If you continue to trade from 1 April 2017 without an approval you may be liable to financial penalties and your alcohol stock could be confiscated (whether or not duty has been paid).
 - If approved, your business will receive an AWRS registration number confirming that you are an approved alcohol wholesaler.
 
 More detailed information can be found in the guidance on GOV.UK.
