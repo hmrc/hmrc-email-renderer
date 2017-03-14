@@ -379,6 +379,12 @@ object TemplateParams {
     "client_cancels_active_mandate" -> Map(
       "service" -> testServiceUpdate
     ),
+    "agent_self_auth_activates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_self_auth_deactivates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
     "offpayroll_private_beta_invitation" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId

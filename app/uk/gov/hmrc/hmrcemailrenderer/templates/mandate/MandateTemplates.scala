@@ -59,12 +59,17 @@ object MandateTemplates {
       plainTemplate = txt.mandateClientRemoves.f,
       htmlTemplate = html.mandateClientRemoves.f),
     MessageTemplate.create(
-      templateId = "client_cancels_active_mandate",
+      templateId = "agent_self_auth_activates_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
-      subject = "A client has cancelled your authority",
-      plainTemplate = txt.mandateClientCancelsActive.f,
-      htmlTemplate = html.mandateClientCancelsActive.f)
-  )
-
+      subject = "You have added your client",
+      plainTemplate = txt.mandateAgentSelfAuthAdds.f,
+      htmlTemplate = html.mandateAgentSelfAuthAdds.f),
+    MessageTemplate.create(
+      templateId = "agent_self_auth_deactivates_mandate",
+      fromAddress = govUkTeamAddress,
+      service = Mandate,
+      subject = "You have removed your client",
+      plainTemplate = txt.mandateAgentSelfAuthRemoves.f,
+      htmlTemplate = html.mandateAgentSelfAuthRemoves.f))
 }
