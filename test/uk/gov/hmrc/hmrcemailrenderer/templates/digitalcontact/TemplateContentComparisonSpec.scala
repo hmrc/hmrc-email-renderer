@@ -24,13 +24,31 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 
 class TemplateContentComparisonSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
-  def digitalContactTemplate(templateId: String) =
+  def digitalContactTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(DigitalContactTemplates.templates)
 
   def customsTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(CustomsTemplates.templates)
 
   "Templates for which the text and html content are identical" should {
+
+    "include customs_registration_successful" in {
+      val params = commonParameters + (
+        "recipientName_forename" -> "Forename",
+        "recipientName_surname" -> "Surname"
+      )
+
+      compareContent("customs_registration_successful", params)(customsTemplate)
+    }
+
+    "include customs_registration_not_successful" in {
+      val params = commonParameters + (
+        "recipientName_forename" -> "Forename",
+        "recipientName_surname" -> "Surname"
+      )
+
+      compareContent("customs_registration_not_successful", params)(customsTemplate)
+    }
 
     "include customs_declaration_success" in {
       val params = Map( "details" -> "details") ++ commonParameters
