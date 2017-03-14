@@ -157,6 +157,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "agent_removes_mandate",
         "client_removes_mandate",
         "client_cancels_active_mandate",
+        "agent_self_auth_activates_mandate",
+        "agent_self_auth_deactivates_mandate",
         "offpayroll_private_beta_invitation",
         "gg_userid_notification",
         "customs_validation_success",

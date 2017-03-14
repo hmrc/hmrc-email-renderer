@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+
+@{params("service")} update
+
+You have successfully removed your client, you no longer have the authority to act for them on @{params("service")}.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
