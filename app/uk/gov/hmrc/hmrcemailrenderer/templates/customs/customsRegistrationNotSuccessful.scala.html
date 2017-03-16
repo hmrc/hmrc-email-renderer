@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,
+    "Register for customs services - application not successful", showHeading1 = false) {
+<h4>This is a test email only. Should you receive this email please ignore it</h4>
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your application to Register for customs services has not been successful.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">What you need to do now</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You should contact 0123 456 7890 for more information.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">HMRC team</p>
+}
