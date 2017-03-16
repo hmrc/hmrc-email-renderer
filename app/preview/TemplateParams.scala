@@ -358,8 +358,8 @@ object TemplateParams {
       "returnLink" -> "http://registeryourcompany.gov.uk"
     ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
-    "indefensible_upgrades" -> (newMessageAlert_Names),
-    "indefensible_upgrades_with_dates" -> (newMessageAlert_Names),
+    "indefensible_upgrades" -> newMessageAlert_Names,
+    "indefensible_upgrades_with_dates" -> newMessageAlert_Names,
 
     "client_approves_mandate" -> Map(
       "service" -> testServiceUpdate
@@ -386,6 +386,14 @@ object TemplateParams {
     "gg_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
+    ),
+    "customs_registration_successful" -> Map(
+      "recipientName_forename" -> "Firstname",
+      "recipientName_surname" -> "Lastname"
+    ),
+    "customs_registration_not_successful" -> Map(
+      "recipientName_forename" -> "Firstname",
+      "recipientName_surname" -> "Lastname"
     ),
     "customs_declaration_success" -> Map(
       "details" -> "declaration success details will appear here"
