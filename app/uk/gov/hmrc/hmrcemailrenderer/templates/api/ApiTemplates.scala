@@ -55,7 +55,7 @@ object ApiTemplates {
       subject = "You have reset your password",
       plainTemplate = txt.passwordChangedConfirmationEmail.f,
       htmlTemplate = html.passwordChangedConfirmationEmail.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = None
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
@@ -82,7 +82,7 @@ object ApiTemplates {
       subject = "A collaborator has been added to your application",
       plainTemplate = txt.apiAddedDeveloperAsCollaboratorNotification.f,
       htmlTemplate = html.apiAddedDeveloperAsCollaboratorNotification.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = None
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiRemovedCollaboratorConfirmation",
@@ -91,7 +91,7 @@ object ApiTemplates {
       subject = "You have been removed from an application",
       plainTemplate = txt.apiRemovedCollaboratorConfirmation.f,
       htmlTemplate = html.apiRemovedCollaboratorConfirmation.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = None
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiRemovedCollaboratorNotification",
@@ -100,7 +100,7 @@ object ApiTemplates {
       subject = "A collaborator has been removed from your application",
       plainTemplate = txt.apiRemovedCollaboratorNotification.f,
       htmlTemplate = html.apiRemovedCollaboratorNotification.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = None
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationApprovedGatekeeperConfirmation",
@@ -109,7 +109,7 @@ object ApiTemplates {
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedGatekeeperConfirmation.f,
       htmlTemplate = html.apiApplicationApprovedGatekeeperConfirmation.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = None
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationApprovedAdminConfirmation",
@@ -127,7 +127,7 @@ object ApiTemplates {
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedNotification.f,
       htmlTemplate = html.apiApplicationApprovedNotification.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = None
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationRejectedNotification",
