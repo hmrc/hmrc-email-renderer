@@ -59,28 +59,52 @@ class TemplatePrioritiesISpec extends ServiceSpec
     val urgent = Table[String, Map[String, String]](
       ("templateIds", "params"),
       ("verifyEmailAddress", Map("verificationLink" -> "/abc")),
-      ("changeOfEmailAddress", Map[String, String]()),
+      ("changeOfEmailAddress", Map.empty),
       ("changeOfEmailAddressNewAddress", Map("verificationLink" -> "/abc")),
       ("generic_access_invitation_template_id", Map("verificationLink" -> "/abc")),
       ("cato_access_invitation_template_id", Map("verificationLink" -> "/abc")),
+      ("apiApplicationApprovedAdminConfirmation", Map(
+        "applicationName" -> "applicationName",
+        "developerHubLink" -> "/developerHubLink"
+      )),
       ("apiAddedRegisteredDeveloperAsCollaboratorConfirmation", Map(
         "role" -> "role",
         "applicationName" -> "applicationName"
       )),
+      ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc")),
       ("apiAddedUnregisteredDeveloperAsCollaboratorConfirmation", Map(
         "role" -> "role",
         "applicationName" -> "applicationName",
         "developerHubLink" -> "/developerHubLink"
       )),
+      ("apiApplicationRejectedNotification", Map(
+        "applicationName" -> "applicationName",
+        "reason" -> "reason",
+        "guidelinesUrl" -> "guidelinesUrl"
+      )),
+      ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset"))
+    )
+
+    val background = Table[String, Map[String, String]](
+      ("templateIds", "params"),
+      ("newMessageAlert_SA316", Map.empty),
+      ("annual_tax_summaries_message_alert", Map("taxYear" -> "2016"))
+    )
+
+    val standard = Table[String, Map[String, String]](
+      ("templateIds", "params"),
+      ("newMessageAlert", Map.empty),
+      ("verificationReminder", Map("verificationLink" -> "/abc")),
+      ("tax_estimate_message_alert", Map("fullName" -> "Mr Joe Bloggs")),                    // DC-839: Moved to standard because of SA316.
+      ("newMessageAlert_SS300", Map.empty),                                                  // DC-839: Moved to standard because of SA316.
+      ("newMessageAlert_SA300", Map.empty),                                                  // DC-839: Moved to standard because of SA316.
+      ("newMessageAlert_SA309", Map.empty),                                                  // DC-839: Moved to standard because of SA316.
+      ("digitalOptOutConfirmation", Map.empty),
+      ("apiDeveloperChangedPasswordConfirmation", Map.empty),
+      ("apiApplicationApprovedNotification", Map("applicationName" -> "applicationName")),
+      ("apiRemovedCollaboratorConfirmation", Map("applicationName" -> "applicationName")),
       ("apiAddedDeveloperAsCollaboratorNotification", Map(
         "role" -> "role",
-        "applicationName" -> "applicationName",
-        "email" -> "email@address.com"
-      )),
-      ("apiRemovedCollaboratorConfirmation", Map(
-        "applicationName" -> "applicationName"
-      )),
-      ("apiRemovedCollaboratorNotification", Map(
         "applicationName" -> "applicationName",
         "email" -> "email@address.com"
       )),
@@ -88,37 +112,10 @@ class TemplatePrioritiesISpec extends ServiceSpec
         "applicationName" -> "applicationName",
         "email" -> "email@address.com"
       )),
-      ("apiApplicationApprovedAdminConfirmation", Map(
+      ("apiRemovedCollaboratorNotification", Map(
         "applicationName" -> "applicationName",
-        "developerHubLink" -> "/developerHubLink"
-      )),
-      ("apiApplicationApprovedNotification", Map(
-        "applicationName" -> "applicationName"
-      )),
-      ("apiApplicationRejectedNotification", Map(
-        "applicationName" -> "applicationName",
-        "reason" -> "reason",
-        "guidelinesUrl" -> "guidelinesUrl"
-      )),
-      ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc")),
-      ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
-      ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset"))
-    )
-
-    val background = Table[String, Map[String, String]](
-      ("templateIds", "params"),
-      ("newMessageAlert_SA316", Map[String, String]()),
-      ("newMessageAlert_SS300", Map[String, String]()),
-      ("newMessageAlert_SA300", Map[String, String]()),
-      ("newMessageAlert_SA309", Map[String, String]()),
-      ("annual_tax_summaries_message_alert", Map("taxYear" -> "2016"))
-    )
-
-    val standard = Table[String, Map[String, String]](
-      ("templateIds", "params"),
-      ("newMessageAlert", Map[String, String]()),
-      ("verificationReminder", Map[String, String]("verificationLink" -> "/abc")),
-      ("digitalOptOutConfirmation", Map[String, String]())
+        "email" -> "email@address.com"
+      ))
     )
   }
 }

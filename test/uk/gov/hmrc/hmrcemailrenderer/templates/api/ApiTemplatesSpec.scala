@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import org.scalatestplus.play.OneAppPerSuite
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.play.test.UnitSpec
@@ -28,51 +29,51 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
     "of are setup correctly" in new TestCase {
 
-      validateTemplate(
+      validateUrgentTemplate(
         templateId = "apiDeveloperEmailVerification",
         expectedSubject = "Verify your email address")
 
-      validateTemplate(
+      validateUrgentTemplate(
         templateId = "apiDeveloperPasswordReset",
         expectedSubject = "Reset your password")
 
-      validateTemplate(
+      validateStandardTemplate(
         templateId = "apiDeveloperChangedPasswordConfirmation",
         expectedSubject = "You have reset your password")
 
-      validateTemplate(
+      validateUrgentTemplate(
         templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
         expectedSubject = "You have been added to an application")
 
-      validateTemplate(
+      validateUrgentTemplate(
         templateId = "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
         expectedSubject = "You have been added to an application")
 
-      validateTemplate(
+      validateStandardTemplate(
         templateId = "apiAddedDeveloperAsCollaboratorNotification",
         expectedSubject = "A collaborator has been added to your application")
 
-      validateTemplate(
+      validateStandardTemplate(
         templateId = "apiRemovedCollaboratorConfirmation",
         expectedSubject = "You have been removed from an application")
 
-      validateTemplate(
+      validateStandardTemplate(
         templateId = "apiRemovedCollaboratorNotification",
         expectedSubject = "A collaborator has been removed from your application")
 
-      validateTemplate(
+      validateStandardTemplate(
         templateId = "apiApplicationApprovedGatekeeperConfirmation",
         expectedSubject = "Application name approved")
 
-      validateTemplate(
+      validateUrgentTemplate(
         templateId = "apiApplicationApprovedAdminConfirmation",
         expectedSubject = "Application name approved: Verify your email address")
 
-      validateTemplate(
+      validateStandardTemplate(
         templateId = "apiApplicationApprovedNotification",
         expectedSubject = "Application name approved")
 
-      validateTemplate(
+      validateUrgentTemplate(
         templateId = "apiApplicationRejectedNotification",
         expectedSubject = "Application not approved")
     }
@@ -82,15 +83,23 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
     ApiTemplates.templates.filter(t => t.templateId == templateId).head
   }
 
-  def validateTemplate(templateId: String, expectedSubject: String) = {
+  def validateTemplate(templateId: String, expectedSubject: String, expectedPriority: Option[MessagePriority]) = {
     val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
-    template.fromAddress.apply(Map.empty) should be ("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
+    template.fromAddress.apply(Map.empty) should be("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
     template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be("HMRC test account <noreply@tax.service.gov.uk>")
     template.service should be(ApiDeveloperHub)
     subject(Map.empty) should be(expectedSubject)
-    template.plainTemplate should not be(null)
-    template.htmlTemplate should not be(null)
-    template.priority.get should be(MessagePriority.Urgent)
+    template.plainTemplate should not be (null)
+    template.htmlTemplate should not be (null)
+    template.priority should be(expectedPriority)
+  }
+
+  def validateUrgentTemplate(templateId: String, expectedSubject: String) = {
+    validateTemplate(templateId, expectedSubject, Some(MessagePriority.Urgent))
+  }
+
+  def validateStandardTemplate(templateId: String, expectedSubject: String) = {
+    validateTemplate(templateId, expectedSubject, None)
   }
 }
