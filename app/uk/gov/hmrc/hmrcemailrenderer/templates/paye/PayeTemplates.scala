@@ -31,7 +31,7 @@ object PayeTemplates  {
       subject = "Your Income Tax estimate has changed",
       plainTemplate = txt.newTaxEstimateMessageAlert.f,
       htmlTemplate = html.newTaxEstimateMessageAlert.f,
-      priority = Some(Background)
+      priority = None
     )
   )
 }
