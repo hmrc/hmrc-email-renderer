@@ -59,7 +59,7 @@ class TemplatePrioritiesISpec extends ServiceSpec
     val urgent = Table[String, Map[String, String]](
       ("templateIds", "params"),
       ("verifyEmailAddress", Map("verificationLink" -> "/abc")),
-      ("changeOfEmailAddress", Map[String, String]()),
+      ("changeOfEmailAddress", Map.empty),
       ("changeOfEmailAddressNewAddress", Map("verificationLink" -> "/abc")),
       ("generic_access_invitation_template_id", Map("verificationLink" -> "/abc")),
       ("cato_access_invitation_template_id", Map("verificationLink" -> "/abc")),
@@ -107,15 +107,15 @@ class TemplatePrioritiesISpec extends ServiceSpec
 
     val background = Table[String, Map[String, String]](
       ("templateIds", "params"),
-      ("newMessageAlert_SA316", Map[String, String]()),
+      ("newMessageAlert_SA316", Map.empty),
       ("annual_tax_summaries_message_alert", Map("taxYear" -> "2016"))
     )
 
     val standard = Table[String, Map[String, String]](
       ("templateIds", "params"),
-      ("newMessageAlert", Map[String, String]()),
+      ("newMessageAlert", Map.empty),
       ("verificationReminder", Map[String, String]("verificationLink" -> "/abc")),
-      ("digitalOptOutConfirmation", Map[String, String]()),
+      ("digitalOptOutConfirmation", Map.empty),
       ("newMessageAlert_SS300", Map.empty),                               // DC-839: move from Background because of SA316
       ("newMessageAlert_SA300", Map.empty),                               // DC-839: move from Background because of SA316
       ("newMessageAlert_SA309", Map.empty),                               // DC-839: move from Background because of SA316
