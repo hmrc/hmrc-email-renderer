@@ -108,9 +108,6 @@ class TemplatePrioritiesISpec extends ServiceSpec
     val background = Table[String, Map[String, String]](
       ("templateIds", "params"),
       ("newMessageAlert_SA316", Map[String, String]()),
-      ("newMessageAlert_SS300", Map[String, String]()),
-      ("newMessageAlert_SA300", Map[String, String]()),
-      ("newMessageAlert_SA309", Map[String, String]()),
       ("annual_tax_summaries_message_alert", Map("taxYear" -> "2016"))
     )
 
@@ -118,7 +115,11 @@ class TemplatePrioritiesISpec extends ServiceSpec
       ("templateIds", "params"),
       ("newMessageAlert", Map[String, String]()),
       ("verificationReminder", Map[String, String]("verificationLink" -> "/abc")),
-      ("digitalOptOutConfirmation", Map[String, String]())
+      ("digitalOptOutConfirmation", Map[String, String]()),
+      ("newMessageAlert_SS300", Map.empty),                               // DC-839: move from Background because of SA316
+      ("newMessageAlert_SA300", Map.empty),                               // DC-839: move from Background because of SA316
+      ("newMessageAlert_SA309", Map.empty),                               // DC-839: move from Background because of SA316
+      ("tax_estimate_message_alert", Map("fullName" -> "myName"))         // DC-839: move from Background because of SA316
     )
   }
 }
