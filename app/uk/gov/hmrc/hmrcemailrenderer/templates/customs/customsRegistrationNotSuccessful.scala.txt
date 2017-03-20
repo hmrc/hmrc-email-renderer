@@ -6,6 +6,6 @@ Your application to Register for customs services has not been successful.
 What you need to do now
 You should contact 0123 456 7890 for more information.
 
-HMRC team
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
