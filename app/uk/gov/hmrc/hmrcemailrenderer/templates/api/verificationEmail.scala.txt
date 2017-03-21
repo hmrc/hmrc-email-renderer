@@ -1,7 +1,11 @@
-@(params: Map[String, Any])Complete your registration
+@(params: Map[String, Any])Verify your email address
 
-To activate your HMRC @{params.getOrElse("developerHubTitle", "API Developer Hub")} account copy and paste the following link into your browser:
+You’ve registered with the HMRC @{params.getOrElse("developerHubTitle", "API Developer Hub")}.
+
+Click on the link below to verify your email address.
 
 @{params("verificationLink")}
+
+From HMRC @{params.getOrElse("developerHubTitle", "API Developer Hub")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
