@@ -7,6 +7,6 @@ Your EORI number is now active and in your customs account. When trading you sho
 Changes you must tell us about
 You must let us know about any changes to VAT registration. You can do this and update other details via your customs account.
 
-HMRC team
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
