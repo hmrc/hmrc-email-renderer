@@ -1,0 +1,12 @@
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.salutationFrom(params)
+
+You have successfully registered for customs services.
+
+Your EORI number is now active and in your customs account. When trading you should only share this number with trusted business partners.
+
+Changes you must tell us about
+You must let us know about any changes to VAT registration. You can do this and update other details via your customs account.
+
+HMRC team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

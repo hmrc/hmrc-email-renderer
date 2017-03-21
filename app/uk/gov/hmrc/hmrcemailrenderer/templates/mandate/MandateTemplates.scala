@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.mandate
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, MessagePriority}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Mandate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -29,42 +29,70 @@ object MandateTemplates {
       service = Mandate,
       subject = "A client has requested you to act as their agent",
       plainTemplate = txt.mandateClientApproves.f,
-      htmlTemplate = html.mandateClientApproves.f),
+      htmlTemplate = html.mandateClientApproves.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "agent_activates_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
       subject = "Your agent has now accepted your request",
       plainTemplate = txt.mandateAgentActivates.f,
-      htmlTemplate = html.mandateAgentActivates.f),
+      htmlTemplate = html.mandateAgentActivates.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "agent_rejects_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
       subject = "Your agent has rejected your request",
       plainTemplate = txt.mandateAgentRejects.f,
-      htmlTemplate = html.mandateAgentRejects.f),
+      htmlTemplate = html.mandateAgentRejects.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "agent_removes_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
       subject = "Your agent has removed you as a client",
       plainTemplate = txt.mandateAgentRemoves.f,
-      htmlTemplate = html.mandateAgentRemoves.f),
+      htmlTemplate = html.mandateAgentRemoves.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "client_removes_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
       subject = "A client has cancelled your request",
       plainTemplate = txt.mandateClientRemoves.f,
-      htmlTemplate = html.mandateClientRemoves.f),
+      htmlTemplate = html.mandateClientRemoves.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "client_cancels_active_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
       subject = "A client has cancelled your authority",
       plainTemplate = txt.mandateClientCancelsActive.f,
-      htmlTemplate = html.mandateClientCancelsActive.f)
-  )
-
+      htmlTemplate = html.mandateClientCancelsActive.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_self_auth_activates_mandate",
+      fromAddress = govUkTeamAddress,
+      service = Mandate,
+      subject = "You have added your client",
+      plainTemplate = txt.mandateAgentSelfAuthAdds.f,
+      htmlTemplate = html.mandateAgentSelfAuthAdds.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_self_auth_deactivates_mandate",
+      fromAddress = govUkTeamAddress,
+      service = Mandate,
+      subject = "You have removed your client",
+      plainTemplate = txt.mandateAgentSelfAuthRemoves.f,
+      htmlTemplate = html.mandateAgentSelfAuthRemoves.f,
+      priority = Some(MessagePriority.Urgent)
+    ))
 }
