@@ -18,197 +18,89 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.joda.time.LocalDate
 import org.joda.time.format.DateTimeFormat
-import org.jsoup.Jsoup
 import org.scalatestplus.play.OneAppPerSuite
-import play.twirl.api.{HtmlFormat, TxtFormat}
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
-import uk.gov.hmrc.play.test.UnitSpec
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
 
-class TemplateContentComparisonSpec extends UnitSpec with TemplateLoader with OneAppPerSuite{
+class TemplateContentComparisonSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+
+  def digitalContactTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
+    messageTemplateF(templateId)(DigitalContactTemplates.templates)
 
   "Templates for which the text and html content are identical" should {
 
-    "include customs_declaration_success" in new TemplateComparison {
-      val params = Map(
-        "details" -> "details",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
-      compareContent("customs_declaration_success", params)(customsTemplate)
-    }
-
-    "include customs_validation_success" in new TemplateComparison {
-      val params = Map(
-        "details" -> "details",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
-      compareContent("customs_validation_success", params)(customsTemplate)
-    }
-
-    "include customs_payment_required" in new TemplateComparison {
-      val params = Map(
-        "details" -> "details",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
-      compareContent("customs_payment_required", params)(customsTemplate)
-    }
-
-    "include customs_payment_success" in new TemplateComparison {
-      val params = Map(
-        "details" -> "details",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
-      compareContent("customs_payment_success", params)(customsTemplate)
-    }
-
-    "include newMessageAlert" in new TemplateComparison {
+    "include newMessageAlert" in {
       val params = Map(
         "recipientName_title" -> "title",
         "recipientName_forename" -> "forename",
         "recipientName_secondForename" -> "a",
         "recipientName_surname" -> "b",
-        "recipientName_honours" -> "c",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+        "recipientName_honours" -> "c"
+      ) ++ commonParameters
       compareContent("newMessageAlert", params)(digitalContactTemplate)
     }
 
-    "include changeOfEmailAddress" in new TemplateComparison {
-      val params = Map(
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+    "include changeOfEmailAddress" in {
+      val params = commonParameters
+
       compareContent("changeOfEmailAddress", params)(digitalContactTemplate)
     }
 
-    "include digitalOptOutConfirmation" in new TemplateComparison {
-      val params = Map(
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+    "include digitalOptOutConfirmation" in {
+      val params = commonParameters
+
       compareContent("digitalOptOutConfirmation", params)(digitalContactTemplate)
     }
 
-    "render the identical rescindedMessageAlert content for both the text and html versions" in new TemplateComparison {
+    "render the identical rescindedMessageAlert content for both the text and html versions" in {
       val params = Map(
         "recipientName_title" -> "title",
         "recipientName_forename" -> "forename",
         "recipientName_secondForename" -> "a",
         "recipientName_surname" -> "b",
-        "recipientName_honours" -> "c",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+        "recipientName_honours" -> "c"
+      ) ++ commonParameters
 
       compareContent("rescindedMessageAlert", params)(digitalContactTemplate)
     }
 
-    "include verificationReminder content for both the text and html versions" in new TemplateComparison {
+    "include verificationReminder content for both the text and html versions" in {
       val params = Map(
-        "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate()),
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+        "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate())
+      ) ++ commonParameters
+
       compareContent("verificationReminder", params)(digitalContactTemplate)
     }
 
-    "include SA300 templates" in new TemplateComparison {
-      val params = Map(
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+    "include SA300 templates" in {
+      val params = commonParameters
+
       compareContent("newMessageAlert_SS300", params)(digitalContactTemplate)
       compareContent("newMessageAlert_SA300", params)(digitalContactTemplate)
     }
 
-    "include SA309 templates" in new TemplateComparison {
+    "include SA309 templates" in {
       val params = Map(
         "recipientName_title" -> "title",
         "recipientName_forename" -> "forename",
         "recipientName_secondForename" -> "a",
         "recipientName_surname" -> "b",
-        "recipientName_honours" -> "c",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+        "recipientName_honours" -> "c"
+      ) ++ commonParameters
 
       compareContent("newMessageAlert_SA309", params)(digitalContactTemplate)
     }
 
-    "include SA316 templates" in new TemplateComparison {
+    "include SA316 templates" in {
       val params = Map(
         "recipientName_title" -> "title",
         "recipientName_forename" -> "forename",
         "recipientName_secondForename" -> "a",
-        "recipientName_honours" -> "c",
-        "staticAssetVersion" -> "version",
-        "staticAssetUrlPrefix" -> "prefix",
-        "borderColour" -> "#005EA5"
-      )
+        "recipientName_honours" -> "c"
+      ) ++ commonParameters
 
       compareContent("newMessageAlert_SA316", params)(digitalContactTemplate)
     }
 
   }
-
-
-  trait TemplateComparison {
-    def compareContent(id: String, params: Map[String, String])(getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
-      getTemplates(id) match {
-        case Some((htmlTemplate, textTemplate)) =>
-          val html = TemplateContentNormalisation.html(htmlTemplate(params))
-          val text = TemplateContentNormalisation.text(textTemplate(params))
-          html should be (s"GOV.UK HM Revenue & Customs $text")
-
-        case _ => fail(s"could not locate template with id $id")
-      }
-  }
-}
-
-trait TemplateLoader {
-  type TextTemplate = Map[String, String] => TxtFormat.Appendable
-  type HtmlTemplate = Map[String, String] => HtmlFormat.Appendable
-
-  def messageTemplateF(id: String): Seq[MessageTemplate] => Option[(HtmlTemplate, TextTemplate)] =
-    _.collectFirst { case x: MessageTemplate if x.templateId == id => (x.htmlTemplate, x.plainTemplate) }
-
-  def digitalContactTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
-    messageTemplateF(templateId)(DigitalContactTemplates.templates)
-
-  def customsTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
-    messageTemplateF(templateId)(CustomsTemplates.templates)
-
-}
-
-object TemplateContentNormalisation {
-
-  def html(content: HtmlFormat.Appendable) = normaliseWhiteSpace(
-    Jsoup.parse(content.body).getElementsByTag("body").text()
-  )
-
-  def text(content: TxtFormat.Appendable) = normaliseWhiteSpace(
-    content.body.lines.
-      map(_.replaceAll("""^((\s*)- )""", "")).
-      mkString(" ")
-  )
-
-  def normaliseWhiteSpace(input: String) =
-    input.replaceAll("""\s+""", " ")
 
 }

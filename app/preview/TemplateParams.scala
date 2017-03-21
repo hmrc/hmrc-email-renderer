@@ -314,10 +314,16 @@ object TemplateParams {
       "helpeeFirstName" -> "John"
     ),
     "tcs_renewal_confirmation" -> Map(
+      "awardStartDate" -> "6 April 2017",
+      "awardEndDate" -> "10 January 2018",
+      "customerFName" -> "Elisha",
       "renewalReference" -> "123 456 789 123 456",
       "startDate" -> "6 April 2016",
       "endDate" -> "5 April 2017",
-      "noticeDate" -> "21 October 2016"
+      "contactDeadline" -> "31 January 2018",
+      "noticeDate" -> "21 October 2017",
+      "incompleteClaims" -> "2",
+      "anyEstimates" -> "1"
     ),
     "iht_access_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
@@ -352,8 +358,8 @@ object TemplateParams {
       "returnLink" -> "http://registeryourcompany.gov.uk"
     ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
-    "indefensible_upgrades" -> (newMessageAlert_Names),
-    "indefensible_upgrades_with_dates" -> (newMessageAlert_Names),
+    "indefensible_upgrades" -> newMessageAlert_Names,
+    "indefensible_upgrades_with_dates" -> newMessageAlert_Names,
 
     "client_approves_mandate" -> Map(
       "service" -> testServiceUpdate
@@ -373,6 +379,12 @@ object TemplateParams {
     "client_cancels_active_mandate" -> Map(
       "service" -> testServiceUpdate
     ),
+    "agent_self_auth_activates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_self_auth_deactivates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
     "offpayroll_private_beta_invitation" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
@@ -380,6 +392,14 @@ object TemplateParams {
     "gg_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
+    ),
+    "customs_registration_successful" -> Map(
+      "recipientName_forename" -> "Firstname",
+      "recipientName_surname" -> "Lastname"
+    ),
+    "customs_registration_not_successful" -> Map(
+      "recipientName_forename" -> "Firstname",
+      "recipientName_surname" -> "Lastname"
     ),
     "customs_declaration_success" -> Map(
       "details" -> "declaration success details will appear here"
