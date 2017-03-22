@@ -164,7 +164,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_payment_required",
         "customs_payment_success",
         "customs_declaration_success",
-        "hmrc_sa_sa100_success")
+        "transactionEngineHMRCSASA100Success",
+        "transactionEngineHMRCSASA100Failure")
     }
 
   }

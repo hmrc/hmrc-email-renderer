@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Successful Receipt of Online Submission") {
+    <p>Dear Submitter,</p>
+    <p>Thank you for sending the Self Assessment submission online.</p>
+    <p>The submission was received on @params("sentDate"). Unfortunately it could not be accepted as it failed HMRC data checks.</p>
+    <p>To correct this please use the help provided within the software you used to complete your form and send it again.</p>
+    <p>If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603</p>
+    <p>The Helpdesk is open</p>
+    <p>Monday to Friday - 08.00 to 20.00</p>
+    <p>Saturday - 08.00 to 16.00</p>
+    <p>(It is closed Christmas Day, Boxing Day and New Year's Day).</p>
+    <p>Self Assessment Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website</p>
+    <h4>This is a test email only. Should you receive this email please ignore it</h4>
+}
