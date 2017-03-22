@@ -36,7 +36,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.rate.RATETemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.RATETemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates

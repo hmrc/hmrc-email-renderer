@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.rate
+package uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
@@ -23,12 +23,21 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
 object RATETemplates {
     val templates = Seq(
         MessageTemplate.create(
-            templateId = "hmrc_sa_sa100_success",
+            templateId = "transactionEngineHMRCSASA100Success",
             fromAddress = govUkTeamAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = "Successful Receipt of Online Submission",
-            plainTemplate = sa.txt.hmrcSASA100Success.f,
-            htmlTemplate = sa.html.hmrcSASA100Success.f,
+            plainTemplate = sa.txt.transactionEngineHMRCSASA100Success.f,
+            htmlTemplate = sa.html.transactionEngineHMRCSASA100Success.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.create(
+            templateId = "transactionEngineHMRCSASA100Failure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = "Unsuccessful submission",
+            plainTemplate = sa.txt.transactionEngineHMRCSASA100Failure.f,
+            htmlTemplate = sa.html.transactionEngineHMRCSASA100Failure.f,
             priority = Some(MessagePriority.Urgent)
         ))
 }

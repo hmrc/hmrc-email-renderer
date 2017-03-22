@@ -7,4 +7,4 @@ The submission was successfully received on @params("sentDate") and is being pro
 
 Self Assessment Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website.
 
-From HMRC Self Assessment
+This is a test email only. Should you receive this email please ignore it

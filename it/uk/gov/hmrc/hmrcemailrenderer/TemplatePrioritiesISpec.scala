@@ -103,7 +103,8 @@ class TemplatePrioritiesISpec extends ServiceSpec
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
-      ("hmrc_sa_sa100_success", Map("sentDate" -> "01/01/01"))
+      ("transactionEngineHMRCSASA100Success", Map("sentDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100Failure", Map("sentDate" -> "01/01/01"))
     )
 
     val background = Table[String, Map[String, String]](
