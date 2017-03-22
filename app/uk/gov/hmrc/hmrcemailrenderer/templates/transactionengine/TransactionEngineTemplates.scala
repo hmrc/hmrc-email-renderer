@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
 
-object RATETemplates {
+object TransactionEngineTemplates {
     val templates = Seq(
         MessageTemplate.create(
             templateId = "transactionEngineHMRCSASA100Success",
@@ -35,7 +35,7 @@ object RATETemplates {
             templateId = "transactionEngineHMRCSASA100Failure",
             fromAddress = govUkTeamAddress,
             service = ServiceIdentifier.SelfAssessment,
-            subject = "Unsuccessful submission",
+            subject = "Unsuccessful Self Assessment submission",
             plainTemplate = sa.txt.transactionEngineHMRCSASA100Failure.f,
             htmlTemplate = sa.html.transactionEngineHMRCSASA100Failure.f,
             priority = Some(MessagePriority.Urgent)
