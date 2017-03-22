@@ -1,0 +1,11 @@
+@(params: Map[String, Any])This is a test email only. Should you receive this email please ignore it
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.salutationFrom(params)
+
+Your application to Register for customs services has not been successful.
+
+What you need to do now
+You should contact 0123 456 7890 for more information.
+
+HMRC team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
