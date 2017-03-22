@@ -1,12 +1,10 @@
 @(params: Map[String, Any])You've got a new message from HMRC
-@import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.SA309SalutationHelper
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, Some(SA309SalutationHelper.salutationFrom(params)))
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January.
 
 To view it, sign in to your HMRC online account.
 
-From HMRC
+From HMRC Self Assessment
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

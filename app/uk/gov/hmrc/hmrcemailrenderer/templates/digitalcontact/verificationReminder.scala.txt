@@ -1,4 +1,5 @@
 @(params: Map[String, Any])Verify your email address
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You’ve chosen to get paperless notifications from HMRC.
 
@@ -11,6 +12,6 @@ Click on the link below to verify your email address.
 Click on the link in the email sent to you on @{params("verificationLinkSentDate")}.
 
 }
-From HMRC
+From HMRC Digital
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

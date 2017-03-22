@@ -1,4 +1,5 @@
 @(params: Map[String, Any])Verify your new email address
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You need to verify your new email address for paperless notifications.
 
@@ -8,6 +9,10 @@ To verify your email address, click the link below.
 
 @{params("verificationLink")}
 
-From HMRC
+Why you got this email
+
+You chose to change your email address for paperless notificatons
+
+From HMRC Digital
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
