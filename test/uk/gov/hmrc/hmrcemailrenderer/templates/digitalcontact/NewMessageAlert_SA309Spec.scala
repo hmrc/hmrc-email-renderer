@@ -46,16 +46,15 @@ class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with Template
     }
 
     "have dear customer as salutation no name parameters are provided" in {
-      templateSA309.htmlTemplate(commonParameters).toString should include("Dear customer")
+      templateSA309.htmlTemplate(commonParameters).toString should include("Dear Customer")
     }
 
     "have dear customer as salutation no forename parameter is provided" in {
       val nameData = Map("recipientName_title" -> "Lord", "recipientName_secondForename" -> "Montogmery", "recipientName_surname" -> "Windsor", "recipientName_honours" -> "Viscount")
       val htmlContent = templateSA309.htmlTemplate(commonParameters ++ nameData).toString
-      htmlContent should include("Dear customer")
-      htmlContent shouldNot include("Lord")
+      htmlContent should include("Dear Lord Windsor")
+      htmlContent shouldNot include("Customer")
       htmlContent shouldNot include("Montgomery")
-      htmlContent shouldNot include("Windsor")
       htmlContent shouldNot include("Viscount")
     }
 

@@ -6,6 +6,6 @@ You received one or more messages on 16 July 2015 from HMRC as a result of an IT
 
 We apologise for any concern this might have caused.
 
-From HMRC
+From HMRC Digital
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

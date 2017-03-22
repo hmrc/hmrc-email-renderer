@@ -29,28 +29,16 @@ object SalutationHelper {
     }
 
   def salutationFrom(params: Map[String, Any]): String = {
-
-
     val salutationParams: List[Option[String]] = List(
       capitalised(params.get("recipientName_title")),
       capitalised(params.get("recipientName_forename")),
-      capitalised(params.get("recipientName_secondForename")),
-      capitalised(params.get("recipientName_surname")),
-      params.get("recipientName_honours").map(_.toString)
+      capitalised(params.get("recipientName_surname"))
     )
 
     salutationParams match {
-      case List(None, Some(forename), None, None, None) => s"Dear $forename"
-      case List(None, Some(forename), None, Some(surname), None) => s"Dear $forename $surname"
-      case List(Some(title), None, None, Some(surname), None) => s"Dear $title $surname"
-      case List(Some(title), Some(forename), None, Some(surname), None) => s"Dear $title $forename $surname"
-      case List(None, Some(forename), None, Some(surname), Some(honours)) => s"Dear $forename $surname $honours"
-      case List(None, Some(forename), Some(secondForename), Some(surname), Some(honours)) => s"Dear $forename $secondForename $surname $honours"
-      case List(Some(title), None, None, Some(surname), Some(honours)) => s"Dear $title $surname $honours"
-      case List(Some(title), Some(forename), None, Some(surname), Some(honours)) => s"Dear $title $forename $surname $honours"
-      case List(Some(title), Some(forename), Some(secondForename), Some(surname), None) => s"Dear $title $forename $secondForename $surname"
-      case List(Some(title), Some(forename), Some(secondForename), Some(surname), Some(honours)) => s"Dear $title $forename $secondForename $surname $honours"
-      case _ => "Hi"
+      case List(_, Some(forename), _) => s"Dear $forename"
+      case List(Some(title), _, Some(surname)) => s"Dear $title $surname"
+      case _ => "Dear Customer"
     }
   }
 }

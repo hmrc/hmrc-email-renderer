@@ -23,6 +23,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateCom
 
 class TemplateContentComparisonSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
+  val commonParamsWithName = commonParameters.updated("recipientName_forename", "forename")
+
   def digitalContactTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(DigitalContactTemplates.templates)
 
@@ -40,13 +42,13 @@ class TemplateContentComparisonSpec extends TemplateComparisonSpec with CommonPa
     }
 
     "include changeOfEmailAddress" in {
-      val params = commonParameters
+      val params = commonParamsWithName
 
       compareContent("changeOfEmailAddress", params)(digitalContactTemplate)
     }
 
     "include digitalOptOutConfirmation" in {
-      val params = commonParameters
+      val params = commonParamsWithName
 
       compareContent("digitalOptOutConfirmation", params)(digitalContactTemplate)
     }
@@ -66,7 +68,7 @@ class TemplateContentComparisonSpec extends TemplateComparisonSpec with CommonPa
     "include verificationReminder content for both the text and html versions" in {
       val params = Map(
         "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate())
-      ) ++ commonParameters
+      ) ++ commonParamsWithName
 
       compareContent("verificationReminder", params)(digitalContactTemplate)
     }

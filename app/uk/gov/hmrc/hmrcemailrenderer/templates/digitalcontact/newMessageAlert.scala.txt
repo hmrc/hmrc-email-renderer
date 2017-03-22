@@ -16,6 +16,4 @@ This means we send you an email to let you know you have a new message in your a
 
 From HMRC Self Assessment
 
-We’re adding new services to your personal tax account. Use it to check how much tax you owe, renew your tax credits, tell us about changes and check your State Pension entitlement. Go to GOV.UK and search 'personal tax account' to sign in.
-
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

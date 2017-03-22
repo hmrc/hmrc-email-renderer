@@ -58,9 +58,9 @@ class TemplatePrioritiesISpec extends ServiceSpec
 
     val urgent = Table[String, Map[String, String]](
       ("templateIds", "params"),
-      ("verifyEmailAddress", Map("verificationLink" -> "/abc")),
-      ("changeOfEmailAddress", Map.empty),
-      ("changeOfEmailAddressNewAddress", Map("verificationLink" -> "/abc")),
+      ("verifyEmailAddress", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
+      ("changeOfEmailAddress", Map("recipientName_forename" -> "Ms Jane Doe")),
+      ("changeOfEmailAddressNewAddress", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("generic_access_invitation_template_id", Map("verificationLink" -> "/abc")),
       ("cato_access_invitation_template_id", Map("verificationLink" -> "/abc")),
       ("apiAddedRegisteredDeveloperAsCollaboratorConfirmation", Map(
@@ -100,7 +100,7 @@ class TemplatePrioritiesISpec extends ServiceSpec
         "reason" -> "reason",
         "guidelinesUrl" -> "guidelinesUrl"
       )),
-      ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc")),
+      ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset"))
     )
@@ -113,12 +113,12 @@ class TemplatePrioritiesISpec extends ServiceSpec
 
     val standard = Table[String, Map[String, String]](
       ("templateIds", "params"),
-      ("newMessageAlert", Map.empty),
-      ("verificationReminder", Map[String, String]("verificationLink" -> "/abc")),
-      ("digitalOptOutConfirmation", Map.empty),
-      ("newMessageAlert_SS300", Map.empty),                               // DC-839: move from Background because of SA316
-      ("newMessageAlert_SA300", Map.empty),                               // DC-839: move from Background because of SA316
-      ("newMessageAlert_SA309", Map.empty),                               // DC-839: move from Background because of SA316
+      ("newMessageAlert", Map("recipientName_forename" -> "Ms Jane Doe")),
+      ("verificationReminder", Map[String, String]("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
+      ("digitalOptOutConfirmation", Map("recipientName_forename" -> "Ms Jane Doe")),
+      ("newMessageAlert_SS300", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
+      ("newMessageAlert_SA300", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
+      ("newMessageAlert_SA309", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
       ("tax_estimate_message_alert", Map("fullName" -> "myName"))         // DC-839: move from Background because of SA316
     )
   }
