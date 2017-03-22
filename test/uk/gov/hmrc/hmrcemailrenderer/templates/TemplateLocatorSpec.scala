@@ -60,7 +60,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Mandate",
         "Off Payroll",
         "Customs",
-        "RATE"
+        "Transaction Engine"
       )
     }
 
