@@ -23,6 +23,20 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Customs
 object CustomsTemplates {
   val templates = Seq(
     MessageTemplate.create(
+      templateId = "customs_registration_successful",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "Register for customs services - application successful",
+      plainTemplate = txt.customsRegistrationSuccessful.f,
+      htmlTemplate = html.customsRegistrationSuccessful.f),
+    MessageTemplate.create(
+      templateId = "customs_registration_not_successful",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "Register for customs services - application not successful",
+      plainTemplate = txt.customsRegistrationNotSuccessful.f,
+      htmlTemplate = html.customsRegistrationNotSuccessful.f),
+    MessageTemplate.create(
       templateId = "customs_validation_success",
       fromAddress = govUkTeamAddress,
       service = Customs,
