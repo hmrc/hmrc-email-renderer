@@ -17,17 +17,17 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.jsoup.Jsoup
+import org.scalatestplus.play.PlaySpec
 import play.twirl.api.{HtmlFormat, TxtFormat}
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.play.test.UnitSpec
 
-trait TemplateComparisonSpec extends UnitSpec with TemplateLoader {
+trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
   def compareContent(id: String, params: Map[String, String])(getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
     getTemplates(id) match {
       case Some((htmlTemplate, textTemplate)) =>
         val html = TemplateContentNormalisation.html(htmlTemplate(params))
         val text = TemplateContentNormalisation.text(textTemplate(params))
-        html should be (s"GOV.UK HM Revenue & Customs $text")
+        html == s"GOV.UK HM Revenue & Customs $text"
 
       case _ => fail(s"could not locate template with id $id")
     }

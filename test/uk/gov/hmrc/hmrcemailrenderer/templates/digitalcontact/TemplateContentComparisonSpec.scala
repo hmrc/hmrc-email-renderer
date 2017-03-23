@@ -18,10 +18,10 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.joda.time.LocalDate
 import org.joda.time.format.DateTimeFormat
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.{OneAppPerSuite, PlaySpec}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
 
-class TemplateContentComparisonSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
   val commonParamsWithName = commonParameters.updated("recipientName_forename", "forename")
 
