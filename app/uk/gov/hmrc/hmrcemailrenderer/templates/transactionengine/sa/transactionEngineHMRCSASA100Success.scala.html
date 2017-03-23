@@ -1,0 +1,8 @@
+@(params: Map[String,Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Successful Receipt of Online Submission") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear Submitter,</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending your Self Assessment submission online.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission was successfully received on @params("sentDate") and is being processed.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Self Assessment Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website.</p>
+    <h4>This is a test email only. Should you receive this email please ignore it</h4>
+}

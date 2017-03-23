@@ -59,7 +59,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "register-your-company",
         "Mandate",
         "Off Payroll",
-        "Customs"
+        "Customs",
+        "Transaction Engine"
       )
     }
 
@@ -166,7 +167,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_validation_success",
         "customs_payment_required",
         "customs_payment_success",
-        "customs_declaration_success")
+        "customs_declaration_success",
+        "transactionEngineHMRCSASA100Success",
+        "transactionEngineHMRCSASA100Failure")
     }
 
   }

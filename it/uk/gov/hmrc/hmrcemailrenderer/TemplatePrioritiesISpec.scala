@@ -99,7 +99,9 @@ class TemplatePrioritiesISpec extends UnitSpec
       )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
-      ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset"))
+      ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
+      ("transactionEngineHMRCSASA100Success", Map("sentDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100Failure", Map("sentDate" -> "01/01/01"))
     )
 
     val background = Table[String, Map[String, String]](
