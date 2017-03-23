@@ -1,18 +1,20 @@
 package uk.gov.hmrc.hmrcemailrenderer
 
 import org.scalatest.concurrent.ScalaFutures
-import play.api.libs.ws.WS
-import uk.gov.hmrc.play.http.test.ResponseMatchers
-import uk.gov.hmrc.play.it.{ExternalService, MicroServiceEmbeddedServer, ServiceSpec}
-import uk.gov.hmrc.play.test.WithFakeApplication
-import play.api.libs.json._
-import play.api.Play.current
 import org.scalatest.prop.TableDrivenPropertyChecks
+import org.scalatestplus.play.{OneServerPerSuite, ServerProvider, WsScalaTestClient}
+import play.api.libs.json._
+import uk.gov.hmrc.play.config.ServicesConfig
+import uk.gov.hmrc.play.http.test.ResponseMatchers
+import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplatePrioritiesISpec extends ServiceSpec
-  with WithFakeApplication
+class TemplatePrioritiesISpec extends UnitSpec
+  with ServicesConfig
+  with WsScalaTestClient
+  with OneServerPerSuite
   with ScalaFutures
   with ResponseMatchers
+  with ServerProvider
   with TableDrivenPropertyChecks {
 
   "Rendered templates" should {
@@ -20,7 +22,7 @@ class TemplatePrioritiesISpec extends ServiceSpec
     forAll(TestTemplates.urgent) {
       (templateId, params) =>
         s"have correct urgent priorities for templateId '$templateId'" in {
-          val response = WS.url(resource(s"/templates/$templateId")).post(Json.obj("parameters" -> params))
+          val response = wsUrl(s"/templates/$templateId").post(Json.obj("parameters" -> params))
           response should have(
             status(200),
             jsonProperty(__ \ "priority", "urgent")
@@ -30,7 +32,7 @@ class TemplatePrioritiesISpec extends ServiceSpec
 
     forAll(TestTemplates.standard) { (templateId, params) =>
       s"not supply a priority for templateId '$templateId'" in {
-        val response = WS.url(resource(s"/templates/$templateId")).post(Json.obj("parameters" -> params)).futureValue
+        val response = wsUrl(s"/templates/$templateId").post(Json.obj("parameters" -> params)).futureValue
         response.status shouldBe 200
         (response.json \ "priority").asOpt[String] shouldBe None
       }
@@ -39,7 +41,7 @@ class TemplatePrioritiesISpec extends ServiceSpec
     forAll(TestTemplates.background) {
       (templateId, params) =>
         s"have correct background priorities for templateId '$templateId'" in {
-          val response = WS.url(resource(s"/templates/$templateId")).post(Json.obj("parameters" -> params))
+          val response = wsUrl(s"/templates/$templateId").post(Json.obj("parameters" -> params))
           response should have(
             status(200),
             jsonProperty(__ \ "priority", "background")
@@ -48,11 +50,6 @@ class TemplatePrioritiesISpec extends ServiceSpec
     }
   }
 
-  override protected val server = new TestServer()
-
-  class TestServer(override val testName: String = "RendererControllerISpec") extends MicroServiceEmbeddedServer {
-    override protected val externalServices: Seq[ExternalService] = Seq.empty
-  }
 
   object TestTemplates {
 

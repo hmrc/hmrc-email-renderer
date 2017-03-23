@@ -17,24 +17,21 @@
 package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
 import com.ning.http.util.Base64
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
 import play.api.libs.json._
 import uk.gov.hmrc.play.test.UnitSpec
-import org.scalacheck.{Arbitrary, Gen}
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 
-class RenderResultSpec extends UnitSpec with GeneratorDrivenPropertyChecks {
+class RenderResultSpec extends UnitSpec {
   "RenderResult" should {
-
-    implicit val nonEmptyStrings: Arbitrary[String] = Arbitrary(Arbitrary.arbString.arbitrary.suchThat(_.nonEmpty))
 
     def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
 
-    "have the plain and html fields Base64 encoded when rendered as JSON" in forAll { (plain: String, html: String) =>
-      val result = Json.toJson(RenderResult(plain, html, "fromAddress", "subject", "service", None))
+    "have the plain and html fields Base64 encoded when rendered as JSON" in {
+      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
 
-      decode((result \ "plain").as[String]) shouldBe plain
-      decode((result \ "html").as[String]) shouldBe html
+      (result \ "plain").as[String] shouldBe "U29tZSBQbGFpbiBUZXh0"
+      decode((result \ "plain").as[String]) shouldBe "Some Plain Text"
+      (result \ "html").as[String] shouldBe "PHA+U29tZSBIVE1MPC9wPg=="
+      decode((result \ "html").as[String]) shouldBe "<p>Some HTML</p>"
       (result \ "priority").asOpt[String] shouldBe None
     }
   }

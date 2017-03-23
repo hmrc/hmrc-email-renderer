@@ -17,45 +17,45 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.PlaySpec
+import org.scalatest.{Matchers, WordSpec}
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiPasswordChangedConfirmationEmailSpec extends PlaySpec {
+class ApiPasswordChangedConfirmationEmailSpec extends WordSpec with Matchers {
 
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> "#005EA5")
 
-  "htmlView" must {
+  "htmlView" should {
     "render as" in new TestCase {
       val renderedHtml = api.html.passwordChangedConfirmationEmail.render(templateParams)
-      renderedHtml.contentType must include("text/html")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Your password for the HMRC " +
+      renderedHtml.contentType should include("text/html")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Your password for the HMRC " +
                                      "API Developer Hub has been reset.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.passwordChangedConfirmationEmail.render(templateParamsPlus)
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Your password for the HMRC " +
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Your password for the HMRC " +
         developerHubTitle + " has been reset.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 
-  "textView" must {
+  "textView" should {
     "render as" in new TestCase {
       val renderedTxt = api.txt.passwordChangedConfirmationEmail.render(templateParams)
-      renderedTxt.contentType must include("text/plain")
-      renderedTxt.body must include("Your password for the HMRC API Developer Hub has been reset.")
-      renderedTxt.body must include("From HMRC API Developer Hub")
+      renderedTxt.contentType should include("text/plain")
+      renderedTxt.body should include("Your password for the HMRC API Developer Hub has been reset.")
+      renderedTxt.body should include("From HMRC API Developer Hub")
 
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedTxt = api.txt.passwordChangedConfirmationEmail.render(templateParamsPlus)
-      renderedTxt.body must include("Your password for the HMRC " + developerHubTitle + " has been reset.")
-      renderedTxt.body must include("From HMRC " + developerHubTitle)
+      renderedTxt.body should include("Your password for the HMRC " + developerHubTitle + " has been reset.")
+      renderedTxt.body should include("From HMRC " + developerHubTitle)
     }
   }
 }

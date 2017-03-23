@@ -16,13 +16,15 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import org.mockito.Mockito._
-import org.scalatest.mock.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.test.UnitSpec
+import org.mockito.Mockito._
+import org.scalatest._
+import org.scalatest.mock.MockitoSugar
+import org.scalatestplus.play._
 
 class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 

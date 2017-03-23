@@ -17,10 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.PlaySpec
+import org.scalatest.Matchers
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
+import uk.gov.hmrc.play.test.UnitSpec
 
-class ApiVerficationEmailSpec extends PlaySpec {
+class ApiVerficationEmailSpec extends UnitSpec with Matchers {
 
   val verificationLink = "http://verify.com"
   val developerHubTitle = "Developer Hub Title"
@@ -33,36 +34,36 @@ class ApiVerficationEmailSpec extends PlaySpec {
     "borderColour" -> "#005EA5"
   )
 
-  "htmlView" must {
+  "htmlView" should {
     "render as" in new TestCase {
       val renderedHtml = api.html.verificationEmail.render(templateParams)
-      renderedHtml.contentType must include("text/html")
-      renderedHtml.body must include("Dear Rich")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
+      renderedHtml.contentType should include("text/html")
+      renderedHtml.body should include("Dear Rich")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
         "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital API Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.verificationEmail.render(templateParamsPlus)
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital " + developerHubTitle + "</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital " + developerHubTitle + "</p>")
     }
   }
 
-  "textView" must {
+  "textView" should {
     "render as" in new TestCase {
       val renderedTxt = api.txt.verificationEmail.render(templateParams)
-      renderedTxt.contentType must include("text/plain")
-      renderedTxt.body must include("Dear Rich")
-      renderedTxt.body must include("Click on the link below to verify your email address:")
-      renderedTxt.body must include(verificationLink)
-      renderedTxt.body must include("From HMRC Digital API Developer Hub")
+      renderedTxt.contentType should include("text/plain")
+      renderedTxt.body should include("Dear Rich")
+      renderedTxt.body should include("Click on the link below to verify your email address:")
+      renderedTxt.body should include(verificationLink)
+      renderedTxt.body should include("From HMRC Digital API Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedTxt = api.txt.verificationEmail.render(templateParamsPlus)
-      renderedTxt.body must include("From HMRC Digital " + developerHubTitle)
+      renderedTxt.body should include("From HMRC Digital " + developerHubTitle)
     }
   }
 }

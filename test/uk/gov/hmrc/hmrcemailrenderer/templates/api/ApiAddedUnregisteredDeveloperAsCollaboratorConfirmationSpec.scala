@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.PlaySpec
+import org.scalatest.{Matchers, WordSpec}
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySpec {
+class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends WordSpec with Matchers {
 
   val applicationName = "Application Name"
   val role = "role"
@@ -31,42 +31,42 @@ class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends PlaySp
     "developerHubLink" -> developerHubLink,
     "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> "#005EA5")
 
-  "htmlView" must {
+  "htmlView" should {
     "render as" in new TestCase {
       val renderedHtml = api.html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
-      renderedHtml.contentType must include("text/html")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
+      renderedHtml.contentType should include("text/html")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
         " rights over <strong>" + applicationName + "</strong>.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
         "API Developer Hub, click on the link below.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" +
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" +
         developerHubLink + "\" style=\"color: #005EA5;\">" +
         developerHubLink + "</a></p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
         developerHubTitle + ", click on the link below.</p>")
-      renderedHtml.body must include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 
-  "textView" must {
+  "textView" should {
     "render as" in new TestCase {
       val renderedTxt = api.txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
-      renderedTxt.contentType must include("text/plain")
-      renderedTxt.body must include("You’ve been given " + role + " rights over " + applicationName + ".")
-      renderedTxt.body must include("To register with the HMRC API Developer Hub, click on the link below.")
-      renderedTxt.body must include(developerHubLink)
-      renderedTxt.body must include("From HMRC API Developer Hub")
+      renderedTxt.contentType should include("text/plain")
+      renderedTxt.body should include("You’ve been given " + role + " rights over " + applicationName + ".")
+      renderedTxt.body should include("To register with the HMRC API Developer Hub, click on the link below.")
+      renderedTxt.body should include(developerHubLink)
+      renderedTxt.body should include("From HMRC API Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedTxt = api.txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
-      renderedTxt.body must include("To register with the HMRC " + developerHubTitle + ", click on the link below.")
-      renderedTxt.body must include("From HMRC " + developerHubTitle)
+      renderedTxt.body should include("To register with the HMRC " + developerHubTitle + ", click on the link below.")
+      renderedTxt.body should include("From HMRC " + developerHubTitle)
     }
   }
 }
