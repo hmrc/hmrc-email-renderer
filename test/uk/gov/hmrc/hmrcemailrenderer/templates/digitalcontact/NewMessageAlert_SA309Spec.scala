@@ -33,7 +33,7 @@ class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with Template
       subject = "You've got a new message from HMRC",
       plainTemplate = txt.newMessageAlertSA309.f,
       htmlTemplate = html.newMessageAlertSA309.f,
-      priority = Some(MessagePriority.Background)
+      priority = Some(MessagePriority.Standard)
     )
 
 
