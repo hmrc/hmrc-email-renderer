@@ -48,7 +48,9 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC notifications by post",
       plainTemplate = txt.digitalOptOutConfirmation.f,
-      htmlTemplate = html.digitalOptOutConfirmation.f),
+      htmlTemplate = html.digitalOptOutConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "changeOfEmailAddressNewAddress",
       fromAddress = defaultFromAddress,
@@ -78,15 +80,16 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: complete the sign-up process",
       plainTemplate = txt.verificationReminder.f,
-      htmlTemplate = html.verificationReminder.f),
+      htmlTemplate = html.verificationReminder.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA309",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "You've got a new message from HMRC",
       plainTemplate = txt.newMessageAlertSA309.f,
-      htmlTemplate = html.newMessageAlertSA309.f,
-      priority = None
+      htmlTemplate = html.newMessageAlertSA309.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SS300",
@@ -94,8 +97,7 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSS300.f,
-      htmlTemplate = html.newMessageAlertSS300.f,
-      priority = None
+      htmlTemplate = html.newMessageAlertSS300.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA300",
@@ -103,8 +105,7 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSA300.f,
-      htmlTemplate = html.newMessageAlertSA300.f,
-      priority = None
+      htmlTemplate = html.newMessageAlertSA300.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA316",

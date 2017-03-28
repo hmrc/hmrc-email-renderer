@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.fandf
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.FriendsAndFamily
 
@@ -36,13 +36,17 @@ object FandFTemplates  {
       service = FriendsAndFamily,
       subject = ask_help_subject(_),
       plainTemplate = txt.newFandFAskHelpMessageAlert.f,
-      htmlTemplate = html.newFandFAskHelpMessageAlert.f),
+      htmlTemplate = html.newFandFAskHelpMessageAlert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "fandf_offer_help_notification",
       fromAddress = trustedHelpersTeamAddress,
       service = FriendsAndFamily,
       subject = offer_help_subject(_),
       plainTemplate = txt.newFandFOfferHelpMessageAlert.f,
-      htmlTemplate = html.newFandFOfferHelpMessageAlert.f)
+      htmlTemplate = html.newFandFOfferHelpMessageAlert.f,
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }
