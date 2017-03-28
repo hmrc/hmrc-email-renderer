@@ -101,7 +101,8 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
       ("transactionEngineHMRCSASA100Success", Map("sentDate" -> "01/01/01")),
-      ("transactionEngineHMRCSASA100Failure", Map("sentDate" -> "01/01/01"))
+      ("transactionEngineHMRCSASA100Failure", Map("sentDate" -> "01/01/01")),
+      ("digitalOptOutConfirmation", Map("recipientName_forename" -> "Ms Jane Doe"))
     )
 
     val background = Table[String, Map[String, String]](
@@ -114,7 +115,6 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("templateIds", "params"),
       ("newMessageAlert", Map("recipientName_forename" -> "Ms Jane Doe")),
       ("verificationReminder", Map[String, String]("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
-      ("digitalOptOutConfirmation", Map("recipientName_forename" -> "Ms Jane Doe")),
       ("newMessageAlert_SS300", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
       ("newMessageAlert_SA300", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
       ("newMessageAlert_SA309", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316

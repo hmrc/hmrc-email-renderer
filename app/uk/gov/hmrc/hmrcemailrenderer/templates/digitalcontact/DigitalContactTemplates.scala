@@ -80,8 +80,7 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: complete the sign-up process",
       plainTemplate = txt.verificationReminder.f,
-      htmlTemplate = html.verificationReminder.f,
-      priority = Some(MessagePriority.Urgent)
+      htmlTemplate = html.verificationReminder.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA309",
