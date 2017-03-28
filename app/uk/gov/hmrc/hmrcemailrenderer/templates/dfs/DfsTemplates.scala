@@ -16,46 +16,57 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.dfs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalFormsService
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
+
 object DfsTemplates {
 
-   val templates = Seq(
+  val templates = Seq(
     MessageTemplate.create(
       templateId = "dfs_submission_success_r39_2015",
       fromAddress = govUkTeamAddress,
       service = DigitalFormsService,
       subject = "R39: Claim a Tax Refund submission confirmation",
       plainTemplate = txt.dfsSubmissionConfirmationEmail.f,
-      htmlTemplate = html.dfsSubmissionConfirmationEmail.f),
-     MessageTemplate.create(
-      templateId = "dfs_submission_success_cis_2015", 
+      htmlTemplate = html.dfsSubmissionConfirmationEmail.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dfs_submission_success_cis_2015",
       fromAddress = govUkTeamAddress,
       service = DigitalFormsService,
       subject = "Subcontractor registration submission confirmation",
       plainTemplate = txt.dfsSubmissionConfirmationEmailCIS.f,
-      htmlTemplate = html.dfsSubmissionConfirmationEmailCIS.f),
-     MessageTemplate.create(
-       templateId = "dfs_submission_success_sptu_2015",
-       fromAddress = govUkTeamAddress,
-       service = DigitalFormsService,
-       subject = "State Pension top up (Class3A) submission confirmation",
-       plainTemplate = txt.dfsSubmissionConfirmationEmailSPTU.f,
-       htmlTemplate = html.dfsSubmissionConfirmationEmailSPTU.f),
-     MessageTemplate.createWithDynamicSubject(
-       templateId = "dfs_submission_success_generic_2015",
-       fromAddress = govUkTeamAddress,
-       service = DigitalFormsService,
-       subject = _.apply("subject"),
-       plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric.f,
-       htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric.f),
-     MessageTemplate.createWithDynamicSubject(
-       templateId = "dfs_submission_success_empty_turn_around_time_2015",
-       fromAddress = govUkTeamAddress,
-       service = DigitalFormsService,
-       subject = _.apply("subject"),
-       plainTemplate = txt.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f,
-       htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f)
+      htmlTemplate = html.dfsSubmissionConfirmationEmailCIS.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dfs_submission_success_sptu_2015",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = "State Pension top up (Class3A) submission confirmation",
+      plainTemplate = txt.dfsSubmissionConfirmationEmailSPTU.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailSPTU.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_generic_2015",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_empty_turn_around_time_2015",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f,
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }

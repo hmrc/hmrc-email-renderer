@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.cc
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -29,6 +29,8 @@ object CcTemplates {
       service = Childcare,
       subject = "Your interest in Tax-Free Childcare",
       plainTemplate = txt.ccRegistrationEmail.f,
-      htmlTemplate = html.ccRegistrationEmail.f)
+      htmlTemplate = html.ccRegistrationEmail.f,
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }
