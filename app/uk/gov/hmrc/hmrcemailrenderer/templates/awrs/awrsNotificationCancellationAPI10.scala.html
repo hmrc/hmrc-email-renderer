@@ -1,0 +1,8 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Alcohol Wholesaler Registration Scheme (AWRS) cancellation") {
+    <p @pStyle>Your request to cancel your AWRS registration for @{params("organisationName")} was received on @{params("submissionDate")}.</p>
+<p @pStyle>What happens next</p>
+    <p @pStyle>Your details on the AWRS register will be changed to show that your business has deregistered on the 12 December 2016.</p>
+    <p @pStyle>Unless you are joining a group or partnership, you must not trade alcohol wholesale after the @{params("submissionDate")}. </p>
+    <p @pStyle>You must sell or dispose of any existing wholesale stock by this date. If you continue to sell alcohol wholesale without an AWRS number you could be liable to criminal prosecution, financial penalties and/or seizure of alcohol stock (whether or not duty paid).</p>
+}
