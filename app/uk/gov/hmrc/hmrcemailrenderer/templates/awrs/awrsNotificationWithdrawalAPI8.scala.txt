@@ -1,0 +1,10 @@
+@(params: Map[String, Any])
+Alcohol Wholesaler Registration Scheme (AWRS) withdrawal
+
+Your request to withdraw your AWRS application for @{params("organisationName")} was received on @{params("submissionDate")}.
+
+What happens next
+
+If you wish to submit a new application for AWRS you need to start the application process again.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

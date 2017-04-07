@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+Alcohol Wholesaler Registration Scheme (AWRS) cancellation
+
+Your request to cancel your AWRS registration for @{params("organisationName")} was received on @{params("submissionDate")}.
+
+What happens next
+
+Your details on the AWRS register will be changed to show that your business has deregistered on the 12 December 2016.
+
+Unless you are joining a group or partnership, you must not trade alcohol wholesale after the @{params("submissionDate")}.
+
+You must sell or dispose of any existing wholesale stock by this date. If you continue to sell alcohol wholesale without an AWRS number you could be liable to criminal prosecution, financial penalties and/or seizure of alcohol stock (whether or not duty paid).
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
