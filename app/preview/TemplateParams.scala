@@ -145,6 +145,14 @@ object TemplateParams {
       "submissionDate" -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
+    "awrs_notification_template_cancellation_api10" -> Map(
+      "organisationName" -> "Booze Inc.",
+      "submissionDate" -> "12 March 2016"
+    ),
+    "awrs_notification_template_withdrawn_api8" -> Map(
+      "organisationName" -> "Booze Inc.",
+      "submissionDate" -> "12 March 2016"
+    ),
     "awrs_email_verification" -> Map(
       "verificationLink" -> "http://host:8080/your/link/d2cbc3df-1895-45c8-9e22-1e79a087ad78"
     ),
