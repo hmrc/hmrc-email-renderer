@@ -5,7 +5,7 @@ Your request to cancel your AWRS registration for @{params("organisationName")} 
 
 What happens next
 
-Your details on the AWRS register will be changed to show that your business has deregistered on the 12 December 2016.
+Your details on the AWRS register will be changed to show that your business has deregistered on the @{params("submissionDate")}.
 
 Unless you are joining a group or partnership, you must not trade alcohol wholesale after the @{params("submissionDate")}.
 
