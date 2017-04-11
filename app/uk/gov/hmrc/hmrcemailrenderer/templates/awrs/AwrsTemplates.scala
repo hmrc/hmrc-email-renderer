@@ -86,6 +86,20 @@ object AwrsTemplates {
       subject = "Verify your email address",
       plainTemplate = txt.awrsEmailVerification.f,
       htmlTemplate = html.awrsEmailVerification.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_cancellation_api10",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS cancellation request",
+      plainTemplate = txt.awrsNotificationCancellationAPI10.f,
+      htmlTemplate = html.awrsNotificationCancellationAPI10.f),
+    MessageTemplate.create(
+      templateId = "awrs_notification_template_withdrawn_api8",
+      fromAddress = govUkTeamAddress,
+      service = AlcoholWholesalerRegistrationScheme,
+      subject = "AWRS withdrawal request",
+      plainTemplate = txt.awrsNotificationWithdrawalAPI8.f,
+      htmlTemplate = html.awrsNotificationWithdrawalAPI8.f)
   )
 }
