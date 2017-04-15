@@ -29,7 +29,13 @@ object OffPayrollTemplates {
       service = OffPayroll,
       subject = "Test the new employment status service",
       plainTemplate = txt.offpayrollPrivateBetaInvitation.f,
-      htmlTemplate = html.offpayrollPrivateBetaInvitation.f)
-  )
-
+      htmlTemplate = html.offpayrollPrivateBetaInvitation.f),
+  MessageTemplate.create(
+      templateId = "offpayroll_private_beta_final",
+      fromAddress = govUkTeamAddress,
+      service = OffPayroll,
+      subject = "Test the new employment status service",
+      plainTemplate = txt.offpayrollPrivateBetaFinal.f,
+      htmlTemplate = html.offpayrollPrivateBetaFinal.f)
+   )
 }

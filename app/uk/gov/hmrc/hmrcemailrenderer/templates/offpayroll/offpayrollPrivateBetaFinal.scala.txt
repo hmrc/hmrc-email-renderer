@@ -1,0 +1,58 @@
+@(params: Map[String, Any])
+
+Dear @{params("name")}
+
+The first version of the employment status service is ready for you to test.
+
+This email includes all the information you'll need to use the service and give us your feedback
+
+What the service is for
+
+This is a new tool that can help people find out if a worker is employed or self-employed for tax purposes.
+
+It could be used by:
+
+-a worker providing a service
+-a person or company hiring a worker
+-an agency that is paying a worker
+
+This version is just for testing purposes so you shouldn't rely on the results it gives.
+
+Results will not be legally binding so you should carry on using existing methods for checking contracts.
+
+We'll be adding more features to the next version of the service.
+
+How to start testing
+
+This link will take you straight to the test version of the service:
+
+@{params("verificationLink")}
+
+Please don't share this link with other people.
+
+We'll be monitoring how the service is used by invitees and may need to restrict access.
+
+How to give us your feedback
+
+If you want to comment on any question please click the feedback link next to it. This will open a form for you to tell us what you think.
+
+You'll also find a form at the end of the service. You can use this to give us general feedback or tell us your thoughts on the results you got.
+
+The more feedback you give us, the better we can make the nest version of this service.
+
+How long testing lasts
+
+You can try this service as many times as you like until 30 days have passed.
+
+After that we'll make and test a second version of the service based on the feedback we get.
+
+Thank you for your help and feedback,
+
+Rhys Hobbs
+Digital Service Manager
+Personal Tax Customer Product and Process
+
+
+If you’re unsure an email is from HMRC:
+do not reply to it or click any links
+forward it to phishing@@hmrc.gsi.gov.uk
