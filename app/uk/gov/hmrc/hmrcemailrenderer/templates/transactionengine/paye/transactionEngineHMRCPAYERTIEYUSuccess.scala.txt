@@ -1,0 +1,7 @@
+@(params: Map[String,Any])
+
+Thank you for sending your Earlier Year Update Submission.
+
+The submission for reference xxxxx was successfully received on yyyyy and is being processed.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
