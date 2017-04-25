@@ -1,5 +1,5 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Successful Receipt of Online Submission for Reference") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Successful Receipt of Online Submission for Reference ${params("identifier")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending your TEST Employer Payment Summary.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was successfully received on @params("receivedDate").</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This has been recognised as a TEST transmission and will not be processed. Remember you still need to send your actual submission using the live transmission in order for it to be processed.</p>
