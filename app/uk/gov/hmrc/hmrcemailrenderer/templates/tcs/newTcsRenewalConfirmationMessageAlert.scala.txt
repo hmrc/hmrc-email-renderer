@@ -12,15 +12,11 @@ What you must do next
 @if(ic == 0 && ae > 0){You must contact us by webchat or telephone to tell us the actual amount for the estimate@if(ae > 1){s} you gave, by 31 January 2018. For contact details, search for 'tax credits general enquiries'.}
 @if(ic == 1 && ae == 0){You must complete your last annual declaration to finish your renewal.}
 @if(ic > 1 && ae == 0){You must complete your @ic remaining annual declarations to finish your renewal.}
-
-@if(ic == 1 && ae > 0){- complete your last annual declaration to finish your renewal
-@if(ae > 0){- contact us to tell us the actual amount for the estimate@if(ae > 1){s} you gave by 31 January 2018. For contact details, search for 'tax credits general enquiries'}
-}
-
-@if(ic > 1 && ae > 0){- complete your @ic remaining annual declarations to finish your renewal
-@if(ae > 0){- contact us to tell us the actual amount for the estimate@if(ae > 1){s} you gave by 31 January 2018. For contact details, search for 'tax credits general enquiries'}
+@if((ic >= 1) && ae > 0){You must:
+@if(ic == 1){- complete your last annual declaration to finish your renewal}
+@if(ic > 1){- complete your @ic remaining annual declarations to finish your renewal}
+- contact us to tell us the actual amount for the estimate@if(ae > 1){s} you gave by 31 January 2018. For contact details, search for 'tax credits general enquiries'
 }}}
-
  What you can do next
 
  You can visit Manage your tax credits and sign in to:

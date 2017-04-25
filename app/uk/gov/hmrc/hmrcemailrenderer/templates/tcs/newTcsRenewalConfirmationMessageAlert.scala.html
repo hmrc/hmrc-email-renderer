@@ -22,20 +22,13 @@
             @if(ic == 1 && ae == 0){<p style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">You must complete your last annual declaration to finish your renewal.</p>}
             @if(ic > 1 && ae == 0){<p style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">You must complete your @ic remaining annual declarations to finish your renewal.</p>}
 
-            @if(ic == 1 && ae > 0){
+            @if((ic >= 1) && ae > 0){
             <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
             <ul>
-                <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your last annual declaration to finish your renewal</li>
+                @if(ic == 1){<li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your last annual declaration to finish your renewal</li>}
+                @if(ic > 1){<li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @ic remaining annual declarations to finish your renewal</li>}
                 <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact us by webchat or telephone to tell us the actual amount for the estimate@if(ae > 1){s} you gave, by 31 January 2018. For contact details, search for 'tax credits general enquiries'.</li>
             </ul>
-            }
-
-            @if(ic > 1 && ae > 0){
-                <p style="font-size: 16px;line-height: 1.315789474;">You must:</p>
-                <ul>
-                    <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">complete your @ic remaining annual declarations to finish your renewal</li>
-                    <li style="font-size: 16px;line-height: 1.315789474; margin: 0 0 10px 0;">contact us by webchat or telephone to tell us the actual amount for the estimate@if(ae > 1){s} you gave, by 31 January 2018. For contact details, search for 'tax credits general enquiries'.</li>
-                </ul>
             }
         }}
 
