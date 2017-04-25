@@ -2,7 +2,7 @@
 
 Thank you for sending your TEST Full Payment Submission.
 
-The submission for reference xxxxx was successfully received on yyyyy but unfortunately failed HM Revenue & Customs data checks and could not be accepted.
+The submission for reference @params("identifier") was successfully received on @params("receivedDate") but unfortunately failed HM Revenue & Customs data checks and could not be accepted.
 
 Please use the Help provided with the payroll software or online forms service that you used to complete your submission, correct it and send again.
 

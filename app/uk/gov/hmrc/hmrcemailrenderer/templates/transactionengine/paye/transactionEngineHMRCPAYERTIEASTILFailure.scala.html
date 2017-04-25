@@ -1,7 +1,7 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Unsuccessful submission for Reference") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Unsuccessful submission for Reference ${params("identifier")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending your TEST Employer Alignment Submission.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference xxxxx was received on yyyyy but unfortunately failed HM Revenue & Customs data checks and could not be accepted.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was received on @params("receivedDate") but unfortunately failed HM Revenue & Customs data checks and could not be accepted.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Please use the Help provided with the payroll software or online forms service that you used to complete the submission, correct it and send again.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems, please contact the Online Services Helpdesk.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk</p>

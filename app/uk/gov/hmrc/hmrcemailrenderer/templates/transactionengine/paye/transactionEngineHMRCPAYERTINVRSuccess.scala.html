@@ -1,7 +1,7 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Successful Receipt of Online Submission for Reference") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Successful Receipt of Online Submission for Reference ${params("identifier")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending your NINO Verification Request.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference xxxxx was successfully received on yyyyy and is being processed.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was successfully received on @params("receivedDate") and is being processed.</p>
 }
 
 

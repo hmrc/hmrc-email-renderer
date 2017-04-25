@@ -2,7 +2,7 @@
 
 Thank you for sending your TEST Employer Payment Summary.
 
-The submission for reference xxxxx was received on yyyyy but unfortunately failed HM Revenue & Customs data checks and could not be accepted.
+The submission for reference @params("identifier") was received on @params("receivedDate") but unfortunately failed HM Revenue & Customs data checks and could not be accepted.
 
 Please use the Help provided with the payroll software or online forms service that you used to complete the submission, correct it and send again.
 

@@ -2,7 +2,7 @@
 
  Thank you for sending your TEST Employer Payment Summary.
 
-The submission for reference xxxxx was successfully received on yyyyy.
+The submission for reference @params("identifier") was successfully received on @params("receivedDate").
 
 This has been recognised as a TEST transmission and will not be processed. Remember you still need to send your actual submission using the live transmission in order for it to be processed.
 
