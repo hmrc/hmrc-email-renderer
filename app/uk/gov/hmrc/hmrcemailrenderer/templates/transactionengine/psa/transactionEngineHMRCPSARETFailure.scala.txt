@@ -2,7 +2,7 @@
 
     Thank you for sending a Pension Scheme Return over the Internet.
 
-    Unfortunately, although the form was received on , it could not be accepted as it failed HMRC data checks.
+    Unfortunately, although the form was received on @params("receivedDate"), it could not be accepted as it failed HMRC data checks.
 
     Please: use the Help provided with the software or online forms service you used to complete and send this Pension Scheme Return to find out how to retrieve and view details of the reason(s) the Pension Scheme Return failed; and  correct the Pension Scheme Return and send it again.
 

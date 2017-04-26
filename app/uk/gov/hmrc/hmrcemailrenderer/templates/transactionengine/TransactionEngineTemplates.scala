@@ -690,6 +690,24 @@ object TransactionEngineTemplates {
             plainTemplate = sa.txt.transactionEnginePSARETFailure.f,
             htmlTemplate = sa.html.transactionEnginePSARETFailure.f,
             priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineECSLORGV101Success",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineECSLORGV101Success.f,
+            htmlTemplate = sa.html.transactionEngineECSLORGV101Success.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineECSLORGV101Failure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineECSLORGV101Failure.f,
+            htmlTemplate = sa.html.transactionEngineECSLORGV101Failure.f,
+            priority = Some(MessagePriority.Urgent)
         )
     )
 }
