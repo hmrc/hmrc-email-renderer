@@ -1,17 +1,9 @@
 @(params: Map[String,Any])
 
-Thank you for sending the Stamp Duty Land Tax Return online.
+    The submission for reference   was successfully received on  and is being processed.
 
-The return for reference  was successfully received on  and is being processed.
+    PAYE Works Number Update Online is just one of the many online services we offer that can save you time and paperwork.
 
-Stamp Duty Land Tax Online is just one of many services we offer over the Internet that can save you time and paperwork.
-
-For the latest information on all of our Online Services, please visit the HMRC website.
+    For the latest information on all of our Online Services please visit the HMRC website
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
-<?xml version="1.0"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><xsl:template match="/"><Email xmlns="http://Gateway.AxE.BizTalk.EventRouter.Process.Email"><To><xsl:value-of select="/TxENotificationData/EmailAddress/text()" /></To><Subject>Successful Receipt of Online Submission for Reference <xsl:value-of select="concat(substring(//Identifiers,18,3),'/',normalize-space(substring(//Identifiers,41,10)))" /></Subject><Body>Thank you for sending the PAYE Works Number Update submission online.
-
-The submission for reference <xsl:value-of select="concat(substring(//Identifiers,18,3),'/',normalize-space(substring(//Identifiers,41,10)))" /> was successfully received on <xsl:value-of select="concat(substring(//Timestamp,9,2),substring(//Timestamp,5,4),substring-before(//Timestamp,'-'))" /> and is being processed.
-
-PAYE Works Number Update Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website
-</Body></Email></xsl:template></xsl:stylesheet>

@@ -1,18 +1,11 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Unsuccessful receipt of Online Agent Authorisation") {
-    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending your Online Agent Authorisation.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately the Authorisation was not accepted as it failed HMRC data checks.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Please use the Help provided with the software or online forms service you used to complete and send this Authorisation
-        to find out how to retrieve and view details of the reason(s) your Authorisation failed then correct the Authorisation and send it again.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Unsuccessful submission for reference") {
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference  was received on  .</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Please use the Help provided with the payroll software or online forms service that you used to complete your forms, correct them and send them again.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@ir-efile.gov.uk</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The Helpdesk is open</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Monday to Friday - 08.00 to 20.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Saturday - 0800 to 16.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">(It is closed Christmas Day, Boxing Day and New Year's Day).</p>
 }
-
-    <?xml version="1.0"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><xsl:template match="/"><Email xmlns="http://Gateway.AxE.BizTalk.EventRouter.Process.Email"><To><xsl:value-of select="/TxENotificationData/EmailAddress/text()" /></To><Subject>Unsuccessful submission for Reference <xsl:value-of select="concat(substring(//Identifiers,18,3),'/',normalize-space(substring(//Identifiers,41,10)))" /></Subject><Body>Thank you for sending your TEST Starter, Leaver or Pension notification forms online.
-    The submission for reference <xsl:value-of select="concat(substring(//Identifiers,18,3),'/',normalize-space(substring(//Identifiers,41,10)))" /> was received on <xsl:value-of select="concat(substring(//Timestamp,9,2),substring(//Timestamp,5,4),substring-before(//Timestamp,'-'))" />. But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.
-    Please use the Help provided with the payroll software or online forms service that you used to complete your forms, correct them and send them again.
-    If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@ir-efile.gov.uk
-    The Helpdesk is open
-    Monday to Friday - 08.00 to 20.00
-    Saturday - 0800 to 16.00
-    (It is closed Christmas Day, Boxing Day and New Year's Day).
-</Body></Email></xsl:template></xsl:stylesheet>

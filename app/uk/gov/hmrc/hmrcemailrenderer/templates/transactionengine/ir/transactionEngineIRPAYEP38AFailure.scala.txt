@@ -1,28 +1,17 @@
 @(params: Map[String,Any])
 
-Thank you for sending the Stamp Duty Land Tax Return online.
+    Thank you for sending the P38A Employers Supplementary Return online. The Form for reference  was received on  .
 
-The return for reference  was received on . Unfortunately it could not be accepted as it failed Inland Revenue data checks.
+    Unfortunately it could not be accepted as it failed Inland Revenue data checks.
 
-To correct this, please use the help provided within the software you used to complete your return, then send it again.
+    To correct this, please use the Help provided within the software you used to complete the form, then send it again.
 
-If you continue having problems, please contact the e-business Helpdesk on Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk
+    If you continue having problems, please contact the e-business Helpdesk on Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk
 
-The Helpdesk is open Monday to Friday 08.00 to 20.00, Saturday 08.00 to 16.00
+    The Helpdesk is open Monday to Friday 08.00 to 20.00, Saturday 08.00 to 16.00
 
-(It is closed Christmas Day, Boxing Day and New Year's Day).
+    (It is closed Christmas Day, Boxing Day and New Year's Day).
 
-Stamp Duty Land Tax Online is just one of many services we offer over the Internet that can save you time and paperwork.  For the latest information on all of our Online Services, please visit the HMRC website.
+    PAYE Online for Employers is just one of many services we offer over the Internet that can save you time and paperwork. For the latest information on all of our Online Services, please visit the HMRC website
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
-
-<?xml version="1.0"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><xsl:template match="/"><Email xmlns="http://Gateway.AxE.BizTalk.EventRouter.Process.Email"><To><xsl:value-of select="/TxENotificationData/EmailAddress/text()" /></To><Subject>Unsuccessful submission of P38A Employers Supplementary Return for Reference <xsl:value-of select="concat(substring(//Identifiers,18,3),', ',substring(//Identifiers,41,10))" /></Subject><Body>
-Thank you for sending the P38A Employers Supplementary Return online. The Form for reference <xsl:value-of select="concat(substring(//Identifiers,18,3),', ',substring(//Identifiers,41,10))" /> was received on <xsl:value-of select="concat(substring(//Timestamp,9,2),substring(//Timestamp,5,4),substring-before(//Timestamp,'-'))" />. Unfortunately it could not be accepted as it failed Inland Revenue data checks.
-To correct this, please use the Help provided within the software you used to complete the form, then send it again.
-If you continue having problems, please contact the e-business Helpdesk on Tel 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk.
-The Helpdesk is open
-Monday to Friday - 08.00 to 20.00
-Saturday - 0800 to 16.00
-(It is closed Christmas Day, Boxing Day and New Year's Day).
-PAYE Online for Employers is just one of many services we offer over the Internet that can save you time and paperwork. For the latest information on all of our Online Services, please visit the HMRC website
-</Body></Email></xsl:template></xsl:stylesheet>

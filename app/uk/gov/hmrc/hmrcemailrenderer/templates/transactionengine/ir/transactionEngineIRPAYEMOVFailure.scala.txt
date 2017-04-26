@@ -1,19 +1,20 @@
 @(params: Map[String,Any])
 
-Thank you for sending your Starter, Leaver or Pension notification forms online.
+    The submission for reference   was received on  .
 
-The submission for reference  was successfully received on  and is being processed.
+    But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.
 
-PAYE Online for Employers  is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website
+    Please use the Help provided with the payroll software or online forms service that you used to complete your forms, correct them and send them again.
 
+    If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@ir-efile.gov.uk
+
+    The Helpdesk is open
+
+    Monday to Friday - 08.00 to 20.00
+
+    Saturday - 0800 to 16.00
+
+    (It is closed Christmas Day, Boxing Day and New Year's Day).
+    
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 
-<?xml version="1.0"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"><xsl:template match="/"><Email xmlns="http://Gateway.AxE.BizTalk.EventRouter.Process.Email"><To><xsl:value-of select="/TxENotificationData/EmailAddress/text()" /></To><Subject>Unsuccessful submission for Reference <xsl:value-of select="concat(substring(//Identifiers,18,3),'/',normalize-space(substring(//Identifiers,41,10)))" /></Subject><Body>Thank you for sending your Starter, Leaver or Pension notification forms online.
-The submission for reference <xsl:value-of select="concat(substring(//Identifiers,18,3),'/',normalize-space(substring(//Identifiers,41,10)))" /> was received on <xsl:value-of select="concat(substring(//Timestamp,9,2),substring(//Timestamp,5,4),substring-before(//Timestamp,'-'))" />. But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.
-Please use the Help provided with the payroll software or online forms service that you used to complete your forms, correct them and send them again.
-If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@ir-efile.gov.uk
-The Helpdesk is open
-Monday to Friday - 08.00 to 20.00
-Saturday - 0800 to 16.00
-(It is closed Christmas Day, Boxing Day and New Year's Day).
-</Body></Email></xsl:template></xsl:stylesheet>
