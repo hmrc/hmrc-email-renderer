@@ -4,25 +4,38 @@ Dear @{params("customerFName")}
 
 Your reference number is @{params("renewalReference")}
 
-What you can do next @defining((params("incompleteClaims").toString.toInt, params("anyEstimates").toString.toInt)) { case (ic, ae) =>
+If we have an up-to-date mobile number on your tax credits claim, you will get another confirmation by text message.
+
+@defining((params("incompleteClaims").toString.toInt, params("anyEstimates").toString.toInt)) { case (ic, ae) =>
 @if(ic > 0 || ae > 0){
-You must:
-@if(ic > 0) {- complete your @ic remaining annual review@if(ic > 1){s} to finish your renewal}
-@if(ae > 0) {- contact us to tell us the actual amount for the estimate@if(ae > 1){s} you gave by @{params("contactDeadline")}. For contact details, search for 'tax credits general enquiries'}
-}}
-You can:
-- log into tax credits and check the status of your renewal
+What you must do next
+@if(ic == 0 && ae > 0){You must contact us by webchat or telephone to tell us the actual amount for the estimate@if(ae > 1){s} you gave, by 31 January 2018. For contact details, search for 'tax credits general enquiries'.}
+@if(ic == 1 && ae == 0){You must complete your last annual declaration to finish your renewal.}
+@if(ic > 1 && ae == 0){You must complete your @ic remaining annual declarations to finish your renewal.}
+@if((ic >= 1) && ae > 0){You must:
+@if(ic == 1){- complete your last annual declaration to finish your renewal}
+@if(ic > 1){- complete your @ic remaining annual declarations to finish your renewal}
+- contact us to tell us the actual amount for the estimate@if(ae > 1){s} you gave by 31 January 2018. For contact details, search for 'tax credits general enquiries'
+}}}
+What you can do next
+
+You can visit Manage your tax credits and sign in to:
+
+- check if we have finished processing your renewal
 - complete this declaration again if you think you made a mistake
+- report any changes to your claim that have happened since 6 April 2017
+
+You can also manage your tax credits using the HMRC app. It is available on Android, iOS and Windows.
 
 What happens next
 
 We will work out how much tax credits you:
 
-- should have got in your award period
+- should have got already
 - will get from @{params("startDate")} to @{params("endDate")}, unless your claim has ended,
   and send you an award notice that you should get by @{params("noticeDate")}
 
-If the amount was wrong, we will pay you the right amount or ask you to pay back any extra money.
+If the amount you got already was wrong, we will pay you the right amount or ask you to pay back any extra money.
 
 From HMRC Tax Credits
 
