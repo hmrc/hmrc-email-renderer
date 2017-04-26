@@ -2,7 +2,7 @@
 
 Thank you for sending your CTF Annual Return over the Internet.
 
-Unfortunately, although the form was received on   it could not be accepted as it failed HMRC data checks.
+Unfortunately, although the form was received on @params("receivedDate") it could not be accepted as it failed HMRC data checks.
 
 Please send it again.
 

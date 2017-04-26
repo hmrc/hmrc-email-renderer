@@ -1,6 +1,6 @@
 @(params: Map[String,Any])
 
-Thank you - the Verification Request form you sent for  over the internet was successfully received on  by HMRC and will now be processed.
+Thank you - the Verification Request form you sent for @params("identifier") over the internet was successfully received on @params("receivedDate") by HMRC and will now be processed.
 
 Thank you for using HMRC Internet Service for Construction Industry Schemes.
 

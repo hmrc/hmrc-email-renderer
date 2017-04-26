@@ -1,6 +1,6 @@
 @(params: Map[String,Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Successful receipt of CTF Annual Return") {
-    <p style="margin: 0 0 30px; font-size: 19px;">Thank you - the completed CTF Annual Return you sent over the Internet was successfully received on  and is being processed.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you - the completed CTF Annual Return you sent over the Internet was successfully received on @params("receivedDate") and is being processed.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">CTF is just one of the many services we offer over the Internet that can save you time and paperwork.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">For the latest information on all our Online Services, please visit www.hmrc.gov.uk</p>
 }

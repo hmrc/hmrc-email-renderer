@@ -1,6 +1,6 @@
 @(params: Map[String,Any])
 
-    The submission for reference   was successfully received on  and is being processed.
+    The submission for reference @params("identifier") was successfully received on @params("receivedDate") and is being processed.
 
     PAYE Works Number Update Online is just one of the many online services we offer that can save you time and paperwork.
 

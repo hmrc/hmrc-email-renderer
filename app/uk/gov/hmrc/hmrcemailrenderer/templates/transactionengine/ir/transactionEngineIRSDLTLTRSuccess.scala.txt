@@ -2,7 +2,7 @@
 
 Thank you for sending the Stamp Duty Land Tax Return online.
 
-The return for reference  was successfully received on  and is being processed.
+The return for reference @params("identifier") was successfully received on @params("receivedDate") and is being processed.
 
 Stamp Duty Land Tax Online is just one of many services we offer over the Internet that can save you time and paperwork.
 

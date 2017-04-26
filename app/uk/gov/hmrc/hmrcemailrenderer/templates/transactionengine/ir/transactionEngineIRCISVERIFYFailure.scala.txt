@@ -1,8 +1,8 @@
 @(params: Map[String,Any])
 
-Thank you for sending the Verification Request form for   over the Internet.
+Thank you for sending the Verification Request form for @params("identifier") over the Internet.
 
-Unfortunately, although the form was received on  , it could not be accepted as it failed HMRC data checks.
+Unfortunately, although the form was received on @params("receivedDate"), it could not be accepted as it failed HMRC data checks.
 
 Please use the Help provided with the software or online forms service you used to complete and send this Authorisation
 to find out how to retrieve and view details of the reason(s) your Authorisation failed then correct the Authorisation and send it again.

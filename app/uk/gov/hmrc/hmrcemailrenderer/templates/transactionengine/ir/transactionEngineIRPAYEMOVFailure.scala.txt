@@ -1,6 +1,6 @@
 @(params: Map[String,Any])
 
-    The submission for reference   was received on  .
+    The submission for reference @params("identifier") was received on @params("receivedDate").
 
     But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.
 

@@ -2,7 +2,7 @@
 
     Thank you for sending the P38A Employers Supplementary Return online.
 
-    The Form for reference  was successfully received on  and is being processed.
+    The Form for reference @params("identifier") was successfully received on @params("receivedDate") and is being processed.
 
     PAYE Online for Employers is just one of many services we offer over the Internet that can save you time and paperwork. For the latest information on all of our Online Services, please visit the HMRC website
 
