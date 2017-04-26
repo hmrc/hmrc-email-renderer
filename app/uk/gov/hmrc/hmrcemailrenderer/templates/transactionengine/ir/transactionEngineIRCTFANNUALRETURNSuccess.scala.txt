@@ -1,0 +1,14 @@
+@(params: Map[String,Any])
+
+Thank you - the completed CTF Annual Return you sent over the Internet was successfully received on  and is being processed.
+
+CTF is just one of the many services we offer over the Internet that can save you time and paperwork.
+
+For the latest information on all our Online Services, please visit www.hmrc.gov.uk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
+
+
+
+
