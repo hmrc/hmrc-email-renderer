@@ -222,6 +222,258 @@ object TransactionEngineTemplates {
             plainTemplate = sa.txt.transactionEngineHMRCPAYERTINVRTILFailure.f,
             htmlTemplate = sa.html.transactionEngineHMRCPAYERTINVRTILFailure.f,
             priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRAACTSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRAACTSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRAACTSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRAACTFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRAACTFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRAACTFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRAAPAYESuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRAAPAYESuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRAAPAYESuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRAAPAYEFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRAAPAYEFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRAAPAYEFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRAASASuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRAASASuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRAASASuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRAASAFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRAASAFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRAASAFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRCISCIS300MRSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRCISCIS300MRSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRCISCIS300MRSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRCISCIS300MRFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRCISCIS300MRFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRCISCIS300MRFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRCISVERIFYSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRCISVERIFYSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRCISVERIFYSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRCISVERIFYFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRCISVERIFYFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRCISVERIFYFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRCTFANNUALRETURNSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRCTFANNUALRETURNSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRCTFANNUALRETURNSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRCTFANNUALRETURNFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRCTFANNUALRETURNFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRCTFANNUALRETURNFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEOYSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEOYSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEOYSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEOYFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEOYFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEOYFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEOYTILSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEOYTILSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEOYTILSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEOYTILFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEOYTILFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEOYTILFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEXBSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEXBSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEXBSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEXBFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEXBFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEXBFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEMOVSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEMOVSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEMOVSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEMOVFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEMOVFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEMOVFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEMOVTILSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEMOVTILSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEMOVTILSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEMOVTILFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEMOVTILFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEMOVTILFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEP38ASuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEP38ASuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEP38ASuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEEP38AFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEEP38AFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEEP38AFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEUPDATESuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEUPDATESuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEUPDATESuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRPAYEUPDATEFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRPAYEUPDATEFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRPAYEUPDATEFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRSDLTLTRSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRSDLTLTRSuccess.f,
+            htmlTemplate = sa.html.transactionEngineIRSDLTLTRSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineIRSDLTLTRFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject(_),
+            plainTemplate = sa.txt.transactionEngineIRSDLTLTRFailure.f,
+            htmlTemplate = sa.html.transactionEngineIRSDLTLTRFailure.f,
+            priority = Some(MessagePriority.Urgent)
         )
     )
 }
