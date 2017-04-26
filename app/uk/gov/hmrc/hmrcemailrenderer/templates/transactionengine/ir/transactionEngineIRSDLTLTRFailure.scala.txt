@@ -2,7 +2,9 @@
 
 Thank you for sending the Stamp Duty Land Tax Return online.
 
-The return for reference @params("identifier") was received on @params("receivedDate"). Unfortunately it could not be accepted as it failed Inland Revenue data checks.
+The return for reference @params("identifier") was received on @params("receivedDate").
+
+Unfortunately it could not be accepted as it failed Inland Revenue data checks.
 
 To correct this, please use the help provided within the software you used to complete your return, then send it again.
 
