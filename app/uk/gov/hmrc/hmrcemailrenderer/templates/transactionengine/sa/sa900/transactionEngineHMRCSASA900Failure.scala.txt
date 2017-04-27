@@ -1,10 +1,10 @@
 @(params: Map[String,Any])
 
-Thank you for sending the SA Partnership submission online.
+Thank you for sending the SA Trust submission online.
 
 The submission for reference  was received on .
 
-Unfortunately it could not be accepted as it failed HMRC data checks.
+Unfortunately it could not be accepted as it failed Inland Revenue data checks.
 
 To correct this please use the help provided within the software you used to complete your form and send it again.
 
@@ -18,7 +18,7 @@ Saturday - 0800 to 16.00
 
 (It is closed Christmas Day, Boxing Day and New Year's Day).
 
-SA Partnership Online is just one of the many online services we offer that can save you time and paperwork.
+SA Trust Online is just one of the many online services we offer that can save you time and paperwork.
 
 For the latest information on all of our Online Services please visit the HMRC website
 
