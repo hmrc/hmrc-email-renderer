@@ -60,6 +60,24 @@ object TransactionEngineTemplates {
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTFailure.f,
             htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTFailure.f,
             priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCSASA100ATTTILSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILSuccess.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTTILSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCSASA100ATTTILFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILFailure.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTTILFailure.f,
+            priority = Some(MessagePriority.Urgent)
         )
     )
 }

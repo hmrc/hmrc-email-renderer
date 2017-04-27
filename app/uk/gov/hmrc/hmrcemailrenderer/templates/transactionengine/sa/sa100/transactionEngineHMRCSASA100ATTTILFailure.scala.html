@@ -1,0 +1,12 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Unsuccessful 'TEST IN LIVE'") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending the online Self Assessment submission to the 'TEST IN LIVE' service.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was received on @params("receivedDate"). Unfortunately it could not be accepted as it failed HMRC data checks.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">To correct this please use the help provided within the software that you used to complete your form and send it again.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@@ir-efile.gov.uk</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The Helpdesk is open</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Monday to Friday - 08.00 to 20.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Saturday - 08.00 to 16.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">(Closed Christmas Day, Boxing Day and New Year's Day).</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Self Assessment Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website</p>
+}
