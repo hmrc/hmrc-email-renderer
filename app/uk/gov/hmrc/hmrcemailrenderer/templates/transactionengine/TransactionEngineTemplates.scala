@@ -30,8 +30,8 @@ object TransactionEngineTemplates {
             fromAddress = govUkTeamAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
-            plainTemplate = sa.txt.transactionEngineHMRCSASA100Success.f,
-            htmlTemplate = sa.html.transactionEngineHMRCSASA100Success.f,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100Success.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100Success.f,
             priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
@@ -39,8 +39,27 @@ object TransactionEngineTemplates {
             fromAddress = govUkTeamAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
-            plainTemplate = sa.txt.transactionEngineHMRCSASA100Failure.f,
-            htmlTemplate = sa.html.transactionEngineHMRCSASA100Failure.f,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100Failure.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100Failure.f,
             priority = Some(MessagePriority.Urgent)
-        ))
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCSASA100ATTSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTSuccess.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCSASA100ATTFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTFailure.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        )
+    )
 }
