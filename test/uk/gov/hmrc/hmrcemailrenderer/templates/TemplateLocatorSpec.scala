@@ -169,9 +169,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_validation_success",
         "customs_payment_required",
         "customs_payment_success",
-        "customs_declaration_success"
-//        "transactionEngineHMRCSASA100Success",
-//        "transactionEngineHMRCSASA100Failure"
+        "customs_declaration_success",
+        "transactionEngineHMRCSASA100Success",
+        "transactionEngineHMRCSASA100Failure"
 //        "transactionEngineECSLORGV101Success",
 //        "transactionEngineECSLORGV101Failure",
 //        "transactionEngineIRAACTSuccess",
@@ -212,8 +212,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 //        "transactionEngineHMRCPAYERTIEPSTILFailure",
 //        "transactionEngineHMRCPAYERTIEYUSuccess",
 //        "transactionEngineHMRCPAYERTIEYUFailure",
-//        "transactionEngineHMRCPAYERTIEPSTILSuccess",
-//        "transactionEngineHMRCPAYERTIEPSTILFailure",
+//        "transactionEngineHMRCPAYERTIEYUTILSuccess",
+//        "transactionEngineHMRCPAYERTIEYUTILFailure",
 //        "transactionEngineHMRCPAYERTIFPSSuccess",
 //        "transactionEngineHMRCPAYERTIFPSFailure",
 //        "transactionEngineHMRCPAYERTIFPSTILSuccess",
