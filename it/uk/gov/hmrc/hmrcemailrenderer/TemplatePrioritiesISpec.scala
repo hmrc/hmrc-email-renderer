@@ -102,6 +102,10 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
       ("transactionEngineHMRCSASA100Success", Map("sentDate" -> "01/01/01")),
       ("transactionEngineHMRCSASA100Failure", Map("sentDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100Success", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100Failure", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100ATTSuccess", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100ATTFailure", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
       ("digitalOptOutConfirmation", Map("recipientName_forename" -> "Ms Jane Doe"))
     )
 
