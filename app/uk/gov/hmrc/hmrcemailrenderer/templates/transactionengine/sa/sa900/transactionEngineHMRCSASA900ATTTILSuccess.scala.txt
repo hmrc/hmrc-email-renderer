@@ -2,7 +2,7 @@
 
 Thank you for sending the online Self Assessment submission to the 'TEST IN LIVE' service.
 
-The submission received on  for reference  was successful and would have been processed if sent under non-test conditions.
+The submission received on @params("receivedDate") for reference @params("identifier") was successful and would have been processed if sent under non-test conditions.
 
 Self Assessment Online is just one of the many online services we offer that can save you time and paperwork.
 

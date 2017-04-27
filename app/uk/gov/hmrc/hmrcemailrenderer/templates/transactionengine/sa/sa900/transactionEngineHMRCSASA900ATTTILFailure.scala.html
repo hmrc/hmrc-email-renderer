@@ -2,7 +2,7 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Unsuccessful 'TEST IN LIVE'") {
 
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending the online Self Assessment submission to the 'TEST IN LIVE' service.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference  was received on .</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was received on @params("receivedDate").</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately it could not be accepted as it failed HMRC data checks.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">To correct this please use the help provided within the software you used to complete your form and send it again.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk</p>

@@ -2,7 +2,7 @@
 
 Thank you for sending the SA Partnership submission online.
 
-The submission for reference  was received on .
+The submission for reference @params("identifier") was received on @params("receivedDate").
 
 Unfortunately it could not be accepted as it failed HMRC data checks.
 
