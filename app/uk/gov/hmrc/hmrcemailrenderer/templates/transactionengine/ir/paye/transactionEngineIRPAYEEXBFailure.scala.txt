@@ -8,7 +8,7 @@ Unfortunately it could not be accepted as it failed HMRC data checks.
 
 To correct this please use the help provided within the software you used to complete your form and send it again.
 
-If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@ir-efile.gov.uk
+If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@@ir-efile.gov.uk
 
 The Helpdesk is open
 

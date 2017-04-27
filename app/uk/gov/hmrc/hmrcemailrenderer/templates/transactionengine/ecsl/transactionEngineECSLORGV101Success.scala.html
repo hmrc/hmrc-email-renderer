@@ -1,5 +1,5 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(paramss,s"Successful receipt of VAT Online EC Sales List declaration for VAT Registration Number ${params("identifier")}") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Successful receipt of VAT Online EC Sales List declaration for VAT Registration Number ${params("identifier")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for using the VAT online service.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">The VAT EC Sales List declaration for VAT Registration Number @params("identifier"), which you sent over the Internet on @params("receivedDate"), has been passed to HMRC for processing.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you have a specific query relating to your filing of this VAT EC Sales List declaration, please contact the eCustomer Support Helpdesk on 0300 200 3701.</p>

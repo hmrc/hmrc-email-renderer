@@ -8,7 +8,7 @@ Unfortunately it could not be accepted as it failed Inland Revenue data checks.
 
 To correct this, please use the help provided within the software you used to complete your return, then send it again.
 
-If you continue having problems, please contact the e-business Helpdesk on Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@ir-efile.gov.uk
+If you continue having problems, please contact the e-business Helpdesk on Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
 
 The Helpdesk is open Monday to Friday 08.00 to 20.00, Saturday 08.00 to 16.00
 
