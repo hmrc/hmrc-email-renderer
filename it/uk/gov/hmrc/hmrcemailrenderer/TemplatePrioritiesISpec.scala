@@ -108,6 +108,8 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("transactionEngineHMRCSASA100ATTFailure", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
       ("transactionEngineHMRCSASA100ATTTILSuccess", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
       ("transactionEngineHMRCSASA100ATTTILFailure", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100TILSuccess", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
+      ("transactionEngineHMRCSASA100TILFailure", Map("idenitifer" -> "1234567890", "receivedDate" -> "01/01/01")),
       ("digitalOptOutConfirmation", Map("recipientName_forename" -> "Ms Jane Doe"))
     )
 

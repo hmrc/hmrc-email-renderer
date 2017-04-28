@@ -175,7 +175,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "transactionEngineHMRCSASA100ATTSuccess",
         "transactionEngineHMRCSASA100ATTFailure",
         "transactionEngineHMRCSASA100ATTTILSuccess",
-        "transactionEngineHMRCSASA100ATTTILFailure")
+        "transactionEngineHMRCSASA100ATTTILFailure",
+        "transactionEngineHMRCSASA100TILSuccess",
+        "transactionEngineHMRCSASA100TILFailure")
     }
 
   }
