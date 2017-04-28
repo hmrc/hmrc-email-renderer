@@ -147,7 +147,8 @@ object TemplateParams {
     ),
     "awrs_notification_template_cancellation_api10" -> Map(
       "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016"
+      "submissionDate" -> "12 March 2016",
+      "deregistrationDate" -> "23 April 2017"
     ),
     "awrs_notification_template_withdrawn_api8" -> Map(
       "organisationName" -> "Booze Inc.",
@@ -322,16 +323,15 @@ object TemplateParams {
       "helpeeFirstName" -> "John"
     ),
     "tcs_renewal_confirmation" -> Map(
-      "awardStartDate" -> "6 April 2017",
-      "awardEndDate" -> "10 January 2018",
-      "customerFName" -> "Elisha",
+      "awardStartDate" -> "6 April 2016",
+      "awardEndDate" -> "10 January 2017",
+      "customerFName" -> "Tom",
       "renewalReference" -> "123 456 789 123 456",
-      "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017",
-      "contactDeadline" -> "31 January 2018",
-      "noticeDate" -> "21 October 2017",
+      "startDate" -> "6 April 2017",
+      "endDate" -> "5 April 2018",
+      "noticeDate" -> "7 July 2017",
       "incompleteClaims" -> "2",
-      "anyEstimates" -> "1"
+      "anyEstimates" -> "3"
     ),
     "iht_access_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
