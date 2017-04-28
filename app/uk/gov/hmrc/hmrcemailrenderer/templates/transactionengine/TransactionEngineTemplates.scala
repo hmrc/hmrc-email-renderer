@@ -22,7 +22,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
 
 object TransactionEngineTemplates {
 
-    private def extractSubject(params: Map[String,String]) : String = params("subject")
+    private def extractSubject(params: Map[String,String]) : String = ""
 
     val templates = Seq(
         MessageTemplate.createWithDynamicSubject(
@@ -72,6 +72,24 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100ATTTILFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILFailure.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTTILFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCSASA100TILSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SelfAssessment,
+            subject = extractSubject,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILSuccess.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTTILSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCSASA100TILFailure",
             fromAddress = govUkTeamAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
