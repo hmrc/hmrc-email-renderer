@@ -147,7 +147,8 @@ object TemplateParams {
     ),
     "awrs_notification_template_cancellation_api10" -> Map(
       "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016"
+      "submissionDate" -> "12 March 2016",
+      "deregistrationDate" -> "23 April 2017"
     ),
     "awrs_notification_template_withdrawn_api8" -> Map(
       "organisationName" -> "Booze Inc.",
