@@ -65,5 +65,9 @@ object ServiceIdentifier {
   case object PensionSchemeRegistration extends ServiceIdentifier { override val name = "reg" }
   case object PensionSchemeReturn extends ServiceIdentifier { override val name = "ret" }
   case object VATECSalesList extends ServiceIdentifier { override val name = "ecsl" }
+  case object NewExportSystem extends ServiceIdentifier { override val name = "nes" }
+  case object SubmitVATReturns extends ServiceIdentifier { override val name = "vat" }
+
+
 
 }

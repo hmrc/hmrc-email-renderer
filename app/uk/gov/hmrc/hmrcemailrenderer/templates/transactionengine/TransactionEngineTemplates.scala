@@ -816,7 +816,63 @@ object TransactionEngineTemplates {
             plainTemplate = sa.sa900.txt.transactionEngineHMRCSASA900TILFailure.f,
             htmlTemplate = sa.sa900.html.transactionEngineHMRCSASA900TILFailure.f,
             priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMCENESEDIFACTSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.NewExportSystem,
+            subject = extractSubject(_),
+            plainTemplate = nes.txt.transactionEngineHMCENESEDIFACTSuccess.f,
+            htmlTemplate = nes.html.transactionEngineHMCENESEDIFACTSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMCENESEDIFACTFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.NewExportSystem,
+            subject = extractSubject(_),
+            plainTemplate = nes.txt.transactionEngineHMCENESEDIFACTFailure.f,
+            htmlTemplate = nes.html.transactionEngineHMCENESEDIFACTFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCVATDECSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SubmitVATReturns,
+            subject = extractSubject(_),
+            plainTemplate = vat.txt.transactionEngineHMRCVATDECSuccess.f,
+            htmlTemplate = vat.html.transactionEngineHMRCVATDECSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCVATDECFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SubmitVATReturns,
+            subject = extractSubject(_),
+            plainTemplate = vat.txt.transactionEngineHMRCVATDECFailure.f,
+            htmlTemplate = vat.html.transactionEngineHMRCVATDECFailure.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCVATDECTILSuccess",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SubmitVATReturns,
+            subject = extractSubject(_),
+            plainTemplate = vat.txt.transactionEngineHMRCVATDECTILSuccess.f,
+            htmlTemplate = vat.html.transactionEngineHMRCVATDECTILSuccess.f,
+            priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+            templateId = "transactionEngineHMRCVATDECTILFailure",
+            fromAddress = govUkTeamAddress,
+            service = ServiceIdentifier.SubmitVATReturns,
+            subject = extractSubject(_),
+            plainTemplate = vat.txt.transactionEngineHMRCVATDECTILFailure.f,
+            htmlTemplate = vat.html.transactionEngineHMRCVATDECTILFailure.f,
+            priority = Some(MessagePriority.Urgent)
         )
+
+
 //       ,MessageTemplate.createWithDynamicSubject(
 //        templateId = "transactionEngineHMRCPSAPRACAUTHSuccess",
 //        fromAddress = govUkTeamAddress,

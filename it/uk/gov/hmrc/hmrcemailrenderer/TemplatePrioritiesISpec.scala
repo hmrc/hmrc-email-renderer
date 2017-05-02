@@ -188,7 +188,13 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("transactionEngineHMRCSASA900ATTTILSuccess", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
       ("transactionEngineHMRCSASA900ATTTILFailure", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
       ("transactionEngineHMRCSASA900Success", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
-      ("transactionEngineHMRCSASA900Failure", Map("receivedDate" -> "01/01/01","identifier" -> "12345"))
+      ("transactionEngineHMRCSASA900Failure", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
+      ("transactionEngineHMCENESEDIFACTSuccess", Map.empty),
+      ("transactionEngineHMCENESEDIFACTFailure", Map.empty),
+      ("transactionEngineHMRCVATDECSuccess", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
+      ("transactionEngineHMRCVATDECFailure", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
+      ("transactionEngineHMRCVATDECTILSuccess", Map("receivedDate" -> "01/01/01","identifier" -> "12345")),
+      ("transactionEngineHMRCVATDECTILFailure", Map("receivedDate" -> "01/01/01","identifier" -> "12345"))
       //      ("transactionEngineHMRCPSAPRACAUTHSuccess", Map("receivedDate" -> "01/01/01")),
       //      ("transactionEngineHMRCPSAPRACAUTHFailure", Map("receivedDate" -> "01/01/01")),
       //      ("transactionEngineHMRCPSAPRACDEAUTHSuccess", Map("receivedDate" -> "01/01/01")),
