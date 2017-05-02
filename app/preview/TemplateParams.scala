@@ -420,6 +420,12 @@ object TemplateParams {
     ),
     "customs_validation_success" -> Map(
       "details" -> "validation success details will appear here"
+    ),
+    "transactionEngineHMRCSASA100Success" -> Map(
+      "sentDate" -> "20 April 2017"
+    ),
+    "transactionEngineHMRCSASA100Failure" -> Map(
+      "sentDate" -> "20 April 2017"
     )
   )
 }
