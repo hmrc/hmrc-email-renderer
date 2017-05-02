@@ -1,0 +1,43 @@
+@(params: Map[String,Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,"Gateway Error Notification Mail") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending an Accounting for Tax Form over the Internet.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, although the form was received on @params("receivedDate"), it could not be accepted as it failed HMRC data checks.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Please:  use the Help provided with the software or online forms service you used to complete and send this Form to
+        find out how to retrieve and view details of the reason(s) the Form failed; and correct the Form and send it again. </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk</p>
+}
+
+iiiii
+
+    <xsl:template name="Acknowledgement"> <xsl:value-of select="concat(substring-after(//Timestamp,'T'),' on ',substring(//Timestamp,9,2),substring(//Timestamp,5,4),substring-before(//Timestamp,'-'))"/>.<xsl:text>&#xA;</xsl:text>
+    </xsl:template>
+    <xsl:template name="ErrorIntro">
+        <xsl:choose>
+            <xsl:when test="//ErrorType='fatal'">
+                Unfortunately, an error occurred whilst processing your submission. Please contact the relevant government department directly.<xsl:text>&#xA;</xsl:text>
+            </xsl:when>
+            <xsl:when test="//ErrorType='business'">
+                Unfortunately, the document could not be accepted as the data was incorrect, and did not pass the input validation.<xsl:text>&#xA;</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                Unfortunately, an error occurred whilst processing your submission.<xsl:text>&#xA;</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template name="ErrorDetails">
+        <xsl:choose>
+            <xsl:when test="//ErrorType='business'">
+                <xsl:for-each select="//er:ErrorResponse/er:Error">
+                    Error Code: <xsl:value-of select="er:Number"/><xsl:text>&#xA;</xsl:text>Error Message:
+                    <xsl:value-of select="er:Text"/>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                Error Code: <xsl:value-of select="//ErrorNumber"/><xsl:text>&#xA;</xsl:text>Error Message: <xsl:value-of select="//ErrorText"/><xsl:text>&#xA;</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>The identifiers for this submission are: <xsl:value-of select="//Identifiers"/>
+    </xsl:template>
+    <xsl:template name="ResponseWording">
+        Your document has been transmitted to the service owner and will now be processed. The identifiers for this submission are:<xsl:text>&#xA;</xsl:text><xsl:text>&#xA;</xsl:text><xsl:value-of select="//Identifiers"/><xsl:text>&#xA;</xsl:text><xsl:text>&#xA;</xsl:text>You do not need to take any action in response to this e-mail.
+    </xsl:template>
+</xsl:stylesheet>
