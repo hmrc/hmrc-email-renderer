@@ -1,0 +1,6 @@
+@(params: Map[String,Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Successful submission for reference ${params("identifier")}") {
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was successfully received on @params("receivedDate").</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This has been recognised as a TEST transmission and will not be processed.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Remember you still need to send your actual forms using the live transmission in order for it to be processed.</p>
+}

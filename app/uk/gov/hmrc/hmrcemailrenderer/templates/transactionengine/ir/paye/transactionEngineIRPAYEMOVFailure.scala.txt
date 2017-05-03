@@ -1,0 +1,20 @@
+@(params: Map[String,Any])
+
+The submission for reference @params("identifier") was received on @params("receivedDate").
+
+But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.
+
+Please use the Help provided with the payroll software or online forms service that you used to complete your forms, correct them and send them again.
+
+If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@@ir-efile.gov.uk
+
+The Helpdesk is open
+
+Monday to Friday - 08.00 to 20.00
+
+Saturday - 0800 to 16.00
+
+(It is closed Christmas Day, Boxing Day and New Year's Day).
+    
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
