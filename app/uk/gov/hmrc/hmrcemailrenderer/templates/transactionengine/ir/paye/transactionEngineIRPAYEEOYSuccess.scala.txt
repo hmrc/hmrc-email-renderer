@@ -1,0 +1,13 @@
+@(params: Map[String,Any])
+
+Thank you for sending the PAYE End of Year submission online.
+
+The submission for reference @params("identifier") was successfully received on @params("receivedDate").
+
+If this was a test transmission, remember you still need to send your actual Employer Annual Return using the live transmission in order for it to be processed.
+
+PAYE End of Year Online is just one of the many online services we offer that can save you time and paperwork.
+
+For the latest information on all of our Online Services please visit the HMRC website
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
