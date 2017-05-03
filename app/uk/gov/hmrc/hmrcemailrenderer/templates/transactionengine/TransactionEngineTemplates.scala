@@ -17,8 +17,8 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier
+import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineFromAddress.transactionEngineAddress
 
 object TransactionEngineTemplates {
 
@@ -27,7 +27,7 @@ object TransactionEngineTemplates {
     val templates = Seq(
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100Success",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100Success.f,
@@ -36,7 +36,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100Failure",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100Failure.f,
@@ -45,7 +45,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100ATTSuccess",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTSuccess.f,
@@ -54,7 +54,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100ATTFailure",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTFailure.f,
@@ -63,7 +63,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100ATTTILSuccess",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILSuccess.f,
@@ -72,7 +72,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100ATTTILFailure",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILFailure.f,
@@ -81,7 +81,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100TILSuccess",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILSuccess.f,
@@ -90,7 +90,7 @@ object TransactionEngineTemplates {
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCSASA100TILFailure",
-            fromAddress = govUkTeamAddress,
+            fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
             plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILFailure.f,
