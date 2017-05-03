@@ -2,7 +2,7 @@
 
 Thank you for sending the VAT submission online.
 
-The submission was successfully received on @params("sentDate") and is being processed.
+The submission was successfully received on @params("receivedDate") and is being processed.
 
 VAT Online is just one of the many online services we offer that can save you time and paperwork.
 

@@ -3,7 +3,7 @@ Dear Submitter,
 
 Thank you for sending the Self Assessment submission online.
 
-The submission was received on @params("sentDate"). Unfortunately it could not be accepted as it failed HMRC data checks.
+The submission was received on @params("receivedDate"). Unfortunately it could not be accepted as it failed HMRC data checks.
 
 To correct this please use the help provided within the software you used to complete your form and send it again.
 
