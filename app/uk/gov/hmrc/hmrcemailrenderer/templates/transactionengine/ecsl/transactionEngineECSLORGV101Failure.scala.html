@@ -1,0 +1,14 @@
+@(params: Map[String,Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Failed submission of VAT Online EC Sales List declaration for VAT Registration Number ${params("identifier")}") {
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for using the VAT online service.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately the information provided in your VAT EC Sales List declaration for VAT Registration Number @params("identifier") which you sent over the Internet on @params("receivedDate"), has failed HMRC data checks and so cannot be accepted.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You will need to review and resubmit corrected information before we can accept your VAT EC Sales List declaration.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Because your VAT EC Sales List declaration has failed data checks and not been accepted you are still due to file a VAT EC Sales List declaration for VAT Registration number .</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Please resubmit.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Please refer to any help documentation associated with the software you used to prepare your VAT EC Sales List declaration to find out how to retrieve and review the details of the reason(s) your submission failed.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You will need to correct your information and resubmit it.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">For information on how to complete your VAT EC Sales List declaration, please vist the HMRC website and refer to our; FAQ: Completing your EC Sales Lists.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Our website provides the latest information about our Internet services and regularly updated advisory information to help answer your queries.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you have a specific query relating to this VAT EC Sales List declaration, please contact the eCustomer Support Helpdesk on 0300 200 3701.</p>
+}
