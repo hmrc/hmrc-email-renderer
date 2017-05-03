@@ -1,0 +1,13 @@
+@(params: Map[String,Any])
+HM Revenue and Customs(HMRC) have received the submission for reference @params("identifier").
+It will be processed depending on further validation checks.
+This usually takes at least 2 working days and you can check the progress for the return period in the Corporation Tax section of the company's online tax account.
+All parts of the Company Tax Return must be proper and complete and the content must be viewable by HMRC officers.
+HMRC can't confirm that this submission meets that requirement until we've processed it and will notify you at a later date if the submission is not a valid Company Tax Return.
+HMRC no longer issues paper acknowledgements. We recommend that you keep this email and a copy of the return.
+The easiest way to make Corporation Tax payments is from the online tax account.
+You can also make payments at www.gov.uk/pay-corporation-tax.
+Use the 17 digit payment reference appropriate to the accounting period, for example 1234005678A00101A.
+You can find the payment reference for each accounting period in the online tax account.
+This is an automatically generated email.  Please don't reply as the email address is not monitored.
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

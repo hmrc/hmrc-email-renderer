@@ -28,8 +28,10 @@ object ServiceIdentifier {
   case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
   case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
   case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
+  case object Charities extends ServiceIdentifier { override val name = "charities" }
   case object Childcare extends ServiceIdentifier { override val name = "cc" }
   case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
+  case object CorporationTax extends ServiceIdentifier { override val name  = "ct" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
   case object FriendsAndFamily extends ServiceIdentifier { override val name = "fandf" }
   case object GovernmentGateway extends ServiceIdentifier { override val name = "gg" }
@@ -37,6 +39,7 @@ object ServiceIdentifier {
   case object Generic extends ServiceIdentifier { override val name = "generic" }
   case object InheritanceTax extends ServiceIdentifier { override val name = "iht" }
   case object PayAsYouEarn extends ServiceIdentifier { override val name = "paye" }
+  case object PensionSchemesforPractitioners extends ServiceIdentifier { override val name  = "pp" }
   case object RegisterYourCompany extends ServiceIdentifier { override val name = "register-your-company" }
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
   case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
