@@ -171,9 +171,29 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_payment_success",
         "customs_declaration_success",
         "transactionEngineHMRCSASA100Success",
-        "transactionEngineHMRCSASA100Failure")
+        "transactionEngineHMRCSASA100Failure",
+        "transactionEngineHMRCCTCT600Success",
+        "transactionEngineHMRCCTCT600Failure",
+        "transactionEngineHMRCPPACCTSuccess",
+        "transactionEngineHMRCPPACCTFailure",
+        "transactionEngineHMRCPPAMDSuccess",
+        "transactionEngineHMRCPPAMDFailure",
+        "transactionEngineHMRCPPEVNTSuccess",
+        "transactionEngineHMRCPPEVNTFailure",
+        "transactionEngineHMRCPPMAINTSuccess",
+        "transactionEngineHMRCPPMAINTFailure",
+        "transactionEngineHMRCPPPRACSuccess",
+        "transactionEngineHMRCPPPRACFailure",
+        "transactionEngineHMRCPPRASSuccess",
+        "transactionEngineHMRCPPRASFailure",
+        "transactionEngineHMRCPPRETSuccess",
+        "transactionEngineHMRCPPRETFailure",
+        "transactionEngineCHARCLMFailure",
+        "transactionEngineCHARCLMSuccess",
+        "transactionEngineCHARCLMMULTIFailure",
+        "transactionEngineCHARCLMMULTISuccess"
+        )
     }
-
   }
 
   trait TestCase {
