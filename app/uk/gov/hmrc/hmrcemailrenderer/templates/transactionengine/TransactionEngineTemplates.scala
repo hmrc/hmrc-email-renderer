@@ -22,7 +22,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngi
 
 object TransactionEngineTemplates {
 
-    private def extractSubject(params: Map[String,String]) : String = ""
+    private def extractSubject(params: Map[String,String]) : String = params("subject")
 
     val templates = Seq(
         MessageTemplate.createWithDynamicSubject(
