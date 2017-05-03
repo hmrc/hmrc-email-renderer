@@ -460,6 +460,283 @@ object TemplateParams {
       "receivedDate" -> "01/01/01",
       "identifier" -> "1234567890",
       "subject" -> "subject"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineECSLORGV101Success" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineECSLORGV101Failure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRAACTSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRAACTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRAAPAYESuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRAAPAYEFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRAASASuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRAASAFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRCISCIS300MRSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRCISCIS300MRFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRCISVERIFYSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRCISVERIFYFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRCTFANNUALRETURNSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRCTFANNUALRETURNFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEEOYSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEEOYFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEEOYTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEEOYTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEEXBSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEEXBFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEMOVSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEMOVFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEMOVTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEMOVTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEP38ASuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEP38AFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEUPDATESuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRPAYEUPDATEFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRSDLTLTRSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineIRSDLTLTRFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEASSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEASFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEASTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEASTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEPSSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEPSFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEPSTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEPSTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEYUSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEYUFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEYUTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIEYUTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIFPSSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIFPSFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIFPSTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTIFPSTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTINVRSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTINVRFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTINVRTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPAYERTINVRTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAACCTTAXSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAACCTTAXFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAADDSCHASuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAADDSCHAFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAAMDDETSSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAAMDDETSFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAASSCSASuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAASSCSAFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSACOMBINEDREGSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSACOMBINEDREGFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAEVNTREPSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAEVNTREPFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAMAINTSCMSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAMAINTSCMFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSARASSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSARASFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAREGSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSAREGFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSARETSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCPSARETFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800ATTSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800ATTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800TILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800TILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800ATTTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800ATTTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800Success" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA800Failure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900ATTSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900ATTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900TILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900TILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900ATTTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900ATTTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900Success" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCSASA900Failure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMCENESEDIFACTSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMCENESEDIFACTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCVATDECSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCVATDECFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCVATDECTILSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+    ),
+    "transactionEngineHMRCVATDECTILFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
     )
   )
 }
