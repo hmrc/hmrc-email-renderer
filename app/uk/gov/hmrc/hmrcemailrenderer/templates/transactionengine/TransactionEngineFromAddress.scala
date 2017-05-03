@@ -18,11 +18,14 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine
 
 import play.api.Play
 
+import scala.util.Try
+
 object TransactionEngineFromAddress {
   import play.api.Play.current
 
-  lazy val replyDomain = Play.configuration.getString("transactionEngine.fromAddress.domain").
-    getOrElse(throw new IllegalArgumentException("Missing config for key - transactionEngine.fromAddress.domain"))
+  private val defaultDomain = "transaction-engine.tax.service.gov.uk"
+
+  lazy val replyDomain = Try(Play.configuration.getString("transactionEngine.fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
 
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 

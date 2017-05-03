@@ -422,10 +422,44 @@ object TemplateParams {
       "details" -> "validation success details will appear here"
     ),
     "transactionEngineHMRCSASA100Success" -> Map(
-      "sentDate" -> "20 April 2017"
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA100Failure" -> Map(
-      "sentDate" -> "20 April 2017"
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTSuccess" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTFailure" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTTILSuccess" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTTILFailure" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100TILSuccess" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100TILFailure" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
     )
   )
 }
