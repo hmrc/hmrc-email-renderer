@@ -264,11 +264,6 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "transactionEngineHMRCVATDECFailure",
         "transactionEngineHMRCVATDECTILSuccess",
         "transactionEngineHMRCVATDECTILFailure"
-
-        //        "transactionEngineHMRCPSAPRACAUTHSuccess",
-        //        "transactionEngineHMRCPSAPRACAUTHFailure",
-        //        "transactionEngineHMRCPSAPRACDEAUTHSuccess",
-        //        "transactionEngineHMRCPSAPRACDEAUTHFailure",
         )
     }
 

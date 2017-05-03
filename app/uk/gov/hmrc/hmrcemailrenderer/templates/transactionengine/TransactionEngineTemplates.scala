@@ -871,43 +871,5 @@ object TransactionEngineTemplates {
             htmlTemplate = vat.html.transactionEngineHMRCVATDECTILFailure.f,
             priority = Some(MessagePriority.Urgent)
         )
-
-
-//       ,MessageTemplate.createWithDynamicSubject(
-//        templateId = "transactionEngineHMRCPSAPRACAUTHSuccess",
-//        fromAddress = govUkTeamAddress,
-//        service = ServiceIdentifier.SelfAssessment,
-//        subject = extractSubject(_),
-//        plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHSuccess.f,
-//        htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHSuccess.f,
-//        priority = Some(MessagePriority.Urgent)
-//    ),
-//    MessageTemplate.createWithDynamicSubject(
-//        templateId = "transactionEngineHMRCPSAPRACAUTHFailure",
-//        fromAddress = govUkTeamAddress,
-//        service = ServiceIdentifier.SelfAssessment,
-//        subject = extractSubject(_),
-//        plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHFailure.f,
-//        htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHFailure.f,
-//        priority = Some(MessagePriority.Urgent)
-//    ),
-//    MessageTemplate.createWithDynamicSubject(
-//        templateId = "transactionEngineHMRCPSAPRACDEAUTHSuccess",
-//        fromAddress = govUkTeamAddress,
-//        service = ServiceIdentifier.SelfAssessment,
-//        subject = extractSubject(_),
-//        plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACDEAUTHSuccess.f,
-//        htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACDEAUTHSuccess.f,
-//        priority = Some(MessagePriority.Urgent)
-//    ),
-//    MessageTemplate.createWithDynamicSubject(
-//        templateId = "transactionEngineHMRCPSAPRACDEAUTHFailure",
-//        fromAddress = govUkTeamAddress,
-//        service = ServiceIdentifier.SelfAssessment,
-//        subject = extractSubject(_),
-//        plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACDEAUTHFailure.f,
-//        htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACDEAUTHFailure.f,
-//        priority = Some(MessagePriority.Urgent)
-//    )
     )
 }
