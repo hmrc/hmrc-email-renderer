@@ -42,7 +42,7 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
         "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
@@ -58,7 +58,7 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
       renderedTxt.body should include("Dear Rich")
       renderedTxt.body should include("Click on the link below to verify your email address:")
       renderedTxt.body should include(verificationLink)
-      renderedTxt.body should include("From HMRC Digital API Developer Hub")
+      renderedTxt.body should include("From HMRC Digital Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)

@@ -2,5 +2,5 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A collaborator has been removed from your application") {
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>@{params("email")}</strong> has been removed from <strong>@{params("applicationName")}</strong> by another admin.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">They can no longer access this application.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC @{params.getOrElse("developerHubTitle", "API Developer Hub")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}</p>
 }
