@@ -25,7 +25,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   */
 object ApiTemplates {
   private def extractFromAddress(params : Map[String, String]): String = {
-    val sender = params.get("developerHubTitle").getOrElse("API Developer Hub")
+    val sender = params.get("developerHubTitle").getOrElse("Developer Hub")
     FromAddress.noReply(s"HMRC $sender")
   }
   

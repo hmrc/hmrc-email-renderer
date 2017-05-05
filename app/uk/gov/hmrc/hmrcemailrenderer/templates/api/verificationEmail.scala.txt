@@ -6,6 +6,6 @@ Click on the link below to verify your email address:
 
 @{params("verificationLink")}
 
-From HMRC Digital @{params.getOrElse("developerHubTitle", "API Developer Hub")}
+From HMRC Digital @{params.getOrElse("developerHubTitle", "Developer Hub")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
