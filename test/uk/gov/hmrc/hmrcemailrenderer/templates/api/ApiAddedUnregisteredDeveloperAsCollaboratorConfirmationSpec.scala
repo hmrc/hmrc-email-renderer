@@ -38,11 +38,11 @@ class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends WordSp
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
         " rights over <strong>" + applicationName + "</strong>.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
-        "API Developer Hub, click on the link below.</p>")
+        "Developer Hub, click on the link below.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" +
         developerHubLink + "\" style=\"color: #005EA5;\">" +
         developerHubLink + "</a></p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
@@ -58,9 +58,9 @@ class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends WordSp
       val renderedTxt = api.txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include("You’ve been given " + role + " rights over " + applicationName + ".")
-      renderedTxt.body should include("To register with the HMRC API Developer Hub, click on the link below.")
+      renderedTxt.body should include("To register with the HMRC Developer Hub, click on the link below.")
       renderedTxt.body should include(developerHubLink)
-      renderedTxt.body should include("From HMRC API Developer Hub")
+      renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
