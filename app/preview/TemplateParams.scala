@@ -712,19 +712,10 @@ object TemplateParams {
     "transactionEngineHMRCPPACCTFailure" -> Map(
       "receivedDate" -> "20 April 2017"
     ),
-    "transactionEngineHMRCPPACCTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
-    ),
     "transactionEngineHMRCPPAMDFailure" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345"
     ),
-    "transactionEngineHMRCPPAMDSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
-    ),
     "transactionEngineHMRCPPEVNTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
-    ),
-    "transactionEngineHMRCPPEVNTSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345"
     ),
     "transactionEngineHMRCPPEVNTFailure" -> Map(
@@ -734,9 +725,6 @@ object TemplateParams {
       "receivedDate" -> "20 April 2017", "identifier" -> "12345"
     ),
     "transactionEngineHMRCPPMAINTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
-    ),
-    "transactionEngineHMRCPPMAINTSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345"
     ),
     "transactionEngineHMRCPPPRACSuccess" -> Map(
@@ -783,12 +771,6 @@ object TemplateParams {
     ),
     "transactionEngineHMRCPPRASFailure" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345"
-    ),
-    "transactionEngineHMRCPPRASSuccess" -> Map(
-     "receivedDate" -> "20 April 2017", "identifier" -> "12345"
     )
-
-
-
   )
 }
