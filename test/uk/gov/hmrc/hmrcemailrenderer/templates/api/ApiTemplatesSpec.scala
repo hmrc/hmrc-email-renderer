@@ -85,7 +85,7 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
   def validateTemplate(templateId: String, expectedSubject: String) = {
     val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
-    template.fromAddress.apply(Map.empty) should be ("HMRC API Developer Hub <noreply@tax.service.gov.uk>")
+    template.fromAddress.apply(Map.empty) should be ("HMRC Developer Hub <noreply@tax.service.gov.uk>")
     template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be("HMRC test account <noreply@tax.service.gov.uk>")
     template.service should be(ApiDeveloperHub)
     subject(Map.empty) should be(expectedSubject)
