@@ -33,9 +33,9 @@ class ApiRemovedCollaboratorConfirmationSpec extends UnitSpec {
       val renderedHtml = api.html.apiRemovedCollaboratorConfirmation.render(templateParams)
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been removed from <strong>" +
-        applicationName + "</strong> on the HMRC API Developer Hub.</p>")
+        applicationName + "</strong> on the HMRC Developer Hub.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You can no longer access this application.</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
@@ -51,9 +51,9 @@ class ApiRemovedCollaboratorConfirmationSpec extends UnitSpec {
       val renderedTxt = api.txt.apiRemovedCollaboratorConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include("You’ve been removed from " + applicationName +
-        " on the HMRC API Developer Hub.")
+        " on the HMRC Developer Hub.")
       renderedTxt.body should include("You can no longer access this application.")
-      renderedTxt.body should include("From HMRC API Developer Hub")
+      renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
