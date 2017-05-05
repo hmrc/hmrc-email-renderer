@@ -1,0 +1,11 @@
+@(params: Map[String,Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Unsuccessful submission for reference ${params("identifier")}") {
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was received on @params("receivedDate").</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Please use the Help provided with the payroll software or online forms service that you used to complete your forms, correct them and send them again.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@@ir-efile.gov.uk</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The Helpdesk is open</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Monday to Friday - 08.00 to 20.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Saturday - 0800 to 16.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">(It is closed Christmas Day, Boxing Day and New Year's Day).</p>
+}

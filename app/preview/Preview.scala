@@ -25,11 +25,11 @@ trait Preview {
 
   def renderer: TemplateRenderer
 
-  def html(templateId: String, parameters: Map[String, Seq[String]]): String =
-    extractHtml.orElse(handleErrors).apply(renderer.render(templateId, flattenParameterValues(parameters)))
+  def html(templateId: String, parameters: Map[String, String]): String =
+    extractHtml.orElse(handleErrors).apply(renderer.render(templateId, parameters))
 
-  def plain(templateId: String, parameters: Map[String, Seq[String]]): String =
-    extractPlainText.orElse(handleErrors)(renderer.render(templateId, flattenParameterValues(parameters)))
+  def plain(templateId: String, parameters: Map[String, String]): String =
+    extractPlainText.orElse(handleErrors)(renderer.render(templateId, parameters))
 
   private val extractHtml: PartialFunction[RenderedResult, String] =
     { case Right(RenderResult(_, html, _, _, _, _)) => html }
@@ -43,7 +43,6 @@ trait Preview {
     case Left(TemplateRenderFailure(reason)) => reason
   }
 
-  private val flattenParameterValues: Map[String, Seq[String]] => Map[String, String] = _.map(t => (t._1, t._2.head))
 }
 
 object Preview extends Preview {

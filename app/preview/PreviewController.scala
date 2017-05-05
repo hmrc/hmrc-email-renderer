@@ -28,21 +28,24 @@ object PreviewController extends BaseController {
   }
 
   def previewHtml(templateId: String) = Action { implicit request =>
-    Ok(views.html.previewHtml(templateId, request.queryString))
+    Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString)))
   }
 
   def previewText(templateId: String) = Action { implicit request =>
-    Ok(views.txt.previewText(templateId, request.queryString))
+    Ok(views.txt.previewText(templateId, flattenParameterValues(request.queryString)))
   }
 
   def previewSource(templateId: String) = Action { implicit request =>
-    Ok(views.html.previewHtml(templateId, request.queryString).toString)
+    Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString)).toString)
   }
 
   private lazy val previewGroups: Stream[PreviewGroup] =
     TemplateLocator.templateGroups.toStream.map { case (identifier, templates) =>
       PreviewGroup.createPreviewGroup(identifier, templates)
     }
+
+  private def flattenParameterValues(qs: Map[String, Seq[String]]): Map[String, String] = qs.map(t => (t._1, t._2.head))
+
 }
 
 final case class PreviewGroup private(name: String, items: Seq[PreviewListItem])
