@@ -6,6 +6,6 @@ The admin who submitted the name needs to verify their email address again. This
 
 The application will then be able to access production credentials.
 
-From HMRC API Developer Hub
+From HMRC Developer Hub
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

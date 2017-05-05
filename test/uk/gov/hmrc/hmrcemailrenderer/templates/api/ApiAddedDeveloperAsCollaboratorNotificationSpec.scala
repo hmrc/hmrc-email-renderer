@@ -40,7 +40,7 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends WordSpec with Matc
                                      "</strong> by another admin.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They now have " + role +
                                      " rights over the application.</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
@@ -55,7 +55,7 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends WordSpec with Matc
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include(email + " has been added to " + applicationName + " by another admin.")
       renderedTxt.body should include("They now have " + role + " rights over the application.")
-      renderedTxt.body should include("From HMRC API Developer Hub")
+      renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)

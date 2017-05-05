@@ -37,7 +37,7 @@ class ApiRemovedCollaboratorNotificationSpec extends WordSpec with Matchers {
         "</strong> has been removed from <strong>" + applicationName +
         "</strong> by another admin.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They can no longer access this application.</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
@@ -53,7 +53,7 @@ class ApiRemovedCollaboratorNotificationSpec extends WordSpec with Matchers {
       renderedTxt.body should include("A collaborator has been removed from your application")
       renderedTxt.body should include(email + " has been removed from " + applicationName + " by another admin.")
       renderedTxt.body should include("They can no longer access this application.")
-      renderedTxt.body should include("From HMRC API Developer Hub")
+      renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)

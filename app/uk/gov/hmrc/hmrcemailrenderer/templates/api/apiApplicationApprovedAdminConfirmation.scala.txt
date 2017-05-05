@@ -10,6 +10,6 @@ Click on the link below to verify your email account.
 
 This link expires in 90 days.
 
-From HMRC API Developer Hub
+From HMRC Developer Hub
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

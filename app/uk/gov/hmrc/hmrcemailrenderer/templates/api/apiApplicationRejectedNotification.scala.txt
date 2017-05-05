@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Application not approved
 
-@{params("applicationName")} has not been approved to access production credentials on the HMRC API Developer Hub.
+@{params("applicationName")} has not been approved to access production credentials on the HMRC Developer Hub.
 
 This is because the name of the application does not meet our guidelines for the following reason:
 
@@ -12,6 +12,6 @@ You can view our guidelines by clicking the link below.
 
 Submit a new name if you still want to access production credentials.
 
-From HMRC API Developer Hub
+From HMRC Developer Hub
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
