@@ -37,9 +37,9 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends WordSpec
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
                                      " rights over <strong>" + applicationName + "</strong>.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC " +
-                                     "API Developer Hub to access the application.</p>")
+                                     "Developer Hub to access the application.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">For security reasons, we have not included a link with this email.</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC API Developer Hub")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
@@ -55,9 +55,9 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends WordSpec
       val renderedTxt = api.txt.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include("You’ve been given " + role + " rights over " + applicationName + ".")
-      renderedTxt.body should include("Sign in to the HMRC API Developer Hub to access the application.")
+      renderedTxt.body should include("Sign in to the HMRC Developer Hub to access the application.")
       renderedTxt.body should include("For security reasons, we have not included a link with this email.")
-      renderedTxt.body should include("From HMRC API Developer Hub")
+      renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
