@@ -1,0 +1,5 @@
+@(params: Map[String,Any])
+
+An error has occurred - please resubmit.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
