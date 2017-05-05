@@ -1,0 +1,15 @@
+@(params: Map[String,Any])
+
+Thank you for using the VAT online service.
+
+The VAT EC Sales List declaration for VAT Registration Number @params("identifier"), which you sent over the Internet on @params("receivedDate"), has been passed to HMRC for processing.
+
+If you have a specific query relating to your filing of this VAT EC Sales List declaration, please contact the eCustomer Support Helpdesk on 0300 200 3701.
+
+For further information please visit the HMRC website and refer to our; FAQ: Completing your EC Sales Lists.
+
+Our website provides the latest information about our Internet services and regularly updated advisory information to help answer your queries.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
+

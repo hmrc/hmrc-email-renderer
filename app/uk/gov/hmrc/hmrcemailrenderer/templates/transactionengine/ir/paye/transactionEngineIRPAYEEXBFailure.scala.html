@@ -1,0 +1,14 @@
+@(params: Map[String,Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Unsuccessful submission for Reference ${params("identifier")}") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending the PAYE Expenses & Benefits submission online.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was received on @params("receivedDate").</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately it could not be accepted as it failed HMRC data checks.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">To correct this please use the help provided within the software you used to complete your form and send it again.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or e-mail helpdesk@@ir-efile.gov.uk</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The Helpdesk is open</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Monday to Friday - 08.00 to 20.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">saturday - 08.00 to 16.00</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">(It is closed Christmas Day, Boxing Day and New Year's Day).</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">PAYE Expenses & Benefits Online is just one of the many online services we offer that can save you time and paperwork.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">For the latest information on all of our Online Services please visit the HMRC website</p>
+}

@@ -5,6 +5,6 @@ A collaborator has been removed from your application
 
 They can no longer access this application.
 
-From HMRC @{params.getOrElse("developerHubTitle", "API Developer Hub")}
+From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
