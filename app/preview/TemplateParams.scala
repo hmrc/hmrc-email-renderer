@@ -422,355 +422,499 @@ object TemplateParams {
       "details" -> "validation success details will appear here"
     ),
     "transactionEngineHMRCSASA100Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA100Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTSuccess" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTFailure" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTTILSuccess" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100ATTTILFailure" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100TILSuccess" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCSASA100TILFailure" -> Map(
+      "receivedDate" -> "01/01/01",
+      "identifier" -> "1234567890",
+      "subject" -> "subject"
     ),
     "transactionEngineECSLORGV101Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineECSLORGV101Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRAACTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRAACTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRAAPAYESuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRAAPAYEFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRAASASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRAASAFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRCISCIS300MRSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRCISCIS300MRFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRCISVERIFYSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRCISVERIFYFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRCTFANNUALRETURNSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRCTFANNUALRETURNFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEEOYSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEEOYFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEEOYTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEEOYTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEEXBSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEEXBFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEMOVSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEMOVFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEMOVTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEMOVTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEP38ASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEP38AFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEUPDATESuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRPAYEUPDATEFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRSDLTLTRSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineIRSDLTLTRFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAACCTTAXSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAACCTTAXFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAADDSCHASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAADDSCHAFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAAMDDETSSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAAMDDETSFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAASSCSASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAASSCSAFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSACOMBINEDREGSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSACOMBINEDREGFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAEVNTREPSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAEVNTREPFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAMAINTSCMSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAMAINTSCMFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSARASSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSARASFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAREGSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAREGFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSARETSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPSARETFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800TILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800TILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA800Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900TILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900TILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCSASA900Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMCENESEDIFACTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMCENESEDIFACTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCVATDECSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCVATDECFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCVATDECTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCVATDECTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCCTCT600Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCCTCT600Success" -> Map(
-      "identifier" -> "12345"
+      "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPACCTFailure" -> Map(
-      "receivedDate" -> "20 April 2017"
+      "receivedDate" -> "20 April 2017",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPAMDFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPEVNTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPEVNTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPEVNTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPMAINTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPPRACSuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPPRACFailure" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "errorType" -> "business", "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+      "subject" -> "subject", "errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>",
     ),
     "transactionEngineHMRCPPPRACFailure" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
       "errorType" -> "fatal",
       "errorNumber" -> "123", "errorMessage" -> "This is an error"
     ),
     "transactionEngineHMRCPPRETFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPRETSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineCHARCLMSuccess" -> Map(
-      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineCHARCLMFailure" -> Map(
       "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "errorType" -> "business", "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+      "subject" -> "subject","errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
     ),
     "transactionEngineCHARCLMFailure" -> Map(
       "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "errorType" -> "fatal",
+      "subject" -> "subject", "errorType" -> "fatal",
       "errorNumber" -> "123", "errorMessage" -> "This is an error"
     ),
     "transactionEngineCHARCLMMULTIFailure" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "errorType" -> "business", "errorHtmlBlock" -> "<p>Error Code: 123 Error Message</p>"
+      "subject" -> "subject", "errorType" -> "business",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message</p>"
     ),
     "transactionEngineCHARCLMMULTIFailure" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "errorType" -> "fatal",
+      "subject" -> "subject", "errorType" -> "fatal",
       "errorNumber" -> "123", "errorMessage" -> "This is an error"
     ),
     "transactionEngineCHARCLMMULTISuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     ),
     "transactionEngineHMRCPPRASFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345"
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     )
   )
 }
