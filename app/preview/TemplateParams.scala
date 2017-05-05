@@ -868,7 +868,7 @@ object TemplateParams {
     "transactionEngineHMRCPPPRACFailure" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject", "errorType" -> "business",
-      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
     ),
     "transactionEngineHMRCPPPRACFailure" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
