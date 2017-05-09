@@ -21,6 +21,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Childcare
 
 object ChildcareTemplates {
+
+  val childcareAddress = "noreply@childcarechoices.tax.service.gov.uk"
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "cc_registration_email",
@@ -46,14 +49,14 @@ object ChildcareTemplates {
       htmlTemplate = html.childcareRegistrationEmail.f),
     MessageTemplate.create(
       templateId = "childcare_taxfree_england",
-      fromAddress = govUkTeamAddress,
+      fromAddress = childcareAddress,
       service = Childcare,
       subject = "Apply for Tax-Free Childcare today",
       plainTemplate = txt.childcareTaxFreeEngland.f,
       htmlTemplate = html.childcareTaxFreeEngland.f),
     MessageTemplate.create(
       templateId = "childcare_taxfree_devolved",
-      fromAddress = govUkTeamAddress,
+      fromAddress = childcareAddress,
       service = Childcare,
       subject = "Apply for Tax-Free Childcare today",
       plainTemplate = txt.childcareTaxFreeDevolved.f,
