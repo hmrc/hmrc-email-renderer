@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RegisterYourCompany
 
 object RegisterYourCompanyTemplates {
-  def templates = Seq(
+  val templates = Seq(
     MessageTemplate.create(
       templateId = "register_your_company_verification_email",
       fromAddress = FromAddress.govUkTeamAddress,
