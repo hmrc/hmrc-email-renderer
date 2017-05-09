@@ -22,9 +22,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.cc.CcTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.childcarecalculator.ChildcareTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.childcareschemesinterest.ChildcareSchemesInterestTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
@@ -36,10 +34,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -48,9 +46,7 @@ trait TemplateLocator {
         "AWRS"                       -> AwrsTemplates.templates,
         "AMLS"                       -> AmlsTemplates.templates,
         "BARS"                       -> BarsTemplates.templates,
-        "CC"                         -> CcTemplates.templates,
-        "Childcare Calculator"       -> ChildcareTemplates.templates,
-        "Childcare Schemes Interest" -> ChildcareSchemesInterestTemplates.templates,
+        "Childcare"                  -> ChildcareTemplates.templates,
         "DFS"                        -> DfsTemplates.templates,
         "FANDF"                      -> FandFTemplates.templates,
         "GG"                         -> GgTemplates.templates,
