@@ -178,6 +178,26 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "transactionEngineHMRCSASA100ATTTILFailure",
         "transactionEngineHMRCSASA100TILSuccess",
         "transactionEngineHMRCSASA100TILFailure",
+        "transactionEngineHMRCCTCT600Success",
+        "transactionEngineHMRCCTCT600Failure",
+        "transactionEngineHMRCPPACCTSuccess",
+        "transactionEngineHMRCPPACCTFailure",
+        "transactionEngineHMRCPPAMDSuccess",
+        "transactionEngineHMRCPPAMDFailure",
+        "transactionEngineHMRCPPEVNTSuccess",
+        "transactionEngineHMRCPPEVNTFailure",
+        "transactionEngineHMRCPPMAINTSuccess",
+        "transactionEngineHMRCPPMAINTFailure",
+        "transactionEngineHMRCPPPRACSuccess",
+        "transactionEngineHMRCPPPRACFailure",
+        "transactionEngineHMRCPPRASSuccess",
+        "transactionEngineHMRCPPRASFailure",
+        "transactionEngineHMRCPPRETSuccess",
+        "transactionEngineHMRCPPRETFailure",
+        "transactionEngineCHARCLMFailure",
+        "transactionEngineCHARCLMSuccess",
+        "transactionEngineCHARCLMMULTIFailure",
+        "transactionEngineCHARCLMMULTISuccess",
         "transactionEngineECSLORGV101Success",
         "transactionEngineECSLORGV101Failure",
         "transactionEngineIRAACTSuccess",
@@ -272,7 +292,6 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "transactionEngineHMRCVATDECTILFailure"
         )
     }
-
   }
 
   trait TestCase {
