@@ -828,6 +828,93 @@ object TemplateParams {
     "transactionEngineHMRCVATDECTILFailure" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
+    ),
+    "transactionEngineHMRCCTCT600Failure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCCTCT600Success" -> Map(
+      "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPACCTFailure" -> Map(
+      "receivedDate" -> "20 April 2017",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPAMDFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPEVNTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPEVNTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPEVNTSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPMAINTFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPPRACSuccess" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPPRACFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+    ),
+    "transactionEngineHMRCPPPRACFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorType" -> "fatal",
+      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+    ),
+    "transactionEngineHMRCPPRETFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPRETSuccess" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineCHARCLMSuccess" -> Map(
+      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineCHARCLMFailure" -> Map(
+      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject","errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+    ),
+    "transactionEngineCHARCLMFailure" -> Map(
+      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "fatal",
+      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+    ),
+    "transactionEngineCHARCLMMULTIFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "business",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message</p>"
+    ),
+    "transactionEngineCHARCLMMULTIFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "fatal",
+      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+    ),
+    "transactionEngineCHARCLMMULTISuccess" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPPRASFailure" -> Map(
+      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
     )
   )
 }
