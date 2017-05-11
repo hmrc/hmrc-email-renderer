@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gateway Error Notification Mail") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Gateway Automatic Error Notification</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for your electronic submission that was received at @params("receivedTime") on @params("receivedDate")</p>
+    @{
+        if(params("errorType") == "fatal") {
+            <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, an error occurred whilst processing your submission.</p>
+            <p style="margin: 0 0 30px; font-size: 19px;">Please contact the relevant government department directly.</p>
+            <p style="margin: 0 0 30px; font-size: 19px;">Error Code: @params("errorNumber")</p>
+            <p style="margin: 0 0 30px; font-size: 19px;">Error Message: @params("errorMessage")</p>
+        } else if(params("errorType") == "business") {
+            <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, the document could not be accepted as the data was incorrect, and did not pass the input validation.</p>
+            <p style="margin: 0 0 30px; font-size: 19px;">@param("errorHtmlBlock")</p>
+        } else {
+            <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, an error occurred whilst processing your submission.</p>
+        }
+    }
+}

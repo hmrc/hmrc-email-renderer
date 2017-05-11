@@ -741,6 +741,21 @@ object TemplateParams {
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
     ),
+    "transactionEngineHMRCPSAPRACAUTHSuccess" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPSAPRACAUTHFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+    ),
+    "transactionEngineHMRCPSAPRACAUTHFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorType" -> "fatal",
+      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+    ),
     "transactionEngineHMRCSASA800ATTSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
@@ -829,13 +844,28 @@ object TemplateParams {
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
     ),
+    "transactionEngineHMRCCTCT600Success" -> Map(
+      "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
     "transactionEngineHMRCCTCT600Failure" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
     ),
-    "transactionEngineHMRCCTCT600Success" -> Map(
-      "identifier" -> "12345",
+    "transactionEngineHMRCCTCT600TILSuccess" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
+    ),
+    "transactionEngineHMRCCTCT600TILFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+    ),
+    "transactionEngineHMRCCTCT600TILFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorType" -> "fatal",
+      "errorNumber" -> "123", "errorMessage" -> "This is an error"
     ),
     "transactionEngineHMRCPPACCTFailure" -> Map(
       "receivedDate" -> "20 April 2017",
