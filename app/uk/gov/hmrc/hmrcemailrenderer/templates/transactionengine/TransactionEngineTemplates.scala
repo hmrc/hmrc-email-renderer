@@ -910,7 +910,7 @@ object TransactionEngineTemplates {
         MessageTemplate.createWithDynamicSubject(
           templateId = "transactionEngineHMRCPSAPRACAUTHSuccess",
           fromAddress = transactionEngineAddress,
-          service = ServiceIdentifier.PensionSchemeReturn,
+          service = ServiceIdentifier.PensionSchemePractitioners,
           subject = extractSubject(_),
           plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHSuccess.f,
           htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHSuccess.f,
@@ -919,7 +919,25 @@ object TransactionEngineTemplates {
         MessageTemplate.createWithDynamicSubject(
           templateId = "transactionEngineHMRCPSAPRACAUTHFailure",
           fromAddress = transactionEngineAddress,
-          service = ServiceIdentifier.PensionSchemeReturn,
+          service = ServiceIdentifier.PensionSchemePractitioners,
+          subject = extractSubject(_),
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHFailure.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHFailure.f,
+          priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCPSAPRACDEAUTHSuccess",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.PensionSchemePractitioners,
+          subject = extractSubject(_),
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHSuccess.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHSuccess.f,
+          priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCPSAPRACDEAUTHFailure",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.PensionSchemePractitioners,
           subject = extractSubject(_),
           plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHFailure.f,
           htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHFailure.f,
