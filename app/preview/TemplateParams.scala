@@ -756,6 +756,21 @@ object TemplateParams {
       "errorType" -> "fatal",
       "errorNumber" -> "123", "errorMessage" -> "This is an error"
     ),
+    "transactionEngineHMRCPSAPRACDEAUTHSuccess" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject"
+    ),
+    "transactionEngineHMRCPSAPRACDEAUTHFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject", "errorType" -> "business",
+      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+    ),
+    "transactionEngineHMRCPSAPRACDEAUTHFailure" -> Map(
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorType" -> "fatal",
+      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+    ),
     "transactionEngineHMRCSASA800ATTSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
