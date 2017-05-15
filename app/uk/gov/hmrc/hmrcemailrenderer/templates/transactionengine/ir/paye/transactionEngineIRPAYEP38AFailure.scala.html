@@ -1,5 +1,5 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Unsuccessful submission for reference ${params("identifier")}") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Unsuccessful submission of P38A Employers Supplementary Return for Reference ${params("identifier")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending the P38A Employers Supplementary Return online.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">The Form for reference @params("identifier") was received on @params("receivedDate").</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately it could not be accepted as it failed Inland Revenue data checks.</p>
