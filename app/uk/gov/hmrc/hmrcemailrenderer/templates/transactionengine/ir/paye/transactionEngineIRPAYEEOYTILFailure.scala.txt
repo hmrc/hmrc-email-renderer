@@ -1,5 +1,7 @@
 @(params: Map[String,Any])
 
+Thank you for sending the test PAYE End of year submission online.
+
 The submission for reference @params("identifier") was received on @params("receivedDate").
 
 Unfortunately it could not be accepted as it failed HMRC data checks.

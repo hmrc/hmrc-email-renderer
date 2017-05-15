@@ -1,5 +1,7 @@
 @(params: Map[String,Any])
 
+Thank you for sending your Starter, Leaver or Pension notification forms online.
+
 The submission for reference @params("identifier") was received on @params("receivedDate").
 
 But unfortunately it failed HM Revenue & Customs data checks and could not be accepted.

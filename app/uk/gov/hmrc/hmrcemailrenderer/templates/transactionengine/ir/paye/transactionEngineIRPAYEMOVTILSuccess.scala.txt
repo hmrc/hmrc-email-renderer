@@ -1,5 +1,7 @@
 @(params: Map[String,Any])
 
+Thank you for sending your TEST Starter, Leaver or Pension notification forms online.
+
 The submission for reference @params("identifier") was successfully received on @params("receivedDate").
 
 This has been recognised as a TEST transmission and will not be processed.
