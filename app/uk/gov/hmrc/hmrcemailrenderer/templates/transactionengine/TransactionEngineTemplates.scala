@@ -84,8 +84,8 @@ object TransactionEngineTemplates {
             fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
-            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILSuccess.f,
-            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTTILSuccess.f,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100TILSuccess.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100TILSuccess.f,
             priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
@@ -93,8 +93,8 @@ object TransactionEngineTemplates {
             fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject(_),
-            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100Failure.f,
-            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100Failure.f,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100TILFailure.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100TILFailure.f,
             priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
