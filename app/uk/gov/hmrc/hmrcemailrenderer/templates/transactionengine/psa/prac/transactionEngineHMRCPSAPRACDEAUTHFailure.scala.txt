@@ -1,0 +1,16 @@
+@(params: Map[String,Any])
+Gateway Automatic Error notification
+Thank you for your electronic submission that was received at @params("receivedTime") on @params("receivedDate")
+@if(params("errorType") == "fatal") {
+Unfortunately, an error occurred whilst processing your submission.
+Please contact the relevant government department directly.
+Error Code: @params("errorNumber")
+Error Message: @params("errorMessage")
+}else{ @if(params("errorType") == "business") {
+Unfortunately, the document could not be accepted as the data was incorrect, and did not pass the input validation.
+@params("errorTextBlock")
+}else{
+Unfortunately, an error occurred whilst processing your submission.
+}
+}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
