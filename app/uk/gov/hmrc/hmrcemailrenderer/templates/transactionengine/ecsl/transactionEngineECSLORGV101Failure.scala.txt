@@ -6,7 +6,7 @@ Unfortunately the information provided in your VAT EC Sales List declaration for
 
 You will need to review and resubmit corrected information before we can accept your VAT EC Sales List declaration.
 
-Because your VAT EC Sales List declaration has failed data checks and not been accepted you are still due to file a VAT EC Sales List declaration for VAT Registration number .
+Because your VAT EC Sales List declaration has failed data checks and not been accepted you are still due to file a VAT EC Sales List declaration for VAT Registration number @params("identifier").
 
 Please resubmit.
 
@@ -14,7 +14,7 @@ Please refer to any help documentation associated with the software you used to 
 
 You will need to correct your information and resubmit it.
 
-For information on how to complete your VAT EC Sales List declaration, please vist the HMRC website and refer to our; FAQ: Completing your EC Sales Lists.
+For information on how to complete your VAT EC Sales List declaration, please visit the HMRC website and refer to our; FAQ: Completing your EC Sales Lists.
 
 Our website provides the latest information about our Internet services and regularly updated advisory information to help answer your queries.
 

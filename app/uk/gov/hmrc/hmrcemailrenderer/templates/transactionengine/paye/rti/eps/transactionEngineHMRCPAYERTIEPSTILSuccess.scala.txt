@@ -1,6 +1,6 @@
 @(params: Map[String,Any])
 
- Thank you for sending your TEST Employer Payment Summary.
+Thank you for sending your TEST Employer Payment Summary.
 
 The submission for reference @params("identifier") was successfully received on @params("receivedDate").
 

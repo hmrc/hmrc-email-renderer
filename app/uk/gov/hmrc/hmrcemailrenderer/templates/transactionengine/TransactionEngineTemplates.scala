@@ -84,8 +84,8 @@ object TransactionEngineTemplates {
             fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject,
-            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100ATTTILSuccess.f,
-            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100ATTTILSuccess.f,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100TILSuccess.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100TILSuccess.f,
             priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
@@ -93,8 +93,8 @@ object TransactionEngineTemplates {
             fromAddress = transactionEngineAddress,
             service = ServiceIdentifier.SelfAssessment,
             subject = extractSubject(_),
-            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100Failure.f,
-            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100Failure.f,
+            plainTemplate = sa.sa100.txt.transactionEngineHMRCSASA100TILFailure.f,
+            htmlTemplate = sa.sa100.html.transactionEngineHMRCSASA100TILFailure.f,
             priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
@@ -114,6 +114,24 @@ object TransactionEngineTemplates {
             plainTemplate = ct.txt.transactionEngineHMRCCTCT600Failure.f,
             htmlTemplate = ct.html.transactionEngineHMRCCTCT600Failure.f,
             priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCCTCT600TILSuccess",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.CorporationTax,
+          subject = extractSubject(_),
+          plainTemplate = ct.txt.transactionEngineHMRCCTCT600TILSuccess.f,
+          htmlTemplate = ct.html.transactionEngineHMRCCTCT600TILSuccess.f,
+          priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCCTCT600TILFailure",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.CorporationTax,
+          subject = extractSubject(_),
+          plainTemplate = ct.txt.transactionEngineHMRCCTCT600TILFailure.f,
+          htmlTemplate = ct.html.transactionEngineHMRCCTCT600TILFailure.f,
+          priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineHMRCPPACCTSuccess",
@@ -888,6 +906,42 @@ object TransactionEngineTemplates {
             plainTemplate = psa.ret.txt.transactionEngineHMRCPSARETFailure.f,
             htmlTemplate = psa.ret.html.transactionEngineHMRCPSARETFailure.f,
             priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCPSAPRACAUTHSuccess",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.PensionSchemePractitioners,
+          subject = extractSubject(_),
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHSuccess.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHSuccess.f,
+          priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCPSAPRACAUTHFailure",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.PensionSchemePractitioners,
+          subject = extractSubject(_),
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHFailure.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHFailure.f,
+          priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCPSAPRACDEAUTHSuccess",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.PensionSchemePractitioners,
+          subject = extractSubject(_),
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACDEAUTHSuccess.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACDEAUTHSuccess.f,
+          priority = Some(MessagePriority.Urgent)
+        ),
+        MessageTemplate.createWithDynamicSubject(
+          templateId = "transactionEngineHMRCPSAPRACDEAUTHFailure",
+          fromAddress = transactionEngineAddress,
+          service = ServiceIdentifier.PensionSchemePractitioners,
+          subject = extractSubject(_),
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACDEAUTHFailure.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACDEAUTHFailure.f,
+          priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
             templateId = "transactionEngineECSLORGV101Success",

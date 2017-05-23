@@ -1,5 +1,5 @@
 @(params: Map[String,Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Successful submission for reference ${params("identifier")}") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,s"Successful Receipt of Online Submission for Reference ${params("identifier")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending the PAYE End of Year submission online.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was successfully received on @params("receivedDate").</p>
     <p style="margin: 0 0 30px; font-size: 19px;">If this was a test transmission, remember you still need to send your actual Employer Annual Return using the live transmission in order for it to be processed.</p>
