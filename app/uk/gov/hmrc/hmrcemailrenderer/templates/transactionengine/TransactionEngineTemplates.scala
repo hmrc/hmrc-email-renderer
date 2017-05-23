@@ -930,8 +930,8 @@ object TransactionEngineTemplates {
           fromAddress = transactionEngineAddress,
           service = ServiceIdentifier.PensionSchemePractitioners,
           subject = extractSubject(_),
-          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHSuccess.f,
-          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHSuccess.f,
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACDEAUTHSuccess.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACDEAUTHSuccess.f,
           priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
@@ -939,8 +939,8 @@ object TransactionEngineTemplates {
           fromAddress = transactionEngineAddress,
           service = ServiceIdentifier.PensionSchemePractitioners,
           subject = extractSubject(_),
-          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACAUTHFailure.f,
-          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACAUTHFailure.f,
+          plainTemplate = psa.prac.txt.transactionEngineHMRCPSAPRACDEAUTHFailure.f,
+          htmlTemplate = psa.prac.html.transactionEngineHMRCPSAPRACDEAUTHFailure.f,
           priority = Some(MessagePriority.Urgent)
         ),
         MessageTemplate.createWithDynamicSubject(
