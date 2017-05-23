@@ -10,7 +10,6 @@
     } else {
         @if(params("errorType") == "business") {
             <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, the document could not be accepted as the data was incorrect, and did not pass the input validation.</p>
-            <p style="margin: 0 0 30px; font-size: 19px;">@params("errorHtmlBlock")</p>
         } else {
             <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, an error occurred whilst processing your submission.</p>
         }
