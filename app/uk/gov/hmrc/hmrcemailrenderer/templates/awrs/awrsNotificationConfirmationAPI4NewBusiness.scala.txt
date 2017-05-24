@@ -3,10 +3,10 @@ Alcohol Wholesaler Registration Scheme (AWRS) application submission confirmatio
 
 Your application for @{params("organisationName")} has been received on the @{params("submissionDate")}.
 
-Your application reference number is @{params("applicationReference")}. This is not your AWRS registration number.
+Your application reference number is @{params("applicationReference")}. This is not your AWRS reference number.
 
 What happens next
-- You cannot trade until an AWRS registration number is issued.
+- You cannot trade until an AWRS reference number is issued.
 - It will take up to 45 days from your submission to make a decision on your application.
 
 More detailed information can be found in the guidance on GOV.UK.
