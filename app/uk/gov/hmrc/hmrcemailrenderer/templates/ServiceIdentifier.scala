@@ -71,7 +71,7 @@ object ServiceIdentifier {
   case object VATECSalesList extends ServiceIdentifier { override val name = "ecsl" }
   case object NewExportSystem extends ServiceIdentifier { override val name = "nes" }
   case object SubmitVATReturns extends ServiceIdentifier { override val name = "vat" }
-
+  case object Ated extends ServiceIdentifier { override val name = "ated" }
 
 
 }
