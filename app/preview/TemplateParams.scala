@@ -948,6 +948,27 @@ object TemplateParams {
     "transactionEngineHMRCPPRASFailure" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
+    ),
+    "chargeable_return_submit" -> Map(
+      "company_name" -> "Acme Limited",
+      "date" -> "23 September 2017"
+    ),
+    "relief_return_submit" -> Map(
+      "company_name" -> "Acme Limited",
+      "date" -> "23 September 2017",
+      "reference" -> "1234567890"
+    ),
+    "amended_return_submit" -> Map(
+      "company_name" -> "Acme Limited",
+      "date" -> "23 September 2017"
+    ),
+    "further_return_submit" -> Map(
+      "company_name" -> "Acme Limited",
+      "date" -> "23 September 2017"
+    ),
+    "change_details_return_submit" -> Map(
+      "company_name" -> "Acme Limited",
+      "date" -> "23 September 2017"
     )
   )
 }
