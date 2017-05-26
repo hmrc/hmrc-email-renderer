@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Your relief return(s) for @{params("company_name")} have been successfully submitted on @{params("date")}
+
+You can view your completed returns, payment references and ways to pay in your ATED online service. There can be a 24 hour delay before you see any updates. There is no liability for these returns.
+
+There is no liability for these returns.
+
+This amount does not reflect any payments you have already made, or penalties that have been issued.
+
+Your references for these returns are @{params("reference")}.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

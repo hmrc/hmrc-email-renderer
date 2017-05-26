@@ -58,7 +58,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Mandate",
         "Off Payroll",
         "Customs",
-        "Transaction Engine"
+        "Transaction Engine",
+        "ATED"
       )
     }
 
@@ -295,7 +296,12 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "transactionEngineHMRCVATDECSuccess",
         "transactionEngineHMRCVATDECFailure",
         "transactionEngineHMRCVATDECTILSuccess",
-        "transactionEngineHMRCVATDECTILFailure"
+        "transactionEngineHMRCVATDECTILFailure",
+        "chargeable_return_submit",
+        "relief_return_submit",
+        "amended_return_submit",
+        "further_return_submit",
+        "change_details_return_submit"
         )
     }
   }
