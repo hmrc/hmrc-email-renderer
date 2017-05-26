@@ -1,0 +1,16 @@
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your relief(s) return have been submitted") {
+
+<p style="font-size: 32px; line-height: 1.315789474; margin: 0 0 30px 0;">Your relief return(s) for @{params("company_name").toString} have been successfully submitted on @{params("date").toString}</p>
+
+<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">You can view your completed returns, payment references and ways to pay in your ATED online service. There can be a 24 hour delay before you see any updates. There is no liability for these returns.</p>
+
+<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0; font-weight: bold;">There is no liability for these returns.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">This amount does not reflect any payments you have already made, or penalties that have been issued.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your references for these returns are @{params("reference").toString}.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC</p>
+}
