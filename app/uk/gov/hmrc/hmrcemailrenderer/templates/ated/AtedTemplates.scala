@@ -19,7 +19,6 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.ated
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Ated
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.mandate.{html, txt}
 
 object AtedTemplates {
   val templates = Seq(
