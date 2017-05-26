@@ -29,7 +29,7 @@ object AtedTemplates {
       subject = "Your chargeable return has been successfully submitted",
       plainTemplate = txt.chargeableReturnSubmitted.f,
       htmlTemplate = html.chargeableReturnSubmitted.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "relief_return_submit",
@@ -38,7 +38,7 @@ object AtedTemplates {
       subject = "Your relief return(s) have been successfully submitted",
       plainTemplate = txt.reliefReturnSubmitted.f,
       htmlTemplate = html.reliefReturnSubmitted.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "amended_return_submit",
@@ -47,7 +47,7 @@ object AtedTemplates {
       subject = "Your amended return has been successfully submitted",
       plainTemplate = txt.amendedReturnSubmitted.f,
       htmlTemplate = html.amendedReturnSubmitted.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "further_return_submit",
@@ -56,7 +56,7 @@ object AtedTemplates {
       subject = "Your further return has been successfully submitted",
       plainTemplate = txt.furtherReturnSubmitted.f,
       htmlTemplate = html.furtherReturnSubmitted.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "change_details_return_submit",
@@ -65,6 +65,6 @@ object AtedTemplates {
       subject = "Your change in details has been successfully submitted",
       plainTemplate = txt.changedDetailsReturnSubmitted.f,
       htmlTemplate = html.changedDetailsReturnSubmitted.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ))
 }
