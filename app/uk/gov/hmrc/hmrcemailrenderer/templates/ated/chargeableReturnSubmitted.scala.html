@@ -1,0 +1,12 @@
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your chargeable return has been submitted") {
+
+    <p style="font-size: 32px; line-height: 1.315789474; margin: 0 0 30px 0; font-weight: bold;">You have submitted your return for Annual Tax on Enveloped Dwellings (ATED)</p>
+
+    <p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">You are receiving this email as your ATED chargeable return for @{params("company_name").toString} has been successfully submitted on @{params("date").toString}.</p>
+
+    <p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">You can view your completed returns, payment references, and ways to pay in your ATED online service.  There can be a 24 hour delay before you see any updates.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC ATED</p>
+}
