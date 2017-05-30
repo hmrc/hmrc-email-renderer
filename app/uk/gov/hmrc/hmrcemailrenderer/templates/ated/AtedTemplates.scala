@@ -66,5 +66,14 @@ object AtedTemplates {
       plainTemplate = txt.changedDetailsReturnSubmitted.f,
       htmlTemplate = html.changedDetailsReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "disposal_return_submit",
+      fromAddress = govUkTeamAddress,
+      service = Ated,
+      subject = "Your disposal has been successfully submitted",
+      plainTemplate = txt.disposalReturnSubmitted.f,
+      htmlTemplate = html.disposalReturnSubmitted.f,
+      priority = Some(MessagePriority.Urgent)
     ))
 }
