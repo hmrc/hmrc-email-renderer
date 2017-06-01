@@ -969,6 +969,10 @@ object TemplateParams {
     "change_details_return_submit" -> Map(
       "company_name" -> "Acme Limited",
       "date" -> "23 September 2017"
+    ),
+    "disposal_return_submit" -> Map(
+      "company_name" -> "Acme Limited",
+      "date" -> "23 September 2017"
     )
   )
 }
