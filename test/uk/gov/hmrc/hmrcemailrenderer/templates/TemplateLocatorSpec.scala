@@ -301,7 +301,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "relief_return_submit",
         "amended_return_submit",
         "further_return_submit",
-        "change_details_return_submit"
+        "change_details_return_submit",
+        "disposal_return_submit"
         )
     }
   }
