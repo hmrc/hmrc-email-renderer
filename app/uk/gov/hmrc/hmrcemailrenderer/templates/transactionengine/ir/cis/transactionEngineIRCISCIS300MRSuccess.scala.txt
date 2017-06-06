@@ -1,5 +1,7 @@
 @(params: Map[String,Any])
 
+Gateway Automatic Response notification
+
 Thank you - the Contractor CIS300 Monthly Return for @params("identifier") you sent over the internet was successfully received on @params("receivedDate") by HMRC and will now be processed.
 
 Thank you for using HMRC Internet Service for Construction Industry Schemes.
