@@ -4,4 +4,5 @@ Thank you for your electronic submission that was received at @params("receivedT
 Your document has been transmitted to the service owner and will now be processed.
 The identifiers for this submission are: @params("identifier")
 You do not need to take any action in response to this e-mail.
+Gateway Transaction Engine
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

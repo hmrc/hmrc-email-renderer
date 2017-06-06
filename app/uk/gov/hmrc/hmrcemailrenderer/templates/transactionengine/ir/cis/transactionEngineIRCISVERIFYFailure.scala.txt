@@ -1,11 +1,17 @@
 @(params: Map[String,Any])
 
+Gateway Automatic Error notification
+
 Thank you for sending the Verification Request form for @params("identifier") over the Internet.
-
 Unfortunately, although the form was received on @params("receivedDate"), it could not be accepted as it failed HMRC data checks.
-
-Please use the Help provided with the software or online forms service you used to complete and send this Authorisation to find out how to retrieve and view details of the reason(s) your Authorisation failed then correct the Authorisation and send it again.
-
+Please: use the Help provided with the software or online forms service you used to complete and send this Form to find out how to retrieve and view details of the reason(s) the Form failed; and correct the Form and send it again.
 Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
+
+@if(params("errorType") == "business") {
+    params("errorTextBlock")
+}
+
+The identifiers for this submission are: @params("identifier")
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
