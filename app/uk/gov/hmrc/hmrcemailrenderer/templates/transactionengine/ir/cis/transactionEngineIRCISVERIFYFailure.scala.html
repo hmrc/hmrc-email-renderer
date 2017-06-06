@@ -9,7 +9,7 @@
 <p style="margin: 0 0 30px; font-size: 19px;">Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk</p>
 
 @if(params("errorType") == "business") {
-    <p style="margin: 0 0 30px; font-size: 19px;">@Html(params("errorHtmlBlock").toString)</p>
+    @Html(params("errorHtmlBlock").toString)
 }
 
 <p style="margin: 0 0 30px; font-size: 19px;">The identifiers for this submission are: @params("identifier")</p>
