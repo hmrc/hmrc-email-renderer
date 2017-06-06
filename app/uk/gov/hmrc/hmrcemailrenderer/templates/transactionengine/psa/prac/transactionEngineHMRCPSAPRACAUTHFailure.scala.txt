@@ -7,6 +7,7 @@ Error Code: @params("errorNumber")
 Error Message: @params("errorMessage")
 }else{ @if(params("errorType") == "business") {
 Unfortunately, the document could not be accepted as the data was incorrect, and did not pass the input validation.
+@params("errorTextBlock")
 }else{
 Unfortunately, an error occurred whilst processing your submission.
 }
