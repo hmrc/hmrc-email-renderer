@@ -10,4 +10,6 @@ Please visit the HMRC website for the latest information about our Internet serv
 
 Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
 
+Gateway Transaction Engine
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
