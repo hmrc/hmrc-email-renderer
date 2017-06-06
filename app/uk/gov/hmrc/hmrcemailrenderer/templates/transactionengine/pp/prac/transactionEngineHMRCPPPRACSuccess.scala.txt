@@ -1,5 +1,5 @@
 @(params: Map[String,Any])
-Gateway Automatic Response Notification
+Gateway Automatic Response notification
 
 Thank you for your electronic submission that was received at @params("receivedTime") on @params("receivedDate")
 
