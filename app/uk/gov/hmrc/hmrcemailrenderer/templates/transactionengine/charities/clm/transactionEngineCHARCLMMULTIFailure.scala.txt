@@ -13,4 +13,9 @@ Unfortunately, the document could not be accepted as the data was incorrect, and
 Unfortunately, an error occurred whilst processing your submission.
 }
 }
+
+The identifiers for this submission are: @params("identifier")
+
+Gateway Transaction Engine
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

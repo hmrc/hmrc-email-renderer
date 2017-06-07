@@ -1,6 +1,6 @@
 @(params: Map[String,Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Successful Receipt of CT600 submission online for Reference ${params("identifier")}") {
-    <p style="margin: 0 0 30px; font-size: 19px;">HM Revenue and Customs(HMRC) have received the submission for reference @params("identifier"). </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">HM Revenue and Customs(HMRC) have received the submission for reference @params("identifier") on @params("receivedDate"). </p>
     <p style="margin: 0 0 30px; font-size: 19px;">It will be processed depending on further validation checks. </p>
     <p style="margin: 0 0 30px; font-size: 19px;">This usually takes at least 2 working days and you can check the progress for the return period in the Corporation Tax section of the company's online tax account.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">All parts of the Company Tax Return must be proper and complete and the content must be viewable by HMRC officers. HMRC can't confirm that this submission meets that requirement until we've processed it and will notify you at a later date if the submission is not a valid Company Tax Return.</p>
