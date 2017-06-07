@@ -1,5 +1,7 @@
 @(params: Map[String,Any])
 
+Gateway Automatic Response notification
+
 Thank you - the Verification Request form you sent for @params("identifier") over the internet was successfully received on @params("receivedDate") by HMRC and will now be processed.
 
 Thank you for using HMRC Internet Service for Construction Industry Schemes.
@@ -7,5 +9,7 @@ Thank you for using HMRC Internet Service for Construction Industry Schemes.
 Please visit the HMRC website for the latest information about our Internet services.
 
 Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
+
+Gateway Transaction Engine
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

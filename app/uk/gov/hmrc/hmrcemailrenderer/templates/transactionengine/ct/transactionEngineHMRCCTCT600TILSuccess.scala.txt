@@ -1,4 +1,5 @@
 @(params: Map[String,Any])
 Thank you for sending in the online Corporation Tax submission to the 'TEST IN LIVE' service.
 The submission received on @params("receivedDate") for reference @params("identifier") was successful and would have been processed if sent under non-test conditions. Corporation Tax Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all our online services please visit the HMRC website.
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
