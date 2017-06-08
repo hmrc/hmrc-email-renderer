@@ -1,0 +1,12 @@
+@(params: Map[String, Any])Verify your email address
+
+You’re getting this email because you’re applying to use a venture capital scheme.
+We need you to confirm your email address so you can use the service.
+
+To verify your email address click the link below:
+
+@{params("verificationLink")}
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
