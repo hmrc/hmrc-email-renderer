@@ -4,7 +4,7 @@ Dear @{params("customerFName")}
 
 Your reference number is @{params("renewalReference")}
 
-If we have an up-to-date mobile number on your tax credits claim, you will get another confirmation by text message.
+If we have an up-to-date mobile number on your tax credits claim, you may get some text messages about the progress of your renewal.
 
 @defining((params("incompleteClaims").toString.toInt, params("anyEstimates").toString.toInt)) { case (ic, ae) =>
 @if(ic > 0 || ae > 0){
