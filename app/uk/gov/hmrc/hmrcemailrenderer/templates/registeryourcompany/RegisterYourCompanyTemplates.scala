@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RegisterYourCompany
 
@@ -28,7 +28,8 @@ object RegisterYourCompanyTemplates {
       service = RegisterYourCompany,
       subject = "Register your company: verify your email address",
       plainTemplate = txt.registerYourCompanyVerificationEmail.f,
-      htmlTemplate = html.registerYourCompanyVerificationEmail.f),
+      htmlTemplate = html.registerYourCompanyVerificationEmail.f,
+      priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "register_your_company_welcome_email",
       fromAddress = FromAddress.govUkTeamAddress,

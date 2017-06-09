@@ -5,8 +5,8 @@ Your amendment for @{params("organisationName")} has been received on the @{para
 
 What happens next
 - You cannot trade until an AWRS reference number is issued.
-- We will review and check your application amendments (reference @{params("applicationReference")}).
-- We may contact you to discuss your amended application.
+- It will take up to 45 days from your initial submission to make a decision on your application.
+- We will review and check your application amendments (reference @{params("applicationReference")}). HMRC will contact you to discuss your amended application.
 
 More detailed information can be found in the guidance on GOV.UK.
 
