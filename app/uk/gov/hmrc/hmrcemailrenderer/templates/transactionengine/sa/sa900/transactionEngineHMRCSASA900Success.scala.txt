@@ -6,7 +6,7 @@ The submission for reference @params("identifier") was received on @params("rece
 
 SA Trust Online is just one of the many online services we offer that can save you time and paperwork.
 
-For the latest information on all of our Online Services please visit the HMRC website
+For the latest information on all of our Online Services please visit the HMRC website.
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -4,7 +4,7 @@ Thank you for sending the PAYE Works Number Update submission online.
 
 The submission for reference @params("identifier") was successfully received on @params("receivedDate") and is being processed.
 
-PAYE Works Number Update Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website
+PAYE Works Number Update Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 

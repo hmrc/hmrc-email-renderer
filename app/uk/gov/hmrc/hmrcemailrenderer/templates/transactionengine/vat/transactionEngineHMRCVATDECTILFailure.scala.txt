@@ -8,6 +8,8 @@ To correct this please use the help provided within the software you used to com
 
 If you continue having problems please contact the Online Services Helpdesk on 0300 200 3701. Fax 03000 516250.
 
-The Helpdesk is open Monday to Friday - 08:00 to 18:00. VAT Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website.
+The Helpdesk is open Monday to Friday - 08:00 to 18:00.
+
+VAT Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

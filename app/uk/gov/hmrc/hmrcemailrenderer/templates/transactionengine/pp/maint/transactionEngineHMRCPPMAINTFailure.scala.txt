@@ -1,8 +1,13 @@
 @(params: Map[String,Any])
+
 Thank you for sending an Amend Scheme Details Form over the Internet.
+
 Unfortunately, although the form was received on @params("receivedDate"), it could not be accepted as it failed HMRC data checks.
+
 Please:
 use the Help provided with the software or online forms service you used to complete and send this Form to  find out how to retrieve and view details of the reason(s) the Form failed;
 and correct the Form and send it again.
+
 Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
