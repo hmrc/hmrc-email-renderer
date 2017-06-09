@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.itr
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{InvestmentTaxRelief}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -29,14 +29,8 @@ object ItrTemplates {
       service = InvestmentTaxRelief,
       subject = "Apply to use Venture Capital Schemes: verify your email address",
       plainTemplate = txt.itrEmailVerification.f,
-      htmlTemplate = html.itrEmailVerification.f),
-    MessageTemplate.create(
-      templateId = "investment_tax_relief_confirmation_email",
-      fromAddress = govUkTeamAddress,
-      service = InvestmentTaxRelief,
-      subject = "Apply to use Venture Capital Schemes: Confirmation Email",
-      plainTemplate = txt.itrEmailConfirmation.f,
-      htmlTemplate = html.itrEmailConfirmation.f)
+      htmlTemplate = html.itrEmailVerification.f,
+      priority = Some(MessagePriority.Urgent))
   )
 
 }
