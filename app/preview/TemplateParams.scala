@@ -947,11 +947,6 @@ object TemplateParams {
       "errorNumber" -> "1001",
       "errorMessage" -> "Fatal Error Message"
     ),
-    "transactionEngineCHARCLMFailure" -> Map(
-      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "fatal",
-      "errorNumber" -> "123", "errorMessage" -> "This is an error"
-    ),
     "transactionEngineCHARCLMMULTIFailure" -> Map(
       "errorType" -> "business",
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
