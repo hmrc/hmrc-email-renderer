@@ -1,7 +1,9 @@
 @(params: Map[String,Any])
 Gateway Automatic Error notification
+
 Thank you for your electronic submission that was received at @params("receivedTime") on @params("receivedDate")
 @if(params("errorType") == "fatal") {
+
 Unfortunately, an error occurred whilst processing your submission. Please contact the relevant government department directly.
 Error Code: @params("errorNumber")
 Error Message: @params("errorMessage")
