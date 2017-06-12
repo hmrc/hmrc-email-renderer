@@ -29,6 +29,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemp
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gg.GgTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.itr.ItrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mandate.MandateTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
@@ -63,7 +64,8 @@ trait TemplateLocator {
         "Off Payroll"                -> OffPayrollTemplates.templates,
         "Customs"                    -> CustomsTemplates.templates,
         "Transaction Engine"         -> TransactionEngineTemplates.templates,
-        "ATED"                       -> AtedTemplates.templates)
+        "ATED"                       -> AtedTemplates.templates,
+        "ITR"                        -> ItrTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 
