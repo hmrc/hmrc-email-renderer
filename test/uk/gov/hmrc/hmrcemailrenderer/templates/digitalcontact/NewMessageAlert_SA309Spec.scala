@@ -58,19 +58,6 @@ class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with Template
       htmlContent shouldNot include("Viscount")
     }
 
-
-    "have 'Dear firstname' only when all name parameters are provided" in {
-      val nameData = Map("recipientName_title" -> "Lord", "recipientName_forename" -> "Antonio", "recipientName_secondForename" -> "Montogmery", "recipientName_surname" -> "Windsor", "recipientName_honours" -> "Viscount")
-
-      val htmlContent = templateSA309.htmlTemplate(commonParameters ++ nameData).toString
-      htmlContent should include("Dear Antonio")
-      htmlContent shouldNot include("Lord")
-      htmlContent shouldNot include("Montgomery")
-      htmlContent shouldNot include("Windsor")
-      htmlContent shouldNot include("Viscount")
-
-    }
-
   }
 
 }

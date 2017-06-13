@@ -27,7 +27,8 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "recipientName_forename" -> "Rich",
+    "recipientName_title" -> "Mr",
+    "recipientName_surname" -> "Smith",
     "verificationLink" -> verificationLink,
     "staticAssetUrlPrefix" -> "http://uri",
     "staticAssetVersion" -> "v1",
@@ -38,7 +39,7 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
     "render as" in new TestCase {
       val renderedHtml = api.html.verificationEmail.render(templateParams)
       renderedHtml.contentType should include("text/html")
-      renderedHtml.body should include("Dear Rich")
+      renderedHtml.body should include("Dear Mr Smith")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
         "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
@@ -55,7 +56,7 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
     "render as" in new TestCase {
       val renderedTxt = api.txt.verificationEmail.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include("Dear Rich")
+      renderedTxt.body should include("Dear Mr Smith")
       renderedTxt.body should include("Click on the link below to verify your email address:")
       renderedTxt.body should include(verificationLink)
       renderedTxt.body should include("From HMRC Digital Developer Hub")
