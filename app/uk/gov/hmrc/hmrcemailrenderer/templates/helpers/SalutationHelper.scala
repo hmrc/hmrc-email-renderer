@@ -31,13 +31,11 @@ object SalutationHelper {
   def salutationFrom(params: Map[String, Any]): String = {
     val salutationParams: List[Option[String]] = List(
       capitalised(params.get("recipientName_title")),
-      capitalised(params.get("recipientName_forename")),
       capitalised(params.get("recipientName_surname"))
     )
 
     salutationParams match {
-      case List(_, Some(forename), _) => s"Dear $forename"
-      case List(Some(title), _, Some(surname)) => s"Dear $title $surname"
+      case List(Some(title), Some(surname)) => s"Dear $title $surname"
       case _ => "Dear Customer"
     }
   }
