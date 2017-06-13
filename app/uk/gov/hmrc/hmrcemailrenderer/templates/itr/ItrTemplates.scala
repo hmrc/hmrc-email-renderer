@@ -35,7 +35,7 @@ object ItrTemplates {
       templateId = "investment_tax_relief_confirmation_email",
       fromAddress = govUkTeamAddress,
       service = InvestmentTaxRelief,
-      subject = "Apply to use Venture Capital Schemes: Confirmation Email",
+      subject = "Apply to use Venture Capital Schemes: Advance Assurance application received",
       plainTemplate = txt.itrEmailConfirmation.f,
       htmlTemplate = html.itrEmailConfirmation.f)
   )
