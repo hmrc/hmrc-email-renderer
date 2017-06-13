@@ -1,6 +1,5 @@
-@import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsSalutationHelper
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Annual Tax Summary is ready", footerMessage = Some(footer)) {
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, Some(AtsSalutationHelper.salutationFrom(params)))
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Thank you for completing your Self Assessment tax return.</p>
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Your annual tax summary is now online. It shows ‎how much tax and National Insurance you have paid and how Government spends it.</p>
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">You can find the summary by signing into your tax account, looking in the self assessment section and selecting 'find out how your tax is spent'.</p>

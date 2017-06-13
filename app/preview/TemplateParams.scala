@@ -365,6 +365,9 @@ object TemplateParams {
     "register_your_company_welcome_email" -> Map(
       "returnLink" -> "http://registeryourcompany.gov.uk"
     ),
+    "investment_tax_relief_verification_email" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
     "indefensible_upgrades" -> newMessageAlert_Names,
     "indefensible_upgrades_with_dates" -> newMessageAlert_Names,
