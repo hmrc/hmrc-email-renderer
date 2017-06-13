@@ -30,7 +30,14 @@ object ItrTemplates {
       subject = "Apply to use Venture Capital Schemes: verify your email address",
       plainTemplate = txt.itrEmailVerification.f,
       htmlTemplate = html.itrEmailVerification.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "investment_tax_relief_confirmation_email",
+      fromAddress = govUkTeamAddress,
+      service = InvestmentTaxRelief,
+      subject = "Apply to use Venture Capital Schemes: Confirmation Email",
+      plainTemplate = txt.itrEmailConfirmation.f,
+      htmlTemplate = html.itrEmailConfirmation.f)
   )
 
 }
