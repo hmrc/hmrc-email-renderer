@@ -1,7 +1,7 @@
 @(params: Map[String, Any])Verify your email address
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-You’ve chosen to get paperless notifications from HMRC.
+You’ve chosen to get electronic communications from HMRC.
 
 Click on the link below to verify your email address.
 
