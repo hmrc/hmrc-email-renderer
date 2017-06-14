@@ -501,16 +501,26 @@ object TemplateParams {
       "subject" -> "subject"
     ),
     "transactionEngineIRCISCIS300MRFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "errorType" -> "business",
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineIRCISVERIFYSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
     ),
     "transactionEngineIRCISVERIFYFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "errorType" -> "business",
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineIRCTFANNUALRETURNSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
@@ -749,18 +759,26 @@ object TemplateParams {
       "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAPRACAUTHFailure" -> Map(
+      "errorType" -> "business",
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "business",
-      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+      "subject" -> "subject",
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineHMRCPSAPRACDEAUTHSuccess" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject"
     ),
     "transactionEngineHMRCPSAPRACDEAUTHFailure" -> Map(
+      "errorType" -> "business",
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "business",
-      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
+      "subject" -> "subject",
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineHMRCSASA800ATTSuccess" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
@@ -851,6 +869,7 @@ object TemplateParams {
       "subject" -> "subject"
     ),
     "transactionEngineHMRCCTCT600Success" -> Map(
+      "receivedDate" -> "20 April 2017",
       "identifier" -> "12345",
       "subject" -> "subject"
     ),
@@ -902,15 +921,13 @@ object TemplateParams {
       "subject" -> "subject"
     ),
     "transactionEngineHMRCPPPRACFailure" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "business",
-      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
-    ),
-    "transactionEngineHMRCPPPRACFailure" -> Map(
+      "errorType" -> "business",
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
       "subject" -> "subject",
-      "errorType" -> "fatal",
-      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineHMRCPPRETFailure" -> Map(
       "receivedDate" -> "20 April 2017", "identifier" -> "12345",
@@ -925,24 +942,22 @@ object TemplateParams {
       "subject" -> "subject"
     ),
     "transactionEngineCHARCLMFailure" -> Map(
-      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject","errorType" -> "business",
-      "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
-    ),
-    "transactionEngineCHARCLMFailure" -> Map(
-      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "fatal",
-      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+      "errorType" -> "business",
+      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
+      "subject" -> "subject",
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineCHARCLMMULTIFailure" -> Map(
+      "errorType" -> "business",
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "business",
-      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message</p>"
-    ),
-    "transactionEngineCHARCLMMULTIFailure" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "fatal",
-      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+      "subject" -> "subject",
+      "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
+      "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
+      "errorNumber" -> "1001",
+      "errorMessage" -> "Fatal Error Message"
     ),
     "transactionEngineCHARCLMMULTISuccess" -> Map(
       "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",

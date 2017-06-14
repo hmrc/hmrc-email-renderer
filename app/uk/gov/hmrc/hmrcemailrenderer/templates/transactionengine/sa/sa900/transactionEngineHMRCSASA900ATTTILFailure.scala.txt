@@ -10,16 +10,15 @@ To correct this please use the help provided within the software you used to com
 
 If you continue having problems please contact the Online Services Helpdesk on 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
 
-The Helpdesk is open
+The Helpdesk is open:
 
 Monday to Friday - 08.00 to 20.00
-
 Saturday - 0800 to 16.00
 
 (It is closed Christmas Day, Boxing Day and New Year's Day).
 
 Self Assessment Online is just one of the many online services we offer that can save you time and paperwork.
 
-For the latest information on all of our Online Services please visit the HMRC website
+For the latest information on all of our Online Services please visit the HMRC website.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
