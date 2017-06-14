@@ -53,7 +53,7 @@ As explained in the `email` service documentation, the developer can specify for
 
 - **Urgent** priority: all emails will be sent immediately (meaning that no throttling is applied). For this reason, this priority is typically used for **transactional/verification emails**, or whenever the client system expects the user to receive an email promptly. This is **not** meant to be used **for batches**.
 - **Standard** priority: this is used to process **batches of emails**, and is the priority that will be used if no other is specified. An email sent with this priority could be queued for a few hours, depending on the load and throttling rate.
-- **Background** priority: the typical use case for this is when, from a business point of view, ** big batches** (hundred of thousands) of emails need to be sent. An email sent with this priority could be queued for a few days, depending on the load and throttling rate.
+- **Background** priority: the typical use case for this is when, from a business point of view, **big batches** (hundred of thousands) of emails need to be sent. An email sent with this priority could be queued for a few days, depending on the load and throttling rate.
 
 It's also really important to **discuss with the Digital Contact team how many messages you expect to send, and when.** We monitor the flow of email very carefully to ensure that deliverability of HMRC email is a good as it can be.
 
