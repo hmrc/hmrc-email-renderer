@@ -9,9 +9,13 @@
     } else {
         @if(params("errorType") == "business") {
             <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, the document could not be accepted as the data was incorrect, and did not pass the input validation.</p>
-            <p style="margin: 0 0 30px; font-size: 19px;">@params("errorHtmlBlock")</p>
+            @Html(params("errorHtmlBlock").toString)
         } else {
             <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately, an error occurred whilst processing your submission.</p>
         }
     }
+
+    <p style="margin: 0 0 30px; font-size: 19px;">The identifiers for this submission are: @params("identifier")</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Gateway Transaction Engine</p>
 }

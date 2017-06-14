@@ -1,11 +1,10 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Unsuccessful submission of VAT Submission online for Reference ${params("identifier")}") {
+
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for sending in the online VAT submission to the 'TEST IN LIVE' service.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was successfully received on @params("receivedDate")</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Unfortunately it could not be accepted as it failed HMRC data checks.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The submission for reference @params("identifier") was received on @params("receivedDate"). Unfortunately it could not be accepted as it failed HMRC data checks.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">To correct this please use the help provided within the software you used to complete your form and send it again.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you continue having problems please contact the Online Services Helpdesk on 0300 200 3701. Fax 03000 516250.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The Helpdesk is open Monday to Friday - 08:00 to 18:00.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">VAT Online is just one of the many online services we offer that can save you time and paperwork.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">For the latest information on all of our Online Services please visit the HMRC website</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The Helpdesk is open Monday to Friday - 08:00 to 18:00. VAT Online is just one of the many online services we offer that can save you time and paperwork. For the latest information on all of our Online Services please visit the HMRC website.</p>
+
 }
