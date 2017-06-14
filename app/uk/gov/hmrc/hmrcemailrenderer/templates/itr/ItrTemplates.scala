@@ -37,7 +37,8 @@ object ItrTemplates {
       service = InvestmentTaxRelief,
       subject = "Apply to use Venture Capital Schemes: Advance Assurance application received",
       plainTemplate = txt.itrEmailConfirmation.f,
-      htmlTemplate = html.itrEmailConfirmation.f)
+      htmlTemplate = html.itrEmailConfirmation.f,
+      priority = Some(MessagePriority.Urgent))
   )
 
 }
