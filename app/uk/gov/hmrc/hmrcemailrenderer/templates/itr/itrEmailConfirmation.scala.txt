@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Advance Assurance application received
+
+This is a test email only. Should you receive this email please ignore it
+
+We received your Advance Assurance application for @{params("companyName")} on @{params("date")}
+Your application reference number is @{params("formBundleRefNumber")}
+
+What happens next
+
+We’ll let you know the outcome of your application within 4 weeks.
+
+From HM Revenue and Customs, small companies enterprise centre
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

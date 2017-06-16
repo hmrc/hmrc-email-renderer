@@ -9,6 +9,6 @@ To verify your email address click the link below:
 
 @{params("verificationLink")}
 
-From HMRC
+From HM Revenue and Customs, small companies enterprise centre
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
