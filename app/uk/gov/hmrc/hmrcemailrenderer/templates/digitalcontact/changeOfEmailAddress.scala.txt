@@ -1,11 +1,11 @@
 @(params: Map[String, Any])You’ve changed your email address
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-You’ve changed your email address for paperless notifications.
+You’ve changed your email address for electronic communications.
 
 Now you need to verify your new email address. We’ve sent you an email separately to tell you how to do this.
 
-Until you verify your new email address, your paperless notifications will get sent here.
+Until you verify your new email address, your electronic communications will get sent here.
 
 From HMRC Digital
 

@@ -24,7 +24,7 @@ class RendererControllerISpec extends UnitSpec
       response should have(
         status(200),
         jsonProperty(__ \ "fromAddress", "HMRC paperless <noreply@tax.service.gov.uk>"),
-        jsonProperty(__ \ "subject", "HMRC paperless notifications: verify your email address"),
+        jsonProperty(__ \ "subject", "HMRC electronic communications: verify your email address"),
         jsonProperty(__ \ "service", "sa"),
         jsonProperty(__ \ "plain"),
         jsonProperty(__ \ "html")

@@ -28,7 +28,7 @@ object DigitalContactTemplates {
       templateId = "verifyEmailAddress",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC paperless notifications: verify your email address",
+      subject = "HMRC electronic communications: verify your email address",
       plainTemplate = txt.verifyEmailAddress.f,
       htmlTemplate  = html.verifyEmailAddress.f,
       priority = Some(MessagePriority.Urgent)
@@ -37,7 +37,7 @@ object DigitalContactTemplates {
       templateId = "changeOfEmailAddress",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC paperless notifications: change of email address",
+      subject = "HMRC electronic communications: change of email address",
       plainTemplate = txt.changeOfEmailAddress.f,
       htmlTemplate = html.changeOfEmailAddress.f,
       priority = Some(MessagePriority.Urgent)
@@ -55,7 +55,7 @@ object DigitalContactTemplates {
       templateId = "changeOfEmailAddressNewAddress",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC paperless notifications: verify your new email address",
+      subject = "HMRC electronic communications: verify your new email address",
       plainTemplate = txt.changeOfEmailAddressNewAddress.f,
       htmlTemplate = html.changeOfEmailAddressNewAddress.f,
       priority = Some(MessagePriority.Urgent)
@@ -78,7 +78,7 @@ object DigitalContactTemplates {
       templateId = "verificationReminder",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC paperless notifications: complete the sign-up process",
+      subject = "HMRC electronic communications: complete the sign-up process",
       plainTemplate = txt.verificationReminder.f,
       htmlTemplate = html.verificationReminder.f
     ),
