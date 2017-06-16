@@ -1,7 +1,7 @@
 @(params: Map[String,Any])
 Thank you for sending in the CT600 submission online to the 'TEST IN LIVE' service.
 
-The submission for reference @params("identifier") received on @params("receivedDate") was successful and would have been processed if sent under non-test conditions.
+The submission for reference @params("identifier") was received on @params("receivedDate") was successful and would have been processed if sent under non-test conditions.
 
 Corporation Tax online is just one of the many online services we offer that can save you time and paperwork.
 
