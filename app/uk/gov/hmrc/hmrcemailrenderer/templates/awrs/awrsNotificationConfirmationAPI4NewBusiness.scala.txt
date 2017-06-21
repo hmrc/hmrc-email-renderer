@@ -7,7 +7,7 @@ Your application reference number is @{params("applicationReference")}. This is 
 
 What happens next
 - You cannot trade until an AWRS reference number is issued.
-- It will take up to 45 days from your submission to make a decision on your application.
+- It will take up to 45 days from your initial application before we make a decision.
 
 More detailed information can be found in the guidance on GOV.UK.
 
