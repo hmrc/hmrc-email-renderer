@@ -10,9 +10,9 @@ Please: use the Help provided with the software or online forms service you used
 
 Online Services Helpdesk Telephone 0300 200 3600, Textphone 0300 200 3603 or email helpdesk@@ir-efile.gov.uk
 
-@if(params("errorType") == "business") {
-    params("errorTextBlock")
-}
+    @if(params("errorType") == "business") {
+        @params("errorTextBlock")
+     }
 
 The identifiers for this submission are: @params("identifier")
 
