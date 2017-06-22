@@ -23,7 +23,7 @@ class RendererControllerISpec extends UnitSpec
       val response = wsUrl(s"/templates/verifyEmailAddress").post(Json.obj("parameters" -> params))
       response should have(
         status(200),
-        jsonProperty(__ \ "fromAddress", "HMRC paperless <noreply@tax.service.gov.uk>"),
+        jsonProperty(__ \ "fromAddress", "HMRC digital <noreply@tax.service.gov.uk>"),
         jsonProperty(__ \ "subject", "HMRC electronic communications: verify your email address"),
         jsonProperty(__ \ "service", "sa"),
         jsonProperty(__ \ "plain"),

@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
 object DigitalContactTemplates {
-  val defaultFromAddress = FromAddress.noReply("HMRC paperless")
+  val defaultFromAddress = FromAddress.noReply("HMRC digital")
 
   val templates = Seq(
     MessageTemplate.create(
