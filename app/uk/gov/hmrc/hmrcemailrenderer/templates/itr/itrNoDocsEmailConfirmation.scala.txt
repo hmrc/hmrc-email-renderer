@@ -1,0 +1,32 @@
+@(params: Map[String, Any])We’ve received your Advance Assurance application
+
+We received your Advance Assurance application for @{params("companyName")} on @{params("date")}
+Your application reference number is @{params("formBundleRefNumber")}
+
+What happens next
+
+To complete your application you need to send us your company’s:
+-business plan
+-shareholder agreements or drafts
+-memorandum and articles of association
+-prospectuses and other documents for attracting investment
+-last annual accounts or cash flow forecast if you haven’t submitted accounts yet
+
+If your supporting documents aren’t up-to-date, you need to tell us about any changes you plan to make.
+
+Once we’ve received these documents, we’ll let you know whether your application is successful within 4 weeks.
+
+How to send your supporting documents
+
+You can upload your supporting documents or send them by post.
+
+If you want to upload your supporting documents, you can do this from the Venture Capital Schemes dashboard. To get to the dashboard, log into this service with the same Government Gateway ID that you used to apply.
+
+If you want to post your supporting documents, you need to call the Small Companies Enterprise Centre (SCEC) on 0300 123 1083.
+
+
+You can find more information about the Venture Capital Schemes on GOV.UK.
+
+From HM Revenue and Customs, Small Company Enterprise Centre
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

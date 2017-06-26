@@ -373,6 +373,11 @@ object TemplateParams {
       "date" -> "09-09-2999",
       "formBundleRefNumber" -> "XAFORMBUNDLEREF"
     ),
+    "investment_tax_relief_no_docs_confirmation_email" -> Map(
+      "companyName" -> "Test company name",
+      "date" -> "09-09-2999",
+      "formBundleRefNumber" -> "XAFORMBUNDLEREF"
+    ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
     "indefensible_upgrades" -> newMessageAlert_Names,
     "indefensible_upgrades_with_dates" -> newMessageAlert_Names,
