@@ -9,6 +9,6 @@ You can still register voluntarily if the company's VAT taxable turnover is less
 
 To access the service, use the link you received previously in the 'Register your company' welcome email
 
-From HMRC
+From HMRC VAT
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
