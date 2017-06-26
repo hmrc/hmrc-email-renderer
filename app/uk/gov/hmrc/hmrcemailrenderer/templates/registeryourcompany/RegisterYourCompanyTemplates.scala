@@ -36,6 +36,13 @@ object RegisterYourCompanyTemplates {
       service = RegisterYourCompany,
       subject = "Register your company - Welcome",
       plainTemplate = txt.registerYourCompanyWelcomeEmail.f,
-      htmlTemplate = html.registerYourCompanyWelcomeEmail.f)
+      htmlTemplate = html.registerYourCompanyWelcomeEmail.f),
+    MessageTemplate.create(
+      templateId = "register_your_company_register_vat_email",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "Register for VAT online - new service",
+      plainTemplate = txt.registerYourCompanyRegisterVATEmail.f,
+      htmlTemplate = html.registerYourCompanyRegisterVATEmail.f)
     )
 }
