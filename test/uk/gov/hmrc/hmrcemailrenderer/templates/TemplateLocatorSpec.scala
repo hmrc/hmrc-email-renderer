@@ -156,6 +156,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tcs_renewal_confirmation",
         "register_your_company_verification_email",
         "register_your_company_welcome_email",
+        "register_your_company_register_vat_email",
         "investment_tax_relief_verification_email",
         "investment_tax_relief_confirmation_email",
         "client_approves_mandate",
