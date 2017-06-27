@@ -1,6 +1,5 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Activate your account") {
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 <p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to verify your email address:</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}</p>
