@@ -1,10 +1,11 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Advance Assurance application received") {
-<h4>This is a test email only. Should you receive this email please ignore it</h4>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We’ve received your Advance Assurance application ") {
 <p style="margin: 0 0 30px; font-size: 19px;">We received your Advance Assurance application for @{params("companyName")}
     on @{params("date")}.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Your application reference number is @{params("formBundleRefNumber")}.</p>
 <h2 style="margin: 0 0 30px; font-size: 24px;">What happens next</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">We’ll let you know the outcome of your application within 4 weeks.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue and Customs, small companies enterprise centre</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We’ll let you know whether your application is successful within 4 weeks. </p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can find more information about the
+    <a href="https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance">Venture Capital Schemes</a> on GOV.UK.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue and Customs, Small Company Enterprise Centre</p>
 }

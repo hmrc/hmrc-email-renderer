@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We’ve received your Advance Assurance application ") {
+<p style="margin: 0 0 30px; font-size: 19px;">We received your Advance Assurance application for @{params("companyName")}
+    on @{params("date")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your application reference number is @{params("formBundleRefNumber")}.</p>
+<h2 style="margin: 0 0 30px; font-size: 24px;">What happens next</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">To complete your application you need to send us your company’s:</p>
+    <ul>
+        <li style="margin: 0 0 0px; font-size: 19px;">business plan</li>
+        <li style="margin: 0 0 0px; font-size: 19px;">shareholder agreements or drafts</li>
+        <li style="margin: 0 0 0px; font-size: 19px;">memorandum and articles of association</li>
+        <li style="margin: 0 0 0px; font-size: 19px;">prospectuses and other documents for attracting investment</li>
+        <li style="margin: 0 0 0px; font-size: 19px;">last annual accounts or cash flow forecast if you haven’t submitted accounts yet</li>
+    </ul>
+
+
+<p style="margin: 0 0 30px; font-size: 19px;">If your supporting documents aren’t up-to-date, you need to tell us about any changes you plan to make</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Once we’ve received these documents, we’ll let you know whether your application is successful within 4 weeks.</p>
+<h2 style="margin: 0 0 30px; font-size: 24px;">How to send your supporting documents</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You can upload your supporting documents or send them by post.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you want to upload your supporting documents, you can do this from the Venture Capital Schemes dashboard. To get to the dashboard, log into this service with the same Government Gateway ID that you used to apply. </p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you want to post your supporting documents, you need to call the Small Companies Enterprise Centre (SCEC) on 0300 123 1083.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can find more information about the
+    <a href="https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance">Venture Capital Schemes</a> on GOV.UK.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue and Customs, Small Company Enterprise Centre</p>
+}
