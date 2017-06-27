@@ -30,6 +30,13 @@ object GgTemplates {
       subject = "Government Gateway User ID",
       plainTemplate = txt.ggUserIdNotificationEmail.f,
       htmlTemplate = html.ggUserIdNotificationEmail.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "2SV_reset_confirmation",
+      fromAddress = FromAddress.noReply("Government Gateway service"),
+      service = GovernmentGateway,
+      subject = "2Sv reset confirmation",
+      plainTemplate = txt.TwoSvResetConfirmation.f,
+      htmlTemplate = html.TwoSvResetConfirmation.f)
   )
 }
