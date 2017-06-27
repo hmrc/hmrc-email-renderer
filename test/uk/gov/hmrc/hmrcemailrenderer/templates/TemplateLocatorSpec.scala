@@ -169,6 +169,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "agent_self_auth_deactivates_mandate",
         "offpayroll_private_beta_invitation",
         "gg_userid_notification",
+        "2SV_reset_confirmation",
         "customs_registration_successful",
         "customs_registration_not_successful",
         "customs_validation_success",
