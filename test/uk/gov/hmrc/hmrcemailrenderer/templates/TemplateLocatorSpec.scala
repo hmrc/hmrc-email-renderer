@@ -57,6 +57,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "register-your-company",
         "Mandate",
         "Off Payroll",
+        "EMAC Helpdesk",
         "Customs",
         "Transaction Engine",
         "ATED",
@@ -308,7 +309,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "amended_return_submit",
         "further_return_submit",
         "change_details_return_submit",
-        "disposal_return_submit"
+        "disposal_return_submit",
+        "emac_helpdesk_failure_confirmation_email",
+        "emac_helpdesk_successful_confirmation_email"
         )
     }
   }
