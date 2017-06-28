@@ -40,6 +40,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -50,6 +51,7 @@ trait TemplateLocator {
         "BARS"                       -> BarsTemplates.templates,
         "Childcare"                  -> ChildcareTemplates.templates,
         "DFS"                        -> DfsTemplates.templates,
+        "EMAC Helpdesk"              -> EmacHelpdeskTemplates.templates,
         "FANDF"                      -> FandFTemplates.templates,
         "GG"                         -> GgTemplates.templates,
         "Passcodes"                  -> PasscodesTemplates.templates,
