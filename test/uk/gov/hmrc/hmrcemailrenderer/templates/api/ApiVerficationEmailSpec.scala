@@ -42,12 +42,12 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
         "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.verificationEmail.render(templateParamsPlus)
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Digital " + developerHubTitle + "</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 
@@ -57,12 +57,12 @@ class ApiVerficationEmailSpec extends UnitSpec with Matchers {
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include("Click on the link below to verify your email address:")
       renderedTxt.body should include(verificationLink)
-      renderedTxt.body should include("From HMRC Digital Developer Hub")
+      renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedTxt = api.txt.verificationEmail.render(templateParamsPlus)
-      renderedTxt.body should include("From HMRC Digital " + developerHubTitle)
+      renderedTxt.body should include("From HMRC " + developerHubTitle)
     }
   }
 }
