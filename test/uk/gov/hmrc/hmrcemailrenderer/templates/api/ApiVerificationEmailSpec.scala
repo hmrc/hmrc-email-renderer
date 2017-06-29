@@ -21,7 +21,7 @@ import org.scalatest.Matchers
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 import uk.gov.hmrc.play.test.UnitSpec
 
-class ApiVerficationEmailSpec extends UnitSpec with Matchers {
+class ApiVerificationEmailSpec extends UnitSpec with Matchers {
 
   val verificationLink = "http://verify.com"
   val developerHubTitle = "Developer Hub Title"
