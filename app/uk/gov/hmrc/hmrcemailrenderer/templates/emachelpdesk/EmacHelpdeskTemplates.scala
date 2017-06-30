@@ -25,7 +25,7 @@ object EmacHelpdeskTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "emac_helpdesk_failure_confirmation_email",
-      fromAddress = FromAddress.noReply("HMRC services and enrolments helpdesk"),
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
       service = EmacHelpdesk,
       subject = "You've submitted a document to HMRC",
       plainTemplate = txt.emacHelpdeskFailureConfirmationEmail.f,
@@ -33,7 +33,7 @@ object EmacHelpdeskTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "emac_helpdesk_successful_confirmation_email",
-      fromAddress = FromAddress.noReply("HMRC services and enrolments helpdesk"),
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
       service = EmacHelpdesk,
       subject = "You've submitted a document to HMRC",
       plainTemplate = txt.emacHelpdeskSuccessfulConfirmationEmail.f,
