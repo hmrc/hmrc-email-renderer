@@ -23,11 +23,11 @@ import scala.util.Try
 object TransactionEngineFromAddress {
   import play.api.Play.current
 
-  private val defaultDomain = "transaction-engine.tax.service.gov.uk"
+  private val defaultDomain = "confirmation.tax.service.gov.uk"
 
   lazy val replyDomain = Try(Play.configuration.getString("transactionEngine.fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
 
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 
-  lazy val transactionEngineAddress = noReply("Government Gateway Transaction Engine")
+  lazy val transactionEngineAddress = noReply("Gateway Confirmation")
 }
