@@ -417,6 +417,9 @@ object TemplateParams {
     "2SV_reset_confirmation" -> Map(
       "full_name" -> "Joe Bloggs"
     ),
+    "password_change_confirmation" -> Map(
+      "full_name" -> "Joe Bloggs"
+    ),
     "customs_registration_successful" -> Map(
       "recipientName_forename" -> "Firstname",
       "recipientName_surname" -> "Lastname"

@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.gg
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GovernmentGateway
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{GovernmentGateway, SecurityConsole}
 
 object GgTemplates {
 
@@ -37,6 +37,13 @@ object GgTemplates {
       service = GovernmentGateway,
       subject = "2Sv reset confirmation",
       plainTemplate = txt.TwoSvResetConfirmation.f,
-      htmlTemplate = html.TwoSvResetConfirmation.f)
+      htmlTemplate = html.TwoSvResetConfirmation.f),
+    MessageTemplate.create(
+      templateId = "password_change_confirmation",
+      fromAddress = FromAddress.noReply("Government Gateway service"),
+      service = SecurityConsole,
+      subject = "Password change confirmation",
+      plainTemplate = txt.PasswordChangeConfirmation.f,
+      htmlTemplate = html.PasswordChangeConfirmation.f)
   )
 }
