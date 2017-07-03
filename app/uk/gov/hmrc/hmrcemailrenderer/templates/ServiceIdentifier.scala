@@ -42,6 +42,7 @@ object ServiceIdentifier {
   case object PensionSchemesforPractitioners extends ServiceIdentifier { override val name  = "pp" }
   case object RegisterYourCompany extends ServiceIdentifier { override val name = "register-your-company" }
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
+  case object SecurityConsole extends ServiceIdentifier { override val name = "security-console" }
   case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
