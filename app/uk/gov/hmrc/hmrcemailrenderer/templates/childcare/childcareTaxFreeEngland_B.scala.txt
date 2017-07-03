@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Thank you for registering your interest in government childcare offers.
+
+Apply now for Tax-Free Childcare and 30 hours free childcare!
+
+ You can apply for Tax-Free Childcare and 30 hours free childcare now if your youngest child will be under 4 on 31 August, or you have a disabled child under 17. 
+ To apply go to: www.childcare-support.tax.service.gov.uk/par/app/applynow
+  You will be asked if you have been invited to apply. Please select 'no', and enter the date of birth of your youngest child.  
+Once you've applied for Tax-Free Childcare, you can log back into your account using the same link.
+
+  Find out more
+ You can find more information on Tax-Free Childcare & 30 hours free childcare and check if you're eligible at: www.childcarechoices.gov.uk  
+
+Thank you for your interest in the childcare service. 
+
+ Yours faithfully,
+
+Sarah Radford
+Childcare Service, HM Government
+
+You can identify genuine contact from HMRC on GOV.UK by searching: 'Genuine HMRC contact and recognising phishing emails'.
+
+How to contact us
+If you have any queries or need help applying, please contact the childcare service helpline on 0300 123 4097. It is available between 8am and 8pm Monday to Friday, 8am to 4pm on Saturday and 10am to 4pm on Sunday.
