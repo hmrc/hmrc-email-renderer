@@ -55,11 +55,39 @@ object ChildcareTemplates {
       plainTemplate = txt.childcareTaxFreeEngland.f,
       htmlTemplate = html.childcareTaxFreeEngland.f),
     MessageTemplate.create(
+      templateId = "childcare_taxfree_england_A",
+      fromAddress = childcareAddress,
+      service = Childcare,
+      subject = "Apply for Tax-Free Childcare today",
+      plainTemplate = txt.childcareTaxFreeEngland_A.f,
+      htmlTemplate = html.childcareTaxFreeEngland_A.f),
+    MessageTemplate.create(
+      templateId = "childcare_taxfree_england_B",
+      fromAddress = childcareAddress,
+      service = Childcare,
+      subject = "Apply for Tax-Free Childcare today",
+      plainTemplate = txt.childcareTaxFreeEngland_B.f,
+      htmlTemplate = html.childcareTaxFreeEngland_B.f),
+    MessageTemplate.create(
       templateId = "childcare_taxfree_devolved",
       fromAddress = childcareAddress,
       service = Childcare,
       subject = "Apply for Tax-Free Childcare today",
       plainTemplate = txt.childcareTaxFreeDevolved.f,
-      htmlTemplate = html.childcareTaxFreeDevolved.f)
+      htmlTemplate = html.childcareTaxFreeDevolved.f),
+    MessageTemplate.create(
+      templateId = "childcare_taxfree_devolved_A",
+      fromAddress = childcareAddress,
+      service = Childcare,
+      subject = "Apply for Tax-Free Childcare today",
+      plainTemplate = txt.childcareTaxFreeDevolved_A.f,
+      htmlTemplate = html.childcareTaxFreeDevolved_A.f),
+    MessageTemplate.create(
+      templateId = "childcare_taxfree_devolved_B",
+      fromAddress = childcareAddress,
+      service = Childcare,
+      subject = "Apply for Tax-Free Childcare today",
+      plainTemplate = txt.childcareTaxFreeDevolved_B.f,
+      htmlTemplate = html.childcareTaxFreeDevolved_B.f)
   )
 }
