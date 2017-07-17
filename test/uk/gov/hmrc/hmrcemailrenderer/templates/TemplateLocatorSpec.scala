@@ -94,6 +94,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "generic_access_invitation_template_id",
         "cato_access_invitation_template_id",
         "agents_access_invitation_template_id",
+        "agent-mapping-invitation-template-id",
+        "agent-subscription-invitation-template-id",
         "agents_opt_in_exclude_template_id",
         "agents_opt_in_rejoin_template_id",
         "tamc_access_invitation_template_id",

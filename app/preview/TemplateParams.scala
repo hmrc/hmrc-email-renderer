@@ -292,6 +292,14 @@ object TemplateParams {
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "agent-mapping-invitation-template-id" -> Map(
+      "name" -> "Mr Joe Bloggs",
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "agent-subscription-invitation-template-id" -> Map(
+      "name" -> "Mr Joe Bloggs",
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "agents_opt_in_exclude_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
