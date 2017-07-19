@@ -53,6 +53,24 @@ object PasscodesTemplates {
       plainTemplate = txt.agentVerificationEmail.f,
       htmlTemplate = html.agentVerificationEmail.f),
     MessageTemplate.create(
+      templateId = "agent_mapping_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = Agent,
+      subject = "Your HMRC service test link - adding existing Self Assessment clients to an Agent Services account",
+      plainTemplate = txt.agentMappingInvitation.f,
+      htmlTemplate = html.agentMappingInvitation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_subscription_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = Agent,
+      subject = "Your HMRC service test link - creating an Agent Services Account",
+      plainTemplate = txt.agentSubscriptionInvitation.f,
+      htmlTemplate = html.agentSubscriptionInvitation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "generic_access_invitation_template_id",
       fromAddress = govUkTeamAddress,
       service = Generic,
