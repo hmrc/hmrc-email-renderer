@@ -60,7 +60,8 @@ object PasscodesTemplates {
       plainTemplate = txt.agentMappingInvitation.f,
       htmlTemplate = html.agentMappingInvitation.f,
       priority = Some(MessagePriority.Urgent)
-    ),MessageTemplate.create(
+    ),
+    MessageTemplate.create(
       templateId = "agent-subscription-invitation-template-id",
       fromAddress = govUkTeamAddress,
       service = Agent,
