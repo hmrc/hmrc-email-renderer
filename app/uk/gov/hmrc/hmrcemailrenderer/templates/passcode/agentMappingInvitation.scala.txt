@@ -10,4 +10,4 @@ Click on this unique link to access the service. Don't give it to anyone else.
 
 @{params("verificationLink")}
 
-From HMRC
+From the HMRC Digital team
