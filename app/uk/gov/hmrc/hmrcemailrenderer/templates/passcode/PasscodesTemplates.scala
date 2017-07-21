@@ -71,6 +71,15 @@ object PasscodesTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "agent_fi_invitation_template_id",
+      fromAddress = govUkTeamAddress,
+      service = Agent,
+      subject = "Your HMRC service test link - Agents for Individuals",
+      plainTemplate = txt.agentForIndividualsInvitation.f,
+      htmlTemplate = html.agentForIndividualsInvitation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "generic_access_invitation_template_id",
       fromAddress = govUkTeamAddress,
       service = Generic,
