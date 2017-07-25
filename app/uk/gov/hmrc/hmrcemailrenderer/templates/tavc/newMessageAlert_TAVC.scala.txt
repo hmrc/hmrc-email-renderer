@@ -1,0 +1,20 @@
+@(params: Map[String, Any])You’ve got a new message from HMRC about Tax Advantaged Venture Capital
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.informalSalutationFrom
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, Some(informalSalutationFrom(params)))
+
+You have a new message from HMRC about Tax Advantaged Venture Capital.
+
+To view it, sign in to your TAVC HMRC online account.
+
+For security reasons, we have not included a link with this email.
+
+Why you got this email
+
+TAVC communications are sent to your secure inbox.
+
+This means we send you an email to let you know you have a new message in your account.
+
+From HMRC TAVC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

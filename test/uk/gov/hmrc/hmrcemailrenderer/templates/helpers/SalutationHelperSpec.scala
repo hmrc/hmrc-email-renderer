@@ -74,4 +74,57 @@ class SalutationHelperSpec extends UnitSpec {
       }
     }
 
+  "The informal salutation" should {
+
+    "be Dear Customer when having no name" in {
+      informalSalutationFrom(Map()) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having name.forename only" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "GEOFF")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having name.title and name.forename only" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having name.title and name.surname only" in {
+      informalSalutationFrom(Map("recipientName_surname" -> "FISHER")) should be("Dear Customer")
+    }
+
+    "be respected when having apostrophied surname" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "PAT", "recipientName_surname" -> "O'maLLey")) should be("Dear Pat O'Malley")
+    }
+
+    "be respected when having hyphenated surname" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "COLIN", "recipientName_surname" -> "FISHER-PriCE")) should be("Dear Colin Fisher-Price")
+    }
+
+    "be respected when having name.title name.surname	Dear Customer" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER")) should be("Dear Customer")
+    }
+
+    "be respected when having name.title name.forename name.surname	Dear [name.title] [name.forename] [name.surname]" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER")) should be("Dear Geoff Fisher")
+    }
+    "be respected when having name.forename name.surname name.honours	Dear [name.forename] [name.surname] [name.honours]" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")) should be("Dear Geoff Fisher")
+    }
+    "be respected when having name.forename name.secondForename name.surname name.honours	Dear [name.forename] [name.secondForename] [name.surname] [name.honours]" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "GEOFF", "recipientName_secondForename" -> "BOB", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")) should be("Dear Geoff Fisher")
+    }
+    "be respected when having name.title name.surname name.honours	Dear Customer" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")) should be("Dear Customer")
+    }
+    "be respected when having name.title name.forename name.surname name.honours	Dear [name.title] [name.forename] [name.surname] [name.honours]" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")) should be("Dear Geoff Fisher")
+    }
+    "be respected when having name.title name.forename name.secondForename name.surname	Dear [name.title] [name.forename] [name.secondForename] [name.surname]" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_secondForename" -> "BOB", "recipientName_surname" -> "FISHER")) should be("Dear Geoff Fisher")
+    }
+    "be respected when having name.title name.forename name.secondForename name.surname name.honours	Dear [name.title] [name.forename] [name.secondForename] [name.surname] [name.honours]" in {
+      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_secondForename" -> "BOB", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")) should be("Dear Geoff Fisher")
+    }
+  }
+
 }
