@@ -44,6 +44,7 @@ object ServiceIdentifier {
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
   case object SecurityConsole extends ServiceIdentifier { override val name = "security-console" }
   case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
+  case object TaxAdvantagedVentureCapital extends ServiceIdentifier { override val name = "tavc" }
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
   case object Mandate extends ServiceIdentifier { override val name = "agent-client-mandate" }

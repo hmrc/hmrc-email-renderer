@@ -39,4 +39,16 @@ object SalutationHelper {
       case _ => "Dear Customer"
     }
   }
+
+  def informalSalutationFrom(params: Map[String, Any]): String = {
+    val salutationParams: List[Option[String]] = List(
+      capitalised(params.get("recipientName_forename")),
+      capitalised(params.get("recipientName_surname"))
+    )
+
+    salutationParams match {
+      case List(Some(forename), Some(surname)) => s"Dear $forename $surname"
+      case _ => "Dear Customer"
+    }
+  }
 }
