@@ -28,7 +28,7 @@ object TavcTemplates {
       templateId = "newMessageAlert_TAVC",
       fromAddress = defaultFromAddress,
       service = TaxAdvantagedVentureCapital,
-      subject = "HMRC electronic communications: Message",
+      subject = "HMRC electronic communications: TAVC Message",
       plainTemplate = txt.newMessageAlert_TAVC.f,
       htmlTemplate  = html.newMessageAlert_TAVC.f
     )
