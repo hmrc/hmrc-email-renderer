@@ -223,7 +223,8 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("newMessageAlert_SS300", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
       ("newMessageAlert_SA300", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
       ("newMessageAlert_SA309", Map("recipientName_forename" -> "Ms Jane Doe")),                               // DC-839: move from Background because of SA316
-      ("tax_estimate_message_alert", Map("fullName" -> "myName"))         // DC-839: move from Background because of SA316
+      ("tax_estimate_message_alert", Map("fullName" -> "myName")),         // DC-839: move from Background because of SA316
+      ("newMessageAlert_TAVC", Map("recipientName_forename" -> "Jane", "recipientName_surname" -> "Doe"))
     )
   }
 }

@@ -102,6 +102,7 @@ object TemplateParams {
     ) ++ newMessageAlert_Names),
 
     "newMessageAlert_SA309" -> newMessageAlert_Names,
+    "newMessageAlert_TAVC" -> newMessageAlert_Names,
 
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId

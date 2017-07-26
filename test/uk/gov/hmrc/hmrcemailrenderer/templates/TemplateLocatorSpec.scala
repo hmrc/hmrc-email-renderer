@@ -61,7 +61,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Customs",
         "Transaction Engine",
         "ATED",
-        "ITR"
+        "ITR",
+        "TAVC"
       )
     }
 
@@ -319,7 +320,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "change_details_return_submit",
         "disposal_return_submit",
         "emac_helpdesk_failure_confirmation_email",
-        "emac_helpdesk_successful_confirmation_email"
+        "emac_helpdesk_successful_confirmation_email",
+        "newMessageAlert_TAVC"
         )
     }
   }
