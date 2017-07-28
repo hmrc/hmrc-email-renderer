@@ -33,7 +33,7 @@ class TavcTemplateContentComparisonSpec extends PlaySpec with TemplateComparison
         "recipientName_surname" -> "b",
         "recipientName_honours" -> "c"
       ) ++ commonParameters
-      assert(compareContent("newMessageAlert_TAVC", params)(tavcTemplate), "Contents of Html and Txt messages should match")
+      compareContent("newMessageAlert_TAVC", params)(tavcTemplate)
     }
   }
 }

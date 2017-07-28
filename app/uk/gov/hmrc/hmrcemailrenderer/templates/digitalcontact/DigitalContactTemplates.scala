@@ -23,6 +23,32 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 object DigitalContactTemplates {
   val defaultFromAddress = FromAddress.noReply("HMRC digital")
 
+  val templatesToMapToNewMessageAlert = Seq(
+    "R002A",
+    "SA251",
+    "SA326D",
+    "SA328D",
+    "SA359",
+    "SA370",
+    "SA371",
+    "SA372",
+    "SA373",
+    "IgnorePaperFiling",
+    "CA001"
+  )
+
+  val newMessageAlertTemplates: Seq[MessageTemplate] =
+    templatesToMapToNewMessageAlert.map {
+      formId =>  MessageTemplate.create(
+              templateId = s"newMessageAlert_$formId",
+              fromAddress = defaultFromAddress,
+              service = SelfAssessment,
+              subject = "HMRC paperless notifications: new message",
+              plainTemplate = txt.newMessageAlert.f,
+              htmlTemplate = html.newMessageAlert.f)
+    }
+
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "verifyEmailAddress",
@@ -115,5 +141,5 @@ object DigitalContactTemplates {
       htmlTemplate = html.newMessageAlertSA316_A.f,
       priority = Some(MessagePriority.Background)
     )
-  )
+  ) ++ newMessageAlertTemplates
 }
