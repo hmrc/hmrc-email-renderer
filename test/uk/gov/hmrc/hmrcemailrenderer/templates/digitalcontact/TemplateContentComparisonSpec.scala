@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.joda.time.LocalDate
 import org.joda.time.format.DateTimeFormat
+import org.scalatest.Matchers
 import org.scalatestplus.play.{OneAppPerSuite, PlaySpec}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
 
