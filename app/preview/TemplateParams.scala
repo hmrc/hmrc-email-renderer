@@ -283,6 +283,10 @@ object TemplateParams {
       "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation" -> "true"
     ),
+    "dfs_admin_notification" -> Map(
+      "paragraphOne" -> "Hello,",
+      "paragraphTwo" -> "There are parked submissions that require reviewing within the Child benefit admin tool. Please review within 5 days of the first email. You will continue to receive an email notification for each day a parked submission is in waiting."
+    ),
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
