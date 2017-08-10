@@ -141,6 +141,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_submission_success_sptu_2015",
         "dfs_submission_success_generic_2015",
         "dfs_submission_success_empty_turn_around_time_2015",
+        "dfs_admin_notification",
         "cc_registration_email",
         "childcare_registration_email",
         "childcare_schemes_interest_email",
