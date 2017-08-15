@@ -284,8 +284,11 @@ object TemplateParams {
       "warningInformation" -> "true"
     ),
     "dfs_admin_notification" -> Map(
-      "paragraphOne" -> "Hello,",
-      "paragraphTwo" -> "There are parked submissions that require reviewing within the Child benefit admin tool. Please review within 5 days of the first email. You will continue to receive an email notification for each day a parked submission is in waiting."
+      "paragraphOne" -> "Dear colleague,",
+      "paragraphTwo" -> "There are parked submissions in the Child Benefit admin dashboard that need to be reviewed.",
+      "paragraphThree" -> "To view the submissions, sign in to your HMRC Child Benefit admin account.",
+      "paragraphFour" -> "For security reasons, we have not included a link with this email.",
+      "paragraphFive" -> "Please review parked submissions within 5 days of the first email. You will receive an email notification each day a submission is waiting."
     ),
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId

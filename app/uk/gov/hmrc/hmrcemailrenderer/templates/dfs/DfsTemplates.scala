@@ -72,7 +72,7 @@ object DfsTemplates {
       templateId = "dfs_admin_notification",
       fromAddress = govUkTeamAddress,
       service = DigitalFormsService,
-      subject = "Parked Submission Notification",
+      subject = "You’ve got a new message from HMRC Child Benefit admin",
       plainTemplate = txt.dfsAdminNotificationEmail.f,
       htmlTemplate = html.dfsAdminNotificationEmail.f,
       priority = Some(MessagePriority.Urgent)

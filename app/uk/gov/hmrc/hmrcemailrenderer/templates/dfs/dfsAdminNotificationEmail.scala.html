@@ -9,7 +9,21 @@
             params("paragraphTwo")
         }</p>
         }
-
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">HM Revenue and Customs</p>
+    @if(params.isDefinedAt("paragraphThree")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphThree")
+        }</p>
+    }
+    @if(params.isDefinedAt("paragraphFour")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphFour")
+        }</p>
+    }
+    @if(params.isDefinedAt("paragraphFive")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphFive")
+        }</p>
+    }
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Child Benefit admin</p>
 
 }
