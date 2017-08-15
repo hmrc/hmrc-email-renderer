@@ -1,29 +1,11 @@
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
-    @if(params.isDefinedAt("paragraphOne")) {
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-            params("paragraphOne")
-        }</p>
-        }
-    @if(params.isDefinedAt("paragraphTwo")) {
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-            params("paragraphTwo")
-        }</p>
-        }
-    @if(params.isDefinedAt("paragraphThree")) {
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-            params("paragraphThree")
-        }</p>
-    }
-    @if(params.isDefinedAt("paragraphFour")) {
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-            params("paragraphFour")
-        }</p>
-    }
-    @if(params.isDefinedAt("paragraphFive")) {
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-            params("paragraphFive")
-        }</p>
-    }
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Child Benefit admin</p>
 
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear colleague,</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">There are parked submissions in the Child Benefit admin dashboard that need to be reviewed.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">To view the submissions, sign in to your HMRC Child Benefit admin account.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link with this email. </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Please review parked submissions within 5 days of the first email. You will receive an email notification each day a submission is waiting. </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Child Benefit admin</p>
 }

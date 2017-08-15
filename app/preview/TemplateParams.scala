@@ -283,13 +283,7 @@ object TemplateParams {
       "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation" -> "true"
     ),
-    "dfs_admin_notification" -> Map(
-      "paragraphOne" -> "Dear colleague,",
-      "paragraphTwo" -> "There are parked submissions in the Child Benefit admin dashboard that need to be reviewed.",
-      "paragraphThree" -> "To view the submissions, sign in to your HMRC Child Benefit admin account.",
-      "paragraphFour" -> "For security reasons, we have not included a link with this email.",
-      "paragraphFive" -> "Please review parked submissions within 5 days of the first email. You will receive an email notification each day a submission is waiting."
-    ),
+    "dfs_admin_notification" -> Map.empty[String,String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
