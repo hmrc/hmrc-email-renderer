@@ -1,11 +1,12 @@
 @(params: Map[String, Any])
 
-@if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}}
-@if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}}
-@if(params.isDefinedAt("paragraphThree")) {@{params("paragraphThree")}}
-@if(params.isDefinedAt("paragraphFour")) {@{params("paragraphFour")}}
-@if(params.isDefinedAt("paragraphFive")) {@{params("paragraphFive")}} 
-From HMRC Child Benefit admin
+Dear colleague,
 
+There are parked submissions in the Child Benefit admin dashboard that need to be reviewed.
+To view the submissions, sign in to your HMRC Child Benefit admin account.
+For security reasons, we have not included a link with this email.
+Please review parked submissions within 5 days of the first email. You will receive an email notification each day a submission is waiting.
+ 
+From HMRC Child Benefit admin
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
