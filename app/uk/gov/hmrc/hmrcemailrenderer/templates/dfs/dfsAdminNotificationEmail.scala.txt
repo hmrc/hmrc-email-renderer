@@ -2,8 +2,10 @@
 
 @if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}}
 @if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}}
- 
-HM Revenue and Customs
+@if(params.isDefinedAt("paragraphThree")) {@{params("paragraphThree")}}
+@if(params.isDefinedAt("paragraphFour")) {@{params("paragraphFour")}}
+@if(params.isDefinedAt("paragraphFive")) {@{params("paragraphFive")}} 
+From HMRC Child Benefit admin
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
