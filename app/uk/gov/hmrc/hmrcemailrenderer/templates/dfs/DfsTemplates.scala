@@ -67,6 +67,15 @@ object DfsTemplates {
       plainTemplate = txt.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f,
       htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dfs_admin_notification",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = "You’ve got a new message from HMRC Child Benefit admin",
+      plainTemplate = txt.dfsAdminNotificationEmail.f,
+      htmlTemplate = html.dfsAdminNotificationEmail.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
