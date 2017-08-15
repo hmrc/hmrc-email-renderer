@@ -283,6 +283,7 @@ object TemplateParams {
       "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation" -> "true"
     ),
+    "dfs_admin_notification" -> Map.empty[String,String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
