@@ -274,17 +274,6 @@ object TemplateParams {
       "warningInformation" -> "true",
       "turnAroundTime" -> "35 days"
     ),
-    "dfs_submission_success_generic_2017" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
-      "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "paragraphThree" -> "Some extra content for paragraph three...",
-      "warningInformation" -> "false",
-      "turnAroundTime" -> "35 days"
-    ),
     "dfs_submission_success_empty_turn_around_time_2015" -> Map(
       "subject" -> "Test Subject",
       "greeting" -> "Mr Joe Bloggs",
@@ -1032,6 +1021,10 @@ object TemplateParams {
     "disposal_return_submit" -> Map(
       "company_name" -> "Acme Limited",
       "date" -> "23 September 2017"
+    ),
+    "lisa_application_submit" -> Map(
+      "application_reference" -> "ABC1234567890",
+      "email" -> "lisaTest@test.com"
     ),
     "emac_helpdesk_failure_confirmation_email" -> Map(
       "service_name" -> "Self Assessment (SA)",
