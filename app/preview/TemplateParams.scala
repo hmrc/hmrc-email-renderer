@@ -274,6 +274,17 @@ object TemplateParams {
       "warningInformation" -> "true",
       "turnAroundTime" -> "35 days"
     ),
+    "dfs_submission_success_generic_2017" -> Map(
+      "subject" -> "Test Subject",
+      "greeting" -> "Mr Joe Bloggs",
+      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree" -> "Some extra content for paragraph three...",
+      "warningInformation" -> "false",
+      "turnAroundTime" -> "35 days"
+    ),
     "dfs_submission_success_empty_turn_around_time_2015" -> Map(
       "subject" -> "Test Subject",
       "greeting" -> "Mr Joe Bloggs",
