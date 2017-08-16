@@ -58,6 +58,14 @@ object DfsTemplates {
       plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric.f,
       htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric.f,
       priority = Some(MessagePriority.Urgent)
+    ), MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_generic_2017",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric3Paragraphs.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric3Paragraphs.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "dfs_submission_success_empty_turn_around_time_2015",
