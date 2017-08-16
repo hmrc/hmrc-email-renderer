@@ -61,6 +61,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Customs",
         "Transaction Engine",
         "ATED",
+        "LifetimeISA",
         "ITR",
         "TAVC"
       )
@@ -140,7 +141,6 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_submission_success_cis_2015",
         "dfs_submission_success_sptu_2015",
         "dfs_submission_success_generic_2015",
-        "dfs_submission_success_generic_2017",
         "dfs_submission_success_empty_turn_around_time_2015",
         "dfs_admin_notification",
         "cc_registration_email",
@@ -329,6 +329,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "chargeable_return_submit",
         "relief_return_submit",
         "amended_return_submit",
+        "lisa_application_submit",
         "further_return_submit",
         "change_details_return_submit",
         "disposal_return_submit",

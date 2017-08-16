@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+
+Lifetime ISA Application
+
+Your application to be become an approved Lifetime ISA Manager will be reviewed by HM Revenue and Customs. Your application reference is @{params("application_reference").toString}
+
+The review process can take up to 14 days. We will send another email to @{params("email").toString} when the decision has been made.
+
+From HMRC Savings Audit Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
