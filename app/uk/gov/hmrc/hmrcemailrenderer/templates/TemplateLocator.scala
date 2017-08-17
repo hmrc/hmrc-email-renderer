@@ -70,7 +70,7 @@ trait TemplateLocator {
         "Customs"                    -> CustomsTemplates.templates,
         "Transaction Engine"         -> TransactionEngineTemplates.templates,
         "ATED"                       -> AtedTemplates.templates,
-        "LifetiemISA"                -> LisaTemplates.templates,
+        "LifetimeISA"                -> LisaTemplates.templates,
         "ITR"                        -> ItrTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
