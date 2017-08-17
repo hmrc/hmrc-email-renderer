@@ -1033,6 +1033,10 @@ object TemplateParams {
       "company_name" -> "Acme Limited",
       "date" -> "23 September 2017"
     ),
+    "lisa_application_submit" -> Map(
+      "application_reference" -> "ABC1234567890",
+      "email" -> "lisaTest@test.com"
+    ),
     "emac_helpdesk_failure_confirmation_email" -> Map(
       "service_name" -> "Self Assessment (SA)",
       "full_name" -> "Troy Barnes",
