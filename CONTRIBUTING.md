@@ -117,6 +117,6 @@ From HMRC Self Assessment
 Once you've got your code changes done and a pull request created, it's time to get it pushed to production. Here's how:
 
 1. Create a story for project "Digital Contact (DC)" in Jira with details of the pull request and what it's for
-2. Tag our scrum-master [~tim.garbett] in the ticket, so we can get it prioritised for you
+2. Tag our scrum-master [~mo.pledger] in the ticket, so we can get it prioritised for you
 3. Join Slack channel #team-digital-contact to ask about progress and/or ask questions
 4. Our QA's will contact you when the they have merged and deployed to QA so you can check you are happy before we create a release ticket
