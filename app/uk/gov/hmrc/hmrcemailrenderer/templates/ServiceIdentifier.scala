@@ -33,6 +33,7 @@ object ServiceIdentifier {
   case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
   case object CorporationTax extends ServiceIdentifier { override val name  = "ct" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
+  case object Eeitt extends ServiceIdentifier {override val name = "eeitt"}
   case object FriendsAndFamily extends ServiceIdentifier { override val name = "fandf" }
   case object GovernmentGateway extends ServiceIdentifier { override val name = "gg" }
   case object GuaranteedMinimumPension extends ServiceIdentifier { override val name = "gmp" }

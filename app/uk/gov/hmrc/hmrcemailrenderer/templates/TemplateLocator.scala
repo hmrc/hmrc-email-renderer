@@ -40,7 +40,11 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
+<<<<<<< HEAD
 import uk.gov.hmrc.hmrcemailrenderer.templates.lisa.LisaTemplates
+=======
+import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
+>>>>>>> Added the eeitt submission confirmation and the text and html templates for it
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tavc.TavcTemplates
 
@@ -72,6 +76,8 @@ trait TemplateLocator {
         "ATED"                       -> AtedTemplates.templates,
         "LifetimeISA"                -> LisaTemplates.templates,
         "ITR"                        -> ItrTemplates.templates)
+        "ITR"                        -> ItrTemplates.templates,
+        "EEITT"                      -> EeittTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 
