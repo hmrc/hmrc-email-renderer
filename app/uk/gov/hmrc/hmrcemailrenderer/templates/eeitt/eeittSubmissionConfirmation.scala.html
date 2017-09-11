@@ -1,0 +1,7 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Thank you for your submission"){
+<p style="margin: 0 0 30px; font-size: 19px;">Submission date: @{params("submissionDate")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Reference number: @{params("refNumber")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You should contact: @{params("contactInfo")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can call @{params("telephoneNumber")} for help</p>
+}
