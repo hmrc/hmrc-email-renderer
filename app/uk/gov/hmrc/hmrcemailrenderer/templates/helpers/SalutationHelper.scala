@@ -30,8 +30,8 @@ object SalutationHelper {
 
   def salutationFrom(params: Map[String, Any]): String = {
     val salutationParams: List[Option[String]] = List(
-      capitalised(params.get("recipientName_title")),
-      capitalised(params.get("recipientName_surname"))
+      capitalised(params.getNonEmpty("recipientName_title")),
+      capitalised(params.getNonEmpty("recipientName_surname"))
     )
 
     salutationParams match {
@@ -42,13 +42,22 @@ object SalutationHelper {
 
   def informalSalutationFrom(params: Map[String, Any]): String = {
     val salutationParams: List[Option[String]] = List(
-      capitalised(params.get("recipientName_forename")),
-      capitalised(params.get("recipientName_surname"))
+      capitalised(params.getNonEmpty("recipientName_forename")),
+      capitalised(params.getNonEmpty("recipientName_surname"))
     )
 
     salutationParams match {
       case List(Some(forename), Some(surname)) => s"Dear $forename $surname"
       case _ => "Dear Customer"
+    }
+  }
+
+  private implicit class ParamsOps(params: Map[String,Any]){
+    def getNonEmpty(key: String): Option[Any] = {
+      params.get(key) match {
+        case Some(value) if value.toString.trim.length > 0 => Some(value)
+        case _ => None
+      }
     }
   }
 }
