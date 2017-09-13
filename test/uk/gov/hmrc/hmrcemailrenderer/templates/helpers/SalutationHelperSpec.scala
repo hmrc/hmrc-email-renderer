@@ -39,6 +39,14 @@ class SalutationHelperSpec extends UnitSpec {
         salutationFrom(Map("recipientName_surname" -> "FISHER")) should be("Dear Customer")
       }
 
+      "be Dear Customer when having empty title" in {
+        salutationFrom(Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey")) should be("Dear Customer")
+      }
+
+      "be Dear Customer when having empty surname" in {
+        salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "  ")) should be("Dear Customer")
+      }
+
       "be respected when having apostrophied surname" in {
         salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "O'maLLey")) should be("Dear Mr O'Malley")
       }
@@ -90,6 +98,14 @@ class SalutationHelperSpec extends UnitSpec {
 
     "be Dear Customer when having name.title and name.surname only" in {
       informalSalutationFrom(Map("recipientName_surname" -> "FISHER")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having empty forname" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "", "recipientName_surname" -> "O'maLLey")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having empty surname" in {
+      informalSalutationFrom(Map("recipientName_forename" -> "PAT", "recipientName_surname" -> "")) should be("Dear Customer")
     }
 
     "be respected when having apostrophied surname" in {
