@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.eeitt
 
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Eeitt
 
 object EeittTemplates {
@@ -29,7 +29,8 @@ object EeittTemplates {
       service = Eeitt,
       subject = "Thank you for your submission",
       plainTemplate = txt.eeittSubmissionConfirmation.f,
-      htmlTemplate = html.eeittSubmissionConfirmation.f
+      htmlTemplate = html.eeittSubmissionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
