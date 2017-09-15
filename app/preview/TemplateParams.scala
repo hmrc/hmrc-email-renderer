@@ -305,6 +305,9 @@ object TemplateParams {
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "cbcr_subscription" -> Map(
+      "cbcrId" -> "XGCBC0000000001"
+    ),
     "agent_mapping_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
