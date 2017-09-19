@@ -306,6 +306,8 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "cbcr_subscription" -> Map(
+      "f_name" -> "Tyrion",
+      "s_name" -> "Lannister",
       "cbcrId" -> "XGCBC0000000001"
     ),
     "agent_mapping_invitation_template_id" -> Map(
