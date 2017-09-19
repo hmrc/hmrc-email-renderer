@@ -1,0 +1,9 @@
+@(params: Map[String, Any]) Thanks for the submission. This is a test email, should you receive it ignore it
+Submission date: @{params("submissionDate")}
+
+Reference number: @{params("refNumber")}
+
+You should contact: @{params("contactInfo")}
+
+You can call @{params("telephoneNumber")} for help
+
