@@ -1046,6 +1046,12 @@ object TemplateParams {
       "service_name" -> "Alcohol and Tobacco Warehousing Declarations (ATWD)",
       "full_name" -> "Abed Nadir",
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
+    ),
+    "eeitt_submission_confirmation" -> Map(
+      "submissionDate" -> "25/12/2016",
+      "refNumber" -> "XTAL00000100001",
+      "contactInfo" -> "Speak to the help desk",
+      "telephoneNumber" -> "07777734333"
     )
   )
 }
