@@ -1059,6 +1059,7 @@ object TemplateParams {
     ),
     "eeitt_submission_confirmation" -> Map(
       "submissionDate" -> "25/12/2016",
+      "submissionTime" -> "12:12:06",
       "refNumber" -> "XTAL00000100001",
       "contactInfo" -> "Speak to the help desk",
       "telephoneNumber" -> "07777734333"
