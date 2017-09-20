@@ -64,6 +64,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "LifetimeISA",
         "ITR",
         "TAVC",
+        "CBCR",
         "EEITT"
       )
     }
@@ -338,7 +339,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "disposal_return_submit",
         "emac_helpdesk_failure_confirmation_email",
         "emac_helpdesk_successful_confirmation_email",
-        "newMessageAlert_TAVC"
+        "newMessageAlert_TAVC",
+        "cbcr_subscription"
         )
     }
   }
