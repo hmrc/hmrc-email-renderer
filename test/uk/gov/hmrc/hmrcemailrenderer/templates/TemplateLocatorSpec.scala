@@ -64,7 +64,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "LifetimeISA",
         "ITR",
         "TAVC",
-        "CBCR"
+        "CBCR",
+        "EEITT"
       )
     }
 
@@ -145,6 +146,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_submission_success_generic_2017",
         "dfs_submission_success_empty_turn_around_time_2015",
         "dfs_admin_notification",
+        "eeitt_submission_confirmation",
         "cc_registration_email",
         "childcare_registration_email",
         "childcare_schemes_interest_email",
