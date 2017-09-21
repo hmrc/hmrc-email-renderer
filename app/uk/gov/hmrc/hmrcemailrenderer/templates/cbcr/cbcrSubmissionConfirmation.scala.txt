@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 params("received_at")
-Dear params("f_name") params("s_name")
+Dear params("name")
 You can use this digital signature as a receipt for the country-by-country report you've sent:
 params("hash")
 What happens next?
