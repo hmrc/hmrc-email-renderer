@@ -208,7 +208,8 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("transactionEngineHMRCVATDECTILFailure", Map("receivedDate" -> "01/01/01","identifier" -> "12345","subject" -> "subject")),
       ("emac_helpdesk_failure_confirmation_email", Map("service_name" -> "Self Assessment (SA)", "full_name" -> "Troy Barnes", "correlation_id" -> "H5JK4ITURY84783HJ345HJ345HJ342N3")),
       ("emac_helpdesk_successful_confirmation_email", Map("service_name" -> "Alcohol and Tobacco Warehousing Declarations (ATWD)", "full_name" -> "Abed Nadir", "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783")),
-      ("cbcr_subscription", Map("f_name" -> "Tyrion", "s_name" -> "Lannister", "cbcrId" -> "XGCBC0000000001"))
+      ("cbcr_subscription", Map("f_name" -> "Tyrion", "s_name" -> "Lannister", "cbcrId" -> "XGCBC0000000001")),
+      ("cbcr_report_confirmation" , Map("f_name" -> "Tyrion", "s_name" -> "Lannister", "received_at" -> "31 December 2017", "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6"))
     )
 
     val background = Table[String, Map[String, String]](
