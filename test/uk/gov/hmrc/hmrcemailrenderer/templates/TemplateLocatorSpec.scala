@@ -340,7 +340,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "emac_helpdesk_failure_confirmation_email",
         "emac_helpdesk_successful_confirmation_email",
         "newMessageAlert_TAVC",
-        "cbcr_subscription"
+        "cbcr_subscription",
+        "cbcr_report_confirmation"
         )
     }
   }

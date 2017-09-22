@@ -29,7 +29,16 @@ object CBCRTemplates {
     subject = "Confirmation of your country-by-country registration ID",
     plainTemplate = txt.cbcrCbcIDReceived.f,
     htmlTemplate = html.cbcrCbcIDReceived.f,
+    priority = Some(MessagePriority.Urgent))
+  ,
+  MessageTemplate.create(
+    templateId = "cbcr_report_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = CountryByCountryReporting,
+    subject = "Confirmation that your country-by-country report has been received",
+    plainTemplate = txt.cbcrSubmissionConfirmation.f,
+    htmlTemplate = html.cbcrSubmissionConfirmation.f,
     priority = Some(MessagePriority.Urgent)
-  )
-  )
+  ))
+
 }
