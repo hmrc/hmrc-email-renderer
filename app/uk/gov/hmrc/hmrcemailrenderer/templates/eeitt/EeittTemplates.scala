@@ -27,7 +27,7 @@ object EeittTemplates {
       templateId = "eeitt_submission_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Thank you for your submission",
+      subject = "Confirmation",
       plainTemplate = txt.eeittSubmissionConfirmation.f,
       htmlTemplate = html.eeittSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)

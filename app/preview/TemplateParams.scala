@@ -1058,11 +1058,7 @@ object TemplateParams {
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
     ),
     "eeitt_submission_confirmation" -> Map(
-      "submissionDate" -> "25/12/2016",
-      "submissionTime" -> "12:12:06",
-      "refNumber" -> "XTAL00000100001",
-      "contactInfo" -> "Speak to the help desk",
-      "telephoneNumber" -> "07777734333"
+      "" -> ""
     )
   )
 }
