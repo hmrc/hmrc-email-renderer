@@ -1,9 +1,12 @@
-@(params: Map[String, Any]) Thanks for the submission. This is a test email, should you receive it ignore it
-Submission date: @{params("submissionDate")}
+@(params: Map[String, Any])This is a test email only.
 
-Reference number: @{params("refNumber")}
+Dear Customer
 
-You should contact: @{params("contactInfo")}
 
-You can call @{params("telephoneNumber")} for help
+This is a confirmation of your submission to
+HMRC.
+
+Thank you.
+
+HMRC submissions team
 
