@@ -1,4 +1,7 @@
 @(params: Map[String, Any]) This is a test email, should you receive it please ignore it
+
+Dear customer
+
 This is a confirmation of your submission to
 HMRC.
 
