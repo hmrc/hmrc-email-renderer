@@ -5,6 +5,6 @@ You can use this digital signature as a receipt for the country-by-country repor
 params("hash")
 What happens next?
 
-We'll check this information in your report and contact you if there are any issues.
+We'll check the information in your report and contact you if there are any issues.
 
 From HMRC Country-by-Country Reporting
