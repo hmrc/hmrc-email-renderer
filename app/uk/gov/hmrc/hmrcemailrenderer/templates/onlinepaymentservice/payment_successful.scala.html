@@ -1,0 +1,55 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC payment confirmation") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your payment has been received by HMRC.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you have an online tax account, your payment will take 3 to 5 days to show in your account.</p>
+
+<table width="100%" cellspacing="0" cellpadding="0" style="text-align:left;">
+
+    <tbody>
+
+        <tr>
+            <th>Tax</th>
+            <td>@params("taxType")</td>
+        </tr>
+
+        <tr>
+            <th>Tax reference</th>
+            <td>@params("taxReference")</td>
+        </tr>
+
+        <tr>
+            <th>Payment reference</th>
+            <td>@params("paymentReference")</td>
+        </tr>
+
+        <tr>
+            <th>Amount paid</th>
+            <td>£@params("amountPaid")</td>
+        </tr>
+
+        @params.get("commission").map { commission =>
+            <tr>
+                <th>Credit card fee</th>
+                <td>£@commission</td>
+            </tr>
+        }
+
+        @params.get("totalPaid").map { totalPaid =>
+            <tr>
+                <th>Total paid</th>
+                <td>£@totalPaid</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+</br>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><h2>Why you got this email</h2></p>
+<p style="margin: 0 0 30px; font-size: 19px;">You chose to receive payment confirmation by email.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC online payments team</p>
+
+}
