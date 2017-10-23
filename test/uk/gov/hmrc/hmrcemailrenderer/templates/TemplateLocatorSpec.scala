@@ -65,7 +65,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ITR",
         "TAVC",
         "CBCR",
-        "EEITT"
+        "EEITT",
+        "OnlinePaymentService"
       )
     }
 
@@ -341,7 +342,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "emac_helpdesk_successful_confirmation_email",
         "newMessageAlert_TAVC",
         "cbcr_subscription",
-        "cbcr_report_confirmation"
+        "cbcr_report_confirmation",
+        "payment_successful"
         )
     }
   }
