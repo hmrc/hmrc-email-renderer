@@ -79,4 +79,5 @@ object ServiceIdentifier {
   case object EmacHelpdesk extends ServiceIdentifier { override val name = "emac-helpdesk" }
   case object LifetimeISA extends ServiceIdentifier { override val name = "lisa" }
   case object CountryByCountryReporting extends ServiceIdentifier { override val name = "cbcr" }
+  case object OnlinePaymentService extends ServiceIdentifier { override val name = "online-payment-service" }
 }
