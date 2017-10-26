@@ -1,10 +1,8 @@
 @(params: Map[String, Any])
 
-Dear Customer
+Dear Customer,
 
 Your payment has been received by HMRC.
-
-If you have an online tax account, your payment will take 3 to 5 days to show in your account.
 
 Tax: @params("taxType")
 Tax reference: @params("taxReference")
@@ -16,6 +14,8 @@ Credit card fee (non-refundable): £@commission
 @params.get("totalPaid").map { totalPaid =>
 Total paid: £@totalPaid
 }
+
+If you have an online tax account, your payment will take 3 to 5 days to show in your account.
 
 Why you got this email
 
