@@ -23,9 +23,9 @@ object OnlinePaymentServiceTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "payment_successful",
-      fromAddress = FromAddress.govUkTeamAddress,
+      fromAddress = FromAddress.noReply("Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC payment confirmation",
+      subject = "HMRC Payment confirmation",
       plainTemplate = txt.payment_successful.f,
       htmlTemplate = html.payment_successful.f,
       priority = Some(MessagePriority.Urgent))
