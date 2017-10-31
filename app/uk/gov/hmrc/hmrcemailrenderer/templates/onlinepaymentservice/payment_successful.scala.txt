@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Dear Customer,
+Dear Customer
 
 Your payment has been received by HMRC.
 
@@ -15,12 +15,12 @@ Credit card fee (non-refundable): £@commission
 Total paid: £@totalPaid
 }
 
-If you have an online tax account, your payment will take 3 to 5 days to show in your account.
+If you have an online tax account your payment will take 3 to 5 days to show in your account.
 
 Why you got this email
 
 You chose to receive payment confirmation by email.
 
-From HMRC online payments team
+From HMRC Online Payments
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
