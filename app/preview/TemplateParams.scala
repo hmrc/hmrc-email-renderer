@@ -298,6 +298,15 @@ object TemplateParams {
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "dfs_trusts_submission_success" -> Map(
+      "subject" -> "Trust/Estate email confirmation",
+      "greeting" -> "Mr Joe Bloggs",
+      "confirmation" -> "HM Revenue and Customs (HMRC) has received your registration of a trust",
+      "submissionReference" -> "XWTRN0000000875",
+      "paragraphOne" -> "There is no need to call us, we will contact you if we need any more information",
+      "warningInformation" -> "false",
+      "turnAroundTime" -> "15 days"
+    ),
     "cato_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
