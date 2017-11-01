@@ -23,7 +23,7 @@ object OnlinePaymentServiceTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "payment_successful",
-      fromAddress = FromAddress.noReply("Online Payments"),
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "HMRC Payment confirmation",
       plainTemplate = txt.payment_successful.f,
