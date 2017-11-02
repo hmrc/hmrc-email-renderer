@@ -84,6 +84,15 @@ object DfsTemplates {
       plainTemplate = txt.dfsAdminNotificationEmail.f,
       htmlTemplate = html.dfsAdminNotificationEmail.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_trusts_submission_success",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsTrustsSubmissionConfirmationEmail.f,
+      htmlTemplate = html.dfsTrustsSubmissionConfirmationEmail.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
