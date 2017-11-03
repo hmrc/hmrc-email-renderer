@@ -344,6 +344,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_TAVC",
         "cbcr_subscription",
         "cbcr_report_confirmation",
+        "cbcr_cbcid_regeneration",
         "payment_successful"
         )
     }
