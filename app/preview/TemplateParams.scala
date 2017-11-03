@@ -324,7 +324,13 @@ object TemplateParams {
       "received_at" -> "31 December 2017",
       "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6"
     ),
-    "agent_mapping_invitation_template_id" -> Map(
+     "cbcr_cbcid_regeneration" -> Map(
+      "f_name" -> "Tyrion",
+      "s_name" -> "Lannister",
+      "received_at" -> "31 December 2017",
+      "cbcrId" -> "XGCBC0000000001"
+    ),
+   "agent_mapping_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
