@@ -1,7 +1,7 @@
 @(params: Map[String, Any])
-Dear params("f_name") params("s_name")
+Dear @{params("f_name")} @{params("s_name")}
 Your registration is complete
-Your country-by-county Id is : params("cbcrId")
+Your country-by-county Id is : @{params("cbcrId")}
 Keep this ID safe, as you'll need it each time you send a report.
 Why you got this email
 
