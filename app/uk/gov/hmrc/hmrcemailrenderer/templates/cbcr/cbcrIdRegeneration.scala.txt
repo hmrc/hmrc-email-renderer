@@ -4,8 +4,10 @@ Dear @{params("f_name")} @{params("s_name")}
 Thank you for taking part in the private beta phase of the country-by-country digital service.
 Here is your new country-by-country ID, which replaces the one you created for private beta:
 @{params("cbcrId")}
+
 What happens next?
 
-Please keep this new country-by-country ID safe. From now on, you’ll need to use it each time you send a report.
+You’ll need to validate your new country-by-country ID
+Make sure you keep the ID safe, as you must use it from now on each time you send a country-by-country report.
 
 From HMRC Country-by-Country Reporting
