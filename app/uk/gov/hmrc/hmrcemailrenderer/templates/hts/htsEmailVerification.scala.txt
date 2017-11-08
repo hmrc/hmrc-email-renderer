@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+Verify your email address
+
+Dear @{params("name")}
+
+You received this email because you chose to provide a new email address for Help to Save.
+
+You'll need to verify your email address within the next 30 minutes.
+
+To verify your email address click the link below:
+
+@{params("verificationLink")}
+
+After 30 minutes this link will expire and you'll need to apply again from the start.
+
+From the HMRC Help to Save team.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

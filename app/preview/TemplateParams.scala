@@ -1080,6 +1080,11 @@ object TemplateParams {
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
       "amountPaid" -> "123.45",
       "commission" -> "2.55",
-      "totalPaid" -> "126.00")
+      "totalPaid" -> "126.00"
+    ),
+    "hts_verification_email" -> Map(
+      "name" -> "Mr Joe Bloggs",
+      "verificationLink" -> exampleLinkWithRandomId
+    )
   )
 }

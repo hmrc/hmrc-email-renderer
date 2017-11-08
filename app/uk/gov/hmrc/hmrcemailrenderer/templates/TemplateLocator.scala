@@ -45,6 +45,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tavc.TavcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.hts.HtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.OnlinePaymentServiceTemplates
 
 trait TemplateLocator {
@@ -77,7 +78,8 @@ trait TemplateLocator {
         "ITR"                        -> ItrTemplates.templates,
         "CBCR"                       -> CBCRTemplates.templates,
         "OnlinePaymentService"       -> OnlinePaymentServiceTemplates.templates,
-        "EEITT"                      -> EeittTemplates.templates)
+        "EEITT"                      -> EeittTemplates.templates,
+        "HTS"                        -> HtsTemplates.templates)
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 
