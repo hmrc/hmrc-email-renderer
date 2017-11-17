@@ -28,7 +28,7 @@ object HtsTemplates {
       templateId = "hts_verification_email",
       fromAddress = FromAddress.noReply("HMRC Services and Help to Save"),
       service = HelpToSave,
-      subject = "Email verification link for Help to save",
+      subject = "Verify your email address",
       plainTemplate = txt.htsEmailVerification.f,
       htmlTemplate = html.htsEmailVerification.f,
       priority = Some(MessagePriority.Urgent))
