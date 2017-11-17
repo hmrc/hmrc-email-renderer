@@ -1083,7 +1083,7 @@ object TemplateParams {
       "totalPaid" -> "126.00"
     ),
     "hts_verification_email" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
     )
   )
