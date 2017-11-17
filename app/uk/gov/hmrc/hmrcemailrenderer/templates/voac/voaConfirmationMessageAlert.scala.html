@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Valuation Office Agency Contact Form ") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Valuation Office Agency Contact Form") {
 
     <p style="margin: 0 0 30px; font-size: 19px;"><h2>Enquiry summary</h2></p>
 
@@ -9,17 +9,17 @@
     <tbody>
 
         <tr>
-            <td valign="top">Property address</td>
+            <td valign="top">Property address:</td>
             <td>@params("propertyAddress")</td>
         </tr>
 
         <tr>
-            <td valign="top">Enquiry type</td>
+            <td valign="top">Enquiry type:</td>
             <td>@params("enquiryCategoryMsg")<br />@params("subEnquiryCategoryMsg")</td>
         </tr>
 
         <tr>
-            <td valign="top">Personal details</td>
+            <td valign="top">Personal details:</td>
             <td>@params("firstName")<br />
                 @params("lastName")<br />
                 @params("email")<br />
@@ -28,7 +28,7 @@
         </tr>
 
         <tr>
-            <td valign="top">Message</td>
+            <td valign="top">Message:</td>
             <td>@params("message")</td>
         </tr>
 

@@ -1,12 +1,11 @@
-@(params: Map[String, Any])
-Valuation Office Agency Contact Form
+@(params: Map[String, Any])Valuation Office Agency Contact Form
 
 Enquiry summary
 
+Property address: @params("propertyAddress")
+
 Enquiry type: @params("enquiryCategoryMsg")
               @params("subEnquiryCategoryMsg")
-
-Property address: @params("propertyAddress")
 
 Personal details: @params("firstName")
                   @params("lastName")

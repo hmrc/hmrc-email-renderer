@@ -67,7 +67,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "CBCR",
         "EEITT",
         "OnlinePaymentService",
-        "HTS"
+        "HTS",
+        "VOAC"
       )
     }
 
@@ -347,7 +348,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cbcr_report_confirmation",
         "cbcr_cbcid_regeneration",
         "payment_successful",
-        "hts_verification_email"
+        "hts_verification_email",
+        "voa_confirmation_message_alert"
         )
     }
   }
