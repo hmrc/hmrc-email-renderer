@@ -1,11 +1,12 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Verify your email address") {
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You received this email because you chose to provide a new email address for Help to Save.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You'll need to verify your email address within the next 30 minutes.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">To verify your email address click the link below:</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Hello @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You told us you want us to use this email address to contact you about your Help to Save account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Before we can start using this address, you'll need to verify it.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">How to verify your email address</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Please click the link below within the next 30 minutes to verify your email address:</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
-<p style="margin: 0 0 30px; font-size: 19px;">After 30 minutes this link will expire and you'll need to apply again from the start.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Help to Save team.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">After 30 minutes this link will expire and you'll need to start again.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From Help to Save</p>
 <p style="margin: 0 0 30px; font-size: 19px;">If you're unsure an email is from HMRC:</p>
 }
