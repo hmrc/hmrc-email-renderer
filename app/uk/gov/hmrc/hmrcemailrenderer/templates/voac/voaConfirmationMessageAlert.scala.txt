@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+Valuation Office Agency Contact Form
+
+Enquiry summary
+
+Enquiry type: @params("enquiryCategoryMsg")
+              @params("subEnquiryCategoryMsg")
+
+Property address: @params("propertyAddress")
+
+Personal details: @params("firstName")
+                  @params("lastName")
+                  @params("email")
+                  @params("contactNumber")
+
+Message: @params("message")
+
+From Valuation Office Agency Contact Form
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
