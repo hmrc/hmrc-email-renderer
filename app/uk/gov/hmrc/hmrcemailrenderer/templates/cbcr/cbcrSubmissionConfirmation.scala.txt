@@ -1,8 +1,10 @@
 @(params: Map[String, Any])
+Report received on:
 @{params("received_at")}
+
 Dear @{params("name")}
-You can use this digital signature as a receipt for the country-by-country report you've sent:
-@{params("hash")}
+You can use this digital signature as a receipt for the country-by-country report you've sent.
+
 What happens next?
 
 We'll check the information in your report and contact you if there are any issues.
