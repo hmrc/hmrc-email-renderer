@@ -28,7 +28,7 @@ object VoacTemplates  {
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
       templateId = "voa_confirmation_message_alert",
-      fromAddress = FromAddress.noReply("Valuation Office Agency Contact From"),
+      FromAddress.noReply("VOA Internal Use only - From Valuation Office Agency Contact Form"),
       service  = ValuationOfficeAgencyContactForm,
       subject = property_for_subject,
       plainTemplate = txt.voaConfirmationMessageAlert.f,

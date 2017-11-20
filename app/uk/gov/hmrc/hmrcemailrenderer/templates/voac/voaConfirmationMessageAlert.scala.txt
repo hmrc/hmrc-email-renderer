@@ -14,6 +14,6 @@ Personal details: @params("firstName")
 
 Message: @params("message")
 
-From Valuation Office Agency Contact Form
+"VOA Internal use only From Valuation Office Agency Contact Form"
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
