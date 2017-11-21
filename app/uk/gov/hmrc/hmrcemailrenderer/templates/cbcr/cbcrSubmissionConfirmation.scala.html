@@ -1,13 +1,11 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your report was received on:") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Report received on:") {
 
     <p style="margin: 0 0 30px; font-size: 19px;">@params("received_at")</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("name")</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">You can use this digital signature as a receipt for the country-by-country report you've sent:</p>
-
-    <p style="margin: 0 0 30px; font-size: 19px;">@params("hash")</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You can use this digital signature as a receipt for the country-by-country report you've sent.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;"><h2>What happens next?</h2></p>
 
