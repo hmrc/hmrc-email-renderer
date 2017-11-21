@@ -1085,6 +1085,16 @@ object TemplateParams {
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "voa_confirmation_message_alert" -> Map(
+      "firstName" -> "Alex",
+      "lastName" -> "Smith",
+      "email" -> "a@a",
+      "contactNumber" -> "01234567891",
+      "propertyAddress" -> "1A Street, Town, County, AA11AA",
+      "enquiryCategoryMsg" -> "Council Tax",
+      "subEnquiryCategoryMsg" -> "Other",
+      "message" -> "Hello"
     )
   )
 }
