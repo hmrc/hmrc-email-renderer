@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 Dear @{params("f_name")} @{params("s_name")}
-Registration complete
+Registration successful
 The country-by-country ID for this company or partnership is: @{params("cbcrId")}
 Keep this ID safe, as it must be included each time a report is sent.
 Why you got this email
