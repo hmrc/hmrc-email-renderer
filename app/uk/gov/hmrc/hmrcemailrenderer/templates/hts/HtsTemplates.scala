@@ -26,7 +26,7 @@ object HtsTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "hts_verification_email",
-      fromAddress = FromAddress.noReply("HMRC Services and Help to Save"),
+      fromAddress = FromAddress.noReply("Help to Save"),
       service = HelpToSave,
       subject = "Verify your email address",
       plainTemplate = txt.htsEmailVerification.f,
