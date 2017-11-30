@@ -65,7 +65,7 @@ object ChildcareTemplates {
       templateId = "childcare_taxfree_england_B",
       fromAddress = childcareAddress,
       service = Childcare,
-      subject = "Apply for Tax-Free Childcare today",
+      subject = "Apply for 30 hours free childcare & Tax-Free Childcare today",
       plainTemplate = txt.childcareTaxFreeEngland_B.f,
       htmlTemplate = html.childcareTaxFreeEngland_B.f),
     MessageTemplate.create(
