@@ -1,9 +1,9 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Registration successful") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Registration Successful") {
 
     <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("f_name") @params("s_name")</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">The country-by-country ID for this company or partnership is: @params("cbcrId")</p>
+    <p><span style="margin: 0 0 30px; font-size: 19px;">The country-by-country ID is</span><span style="font-size: 25px;"> @params("cbcrId")</span></p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Keep this ID safe, as it must be included each time a report is sent.</p>
 
