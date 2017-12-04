@@ -1,8 +1,8 @@
 @(params: Map[String, Any])
 Dear @{params("f_name")} @{params("s_name")}
-Your registration is complete
-Your country-by-county Id is : @{params("cbcrId")}
-Keep this ID safe, as you'll need it each time you send a report.
+Registration Successful
+The country-by-county Id is @{params("cbcrId")}
+Keep this ID safe, as it must be included each time a report is sent.
 Why you got this email
 
 You gave this contact email address when you registered to send a country-by-country report.
