@@ -2,6 +2,7 @@
 Dear @{params("f_name")} @{params("s_name")}
 Registration Successful
 The country-by-county Id is @{params("cbcrId")}
+
 Keep this ID safe, as it must be included each time a report is sent.
 Why you got this email
 
