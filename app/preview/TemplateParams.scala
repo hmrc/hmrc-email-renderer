@@ -1075,6 +1075,9 @@ object TemplateParams {
     "eeitt_submission_confirmation" -> Map(
       "" -> ""
     ),
+    "fhdds_submission_confirmation" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "payment_successful" -> Map("taxType" -> "Self Assessment",
       "taxReference" -> "1234567890K",
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",

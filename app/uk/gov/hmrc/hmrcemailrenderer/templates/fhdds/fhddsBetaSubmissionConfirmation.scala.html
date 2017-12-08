@@ -1,0 +1,48 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "This is a test email only."){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear Customer: <br><br>
+
+    A test version of the fulfilment business registration service is ready for you to try.<br>
+    This email includes all the information you'll need to use the service and give us your feedback.<br><br>
+
+    What the service is for<br>
+    This is a new service by which organisations will apply for approval to be registered as fulfilment businesses.<br>
+    Please note: this test version will only allow you to run through the process of registering, it is not the registration process itself, which will only be available from 1st April 2018<br><br>
+
+    It should be used by:<br>
+    Whoever in your organisation will be responsible for applying to the register<br>
+    Ideally this person should be the person who will be able to sign a declaration of compliance on behalf of the organisation<br>
+    The information you provide should be legitimate as it will be used to test our technical processes.<br>
+    Your information will not be maintained into the final service when it launches in April, so you will be asked to provide much of this information again at that time. It is probably advisable to keep a copy of the information you submit on file for future reference.<br>
+    The facility to recover your username and/or password using information relating to your FHDDS application will not be available during the FHDDS Private Beta. This means that if you lose or forget your username and/or password, there may be significant delay in gaining access to the details of your application while the problem is sorted out.<br>
+    We therefore recommend that you use the same username and/or password that you already use to access other government services online in relation to your business. You should then be able to use information relating to one of these other services to recover your username and password if necessary.<br>
+    We expect the application process to be improved before being launched in April. We also expect more information about the due diligence requirements being agreed to by then.<br><br>
+
+    How to start testing<br>
+    This link will take you straight to the test version of the service:<br>
+        @{params("verificationLink")}<br>
+    Please don't share this link with other people.<br>
+    We'll be monitoring how the service is used by invitees and may need to restrict access.<br><br>
+
+    How to give us your feedback<br>
+    If you want to comment on any aspect of the service please email John Salisbury at john.salisbury@@digital.hmrc.gov.uk<br>
+    The more feedback you give us, the better we can make the next version of this service.<br><br>
+
+    How long testing lasts<br>
+    You can submit an application any time during the next XX days, but it would be really helpful to the team if  you made a submission on the afternoon of 11th December 2017.<br>
+    After that we'll make and test a second version of the service based on the feedback we get.<br><br>
+
+    Why you got this email<br>
+    This email is being sent to people who've been involved in our research so far, or who've volunteered to help us test this service.<br>
+
+    Thank you for your help and feedback,<br>
+    Karina Immanuel<br>
+    Digital Service Manager<br>
+    Fulfilment House Due Diligence Scheme<br>
+    If you’re unsure an email is from HMRC:<br>
+    do not reply to it or click any links<br>
+    forward it to phishing@@hmrc.gsi.gov.uk<br>
+
+</p>
+}
