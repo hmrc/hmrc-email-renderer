@@ -1,4 +1,4 @@
-@(params: Map[String, Any])This is FHDDS Beta submission email.
+@(params: Map[String, Any])This is Fulfilment House Due Diligence Scheme Beta submission email.
 
 Dear Customer:
 
@@ -45,6 +45,5 @@ Thank you for your help and feedback,
 Karina Immanuel
 Digital Service Manager
 Fulfilment House Due Diligence Scheme
-If you’re unsure an email is from HMRC:
-do not reply to it or click any links
-forward it to phishing@@hmrc.gsi.gov.uk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
