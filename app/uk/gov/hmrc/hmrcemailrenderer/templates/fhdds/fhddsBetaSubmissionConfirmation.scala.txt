@@ -1,0 +1,49 @@
+@(params: Map[String, Any])This is Fulfilment House Due Diligence Scheme Beta submission email.
+
+Hello Customer
+
+
+A test version of the fulfilment business registration service is ready for you to try.
+
+This email includes all the information you'll need to use the service and give us your feedback.
+
+What the service is for
+This is a new service by which organisations will apply for approval to be registered as fulfilment businesses.
+Please note: this test version will only allow you to try out the process of registering. The online registration service itself will only be available from 1 April 2018.
+
+Who should test the service
+This should be the person in your organisation who will be responsible for applying to register. Ideally this should be someone who will be able to sign a declaration of compliance on behalf of your organisation.
+
+Before you start testing
+Please make sure you provide valid information about your organisation, as we will use this to test our technical processes.
+
+Your information will not be transferred  into the final service when it launches in April, so you will be asked to provide much of this information again at that time. You may want to keep a copy of the information you submit on file for future reference.
+
+You'll need to use a Government Gateway user ID and password to sign into the test version. If you don't know these, please note that you may not be able to reset your user ID and password in this test version.
+
+How to start testing
+Use the link below to access the test version of the service:
+
+@{params("verificationLink")}
+
+Please don't share this link with other people.
+We'll be monitoring how the service is used by invitees and may need to restrict access.
+
+How to give us your feedback
+If you want to comment on any aspect of the service please email John Salisbury  at john.salisbury@@digital.hmrc.gov.uk
+The more feedback you give us, the better we can make the next version of this service.
+
+How long testing lasts
+You can submit an application any time during the next 5 days, but it would be really helpful to the team if you made a submission on the afternoon of 11th December 2017.
+
+After that we'll make and test a second version of the service based on the feedback we get.
+
+Why you got this email
+This email is being sent to people who've been involved in our research so far, or who've volunteered to help us test this service.
+
+Thank you for your help and feedback,
+Karina Immanuel
+Digital Service Manager
+Fulfilment House Due Diligence Scheme
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

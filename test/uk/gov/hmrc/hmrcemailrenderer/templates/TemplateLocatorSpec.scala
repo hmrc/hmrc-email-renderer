@@ -66,6 +66,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "TAVC",
         "CBCR",
         "EEITT",
+        "FHDDS",
         "OnlinePaymentService",
         "HTS",
         "VOAC"
@@ -151,6 +152,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_admin_notification",
         "dfs_trusts_submission_success",
         "eeitt_submission_confirmation",
+        "fhdds_submission_confirmation",
         "cc_registration_email",
         "childcare_registration_email",
         "childcare_schemes_interest_email",
