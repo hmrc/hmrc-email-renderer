@@ -27,7 +27,7 @@ object FhddsTemplates {
       templateId = "fhdds_submission_confirmation",
       fromAddress = govUkTeamAddress,
       service = Fhdds,
-      subject = "Submission Confirmation",
+      subject = "Invitation to test new online service",
       plainTemplate = txt.fhddsBetaSubmissionConfirmation.f,
       htmlTemplate = html.fhddsBetaSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
