@@ -1,7 +1,6 @@
-@(params: Map[String, Any])This is Fulfilment House Due Diligence Scheme Beta submission email.
+@(params: Map[String, Any])Fulfilment House Due Diligence Scheme Beta
 
-Hello Customer
-
+Hello
 
 A test version of the fulfilment business registration service is ready for you to try.
 
@@ -30,7 +29,7 @@ Please don't share this link with other people.
 We'll be monitoring how the service is used by invitees and may need to restrict access.
 
 How to give us your feedback
-If you want to comment on any aspect of the service please email John Salisbury  at john.salisbury@@digital.hmrc.gov.uk
+If you want to comment on any aspect of the service please email John Salisbury at john.salisbury@@digital.hmrc.gov.uk
 The more feedback you give us, the better we can make the next version of this service.
 
 How long testing lasts
