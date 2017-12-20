@@ -1,6 +1,6 @@
-@(params: Map[String, Any])This is a test email only.
+@(params: Map[String, Any])
 
-Dear Customer
+Dear customer
 
 
 This is a confirmation of your submission to
@@ -8,5 +8,7 @@ HMRC.
 
 Thank you.
 
-HMRC submissions team
+HM Revenue and Customs
+
+Do not reply to this email
 
