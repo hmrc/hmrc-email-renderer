@@ -2,6 +2,6 @@
 
 Company Name: @params.get("companyName")
 
-Your registration number is @params.get("sdilNumber").
+Your registration for the Soft Drinks Levy is now complete. Your registration number is @params.get("sdilNumber").
 
 You'll need to keep this for your records.
