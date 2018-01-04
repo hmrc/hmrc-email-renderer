@@ -1,0 +1,3 @@
+@(params: Map[String, Any])Your Soft Drinks Industry Levy registration has been accepted.
+
+Your registration number is: @params.get("sdilNumber")

@@ -1089,6 +1089,9 @@ object TemplateParams {
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "sdil_registration_accepted" -> Map(
+      "sdilNumber" -> "ZZSDIL0009999"
+    ),
     "retrieve_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
