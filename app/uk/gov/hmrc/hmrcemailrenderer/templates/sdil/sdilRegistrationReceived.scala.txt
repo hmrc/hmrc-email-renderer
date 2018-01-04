@@ -1,3 +1,8 @@
-@(params: Map[String, Any])Your Soft Drinks Industry Levy registration has been received.
+@(params: Map[String, Any])Your application to register for the Soft Drinks Levy has been submitted.
 
-Your registration number will be sent to you soon.
+Company Name: @params.get("companyName")
+
+We’ll contact you again when your registration has been processed and your registration number has been assigned.
+
+You don’t need to do anything else.
+

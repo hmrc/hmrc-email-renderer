@@ -1,8 +1,13 @@
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Soft Drinks Industry Levy") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your application to register for the Soft Drinks Levy has been submitted") {
 
-    <p>Your Soft Drinks Industry Levy registration has been received.</p>
+    <p>Company Name: @params.get("companyName")</p>
 
-    <p>Your registration number will be sent to you soon.</p>
+    <p>Your application to register for the Soft Drinks Levy has been submitted.</p>
+
+    <p>We’ll contact you again when your registration has been processed and your
+        registration number has been assigned.</p>
+
+    <p>You don’t need to do anything else.</p>
 }

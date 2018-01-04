@@ -1090,6 +1090,11 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "sdil_registration_accepted" -> Map(
+      "sdilNumber" -> "ZZSDIL0009999",
+      "companyName" -> "Some company Ltd."
+    ),
+    "sdil_registration_received" -> Map(
+      "companyName" -> "Some company Ltd."
       "sdilNumber" -> "ZZSDIL0009999"
     ),
     "retrieve_userid_notification" -> Map(
