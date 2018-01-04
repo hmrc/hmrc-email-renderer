@@ -30,6 +30,15 @@ object SdilTemplates {
       subject = "SDIL registration accepted",
       plainTemplate = txt.sdilRegistrationAccepted.f,
       htmlTemplate = html.sdilRegistrationAccepted.f
+    ),
+    MessageTemplate.create(
+      templateId = "sdil_registration_received",
+      fromAddress = FromAddress.noReply("Soft Drinks Industry Levy"),
+      service = SoftDrinksIndustryLevy,
+      subject = "SDIL registration received",
+      plainTemplate = txt.sdilRegistrationReceived.f,
+      htmlTemplate = html.sdilRegistrationReceived.f
+
     )
   )
 }
