@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 HM Revenue & Customs
+ * Copyright 2018 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,7 +68,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "EEITT",
         "FHDDS",
         "OnlinePaymentService",
-        "HTS"
+        "HTS",
+        "Lost Credentials"
       )
     }
 
@@ -349,7 +350,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cbcr_report_confirmation",
         "cbcr_cbcid_regeneration",
         "payment_successful",
-        "hts_verification_email"
+        "hts_verification_email",
+        "retrieve_userid_notification"
         )
     }
   }
