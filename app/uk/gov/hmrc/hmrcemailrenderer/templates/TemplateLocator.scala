@@ -48,7 +48,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hts.HtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.OnlinePaymentServiceTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.voac.VoacTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -82,7 +81,6 @@ trait TemplateLocator {
         "OnlinePaymentService"       -> OnlinePaymentServiceTemplates.templates,
         "EEITT"                      -> EeittTemplates.templates,
         "HTS"                        -> HtsTemplates.templates,
-        "VOAC"                       -> VoacTemplates.templates,
         "FHDDS"                      -> FhddsTemplates.templates
     )
 
