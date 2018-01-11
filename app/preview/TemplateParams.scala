@@ -1094,7 +1094,7 @@ object TemplateParams {
       "companyName" -> "Some company Ltd."
     ),
     "sdil_registration_received" -> Map(
-      "companyName" -> "Some company Ltd."
+      "companyName" -> "Some company Ltd.",
       "sdilNumber" -> "ZZSDIL0009999"
     ),
     "retrieve_userid_notification" -> Map(
