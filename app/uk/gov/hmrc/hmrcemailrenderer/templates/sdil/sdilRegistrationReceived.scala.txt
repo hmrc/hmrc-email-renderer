@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Your application to register for the Soft Drinks Levy has been submitted.
+
+Company Name: @params.get("companyName")
+
+Your application to register for the Soft Drinks Levy has been submitted.
+
+We’ll contact you again when your registration has been processed and your registration number has been assigned.
+
+You don’t need to do anything else.
+
+Why you got this email
+
+You gave this contact email address when you applied to register for the Soft Drinks Levy.
+
+From HMRC Soft Drinks Levy Project Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

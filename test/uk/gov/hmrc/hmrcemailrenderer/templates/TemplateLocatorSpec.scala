@@ -69,6 +69,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "FHDDS",
         "OnlinePaymentService",
         "HTS",
+        "SDIL",
         "Lost Credentials"
       )
     }
@@ -351,6 +352,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cbcr_cbcid_regeneration",
         "payment_successful",
         "hts_verification_email",
+        "sdil_registration_accepted",
+        "sdil_registration_received",
         "retrieve_userid_notification"
         )
     }

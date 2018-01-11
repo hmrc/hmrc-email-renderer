@@ -82,5 +82,6 @@ object ServiceIdentifier {
   case object CountryByCountryReporting extends ServiceIdentifier { override val name = "cbcr" }
   case object OnlinePaymentService extends ServiceIdentifier { override val name = "online-payment-service" }
   case object HelpToSave extends ServiceIdentifier { override val name = "hts" }
+  case object SoftDrinksIndustryLevy extends ServiceIdentifier { override def name: String = "sdil" }
   case object LostCredentials extends ServiceIdentifier { override val name = "lostcredentials" }
 }
