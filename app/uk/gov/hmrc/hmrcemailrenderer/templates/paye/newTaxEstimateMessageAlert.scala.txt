@@ -1,22 +1,38 @@
+
 @(params: Map[String, Any])Your Income Tax estimate has changed
 
 Dear @{params("fullName")}
 
-We have changed your tax code and we would like you to check it is right.
+You have a tax code change
 
-This is to make sure you pay the right amount of tax.
+Your PAYE Income Tax records have recently changed. For security reasons we do not give the full details here but it could be because of a change in something like:
 
-Go to the 'Pay As You Earn (PAYE)' section of your Personal Tax Account.
+A job
+Your pay
+Your company benefits such as a company car
+Your pension
 
-You'll find your new tax code there with information on how we've calculated it.
+This means that the amount of Income Tax you will pay will change.
 
-For security reasons, we have not included a link with this email.
+You should check your details to make sure they are right. This is so you pay the right amount of Income Tax.
+
+Check your details
+
+Sign in to your Personal Tax Account and go to the 'Pay As You Earn (PAYE)' section’. 
+
+For security reasons we have not included a link in this email. To get to your Personal Tax Account search for ‘HMRC Personal Tax Account’.
+
+Signing In
+
+Use your Government Gateway or Verify details to sign in to your Personal Tax Account.
+
+You should have access to these as you have already used the service to choose to receive emails.
+
+Contact HMRC if you do not have your Government Gateway or Verify details.
 
 Why you got this email
 
-You chose to get email notifications about your Income Tax.
-
-This means we send you an email when your Income Tax estimate changes.
+You got this email because you’ve chosen to receive email updates instead of letters by post
 
 From HMRC Check your Income Tax
 
