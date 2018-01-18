@@ -1,13 +1,21 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Income Tax estimate has changed") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your have a tax code change") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("fullName")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">We have changed your tax code and we would like you to check it is right.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">This is to make sure you pay the right amount of tax.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Go to the 'Pay As You Earn (PAYE)' section of your Personal Tax Account.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You'll find your new tax code there with information on how we've calculated it.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link with this email.</p>
+<p style="margin: 0 0 0px; font-size: 19px;">Your PAYE Income Tax records have recently changed. For security reasons we do not give the full details here but it could be because of a change in something like:</p>
+<ul>
+    <li>A job</li>
+    <li>Your pay</li>
+    <li>Your company benefits such as a company car</li>
+    <li>Your pension</li></ul>
+<p style="margin: 0 0 30px; font-size: 19px;">This means that the amount of Income Tax you will pay will change.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You should check your details to make sure they are right. This is so you pay the right amount of Income Tax.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Check your details</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Sign in to your Personal Tax Account and go to the 'Pay As You Earn (PAYE)' section’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons we have not included a link in this email. To get to your Personal Tax Account search for ‘HMRC Personal Tax Account’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Signing in</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Use your Government Gateway or Verify details to sign in to your Personal Tax Account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You should have access to these as you have already used the service to choose to receive emails.</p>
 <h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Why you got this email</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">You chose to get email notifications about your Income Tax.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">This means we send you an email when your Income Tax estimate changes.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You got this email because you’ve chosen to receive email updates instead of letters by post.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Check your Income Tax</p>
 }
