@@ -1,9 +1,9 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your HMRC service test link - Agents for Individuals") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Thanks for agreeing to help develop Making Tax Digital.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">This email contains a link to the prototype you've agreed to test: Agents for Individuals.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Click on this unique link to access the service. Don't give it to anyone else.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This email contains a link to a new service for agents where you can view the income and tax records of your clients.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Thank you for agreeing to use this service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Click on this unique link to access this service. Do not give it to anyone else.</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
 <p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Digital team</p>
 }
