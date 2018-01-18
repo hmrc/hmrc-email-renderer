@@ -4,8 +4,6 @@ Dear @{params("name")}
 
 This email contains a link to a new service for agents where you can view the income and tax records of your clients.
 
-Thank you for agreeing to use this service.
-
 Click on this unique link to access this service. Do not give it to anyone else.
 
 @{params("verificationLink")}
