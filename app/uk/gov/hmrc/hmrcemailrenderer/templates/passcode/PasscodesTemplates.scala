@@ -74,7 +74,7 @@ object PasscodesTemplates {
       templateId = "agent_fi_invitation_template_id",
       fromAddress = govUkTeamAddress,
       service = Agent,
-      subject = "Your HMRC service test link - Agents for Individuals",
+      subject = "Your HMRC agent services link to view client records",
       plainTemplate = txt.agentForIndividualsInvitation.f,
       htmlTemplate = html.agentForIndividualsInvitation.f,
       priority = Some(MessagePriority.Urgent)
