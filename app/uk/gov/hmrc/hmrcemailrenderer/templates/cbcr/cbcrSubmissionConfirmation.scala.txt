@@ -1,9 +1,14 @@
 @(params: Map[String, Any])
-Report received on:
+Report received
+@{params.exists(_._1 == "cbcrId") match {
+        case true => s"for country-by-country ID ${params("cbcrId")}, on"
+        case _    => "for country-by-country on"
+    }
+    }
 @{params("received_at")}
 
 Dear @{params("name")}
-You can use this digital signature as a receipt for the country-by-country report you've sent.
+You can use the following digital signature as a receipt for the country-by-country report you've sent:
 @{params("hash")}
 
 What happens next
