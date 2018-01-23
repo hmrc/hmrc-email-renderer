@@ -1,15 +1,13 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Report received") {
 
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params.exists(_._1 == "cbcrId") match {
-        case true => s"for country-by-country ID ${params("cbcrId")}, on"
-        case _    => "for country-by-country on"
-    }
-    }
-
-    <p style="margin: 0 0 30px; font-size: 19px;">@params("received_at")</p>
-
     <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("name")</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params.exists(_._1 == "cbcrId") match {
+        case true => s"The report for country-by-country ID ${params("cbcrId")} was received on ${params("received_at")}"
+        case _    => s"The report for country-by-country was received on ${params("received_at")}"
+    }
+    }
 
     <p style="margin: 0 0 30px; font-size: 19px;">You can use the following digital signature as a receipt for the country-by-country report you've sent:</p>
 
