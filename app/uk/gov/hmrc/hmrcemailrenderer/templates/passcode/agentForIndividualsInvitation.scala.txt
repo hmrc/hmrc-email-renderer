@@ -1,12 +1,10 @@
-@(params: Map[String, Any])Thanks for agreeing to help develop Making Tax Digital
+@(params: Map[String, Any])Your HMRC agent services link to view client records
 
 Dear @{params("name")}
 
-Thanks for agreeing to help develop Making Tax Digital.
+This email contains a link to a new service for agents where you can view the income and tax records of your clients.
 
-This email contains a link to the prototype you've agreed to test: Agents for Individuals.
-
-Click on this unique link to access the service. Don't give it to anyone else.
+Click on this unique link to access this service. Do not give it to anyone else.
 
 @{params("verificationLink")}
 
