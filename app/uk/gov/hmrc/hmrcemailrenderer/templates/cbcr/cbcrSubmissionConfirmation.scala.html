@@ -5,7 +5,7 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params.exists(_._1 == "cbcrId") match {
         case true => s"The report for country-by-country ID ${params("cbcrId")} was received on ${params("received_at")}"
-        case _    => "The report for country-by-country"
+        case _    => "The report for country-by-country was received on ${params(\"received_at\")}"
     }
     }
 
