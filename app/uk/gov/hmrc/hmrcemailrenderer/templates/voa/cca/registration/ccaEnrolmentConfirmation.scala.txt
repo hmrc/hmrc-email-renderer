@@ -1,0 +1,16 @@
+@(params: Map[String, Any])
+
+<Valuation Office Agency – check and challenge registration>
+
+Dear <name>,
+
+As part of the registration for the check and challenge service, you’ve been given a personal ID number. You should keep a note of this number in a safe place as you’ll need it if you want to reset your password.
+
+Your ID number is <###>
+
+You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
+
+Valuation Office Agency (VOA)
+
+This is an automatically generated email. Please don’t reply as the email address is not monitored. If you want to contact the VOA about your business rates you should email ccaservice@@voa.gsi.gov.uk.
+If you’re unsure whether an email is from the VOA, don’t reply to it or click on any links. Instead you should report the suspicious email to the VOA – to find out how, go to GOV.UK and search for ‘Avoid and report internet scams and phishing’.
