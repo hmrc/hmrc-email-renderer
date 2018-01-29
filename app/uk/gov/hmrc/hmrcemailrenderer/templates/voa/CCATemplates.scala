@@ -14,27 +14,27 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.voa.cca
+package uk.gov.hmrc.hmrcemailrenderer.templates.voa
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Eeitt
-
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CCA
+import registration._
 object CCATemplates {
 
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "cca_enrolment_confirmation",
+      templateId = "cca_enrolment_migration_confirmation",
       fromAddress = govUkTeamAddress,
-      service = Eeitt,
+      service = CCA,
       subject = "Submission Confirmation",
-      plainTemplate = exisiting.txt.ccaEnrolmentConfirmationExisiting.f,
-      htmlTemplate = exisiting.html.ccaEnrolmentConfirmationExisting.f,
+      plainTemplate = txt.ccaEnrolmentConfirmationExisiting.f,
+      htmlTemplate = html.ccaEnrolmentConfirmationExisting.f,
       priority = Some(MessagePriority.Standard)),
-      MessageTemplate.create(
+    MessageTemplate.create(
         templateId = "cca_enrolment_confirmation",
         fromAddress = govUkTeamAddress,
-        service = Eeitt,
+        service = CCA,
         subject = "Submission Confirmation",
         plainTemplate = registration.txt.ccaEnrolmentConfirmation.f,
         htmlTemplate = registration.html.ccaEnrolmentConfirmation.f,
