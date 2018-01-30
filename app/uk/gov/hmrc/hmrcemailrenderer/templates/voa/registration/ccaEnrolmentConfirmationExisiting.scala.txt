@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-<Valuation Office Agency – check and challenge registration>
+Valuation Office Agency – check and challenge registration
 
 Dear @params("name"),
 
