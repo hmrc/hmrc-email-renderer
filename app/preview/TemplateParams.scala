@@ -1101,6 +1101,14 @@ object TemplateParams {
     "retrieve_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
+    ),
+    "cca_enrolment_migration_confirmation" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789"
+    ),
+    "cca_enrolment_confirmation" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789"
     )
   )
 }
