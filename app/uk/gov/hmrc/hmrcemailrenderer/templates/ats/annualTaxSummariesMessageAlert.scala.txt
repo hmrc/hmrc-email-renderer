@@ -6,12 +6,12 @@ Thank you for completing your Self Assessment tax return.
 
 Your annual tax summary is now online. It shows ‎how much tax and National Insurance you have paid and how Government spends it.
 
-You can find the summary by signing into your tax account, looking in the self assessment section and selecting 'find out how your tax is spent'.
+You can find the summary by signing into your tax account, selecting Self Assessment and then ‘more self assessment details’ and then selecting ‘find out how your tax is spent’.
 
-Tax summaries are for information only so there's no need to take any further action.
+Tax summaries are for information only so there’s no need to take any further action.
 
-Rachel McLean
+Angela MacDonald
 
-Interim Director General for Customer Services
+Director General, HMRC Customer Services
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

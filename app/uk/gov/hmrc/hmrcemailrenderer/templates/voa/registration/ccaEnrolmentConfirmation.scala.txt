@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Valuation Office Agency – check and challenge registration
+
+Dear @params("name"),
+
+As part of the registration for the check and challenge service, you’ve been given a personal ID number. You should keep a note of this number in a safe place as you’ll need it if you want to reset your password.
+
+Your ID number is @params("personId")
+
+You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
+
+Valuation Office Agency (VOA)
+
+ @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

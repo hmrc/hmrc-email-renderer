@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
+
+<h1>Valuation Office Agency – check and challenge registration</h1>
+
+<div style="margin: 0 0 30px; font-size: 19px;">
+    <p>Dear @params("name"),</p>
+
+    <p>As part of the ongoing improvements to the check and challenge service, we’re giving you a personal ID number. You should keep a note of this number in a safe place as you will need it if you want to reset your password.</p>
+
+    <p>Your ID number is @params("personId")</p>
+
+    <p>You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.</p>
+
+    <p>Valuation Office Agency (VOA)</p>
+
+</div>
+}

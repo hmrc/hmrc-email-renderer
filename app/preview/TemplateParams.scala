@@ -322,7 +322,8 @@ object TemplateParams {
     "cbcr_report_confirmation" -> Map(
       "name" -> "Tyrion Lannister",
       "received_at" -> "31 December 2017",
-      "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6"
+      "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6",
+      "cbcrId" -> "XGCBC0000000001"
     ),
      "cbcr_cbcid_regeneration" -> Map(
       "f_name" -> "Tyrion",
@@ -1100,6 +1101,14 @@ object TemplateParams {
     "retrieve_userid_notification" -> Map(
       "user_id" -> "914657894302",
       "full_name" -> "Joe Bloggs"
+    ),
+    "cca_enrolment_migration_confirmation" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789"
+    ),
+    "cca_enrolment_confirmation" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789"
     )
   )
 }
