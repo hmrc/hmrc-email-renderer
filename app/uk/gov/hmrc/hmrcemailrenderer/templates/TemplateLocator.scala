@@ -43,7 +43,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.lisa.LisaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.tavc.TavcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hts.HtsTemplates
@@ -70,7 +69,6 @@ trait TemplateLocator {
         "RALD"                       -> RaldTemplates.templates,
         "register-your-company"      -> RegisterYourCompanyTemplates.templates,
         "Self Assessment"            -> DigitalContactTemplates.templates,
-        "TAVC"                       -> TavcTemplates.templates,
         "TAMC"                       -> TamcTemplates.templates,
         "TCS"                        -> TcsTemplates.templates,
         "Mandate"                    -> MandateTemplates.templates,
