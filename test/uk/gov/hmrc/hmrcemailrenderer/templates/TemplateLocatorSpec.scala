@@ -70,7 +70,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "OnlinePaymentService",
         "HTS",
         "SDIL",
-        "Lost Credentials"
+        "Lost Credentials",
+        "CCA"
       )
     }
 
@@ -354,7 +355,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
-        "retrieve_userid_notification"
+        "retrieve_userid_notification",
+        "cca_enrolment_migration_confirmation",
+        "cca_enrolment_confirmation"
         )
     }
   }
