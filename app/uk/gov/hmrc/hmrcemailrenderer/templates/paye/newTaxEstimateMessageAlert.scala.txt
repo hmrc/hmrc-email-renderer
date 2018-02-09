@@ -7,10 +7,10 @@ You have a tax code change
 
 Your PAYE Income Tax records have recently changed. For security reasons we do not give the full details here but it could be because of a change in something like:
 
-A job
-Your pay
-Your company benefits such as a company car
-Your pension
+a job
+your pay
+your company benefits such as a company car
+your pension
 
 This means that the amount of Income Tax you will pay will change.
 
@@ -18,9 +18,9 @@ You should check your details to make sure they are right. This is so you pay th
 
 Check your details
 
-Sign in to your Personal Tax Account and go to the 'Pay As You Earn (PAYE)' section’. 
+Sign in to your Personal Tax Account and go to the 'Pay As You Earn (PAYE)' section. 
 
-For security reasons we have not included a link in this email. To get to your Personal Tax Account search for ‘HMRC Personal Tax Account’.
+For security reasons we have not included a link in this email. To get to your Personal Tax Account search for 'HMRC Personal Tax Account'.
 
 Signing In
 
@@ -32,7 +32,7 @@ Contact HMRC if you do not have your Government Gateway or Verify details.
 
 Why you got this email
 
-You got this email because you’ve chosen to receive email updates instead of letters by post
+You got this email because you've chosen to receive email updates instead of letters by post
 
 From HMRC Check your Income Tax
 
