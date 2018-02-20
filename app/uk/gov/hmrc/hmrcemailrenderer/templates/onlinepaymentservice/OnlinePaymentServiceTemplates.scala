@@ -28,7 +28,14 @@ object OnlinePaymentServiceTemplates {
       subject = "HMRC Payment confirmation",
       plainTemplate = txt.payment_successful.f,
       htmlTemplate = html.payment_successful.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "payment_successful_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Cadarnhad gan CThEM o daliad",
+      plainTemplate = txt.payment_successful_cy.f,
+      htmlTemplate = html.payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent))
   )
-
 }
