@@ -1,0 +1,59 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhad gan CThEM o daliad") {
+
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl Gwsmer</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Mae'ch taliad wedi dod i law. </p>
+
+<p>
+<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+
+    <tbody>
+
+        <tr>
+            <th>Treth</th>
+            <td>@params("taxType")</td>
+        </tr>
+
+        <tr>
+            <th>Cyfeirnod treth </th>
+            <td>@params("taxReference")</td>
+        </tr>
+
+        <tr>
+            <th>Cyfeirnod y taliad</th>
+            <td>@params("paymentReference")</td>
+        </tr>
+
+        <tr>
+            <th>Swm a dalwyd</th>
+            <td>£@params("amountPaid")</td>
+        </tr>
+
+        @params.get("commission").map { commission =>
+            <tr>
+                <th>Ffi cerdyn credyd</th>
+                <td>£@commission</td>
+            </tr>
+        }
+
+        @params.get("totalPaid").map { totalPaid =>
+            <tr>
+                <th>Cyfanswm a dalwyd</th>
+                <td>£@totalPaid</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif. </p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><h2>Pam y cawsoch yr e-bost hwn </h2></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Gwnaethoch ddewis cael cadarnhad o daliad drwy e-bost.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">O Daliadau Ar-lein CThEM</p>
+
+}
