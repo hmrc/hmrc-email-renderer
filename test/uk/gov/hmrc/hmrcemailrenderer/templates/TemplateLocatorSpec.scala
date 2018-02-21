@@ -351,6 +351,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cbcr_report_confirmation",
         "cbcr_cbcid_regeneration",
         "payment_successful",
+        "payment_successful_cy",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
