@@ -1,4 +1,4 @@
-@(params: Map[String, Any])A collaborator has been added to your application
+@(params: Map[String, Any])A team member has been added to your application
 
 @{params("email")} has been added to @{params("applicationName")} by another admin.
 
