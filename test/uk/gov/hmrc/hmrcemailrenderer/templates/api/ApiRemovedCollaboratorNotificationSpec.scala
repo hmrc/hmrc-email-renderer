@@ -50,7 +50,7 @@ class ApiRemovedCollaboratorNotificationSpec extends WordSpec with Matchers {
     "render as" in new TestCase {
       val renderedTxt = api.txt.apiRemovedCollaboratorNotification.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include("A collaborator has been removed from your application")
+      renderedTxt.body should include("A team member has been removed from your application")
       renderedTxt.body should include(email + " has been removed from " + applicationName + " by another admin.")
       renderedTxt.body should include("They can no longer access this application.")
       renderedTxt.body should include("From HMRC Developer Hub")
