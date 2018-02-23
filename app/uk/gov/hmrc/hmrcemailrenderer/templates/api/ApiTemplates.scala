@@ -28,7 +28,7 @@ object ApiTemplates {
     val sender = params.get("developerHubTitle").getOrElse("Developer Hub")
     FromAddress.noReply(s"HMRC $sender")
   }
-  
+
   val templates = Seq(
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiDeveloperEmailVerification",
@@ -127,6 +127,15 @@ object ApiTemplates {
       subject = "Application name approved",
       plainTemplate = txt.apiApplicationApprovedNotification.f,
       htmlTemplate = html.apiApplicationApprovedNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiApplicationDeletedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "We deleted an application",
+      plainTemplate = txt.apiApplicationDeletedNotification.f,
+      htmlTemplate = html.apiApplicationDeletedNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(

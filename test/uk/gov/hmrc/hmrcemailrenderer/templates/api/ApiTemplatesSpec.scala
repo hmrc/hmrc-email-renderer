@@ -73,6 +73,10 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
         expectedSubject = "Application name approved")
 
       validateTemplate(
+        templateId = "apiApplicationDeletedNotification",
+        expectedSubject = "We deleted an application")
+
+      validateTemplate(
         templateId = "apiApplicationRejectedNotification",
         expectedSubject = "Application not approved")
     }
