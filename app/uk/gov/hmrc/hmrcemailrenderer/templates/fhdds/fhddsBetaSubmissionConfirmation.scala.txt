@@ -12,9 +12,9 @@ Help using this service
 
 See the guidance on GOV.UK to find out:
 
-what you need to do while HMRC processes your application
-how to make changes to your application
-how to contact HMRC about your application
+- what you need to do while HMRC processes your application
+- how to make changes to your application
+- how to contact HMRC about your application
 
 From the HMRC Fulfilment House Due Diligence Scheme
 
