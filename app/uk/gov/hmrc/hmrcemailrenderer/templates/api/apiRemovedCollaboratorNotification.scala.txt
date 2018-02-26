@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-A collaborator has been removed from your application
+A team member has been removed from your application
 
 @{params("email")} has been removed from @{params("applicationName")} by another admin.
 
