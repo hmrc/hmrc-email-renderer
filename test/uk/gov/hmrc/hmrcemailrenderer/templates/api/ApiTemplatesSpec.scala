@@ -50,7 +50,7 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
       validateTemplate(
         templateId = "apiAddedDeveloperAsCollaboratorNotification",
-        expectedSubject = "A collaborator has been added to your application")
+        expectedSubject = "A team member has been added to your application")
 
       validateTemplate(
         templateId = "apiRemovedCollaboratorConfirmation",
@@ -58,7 +58,7 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
       validateTemplate(
         templateId = "apiRemovedCollaboratorNotification",
-        expectedSubject = "A collaborator has been removed from your application")
+        expectedSubject = "A team member has been removed from your application")
 
       validateTemplate(
         templateId = "apiApplicationApprovedGatekeeperConfirmation",
@@ -71,6 +71,10 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
       validateTemplate(
         templateId = "apiApplicationApprovedNotification",
         expectedSubject = "Application name approved")
+
+      validateTemplate(
+        templateId = "apiApplicationDeletedNotification",
+        expectedSubject = "We deleted an application")
 
       validateTemplate(
         templateId = "apiApplicationRejectedNotification",
