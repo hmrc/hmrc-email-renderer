@@ -1,5 +1,7 @@
 @(params: Map[String, Any])Fulfilment House Due Diligence Scheme: Application received
 
+Dear Customer
+
 We have received your application to register a business for the Fulfilment House Due Diligence Scheme.
 
 What happens next
@@ -17,7 +19,5 @@ See the guidance on GOV.UK to find out:
 - how to contact HMRC about your application
 
 From the HMRC Fulfilment House Due Diligence Scheme
-
-Do not reply to this email.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
