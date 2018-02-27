@@ -92,6 +92,10 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("apiApplicationApprovedNotification", Map(
         "applicationName" -> "applicationName"
       )),
+      ("apiApplicationDeletedNotification", Map(
+        "applicationName" -> "applicationName",
+        "requestor" -> "email@address.com"
+      )),
       ("apiApplicationRejectedNotification", Map(
         "applicationName" -> "applicationName",
         "reason" -> "reason",

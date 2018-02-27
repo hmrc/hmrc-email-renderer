@@ -80,6 +80,10 @@ object TemplateParams {
     "apiApplicationApprovedNotification" -> Map(
       "applicationName" -> "Test Application"
     ),
+    "apiApplicationDeletedNotification" -> Map(
+      "applicationName" -> "Test Application",
+      "requestor" -> "joe.bloggs@gmail.com"
+    ),
     "apiApplicationRejectedNotification" -> Map(
       "applicationName" -> "Test Application",
       "guidelinesUrl" -> exampleLinkWithRandomId,
