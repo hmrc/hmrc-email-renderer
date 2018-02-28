@@ -31,6 +31,24 @@ object EeittTemplates {
       plainTemplate = txt.eeittSubmissionConfirmation.f,
       htmlTemplate = html.eeittSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cir_appointment_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Appointment Confirmation",
+      plainTemplate = txt.cirAppointmentConfirmation.f,
+      htmlTemplate = html.cirAppointmentConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cir_revocation_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Revocation Confirmation",
+      plainTemplate = txt.cirRevocationConfirmation.f,
+      htmlTemplate = html.cirRevocationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

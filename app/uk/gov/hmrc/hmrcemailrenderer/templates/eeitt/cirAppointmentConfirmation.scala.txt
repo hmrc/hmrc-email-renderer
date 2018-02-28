@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Your application to appoint a reporting company has been submitted
+
+Dear Customer,
+
+We have received the appointment.
+
+Why you are receiving this
+
+This is an email to confirm the Appointment of the reporting company for Corporate Interest Restriction.
+
+Thank you.
+
+Corporate Interest Restriction
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
