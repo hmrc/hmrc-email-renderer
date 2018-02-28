@@ -12,6 +12,6 @@ This is an email to confirm the reporting company's Revocation of the Corporate 
 
 Thank you.
 
-Corporate Interest Restriction
+From HMRC Corporate Interest Restriction
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
