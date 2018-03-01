@@ -1,10 +1,10 @@
-@(params: Map[String, Any])Your registration for the Soft Drink Levy is complete.
+@(params: Map[String, Any])Soft Drinks Levy Reference Number.
 
 Company Name: @params.get("companyName")
 
 Your registration for the Soft Drinks Levy is complete.
 
-Your registration number is @params.get("sdilNumber").
+Your reference number is @params.get("sdilNumber").
 
 You'll need to keep this for your records.
 

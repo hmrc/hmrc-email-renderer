@@ -27,7 +27,7 @@ object SdilTemplates {
       templateId = "sdil_registration_accepted",
       fromAddress = FromAddress.noReply("Soft Drinks Industry Levy"),
       service = SoftDrinksIndustryLevy,
-      subject = "Soft Drinks Levy Registration Number",
+      subject = "Soft Drinks Levy Reference Number",
       plainTemplate = txt.sdilRegistrationAccepted.f,
       htmlTemplate = html.sdilRegistrationAccepted.f
     ),
