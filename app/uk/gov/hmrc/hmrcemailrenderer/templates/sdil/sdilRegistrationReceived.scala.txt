@@ -4,7 +4,7 @@ Company Name: @params.get("companyName")
 
 Your application to register for the Soft Drinks Levy has been submitted.
 
-We’ll contact you again when your registration has been processed and your registration number has been assigned.
+We’ll contact you again when your registration has been processed and your reference number has been assigned.
 
 You don’t need to do anything else.
 
