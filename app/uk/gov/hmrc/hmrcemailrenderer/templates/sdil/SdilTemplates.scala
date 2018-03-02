@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.sdil
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SoftDrinksIndustryLevy
 
@@ -29,7 +29,8 @@ object SdilTemplates {
       service = SoftDrinksIndustryLevy,
       subject = "Soft Drinks Levy Reference Number",
       plainTemplate = txt.sdilRegistrationAccepted.f,
-      htmlTemplate = html.sdilRegistrationAccepted.f
+      htmlTemplate = html.sdilRegistrationAccepted.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "sdil_registration_received",
@@ -37,7 +38,8 @@ object SdilTemplates {
       service = SoftDrinksIndustryLevy,
       subject = "Soft Drinks Levy application submitted",
       plainTemplate = txt.sdilRegistrationReceived.f,
-      htmlTemplate = html.sdilRegistrationReceived.f
+      htmlTemplate = html.sdilRegistrationReceived.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
