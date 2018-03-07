@@ -1085,6 +1085,12 @@ object TemplateParams {
     "cir_appointment_confirmation" -> Map(
       "" -> ""
     ),
+    "eeitt_ce930_confirmation" -> Map(
+      "" -> ""
+    ),
+     "eeitt_ho930_confirmation" -> Map(
+       "" -> ""
+    ),
     "fhdds_submission_confirmation" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
