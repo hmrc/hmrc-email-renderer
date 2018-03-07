@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Dear Customer
+
+Using gas as a road fuel
+
+Your return has been submitted successfully.
+
+Why you got this email
+
+You gave this contact email address when you completed your return.
+
+From HMRC Fuel Duty
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
