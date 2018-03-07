@@ -49,6 +49,24 @@ object EeittTemplates {
       plainTemplate = txt.cirRevocationConfirmation.f,
       htmlTemplate = html.cirRevocationConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    )
+    ),
+    MessageTemplate.create(
+      templateId = "eeitt_ce930_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "CE930 Confirmation",
+      plainTemplate = txt.eeitt_ce930_confirmation.f,
+      htmlTemplate = html.eeitt_ce930_confirmation.f,
+      priority = Some(MessagePriority.Standard)
+  ),
+    MessageTemplate.create(
+      templateId = "eeitt_ho930_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HO930 Confirmation",
+      plainTemplate = txt.eeitt_ho930_confirmation.f,
+      htmlTemplate = html.eeitt_ho930_confirmation.f,
+      priority = Some(MessagePriority.Standard)
+  )
   )
 }
