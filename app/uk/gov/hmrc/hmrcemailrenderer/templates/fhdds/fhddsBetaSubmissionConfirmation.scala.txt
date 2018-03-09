@@ -19,4 +19,8 @@ See the guidance on GOV.UK to find out:
 
 From the HMRC Fulfilment House Due Diligence Scheme
 
+--
+
+Do not reply to this email.
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
