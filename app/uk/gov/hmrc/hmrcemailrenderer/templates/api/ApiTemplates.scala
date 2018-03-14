@@ -139,6 +139,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiDeveloperDeletedConfirmation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "We deleted your account",
+      plainTemplate = txt.apiDeveloperDeletedConfirmation.f,
+      htmlTemplate = html.apiDeveloperDeletedConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiApplicationRejectedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
