@@ -417,11 +417,19 @@ object TemplateParams {
       "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
       "errorList" -> "Brap Brap"
     ),
+    "register_your_company_welcome_email" -> Map(
+      "returnLink" -> "http://registeryourcompany.gov.uk"
+    ),
     "register_your_company_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "register_your_company_welcome_email" -> Map(
-      "returnLink" -> "http://registeryourcompany.gov.uk"
+    "register_your_company_register_paye_confirmation_current_tax_year" -> Map(
+      "companyName" -> "Not Foo bar Wizz And Bang Ltd",
+      "referenceNumber" -> "not-reference-test-12345678910"
+    ),
+    "register_your_company_register_paye_confirmation_new_tax_year" -> Map(
+      "companyName" -> "Foo bar Wizz And Bang Ltd",
+      "referenceNumber" -> "reference-test-12345678910"
     ),
     "investment_tax_relief_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
