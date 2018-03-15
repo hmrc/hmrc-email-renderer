@@ -1,0 +1,21 @@
+@(params: Map[String, Any])We received your PAYE application for @params("companyName")
+
+Your application reference number is: @params("referenceNumber")
+
+What happens next?
+
+You've asked for the company's PAYE scheme to start in the next tax year. We won't process your application until the next tax year begins. We'll tell you the outcome by post.
+
+You can still do payroll but you should:
+
+- hold off on sending a Full Payment Submission until you have the company's PAYE registration details
+- enter HMRC code G in the 'late reporting reason' box
+
+If successful we'll send you:
+
+- a letter with your PAYE and accounts office reference number within 5 working days of your application being approved
+- an activation code to do PAYE online within 10 days of your application being approved
+
+From HMRC PAYE
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
