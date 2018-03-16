@@ -7,21 +7,93 @@
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{params("confirmation")}.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your reference is @{params("submissionReference")}.</p>
-@if(params.isDefinedAt("paragraphOne")) {
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-    params("paragraphOne")
-    }.</p>
-}
-@if(params.isDefinedAt("paragraphTwo")) {
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-    params("paragraphTwo")
-    }.</p>
-}
-@if(params.isDefinedAt("paragraphThree")) {
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
-    params("paragraphThree")
-    }.</p>
-}
+    @if(params.isDefinedAt("paragraphOneHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphOneHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphOne")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphOne")
+        }.</p>
+        }
+
+    @if(params.isDefinedAt("paragraphTwoHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphTwoHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphTwo")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphTwo")
+        }.</p>
+        }
+
+    @if(params.isDefinedAt("paragraphThreeHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphThreeHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphThree")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphThree")
+        }.</p>
+    }
+
+    @if(params.isDefinedAt("paragraphFourHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphFourHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphFour")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphFour")
+        }.</p>
+    }
+
+    @if(params.isDefinedAt("paragraphFiveHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphFiveHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphFive")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphFive")
+        }.</p>
+    }
+
+    @if(params.isDefinedAt("paragraphSixHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphSixHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphSix")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphSix")
+        }.</p>
+    }
+
+    @if(params.isDefinedAt("paragraphSevenHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphSevenHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphSeven")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphSeven")
+        }.</p>
+    }
+
+    @if(params.isDefinedAt("paragraphEightHeading")) {
+        <h2 style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphEightHeading")
+        }.</h2>
+    }
+    @if(params.isDefinedAt("paragraphEight")) {
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{
+            params("paragraphEight")
+        }.</p>
+    }
 @if(params("warningInformation").equals("true")) {
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If we need any further details, we'll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won't ask for your personal details by email.</p>
 }

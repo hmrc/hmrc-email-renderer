@@ -7,9 +7,31 @@
 
 Your reference is @{params("submissionReference")}.
 
+
+@if(params.isDefinedAt("paragraphOneHeading")) {@{params("paragraphOneHeading")}.}
 @if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}.}
+
+@if(params.isDefinedAt("paragraphTwoHeading")) {@{params("paragraphTwoHeading")}.}
 @if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}.}
+
+@if(params.isDefinedAt("paragraphThreeHeading")) {@{params("paragraphThreeHeading")}.}
 @if(params.isDefinedAt("paragraphThree")) {@{params("paragraphThree")}.}
+
+@if(params.isDefinedAt("paragraphFourHeading")) {@{params("paragraphFourHeading")}.}
+@if(params.isDefinedAt("paragraphFour")) {@{params("paragraphFour")}.}
+
+@if(params.isDefinedAt("paragraphFiveHeading")) {@{params("paragraphFiveHeading")}.}
+@if(params.isDefinedAt("paragraphFive")) {@{params("paragraphFive")}.}
+
+@if(params.isDefinedAt("paragraphSixHeading")) {@{params("paragraphSixHeading")}.}
+@if(params.isDefinedAt("paragraphSix")) {@{params("paragraphSix")}.}
+
+@if(params.isDefinedAt("paragraphSevenHeading")) {@{params("paragraphSevenHeading")}.}
+@if(params.isDefinedAt("paragraphSeven")) {@{params("paragraphSeven")}.}
+
+@if(params.isDefinedAt("paragraphEightHeading")) {@{params("paragraphEightHeading")}.}
+@if(params.isDefinedAt("paragraphEight")) {@{params("paragraphEight")}.}
+
 @if(params("warningInformation").equals("true")) {If we need any further details, we'll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won't ask for your personal details by email.} 
 @if(params.isDefinedAt("turnAroundTime")) {You’ll normally receive a response within @{params("turnAroundTime")}.}
 
