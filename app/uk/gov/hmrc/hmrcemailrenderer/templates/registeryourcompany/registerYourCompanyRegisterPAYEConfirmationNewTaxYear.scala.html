@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"We received your PAYE application for ${params("companyName")}") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your application reference number is: @params("referenceNumber")</p>
+
+<h2>What happens next?</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You've asked for the company's PAYE scheme to start in the next tax year. We won't process your application until the next tax year begins. We'll tell you the outcome by post.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You can still do payroll but you should:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>hold off on sending a Full Payment Submission until you have the company's PAYE registration details</li>
+    <li>enter HMRC code G in the 'late reporting reason' box</li>
+</ul>
+
+<p style="margin: 0 0 30px; font-size: 19px;">If successful we'll send you:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>a letter with your PAYE and accounts office reference number within 5 working days of your application being approved</li>
+    <li>an activation code to do PAYE online within 10 days of your application being approved</li>
+</ul>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC PAYE</p>
+}
