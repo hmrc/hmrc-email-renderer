@@ -43,6 +43,20 @@ object RegisterYourCompanyTemplates {
       service = RegisterYourCompany,
       subject = "Register for VAT online - new service",
       plainTemplate = txt.registerYourCompanyRegisterVATEmail.f,
-      htmlTemplate = html.registerYourCompanyRegisterVATEmail.f)
+      htmlTemplate = html.registerYourCompanyRegisterVATEmail.f),
+    MessageTemplate.create(
+      templateId = "register_your_company_register_paye_confirmation_new_tax_year",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "'Register as an employer for PAYE' - application received",
+      plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f,
+      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f),
+    MessageTemplate.create(
+      templateId = "register_your_company_register_paye_confirmation_current_tax_year",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "'Register as an employer for PAYE' - application received",
+      plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmation.f,
+      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmation.f)
     )
 }
