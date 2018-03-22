@@ -1,7 +1,12 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Register your company") {
-    <p style="margin: 0 0 30px; font-size: 19px;">You're getting this email because you've signed up to register a company using our private beta service.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">To continue your registration - or to review your application - use the link below:</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Access the 'Register your company' service") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Save this email. You'll need it to:</p>
+    <ul>
+        <li>continue with an incomplete application</li>
+        <li>check the status of a completed application</li>
+        <li>register the company for PAYE</li>
+    </ul>
+    <p style="margin: 0 0 30px; font-size: 19px;">Access the service with the link below:</p>
     <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("returnLink")}" style="color: #005EA5;">@{params("returnLink")}</a></p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC and Companies House</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue & Customs and Companies House</p>
 }
