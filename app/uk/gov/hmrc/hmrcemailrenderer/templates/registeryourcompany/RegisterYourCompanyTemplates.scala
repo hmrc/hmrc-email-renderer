@@ -26,7 +26,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_verification_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "Register your company: verify your email address",
+      subject = "Confirm your email address - ‘Register your company’ service",
       plainTemplate = txt.registerYourCompanyVerificationEmail.f,
       htmlTemplate = html.registerYourCompanyVerificationEmail.f,
       priority = Some(MessagePriority.Urgent)),
@@ -34,7 +34,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_welcome_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "Register your company - Welcome",
+      subject = "Access the ‘Register your company’ service",
       plainTemplate = txt.registerYourCompanyWelcomeEmail.f,
       htmlTemplate = html.registerYourCompanyWelcomeEmail.f),
     MessageTemplate.create(
