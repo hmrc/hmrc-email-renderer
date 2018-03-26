@@ -1103,6 +1103,12 @@ object TemplateParams {
      "eeitt_ho930_confirmation" -> Map(
        "" -> ""
     ),
+     "cir_return_confirmation" -> Map(
+       "" -> ""
+    ),
+     "randd_confirmation_submission" -> Map(
+       "" -> ""
+    ),
     "fhdds_submission_confirmation" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
