@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Your Hydrocarbon Oils return has been submitted
+
+Dear Customer,
+
+We have received the return.
+
+Why you are receiving this
+
+This is an email to confirm the submission of the Hydrocarbon Oils return.
+
+Thank you.
+
+From HMRC Hydrocarbon Oils
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
