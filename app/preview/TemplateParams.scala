@@ -1109,6 +1109,9 @@ object TemplateParams {
      "randd_confirmation_submission" -> Map(
        "" -> ""
     ),
+    "ho10_confirmation_submission" -> Map(
+      "" -> ""
+    ),
     "fhdds_submission_confirmation" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
