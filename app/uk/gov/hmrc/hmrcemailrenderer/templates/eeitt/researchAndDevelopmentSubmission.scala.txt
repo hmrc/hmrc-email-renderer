@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Your Research and Development application has been submitted
+
+Dear Customer,
+
+We have received the application.
+
+Why you are receiving this
+
+This is an email to confirm the submission of the Research and Development application.
+
+Thank you.
+
+From HMRC Research and Development
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

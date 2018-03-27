@@ -158,6 +158,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "eeitt_submission_confirmation",
         "cir_appointment_confirmation",
         "cir_revocation_confirmation",
+        "cir_return_confirmation",
+        "randd_confirmation_submission",
         "eeitt_ce930_confirmation",
         "eeitt_ho930_confirmation",
         "fhdds_submission_confirmation",

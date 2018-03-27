@@ -67,6 +67,24 @@ object EeittTemplates {
       plainTemplate = txt.eeitt_ho930_confirmation.f,
       htmlTemplate = html.eeitt_ho930_confirmation.f,
       priority = Some(MessagePriority.Standard)
+  ),
+  MessageTemplate.create(
+    templateId = "cir_return_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "CIR Return",
+    plainTemplate = txt.cirReturnConfirmation.f,
+    htmlTemplate = html.cirReturnConfirmation.f,
+    priority = Some(MessagePriority.Standard)
+  ),
+  MessageTemplate.create(
+    templateId = "randd_confirmation_submission",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "R&D Submission",
+    plainTemplate = txt.researchAndDevelopmentSubmission.f,
+    htmlTemplate = html.researchAndDevelopmentSubmission.f,
+    priority = Some(MessagePriority.Standard)
   )
   )
 }
