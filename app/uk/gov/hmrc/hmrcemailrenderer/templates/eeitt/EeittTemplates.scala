@@ -91,7 +91,7 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HO10 Submission",
-      plainTemplate = txt.ho10Confimartion.f,
+      plainTemplate = txt.ho10Confimation.f,
       htmlTemplate = html.ho10Confirmation.f,
       priority = Some(MessagePriority.Standard)
     )
