@@ -85,6 +85,15 @@ object EeittTemplates {
     plainTemplate = txt.researchAndDevelopmentSubmission.f,
     htmlTemplate = html.researchAndDevelopmentSubmission.f,
     priority = Some(MessagePriority.Standard)
-  )
+  ),
+    MessageTemplate.create(
+      templateId = "ho10_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HO10 Submission",
+      plainTemplate = txt.ho10Confirmation.f,
+      htmlTemplate = html.ho10Confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
 }
