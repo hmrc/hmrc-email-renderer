@@ -1,6 +1,6 @@
-@(params: Map[String, Any])Verify your email address
+@(params: Map[String, Any])Confirm your email address
 
-You're getting this email because you've signed up to register a company.
+You’re getting this email because you’ve started the Set up a limited company and register for Corporation Tax service.
 
 To verify your email address click the link below:
 
