@@ -26,7 +26,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_verification_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "Confirm your email address - ‘Register your company’ service",
+      subject = "Confirm your email address - Set up a limited company and register for Corporation Tax service",
       plainTemplate = txt.registerYourCompanyVerificationEmail.f,
       htmlTemplate = html.registerYourCompanyVerificationEmail.f,
       priority = Some(MessagePriority.Urgent)),
