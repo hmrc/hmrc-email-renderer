@@ -94,6 +94,15 @@ object EeittTemplates {
       plainTemplate = txt.ho10Confirmation.f,
       htmlTemplate = html.ho10Confirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "apd_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "apd return",
+      plainTemplate = txt.apdReturnConfirmation.f,
+      htmlTemplate = html.apdReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
