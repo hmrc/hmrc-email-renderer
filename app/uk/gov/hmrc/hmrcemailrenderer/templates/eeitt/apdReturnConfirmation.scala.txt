@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Your Air Passenger Duty return has been submitted
+
+Dear Customer,
+
+We have received the return.
+
+Why you are receiving this
+
+This is an email to confirm the submission of the Air Passenger Duty return.
+
+Thank you.
+
+From HMRC Air Passenger Duty
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
