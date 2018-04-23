@@ -18,8 +18,9 @@ package preview
 
 import play.api.mvc.Action
 import play.utils.UriEncoding
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ServiceIdentifier, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.microservice.controller.BaseController
 
 object PreviewController extends BaseController {
@@ -53,11 +54,12 @@ object PreviewGroup {
   def createPreviewGroup(title: String, templates: Seq[MessageTemplate]) =
     PreviewGroup(title, templates.map { template =>
       val params = TemplateParams.exampleParams.getOrElse(template.templateId, Map.empty)
-      PreviewListItem(template.templateId, template.subject(params), params)
+      val priority = template.priority.getOrElse(MessagePriority.Standard)
+      PreviewListItem(template.templateId, template.subject(params), priority, params)
     })
 }
 
-final case class PreviewListItem(templateId: String, subject: String, params: Map[String, String]) {
+final case class PreviewListItem(templateId: String, subject: String, priority: MessagePriority, params: Map[String, String]) {
   lazy val queryString: String =
     if (params.isEmpty) ""
     else {
