@@ -18,7 +18,7 @@ package preview
 
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{Body, MessageTemplate, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{Body, MessagePriority, MessageTemplate, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ServiceIdentifier, TemplateLocator}
 import uk.gov.hmrc.play.test.UnitSpec
@@ -35,14 +35,14 @@ class PreviewSpec extends UnitSpec with OneAppPerSuite {
 
       result.name shouldBe "Self Assessment"
       result.items should contain only(
-        PreviewListItem("does not exist", "does not exist", Map.empty),
-        PreviewListItem("also does not exist", "also does not exist", Map.empty)
+        PreviewListItem("does not exist", "does not exist", MessagePriority.Standard, Map.empty),
+        PreviewListItem("also does not exist", "also does not exist", MessagePriority.Standard, Map.empty)
       )
     }
 
     "generate the queryString from a PreviewListItem" in {
-      PreviewListItem("", "", Map("hello" -> "goodbye")).queryString shouldBe "?hello=goodbye"
-      PreviewListItem("", "", Map.empty).queryString shouldBe ""
+      PreviewListItem("", "", MessagePriority.Standard, Map("hello" -> "goodbye")).queryString shouldBe "?hello=goodbye"
+      PreviewListItem("", "", MessagePriority.Standard, Map.empty).queryString shouldBe ""
     }
   }
 

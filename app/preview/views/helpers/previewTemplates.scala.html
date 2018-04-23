@@ -1,8 +1,7 @@
-@import preview.TemplateParams
 @import preview.PreviewListItem
 
 @(items: Seq[PreviewListItem])
 
 <ul>@items.map { item =>
-  <li>@item.subject [@item.templateId] @preview.views.html.base(item)</li>
+  <li>@item.subject [@item.templateId] @preview.views.html.base(item) (@item.priority)))</li>
 }</ul>
