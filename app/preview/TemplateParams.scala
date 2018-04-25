@@ -389,7 +389,8 @@ object TemplateParams {
       "endDate" -> "5 April 2018",
       "noticeDate" -> "7 July 2017",
       "incompleteClaims" -> "2",
-      "anyEstimates" -> "3"
+      "anyEstimates" -> "3",
+      "currentTaxYear" -> "2018"
     ),
     "iht_access_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
