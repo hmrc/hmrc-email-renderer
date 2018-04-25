@@ -37,7 +37,8 @@ class TcsTemplatesSpec extends TemplateComparisonSpec with OneAppPerSuite with C
         "contactDeadline" -> "31 January 2018",
         "noticeDate" -> "21 October 2016",
         "incompleteClaims" -> "0",
-        "anyEstimates" -> "0"
+        "anyEstimates" -> "0",
+        "currentTaxYear" -> "2018"
       ) ++ commonParameters
 
       compareContent("tcs_renewal_confirmation", params)(tcsTemplate)
@@ -54,7 +55,8 @@ class TcsTemplatesSpec extends TemplateComparisonSpec with OneAppPerSuite with C
         "contactDeadline" -> "31 January 2018",
         "noticeDate" -> "21 October 2016",
         "incompleteClaims" -> "1",
-        "anyEstimates" -> "1"
+        "anyEstimates" -> "1",
+        "currentTaxYear" -> "2018"
       ) ++ commonParameters
 
       compareContent("tcs_renewal_confirmation", params)(tcsTemplate)
@@ -71,7 +73,8 @@ class TcsTemplatesSpec extends TemplateComparisonSpec with OneAppPerSuite with C
         "contactDeadline" -> "31 January 2018",
         "noticeDate" -> "21 October 2016",
         "incompleteClaims" -> "2",
-        "anyEstimates" -> "2"
+        "anyEstimates" -> "2",
+        "currentTaxYear" -> "2018"
       ) ++ commonParameters
 
       compareContent("tcs_renewal_confirmation", params)(tcsTemplate)
