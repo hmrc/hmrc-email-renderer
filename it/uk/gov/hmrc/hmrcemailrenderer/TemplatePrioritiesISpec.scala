@@ -103,7 +103,7 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("apiApplicationRejectedNotification", Map(
         "applicationName" -> "applicationName",
         "reason" -> "reason",
-        "guidelinesUrl" -> "guidelinesUrl"
+        "supportUrl" -> "supportUrl"
       )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
