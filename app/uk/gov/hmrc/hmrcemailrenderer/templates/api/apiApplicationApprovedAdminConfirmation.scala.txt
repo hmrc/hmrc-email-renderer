@@ -1,8 +1,8 @@
 @(params: Map[String, Any])Verify your email address
 
-Your application name @{params("applicationName")} has been approved.
+Your application @{params("applicationName")} passed its check.
 
-We need you to verify this email account again for security purposes. You’ll then be able to access production credentials.
+You need to verify this email account again for security purposes. Then you can access production credentials.
 
 Click on the link below to verify your email account.
 
