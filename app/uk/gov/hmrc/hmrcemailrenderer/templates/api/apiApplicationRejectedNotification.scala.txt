@@ -1,16 +1,15 @@
-@(params: Map[String, Any])Application not approved
+@(params: Map[String, Any])Application check failed
 
-@{params("applicationName")} has not been approved to access production credentials on the HMRC Developer Hub.
+@{params("applicationName")} failed its application check and you cannot access its production credentials.
 
-This is because the name of the application does not meet our guidelines for the following reason:
+It failed because:
 
 @{params("reason")}
 
-You can view our guidelines by clicking the link below.
+Submit your application again if you still want to access production credentials.
+Or contact us for help on submitting your application.
 
-@{params("guidelinesUrl")}
-
-Submit a new name if you still want to access production credentials.
+@{params("supportUrl")}
 
 From HMRC Developer Hub
 

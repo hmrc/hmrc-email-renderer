@@ -1,10 +1,10 @@
-@(params: Map[String, Any])Verify your email address
+@(params: Map[String, Any])Access production credentials
 
-Your application name @{params("applicationName")} has been approved.
+Application @{params("applicationName")} passed its check.
 
-The admin who submitted the name needs to verify their email address again. This is for security purposes.
+The admin who submitted it needs to verify their email address again. This is for security purposes.
 
-The application will then be able to access production credentials.
+Then you can access its production credentials.
 
 From HMRC Developer Hub
 
