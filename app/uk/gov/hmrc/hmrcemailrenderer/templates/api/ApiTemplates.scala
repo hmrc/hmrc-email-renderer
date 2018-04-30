@@ -106,7 +106,7 @@ object ApiTemplates {
       templateId = "apiApplicationApprovedGatekeeperConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Application name approved",
+      subject = "Application check passed",
       plainTemplate = txt.apiApplicationApprovedGatekeeperConfirmation.f,
       htmlTemplate = html.apiApplicationApprovedGatekeeperConfirmation.f,
       priority = Some(MessagePriority.Urgent)
@@ -115,7 +115,7 @@ object ApiTemplates {
       templateId = "apiApplicationApprovedAdminConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Application name approved: Verify your email address",
+      subject = "Application check passed: Verify your email address",
       plainTemplate = txt.apiApplicationApprovedAdminConfirmation.f,
       htmlTemplate = html.apiApplicationApprovedAdminConfirmation.f,
       priority = Some(MessagePriority.Urgent)
@@ -124,7 +124,7 @@ object ApiTemplates {
       templateId = "apiApplicationApprovedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Application name approved",
+      subject = "Application check passed",
       plainTemplate = txt.apiApplicationApprovedNotification.f,
       htmlTemplate = html.apiApplicationApprovedNotification.f,
       priority = Some(MessagePriority.Urgent)
@@ -151,7 +151,7 @@ object ApiTemplates {
       templateId = "apiApplicationRejectedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Application not approved",
+      subject = "Application check failed",
       plainTemplate = txt.apiApplicationRejectedNotification.f,
       htmlTemplate = html.apiApplicationRejectedNotification.f,
       priority = Some(MessagePriority.Urgent)

@@ -90,7 +90,7 @@ object TemplateParams {
     ),
     "apiApplicationRejectedNotification" -> Map(
       "applicationName" -> "Test Application",
-      "guidelinesUrl" -> exampleLinkWithRandomId,
+      "supportUrl" -> exampleLinkWithRandomId,
       "reason" -> "The name is too similar to an existing app."
     ),
     "changeOfEmailAddressNewAddress" -> Map(
