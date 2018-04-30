@@ -62,15 +62,15 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
       validateTemplate(
         templateId = "apiApplicationApprovedGatekeeperConfirmation",
-        expectedSubject = "Application name approved")
+        expectedSubject = "Application check passed")
 
       validateTemplate(
         templateId = "apiApplicationApprovedAdminConfirmation",
-        expectedSubject = "Application name approved: Verify your email address")
+        expectedSubject = "Application check passed: Verify your email address")
 
       validateTemplate(
         templateId = "apiApplicationApprovedNotification",
-        expectedSubject = "Application name approved")
+        expectedSubject = "Application check passed")
 
       validateTemplate(
         templateId = "apiApplicationDeletedNotification",
@@ -82,7 +82,7 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
       validateTemplate(
         templateId = "apiApplicationRejectedNotification",
-        expectedSubject = "Application not approved")
+        expectedSubject = "Application check failed")
     }
   }
 
