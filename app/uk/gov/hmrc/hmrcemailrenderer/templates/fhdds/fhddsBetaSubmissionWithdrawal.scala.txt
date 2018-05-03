@@ -1,21 +1,8 @@
-@(params: Map[String, Any])Fulfilment House Due Diligence Scheme: Application received
+@(params: Map[String, Any])Fulfilment House Due Diligence Scheme: application withdrawn
 
-Dear Customer
+Your application for @{params("companyName")} was withdrawn on @{params("withdrawalDate")}.
 
-We have received your application to register a business for the Fulfilment House Due Diligence Scheme.
-
-What happens next
-
-We will review your application. We may get in touch with your contact person to discuss your application.
-
-We will let you know when a decision has been made.
-
-Help using this service
-
-See the guidance on GOV.UK to find out:
-
-- what you need to do while HMRC processes your application
-- how to contact HMRC about your application
+You will need to wait until tomorrow before you can submit a new application.
 
 From the HMRC Fulfilment House Due Diligence Scheme
 
