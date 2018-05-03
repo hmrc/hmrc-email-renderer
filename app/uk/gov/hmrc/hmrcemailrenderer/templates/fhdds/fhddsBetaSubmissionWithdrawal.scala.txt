@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Fulfilment House Due Diligence Scheme: application withdrawn
 
-Your application for @{params("companyName")} was withdrawn on @{params("withdrawalDate")}.
+Your application was withdrawn on @{params("withdrawalDate")}.
 
 You will need to wait until tomorrow before you can submit a new application.
 
