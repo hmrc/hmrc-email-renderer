@@ -31,6 +31,15 @@ object FhddsTemplates {
       plainTemplate = txt.fhddsBetaSubmissionConfirmation.f,
       htmlTemplate = html.fhddsBetaSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "fhdds_submission_withdrawal",
+      fromAddress = govUkTeamAddress,
+      service = Fhdds,
+      subject = "Fulfilment House Due Diligence Scheme application withdrawn",
+      plainTemplate = txt.fhddsBetaSubmissionWithdrawal.f,
+      htmlTemplate = html.fhddsBetaSubmissionWithdrawal.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
