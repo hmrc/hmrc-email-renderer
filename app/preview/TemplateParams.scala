@@ -1119,6 +1119,9 @@ object TemplateParams {
     "fhdds_submission_confirmation" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "fhdds_submission_withdrawal" -> Map(
+      "withdrawalDate" -> "3 May 2018"
+    ),
     "payment_successful" -> Map("taxType" -> "Self Assessment",
       "taxReference" -> "1234567890K",
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
