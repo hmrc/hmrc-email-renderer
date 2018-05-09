@@ -1,0 +1,13 @@
+@(params: Map[String, Any])You can’t use this service yet
+
+Dear Customer
+
+You can’t use software to submit your VAT Returns yet.
+
+As this service is currently a trial, it’s only available to some limited companies and sole traders.
+
+You’ll be able to sign up for this service by April 2019.
+
+From HMRC Digital
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

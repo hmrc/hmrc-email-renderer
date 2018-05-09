@@ -50,6 +50,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.lostcredentials.LostCredentialsTe
 import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.OnlinePaymentServiceTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.voa.CCATemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vat.MtdfbVatTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -86,7 +87,8 @@ trait TemplateLocator {
         "Lost Credentials"           -> LostCredentialsTemplates.templates,
         "FHDDS"                      -> FhddsTemplates.templates,
         "SDIL"                       -> SdilTemplates.templates,
-        "CCA"                        -> CCATemplates.templates
+        "CCA"                        -> CCATemplates.templates,
+        "MTDfB-VAT"                  -> MtdfbVatTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
