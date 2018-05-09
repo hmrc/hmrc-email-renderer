@@ -218,7 +218,9 @@ class TemplatePrioritiesISpec extends UnitSpec
       ("emac_helpdesk_successful_confirmation_email", Map("service_name" -> "Alcohol and Tobacco Warehousing Declarations (ATWD)", "full_name" -> "Abed Nadir", "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783")),
       ("cbcr_subscription", Map("f_name" -> "Tyrion", "s_name" -> "Lannister", "cbcrId" -> "XGCBC0000000001")),
       ("cbcr_report_confirmation" , Map("name" -> "Tyrion Lannister", "received_at" -> "31 December 2017", "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6")),
-      ("cbcr_cbcid_regeneration", Map("f_name" -> "Tyrion", "s_name" -> "Lannister", "received_at" -> "31 December 2017", "cbcrId" -> "XGCBC0000000001"))
+      ("cbcr_cbcid_regeneration", Map("f_name" -> "Tyrion", "s_name" -> "Lannister", "received_at" -> "31 December 2017", "cbcrId" -> "XGCBC0000000001")),
+      ("mtdfb_vat_principal_sign_up_successful", Map.empty),
+      ("mtdfb_vat_principal_sign_up_failure", Map.empty)
     )
 
     val background = Table[String, Map[String, String]](
