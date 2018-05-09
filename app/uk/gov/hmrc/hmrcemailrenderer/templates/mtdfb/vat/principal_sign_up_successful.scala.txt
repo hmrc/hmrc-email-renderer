@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Sign up complete
+
+Dear Customer
+
+You’ve signed up to use software to submit your VAT Returns.
+
+What happens next
+1. Choose relevant third party software.
+2. Allow your software to submit VAT Returns to HMRC. You might need to sign in with your Government Gateway details.
+3. Use software to record your sales and purchases.
+4. Submit your VAT Returns before your deadlines.
+
+From HMRC Digital
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
