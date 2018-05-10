@@ -1,0 +1,20 @@
+@(params: Map[String, Any])Fulfilment House Due Diligence Scheme: email verification
+
+You told us you want us to use this email address to contact you about the Fulfilment House Due Diligence Scheme.
+
+Before we can starting using this address, you’ll need to verify it.
+
+How to verify your email address
+You must click the link below within the next 30 minutes to verify your email address:
+
+@{params("verificationLink")}
+
+After 30 minutes this link will expire and you’ll need to start again.
+
+From the HMRC Fulfilment House Due Diligence Scheme
+
+--
+
+Do not reply to this email.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
