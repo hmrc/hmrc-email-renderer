@@ -71,8 +71,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "HTS",
         "SDIL",
         "Lost Credentials",
-        "CCA",
-        "MTDfB-VAT"
+        "CCA"
       )
     }
 
@@ -372,9 +371,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "sdil_registration_received",
         "retrieve_userid_notification",
         "cca_enrolment_migration_confirmation",
-        "cca_enrolment_confirmation",
-        "mtdfb_vat_principal_sign_up_successful",
-        "mtdfb_vat_principal_sign_up_failure"
+        "cca_enrolment_confirmation"
         )
     }
   }
