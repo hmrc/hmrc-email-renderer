@@ -314,6 +314,11 @@ object TemplateParams {
       "warningInformation" -> "false",
       "turnAroundTime" -> "15 days"
     ),
+    "dfs_submission_success_rcgt_2018"->Map(
+      "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
+      "name" -> "Mr Joe Bloggs",
+      "submissionReference" -> "123-ABCD-456"
+    ),
     "cato_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
