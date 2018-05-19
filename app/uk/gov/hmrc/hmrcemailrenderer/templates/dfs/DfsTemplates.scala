@@ -93,6 +93,15 @@ object DfsTemplates {
       plainTemplate = txt.dfsTrustsSubmissionConfirmationEmail.f,
       htmlTemplate = html.dfsTrustsSubmissionConfirmationEmail.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dfs_submission_success_rcgt_2018",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = "Capital Gains Tax real time transaction return submission confirmation",
+      plainTemplate = txt.dfsSubmissionConfirmationEmailRCGT.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailRCGT.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
