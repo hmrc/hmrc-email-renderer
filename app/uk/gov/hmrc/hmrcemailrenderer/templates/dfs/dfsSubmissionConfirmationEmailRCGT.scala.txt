@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Dear @{params("name")},
+
+HM Revenue and Customs (HMRC) has received your claim for a tax refund.
+
+Your submission reference is @{params("submissionReference")}.
+
+We will email you or contact you by post with your Capital Gains Tax real time transaction return payment reference number if you are due any tax to pay. Please Don't make any payment unit you receive this reference number if appropriate.
+If we need any further details, we'll contact you. We may ask you to sign in a service to provide more details but we won't ask for your personal details by email.
+ 
+You’ll normally receive a response within 15 days.
+ 
+Yours sincerely,
+ 
+HM Revenue and Customs
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -155,6 +155,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_submission_success_empty_turn_around_time_2015",
         "dfs_admin_notification",
         "dfs_trusts_submission_success",
+        "dfs_submission_success_rcgt_2018",
         "eeitt_submission_confirmation",
         "cir_appointment_confirmation",
         "cir_revocation_confirmation",
