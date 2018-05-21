@@ -2,7 +2,7 @@
 
 Dear @{params("name")},
 
-HM Revenue and Customs (HMRC) has received your claim for a tax refund.
+HM Revenue and Customs (HMRC) has received your Capital Gains Tax Real Time Transaction return.
 
 Your submission reference is @{params("submissionReference")}.
 
