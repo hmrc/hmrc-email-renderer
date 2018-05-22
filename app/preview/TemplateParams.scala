@@ -1142,21 +1142,21 @@ object TemplateParams {
     "ddi_cancelled" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "1",
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "DDIREFERENCE" -> "AB123456",
       "REGIME" -> "VATC"
     ),
     "ddi_not_acceptable" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "B",
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "DDIREFERENCE" -> "AB123456",
       "REGIME" -> "VATC"
     ),
     "ddi_reinstated" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "R",
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "DDIREFERENCE" -> "AB123456",
       "REGIME" -> "VATC",
       "SORTCODE" -> "001122",
@@ -1165,14 +1165,14 @@ object TemplateParams {
     "ddi_unpaid" -> Map(
       "FILE" -> "ARUDD",
       "REASON" -> "5",
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "DDIREFERENCE" -> "AB123456",
       "REGIME" -> "VATC",
       "AMOUNT" -> "1000.00",
       "COLLECTIONDATE" -> "20180501"
     ),
     "ddi_advance_notice" -> Map(
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "DDIREFERENCE" -> "AB123456",
       "REGIME" -> "VATC",
       "AMOUNT" -> "15003.18",
@@ -1190,10 +1190,10 @@ object TemplateParams {
       "AMOUNT.2" -> "5952.18"
     ),
     "ddi_set_up" -> Map(
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "DDIREFERENCE" -> "AB123456",
       "REGIME" -> "VATC",
-      "ACCOUNTNAME" -> "MEGACORP PLC",
+      "ACCOUNTNAME" -> "MR A CUSTOMER",
       "SORTCODE" -> "001122",
       "ACCOUNTNUMBER" -> "12345678",
       "COLLECTIONDATE" -> "20180501",
@@ -1202,7 +1202,7 @@ object TemplateParams {
       "CHARGETYPE" -> "VAT Return charge"
     ),
     "ddi_migration_letter" -> Map(
-      "NAME" -> "Megacorp Plc",
+      "NAME" -> "Customer",
       "ADDRESSLINE1" -> "15 Grand Avenue",
       "ADDRESSLINE2" -> "Floor 104",
       "ADDRESSLINE3" -> "Capital City",
