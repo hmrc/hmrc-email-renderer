@@ -21,6 +21,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
 
 object OnlinePaymentServiceTemplates {
   val templates = Seq(
+
+    // Card payments templates
+
     MessageTemplate.create(
       templateId = "payment_successful",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
@@ -36,6 +39,65 @@ object OnlinePaymentServiceTemplates {
       subject = "Cadarnhad gan CThEM o daliad",
       plainTemplate = txt.payment_successful_cy.f,
       htmlTemplate = html.payment_successful_cy.f,
+      priority = Some(MessagePriority.Urgent)),
+
+    // Direct Debit templates
+
+    MessageTemplate.create(
+      templateId = "ddi_cancelled",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Cancelled direct debit instruction",
+      plainTemplate = txt.ddi_cancelled.f,
+      htmlTemplate = html.ddi_cancelled.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_advance_notice",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Advance notice of your direct debit payment",
+      plainTemplate = txt.ddi_advance_notice.f,
+      htmlTemplate = html.ddi_advance_notice.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_migration_letter",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Direct debit for VAT returns",
+      plainTemplate = txt.ddi_migration_letter.f,
+      htmlTemplate = html.ddi_migration_letter.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_not_acceptable",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Direct debit instruction cannot be used",
+      plainTemplate = txt.ddi_not_acceptable.f,
+      htmlTemplate = html.ddi_not_acceptable.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_reinstated",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Reinstated direct debit instruction",
+      plainTemplate = txt.ddi_reinstated.f,
+      htmlTemplate = html.ddi_reinstated.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_unpaid",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Direct debit payment not collected",
+      plainTemplate = txt.ddi_unpaid.f,
+      htmlTemplate = html.ddi_unpaid.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_set_up",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Confirmation of your direct debit instruction",
+      plainTemplate = txt.ddi_set_up.f,
+      htmlTemplate = html.ddi_set_up.f,
       priority = Some(MessagePriority.Urgent))
   )
 }

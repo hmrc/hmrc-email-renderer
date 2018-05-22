@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+
+Cancelled direct debit instruction for VAT
+
+Dear @params("NAME")
+
+Reference @params("DDIREFERENCE")
+
+Your bank has told us your instruction to collect payments under this direct debit reference has been cancelled.
+
+If you want to carry on paying by direct debit, you will need to set up a new instruction.
+
+From HMRC direct debit team
