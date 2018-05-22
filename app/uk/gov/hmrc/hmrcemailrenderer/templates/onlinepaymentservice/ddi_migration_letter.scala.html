@@ -1,0 +1,36 @@
+@(params: Map[String, Any])
+
+@formatDate(yyyymmdd: String) = @{
+  val year = yyyymmdd.slice(2,4)
+  val month = yyyymmdd.slice(4,6)
+  val day = yyyymmdd.slice(6,8)
+  s"$day/$month/$year"
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Information on your direct debit for VAT returns") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">We need to give you some information after your transfer to Making Tax Digital for VAT. There is no need for you to take any action.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You currently pay your VAT return by direct debit. From @formatDate(params("TRANSFERDATE").toString) we will transfer your direct debit over and your reference will change from '@params("OLDSUNNAME")' to '@params("NEWSUNNAME")'. Your new service number is: @params("NEWSUN").</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your bank statement may show a final payment under the old reference and a first payment under the new reference.</p>
+
+{Examples to be included}
+
+<p style="margin: 0 0 30px; font-size: 19px;">If you have any questions, call 0300 200 3700.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC direct debit team</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><h2>The Direct Debit Guarantee</h2></p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    <ul>
+        <li>This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits</li>
+        <li>If there are any changes to the amount, date or frequency of your Direct Debit @params("NEWSUNNAME") will notify you three working days in advance of your account being debited or as otherwise agreed. If you request @params("NEWSUNNAME") to collect a payment, confirmation of the amount and date will be given to you at the time of the request.</li>
+        <li>If an error is made in the payment of your Direct Debit, by @params("NEWSUNNAME") or your bank or building society you are entitled to a full and immediate refund of the amount paid from your bank or building society</li>
+        <li>If you receive a refund you are not entitled to, you must pay it back when @params("NEWSUNNAME") asks you to</li>
+        <li>You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.</li>
+    </ul>
+</p>
+}
