@@ -17,8 +17,6 @@ You currently pay your VAT return by direct debit. From @formatDate(params("TRAN
 
 Your bank statement may show a final payment under the old reference and a first payment under the new reference.
 
-{Examples to be included}
-
 If you have any questions, call 0300 200 3700.
 
 From HMRC direct debit team
