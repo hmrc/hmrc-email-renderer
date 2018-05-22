@@ -1,0 +1,71 @@
+@(params: Map[String, Any])
+
+@variableText = @{
+  params("REGIME").toString match {
+    case "VAT returns" => "We will collect amounts starting from your first VAT return due on or after the first collection date. For any unpaid returns due before this date you will need to pay by an alternative method."
+    case "VAT POA customers" => "We will collect both your future VAT Payment on Account instalments and the balance due on your VAT return."
+    case anyOther => "?????????????????"
+  }
+}
+
+@maskedAccountNumber = @{
+  "****" + params("ACCOUNTNUMBER").toString.drop(4)
+}
+
+@formatDate(yyyymmdd: String) = @{
+  val year = yyyymmdd.slice(2,4)
+  val month = yyyymmdd.slice(4,6)
+  val day = yyyymmdd.slice(6,8)
+  s"$day/$month/$year"
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirmation of your direct debit instruction to pay VAT") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Reference</strong> @params("DDIREFERENCE")</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your direct debit instruction has been set up. Make sure the following details are correct:</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+        <tbody>
+            <tr>
+                <th>Account name</th>
+                <td>@params("ACCOUNTNAME")</td>
+            </tr>
+            <tr>
+                <th>Account number</th>
+                <td>@maskedAccountNumber</td>
+            </tr>
+            <tr>
+                <th>Sort code</th>
+                <td>@params("SORTCODE")</td>
+            </tr>
+            <tr>
+                <th>Date of first collection</th>
+                <td>@formatDate(params("COLLECTIONDATE").toString)</td>
+            </tr>
+        </tbody>
+    </table>
+</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">If any of these details are wrong, call us on @params("PHONENUMBER") quoting reference @params("DDIREFERENCE").</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You have the right to cancel your direct debit at any time. A copy of the direct debit guarantee is below.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We will send you a notification of the amount to be collected 2 working days before we apply to your bank or building society for payment. @variableText</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Payments will be collected under @params("NEWSUNNAME").</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC direct debit team</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><h2>The Direct Debit Guarantee</h2></p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    <ul>
+        <li>This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits</li>
+        <li>If there are any changes to the amount, date or frequency of your Direct Debit @params("NEWSUNNAME") will notify you three working days in advance of your account being debited or as otherwise agreed. If you request @params("NEWSUNNAME") to collect a payment, confirmation of the amount and date will be given to you at the time of the request.</li>
+        <li>If an error is made in the payment of your Direct Debit, by @params("NEWSUNNAME") or your bank or building society you are entitled to a full and immediate refund of the amount paid from your bank or building society</li>
+        <li>If you receive a refund you are not entitled to, you must pay it back when @params("NEWSUNNAME") asks you to</li>
+        <li>You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify us.</li>
+    </ul>
+</p>
+
+}
