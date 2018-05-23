@@ -45,7 +45,7 @@ object OnlinePaymentServiceTemplates {
 
     MessageTemplate.create(
       templateId = "ddi_cancelled",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Cancelled direct debit instruction",
       plainTemplate = txt.ddi_cancelled.f,
@@ -53,7 +53,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_advance_notice",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Advance notice of your direct debit payment",
       plainTemplate = txt.ddi_advance_notice.f,
@@ -61,7 +61,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_migration_letter",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Direct debit for VAT returns",
       plainTemplate = txt.ddi_migration_letter.f,
@@ -69,7 +69,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_not_acceptable",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Direct debit instruction cannot be used",
       plainTemplate = txt.ddi_not_acceptable.f,
@@ -77,7 +77,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_reinstated",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Reinstated direct debit instruction",
       plainTemplate = txt.ddi_reinstated.f,
@@ -85,7 +85,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_unpaid",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Direct debit payment not collected",
       plainTemplate = txt.ddi_unpaid.f,
@@ -93,7 +93,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_set_up",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Confirmation of your direct debit instruction",
       plainTemplate = txt.ddi_set_up.f,

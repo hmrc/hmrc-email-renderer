@@ -1,13 +1,5 @@
 @(params: Map[String, Any])
 
-@variableText = @{
-  params("REGIME").toString match {
-    case "VAT returns" => "We will collect amounts starting from your first VAT return due on or after the first collection date. For any unpaid returns due before this date you will need to pay by an alternative method."
-    case "VAT POA customers" => "We will collect both your future VAT Payment on Account instalments and the balance due on your VAT return."
-    case anyOther => "?????????????????"
-  }
-}
-
 @maskedAccountNumber = @{
   "****" + params("ACCOUNTNUMBER").toString.drop(4)
 }
@@ -34,7 +26,7 @@ Date of first collection: @formatDate(params("COLLECTIONDATE").toString)
 
 If any of these details are wrong, call us on @params("PHONENUMBER") quoting reference @params("DDIREFERENCE").
 You have the right to cancel your direct debit at any time. A copy of the direct debit guarantee is below.
-We will send you a notification of the amount to be collected 2 working days before we apply to your bank or building society for payment. @variableText
+We will send you a notification of the amount to be collected 2 working days before we apply to your bank or building society for payment.
 Payments will be collected under @params("NEWSUNNAME").
 
 From HMRC direct debit team
