@@ -2,12 +2,12 @@
 
 Dear @{params("name")},
 
-HM Revenue and Customs (HMRC) has received your Capital Gains Tax Real Time Transaction return.
+HM Revenue and Customs (HMRC) has received your Real-Time Transaction return for Capital Gains Tax.
 
 Your submission reference is @{params("submissionReference")}.
 
-We will email you or contact you by post with your Capital Gains Tax Real Time Transaction return payment reference number if you are due any tax to pay. Please Don't make any payment unit you receive this reference number if appropriate.
-If we need any further details, we'll contact you. We may ask you to sign in a service to provide more details but we won't ask for your personal details by email.
+If you are due to pay any tax, we will send you a payment reference number by email or post. Please wait to receive this reference number before you make any payment.
+If we need any further details, we'll contact you. We may ask you to sign in a service to provide more details, but we won't ask for your personal details by email.
  
 You’ll normally receive a response within 15 days.
  
