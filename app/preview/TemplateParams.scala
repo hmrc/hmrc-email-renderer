@@ -1139,6 +1139,85 @@ object TemplateParams {
       "commission" -> "2.55",
       "totalPaid" -> "126.00"
     ),
+    "ddi_cancelled" -> Map(
+      "FILE" -> "ADDACS",
+      "REASON" -> "1",
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "AB123456",
+      "REGIME" -> "VATC"
+    ),
+    "ddi_not_acceptable" -> Map(
+      "FILE" -> "ADDACS",
+      "REASON" -> "B",
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "AB123456",
+      "REGIME" -> "VATC"
+    ),
+    "ddi_reinstated" -> Map(
+      "FILE" -> "ADDACS",
+      "REASON" -> "R",
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "AB123456",
+      "REGIME" -> "VATC",
+      "SORTCODE" -> "001122",
+      "ACCOUNTNUMBER" -> "12345678"
+    ),
+    "ddi_unpaid" -> Map(
+      "FILE" -> "ARUDD",
+      "REASON" -> "5",
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "AB123456",
+      "REGIME" -> "VATC",
+      "AMOUNT" -> "1000.00",
+      "COLLECTIONDATE" -> "20180501"
+    ),
+    "ddi_advance_notice" -> Map(
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "AB123456",
+      "REGIME" -> "VATC",
+      "AMOUNT" -> "15003.18",
+      "COLLECTIONDATE" -> "20180501",
+      "NEWSUNNAME" -> "HMRC VAT",
+      "PHONENUMBER" -> "0844 555 4672",
+      "CHARGETYPE.0" -> "VAT Return charge",
+      "PERIOD.0" -> "0118",
+      "AMOUNT.0" -> "5001.43",
+      "CHARGETYPE.1" -> "VAT Return charge",
+      "PERIOD.1" -> "0418",
+      "AMOUNT.1" -> "4049.57",
+      "CHARGETYPE.2" -> "VAT Return charge",
+      "PERIOD.2" -> "0718",
+      "AMOUNT.2" -> "5952.18"
+    ),
+    "ddi_set_up" -> Map(
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "AB123456",
+      "REGIME" -> "VATC",
+      "ACCOUNTNAME" -> "MR A CUSTOMER",
+      "SORTCODE" -> "001122",
+      "ACCOUNTNUMBER" -> "12345678",
+      "COLLECTIONDATE" -> "20180501",
+      "NEWSUNNAME" -> "HMRC VAT",
+      "PHONENUMBER" -> "0844 555 4672",
+      "CHARGETYPE" -> "VAT Return charge"
+    ),
+    "ddi_migration_letter" -> Map(
+      "NAME" -> "Customer",
+      "ADDRESSLINE1" -> "15 Grand Avenue",
+      "ADDRESSLINE2" -> "Floor 104",
+      "ADDRESSLINE3" -> "Capital City",
+      "ADDRESSLINE4" -> "",
+      "ADDRESSLINE5" -> "",
+      "POSTCODE" -> "MZ1 1AA",
+      "COUNTRY" -> "United Kingdom",
+      "REGIME" -> "VATC",
+      "OLDSUN" -> "123456",
+      "NEWSUN" -> "448610",
+      "TRANSFERDATE" -> "20180501",
+      "DDIREFERENCE" -> "AB123456",
+      "OLDSUNNAME" -> "HMRC eVAT",
+      "NEWSUNNAME" -> "HMRC E VAT DDS"
+    ),
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
