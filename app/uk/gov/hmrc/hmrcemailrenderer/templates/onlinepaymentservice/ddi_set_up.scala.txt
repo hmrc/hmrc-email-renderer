@@ -22,10 +22,9 @@ Your direct debit instruction has been set up. Make sure the following details a
 Account name: @params("ACCOUNTNAME")
 Account number: @maskedAccountNumber
 Sort code: @params("SORTCODE")
-Date of first collection: @formatDate(params("COLLECTIONDATE").toString)
 
-If any of these details are wrong, call us on @params("PHONENUMBER") quoting reference @params("DDIREFERENCE").
-You have the right to cancel your direct debit at any time. A copy of the direct debit guarantee is below.
+If any of these details are wrong, call us on @params("PHONENUMBER") and quote your reference.
+You have the right to cancel your direct debit at any time.
 We will send you a notification of the amount to be collected 2 working days before we apply to your bank or building society for payment.
 Payments will be collected under @params("NEWSUNNAME").
 
