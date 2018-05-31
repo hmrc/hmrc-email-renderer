@@ -85,4 +85,5 @@ object ServiceIdentifier {
   case object SoftDrinksIndustryLevy extends ServiceIdentifier { override def name: String = "sdil" }
   case object LostCredentials extends ServiceIdentifier { override val name = "lostcredentials" }
   case object CCA extends ServiceIdentifier { override val name = "check-challenge-assessment"}
+  case object CDS extends ServiceIdentifier { override val name = "cds"}
 }
