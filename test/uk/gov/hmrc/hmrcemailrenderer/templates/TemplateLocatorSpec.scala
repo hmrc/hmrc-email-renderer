@@ -71,7 +71,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "HTS",
         "SDIL",
         "Lost Credentials",
-        "CCA"
+        "CCA",
+        "CDS"
       )
     }
 
@@ -379,7 +380,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "sdil_registration_received",
         "retrieve_userid_notification",
         "cca_enrolment_migration_confirmation",
-        "cca_enrolment_confirmation"
+        "cca_enrolment_confirmation",
+        "cdsTestTemplate"
         )
     }
   }

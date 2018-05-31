@@ -44,6 +44,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.lisa.LisaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hts.HtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.lostcredentials.LostCredentialsTemplates
@@ -86,7 +87,8 @@ trait TemplateLocator {
         "Lost Credentials"           -> LostCredentialsTemplates.templates,
         "FHDDS"                      -> FhddsTemplates.templates,
         "SDIL"                       -> SdilTemplates.templates,
-        "CCA"                        -> CCATemplates.templates
+        "CCA"                        -> CCATemplates.templates,
+        "CDS"                        -> cdsTestTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
