@@ -34,16 +34,12 @@
                 <th>Sort code</th>
                 <td>@params("SORTCODE")</td>
             </tr>
-            <tr>
-                <th>Date of first collection</th>
-                <td>@formatDate(params("COLLECTIONDATE").toString)</td>
-            </tr>
         </tbody>
     </table>
 </p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">If any of these details are wrong, call us on @params("PHONENUMBER") quoting reference @params("DDIREFERENCE").</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You have the right to cancel your direct debit at any time. A copy of the direct debit guarantee is below.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If any of these details are wrong, call us on @params("PHONENUMBER") and quote your reference.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You have the right to cancel your direct debit at any time.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">We will send you a notification of the amount to be collected 2 working days before we apply to your bank or building society for payment.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Payments will be collected under @params("NEWSUNNAME").</p>
 
