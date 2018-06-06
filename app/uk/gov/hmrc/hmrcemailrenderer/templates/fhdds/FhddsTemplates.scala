@@ -49,6 +49,15 @@ object FhddsTemplates {
       plainTemplate = txt.fhddsBetaEmailVerification.f,
       htmlTemplate = html.fhddsBetaEmailVerification.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "fhdds_submission_deregister",
+      fromAddress = govUkTeamAddress,
+      service = Fhdds,
+      subject = "Fulfilment House Due Diligence Scheme registration cancelled",
+      plainTemplate = txt.fhddsBetaDeregistration.f,
+      htmlTemplate = html.fhddsBetaDeregistration.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

@@ -1130,6 +1130,9 @@ object TemplateParams {
     "fhdds_email_verification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "fhdds_submission_deregister" -> Map(
+      "deregisterDate" -> "6 June 2018"
+    ),
     "payment_successful" -> Map("taxType" -> "Self Assessment",
       "taxReference" -> "1234567890K",
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
