@@ -28,7 +28,7 @@ object CCATemplates {
       fromAddress = govUkTeamAddress,
       service = CCA,
       subject = "Valuation Office Agency - check and challenge registration",
-      plainTemplate = txt.ccaEnrolmentConfirmationExisiting.f,
+      plainTemplate = txt.ccaEnrolmentConfirmationExisting.f,
       htmlTemplate = html.ccaEnrolmentConfirmationExisting.f,
       priority = Some(MessagePriority.Standard)),
     MessageTemplate.create(
