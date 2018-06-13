@@ -27,15 +27,15 @@ object CCATemplates {
       templateId = "cca_enrolment_migration_confirmation",
       fromAddress = govUkTeamAddress,
       service = CCA,
-      subject = "Submission Confirmation",
-      plainTemplate = txt.ccaEnrolmentConfirmationExisiting.f,
+      subject = "Valuation Office Agency - check and challenge registration",
+      plainTemplate = txt.ccaEnrolmentConfirmationExisting.f,
       htmlTemplate = html.ccaEnrolmentConfirmationExisting.f,
       priority = Some(MessagePriority.Standard)),
     MessageTemplate.create(
         templateId = "cca_enrolment_confirmation",
         fromAddress = govUkTeamAddress,
         service = CCA,
-        subject = "Submission Confirmation",
+        subject = "Valuation Office Agency - check and challenge registration",
         plainTemplate = registration.txt.ccaEnrolmentConfirmation.f,
         htmlTemplate = registration.html.ccaEnrolmentConfirmation.f,
         priority = Some(MessagePriority.Standard)
