@@ -2,20 +2,19 @@
 
 You have a new message from HMRC
 
-The message is about your anti-money laundering supervision(AMLS). It is only visible from inside your AMLS account.
+The message is about your Anti-Money Laundering Supervision(AMLS). It is only visible from inside your AMLS account.
 
 To read your message either:
 
     - Sign in to your AMLS account using the correct username and password
     - Sign in to your business tax account and then open your AMLS account (under 'Other service')
-    - Use the link to your AMLS account we sent you when you signed up.
+    - Use the link to your AMLS account we sent you when you signed up
 
 For security reasons we cannot include any links on this page
 
-
 Why you got this email
 
-You gave this contact email address when you signed up for anti-money laundering supervision.
+You gave this contact email address when you signed up for Anti-Money laundering supervision.
 This means we send you an email to let you know you have a new message in your account.
 From HMRC Anti-Money Laundering Supervision
 
