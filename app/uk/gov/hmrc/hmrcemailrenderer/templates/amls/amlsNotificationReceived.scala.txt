@@ -1,11 +1,15 @@
 @(params: Map[String, Any])
 
 You have a new message from HMRC
+
 The message is about your anti-money laundering supervision(AMLS). It is only visible from inside your AMLS account.
-To read your message:
-    -Sign in to your AMLS account using the correct username and password
-    -Sign in to your business tax account and then open your AMLS account(under 'Other service')
-    -Use the link to your AMLS account we sent you when you signed up.
+
+To read your message either:
+
+    - Sign in to your AMLS account using the correct username and password
+    - Sign in to your business tax account and then open your AMLS account (under 'Other service')
+    - Use the link to your AMLS account we sent you when you signed up.
+
 For security reasons we cannot include any links on this page
 
 
