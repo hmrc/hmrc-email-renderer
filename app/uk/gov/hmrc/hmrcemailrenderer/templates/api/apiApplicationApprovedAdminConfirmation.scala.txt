@@ -2,9 +2,9 @@
 
 Your application @{params("applicationName")} passed its check.
 
-You need to verify this email account again for security purposes. Then you can access production credentials.
+We need you to verify this email account again for security purposes. Then you can access production credentials.
 
-Click on the link below to verify your email account.
+Click on the link below to verify your email address.
 
 @{params("developerHubLink")}
 
