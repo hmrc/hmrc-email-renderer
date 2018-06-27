@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Customs Risk Information Message
+
+Ref: @params("ref")
+
+has been triggered by the entry of a customs declaration.
+
+Please take the appropriate action or contact your nominated liaison point.
+
+Thank you.
+
+From HMRC Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

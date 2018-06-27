@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Customs Risk Information Message"){
+    <p style="margin: 0 0 30px; font-size: 19px;">
+        Ref: @params("ref")</p>
+    <p style="margin:0 0 30px; font-size: 19px;"> This message has been triggered by the entry of a customs declaration.
+        Please take the appropriate action or contact your nominated liaison point.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">
+        Thank you.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">
+        From HMRC Customs Declaration Service</p>
+}
