@@ -39,6 +39,5 @@ object cdsTestTemplates {
       plainTemplate = txt.cdsEmailTemplate.f,
       htmlTemplate = html.cdsEmailTemplate.f,
       priority = Some(MessagePriority.Urgent))
-    sdfdfsdf
   )
 }
