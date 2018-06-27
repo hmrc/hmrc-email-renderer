@@ -30,6 +30,14 @@ object cdsTestTemplates {
       subject = "CDS Test Email",
       plainTemplate = txt.cdsTestTemplate.f,
       htmlTemplate = html.cdsTestTemplate.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId ="cdsEmailTemplate",
+      fromAddress = FromAddress.noReply("CDS Email"),
+      service = CDS,
+      subject = "CDS Email",
+      plainTemplate = txt.cdsEmailTemplate.f,
+      htmlTemplate = html.cdsEmailTemplate.f,
       priority = Some(MessagePriority.Urgent))
   )
 }

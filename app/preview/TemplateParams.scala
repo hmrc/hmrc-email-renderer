@@ -1249,6 +1249,9 @@ object TemplateParams {
     "cca_enrolment_confirmation" -> Map(
       "name" -> "test user",
       "personId" -> "123456789"
+    ),
+    "cdsEmailTemplate" -> Map(
+      "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
     )
   )
 }
