@@ -86,4 +86,5 @@ object ServiceIdentifier {
   case object LostCredentials extends ServiceIdentifier { override val name = "lostcredentials" }
   case object CCA extends ServiceIdentifier { override val name = "check-challenge-assessment"}
   case object CDS extends ServiceIdentifier { override val name = "cds"}
+  case object MTDfBVatSignUp extends ServiceIdentifier { override val name = "mtdfb-vat-sign-up" }
 }
