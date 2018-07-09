@@ -1,12 +1,13 @@
 @(params: Map[String, Any])
 
-Direct debit instruction for VAT cannot be used
+VAT Return Direct Debit Instruction: cannot be used
 
 Dear @params("NAME")
 
-Reference @params("DDIREFERENCE")
+Direct Debit mandate reference @params("DDIREFERENCE")
 
 Your bank has told us that we cannot collect payments using this instruction.
-If you still wish to pay by direct debit, you need to set up a new instruction.
 
-From HMRC direct debit team
+If you still wish to pay by Direct Debit, you need to set up a new instruction.
+
+From HMRC Direct Debit team
