@@ -1,13 +1,13 @@
 @(params: Map[String, Any])
 
-Cancelled direct debit instruction for VAT
+VAT Return Direct Debit: Cancelled Direct Debit
 
 Dear @params("NAME")
 
-Reference @params("DDIREFERENCE")
+Direct Debit mandate reference @params("DDIREFERENCE")
 
-Your bank has told us your instruction to collect payments under this direct debit reference has been cancelled.
+Your bank has told us your instruction to collect payments under this Direct Debit reference have been cancelled.
 
-If you want to carry on paying by direct debit, you will need to set up a new instruction.
+If you want to carry on paying by Direct Debit, you will need to set up a new instruction.
 
-From HMRC direct debit team
+From HMRC Direct Debit team
