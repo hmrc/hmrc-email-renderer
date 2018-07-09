@@ -20,22 +20,22 @@
   s"$day/$month/$year"
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Direct debit payment for VAT has not been collected") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "VAT Return Direct Debit: payment not collected") {
 
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Reference</strong> @params("DDIREFERENCE")</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
 
 @if(params("REASON") == "0") {
     <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @formatDate(params("COLLECTIONDATE").toString) has been returned by your bank marked 'refer to payer'.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">We will not try to collect this payment again. You need to arrange to make payment by another method immediately (unless you have already paid).</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Your direct debit instruction has not been cancelled, so we will continue to collect future payments.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit instruction has not been cancelled, so we will continue to collect future payments.</p>
 } else {
     <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @formatDate(params("COLLECTIONDATE").toString) has been rejected by your bank. This is because @reason.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">You need to arrange to make payment by another method immediately.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">If you want to make payments in the future by direct debit, you need to set up a new instruction.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you want to make payments in the future by Direct Debit, you need to set up a new instruction.</p>
 }
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC direct debit team</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
 
 }

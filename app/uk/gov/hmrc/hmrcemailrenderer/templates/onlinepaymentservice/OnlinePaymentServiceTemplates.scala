@@ -87,7 +87,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_unpaid",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Direct debit payment not collected",
+      subject = "VAT Return Direct Debit: payment not collected",
       plainTemplate = txt.ddi_unpaid.f,
       htmlTemplate = html.ddi_unpaid.f,
       priority = Some(MessagePriority.Urgent)),
