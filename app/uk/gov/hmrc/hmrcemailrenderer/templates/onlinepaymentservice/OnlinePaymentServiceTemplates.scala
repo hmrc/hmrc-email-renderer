@@ -79,7 +79,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_reinstated",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Reinstated direct debit instruction",
+      subject = "VAT Return Direct Debit: Reinstated Direct Debit Instruction",
       plainTemplate = txt.ddi_reinstated.f,
       htmlTemplate = html.ddi_reinstated.f,
       priority = Some(MessagePriority.Urgent)),
