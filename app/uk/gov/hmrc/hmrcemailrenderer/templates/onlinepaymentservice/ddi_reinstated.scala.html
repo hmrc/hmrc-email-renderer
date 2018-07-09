@@ -4,30 +4,38 @@
     "****" + params("ACCOUNTNUMBER").toString.drop(4)
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reinstated direct debit instruction for VAT") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reinstated Direct Debit instruction for VAT") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">Dear @params("NAME")</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Reference</strong> @params("DDIREFERENCE")</p>
+    <p style="margin: 0 0 30px;
+        font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your bank has told us that your instruction to allow us to collect payments under this direct debit reference has been reinstated.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Your direct debit will continue to be taken from:</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
-        <tbody>
-        <tr>
-            <th>Bank account number</th>
-            <td>@maskedAccountNumber</td>
-        </tr>
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">
+        Your bank has told us that your instruction to allow us to collect payments under this Direct Debit reference has been reinstated.</p>
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">Your direct debit will continue to be taken from:</p>
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">
+<table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
+        font-size: 19px;">
+    <tbody>
         <tr>
             <th>Sort code</th>
             <td>@params("SORTCODE")</td>
         </tr>
-        </tbody>
-    </table>
-</p>
-<p style="margin: 0 0 30px; font-size: 19px;">If this is not correct, amend your direct debit instruction immediately.</p>
+        <tr>
+            <th>Account number</th>
+            <td>@maskedAccountNumber</td>
+        </tr>
+    </tbody>
+</table>
+    </p>
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">If this is not correct, amend your Direct Debit instruction immediately.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC direct debit team</p>
-
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">From HMRC Direct Debit team</p>
 }
