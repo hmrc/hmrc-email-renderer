@@ -71,7 +71,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_not_acceptable",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Direct debit instruction cannot be used",
+      subject = "VAT Return Direct Debit Instruction: cannot be used",
       plainTemplate = txt.ddi_not_acceptable.f,
       htmlTemplate = html.ddi_not_acceptable.f,
       priority = Some(MessagePriority.Urgent)),
