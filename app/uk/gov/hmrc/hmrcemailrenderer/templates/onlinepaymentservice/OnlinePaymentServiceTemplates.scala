@@ -95,7 +95,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_set_up",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Confirmation of your direct debit instruction",
+      subject = "VAT Return Direct Debit: Confirmation of your Direct Debit",
       plainTemplate = txt.ddi_set_up.f,
       htmlTemplate = html.ddi_set_up.f,
       priority = Some(MessagePriority.Urgent))

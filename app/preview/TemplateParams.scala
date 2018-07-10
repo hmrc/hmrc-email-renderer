@@ -1205,7 +1205,7 @@ object TemplateParams {
       "SORTCODE" -> "001122",
       "ACCOUNTNUMBER" -> "12345678",
       "COLLECTIONDATE" -> "20180501",
-      "NEWSUNNAME" -> "HMRC VAT",
+      "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700",
       "CHARGETYPE" -> "VAT Return charge"
     ),
