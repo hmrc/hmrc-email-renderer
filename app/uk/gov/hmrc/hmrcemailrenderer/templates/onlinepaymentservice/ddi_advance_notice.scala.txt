@@ -17,11 +17,11 @@
   s"$day/$month/$year"
 }
 
-Advance notice of your direct debit payment for VAT
+VAT Return Direct Debit: Advance notice of your payment
 
 Dear @params("NAME")
 
-Reference @params("DDIREFERENCE")
+Direct Debit mandate reference @params("DDIREFERENCE")
 
 This notice is for information purposes only. We will collect £@params("AMOUNT") on or just after @formatDate(params("COLLECTIONDATE").toString).
 
@@ -29,7 +29,9 @@ This notice is for information purposes only. We will collect £@params("AMOUNT"
     - Charge type: @chargeType, period: @period, amount: @amount
 }
 
-Make sure you have enough funds in your account to meet this payment. It will be collected under @params("NEWSUNNAME").
-If you have any questions, call @params("PHONENUMBER") quoting reference @params("DDIREFERENCE").
+Make sure you have enough funds in your account to meet this payment.
+Payments will appear on your bank statement as '@params("NEWSUNNAME")'.
 
-From HMRC direct debit team
+If you have any questions, call @params("PHONENUMBER") and quote your Direct Debit reference.
+
+From HMRC Direct Debit team

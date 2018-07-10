@@ -55,7 +55,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_advance_notice",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Advance notice of your direct debit payment",
+      subject = "VAT Return Direct Debit: Advance notice of your payment",
       plainTemplate = txt.ddi_advance_notice.f,
       htmlTemplate = html.ddi_advance_notice.f,
       priority = Some(MessagePriority.Urgent)),

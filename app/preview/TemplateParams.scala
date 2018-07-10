@@ -1185,7 +1185,7 @@ object TemplateParams {
       "REGIME" -> "VATC",
       "AMOUNT" -> "15003.18",
       "COLLECTIONDATE" -> "20180501",
-      "NEWSUNNAME" -> "HMRC VAT",
+      "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700",
       "CHARGETYPE_0" -> "VAT Return charge",
       "PERIOD_0" -> "0118",
