@@ -1151,21 +1151,21 @@ object TemplateParams {
       "FILE" -> "ADDACS",
       "REASON" -> "1",
       "NAME" -> "Customer",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC"
     ),
     "ddi_not_acceptable" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "B",
       "NAME" -> "Customer",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC"
     ),
     "ddi_reinstated" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "R",
       "NAME" -> "Customer",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
       "SORTCODE" -> "001122",
       "ACCOUNTNUMBER" -> "12345678"
@@ -1174,14 +1174,14 @@ object TemplateParams {
       "FILE" -> "ARUDD",
       "REASON" -> "5",
       "NAME" -> "Customer",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
       "AMOUNT" -> "1000.00",
       "COLLECTIONDATE" -> "20180501"
     ),
     "ddi_advance_notice" -> Map(
       "NAME" -> "Customer",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
       "AMOUNT" -> "15003.18",
       "COLLECTIONDATE" -> "20180501",
@@ -1199,7 +1199,7 @@ object TemplateParams {
     ),
     "ddi_set_up" -> Map(
       "NAME" -> "Customer",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
       "ACCOUNTNAME" -> "MR A CUSTOMER",
       "SORTCODE" -> "001122",
@@ -1222,7 +1222,7 @@ object TemplateParams {
       "OLDSUN" -> "123456",
       "NEWSUN" -> "448610",
       "TRANSFERDATE" -> "20180501",
-      "DDIREFERENCE" -> "AB123456",
+      "DDIREFERENCE" -> "123456789",
       "OLDSUNNAME" -> "HMRC eVAT",
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700"

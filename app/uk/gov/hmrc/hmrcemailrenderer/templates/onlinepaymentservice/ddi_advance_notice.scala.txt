@@ -10,6 +10,12 @@
   }
 }
 
+@formatPeriod(period: String) = @{
+  val month = period.slice(0,2)
+  val year = period.slice(2,4)
+  s"$month/$year"
+}
+
 @formatDate(yyyymmdd: String) = @{
   val year = yyyymmdd.slice(2,4)
   val month = yyyymmdd.slice(4,6)
@@ -26,7 +32,7 @@ Direct Debit mandate reference @params("DDIREFERENCE")
 This notice is for information purposes only. We will collect £@params("AMOUNT") on or just after @formatDate(params("COLLECTIONDATE").toString).
 
 @for((chargeType, period, amount) <- breakdown) {
-    - Charge type: @chargeType, period: @period, amount: @amount
+    - Charge type: @chargeType, period: @formatPeriod(period.toString), amount: @amount
 }
 
 Make sure you have enough funds in your account to meet this payment.
@@ -34,4 +40,4 @@ Payments will appear on your bank statement as '@params("NEWSUNNAME")'.
 
 If you have any questions, call @params("PHONENUMBER") and quote your Direct Debit reference.
 
-From HMRC Direct Debit team
+From HMRC Direct Debit Team

@@ -4,7 +4,7 @@
     "****" + params("ACCOUNTNUMBER").toString.drop(4)
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reinstated Direct Debit instruction for VAT") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "VAT Return Direct Debit: Reinstated Direct Debit Instruction") {
 
     <p style="margin: 0 0 30px;
         font-size: 19px;">Dear @params("NAME")</p>
@@ -14,7 +14,7 @@
 
     <p style="margin: 0 0 30px;
         font-size: 19px;">
-        Your bank has told us that your instruction to allow us to collect payments under this Direct Debit reference has been reinstated.</p>
+        Your bank has told us that your Instruction to allow us to collect payments under this Direct Debit reference has been reinstated.</p>
     <p style="margin: 0 0 30px;
         font-size: 19px;">Your direct debit will continue to be taken from:</p>
     <p style="margin: 0 0 30px;
@@ -34,8 +34,8 @@
 </table>
     </p>
     <p style="margin: 0 0 30px;
-        font-size: 19px;">If this is not correct, amend your Direct Debit instruction immediately.</p>
+        font-size: 19px;">If this is not correct, amend your Direct Debit Instruction immediately.</p>
 
     <p style="margin: 0 0 30px;
-        font-size: 19px;">From HMRC Direct Debit team</p>
+        font-size: 19px;">From HMRC Direct Debit Team</p>
 }
