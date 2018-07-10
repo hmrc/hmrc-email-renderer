@@ -63,7 +63,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_migration_letter",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Direct debit for VAT returns",
+      subject = "VAT Return Direct Debit: important information",
       plainTemplate = txt.ddi_migration_letter.f,
       htmlTemplate = html.ddi_migration_letter.f,
       priority = Some(MessagePriority.Urgent)),

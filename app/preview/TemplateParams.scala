@@ -1186,7 +1186,7 @@ object TemplateParams {
       "AMOUNT" -> "15003.18",
       "COLLECTIONDATE" -> "20180501",
       "NEWSUNNAME" -> "HMRC VAT",
-      "PHONENUMBER" -> "0844 555 4672",
+      "PHONENUMBER" -> "0300 200 3700",
       "CHARGETYPE_0" -> "VAT Return charge",
       "PERIOD_0" -> "0118",
       "AMOUNT_0" -> "5001.43",
@@ -1206,7 +1206,7 @@ object TemplateParams {
       "ACCOUNTNUMBER" -> "12345678",
       "COLLECTIONDATE" -> "20180501",
       "NEWSUNNAME" -> "HMRC VAT",
-      "PHONENUMBER" -> "0844 555 4672",
+      "PHONENUMBER" -> "0300 200 3700",
       "CHARGETYPE" -> "VAT Return charge"
     ),
     "ddi_migration_letter" -> Map(
@@ -1224,7 +1224,8 @@ object TemplateParams {
       "TRANSFERDATE" -> "20180501",
       "DDIREFERENCE" -> "AB123456",
       "OLDSUNNAME" -> "HMRC eVAT",
-      "NEWSUNNAME" -> "HMRC E VAT DDS"
+      "NEWSUNNAME" -> "HMRC E VAT DDS",
+      "PHONENUMBER" -> "0300 200 3700"
     ),
     "hts_verification_email" -> Map(
       "name" -> "Joe",
