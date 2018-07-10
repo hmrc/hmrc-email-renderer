@@ -14,7 +14,7 @@ We need to give you some information after your transfer to Making Tax Digital f
 
 You currently pay your VAT return by Direct Debit. From @formatDate(params("TRANSFERDATE").toString) we will transfer your Direct Debit over.
 
-Your new reference is: @params("NEWSUNNAME").
+Your new reference is: @params("DDIREFERENCE").
 Your new service number is: @params("NEWSUN").
 
 Payments will appear on your bank statement as '@params("NEWSUNNAME")'.
@@ -23,7 +23,7 @@ Your bank statement may show a final payment as '@params("OLDSUNNAME")' and then
 
 If you have any questions, call @params("PHONENUMBER").
 
-From HMRC Direct Debit team
+From HMRC Direct Debit Team
 
 
 The Direct Debit Guarantee

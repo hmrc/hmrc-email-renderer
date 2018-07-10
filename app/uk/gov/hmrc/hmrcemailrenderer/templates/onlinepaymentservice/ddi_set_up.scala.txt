@@ -17,7 +17,7 @@ Dear @params("NAME")
 
 Direct Debit mandate reference @params("DDIREFERENCE")
 
-Your direct debit instruction has been set up. Make sure the following details are correct:
+Your Direct Debit Instruction has been set up. Make sure the following details are correct:
 
 Account name: @params("ACCOUNTNAME")
 Sort code: @params("SORTCODE")
@@ -26,11 +26,11 @@ Account number: @maskedAccountNumber
 
 If any of these details are wrong, call us on @params("PHONENUMBER") and quote your Direct Debit reference.
 
-You have the right to cancel your direct debit at any time. We will send you a notification of the amount to be collected 2 working days before we apply to your bank for payment.
+You have the right to cancel your Direct Debit at any time. We will send you a notification of the amount to be collected 2 working days before we apply to your bank for payment.
 
 Payments will appear on your bank statement as '@params("NEWSUNNAME")'.
 
-From HMRC Direct Debit team
+From HMRC Direct Debit Team
 
 
 The Direct Debit Guarantee

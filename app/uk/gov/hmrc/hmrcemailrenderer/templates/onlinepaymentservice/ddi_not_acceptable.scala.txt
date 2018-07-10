@@ -6,8 +6,8 @@ Dear @params("NAME")
 
 Direct Debit mandate reference @params("DDIREFERENCE")
 
-Your bank has told us we cannot collect payments using this instruction.
+Your bank has told us we cannot collect payments using this Instruction.
 
-If you still wish to pay by Direct Debit, you need to set up a new instruction.
+If you still wish to pay by Direct Debit, you need to set up a new Instruction.
 
-From HMRC Direct Debit team
+From HMRC Direct Debit Team

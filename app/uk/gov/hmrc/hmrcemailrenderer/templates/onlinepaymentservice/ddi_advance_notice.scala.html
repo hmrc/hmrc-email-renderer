@@ -6,8 +6,14 @@
     val chargeType = params(s"CHARGETYPE_$i")
     val period = params(s"PERIOD_$i")
     val amount = params(s"AMOUNT_$i")
-    (chargeType, period, amount)
+    (chargeType, formatPeriod(period.toString), amount)
   }
+}
+
+@formatPeriod(period: String) = @{
+  val month = period.slice(0,2)
+  val year = period.slice(2,4)
+  s"$month/$year"
 }
 
 @formatDate(yyyymmdd: String) = @{
@@ -49,5 +55,5 @@
   <br>Payments will appear on your bank statement as '@params("NEWSUNNAME")'.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">If you have any questions, call @params("PHONENUMBER") and quote your Direct Debit reference.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
 }
