@@ -1,18 +1,18 @@
 @(params: Map[String, Any])
 
-
-Reinstated direct debit instruction for VAT
+VAT Return Direct Debit: Reinstated Direct Debit Instruction
 
 Dear @params("NAME")
 
-Reference @params("DDIREFERENCE")
+Direct Debit mandate reference @params("DDIREFERENCE")
 
-Your bank has told us that your instruction to allow us to collect payments under this direct debit reference has been reinstated.
+Your bank has told us that your Instruction to allow us to collect payments under this Direct Debit reference has been reinstated.
+
 Your direct debit will continue to be taken from:
 
-Bank account number: @params("ACCOUNTNUMBER")
 Sort code: @params("SORTCODE")
+Account number: @params("ACCOUNTNUMBER")
 
-If this is not correct, amend your direct debit instruction immediately.
+If this is not correct, amend your Direct Debit Instruction immediately.
 
-From HMRC direct debit team
+From HMRC Direct Debit Team
