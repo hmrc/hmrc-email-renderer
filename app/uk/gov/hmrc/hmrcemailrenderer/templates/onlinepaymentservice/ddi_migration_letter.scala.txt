@@ -1,18 +1,13 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.DateFormatter
 @(params: Map[String, Any])
 
-@formatDate(yyyymmdd: String) = @{
-  val year = yyyymmdd.slice(2,4)
-  val month = yyyymmdd.slice(4,6)
-  val day = yyyymmdd.slice(6,8)
-  s"$day/$month/$year"
-}
 VAT Return Direct Debit: important information
 
 Dear @params("NAME")
 
 We need to give you some information after your transfer to Making Tax Digital for VAT. There is no need for you to take any action.
 
-You currently pay your VAT return by Direct Debit. From @formatDate(params("TRANSFERDATE").toString) we will transfer your Direct Debit over.
+You currently pay your VAT return by Direct Debit. From @DateFormatter.formatDate(params("TRANSFERDATE").toString) we will transfer your Direct Debit over.
 
 Your new reference is: @params("DDIREFERENCE").
 Your new service number is: @params("NEWSUN").
@@ -28,7 +23,7 @@ From HMRC Direct Debit Team
 
 The Direct Debit Guarantee
 
-- This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.
+- This guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits.
 - If there are any changes to the amount, date or frequency of your Direct Debit we will notify you 2 working days in advance of your account being debited or as otherwise agreed. If you request @params("NEWSUNNAME") to collect a payment, confirmation of the amount and date will be given to you at the time of the request.
 - If an error is made in the payment of your Direct Debit by @params("NEWSUNNAME") or your bank or building society, you are entitled to a full and immediate refund of the amount paid from your bank or building society.
 - If you receive a refund you are not entitled to, you must pay it back when @params("NEWSUNNAME") asks you to.
