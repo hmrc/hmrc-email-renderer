@@ -1,3 +1,4 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.DateFormatter
 @(params: Map[String, Any])
 
 @breakdown = @{
@@ -6,21 +7,8 @@
     val chargeType = params(s"CHARGETYPE_$i")
     val period = params(s"PERIOD_$i")
     val amount = params(s"AMOUNT_$i")
-    (chargeType, period, amount)
+    (chargeType, DateFormatter.formatPeriod(period.toString), amount)
   }
-}
-
-@formatPeriod(period: String) = @{
-  val month = period.slice(0,2)
-  val year = period.slice(2,4)
-  s"$month/$year"
-}
-
-@formatDate(yyyymmdd: String) = @{
-  val year = yyyymmdd.slice(2,4)
-  val month = yyyymmdd.slice(4,6)
-  val day = yyyymmdd.slice(6,8)
-  s"$day/$month/$year"
 }
 
 VAT Return Direct Debit: Advance notice of your payment
@@ -29,10 +17,10 @@ Dear @params("NAME")
 
 Direct Debit mandate reference @params("DDIREFERENCE")
 
-This notice is for information purposes only. We will collect £@params("AMOUNT") on or just after @formatDate(params("COLLECTIONDATE").toString).
+This notice is for information purposes only. We will collect £@params("AMOUNT") on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).
 
 @for((chargeType, period, amount) <- breakdown) {
-    - Charge type: @chargeType, period: @formatPeriod(period.toString), amount: @amount
+    - Charge type: @chargeType, period: @period, amount: @amount
 }
 
 Make sure you have enough funds in your account to meet this payment.
