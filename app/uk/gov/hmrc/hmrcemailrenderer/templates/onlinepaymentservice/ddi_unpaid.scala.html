@@ -1,3 +1,4 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.DateFormatter
 @(params: Map[String, Any])
 
 @reason = @{
@@ -13,13 +14,6 @@
   }
 }
 
-@formatDate(yyyymmdd: String) = @{
-  val year = yyyymmdd.slice(2,4)
-  val month = yyyymmdd.slice(4,6)
-  val day = yyyymmdd.slice(6,8)
-  s"$day/$month/$year"
-}
-
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "VAT Return Direct Debit: payment not collected") {
 
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
@@ -27,11 +21,11 @@
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
 
 @if(params("REASON") == "0") {
-    <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @formatDate(params("COLLECTIONDATE").toString) has been returned by your bank marked 'refer to payer'.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @DateFormatter.formatDate(params("COLLECTIONDATE").toString) has been returned by your bank marked 'refer to payer'.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">We will not try to collect this payment again. You need to arrange to make payment by another method immediately (unless you have already paid).</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit Instruction has not been cancelled, so we will continue to collect future payments.</p>
 } else {
-    <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @formatDate(params("COLLECTIONDATE").toString) has been rejected by your bank. This is because @reason.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @DateFormatter.formatDate(params("COLLECTIONDATE").toString) has been rejected by your bank. This is because @reason.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">You need to arrange to make payment by another method immediately.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you want to make payments in the future by Direct Debit, you need to set up a new Instruction.</p>
 }
