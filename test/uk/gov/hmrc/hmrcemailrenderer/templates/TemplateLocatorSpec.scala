@@ -167,6 +167,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "eeitt_ho930_confirmation",
         "ho10_confirmation_submission",
         "apd_return_confirmation",
+        "vat126_submission_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
