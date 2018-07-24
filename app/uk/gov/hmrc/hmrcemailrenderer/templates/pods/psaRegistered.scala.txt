@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You have registered as a pension scheme administrator
+
+Dear Pension Scheme Administrator,
+
+You have successfully registered as a pension scheme administrator.
+
+You can now apply to register a new pension scheme by searching for ‘apply to register a pension scheme’ on GOV.UK and then choosing to use the the online service.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
