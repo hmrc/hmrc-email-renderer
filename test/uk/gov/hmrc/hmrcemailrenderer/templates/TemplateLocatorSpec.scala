@@ -73,7 +73,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Lost Credentials",
         "CCA",
         "CDS",
-        "MTDfB-VAT"
+        "MTDfB-VAT",
+        "PODS"
       )
     }
 
@@ -386,7 +387,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cdsTestTemplate",
         "cdsEmailTemplate",
         "mtdfb_vat_principal_sign_up_successful",
-        "mtdfb_vat_principal_sign_up_failure"
+        "mtdfb_vat_principal_sign_up_failure",
+        "pods_scheme_register",
+        "pods_psa_register"
         )
     }
   }
