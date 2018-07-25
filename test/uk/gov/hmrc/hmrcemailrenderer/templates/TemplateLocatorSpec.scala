@@ -49,7 +49,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "FANDF",
         "GG",
         "ATS",
-        "AWRS",Hydrocarbon Oils
+        "AWRS",
         "GMP",
         "RALD",
         "BARS",
