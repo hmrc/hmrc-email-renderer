@@ -1,11 +1,20 @@
-@(params: Map[String, Any])Fulfilment House Due Diligence Scheme: registration cancelled
+@(params: Map[String, Any])Fulfilment House Due Diligence Scheme
 
-Your registration was cancelled on @{params("deregisterDate")}.
+Dear Mr John Smith
 
-You will need to wait until tomorrow before you can submit a new application.
+You have a new message from HMRC about your Fulfilment House Due Diligence Scheme application.
 
-From the HMRC Fulfilment House Due Diligence Schemesm
+To view it, sign into your HMRC online account.
 
+For security reasons, we have not included a link with this email.
+
+Why you got this email
+
+Fulfilment House Due Diligence scheme is an online service which will send updates to you digitally.
+
+This means that we will provide updates by secure messages to your online account. We will send you an email to let you know when a new message is added.
+
+From the HMRC Fulfilment House Due Diligence Scheme
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
