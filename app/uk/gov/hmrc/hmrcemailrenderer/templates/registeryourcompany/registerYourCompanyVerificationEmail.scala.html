@@ -1,7 +1,9 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address") {
-    <p style="margin: 0 0 30px; font-size: 19px;">You’re getting this email because you’ve started the Set up a limited company and register for Corporation Tax service.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">To continue, click the link below:</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You are getting this email because you have signed up to use the 'Set up a limited company and register for Corporation Tax' service.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">To confirm your email address, click this link:</p>
     <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+    <h2 style="margin: 0 0 30px; font-size: 24px;">This link will expire after 24 hours</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you do not confirm your email address within this time, you will have to log back into the service and request a new link.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue & Customs and Companies House</p>
 }
