@@ -103,6 +103,15 @@ object EeittTemplates {
       plainTemplate = txt.apdReturnConfirmation.f,
       htmlTemplate = html.apdReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vat126_submission_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "VAT126 Claim Submission",
+      plainTemplate = txt.vat126ClaimSubmissionConfirmation.f,
+      htmlTemplate = html.vat126ClaimSubmissionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

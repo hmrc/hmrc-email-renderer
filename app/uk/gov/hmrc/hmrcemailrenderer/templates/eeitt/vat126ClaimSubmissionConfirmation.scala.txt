@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Dear Customer
+
+We have received the claim for a VAT refund.
+
+Why you are receiving this
+
+This is an email to confirm the submission of the VAT126 return.
+
+Thank you
+
+From HMRC VAT126
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
