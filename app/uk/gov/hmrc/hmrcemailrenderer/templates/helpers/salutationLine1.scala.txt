@@ -1,3 +1,3 @@
-@(params: Map[String, Any], overrideSalutation: Option[String] = None)
+@(params: Map[String, Any])
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
-@overrideSalutation.getOrElse(salutationLine1(params))
+@salutationLine1From(params)
