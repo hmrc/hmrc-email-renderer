@@ -140,6 +140,15 @@ object DigitalContactTemplates {
       plainTemplate = txt.newMessageAlertSA316_A.f,
       htmlTemplate = html.newMessageAlertSA316_A.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "dc-1462-test-message",
+      fromAddress = FromAddress.noReply("None"),
+      service = SelfAssessment,
+      subject = "test template",
+      plainTemplate = txt.dc_1462.f,
+      htmlTemplate = html.dc_1462.f,
+      priority = Some(MessagePriority.Background)
     )
   ) ++ newMessageAlertTemplates
 }
