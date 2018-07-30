@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Thank you for your application to become an approved Lifetime ISA Manager") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "What happens next") {
 
-<p style="font-size: 30px; line-height: 1.315789474; margin: 0 0 30px 0; font-weight: bold;">What happens next</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Thank you for applying to become an approved Lifetime ISA manager. Your application will be reviewed by HMRC.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application will be reviewed by HM Revenue and Customs. Your application reference is <b>@{params("application_reference").toString}</b></p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application reference is <b>@{params("application_reference").toString}.</b></p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">The review process can take up to 14 calendar days. We will send another email to <b>@{params("email").toString}</b> when the decision has been made.</p>
 
