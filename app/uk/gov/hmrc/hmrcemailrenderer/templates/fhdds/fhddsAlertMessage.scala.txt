@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Fulfilment House Due Diligence Scheme
-
-Dear Mr John Smith
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fulfilment House Due Diligence Scheme ")
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
 You have a new message from HMRC about your Fulfilment House Due Diligence Scheme application.
 
@@ -10,7 +10,7 @@ For security reasons, we have not included a link with this email.
 
 Why you got this email
 
-Fulfilment House Due Diligence scheme is an online service which will send updates to you digitally.
+Fulfilment House Due Diligence Scheme is an online service which will send you a digital decision about your application. We may also contact you in other ways about your application.
 
 This means that we will provide updates by secure messages to your online account. We will send you an email to let you know when a new message is added.
 
