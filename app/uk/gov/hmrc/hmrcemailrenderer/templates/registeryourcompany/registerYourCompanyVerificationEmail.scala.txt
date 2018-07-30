@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Confirm your email address
 
-You are getting this email because you have signed up to use the 'Set up a limited company and register for Corporation Tax' service.
+You are getting this email because you have signed up to use the digital service 'Set up a limited company and register for Corporation Tax'.
 
 To confirm your email address, click this link:
 
