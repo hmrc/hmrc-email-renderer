@@ -103,6 +103,15 @@ object EeittTemplates {
       plainTemplate = txt.apdReturnConfirmation.f,
       htmlTemplate = html.apdReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipt100_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "IPT 100 return",
+      plainTemplate = txt.ipt100ReturnConfirmation.f,
+      htmlTemplate = html.ipt100ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
