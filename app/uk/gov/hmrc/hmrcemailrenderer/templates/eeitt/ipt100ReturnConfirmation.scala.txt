@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Your Insurance Premium Tax return has been submitted
+Your Insurance Premium Tax return application has been successfully submitted
 
 Dear Customer,
 
