@@ -8,7 +8,8 @@ import uk.gov.hmrc.play.config.ServicesConfig
 import uk.gov.hmrc.play.http.test.ResponseMatchers
 import uk.gov.hmrc.play.test.UnitSpec
 
-class TemplatePrioritiesISpec extends UnitSpec
+class
+TemplatePrioritiesISpec extends UnitSpec
   with ServicesConfig
   with WsScalaTestClient
   with OneServerPerSuite

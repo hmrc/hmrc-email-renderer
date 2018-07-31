@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.fhdds
 
+import uk.gov.hmrc.hmrcemailrenderer.domain
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Fhdds
@@ -57,6 +58,15 @@ object FhddsTemplates {
       subject = "Fulfilment House Due Diligence Scheme registration cancelled",
       plainTemplate = txt.fhddsBetaDeregistration.f,
       htmlTemplate = html.fhddsBetaDeregistration.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "fhddsAlertMessage",
+      fromAddress = govUkTeamAddress,
+      service = Fhdds,
+      subject = "Fulfilment House Due Diligence Scheme Alert Message",
+      plainTemplate = txt.fhddsAlertMessage.f,
+      htmlTemplate = html.fhddsAlertMessage.f,
       priority = Some(MessagePriority.Standard)
     )
   )
