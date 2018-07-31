@@ -4,14 +4,22 @@ Your Insurance Premium Tax return has been submitted
 
 Dear Customer,
 
-We have received the return.
+We have received your application to file your Insurance Premium Tax return online.
 
-Why you are receiving this
+What happens next
 
-This is an email to confirm the submission of the Insurance Premium Tax return.
+We will contact you or your agent if there is a problem with your return.
+
+We will review any claim made for a refund.
+
+Why you are receiving this email
+
+We send a confirmation email for returns filed online.
+
+If you need to contact us about your application, please quote your IPT registration number.
 
 Thank you.
 
-From HMRC Insurance Premium Tax
+From the HMRC Insurance Premium Tax Scheme
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
