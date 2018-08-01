@@ -63,6 +63,17 @@ object SalutationHelper {
     }
   }
 
+  def saluteFullName(params: Map[String, Any]): String = {
+    val salutationParams: List[Option[String]] = List(
+      capitalised(params.getNonEmpty("recipientName_FullName"))
+    )
+
+    salutationParams match {
+      case List(Some(fullName)) => s"Dear $fullName"
+      case _ => "Dear Customer"
+    }
+  }
+
   private implicit class ParamsOps(params: Map[String,Any]){
     def getNonEmpty(key: String): Option[Any] = {
       params.get(key) match {
