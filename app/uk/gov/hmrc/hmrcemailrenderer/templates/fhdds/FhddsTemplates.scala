@@ -49,7 +49,7 @@ object FhddsTemplates {
       subject = "Fulfilment House Due Diligence Scheme email verification",
       plainTemplate = txt.fhddsBetaEmailVerification.f,
       htmlTemplate = html.fhddsBetaEmailVerification.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "fhdds_submission_deregister",
