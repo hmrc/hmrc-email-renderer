@@ -1,10 +1,9 @@
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,
-    "Register for customs services - application successful", showHeading1 = false) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Register for customs services - application successful", showHeading1 = false) {
 
 <p style="margin: 0 0 30px; font-size: 19px;">@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params)</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.organisationname.html.orgName(params) now registered for Customs Declaration Service (CDS).</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youAreItIs(params) now registered for Customs Declaration Service (CDS).</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">Active from : @{params.getOrElse("completionDate", "")}</p>
 

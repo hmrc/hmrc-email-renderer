@@ -14,25 +14,23 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.helpers.organisationname
+package uk.gov.hmrc.hmrcemailrenderer.templates.customs;
 
-object OrgNameHelper {
+object RecipientAddresser {
 
-  def capitalised(param: Option[Any]) =
-    param.map { value =>
-      val buffer = scala.collection.mutable.ArrayBuffer.empty[Char]
-      value.toString.copyToBuffer(buffer)
-      buffer.zipWithIndex.map { case (char, idx) =>
-        if (idx == 0 || !buffer(idx - 1).isLetter) char.toUpper
-        else char.toLower
-      }.mkString
-    }
+  def youAreOrgNameIs(params: Map[String, Any]): String = {
 
+    def proper(param: Option[Any]) =
+      param.map { value =>
+        val buffer = scala.collection.mutable.ArrayBuffer.empty[Char]
+        value.toString.copyToBuffer(buffer)
+        buffer.zipWithIndex.map { case (char, idx) =>
+          if (idx == 0 || !buffer(idx - 1).isLetter) char.toUpper
+          else char.toLower
+        }.mkString
+      }
 
-  def orgNameOrIndividual(params: Map[String, Any]): String = {
-    val orgNameParams: List[Option[String]] = List(
-      capitalised(params.getNonEmpty("recipientOrgName"))
-    )
+    val orgNameParams: List[Option[String]] = List(proper(params.getNonEmpty("recipientOrgName")))
 
     orgNameParams match {
       case List(Some(orgName)) => s"$orgName is"
@@ -40,7 +38,7 @@ object OrgNameHelper {
     }
   }
 
-  private implicit class ParamsOps(params: Map[String,Any]){
+  private implicit class ParamsOps(params: Map[String, Any]) {
     def getNonEmpty(key: String): Option[Any] = {
       params.get(key) match {
         case Some(value) if value.toString.trim.length > 0 => Some(value)
