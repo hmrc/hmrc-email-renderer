@@ -23,31 +23,31 @@ class OrgNameHelperSpec extends UnitSpec {
     "The orgName" should {
 
       "be 'You are' when having no orgName" in {
-        orgNameOrYou(Map()) should be("You are")
+        orgNameOrIndividual(Map()) should be("You are")
       }
 
       "be 'Orgname is' when having orgName only" in {
-        orgNameOrYou(Map("recipientOrgName" -> "Orgname")) should be("Orgname is")
+        orgNameOrIndividual(Map("recipientOrgName" -> "Orgname")) should be("Orgname is")
       }
 
       "be 'Orgname is' when having orgName in uppercase" in {
-        orgNameOrYou(Map("recipientOrgName" -> "ORGNAME")) should be("Orgname is")
+        orgNameOrIndividual(Map("recipientOrgName" -> "ORGNAME")) should be("Orgname is")
       }
 
       "be 'Orgname is' when having orgName in lowercase" in {
-        orgNameOrYou(Map("recipientOrgName" -> "orgname")) should be("Orgname is")
+        orgNameOrIndividual(Map("recipientOrgName" -> "orgname")) should be("Orgname is")
       }
 
       "be 'Orgname-Orgname is' when having hyphenated orgName" in {
-        orgNameOrYou(Map("recipientOrgName" -> "orgname-orgname")) should be("Orgname-Orgname is")
+        orgNameOrIndividual(Map("recipientOrgName" -> "orgname-orgname")) should be("Orgname-Orgname is")
       }
 
       "be respected when having apostrophied orgName" in {
-        orgNameOrYou(Map("recipientOrgName" -> "o'orgname")) should be("O'Orgname is")
+        orgNameOrIndividual(Map("recipientOrgName" -> "o'orgname")) should be("O'Orgname is")
       }
 
       "be 'Orgname Orgname is' when having orgName with spaces" in {
-        orgNameOrYou(Map("recipientOrgName" -> "orgname orgname")) should be("Orgname Orgname is")
+        orgNameOrIndividual(Map("recipientOrgName" -> "orgname orgname")) should be("Orgname Orgname is")
       }
     }
 }

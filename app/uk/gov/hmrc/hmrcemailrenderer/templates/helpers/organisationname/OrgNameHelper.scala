@@ -29,7 +29,7 @@ object OrgNameHelper {
     }
 
 
-  def orgNameOrYou(params: Map[String, Any]): String = {
+  def orgNameOrIndividual(params: Map[String, Any]): String = {
     val orgNameParams: List[Option[String]] = List(
       capitalised(params.getNonEmpty("recipientOrgName"))
     )
