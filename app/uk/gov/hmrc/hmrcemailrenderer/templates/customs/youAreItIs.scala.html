@@ -1,3 +1,2 @@
 @(params: Map[String, Any])
-@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.RecipientAddresser._
-@youAreOrgNameIs(params)
+params.get("recipientOrgName").map(_.toString).map(_.toLowerCase.capitalize).getOrElse("You are")
