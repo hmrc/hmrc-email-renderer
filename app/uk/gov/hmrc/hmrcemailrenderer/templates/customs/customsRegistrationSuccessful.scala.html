@@ -5,7 +5,7 @@
 
 <p style="margin: 0 0 30px; font-size: 19px;">@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youAreItIs(params) now registered for Customs Declaration Service (CDS).</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Active from : @{params.getOrElse("completionDate", "")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Active from : @{params.getOrElse("completionDate", "today")}</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">Use this service to :</p>
 
