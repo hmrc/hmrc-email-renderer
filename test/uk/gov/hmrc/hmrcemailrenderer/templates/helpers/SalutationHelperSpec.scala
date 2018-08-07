@@ -143,4 +143,43 @@ class SalutationHelperSpec extends UnitSpec {
     }
   }
 
+  "The Fullname salutation" should {
+
+    "be Dear Customer when having no name" in {
+      saluteFullName(Map()) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having name.forename only" in {
+      saluteFullName(Map("recipientName_forename" -> "John")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having name.title and name.surname only" in {
+      saluteFullName(Map("recipientName_surname" -> "DOE")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having empty forname" in {
+      saluteFullName(Map("recipientName_forename" -> "", "recipientName_surname" -> "O'doe")) should be("Dear Customer")
+    }
+
+    "be Dear Customer when having empty surname" in {
+      saluteFullName(Map("recipientName_forename" -> "John", "recipientName_surname" -> "")) should be("Dear Customer")
+    }
+
+    "be respected when having apostrophied Fullname" in {
+      saluteFullName(Map("recipientName_FullName" -> "John O'Doe")) should be("Dear John O'Doe")
+    }
+
+    "be respected when having hyphenated Fullname" in {
+      saluteFullName(Map("recipientName_FullName" -> "John DOE-DOE")) should be("Dear John Doe-Doe")
+    }
+
+    "be respected when having uppercase Fullname" in {
+      saluteFullName(Map("recipientName_FullName" -> "JOHN DOE")) should be("Dear John Doe")
+    }
+
+    "be Dear John Doe when having firstname, surname, fullname" in {
+      saluteFullName(Map("recipientName_forename" -> "ABCDEF", "recipientName_surname" -> "ZXCVB", "recipientName_FullName" -> "John DOE")) should be("Dear John Doe")
+    }
+  }
+
 }
