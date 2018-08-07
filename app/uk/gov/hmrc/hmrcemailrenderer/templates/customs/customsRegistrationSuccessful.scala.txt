@@ -1,5 +1,4 @@
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
-
 @uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youAreItIs(params) now registered for Customs Declaration Service (CDS).
 
 Active from : @{params.getOrElse("completionDate", "")}
