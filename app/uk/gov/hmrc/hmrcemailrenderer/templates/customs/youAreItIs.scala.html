@@ -1,0 +1,2 @@
+@(params: Map[String, Any])
+params.get("recipientOrgName").map(_.toString).map(_.toLowerCase.capitalize).getOrElse("You are")
