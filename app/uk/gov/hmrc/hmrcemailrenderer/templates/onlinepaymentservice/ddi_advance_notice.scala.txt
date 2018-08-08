@@ -26,6 +26,8 @@ This notice is for information purposes only. We will collect £@params("AMOUNT"
 Make sure you have enough funds in your account to meet this payment.
 Payments will appear on your bank statement as '@params("NEWSUNNAME")'.
 
+If there are any changes to the amount, date or frequency of your Direct Debit we will let you know at least 2 working days in advance of your account being debited.
+
 If you have any questions, call @params("PHONENUMBER") and quote your Direct Debit reference.
 
 From HMRC Direct Debit Team
