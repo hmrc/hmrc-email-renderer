@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+The pension scheme details have been sent to HMRC
+
+Dear Pension Scheme Administrator,
+
+You have applied to register a new pension scheme with HMRC.
+
+Your submission reference number is @{params("srn").toString}.
+
+The pension scheme has not been registered yet. HMRC will review the application and make a decision. You will be contacted if there are any other details needed.
+
+You can view the status of the registration by searching for ‘manage a registered pension scheme’ on GOV.UK and then choosing to use the online service.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
