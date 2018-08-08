@@ -1253,6 +1253,9 @@ object TemplateParams {
     ),
     "cdsEmailTemplate" -> Map(
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
+    ),
+    "pods_scheme_register" -> Map(
+      "srn" -> "S12345 67890"
     )
   )
 }
