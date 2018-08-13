@@ -512,6 +512,21 @@ object TemplateParams {
     "customs_validation_success" -> Map(
       "details" -> "validation success details will appear here"
     ),
+    "customs_pull_notifications_warning" -> Map(
+      "queueThreshold" -> "1000",
+      "clientId_0" -> "3d34882b-0e73-4aaa-b156-afc037208871",
+      "notificationTotal_0" -> "1001",
+      "oldestNotification_0" -> "2011-08-08T15:38:09.747+01:00",
+      "latestNotification_0" -> "2018-08-08T10:02:10.627+01:00",
+      "clientId_1" -> "3d34882b-0e73-4aaa-b156-afc037208872",
+      "notificationTotal_1" -> "2001",
+      "oldestNotification_1" -> "2012-08-08T15:38:09.747+01:00",
+      "latestNotification_1" -> "2018-08-08T10:02:10.627+01:00",
+      "clientId_2" -> "3d34882b-0e73-4aaa-b156-afc037208873",
+      "notificationTotal_2" -> "3001",
+      "oldestNotification_2" -> "2013-08-08T15:38:09.747+01:00",
+      "latestNotification_2" -> "2018-08-08T10:02:10.627+01:00"
+    ),
     "transactionEngineHMRCSASA100Success" -> Map(
       "receivedDate" -> "01/01/01",
       "identifier" -> "1234567890",
