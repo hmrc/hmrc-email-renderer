@@ -74,7 +74,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "CCA",
         "CDS",
         "MTDfB-VAT",
-        "PODS"
+        "PODS",
+        "vat"
       )
     }
 
@@ -393,7 +394,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
         "pods_scheme_register",
-        "pods_psa_register"
+        "pods_psa_register",
+        "vat"
         )
     }
   }
