@@ -98,6 +98,14 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Return Direct Debit: Confirmation of your Direct Debit",
       plainTemplate = txt.ddi_set_up.f,
       htmlTemplate = html.ddi_set_up.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_cancelled_online",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: Cancelled",
+      plainTemplate = txt.ddi_cancelled_online.f,
+      htmlTemplate = html.ddi_cancelled_online.f,
       priority = Some(MessagePriority.Urgent))
   )
 }

@@ -1169,6 +1169,10 @@ object TemplateParams {
       "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC"
     ),
+    "ddi_cancelled_online" -> Map(
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "123456789"
+    ),
     "ddi_not_acceptable" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "B",

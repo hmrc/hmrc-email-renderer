@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "VAT Return Direct Debit: Cancelled") {
+
+  <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">The Direct Debit set up under this mandate reference has been cancelled.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">If you want to carry on paying by Direct Debit, you will need to set up a new Direct Debit instruction.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
+
+}
