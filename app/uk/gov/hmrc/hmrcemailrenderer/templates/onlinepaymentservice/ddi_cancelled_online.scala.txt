@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-VAT Return Direct Debit: Cancelled
+VAT Return Direct Debit: cancelled
 
 Dear @params("NAME")
 
@@ -10,4 +10,4 @@ The Direct Debit set up under this mandate reference has been cancelled.
 
 If you want to carry on paying by Direct Debit, you will need to set up a new Direct Debit instruction.
 
-From HMRC Direct Debit team
+From HMRC Direct Debit Team
