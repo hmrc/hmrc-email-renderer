@@ -103,7 +103,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "ddi_cancelled_online",
       fromAddress = FromAddress.noReply("VAT direct debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "VAT Return Direct Debit: Cancelled",
+      subject = "VAT Return Direct Debit: cancelled",
       plainTemplate = txt.ddi_cancelled_online.f,
       htmlTemplate = html.ddi_cancelled_online.f,
       priority = Some(MessagePriority.Urgent))
