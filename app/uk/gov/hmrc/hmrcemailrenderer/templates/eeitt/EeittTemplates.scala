@@ -105,6 +105,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "vat_refund_claim_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "VAT claim confirmation",
+      plainTemplate = txt.claimVATRefundConfirmation.f,
+      htmlTemplate = html.claimVATRefundConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "ipt100_return_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
