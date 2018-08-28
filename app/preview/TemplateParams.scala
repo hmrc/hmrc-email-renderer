@@ -54,6 +54,12 @@ object TemplateParams {
       "developerHubLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
+    "apiAddedDeveloperAsCollaboratorConfirmation" -> Map(
+      "role" -> "admin",
+      "applicationName" -> "Test Application",
+      "developerHubLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
+    ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
       "email" -> "joe.bloggs@gmail.com",
       "role" -> "admin",
