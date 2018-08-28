@@ -80,8 +80,8 @@ object ApiTemplates {
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "You have been added to an application",
-      plainTemplate = txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
-      htmlTemplate = html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
+      plainTemplate = txt.apiAddedDeveloperAsCollaboratorConfirmation.f,
+      htmlTemplate = html.apiAddedDeveloperAsCollaboratorConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
