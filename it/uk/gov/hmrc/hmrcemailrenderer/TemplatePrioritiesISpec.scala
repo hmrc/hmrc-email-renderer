@@ -70,6 +70,11 @@ TemplatePrioritiesISpec extends UnitSpec
         "applicationName" -> "applicationName",
         "developerHubLink" -> "/developerHubLink"
       )),
+      ("apiAddedDeveloperAsCollaboratorConfirmation", Map(
+        "role" -> "role",
+        "applicationName" -> "applicationName",
+        "developerHubLink" -> "/developerHubLink"
+      )),
       ("apiAddedDeveloperAsCollaboratorNotification", Map(
         "role" -> "role",
         "applicationName" -> "applicationName",

@@ -49,6 +49,10 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
         expectedSubject = "You have been added to an application")
 
       validateTemplate(
+        templateId = "apiAddedDeveloperAsCollaboratorConfirmation",
+        expectedSubject = "You have been added to an application")
+
+      validateTemplate(
         templateId = "apiAddedDeveloperAsCollaboratorNotification",
         expectedSubject = "A team member has been added to your application")
 
