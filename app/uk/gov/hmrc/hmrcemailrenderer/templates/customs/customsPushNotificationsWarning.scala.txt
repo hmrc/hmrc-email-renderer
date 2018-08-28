@@ -1,0 +1,5 @@
+@(params: Map[String, Any])
+
+Push notification failure detected at @params("timestamp"),  please investigate.
+
+From HMRC Customs Declaration Service

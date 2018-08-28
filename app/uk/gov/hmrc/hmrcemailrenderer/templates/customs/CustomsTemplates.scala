@@ -71,6 +71,14 @@ object CustomsTemplates {
       subject = "Customs pull notifications queue alarm - do not reply",
       plainTemplate = txt.customsPullNotificationsWarning.f,
       htmlTemplate = html.customsPullNotificationsWarning.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "customs_push_notifications_warning",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "Customs push notifications failure - do not reply",
+      plainTemplate = txt.customsPushNotificationsWarning.f,
+      htmlTemplate = html.customsPushNotificationsWarning.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

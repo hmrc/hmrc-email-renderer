@@ -527,6 +527,9 @@ object TemplateParams {
       "oldestNotification_2" -> "2013-08-08T15:38:09.747+01:00",
       "latestNotification_2" -> "2018-08-08T10:02:10.627+01:00"
     ),
+    "customs_push_notifications_warning" -> Map(
+      "timestamp" -> "2018-07-05T09:08:12.831Z"
+    ),
     "transactionEngineHMRCSASA100Success" -> Map(
       "receivedDate" -> "01/01/01",
       "identifier" -> "1234567890",
