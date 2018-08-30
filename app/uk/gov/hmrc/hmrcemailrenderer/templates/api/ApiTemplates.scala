@@ -76,6 +76,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedDeveloperAsCollaboratorConfirmation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "You have been added to an application",
+      plainTemplate = txt.apiAddedDeveloperAsCollaboratorConfirmation.f,
+      htmlTemplate = html.apiAddedDeveloperAsCollaboratorConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiAddedDeveloperAsCollaboratorNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
