@@ -87,6 +87,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apiDeveloperChangedPasswordConfirmation",
         "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
         "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
+        "apiAddedDeveloperAsCollaboratorConfirmation",
         "apiAddedDeveloperAsCollaboratorNotification",
         "apiRemovedCollaboratorConfirmation",
         "apiRemovedCollaboratorNotification",
