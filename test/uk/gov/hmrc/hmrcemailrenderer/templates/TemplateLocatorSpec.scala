@@ -385,6 +385,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ddi_advance_notice",
         "ddi_set_up",
         "ddi_migration_letter",
+        "ddi_cancelled_online",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
