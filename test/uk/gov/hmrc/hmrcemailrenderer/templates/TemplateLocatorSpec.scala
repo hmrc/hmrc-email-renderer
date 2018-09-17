@@ -174,6 +174,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apd_return_confirmation",
         "ipt100_return_confirmation",
         "bd510_return_confirmation",
+        "al100_return_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
