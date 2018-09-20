@@ -106,6 +106,30 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Return Direct Debit: cancelled",
       plainTemplate = txt.ddi_cancelled_online.f,
       htmlTemplate = html.ddi_cancelled_online.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_setup_advisory",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: confirmation",
+      plainTemplate = txt.ddi_setup_advisory.f,
+      htmlTemplate = html.ddi_setup_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_amend_advisory",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: amended details",
+      plainTemplate = txt.ddi_amend_advisory.f,
+      htmlTemplate = html.ddi_amend_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_cancelled_advisory",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: cancelled",
+      plainTemplate = txt.ddi_cancelled_advisory.f,
+      htmlTemplate = html.ddi_cancelled_advisory.f,
       priority = Some(MessagePriority.Urgent))
   )
 }

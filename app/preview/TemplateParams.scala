@@ -1255,6 +1255,15 @@ object TemplateParams {
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700"
     ),
+    "ddi_setup_advisory" -> Map(
+      "name" -> "Joe Smith"
+    ),
+    "ddi_amend_advisory" -> Map(
+      "name" -> "Joe Smith"
+    ),
+    "ddi_cancelled_advisory" -> Map(
+      "name" -> "Joe Smith"
+    ),
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId

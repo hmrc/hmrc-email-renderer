@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+
+VAT Return Direct Debit: confirmation
+
+Dear @params.get("name").getOrElse("Customer")
+
+Your Direct Debit instruction has been set up.
+
+It’s important you sign in to your HMRC online account for more information.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Direct Debit Team
