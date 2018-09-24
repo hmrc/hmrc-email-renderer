@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "VAT Return Direct Debit: confirmation") {
+  <p style="margin: 0 0 30px; font-size: 19px;">Dear @params.get("name").getOrElse("Customer")</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit instruction has been set up.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;font-weight: bold;">It’s important you sign in to your HMRC online account for more information.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link with this email.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
+
+}
