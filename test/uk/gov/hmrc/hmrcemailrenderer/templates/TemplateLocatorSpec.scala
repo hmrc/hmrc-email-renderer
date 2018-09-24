@@ -408,6 +408,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "mtdfb_vat_agent_sign_up_successful",
         "pods_scheme_register",
         "pods_psa_register",
+        "pods_psa_invited",
         "vat"
         )
     }

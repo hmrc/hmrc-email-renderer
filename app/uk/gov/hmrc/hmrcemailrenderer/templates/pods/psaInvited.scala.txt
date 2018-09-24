@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You have been invited to administer a pension scheme
+
+Dear @{params("inviteeName").toString},
+
+You have been invited to administer @{params("schemeName").toString}.
+
+You can view the invitation on the list of your pension schemes on the 'Manage and register pension schemes' online service. Search for 'manage a registered pension scheme' on GOV.UK to find the service.
+
+If you do not accept this invitation, it will be deleted on @{params("expiryDate").toString}.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
