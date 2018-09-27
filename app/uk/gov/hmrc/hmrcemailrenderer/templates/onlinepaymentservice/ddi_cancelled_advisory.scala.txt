@@ -2,7 +2,7 @@
 
 VAT Return Direct Debit: cancelled
 
-Dear @params.get("recipientName_line1").getOrElse("Customer")
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
 Your Direct Debit has been cancelled.
 
