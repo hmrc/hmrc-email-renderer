@@ -2,7 +2,7 @@
 
 VAT Return Direct Debit: amended details
 
-Dear @params.get("recipientName_line1").getOrElse("Customer")
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
 Your Direct Debit has been amended. You need to check your details are correct.
 
