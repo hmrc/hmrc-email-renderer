@@ -1293,6 +1293,9 @@ object TemplateParams {
     ),
     "pods_scheme_register" -> Map(
       "srn" -> "S12345 67890"
+    ),
+    "mtdfb_vat_agent_sign_up_successful" -> Map(
+      "vatNumber" -> "123456782"
     )
   )
 }
