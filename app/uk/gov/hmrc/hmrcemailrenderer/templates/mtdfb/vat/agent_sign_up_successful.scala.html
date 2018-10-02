@@ -1,0 +1,43 @@
+@*
+ * Copyright 2018 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sign up complete") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear agent,</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You have signed up your client to use software to submit their VAT Returns.</p>
+
+    <p style="margin: 0 0 0; font-size: 19px;font-weight: bold;">Client VAT registration number</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@params("vatNumber")</p>
+
+    <div style="clear: both; border-left-style: solid; border-color: #bfc1c3; border-left-width: 10px; padding: 0.78947em; margin-bottom: 0.78947em;" >
+        <p style="margin: 0 0 30px; font-size: 19px;">You must tell your client that you have signed them up for this trial. </p>
+    </div>
+
+    <p style="margin: 0 0 30px; font-size: 19px;font-weight: bold;">What happens next</p>
+    <ol>
+        <li>Choose relevant third party software. If your client will use software, it is important they choose a package that can interact with yours.</li>
+        <li>Allow your software to submit VAT Returns to HMRC. You might need to sign in with your Government Gateway details.</li>
+        <li>Use software to record your client’s sales and purchases.</li>
+        <li>Submit your client’s VAT Returns before their deadlines.</li>
+    </ol>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Your client can view their VAT Return deadlines in their accounting software or business tax account.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital</p>
+
+}

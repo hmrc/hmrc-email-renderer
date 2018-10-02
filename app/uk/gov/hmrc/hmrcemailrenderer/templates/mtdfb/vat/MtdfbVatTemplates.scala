@@ -41,6 +41,15 @@ object MtdfbVatTemplates {
       plainTemplate = txt.principal_sign_up_failure.f,
       htmlTemplate = html.principal_sign_up_failure.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mtdfb_vat_agent_sign_up_successful",
+      fromAddress = FromAddress.noReply("HMRC Making Tax Digital for VAT"),
+      service = MTDfBVatSignUp,
+      subject = "Client sign up complete | Making Tax Digital for VAT",
+      plainTemplate = txt.agent_sign_up_successful.f,
+      htmlTemplate = html.agent_sign_up_successful.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
