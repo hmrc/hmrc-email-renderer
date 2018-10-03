@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Your Gaming Duty return has been submitted
+
+Dear Customer,
+
+We have received your Gaming Duty return online.
+
+Why you are receiving this email
+
+We send a confirmation email for returns submitted online.
+
+If you need to contact us about your application, please quote your Gaming Duty registration number.
+
+Thank you.
+
+From the HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
