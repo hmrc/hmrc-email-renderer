@@ -37,7 +37,7 @@ object SalutationHelper {
 
     salutationParams match {
       case (Some(title), Some(surname), _) => s"Dear $title $surname"
-      case (None, None, Some(line1)) => s"Dear $line1"
+      case (_, _, Some(line1)) => s"Dear $line1"
       case _ => "Dear Customer"
     }
   }
