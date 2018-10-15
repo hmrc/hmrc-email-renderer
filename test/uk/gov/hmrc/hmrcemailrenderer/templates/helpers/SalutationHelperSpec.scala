@@ -59,6 +59,14 @@ class SalutationHelperSpec extends UnitSpec {
         salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER")) should be("Dear Mr Fisher")
       }
 
+      "be title and forename when provided with line1" in {
+        salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER", "recipientName_line1" -> "something else")) should be("Dear Mr Fisher")
+      }
+
+      "be line1 when title and forname are not provided" in {
+        salutationFrom(Map("recipientName_line1" -> "something else")) should be("Dear something else")
+      }
+
       "be respected when having name.title name.forename name.surname	Dear [name.title] [name.forename] [name.surname]" in {
         salutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER")) should be("Dear Mr Fisher")
       }

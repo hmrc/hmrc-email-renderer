@@ -28,25 +28,16 @@ object SalutationHelper {
       }.mkString
     }
 
-  def salutationLine1From(params: Map[String, Any]): String = {
-    val salutationParams: List[Option[String]] = List(
-      capitalised(params.getNonEmpty("recipientName_line1"))
-    )
-
-    salutationParams match {
-      case List(Some(line1)) => s"Dear $line1"
-      case _ => "Dear Customer"
-    }
-  }
-
   def salutationFrom(params: Map[String, Any]): String = {
-    val salutationParams: List[Option[String]] = List(
+    val salutationParams = (
       capitalised(params.getNonEmpty("recipientName_title")),
-      capitalised(params.getNonEmpty("recipientName_surname"))
+      capitalised(params.getNonEmpty("recipientName_surname")),
+      params.getNonEmpty("recipientName_line1")
     )
 
     salutationParams match {
-      case List(Some(title), Some(surname)) => s"Dear $title $surname"
+      case (Some(title), Some(surname), _) => s"Dear $title $surname"
+      case (_, _, Some(line1)) => s"Dear $line1"
       case _ => "Dear Customer"
     }
   }
