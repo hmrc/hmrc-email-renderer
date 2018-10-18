@@ -157,6 +157,15 @@ object EeittTemplates {
     plainTemplate = txt.gd95ReturnConfirmation.f,
     htmlTemplate = html.gd95ReturnConfirmation.f,
     priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+    templateId = "gd94_return_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "Your Gaming Duty return (GD94) has been submitted",
+    plainTemplate = txt.gd94ReturnConfirmation.f,
+    htmlTemplate = html.gd94ReturnConfirmation.f,
+    priority = Some(MessagePriority.Standard)
     )
   )
 
