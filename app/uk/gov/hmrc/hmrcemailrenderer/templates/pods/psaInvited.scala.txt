@@ -2,13 +2,17 @@
 
 You have been invited to administer a pension scheme
 
-Dear @{params("inviteeName").toString},
+Dear Pension Scheme Administrator,
 
 You have been invited to administer @{params("schemeName").toString}.
 
-You can view the invitation on the list of your pension schemes on the 'Manage and register pension schemes' online service. Search for 'manage a registered pension scheme' on GOV.UK to find the service.
+You need to accept the invitation by using the ‘Manage and register pension schemes’ online service and viewing your pension schemes.
+
+You can do this by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
 
 If you do not accept this invitation, it will be deleted on @{params("expiryDate").toString}.
+
+For security reasons, we have not included a link with this email.
 
 From HMRC Pension Schemes Services
 
