@@ -30,7 +30,6 @@ object PodsTemplates {
       plainTemplate = txt.schemeRegSubmitted.f,
       htmlTemplate = html.schemeRegSubmitted.f,
       priority = Some(MessagePriority.Standard)
-
     ),
     MessageTemplate.create(
       templateId = "pods_psa_register",
@@ -40,6 +39,15 @@ object PodsTemplates {
       plainTemplate = txt.psaRegistered.f,
       htmlTemplate = html.psaRegistered.f,
       priority = Some(MessagePriority.Standard)
-
-    ))
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psa_invited",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "You have been invited to administer a pension scheme",
+      plainTemplate = txt.psaInvited.f,
+      htmlTemplate = html.psaInvited.f,
+      priority = Some(MessagePriority.Standard)
+    )
+  )
 }

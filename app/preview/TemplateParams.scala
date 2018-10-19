@@ -1296,6 +1296,11 @@ object TemplateParams {
     ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
+    ),
+    "pods_psa_invited" -> Map(
+      "inviteeName" -> "Joe Bloggs",
+      "schemeName" -> "Some Pension Scheme",
+      "expiryDate" -> "20 July 1969"
     )
   )
 }
