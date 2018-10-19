@@ -12,6 +12,8 @@ The pension scheme has not been registered yet. HMRC will review the application
 
 You can view the status of the registration by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
 
+You can do this by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
+
 There is no time limit for how long it will take HMRC to make a decision. You can appeal to a tribunal if HMRC decline the application or if a decision has not been made within 6 months. You can find details of how to do this on the ‘apply to register a pension scheme’ page on GOV.UK.
 
 For security reasons, we have not included a link with this email.
