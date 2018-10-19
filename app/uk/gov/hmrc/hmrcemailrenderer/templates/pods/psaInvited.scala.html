@@ -18,13 +18,17 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have been invited to administer a pension scheme") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("inviteeName").toString},</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear Pension Scheme Administrator,</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You have been invited to administer @{params("schemeName").toString}.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can view the invitation on the list of your pension schemes on the 'Manage and register pension schemes' online service. Search for 'manage a registered pension scheme' on GOV.UK to find the service.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You need to accept the invitation by using the ‘Manage and register pension schemes’ online service and viewing your pension schemes.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can do this by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you do not accept this invitation, it will be deleted on @{params("expiryDate").toString}.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link with this email.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Pension Schemes Services</p>
 }
