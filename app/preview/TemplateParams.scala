@@ -1301,6 +1301,23 @@ object TemplateParams {
       "inviteeName" -> "Joe Bloggs",
       "schemeName" -> "Some Pension Scheme",
       "expiryDate" -> "20 July 1969"
+    ),
+    "passengers_confirmation" -> Map(
+      "NAME" -> "Alex Smith",
+      "DATE" -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
+      "PLACEOFARRIVAL" -> "Heathrow",
+      "DATEOFARRIVAL" -> "15 September 2018",
+      "REFERENCE" -> "XAPR9876543210",
+      "TOTAL" -> "32.40",
+      "NAME_0" -> "5 litres spirits",
+      "CURRENCY_0" -> "60 Mexican Peso(MXN)",
+      "COSTGBP_0" -> "10.50",
+      "NAME_1" -> "All other electronic devices",
+      "CURRENCY_1" -> "100 USA Dollar(USD)",
+      "COSTGBP_1" -> "10.50",
+      "NAME_2" -> "All other electronic devices",
+      "CURRENCY_2" -> "600 USA Dollar(USD)",
+      "COSTGBP_2" -> "11.40"
     )
   )
 }

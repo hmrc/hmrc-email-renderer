@@ -1,0 +1,103 @@
+@*
+ * Copyright 2018 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@breakdown = @{
+  val indices = Stream.from(0).takeWhile(i => params.get(s"NAME_$i").isDefined).toList
+  indices.map { i =>
+    val item = params(s"NAME_$i")
+    val currency = params(s"CURRENCY_$i")
+    val amount = params(s"COSTGBP_$i")
+    (item, currency, amount)
+  }
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have paid the duty you owe") {
+
+  <p style="margin: 0 0 30px; font-size: 19px;">Go to the green channel if these are the only items you are declaring. Show your email receipt on your mobile phone or tablet to a member of Border Force if asked.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel or red point phone if you have something else to declare and speak to a member of Border Force.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel if you are carrying restricted items such as firearms or ammunition.</p>
+
+  <h2>Your details</h2>
+
+  <table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <td>@params("NAME")</td>
+      </tr>
+
+      <tr>
+        <th>Date</th>
+        <td>@params("DATE")</td>
+      </tr>
+
+      <tr>
+        <th>Place of arrival in UK</th>
+        <td>@params("PLACEOFARRIVAL")</td>
+      </tr>
+
+      <tr>
+        <th>Date of arrival</th>
+        <td>@params("DATEOFARRIVAL")</td>
+      </tr>
+
+      <tr>
+        <th>Payment reference</th>
+        <td>@params("REFERENCE")</td>
+      </tr>
+
+      <tr>
+        <th>Duty paid</th>
+        <td>£@params("TOTAL")</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Duty and tax to pay per item</h2>
+  <table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Currency</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    @for((item, currency, amount) <- breakdown) {
+      <tr role="row">
+        <td>@item</td>
+        <td>@currency</td>
+        <td>£@amount</td>
+      </tr>
+    }
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Total</th>
+        <td></td>
+        <th>£@params("TOTAL")</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <br/>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+}

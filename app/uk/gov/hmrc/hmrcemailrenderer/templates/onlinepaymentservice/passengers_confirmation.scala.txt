@@ -1,0 +1,34 @@
+@(params: Map[String, Any])
+@breakdown = @{
+  val indices = Stream.from(0).takeWhile(i => params.get(s"NAME_$i").isDefined).toList
+  indices.map { i =>
+    val item = params(s"NAME_$i")
+    val currency = params(s"CURRENCY_$i")
+    val amount = params(s"COSTGBP_$i")
+    (item, currency, amount)
+  }
+}
+You have paid the duty you owe
+
+Go to the green channel if these are the only items you are declaring. Show your email receipt on your mobile phone or tablet to a member of Border Force if asked.
+
+Go to the red channel or red point phone if you have something else to declare and speak to a member of Border Force.
+
+Go to the red channel if you are carrying restricted items such as firearms or ammunition.
+
+Your details
+
+Name: @params("NAME")
+Date: @params("DATE")
+Place of arrival in UK: @params("PLACEOFARRIVAL")
+Date of arrival: @params("DATEOFARRIVAL")
+Payment reference: @params("REFERENCE")
+Duty paid: £@params("TOTAL")
+
+Duty and tax to pay per item
+@for((item, currency, amount) <- breakdown) {
+- Item: @item, Currency: @currency, Amount: @amount
+}
+Total: £@params("TOTAL")
+
+From HMRC

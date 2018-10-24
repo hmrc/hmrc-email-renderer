@@ -130,6 +130,16 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Return Direct Debit: cancelled",
       plainTemplate = txt.ddi_cancelled_advisory.f,
       htmlTemplate = html.ddi_cancelled_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+
+  //Passengers email template
+    MessageTemplate.create(
+      templateId = "passengers_confirmation",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Receipt for payment on goods brought into the UK",
+      plainTemplate = txt.passengers_confirmation.f,
+      htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent))
   )
 }
