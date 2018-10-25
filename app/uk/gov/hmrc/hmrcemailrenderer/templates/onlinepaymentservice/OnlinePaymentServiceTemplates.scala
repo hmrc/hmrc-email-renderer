@@ -134,7 +134,7 @@ object OnlinePaymentServiceTemplates {
 
   //Passengers email template
     MessageTemplate.create(
-      templateId = "passengers_confirmation",
+      templateId = "passengers_payment_confirmation",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Receipt for payment on goods brought into the UK",

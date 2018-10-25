@@ -28,11 +28,11 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have paid the duty you owe") {
 
-  <p style="margin: 0 0 30px; font-size: 19px;">Go to the green channel if these are the only items you are declaring. Show your email receipt on your mobile phone or tablet to a member of Border Force if asked.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">If these are the only items you are declaring, go to the green channel. You may be asked to show your email receipt on your phone or tablet by a member of Border Force.</p>
 
-  <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel or red point phone if you have something else to declare and speak to a member of Border Force.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">If you have something else to declare, go to red channel or red phone point and speak to a member of Border Force.</p>
 
-  <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel if you are carrying restricted items such as firearms or ammunition.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">If you are carrying restricted items such as firearms or ammunition, go to the red channel.</p>
 
   <h2>Your details</h2>
 
@@ -65,7 +65,7 @@
 
       <tr>
         <th>Duty paid</th>
-        <td>£@params("TOTAL")</td>
+        <th>£@params("TOTAL")</th>
       </tr>
     </tbody>
   </table>
@@ -96,8 +96,4 @@
       </tr>
     </tfoot>
   </table>
-
-  <br/>
-
-  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 }

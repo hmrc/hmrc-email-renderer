@@ -1302,7 +1302,7 @@ object TemplateParams {
       "schemeName" -> "Some Pension Scheme",
       "expiryDate" -> "20 July 1969"
     ),
-    "passengers_confirmation" -> Map(
+    "passengers_payment_confirmation" -> Map(
       "NAME" -> "Alex Smith",
       "DATE" -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
       "PLACEOFARRIVAL" -> "Heathrow",

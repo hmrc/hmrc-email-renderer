@@ -10,11 +10,11 @@
 }
 You have paid the duty you owe
 
-Go to the green channel if these are the only items you are declaring. Show your email receipt on your mobile phone or tablet to a member of Border Force if asked.
+If these are the only items you are declaring, go to the green channel. You may be asked to show your email receipt on your phone or tablet by a member of Border Force.
 
-Go to the red channel or red point phone if you have something else to declare and speak to a member of Border Force.
+If you have something else to declare, go to red channel or red phone point and speak to a member of Border Force.
 
-Go to the red channel if you are carrying restricted items such as firearms or ammunition.
+If you are carrying restricted items such as firearms or ammunition, go to the red channel.
 
 Your details
 
@@ -30,5 +30,3 @@ Duty and tax to pay per item
 - Item: @item, Currency: @currency, Amount: @amount
 }
 Total: £@params("TOTAL")
-
-From HMRC

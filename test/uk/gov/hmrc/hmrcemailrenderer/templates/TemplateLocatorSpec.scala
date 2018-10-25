@@ -410,7 +410,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_psa_register",
         "pods_psa_invited",
         "vat",
-        "passengers_confirmation"
+        "passengers_payment_confirmation"
         )
     }
   }
