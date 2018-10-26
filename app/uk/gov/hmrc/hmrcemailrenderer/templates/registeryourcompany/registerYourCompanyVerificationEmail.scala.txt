@@ -1,12 +1,12 @@
 @(params: Map[String, Any])Confirm your email address
 
-You are getting this email because you have signed up to use the digital service 'Set up a limited company and register for Corporation Tax'.
+You are getting this email because you have signed up to use the 'Set up a limited company and register for Corporation Tax' service.
 
 To confirm your email address, click this link:
 
 @{params("verificationLink")}
 
-This link will expire after 24 hours
+This link will expire after 3 days
 
 If you do not confirm your email address within this time, you will have to log back into the service and request a new link.
 
