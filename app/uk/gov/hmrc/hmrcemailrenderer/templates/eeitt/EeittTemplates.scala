@@ -166,6 +166,15 @@ object EeittTemplates {
     plainTemplate = txt.gd94ReturnConfirmation.f,
     htmlTemplate = html.gd94ReturnConfirmation.f,
     priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "air597_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your Alcoholic Ingredients Relief claim has been submitted",
+      plainTemplate = txt.air597ReturnConfirmation.f,
+      htmlTemplate = html.air597ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
