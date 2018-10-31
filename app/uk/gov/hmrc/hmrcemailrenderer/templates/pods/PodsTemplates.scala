@@ -44,7 +44,7 @@ object PodsTemplates {
       templateId = "pods_psa_invited",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = "You have been invited to administer a pension scheme",
+      subject = "You have an invitation to be added as a scheme administrator of a pension scheme",
       plainTemplate = txt.psaInvited.f,
       htmlTemplate = html.psaInvited.f,
       priority = Some(MessagePriority.Standard)
