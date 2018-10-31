@@ -1,14 +1,12 @@
 @(params: Map[String, Any])
 
-You have been invited to administer a pension scheme
+You have an invitation to be added as a scheme administrator of a pension scheme
 
 Dear Pension Scheme Administrator,
 
-You have been invited to administer @{params("schemeName").toString}.
+You have an invitation to be added as a scheme administrator of @{params("schemeName").toString}.
 
-You need to accept the invitation by using the ‘Manage and register pension schemes’ online service and viewing your pension schemes.
-
-You can do this by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
+You can accept the invitation by using the ‘Manage and register pension schemes’ online service and viewing your pension schemes. You can do this by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
 
 If you do not accept this invitation, it will be deleted on @{params("expiryDate").toString}.
 
