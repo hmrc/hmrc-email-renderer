@@ -1,19 +1,19 @@
 
-@(params: Map[String, Any])Tax Account name :@{params("name")}
+@(params: Map[String, Any])Subject: Your request for access to use @{params("serviceName")}
 
-Thank you for using HMRC's Online Services for@{params("serviceName")}
+To @{params("name")},
 
-Your service Activation Code has not been posted to you because we do not hold an up to date address for you.
+You recently requested access to use @{params("serviceName")}. To continue we need to send you an Activation Code.
+We have not been able to post your Activation Code to you because we do not have your up-to-date address or your tax record has been closed.
 
-Please telephone HMRC to tell us about any changes we need to make to your records. You can find the telephone number on our website at https://www.gov.uk/contact-hmrc and choose from the list of available contacts.
+Contact HMRC
 
-Please do not respond to this email, as this facility is not monitored.
+You need to contact HMRC to update your tax record - go to www.gov.uk/contact-hmrc for HMRC telephone numbers.
 
-Digital Customer Support Team
+From HMRC Digital Support team
 
 HM Revenue & Customs.
 
-If you have any doubt about the authenticity of an email you receive which claims to come from HM Revenue & Customs (HMRC), please do not follow any links within the email, disclose any personal details or respond to it. Instead forward it to us at phishinghmrc.gsi.gov.uk.
-
+This is an automatic email – do not reply.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
