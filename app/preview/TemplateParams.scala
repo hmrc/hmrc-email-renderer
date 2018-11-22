@@ -1118,6 +1118,10 @@ object TemplateParams {
       "full_name" -> "Abed Nadir",
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
     ),
+    "emac_activation_code_not_received" -> Map(
+      "serviceName" -> "Enrolment Team",
+      "name" -> "David Smith"
+    ),
     "eeitt_submission_confirmation" -> Map(
       "" -> ""
     ),
