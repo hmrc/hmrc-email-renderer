@@ -1,0 +1,29 @@
+@*
+ * Copyright 2018 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Tax Account name :</strong> @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Thank you for using HMRC's Online Services for @{params("serviceName")}</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your service Activation Code has not been posted to you because we do not hold an up to date address for you.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Please telephone HMRC to tell us about any changes we need to make to your records. You can find the telephone number on our website at <a href="https://www.gov.uk/help-friends-family-tax" style="color: #005EA5;">https://www.gov.uk/contact-hmrc</a> and choose from the list of available contacts.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Please do not respond to this email, as this facility is not monitored.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Digital Customer Support Team</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">HM Revenue & Customs.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you have any doubt about the authenticity of an email you receive which claims to come from HM Revenue & Customs (HMRC), please do not follow any links within the email, disclose any personal details or respond to it. Instead forward it to us at <a href="https://www.gov.uk/help-friends-family-tax" style="color: #005EA5;">phishinghmrc.gsi.gov.uk</a>.</p>
+
+}
