@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+
+Two way messing Template
+
+Thank you for making contact through secure messaging.
+
+We’ll email you again when your reply is ready to view in your secure account inbox.
+
+From HMRC Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
