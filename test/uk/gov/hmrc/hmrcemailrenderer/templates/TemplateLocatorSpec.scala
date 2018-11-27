@@ -75,7 +75,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "CDS",
         "MTDfB-VAT",
         "PODS",
-        "vat"
+        "vat",
+        "Two way messaging"
       )
     }
 
@@ -410,7 +411,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_scheme_register",
         "pods_psa_register",
         "pods_psa_invited",
-        "vat"
+        "vat",
+        "twoWayMessageReceived",
+        "twoWayMessageNotification"
         )
     }
   }
