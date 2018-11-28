@@ -26,7 +26,7 @@ object twoWayMessagingTemplates {
       templateId = "2wsm-customer",
       fromAddress = FromAddress.noReply("twoWayMessingRecieved"),
       service = TwoWayMessaging,
-      subject = "New message from HMRC received",
+      subject = "HMRC has recieved your secure enquiry",
       plainTemplate = txt.twoWayMessageRecievedTemplate.f,
       htmlTemplate = html.twoWayMessageRecievedTemplate.f,
       priority = Some(MessagePriority.Background)
@@ -35,7 +35,7 @@ object twoWayMessagingTemplates {
       templateId = "2wsm-advisor",
       fromAddress = FromAddress.noReply("twoWayMessingNotification"),
       service = TwoWayMessaging,
-      subject = "Message notification",
+      subject = "HMRC has responded to your enquiry",
       plainTemplate = txt.twoWayMessageNotificationTemplate.f,
       htmlTemplate = html.twoWayMessageNotificationTemplate.f,
       priority = Some(MessagePriority.Background)
