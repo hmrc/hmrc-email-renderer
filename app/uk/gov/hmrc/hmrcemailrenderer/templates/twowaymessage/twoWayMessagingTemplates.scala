@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TwoWayMessaging
 object twoWayMessagingTemplates {
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "twoWayMessageReceived",
+      templateId = "2wsm-customer",
       fromAddress = FromAddress.noReply("twoWayMessingRecieved"),
       service = TwoWayMessaging,
       subject = "New message from HMRC received",
@@ -32,7 +32,7 @@ object twoWayMessagingTemplates {
       priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
-      templateId = "twoWayMessageNotification",
+      templateId = "2wsm-advisor",
       fromAddress = FromAddress.noReply("twoWayMessingNotification"),
       service = TwoWayMessaging,
       subject = "Message notification",
