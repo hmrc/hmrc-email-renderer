@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Your Apply to register as a bingo promoter form has been submitted
+
+Dear Customer,
+
+We have received your bingo promoter registration form online.
+
+Why you are receiving this email
+
+We send a confirmation email for registration submitted online.
+
+If you need to contact us about your registration, please quote your submission reference number.
+
+Thank you.
+
+From the HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
