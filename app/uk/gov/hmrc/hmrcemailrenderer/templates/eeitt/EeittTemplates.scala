@@ -168,6 +168,15 @@ object EeittTemplates {
     priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ex250_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your Apply to register as a bingo promoter form has been submitted",
+      plainTemplate = txt.ex250ReturnConfirmation.f,
+      htmlTemplate = html.ex250ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "air597_return_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
