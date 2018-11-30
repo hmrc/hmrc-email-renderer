@@ -171,7 +171,7 @@ object EeittTemplates {
       templateId = "ex250_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Your Apply to register as a bingo promoter form has been submitted",
+      subject = "Your registration to be a bingo promoter has been submitted",
       plainTemplate = txt.ex250ReturnConfirmation.f,
       htmlTemplate = html.ex250ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
