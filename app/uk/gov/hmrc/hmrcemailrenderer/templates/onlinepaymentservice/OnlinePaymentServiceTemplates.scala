@@ -130,6 +130,46 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Return Direct Debit: cancelled",
       plainTemplate = txt.ddi_cancelled_advisory.f,
       htmlTemplate = html.ddi_cancelled_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_setup_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return: Direct Debit set up",
+      plainTemplate = txt.ddi_setup_dcs_alert.f,
+      htmlTemplate = html.ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_amended_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return: Direct Debit amended",
+      plainTemplate = txt.ddi_amended_dcs_alert.f,
+      htmlTemplate = html.ddi_amended_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_cancelled_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return: Direct Debit cancelled",
+      plainTemplate = txt.ddi_cancelled_dcs_alert.f,
+      htmlTemplate = html.ddi_cancelled_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_reminder_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: reminder of payment collection",
+      plainTemplate = txt.ddi_reminder_dcs_alert.f,
+      htmlTemplate = html.ddi_reminder_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_unpaid_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT direct debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: payment not collected",
+      plainTemplate = txt.ddi_unpaid_dcs_alert.f,
+      htmlTemplate = html.ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent))
   )
 }
