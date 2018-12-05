@@ -1,0 +1,9 @@
+@(params: Map[String, Any])VAT Return: Direct Debit set up
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+Your Direct Debit has been set up.
+
+Go to your secure business tax account inbox to check your account details are correct.
+
+From HMRC Direct Debit Team
