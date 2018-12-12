@@ -1264,6 +1264,23 @@ object TemplateParams {
     "ddi_cancelled_advisory" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
+
+    "ddi_setup_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_amended_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_cancelled_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_reminder_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_unpaid_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
