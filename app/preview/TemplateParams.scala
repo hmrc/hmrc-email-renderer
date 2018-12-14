@@ -1318,6 +1318,11 @@ object TemplateParams {
       "inviteeName" -> "Joe Bloggs",
       "schemeName" -> "Some Pension Scheme",
       "expiryDate" -> "20 July 1969"
+    ),
+    "digital_tariffs_case_completed" -> Map(
+      "recipientName_line1" -> "FULL NAME",
+      "reference" -> "BTI REFERENCE",
+      "itemName" -> "ITEM NAME"
     )
   )
 }
