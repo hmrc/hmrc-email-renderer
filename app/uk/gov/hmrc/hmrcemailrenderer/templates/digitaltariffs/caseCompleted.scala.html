@@ -15,16 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Binding tariff ruling issued") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Binding Tariff Information (BTI) Ruling") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
     <p>
         We have issued your BTI ruling for application @params("reference") for @params("itemName").
-        To view and download your certificate sign into your BTI account on GOV.UK in Binding Tariff Information (Notice 600).
+    </p>
+    <p>
+        To view and download your certificate sign in to your BTI account on GOV.UK in Binding Tariff Information (Notice 600).
     </p>
     <p>
         Get more information on BTI rulings including how to appeal on GOV.UK in the guide on Binding Tariff Information (Notice 600).
     </p>
-    <p>Tariff Classification Service</p>
-    <p>HM Revenue & Customs</p>
     <p style="font-weight:bold">For security reasons we have not included a link with this email.</p>
+    <p>From Tariff Classification Service</p>
 }
