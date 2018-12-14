@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-Binding Tariff Information (BTI) Ruling
+Issued: Binding Tariff Information (BTI) ruling
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
