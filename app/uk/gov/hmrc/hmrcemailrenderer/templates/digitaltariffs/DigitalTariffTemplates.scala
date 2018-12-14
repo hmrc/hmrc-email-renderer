@@ -27,7 +27,7 @@ object DigitalTariffTemplates {
       templateId = "digital_tariffs_case_completed",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
       service = BTIOperationalService,
-      subject = "Binding tariff ruling issued",
+      subject = "Binding Tariff Ruling issued",
       plainTemplate = txt.caseCompleted.f,
       htmlTemplate = html.caseCompleted.f,
       priority = Some(MessagePriority.Background)
