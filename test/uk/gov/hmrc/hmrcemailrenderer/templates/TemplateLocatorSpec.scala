@@ -417,7 +417,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_psa_register",
         "pods_psa_invited",
         "vat",
-        "2wsm-customer",
+        "2WSM-question",
         "2wsm-advisor"
         )
     }

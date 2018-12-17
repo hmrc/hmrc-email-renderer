@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TwoWayMessaging
 object twoWayMessagingTemplates {
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "2wsm-customer",
+      templateId = "2WSM-question",
       fromAddress = FromAddress.noReply("twoWayMessingRecieved"),
       service = TwoWayMessaging,
       subject = "HMRC has recieved your secure enquiry",
