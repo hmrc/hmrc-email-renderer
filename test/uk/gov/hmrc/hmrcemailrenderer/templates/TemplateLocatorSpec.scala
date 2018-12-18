@@ -44,6 +44,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Passcodes",
         "TAMC",
         "DFS",
+        "Digital Tariffs",
         "Childcare",
         "PAYE",
         "FANDF",
@@ -76,7 +77,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "CDS",
         "MTDfB-VAT",
         "PODS",
-        "vat"
+        "vat",
+        "Two way messaging"
       )
     }
 
@@ -154,6 +156,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tamc_recipient_divorce_previous_yr_cy",
         "tamc_recipient_rejects_retro_yr_cy",
         "tamc_transferor_divorce_current_yr_cy",
+        "digital_tariffs_case_completed",
         "dfs_submission_success_r39_2015",
         "dfs_submission_success_cis_2015",
         "dfs_submission_success_sptu_2015",
@@ -179,6 +182,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "lt100_return_confirmation",
         "gd95_return_confirmation",
         "gd94_return_confirmation",
+        "ex250_return_confirmation",
+        "ex250_registration_confirmation",
         "air597_return_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
@@ -398,6 +403,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ddi_setup_advisory",
         "ddi_amend_advisory",
         "ddi_cancelled_advisory",
+        "ddi_setup_dcs_alert",
+        "ddi_amended_dcs_alert",
+        "ddi_cancelled_dcs_alert",
+        "ddi_reminder_dcs_alert",
+        "ddi_unpaid_dcs_alert",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
@@ -412,7 +422,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_scheme_register",
         "pods_psa_register",
         "pods_psa_invited",
-        "vat"
+        "vat",
+        "newMessageAlert_2WSM-question",
+        "2wsm-advisor"
         )
     }
   }
