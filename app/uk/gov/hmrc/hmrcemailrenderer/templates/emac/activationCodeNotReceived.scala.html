@@ -16,13 +16,18 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Subject: Your request for access to use @{params("serviceName")}</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Subject: </strong><br/>Your HMRC @{params("serviceName")} request</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Heading: </strong> <br/>Contact HMRC now to update details</p>
+
 <p style="margin: 0 0 30px; font-size: 19px;">To @{params("name")},</p>
 <p style="margin: 0 0 30px; font-size: 19px;">You recently requested access to use @{params("serviceName")}. To continue we need to send you an Activation Code.</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">We have not been able to post your Activation Code to you because we do not have your up-to-date address or your tax record has been closed.</p>
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Contact HMRC</strong></p>
-<p style="margin: 0 0 30px; font-size: 19px;">You need to contact HMRC to update your tax record - go to  <a href="www.gov.uk/contact-hmrc" style="color: #005EA5;">www.gov.uk/contact-hmrc</a> for HMRC telephone numbers.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Support team</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>What you need to do now</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Contact HMRC to update your tax record - search for ‘Contact HMRC’ to find HMRC telephone numbers.</p>
+
 <p style="margin: 0 0 30px; font-size: 19px;">This is an automatic email – do not reply.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Support team</p>
 }
