@@ -1,19 +1,22 @@
 
-@(params: Map[String, Any])Subject: Your request for access to use @{params("serviceName")}
+@(params: Map[String, Any])Subject:
+Your HMRC @{params("serviceName")} request
+Heading:
+Contact HMRC now to update details
 
 To @{params("name")},
 
 You recently requested access to use @{params("serviceName")}. To continue we need to send you an Activation Code.
+
 We have not been able to post your Activation Code to you because we do not have your up-to-date address or your tax record has been closed.
 
-Contact HMRC
+What you need to do now
 
-You need to contact HMRC to update your tax record - go to www.gov.uk/contact-hmrc for HMRC telephone numbers.
+Contact HMRC to update your tax record - search for ‘Contact HMRC’ to find HMRC telephone numbers.
+
+This is an automatic email – do not reply.
 
 From HMRC Digital Support team
 
-HM Revenue & Customs.
-
-This is an automatic email – do not reply.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
