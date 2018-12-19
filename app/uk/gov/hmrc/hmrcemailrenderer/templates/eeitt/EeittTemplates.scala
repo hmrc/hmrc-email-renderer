@@ -174,6 +174,7 @@ object EeittTemplates {
       subject = "We received your Aggregates Levy registration",
       plainTemplate = txt.alRegistrationConfirmation.f,
       htmlTemplate = html.alRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "ex250_registration_confirmation",
