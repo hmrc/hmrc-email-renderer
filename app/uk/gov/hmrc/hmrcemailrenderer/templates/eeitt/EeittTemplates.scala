@@ -184,6 +184,24 @@ object EeittTemplates {
       plainTemplate = txt.air597ReturnConfirmation.f,
       htmlTemplate = html.air597ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c117_appplication_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your C117 Authorised Economic Operator application",
+      plainTemplate = txt.c117ApplicationConfirmation.f,
+      htmlTemplate = html.c117ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your C118 Authorised Economic Operator application",
+      plainTemplate = txt.c118ApplicationConfirmation.f,
+      htmlTemplate = html.c118ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 

@@ -1,0 +1,21 @@
+
+@(params: Map[String, Any])
+
+Submitted: your C117 Authorised Economic Operator application
+
+Dear Customer,
+
+We have received your part application for Authorised Economic Operator, the C117 form.
+
+You now need to immediately submit your C118 form to complete the application.
+
+Why you are receiving this email
+
+We send a confirmation email for applications submitted online.
+
+If you need to contact us about your application, please quote your EORI number.
+
+
+From the HMRC AEO team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
