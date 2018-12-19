@@ -174,6 +174,14 @@ object EeittTemplates {
       subject = "We received your Aggregates Levy registration",
       plainTemplate = txt.alRegistrationConfirmation.f,
       htmlTemplate = html.alRegistrationConfirmation.f,
+    ),
+    MessageTemplate.create(
+      templateId = "ex250_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your registration to be a bingo promoter has been submitted",
+      plainTemplate = txt.ex250ReturnConfirmation.f,
+      htmlTemplate = html.ex250ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(

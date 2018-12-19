@@ -29,6 +29,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.emac.EmacTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs.DigitalTariffTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
@@ -68,6 +69,7 @@ trait TemplateLocator {
         "Digital Tariffs"            -> DigitalTariffTemplates.templates,
         "DFS"                        -> DfsTemplates.templates,
         "EMAC Helpdesk"              -> EmacHelpdeskTemplates.templates,
+        "EMAC"                       -> EmacTemplates.templates,
         "FANDF"                      -> FandFTemplates.templates,
         "GG"                         -> GgTemplates.templates,
         "Passcodes"                  -> PasscodesTemplates.templates,
