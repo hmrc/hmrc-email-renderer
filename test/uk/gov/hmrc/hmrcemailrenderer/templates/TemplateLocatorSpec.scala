@@ -179,6 +179,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ipt100_return_confirmation",
         "bd510_return_confirmation",
         "al100_return_confirmation",
+        "al_registration_confirmation",
         "lt100_return_confirmation",
         "gd95_return_confirmation",
         "gd94_return_confirmation",

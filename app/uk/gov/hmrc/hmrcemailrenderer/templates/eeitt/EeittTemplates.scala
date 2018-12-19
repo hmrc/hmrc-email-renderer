@@ -168,6 +168,15 @@ object EeittTemplates {
     priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "al_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "We received your Aggregates Levy registration",
+      plainTemplate = txt.alRegistrationConfirmation.f,
+      htmlTemplate = html.alRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "ex250_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
