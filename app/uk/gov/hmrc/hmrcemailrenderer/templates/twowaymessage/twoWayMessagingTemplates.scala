@@ -32,7 +32,7 @@ object twoWayMessagingTemplates {
       priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
-      templateId = "2wsm-advisor",
+      templateId = "newMessageAlert_2WSM-reply",
       fromAddress = FromAddress.noReply("twoWayMessingNotification"),
       service = TwoWayMessaging,
       subject = "HMRC has responded to your enquiry",
