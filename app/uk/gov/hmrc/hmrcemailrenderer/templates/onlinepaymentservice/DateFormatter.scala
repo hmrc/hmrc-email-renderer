@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +15,11 @@
  */
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
+
+import play.api.Logger
+
+import scala.util.Try
+import scala.util.control.NonFatal
 
 object DateFormatter {
 
@@ -44,6 +49,11 @@ object DateFormatter {
     val year = yyyymmdd.slice(0, 4)
     val month = yyyymmdd.slice(4, 6)
     val day = yyyymmdd.slice(6, 8)
-    s"$day ${formatMonth(month)} $year"
+    s"${formatDay(day)} ${formatMonth(month)} $year"
   }
+
+  private def formatDay(day: String): String = Try(day.toInt.toString).recover {
+    case NonFatal(e) => Logger.warn(s"Day parse exception: ${e.getMessage}"); day
+  }.getOrElse(day)
+
 }
