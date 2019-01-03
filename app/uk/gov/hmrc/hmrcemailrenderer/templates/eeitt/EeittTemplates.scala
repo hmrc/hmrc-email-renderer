@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -195,7 +195,7 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "c117_appplication_confirmation",
+      templateId = "c117_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Submitted: your C117 Authorised Economic Operator application",
