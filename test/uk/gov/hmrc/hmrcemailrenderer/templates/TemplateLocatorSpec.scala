@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -186,6 +186,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ex250_return_confirmation",
         "ex250_registration_confirmation",
         "air597_return_confirmation",
+        "c117_application_confirmation",
+        "c118_application_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
