@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -192,6 +192,24 @@ object EeittTemplates {
       subject = "Your Alcoholic Ingredients Relief claim has been submitted",
       plainTemplate = txt.air597ReturnConfirmation.f,
       htmlTemplate = html.air597ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c117_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your C117 Authorised Economic Operator application",
+      plainTemplate = txt.c117ApplicationConfirmation.f,
+      htmlTemplate = html.c117ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your C118 Authorised Economic Operator application",
+      plainTemplate = txt.c118ApplicationConfirmation.f,
+      htmlTemplate = html.c118ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )
