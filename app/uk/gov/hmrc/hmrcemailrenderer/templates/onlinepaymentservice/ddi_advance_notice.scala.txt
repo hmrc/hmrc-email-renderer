@@ -1,4 +1,5 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.DateFormatter
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmount
 @(params: Map[String, Any])
 
 @breakdown = @{
@@ -7,7 +8,7 @@
     val chargeType = params(s"CHARGETYPE_$i")
     val period = params(s"PERIOD_$i")
     val amount = params(s"AMOUNT_$i")
-    (chargeType, DateFormatter.formatPeriod(period.toString), amount)
+    (chargeType, DateFormatter.formatPeriod(period.toString), formatAmount(amount.toString))
   }
 }
 
@@ -17,7 +18,7 @@ Dear @params("NAME")
 
 Direct Debit mandate reference @params("DDIREFERENCE")
 
-This notice is for information purposes only. We will collect £@params("AMOUNT") on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).
+This notice is for information purposes only. We will collect @formatAmount(params("AMOUNT").toString) on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).
 
 @for((chargeType, period, amount) <- breakdown) {
     - Charge type: @chargeType, period: @period, amount: @amount
