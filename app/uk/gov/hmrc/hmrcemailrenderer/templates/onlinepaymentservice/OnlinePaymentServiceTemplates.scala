@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -170,6 +170,15 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Return Direct Debit: payment not collected",
       plainTemplate = txt.ddi_unpaid_dcs_alert.f,
       htmlTemplate = html.ddi_unpaid_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    //Passengers email template
+      MessageTemplate.create(
+      templateId = "passengers_payment_confirmation",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Receipt for payment on goods brought into the UK",
+      plainTemplate = txt.passengers_confirmation.f,
+      htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent))
   )
 }
