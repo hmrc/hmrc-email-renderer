@@ -1215,7 +1215,7 @@ object TemplateParams {
       "NAME" -> "Customer",
       "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
-      "AMOUNT" -> "15003.18",
+      "AMOUNT" -> "1215003.18",
       "COLLECTIONDATE" -> "20180501",
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700",
@@ -1227,7 +1227,7 @@ object TemplateParams {
       "AMOUNT_1" -> "4049.57",
       "CHARGETYPE_2" -> "VAT Return",
       "PERIOD_2" -> "0718",
-      "AMOUNT_2" -> "5952.18"
+      "AMOUNT_2" -> "5952"
     ),
     "ddi_set_up" -> Map(
       "NAME" -> "Customer",

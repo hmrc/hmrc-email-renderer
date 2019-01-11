@@ -6,9 +6,9 @@ Dear @params("NAME")
 
 Direct Debit mandate reference @params("DDIREFERENCE")
 
-Your bank has told us that your Instruction to allow us to collect payments under this Direct Debit reference has been reinstated.
+Your bank has told us that your instruction to allow us to collect payments under this Direct Debit reference has been reinstated.
 
-Your direct debit will continue to be taken from:
+Your Direct Debit will continue to be taken from:
 
 Sort code: @params("SORTCODE")
 Account number: @params("ACCOUNTNUMBER")
