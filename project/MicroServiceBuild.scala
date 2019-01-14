@@ -13,7 +13,6 @@ private object AppDependencies {
   def apply() = Seq(
     ws,
     "uk.gov.hmrc"                 %% "microservice-bootstrap" % "6.18.0",
-    "uk.gov.hmrc"                 %% "play-url-binders"       % "2.1.0",
     "uk.gov.hmrc"                 %% "domain"                 % "5.1.0",
     "uk.gov.hmrc"                 %% "emailaddress"           % "2.2.0",
     "org.jsoup"                   %  "jsoup"                  % "1.7.3"             % "test",

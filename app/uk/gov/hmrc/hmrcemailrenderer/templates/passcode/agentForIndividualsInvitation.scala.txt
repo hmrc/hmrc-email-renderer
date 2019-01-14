@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Your HMRC agent services link to view client records
+@(params: Map[String, Any])Your agent services link to view client records
 
 Dear @{params("name")}
 

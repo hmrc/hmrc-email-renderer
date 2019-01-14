@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Your Alcoholic Ingredients Relief claim has been submitted
+
+Dear Customer,
+
+We have received your Alcoholic Ingredients Relief claim online.
+
+Why you are receiving this email
+
+We send a confirmation email for claims submitted online.
+
+If you need to contact us about your claim, please quote your Alcoholic Ingredients Relief registration number.
+
+Thank you.
+
+From the HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

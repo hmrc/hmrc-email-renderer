@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+We received your Aggregates Levy registration
+
+Dear Customer,
+
+We have received your Aggregates Levy registration online.
+
+Please check GOV.UK to see whether you need to fill in any further forms to complete your Aggregates Levy registration.
+
+For example, if your business is a partnership you will also need to complete form AL2.
+
+Why you are receiving this email
+
+We send a confirmation email for a registration submitted online.
+
+Thank you.
+
+From the HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

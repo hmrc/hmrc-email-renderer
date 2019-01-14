@@ -1,0 +1,11 @@
+@(params: Map[String, Any])You’ve been added to an application
+
+You’ve been given @{params("role")} rights over @{params("applicationName")}.
+
+Not already registered? To register with the HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}, click on the link below.
+
+@{params("developerHubLink")}
+
+From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

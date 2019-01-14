@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -73,6 +73,15 @@ object ApiTemplates {
       subject = "You have been added to an application",
       plainTemplate = txt.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
       htmlTemplate = html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedDeveloperAsCollaboratorConfirmation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "You have been added to an application",
+      plainTemplate = txt.apiAddedDeveloperAsCollaboratorConfirmation.f,
+      htmlTemplate = html.apiAddedDeveloperAsCollaboratorConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(

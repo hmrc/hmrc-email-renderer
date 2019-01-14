@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,6 @@ object PodsTemplates {
       plainTemplate = txt.schemeRegSubmitted.f,
       htmlTemplate = html.schemeRegSubmitted.f,
       priority = Some(MessagePriority.Standard)
-
     ),
     MessageTemplate.create(
       templateId = "pods_psa_register",
@@ -40,6 +39,15 @@ object PodsTemplates {
       plainTemplate = txt.psaRegistered.f,
       htmlTemplate = html.psaRegistered.f,
       priority = Some(MessagePriority.Standard)
-
-    ))
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psa_invited",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "You have an invitation to be added as a scheme administrator of a pension scheme",
+      plainTemplate = txt.psaInvited.f,
+      htmlTemplate = html.psaInvited.f,
+      priority = Some(MessagePriority.Standard)
+    )
+  )
 }

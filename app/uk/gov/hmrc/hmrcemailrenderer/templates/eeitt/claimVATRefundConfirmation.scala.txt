@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+Your claim for a VAT refund has been submitted
+
+Dear Customer,
+
+We have received your application to submit your claim for a VAT refund as an organisation unregistered for VAT.
+
+What happens next
+
+We will contact you if we need further information about your claim
+
+Why you are receiving this email
+
+We send a confirmation email for claims made online.
+
+If you need to contact us about your claim, please quote your unique customer reference number that you used to access the online service.
+
+Thank you.
+
+From the HMRC VAT 126 team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

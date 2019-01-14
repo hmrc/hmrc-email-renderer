@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,6 +44,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Passcodes",
         "TAMC",
         "DFS",
+        "Digital Tariffs",
         "Childcare",
         "PAYE",
         "FANDF",
@@ -58,6 +59,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Mandate",
         "Off Payroll",
         "EMAC Helpdesk",
+        "EMAC",
         "Customs",
         "Transaction Engine",
         "ATED",
@@ -74,7 +76,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "CCA",
         "CDS",
         "MTDfB-VAT",
-        "PODS"
+        "PODS",
+        "vat",
+        "Two way messaging"
       )
     }
 
@@ -86,6 +90,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apiDeveloperChangedPasswordConfirmation",
         "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
         "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
+        "apiAddedDeveloperAsCollaboratorConfirmation",
         "apiAddedDeveloperAsCollaboratorNotification",
         "apiRemovedCollaboratorConfirmation",
         "apiRemovedCollaboratorNotification",
@@ -151,6 +156,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tamc_recipient_divorce_previous_yr_cy",
         "tamc_recipient_rejects_retro_yr_cy",
         "tamc_transferor_divorce_current_yr_cy",
+        "digital_tariffs_case_completed",
         "dfs_submission_success_r39_2015",
         "dfs_submission_success_cis_2015",
         "dfs_submission_success_sptu_2015",
@@ -168,8 +174,20 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "eeitt_ce930_confirmation",
         "eeitt_ho930_confirmation",
         "ho10_confirmation_submission",
+        "vat_refund_claim_confirmation",
         "apd_return_confirmation",
         "ipt100_return_confirmation",
+        "bd510_return_confirmation",
+        "al100_return_confirmation",
+        "al_registration_confirmation",
+        "lt100_return_confirmation",
+        "gd95_return_confirmation",
+        "gd94_return_confirmation",
+        "ex250_return_confirmation",
+        "ex250_registration_confirmation",
+        "air597_return_confirmation",
+        "c117_application_confirmation",
+        "c118_application_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
@@ -234,6 +252,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_payment_required",
         "customs_payment_success",
         "customs_declaration_success",
+        "customs_pull_notifications_warning",
+        "customs_push_notifications_warning",
         "transactionEngineHMRCSASA100Success",
         "transactionEngineHMRCSASA100Failure",
         "transactionEngineHMRCSASA100ATTSuccess",
@@ -369,6 +389,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "disposal_return_submit",
         "emac_helpdesk_failure_confirmation_email",
         "emac_helpdesk_successful_confirmation_email",
+        "emac_activation_code_not_received",
         "cbcr_subscription",
         "cbcr_report_confirmation",
         "cbcr_cbcid_regeneration",
@@ -381,6 +402,15 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ddi_advance_notice",
         "ddi_set_up",
         "ddi_migration_letter",
+        "ddi_cancelled_online",
+        "ddi_setup_advisory",
+        "ddi_amend_advisory",
+        "ddi_cancelled_advisory",
+        "ddi_setup_dcs_alert",
+        "ddi_amended_dcs_alert",
+        "ddi_cancelled_dcs_alert",
+        "ddi_reminder_dcs_alert",
+        "ddi_unpaid_dcs_alert",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
@@ -391,8 +421,14 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cdsEmailTemplate",
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
+        "mtdfb_vat_agent_sign_up_successful",
         "pods_scheme_register",
-        "pods_psa_register"
+        "pods_psa_register",
+        "pods_psa_invited",
+        "vat",
+        "newMessageAlert_2WSM-question",
+        "newMessageAlert_2WSM-reply",
+        "passengers_payment_confirmation"
         )
     }
   }

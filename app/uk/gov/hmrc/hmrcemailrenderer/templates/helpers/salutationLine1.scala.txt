@@ -1,3 +1,3 @@
 @(params: Map[String, Any])
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
-@salutationLine1From(params)
+@salutationFrom(params)

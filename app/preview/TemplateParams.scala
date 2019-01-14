@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,12 @@ object TemplateParams {
       "developerHubLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
+    "apiAddedDeveloperAsCollaboratorConfirmation" -> Map(
+      "role" -> "admin",
+      "applicationName" -> "Test Application",
+      "developerHubLink" -> exampleLinkWithRandomId,
+      "developerHubTitle" -> "Developer Hub Title"
+    ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
       "email" -> "joe.bloggs@gmail.com",
       "role" -> "admin",
@@ -98,7 +104,7 @@ object TemplateParams {
     ),
     "newMessageAlert" -> newMessageAlert_Names,
     "rescindedMessageAlert" -> newMessageAlert_Names,
-    "newMessageAlert_SA300" -> newMessageAlert_Names,
+    "newMessageAlert_SA300" -> Map("recipientName_line1" -> "this is a line 1"),
     "newMessageAlert_SS300" -> newMessageAlert_Names,
 
     "newMessageAlert_SA316" -> (Map(
@@ -511,6 +517,24 @@ object TemplateParams {
     ),
     "customs_validation_success" -> Map(
       "details" -> "validation success details will appear here"
+    ),
+    "customs_pull_notifications_warning" -> Map(
+      "queueThreshold" -> "1000",
+      "clientId_0" -> "3d34882b-0e73-4aaa-b156-afc037208871",
+      "notificationTotal_0" -> "1001",
+      "oldestNotification_0" -> "2011-08-08T15:38:09.747+01:00",
+      "latestNotification_0" -> "2018-08-08T10:02:10.627+01:00",
+      "clientId_1" -> "3d34882b-0e73-4aaa-b156-afc037208872",
+      "notificationTotal_1" -> "2001",
+      "oldestNotification_1" -> "2012-08-08T15:38:09.747+01:00",
+      "latestNotification_1" -> "2018-08-08T10:02:10.627+01:00",
+      "clientId_2" -> "3d34882b-0e73-4aaa-b156-afc037208873",
+      "notificationTotal_2" -> "3001",
+      "oldestNotification_2" -> "2013-08-08T15:38:09.747+01:00",
+      "latestNotification_2" -> "2018-08-08T10:02:10.627+01:00"
+    ),
+    "customs_push_notifications_warning" -> Map(
+      "timestamp" -> "2018-07-05T09:08:12.831Z"
     ),
     "transactionEngineHMRCSASA100Success" -> Map(
       "receivedDate" -> "01/01/01",
@@ -1094,6 +1118,10 @@ object TemplateParams {
       "full_name" -> "Abed Nadir",
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
     ),
+    "emac_activation_code_not_received" -> Map(
+      "serviceName" -> "Enrolment Team",
+      "name" -> "David Smith"
+    ),
     "eeitt_submission_confirmation" -> Map(
       "" -> ""
     ),
@@ -1154,6 +1182,10 @@ object TemplateParams {
       "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC"
     ),
+    "ddi_cancelled_online" -> Map(
+      "NAME" -> "Customer",
+      "DDIREFERENCE" -> "123456789"
+    ),
     "ddi_not_acceptable" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "B",
@@ -1183,7 +1215,7 @@ object TemplateParams {
       "NAME" -> "Customer",
       "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
-      "AMOUNT" -> "15003.18",
+      "AMOUNT" -> "1215003.18",
       "COLLECTIONDATE" -> "20180501",
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700",
@@ -1195,7 +1227,7 @@ object TemplateParams {
       "AMOUNT_1" -> "4049.57",
       "CHARGETYPE_2" -> "VAT Return",
       "PERIOD_2" -> "0718",
-      "AMOUNT_2" -> "5952.18"
+      "AMOUNT_2" -> "5952"
     ),
     "ddi_set_up" -> Map(
       "NAME" -> "Customer",
@@ -1227,6 +1259,32 @@ object TemplateParams {
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700"
     ),
+    "ddi_setup_advisory" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_amend_advisory" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_cancelled_advisory" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+
+    "ddi_setup_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_amended_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_cancelled_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_reminder_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+    "ddi_unpaid_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith"
+    ),
+
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
@@ -1256,6 +1314,36 @@ object TemplateParams {
     ),
     "pods_scheme_register" -> Map(
       "srn" -> "S12345 67890"
+    ),
+    "mtdfb_vat_agent_sign_up_successful" -> Map(
+      "vatNumber" -> "123456782"
+    ),
+    "pods_psa_invited" -> Map(
+      "inviteeName" -> "Joe Bloggs",
+      "schemeName" -> "Some Pension Scheme",
+      "expiryDate" -> "20 July 1969"
+    ),
+    "digital_tariffs_case_completed" -> Map(
+      "recipientName_line1" -> "FULL NAME",
+      "reference" -> "BTI REFERENCE",
+      "itemName" -> "ITEM NAME"
+    ),
+    "passengers_payment_confirmation" -> Map(
+      "NAME" -> "Alex Smith",
+      "DATE" -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
+      "PLACEOFARRIVAL" -> "Heathrow",
+      "DATEOFARRIVAL" -> "15 September 2018",
+      "REFERENCE" -> "XAPR9876543210",
+      "TOTAL" -> "32.40",
+      "NAME_0" -> "5 litres spirits",
+      "CURRENCY_0" -> "60 Mexican Peso(MXN)",
+      "COSTGBP_0" -> "10.50",
+      "NAME_1" -> "All other electronic devices",
+      "CURRENCY_1" -> "100 USA Dollar(USD)",
+      "COSTGBP_1" -> "10.50",
+      "NAME_2" -> "All other electronic devices",
+      "CURRENCY_2" -> "600 USA Dollar(USD)",
+      "COSTGBP_2" -> "11.40"
     )
   )
 }

@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+
+VAT Return Direct Debit: cancelled
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+Your Direct Debit has been cancelled.
+
+It’s important you sign in to your HMRC online account for more information.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Direct Debit Team

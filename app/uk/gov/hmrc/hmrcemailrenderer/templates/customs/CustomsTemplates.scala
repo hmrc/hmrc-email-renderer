@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.customs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Customs
 
@@ -63,6 +63,23 @@ object CustomsTemplates {
       service = Customs,
       subject = "Status Change in your Supplementary Declaration",
       plainTemplate = txt.customsDeclarationSuccess.f,
-      htmlTemplate = html.customsDeclarationSuccess.f)
+      htmlTemplate = html.customsDeclarationSuccess.f),
+    MessageTemplate.create(
+      templateId = "customs_pull_notifications_warning",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "Customs pull notifications queue alarm - do not reply",
+      plainTemplate = txt.customsPullNotificationsWarning.f,
+      htmlTemplate = html.customsPullNotificationsWarning.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "customs_push_notifications_warning",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "Customs push notifications failure - do not reply",
+      plainTemplate = txt.customsPushNotificationsWarning.f,
+      htmlTemplate = html.customsPushNotificationsWarning.f,
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }

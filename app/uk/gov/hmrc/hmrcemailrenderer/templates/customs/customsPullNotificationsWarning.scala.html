@@ -1,0 +1,65 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@grid = @{
+    val warnings = Stream.from(0).takeWhile(i => params.get(s"clientId_$i").isDefined).toList
+    warnings.map { i =>
+        val clientId = params(s"clientId_$i")
+        val notificationTotal = params(s"notificationTotal_$i")
+        val oldestNotification = params(s"oldestNotification_$i")
+        val latestNotification = params(s"latestNotification_$i")
+        (clientId, notificationTotal, oldestNotification, oldestNotification)
+    }
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Notification Pull Warning") {
+
+    <p>
+    Clients that have exceeded the @params("queueThreshold") notification queue limit
+    <p>
+
+    <table width="1000" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+        <thead>
+            <tr>
+                <th>Client Id</th>
+                <th>Notification Total</th>
+                <th>Oldest Notification</th>
+                <th>Latest Notification</th>
+            </tr>
+        </thead>
+        <tbody>
+        @for((clientId, notificationTotal, oldestNotification, latestNotification) <- grid) {
+            <tr style="font-size: 12px">
+                <td>@clientId</td>
+                <td>@notificationTotal</td>
+                <td>@oldestNotification</td>
+                <td>@latestNotification</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Please notify the trader or CSP that they need to retrieve their notifications.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Queued notifications will only be deleted once they have been retrieved.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">In order to retrieve pull notifications the trader or CSP must be subscribed to the api-notification-pull service.</p>
+
+    <p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Customs Declaration Service</p>
+}

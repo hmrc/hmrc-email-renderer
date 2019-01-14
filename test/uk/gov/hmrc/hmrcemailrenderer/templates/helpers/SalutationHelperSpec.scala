@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,6 +57,14 @@ class SalutationHelperSpec extends UnitSpec {
 
       "be respected when having name.title name.surname	Dear [name.title] [name.surname]" in {
         salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER")) should be("Dear Mr Fisher")
+      }
+
+      "be title and forename when provided with line1" in {
+        salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER", "recipientName_line1" -> "something else")) should be("Dear Mr Fisher")
+      }
+
+      "be line1 when title and forname are not provided" in {
+        salutationFrom(Map("recipientName_line1" -> "something else")) should be("Dear something else")
       }
 
       "be respected when having name.title name.forename name.surname	Dear [name.title] [name.forename] [name.surname]" in {

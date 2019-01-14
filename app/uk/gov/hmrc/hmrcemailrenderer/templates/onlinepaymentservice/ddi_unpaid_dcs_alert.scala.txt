@@ -1,0 +1,9 @@
+@(params: Map[String, Any])VAT Return Direct Debit: payment not collected
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+Your Direct Debit payment has not been collected.  We have sent a secure message to your business tax account inbox with full details.
+
+Make sure you pay your VAT Return by another payment method.  You can pay either by bank transfer or by debit card or corporate credit card.
+
+From HMRC Direct Debit Team

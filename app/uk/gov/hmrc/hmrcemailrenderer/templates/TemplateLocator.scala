@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,40 +19,44 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.emac.EmacTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs.DigitalTariffTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gg.GgTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gmp.GmpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.hts.HtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.itr.ItrTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.lisa.LisaTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.lostcredentials.LostCredentialsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mandate.MandateTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vat.MtdfbVatTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.OnlinePaymentServiceTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.pods.PodsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.lisa.LisaTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.hts.HtsTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.lostcredentials.LostCredentialsTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.OnlinePaymentServiceTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.twowaymessage.twoWayMessagingTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.vat.vatTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.voa.CCATemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vat.MtdfbVatTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.pods.PodsTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -62,8 +66,10 @@ trait TemplateLocator {
         "AMLS"                       -> AmlsTemplates.templates,
         "BARS"                       -> BarsTemplates.templates,
         "Childcare"                  -> ChildcareTemplates.templates,
+        "Digital Tariffs"            -> DigitalTariffTemplates.templates,
         "DFS"                        -> DfsTemplates.templates,
         "EMAC Helpdesk"              -> EmacHelpdeskTemplates.templates,
+        "EMAC"                       -> EmacTemplates.templates,
         "FANDF"                      -> FandFTemplates.templates,
         "GG"                         -> GgTemplates.templates,
         "Passcodes"                  -> PasscodesTemplates.templates,
@@ -92,7 +98,9 @@ trait TemplateLocator {
         "CCA"                        -> CCATemplates.templates,
         "CDS"                        -> cdsTestTemplates.templates,
         "MTDfB-VAT"                  -> MtdfbVatTemplates.templates,
-        "PODS"                       -> PodsTemplates.templates
+        "PODS"                       -> PodsTemplates.templates,
+        "vat"                        -> vatTemplates.templates,
+        "Two way messaging"          -> twoWayMessagingTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

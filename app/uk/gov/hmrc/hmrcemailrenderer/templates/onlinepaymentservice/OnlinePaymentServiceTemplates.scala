@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ object OnlinePaymentServiceTemplates {
 
     MessageTemplate.create(
       templateId = "ddi_cancelled",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit: Cancelled Direct Debit",
       plainTemplate = txt.ddi_cancelled.f,
@@ -53,7 +53,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_advance_notice",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit: Advance notice of your payment",
       plainTemplate = txt.ddi_advance_notice.f,
@@ -61,7 +61,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_migration_letter",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit: important information",
       plainTemplate = txt.ddi_migration_letter.f,
@@ -69,7 +69,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_not_acceptable",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit Instruction: cannot be used",
       plainTemplate = txt.ddi_not_acceptable.f,
@@ -77,7 +77,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_reinstated",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit: Reinstated Direct Debit Instruction",
       plainTemplate = txt.ddi_reinstated.f,
@@ -85,7 +85,7 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_unpaid",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit: payment not collected",
       plainTemplate = txt.ddi_unpaid.f,
@@ -93,11 +93,92 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "ddi_set_up",
-      fromAddress = FromAddress.noReply("VAT direct debit"),
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "VAT Return Direct Debit: Confirmation of your Direct Debit",
       plainTemplate = txt.ddi_set_up.f,
       htmlTemplate = html.ddi_set_up.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_cancelled_online",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: cancelled",
+      plainTemplate = txt.ddi_cancelled_online.f,
+      htmlTemplate = html.ddi_cancelled_online.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_setup_advisory",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: confirmation",
+      plainTemplate = txt.ddi_setup_advisory.f,
+      htmlTemplate = html.ddi_setup_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_amend_advisory",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: amended details",
+      plainTemplate = txt.ddi_amend_advisory.f,
+      htmlTemplate = html.ddi_amend_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_cancelled_advisory",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: cancelled",
+      plainTemplate = txt.ddi_cancelled_advisory.f,
+      htmlTemplate = html.ddi_cancelled_advisory.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_setup_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return: Direct Debit set up",
+      plainTemplate = txt.ddi_setup_dcs_alert.f,
+      htmlTemplate = html.ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_amended_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return: Direct Debit amended",
+      plainTemplate = txt.ddi_amended_dcs_alert.f,
+      htmlTemplate = html.ddi_amended_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_cancelled_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return: Direct Debit cancelled",
+      plainTemplate = txt.ddi_cancelled_dcs_alert.f,
+      htmlTemplate = html.ddi_cancelled_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_reminder_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: reminder of payment collection",
+      plainTemplate = txt.ddi_reminder_dcs_alert.f,
+      htmlTemplate = html.ddi_reminder_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_unpaid_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: payment not collected",
+      plainTemplate = txt.ddi_unpaid_dcs_alert.f,
+      htmlTemplate = html.ddi_unpaid_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    //Passengers email template
+      MessageTemplate.create(
+      templateId = "passengers_payment_confirmation",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Receipt for payment on goods brought into the UK",
+      plainTemplate = txt.passengers_confirmation.f,
+      htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent))
   )
 }

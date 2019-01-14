@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -105,6 +105,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "vat_refund_claim_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "VAT claim confirmation",
+      plainTemplate = txt.claimVATRefundConfirmation.f,
+      htmlTemplate = html.claimVATRefundConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "ipt100_return_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -112,6 +121,97 @@ object EeittTemplates {
       plainTemplate = txt.ipt100ReturnConfirmation.f,
       htmlTemplate = html.ipt100ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "bd510_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "BD 510 return",
+      plainTemplate = txt.bd510ReturnConfirmation.f,
+      htmlTemplate = html.bd510ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "al100_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "AL 100 return",
+      plainTemplate = txt.al100ReturnConfirmation.f,
+      htmlTemplate = html.al100ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+    templateId = "lt100_return_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "LT 100 return",
+    plainTemplate = txt.lt100ReturnConfirmation.f,
+    htmlTemplate = html.lt100ReturnConfirmation.f,
+    priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+    templateId = "gd95_return_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "Your Gaming Duty return has been submitted",
+    plainTemplate = txt.gd95ReturnConfirmation.f,
+    htmlTemplate = html.gd95ReturnConfirmation.f,
+    priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+    templateId = "gd94_return_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "Your Gaming Duty return (GD94) has been submitted",
+    plainTemplate = txt.gd94ReturnConfirmation.f,
+    htmlTemplate = html.gd94ReturnConfirmation.f,
+    priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "al_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "We received your Aggregates Levy registration",
+      plainTemplate = txt.alRegistrationConfirmation.f,
+      htmlTemplate = html.alRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ex250_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your registration to be a bingo promoter has been submitted",
+      plainTemplate = txt.ex250ReturnConfirmation.f,
+      htmlTemplate = html.ex250ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "air597_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your Alcoholic Ingredients Relief claim has been submitted",
+      plainTemplate = txt.air597ReturnConfirmation.f,
+      htmlTemplate = html.air597ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c117_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your C117 Authorised Economic Operator application",
+      plainTemplate = txt.c117ApplicationConfirmation.f,
+      htmlTemplate = html.c117ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your C118 Authorised Economic Operator application",
+      plainTemplate = txt.c118ApplicationConfirmation.f,
+      htmlTemplate = html.c118ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
+
 }

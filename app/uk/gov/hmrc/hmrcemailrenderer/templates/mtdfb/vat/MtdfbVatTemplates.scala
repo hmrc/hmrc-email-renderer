@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 HM Revenue & Customs
+ * Copyright 2019 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,15 @@ object MtdfbVatTemplates {
       subject = "Use software to submit your VAT Returns",
       plainTemplate = txt.principal_sign_up_failure.f,
       htmlTemplate = html.principal_sign_up_failure.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mtdfb_vat_agent_sign_up_successful",
+      fromAddress = FromAddress.noReply("HMRC Making Tax Digital for VAT"),
+      service = MTDfBVatSignUp,
+      subject = "Client sign up complete | Making Tax Digital for VAT",
+      plainTemplate = txt.agent_sign_up_successful.f,
+      htmlTemplate = html.agent_sign_up_successful.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

@@ -1,0 +1,31 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Issued: Binding Tariff Information (BTI) ruling") {
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+    <p>
+        We have issued your BTI ruling for application @params("reference") for @params("itemName").
+    </p>
+    <p>
+        To view and download your certificate sign in to your BTI account on GOV.UK in Binding Tariff Information (Notice 600).
+    </p>
+    <p>
+        Get more information on BTI rulings including how to appeal on GOV.UK in the guide on Binding Tariff Information (Notice 600).
+    </p>
+    <p>For security reasons we have not included a link with this email.</p>
+    <p>From Tariff Classification Service</p>
+}
