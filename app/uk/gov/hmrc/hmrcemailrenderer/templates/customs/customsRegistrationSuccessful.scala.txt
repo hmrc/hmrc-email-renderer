@@ -1,7 +1,5 @@
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
-@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youAreItIs(params) now registered for Customs Declaration Service (CDS).
-
-Active from : @{params.getOrElse("completionDate", "today")}
+@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youHaveItHas(params) now got access to the Customs Declaration Service (CDS).
 
 If your software is compatible, you can now make customs declarations to CDS. Check with your software provider or in-house IT team.
 
