@@ -7,7 +7,7 @@ Dear @params("NAME")
 
 We need to give you some information after your transfer to Making Tax Digital for VAT. There is no need for you to take any action.
 
-You currently pay your VAT return by Direct Debit. From @DateFormatter.formatDate(params("TRANSFERDATE").toString) we will transfer your Direct Debit over.
+You currently pay your VAT Return by Direct Debit. From @DateFormatter.formatDate(params("TRANSFERDATE").toString) we will transfer your Direct Debit over.
 
 Your new reference is: @params("DDIREFERENCE").
 Your new service number is: @params("NEWSUN").
