@@ -211,6 +211,15 @@ object EeittTemplates {
       plainTemplate = txt.c118ApplicationConfirmation.f,
       htmlTemplate = html.c118ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "tsp_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: your Transitional Simplified Procedure application",
+      plainTemplate = txt.tspApplicationConfirmation.f,
+      htmlTemplate = html.tspApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
