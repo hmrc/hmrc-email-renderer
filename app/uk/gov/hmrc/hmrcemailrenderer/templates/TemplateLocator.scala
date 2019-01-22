@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.agent.AgentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
@@ -29,9 +30,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.emac.EmacTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs.DigitalTariffTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.emac.EmacTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
@@ -60,7 +61,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.voa.CCATemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
-    Map("API Platform"               -> ApiTemplates.templates,
+    Map("Agent"                     -> AgentTemplates.templates,
+        "API Platform"               -> ApiTemplates.templates,
         "ATS"                        -> AtsTemplates.templates,
         "AWRS"                       -> AwrsTemplates.templates,
         "AMLS"                       -> AmlsTemplates.templates,
