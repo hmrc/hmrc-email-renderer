@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Application for agent services account rejected
+
+We have rejected your application for an agent services account for @params("tradingName")
+
+Your application was rejected for the following reasons:
+
+@for(reason <- params.keys.toList.filter(_.startsWith("reason"))){
+@params(reason)
+}
+@params.getOrElse("otherReason", "")
+
+@params.getOrElse("additionalText", "")
+
+If you want to apply again
+
+Before you apply again, make sure you have dealt with the reasons why your application was rejected.
+
+If you want to apply again, you will need to start a new application. You can do this on GOV.UK.
+
+From HMRC agent services team
+
+Do not reply to this email.
+

@@ -38,6 +38,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "enumerate all titles" in {
       TemplateLocator.templateGroups.keys should contain only(
+        "Agent",
         "API Platform",
         "Self Assessment",
         "AMLS",
@@ -84,6 +85,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "enumerate all template identifiers" in {
       TemplateLocator.all.map(_.templateId) should contain only(
+        "overseas_application_rejected",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
