@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Submitted: your Transitional Simplified Procedure application
+
+Dear Customer,
+
+We have received your application for Transitional Simplified Procedure.
+
+Why you are receiving this email
+
+We send a confirmation email for applications submitted online.
+
+If you need to contact us about your application, please quote your EORI number.
+
+From HMRC Transitional Simplified Procedure Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
