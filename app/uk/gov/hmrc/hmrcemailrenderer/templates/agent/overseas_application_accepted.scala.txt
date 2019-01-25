@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Application for agent services account approved
+
+We have approved your application for an agent services account for @params("tradingName").
+
+What you need to do next
+
+You now need to create your agent services account. You can do this online.
+
+To find out how to create your account, search GOV.UK for 'apply for an HMRC agent services account if you are not in the UK'.
+
+From HMRC agent services team
+
+Do not reply to this email.

@@ -31,6 +31,23 @@ object AgentTemplates {
       plainTemplate = txt.overseas_application_rejected.f,
       htmlTemplate = html.overseas_application_rejected.f,
       priority = Some(MessagePriority.Standard))
-  )
+  ,
+  MessageTemplate.create(
+    templateId = "overseas_application_accepted",
+    fromAddress = govUkTeamAddress,
+    service = Agent,
+    subject = "new message",
+    plainTemplate = txt.overseas_application_accepted.f,
+    htmlTemplate = html.overseas_application_accepted.f,
+    priority = Some(MessagePriority.Standard))
+    ,
+  MessageTemplate.create(
+    templateId = "overseas_application_received",
+    fromAddress = govUkTeamAddress,
+    service = Agent,
+    subject = "new message",
+    plainTemplate = txt.overseas_application_received.f,
+    htmlTemplate = html.overseas_application_received.f,
+    priority = Some(MessagePriority.Standard)))
 
 }
