@@ -15,29 +15,16 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application for agent services account rejected") {
-
-
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
-        We have rejected your application for an agent services account for @params("tradingName").</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application for agent services account approved") {
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
-        Your application was rejected for the following reasons:</p>
+        We have approved your application for an agent services account for @params("tradingName").</p>
 
-    <ul style="margin: 0 0 20px 0;">
-        @for(reason <- params.keys.toList.filter(_.startsWith("reason")).sorted){
-            <li style="font-size: 19px">@params(reason)</li>
-        }
-        @if(params.contains("otherReason")){
-            <li style="font-size: 19px">@params("otherReason")</li>
-        }
-    </ul>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">@params.getOrElse("additionalText", "")</p>
-    <h2>If you want to apply again</h2>
+    <h2>What you need to do next</h2>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Before you apply again, make sure you have dealt with the reasons why your application was rejected.</p>
+        You now need to create your agent services account. You can do this online.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        If you want to apply again, you will need to start a new application. You can do this on GOV.UK.</p>
+        To find out how to create your account, search GOV.UK for 'apply for an HMRC agent services account if you are not in the UK'.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC agent services team</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
 
