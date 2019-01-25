@@ -4,9 +4,9 @@ We have approved your application for an agent services account for @params("tra
 
 What you need to do next
 
-You now need to create your agent services account. You can do this online.
+You now need to finish setting up your agent services account. You can do this online.
 
-To find out how to create your account, search GOV.UK for 'apply for an HMRC agent services account if you are not in the UK'.
+To finish setting up your account, search GOV.UK for 'set up your approved agent services account' and follow the instructions.
 
 From HMRC agent services team
 

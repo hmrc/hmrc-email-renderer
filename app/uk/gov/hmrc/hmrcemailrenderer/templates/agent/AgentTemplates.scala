@@ -16,38 +16,38 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.agent
 
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Agent
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Agent
 
 object AgentTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
       templateId = "overseas_application_rejected",
-      fromAddress = govUkTeamAddress,
+      fromAddress = FromAddress.noReply("HMRC agent services"),
       service = Agent,
-      subject = "new message",
+      subject = "Application for agent services account rejected",
       plainTemplate = txt.overseas_application_rejected.f,
       htmlTemplate = html.overseas_application_rejected.f,
       priority = Some(MessagePriority.Standard))
   ,
   MessageTemplate.create(
     templateId = "overseas_application_accepted",
-    fromAddress = govUkTeamAddress,
+    fromAddress = FromAddress.noReply("HMRC agent services"),
     service = Agent,
-    subject = "new message",
+    subject = "Application for agent services account approved",
     plainTemplate = txt.overseas_application_accepted.f,
     htmlTemplate = html.overseas_application_accepted.f,
     priority = Some(MessagePriority.Standard))
     ,
   MessageTemplate.create(
     templateId = "overseas_application_received",
-    fromAddress = govUkTeamAddress,
+    fromAddress = FromAddress.noReply("HMRC agent services"),
     service = Agent,
-    subject = "new message",
+    subject = "Application for agent services account received",
     plainTemplate = txt.overseas_application_received.f,
     htmlTemplate = html.overseas_application_received.f,
-    priority = Some(MessagePriority.Standard)))
-
+    priority = Some(MessagePriority.Standard))
+  )
 }
