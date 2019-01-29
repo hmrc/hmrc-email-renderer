@@ -1,7 +1,7 @@
 
 @(params: Map[String, Any])
 
-Submitted: your C117 Authorised Economic Operator application
+Submitted: C117 Authorised Economic Operator application
 
 Dear Customer,
 

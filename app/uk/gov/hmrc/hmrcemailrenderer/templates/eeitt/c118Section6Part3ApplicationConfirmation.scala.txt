@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Submitted: your C118 Section 6 Part 3 Authorised Economic Operator application
+Submitted: C118 Section 6 Part 3 Authorised Economic Operator application
 
 Dear Customer,
 
