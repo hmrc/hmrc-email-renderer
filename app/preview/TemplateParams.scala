@@ -117,6 +117,26 @@ object TemplateParams {
 
     "newMessageAlert_SA309" -> newMessageAlert_Names,
 
+    "newMessageAlert_VRT1214A" -> Map(
+      "recipientName_line1" -> "Mr Bump"
+    ),
+
+    "newMessageAlert_VRT1214C" -> Map(
+      "recipientName_line1" -> "Mrs Bump"
+    ),
+
+    "newMessageAlert_VRT12B" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
+
+    "newMessageAlert_VRT14B" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
+
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
