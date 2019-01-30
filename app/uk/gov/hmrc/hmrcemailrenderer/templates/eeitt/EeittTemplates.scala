@@ -198,18 +198,117 @@ object EeittTemplates {
       templateId = "c117_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Submitted: your C117 Authorised Economic Operator application",
+      subject = "Submitted: C117 Authorised Economic Operator application",
       plainTemplate = txt.c117ApplicationConfirmation.f,
       htmlTemplate = html.c117ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "c118_application_confirmation",
+      templateId = "c118_section1_part1_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Submitted: your C118 Authorised Economic Operator application",
-      plainTemplate = txt.c118ApplicationConfirmation.f,
-      htmlTemplate = html.c118ApplicationConfirmation.f,
+      subject = "Submitted: C118 Section 1 Part 1 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section1Part1ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section1Part1ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section1_part2_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 1 Part 2 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section1Part2ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section1Part2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section1_part3_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 1 Part 3 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section1Part3ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section1Part3ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section2_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 2 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section2ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+    templateId = "c118_section3_part1_application_confirmation",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "Submitted: C118 Section 3 Part 1 Authorised Economic Operator application",
+    plainTemplate = txt.c118Section3Part1ApplicationConfirmation.f,
+    htmlTemplate = html.c118Section3Part1ApplicationConfirmation.f,
+    priority = Some(MessagePriority.Standard)
+  ),
+    MessageTemplate.create(
+      templateId = "c118_section3_part2_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 3 Part 2 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section3Part2ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section3Part2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+  ),
+    MessageTemplate.create(
+      templateId = "c118_section4_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 4 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section4ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section4ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section5_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 5 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section5ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section5ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section6_part1_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 6 Part 1 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section6Part1ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section6Part1ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section6_part2_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 6 Part 2 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section6Part2ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section6Part2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section6_part3_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 6 Part 3 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section6Part3ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section6Part3ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section6_part4_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Submitted: C118 Section 6 Part 4 Authorised Economic Operator application",
+      plainTemplate = txt.c118Section6Part4ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section6Part4ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
