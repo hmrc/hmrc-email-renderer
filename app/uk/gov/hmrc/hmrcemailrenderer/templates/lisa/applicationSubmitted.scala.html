@@ -16,13 +16,21 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "What happens next") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "What happens next", showHeading1 = false) {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Thank you for applying to become an approved Lifetime ISA manager. Your application will be reviewed by HMRC.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Thank you for applying to become an approved Lifetime ISA manager.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application reference is <b>@{params("application_reference").toString}.</b></p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">The review process can take up to 14 calendar days. We will send another email to <b>@{params("email").toString}</b> when the decision has been made.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;"><h2>What happens next</h2></p>
 
-<p style="font-size: 20px; line-height: 0; margin: 0 0 30px 0;"> From HMRC Savings Audit Team</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We will send you a readiness declaration by email. You must print out this form, complete it and return it to us by post.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We will review your online application and readiness declaration together by <b>@{params("review_date").toString}</b>.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We will send another email to <b>@{params("email").toString}</b> when the decision has been made.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you need to change your application, email savings.audit@@hmrc.gov.uk</p>
+
+<p style="font-size: 20px; line-height: 0; margin: 0 0 30px 0;"> From HMRC Savings and Shareschemes Team</p>
 }
