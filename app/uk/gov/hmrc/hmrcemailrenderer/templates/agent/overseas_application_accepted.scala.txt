@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Approved: agent services account application
+@(params: Map[String, Any])Application for agent services account approved
 
 We have approved your application for an agent services account for @params("tradingName").
 

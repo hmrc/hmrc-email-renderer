@@ -27,7 +27,7 @@ object AgentTemplates {
       templateId = "overseas_application_rejected",
       fromAddress = FromAddress.noReply("HMRC agent services"),
       service = Agent,
-      subject = "Application for agent services account rejected",
+      subject = "Rejected: agent services account application",
       plainTemplate = txt.overseas_application_rejected.f,
       htmlTemplate = html.overseas_application_rejected.f,
       priority = Some(MessagePriority.Standard))
@@ -36,7 +36,7 @@ object AgentTemplates {
     templateId = "overseas_application_accepted",
     fromAddress = FromAddress.noReply("HMRC agent services"),
     service = Agent,
-    subject = "Application for agent services account approved",
+    subject = "Approved: agent services account application",
     plainTemplate = txt.overseas_application_accepted.f,
     htmlTemplate = html.overseas_application_accepted.f,
     priority = Some(MessagePriority.Standard))
@@ -45,7 +45,7 @@ object AgentTemplates {
     templateId = "overseas_application_received",
     fromAddress = FromAddress.noReply("HMRC agent services"),
     service = Agent,
-    subject = "Application for agent services account received",
+    subject = "Received: agent services account application",
     plainTemplate = txt.overseas_application_received.f,
     htmlTemplate = html.overseas_application_received.f,
     priority = Some(MessagePriority.Standard))
