@@ -16,15 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ats
 
+import org.joda.time.LocalDate
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummary
 
 object AtsTemplates {
 
-  private val ats_year_for_subject: Map[String, String] => String =
-    _.get("taxYear").map(year => s"Your Annual Tax Summary for $year is now ready").
-      getOrElse(throw new RuntimeException("Missing parameter taxYear"))
+  private val ats_year_for_subject: Map[String, String] => String = { params =>
+    val taxYear = params.getOrElse("taxYear", LocalDate.now().getYear - 1)
+    s"Your Annual Tax Summary for $taxYear is now ready"
+  }
 
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
