@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application for agent services account rejected") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rejected: agent services account application") {
 
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
@@ -35,10 +35,11 @@
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">@params.getOrElse("additionalText", "")</p>
     <h2>If you want to apply again</h2>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Before you apply again, make sure you have dealt with the reasons why your application was rejected.</p>
+        Before you reapply, make sure you deal with all the reasons why your application was rejected.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        If you want to apply again, you will need to start a new application. You can do this on GOV.UK.</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC agent services team</p>
+        You will need to start a new application. You can do this on GOV.UK.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC agent services team</p>
+
 
 }
