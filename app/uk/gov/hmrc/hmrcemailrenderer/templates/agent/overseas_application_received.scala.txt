@@ -1,15 +1,15 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
-@(params: Map[String, Any])Application for agent services account received
+@(params: Map[String, Any])Received: agent services account application
 
 We received your application for an agent services account for @params("tradingName") on @DateFormatter.formatDate(params("receivedDate").toString).
 
 What happens next
 
-We may get in touch with you to discuss your application
+We may get in touch with you to discuss your application.
 
 We will tell you within 28 calendar days if your application has been approved. We will also tell you how to set up your account.
 
-If your application is rejected we will tell you why
+If your application is rejected we will tell you why.
 
 What you can do next
 
@@ -19,6 +19,7 @@ If you need help
 
 If you need help using this service, sign in to the service and use the 'get help with this page' link at the bottom of the page.
 
+Do not reply to this email.
+
 From HMRC agent services team
 
-Do not reply to this email.
