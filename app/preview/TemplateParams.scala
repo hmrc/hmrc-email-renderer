@@ -32,6 +32,21 @@ object TemplateParams {
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
+    "overseas_application_rejected" -> Map(
+      "tradingName" -> "ABC Accountants Ltd",
+      "reason1" -> "We could not confirm your money laundering supervisory body",
+      "reason2" -> "We could not confirm your identity",
+      "reason3" -> "We could not confirm your business address",
+      "otherReason" -> "We had other reasons that are given here",
+      "additionalText" -> "Additional text goes here."
+    ),
+    "overseas_application_accepted" -> Map(
+      "tradingName" -> "ABC Accountants Ltd"
+    ),
+    "overseas_application_received" -> Map(
+      "tradingName" -> "ABC Accountants Ltd",
+      "receivedDate" -> "20190214"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
