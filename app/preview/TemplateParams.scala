@@ -1107,7 +1107,9 @@ object TemplateParams {
     "lisa_application_submit" -> Map(
       "application_reference" -> "ABC1234567890",
       "email" -> "lisaTest@test.com",
-      "review_date" -> "7 February 2019"
+      "review_date" -> "7 February 2019",
+      "first_name" -> "Frank",
+      "last_name" -> "Customer"
     ),
     "emac_helpdesk_failure_confirmation_email" -> Map(
       "service_name" -> "Self Assessment (SA)",
