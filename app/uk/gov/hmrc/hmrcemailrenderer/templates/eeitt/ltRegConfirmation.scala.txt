@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You submitted a Landfill Tax registration
+
+Dear Customer,
+
+HMRC received your Landfill Tax registration online.
+
+What you need to do next
+
+Please check the guidance for this service on GOV.UK to see whether you need to fill in any further forms to complete your Landfill Tax registration. For example, if your business is a partnership you will also need to complete a partnership details registration form (LT2).
+
+Why you are receiving this email
+
+We send a confirmation email for a registration submitted online.
+
+From HMRC Excise Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
