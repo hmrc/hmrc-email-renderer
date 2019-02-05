@@ -1,17 +1,18 @@
 @(params: Map[String, Any])
 
-Your Research and Development application has been submitted
+HMRC received your R&D tax relief details
 
 Dear Customer,
 
-We have received the application.
+We have received the form to support a Research and Development tax relief claim for an SME.
 
-Why you are receiving this
+Why you are receiving this email
 
-This is an email to confirm the submission of the Research and Development application.
+We send a confirmation email for forms submitted online.
 
-Thank you.
+If you need to contact us about this, please quote the Company Unique Taxpayer Reference (UTR) number.
 
-From HMRC Research and Development
+From HMRC Incentives and Reliefs team
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
