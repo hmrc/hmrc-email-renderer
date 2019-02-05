@@ -319,6 +319,15 @@ object EeittTemplates {
       plainTemplate = txt.tspApplicationConfirmation.f,
       htmlTemplate = html.tspApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "lT_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You submitted a Landfill Tax registration",
+      plainTemplate = txt.ltRegConfirmation.f,
+      htmlTemplate = html.ltRegConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
