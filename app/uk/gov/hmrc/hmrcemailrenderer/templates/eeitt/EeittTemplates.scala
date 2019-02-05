@@ -321,7 +321,7 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "lT_registration_confirmation",
+      templateId = "lt_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "You submitted a Landfill Tax registration",
