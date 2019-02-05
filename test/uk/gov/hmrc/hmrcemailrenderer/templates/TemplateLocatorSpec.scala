@@ -45,6 +45,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Passcodes",
         "TAMC",
         "DFS",
+        "Digital Contact VAT",
         "Digital Tariffs",
         "Childcare",
         "PAYE",
@@ -444,7 +445,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
-        "passengers_payment_confirmation"
+        "passengers_payment_confirmation",
+        "newMessageAlert_VRT12B",
+        "newMessageAlert_VRT14B",
+        "newMessageAlert_VRT1214C",
+        "newMessageAlert_VRT1214A"
         )
     }
   }
