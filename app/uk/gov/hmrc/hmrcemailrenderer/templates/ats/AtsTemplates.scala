@@ -23,8 +23,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummar
 
 object AtsTemplates {
 
-    val taxYearFrom = LocalDate.now().getYear -1
-    val taxYearTo = LocalDate.now().getYear
+    val taxYearFrom = LocalDate.now().getYear - 2
+    val taxYearTo = LocalDate.now().getYear - 1
     private val ats_year_for_subject = s"Your Annual Tax Summary for $taxYearFrom to $taxYearTo is now ready"
 
   val templates = Seq(
