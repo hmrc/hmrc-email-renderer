@@ -210,6 +210,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "fhdds_email_verification",
         "fhdds_submission_deregister",
         "fhddsAlertMessage",
+        "lt_registration_confirmation",
         "cc_registration_email",
         "childcare_registration_email",
         "childcare_schemes_interest_email",
