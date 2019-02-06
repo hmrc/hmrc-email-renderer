@@ -23,13 +23,12 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummar
 
 object AtsTemplates {
 
-  private val ats_year_for_subject: Map[String, String] => String = { params =>
-    val taxYear = params.getOrElse("taxYear", LocalDate.now().getYear - 1)
-    s"Your Annual Tax Summary for $taxYear is now ready"
-  }
+    val taxYearFrom = LocalDate.now().getYear - 2
+    val taxYearTo = LocalDate.now().getYear - 1
+    private val ats_year_for_subject = s"Your Annual Tax Summary for $taxYearFrom to $taxYearTo is now ready"
 
   val templates = Seq(
-    MessageTemplate.createWithDynamicSubject(
+      MessageTemplate.create(
       templateId = "annual_tax_summaries_message_alert",
       fromAddress = FromAddress.noReply("HMRC Your Annual Tax Summary"),
       service = AnnualTaxSummary,
