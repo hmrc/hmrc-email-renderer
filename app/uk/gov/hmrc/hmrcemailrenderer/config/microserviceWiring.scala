@@ -16,6 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer
 
+import com.typesafe.config.Config
+import play.api.{Configuration, Play}
 import uk.gov.hmrc.http._
 import uk.gov.hmrc.play.microservice.config.LoadAuditingConfig
 import uk.gov.hmrc.play.audit.http.connector.AuditConnector
@@ -32,8 +34,13 @@ trait Hooks extends HttpHooks with HttpAuditing {
 }
 
 trait WSHttp extends HttpGet with WSGet with HttpPut with WSPut with HttpPost with WSPost with HttpDelete with WSDelete with Hooks with AppName
-object WSHttp extends WSHttp
+object WSHttp extends WSHttp {
+  override protected def appNameConfiguration: Configuration = Play.current.configuration
+
+  override protected def configuration: Option[Config] = Some(Play.current.configuration.underlying)
+}
 
 object MicroserviceAuditConnector extends AuditConnector {
   lazy val auditingConfig: AuditingConfig = LoadAuditingConfig(s"auditing")
 }
+
