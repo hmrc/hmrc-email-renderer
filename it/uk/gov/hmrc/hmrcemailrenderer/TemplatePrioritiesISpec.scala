@@ -1,9 +1,13 @@
 package uk.gov.hmrc.hmrcemailrenderer
 
+import org.scalactic.source.Position
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatestplus.play.{OneServerPerSuite, ServerProvider, WsScalaTestClient}
+import play.api.{Configuration, Play}
+import play.api.Mode.Mode
 import play.api.libs.json._
+import play.api.libs.ws.WSClient
 import uk.gov.hmrc.play.config.ServicesConfig
 import uk.gov.hmrc.play.http.test.ResponseMatchers
 import uk.gov.hmrc.play.test.UnitSpec
@@ -19,6 +23,9 @@ TemplatePrioritiesISpec extends UnitSpec
   with TableDrivenPropertyChecks {
 
   "Rendered templates" should {
+
+    implicit lazy val wsc: WSClient = app.injector.instanceOf[WSClient]
+    implicit lazy val pos:Position = Position.here
 
     forAll(TestTemplates.urgent) {
       (templateId, params) =>
@@ -246,4 +253,8 @@ TemplatePrioritiesISpec extends UnitSpec
       ("tax_estimate_message_alert", Map("fullName" -> "myName"))         // DC-839: move from Background because of SA316
     )
   }
+
+  override protected def mode: play.api.Mode.Mode = Play.current.mode
+
+  override protected def runModeConfiguration: Configuration = Play.current.configuration
 }
