@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer
 
+import akka.actor.ActorSystem
 import com.typesafe.config.Config
 import play.api.{Configuration, Play}
 import uk.gov.hmrc.http._
@@ -38,6 +39,8 @@ object WSHttp extends WSHttp {
   override protected def appNameConfiguration: Configuration = Play.current.configuration
 
   override protected def configuration: Option[Config] = Some(Play.current.configuration.underlying)
+
+  override protected def actorSystem: ActorSystem = Play.current.actorSystem
 }
 
 object MicroserviceAuditConnector extends AuditConnector {
