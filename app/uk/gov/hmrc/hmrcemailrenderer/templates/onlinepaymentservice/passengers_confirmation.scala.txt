@@ -23,10 +23,10 @@ Date: @params("DATE")
 Place of arrival in UK: @params("PLACEOFARRIVAL")
 Date of arrival: @params("DATEOFARRIVAL")
 Payment reference: @params("REFERENCE")
-Duty paid: £@params("TOTAL")
+Duty paid: @params("TOTAL")
 
 Duty and tax paid per item
 @for((item, currency, amount) <- breakdown) {
 - Item: @item, Currency: @currency, Amount: @amount
 }
-Total: £@params("TOTAL")
+Total: @params("TOTAL")
