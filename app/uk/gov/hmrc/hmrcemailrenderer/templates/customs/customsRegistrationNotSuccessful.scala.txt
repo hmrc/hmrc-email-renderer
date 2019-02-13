@@ -1,11 +1,14 @@
-@(params: Map[String, Any])This is a test email only. Should you receive this email please ignore it
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.salutationFrom(params)
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
 
-Your application to Register for customs services has not been successful.
+You applied for EORI / CDS.
 
-What you need to do now
-You should contact 0123 456 7890 for more information.
+The application has been unsuccessful.
 
-From HMRC
+Help and support
+
+Telephone: 0300 322 7067
+Open 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From HMRC Customs Declaration Service (CDS)
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

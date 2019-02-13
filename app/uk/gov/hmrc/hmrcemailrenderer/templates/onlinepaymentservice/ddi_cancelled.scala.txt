@@ -6,8 +6,8 @@ Dear @params("NAME")
 
 Direct Debit mandate reference @params("DDIREFERENCE")
 
-Your bank has told us your Instruction to collect payments under this Direct Debit reference have been cancelled.
+Your bank has told us your instruction to collect payments under this Direct Debit reference have been cancelled.
 
-If you want to carry on paying by Direct Debit, you will need to set up a new Instruction.
+If you want to carry on paying by Direct Debit, you will need to set up a new instruction.
 
 From HMRC Direct Debit Team

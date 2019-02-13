@@ -38,12 +38,14 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "enumerate all titles" in {
       TemplateLocator.templateGroups.keys should contain only(
+        "Agent",
         "API Platform",
         "Self Assessment",
         "AMLS",
         "Passcodes",
         "TAMC",
         "DFS",
+        "Digital Contact VAT",
         "Digital Tariffs",
         "Childcare",
         "PAYE",
@@ -84,6 +86,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "enumerate all template identifiers" in {
       TemplateLocator.all.map(_.templateId) should contain only(
+        "overseas_application_rejected",
+        "overseas_application_accepted",
+        "overseas_application_received",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
@@ -187,12 +192,25 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ex250_registration_confirmation",
         "air597_return_confirmation",
         "c117_application_confirmation",
-        "c118_application_confirmation",
+        "c118_section1_part1_application_confirmation",
+        "c118_section1_part2_application_confirmation",
+        "c118_section1_part3_application_confirmation",
+        "c118_section2_application_confirmation",
+        "c118_section3_part1_application_confirmation",
+        "c118_section3_part2_application_confirmation",
+        "c118_section4_application_confirmation",
+        "c118_section5_application_confirmation",
+        "c118_section6_part1_application_confirmation",
+        "c118_section6_part2_application_confirmation",
+        "c118_section6_part3_application_confirmation",
+        "c118_section6_part4_application_confirmation",
+        "tsp_application_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
         "fhdds_submission_deregister",
         "fhddsAlertMessage",
+        "lt_registration_confirmation",
         "cc_registration_email",
         "childcare_registration_email",
         "childcare_schemes_interest_email",
@@ -428,7 +446,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
-        "passengers_payment_confirmation"
+        "passengers_payment_confirmation",
+        "newMessageAlert_VRT12B",
+        "newMessageAlert_VRT14B",
+        "newMessageAlert_VRT1214C",
+        "newMessageAlert_VRT1214A"
         )
     }
   }
