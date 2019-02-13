@@ -3,9 +3,8 @@
   val indices = Stream.from(0).takeWhile(i => params.get(s"NAME_$i").isDefined).toList
   indices.map { i =>
     val item = params(s"NAME_$i")
-    val currency = params(s"CURRENCY_$i")
     val amount = params(s"COSTGBP_$i")
-    (item, currency, amount)
+    (item,  amount)
   }
 }
 You have paid the duty you owe
@@ -26,7 +25,7 @@ Payment reference: @params("REFERENCE")
 Duty paid: @params("TOTAL")
 
 Duty and tax paid per item
-@for((item, currency, amount) <- breakdown) {
-- Item: @item, Currency: @currency, Amount: @amount
+@for((item, amount) <- breakdown) {
+- Item: @item, Amount: @amount
 }
 Total: @params("TOTAL")

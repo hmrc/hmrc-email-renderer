@@ -32,6 +32,21 @@ object TemplateParams {
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
+    "overseas_application_rejected" -> Map(
+      "tradingName" -> "ABC Accountants Ltd",
+      "reason1" -> "We could not confirm your money laundering supervisory body",
+      "reason2" -> "We could not confirm your identity",
+      "reason3" -> "We could not confirm your business address",
+      "otherReason" -> "We had other reasons that are given here",
+      "additionalText" -> "Additional text goes here."
+    ),
+    "overseas_application_accepted" -> Map(
+      "tradingName" -> "ABC Accountants Ltd"
+    ),
+    "overseas_application_received" -> Map(
+      "tradingName" -> "ABC Accountants Ltd",
+      "receivedDate" -> "20190214"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
@@ -116,6 +131,26 @@ object TemplateParams {
     ) ++ newMessageAlert_Names),
 
     "newMessageAlert_SA309" -> newMessageAlert_Names,
+
+    "newMessageAlert_VRT1214A" -> Map(
+      "recipientName_line1" -> "Mr Bump"
+    ),
+
+    "newMessageAlert_VRT1214C" -> Map(
+      "recipientName_line1" -> "Mrs Bump"
+    ),
+
+    "newMessageAlert_VRT12B" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
+
+    "newMessageAlert_VRT14B" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
 
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
@@ -1215,7 +1250,7 @@ object TemplateParams {
       "NAME" -> "Customer",
       "DDIREFERENCE" -> "123456789",
       "REGIME" -> "VATC",
-      "AMOUNT" -> "15003.18",
+      "AMOUNT" -> "1215003.18",
       "COLLECTIONDATE" -> "20180501",
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700",
@@ -1227,7 +1262,7 @@ object TemplateParams {
       "AMOUNT_1" -> "4049.57",
       "CHARGETYPE_2" -> "VAT Return",
       "PERIOD_2" -> "0718",
-      "AMOUNT_2" -> "5952.18"
+      "AMOUNT_2" -> "5952"
     ),
     "ddi_set_up" -> Map(
       "NAME" -> "Customer",

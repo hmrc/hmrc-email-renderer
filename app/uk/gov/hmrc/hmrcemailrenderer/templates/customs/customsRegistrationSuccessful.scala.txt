@@ -1,20 +1,11 @@
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
-@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youAreItIs(params) now registered for Customs Declaration Service (CDS).
+@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youHaveItHas(params) now got access to the Customs Declaration Service (CDS).
 
-Active from : @{params.getOrElse("completionDate", "")}
-
-Use this service to :
-    manage your customs activities
-    get reports on previous import and export data
-    check tariffs
-    check duty deferment statements
-    access self-service tools, guides and checklists
-    get news and information from HMRC
-
+If your software is compatible, you can now make customs declarations to CDS. Check with your software provider or in-house IT team.
 
 Help and support
 
-Telephone: 0300 200 3700.
+Telephone: 0300 322 7067
 Open 8am to 6pm, Monday to Friday (closed bank holidays).
 
 From HMRC Customs Declaration Service (CDS)

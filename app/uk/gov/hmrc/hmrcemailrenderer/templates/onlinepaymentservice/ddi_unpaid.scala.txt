@@ -23,7 +23,7 @@ Direct Debit mandate reference @params("DDIREFERENCE")
   } else {
     s"Our request for payment of ${params("AMOUNT")} on ${DateFormatter.formatDate(params("COLLECTIONDATE").toString)} has been rejected by your bank. This is because $reason.\n" +
     s"You need to arrange to make payment by another method immediately.\n" +
-    s"If you want to make payments in the future by Direct Debit, you need to set up a new Instruction.\n"
+    s"If you want to make payments in the future by Direct Debit, you need to set up a new instruction.\n"
   }
 }
 From HMRC Direct Debit Team

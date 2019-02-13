@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Your agent has made a change to your VAT business details
+
+@if(params("recipientName_line1").toString.trim.nonEmpty){
+Dear @{params("recipientName_line1")},
+}
+
+This is an important message. To view it:
+
+1. Sign in to HMRC services.
+
+2. Go to Messages.
+
+3. Click on Making Tax Digital for VAT.
+
+For security reasons we have not included a link with this email.
+
+From HMRC VAT
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

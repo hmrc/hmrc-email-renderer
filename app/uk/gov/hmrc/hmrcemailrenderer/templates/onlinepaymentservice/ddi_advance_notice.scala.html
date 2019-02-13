@@ -15,6 +15,7 @@
  *@
 
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.DateFormatter
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmount
 @(params: Map[String, Any])
 
 @breakdown = @{
@@ -23,7 +24,7 @@
     val chargeType = params(s"CHARGETYPE_$i")
     val period = params(s"PERIOD_$i")
     val amount = params(s"AMOUNT_$i")
-    (chargeType, DateFormatter.formatPeriod(period.toString), amount)
+    (chargeType, DateFormatter.formatPeriod(period.toString), formatAmount(amount.toString))
   }
 }
 
@@ -32,7 +33,7 @@
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">This notice is for information purposes only. We will collect £@params("AMOUNT") on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This notice is for information purposes only. We will collect @formatAmount(params("AMOUNT").toString) on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;"></p>
   <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
@@ -48,7 +49,7 @@
         <tr>
           <td>@chargeType</td>
           <td>@period</td>
-          <td>£@amount</td>
+          <td>@amount</td>
         </tr>
       }
     </tbody>
