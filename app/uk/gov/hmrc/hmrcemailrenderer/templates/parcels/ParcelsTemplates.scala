@@ -17,16 +17,14 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.parcels
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Parcels
 
 object ParcelsTemplates {
-
-  val parcelsAddress = "importvatparcels@hmrc.gov.uk"
-
   val templates = Seq(
     MessageTemplate.create(
       templateId = "parcels_registered",
-      fromAddress = parcelsAddress,
+      fromAddress = govUkTeamAddress,
       service = Parcels,
       subject = "You have registered for the import VAT on parcels service",
       plainTemplate = txt.parcelsRegistered.f,
