@@ -16,6 +16,6 @@ Keep a note of this as HMRC may use it in future contact with you about
 
 this report.
 
-From HMRC corporate self-reporting coordination team
+From HMRC Corporate Self-reporting coordination team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
