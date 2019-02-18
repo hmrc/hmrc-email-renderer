@@ -328,6 +328,15 @@ object EeittTemplates {
       plainTemplate = txt.ltRegConfirmation.f,
       htmlTemplate = html.ltRegConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "gd_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your application to register for Gaming Duty has been received",
+      plainTemplate = txt.gdApplicationConfirmation.f,
+      htmlTemplate = html.gdApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 

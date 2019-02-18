@@ -1,0 +1,52 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your application to register for Gaming Duty has been received"){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params.get("customerName"),</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HM Revenue and Customs has received your application to register your business for
+    Gaming Duty.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Once we have reviewed your application, we’ll send you a Gaming Duty registration number. <br/>
+    You’ll need to provide this number when you contact us about Gaming Duty.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    If we need any more details, we'll contact you by letter, telephone or email. We'll never ask
+    for your personal details or any other information by email.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You’ll usually receive a reply within 35 days.
+</p>
+<h2>How to register a group</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Go to GOV.UK and complete the ‘Apply for group treatment for Gaming Duty’ form (GD60).</p>
+<h2>How to include or remove premises</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Go to GOV.UK and complete the ‘Notify HMRC about premises to include on Gaming Duty
+    Register’ form (GD58). This form is also for premises used for gaming under Temporary Use
+    Notices. You may be liable to civil penalties if you do not tell us about changes.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Yours sincerely
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HM Revenue and Customs
+</p>
+
+
+}
