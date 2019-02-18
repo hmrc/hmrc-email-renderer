@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Parcels
 object ParcelsTemplates {
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "parcels_registered",
+      templateId = "parcels_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Parcels,
       subject = "You have registered for the import VAT on parcels service",

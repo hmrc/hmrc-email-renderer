@@ -80,7 +80,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "MTDfB-VAT",
         "PODS",
         "vat",
-        "Two way messaging"
+        "Two way messaging",
+        "Parcels"
       )
     }
 
@@ -450,7 +451,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
         "newMessageAlert_VRT1214C",
-        "newMessageAlert_VRT1214A"
+        "newMessageAlert_VRT1214A",
+        "parcels_registration_confirmation"
         )
     }
   }

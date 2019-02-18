@@ -1358,6 +1358,10 @@ object TemplateParams {
       "schemeName" -> "Some Pension Scheme",
       "expiryDate" -> "20 July 1969"
     ),
+    "parcels_registration_confirmation" -> Map(
+      "name" -> "Joe Bloggs",
+      "referenceNumber" -> "IM123456789A"
+    ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference" -> "BTI REFERENCE",
