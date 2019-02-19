@@ -26,7 +26,7 @@ object ParcelsTemplates {
       templateId = "parcels_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Parcels,
-      subject = "You have registered for the import VAT on parcels service",
+      subject = "HMRC received your parcels import VAT registration",
       plainTemplate = txt.parcelsRegistered.f,
       htmlTemplate = html.parcelsRegistered.f,
       priority = Some(MessagePriority.Standard)

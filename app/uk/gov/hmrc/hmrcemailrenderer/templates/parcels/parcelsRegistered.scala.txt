@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have registered for the import VAT on parcels service
+HMRC received your parcels import VAT registration
 
 Dear @{params("name").toString},
 
