@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+HMRC received your LISA application
+
 Dear @{params("first_name").toString} @{params("last_name").toString}
 
 Thank you for applying to become an approved Lifetime ISA manager.
