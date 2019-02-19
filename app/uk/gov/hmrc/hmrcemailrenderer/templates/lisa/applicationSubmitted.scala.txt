@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-HMRC received your LISA application
+Your LISA application has been submitted
 
 Dear @{params("first_name").toString} @{params("last_name").toString}
 
