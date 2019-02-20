@@ -333,7 +333,7 @@ object EeittTemplates {
       templateId = "gd_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Your application to register for Gaming Duty has been received",
+      subject = "Gaming Duty application received",
       plainTemplate = txt.gdApplicationConfirmation.f,
       htmlTemplate = html.gdApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
