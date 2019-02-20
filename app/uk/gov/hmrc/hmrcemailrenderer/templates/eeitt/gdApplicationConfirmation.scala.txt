@@ -1,7 +1,5 @@
 @(params: Map[String, Any])
 
-Gaming Duty application received
-
 HM Revenue and Customs has received your application to register your business for Gaming Duty.
 
 Dear params.get("customerName")
