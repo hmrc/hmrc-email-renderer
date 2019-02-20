@@ -337,7 +337,16 @@ object EeittTemplates {
       plainTemplate = txt.gdApplicationConfirmation.f,
       htmlTemplate = html.gdApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    )
+    ),
+      MessageTemplate.create(
+        templateId = "csr_submission_confirmation",
+        fromAddress = govUkTeamAddress,
+        service = Eeitt,
+        subject = "HMRC received your self-report",
+        plainTemplate = txt.corporateSelfReportingSubmissionConfirmation.f,
+        htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
+        priority = Some(MessagePriority.Standard)
+  )
   )
 
 }
