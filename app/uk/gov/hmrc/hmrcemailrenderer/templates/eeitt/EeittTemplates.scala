@@ -329,6 +329,15 @@ object EeittTemplates {
       htmlTemplate = html.ltRegConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    MessageTemplate.create(
+      templateId = "gd_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Gaming Duty application received",
+      plainTemplate = txt.gdApplicationConfirmation.f,
+      htmlTemplate = html.gdApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
       MessageTemplate.create(
         templateId = "csr_submission_confirmation",
         fromAddress = govUkTeamAddress,
