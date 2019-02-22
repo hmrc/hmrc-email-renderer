@@ -24,7 +24,7 @@ object ParcelsTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "parcels_registration_confirmation",
-      fromAddress = govUkTeamAddress,
+      fromAddress = FromAddress.noReply("None"),
       service = Parcels,
       subject = "HMRC received your parcels import VAT registration",
       plainTemplate = txt.parcelsRegistered.f,
