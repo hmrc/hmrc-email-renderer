@@ -59,6 +59,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.twowaymessage.twoWayMessagingTemp
 import uk.gov.hmrc.hmrcemailrenderer.templates.vat.vatTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.voa.CCATemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactVatTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.parcels.ParcelsTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -102,6 +103,7 @@ trait TemplateLocator {
         "CDS"                        -> cdsTestTemplates.templates,
         "MTDfB-VAT"                  -> MtdfbVatTemplates.templates,
         "PODS"                       -> PodsTemplates.templates,
+        "Parcels"                    -> ParcelsTemplates.templates,
         "vat"                        -> vatTemplates.templates,
         "Digital Contact VAT"        -> DigitalContactVatTemplates.templates,
         "Two way messaging"          -> twoWayMessagingTemplates.templates
