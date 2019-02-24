@@ -1,0 +1,40 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Classification advice request: ${params("reference")}") {
+
+    <h3>Contact Name</h3>
+    <p>@params("contactName")</p>
+
+    <h3 style="margin-top: 30px">Contact Email</h3>
+    <p><a href="mailto:@params("contactEmail")?subject=@{s"Classification advice request: ${params("reference")}"}">@params("contactEmail")</a></p>
+
+    <h3 style="margin-top: 30px">Item Name</h3>
+    <p>@params("itemName")</p>
+
+    <h3 style="margin-top: 30px">Item Description</h3>
+    <p>@params("itemDescription")</p>
+
+    <h3 style="margin-top: 30px">Supporting Documents</h3>
+    @for(document: String <- params("supportingDocuments").asInstanceOf[String].split("\\|")) {
+        <p><a href="@document">@document</a></p>
+    }
+
+    <h3 style="margin-top: 30px">Supporting Info</h3>
+    <p>@params("supportingInformation")</p>
+
+}

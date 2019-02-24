@@ -1386,6 +1386,15 @@ object TemplateParams {
       "NAME_2" -> "All other electronic devices",
       "CURRENCY_2" -> "600 USA Dollar(USD)",
       "COSTGBP_2" -> "11.40"
+    ),
+    "digital_tariffs_advice_request" -> Map(
+      "reference" -> "REFERENCE",
+      "contactName" -> "FULL NAME",
+      "contactEmail" -> "EMAIL ADDRESS",
+      "itemName" -> "ITEM NAME",
+      "itemDescription" -> "ITEM DESCRIPTION",
+      "supportingDocuments" -> "www.hmrc.gov.uk|www.gov.co.uk",
+      "supportingInformation" -> "SUPPORTING INFO"
     )
   )
 }
