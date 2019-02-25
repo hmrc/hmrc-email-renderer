@@ -19,10 +19,11 @@ package uk.gov.hmrc.hmrcemailrenderer.domain
 import play.api.libs.json.{Json, Writes}
 import play.twirl.api.{HtmlFormat, TxtFormat}
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
-import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ReplyToAddress, ServiceIdentifier}
 
 case class MessageTemplate(templateId: String,
                            fromAddress: FromAddress,
+                           replyTo: Option[ReplyToAddress],
                            service: ServiceIdentifier,
                            subject: Subject,
                            plainTemplate: Body.Plain,
@@ -32,6 +33,7 @@ object MessageTemplate {
 
   def create(templateId: String,
              fromAddress: String,
+             replyTo: Option[ReplyToAddress] = None,
              service: ServiceIdentifier,
              subject: String,
              plainTemplate: Body.Plain,
@@ -40,6 +42,7 @@ object MessageTemplate {
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
+      replyTo,
       service,
       Subject.fromPlainString(subject),
       plainTemplate,
@@ -49,6 +52,7 @@ object MessageTemplate {
 
   def createWithDynamicSubject(templateId: String,
                                fromAddress: String,
+                               replyTo: Option[ReplyToAddress] = None,
                                service: ServiceIdentifier,
                                subject: Map[String, String] => String,
                                plainTemplate: Body.Plain,
@@ -57,6 +61,7 @@ object MessageTemplate {
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
+      replyTo,
       service,
       Subject(subject),
       plainTemplate,
@@ -66,6 +71,7 @@ object MessageTemplate {
 
   def createWithDynamicFromAddress(templateId: String,
                                fromAddress: Map[String, String] => String,
+                               replyTo: Option[ReplyToAddress] = None,
                                service: ServiceIdentifier,
                                subject: String,
                                plainTemplate: Body.Plain,
@@ -74,6 +80,7 @@ object MessageTemplate {
     MessageTemplate(
       templateId,
       FromAddress(fromAddress),
+      replyTo,
       service,
       Subject.fromPlainString(subject),
       plainTemplate,
