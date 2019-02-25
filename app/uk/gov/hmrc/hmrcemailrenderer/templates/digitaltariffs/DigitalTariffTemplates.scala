@@ -37,7 +37,7 @@ object DigitalTariffTemplates {
       templateId = "digital_tariffs_advice_request",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
       service = BTIAdviceService,
-      subject = params => s"Classification advice request: ${params("reference")}",
+      subject = params => s"${params("reference")}: ${params("itemName")}",
       plainTemplate = txt.adviceRequest.f,
       htmlTemplate = html.adviceRequest.f,
       priority = Some(MessagePriority.Background)
