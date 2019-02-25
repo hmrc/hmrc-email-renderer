@@ -16,8 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, Subject}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ReplyToAddress}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{BTIAdviceService, BTIOperationalService}
 
 object DigitalTariffTemplates {
@@ -33,11 +33,12 @@ object DigitalTariffTemplates {
       priority = Some(MessagePriority.Background)
     ),
 
-    MessageTemplate.createWithDynamicSubject(
+    MessageTemplate(
       templateId = "digital_tariffs_advice_request",
-      fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
+      fromAddress = FromAddress(_ => FromAddress.noReply("HMRC Tariff Classification Team")),
+      replyTo = Some(ReplyToAddress(params => s"${params("contactEmail")}")),
       service = BTIAdviceService,
-      subject = params => s"${params("reference")}: ${params("itemName")}",
+      subject = Subject(params => s"${params("reference")}: ${params("itemName")}"),
       plainTemplate = txt.adviceRequest.f,
       htmlTemplate = html.adviceRequest.f,
       priority = Some(MessagePriority.Background)
