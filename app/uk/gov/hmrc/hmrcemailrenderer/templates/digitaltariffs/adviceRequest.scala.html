@@ -21,7 +21,7 @@
     <p>@params("contactName")</p>
 
     <h3 style="margin-top: 30px">Contact Email</h3>
-    <p><a href="mailto:@params("contactEmail")?subject=@{s"Classification advice request: ${params("reference")}"}">@params("contactEmail")</a></p>
+    <p>@params("contactEmail")</p>
 
     <h3 style="margin-top: 30px">Item Name</h3>
     <p>@params("itemName")</p>
@@ -31,7 +31,7 @@
 
     <h3 style="margin-top: 30px">Supporting Documents</h3>
     @for(document: String <- params("supportingDocuments").asInstanceOf[String].split("\\|")) {
-        <p><a href="@document">@document</a></p>
+        <p>@document</p>
     }
 
     <h3 style="margin-top: 30px">Supporting Info</h3>
