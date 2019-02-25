@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ReplyToAddress, TemplateLocator}
 import uk.gov.hmrc.play.test.UnitSpec
 import org.mockito.Mockito._
 import org.scalatest._
@@ -61,6 +61,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
     val validTemplate = MessageTemplate.create(
       templateId = templateId,
       fromAddress = "from@test",
+      replyTo = Some("reply-to@test"),
       service = SelfAssessment,
       subject = "a subject",
       plainTemplate = txt.templateSample.f,
@@ -70,6 +71,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
     val validRenderedResult = RenderResult(
       fromAddress = "from@test",
+      replyTo = Some("reply-to@test"),
       service = "sa",
       subject = "a subject",
       plain = "Test template with parameter value: VALUE using common parameters: commonValue",

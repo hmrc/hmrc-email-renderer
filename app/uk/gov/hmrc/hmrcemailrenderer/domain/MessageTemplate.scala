@@ -33,7 +33,7 @@ object MessageTemplate {
 
   def create(templateId: String,
              fromAddress: String,
-             replyTo: Option[ReplyToAddress] = None,
+             replyTo: Option[String] = None,
              service: ServiceIdentifier,
              subject: String,
              plainTemplate: Body.Plain,
@@ -42,7 +42,7 @@ object MessageTemplate {
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
-      replyTo,
+      replyTo.map(s => ReplyToAddress(_ => s)),
       service,
       Subject.fromPlainString(subject),
       plainTemplate,
@@ -52,7 +52,7 @@ object MessageTemplate {
 
   def createWithDynamicSubject(templateId: String,
                                fromAddress: String,
-                               replyTo: Option[ReplyToAddress] = None,
+                               replyTo: Option[String] = None,
                                service: ServiceIdentifier,
                                subject: Map[String, String] => String,
                                plainTemplate: Body.Plain,
@@ -61,7 +61,7 @@ object MessageTemplate {
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
-      replyTo,
+      replyTo.map(s => ReplyToAddress(_ => s)),
       service,
       Subject(subject),
       plainTemplate,
@@ -71,7 +71,7 @@ object MessageTemplate {
 
   def createWithDynamicFromAddress(templateId: String,
                                fromAddress: Map[String, String] => String,
-                               replyTo: Option[ReplyToAddress] = None,
+                               replyTo: Option[String] = None,
                                service: ServiceIdentifier,
                                subject: String,
                                plainTemplate: Body.Plain,
@@ -80,7 +80,7 @@ object MessageTemplate {
     MessageTemplate(
       templateId,
       FromAddress(fromAddress),
-      replyTo,
+      replyTo.map(s => ReplyToAddress(_ => s)),
       service,
       Subject.fromPlainString(subject),
       plainTemplate,

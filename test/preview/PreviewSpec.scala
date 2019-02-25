@@ -28,7 +28,7 @@ class PreviewSpec extends UnitSpec with OneAppPerSuite {
   "createPreviewGroup" should {
     "generate a  preview item for each template id that resolves to a message template" in {
       val templates: Seq[MessageTemplate] = List("does not exist", "also does not exist").map { id =>
-        MessageTemplate.create(id, "", ServiceIdentifier.SelfAssessment, id, (_ => ???): Body.Plain, (_ => ???): Body.Html)
+        MessageTemplate.create(id, "", None, ServiceIdentifier.SelfAssessment, id, (_ => ???): Body.Plain, (_ => ???): Body.Html)
       }
 
       val result = PreviewGroup.createPreviewGroup("Self Assessment", templates)

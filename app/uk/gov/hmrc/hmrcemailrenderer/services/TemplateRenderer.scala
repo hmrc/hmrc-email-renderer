@@ -54,6 +54,7 @@ trait TemplateRenderer {
       plainText,
       htmlText,
       template.fromAddress(allParams),
+      template.replyTo.map(_(allParams)),
       template.subject(allParams),
       template.service.name,
       template.priority

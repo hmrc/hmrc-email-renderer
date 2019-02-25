@@ -26,13 +26,25 @@ class RenderResultSpec extends UnitSpec {
     def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
 
     "have the plain and html fields Base64 encoded when rendered as JSON" in {
-      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
+      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", Some("replyToAddress"), "subject", "service", None))
 
       (result \ "plain").as[String] shouldBe "U29tZSBQbGFpbiBUZXh0"
       decode((result \ "plain").as[String]) shouldBe "Some Plain Text"
       (result \ "html").as[String] shouldBe "PHA+U29tZSBIVE1MPC9wPg=="
       decode((result \ "html").as[String]) shouldBe "<p>Some HTML</p>"
       (result \ "priority").asOpt[String] shouldBe None
+    }
+
+    "ignore missing replyTo Address" in {
+      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", None, "subject", "service", None))
+
+      (result \ "replyTo").asOpt[String] shouldBe None
+    }
+
+    "serialize replyTo Address" in {
+      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", Some("replyToAddress"), "subject", "service", None))
+
+      (result \ "replyTo").asOpt[String] shouldBe Some("replyToAddress")
     }
   }
 }
