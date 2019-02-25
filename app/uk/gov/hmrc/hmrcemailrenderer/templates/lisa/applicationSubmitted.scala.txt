@@ -6,7 +6,7 @@ Dear @{params("first_name").toString} @{params("last_name").toString}
 
 Thank you for applying to become an approved Lifetime ISA manager.
 
-Your application reference is @{params("application_reference").toString}.
+Your application reference is @{params("application_reference").toString}
 
 What happens next
 
