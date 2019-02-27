@@ -105,6 +105,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "apd_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Air Passenger Duty registration",
+      plainTemplate = txt.apdRegistrationConfirmation.f,
+      htmlTemplate = html.apdRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "vat_refund_claim_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
