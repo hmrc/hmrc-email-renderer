@@ -1,11 +1,15 @@
-@(params: Map[String, Any])We sent you messages in error
+@(params: Map[String, Any])Rescindment: File your Self Assessment tax return
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-You received one or more messages on 16 July 2015 from HMRC as a result of an IT error. These messages have now been withdrawn.
+HMRC sent you an email alert and online message on 19 February 2019.
 
-We apologise for any concern this might have caused.
+We sent this to you too early in error, and we are sorry for the mistake.
 
-From HMRC Digital
+We have now removed the incorrect message from your HMRC account.
+
+You will receive a new email alert and message soon after the new tax year begins on 6 April.
+
+From HMRC Digital Contact
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
