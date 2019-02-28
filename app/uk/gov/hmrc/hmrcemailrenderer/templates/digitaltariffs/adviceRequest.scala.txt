@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+Classification advice request: @params("reference")
+
+Contact Name
+@params("contactName")
+
+Contact Email
+@params("contactEmail")
+
+Item Name
+@params("itemName")
+
+Item Description
+@params("itemDescription")
+
+Supporting Documents
+@for(document: String <- params("supportingDocuments").asInstanceOf[String].split("\\|")) {
+@document
+}
+
+Supporting Info
+@params("supportingInformation")
