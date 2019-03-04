@@ -328,6 +328,15 @@ object EeittTemplates {
       plainTemplate = txt.ltRegConfirmation.f,
       htmlTemplate = html.ltRegConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "iptRegistrationConfirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your IPT application",
+      plainTemplate = txt.iptRegistrationConfirmation.f,
+      htmlTemplate = html.iptRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
