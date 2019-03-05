@@ -347,6 +347,15 @@ object EeittTemplates {
       htmlTemplate = html.gdApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    MessageTemplate.create(
+      templateId = "ipt100_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your IPT application",
+      plainTemplate = txt.ipt100RegistrationConfirmation.f,
+      htmlTemplate = html.ipt100RegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
       MessageTemplate.create(
         templateId = "csr_submission_confirmation",
         fromAddress = govUkTeamAddress,
