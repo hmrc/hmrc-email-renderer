@@ -26,7 +26,7 @@ object LisaTemplates {
       templateId = "lisa_application_submit",
       fromAddress = govUkTeamAddress,
       service = LifetimeISA,
-      subject = "Your LISA application has been successfully submitted",
+      subject = "HMRC received your LISA application",
       plainTemplate = txt.applicationSubmitted.f,
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Urgent)

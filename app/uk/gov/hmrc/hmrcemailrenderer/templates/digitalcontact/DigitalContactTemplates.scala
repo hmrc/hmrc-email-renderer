@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
 object DigitalContactTemplates {
@@ -95,11 +95,12 @@ object DigitalContactTemplates {
       htmlTemplate = html.newMessageAlert.f),
     MessageTemplate.create(
       templateId = "rescindedMessageAlert",
-      fromAddress = defaultFromAddress,
+      fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
       service = SelfAssessment,
-      subject = "HMRC paperless notifications: message updated",
+      subject = "HMRC recalled a Self Assessment message",
       plainTemplate = txt.rescindedMessageAlert.f,
-      htmlTemplate = html.rescindedMessageAlert.f),
+      htmlTemplate = html.rescindedMessageAlert.f,
+      priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "verificationReminder",
       fromAddress = defaultFromAddress,

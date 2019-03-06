@@ -32,6 +32,21 @@ object TemplateParams {
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
+    "overseas_application_rejected" -> Map(
+      "tradingName" -> "ABC Accountants Ltd",
+      "reason1" -> "We could not confirm your money laundering supervisory body",
+      "reason2" -> "We could not confirm your identity",
+      "reason3" -> "We could not confirm your business address",
+      "otherReason" -> "We had other reasons that are given here",
+      "additionalText" -> "Additional text goes here."
+    ),
+    "overseas_application_accepted" -> Map(
+      "tradingName" -> "ABC Accountants Ltd"
+    ),
+    "overseas_application_received" -> Map(
+      "tradingName" -> "ABC Accountants Ltd",
+      "receivedDate" -> "20190214"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
@@ -116,6 +131,26 @@ object TemplateParams {
     ) ++ newMessageAlert_Names),
 
     "newMessageAlert_SA309" -> newMessageAlert_Names,
+
+    "newMessageAlert_VRT1214A" -> Map(
+      "recipientName_line1" -> "Mr Bump"
+    ),
+
+    "newMessageAlert_VRT1214C" -> Map(
+      "recipientName_line1" -> "Mrs Bump"
+    ),
+
+    "newMessageAlert_VRT12B" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
+
+    "newMessageAlert_VRT14B" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
 
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
@@ -1106,7 +1141,10 @@ object TemplateParams {
     ),
     "lisa_application_submit" -> Map(
       "application_reference" -> "ABC1234567890",
-      "email" -> "lisaTest@test.com"
+      "email" -> "lisaTest@test.com",
+      "review_date" -> "7 February 2019",
+      "first_name" -> "Frank",
+      "last_name" -> "Customer"
     ),
     "emac_helpdesk_failure_confirmation_email" -> Map(
       "service_name" -> "Self Assessment (SA)",
@@ -1323,6 +1361,10 @@ object TemplateParams {
       "schemeName" -> "Some Pension Scheme",
       "expiryDate" -> "20 July 1969"
     ),
+    "parcels_registration_confirmation" -> Map(
+      "name" -> "Joe Bloggs",
+      "referenceNumber" -> "IM123456789A"
+    ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference" -> "BTI REFERENCE",
@@ -1334,7 +1376,7 @@ object TemplateParams {
       "PLACEOFARRIVAL" -> "Heathrow",
       "DATEOFARRIVAL" -> "15 September 2018",
       "REFERENCE" -> "XAPR9876543210",
-      "TOTAL" -> "32.40",
+      "TOTAL" -> "£32.45",
       "NAME_0" -> "5 litres spirits",
       "CURRENCY_0" -> "60 Mexican Peso(MXN)",
       "COSTGBP_0" -> "10.50",
@@ -1344,6 +1386,15 @@ object TemplateParams {
       "NAME_2" -> "All other electronic devices",
       "CURRENCY_2" -> "600 USA Dollar(USD)",
       "COSTGBP_2" -> "11.40"
+    ),
+    "digital_tariffs_advice_request" -> Map(
+      "reference" -> "REFERENCE",
+      "contactName" -> "FULL NAME",
+      "contactEmail" -> "EMAIL ADDRESS",
+      "itemName" -> "ITEM NAME",
+      "itemDescription" -> "ITEM DESCRIPTION",
+      "supportingDocuments" -> "www.hmrc.gov.uk|www.gov.co.uk",
+      "supportingInformation" -> "SUPPORTING INFO"
     )
   )
 }

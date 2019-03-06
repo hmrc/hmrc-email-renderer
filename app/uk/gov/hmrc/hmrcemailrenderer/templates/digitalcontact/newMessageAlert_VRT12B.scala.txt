@@ -1,0 +1,16 @@
+@(params: Map[String, Any])Changes to your client’s VAT business details
+
+@if(params("transactorName").toString.trim.nonEmpty){
+Dear @{params("transactorName")},
+}
+
+Your request to change @params("clientName"), VRN @{params("clientVrn").toString} VAT business details has been accepted.
+
+We have sent a message to your client with full details.
+
+Depending on your client’s communication preferences, they will either receive a paper copy at their principal
+place of business or a digital message in their secure mailbox.
+
+From HMRC VAT
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
