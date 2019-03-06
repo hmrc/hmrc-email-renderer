@@ -1,0 +1,50 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application for agent services account received") {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+    We received your application for an agent services account for @params("tradingName") on @DateFormatter.formatDate(params("receivedDate").toString).
+    </p>
+
+    <h2>What happens next</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        We may get in touch with you to discuss your application.</p>
+    <br>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        We will tell you within 28 calendar days if your application has been approved. We will also tell you how to set up your account.</p>
+    <br>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        If your application is rejected we will tell you why.</p>
+    
+    <h2>What you can do next</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        Check the guidance on GOV.UK to find out how to track the progress of your application.</p>
+    <h2>
+        If you need help
+    </h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        If you need help using this service, sign in to the service and use the 'get help with this page' link at the bottom of the page.
+    </p><br>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC agent services team</p>
+
+
+
+}

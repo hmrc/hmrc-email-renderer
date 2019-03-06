@@ -28,6 +28,7 @@ object ServiceIdentifier {
   case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
   case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
   case object BTIOperationalService extends ServiceIdentifier {override val name = "tariff-classification-frontend"}
+  case object BTIAdviceService extends ServiceIdentifier {override val name = "digital-tariff-advice-frontend"}
   case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
   case object Charities extends ServiceIdentifier { override val name = "charities" }
   case object Childcare extends ServiceIdentifier { override val name = "cc" }
@@ -90,6 +91,8 @@ object ServiceIdentifier {
   case object CDS extends ServiceIdentifier { override val name = "cds"}
   case object MTDfBVatSignUp extends ServiceIdentifier { override val name = "mtdfb-vat-sign-up" }
   case object PODS extends ServiceIdentifier { override val name = "pods" }
+  case object Parcels extends ServiceIdentifier { override val name = "parcels" }
   case object Vat extends ServiceIdentifier { override val name = "vat"}
+  case object DigitalContactVat extends ServiceIdentifier { override val name = "digitalContactVat"}
   case object TwoWayMessaging extends ServiceIdentifier { override val name = "twoWayMessaging"}
 }

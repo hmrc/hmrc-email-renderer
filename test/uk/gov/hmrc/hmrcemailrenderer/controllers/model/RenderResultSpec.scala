@@ -16,14 +16,15 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
-import com.ning.http.util.Base64
+import java.util.Base64
+
 import play.api.libs.json._
 import uk.gov.hmrc.play.test.UnitSpec
 
 class RenderResultSpec extends UnitSpec {
   "RenderResult" should {
 
-    def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
+    def decode(value: String): String = new String(Base64.getDecoder.decode(value), "UTF-8")
 
     "have the plain and html fields Base64 encoded when rendered as JSON" in {
       val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
