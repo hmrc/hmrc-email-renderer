@@ -20,9 +20,8 @@
     val indices = Stream.from(0).takeWhile(i => params.get(s"NAME_$i").isDefined).toList
     indices.map { i =>
         val item = params(s"NAME_$i")
-        val currency = params(s"CURRENCY_$i")
         val amount = params(s"COSTGBP_$i")
-        (item, currency, amount)
+        (item,  amount)
     }
 }
 
@@ -75,15 +74,13 @@
         <thead>
             <tr>
                 <th>Item</th>
-                <th>Currency</th>
                 <th>Amount</th>
             </tr>
         </thead>
         <tbody>
-        @for((item, currency, amount) <- breakdown) {
+        @for((item, amount) <- breakdown) {
             <tr role="row">
                 <td>@item</td>
-                <td>@currency</td>
                 <td>£@amount</td>
             </tr>
         }
@@ -91,7 +88,6 @@
         <tfoot>
             <tr>
                 <th>Total</th>
-                <td></td>
                 <th>£@params("TOTAL")</th>
             </tr>
         </tfoot>
