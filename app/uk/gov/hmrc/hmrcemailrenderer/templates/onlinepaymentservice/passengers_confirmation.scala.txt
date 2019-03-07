@@ -21,9 +21,9 @@ Name: @params("NAME")
 Date of payment: @params("DATE")
 Place of arrival in UK: @params("PLACEOFARRIVAL")
 Date of arrival: @params("DATEOFARRIVAL")
-Time of arrival: @params("DATEOFARRIVAL")
+Time of arrival: @params("TIMEOFARRIVAL")
 Payment reference: @params("REFERENCE")
-Transaction ID: @params("REFERENCE")
+Transaction ID: @params("TRANSACTIONREFERENCE")
 Amount paid: @params("TOTAL")
 
 Duty and tax to pay for each item
