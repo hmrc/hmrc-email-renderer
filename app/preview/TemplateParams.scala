@@ -1375,6 +1375,8 @@ object TemplateParams {
       "DATE" -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
       "PLACEOFARRIVAL" -> "Heathrow",
       "DATEOFARRIVAL" -> "15 September 2018",
+      "TIMEOFARRIVAL" -> "12:15 PM",
+      "TRANSACTIONREFERENCE" -> "tran-ref-value",
       "REFERENCE" -> "XAPR9876543210",
       "TOTAL" -> "£32.45",
       "NAME_0" -> "5 litres spirits",
