@@ -1395,6 +1395,10 @@ object TemplateParams {
       "itemDescription" -> "ITEM DESCRIPTION",
       "supportingDocuments" -> "www.hmrc.gov.uk|www.gov.co.uk",
       "supportingInformation" -> "SUPPORTING INFO"
+    ),
+    "digital_tariffs_application_submitted" -> Map(
+      "recipientName_line1" -> "FULL NAME",
+      "reference" -> "REFERENCE"
     )
   )
 }
