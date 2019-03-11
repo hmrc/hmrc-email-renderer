@@ -3,7 +3,7 @@ Issued: Binding Tariff Information (BTI) ruling
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-Your BTI application has been submitted. Your application reference number is @params("reference").
+Your BTI application @params("reference") has been submitted.
 
 We will email you to tell you when your ruling is complete within 30 to 60 days.
 
