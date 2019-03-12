@@ -1,5 +1,5 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
-@(params: Map[String, Any])Application for agent services account received
+@(params: Map[String, Any])HMRC received your agent services account application
 
 We received your application for an agent services account for @params("tradingName") on @DateFormatter.formatDate(params("receivedDate").toString).
 
@@ -21,5 +21,5 @@ If you need help using this service, sign in to the service and use the 'get hel
 
 Do not reply to this email.
 
-From HMRC agent services team
+From HMRC Agent Services team
 

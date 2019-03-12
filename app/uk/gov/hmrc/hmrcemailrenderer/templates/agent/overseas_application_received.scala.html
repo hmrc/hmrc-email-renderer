@@ -17,7 +17,7 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application for agent services account received") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC received your agent services account application") {
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
     We received your application for an agent services account for @params("tradingName") on @DateFormatter.formatDate(params("receivedDate").toString).
@@ -43,7 +43,7 @@
         If you need help using this service, sign in to the service and use the 'get help with this page' link at the bottom of the page.
     </p><br>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC agent services team</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services team</p>
 
 
 
