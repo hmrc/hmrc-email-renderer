@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Application for agent services account approved
+@(params: Map[String, Any])HMRC approved your agent services account application
 
 We have approved your application for an agent services account for @params("tradingName").
 
@@ -10,5 +10,5 @@ To finish setting up your account, search GOV.UK for 'finish setting up your age
 
 Do not reply to this email.
 
-From HMRC agent services team
+From HMRC Agent Services team
 
