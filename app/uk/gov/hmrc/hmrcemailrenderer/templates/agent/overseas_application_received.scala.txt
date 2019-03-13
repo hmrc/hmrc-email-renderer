@@ -1,6 +1,8 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
 @(params: Map[String, Any])HMRC received your agent services account application
 
+Dear Customer
+
 We received your application for an agent services account for @params("tradingName") on @DateFormatter.formatDate(params("receivedDate").toString).
 
 What happens next
