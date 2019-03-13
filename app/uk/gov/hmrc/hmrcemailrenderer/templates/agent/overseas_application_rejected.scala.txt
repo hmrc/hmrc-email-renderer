@@ -1,7 +1,6 @@
-
-
 @(params: Map[String, Any])HMRC rejected your agent services account application
 
+Dear Customer
 
 We have rejected your application for an agent services account for @params("tradingName").
 

@@ -1,5 +1,7 @@
 @(params: Map[String, Any])HMRC approved your agent services account application
 
+Dear Customer
+
 We have approved your application for an agent services account for @params("tradingName").
 
 What you need to do next
