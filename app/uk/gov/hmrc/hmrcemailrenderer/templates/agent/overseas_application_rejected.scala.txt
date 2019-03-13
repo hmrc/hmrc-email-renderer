@@ -6,8 +6,7 @@ We have rejected your application for an agent services account for @params("tra
 
 Your application was rejected for the following reasons:
 
-@for(reason <- params.keys.toList.filter(_.startsWith("reason")).sorted){
-@params(reason)
+@for(reason <- params.keys.toList.filter(_.startsWith("reason")).sorted){@params(reason)
 }
 @params.getOrElse("otherReason", "")
 
