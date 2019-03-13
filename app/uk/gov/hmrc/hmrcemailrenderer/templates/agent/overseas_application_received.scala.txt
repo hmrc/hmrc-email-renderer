@@ -1,5 +1,5 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
-@(params: Map[String, Any])HMRC received your agent services account application
+@(params: Map[String, Any])Application for agent services account received
 
 Dear Customer
 
