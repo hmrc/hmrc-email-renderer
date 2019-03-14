@@ -2,19 +2,22 @@
 
 Submitted: C118 Section 1 Part 2 Authorised Economic Operator application
 
-Dear Customer,
+Dear Customer
 
-We have received your part application for Authorised Economic Operator, the C118 Section 1 Part 2 form.
+We have received your part application for AEO, the C118 Section 1 Part 2 form.
 
-Make sure you send all relevant sections of the C118 forms and the C117 form within 24 hours of submitting your first form, otherwise your application will be rejected.
+What you need to do next
+
+You must submit the C117 and all relevant sections of the C118 within 24 hours of submitting your first form.
+
+If you do not do this, we will reject your application.
 
 Why you are receiving this email
 
 We send a confirmation email for applications submitted online.
 
-If you need to contact us about your application, please quote your EORI number.
+If you need to contact us about your application, quote your EORI number.
 
-
-From HMRC Authorised Economic Officer Team
+From HMRC AEO team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
