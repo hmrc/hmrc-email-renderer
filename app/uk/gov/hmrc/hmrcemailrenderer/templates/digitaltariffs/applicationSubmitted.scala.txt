@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+Issued: Binding Tariff Information (BTI) ruling
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Your BTI application @params("reference") has been submitted.
+
+We will email you to tell you when your ruling is complete within 30 to 60 days.
+
+To check the status of your application or to get information on samples go to GOV.UK and search for 'Apply for a Binding Tariff Information decision (Notice 600)'.
+
+For security reasons we have not included a link with this email.
+
+From Tariff Classification Service
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -14,15 +14,13 @@
  * limitations under the License.
  *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.VrnFormatter._
-
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(
  params, "Changes to your client’s VAT business details") {
 @if(params("transactorName").toString.trim.nonEmpty){
  <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("transactorName")},</p>
 }
-<p style="margin: 0 0 30px; font-size: 19px;">Your request to change @params("clientName"), (VRN @{formatVrn(params("clientVrn").toString)} ) VAT business details has been accepted.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your request to change @params("clientName"), VRN @{params("clientVrn").toString} VAT business details has been accepted.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">We have sent a message to your client with full details. </p>
 <p style="margin: 0 0 30px; font-size: 19px;">Depending on your client’s communication preferences, they will either receive a paper copy at
   their principal place of business or a digital message in their secure mailbox.</p>

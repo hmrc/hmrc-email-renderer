@@ -16,7 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.Play
+import play.api.Mode.Mode
+import play.api.{Configuration, Play}
 import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
@@ -36,6 +37,11 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
       map(_.entrySet.toMap.mapValues(_.unwrapped.toString)).
       getOrElse(Map.empty[String, String])
   }
+
+  override protected def mode: play.api.Mode.Mode = Play.current.mode
+
+  override protected def runModeConfiguration: Configuration = Play.current.configuration
+
 }
 
 trait TemplateRenderer {

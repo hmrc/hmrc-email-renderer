@@ -16,13 +16,24 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, Subject}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{{MessagePriority, MessageTemplate, Subject}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ReplyToAddress}
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{BTIAdviceService, BTIOperationalService}
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{BTIAdviceService, BTIApplicationService, BTIOperationalService}
+
 
 object DigitalTariffTemplates {
 
   val templates = Seq(
+    MessageTemplate.create(
+      templateId = "digital_tariffs_application_submitted",
+      fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
+      service = BTIApplicationService,
+      subject = "Submitted: Binding Tariff Information (BTI) application",
+      plainTemplate = txt.applicationSubmitted.f,
+      htmlTemplate = html.applicationSubmitted.f,
+      priority = Some(MessagePriority.Background)
+    ),
+
     MessageTemplate.create(
       templateId = "digital_tariffs_case_completed",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),

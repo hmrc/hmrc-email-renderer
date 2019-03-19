@@ -1,7 +1,17 @@
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
-@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youHaveItHas(params) now got access to the Customs Declaration Service (CDS).
+@uk.gov.hmrc.hmrcemailrenderer.templates.customs.html.youHaveItHas(params) applied for EORI / CDS
+
+The application has been successful.
 
 If your software is compatible, you can now make customs declarations to CDS. Check with your software provider or in-house IT team.
+
+To see your EORI number
+
+1. go to GOV.UK
+2. search for 'Get an EORI’
+3. click on the link on the ‘Get an EORI’ page that says ‘Check the status of an application you have already made’.
+
+For security reasons we have not included a link with this email.
 
 Help and support
 
