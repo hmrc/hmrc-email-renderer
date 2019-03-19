@@ -364,7 +364,16 @@ object EeittTemplates {
         plainTemplate = txt.corporateSelfReportingSubmissionConfirmation.f,
         htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
         priority = Some(MessagePriority.Standard)
-  )
+      ),
+    MessageTemplate.create(
+      templateId = "cash_declaration",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your cash declaration",
+      plainTemplate = txt.cashDeclaration.f,
+      htmlTemplate = html.cashDeclaration.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
 
 }

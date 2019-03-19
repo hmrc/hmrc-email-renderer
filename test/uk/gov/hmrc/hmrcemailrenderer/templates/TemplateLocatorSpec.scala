@@ -212,6 +212,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tsp_application_confirmation",
         "gd_application_confirmation",
         "csr_submission_confirmation",
+        "cash_declaration",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
