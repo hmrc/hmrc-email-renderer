@@ -25,51 +25,58 @@
     }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have paid the duty you owe") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have paid the duty you owe for these goods") {
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If these are the only items you are declaring, go to the green channel. You may be asked to show your email receipt on your phone or tablet by a member of Border Force.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Go to the green channel if these are the only items you are declaring. If asked, show your receipt on your mobile phone or tablet to a member of Border Force.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If you have something else to declare, go to the red channel or red phone point and speak to a member of Border Force.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel or red-point phone if you have something else to declare and speak to a member of Border Force.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If you are carrying restricted items such as firearms or ammunition, go to the red channel.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel if you are carrying restricted items such as firearms or ammunition.</p>
 
     <h2>Your details</h2>
 
-    <table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
+    <table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;font-size: 19px;c">
         <tbody>
             <tr>
-                <th>Name</th>
-                <td>@params("NAME")</td>
+                <th style="border-bottom: 1px solid #bfc1c3">Name</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("NAME")</td>
             </tr>
 
             <tr>
-                <th>Date</th>
-                <td>@params("DATE")</td>
+                <th style="border-bottom: 1px solid #bfc1c3">Date of payment</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("DATE")</td>
             </tr>
 
             <tr>
-                <th>Place of arrival in UK</th>
-                <td>@params("PLACEOFARRIVAL")</td>
+                <th style="border-bottom: 1px solid #bfc1c3">Place of arrival in UK</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("PLACEOFARRIVAL")</td>
             </tr>
 
             <tr>
-                <th>Date of arrival</th>
-                <td>@params("DATEOFARRIVAL")</td>
+                <th style="border-bottom: 1px solid #bfc1c3">Date of arrival</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("DATEOFARRIVAL")</td>
+            </tr>
+            <tr>
+                <th style="border-bottom: 1px solid #bfc1c3">Time of arrival</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("TIMEOFARRIVAL")</td>
+            </tr>
+            <tr>
+                <th style="border-bottom: 1px solid #bfc1c3">Payment reference</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("REFERENCE")</td>
             </tr>
 
             <tr>
-                <th>Payment reference</th>
-                <td>@params("REFERENCE")</td>
+                <th style="border-bottom: 1px solid #bfc1c3">Transaction ID</th>
+                <td style="border-bottom: 1px solid #bfc1c3">@params("TRANSACTIONREFERENCE")</td>
             </tr>
-
             <tr>
-                <th>Duty paid</th>
-                <th>@params("TOTAL")</th>
+                <th style="border-bottom: 1px solid #bfc1c3">Amount paid</th>
+                <th style="border-bottom: 1px solid #bfc1c3">@params("TOTAL")</th>
             </tr>
         </tbody>
     </table>
 
-    <h2>Duty and tax paid per item</h2>
+    <h2>Duty and tax paid for each item</h2>
     <table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <thead>
             <tr>
