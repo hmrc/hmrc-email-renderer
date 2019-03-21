@@ -25,27 +25,27 @@ object AgentTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "overseas_application_rejected",
-      fromAddress = FromAddress.noReply("HMRC agent services"),
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = "Rejected: agent services account application",
+      subject = "HMRC rejected your agent services account application",
       plainTemplate = txt.overseas_application_rejected.f,
       htmlTemplate = html.overseas_application_rejected.f,
       priority = Some(MessagePriority.Standard))
   ,
   MessageTemplate.create(
     templateId = "overseas_application_accepted",
-    fromAddress = FromAddress.noReply("HMRC agent services"),
+    fromAddress = FromAddress.noReply("HMRC Agent Services"),
     service = Agent,
-    subject = "Approved: agent services account application",
+    subject = "HMRC approved your agent services account application",
     plainTemplate = txt.overseas_application_accepted.f,
     htmlTemplate = html.overseas_application_accepted.f,
     priority = Some(MessagePriority.Standard))
     ,
   MessageTemplate.create(
     templateId = "overseas_application_received",
-    fromAddress = FromAddress.noReply("HMRC agent services"),
+    fromAddress = FromAddress.noReply("HMRC Agent Services"),
     service = Agent,
-    subject = "Received: agent services account application",
+    subject = "HMRC received your agent services account application",
     plainTemplate = txt.overseas_application_received.f,
     htmlTemplate = html.overseas_application_received.f,
     priority = Some(MessagePriority.Standard))
