@@ -1,0 +1,56 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted a registration for duty on biofuels and other fuel substitutes (EX103/103A BFS)"){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HMRC received your registration for duty on biofuels and other fuel substitutes</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params.get("customerName") </p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HMRC has received your application to register a business for duty on biofuels and other fuel substitutes.
+</p>
+<h2>
+    What you need to do next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    To complete your registration you will need to do the following.</p>
+<h2>If the business is a limited company </h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You must complete form ‘Excise entry: incorporated company EX103A’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103A form.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+<h2>If the business is a sole trader </h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You must complete form ‘Excise entry: private trader EX103’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103 form.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+<h2>If the business is a limited liability partnership (LLP)</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You must complete form ‘Excise entry: incorporated company EX103A’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103A form.
+
+    You’ll also need to email enquiries.eeitts&#64;hmrc.gov.uk to tell us that your business is a limited liability partnership (LLP), so that we can ask you for more details about this.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+<h2>If the business is a partnership </h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You must complete form ‘Excise entry: private trader EX103’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103 form.
+
+    You’ll also need to email enquiries.eeitts&#64;hmrc.gov.uk to tell us that your business is a partnership, so that we can ask you for more details about this.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+<h2>If you want to apply for a deferment of duty payments </h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You’ll need to check ‘Excise Notice 179e: biofuels and other fuel substitutes’ for details of how to apply for deferment. You’ll need to go to GOV.UK and search for ‘Excise Notice 179e: biofuels and other fuel substitutes’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC Excise team</p>
+}

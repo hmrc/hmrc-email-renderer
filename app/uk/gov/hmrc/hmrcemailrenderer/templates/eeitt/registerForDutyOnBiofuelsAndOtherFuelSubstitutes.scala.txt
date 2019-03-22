@@ -1,0 +1,41 @@
+@(params: Map[String, Any])
+
+You submitted a registration for duty on biofuels and other fuel substitutes (EX103/103A BFS)
+
+HMRC received your registration for duty on biofuels and other fuel substitutes
+
+Dear @params.get("customerName")
+
+HMRC has received your application to register a business for duty on biofuels and other fuel substitutes.
+
+What you need to do next
+
+To complete your registration you will need to do the following.
+
+If the business is a limited company
+
+You must complete form ‘Excise entry: incorporated company EX103A’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103A form.
+
+If the business is a sole trader
+
+You must complete form ‘Excise entry: private trader EX103’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103 form.
+
+If the business is a limited liability partnership (LLP)
+
+You must complete form ‘Excise entry: incorporated company EX103A’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103A form.
+
+You’ll also need to email enquiries.eeitts&#64;hmrc.gov.uk to tell us that your business is a limited liability partnership (LLP), so that we can ask you for more details about this.
+
+If the business is a partnership
+
+You must complete form ‘Excise entry: private trader EX103’ for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the EX103 form.
+
+You’ll also need to email enquiries.eeitts&#64;hmrc.gov.uk to tell us that your business is a partnership, so that we can ask you for more details about this.
+
+If you want to apply for a deferment of duty payments
+
+You’ll need to check ‘Excise Notice 179e: biofuels and other fuel substitutes’ for details of how to apply for deferment. You’ll need to go to GOV.UK and search for ‘Excise Notice 179e: biofuels and other fuel substitutes’.
+
+From HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
