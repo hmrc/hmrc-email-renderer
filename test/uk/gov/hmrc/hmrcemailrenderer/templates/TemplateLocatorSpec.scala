@@ -213,6 +213,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "gd_application_confirmation",
         "csr_submission_confirmation",
         "cash_declaration",
+        "register_for_duty_on_gas_for_road_fuel_use",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
         "fhdds_email_verification",
