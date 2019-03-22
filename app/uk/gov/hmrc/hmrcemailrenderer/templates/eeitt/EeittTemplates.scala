@@ -373,6 +373,15 @@ object EeittTemplates {
       plainTemplate = txt.cashDeclaration.f,
       htmlTemplate = html.cashDeclaration.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "register_for_duty_on_gas_for_road_fuel_use",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your registration for duty on gas for road fuel use",
+      plainTemplate = txt.registerForDutyOnGasForRoadFuelUse.f,
+      htmlTemplate = html.registerForDutyOnGasForRoadFuelUse.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
