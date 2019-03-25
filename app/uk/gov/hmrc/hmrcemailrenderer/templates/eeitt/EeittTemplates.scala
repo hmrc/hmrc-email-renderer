@@ -378,7 +378,7 @@ object EeittTemplates {
       templateId = "register_for_duty_on_gas_for_road_fuel_use",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your registration for duty on gas for road fuel use",
+      subject = "HMRC received your registration for duty on gas for use as road fuel",
       plainTemplate = txt.registerForDutyOnGasForRoadFuelUse.f,
       htmlTemplate = html.registerForDutyOnGasForRoadFuelUse.f,
       priority = Some(MessagePriority.Standard)
