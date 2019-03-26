@@ -2,8 +2,6 @@
 
 You submitted a registration for duty on biofuels and other fuel substitutes (EX103/103A BFS)
 
-HMRC received your registration for duty on biofuels and other fuel substitutes
-
 Dear @params.get("customerName")
 
 HMRC has received your application to register a business for duty on biofuels and other fuel substitutes.

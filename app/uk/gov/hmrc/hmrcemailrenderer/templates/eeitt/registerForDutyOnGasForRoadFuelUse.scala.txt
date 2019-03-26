@@ -2,8 +2,6 @@
 
 You submitted a registration for duty on gas for use as road fuel
 
-HMRC received your registration for duty on gas for use as road fuel
-
 Dear @params.get("customerName")
 
 HMRC has received your application to register a business for duty on gas for use as road fuel.
