@@ -378,11 +378,20 @@ object EeittTemplates {
       templateId = "register_for_duty_on_gas_for_road_fuel_use",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your registration for duty on gas for road fuel use",
+      subject = "HMRC received your registration for duty on gas for use as road fuel",
       plainTemplate = txt.registerForDutyOnGasForRoadFuelUse.f,
       htmlTemplate = html.registerForDutyOnGasForRoadFuelUse.f,
       priority = Some(MessagePriority.Standard)
-    )
+    ),
+  MessageTemplate.create(
+    templateId = "register_for_duty_on_biofuels_and_other_fuel_substitutes",
+    fromAddress = govUkTeamAddress,
+    service = Eeitt,
+    subject = "HMRC received your registration for duty on biofuels and other fuel substitutes",
+    plainTemplate = txt.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
+    htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
+    priority = Some(MessagePriority.Standard)
+  )
   )
 
 }

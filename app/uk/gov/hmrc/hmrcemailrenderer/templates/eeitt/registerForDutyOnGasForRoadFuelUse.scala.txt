@@ -1,12 +1,10 @@
 @(params: Map[String, Any])
 
-You submitted a registration for duty on gas for road fuel use
-
-HMRC received your registration for duty on gas for road fuel use
+You submitted a registration for duty on gas for use as road fuel
 
 Dear @params.get("customerName")
 
-HMRC has received your application to register a business for duty on gas for road fuel use..
+HMRC has received your application to register a business for duty on gas for use as road fuel.
 
 What you need to do next
 
