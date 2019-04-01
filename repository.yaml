@@ -21,3 +21,4 @@ leakDetectionExemptions:
       - '/test/uk/gov/hmrc/hmrcemailrenderer/templates/TemplateLocatorSpec.scala'
       - '/app/uk/gov/hmrc/hmrcemailrenderer/templates/childcare/childcareTaxFreeDevolved.scala.html'
       - '/app/uk/gov/hmrc/hmrcemailrenderer/templates/childcare/childcareTaxFreeEngland.scala.html'
+repoVisibility: public_0C3F0CE3E6E6448FAD341E7BFA50FCD333E06A20CFF05FCACE61154DDBBADF71
