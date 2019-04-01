@@ -14,13 +14,27 @@
  * limitations under the License.
  *@
 
+@import org.joda.time.LocalDate
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
+
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Team") {
 
-    <p>Thank you for making contact through secure messaging.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">We will reply within 7 days</p>
 
-    <p>We’ll email you again when your reply is ready to view in your secure account inbox.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)</p>
 
-    <p>From HMRC Team</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Thank you for the message you sent to HMRC today.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">We will reply by @DateHelper.formatter(LocalDate.now)</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">You do not need to do anything else now, including sending another message, or calling.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">When our reply is ready, we’ll email you to let you know.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">You will then find the reply online in your personal tax account messages.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Team</p>
+
 }
