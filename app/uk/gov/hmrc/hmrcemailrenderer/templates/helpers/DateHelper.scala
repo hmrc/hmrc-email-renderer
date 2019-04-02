@@ -33,12 +33,4 @@ object DateHelper {
 
   // To ensure that emails are always sent, be tolerant of any failure to provide dates in ISO format
   def asUserDate(isoDate: Any): String = Try(formatLocalDate(parseIsoDate(isoDate.toString))) getOrElse isoDate.toString
-
-  val expectedReturnDate = LocalDate.now.getDayOfMonth
-
-  val dateFormatter = DateTimeFormat.forPattern("dd MMMM.")
-  def formatter(date: LocalDate): String = {
-   val futureDate = date.plusDays(7)
-   futureDate.toString(dateFormatter)
-  }
 }
