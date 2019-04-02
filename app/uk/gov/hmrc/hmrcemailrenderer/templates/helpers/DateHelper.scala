@@ -16,8 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
+import java.time.OffsetDateTime
+
 import org.joda.time.LocalDate
-import org.joda.time.format.{ISODateTimeFormat, DateTimeFormat}
+import org.joda.time.format.{DateTimeFormat, ISODateTimeFormat}
 
 import scala.util.Try
 
