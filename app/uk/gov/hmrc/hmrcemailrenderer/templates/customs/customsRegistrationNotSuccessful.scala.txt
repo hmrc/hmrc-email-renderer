@@ -1,14 +1,22 @@
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
+@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 
-You applied for EORI / CDS.
+@(params: Map[String, Any])You applied for an Economic Operator Registration and Identification (EORI) number
 
-The application has been unsuccessful.
+@saluteFullName(params)
 
-Help and support
+Your EORI application @forOrgName(params)on @completionDate(params)has been unsuccessful.
 
-Telephone: 0300 322 7067
-Open 8am to 6pm, Monday to Friday (closed bank holidays).
 
-From HMRC Customs Declaration Service (CDS)
+If you need help
+
+Phone the EORI support team on 0300 322 7067. This is available 8am to 6pm, Monday to Friday (closed bank holidays).
+
+You can also find more information about this subject on GOV.UK.
+
+For security reasons we have not included a link with this email.
+
+From HMRC EORI Support Team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
