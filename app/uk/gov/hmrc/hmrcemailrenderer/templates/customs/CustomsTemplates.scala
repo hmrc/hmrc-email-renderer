@@ -37,6 +37,20 @@ object CustomsTemplates {
       plainTemplate = txt.customsRegistrationNotSuccessful.f,
       htmlTemplate = html.customsRegistrationNotSuccessful.f),
     MessageTemplate.create(
+      templateId = "customs_migrate_successful",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "HMRC approved your CDS application",
+      plainTemplate = txt.customsMigrateSuccessful.f,
+      htmlTemplate = html.customsMigrateSuccessful.f),
+    MessageTemplate.create(
+      templateId = "customs_migrate_not_successful",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "Your CDS application was unsuccessful",
+      plainTemplate = txt.customsMigrateNotSuccessful.f,
+      htmlTemplate = html.customsMigrateNotSuccessful.f),
+    MessageTemplate.create(
       templateId = "customs_validation_success",
       fromAddress = govUkTeamAddress,
       service = Customs,
