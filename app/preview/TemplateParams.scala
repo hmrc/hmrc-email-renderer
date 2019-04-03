@@ -1401,6 +1401,12 @@ object TemplateParams {
     "digital_tariffs_application_submitted" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference" -> "REFERENCE"
+    ),
+    "newMessageAlert_2WSM-question" -> Map(
+      "recipientName_line1" -> "FULL NAME"
+    ),
+    "newMessageAlert_2WSM-reply" -> Map(
+      "recipientName_line1" -> "FULL NAME"
     )
   )
 }
