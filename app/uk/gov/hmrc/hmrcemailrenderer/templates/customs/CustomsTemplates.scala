@@ -26,14 +26,14 @@ object CustomsTemplates {
       templateId = "customs_registration_successful",
       fromAddress = govUkTeamAddress,
       service = Customs,
-      subject = "Register for customs services - application successful",
+      subject = "HMRC approved your EORI number application",
       plainTemplate = txt.customsRegistrationSuccessful.f,
       htmlTemplate = html.customsRegistrationSuccessful.f),
     MessageTemplate.create(
       templateId = "customs_registration_not_successful",
       fromAddress = govUkTeamAddress,
       service = Customs,
-      subject = "Register for customs services - application not successful",
+      subject = "Your EORI application was unsuccessful",
       plainTemplate = txt.customsRegistrationNotSuccessful.f,
       htmlTemplate = html.customsRegistrationNotSuccessful.f),
     MessageTemplate.create(
