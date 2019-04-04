@@ -4,7 +4,7 @@
 
 @(params: Map[String, Any])You applied for an Economic Operator Registration and Identification (EORI) number
 
-@saluteFullName(params)
+@salutationFullName(params)
 
 Your EORI application @forOrgName(params) @onCompletionDate(params)has been unsuccessful.
 
