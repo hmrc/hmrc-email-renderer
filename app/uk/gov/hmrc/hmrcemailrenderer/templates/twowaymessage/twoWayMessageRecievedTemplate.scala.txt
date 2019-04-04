@@ -2,7 +2,7 @@
 
 We will reply within 9 days
 
-Dear Customer
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation()}
 
 Thank you for the message you sent to HMRC today.
 
