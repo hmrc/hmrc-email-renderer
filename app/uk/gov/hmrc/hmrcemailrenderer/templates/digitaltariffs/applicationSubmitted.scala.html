@@ -15,15 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sign in to your secure account now") {
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Binding Tariff Information (BTI) application") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
-    <p>New HMRC reply ready to view</p>
-    <p>To see your new secure message:</p>
-    <ol>
-        <li>Sign in to your Business or Personal Tax Account</li>
-        <li>Go to Messages</li>
-    </ol>
-    <p>From HMRC Team</p>
+    <p>
+        Your BTI application @params("reference") has been submitted.
+    </p>
+    <p>
+        We will email you to tell you when your ruling is complete within 30 to 60 days.
+    </p>
+    <p>
+        To check the status of your application or to get information on samples go to GOV.UK and search for 'Apply for a Binding Tariff Information decision (Notice 600)'.
+    </p>
+    <p>For security reasons we have not included a link with this email.</p>
+    <p>From Tariff Classification Service</p>
 }

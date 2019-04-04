@@ -24,7 +24,7 @@ object twoWayMessagingTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "newMessageAlert_2WSM-question",
-      fromAddress = FromAddress.noReply("twoWayMessingRecieved"),
+      fromAddress = FromAddress.noReply("twoWayMessagingReceived"),
       service = TwoWayMessaging,
       subject = "HMRC has recieved your secure enquiry",
       plainTemplate = txt.twoWayMessageRecievedTemplate.f,
@@ -33,7 +33,7 @@ object twoWayMessagingTemplates {
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_2WSM-reply",
-      fromAddress = FromAddress.noReply("twoWayMessingNotification"),
+      fromAddress = FromAddress.noReply("twoWayMessagingNotification"),
       service = TwoWayMessaging,
       subject = "HMRC has responded to your enquiry",
       plainTemplate = txt.twoWayMessageNotificationTemplate.f,
