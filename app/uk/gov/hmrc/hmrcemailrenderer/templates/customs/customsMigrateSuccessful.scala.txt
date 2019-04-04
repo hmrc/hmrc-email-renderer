@@ -6,7 +6,7 @@
 
 @saluteFullName(params)
 
-Your CDS application @forOrgName(params)on @completionDate(params)has been successful.
+Your CDS application @forOrgName(params) @onCompletionDate(params)has been successful.
 
 If your software is compatible, you can now make customs declarations to CDS. Check with your software provider or in-house IT team.
 

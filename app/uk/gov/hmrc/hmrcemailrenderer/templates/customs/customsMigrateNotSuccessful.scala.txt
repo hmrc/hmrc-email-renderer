@@ -5,7 +5,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper.saluteFullName(params)
 
-Your CDS application @forOrgName(params)on @completionDate(params)has been unsuccessful.
+Your CDS application @forOrgName(params) @onCompletionDate(params)has been unsuccessful.
 
 
 If you need help

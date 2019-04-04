@@ -6,7 +6,7 @@
 
 @saluteFullName(params)
 
-Your EORI application @forOrgName(params)on @completionDate(params)has been successful.
+Your EORI application @forOrgName(params) @onCompletionDate(params)has been successful.
 
 To see your EORI number
 

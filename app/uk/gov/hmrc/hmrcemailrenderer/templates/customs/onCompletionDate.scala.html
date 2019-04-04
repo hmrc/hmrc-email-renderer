@@ -15,4 +15,4 @@
  *@
 
 @(params: Map[String, Any])
-@params.get("completionDate").map(_.toString).filterNot(_.isEmpty).map(_ + " ").getOrElse("")
+@params.get("completionDate").map(_.toString).filterNot(_.isEmpty).map(date => s"on $date ").getOrElse("")
