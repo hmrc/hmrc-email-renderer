@@ -391,6 +391,15 @@ object EeittTemplates {
     plainTemplate = txt.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     priority = Some(MessagePriority.Standard)
+),
+    MessageTemplate.create(
+      templateId = "corporation_tax_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Corporation Tax application",
+      plainTemplate = txt.corporationTaxConfirmation.f,
+      htmlTemplate = html.corporationTaxConfirmation.f,
+      priority = Some(MessagePriority.Standard)
   )
   )
 
