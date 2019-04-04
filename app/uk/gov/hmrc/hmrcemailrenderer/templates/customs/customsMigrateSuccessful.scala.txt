@@ -4,7 +4,7 @@
 
 @(params: Map[String, Any])You successfully applied to get access to Customs Declaration Service (CDS)
 
-@saluteFullName(params)
+@salutationFullName(params)
 
 Your CDS application @forOrgName(params) @onCompletionDate(params)has been successful.
 

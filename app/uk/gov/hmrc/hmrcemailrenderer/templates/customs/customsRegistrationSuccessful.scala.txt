@@ -4,15 +4,15 @@
 
 @(params: Map[String, Any])You successfully applied for an Economic Operator Registration and Identification (EORI) number
 
-@saluteFullName(params)
+@salutationFullName(params)
 
 Your EORI application @forOrgName(params) @onCompletionDate(params)has been successful.
 
 To see your EORI number
 
-1. Go to GOV.UK
+1. Go to GOV.UK.
 
-2. Search for 'Get an EORI’
+2. Search for 'Get an EORI’.
 
 3. Select the link on the ‘Get an EORI’ page that says ‘Check the status of an application you have already made’.
 
