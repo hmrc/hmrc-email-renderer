@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You submitted a registration for duty on gas for use as road fuel
+
+Dear @params.get("customerName")
+
+HMRC has received your application to register a business for duty on gas for use as road fuel.
+
+What you need to do next
+
+You must complete form C&E930B for each of your premises to provide us with further registration details. You’ll need to go to GOV.UK and search for the C&E930B form.
+
+If the business is a partnership
+
+You must also contact HMRC to tell us your business is a partnership. You’ll need to email: enquiries.eeitts&#64;hmrc.gov.uk to let us know, so that we can ask you for more details about this.
+
+From HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

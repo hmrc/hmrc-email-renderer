@@ -1,4 +1,5 @@
 @(params: Map[String, Any])
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
     New HMRC reply ready to view
     To see your new secure message:
         1. Sign in to your Business or Personal Tax Account
