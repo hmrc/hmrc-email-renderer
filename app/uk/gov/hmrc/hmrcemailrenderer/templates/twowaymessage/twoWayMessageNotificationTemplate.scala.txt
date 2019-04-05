@@ -1,9 +1,20 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
 @(params: Map[String, Any])
+Sign in to view your reply now
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
-    New HMRC reply ready to view
-    To see your new secure message:
-        1. Sign in to your Business or Personal Tax Account
-        2. Go to Messages
-    rom HMRC Team
+
+Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready to view.
+
+To read it:
+
+       1. Sign in to your HMRC personal tax account.
+
+       2. Find the messages near the top of your account home page.
+
+       3. Select your new unread message.
+
+Do not reply to this email.
+
+From HMRC Digital Team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

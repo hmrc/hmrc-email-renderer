@@ -16,8 +16,6 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
-import java.time.OffsetDateTime
-
 import org.joda.time.LocalDate
 import org.joda.time.format.{DateTimeFormat, ISODateTimeFormat}
 
@@ -33,4 +31,10 @@ object DateHelper {
 
   // To ensure that emails are always sent, be tolerant of any failure to provide dates in ISO format
   def asUserDate(isoDate: Any): String = Try(formatLocalDate(parseIsoDate(isoDate.toString))) getOrElse isoDate.toString
+
+  def dateFormatter(date:String): String = {
+    val dateFormatter = DateTimeFormat.forPattern("dd MMMM")
+    val convert = LocalDate.parse(date: String)
+    dateFormatter.print(convert)
+  }
 }
