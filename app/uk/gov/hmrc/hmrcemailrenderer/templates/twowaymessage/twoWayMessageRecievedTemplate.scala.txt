@@ -1,8 +1,8 @@
 @(params: Map[String, Any])
 
-We will reply within 9 days
+We will reply within 7 days
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
 
 Thank you for the message you sent to HMRC today.
 
