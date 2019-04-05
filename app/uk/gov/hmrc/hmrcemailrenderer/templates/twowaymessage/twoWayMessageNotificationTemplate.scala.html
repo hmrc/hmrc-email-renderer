@@ -14,16 +14,22 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sign in to your secure account now") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sign in to view your reply now") {
 
-    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
-    <p>New HMRC reply ready to view</p>
-    <p>To see your new secure message:</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+
+  <p style="margin: 0 0 30px; font-size: 19px;">
+    Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready to view.
+  </p>
+  <p style="margin: 0 0 30px; font-size: 19px;">To read it:</p>
     <ol>
-        <li>Sign in to your Business or Personal Tax Account</li>
-        <li>Go to Messages</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Sign in to your HMRC personal tax account.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Find the messages near the top of your account home page.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Select your new unread message.</li>
     </ol>
-    <p>From HMRC Team</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Team</p>
 }

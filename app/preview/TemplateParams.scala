@@ -1403,10 +1403,11 @@ object TemplateParams {
       "reference" -> "REFERENCE"
     ),
     "newMessageAlert_2WSM-question" -> Map(
-      "recipientName_line1" -> "FULL NAME"
+      "recipientName_line1" -> "Alex Brown"
     ),
     "newMessageAlert_2WSM-reply" -> Map(
-      "recipientName_line1" -> "FULL NAME"
+      "recipientName_line1" -> "Alex Brown",
+      "date"                -> "2019-04-03"
     )
   )
 }
