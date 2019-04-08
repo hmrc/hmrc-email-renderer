@@ -40,6 +40,14 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.payment_successful_cy.f,
       htmlTemplate = html.payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "payment_successful_parcels",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Payment confirmation",
+      plainTemplate = txt.payment_successful_parcels.f,
+      htmlTemplate = html.payment_successful_parcels.f,
+      priority = Some(MessagePriority.Urgent)),
 
     // Direct Debit templates
 
