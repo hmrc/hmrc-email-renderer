@@ -22,14 +22,14 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 
   <p style="margin: 0 0 30px; font-size: 19px;">
-    Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready to view.
+    Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready.
   </p>
   <p style="margin: 0 0 30px; font-size: 19px;">To read it:</p>
     <ol>
-        <li style="margin: 0 0 30px; font-size: 19px;">Sign in to your HMRC personal tax account.</li>
-        <li style="margin: 0 0 30px; font-size: 19px;">Find the messages near the top of your account home page.</li>
-        <li style="margin: 0 0 30px; font-size: 19px;">Select your new unread message.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Sign in to HMRC services.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Find the messages near the top of the page.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Select your unread message.</li>
     </ol>
   <p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
-  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Team</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC digital team</p>
 }

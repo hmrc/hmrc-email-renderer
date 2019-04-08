@@ -3,18 +3,18 @@
 Sign in to view your reply now
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
 
-Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready to view.
+Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready.
 
 To read it:
 
-       1. Sign in to your HMRC personal tax account.
+       1. Sign in to HMRC services.
 
-       2. Find the messages near the top of your account home page.
+       2. Find the messages near the top of the page.
 
-       3. Select your new unread message.
+       3. Select your unread message.
 
 Do not reply to this email.
 
-From HMRC Digital Team
+From HMRC digital team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
