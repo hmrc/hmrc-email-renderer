@@ -1,0 +1,76 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Payment confirmation") {
+
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your payment has been received by HMRC.</p>
+
+<p>
+<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+
+    <tbody>
+
+    <tr>
+        <th>Tax</th>
+        <td>@params("taxType")</td>
+    </tr>
+
+    <tr>
+        <th>Tax reference</th>
+        <td>@params("taxReference")</td>
+    </tr>
+
+    <tr>
+        <th>Report payment reference</th>
+        <td>@params("paymentReference")</td>
+    </tr>
+
+    <tr>
+        <th>Amount paid</th>
+        <td>£@params("amountPaid")</td>
+    </tr>
+
+    @params.get("commission").map { commission =>
+    <tr>
+        <th>Credit card fee</th>
+        <td>£@commission</td>
+    </tr>
+    }
+
+    @params.get("totalPaid").map { totalPaid =>
+    <tr>
+        <th>Total paid</th>
+        <td>£@totalPaid</td>
+    </tr>
+    }
+
+    </tbody>
+</table>
+
+</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">This payment will take up to 5 days to appear in the import VAT on parcels online service</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><h2>Why you got this email</h2></p>
+<p style="margin: 0 0 30px; font-size: 19px;">You chose to receive payment confirmation by email.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Online Payments</p>
+
+}
+
