@@ -6,7 +6,7 @@ Dear @{params("name").toString},
 
 Your import VAT on parcels reference is @{params("referenceNumber").toString}.
 
-You can now access your account. Search for 'Manage import VAT on parcels you sell to UK buyers' on GOV.UK and sign in to the service.
+You can now access your account. Search for 'Manage your import VAT on parcels' on GOV.UK and sign in to the service.
 
 For security reasons, we have not included a link in this email.
 
