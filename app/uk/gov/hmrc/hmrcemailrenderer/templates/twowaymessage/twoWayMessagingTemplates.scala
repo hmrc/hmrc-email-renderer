@@ -29,7 +29,7 @@ object twoWayMessagingTemplates {
       subject = "HMRC will reply within 7 days",
       plainTemplate = txt.twoWayMessageRecievedTemplate.f,
       htmlTemplate = html.twoWayMessageRecievedTemplate.f,
-      priority = Some(MessagePriority.Background)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_2WSM-reply",
@@ -38,7 +38,7 @@ object twoWayMessagingTemplates {
       subject = "HMRC reply: Sign in for new message",
       plainTemplate = txt.twoWayMessageNotificationTemplate.f,
       htmlTemplate = html.twoWayMessageNotificationTemplate.f,
-      priority = Some(MessagePriority.Background)
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
