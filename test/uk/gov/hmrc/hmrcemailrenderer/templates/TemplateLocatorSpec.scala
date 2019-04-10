@@ -277,6 +277,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "password_change_confirmation",
         "customs_registration_successful",
         "customs_registration_not_successful",
+        "customs_migrate_successful",
+        "customs_migrate_not_successful",
         "customs_validation_success",
         "customs_payment_required",
         "customs_payment_success",
