@@ -14,5 +14,4 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])
-@params.get("recipientOrgName").map(_.toString).filterNot(_.isEmpty).map(_.toLowerCase.capitalize).map(_ + " has").getOrElse("You have")
+@(params: Map[String, Any])@params.get("recipientOrgName").map(_.toString).filterNot(_.isEmpty).map("for " + _).getOrElse("")

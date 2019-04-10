@@ -342,7 +342,7 @@ object TemplateParams {
       "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation" -> "true"
     ),
-    "dfs_admin_notification" -> Map.empty[String,String],
+    "dfs_admin_notification" -> Map.empty[String, String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -355,7 +355,7 @@ object TemplateParams {
       "warningInformation" -> "false",
       "turnAroundTime" -> "15 days"
     ),
-    "dfs_submission_success_rcgt_2018"->Map(
+    "dfs_submission_success_rcgt_2018" -> Map(
       "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
       "name" -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
@@ -378,13 +378,13 @@ object TemplateParams {
       "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6",
       "cbcrId" -> "XGCBC0000000001"
     ),
-     "cbcr_cbcid_regeneration" -> Map(
+    "cbcr_cbcid_regeneration" -> Map(
       "f_name" -> "Tyrion",
       "s_name" -> "Lannister",
       "received_at" -> "31 December 2017",
       "cbcrId" -> "XGCBC0000000001"
     ),
-   "agent_mapping_invitation_template_id" -> Map(
+    "agent_mapping_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -534,12 +534,24 @@ object TemplateParams {
       "full_name" -> "Joe Bloggs"
     ),
     "customs_registration_successful" -> Map(
-      "recipientName_forename" -> "Firstname",
-      "recipientName_surname" -> "Lastname"
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "15 March 2019"
     ),
     "customs_registration_not_successful" -> Map(
-      "recipientName_forename" -> "Firstname",
-      "recipientName_surname" -> "Lastname"
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "15 March 2019"
+    ),
+    "customs_migrate_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "22 March 2019"
+    ),
+    "customs_migrate_not_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "22 March 2019"
     ),
     "customs_declaration_success" -> Map(
       "details" -> "declaration success details will appear here"
@@ -1172,14 +1184,14 @@ object TemplateParams {
     "eeitt_ce930_confirmation" -> Map(
       "" -> ""
     ),
-     "eeitt_ho930_confirmation" -> Map(
-       "" -> ""
+    "eeitt_ho930_confirmation" -> Map(
+      "" -> ""
     ),
-     "cir_return_confirmation" -> Map(
-       "" -> ""
+    "cir_return_confirmation" -> Map(
+      "" -> ""
     ),
-     "randd_confirmation_submission" -> Map(
-       "" -> ""
+    "randd_confirmation_submission" -> Map(
+      "" -> ""
     ),
     "ho10_confirmation_submission" -> Map(
       "" -> ""
