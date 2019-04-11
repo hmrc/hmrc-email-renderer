@@ -391,7 +391,7 @@ object EeittTemplates {
     plainTemplate = txt.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     priority = Some(MessagePriority.Standard)
-),
+   ),
     MessageTemplate.create(
       templateId = "corporation_tax_confirmation",
       fromAddress = govUkTeamAddress,
@@ -400,7 +400,15 @@ object EeittTemplates {
       plainTemplate = txt.corporationTaxConfirmation.f,
       htmlTemplate = html.corporationTaxConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "register_for_fuel_duty_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your application to register for Fuel Duty",
+      plainTemplate = txt.registerForFuelDuty.f,
+      htmlTemplate = html.registerForFuelDuty.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
-  )
-
 }
