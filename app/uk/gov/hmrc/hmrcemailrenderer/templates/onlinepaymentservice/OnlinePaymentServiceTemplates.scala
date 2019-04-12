@@ -44,7 +44,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "payment_successful_parcels",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Payment confirmation",
+      subject = "Receipt for payment of import VAT on parcels",
       plainTemplate = txt.payment_successful_parcels.f,
       htmlTemplate = html.payment_successful_parcels.f,
       priority = Some(MessagePriority.Urgent)),
