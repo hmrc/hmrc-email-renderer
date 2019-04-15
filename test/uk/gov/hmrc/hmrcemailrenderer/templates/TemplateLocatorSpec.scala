@@ -427,6 +427,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cbcr_cbcid_regeneration",
         "payment_successful",
         "payment_successful_cy",
+        "payment_successful_parcels",
         "ddi_cancelled",
         "ddi_not_acceptable",
         "ddi_reinstated",
