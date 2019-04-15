@@ -1225,6 +1225,13 @@ object TemplateParams {
       "commission" -> "2.55",
       "totalPaid" -> "126.00"
     ),
+    "payment_successful_parcels" -> Map("taxType" -> "Import VAT on parcels",
+      "taxReference" -> "1234567890K",
+      "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
+      "amountPaid" -> "123.45",
+      "commission" -> "2.55",
+      "totalPaid" -> "126.00"
+    ),
     "ddi_cancelled" -> Map(
       "FILE" -> "ADDACS",
       "REASON" -> "1",
