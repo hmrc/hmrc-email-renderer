@@ -1,0 +1,2 @@
+@(params: Map[String, Any])
+This is a test email only. Should you receive this email please ignore it
