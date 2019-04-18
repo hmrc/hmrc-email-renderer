@@ -1,12 +1,10 @@
 @(params: Map[String, Any])
 
-We will reply within 7 days
-
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
 
 Thank you for the message you sent HMRC today.
 
-We are working on your message and will reply within 7 days.
+We are working on your message and will reply within @params.get("waitTime").
 
 You do not need to follow up by sending another message or by calling us.
 
