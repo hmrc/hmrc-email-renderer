@@ -1360,11 +1360,13 @@ object TemplateParams {
     ),
     "cca_enrolment_migration_confirmation" -> Map(
       "name" -> "test user",
-      "personId" -> "123456789"
+      "personId" -> "123456789",
+      "orgName" -> "Test Organisation"
     ),
     "cca_enrolment_confirmation" -> Map(
       "name" -> "test user",
-      "personId" -> "123456789"
+      "personId" -> "123456789",
+      "orgName" -> "Test Organisation"
     ),
     "cdsEmailTemplate" -> Map(
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
