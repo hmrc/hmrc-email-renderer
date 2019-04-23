@@ -8,6 +8,8 @@ As part of the registration for the check and challenge service, you’ve been g
 
 Your ID number is @params("personId")
 
+Your organisation is @params("orgName")
+
 You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
 
 Valuation Office Agency (VOA)
