@@ -88,8 +88,6 @@ trait TemplateRenderer {
 
   private def validate(templateId: String, result: RenderResult): Either[ErrorMessage, RenderResult] = {
     result.replyToAddress match {
-      case Some(address: String) if !address.endsWith("gov.uk") =>
-        Left(TemplateRenderFailure(s"Reply-To address [$address] must be a gov.uk mailbox"))
       case Some(_) if !allowedReplyToTemplates.contains(templateId) =>
         Left(TemplateRenderFailure(s"Template Id [$templateId] is not permitted to use Reply-To address"))
       case _ =>

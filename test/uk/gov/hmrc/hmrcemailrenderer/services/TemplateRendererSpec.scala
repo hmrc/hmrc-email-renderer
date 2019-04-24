@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ReplyToAddress, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.test.UnitSpec
 import org.mockito.Mockito._
 import org.scalatest._
@@ -47,13 +47,6 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
 
       templateRenderer.render(templateId, Map.empty) shouldBe Left(errorMessage)
-    }
-
-    "return error message in Left if non gov.uk reply to address" in new TestCase {
-      when(configurationMock.getString("replyToAddress.templates")).thenReturn(Some(templateId))
-      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate.copy(replyToAddress = Some(ReplyToAddress(_ => "reply-to@test")))))
-
-      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Left(TemplateRenderFailure("Reply-To address [reply-to@test] must be a gov.uk mailbox"))
     }
 
     "return error message in Left if template not permitted for reply-to" in new TestCase {
