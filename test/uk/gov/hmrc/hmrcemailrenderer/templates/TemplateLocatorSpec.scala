@@ -450,6 +450,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "retrieve_userid_notification",
         "cca_enrolment_migration_confirmation",
         "cca_enrolment_confirmation",
+        "cca_enrolment_confirmation_agent",
         "cdsTestTemplate",
         "cdsEmailTemplate",
         "mtdfb_vat_principal_sign_up_successful",
