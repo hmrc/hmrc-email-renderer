@@ -61,7 +61,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
     val validTemplate = MessageTemplate.create(
       templateId = templateId,
       fromAddress = "from@test",
-      replyTo = Some("reply-to@test"),
+      replyToAddress = Some("reply-to@test"),
       service = SelfAssessment,
       subject = "a subject",
       plainTemplate = txt.templateSample.f,
