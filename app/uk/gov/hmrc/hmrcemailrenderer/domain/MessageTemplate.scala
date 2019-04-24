@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ReplyToAddress, Ser
 
 case class MessageTemplate(templateId: String,
                            fromAddress: FromAddress,
-                           replyTo: Option[ReplyToAddress],
+                           replyToAddress: Option[ReplyToAddress],
                            service: ServiceIdentifier,
                            subject: Subject,
                            plainTemplate: Body.Plain,

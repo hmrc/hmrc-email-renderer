@@ -32,7 +32,7 @@ object RenderRequest {
 case class RenderResult(plain: String,
                         html: String,
                         fromAddress: String,
-                        replyTo: Option[String],
+                        replyToAddress: Option[String],
                         subject: String,
                         service: String,
                         priority: Option[MessagePriority])
@@ -48,7 +48,7 @@ object RenderResult {
       "subject" -> toRender.subject,
       "service" -> toRender.service
     )
-      .++(toRender.replyTo.map(address => Json.obj("replyTo" -> address)).getOrElse(Json.obj()))
+      .++(toRender.replyToAddress.map(address => Json.obj("replyToAddress" -> address)).getOrElse(Json.obj()))
       .++(toRender.priority.fold(Json.obj()) {
         priority => Json.obj("priority" -> priority.toString)
       })

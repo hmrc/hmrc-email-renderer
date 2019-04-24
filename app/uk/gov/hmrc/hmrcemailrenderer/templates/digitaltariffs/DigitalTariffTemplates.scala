@@ -47,7 +47,7 @@ object DigitalTariffTemplates {
     MessageTemplate(
       templateId = "digital_tariffs_advice_request",
       fromAddress = FromAddress(_ => FromAddress.noReply("HMRC Tariff Classification Team")),
-      replyTo = Some(ReplyToAddress(params => s"${params("contactEmail")}")),
+      replyToAddress = Some(ReplyToAddress(params => s"${params("contactEmail")}")),
       service = BTIAdviceService,
       subject = Subject(params => s"${params("reference")}: ${params("itemName")}"),
       plainTemplate = txt.adviceRequest.f,

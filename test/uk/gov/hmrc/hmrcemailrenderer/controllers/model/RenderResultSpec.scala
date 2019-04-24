@@ -36,16 +36,16 @@ class RenderResultSpec extends UnitSpec {
       (result \ "priority").asOpt[String] shouldBe None
     }
 
-    "ignore missing replyTo Address" in {
+    "ignore missing replyToAddress" in {
       val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", None, "subject", "service", None))
 
-      (result \ "replyTo").asOpt[String] shouldBe None
+      (result \ "replyToAddress").asOpt[String] shouldBe None
     }
 
     "serialize replyTo Address" in {
       val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", Some("replyToAddress"), "subject", "service", None))
 
-      (result \ "replyTo").asOpt[String] shouldBe Some("replyToAddress")
+      (result \ "replyToAddress").asOpt[String] shouldBe Some("replyToAddress")
     }
   }
 }

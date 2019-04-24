@@ -71,7 +71,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
     val validRenderedResult = RenderResult(
       fromAddress = "from@test",
-      replyTo = Some("reply-to@test"),
+      replyToAddress = Some("reply-to@test"),
       service = "sa",
       subject = "a subject",
       plain = "Test template with parameter value: VALUE using common parameters: commonValue",
