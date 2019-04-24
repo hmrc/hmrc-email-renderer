@@ -25,12 +25,14 @@ import org.mockito.Mockito._
 import org.scalatest._
 import org.scalatest.mock.MockitoSugar
 import org.scalatestplus.play._
+import play.api.Configuration
 
 class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
   "The template renderer" should {
 
     "render an existing template using the common parameters" in new TestCase {
+      when(configurationMock.getString("replyToAddress.templates")).thenReturn(Some(templateId))
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
       templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Right(validRenderedResult)
     }
@@ -46,9 +48,24 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
       templateRenderer.render(templateId, Map.empty) shouldBe Left(errorMessage)
     }
+
+    "return error message in Left if non gov.uk reply to address" in new TestCase {
+      when(configurationMock.getString("replyToAddress.templates")).thenReturn(Some(templateId))
+      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate.copy(replyToAddress = Some(ReplyToAddress(_ => "reply-to@test")))))
+
+      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Left(TemplateRenderFailure("Reply-To address [reply-to@test] must be a gov.uk mailbox"))
+    }
+
+    "return error message in Left if template not permitted for reply-to" in new TestCase {
+      when(configurationMock.getString("replyToAddress.templates")).thenReturn(None)
+      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
+
+      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Left(TemplateRenderFailure(s"Template Id [$templateId] is not permitted to use Reply-To address"))
+    }
   }
 
   class TestCase {
+    val configurationMock = mock[Configuration]
     val locatorMock = mock[TemplateLocator]
     val templateId = "a-template-id"
 
@@ -56,12 +73,14 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       override def locator: TemplateLocator = locatorMock
 
       override def commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
+
+      override protected def runModeConfiguration: Configuration = configurationMock
     }
 
     val validTemplate = MessageTemplate.create(
       templateId = templateId,
       fromAddress = "from@test",
-      replyToAddress = Some("reply-to@test"),
+      replyToAddress = Some("reply-to@gov.uk"),
       service = SelfAssessment,
       subject = "a subject",
       plainTemplate = txt.templateSample.f,
@@ -71,7 +90,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
     val validRenderedResult = RenderResult(
       fromAddress = "from@test",
-      replyToAddress = Some("reply-to@test"),
+      replyToAddress = Some("reply-to@gov.uk"),
       service = "sa",
       subject = "a subject",
       plain = "Test template with parameter value: VALUE using common parameters: commonValue",

@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{{MessagePriority, MessageTemplate, Subject}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, Subject}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ReplyToAddress}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{BTIAdviceService, BTIApplicationService, BTIOperationalService}
 

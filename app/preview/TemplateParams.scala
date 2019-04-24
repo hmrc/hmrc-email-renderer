@@ -1390,7 +1390,7 @@ object TemplateParams {
     "digital_tariffs_advice_request" -> Map(
       "reference" -> "REFERENCE",
       "contactName" -> "FULL NAME",
-      "contactEmail" -> "EMAIL ADDRESS",
+      "contactEmail" -> "EMAIL ADDRESS@gov.uk",
       "itemName" -> "ITEM NAME",
       "itemDescription" -> "ITEM DESCRIPTION",
       "supportingDocuments" -> "www.hmrc.gov.uk|www.gov.co.uk",
