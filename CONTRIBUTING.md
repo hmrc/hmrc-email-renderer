@@ -17,6 +17,16 @@ If you are unsure on how to make the Pull Request please have a look at the [MDT
 5. Run the tests locally with `sbt clean test it:test`
 6. Submit a Pull Request and [let the Digital Contact team know](#i-have-created-a-pull-request---now-what)
 
+### I have created a pull request - now what?
+
+Once you've got your code changes done and a pull request created, it's time to get it pushed to production. Here's how:
+
+1. Create a JIRA ticket for project "Digital Contact (DC)" in Jira with details of the pull request and what it's for
+2. Preview your email locally, and attach the image to the JIRA ticket (find out how to preview here https://github.com/hmrc/hmrc-email-renderer)
+3. Tag Tom [~tomhughes] in the ticket, so we can review and get it prioritised for you
+4. Join Slack channel #team-digital-contact to ask about progress and/or ask questions
+5. Our QA's will contact you when the they have merged and deployed to QA so you can check you are happy before we create a release ticket
+
 
 ### Content recommendations
 
@@ -112,11 +122,4 @@ From HMRC Self Assessment
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 ```
 
-### I have created a pull request - now what?
 
-Once you've got your code changes done and a pull request created, it's time to get it pushed to production. Here's how:
-
-1. Create a story for project "Digital Contact (DC)" in Jira with details of the pull request and what it's for
-2. Tag Matthew [~matthewgroom] in the ticket, so we can get it prioritised for you
-3. Join Slack channel #team-digital-contact to ask about progress and/or ask questions
-4. Our QA's will contact you when the they have merged and deployed to QA so you can check you are happy before we create a release ticket
