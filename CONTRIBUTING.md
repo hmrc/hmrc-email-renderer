@@ -22,7 +22,7 @@ If you are unsure on how to make the Pull Request please have a look at the [MDT
 Once you've got your code changes done and a pull request created, it's time to get it pushed to production. Here's how:
 
 1. Create a JIRA ticket for project "Digital Contact (DC)" in Jira with details of the pull request and what it's for
-2. Preview your email locally, and attach the image to the JIRA ticket (find out how to preview here https://github.com/hmrc/hmrc-email-renderer)
+2. Preview your email locally, and attach the image to the JIRA ticket (find out how to preview using the README.md file here: https://github.com/hmrc/hmrc-email-renderer)
 3. Tag Tom [~tom.hughes] in the ticket, so we can review and get it prioritised for you
 4. Join Slack channel #team-digital-contact to ask about progress and/or ask questions
 5. Our QA's will contact you when the they have merged and deployed to QA so you can check you are happy before we create a release ticket
