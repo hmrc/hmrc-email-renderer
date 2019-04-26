@@ -16,10 +16,11 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
+import play.api.Mode.Mode
 import play.api.{Configuration, Play}
 import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain._
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.config.RunMode
 
@@ -45,20 +46,13 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
 
 trait TemplateRenderer {
 
-  protected def runModeConfiguration: Configuration
-
-  private lazy val allowedReplyToTemplates: Set[String] = runModeConfiguration
-    .getString("replyToAddress.templates")
-    .map(_.split(",").toSet)
-    .getOrElse(Set.empty)
-
   def commonParameters: Map[String, String]
 
   def locator: TemplateLocator
 
   def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
-    val result = for {
+    for {
       template <- locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
       plainText <- render(template.plainTemplate, allParams).right
       htmlText <- render(template.htmlTemplate, allParams).right
@@ -66,17 +60,11 @@ trait TemplateRenderer {
       plainText,
       htmlText,
       template.fromAddress(allParams),
-      template.replyToAddress.map(_ (allParams)),
+      template.replyToAddress.map(_(allParams)),
       template.subject(allParams),
       template.service.name,
       template.priority
     )
-    result match {
-      case Right(r) =>
-        validate(templateId, r)
-      case Left(error) =>
-        Left(error)
-    }
   }
 
   private def render(template: Map[String, String] => Format[_]#Appendable,
@@ -85,13 +73,4 @@ trait TemplateRenderer {
       case Success(output) => Right(output.toString)
       case Failure(error) => Left(TemplateRenderFailure(error.getMessage))
     }
-
-  private def validate(templateId: String, result: RenderResult): Either[ErrorMessage, RenderResult] = {
-    result.replyToAddress match {
-      case Some(_) if !allowedReplyToTemplates.contains(templateId) =>
-        Left(TemplateRenderFailure(s"Template Id [$templateId] is not permitted to use Reply-To address"))
-      case _ =>
-        Right(result)
-    }
-  }
 }
