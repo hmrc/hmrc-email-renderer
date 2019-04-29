@@ -14,6 +14,6 @@ Your organisation is: @params("orgName")
 
 You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
 
-Valuation Office Agency (VOA)
+From Valuation Office Agency (VOA)
 
  @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
