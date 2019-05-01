@@ -1374,6 +1374,10 @@ object TemplateParams {
       "orgName" -> "Test Organisation",
       "agentCode" -> "8888888"
     ),
+    "cca_enrolment_confirmation_individual" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789"
+    ),
     "cdsEmailTemplate" -> Map(
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
     ),
