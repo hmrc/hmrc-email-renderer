@@ -1340,7 +1340,15 @@ object TemplateParams {
     "ddi_unpaid_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
-
+    "recon_tps_report" -> Map(
+      "shipley" -> "3245,43245,53245,63245,73245",
+      "cumbernauld" -> "3245,43245,53245,63245,73245",
+      "nirs" -> "3245,43245,53245,63245,73245",
+      "vatAccount" -> "3245,43245,53245,63245,73245",
+      "debitCardFee" -> "3245,43245,53245,63245,73245",
+      "commisionCard" -> "3245,43245,53245,63245,73245",
+      "total" -> "3245,43245,53245,63245,73245")
+    ,
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
