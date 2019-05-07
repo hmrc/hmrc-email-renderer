@@ -27,13 +27,13 @@
    <th>IVR Volumes</th>
    <th>Total Advisor and IVR volumes</th>
   </tr>
- <tr><td>Shipley </td> @params("shipley").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
-  <tr><td>Cumbernauld</td> @params("cumbernauld").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
-  <tr><td>Nirs</td> @params("nirs").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
-  <tr><td>Vat Account</td> @params("vatAccount").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
-  <tr><td>Debit Card Fee</td> @params("debitCardFee").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
-  <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
-  <tr><td>Total </td>@params("total").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
+ <tr><td>Shipley </td> @params("shipley").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("shipley").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Cumbernauld</td> @params("cumbernauld").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("cumbernauld").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Nirs</td> @params("nirs").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("nirs").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Vat Account</td> @params("vatAccount").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("vatAccount").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Debit Card Fee</td> @params("debitCardFee").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("debitCardFee").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("commisionCard").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Total </td>@params("total").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("total").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
  </table>
 
     <p><STRONG>From HMRC Online Payments team</STRONG></p>
