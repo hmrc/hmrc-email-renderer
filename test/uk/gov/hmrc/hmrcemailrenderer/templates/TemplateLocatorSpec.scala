@@ -429,6 +429,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "payment_successful",
         "payment_successful_cy",
         "payment_successful_parcels",
+        "recon_tps_report",
         "ddi_cancelled",
         "ddi_not_acceptable",
         "ddi_reinstated",
