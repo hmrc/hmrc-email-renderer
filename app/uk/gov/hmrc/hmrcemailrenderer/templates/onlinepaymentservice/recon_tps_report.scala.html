@@ -17,7 +17,7 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmount
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "TPS Report") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Telephone Payment Service (TPS2) finance report") {
  <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;font-size: 19px;c">
   <tr>
    <th> </th>
@@ -35,4 +35,6 @@
   <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
   <tr><td>Total </td>@params("total").toString.split(",").toList.map {data => <td> @formatAmount(data)</td>}</tr>
  </table>
+
+    <p><STRONG>From HMRC Online Payments team</STRONG></p>
 }
