@@ -16,10 +16,15 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
 
 object OnlinePaymentServiceTemplates {
+
+   val formatTpsSubject =  DateTimeFormatter.ofPattern("dd/MM/yyyy")
   val templates = Seq(
 
     // Card payments templates
@@ -187,6 +192,15 @@ object OnlinePaymentServiceTemplates {
       subject = "Receipt for payment on goods brought into the UK",
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)),
+        //Recon tps
+      MessageTemplate.create(
+       templateId = "recon_tps_report",
+       fromAddress = FromAddress.noReply("HMRC Online Payments"),
+       service = ServiceIdentifier.OnlinePaymentService,
+       subject = s"Telephone Payment System (TPS2) Finance Report ${LocalDate.now().format(formatTpsSubject)}",
+       plainTemplate = txt.recon_tps_report.f,
+       htmlTemplate = html.recon_tps_report.f,
+       priority = Some(MessagePriority.Urgent))
   )
 }
