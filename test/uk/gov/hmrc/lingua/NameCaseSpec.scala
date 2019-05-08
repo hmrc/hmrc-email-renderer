@@ -24,15 +24,15 @@ class NameCaseSpec extends WordSpec with Matchers {
   "NameCase nc" should {
     val properNames = List(
       "Keith", "Leigh-Williams", "McCarthy",
-      "O'Callaghan", "St. John", "von Streit",
-      "van Dyke", "Van", "ap Llwyd Dafydd",
+      "O'Callaghan", "St. John", "Wane von Streit",
+      "Brian van Dyke", "Van", "ap Llwyd Dafydd",
       "Al",
       // "el Grecco",
       "Ben Gurion", "Ben",
-      "da Vinci",
-      "di Caprio", "du Pont", "de Legate",
-      "del Crond", "der Sind", "van der Post",
-      "von Trapp",  "le Figaro",
+      "Leonardo da Vinci",
+      "Leonardo di Caprio", "John du Pont", "Rob de Legate",
+      "Sole del Crond", "Mary der Sind", "Fred van der Post",
+      "Matt von Trapp",  "Elie le Figaro",
       "Mack Knife", "Dougal MacDonald"
     )
     properNames.foreach{name =>
@@ -51,7 +51,7 @@ class NameCaseSpec extends WordSpec with Matchers {
       "MARY BETH DAVIDSON MD" -> "Mary Beth Davidson MD",
       "MS LAURA CONLEY-ROSE" -> "Ms Laura Conley-Rose",
       "LAURA&DAVID SMITH" -> "Laura&David Smith",
-      "ESTATE OF LAURA JONES" -> "Estate Of Laura Jones",
+      "ESTATE OF LAURA JONES" -> "Estate of Laura Jones",
       "MS MS. LAURA J BYRD" -> "Ms Ms. Laura J Byrd",
       "ben mcgrath" -> "Ben McGrath",
       "al gore" -> "Al Gore",
@@ -59,7 +59,11 @@ class NameCaseSpec extends WordSpec with Matchers {
       // "MIRIAM BAT RIVKAH" -> "Miriam bat Rivkah",
       "anton macevicius" -> "Anton Macevicius",
       "kelechi okoro" -> "Kelechi Okoro",
-      "kelechi okoro on behalf of alex olkhovskiy" -> "Kelechi Okoro on behalf of Alex Olkhovskiy"
+      "kelechi okoro on behalf of alex olkhovskiy" -> "Kelechi Okoro on behalf of Alex Olkhovskiy",
+      "vincent VAN gogh" -> "Vincent van Gogh",
+      "VAN gogh" -> "Van Gogh",
+      "george herbert, 5th earl of carnarvon" -> "George Herbert, 5th Earl of Carnarvon",
+      "baldrick, son of robin the dung gatherer" -> "Baldrick, Son of Robin the Dung Gatherer"
     )
     badNamesMap.keys.foreach( name =>
       s"""fix "${name}" to "${badNamesMap.get(name).get}" """ in {

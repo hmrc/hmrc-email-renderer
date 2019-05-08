@@ -97,42 +97,43 @@ object NameCase {
     //s = raw"(\bAl +\b)".r.replaceAllIn(s, "al ")
     // Welsh
     s = raw"(\bAp +\b)".r.replaceAllIn(s, "ap ")
-    s = raw"(\bVon +\b)".r.replaceAllIn(s, "von ")
-    s = raw"(\bVan +\b)".r.replaceAllIn(s, "van ")
+    s = raw"( Von +\b)".r.replaceAllIn(s, " von ")
+    s = raw"( Van +\b)".r.replaceAllIn(s, " van ")
 
     // della and delle Italian
-    s = raw"(\bDella +\b)".r.replaceAllIn(s, "della ")
-    s = raw"(\bDelle +\b)".r.replaceAllIn(s, "delle ")
+    s = raw"( Della +\b)".r.replaceAllIn(s, " della ")
+    s = raw"( Delle +\b)".r.replaceAllIn(s, " delle ")
 
     // da, de di Italian
-    s = raw"(\bDa +\b)".r.replaceAllIn(s, "da ")
-    s = raw"(\bDe +\b)".r.replaceAllIn(s, "de ")
-    s = raw"(\bDi +\b)".r.replaceAllIn(s, "di ")
+    s = raw"( Da +\b)".r.replaceAllIn(s, " da ")
+    s = raw"( De +\b)".r.replaceAllIn(s, " de ")
+    s = raw"( Di +\b)".r.replaceAllIn(s, " di ")
 
     // du French
-    s = raw"(\bDu +\b)".r.replaceAllIn(s, "du ")
+    s = raw"( Du +\b)".r.replaceAllIn(s, " du ")
 
     // du Italian
-    s = raw"(\bDel +\b)".r.replaceAllIn(s, "del ")
+    s = raw"( Del +\b)".r.replaceAllIn(s, " del ")
 
     // Dutch/French
-    s = raw"(\bDer +\b)".r.replaceAllIn(s, "der ")
-
-    // El - Spanish or el Greek  - keep Spanish version
-    s = raw"(\bEl +\b)".r.replaceAllIn(s, "El ")
+    s = raw"( Der +\b)".r.replaceAllIn(s, " der ")
 
     // Italian
-    s = raw"(\bLe +\b)".r.replaceAllIn(s, "le ")
+    s = raw"( Le +\b)".r.replaceAllIn(s, " le ")
 
     // French
-    s = raw"(\bLo +\b)".r.replaceAllIn(s, "lo ")
+    s = raw"( Lo +\b)".r.replaceAllIn(s, " lo ")
 
     // la French or La Spanish - keep  Spanish version
-    s = raw"(\bLa +\b)".r.replaceAllIn(s, "La ")
+    s = raw"( La +\b)".r.replaceAllIn(s, " La ")
 
     POST_NOMINAL_INITIALS.foreach(
       n => s = s.replaceFirst(raw"(?i)\b$n" + " *$", s"$n")
     )
+
+    s = raw"( Of +\b)".r.replaceAllIn(s, " of ")
+
+    s = raw"( The +\b)".r.replaceAllIn(s, " the ")
 
     s = raw"((?i)\bon behalf of\b)".r.replaceAllIn(s, "on behalf of")
 
