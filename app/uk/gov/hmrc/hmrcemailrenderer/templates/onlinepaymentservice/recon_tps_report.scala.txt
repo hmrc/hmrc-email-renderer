@@ -1,0 +1,12 @@
+@(params: Map[String, Any])
+
+
+Shipley: @params("shipley")
+Cumbernauld: @params("cumbernauld")
+Nirs: @params("nirs")
+VatAccount: @params("vatAccount")
+Debit Card Fee: @params("debitCardFee")
+Commision Card: @params("commisionCard")
+Total: @params("total")
+
+
