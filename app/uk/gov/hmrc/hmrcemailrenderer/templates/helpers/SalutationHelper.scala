@@ -16,6 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
+import uk.gov.hmrc.lingua.NameCase
+
 object SalutationHelper {
 
   def capitalised(param: Option[Any]) =
@@ -32,7 +34,7 @@ object SalutationHelper {
     val salutationParams = (
       capitalised(params.getNonEmpty("recipientName_title")),
       capitalised(params.getNonEmpty("recipientName_surname")),
-      params.getNonEmpty("recipientName_line1")
+      params.getNonEmpty("recipientName_line1").map{line1 => NameCase.nc(s"${line1}")}
     )
 
     salutationParams match {
