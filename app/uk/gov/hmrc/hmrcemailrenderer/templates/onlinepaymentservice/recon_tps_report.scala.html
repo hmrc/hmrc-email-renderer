@@ -14,7 +14,7 @@
  * limitations under the License.
  *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmount
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Telephone Payment Service (TPS2) finance report") {
@@ -27,13 +27,13 @@
    <th>IVR Volumes</th>
    <th>Total Advisor and IVR volumes</th>
   </tr>
- <tr><td>Shipley </td> @params("shipley").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("shipley").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Cumbernauld</td> @params("cumbernauld").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("cumbernauld").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Nirs</td> @params("nirs").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("nirs").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Vat Account</td> @params("vatAccount").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("vatAccount").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Debit Card Fee</td> @params("debitCardFee").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("debitCardFee").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("commisionCard").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Total </td>@params("total").toString.split(",").toList.take(2).map {data => <td> @formatAmount(data)</td>} @params("total").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+ <tr><td>Shipley Account</td> @params("shipley").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("shipley").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Cumbernauld Account</td> @params("cumbernauld").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("cumbernauld").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Nirs Account</td> @params("nirs").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("nirs").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Vat Account</td> @params("vatAccount").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("vatAccount").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Debit Card Fee</td> @params("debitCardFee").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("debitCardFee").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("commisionCard").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>Total </td>@params("total").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("total").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
  </table>
 
     <p><STRONG>From HMRC Online Payments team</STRONG></p>
