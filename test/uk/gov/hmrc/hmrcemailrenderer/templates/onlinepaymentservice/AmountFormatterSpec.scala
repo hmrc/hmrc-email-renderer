@@ -29,7 +29,7 @@ class AmountFormatterSpec extends UnitSpec {
     AmountFormatter.formatAmount("123456789.56") shouldBe "£123,456,789.56"
   }
   "amount should be correctly formatted for display tps" in {
-    AmountFormatter.formatAmountPennies("1230") shouldBe "£12.30"
+    AmountFormatter.formatAmountInPence("1233") shouldBe "£12.33"
   }
 
 }
