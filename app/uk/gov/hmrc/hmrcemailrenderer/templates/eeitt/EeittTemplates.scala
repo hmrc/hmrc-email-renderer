@@ -393,6 +393,15 @@ object EeittTemplates {
     priority = Some(MessagePriority.Standard)
    ),
     MessageTemplate.create(
+      templateId = "rdec_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your supporting details for an R&D Expenditure Credit claim",
+      plainTemplate = txt.rdecEmailTemplate.f,
+      htmlTemplate = html.rdecEmailTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "corporation_tax_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
