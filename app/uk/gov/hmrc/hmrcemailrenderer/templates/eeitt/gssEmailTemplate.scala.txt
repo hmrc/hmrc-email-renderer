@@ -2,7 +2,7 @@
 
 You requested support from the Growth Support Service
 
-Dear @params.get("customerName")
+Dear @params.get("regContactName1")
 
 Your submission reference is: @params.get("submissionReference")
 
