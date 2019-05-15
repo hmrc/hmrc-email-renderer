@@ -2,7 +2,7 @@
 
 You applied to get help with a tax issue for a mid-sized business
 
-Dear @params.get("customerName")
+Dear @params.get("regContactName1")
 
 Your application reference is: @params.get("submissionReference")
 
