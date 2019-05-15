@@ -375,6 +375,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "gss_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your growth support request for a mid-sized business",
+      plainTemplate = txt.gssEmailTemplate.f,
+      htmlTemplate = html.gssEmailTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "register_for_duty_on_gas_for_road_fuel_use",
       fromAddress = govUkTeamAddress,
       service = Eeitt,

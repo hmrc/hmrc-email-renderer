@@ -1,23 +1,15 @@
 @(params: Map[String, Any])
 
-You submitted a cash declaration online
+You requested support from the Growth Support Service
 
 Dear @params.get("customerName")
 
-HMRC received your declaration of carrying a cash amount of £10,000 or more into or out of the UK.
-
-This includes the equivalent of £10,000 in other currencies.
-
-What you need to do next
-
 Your submission reference is: @params.get("submissionReference")
 
-You need to make a note of this reference and also print a copy of your online declaration as proof of your submission. If you are asked, you will need to show these to a customs official when you travel.
+What happens next
 
-Why you are receiving this email
+We will respond using the details you have provided to discuss the support we can offer the business. We aim to reply within 15 working days.
 
-We send a confirmation email for a declaration submitted online.
-
-From HMRC Cash Declarations
+From HMRC Growth Support Service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
