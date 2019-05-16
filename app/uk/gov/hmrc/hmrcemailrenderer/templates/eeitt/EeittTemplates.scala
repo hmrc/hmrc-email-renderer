@@ -374,13 +374,23 @@ object EeittTemplates {
       htmlTemplate = html.cashDeclaration.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.create(
+        MessageTemplate.create(
+gssEmailTemplate
       templateId = "gss_email_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received your growth support request for a mid-sized business",
       plainTemplate = txt.gssEmailTemplate.f,
       htmlTemplate = html.gssEmailTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cet_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request for help with a tax issue",
+      plainTemplate = txt.cetEmailConfirmation.f,
+      htmlTemplate = html.cetEmailConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -401,6 +411,15 @@ object EeittTemplates {
     htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     priority = Some(MessagePriority.Standard)
    ),
+    MessageTemplate.create(
+      templateId = "rdec_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your supporting details for an R&D Expenditure Credit claim",
+      plainTemplate = txt.rdecEmailTemplate.f,
+      htmlTemplate = html.rdecEmailTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "corporation_tax_confirmation",
       fromAddress = govUkTeamAddress,
