@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+ You requested support from the Growth Support Service
+
+ Dear @params.get("regContactName1")
+
+ Your submission reference is: @params.get("submissionReference")
+
+ What happens next
+
+ We will respond using the details you have provided to discuss the support we can offer the business. We aim to reply within 15 working days.
+
+ From HMRC Growth Support Service
+
+ @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

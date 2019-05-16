@@ -15,16 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to get help with a tax issue for a mid-sized business"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You requested support from the Growth Support Service"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("regContactName1") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your application reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params.get("submissionReference")</p>
 <h2>
     What happens next</h2>
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will contact you using the details you have provided to discuss this request for help with a tax issue. We aim to respond within 15 working days.</p>
+    We will respond using the details you have provided to discuss the support we can offer the business. We aim to reply within 15 working days.</p>
+
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From Mid-sized Business Customer Engagement Team</p>
+    From HMRC Growth Support Service</p>
 }
