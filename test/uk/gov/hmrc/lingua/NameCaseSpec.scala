@@ -18,7 +18,7 @@ package uk.gov.hmrc.lingua
 
 import org.scalatest._
 
-
+@DoNotDiscover
 class NameCaseSpec extends WordSpec with Matchers {
 
   "NameCase nc" should {
