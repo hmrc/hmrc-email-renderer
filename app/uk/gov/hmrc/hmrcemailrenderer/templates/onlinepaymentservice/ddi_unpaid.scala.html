@@ -37,7 +37,7 @@
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
 
 @if(params("REASON") == "0") {
-    <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @DateFormatter.formatDate(params("COLLECTIONDATE").toString) has been returned by your bank marked 'refer to payer'.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Our request for payment of £@params("AMOUNT") on @DateFormatter.formatDate(params("COLLECTIONDATE").toString) has been returned by your bank marked ‘refer to payer’.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">We will not try to collect this payment again. You need to arrange to make payment by another method immediately (unless you have already paid).</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit Instruction has not been cancelled, so we will continue to collect future payments.</p>
 } else {
