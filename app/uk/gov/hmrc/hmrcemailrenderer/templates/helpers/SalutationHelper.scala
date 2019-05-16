@@ -34,7 +34,13 @@ object SalutationHelper {
     val salutationParams = (
       capitalised(params.getNonEmpty("recipientName_title")),
       capitalised(params.getNonEmpty("recipientName_surname")),
-      params.getNonEmpty("recipientName_line1").map{line1 => NameCase.nc(s"${line1}")}
+
+      // Once DC-1862 approved, replace the line below
+      // with the next commented line.
+      // Also remove @DoNotDiscover annotation from NameCaseSpec and fix
+      // a failing test in SalutationHelperSpec.
+      params.getNonEmpty("recipientName_line1")
+      //params.getNonEmpty("recipientName_line1").map{line1 => NameCase.nc(s"${line1}")}
     )
 
     salutationParams match {

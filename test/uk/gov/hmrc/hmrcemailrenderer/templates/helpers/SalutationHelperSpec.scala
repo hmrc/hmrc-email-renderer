@@ -64,7 +64,7 @@ class SalutationHelperSpec extends UnitSpec {
     }
 
     "be line1 when title and forname are not provided" in {
-      salutationFrom(Map("recipientName_line1" -> "something else")) shouldBe "Dear Something Else"
+      salutationFrom(Map("recipientName_line1" -> "something else")) shouldBe "Dear something else"
     }
 
     "be respected when having name.title name.forename name.surname	Dear [name.title] [name.forename] [name.surname]" in {
