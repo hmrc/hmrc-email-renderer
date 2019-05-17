@@ -32,6 +32,7 @@
   <tr><td>Nirs Account</td> @params("nirs").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("nirs").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
   <tr><td>Vat Account</td> @params("vatAccount").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("vatAccount").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
   <tr><td>Debit Card Fee</td> @params("debitCardFee").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("debitCardFee").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+  <tr><td>VAT Distraint/Legal costs</td> @params("vatLegal").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("vatLegal").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
   <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("commisionCard").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
   <tr><td>Total </td>@params("total").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("total").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
  </table>
