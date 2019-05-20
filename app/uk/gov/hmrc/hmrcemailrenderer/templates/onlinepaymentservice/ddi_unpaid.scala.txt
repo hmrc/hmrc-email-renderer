@@ -17,7 +17,7 @@ Direct Debit mandate reference @params("DDIREFERENCE")
   }
 
   if (params("REASON") == "0") {
-    s"Our request for payment of ${params("AMOUNT")} on ${DateFormatter.formatDate(params("COLLECTIONDATE").toString)} has been returned by your bank marked 'refer to payer'.\n" +
+    s"Our request for payment of ${params("AMOUNT")} on ${DateFormatter.formatDate(params("COLLECTIONDATE").toString)} has been returned by your bank marked ‘refer to payer’.\n" +
     s"We will not try to collect this payment again. You need to arrange to make payment by another method immediately (unless you have already paid).\n" +
     s"Your Direct Debit Instruction has not been cancelled, so we will continue to collect future payments.\n"
   } else {
