@@ -2,9 +2,7 @@
 
 Your application reference number is: @params("referenceNumber")
 
-The company’s first payment to someone is in the next tax year, so we will not start processing your application until after the next tax year begins (6 April).
-
-Please do not contact us about the application until after 17 May.
+Please do not contact us about the application until after 14 June.
 
 What happens next
 
