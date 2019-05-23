@@ -15,26 +15,28 @@
  *@
 
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.tps_recon_row
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Telephone Payment Service (TPS2) finance report") {
  <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;font-size: 19px;c">
   <tr>
    <th> </th>
+   <th>TPS Volumes</th>
    <th>TPS Amount</th>
-   <th>Automated payments</th>
-   <th>Advisor</th>
-   <th>IVR Volumes</th>
-   <th>Total Advisor and IVR volumes</th>
+   <th>Automated payments Volume</th>
+   <th>Automated payments Amount</th>
+   <th>Total TPS and Automated Volume</th>
+   <th>Total TPS and Automated Amount</th>
   </tr>
- <tr><td>Shipley Account</td> @params("shipley").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("shipley").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Cumbernauld Account</td> @params("cumbernauld").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("cumbernauld").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Nirs Account</td> @params("nirs").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("nirs").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Vat Account</td> @params("vatAccount").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("vatAccount").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Debit Card Fee</td> @params("debitCardFee").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("debitCardFee").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>VAT Distraint/Legal costs</td> @params("vatLegal").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("vatLegal").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Commision Card</td> @params("commisionCard").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("commisionCard").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
-  <tr><td>Total </td>@params("total").toString.split(",").toList.take(2).map {data => <td> @formatAmountInPence(data)</td>} @params("total").toString.split(",").toList.takeRight(3).map {data => <td> @(data)</td>}</tr>
+ <tr><td>Shipley Account</td>@tps_recon_row(params("shipley").toString.split(",").toArray)
+  <tr><td>Cumbernauld Account</td> @tps_recon_row(params("cumbernauld").toString.split(",").toArray)
+  <tr><td>NIRS Account</td> @tps_recon_row(params("nirs").toString.split(",").toArray)
+  <tr><td>VAT Account</td>@tps_recon_row(params("vatAccount").toString.split(",").toArray)
+  <tr><td>VAT Distraint/Legal costs</td>  @tps_recon_row(params("vatLegal").toString.split(",").toArray)
+  <tr><td>Debit Card Fee</td> @tps_recon_row(params("debitCardFee").toString.split(",").toArray)
+  <tr><td>Commission Card</td>  @tps_recon_row(params("commisionCard").toString.split(",").toArray)
+  <tr><td>Total </td>@tps_recon_row(params("total").toString.split(",").toArray)
  </table>
 
     <p><STRONG>From HMRC Online Payments team</STRONG></p>
