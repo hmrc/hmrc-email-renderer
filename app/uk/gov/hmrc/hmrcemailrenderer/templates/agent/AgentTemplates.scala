@@ -31,23 +31,32 @@ object AgentTemplates {
       plainTemplate = txt.overseas_application_rejected.f,
       htmlTemplate = html.overseas_application_rejected.f,
       priority = Some(MessagePriority.Standard))
-  ,
-  MessageTemplate.create(
-    templateId = "overseas_application_accepted",
-    fromAddress = FromAddress.noReply("HMRC Agent Services"),
-    service = Agent,
-    subject = "HMRC approved your agent services account application",
-    plainTemplate = txt.overseas_application_accepted.f,
-    htmlTemplate = html.overseas_application_accepted.f,
-    priority = Some(MessagePriority.Standard))
     ,
-  MessageTemplate.create(
-    templateId = "overseas_application_received",
-    fromAddress = FromAddress.noReply("HMRC Agent Services"),
-    service = Agent,
-    subject = "HMRC received your agent services account application",
-    plainTemplate = txt.overseas_application_received.f,
-    htmlTemplate = html.overseas_application_received.f,
-    priority = Some(MessagePriority.Standard))
+    MessageTemplate.create(
+      templateId = "overseas_application_accepted",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC approved your agent services account application",
+      plainTemplate = txt.overseas_application_accepted.f,
+      htmlTemplate = html.overseas_application_accepted.f,
+      priority = Some(MessagePriority.Standard))
+    ,
+    MessageTemplate.create(
+      templateId = "overseas_application_received",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC received your agent services account application",
+      plainTemplate = txt.overseas_application_received.f,
+      htmlTemplate = html.overseas_application_received.f,
+      priority = Some(MessagePriority.Standard))
+    ,
+    MessageTemplate.create(
+      templateId = "client_accepted_authorisation_request",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Client accepted your authorisation request",
+      plainTemplate = txt.client_accepted_authorisation_request.f,
+      htmlTemplate = html.client_accepted_authorisation_request.f,
+      priority = Some(MessagePriority.Standard))
   )
 }

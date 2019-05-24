@@ -1,0 +1,14 @@
+@(params: Map[String, Any])Your client accepted your authorisation request
+
+Dear [Agent name]
+
+Your client [ClientName] has authorised you to:
+
+view their PAYE income record
+send their Income Tax updates through software
+submit their VAT returns through software
+
+Do not reply to this email.
+
+From HMRC Agent Services Team
+
