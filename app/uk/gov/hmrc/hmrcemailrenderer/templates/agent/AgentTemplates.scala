@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.agent
 
+import uk.gov.hmrc.hmrcemailrenderer.domain
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Agent
@@ -48,6 +49,15 @@ object AgentTemplates {
     subject = "HMRC received your agent services account application",
     plainTemplate = txt.overseas_application_received.f,
     htmlTemplate = html.overseas_application_received.f,
+    priority = Some(MessagePriority.Standard))
+    ,
+  MessageTemplate.create(
+    templateId = "invitations_rejected",
+    fromAddress = FromAddress.noReply("HMRC Agent Services"),
+    service = Agent,
+    subject = "HMRC: Client declined your authorisation request",
+    plainTemplate = txt.invitations_rejected.f,
+    htmlTemplate = html.invitations_rejected.f,
     priority = Some(MessagePriority.Standard))
   )
 }

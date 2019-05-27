@@ -1,0 +1,41 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your authorisation request was declined") {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @params("agentName")</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+    Your client @params("clientName") has declined your request to:</p>
+
+<ul style="margin: 0 0 20px 0;">
+ @for(service <- List(params("serviceItsa").toString, params("serviceVat").toString, params("serviceIrv").toString).filter(_.nonEmpty)) {
+   <li style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">@service</li>
+ }
+
+
+</ul>
+
+<h2>What you need to do next</h2>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    If you think this is a mistake, sign in to your HMRC agent services account and start a new authorisation request for this client.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services team</p>
+
+}

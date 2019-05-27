@@ -47,6 +47,13 @@ object TemplateParams {
       "tradingName" -> "ABC Accountants Ltd",
       "receivedDate" -> "20190214"
     ),
+    "invitations_rejected" -> Map(
+      "agentName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "serviceItsa" -> "Itsa",
+      "serviceVat" -> "Vat",
+      "serviceIrv" -> "Irv"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
