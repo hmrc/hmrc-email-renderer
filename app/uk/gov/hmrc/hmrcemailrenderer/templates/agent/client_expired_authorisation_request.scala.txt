@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Your authorisation request expired without being accepted
+
+Dear @params("agencyName")
+
+Your authorisation request to your client @params("clientName") has expired because they did not respond within 14 days.
+
+@params("clientName") did not accept your request to:
+
+@for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {- @params(service)
+}
+What you can do next
+
+If you still want @params("clientName") to authorise you, sign in to your HMRC agent services account and start a new authorisation request.
+
+Do not reply to this email.
+
+From HMRC Agent Services Team

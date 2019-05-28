@@ -56,8 +56,32 @@ object AgentTemplates {
     fromAddress = FromAddress.noReply("HMRC Agent Services"),
     service = Agent,
     subject = "HMRC: Client declined your authorisation request",
-    plainTemplate = txt.invitations_rejected.f,
-    htmlTemplate = html.invitations_rejected.f,
-    priority = Some(MessagePriority.Standard))
+    plainTemplate = txt.client_rejected_authorisation_request.f,
+    htmlTemplate = html.client_rejected_authorisation_request.f,
+    priority = Some(MessagePriority.Urgent)),
+  MessageTemplate.create(
+      templateId = "client_accepted_authorisation_request",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Client accepted your authorisation request",
+      plainTemplate = txt.client_accepted_authorisation_request.f,
+      htmlTemplate = html.client_accepted_authorisation_request.f,
+      priority = Some(MessagePriority.Urgent)),
+  MessageTemplate.create(
+      templateId = "client_expired_authorisation_request",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Your authorisation request expired",
+      plainTemplate = txt.client_expired_authorisation_request.f,
+      htmlTemplate = html.client_expired_authorisation_request.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "agent_services_account_created",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: agent services account created",
+      plainTemplate = txt.agent_services_account_created.f,
+      htmlTemplate = html.agent_services_account_created.f,
+      priority = Some(MessagePriority.Urgent))
   )
 }

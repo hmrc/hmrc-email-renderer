@@ -1,18 +1,15 @@
 @(params: Map[String, Any])Your authorisation request was declined
 
-Your authorisation request was declined
-
-Dear @params("agentName")
+Dear @params("agencyName")
 
 Your client @params("clientName") has declined your request to:
- @for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {
-   - @params(service)
- }
 
+@for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {- @params(service)
+}
 What you need to do next
 
 If you think this is a mistake, sign in to your HMRC agent services account and start a new authorisation request for this client.
 
 Do not reply to this email.
 
-From HMRC Agent Services team
+From HMRC Agent Services Team

@@ -48,11 +48,29 @@ object TemplateParams {
       "receivedDate" -> "20190214"
     ),
     "client_rejected_authorisation_request" -> Map(
-      "agentName" -> "Agent 1",
+      "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
       "service1" -> "view their PAYE income record",
       "service2" -> "send their Income Tax updates through software",
       "service3" -> "submit their VAT returns through software"
+    ),
+    "client_accepted_authorisation_request" -> Map(
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "service1" -> "view their PAYE income record",
+      "service2" -> "send their Income Tax updates through software",
+      "service3" -> "submit their VAT returns through software"
+    ),
+    "client_expired_authorisation_request" -> Map(
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "service1" -> "view their PAYE income record",
+      "service2" -> "send their Income Tax updates through software",
+      "service3" -> "submit their VAT returns through software"
+    ),
+    "agent_services_account_created" -> Map(
+      "agencyName" -> "Agent 1",
+      "arn" -> "XARN-123-4567"
     ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
