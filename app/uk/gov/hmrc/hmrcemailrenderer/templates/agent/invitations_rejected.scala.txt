@@ -6,7 +6,7 @@ Dear @params("agentName")
 
 Your client @params("clientName") has declined your request to:
  @for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {
-   - @service
+   - @params(service)
  }
 
 What you need to do next
