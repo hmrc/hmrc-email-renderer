@@ -47,12 +47,12 @@ object TemplateParams {
       "tradingName" -> "ABC Accountants Ltd",
       "receivedDate" -> "20190214"
     ),
-    "invitations_rejected" -> Map(
+    "client_rejected_authorisation_request" -> Map(
       "agentName" -> "Agent 1",
       "clientName" -> "Client 2",
-      "serviceItsa" -> "Itsa",
-      "serviceVat" -> "Vat",
-      "serviceIrv" -> "Irv"
+      "service1" -> "Paye",
+      "service2" -> "Itsa",
+      "service3" -> "Vat"
     ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,

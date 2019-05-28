@@ -52,7 +52,7 @@ object AgentTemplates {
     priority = Some(MessagePriority.Standard))
     ,
   MessageTemplate.create(
-    templateId = "invitations_rejected",
+    templateId = "client_rejected_authorisation_request",
     fromAddress = FromAddress.noReply("HMRC Agent Services"),
     service = Agent,
     subject = "HMRC: Client declined your authorisation request",

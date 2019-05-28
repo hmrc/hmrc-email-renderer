@@ -91,7 +91,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "overseas_application_rejected",
         "overseas_application_accepted",
         "overseas_application_received",
-        "invitations_rejected",
+        "client_rejected_authorisation_request",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",

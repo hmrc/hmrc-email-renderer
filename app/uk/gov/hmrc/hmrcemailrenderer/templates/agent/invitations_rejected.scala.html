@@ -25,7 +25,7 @@
     Your client @params("clientName") has declined your request to:</p>
 
 <ul style="margin: 0 0 20px 0;">
- @for(service <- List(params("serviceItsa").toString, params("serviceVat").toString, params("serviceIrv").toString).filter(_.nonEmpty)) {
+ @for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {
    <li style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">@service</li>
  }
 
