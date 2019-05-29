@@ -64,6 +64,7 @@ object TemplateParams {
     "client_expired_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
+      "expiryPeriod"  -> "14 days",
       "service1" -> "view their PAYE income record",
       "service2" -> "send their Income Tax updates through software",
       "service3" -> "submit their VAT returns through software"

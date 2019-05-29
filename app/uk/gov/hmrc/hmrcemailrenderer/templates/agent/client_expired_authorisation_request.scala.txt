@@ -2,7 +2,7 @@
 
 Dear @params("agencyName")
 
-Your authorisation request to your client @params("clientName") has expired because they did not respond within 14 days.
+Your authorisation request to your client @params("clientName") has expired because they did not respond within @params("expiryPeriod").
 
 @params("clientName") did not accept your request to:
 
