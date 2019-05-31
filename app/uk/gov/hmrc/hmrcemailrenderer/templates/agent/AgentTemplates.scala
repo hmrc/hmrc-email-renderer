@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.agent
 
+import uk.gov.hmrc.hmrcemailrenderer.domain
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Agent
@@ -49,5 +50,38 @@ object AgentTemplates {
     plainTemplate = txt.overseas_application_received.f,
     htmlTemplate = html.overseas_application_received.f,
     priority = Some(MessagePriority.Standard))
+    ,
+  MessageTemplate.create(
+    templateId = "client_rejected_authorisation_request",
+    fromAddress = FromAddress.noReply("HMRC Agent Services"),
+    service = Agent,
+    subject = "HMRC: Client declined your authorisation request",
+    plainTemplate = txt.client_rejected_authorisation_request.f,
+    htmlTemplate = html.client_rejected_authorisation_request.f,
+    priority = Some(MessagePriority.Urgent)),
+  MessageTemplate.create(
+      templateId = "client_accepted_authorisation_request",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Client accepted your authorisation request",
+      plainTemplate = txt.client_accepted_authorisation_request.f,
+      htmlTemplate = html.client_accepted_authorisation_request.f,
+      priority = Some(MessagePriority.Urgent)),
+  MessageTemplate.create(
+      templateId = "client_expired_authorisation_request",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Your authorisation request expired",
+      plainTemplate = txt.client_expired_authorisation_request.f,
+      htmlTemplate = html.client_expired_authorisation_request.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "agent_services_account_created",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: agent services account created",
+      plainTemplate = txt.agent_services_account_created.f,
+      htmlTemplate = html.agent_services_account_created.f,
+      priority = Some(MessagePriority.Urgent))
   )
 }
