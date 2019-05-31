@@ -1,0 +1,41 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agencyName() = {@params("agencyName")}
+@arn() = {@params("arn")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Agent services account created") {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agencyName</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">You have created an HMRC agent services account for @agencyName.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Your account reference number is <strong>@arn</strong></p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">You will need this reference number to contact HMRC if you cannot access your agent services account.</p>
+
+<h2>What you can do next</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">To sign in to your agent services account, search GOV.UK for 'agent services account' and follow the instructions.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can use your new agent services account to access Making Tax Digital services and register a trust or estate.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For a step-by-step guide to what you need to do for Making Tax Digital for VAT, search GOV.UK for 'Making Tax Digital for VAT as an agent'.</p>
+
+<h2>Why you got this email</h2>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You gave this contact email address when you created your agent services account.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services Team</p>
+
+}
