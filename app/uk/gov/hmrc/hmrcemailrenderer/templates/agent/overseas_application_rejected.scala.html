@@ -27,10 +27,10 @@
 
     <ul style="margin: 0 0 20px 0;">
         @for(reason <- params.keys.toList.filter(_.startsWith("reason")).sorted){
-            <li style="font-size: 19px">@params(reason)</li>
+            <li style="font-size: 19px; line-height: 1.315789474;">@params(reason)</li>
         }
         @if(params.contains("otherReason")){
-            <li style="font-size: 19px">@params("otherReason")</li>
+            <li style="font-size: 19px; line-height: 1.315789474;">@params("otherReason")</li>
         }
     </ul>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">@params.getOrElse("additionalText", "")</p>
