@@ -484,6 +484,15 @@ object TemplateParams {
       "postcode" -> "Postcode: BN12 4AX",
       "expiryDate" -> "We will delete any unsubmitted information on 28 July 2016"
     ),
+    "rald_not_connected" -> Map(
+      "referenceNumber" -> "9999000666",
+      "fullName" -> "Jimmy McJimmney",
+      "email" -> "jimm@jimmjimm.com",
+      "phoneNumber" -> "01234567890",
+      "address" -> "1 Jim Street, Jimtown, Jimregion",
+      "postcode" -> "BN12 4AX",
+      "additionalInformation" -> "I have left the property 6 months ago. The new occupier is Tim McTimmney"
+    ),
     "bars_alert" -> Map(
       "baRefNumber" -> "BA : ba5090",
       "fileName" -> "File name : Barnet_CT.xml",

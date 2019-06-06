@@ -262,6 +262,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "gmp_bulk_upload_received",
         "gmp_bulk_upload_processed",
         "rald_alert",
+        "rald_not_connected",
         "bars_alert",
         "tcs_renewal_confirmation",
         "register_your_company_verification_email",
