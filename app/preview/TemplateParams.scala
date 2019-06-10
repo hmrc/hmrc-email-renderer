@@ -1367,6 +1367,7 @@ object TemplateParams {
       "recipientName_line1" -> "Joe Smith"
     ),
     "recon_tps_report" -> Map(
+      "subject" -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
       "vatLegal" -> "2,19400000,0,0,2,19400000",
       "shipley" -> "4,20744424,1,9886240,5,30630664",
       "debitCardFee" -> "3,0,0,0,3,0",
