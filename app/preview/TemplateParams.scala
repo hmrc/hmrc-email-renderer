@@ -50,24 +50,18 @@ object TemplateParams {
     "client_rejected_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
-      "service1" -> "view their PAYE income record",
-      "service2" -> "send their Income Tax updates through software",
-      "service3" -> "submit their VAT returns through software"
+      "service" -> "submit their VAT returns through software."
     ),
     "client_accepted_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
-      "service1" -> "view their PAYE income record",
-      "service2" -> "send their Income Tax updates through software",
-      "service3" -> "submit their VAT returns through software"
+      "service" -> "view their PAYE income record."
     ),
     "client_expired_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
       "expiryPeriod"  -> "14 days",
-      "service1" -> "view their PAYE income record",
-      "service2" -> "send their Income Tax updates through software",
-      "service3" -> "submit their VAT returns through software"
+      "service" -> "send their Income Tax updates through software."
     ),
     "agent_services_account_created" -> Map(
       "agencyName" -> "Agent 1",

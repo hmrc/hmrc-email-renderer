@@ -2,10 +2,8 @@
 
 Dear @params("agencyName")
 
-Your client @params("clientName") has declined your request to:
+Your client @params("clientName") has declined your request to @params("service")
 
-@for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {- @params(service)
-}
 What you can do next
 
 If you think this is a mistake, sign in to your HMRC agent services account and start a new authorisation request for this client.

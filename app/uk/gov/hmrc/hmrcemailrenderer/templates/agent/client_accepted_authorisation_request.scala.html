@@ -18,17 +18,12 @@
 
 @agencyName() = {@params("agencyName")}
 @clientName() = {@params("clientName")}
+@service() = {@params("service")}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your client accepted your authorisation request") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agencyName</p>
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Your client @clientName has authorised you to:</p>
-
-<ul style="margin: 0 0 20px 0;">
-    @for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {
-    <li style="font-size: 19px; line-height: 1.315789474;">@params(service)</li>
-    }
-</ul>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Your client @clientName has authorised you to @service</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services Team</p>
