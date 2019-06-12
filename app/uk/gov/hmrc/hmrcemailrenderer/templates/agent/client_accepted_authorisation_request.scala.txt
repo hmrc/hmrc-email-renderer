@@ -2,10 +2,8 @@
 
 Dear @params("agencyName")
 
-Your client @params("clientName") has authorised you to:
+Your client @params("clientName") has authorised you to @params("service")
 
-@for(service <- params.keys.toList.filter(_.startsWith("service")).sorted) {- @params(service)
-}
 Do not reply to this email.
 
 From HMRC Agent Services Team
