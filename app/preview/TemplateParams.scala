@@ -47,6 +47,26 @@ object TemplateParams {
       "tradingName" -> "ABC Accountants Ltd",
       "receivedDate" -> "20190214"
     ),
+    "client_rejected_authorisation_request" -> Map(
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "service" -> "submit their VAT returns through software."
+    ),
+    "client_accepted_authorisation_request" -> Map(
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "service" -> "view their PAYE income record."
+    ),
+    "client_expired_authorisation_request" -> Map(
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "expiryPeriod"  -> "14 days",
+      "service" -> "send their Income Tax updates through software."
+    ),
+    "agent_services_account_created" -> Map(
+      "agencyName" -> "Agent 1",
+      "arn" -> "XARN-123-4567"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
@@ -342,7 +362,7 @@ object TemplateParams {
       "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation" -> "true"
     ),
-    "dfs_admin_notification" -> Map.empty[String,String],
+    "dfs_admin_notification" -> Map.empty[String, String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -355,7 +375,7 @@ object TemplateParams {
       "warningInformation" -> "false",
       "turnAroundTime" -> "15 days"
     ),
-    "dfs_submission_success_rcgt_2018"->Map(
+    "dfs_submission_success_rcgt_2018" -> Map(
       "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
       "name" -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
@@ -378,13 +398,13 @@ object TemplateParams {
       "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6",
       "cbcrId" -> "XGCBC0000000001"
     ),
-     "cbcr_cbcid_regeneration" -> Map(
+    "cbcr_cbcid_regeneration" -> Map(
       "f_name" -> "Tyrion",
       "s_name" -> "Lannister",
       "received_at" -> "31 December 2017",
       "cbcrId" -> "XGCBC0000000001"
     ),
-   "agent_mapping_invitation_template_id" -> Map(
+    "agent_mapping_invitation_template_id" -> Map(
       "name" -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -534,12 +554,24 @@ object TemplateParams {
       "full_name" -> "Joe Bloggs"
     ),
     "customs_registration_successful" -> Map(
-      "recipientName_forename" -> "Firstname",
-      "recipientName_surname" -> "Lastname"
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "15 March 2019"
     ),
     "customs_registration_not_successful" -> Map(
-      "recipientName_forename" -> "Firstname",
-      "recipientName_surname" -> "Lastname"
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "15 March 2019"
+    ),
+    "customs_migrate_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "22 March 2019"
+    ),
+    "customs_migrate_not_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName" -> "SHD Fashion House",
+      "completionDate" -> "22 March 2019"
     ),
     "customs_declaration_success" -> Map(
       "details" -> "declaration success details will appear here"
@@ -1172,14 +1204,14 @@ object TemplateParams {
     "eeitt_ce930_confirmation" -> Map(
       "" -> ""
     ),
-     "eeitt_ho930_confirmation" -> Map(
-       "" -> ""
+    "eeitt_ho930_confirmation" -> Map(
+      "" -> ""
     ),
-     "cir_return_confirmation" -> Map(
-       "" -> ""
+    "cir_return_confirmation" -> Map(
+      "" -> ""
     ),
-     "randd_confirmation_submission" -> Map(
-       "" -> ""
+    "randd_confirmation_submission" -> Map(
+      "" -> ""
     ),
     "ho10_confirmation_submission" -> Map(
       "" -> ""
@@ -1209,6 +1241,12 @@ object TemplateParams {
     "payment_successful_cy" -> Map("taxType" -> "Self Assessment",
       "taxReference" -> "1234567890K",
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
+      "amountPaid" -> "123.45",
+      "commission" -> "2.55",
+      "totalPaid" -> "126.00"
+    ),
+    "payment_successful_parcels" -> Map("taxType" -> "Import VAT on parcels",
+      "taxReference" -> "1234 5678 90K",
       "amountPaid" -> "123.45",
       "commission" -> "2.55",
       "totalPaid" -> "126.00"
@@ -1322,7 +1360,17 @@ object TemplateParams {
     "ddi_unpaid_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
-
+    "recon_tps_report" -> Map(
+      "subject" -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
+      "vatLegal" -> "2,19400000,0,0,2,19400000",
+      "shipley" -> "4,20744424,1,9886240,5,30630664",
+      "debitCardFee" -> "3,0,0,0,3,0",
+      "vatAccount" -> "1,9700000,0,0,1,9700000",
+      "nirs" -> "1,9700000,0,0,1,9700000",
+      "commisionCard" -> "7,1344420,1,186240,8,1530660",
+      "total" -> "10,70588846,1,10072480,11,80661326",
+      "cumbernauld" -> "2,9700002,0,0,2,9700002")
+    ,
     "hts_verification_email" -> Map(
       "name" -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
@@ -1341,9 +1389,21 @@ object TemplateParams {
     ),
     "cca_enrolment_migration_confirmation" -> Map(
       "name" -> "test user",
-      "personId" -> "123456789"
+      "personId" -> "123456789",
+      "orgName" -> "Test Organisation"
     ),
     "cca_enrolment_confirmation" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789",
+      "orgName" -> "Test Organisation"
+    ),
+    "cca_enrolment_confirmation_agent" -> Map(
+      "name" -> "test user",
+      "personId" -> "123456789",
+      "orgName" -> "Test Organisation",
+      "agentCode" -> "8888888"
+    ),
+    "cca_enrolment_confirmation_individual" -> Map(
       "name" -> "test user",
       "personId" -> "123456789"
     ),

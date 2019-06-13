@@ -39,6 +39,24 @@ object CCATemplates {
         plainTemplate = registration.txt.ccaEnrolmentConfirmation.f,
         htmlTemplate = registration.html.ccaEnrolmentConfirmation.f,
         priority = Some(MessagePriority.Standard)
+      ),
+    MessageTemplate.create(
+        templateId = "cca_enrolment_confirmation_agent",
+        fromAddress = govUkTeamAddress,
+        service = CCA,
+        subject = "Valuation Office Agency - check and challenge registration",
+        plainTemplate = registration.txt.ccaEnrolmentConfirmationAgent.f,
+        htmlTemplate = registration.html.ccaEnrolmentConfirmationAgent.f,
+        priority = Some(MessagePriority.Standard)
+      ),
+    MessageTemplate.create(
+        templateId = "cca_enrolment_confirmation_individual",
+        fromAddress = govUkTeamAddress,
+        service = CCA,
+        subject = "Valuation Office Agency - check and challenge registration",
+        plainTemplate = registration.txt.ccaEnrolmentConfirmationIndividual.f,
+        htmlTemplate = registration.html.ccaEnrolmentConfirmationIndividual.f,
+        priority = Some(MessagePriority.Standard)
       )
   )
 }

@@ -20,7 +20,7 @@ If any of these details are wrong, call us on @params("PHONENUMBER") and quote y
 
 You have the right to cancel your Direct Debit at any time. We will send you a notification of the amount to be collected 2 working days before we apply to your bank for payment.
 
-Payments will appear on your bank statement as '@params("NEWSUNNAME")'.
+Payments will appear on your bank statement as ‘@params("NEWSUNNAME")’.
 
 From HMRC Direct Debit Team
 

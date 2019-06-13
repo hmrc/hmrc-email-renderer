@@ -16,14 +16,14 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
+
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
 
 object OnlinePaymentServiceTemplates {
+
   val templates = Seq(
-
     // Card payments templates
-
     MessageTemplate.create(
       templateId = "payment_successful",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
@@ -39,6 +39,14 @@ object OnlinePaymentServiceTemplates {
       subject = "Cadarnhad gan CThEM o daliad",
       plainTemplate = txt.payment_successful_cy.f,
       htmlTemplate = html.payment_successful_cy.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "payment_successful_parcels",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Receipt for payment of import VAT on parcels",
+      plainTemplate = txt.payment_successful_parcels.f,
+      htmlTemplate = html.payment_successful_parcels.f,
       priority = Some(MessagePriority.Urgent)),
 
     // Direct Debit templates
@@ -179,6 +187,15 @@ object OnlinePaymentServiceTemplates {
       subject = "Receipt for payment on goods brought into the UK",
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)),
+        //Recon tps
+      MessageTemplate.createWithDynamicSubject(
+       templateId = "recon_tps_report",
+       fromAddress = FromAddress.noReply("HMRC Online Payments"),
+       service = ServiceIdentifier.OnlinePaymentService,
+       subject = _.apply("subject"),
+       plainTemplate = txt.recon_tps_report.f,
+       htmlTemplate = html.recon_tps_report.f,
+       priority = Some(MessagePriority.Urgent))
   )
 }
