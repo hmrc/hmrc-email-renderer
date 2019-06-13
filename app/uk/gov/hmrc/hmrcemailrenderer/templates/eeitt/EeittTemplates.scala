@@ -436,6 +436,15 @@ object EeittTemplates {
       plainTemplate = txt.registerForFuelDuty.f,
       htmlTemplate = html.registerForFuelDuty.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "adr_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your ADR application",
+      plainTemplate = txt.adrConfirmation.f,
+      htmlTemplate = html.adrConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

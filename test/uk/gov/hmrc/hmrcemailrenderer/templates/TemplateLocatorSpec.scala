@@ -200,6 +200,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "gd94_return_confirmation",
 //        "ex250_return_confirmation",
         "ex250_registration_confirmation",
+        "adr_confirmation_submission",
         "air597_return_confirmation",
         "c117_application_confirmation",
         "c118_section1_part1_application_confirmation",
