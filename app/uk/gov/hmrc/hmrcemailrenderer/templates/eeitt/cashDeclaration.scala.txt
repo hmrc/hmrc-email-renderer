@@ -4,9 +4,9 @@ You submitted a cash declaration online
 
 Dear @params.get("customerName")
 
-HMRC received your declaration of carrying a cash amount of £10,000 or more into or out of the UK.
+HMRC received your declaration of carrying a cash amount of 10,000 euros or more into or out of the EU.
 
-This includes the equivalent of £10,000 in other currencies.
+This includes the equivalent of 10,000 euros in other currencies.
 
 What you need to do next
 

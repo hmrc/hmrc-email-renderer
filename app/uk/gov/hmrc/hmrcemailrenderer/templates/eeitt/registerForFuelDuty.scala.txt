@@ -1,0 +1,28 @@
+@(params: Map[String, Any])
+
+Dear @params.get("customerName")
+
+Dear Customer,
+
+You submitted a form to register for Fuel Duty online
+
+HMRC has received your application to register a business for Fuel Duty.
+
+What you need to do next
+
+If the business is Excise Payment Security System (EPSS) approved
+
+You must complete a ‘VAT: deferment schedule - SIVA reduced security (SIVA2)’ form. You must complete and send the SIVA2 form as well as a copy of your EPSS approval letter to HMRC. You’ll need to go to GOV.UK and search for the SIVA2 form.
+From HMRC Incentives and Reliefs team
+
+If you’re not EPSS approved
+
+You’ll need to appoint a guarantor and complete a ‘Guarantee deferment of payment to HMRC (C1201HO) form’ and send it to HMRC. You’ll need to go to GOV.UK and search for the C1201HO form.
+
+How to set up a Direct Debit for your return payments
+
+You’ll also need to complete a ‘Set up a Direct Debit to pay deferred duty on imports and excise goods (C1202) form’ for your return payments and send it to HMRC. You’ll need to go to GOV.UK and search for the C1202 form.
+
+From HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

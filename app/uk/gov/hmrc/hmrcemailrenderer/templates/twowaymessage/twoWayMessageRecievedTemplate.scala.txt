@@ -2,7 +2,7 @@
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
 
-Thank you for the message you sent HMRC today.
+Thank you for the message you sent to HMRC today.
 
 We are working on your message and will reply within @params.get("waitTime").
 

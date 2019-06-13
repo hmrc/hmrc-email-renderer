@@ -45,6 +45,25 @@ class CustomsTemplatesContentComparisonSpec extends TemplateComparisonSpec with 
       compareContent("customs_registration_not_successful", params)(customsTemplate)
     }
 
+    "include customs_migrate_successful" in {
+      val params = commonParameters + (
+        "recipientName_forename" -> "Forename",
+        "recipientName_surname" -> "Surname",
+        "completionDate" -> "17-06-2018"
+      )
+
+      compareContent("customs_migrate_successful", params)(customsTemplate)
+    }
+
+    "include customs_migrate_not_successful" in {
+      val params = commonParameters + (
+        "recipientName_forename" -> "Forename",
+        "recipientName_surname" -> "Surname"
+      )
+
+      compareContent("customs_migrate_not_successful", params)(customsTemplate)
+    }
+
     "include customs_declaration_success" in {
       val params = Map( "details" -> "details") ++ commonParameters
 

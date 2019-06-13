@@ -4,7 +4,11 @@ Issued: Binding Tariff Information (BTI) ruling
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 We have issued your BTI ruling for application @params("reference") for @params("itemName").
-To view and download your certificate sign in to your BTI account on GOV.UK in Binding Tariff Information (Notice 600).
+
+Sign into your BTI account on GOV.UK in Binding Tariff Information (Notice 600) to:
+
+- find out how we made our decision
+- view and download your ruling certificate
 
 Get more information on BTI rulings including how to appeal on GOV.UK in the guide on Binding Tariff Information (Notice 600).
 

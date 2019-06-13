@@ -375,6 +375,24 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cet_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request for help with a tax issue",
+      plainTemplate = txt.cetEmailConfirmation.f,
+      htmlTemplate = html.cetEmailConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "gss_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your growth support request for a mid-sized business",
+      plainTemplate = txt.gssEmailTemplate.f,
+      htmlTemplate = html.gssEmailTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "register_for_duty_on_gas_for_road_fuel_use",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -391,7 +409,16 @@ object EeittTemplates {
     plainTemplate = txt.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
     priority = Some(MessagePriority.Standard)
-),
+   ),
+    MessageTemplate.create(
+      templateId = "rdec_email_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your supporting details for an R&D Expenditure Credit claim",
+      plainTemplate = txt.rdecEmailTemplate.f,
+      htmlTemplate = html.rdecEmailTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "corporation_tax_confirmation",
       fromAddress = govUkTeamAddress,
@@ -400,7 +427,15 @@ object EeittTemplates {
       plainTemplate = txt.corporationTaxConfirmation.f,
       htmlTemplate = html.corporationTaxConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "register_for_fuel_duty_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your application to register for Fuel Duty",
+      plainTemplate = txt.registerForFuelDuty.f,
+      htmlTemplate = html.registerForFuelDuty.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
-  )
-
 }

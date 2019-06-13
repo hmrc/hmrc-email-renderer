@@ -32,6 +32,7 @@ object AmountFormatter {
   }
 
   def formatAmount(amount: String): String = formatter.format(toDouble(amount))
+  def formatAmountInPence(amountInPence: String): String = formatter.format(toDouble(amountInPence)/100)
 
   private def toDouble(s: String): Double = Try(s.toDouble).recover {
     case NonFatal(e) => Logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0D

@@ -81,7 +81,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "PODS",
         "vat",
         "Two way messaging",
-        "Parcels"
+        "Parcels",
+        "Customs Financials"
       )
     }
 
@@ -90,6 +91,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "overseas_application_rejected",
         "overseas_application_accepted",
         "overseas_application_received",
+        "client_rejected_authorisation_request",
+        "client_accepted_authorisation_request",
+        "client_expired_authorisation_request",
+        "agent_services_account_created",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
@@ -211,10 +216,14 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "c118_section6_part4_application_confirmation",
         "tsp_application_confirmation",
         "gd_application_confirmation",
+        "rdec_email_confirmation",
         "csr_submission_confirmation",
+        "cet_email_confirmation",
+        "gss_email_confirmation",
         "cash_declaration",
         "register_for_duty_on_gas_for_road_fuel_use",
         "register_for_duty_on_biofuels_and_other_fuel_substitutes",
+        "register_for_fuel_duty_confirmation",
         "corporation_tax_confirmation",
         "fhdds_submission_confirmation",
         "fhdds_submission_withdrawal",
@@ -277,6 +286,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "password_change_confirmation",
         "customs_registration_successful",
         "customs_registration_not_successful",
+        "customs_migrate_successful",
+        "customs_migrate_not_successful",
         "customs_validation_success",
         "customs_payment_required",
         "customs_payment_success",
@@ -424,6 +435,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cbcr_cbcid_regeneration",
         "payment_successful",
         "payment_successful_cy",
+        "payment_successful_parcels",
+        "recon_tps_report",
         "ddi_cancelled",
         "ddi_not_acceptable",
         "ddi_reinstated",
@@ -446,6 +459,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "retrieve_userid_notification",
         "cca_enrolment_migration_confirmation",
         "cca_enrolment_confirmation",
+        "cca_enrolment_confirmation_agent",
+        "cca_enrolment_confirmation_individual",
         "cdsTestTemplate",
         "cdsEmailTemplate",
         "mtdfb_vat_principal_sign_up_successful",
@@ -462,7 +477,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_VRT14B",
         "newMessageAlert_VRT1214C",
         "newMessageAlert_VRT1214A",
-        "parcels_registration_confirmation"
+        "parcels_registration_confirmation",
+        "customs_financials_new_statement_notification"
         )
     }
   }
