@@ -16,18 +16,18 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.twowaymessage
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, Subject}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TwoWayMessaging
 
 object twoWayMessagingTemplates {
 
   val templates = Seq(
-    MessageTemplate.createWithDynamicSubject(
+    MessageTemplate.create(
       templateId = "newMessageAlert_2WSM-question",
       fromAddress = FromAddress.noReply("HMRC digital team"),
       service = TwoWayMessaging,
-      subject = _.getOrElse("subject", ""),
+      subject =  "HMRC will reply within 7 days",
       plainTemplate = txt.twoWayMessageRecievedTemplate.f,
       htmlTemplate = html.twoWayMessageRecievedTemplate.f,
       priority = Some(MessagePriority.Urgent)
