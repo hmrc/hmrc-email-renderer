@@ -4,7 +4,7 @@
 
 Thank you for the message you sent to HMRC today.
 
-We are working on your message and will reply within @params.get("waitTime").
+We are working on your message and will reply within 7 days.
 
 You do not need to follow up by sending another message or by calling us.
 
