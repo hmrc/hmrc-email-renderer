@@ -486,12 +486,8 @@ object TemplateParams {
     ),
     "rald_not_connected" -> Map(
       "referenceNumber" -> "9999000666",
-      "fullName" -> "Jimmy McJimmney",
       "email" -> "jimm@jimmjimm.com",
-      "phoneNumber" -> "01234567890",
-      "address" -> "1 Jim Street, Jimtown, Jimregion",
-      "postcode" -> "BN12 4AX",
-      "additionalInformation" -> "I have left the property 6 months ago. The new occupier is Tim McTimmney"
+      "phoneNumber" -> "01234567890"
     ),
     "bars_alert" -> Map(
       "baRefNumber" -> "BA : ba5090",

@@ -23,7 +23,6 @@
 
     <p><b>Reference number:</b> @params("referenceNumber")</p>
 
-    <p><b>Name:</b> @params("fullName")<br />
     @params.get("email").map { email =>
         <b>Email address:</b> @email <br />
     }.getOrElse("")
@@ -32,11 +31,6 @@
     <b>Phone number:</b> @phoneNumber <br />
     }.getOrElse("")
     </p>
-
-    <p><b>Address:</b> @params("address")<br />
-    <b>Postcode:</b> @params("postcode")</p>
-
-    <p><b>Additional information:</b><br /> @params("additionalInformation")</p>
 
     <p>From Valuation Office Agency - Rent and lease details service </p>
 

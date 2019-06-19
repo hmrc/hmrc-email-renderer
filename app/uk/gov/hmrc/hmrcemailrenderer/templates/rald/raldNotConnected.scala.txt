@@ -3,15 +3,8 @@ Rent and lease details - Not connected property
 
 Reference number: @params("referenceNumber")
 
-Name:@params("fullName")
 @params.get("email").map { email =>Email address: @email}.getOrElse("")
 @params.get("phoneNumber").map { phoneNumber =>Phone number: @phoneNumber}.getOrElse("")
-
-Address: @params("address")
-Postcode: @params("postcode")
-
-Additional information:
-@params("additionalInformation")
 
 From Valuation Office Agency - Rent and lease details service
 
