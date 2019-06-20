@@ -16,18 +16,23 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.twowaymessage
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, Subject}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TwoWayMessaging
 
 object twoWayMessagingTemplates {
 
+  private def getWaitTimeSubject(params: Map[String, String]): String = {
+    val waitTime = params.getOrElse("waitTime", "7 days")
+    s"HMRC will reply within $waitTime"
+  }
+
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "newMessageAlert_2WSM-question",
       fromAddress = FromAddress.noReply("HMRC digital team"),
       service = TwoWayMessaging,
-      subject =  "HMRC will reply within 7 days",
+      subject = getWaitTimeSubject(_),
       plainTemplate = txt.twoWayMessageRecievedTemplate.f,
       htmlTemplate = html.twoWayMessageRecievedTemplate.f,
       priority = Some(MessagePriority.Urgent)
