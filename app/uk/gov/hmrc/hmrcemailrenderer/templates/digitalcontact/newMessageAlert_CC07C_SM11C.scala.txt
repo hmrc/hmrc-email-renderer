@@ -1,8 +1,10 @@
 @(params: Map[String, Any])Opting out of Making Tax Digital for VAT
 
 @if(params("transactorName").toString.trim.nonEmpty){
-Dear @{params("transactorName")},
+Dear @{params("transactorName")}
 }
+
+You have opted your client’s business out of Making Tax Digital for VAT
 
 Your request to opt @params("clientName"), VRN @{params("clientVrn").toString} VAT, out of Making Tax Digital for VAT  has been completed.
 
@@ -11,5 +13,5 @@ You must continue to use software compatible with Making Tax Digital to submit y
 Visit 'Manage your client's details for Making Tax Digital for VAT' on the GOV.UK website to submit your client's future VAT returns.
 If your client’s turnover goes above £85,000, you must sign them up for Making Tax Digital again by visiting the ‘VAT: general enquiries’ page on the GOV.UK website.
 
-From HMRC VAT
+From HMRC Making Tax Digital for VAT
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
