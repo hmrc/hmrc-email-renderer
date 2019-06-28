@@ -476,6 +476,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "passengers_payment_confirmation",
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
+        "newMessageAlert_CC07C_SM11C",
         "newMessageAlert_VRT1214C",
         "newMessageAlert_VRT1214A",
         "parcels_registration_confirmation",
