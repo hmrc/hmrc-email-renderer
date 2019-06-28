@@ -59,6 +59,15 @@ object DigitalContactVatTemplates {
       plainTemplate = txt.newMessageAlert_VRT14B.f,
       htmlTemplate = html.newMessageAlert_VRT14B.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_CC07C_SM11C",
+      fromAddress = vatFromAddress,
+      service = DigitalContactVat,
+      subject = "Client opted out of Making Tax Digital for VAT",
+      plainTemplate = txt.newMessageAlert_CC07C_SM11C.f,
+      htmlTemplate = html.newMessageAlert_CC07C_SM11C.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

@@ -172,6 +172,12 @@ object TemplateParams {
       "clientVrn" -> "1234567890"
     ),
 
+    "newMessageAlert_CC07C_SM11C" -> Map(
+      "clientName" -> "Tesla Limited",
+      "transactorName" -> "Musk's Agent",
+      "clientVrn" -> "1234567890"
+    ),
+
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
