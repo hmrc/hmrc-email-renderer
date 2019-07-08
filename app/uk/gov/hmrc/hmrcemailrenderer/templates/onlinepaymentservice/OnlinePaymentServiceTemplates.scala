@@ -153,6 +153,14 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.ddi_setup_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
+      templateId = "ddi_setup_aa_dcs_alert",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Direct Debit: set up confirmation",
+      plainTemplate = txt.ddi_setup_aa_dcs_alert.f,
+      htmlTemplate = html.ddi_setup_aa_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
       templateId = "ddi_amended_dcs_alert",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,

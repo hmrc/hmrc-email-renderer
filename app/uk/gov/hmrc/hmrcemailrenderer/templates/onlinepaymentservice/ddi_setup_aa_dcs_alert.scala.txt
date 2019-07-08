@@ -1,0 +1,9 @@
+@(params: Map[String, Any])You successfully set up your VAT Direct Debit
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+Your Direct Debit instruction is now set up.
+
+Get full details by signing into your HMRC online services account and going to your messages.
+
+From HMRC Direct Debits
