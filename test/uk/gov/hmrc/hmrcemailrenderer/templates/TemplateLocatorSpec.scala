@@ -445,6 +445,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ddi_amend_advisory",
         "ddi_cancelled_advisory",
         "ddi_setup_dcs_alert",
+        "ddi_setup_aa_dcs_alert",
         "ddi_amended_dcs_alert",
         "ddi_cancelled_dcs_alert",
         "ddi_reminder_dcs_alert",
