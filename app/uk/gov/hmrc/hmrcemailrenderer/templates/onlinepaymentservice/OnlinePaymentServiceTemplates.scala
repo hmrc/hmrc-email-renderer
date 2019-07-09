@@ -180,7 +180,7 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)),
     //Passengers email template
-      MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "passengers_payment_confirmation",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
@@ -188,14 +188,22 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent)),
-        //Recon tps
-      MessageTemplate.createWithDynamicSubject(
-       templateId = "recon_tps_report",
-       fromAddress = FromAddress.noReply("HMRC Online Payments"),
-       service = ServiceIdentifier.OnlinePaymentService,
-       subject = _.apply("subject"),
-       plainTemplate = txt.recon_tps_report.f,
-       htmlTemplate = html.recon_tps_report.f,
-       priority = Some(MessagePriority.Urgent))
+    MessageTemplate.create(
+      templateId = "ddi_08_alert_aa",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Direct Debit",
+      plainTemplate = txt.ddi_08_alert_aa.f,
+      htmlTemplate = html.ddi_08_alert_aa.f,
+      priority = Some(MessagePriority.Urgent)),
+    //Recon tps
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_tps_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_tps_report.f,
+      htmlTemplate = html.recon_tps_report.f,
+      priority = Some(MessagePriority.Urgent))
   )
 }
