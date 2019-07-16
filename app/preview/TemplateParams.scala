@@ -1366,6 +1366,9 @@ object TemplateParams {
     "ddi_unpaid_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
+    "ddi_08_alert_aa" -> Map(
+      "name" -> "Colm Cavanagh"
+    ),
     "recon_tps_report" -> Map(
       "subject" -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
       "vatLegal" -> "2,19400000,0,0,2,19400000",
