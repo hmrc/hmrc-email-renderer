@@ -4,7 +4,9 @@ Dear Customer,
 
 Your application reference number is: @params("referenceNumber")
 
-Please do not contact us about the application until after 26 July.
+Due to the volume of registrations that we currently have, it may take up to 20 days before you receive your employer PAYE reference number.
+
+We are working hard to resolve the backlog of cases and apologise for any inconvenience this may cause.
 
 What happens next
 
