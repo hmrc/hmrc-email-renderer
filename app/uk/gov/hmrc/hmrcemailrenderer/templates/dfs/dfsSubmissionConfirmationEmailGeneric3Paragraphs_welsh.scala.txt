@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+@if(params("greeting").asInstanceOf[String].length>0) {Annwyl @{params("greeting")},
+
+}
+@{params("confirmation")}.
+
+Eich cyfeirnod yw @{params("submissionReference")}.
+
+@if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}.}
+@if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}.}
+@if(params.isDefinedAt("paragraphThree")) {@{params("paragraphThree")}.}
+@if(params("warningInformation").equals("true")) {Byddwn yn anfon llythyr atoch, neu’n eich ffonio, os oes angen rhagor o fanylion arnom. Mae’n bosibl y byddwn yn gofyn i chi fewngofnodi i wasanaeth er mwyn rhoi rhagor o fanylion, ond ni fyddwn yn gofyn i chi am eich manylion personol drwy e-bost.} 
+@if(params.isDefinedAt("turnAroundTime")) {Fel arfer, byddwch yn cael ateb cyn pen @{params("turnAroundTime")}.}
+
+Yn gywir,
+ 
+Cyllid a Thollau EM
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

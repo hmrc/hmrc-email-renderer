@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+@if(params("greeting").asInstanceOf[String].length>0) {Annwyl @{params("greeting")},
+
+}
+@{params("confirmation")}.
+
+Eich cyfeirnod yw @{params("submissionReference")}.
+
+@if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}.}
+@if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}.}
+@if(params.isDefinedAt("turnAroundTime")) {Os ydych wedi cofrestru ymddiriedolaeth newydd, cewch UTR cyn pen @{params("turnAroundTime")}.}
+
+Yn gywir,
+ 
+Cyllid a Thollau EM
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
