@@ -1367,7 +1367,7 @@ object TemplateParams {
       "recipientName_line1" -> "Joe Smith"
     ),
     "ddi_08_alert_aa" -> Map(
-      "name" -> "Colm Cavanagh"
+      "recipientName_line1" -> "Colm Cavanagh"
     ),
     "recon_tps_report" -> Map(
       "subject" -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
