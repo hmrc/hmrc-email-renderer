@@ -11,8 +11,8 @@ If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 5
 }
 
 To view your statement:
- Go to GOV.UK
- Search for ‘Get your duty deferment statements’
+ Go to GOV.UK.
+ Search for ‘Get your duty deferment statements’.
 
  For security reasons, we have not included a link in this email.
 
