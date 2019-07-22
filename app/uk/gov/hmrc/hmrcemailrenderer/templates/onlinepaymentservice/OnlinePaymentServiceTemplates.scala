@@ -76,14 +76,6 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.ddi_migration_letter.f,
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
-      templateId = "ddi_migration_letter",
-      fromAddress = FromAddress.noReply("VAT Direct Debit"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "VAT Return Direct Debit: important information",
-      plainTemplate = txt.ddi_migration_letter.f,
-      htmlTemplate = html.ddi_migration_letter.f,
-      priority = Some(MessagePriority.Urgent)),
-    MessageTemplate.create(
       templateId = "ddi_not_acceptable",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
@@ -211,14 +203,6 @@ object OnlinePaymentServiceTemplates {
       subject = "Receipt for payment on goods brought into the UK",
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
-      priority = Some(MessagePriority.Urgent)),
-    MessageTemplate.create(
-      templateId = "ddi_08_alert_aa",
-      fromAddress = FromAddress.noReply("VAT Direct Debit"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "VAT Direct Debit",
-      plainTemplate = txt.ddi_08_alert_aa.f,
-      htmlTemplate = html.ddi_08_alert_aa.f,
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "dd_email_verifcation",
