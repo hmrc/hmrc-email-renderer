@@ -76,6 +76,14 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.ddi_migration_letter.f,
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
+      templateId = "ddi_migration_letter",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Return Direct Debit: important information",
+      plainTemplate = txt.ddi_migration_letter.f,
+      htmlTemplate = html.ddi_migration_letter.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
       templateId = "ddi_not_acceptable",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
@@ -187,6 +195,14 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.ddi_unpaid_dcs_alert.f,
       htmlTemplate = html.ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_08_alert_aa",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Direct Debit",
+      plainTemplate = txt.ddi_08_alert_aa.f,
+      htmlTemplate = html.ddi_08_alert_aa.f,
+      priority = Some(MessagePriority.Urgent)),
     //Passengers email template
     MessageTemplate.create(
       templateId = "passengers_payment_confirmation",
@@ -203,6 +219,14 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Direct Debit",
       plainTemplate = txt.ddi_08_alert_aa.f,
       htmlTemplate = html.ddi_08_alert_aa.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "dd_email_verifcation",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Verify your email address",
+      plainTemplate = txt.dd_email_verifcation.f,
+      htmlTemplate = html.dd_email_verifcation.f,
       priority = Some(MessagePriority.Urgent)),
     //Recon tps
     MessageTemplate.createWithDynamicSubject(
