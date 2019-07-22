@@ -15,7 +15,28 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You’ve got a new message from HMRC") {
+
+@ddtitle = @{"duty deferment " + params.get("DefermentStatementType").getOrElse("") + " statement"}
+@title = @{s"New $ddtitle"}
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title) {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
-<h4>This is a test email only. Should you receive this email please ignore it</h4>
+
+<p>You have a new @{ddtitle}.</p>
+
+@if(params.get("DefermentStatementType").isDefined) {
+<p>The total Duty and VAT owed will be collected by direct debit on or after @{params.get("date").getOrElse("")}.</p>
+
+<p>If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 594 243 if you need help making a CHAPS payment.</p>
+}
+
+<p>To view your statement:
+<ol>
+ <li>Go to GOV.UK.</li>
+ <li>Search for ‘Get your duty deferment statements’.</li>
+</ol></p>
+<p>
+ For security reasons, we have not included a link in this email.
+</p>
+<h4>Help and support</h4>
+<p>Telephone: 0300 200 3700.<br/>Open 8am to 6pm, Monday to Friday (closed bank holidays).</p>
 }
