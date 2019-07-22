@@ -1369,6 +1369,10 @@ object TemplateParams {
     "ddi_08_alert_aa" -> Map(
       "recipientName_line1" -> "Colm Cavanagh"
     ),
+    "dd_email_verifcation" -> Map(
+        "name" -> "Joe",
+        "verificationLink" -> exampleLinkWithRandomId
+      ),
     "recon_tps_report" -> Map(
       "subject" -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
       "vatLegal" -> "2,19400000,0,0,2,19400000",
