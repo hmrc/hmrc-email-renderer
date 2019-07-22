@@ -18,12 +18,17 @@
 
 @ddtitle = @{"duty deferment " + params.get("DefermentStatementType").getOrElse("") + " statement"}
 @title = @{s"New $ddtitle"}
+@showExtra = @{
+val ddst = params.get("DefermentStatementType").getOrElse("Unknown")
+ddst == "supplementary" || ddst == "excise" || (ddst == "weekly" && params.get("PeriodIssueNumber").getOrElse("0") == "4")
+}
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title) {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
 <p>You have a new @{ddtitle}.</p>
 
-@if(params.get("DefermentStatementType").isDefined) {
+@if(showExtra) {
 <p>The total Duty and VAT owed will be collected by direct debit on or after @{params.get("date").getOrElse("")}.</p>
 
 <p>If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 594 243 if you need help making a CHAPS payment.</p>
