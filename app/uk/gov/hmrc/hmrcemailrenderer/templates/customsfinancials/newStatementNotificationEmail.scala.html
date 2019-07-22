@@ -15,8 +15,11 @@
  *@
 
 @(params: Map[String, Any])
-
-@ddtitle = @{"duty deferment " + params.get("DefermentStatementType").getOrElse("") + " statement"}
+@statementType = @{params.get("DefermentStatementType").map(_.toString.toLowerCase).map{st => st match {
+  case "supplementary" | "excise" => st + " "
+  case _ => ""
+}}.getOrElse("")}
+@ddtitle = @{"duty deferment " + statementType + "statement"}
 @title = @{s"New $ddtitle"}
 @showExtra = @{
 val ddst = params.get("DefermentStatementType").getOrElse("Unknown")

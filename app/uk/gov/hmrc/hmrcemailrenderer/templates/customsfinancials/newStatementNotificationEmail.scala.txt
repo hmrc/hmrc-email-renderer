@@ -1,4 +1,8 @@
-@(params: Map[String, Any])@ddtitle = @{"duty deferment " + params.get("DefermentStatementType").getOrElse("") + "statement"}New @ddtitle
+@(params: Map[String, Any])@statementType = @{params.get("DefermentStatementType").map(_.toString.toLowerCase).map{st => st match {
+                             case "supplementary" | "excise" => st + " "
+                             case _ => ""
+                           }}.getOrElse("")}@ddtitle = @{"duty deferment " + statementType + "statement"}New @ddtitle
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You have a new @{ddtitle}.
