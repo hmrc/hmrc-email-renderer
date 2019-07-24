@@ -4,7 +4,7 @@ Dear Customer,
 
 Your application reference number is: @params("referenceNumber")
 
-Please do not contact us about the application until after 26 July.
+Because we are currently working on a lot of applications, it may take up to 20 days before you receive your employer PAYE reference number.
 
 What happens next
 
@@ -15,7 +15,7 @@ You can still do payroll but you should:
 
 If your application is successful, we will send you:
 
-- a letter with PAYE and Accounts Office reference numbers within 5 working days of the application being approved (you will need these to send payroll information to HMRC)
+- a letter with PAYE and Accounts Office reference numbers (you will need these to send payroll information to HMRC)
 - an activation code in the post so you can manage the company’s PAYE online
 
 From HM Revenue & Customs PAYE
