@@ -15,15 +15,24 @@
  *@
 
 @(params: Map[String, Any])
-
-@ddtitle = @{"duty deferment " + params.get("DefermentStatementType").getOrElse("") + " statement"}
+@statementType = @{params.get("DefermentStatementType").map(_.toString.toLowerCase).map{st => st match {
+case "supplementary" | "excise" => st + " "
+case _ => ""
+}}.getOrElse("")}
+@ddtitle = @{"duty deferment " + statementType + "statement"}
 @title = @{s"New $ddtitle"}
+@showExtra = @{
+val ddst = params.get("DefermentStatementType").getOrElse("Unknown")
+ddst == "supplementary" || ddst == "excise" || (ddst == "weekly" && params.get("PeriodIssueNumber").getOrElse("0") == "4")
+}
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title) {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
 <p>You have a new @{ddtitle}.</p>
 
-@if(params.get("DefermentStatementType").isDefined) {
+
+@if(showExtra) {
 <p>The total Duty and VAT owed will be collected by direct debit on or after @{params.get("date").getOrElse("")}.</p>
 
 <p>If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 594 243 if you need help making a CHAPS payment.</p>
@@ -37,6 +46,9 @@
 <p>
  For security reasons, we have not included a link in this email.
 </p>
-<h4>Help and support</h4>
-<p>Telephone: 0300 200 3700.<br/>Open 8am to 6pm, Monday to Friday (closed bank holidays).</p>
+<h4>If you need help</h4>
+<p>Phone HMRC on 0300 200 3700. Opening times 8am to 6pm, Monday to Friday (closed bank holidays).</p>
+<p></p>
+<p>From the Customs Declaration Service</p>
+
 }
