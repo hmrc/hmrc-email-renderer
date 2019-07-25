@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+
+Annwyl @{params("name")},
+
+Mae’ch cais wedi dod i law i gofrestru fel is-gontractwr yn y diwydiant adeiladu.
+
+Eich cyfeirnod yw @{params("submissionReference")}.
+
+Byddwn yn ysgrifennu atoch ynglŷn â’ch cais ac yn rhoi gwybod i chi os caiff ei dderbyn. Byddwn yn anfon llythyr atoch, neu’n eich ffonio, os bydd angen rhagor o fanylion arnom. Ni fyddwn ar unrhyw adeg yn gofyn i chi am eich manylion drwy e-bost.
+ 
+Fel arfer, byddwch yn cael ateb cyn pen 35 diwrnod.
+ 
+Yn gywir,
+ 
+Cyllid a Thollau EM
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
