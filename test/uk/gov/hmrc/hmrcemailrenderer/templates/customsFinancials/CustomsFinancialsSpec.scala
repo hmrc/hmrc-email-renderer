@@ -28,7 +28,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
 
     "include Supplementary statement content" in {
       val params = commonParameters + (
-        "DefermentStatementType" -> "Supplementary",
+        "DefermentStatementType" -> "supplementary",
         "date" -> "15 June 2018"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
@@ -36,7 +36,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
 
     "include Excise statement content" in {
       val params = commonParameters + (
-        "DefermentStatementType" -> "Excise",
+        "DefermentStatementType" -> "excise",
         "date" -> "15 June 2018"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
@@ -44,7 +44,17 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
 
     "include 4th week statement content" in {
       val params = commonParameters + (
-        "DefermentStatementType" -> "Weekly",
+        "DefermentStatementType" -> "weekly",
+        "PeriodIssueNumber" -> "4",
+        "date" -> "15 June 2018"
+      )
+      compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
+    }
+
+    "include 1st week statement content" in {
+      val params = commonParameters + (
+        "DefermentStatementType" -> "weekly",
+        "PeriodIssueNumber" -> "1",
         "date" -> "15 June 2018"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
