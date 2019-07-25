@@ -1,6 +1,6 @@
 @(params: Map[String, Any])We have received your PAYE application for @params("companyName")
 
-Dear Customer,
+Dear Customer
 
 Your application reference number is: @params("referenceNumber")
 
