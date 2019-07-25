@@ -26,7 +26,7 @@ object CustomsFinancialsTemplates {
       templateId = "customs_financials_new_statement_notification",
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
-      subject = "Customs Financials Test Email",
+      subject = "View your HMRC Duty Deferment Statement",
       plainTemplate = txt.newStatementNotificationEmail.f,
       htmlTemplate = html.newStatementNotificationEmail.f,
       priority = Some(MessagePriority.Urgent)

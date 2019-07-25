@@ -24,8 +24,9 @@ To view your statement:
 
  For security reasons, we have not included a link in this email.
 
-Help and support
-Telephone: 0300 200 3700.
-Open 8am to 6pm, Monday to Friday (closed bank holidays).
+If you need help
+Phone HMRC on 0300 200 3700. Opening times 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From the Customs Declaration Service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
