@@ -330,15 +330,37 @@ object TemplateParams {
       "name" -> "Mr Joe Bloggs",
       "submissionReference" -> "1234"
     ),
+    "dfs_submission_success_r39_2015_welsh" -> Map(
+      "name" -> "Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
     "dfs_submission_success_cis_2015" -> Map(
       "name" -> "Mr Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_cis_2015_welsh" -> Map(
+      "name" -> "Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_sptu_2015" -> Map(
       "name" -> "Mr Joe Bloggs",
       "submissionReference" -> "1234"
     ),
+    "dfs_submission_success_sptu_2015_welsh" -> Map(
+      "name" -> "Mr Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
     "dfs_submission_success_generic_2015" -> Map(
+      "subject" -> "Test Subject",
+      "greeting" -> "Mr Joe Bloggs",
+      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation" -> "true",
+      "turnAroundTime" -> "35 days"
+    ),
+    "dfs_submission_success_generic_2015_welsh" -> Map(
       "subject" -> "Test Subject",
       "greeting" -> "Mr Joe Bloggs",
       "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
@@ -359,7 +381,27 @@ object TemplateParams {
       "warningInformation" -> "false",
       "turnAroundTime" -> "35 days"
     ),
+    "dfs_submission_success_generic_2017_welsh" -> Map(
+      "subject" -> "Test Subject",
+      "greeting" -> "Mr Joe Bloggs",
+      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree" -> "Some extra content for paragraph three...",
+      "warningInformation" -> "false",
+      "turnAroundTime" -> "35 days"
+    ),
     "dfs_submission_success_empty_turn_around_time_2015" -> Map(
+      "subject" -> "Test Subject",
+      "greeting" -> "Mr Joe Bloggs",
+      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation" -> "true"
+    ),
+    "dfs_submission_success_empty_turn_around_time_2015_welsh" -> Map(
       "subject" -> "Test Subject",
       "greeting" -> "Mr Joe Bloggs",
       "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
@@ -381,7 +423,21 @@ object TemplateParams {
       "warningInformation" -> "false",
       "turnAroundTime" -> "15 days"
     ),
+    "dfs_trusts_submission_success_welsh" -> Map(
+      "subject" -> "Trust/Estate email confirmation",
+      "greeting" -> "Mr Joe Bloggs",
+      "confirmation" -> "HM Revenue and Customs (HMRC) has received your registration of a trust",
+      "submissionReference" -> "XWTRN0000000875",
+      "paragraphOne" -> "There is no need to call us, we will contact you if we need any more information",
+      "warningInformation" -> "false",
+      "turnAroundTime" -> "15 days"
+    ),
     "dfs_submission_success_rcgt_2018" -> Map(
+      "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
+      "name" -> "Mr Joe Bloggs",
+      "submissionReference" -> "123-ABCD-456"
+    ),
+    "dfs_submission_success_rcgt_2018_welsh" -> Map(
       "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
       "name" -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
