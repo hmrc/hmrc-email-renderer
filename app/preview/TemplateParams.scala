@@ -1543,6 +1543,9 @@ object TemplateParams {
     "newMessageAlert_2WSM-reply" -> Map(
       "recipientName_line1" -> "Alex Brown",
       "date"                -> "2019-04-03"
+    ),
+    "cgtpd_email_verification" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
     )
   )
 }
