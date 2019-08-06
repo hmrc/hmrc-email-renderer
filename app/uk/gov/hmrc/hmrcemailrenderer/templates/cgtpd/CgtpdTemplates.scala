@@ -27,7 +27,7 @@ object CgtpdTemplates {
       templateId = "cgtpd_email_verification",
       fromAddress = govUkTeamAddress,
       service = Cgtpd,
-      subject = "Report and pay Capital Gains Tax on UK property email verification",
+      subject = "Verify your email for Capital Gains Tax on UK property",
       plainTemplate = txt.cgtpdEmailVerification.f,
       htmlTemplate = html.cgtpdEmailVerification.f,
       priority = Some(MessagePriority.Urgent)

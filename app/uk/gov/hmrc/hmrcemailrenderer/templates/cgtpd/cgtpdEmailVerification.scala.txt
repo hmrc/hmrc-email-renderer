@@ -1,5 +1,7 @@
 @(params: Map[String, Any])Report and pay Capital Gains Tax on UK property email verification
 
+Hello @{params("name")}
+
 You told us you want us to use this email address to contact you about Capital Gains Tax on UK property.
 
 Before we can starting using this address, you’ll need to verify it.
@@ -11,10 +13,10 @@ You must click the link below within the next 30 minutes to verify your email ad
 
 After 30 minutes this link will expire and you’ll need to start again.
 
+Do not reply to this email.
+
 From HMRC Capital Gains Tax on UK property
 
 --
-
-Do not reply to this email.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

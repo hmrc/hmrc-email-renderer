@@ -1545,7 +1545,8 @@ object TemplateParams {
       "date"                -> "2019-04-03"
     ),
     "cgtpd_email_verification" -> Map(
-      "verificationLink" -> exampleLinkWithRandomId
+      "verificationLink" -> exampleLinkWithRandomId,
+      "name" -> "Susan Bartlett"
     )
   )
 }
