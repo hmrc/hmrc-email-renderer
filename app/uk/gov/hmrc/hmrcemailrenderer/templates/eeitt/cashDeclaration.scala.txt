@@ -12,7 +12,7 @@ What you need to do next
 
 Your submission reference is: @params.get("submissionReference")
 
-You need to make a note of this reference and also print a copy of your online declaration as proof of your submission. If you are asked, you will need to show these to a customs official when you travel.
+You need to make a note of this reference. It also helps if you print a copy of your online declaration, so you can show these to a customs official if they ask for proof of your submission.
 
 Why you are receiving this email
 
