@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Report and pay Capital Gains Tax on UK property email verification
 
-Hello @{params("name")}
+Dear @{params("name")}
 
 You told us you want us to use this email address to contact you about Capital Gains Tax on UK property.
 
