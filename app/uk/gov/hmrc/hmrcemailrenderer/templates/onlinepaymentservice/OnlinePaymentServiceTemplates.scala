@@ -187,6 +187,14 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.ddi_unpaid_dcs_alert.f,
       htmlTemplate = html.ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "ddi_08_alert_aa",
+      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "VAT Direct Debit",
+      plainTemplate = txt.ddi_08_alert_aa.f,
+      htmlTemplate = html.ddi_08_alert_aa.f,
+      priority = Some(MessagePriority.Urgent)),
     //Passengers email template
     MessageTemplate.create(
       templateId = "passengers_payment_confirmation",
@@ -197,12 +205,12 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
-      templateId = "ddi_08_alert_aa",
+      templateId = "dd_email_verifcation",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "VAT Direct Debit",
-      plainTemplate = txt.ddi_08_alert_aa.f,
-      htmlTemplate = html.ddi_08_alert_aa.f,
+      subject = "Verify your email address",
+      plainTemplate = txt.dd_email_verifcation.f,
+      htmlTemplate = html.dd_email_verifcation.f,
       priority = Some(MessagePriority.Urgent)),
     //Recon tps
     MessageTemplate.createWithDynamicSubject(
