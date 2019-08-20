@@ -60,4 +60,16 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
     }
   }
+
+  "Email notifications " should {
+    "have matching html and text for import adjustment statements" in {
+      compareContent("customs_financials_new_import_adjustment", commonParameters)(customsFinancialsTemplate)
+    }
+
+    "have matching html and text for C79 certificates" in {
+      compareContent("customs_financials_new_c79_certificate", commonParameters)(customsFinancialsTemplate)
+    }
+
+  }
+
 }
