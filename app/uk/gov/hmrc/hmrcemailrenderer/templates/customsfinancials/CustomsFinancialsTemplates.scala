@@ -30,6 +30,24 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.newStatementNotificationEmail.f,
       htmlTemplate = html.newStatementNotificationEmail.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_new_import_adjustment",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New notification of import adjustment statement",
+      plainTemplate = txt.ImportAdjustmentEmail.f,
+      htmlTemplate = html.ImportAdjustmentEmail.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_new_c79_certificate",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New import VAT certificate (C79)",
+      plainTemplate = txt.C79Certificate.f,
+      htmlTemplate = html.C79Certificate.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
