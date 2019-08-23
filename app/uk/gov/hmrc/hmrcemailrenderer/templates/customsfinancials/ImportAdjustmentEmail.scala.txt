@@ -4,8 +4,6 @@
 
 You have a new statement. To view it:
 
-To view your statement:
-
 Go to GOV.UK.
 
 Search for ‘Get your notification of import adjustment statements’.
