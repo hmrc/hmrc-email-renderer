@@ -48,6 +48,17 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.C79Certificate.f,
       htmlTemplate = html.C79Certificate.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_new_postponed_vat_notification",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New postponed import VAT statement",
+//      plainTemplate = txt.postponedImportVATStatement.f ,
+//      htmlTemplate = html.postponedImportVATStatement.f,
+      plainTemplate = txt.postponedImportVATStatement.f,
+      htmlTemplate = html.postponedImportVATStatement.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
