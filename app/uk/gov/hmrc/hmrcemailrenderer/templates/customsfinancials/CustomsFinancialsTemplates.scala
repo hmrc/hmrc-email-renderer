@@ -54,8 +54,6 @@ object CustomsFinancialsTemplates {
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "New postponed import VAT statement",
-//      plainTemplate = txt.postponedImportVATStatement.f ,
-//      htmlTemplate = html.postponedImportVATStatement.f,
       plainTemplate = txt.postponedImportVATStatement.f,
       htmlTemplate = html.postponedImportVATStatement.f,
       priority = Some(MessagePriority.Urgent)
