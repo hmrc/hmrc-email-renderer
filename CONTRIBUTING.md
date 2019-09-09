@@ -24,8 +24,8 @@ Once you've got your code changes done and a pull request created, it's time to 
 1. Create a JIRA ticket for project "Digital Contact (DC)" in Jira with details of the pull request and what it's for
 2. Make sure you've attached the [rendered preview of your email](/README.md#preview-mode)
 3. Tag Tom [~tom.hughes] in the ticket, so we can review and get it prioritised for you
-4. Join Slack channel #team-digital-contact to ask about progress and/or ask questions
-5. Our QA's will contact you when the they have merged and deployed to QA so you can check you are happy before we create a release ticket
+4. Join Slack channel #team-digital-contact to tell us you've created a ticket, and also ask about progress or any other questions
+5. Our QA will contact you when they have merged and deployed to the QA environment so you can check you are happy before we create a release ticket
 
 
 ### Content recommendations
