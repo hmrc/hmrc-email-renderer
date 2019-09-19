@@ -164,6 +164,15 @@ object ApiTemplates {
       plainTemplate = txt.apiApplicationRejectedNotification.f,
       htmlTemplate = html.apiApplicationRejectedNotification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiStatusChangedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "API Status Changed",
+      plainTemplate = txt.apiStatusChangedNotification.f,
+      htmlTemplate = html.apiStatusChangedNotification.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
