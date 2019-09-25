@@ -134,6 +134,12 @@ object TemplateParams {
       "supportUrl" -> exampleLinkWithRandomId,
       "reason" -> "The name is too similar to an existing app."
     ),
+    "apiStatusChangedNotification" -> Map(
+      "apiName" -> "Test Microservice",
+      "apiVersion" -> "2.0",
+      "currentStatus" -> "ALPHA",
+      "newStatus" -> "BETA"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
