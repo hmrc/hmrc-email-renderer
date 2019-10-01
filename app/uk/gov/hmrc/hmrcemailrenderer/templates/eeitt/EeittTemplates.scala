@@ -445,6 +445,15 @@ object EeittTemplates {
       plainTemplate = txt.adrConfirmation.f,
       htmlTemplate = html.adrConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ccg1_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your customs application",
+      plainTemplate = txt.ccg1Confirmation.f,
+      htmlTemplate = html.ccg1Confirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
