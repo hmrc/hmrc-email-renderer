@@ -232,6 +232,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cet_email_confirmation",
         "gss_email_confirmation",
         "cash_declaration",
+        "ccg1_confirmation_submission",
         "register_for_duty_on_gas_for_road_fuel_use",
         "register_for_duty_on_biofuels_and_other_fuel_substitutes",
         "register_for_fuel_duty_confirmation",
