@@ -15,7 +15,8 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied for a Customs Comprehensive Guarantee"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied for Customs Comprehensive Guarantee authorisation"){
+
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("decName") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
@@ -28,9 +29,11 @@
     We will review your business's application. If we approve the application, we will confirm the level of guarantee we require from your guarantor.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     If we have any questions before we make this decision, we will contact you by email.</p>
-<h2>Why you are receiving this email</h2>
+<h2>What you can do now</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for an application submitted online.</p>
+    You may want to contact an approved financial institution to discuss your guarantee requirements. This could save you time later if we approve your application.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You should not finalise any guarantee arrangements or use any customs procedures until you receive confirmation from HMRC that your application is approved.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     From the Customs Comprehensive Guarantee team</p>
 }

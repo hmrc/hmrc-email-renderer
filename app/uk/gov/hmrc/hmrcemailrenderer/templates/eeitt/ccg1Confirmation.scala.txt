@@ -1,6 +1,7 @@
 @(params: Map[String, Any])
 
-You applied for a Customs Comprehensive Guarantee
+You applied for Customs Comprehensive Guarantee authorisation
+
 
 Dear @params.get("decName")
 
@@ -14,9 +15,12 @@ We will review your business's application. If we approve the application, we wi
 
 If we have any questions before we make this decision, we will contact you by email.
 
-Why you are receiving this email
+What you can do now
 
-We send a confirmation email for an application submitted online.
+You may want to contact an approved financial institution to discuss your guarantee requirements. This could save you time later if we approve your application.
+
+You should not finalise any guarantee arrangements or use any customs procedures until you receive confirmation from HMRC that your application is approved.
+
 
 From the Customs Comprehensive Guarantee team
 
