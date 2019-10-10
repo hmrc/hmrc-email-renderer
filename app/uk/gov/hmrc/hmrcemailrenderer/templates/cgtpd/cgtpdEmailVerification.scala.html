@@ -15,14 +15,15 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Report and pay Capital Gains Tax on UK property email verification"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
   <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
-  <p style="margin: 0 0 30px; font-size: 19px;">You told us you want us to use this email address to contact you about Capital Gains Tax on UK property.</p>
-  <p style="margin: 0 0 30px; font-size: 19px;">Before we can starting using this address, you’ll need to verify it.</p>
-  <p style="margin: 0 0 30px; font-size: 19px; font-weight: bold;">How to verify your email address</p>
-  <p style="margin: 0 0 30px; font-size: 19px;">You must click the link below within the next 30 minutes to verify your email address:</p>
-  <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
-  <p style="margin: 0 0 30px; font-size: 19px;">After 30 minutes this link will expire and you’ll need to start again.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">You told us you wanted us to use this email address to contact you about reporting and paying Capital Gains Tax on UK property.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Before we can start using this address, you’ll need to confirm it.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">The link below will stop working after 30 minutes. If the link does not work, you’ll need to start again.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Follow the link below to confirm your email address.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">
+    <a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a>
+  </p>
   <p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
-  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Capital Gains Tax on UK property</p>
+  <p style="margin: 0 0 30px; font-size: 19px; font-weight: bold;">From Capital Gains Tax on UK property</p>
 }
