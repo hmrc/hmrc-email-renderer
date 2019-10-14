@@ -375,6 +375,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cash_declaration_UK",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your cash declaration",
+      plainTemplate = txt.cashDeclaration_UK.f,
+      htmlTemplate = html.cashDeclaration_UK.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "cet_email_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
