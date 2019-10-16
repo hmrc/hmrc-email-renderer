@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Report and pay Capital Gains Tax on UK property email verification
+
+Confirm your email address
+
+Dear @{params("name")}
+
+You told us you wanted us to use this email address to contact you about reporting and paying Capital Gains Tax on UK property.
+
+Before we can start using this address, you’ll need to confirm it.
+
+The link below will stop working after 30 minutes. If the link does not work, you’ll need to start again.
+
+Follow the link below to confirm your email address.
+
+@{params("verificationLink")}
+
+After 30 minutes this link will expire and you’ll need to start again.
+
+Do not reply to this email.
+
+From HMRC Capital Gains Tax on UK property
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

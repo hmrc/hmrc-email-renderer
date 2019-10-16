@@ -61,6 +61,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.voa.CCATemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactVatTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.parcels.ParcelsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customsfinancials.CustomsFinancialsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd.CgtpdTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -108,7 +109,8 @@ trait TemplateLocator {
         "vat"                        -> vatTemplates.templates,
         "Digital Contact VAT"        -> DigitalContactVatTemplates.templates,
         "Two way messaging"          -> twoWayMessagingTemplates.templates,
-        "Customs Financials"         -> CustomsFinancialsTemplates.templates
+        "Customs Financials"         -> CustomsFinancialsTemplates.templates,
+        "Cgtpd"                      -> CgtpdTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
