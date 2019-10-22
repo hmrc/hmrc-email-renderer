@@ -1547,6 +1547,12 @@ object TemplateParams {
     "cgtpd_email_verification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "name" -> "Susan Bartlett"
+    ),
+    "tdq_header_compliance_email_no_headers" -> Map(
+      "fromDate"          -> "22/09/2019",
+      "toDate"            -> "22/10/2019",
+      "applicationName"   -> "MTD VAT Test Application",
+      "applicationId"     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
     )
   )
 }
