@@ -21,12 +21,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateCom
 
 class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
-  private def tdqTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
-    messageTemplateF(templateId)(TdqTemplates.templates)
+  "tdq_compliance_all_required_headers_missing template" should {
 
-  "Templates for which the text and html content are identical" should {
+    "be the same for text and html content" in {
 
-    "include tdq_header_compliance_email_no_headers" in {
       val params = commonParameters + (
         "fromDate" -> "22/09/2019",
         "toDate" -> "22/10/2019",
@@ -34,7 +32,17 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
         "applicationId" -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
 
-      compareContent("tdq_header_compliance_email_no_headers", params)(tdqTemplate)
+      compareContent("tdq_compliance_all_required_headers_missing", params)(tdqTemplate)
+    }
+
+    "contain subject with application name" in {
+
+      val template = findTemplate("tdq_compliance_all_required_headers_missing")
+      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
   }
+
+  private def tdqTemplate(templateId: String) = messageTemplateF(templateId)(TdqTemplates.templates)
+
+  private def findTemplate(templateId: String) = TdqTemplates.templates.filter(t => t.templateId == templateId).head
 }

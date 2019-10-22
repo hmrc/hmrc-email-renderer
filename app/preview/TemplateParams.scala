@@ -1548,7 +1548,7 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId,
       "name" -> "Susan Bartlett"
     ),
-    "tdq_header_compliance_email_no_headers" -> Map(
+    "tdq_compliance_all_required_headers_missing" -> Map(
       "fromDate"          -> "22/09/2019",
       "toDate"            -> "22/10/2019",
       "applicationName"   -> "MTD VAT Test Application",
