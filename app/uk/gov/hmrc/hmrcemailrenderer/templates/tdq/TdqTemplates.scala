@@ -29,7 +29,7 @@ object TdqTemplates {
 
   val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.createWithDynamicSubject(
-      templateId = "tdq_header_compliance_email_no_headers",
+      templateId = "tdq_compliance_all_required_headers_missing",
       fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
       service = Tdq,
       subject = extractSubject,
