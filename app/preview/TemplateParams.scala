@@ -1549,6 +1549,7 @@ object TemplateParams {
       "name" -> "Susan Bartlett"
     ),
     "tdq_compliance_all_required_headers_missing" -> Map(
+      "developerName"     -> "John Smith",
       "fromDate"          -> "22/09/2019",
       "toDate"            -> "22/10/2019",
       "applicationName"   -> "MTD VAT Test Application",

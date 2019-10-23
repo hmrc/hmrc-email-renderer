@@ -26,6 +26,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "be the same for text and html content" in {
 
       val params = commonParameters + (
+        "developerName" -> "John Smith",
         "fromDate" -> "22/09/2019",
         "toDate" -> "22/10/2019",
         "applicationName" -> "MTD VAT Test Application",
