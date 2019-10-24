@@ -463,6 +463,24 @@ object EeittTemplates {
       plainTemplate = txt.ccg1Confirmation.f,
       htmlTemplate = html.ccg1Confirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "tspDeReg_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your cancellation request",
+      plainTemplate = txt.tspDeRegConfirmation.f,
+      htmlTemplate = html.tspDeRegConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "tspCHIEF_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your CHIEF badge request",
+      plainTemplate = txt.tspCHIEFActivationConfirmation.f,
+      htmlTemplate = html.tspCHIEFActivationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
