@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+You applied to activate a badge for CHIEF declarations
+
+Dear @params.get("fullNameFilling")
+
+HMRC received your request to access CHIEF for transitional simplified procedures.
+
+Your submission reference is: @params.get("submissionReference")
+
+What happens next
+
+We will review the details you have given us and contact you on the email you provided.
+
+If you need to make contact before then, you can email: chief.operations&#64;hmrc.gov.uk
+
+Why you are receiving this email
+
+We send a confirmation email for requests to activate a badge for CHIEF.
+
+From HMRC CHIEF operations
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
