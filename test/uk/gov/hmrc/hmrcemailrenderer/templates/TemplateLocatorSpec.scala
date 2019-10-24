@@ -83,7 +83,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Two way messaging",
         "Parcels",
         "Customs Financials",
-        "Cgtpd"
+        "Cgtpd",
+        "TDQ"
       )
     }
 
@@ -500,7 +501,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_financials_new_import_adjustment",
         "customs_financials_new_c79_certificate",
         "customs_financials_new_postponed_vat_notification",
-        "cgtpd_email_verification"
+        "cgtpd_email_verification",
+        "tdq_compliance_all_required_headers_missing"
       )
     }
   }
