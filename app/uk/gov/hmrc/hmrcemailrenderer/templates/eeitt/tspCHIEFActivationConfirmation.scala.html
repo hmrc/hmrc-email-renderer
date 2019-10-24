@@ -1,0 +1,35 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to activate a badge for CHIEF declarations"){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params.get("fullNameFilling")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HMRC received your request to access CHIEF for transitional simplified procedures.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: @params.get("submissionReference")</p>
+<h2>What happens next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We will review the details you have given us and contact you on the email you provided.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    If you need to make contact before then, you can email: chief.operations&#64;hmrc.gov.uk</p>
+<h2>Why you are receiving this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We send a confirmation email for requests to activate a badge for CHIEF.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC CHIEF operations</p>
+}
