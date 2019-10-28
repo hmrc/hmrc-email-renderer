@@ -138,7 +138,8 @@ object TemplateParams {
       "apiName" -> "Test Microservice",
       "apiVersion" -> "2.0",
       "currentStatus" -> "ALPHA",
-      "newStatus" -> "BETA"
+      "newStatus" -> "BETA",
+      "environment" -> "Production"
     ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
