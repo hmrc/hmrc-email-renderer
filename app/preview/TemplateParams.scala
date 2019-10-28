@@ -139,7 +139,7 @@ object TemplateParams {
       "apiVersion" -> "2.0",
       "currentStatus" -> "ALPHA",
       "newStatus" -> "BETA",
-      "environment" -> "Production"
+      "environmentName" -> "Production"
     ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId

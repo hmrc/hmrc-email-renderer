@@ -16,5 +16,5 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "API Status Changed") {
-<p style="margin: 0 0 30px; font-size: 19px;">The Status of API <strong>@{params("apiName")}</strong> Version <strong>@{params("apiVersion")}</strong> has changed from <strong>@{params("currentStatus")}</strong> to <strong>@{params("newStatus")}</strong> in the <strong>@{params("environment")}</strong> environment.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">The Status of API <strong>@{params("apiName")}</strong> Version <strong>@{params("apiVersion")}</strong> has changed from <strong>@{params("currentStatus")}</strong> to <strong>@{params("newStatus")}</strong> in the <strong>@{params("environmentName")}</strong> environment.</p>
 }
