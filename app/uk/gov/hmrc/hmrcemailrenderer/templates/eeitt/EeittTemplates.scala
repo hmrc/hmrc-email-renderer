@@ -481,6 +481,15 @@ object EeittTemplates {
       plainTemplate = txt.tspCHIEFActivationConfirmation.f,
       htmlTemplate = html.tspCHIEFActivationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "challengeChildcare_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request for a mandatory review",
+      plainTemplate = txt.challengeChildcareSubmission.f,
+      htmlTemplate = html.challengeChildcareSubmission.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
