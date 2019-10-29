@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+
+You applied to request a mandatory review of a childcare service application decision
+
+
+Dear @params.get("name")
+
+HMRC received your request for a mandatory review to challenge a childcare service application decision.
+
+Your submission reference is: @params.get("submissionReference")
+
+What happens next
+
+We will review your application and write to you to let you know our decision.
+
+If we have any questions, we will contact you.
+
+Why you are receiving this email
+
+We send a confirmation email for an application submitted online.
+
+From HMRC Childcare Service team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
