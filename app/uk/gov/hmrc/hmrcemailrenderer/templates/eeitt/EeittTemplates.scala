@@ -486,7 +486,7 @@ object EeittTemplates {
       templateId = "challengeChildcare_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your request for a mandatory review",
+      subject = "HMRC received your mandatory review request",
       plainTemplate = txt.challengeChildcareSubmission.f,
       htmlTemplate = html.challengeChildcareSubmission.f,
       priority = Some(MessagePriority.Standard)
