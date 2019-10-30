@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import org.scalatestplus.play.OneAppPerSuite
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.play.test.UnitSpec
@@ -87,6 +88,11 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
       validateTemplate(
         templateId = "apiApplicationRejectedNotification",
         expectedSubject = "Application check failed")
+
+      validateTemplate(
+        templateId = "apiStatusChangedNotification",
+        expectedSubject = "API Status Changed",
+        expectedPriority = MessagePriority.Standard)
     }
   }
 
@@ -94,7 +100,7 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
     ApiTemplates.templates.filter(t => t.templateId == templateId).head
   }
 
-  def validateTemplate(templateId: String, expectedSubject: String) = {
+  def validateTemplate(templateId: String, expectedSubject: String, expectedPriority: MessagePriority = MessagePriority.Urgent) = {
     val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
     template.fromAddress.apply(Map.empty) should be ("HMRC Developer Hub <noreply@tax.service.gov.uk>")
@@ -103,6 +109,6 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
     subject(Map.empty) should be(expectedSubject)
     template.plainTemplate should not be(null)
     template.htmlTemplate should not be(null)
-    template.priority.get should be(MessagePriority.Urgent)
+    template.priority.get should be(expectedPriority)
   }
 }
