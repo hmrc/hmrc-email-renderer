@@ -238,6 +238,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ccg1_confirmation_submission",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
+        "challengeChildcare_confirmation_submission",
         "register_for_duty_on_gas_for_road_fuel_use",
         "register_for_duty_on_biofuels_and_other_fuel_substitutes",
         "register_for_fuel_duty_confirmation",
