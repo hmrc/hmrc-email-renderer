@@ -39,7 +39,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "contain subject with application name" in {
 
       val template = findTemplate("tdq_compliance_all_required_headers_missing")
-      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for MTD VAT Test Application"
+      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for ‘MTD VAT Test Application’"
     }
   }
 
