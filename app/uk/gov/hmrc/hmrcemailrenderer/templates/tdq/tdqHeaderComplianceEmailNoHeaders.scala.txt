@@ -10,9 +10,9 @@ What you must do next
 
 Make sure your application submits the correct fraud prevention headers immediately.
 
-1. Go to the HMRC Developer Hub.
-2. Select the Fraud prevention link in the ‘Get started’ list.
-3. Read the specification to learn how your application must submit the correct fraud prevention headers.
+Go to the HMRC Developer Hub.
+Select the Fraud prevention link in the ‘Get started’ list.
+Read the specification to learn how your application must submit the correct fraud prevention headers.
 
 We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
 
