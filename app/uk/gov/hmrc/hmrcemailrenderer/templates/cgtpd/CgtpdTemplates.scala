@@ -40,5 +40,6 @@ object CgtpdTemplates {
       plainTemplate = txt.cgtpdAccountCreated.f,
       htmlTemplate = html.cgtpdAccountCreated.f,
       priority = Some(MessagePriority.Standard)
+    )
   )
 }
