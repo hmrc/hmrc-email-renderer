@@ -26,7 +26,7 @@ object PodsTemplates {
       templateId = "pods_scheme_register",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = "The pension scheme details have been sent to HMRC",
+      subject = "HMRC received your application",
       plainTemplate = txt.schemeRegSubmitted.f,
       htmlTemplate = html.schemeRegSubmitted.f,
       priority = Some(MessagePriority.Standard)
