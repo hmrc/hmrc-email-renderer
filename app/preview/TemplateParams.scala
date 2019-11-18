@@ -553,6 +553,13 @@ object TemplateParams {
       "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
       "errorList" -> "Brap Brap"
     ),
+    "bars_alert_transaction" -> Map(
+      "baRefNumber" -> "BA : ba5090",
+      "transactionId" -> "Transaction id : 78918c8a-216a-4472-b886-9b81fcf4f64d",
+      "fileName" -> "File name : Barnet_CT.xml",
+      "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
+      "errorList" -> "Brap Brap"
+    ),
     "register_your_company_welcome_email" -> Map(
       "returnLink" -> "http://registeryourcompany.gov.uk"
     ),
