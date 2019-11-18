@@ -16,7 +16,7 @@ Use your account to:
 
 How to sign into your account
 
-Go to @{params("signInUrl")}. You’ll need to have your Government Gateway user ID and password to hand.
+Go to the email we sent you inviting you to take part in the Capital Gains Tax on UK property Private Beta trial. Use the link in that email to sign in. You’ll need to have your Government Gateway user ID and password to hand.
 
 Do not reply to this email.
 

@@ -1557,7 +1557,6 @@ object TemplateParams {
       "applicationId"     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
     ),
     "cgtpd_account_created" -> Map(
-      "signInUrl" -> "https://www.qa.tax.service.gov.uk/cgt-property-disposals/sign-in",
       "cgtReference" -> "XYCGTP123456780",
       "name" -> "Jamie Wilson"
     )
