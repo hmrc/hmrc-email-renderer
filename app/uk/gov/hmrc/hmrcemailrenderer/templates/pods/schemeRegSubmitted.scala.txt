@@ -2,7 +2,7 @@
 
 You have applied to register a new pension scheme with HMRC
 
-Dear Pension Scheme Administrator,
+Dear Pension Scheme Administrator
 
 Your submission reference number is: @{params("srn").toString}
 
