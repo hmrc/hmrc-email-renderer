@@ -32,6 +32,13 @@ object BarsTemplates  {
       service = BusinessRates,
       subject = getBARefCode,
       plainTemplate = txt.bars.f,
-      htmlTemplate = html.bars.f)
+      htmlTemplate = html.bars.f),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "bars_alert_transaction",
+      fromAddress = FromAddress.noReply("Business Rates"),
+      service = BusinessRates,
+      subject = getBARefCode,
+      plainTemplate = txt.barsTransaction.f,
+      htmlTemplate = html.barsTransaction.f)
   )
 }
