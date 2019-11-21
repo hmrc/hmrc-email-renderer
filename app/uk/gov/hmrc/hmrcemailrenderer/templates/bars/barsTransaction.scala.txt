@@ -1,0 +1,7 @@
+@(params: Map[String, Any])Valuation Office Agency - Business Rates
+
+@params("baRefNumber"),
+@params("transactionId"),
+@params("fileName"),
+@params("dateSubmitted"),
+@params("errorList")
