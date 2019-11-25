@@ -230,6 +230,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tsp_application_confirmation",
         "gd_application_confirmation",
         "rdec_email_confirmation",
+        "bd600_confirmation_submission",
         "csr_submission_confirmation",
         "cet_email_confirmation",
         "gss_email_confirmation",

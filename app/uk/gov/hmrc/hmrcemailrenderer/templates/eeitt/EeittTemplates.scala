@@ -490,6 +490,15 @@ object EeittTemplates {
       plainTemplate = txt.challengeChildcareSubmission.f,
       htmlTemplate = html.challengeChildcareSubmission.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "bd600_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Lottery Duty return ",
+      plainTemplate = txt.bd600ReturnConfirmation.f,
+      htmlTemplate = html.bd600ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
