@@ -1,0 +1,31 @@
+@(params: Map[String, Any])
+You created a Capital Gains Tax on UK property account
+
+Dear @{params("name")}
+
+Your Capital Gains Tax on UK property account number is @{params("cgtReference")}.
+
+You will need to provide this number to HMRC if you need to discuss your account.
+
+Your account
+
+From 6 April 2020, you'll be able to use your account to:
+
+- report and pay Capital Gains Tax on UK property sales or disposals made on or after 6 April 2020
+- view and amend returns made on or after 6 April 2020
+
+Go to GOV.UK and search for 'Capital Gains Tax' to find out how to report a capital gain on UK property disposals made before 6 April 2020.
+
+How to sign into your account
+
+Select the link in the email we sent you. The email told you how to take part in the trial of the Report and Pay Capital Gains Tax on UK property service.
+
+You'll need to have your Government Gateway user ID and password to hand.
+
+Do not reply to this email.
+
+From HMRC Capital Gains Tax on UK property
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

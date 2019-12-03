@@ -1509,6 +1509,10 @@ object TemplateParams {
       "toDate"            -> "22/10/2019",
       "applicationName"   -> "MTD VAT Test Application",
       "applicationId"     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+    ),
+    "cgtpd_account_created" -> Map(
+      "cgtReference" -> "XYCGTP123456780",
+      "name" -> "Jamie Wilson"
     )
   )
 }
