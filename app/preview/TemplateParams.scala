@@ -1332,72 +1332,6 @@ object TemplateParams {
       "commission" -> "2.55",
       "totalPaid" -> "126.00"
     ),
-    "ddi_cancelled" -> Map(
-      "FILE" -> "ADDACS",
-      "REASON" -> "1",
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789",
-      "REGIME" -> "VATC"
-    ),
-    "ddi_cancelled_online" -> Map(
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789"
-    ),
-    "ddi_not_acceptable" -> Map(
-      "FILE" -> "ADDACS",
-      "REASON" -> "B",
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789",
-      "REGIME" -> "VATC"
-    ),
-    "ddi_reinstated" -> Map(
-      "FILE" -> "ADDACS",
-      "REASON" -> "R",
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789",
-      "REGIME" -> "VATC",
-      "SORTCODE" -> "001122",
-      "ACCOUNTNUMBER" -> "12345678"
-    ),
-    "ddi_unpaid" -> Map(
-      "FILE" -> "ARUDD",
-      "REASON" -> "5",
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789",
-      "REGIME" -> "VATC",
-      "AMOUNT" -> "1000.00",
-      "COLLECTIONDATE" -> "20180501"
-    ),
-    "ddi_advance_notice" -> Map(
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789",
-      "REGIME" -> "VATC",
-      "AMOUNT" -> "1215003.18",
-      "COLLECTIONDATE" -> "20180501",
-      "NEWSUNNAME" -> "HMRC E VAT DDS",
-      "PHONENUMBER" -> "0300 200 3700",
-      "CHARGETYPE_0" -> "VAT Return",
-      "PERIOD_0" -> "0118",
-      "AMOUNT_0" -> "5001.43",
-      "CHARGETYPE_1" -> "VAT Return",
-      "PERIOD_1" -> "0418",
-      "AMOUNT_1" -> "4049.57",
-      "CHARGETYPE_2" -> "VAT Return",
-      "PERIOD_2" -> "0718",
-      "AMOUNT_2" -> "5952"
-    ),
-    "ddi_set_up" -> Map(
-      "NAME" -> "Customer",
-      "DDIREFERENCE" -> "123456789",
-      "REGIME" -> "VATC",
-      "ACCOUNTNAME" -> "MR A CUSTOMER",
-      "SORTCODE" -> "001122",
-      "ACCOUNTNUMBER" -> "12345678",
-      "COLLECTIONDATE" -> "20180501",
-      "NEWSUNNAME" -> "HMRC E VAT DDS",
-      "PHONENUMBER" -> "0300 200 3700",
-      "CHARGETYPE" -> "VAT Return charge"
-    ),
     "ddi_migration_letter" -> Map(
       "NAME" -> "Customer",
       "ADDRESSLINE1" -> "15 Grand Avenue",
@@ -1416,16 +1350,24 @@ object TemplateParams {
       "NEWSUNNAME" -> "HMRC E VAT DDS",
       "PHONENUMBER" -> "0300 200 3700"
     ),
-    "ddi_setup_advisory" -> Map(
-      "recipientName_line1" -> "Joe Smith"
-    ),
-    "ddi_amend_advisory" -> Map(
-      "recipientName_line1" -> "Joe Smith"
-    ),
-    "ddi_cancelled_advisory" -> Map(
-      "recipientName_line1" -> "Joe Smith"
-    ),
-
+    "ddi_advance_notice" -> Map(
+    "NAME" -> "Customer",
+    "DDIREFERENCE" -> "123456789",
+    "REGIME" -> "VATC",
+    "AMOUNT" -> "1215003.18",
+    "COLLECTIONDATE" -> "20180501",
+    "NEWSUNNAME" -> "HMRC E VAT DDS",
+    "PHONENUMBER" -> "0300 200 3700",
+    "CHARGETYPE_0" -> "VAT Return",
+    "PERIOD_0" -> "0118",
+    "AMOUNT_0" -> "5001.43",
+    "CHARGETYPE_1" -> "VAT Return",
+    "PERIOD_1" -> "0418",
+    "AMOUNT_1" -> "4049.57",
+    "CHARGETYPE_2" -> "VAT Return",
+    "PERIOD_2" -> "0718",
+    "AMOUNT_2" -> "5952"
+  ),
     "ddi_setup_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
