@@ -31,6 +31,15 @@ object CgtpdTemplates {
       plainTemplate = txt.cgtpdEmailVerification.f,
       htmlTemplate = html.cgtpdEmailVerification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId ="cgtpd_account_created",
+      fromAddress = govUkTeamAddress,
+      service = Cgtpd,
+      subject = "Capital Gains Tax on UK property account created",
+      plainTemplate = txt.cgtpdAccountCreated.f,
+      htmlTemplate = html.cgtpdAccountCreated.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
