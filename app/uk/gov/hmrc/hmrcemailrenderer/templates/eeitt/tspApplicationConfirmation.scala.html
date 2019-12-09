@@ -15,16 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: your Transitional Simplified Procedure application"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: your transitional simplified procedures application"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer,</p>
+    Dear @params.get("appName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We have received your application for Transitional Simplified Procedure.</p>
+    We have received your application for transitional simplified procedures.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We will reply with a decision within 15 working days.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: @params.get("submissionReference")</p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for applications submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     If you need to contact us about your application, please quote your EORI number.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Transitional Simplified Procedure Team</p>
+    From HMRC transitional simplified procedures team</p>
 }
