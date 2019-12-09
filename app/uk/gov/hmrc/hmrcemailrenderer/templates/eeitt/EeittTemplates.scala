@@ -324,7 +324,7 @@ object EeittTemplates {
       templateId = "tsp_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Submitted: your Transitional Simplified Procedure application",
+      subject = "HMRC received your transitional simplified procedures application",
       plainTemplate = txt.tspApplicationConfirmation.f,
       htmlTemplate = html.tspApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
