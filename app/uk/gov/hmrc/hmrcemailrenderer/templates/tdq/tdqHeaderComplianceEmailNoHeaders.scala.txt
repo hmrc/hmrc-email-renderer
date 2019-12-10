@@ -1,27 +1,31 @@
-@(params: Map[String, Any])Reminder that you must provide fraud prevention headers
+@(params: Map[String, Any])Reminder to use fraud prevention headers
 
 Dear @params("developerName")
 
-Our API call logs show that between @params("fromDate") and @params("toDate") no fraud prevention headers were submitted from ‘@params("applicationName")’ (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
+Our API call logs show that between @params("fromDate") and @params("toDate") no fraud prevention headers were submitted from '@params("applicationName")' (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
 
-Supplying header information for our VAT (MTD) API(s) is required by law.
+Supplying header information for our VAT (MTD) API is required by law.
 
 What you must do next
 
 Make sure your application submits the correct fraud prevention headers immediately.
 
 Go to the HMRC Developer Hub.
-Select the Fraud prevention link in the ‘Get started’ list.
+
+Select the Fraud prevention link in the 'Get started' list.
+
 Read the specification to learn how your application must submit the correct fraud prevention headers.
+
+Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC’s fraud prevention specification.
 
 We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
 
 Why you have received this email
 
-This email address is registered as the point of contact for the application ‘@{params("applicationName")}’.
+This email address is registered as the point of contact for the application '@{params("applicationName")}'.
 
 If you are not the right person to receive this email please forward it to the relevant person in your organisation.
 
-From Transaction Monitoring Team
+From HMRC Transaction Monitoring Team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
