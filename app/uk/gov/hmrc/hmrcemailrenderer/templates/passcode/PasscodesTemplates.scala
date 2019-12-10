@@ -112,7 +112,7 @@ object PasscodesTemplates {
     MessageTemplate.create(
       templateId = "cgtpd_private_beta_access",
       fromAddress = govUkTeamAddress,
-      service = GuaranteedMinimumPension,
+      service = Cgtpd,
       subject = "How to start the trial of the new ‘Report and pay Capital Gains Tax on UK property service’",
       plainTemplate = txt.cgtpdPrivateBetaAccess.f,
       htmlTemplate = html.cgtpdPrivateBetaAccess.f)
