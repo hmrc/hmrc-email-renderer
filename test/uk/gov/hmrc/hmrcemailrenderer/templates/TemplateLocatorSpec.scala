@@ -500,7 +500,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_financials_new_postponed_vat_notification",
         "cgtpd_email_verification",
         "tdq_compliance_all_required_headers_missing",
-        "cgtpd_account_created"
+        "cgtpd_account_created",
+        "cgtpd_private_beta_access"
       )
     }
   }

@@ -108,6 +108,13 @@ object PasscodesTemplates {
       service = GuaranteedMinimumPension,
       subject = "Your check a GMP link",
       plainTemplate = txt.gmpVerificationEmail.f,
-      htmlTemplate = html.gmpVerificationEmail.f)
+      htmlTemplate = html.gmpVerificationEmail.f),
+    MessageTemplate.create(
+      templateId = "cgtpd_private_beta_access",
+      fromAddress = govUkTeamAddress,
+      service = Cgtpd,
+      subject = "How to start the trial of the new ‘Report and pay Capital Gains Tax on UK property service’",
+      plainTemplate = txt.cgtpdPrivateBetaAccess.f,
+      htmlTemplate = html.cgtpdPrivateBetaAccess.f)
   )
 }
