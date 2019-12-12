@@ -235,6 +235,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cet_email_confirmation",
         "gss_email_confirmation",
         "cash_declaration",
+        "cash_declaration_EU",
         "cash_declaration_UK",
         "ccg1_confirmation_submission",
         "tspDeReg_confirmation_submission",
