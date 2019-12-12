@@ -1513,6 +1513,10 @@ object TemplateParams {
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
       "name" -> "Jamie Wilson"
+    ),
+    "cgtpd_private_beta_access" -> Map(
+      "name" -> "Jamie Wilson",
+      "verificationLink" -> exampleLinkWithRandomId
     )
   )
 }
