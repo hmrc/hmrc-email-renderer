@@ -15,42 +15,48 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reminder that you must provide fraud prevention headers") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reminder to use fraud prevention headers") {
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName")</p>
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Our API call logs show that between @params("fromDate") and @params("toDate") no fraud prevention headers were submitted from ‘@params("applicationName")’ (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
+        Our API call logs show that between @params("fromDate") and @params("toDate") no fraud prevention headers were submitted from '@params("applicationName")' (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
     </p>
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Supplying header information for our VAT (MTD) API(s) is required by law.
+        Supplying header information for our VAT (MTD) API is required by law.
     </p>
 
     <h2>What you must do next</h2>
-
-    <p style="font-size: 19px; line-height: 1.315789474;">
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
         Make sure your application submits the correct fraud prevention headers immediately.
     </p>
-
     <ol>
-        <li style="font-size: 19px; line-height: 1.315789474;">Go to the HMRC Developer Hub.</li>
-        <li style="font-size: 19px; line-height: 1.315789474;">Select the Fraud prevention link in the ‘Get started’ list.</li>
-        <li style="font-size: 19px; line-height: 1.315789474;">Read the specification to learn how your application must submit the correct fraud prevention headers.</li>
+        <li style="font-size: 19px; line-height: 1.315789474;">
+            Go to the HMRC Developer Hub.
+        </li>
+        <li style="font-size: 19px; line-height: 1.315789474;">
+            Select the Fraud prevention link in the 'Get started' list.
+        </li>
+        <li style="font-size: 19px; line-height: 1.315789474;">
+            Read the specification to learn how your application must submit the correct fraud prevention headers.
+        </li>
+        <li style="font-size: 19px; line-height: 1.315789474;">
+            Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC’s fraud prevention specification.
+        </li>
     </ol>
-
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
         We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
     </p>
-
+    
     <h2>Why you have received this email</h2>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        This email address is registered as the point of contact for the application ‘@params("applicationName")’.
+        This email address is registered as the point of contact for the application '@params("applicationName")'.
     </p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
         If you are not the right person to receive this email please forward it to the relevant person in your organisation.
     </p>
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From Transaction Monitoring Team</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Transaction Monitoring Team</p>
 
 }
