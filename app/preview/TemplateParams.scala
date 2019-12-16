@@ -572,8 +572,8 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "register_your_company_register_paye_confirmation_current_tax_year" -> Map(
-      "companyName" -> "Not Foo bar Wizz And Bang Ltd",
-      "referenceNumber" -> "not-reference-test-12345678910"
+      "companyName" -> "ABC Logistics Ltd",
+      "referenceNumber" -> "12345678910"
     ),
     "register_your_company_register_paye_confirmation_new_tax_year" -> Map(
       "companyName" -> "Foo bar Wizz And Bang Ltd",
