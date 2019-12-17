@@ -1437,6 +1437,10 @@ object TemplateParams {
       "name" -> "test user",
       "personId" -> "123456789"
     ),
+    "cca_revaluation_subscription_confirmation" -> Map(
+      "name" -> "test user",
+      "unsubscribeUrl" -> "http://www.tax.gov.uk/business-rates-find/unsubscribe/a-uuid"
+    ),
     "cdsEmailTemplate" -> Map(
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
     ),

@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Valuation Office Agency – Revaluations
+
+Hello @params("name"),
+
+You are getting this email because you have signed up to receive news about future business rates revaluations.
+
+We’ll send you an email when we have published any updates.
+
+You can unsubscribe if you do not want to receive any more emails about future revaluations.
+
+Unsubscribe
+
+From Valuation Office Agency (VOA)
+
+ @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
