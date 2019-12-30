@@ -1,0 +1,64 @@
+@*
+ * Copyright 2019 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fraud prevention headers status report") {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName")</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application '@params("applicationName")' (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Our checks show that some or all requests during this period had an invalid or missing value for the Gov-Client-Connection-Method header (other headers may or may not have been sent).
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Every connection method has a number of mandatory headers that must be submitted.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        We need a value for the Gov-Client-Connection-Method header in order to perform validation, and to identify the list of other headers that will be required for your connection method.
+    </p>
+
+    <h2>What you must do next</h2>
+    <ol>
+        <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
+            Read the fraud prevention specification so that you can make sure that your application submits the correct fraud prevention headers.
+        </li>
+        <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
+            Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC’s fraud prevention specification.
+        </li>
+        <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
+            If the Test Fraud Prevention Headers API shows that your application is submitting the correct headers, please check that your end user is using the latest version of your application.
+        </li>
+    </ol>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
+    </p>
+    
+    <h2>Why you have received this email</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        This email address is registered as the point of contact for the application '@params("applicationName")'.
+    </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        If you are not the right person to receive this email please forward it to the relevant person in your organisation.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Transaction Monitoring Team</p>
+
+}

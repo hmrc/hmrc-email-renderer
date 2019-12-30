@@ -43,6 +43,28 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     }
   }
 
+  "tdq_compliance_partially_complaint_invalid_or_missing_connection_method" should {
+
+    "be the same for text and html content" in {
+
+      val params = commonParameters + (
+        "developerName" -> "John Smith",
+        "fromDate" -> "22/09/2019",
+        "toDate" -> "22/10/2019",
+        "applicationName" -> "MTD VAT Test Application",
+        "applicationId" -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+      )
+
+      compareContent("tdq_compliance_partially_complaint_invalid_or_missing_connection_method", params)(tdqTemplate)
+    }
+
+    "contain subject with application name" in {
+
+      val template = findTemplate("tdq_compliance_partially_complaint_invalid_or_missing_connection_method")
+      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for ‘MTD VAT Test Application’"
+    }
+  }
+
   private def tdqTemplate(templateId: String) = messageTemplateF(templateId)(TdqTemplates.templates)
 
   private def findTemplate(templateId: String) = TdqTemplates.templates.filter(t => t.templateId == templateId).head

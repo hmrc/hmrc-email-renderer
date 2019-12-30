@@ -1510,6 +1510,13 @@ object TemplateParams {
       "applicationName"   -> "MTD VAT Test Application",
       "applicationId"     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
     ),
+    "tdq_compliance_partially_complaint_invalid_or_missing_connection_method" -> Map(
+      "developerName"     -> "Joe Williams",
+      "fromDate"          -> "01/12/2019",
+      "toDate"            -> "31/12/2019",
+      "applicationName"   -> "MTD VAT InvalidConnection App",
+      "applicationId"     -> "1434b966-ea76-40a6-a312-1d58ff873a16"
+    ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
       "name" -> "Jamie Wilson"

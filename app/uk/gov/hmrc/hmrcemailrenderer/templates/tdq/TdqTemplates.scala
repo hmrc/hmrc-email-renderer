@@ -35,6 +35,16 @@ object TdqTemplates {
       subject = extractSubject,
       plainTemplate = txt.tdqHeaderComplianceEmailNoHeaders.f,
       htmlTemplate = html.tdqHeaderComplianceEmailNoHeaders.f,
-      priority = Some(MessagePriority.Standard))
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tdq_compliance_partially_complaint_invalid_or_missing_connection_method",
+      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
+      service = Tdq,
+      subject = extractSubject,
+      plainTemplate = txt.tdqHeaderComplianceInvalidOrMissingConnectionMethod.f,
+      htmlTemplate = html.tdqHeaderComplianceInvalidOrMissingConnectionMethod.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
 }
