@@ -6,9 +6,7 @@ Our API call logs show that between @params("fromDate") and @params("toDate") fr
 
 Our checks show that some or all requests during this period had an invalid or missing value for the Gov-Client-Connection-Method header (other headers may or may not have been sent).
 
-Every connection method has a number of mandatory headers that must be submitted.
-
-We need a value for the Gov-Client-Connection-Method header in order to perform validation, and to identify the list of other headers that will be required for your connection method.
+We need a value for the Gov-Client-Connection-Method header to perform validation, and to identify the other mandatory headers your connection requires.
 
 What you must do next
 
