@@ -16,7 +16,9 @@
 
 package preview
 
-import java.util.UUID
+import java.util.{Base64, UUID}
+
+import play.api.libs.json.Json.{parse, stringify}
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -1509,6 +1511,87 @@ object TemplateParams {
       "toDate"            -> "22/10/2019",
       "applicationName"   -> "MTD VAT Test Application",
       "applicationId"     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+    ),
+    "tdq_compliance_partially_compliant_invalid_or_missing_connection_method" -> Map(
+      "developerName"     -> "Joe Williams",
+      "fromDate"          -> "01/12/2019",
+      "toDate"            -> "31/12/2019",
+      "applicationName"   -> "MTD VAT InvalidConnection App",
+      "applicationId"     -> "1434b966-ea76-40a6-a312-1d58ff873a16"
+    ),
+    "tdq_compliance_partially_compliant_valid_connection_method" -> Map(
+      "developerName"     -> "James Black",
+      "fromDate"          -> "01/01/2020",
+      "toDate"            -> "31/01/2020",
+      "applicationName"   -> "MTD VAT ValidCM App",
+      "applicationId"     -> "07b587d7-34d9-40b6-9d59-a0917490cf02",
+      "extraDetails"      -> Base64.getEncoder.encodeToString(stringify(parse("""
+        {
+          "connectionMethod": "WEB_APP_VIA_SERVER",
+          "requestCount": 100,
+          "headerValidations": [
+            {
+              "headerOrHeaders": "gov-client-public-ip",
+              "errors": [
+                {
+                  "message": "Header value is not an IP address",
+                  "percentage": 5
+                },
+                {
+                  "message": "Header value is not a public IP address ",
+                  "percentage": 10
+                }
+              ],
+              "warnings": []
+            },
+            {
+              "headerOrHeaders": "gov-vendor-version",
+              "errors": [
+                {
+                  "message": "Header value is not a key value data structure ",
+                  "percentage": 10
+                },
+                {
+                  "message": "At least one of the keys or values is not percent encoded",
+                  "percentage": 25
+                },
+                {
+                  "message": "At least one value for software version is missing",
+                  "percentage": 15
+                },
+                {
+                  "message": "At least one separator (ampersand or equal sign) is percent encoded",
+                  "percentage": 40
+                }
+              ],
+              "warnings": [
+                {
+                  "message": "For client server architecture, please supply at least a version for client and server",
+                  "percentage": 10
+                }
+              ]
+            },
+            {
+              "headerOrHeaders": "gov-client-device-id",
+              "errors" : [],
+              "warnings": [
+                {
+                  "message": "Use a UUID (also known as a GUID) as recommended in our documentation",
+                  "percentage": 10
+                },
+                {
+                  "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long",
+                  "percentage": 17
+                },
+                {
+                  "message": "Header value contains an email address. Device ID should not be derived from user-specific data ",
+                  "percentage": 22
+                }
+              ]
+            }
+          ]
+        }
+          """)).getBytes("UTF-8"))
     ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
