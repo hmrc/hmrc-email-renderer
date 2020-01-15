@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ object CCATemplates {
         templateId = "cca_revaluation_subscription_confirmation",
         fromAddress = govUkTeamAddress,
         service = CCA,
-        subject = "Valuation Office Agency - Revaluations",
+        subject = "You signed up for news about business rate revaluations",
         plainTemplate = subscription.txt.ccaRevalSubscriptionConfirmation.f,
         htmlTemplate = subscription.html.ccaRevalSubscriptionConfirmation.f,
         priority = Some(MessagePriority.Standard)

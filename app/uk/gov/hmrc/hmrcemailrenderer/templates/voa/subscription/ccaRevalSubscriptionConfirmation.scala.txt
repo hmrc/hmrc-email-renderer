@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Valuation Office Agency – Revaluations
+Valuation Office Agency – revaluations
 
 Hello @params("name"),
 
