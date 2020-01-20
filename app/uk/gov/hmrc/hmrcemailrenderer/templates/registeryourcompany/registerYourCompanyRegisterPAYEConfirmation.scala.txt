@@ -1,18 +1,16 @@
 @(params: Map[String, Any])We have received your PAYE application for @params("companyName")
 
-Thank you for your application.
-
-Your reference number is: @params("referenceNumber")
+Your application reference number is: @params("referenceNumber")
 
 What happens next
 
-We will send you an email to tell you if your application is successful. If it is, we will send you:
+You will receive an email within 10 working days letting you know the outcome of your application.
 
-- a letter with PAYE and Accounts Office reference numbers. You will need these to send payroll information to HMRC
-- an activation code in the post so you can manage the company’s PAYE online
+If your application is successful, we will send you:
 
-We are currently working through a large volume of registration applications so it might take a few weeks for you to receive your employer PAYE reference number.
+- a letter with PAYE and Accounts Office reference numbers within 5 working days of the application being approved (you will need these to send payroll information to HMRC)
+- an activation code in the post so that you can manage the company’s PAYE online
 
-From HMRC PAYE
+From HM Revenue & Customs PAYE
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
