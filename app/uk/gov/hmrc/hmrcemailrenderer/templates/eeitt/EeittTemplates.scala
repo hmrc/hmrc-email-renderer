@@ -504,10 +504,38 @@ object EeittTemplates {
       templateId = "bd600_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your Lottery Duty return ",
+      subject = "HMRC received your exemption election",
       plainTemplate = txt.bd600ReturnConfirmation.f,
       htmlTemplate = html.bd600ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "civOffShore_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your exemption election",
+      plainTemplate = txt.civOffShoreConfirmation.f,
+      htmlTemplate = html.civOffShoreConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "civQualifying_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your exemption election",
+      plainTemplate = txt.civQualifyingConfirmation.f,
+      htmlTemplate = html.civQualifyingConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "civTransparency_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your transparency election",
+      plainTemplate = txt.civTransparencyConfirmation.f,
+      htmlTemplate = html.civTransparencyConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
+
   )
 }
