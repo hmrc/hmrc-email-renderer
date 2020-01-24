@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Your application is scheduled to be deleted
+
+According to our records, your application @{params("applicationName")} has not been used in our @{params("environmentName")} environment for @{params("numberOfMonthsSinceLastUse")} months.
+
+Our policy is that applications remaining unused for @{params("numberOfMonthsBeforeDeletion")} months will be deleted from Developer Hub and no longer available for use.
+
+Your application has been scheduled to be deleted on or after @{params("dateOfScheduledDeletion")}.
+
+If you wish to retain this application you should make an API call using its credentials prior to the scheduled deletion date.
+
+If you do not wish to retain this application you can log in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.
+
+Once deleted the application cannot be restored.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

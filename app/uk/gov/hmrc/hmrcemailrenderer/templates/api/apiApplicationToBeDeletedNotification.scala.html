@@ -1,0 +1,26 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your application is scheduled to be deleted") {
+ <p style="margin: 0 0 30px; font-size: 19px;">According to our records, your application <strong>@{params("applicationName")}</strong> has not been used in our <strong>@{params("environmentName")}</strong> environment for <strong>@{params("numberOfMonthsSinceLastUse")} months</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Our policy is that applications remaining unused for <strong>@{params("numberOfMonthsBeforeDeletion")} months</strong> will be deleted from Developer Hub and no longer available for use.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Your application has been scheduled to be deleted on or after <strong>@{params("dateOfScheduledDeletion")}</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">If you wish to retain this application you should make an API call using its credentials prior to the scheduled deletion date.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">If you do not wish to retain this application you can log in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Once deleted the application cannot be restored.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
+}

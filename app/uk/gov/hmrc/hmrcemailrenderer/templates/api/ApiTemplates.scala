@@ -191,6 +191,15 @@ object ApiTemplates {
       plainTemplate = txt.apiRemovedClientSecretNotification.f,
       htmlTemplate = html.apiRemovedClientSecretNotification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiApplicationToBeDeletedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Your application is scheduled to be deleted",
+      plainTemplate = txt.apiApplicationToBeDeletedNotification.f,
+      htmlTemplate = html.apiApplicationToBeDeletedNotification.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
