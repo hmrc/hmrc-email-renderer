@@ -24,6 +24,19 @@ import uk.gov.hmrc.play.test.UnitSpec
 
 class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
+  "The template locator when requested Welsh template" should {
+
+    "return Welsh version of template if it exists" in new TestCase {
+      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2.cy").get.templateId shouldBe "template-templateGroup-1-2.cy"
+    }
+    "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
+      templateLocator.findTemplate("template-templateGroup-1-2.cy").get.templateId shouldBe "template-templateGroup-1-2"
+    }
+    "return None if template doesn't exist" in new TestCase {
+      templateLocator.findTemplate("foobar-template") shouldBe None
+    }
+  }
+
   "The template locator" should {
 
     "loop through all groups and return the first template matching the provided template id" in new TestCase {
@@ -526,6 +539,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     val templateLocator = new TemplateLocator {
       override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
+    }
+
+    val templateLocatorWithWelsh = new TemplateLocator {
+      val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
+      override lazy val all: Seq[MessageTemplate] = allEnglish ++ allEnglish.map(t => t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
     }
   }
 
