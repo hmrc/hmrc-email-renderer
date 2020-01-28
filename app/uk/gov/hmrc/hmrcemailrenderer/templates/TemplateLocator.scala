@@ -119,11 +119,7 @@ trait TemplateLocator {
 
   def findTemplate(templateId: String): Option[MessageTemplate] =
     all.find(_.templateId == templateId) orElse  {
-      if (templateId.endsWith(TemplateLocator.WELSH_SUFFIX)) {
-        all.find(_.templateId == templateId.stripSuffix(TemplateLocator.WELSH_SUFFIX))
-      } else {
-        None
-      }
+      all.find(_.templateId == templateId.stripSuffix(TemplateLocator.WELSH_SUFFIX))
     }
 }
 

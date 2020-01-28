@@ -32,6 +32,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
     "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
       templateLocator.findTemplate("template-templateGroup-1-2.cy").get.templateId shouldBe "template-templateGroup-1-2"
     }
+    "return None if template doesn't exist" in new TestCase {
+      templateLocator.findTemplate("foobar-template") shouldBe None
+    }
   }
 
   "The template locator" should {
