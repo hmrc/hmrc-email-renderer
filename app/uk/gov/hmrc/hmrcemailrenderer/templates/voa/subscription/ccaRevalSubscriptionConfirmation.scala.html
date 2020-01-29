@@ -15,13 +15,9 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
-
-<h1>Valuation Office Agency – revaluations</h1>
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Valuation Office Agency – revaluations"){
 <div style="margin: 0 0 30px; font-size: 19px;">
-
-    <p>Hello @params("name")</p>
+    <p>Dear @params("name")</p>
 
     <p>You are getting this email because you have signed up to receive news about future business rates revaluations.</p>
 
