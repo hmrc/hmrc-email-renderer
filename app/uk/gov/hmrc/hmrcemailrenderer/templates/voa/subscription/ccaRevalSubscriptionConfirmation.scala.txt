@@ -9,8 +9,6 @@ We’ll send you an email when we have published any updates.
 
 You can unsubscribe if you do not want to receive any more emails about future revaluations.
 
-Unsubscribe
-
 From Valuation Office Agency (VOA)
 
  @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
