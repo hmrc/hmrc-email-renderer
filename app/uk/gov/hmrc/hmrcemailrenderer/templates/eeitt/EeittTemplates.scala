@@ -535,6 +535,15 @@ object EeittTemplates {
       plainTemplate = txt.civTransparencyConfirmation.f,
       htmlTemplate = html.civTransparencyConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "confirmationCode_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address",
+      plainTemplate = txt.confirmationCodeTemplate.f,
+      htmlTemplate = html.confirmationCodeTemplate.f,
+      priority = Some(MessagePriority.Standard)
     )
 
   )
