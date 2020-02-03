@@ -57,6 +57,15 @@ object CCATemplates {
         plainTemplate = registration.txt.ccaEnrolmentConfirmationIndividual.f,
         htmlTemplate = registration.html.ccaEnrolmentConfirmationIndividual.f,
         priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+        templateId = "cca_revaluation_subscription_confirmation",
+        fromAddress = govUkTeamAddress,
+        service = CCA,
+        subject = "You signed up for news about business rate revaluations",
+        plainTemplate = subscription.txt.ccaRevalSubscriptionConfirmation.f,
+        htmlTemplate = subscription.html.ccaRevalSubscriptionConfirmation.f,
+        priority = Some(MessagePriority.Standard)
       )
   )
 }

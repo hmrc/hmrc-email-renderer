@@ -1439,6 +1439,9 @@ object TemplateParams {
       "name" -> "test user",
       "personId" -> "123456789"
     ),
+    "cca_revaluation_subscription_confirmation" -> Map(
+      "name" -> "test user"
+    ),
     "cdsEmailTemplate" -> Map(
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
     ),
