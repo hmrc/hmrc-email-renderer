@@ -14,11 +14,11 @@
 
   How long it will take
 
-  The trial will take between 30 minutes and an hour in total.
+  The trial will take around 30 minutes to complete.
 
   What you will need to take part
 
-  You will need to use a device that is connected to the internet. You will need to install a computer programme called GoToMeeting.
+  You will need to use a device that is connected to the internet.
 
   When taking part in the online trial, you will need to provide certain personal details to create your Capital Gains Tax on UK property account. These details may include:
   
@@ -60,10 +60,6 @@
 
   To start the trial, go to <a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a>
 
-  How to get help
-
-  You can email @{"ddcw-info-cgtpd-g@digital.hmrc.gov.uk"} if you have any questions about the trial or need help accessing the new online service.
-  
   Do not reply to this email.
 
   From Capital Gains Tax on UK property
