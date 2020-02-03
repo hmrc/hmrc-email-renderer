@@ -16,9 +16,9 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your application is scheduled to be deleted") {
- <p style="margin: 0 0 30px; font-size: 19px;">According to our records, your application <strong>@{params("applicationName")}</strong> has not been used in our <strong>@{params("environmentName")}</strong> environment for <strong>@{params("numberOfMonthsSinceLastUse")} months</strong>.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">Our policy is that applications remaining unused for <strong>@{params("numberOfMonthsBeforeDeletion")} months</strong> will be deleted from Developer Hub and no longer available for use.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">Your application has been scheduled to be deleted on or after <strong>@{params("dateOfScheduledDeletion")}</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">According to our records, your application <strong>@{params("applicationName")}</strong> in our <strong>@{params("environmentName")}</strong> environment has not been used for <strong>@{params("timeSinceLastUse")}</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Applications that have not been used for <strong>@{params("timeBeforeDeletion")}</strong> will be deleted from the Developer Hub and will no longer be available for use.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Your application will be deleted on or after <strong>@{params("dateOfScheduledDeletion")}</strong>.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">If you wish to retain this application you should make an API call using its credentials prior to the scheduled deletion date.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">If you do not wish to retain this application you can log in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">Once deleted the application cannot be restored.</p>

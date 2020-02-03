@@ -1,10 +1,10 @@
 @(params: Map[String, Any])Your application is scheduled to be deleted
 
-According to our records, your application @{params("applicationName")} has not been used in our @{params("environmentName")} environment for @{params("numberOfMonthsSinceLastUse")} months.
+According to our records, your application @{params("applicationName")} in our @{params("environmentName")} environment has not been used for @{params("timeSinceLastUse")}.
 
-Our policy is that applications remaining unused for @{params("numberOfMonthsBeforeDeletion")} months will be deleted from Developer Hub and no longer available for use.
+Applications that have not been used for @{params("timeBeforeDeletion")} will be deleted from the Developer Hub and will no longer be available for use.
 
-Your application has been scheduled to be deleted on or after @{params("dateOfScheduledDeletion")}.
+Your application will be deleted on or after @{params("dateOfScheduledDeletion")}.
 
 If you wish to retain this application you should make an API call using its credentials prior to the scheduled deletion date.
 

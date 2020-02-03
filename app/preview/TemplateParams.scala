@@ -162,8 +162,8 @@ object TemplateParams {
     "apiApplicationToBeDeletedNotification" -> Map(
       "applicationName" -> "Test Application",
       "environmentName" -> "External Test",
-      "numberOfMonthsSinceLastUse" -> "11",
-      "numberOfMonthsBeforeDeletion" -> "12",
+      "timeSinceLastUse" -> "11 months",
+      "timeBeforeDeletion" -> "365 days",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
     "changeOfEmailAddressNewAddress" -> Map(
