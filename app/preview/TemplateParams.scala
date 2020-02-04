@@ -160,6 +160,8 @@ object TemplateParams {
       "applicationName"    -> "Tax Software"
     ),
     "apiApplicationToBeDeletedNotification" -> Map(
+      "userFirstName" -> "Fred",
+      "userLastName" -> "Bloggs",
       "applicationName" -> "Test Application",
       "environmentName" -> "External Test",
       "timeSinceLastUse" -> "11 months",

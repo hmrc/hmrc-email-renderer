@@ -15,12 +15,15 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your application is scheduled to be deleted") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Take action to stop your application being deleted") {
+ <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("userFirstName")} @{params("userLastName")}</p>
  <p style="margin: 0 0 30px; font-size: 19px;">According to our records, your application <strong>@{params("applicationName")}</strong> in our <strong>@{params("environmentName")}</strong> environment has not been used for <strong>@{params("timeSinceLastUse")}</strong>.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">Applications that have not been used for <strong>@{params("timeBeforeDeletion")}</strong> will be deleted from the Developer Hub and will no longer be available for use.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">We permanently delete applications that have not been used for <strong>@{params("timeBeforeDeletion")}</strong>. They cannot be restored.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">Your application will be deleted on or after <strong>@{params("dateOfScheduledDeletion")}</strong>.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">If you wish to retain this application you should make an API call using its credentials prior to the scheduled deletion date.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">If you do not wish to retain this application you can log in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">Once deleted the application cannot be restored.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
+ <h2>What you can do now</h2>
+ <ul style="margin: 0 0 30px; font-size: 19px;">
+  <li>If you <strong>want to keep this application</strong> you should make an API call using its credentials prior to the scheduled deletion date.</li>
+  <li>If you <strong>do not want to keep this application</strong> you can sign in to Developer Hub and delete it manually, or allow it to be removed automatically on the scheduled deletion date.</li>
+ </ul>
+ <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
 }

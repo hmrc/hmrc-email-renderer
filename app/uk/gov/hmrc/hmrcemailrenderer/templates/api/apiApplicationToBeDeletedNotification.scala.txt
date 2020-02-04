@@ -1,16 +1,18 @@
-@(params: Map[String, Any])Your application is scheduled to be deleted
+@(params: Map[String, Any])Take action to stop your application being deleted
+
+Dear @{params("userFirstName")} @{params("userLastName")}
 
 According to our records, your application @{params("applicationName")} in our @{params("environmentName")} environment has not been used for @{params("timeSinceLastUse")}.
 
-Applications that have not been used for @{params("timeBeforeDeletion")} will be deleted from the Developer Hub and will no longer be available for use.
+We permanently delete applications that have not been used for @{params("timeBeforeDeletion")}. They cannot be restored.
 
 Your application will be deleted on or after @{params("dateOfScheduledDeletion")}.
 
-If you wish to retain this application you should make an API call using its credentials prior to the scheduled deletion date.
+What you can do now
 
-If you do not wish to retain this application you can log in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.
+If you want to keep this application you should make an API call using its credentials prior to the scheduled deletion date.
 
-Once deleted the application cannot be restored.
+If you do not want to keep this application you can sign in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.
 
 From HMRC Developer Hub
 
