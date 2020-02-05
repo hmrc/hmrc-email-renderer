@@ -516,6 +516,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_financials_new_statement_notification",
         "customs_financials_new_import_adjustment",
         "customs_financials_new_c79_certificate",
+        "customs_financials_historic_c79_certificate",
         "customs_financials_new_postponed_vat_notification",
         "cgtpd_email_verification",
         "tdq_compliance_all_required_headers_missing",
