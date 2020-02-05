@@ -50,6 +50,15 @@ object CustomsFinancialsTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "customs_financials_historic_c79_certificate",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New requested import VAT certificate (C79)",
+      plainTemplate = txt.C79HistoricCertificate.f,
+      htmlTemplate = html.C79HistoricCertificate.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "customs_financials_new_postponed_vat_notification",
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
