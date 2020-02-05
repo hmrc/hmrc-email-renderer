@@ -10,9 +10,12 @@ Your application will be deleted on or after @{params("dateOfScheduledDeletion")
 
 What you can do now
 
-If you want to keep this application you should make an API call using its credentials prior to the scheduled deletion date.
+If you want to keep this application you need to:
+- make an API call using its credentials before the scheduled deletion date
 
-If you do not want to keep this application you can sign in to Developer Hub and delete it manually, or allow it to be deleted automatically on the scheduled deletion date.
+If you do not want to keep this application you can either:
+- sign in to Developer Hub and delete it manually
+- allow it to be removed automatically on the scheduled deletion date
 
 From HMRC Developer Hub
 
