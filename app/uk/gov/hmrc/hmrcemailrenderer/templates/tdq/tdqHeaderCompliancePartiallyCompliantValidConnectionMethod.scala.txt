@@ -23,7 +23,7 @@ Errors and/or warnings may relate to more than one version of your software as p
 
 Report
 
-'@params("applicationName")' submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
+'@params("applicationName")' using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
 
 These are the headers where errors and/or warnings have been found:
 
@@ -33,11 +33,11 @@ These are the headers where errors and/or warnings have been found:
 @if(headersValidation.errors.nonEmpty) {
   errors
 @for(error <- headersValidation.errors) {
-    @error.message (in @error.percentage% of requests) }}
+    @error.message (@error.percentageDescription) }}
 @if(headersValidation.warnings.nonEmpty) {
   warnings
 @for(warning <- headersValidation.warnings) {
-    @warning.message (in @warning.percentage% of requests) }}
+    @warning.message (@warning.percentageDescription) }}
 }
 
 What you must do next
