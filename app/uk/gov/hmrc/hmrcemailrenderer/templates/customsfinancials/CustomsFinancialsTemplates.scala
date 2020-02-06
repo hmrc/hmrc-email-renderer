@@ -33,6 +33,15 @@ object CustomsFinancialsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "customs_financials_requested_duty_deferment_statement",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New requested duty deferment statement",
+      plainTemplate = txt.requestedDutyDefermentStatement.f,
+      htmlTemplate = html.requestedDutyDefermentStatement.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "customs_financials_new_import_adjustment",
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,

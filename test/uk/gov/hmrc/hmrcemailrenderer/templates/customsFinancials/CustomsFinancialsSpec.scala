@@ -66,6 +66,10 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
   }
 
   "Email notifications " should {
+    "have matching content in the html and the text for requested duty deferment statements" in {
+      compareContent("customs_financials_requested_duty_deferment_statement", commonParameters)(customsFinancialsTemplate)
+    }
+
     "have matching content in the html and the text for import adjustment statements" in {
       compareContent("customs_financials_new_import_adjustment", commonParameters)(customsFinancialsTemplate)
     }
