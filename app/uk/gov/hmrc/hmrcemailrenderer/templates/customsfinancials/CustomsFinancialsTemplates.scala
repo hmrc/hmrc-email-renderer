@@ -28,8 +28,8 @@ object CustomsFinancialsTemplates {
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "New duty deferment statement",
-      plainTemplate = txt.newStatementNotificationEmail.f,
-      htmlTemplate = html.newStatementNotificationEmail.f,
+      plainTemplate = txt.newDutyDefermentStatement.f,
+      htmlTemplate = html.newDutyDefermentStatement.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -37,8 +37,8 @@ object CustomsFinancialsTemplates {
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "New notification of import adjustment statement",
-      plainTemplate = txt.ImportAdjustmentEmail.f,
-      htmlTemplate = html.ImportAdjustmentEmail.f,
+      plainTemplate = txt.newImportAdjustmentStatement.f,
+      htmlTemplate = html.newImportAdjustmentStatement.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -46,8 +46,8 @@ object CustomsFinancialsTemplates {
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "New import VAT certificate (C79)",
-      plainTemplate = txt.C79Certificate.f,
-      htmlTemplate = html.C79Certificate.f,
+      plainTemplate = txt.newC79Certificate.f,
+      htmlTemplate = html.newC79Certificate.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -56,8 +56,8 @@ object CustomsFinancialsTemplates {
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "New requested import VAT certificate (C79)",
-      plainTemplate = txt.C79HistoricCertificate.f,
-      htmlTemplate = html.C79HistoricCertificate.f,
+      plainTemplate = txt.requestedC79Certificate.f,
+      htmlTemplate = html.requestedC79Certificate.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -66,8 +66,8 @@ object CustomsFinancialsTemplates {
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "New postponed import VAT statement",
-      plainTemplate = txt.postponedImportVATStatement.f,
-      htmlTemplate = html.postponedImportVATStatement.f,
+      plainTemplate = txt.newPostponedImportVATStatement.f,
+      htmlTemplate = html.newPostponedImportVATStatement.f,
       priority = Some(MessagePriority.Standard)
     )
   )
