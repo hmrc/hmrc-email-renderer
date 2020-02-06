@@ -22,37 +22,38 @@ case _ => ""
 @ddtitle = @{"duty deferment " + statementType + "statement"}
 @title = @{s"New $ddtitle"}
 @showExtra = @{
-val ddst = params.get("DefermentStatementType").getOrElse("Unknown")
-ddst == "supplementary" || ddst == "excise" || (ddst == "weekly" && params.get("PeriodIssueNumber").getOrElse("0") == "4")
+val ddst = params.getOrElse("DefermentStatementType", "Unknown")
+ddst == "supplementary" || ddst == "excise" || (ddst == "weekly" && params.getOrElse("PeriodIssueNumber", "0") == "4")
 }
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title) {
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
-<div style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
-<p>You have a new @{ddtitle}.</p>
+    <div style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">
 
+        <p>You have a new @{ddtitle}.</p>
 
-@if(showExtra) {
-<p>@{params.get("DutyText").getOrElse("")} @{params.get("date").getOrElse("")}.</p>
+        @if(showExtra) {
+            <p>@{params.getOrElse("DutyText", "")} @{params.getOrElse("date", "")}.</p>
 
-<p>If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 594 243 if you need help making a CHAPS payment.</p>
-}
+            <p>If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 594 243 if you need help making a CHAPS payment.</p>
+        }
 
-<p>To view your statement:
-<ol>
- <li>Go to GOV.UK.</li>
- <li>Search for ‘Get your duty deferment statements’.</li>
-</ol></p>
-<p>
- For security reasons, we have not included a link in this email.
-</p>
-<h4>If you need help</h4>
-<p>Phone HMRC on 0300 059 4243. Opening times 9am to 12pm and 2pm to 4pm, Monday to Friday (closed bank holidays).</p>
-<p></p>
-<p>From the Customs Declaration Service</p>
+        <p>To view your statement:</p>
 
-</div>
+        <ol>
+            <li>Go to GOV.UK.</li>
+            <li>Search for ‘Get your duty deferment statements’.</li>
+        </ol>
 
+        <p>For security reasons, we have not included a link in this email.</p>
+
+        <h4>If you need help</h4>
+
+        <p>Phone HMRC on 0300 059 4243. Opening times 9am to 12pm and 2pm to 4pm, Monday to Friday (closed bank holidays).</p>
+
+        <p>From the Customs Declaration Service</p>
+
+    </div>
 }
