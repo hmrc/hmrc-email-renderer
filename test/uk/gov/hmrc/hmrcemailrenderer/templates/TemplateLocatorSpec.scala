@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, Subject}
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -27,10 +27,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
   "The template locator when requested Welsh template" should {
 
     "return Welsh version of template if it exists" in new TestCase {
-      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2.cy").get.templateId shouldBe "template-templateGroup-1-2.cy"
+      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2_cy"
     }
     "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
-      templateLocator.findTemplate("template-templateGroup-1-2.cy").get.templateId shouldBe "template-templateGroup-1-2"
+      templateLocator.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2"
     }
     "return None if template doesn't exist" in new TestCase {
       templateLocator.findTemplate("foobar-template") shouldBe None
@@ -132,6 +132,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "digitalOptOutConfirmation",
         "changeOfEmailAddressNewAddress",
         "newMessageAlert",
+        "newMessageAlert_cy",
         "newMessageAlert_SA316",
         "newMessageAlert_SS300",
         "newMessageAlert_SA300",
@@ -149,7 +150,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_CA001",
         "amls_notification_received_template",
         "rescindedMessageAlert",
+        "rescindedMessageAlert_cy",
         "verificationReminder",
+        "verificationReminder_cy",
         "generic_access_invitation_template_id",
         "cato_access_invitation_template_id",
         "agents_access_invitation_template_id",
@@ -278,10 +281,12 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "childcare_taxfree_england_B",
         "childcare_taxfree_devolved_B",
         "tax_estimate_message_alert",
+        "tax_estimate_message_alert_cy",
         "iht_access_invitation_template_id",
         "fandf_ask_help_notification",
         "fandf_offer_help_notification",
         "annual_tax_summaries_message_alert",
+        "annual_tax_summaries_message_alert_cy",
         "gmp_access_invitation_template_id",
         //        "indefensibleUpgrade",
         //        "indefensibleUpgradeWithDate",

@@ -190,6 +190,9 @@ object TemplateParams {
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "verificationReminder_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "verifyEmailAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -503,6 +506,9 @@ object TemplateParams {
       "name" -> "Mr Joe Bloggs"
     ),
     "tax_estimate_message_alert" -> Map(
+      "fullName" -> "Mr Joe Bloggs"
+    ),
+    "tax_estimate_message_alert_cy" -> Map(
       "fullName" -> "Mr Joe Bloggs"
     ),
     "fandf_ask_help_notification" -> Map(

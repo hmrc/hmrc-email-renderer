@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Dilyswch eich cyfeiriad e-bost
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, Some("Annwyl"))
+
+Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.
+
+Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.
+@if(params.contains("verificationLink")){
+Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.
+
+@{params("verificationLink")}
+} else {
+Click on the link in the email sent to you on @{params("verificationLinkSentDate")}.
+
+}
+Oddi wrth adran Ddigidol CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
