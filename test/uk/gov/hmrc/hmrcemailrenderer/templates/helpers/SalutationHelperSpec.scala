@@ -21,7 +21,7 @@ import uk.gov.hmrc.play.test.UnitSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 
 class SalutationHelperSpec extends UnitSpec {
-  "The salutation" should {
+  "The salutation in English" should {
 
     "be Dear Customer when having no name" in {
       salutationFrom(Map()) shouldBe "Dear Customer"
@@ -95,6 +95,33 @@ class SalutationHelperSpec extends UnitSpec {
       salutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_secondForename" -> "BOB", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")) shouldBe "Dear Mr Fisher"
     }
   }
+
+  "The salutation in Welsh" should {
+    "be Annwyl Customer when having no name" in {
+      salutationFrom(Map(), "Annwyl") shouldBe "Annwyl Gwsmer"
+    }
+
+    "be Annwyl Customer when having name.forename only" in {
+      salutationFrom(Map("recipientName_forename" -> "GEOFF"), "Annwyl") shouldBe "Annwyl Gwsmer"
+    }
+
+    "be Annwyl Customer when having name.title and name.forename only" in {
+      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF"), "Annwyl") shouldBe "Annwyl Gwsmer"
+    }
+
+    "be Annwyl Customer when name.surname only" in {
+      salutationFrom(Map("recipientName_surname" -> "FISHER"), "Annwyl") shouldBe "Annwyl Gwsmer"
+    }
+
+    "be Annwyl Customer when having empty title" in {
+      salutationFrom(Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey"), "Annwyl") shouldBe "Annwyl Gwsmer"
+    }
+
+    "be Dear Customer when having empty surname" in {
+      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "  "), "Annwyl") shouldBe "Annwyl Gwsmer"
+    }
+  }
+
 
   "The informal salutation" should {
 
