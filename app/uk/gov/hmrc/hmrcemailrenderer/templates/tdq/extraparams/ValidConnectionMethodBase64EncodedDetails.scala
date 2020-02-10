@@ -43,7 +43,14 @@ final case class HeadersValidation(
   warnings: Set[Problem]
 )
 
-final case class Problem(message: String, percentage: Int)
+final case class Problem(message: String, percentage: Int) {
+  val percentageDescription: String =
+    if (percentage < 1) {
+      "found in fewer than 1% of your requests"
+    } else {
+      s"found in $percentage% of your requests"
+    }
+}
 
 object Problem {
   implicit val reads: Reads[Problem] = Json.reads[Problem]
