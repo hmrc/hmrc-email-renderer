@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,15 @@ object CustomsFinancialsTemplates {
       subject = "New notification of import adjustment statement",
       plainTemplate = txt.ImportAdjustmentEmail.f,
       htmlTemplate = html.ImportAdjustmentEmail.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_historic_import_adjustment",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested notification of import adjustment statements are now available",
+      plainTemplate = txt.HistoricImportAdjustmentStatement.f,
+      htmlTemplate = html.HistoricImportAdjustmentStatement.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -495,7 +495,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_financials_new_statement_notification",
         "customs_financials_new_import_adjustment",
         "customs_financials_new_c79_certificate",
-        "customs_financials_new_postponed_vat_notification"
+        "customs_financials_new_postponed_vat_notification",
+        "customs_financials_historic_import_adjustment"
       )
     }
   }

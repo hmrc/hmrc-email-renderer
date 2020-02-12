@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,6 +72,10 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
 
     "have matching content in the html and the text for C79 certificates" in {
       compareContent("customs_financials_new_c79_certificate", commonParameters)(customsFinancialsTemplate)
+    }
+
+    "have matching content in the html and the text for historic import adjustment statements" in {
+      compareContent("customs_financials_historic_import_adjustment", commonParameters)(customsFinancialsTemplate)
     }
 
     "have matching content in the html and the text for postponed VAT statements" in {
