@@ -567,7 +567,7 @@ object EeittTemplates {
       templateId = "civTransparency_code_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - election for transparencyn",
+      subject = "Confirm your email address - election for transparency",
       plainTemplate = txt.civTransparencyCode.f,
       htmlTemplate = html.civTransparencyCode.f,
       priority = Some(MessagePriority.Standard)
