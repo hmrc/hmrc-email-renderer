@@ -544,7 +544,33 @@ object EeittTemplates {
       plainTemplate = txt.confirmationCodeTemplate.f,
       htmlTemplate = html.confirmationCodeTemplate.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "civOffshore_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - election for exemption",
+      plainTemplate = txt.civOffshoreCode.f,
+      htmlTemplate = html.civOffshoreCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "civQualifying_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - election for exemption",
+      plainTemplate = txt.civQualifyingCode.f,
+      htmlTemplate = html.civQualifyingCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "civTransparency_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - election for transparencyn",
+      plainTemplate = txt.civTransparencyCode.f,
+      htmlTemplate = html.civTransparencyCode.f,
+      priority = Some(MessagePriority.Standard)
     )
-
   )
 }
