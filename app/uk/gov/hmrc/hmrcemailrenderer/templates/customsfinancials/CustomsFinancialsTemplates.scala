@@ -51,6 +51,15 @@ object CustomsFinancialsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "customs_financials_requested_import_adjustment",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested notification of import adjustment statements are now available",
+      plainTemplate = txt.HistoricImportAdjustmentStatement.f,
+      htmlTemplate = html.HistoricImportAdjustmentStatement.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "customs_financials_new_c79_certificate",
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
