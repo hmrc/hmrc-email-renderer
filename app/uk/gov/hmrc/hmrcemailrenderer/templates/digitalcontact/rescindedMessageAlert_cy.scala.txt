@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Rescindment: File your Self Assessment tax return
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, Some("Annwyl"))
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
 Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar 19 February 2019.
 

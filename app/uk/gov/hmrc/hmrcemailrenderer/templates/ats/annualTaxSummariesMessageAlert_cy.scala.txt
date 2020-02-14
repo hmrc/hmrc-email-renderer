@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Mae’ch Crynodeb Treth Blynyddol yn barod
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, Some("Annwyl"))
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
 Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.
 

@@ -34,7 +34,7 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
       val htmlContent = template.htmlTemplate(params).toString
       htmlContent should include("Ewch i hafan GOV.UK")
       htmlContent should include("Dilyswch eich cyfeiriad e-bost")
-      htmlContent should include("Annwyl")
+      htmlContent should include("Annwyl Gwsmer")
       htmlContent should include("Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.")
       htmlContent should include("Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.")
       htmlContent should include("Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.")
@@ -46,9 +46,8 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
-
       txtContent should include("Dilyswch eich cyfeiriad e-bost")
-      txtContent should include("Annwyl")
+      txtContent should include("Annwyl Gwsmer")
       txtContent should include("Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.")
       txtContent should include("Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.")
       txtContent should include("Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.")

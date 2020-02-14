@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.AtsTemplates
 import org.joda.time.LocalDate
 import org.scalatest.EitherValues
-import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates.{taxYearFrom, taxYearTo}
+import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -27,6 +27,7 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
 
     val templateLocator = new TemplateLocator {}
     val template = templateLocator.templateGroups("ATS").find(_.templateId == "annual_tax_summaries_message_alert_cy").get
+    val params = commonParameters ++ TemplateParams.newMessageAlert_Names
     "render correct subject" in {
       val taxYearFrom = LocalDate.now().getYear - 2
       val taxYearTo = LocalDate.now().getYear - 1
@@ -34,10 +35,11 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
     }
 
     "render correct html content" in {
-      val htmlContent = template.htmlTemplate(commonParameters).toString
+      val htmlContent = template.htmlTemplate(params).toString
+
       htmlContent should include("Ewch i hafan GOV.UK")
       htmlContent should include("Mae’ch Crynodeb Treth Blynyddol yn barod")
-      htmlContent should include("Annwyl")
+      htmlContent should include("Annwyl Mr Johnston")
       htmlContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       htmlContent should include("Mae’ch crynodeb treth blynyddol bellach ar-lein. Mae’n dangos faint o dreth ac Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
       htmlContent should include("Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a Chyfrinair a ddefnyddioch i gofrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
@@ -51,10 +53,10 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
     }
 
     "render correct text content" in {
-      val txtContent = template.plainTemplate(commonParameters).toString
+      val txtContent = template.plainTemplate(params).toString
 
       txtContent should include("Mae’ch Crynodeb Treth Blynyddol yn barod")
-      txtContent should include("Annwyl")
+      txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       txtContent should include("Mae’ch crynodeb treth blynyddol bellach ar-lein. Mae’n dangos faint o dreth ac Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
       txtContent should include("Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a Chyfrinair a ddefnyddioch i gofrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
