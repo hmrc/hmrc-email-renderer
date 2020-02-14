@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.scalatest.EitherValues
+import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -26,17 +27,18 @@ class NewMessageAlertWelshSpec extends UnitSpec with EitherValues with TemplateL
   "newMessageAlert_cy" should{
     val templateLocator = new TemplateLocator{}
     val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "newMessageAlert_cy").get
+     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Hysbysiadau di-bapur CThEM: neges newydd")
     }
 
     "render correct html content" in {
-      val htmlContent = template.htmlTemplate(commonParameters).toString
+      val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include("Ewch i hafan GOV.UK")
       htmlContent should include("Mae gennych neges newydd oddi wrth CThEM</h1>")
-      htmlContent should include("Annwyl")
+      htmlContent should include("Annwyl Mr Johnston")
       htmlContent should include("Mae gennych neges newydd oddi wrth CThEM am Hunanasesiad.")
       htmlContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEM ar-lein.")
       htmlContent should include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
@@ -49,10 +51,10 @@ class NewMessageAlertWelshSpec extends UnitSpec with EitherValues with TemplateL
     }
 
     "render correct text content" in {
-      val txtContent = template.plainTemplate(commonParameters).toString
+      val txtContent = template.plainTemplate(params).toString
 
       txtContent should include("Mae gennych neges newydd oddi wrth CThEM")
-      txtContent should include("Annwyl")
+      txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Mae gennych neges newydd oddi wrth CThEM am Hunanasesiad.")
       txtContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEM ar-lein.")
       txtContent should include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")

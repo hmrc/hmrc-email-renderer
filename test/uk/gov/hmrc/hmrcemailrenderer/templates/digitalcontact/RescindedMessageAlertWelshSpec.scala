@@ -18,6 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import com.sun.xml.internal.bind.v2.TODO
 import org.scalatest.EitherValues
+import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -26,6 +27,7 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
   "rescindedMessageAlert_cy" should {
     val templateLocator = new TemplateLocator {}
     val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "rescindedMessageAlert_cy").get
+    val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl")
@@ -33,13 +35,13 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
 
 
     "render correct html content" in {
-      val htmlContent = template.htmlTemplate(commonParameters).toString
+      val htmlContent = template.htmlTemplate(params).toString
 
        htmlContent should include("Ewch i hafan GOV.UK")
        //TODO heading for sure cant be in english waiting for welsh translation DC-2251
        htmlContent should include("Rescindment: File your Self Assessment tax return")
        htmlContent should include("Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar")
-       htmlContent should include("Annwyl")
+       htmlContent should include("Annwyl Mr Johnston")
        htmlContent should include("Anfonom hon atoch yn rhy gynnar mewn camgymeriad, ac mae’n flin gennym am y camgymeriad.")
        htmlContent should include("Rydym bellach wedi dileu’r neges anghywir o’ch cyfrif CThEM.")
        htmlContent should include("Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.")
@@ -50,12 +52,11 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
     }
 
     "render correct text content" in {
-      val txtContent = template.plainTemplate(commonParameters).toString
-
+      val txtContent = template.plainTemplate(params).toString
       //TODO heading for sure cant be in english waiting for welsh translation DC-2251
       txtContent should include("Rescindment: File your Self Assessment tax return")
       txtContent should include("Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar")
-      txtContent should include("Annwyl")
+      txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Anfonom hon atoch yn rhy gynnar mewn camgymeriad, ac mae’n flin gennym am y camgymeriad.")
       txtContent should include("Rydym bellach wedi dileu’r neges anghywir o’ch cyfrif CThEM.")
       txtContent should include("Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.")

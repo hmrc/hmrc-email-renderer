@@ -24,7 +24,7 @@ class TaxEstimateMessageAlertWelshSpec  extends UnitSpec with EitherValues with 
 
   "tax_estimate_message_alert_cy" should {
     val templateLocator = new TemplateLocator {}
-    val params = commonParameters ++ Map("fullName" -> "doesnt matter")
+    val params = commonParameters ++ Map("fullName" -> "Matthew Groom")
     val template = templateLocator.templateGroups("PAYE").find(_.templateId == "tax_estimate_message_alert_cy").get
 
     "render correct subject" in {
@@ -33,8 +33,9 @@ class TaxEstimateMessageAlertWelshSpec  extends UnitSpec with EitherValues with 
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
+
       htmlContent should include("Ewch i hafan GOV.UK")
-      htmlContent should include("Annwyl")
+      htmlContent should include("Annwyl Matthew Groom")
       htmlContent should include("Mae gennych newid i’ch cod treth")
       htmlContent should include("Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar. Oherwydd rhesymau diogelwch nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd newid i rywbeth fel y canlynol:")
       htmlContent should include("swydd")
@@ -63,7 +64,7 @@ class TaxEstimateMessageAlertWelshSpec  extends UnitSpec with EitherValues with 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-      txtContent should include("Annwyl")
+      txtContent should include("Annwyl Matthew Groom")
       txtContent should include("Mae gennych newid i’ch cod treth")
       txtContent should include("Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar. Oherwydd rhesymau diogelwch nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd newid i rywbeth fel y canlynol:")
       txtContent should include("swydd")

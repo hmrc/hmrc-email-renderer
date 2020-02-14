@@ -98,27 +98,27 @@ class SalutationHelperSpec extends UnitSpec {
 
   "The salutation in Welsh" should {
     "be Annwyl Customer when having no name" in {
-      salutationFrom(Map(), "Annwyl") shouldBe "Annwyl Gwsmer"
+      salutationFrom(Map(), isWelsh = true) shouldBe "Annwyl Gwsmer"
     }
 
     "be Annwyl Customer when having name.forename only" in {
-      salutationFrom(Map("recipientName_forename" -> "GEOFF"), "Annwyl") shouldBe "Annwyl Gwsmer"
+      salutationFrom(Map("recipientName_forename" -> "GEOFF"), true) shouldBe "Annwyl Gwsmer"
     }
 
     "be Annwyl Customer when having name.title and name.forename only" in {
-      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF"), "Annwyl") shouldBe "Annwyl Gwsmer"
+      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF"), isWelsh = true) shouldBe "Annwyl Gwsmer"
     }
 
     "be Annwyl Customer when name.surname only" in {
-      salutationFrom(Map("recipientName_surname" -> "FISHER"), "Annwyl") shouldBe "Annwyl Gwsmer"
+      salutationFrom(Map("recipientName_surname" -> "FISHER"), isWelsh = true) shouldBe "Annwyl Gwsmer"
     }
 
     "be Annwyl Customer when having empty title" in {
-      salutationFrom(Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey"), "Annwyl") shouldBe "Annwyl Gwsmer"
+      salutationFrom(Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey"),  true) shouldBe "Annwyl Gwsmer"
     }
 
     "be Dear Customer when having empty surname" in {
-      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "  "), "Annwyl") shouldBe "Annwyl Gwsmer"
+      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "  "), true) shouldBe "Annwyl Gwsmer"
     }
   }
 

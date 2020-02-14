@@ -32,9 +32,10 @@ object SalutationHelper {
       }.mkString
     }
 
-  def salutationFrom(params: Map[String, Any], salutationText: String = EnglishSalutation): String = {
+  def salutationFrom(params: Map[String, Any], isWelsh: Boolean = false): String = {
 
-    val default = if(salutationText == WelshSalutation) DefaultWelshName else DefaultEnglishName
+    val defaultName = if(isWelsh) DefaultWelshName else DefaultEnglishName
+    val salutation = if(isWelsh) WelshSalutation else EnglishSalutation
 
     val salutationParams = (
       capitalised(params.getNonEmpty("recipientName_title")),
@@ -44,9 +45,9 @@ object SalutationHelper {
     )
 
     salutationParams match {
-      case (Some(title), Some(surname), _) => s"$salutationText $title $surname"
-      case (_, _, Some(line1)) => s"$salutationText $line1"
-      case _ => s"$salutationText $default"
+      case (Some(title), Some(surname), _) => s"$salutation $title $surname"
+      case (_, _, Some(line1)) => s"$salutation $line1"
+      case _ => s"$salutation $defaultName"
     }
   }
 
