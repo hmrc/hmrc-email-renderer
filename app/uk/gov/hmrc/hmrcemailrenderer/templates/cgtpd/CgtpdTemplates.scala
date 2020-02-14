@@ -39,7 +39,7 @@ object CgtpdTemplates {
       subject = "Capital Gains Tax on UK property account created",
       plainTemplate = txt.cgtpdAccountCreated.f,
       htmlTemplate = html.cgtpdAccountCreated.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
