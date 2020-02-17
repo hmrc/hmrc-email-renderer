@@ -26,6 +26,7 @@ object AtsTemplates {
     val taxYearFrom = LocalDate.now().getYear - 2
     val taxYearTo = LocalDate.now().getYear - 1
     private val ats_year_for_subject = s"Your Annual Tax Summary for $taxYearFrom to $taxYearTo is now ready"
+    private val ats_year_for_subject_welsh = s"Pwnc: Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod"
 
   val templates = Seq(
       MessageTemplate.create(
@@ -35,6 +36,15 @@ object AtsTemplates {
       subject = ats_year_for_subject,
       plainTemplate = txt.annualTaxSummariesMessageAlert.f,
       htmlTemplate = html.annualTaxSummariesMessageAlert.f,
+      priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "annual_tax_summaries_message_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Your Annual Tax Summary"),
+      service = AnnualTaxSummary,
+      subject = ats_year_for_subject_welsh,
+      plainTemplate = txt.annualTaxSummariesMessageAlert_cy.f,
+      htmlTemplate = html.annualTaxSummariesMessageAlert_cy.f,
       priority = Some(MessagePriority.Background)
     )
   )

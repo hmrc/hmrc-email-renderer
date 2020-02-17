@@ -17,6 +17,8 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
 import uk.gov.hmrc.lingua.NameCase
+import Salutation.{EnglishSalutation, WelshSalutation}
+import DefaultName.{DefaultEnglishName, DefaultWelshName}
 
 object SalutationHelper {
 
@@ -30,7 +32,11 @@ object SalutationHelper {
       }.mkString
     }
 
-  def salutationFrom(params: Map[String, Any]): String = {
+  def salutationFrom(params: Map[String, Any], isWelsh: Boolean = false): String = {
+
+    val defaultName = if(isWelsh) DefaultWelshName else DefaultEnglishName
+    val salutation = if(isWelsh) WelshSalutation else EnglishSalutation
+
     val salutationParams = (
       capitalised(params.getNonEmpty("recipientName_title")),
       capitalised(params.getNonEmpty("recipientName_surname")),
@@ -39,9 +45,9 @@ object SalutationHelper {
     )
 
     salutationParams match {
-      case (Some(title), Some(surname), _) => s"Dear $title $surname"
-      case (_, _, Some(line1)) => s"Dear $line1"
-      case _ => "Dear Customer"
+      case (Some(title), Some(surname), _) => s"$salutation $title $surname"
+      case (_, _, Some(line1)) => s"$salutation $line1"
+      case _ => s"$salutation $defaultName"
     }
   }
 
@@ -52,8 +58,8 @@ object SalutationHelper {
     )
 
     salutationParams match {
-      case List(Some(forename), Some(surname)) => s"Dear $forename $surname"
-      case _ => "Dear Customer"
+      case List(Some(forename), Some(surname)) => s"$EnglishSalutation $forename $surname"
+      case _ =>  s"$EnglishSalutation $DefaultEnglishName"
     }
   }
 
@@ -63,8 +69,8 @@ object SalutationHelper {
     )
 
     salutationParams match {
-      case List(Some(fullName)) => s"Dear $fullName"
-      case _ => "Dear Customer"
+      case List(Some(fullName)) => s"$EnglishSalutation $fullName"
+      case _ => s"$EnglishSalutation $DefaultEnglishName"
     }
   }
 
@@ -76,4 +82,14 @@ object SalutationHelper {
       }
     }
   }
+}
+
+object Salutation {
+  val WelshSalutation = "Annwyl"
+  val EnglishSalutation = "Dear"
+}
+
+object DefaultName {
+  val DefaultWelshName = "Gwsmer"
+  val DefaultEnglishName = "Customer"
 }
