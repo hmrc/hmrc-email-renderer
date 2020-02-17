@@ -30,6 +30,14 @@ object PayeTemplates  {
       subject = "Your Income Tax estimate has changed",
       plainTemplate = txt.newTaxEstimateMessageAlert.f,
       htmlTemplate = html.newTaxEstimateMessageAlert.f
+    ),
+    MessageTemplate.create(
+      templateId = "tax_estimate_message_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
+      service  = PayAsYouEarn,
+      subject = "Mae amcangyfrif o’ch Treth Incwm wedi newid",
+      plainTemplate = txt.taxEstimateMessageAlert_cy.f,
+      htmlTemplate = html.taxEstimateMessageAlert_cy.f
     )
   )
 }

@@ -94,6 +94,13 @@ object DigitalContactTemplates {
       plainTemplate = txt.newMessageAlert.f,
       htmlTemplate = html.newMessageAlert.f),
     MessageTemplate.create(
+      templateId = "newMessageAlert_cy",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "Hysbysiadau di-bapur CThEM: neges newydd",
+      plainTemplate = txt.newMessageAlert_cy.f,
+      htmlTemplate = html.newMessageAlert_cy.f),
+    MessageTemplate.create(
       templateId = "rescindedMessageAlert",
       fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
       service = SelfAssessment,
@@ -102,12 +109,28 @@ object DigitalContactTemplates {
       htmlTemplate = html.rescindedMessageAlert.f,
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
+      templateId = "rescindedMessageAlert_cy",
+      fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
+      service = SelfAssessment,
+      subject = "Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl",
+      plainTemplate = txt.rescindedMessageAlert_cy.f,
+      htmlTemplate = html.rescindedMessageAlert_cy.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
       templateId = "verificationReminder",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "HMRC electronic communications: complete the sign-up process",
       plainTemplate = txt.verificationReminder.f,
       htmlTemplate = html.verificationReminder.f
+    ),
+    MessageTemplate.create(
+      templateId = "verificationReminder_cy",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi",
+      plainTemplate = txt.verificationReminder_cy.f,
+      htmlTemplate = html.verificationReminder_cy.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA309",

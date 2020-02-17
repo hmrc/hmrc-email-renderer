@@ -1,0 +1,37 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae gennych newid i’ch cod treth", isWelsh = true) {
+<p style="margin: 0 0 30px; font-size: 19px;">Annwyl @{params("fullName")}</p>
+<p style="margin: 0 0 0px; font-size: 19px;">Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar. Oherwydd rhesymau diogelwch nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd newid i rywbeth fel y canlynol:</p>
+<ul>
+    <li>swydd</li>
+    <li>eich cyflog</li>
+    <li>eich buddiannau cwmni megis car cwmni</li>
+    <li>eich pensiwn</li></ul>
+<p style="margin: 0 0 30px; font-size: 19px;">Mae hyn yn golygu bydd swm y Dreth Incwm y byddwch yn ei dalu yn newid.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dylech wirio’ch manylion i wneud yn siŵr eu bod yn gywir. Mae hyn fel eich bod yn talu’r swm cywir o Dreth Incwm.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Gwiriwch eich manylion</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Mewngofnodwch i’ch Cyfrif Treth Personol ac ewch i’r adran ‘Talu Wrth Ennill (TWE)’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad yn yr e-bost hwn. I gyrraedd eich Cyfrif Treth Personol, chwiliwch am ‘Cyfrif Treth Personol CThEM’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Mewngofnodi</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Defnyddiwch eich manylion Dynodydd Defnyddiwr neu Ddilysu i fewngofnodi i’ch Cyfrif Treth Personol.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dylech gael mynediad at y rhain gan eich bod eisoes wedi defnyddio’r gwasanaeth i ddewis cael e-byst.</p>
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Pam y cawsoch yr e-bost hwn</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Cawsoch yr e-bost hwn am eich bod wedi dewis cael diweddariadau e-bost yn lle llythyrau drwy’r bost</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEM: Gwirio’ch Treth Incwm</p>
+}
