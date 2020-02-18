@@ -65,7 +65,7 @@ object DigitalContactTemplates {
       templateId = "verifyEmailAddress_cy",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC electronic communications: verify your email address",
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
       plainTemplate = txt.verifyEmailAddress_cy.f,
       htmlTemplate  = html.verifyEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -83,7 +83,7 @@ object DigitalContactTemplates {
       templateId = "changeOfEmailAddress_cy",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC electronic communications: change of email address",
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: newid cyfeiriad e-bost",
       plainTemplate = txt.changeOfEmailAddress_cy.f,
       htmlTemplate = html.changeOfEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -101,7 +101,7 @@ object DigitalContactTemplates {
       templateId = "digitalOptOutConfirmation_cy",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC notifications by post",
+      subject = "CThEM – Hysbysiadau drwy’r post",
       plainTemplate = txt.digitalOptOutConfirmation_cy.f,
       htmlTemplate = html.digitalOptOutConfirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -119,7 +119,7 @@ object DigitalContactTemplates {
       templateId = "changeOfEmailAddressNewAddress_cy",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "HMRC electronic communications: verify your new email address",
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
       plainTemplate = txt.changeOfEmailAddressNewAddress_cy.f,
       htmlTemplate = html.changeOfEmailAddressNewAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
