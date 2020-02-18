@@ -15,14 +15,10 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost", footerMessage = Some(footer), isWelsh = true) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost", isWelsh = true) {
  @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh=true)
 <p style="margin: 0 0 30px; font-size: 19px;">Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}"style="color: #005EA5;">@{params("verificationLink")}</a></p>
 <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth adran Ddigidol CThEM</p>
-}
-
-@footer = {
- I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEM ar-lein.
 }

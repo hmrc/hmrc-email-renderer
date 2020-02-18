@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost newydd", footerMessage = Some(footer), isWelsh = true) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost newydd", isWelsh = true) {
  @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh=true)
 <p style="margin: 0 0 30px; font-size: 19px;">Mae’n rhaid i chi ddilysu’ch cyfeiriad e-bost newydd ar gyfer cyfathrebu drwy ddull electronig.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Os nad ydych yn gwneud hyn, bydd eich cyfathrebu drwy ddull electronig yn dal i gael ei anfon i’ch hen gyfeiriad e-bost.</p>
@@ -24,8 +24,4 @@
 <h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Pam y cawsoch yr e-bost hwn</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">Rydych wedi dewis newid eich cyfeiriad e-bost ar gyfer cyfathrebu drwy ddull electronig</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth adran Ddigidol CThEM</p>
-}
-
-@footer = {
- I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEM ar-lein.
 }
