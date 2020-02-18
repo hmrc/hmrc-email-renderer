@@ -146,6 +146,18 @@ object TemplateParams {
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+
+    "changeOfEmailAddressNewAddress_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+
+    "changeOfEmailAddress_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+
+    "verifyEmailAddress_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "newMessageAlert" -> newMessageAlert_Names,
     "newMessageAlert_cy" -> newMessageAlert_Names,
     "rescindedMessageAlert" -> newMessageAlert_Names,
