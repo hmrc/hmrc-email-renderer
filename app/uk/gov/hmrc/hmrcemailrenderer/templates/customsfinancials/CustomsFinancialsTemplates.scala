@@ -54,7 +54,7 @@ object CustomsFinancialsTemplates {
       templateId = "customs_financials_requested_import_adjustment",
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
-      subject = "Requested notification of import adjustment statements are now available",
+      subject = "New requested notification of import adjustment statement",
       plainTemplate = txt.HistoricImportAdjustmentStatement.f,
       htmlTemplate = html.HistoricImportAdjustmentStatement.f,
       priority = Some(MessagePriority.Urgent)
