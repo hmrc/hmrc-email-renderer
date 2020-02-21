@@ -74,6 +74,10 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       compareContent("customs_financials_new_import_adjustment", commonParameters)(customsFinancialsTemplate)
     }
 
+    "have matching content in the html and the text for requested import adjustment statements" in {
+      compareContent("customs_financials_requested_import_adjustment", commonParameters)(customsFinancialsTemplate)
+    }
+
     "have matching content in the html and the text for C79 certificates" in {
       compareContent("customs_financials_new_c79_certificate", commonParameters)(customsFinancialsTemplate)
     }
