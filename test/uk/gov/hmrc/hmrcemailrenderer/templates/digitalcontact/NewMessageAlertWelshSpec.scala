@@ -29,8 +29,9 @@ class NewMessageAlertWelshSpec extends UnitSpec with EitherValues with TemplateL
     val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "newMessageAlert_cy").get
      val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
-    "render correct subject" in {
+    "render correct subject and fromAddress" in {
       template.subject(Map.empty) shouldBe ("Hysbysiadau di-bapur CThEM: neges newydd")
+      template.fromAddress(Map.empty) shouldBe "CThEM Digidol <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
