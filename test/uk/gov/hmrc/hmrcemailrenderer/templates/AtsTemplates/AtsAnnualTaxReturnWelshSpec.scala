@@ -28,10 +28,12 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
     val templateLocator = new TemplateLocator {}
     val template = templateLocator.templateGroups("ATS").find(_.templateId == "annual_tax_summaries_message_alert_cy").get
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
+
     "render correct subject" in {
       val taxYearFrom = LocalDate.now().getYear - 2
       val taxYearTo = LocalDate.now().getYear - 1
       template.subject(Map.empty) shouldBe (s"Pwnc: Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod")
+      template.fromAddress(Map.empty) shouldBe "CThEM – Eich Crynodeb Treth Blynyddol <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {

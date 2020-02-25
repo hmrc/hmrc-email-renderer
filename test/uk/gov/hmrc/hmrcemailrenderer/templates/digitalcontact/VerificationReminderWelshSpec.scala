@@ -28,6 +28,7 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
     val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "verificationReminder_cy").get
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi")
+      template.fromAddress(Map.empty) shouldBe "CThEM Digidol <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -62,9 +63,8 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
       val htmlContent = template.htmlTemplate(params).toString
       val txtContent = template.plainTemplate(params).toString
 
-      //TODO we dont have welsh verision for this DC-2251
-      htmlContent should include("Click on the link in the email sent to you on 2019-04-02.")
-      txtContent should include("Click on the link in the email sent to you on 2019-04-02.")
+      htmlContent should include("Cliciwch ar y cysylltiad yn yr e-bost a anfonwyd atoch ar 2019-04-02.")
+      txtContent should include("Cliciwch ar y cysylltiad yn yr e-bost a anfonwyd atoch ar 2019-04-02.")
     }
 
   }

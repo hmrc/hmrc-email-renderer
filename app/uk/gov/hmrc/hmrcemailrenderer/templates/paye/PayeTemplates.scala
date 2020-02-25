@@ -33,7 +33,7 @@ object PayeTemplates  {
     ),
     MessageTemplate.create(
       templateId = "tax_estimate_message_alert_cy",
-      fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
+      fromAddress = FromAddress.noReply("CThEM – Gwasanaeth Gwirio eich Treth Incwm"),
       service  = PayAsYouEarn,
       subject = "Mae amcangyfrif o’ch Treth Incwm wedi newid",
       plainTemplate = txt.taxEstimateMessageAlert_cy.f,
