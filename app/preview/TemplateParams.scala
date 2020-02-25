@@ -146,6 +146,18 @@ object TemplateParams {
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+
+    "changeOfEmailAddressNewAddress_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+
+    "changeOfEmailAddress_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+
+    "verifyEmailAddress_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "newMessageAlert" -> newMessageAlert_Names,
     "newMessageAlert_cy" -> newMessageAlert_Names,
     "rescindedMessageAlert" -> newMessageAlert_Names,
@@ -1571,7 +1583,7 @@ object TemplateParams {
                 },
                 {
                   "message": "At least one separator (ampersand or equal sign) is percent encoded",
-                  "percentage": 40
+                  "percentage": 0
                 }
               ],
               "warnings": [
@@ -1587,7 +1599,7 @@ object TemplateParams {
               "warnings": [
                 {
                   "message": "Use a UUID (also known as a GUID) as recommended in our documentation",
-                  "percentage": 10
+                  "percentage": 0
                 },
                 {
                   "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long",

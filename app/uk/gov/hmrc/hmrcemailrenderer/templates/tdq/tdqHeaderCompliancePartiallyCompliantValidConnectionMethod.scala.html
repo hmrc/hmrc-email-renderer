@@ -31,6 +31,10 @@
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            However, if you are unable to collect a header value due to the restrictions explained within the fraud prevention header specification, and if you are omitting the header or leaving a value blank, then please contact HMRC.
+        </p>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             The report below is generated based on our basic checks on the fraud prevention header values sent by your application, for example:
         </p>
 
@@ -58,7 +62,7 @@
         <h2>Report</h2>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            '@params("applicationName")' submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
+            '@params("applicationName")' using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             These are the headers where errors and/or warnings have been found:
@@ -75,7 +79,7 @@
                                 <ul>
                                 @for(error <- headersValidation.errors) {
                                     <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
-                                        @error.message (in @error.percentage% of requests)
+                                        @error.message (@error.percentageDescription)
                                     </li>
                                 }
                                 </ul>
@@ -89,7 +93,7 @@
                                 <ul>
                                 @for(warning <- headersValidation.warnings) {
                                     <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
-                                        @warning.message (in @warning.percentage% of requests)
+                                        @warning.message (@warning.percentageDescription)
                                     </li>
                                 }
                                 </ul>

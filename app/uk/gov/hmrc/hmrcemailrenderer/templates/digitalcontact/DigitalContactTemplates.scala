@@ -22,7 +22,12 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
 object DigitalContactTemplates {
   val defaultFromAddress = FromAddress.noReply("HMRC digital")
+
   val defaultFromAddressWelsh = FromAddress.noReply("CThEM Digidol")
+
+  //TODO: waiting for welsh translation
+  val defaultWelshFrom = FromAddress.noReply("")
+
   val templatesToMapToNewMessageAlert = Seq(
     "R002A",
     "SA251",
@@ -60,12 +65,30 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "verifyEmailAddress_cy",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
+      plainTemplate = txt.verifyEmailAddress_cy.f,
+      htmlTemplate  = html.verifyEmailAddress_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "changeOfEmailAddress",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "HMRC electronic communications: change of email address",
       plainTemplate = txt.changeOfEmailAddress.f,
       htmlTemplate = html.changeOfEmailAddress.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "changeOfEmailAddress_cy",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: newid cyfeiriad e-bost",
+      plainTemplate = txt.changeOfEmailAddress_cy.f,
+      htmlTemplate = html.changeOfEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -78,12 +101,30 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "digitalOptOutConfirmation_cy",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "CThEM – Hysbysiadau drwy’r post",
+      plainTemplate = txt.digitalOptOutConfirmation_cy.f,
+      htmlTemplate = html.digitalOptOutConfirmation_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "changeOfEmailAddressNewAddress",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "HMRC electronic communications: verify your new email address",
       plainTemplate = txt.changeOfEmailAddressNewAddress.f,
       htmlTemplate = html.changeOfEmailAddressNewAddress.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "changeOfEmailAddressNewAddress_cy",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
+      plainTemplate = txt.changeOfEmailAddressNewAddress_cy.f,
+      htmlTemplate = html.changeOfEmailAddressNewAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
