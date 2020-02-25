@@ -22,6 +22,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
 object DigitalContactTemplates {
   val defaultFromAddress = FromAddress.noReply("HMRC digital")
+
+  val defaultFromAddressWelsh = FromAddress.noReply("CThEM Digidol")
+
   //TODO: waiting for welsh translation
   val defaultWelshFrom = FromAddress.noReply("")
 
@@ -133,7 +136,7 @@ object DigitalContactTemplates {
       htmlTemplate = html.newMessageAlert.f),
     MessageTemplate.create(
       templateId = "newMessageAlert_cy",
-      fromAddress = defaultFromAddress,
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "Hysbysiadau di-bapur CThEM: neges newydd",
       plainTemplate = txt.newMessageAlert_cy.f,
@@ -148,7 +151,7 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)),
     MessageTemplate.create(
       templateId = "rescindedMessageAlert_cy",
-      fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
+      fromAddress = FromAddress.noReply("CThEM – (Tîm) Cyswllt Digidol"),
       service = SelfAssessment,
       subject = "Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl",
       plainTemplate = txt.rescindedMessageAlert_cy.f,
@@ -164,7 +167,7 @@ object DigitalContactTemplates {
     ),
     MessageTemplate.create(
       templateId = "verificationReminder_cy",
-      fromAddress = defaultFromAddress,
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi",
       plainTemplate = txt.verificationReminder_cy.f,

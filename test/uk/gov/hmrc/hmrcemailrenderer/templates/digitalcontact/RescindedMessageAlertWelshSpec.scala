@@ -31,6 +31,7 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl")
+      template.fromAddress(Map.empty) shouldBe ("CThEM – (Tîm) Cyswllt Digidol <noreply@tax.service.gov.uk>")
     }
 
 
