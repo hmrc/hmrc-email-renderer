@@ -29,6 +29,7 @@ class TaxEstimateMessageAlertWelshSpec  extends UnitSpec with EitherValues with 
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Mae amcangyfrif o’ch Treth Incwm wedi newid")
+      template.fromAddress(Map.empty) shouldBe "CThEM – Gwasanaeth Gwirio eich Treth Incwm <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
