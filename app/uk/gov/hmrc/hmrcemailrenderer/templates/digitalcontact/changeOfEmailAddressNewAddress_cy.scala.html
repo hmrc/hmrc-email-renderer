@@ -1,0 +1,27 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost newydd", isWelsh = true) {
+ @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh=true)
+<p style="margin: 0 0 30px; font-size: 19px;">Mae’n rhaid i chi ddilysu’ch cyfeiriad e-bost newydd ar gyfer cyfathrebu drwy ddull electronig.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Os nad ydych yn gwneud hyn, bydd eich cyfathrebu drwy ddull electronig yn dal i gael ei anfon i’ch hen gyfeiriad e-bost.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">I ddilysu’ch cyfeiriad e-bost, cliciwch ar y cysylltiad isod.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}"style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Pam y cawsoch yr e-bost hwn</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Rydych wedi dewis newid eich cyfeiriad e-bost ar gyfer cyfathrebu drwy ddull electronig</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth adran Ddigidol CThEM</p>
+}
