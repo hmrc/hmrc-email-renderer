@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Rescindment: File your Self Assessment tax return
+@(params: Map[String, Any])Diddymiad: Cyflwyno’ch Ffurflen Dreth Hunanasesiad
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
