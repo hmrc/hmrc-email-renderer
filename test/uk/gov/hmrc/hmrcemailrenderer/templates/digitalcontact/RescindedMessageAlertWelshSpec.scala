@@ -39,8 +39,7 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
       val htmlContent = template.htmlTemplate(params).toString
 
        htmlContent should include("Ewch i hafan GOV.UK")
-       //TODO heading for sure cant be in english waiting for welsh translation DC-2251
-       htmlContent should include("Rescindment: File your Self Assessment tax return")
+       htmlContent should include("Diddymiad: Cyflwyno’ch Ffurflen Dreth Hunanasesiad")
        htmlContent should include("Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar")
        htmlContent should include("Annwyl Mr Johnston")
        htmlContent should include("Anfonom hon atoch yn rhy gynnar mewn camgymeriad, ac mae’n flin gennym am y camgymeriad.")
@@ -54,8 +53,7 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
-      //TODO heading for sure cant be in english waiting for welsh translation DC-2251
-      txtContent should include("Rescindment: File your Self Assessment tax return")
+      txtContent should include("Diddymiad: Cyflwyno’ch Ffurflen Dreth Hunanasesiad")
       txtContent should include("Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar")
       txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Anfonom hon atoch yn rhy gynnar mewn camgymeriad, ac mae’n flin gennym am y camgymeriad.")
