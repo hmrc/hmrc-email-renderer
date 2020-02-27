@@ -32,7 +32,7 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
     "render correct subject" in {
       val taxYearFrom = LocalDate.now().getYear - 2
       val taxYearTo = LocalDate.now().getYear - 1
-      template.subject(Map.empty) shouldBe (s"Pwnc: Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod")
+      template.subject(Map.empty) shouldBe (s"Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod")
       template.fromAddress(Map.empty) shouldBe "CThEM – Eich Crynodeb Treth Blynyddol <noreply@tax.service.gov.uk>"
     }
 
