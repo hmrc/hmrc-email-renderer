@@ -63,6 +63,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.parcels.ParcelsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customsfinancials.CustomsFinancialsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd.CgtpdTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.htsreminder.HtsReminderTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -98,6 +99,7 @@ trait TemplateLocator {
         "OnlinePaymentService"       -> OnlinePaymentServiceTemplates.templates,
         "EEITT"                      -> EeittTemplates.templates,
         "HTS"                        -> HtsTemplates.templates,
+        "HTSReminder"                -> HtsReminderTemplates.templates,
         "FHDDS"                      -> FhddsTemplates.templates,
         "Lost Credentials"           -> LostCredentialsTemplates.templates,
         "FHDDS"                      -> FhddsTemplates.templates,
