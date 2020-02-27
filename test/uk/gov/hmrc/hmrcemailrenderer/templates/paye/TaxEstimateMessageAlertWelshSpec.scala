@@ -25,7 +25,7 @@ class TaxEstimateMessageAlertWelshSpec  extends UnitSpec with EitherValues with 
   "tax_estimate_message_alert_cy" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map("fullName" -> "Matthew Groom")
-    val template = templateLocator.templateGroups("PAYE").find(_.templateId == "tax_estimate_message_alert_cy").get
+    val template = templateLocator.templateGroups("PAYE").find(_.templateId == "tax_estimate_message_alert_cy_").get
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Mae amcangyfrif o’ch Treth Incwm wedi newid")
