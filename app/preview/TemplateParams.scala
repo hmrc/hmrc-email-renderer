@@ -559,7 +559,7 @@ object TemplateParams {
       "fileUploadReference" -> "Reference1234"
     ),
     "hts_reminder_email" -> Map(
-      "name" -> "Mr Joe Bloggs"
+      "name" -> "Joe Bloggs"
     ),
     "gmp_bulk_upload_processed" -> Map(
       "fileUploadReference" -> "Reference1234",
