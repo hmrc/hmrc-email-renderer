@@ -124,5 +124,5 @@ trait TemplateLocator {
 }
 
 object TemplateLocator extends TemplateLocator {
-  final val WELSH_SUFFIX = "_cy_"
+  final val WELSH_SUFFIX = "_cym"
 }
