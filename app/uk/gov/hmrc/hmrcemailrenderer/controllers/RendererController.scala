@@ -23,8 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.microservice.controller.BaseController
-
-import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
 object RendererController extends RendererController {
   override def templateRenderer: TemplateRenderer = TemplateRenderer
@@ -36,14 +35,14 @@ trait RendererController extends BaseController {
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
-      val result = templateRenderer.render(templateId, renderReq.parameters) match {
+      val result = templateRenderer.render(templateId, renderReq.parameters, renderReq.email).map {
         case Right(rendered) => Ok(Json.toJson(rendered))
         case Left(MissingTemplateId(_)) => NotFound
         case Left(x@TemplateRenderFailure(_)) =>
           Logger.warn(s"Failed to render message, reason: ${x.reason}")
           BadRequest(Json.toJson(x))
       }
-      Future.successful(result)
+      result
     }
   }
 }

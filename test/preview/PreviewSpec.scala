@@ -18,13 +18,16 @@ package preview
 
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatestplus.play.OneAppPerSuite
+import uk.gov.hmrc.emailaddress.EmailAddress
 import uk.gov.hmrc.hmrcemailrenderer.domain.{Body, MessagePriority, MessageTemplate, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ServiceIdentifier, TemplateLocator}
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.test.UnitSpec
 
 class PreviewSpec extends UnitSpec with OneAppPerSuite {
 
+  implicit val headerCarrier: HeaderCarrier = new HeaderCarrier()
   "createPreviewGroup" should {
     "generate a  preview item for each template id that resolves to a message template" in {
       val templates: Seq[MessageTemplate] = List("does not exist", "also does not exist").map { id =>
@@ -55,7 +58,7 @@ class PreviewSpec extends UnitSpec with OneAppPerSuite {
       s"be able to render ${mt.templateId}" in {
 
         val parameters = TemplateParams.exampleParams.getOrElse(mt.templateId, Map.empty)
-        TemplateRenderer.render(mt.templateId, parameters) should not matchPattern {
+        TemplateRenderer.render(mt.templateId, parameters, Some(EmailAddress("test@test.com"))) should not matchPattern {
           case Left(TemplateRenderFailure(reason)) =>
         }
       }

@@ -22,22 +22,29 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.microservice.controller.BaseController
+import scala.concurrent.ExecutionContext.Implicits.global
 
 object PreviewController extends BaseController {
   def previewHome = Action {
     Ok(views.html.previews(previewGroups))
   }
 
-  def previewHtml(templateId: String) = Action { implicit request =>
-    Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString)))
+  def previewHtml(templateId: String) = Action.async { implicit request =>
+    Preview.html(templateId, flattenParameterValues(request.queryString)).map{html =>
+        Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString), html))
+       }
   }
 
-  def previewText(templateId: String) = Action { implicit request =>
-    Ok(views.txt.previewText(templateId, flattenParameterValues(request.queryString)))
+  def previewText(templateId: String) = Action.async { implicit request =>
+    Preview.plain(templateId, flattenParameterValues(request.queryString)).map { txt =>
+      Ok(views.txt.previewText(templateId, flattenParameterValues(request.queryString), txt))
+    }
   }
 
-  def previewSource(templateId: String) = Action { implicit request =>
-    Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString)).toString)
+  def previewSource(templateId: String) = Action.async { implicit request =>
+    Preview.html(templateId, flattenParameterValues(request.queryString)).map { html =>
+      Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString), html).toString)
+    }
   }
 
   private lazy val previewGroups: Stream[PreviewGroup] =

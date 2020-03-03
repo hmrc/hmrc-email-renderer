@@ -16,14 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.Mode.Mode
 import play.api.{Configuration, Play}
 import play.twirl.api.Format
+import uk.gov.hmrc.hmrcemailrenderer.config.WelshTemplatesByLangPreference
+import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.config.RunMode
-
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
 
 object TemplateRenderer extends TemplateRenderer with RunMode {
@@ -38,33 +41,65 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
       getOrElse(Map.empty[String, String])
   }
 
+  val templatesByLangPreference = WelshTemplatesByLangPreference.list
+
   override protected def mode: play.api.Mode.Mode = Play.current.mode
 
-  override protected def runModeConfiguration: Configuration = Play.current.configuration
-
+  def runModeConfiguration: Configuration = Play.current.configuration
 }
 
 trait TemplateRenderer {
 
   def commonParameters: Map[String, String]
 
+  val templatesByLangPreference: Map[String, String]
+
   def locator: TemplateLocator
 
-  def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
+  def runModeConfiguration: Configuration
+
+  val preferencesConnector = PreferencesConnector(runModeConfiguration.underlying.getConfig("Dev.services.preferences"))
+
+  def render(templateId: String, parameters: Map[String, String], emailAddress: Option[String] = None)(implicit hc: HeaderCarrier): Future[Either[ErrorMessage, RenderResult]] = {
     val allParams = commonParameters ++ parameters
-    for {
-      template <- locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
-      plainText <- render(template.plainTemplate, allParams).right
-      htmlText <- render(template.htmlTemplate, allParams).right
-    } yield RenderResult(
-      plainText,
-      htmlText,
-      template.fromAddress(allParams),
-      template.subject(allParams),
-      template.service.name,
-      template.priority
-    )
+    if (emailAddress.nonEmpty && shouldCheckLangPreference(templateId)) {
+      preferencesConnector.isWelsh(emailAddress.getOrElse("")).map { isWelsh =>
+        for {
+          template <- if (isWelsh) template(templatesByLangPreference.getOrElse(templateId, "")) else template(templateId)
+          plainText <- render(template.plainTemplate, allParams).right
+          htmlText <- render(template.htmlTemplate, allParams).right
+        } yield RenderResult(
+          plainText,
+          htmlText,
+          template.fromAddress(allParams),
+          template.subject(allParams),
+          template.service.name,
+          template.priority
+        )
+      }
+    } else {
+      Future {
+        for {
+          template <- template(templateId)
+          plainText <- render(template.plainTemplate, allParams).right
+          htmlText <- render(template.htmlTemplate, allParams).right
+        } yield RenderResult(
+          plainText,
+          htmlText,
+          template.fromAddress(allParams),
+          template.subject(allParams),
+          template.service.name,
+          template.priority
+        )
+      }
+    }
   }
+
+  def template(templateId: String) = {
+    locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
+  }
+
+  def shouldCheckLangPreference(templateId: String) = templatesByLangPreference.exists(_._1 == templateId)
 
   private def render(template: Map[String, String] => Format[_]#Appendable,
                      params: Map[String, String]): Either[ErrorMessage, String] =

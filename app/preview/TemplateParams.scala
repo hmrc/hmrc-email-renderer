@@ -147,15 +147,15 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
 
-    "changeOfEmailAddressNewAddress_cym" -> Map(
+    "changeOfEmailAddressNewAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
 
-    "changeOfEmailAddress_cym" -> Map(
+    "changeOfEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
 
-    "verifyEmailAddress_cym" -> Map(
+    "verifyEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "newMessageAlert" -> newMessageAlert_Names,
@@ -203,7 +203,7 @@ object TemplateParams {
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "verificationReminder_cym" -> Map(
+    "verificationReminder_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "verifyEmailAddress" -> Map(
@@ -521,7 +521,7 @@ object TemplateParams {
     "tax_estimate_message_alert" -> Map(
       "fullName" -> "Mr Joe Bloggs"
     ),
-    "tax_estimate_message_alert_cym" -> Map(
+    "tax_estimate_message_alert_cy" -> Map(
       "fullName" -> "Mr Joe Bloggs"
     ),
     "fandf_ask_help_notification" -> Map(
