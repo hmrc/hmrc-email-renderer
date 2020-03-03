@@ -1,0 +1,38 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import java.util.Calendar
+@import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Remember to save this " + DateFormatter.formatMonth(Calendar.MONTH.toString.reverse.padTo(2, '0').reverse)) {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Try and save as much of your monthly £50 Help to Save allowance as you can this @{DateFormatter.formatMonth(Calendar.MONTH.toString.reverse.padTo(2, '0').reverse)}. </p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can deposit any amount from £1 to £50, and anything you save now can help you earn the highest possible bonus.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This bonus will be 50% of your highest savings total after two years of saving.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Just remember, you cannot carry over any of your unused £50 allowance to next month.</p>
+
+<h2>How to sign in to your account </h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Use the HMRC app to sign in to your account. The free app is available on the App Store for iOS or the Google Play Store for Android.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can also sign in to your account by searching GOV.UK for ‘Help to Save’. You will need your Government Gateway ID and password.</p>
+
+<h2>Why you got this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You asked to get monthly Help to Save email reminders. </p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can cancel or change your reminders at any time. Go to ‘savings reminders’ in your Help to Save account home.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From Help to Save team</p>
+}
