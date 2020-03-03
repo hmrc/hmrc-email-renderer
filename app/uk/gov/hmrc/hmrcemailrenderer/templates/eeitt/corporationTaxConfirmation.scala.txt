@@ -1,24 +1,40 @@
 @(params: Map[String, Any])
 
-You applied to register a non-resident company for Corporation Tax
+You notified HMRC that a non-resident company or CIV has disposed of an interest in UK property or land
 
 Dear @params.get("customerName")
 
-HMRC has received your application to register a non-resident company for Corporation Tax.
+HMRC has received your notification that a company or collective investment vehicle has disposed of an interest in UK property or land
 
 Your submission reference is: @params.get("submissionReference")
 
 What happens next
 
-If you are registering a company for Corporation Tax for the first time
+If you are registering a company or collective investment vehicle for Corporation Tax for the first time
 
-We will use the information you have provided to set up a Corporation Tax record and send the company a Corporation Tax Unique Taxpayer Reference. We will also send you more information about what you need to do next.
+We will use the information you have provided to set up a Corporation Tax record and send the company or collective investment vehicle a Corporation Tax Unique Taxpayer Reference. We will also send you more information about what you need to do next.
 
-You will only be able to register for HMRC online services and file the company’s tax returns once you have received the company’s Unique Taxpayer Reference.
+You will only be able to register for HMRC online services and file the company or collective investment vehicle’s tax returns once you have received the company or collective investment vehicle’s Unique Taxpayer Reference.
 
-If you are re-registering a company for UK Corporation Tax
+If you are registering a company or collective investment vehicle for Corporation Tax
 
-If you are re-registering for Corporation Tax we will use the information provided to update our records. You will then be able to use HMRC online services to file returns and make payments.
+We will use the information provided to update our records. You will then be able to use HMRC online services to file returns and make payments.
+
+If you expect to make fewer than 4 disposals of interests in UK property or land in this tax year
+
+You’ll need to:
+
+• notify us each time you make a disposal
+
+• file a Corporation Tax return for each disposal
+
+If you expect to make 4 or more disposals of interests in UK property or land in this tax year
+
+Special rules apply that allow you to:
+
+• not have to notify us separately about each disposal (this form covers all the disposals)
+
+• file one Corporation Tax return for all the disposals made within the accounting period (rather than one return for each disposal)
 
 From HMRC Corporation Tax Services
 
