@@ -536,11 +536,11 @@ object EeittTemplates {
       htmlTemplate = html.civTransparencyConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.createWithDynamicSubject(
+    MessageTemplate.create(
       templateId = "confirmationCode_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = extractSubject,
+      subject ="Confirm your email address",
       plainTemplate = txt.confirmationCodeTemplate.f,
       htmlTemplate = html.confirmationCodeTemplate.f,
       priority = Some(MessagePriority.Standard)
@@ -573,8 +573,4 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     )
   )
-  private def extractSubject(params: Map[String, String]) =
-    params.get("emailSubject")
-      .map(subTitle => s"Confirm your email address '$subTitle'")
-      .getOrElse(throw new RuntimeException("Missing parameter emailSubject"))
-}
+ }
