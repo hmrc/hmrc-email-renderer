@@ -26,7 +26,7 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
   "annual_tax_summaries_message_alert_cy" should {
 
     val templateLocator = new TemplateLocator {}
-    val template = templateLocator.templateGroups("ATS").find(_.templateId == "annual_tax_summaries_message_alert_cy").get
+    val template = templateLocator.templateGroups("ATS").find(_.templateId == "annual_tax_summaries_message_alert_cym").get
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject" in {
