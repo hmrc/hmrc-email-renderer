@@ -93,6 +93,16 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
         templateId = "apiStatusChangedNotification",
         expectedSubject = "API Status Changed",
         expectedPriority = MessagePriority.Standard)
+
+      validateTemplate(
+        templateId = "apiAddedClientSecretNotification",
+        expectedSubject = "Client Secret Added",
+        expectedPriority = MessagePriority.Urgent)
+
+      validateTemplate(
+        templateId = "apiRemovedClientSecretNotification",
+        expectedSubject = "Client Secret Removed",
+        expectedPriority = MessagePriority.Urgent)
     }
   }
 
