@@ -64,6 +64,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.customsfinancials.CustomsFinancia
 import uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd.CgtpdTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.htsreminder.HtsReminderTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.dst.DstTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -75,6 +76,7 @@ trait TemplateLocator {
         "BARS"                       -> BarsTemplates.templates,
         "Childcare"                  -> ChildcareTemplates.templates,
         "Digital Tariffs"            -> DigitalTariffTemplates.templates,
+        "DST"                        -> DstTemplates.templates,
         "DFS"                        -> DfsTemplates.templates,
         "EMAC Helpdesk"              -> EmacHelpdeskTemplates.templates,
         "EMAC"                       -> EmacTemplates.templates,
