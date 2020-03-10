@@ -5,9 +5,9 @@
 
 
 Dear @{params("name")}
-Remember to save this @{DateFormatter.formatMonth(Calendar.MONTH.toString.reverse.padTo(2, '0').reverse) }
+Remember to save this @{DateFormatter.formatMonth((Calendar.MONTH + 1).toString.reverse.padTo(2, '0').reverse) }
 
-Try and save as much of your monthly £50 Help to Save allowance as you can this @{DateFormatter.formatMonth(Calendar.MONTH.toString.reverse.padTo(2, '0').reverse)}.
+Try and save as much of your monthly £50 Help to Save allowance as you can this @{DateFormatter.formatMonth((Calendar.MONTH + 1).toString.reverse.padTo(2, '0').reverse)}.
 You can deposit any amount from £1 to £50, and anything you save now can help you earn the highest possible bonus.
 This bonus will be 50% of your highest savings total after two years of saving.
 Just remember, you cannot carry over any of your unused £50 allowance to next month.
