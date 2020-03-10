@@ -47,8 +47,10 @@
             </li>
         </ul>
 
+        <h2>Report</h2>
+
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            The report below shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
+            This report shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
@@ -58,8 +60,6 @@
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             Errors and/or warnings may relate to more than one version of your software as provided in the Gov-Vendor-Version header.
         </p>
-
-        <h2>Report</h2>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             '@params("applicationName")' using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
