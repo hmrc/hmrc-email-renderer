@@ -17,13 +17,13 @@ is the value for Gov-Client-Public-IP an IP address?
 
 is the IP address value for Gov-Client-Public-IP a public IP?
 
-The report below shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
+Report
+
+This report shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
 
 If your application sent additional requests with a different value for the Gov-Client-Connection-Method you will receive separate reports for each.
 
 Errors and/or warnings may relate to more than one version of your software as provided in the Gov-Vendor-Version header.
-
-Report
 
 '@params("applicationName")' using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
 
