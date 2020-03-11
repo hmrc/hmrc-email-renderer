@@ -16,11 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
+import org.mockito.Matchers._
 import org.mockito.Mockito._
 import org.scalatest.concurrent.Eventually
-import org.scalatest.mock.MockitoSugar
-import play.api.Configuration
-import uk.gov.hmrc.emailaddress.EmailAddress
+import org.scalatest.mockito.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
@@ -29,9 +28,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.test.UnitSpec
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class TemplateRendererSpec extends UnitSpec with MockitoSugar   {
+class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
   "The template renderer" should {
 
@@ -54,117 +54,55 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar   {
 
   }
 
-  "Welsh templates" should {
+  "LanguageTemplateId" should {
 
-    "render template normally if the template doesnt exist in WelshTemplatesByLangPreference object" in new TestCase {
-      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-     await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"))) shouldBe Right(validRenderedResult)
+    "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and exist in language preference" in new TestCase {      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
+      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(true))
+      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com")))  shouldBe templateId
     }
 
-    "render welsh template if template exists in WelshTemplatesByLangPreference" in new TestCase {
-      override  val templateId = s"newMessageAlert"
-      val welshTemplate = s"${templateId}_cy"
-
-      when(locatorMock.findTemplate(welshTemplate)).thenReturn(Some(MessageTemplate.create(
-        templateId = welshTemplate,
-        fromAddress = "from@test",
-        service = SelfAssessment,
-        subject = "welsh subject",
-        plainTemplate = txt.templateSample_cym.f,
-        htmlTemplate = html.templateSample_cym.f,
-        Some(MessagePriority.Urgent)
-      )))
-
-      when(templateRenderer.preferencesConnector.isWelsh(EmailAddress("test@test.com"))).thenReturn(Future.successful(true))
-
-      templateRenderer.templatesByLangPreference.contains(templateId) shouldBe true
-
-      await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"), Option(EmailAddress("test@test.com")))) shouldBe
-        Right(RenderResult(
-          fromAddress = "from@test",
-          service = "sa",
-          subject = "welsh subject",
-          plain = "welsh content",
-          html = "<p>welsh content</p>",
-          priority = Some(MessagePriority.Urgent)
-        ))
+    "return welsh template if template is in WelshTemplatesByLangPreference and language preferences set to welsh" in new TestCase {
+      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(true))
+      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe welshTemplateId
     }
 
-
-    "render english template if template is in WelshTemplatesByLangPreference object and preferences set to English" in new TestCase {
-      override  val templateId = s"newMessageAlert"
-      val welshTemplate = s"${templateId}_cy"
-
-      when(locatorMock.findTemplate(welshTemplate)).thenReturn(Some(MessageTemplate.create(
-        templateId = welshTemplate,
-        fromAddress = "from@test",
-        service = SelfAssessment,
-        subject = "welsh subject",
-        plainTemplate = txt.templateSample_cym.f,
-        htmlTemplate = html.templateSample_cym.f,
-        Some(MessagePriority.Urgent)
-      )))
-
-      when(locatorMock.findTemplate(templateId)).thenReturn(Some(MessageTemplate.create(
-        templateId = templateId,
-        fromAddress = "from@test",
-        service = SelfAssessment,
-        subject = "english subject",
-        plainTemplate = txt.templateSample.f,
-        htmlTemplate = html.templateSample.f,
-        Some(MessagePriority.Urgent)
-      )))
-
-      when(templateRenderer.preferencesConnector.isWelsh(EmailAddress("test@test.com"))).thenReturn(Future.successful(false))
-
-      templateRenderer.templatesByLangPreference.contains(templateId) shouldBe true
-
-      await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"), Option(EmailAddress("test@test.com")))) shouldBe
-       Right(RenderResult(
-          fromAddress = "from@test",
-          service = "sa",
-          subject = "english subject",
-          plain = "Test template with parameter value: VALUE using common parameters: commonValue",
-          html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
-          priority = Some(MessagePriority.Urgent)
-        ))
+    "return english template if template is in WelshTemplatesByLangPreference and language preferences set to english" in new TestCase {
+      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
+      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe engTemplateId
     }
 
-    "render template normally if emailAddress is None" in new TestCase {
-      override  val templateId = s"newMessageAlert"
-      val welshTemplate = s"${templateId}_cy"
-      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
+    "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and doesnt language preference" in new TestCase {
+      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
+      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe engTemplateId
+    }
 
-      templateRenderer.templatesByLangPreference.contains(templateId) shouldBe true
+    "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
+      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
+      await(templateRenderer.languageTemplateId(templateId, None))  shouldBe templateId
+    }
 
-      await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"), None)) shouldBe
-        Right(RenderResult(
-          fromAddress = "from@test",
-          service = "sa",
-          subject = "a subject",
-          plain = "Test template with parameter value: VALUE using common parameters: commonValue",
-          html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
-          priority = Some(MessagePriority.Urgent)
-        ))
+    "return same template if the template exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
+      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
+      await(templateRenderer.languageTemplateId(engTemplateId, None))  shouldBe engTemplateId
     }
   }
 
   class TestCase {
     val locatorMock = mock[TemplateLocator]
     val templateId = "a-template-id"
-
+    val engTemplateId = "engTemplateId"
+    val welshTemplateId = "welshTemplateId"
     val preferences = mock[PreferencesConnector]
 
     val templateRenderer = new TemplateRenderer {
       override def locator: TemplateLocator = locatorMock
 
+      override val templatesByLangPreference = Map(engTemplateId-> welshTemplateId)
+
       override def commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
 
       override val  preferencesConnector =  mock[PreferencesConnector]
 
-      override def runModeConfiguration: Configuration = Configuration.from(LocalConfig.config)
-
-      override val templatesByLangPreference: Map[String, String] = Map("newMessageAlert"-> "newMessageAlert_cy")
     }
 
     val validTemplate = MessageTemplate.create(

@@ -21,11 +21,12 @@ import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.config.WelshTemplatesByLangPreference
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.config.RunMode
-import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.ExecutionContext
+
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
 
@@ -41,39 +42,30 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
       getOrElse(Map.empty[String, String])
   }
 
-  val templatesByLangPreference = WelshTemplatesByLangPreference.list
-
   override protected def mode: play.api.Mode.Mode = Play.current.mode
 
-  def runModeConfiguration: Configuration = Play.current.configuration
+  override protected def runModeConfiguration: Configuration = Play.current.configuration
+
+  val preferencesConnector = PreferencesConnector()
+
 }
 
 trait TemplateRenderer {
 
   def commonParameters: Map[String, String]
 
-  val templatesByLangPreference: Map[String, String]
-
   def locator: TemplateLocator
 
-  def runModeConfiguration: Configuration
+  def preferencesConnector:PreferencesConnector
 
-  val preferencesConnector = PreferencesConnector(runModeConfiguration.underlying.getConfig("Dev.services.preferences"))
+  val templatesByLangPreference = WelshTemplatesByLangPreference.list
 
-  def render(templateId: String, parameters: Map[String, String], emailAddress: Option[String] = None)(implicit hc: HeaderCarrier): Future[Either[ErrorMessage, RenderResult]] = {
+  def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
-
-     {for {
-      email <- emailAddress
-      welshTemplateId <- templatesByLangPreference.get(templateId)
-    } yield {
-      preferencesConnector.isWelsh(email).map(isWelsh => if (isWelsh) welshTemplateId else templateId)
-    }}.getOrElse(Future.successful(templateId)).map{
-     tId =>
-     for {
-       template <- template(tId)
-       plainText <- render(template.plainTemplate, allParams).right
-       htmlText <- render(template.htmlTemplate, allParams).right
+    for {
+      template <- locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
+      plainText <- render(template.plainTemplate, allParams).right
+      htmlText <- render(template.htmlTemplate, allParams).right
     } yield RenderResult(
       plainText,
       htmlText,
@@ -82,14 +74,15 @@ trait TemplateRenderer {
       template.service.name,
       template.priority
     )
-    }
   }
 
-  def template(templateId: String) = {
-    locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId)).right
-  }
+  def languageTemplateId(templateId: String, emailAddress: Option[String])(implicit hc: HeaderCarrier, ec: ExecutionContext): Future[String] =  {for {
+    email <- emailAddress
+    welshTemplateId <- templatesByLangPreference.get(templateId)
+  } yield {
+    preferencesConnector.isWelsh(email).map(isWelsh => if(isWelsh) welshTemplateId else templateId)
+  }}.getOrElse(Future.successful(templateId))
 
-  def shouldCheckLangPreference(templateId: String) = templatesByLangPreference.exists(_._1 == templateId)
 
   private def render(template: Map[String, String] => Format[_]#Appendable,
                      params: Map[String, String]): Either[ErrorMessage, String] =

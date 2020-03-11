@@ -15,5 +15,5 @@
  *@
 
 @import preview.Preview
-@(templateId: String, queryString: Map[String, String], html: String)
-@{Html(html)}
+@(templateId: String, queryString: Map[String, String])
+@{Html(Preview.html(templateId, queryString))}

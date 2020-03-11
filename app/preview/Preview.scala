@@ -19,39 +19,32 @@ package preview
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
-import uk.gov.hmrc.http.HeaderCarrier
-
-import scala.concurrent.Future
-import scala.concurrent.ExecutionContext.Implicits.global
 
 trait Preview {
-
-  implicit val hc: HeaderCarrier = new HeaderCarrier()
-
   type RenderedResult = Either[ErrorMessage, RenderResult]
 
   def renderer: TemplateRenderer
 
-  def html(templateId: String, parameters: Map[String, String]): Future[String] =
-    extractHtml(renderer.render(templateId, parameters))
+  def html(templateId: String, parameters: Map[String, String]): String =
+    extractHtml.orElse(handleErrors).apply(renderer.render(templateId, parameters))
 
-  def plain(templateId: String, parameters: Map[String, String]): Future[String] =
-    extractPlainText(renderer.render(templateId, parameters))
+  def plain(templateId: String, parameters: Map[String, String]): String =
+    extractPlainText.orElse(handleErrors)(renderer.render(templateId, parameters))
 
-  private val extractHtml = (fe: Future[Either[ErrorMessage, RenderResult]]) => fe  map {
-    case Right(RenderResult(_, html, _, _, _, _)) => html
-    case Left(MissingTemplateId(templateId)) => s"failed to rendered template with id == $templateId"
-    case Left(TemplateRenderFailure(reason)) => reason
-  }
+  private val extractHtml: PartialFunction[RenderedResult, String] =
+    { case Right(RenderResult(_, html, _, _, _, _)) => html }
 
-  private val extractPlainText = (fe: Future[Either[ErrorMessage, RenderResult]]) => fe  map {
-    case Right(RenderResult(plain, _, _, _, _, _)) => plain
-    case Left(MissingTemplateId(templateId)) => s"failed to rendered template with id == $templateId"
+  private val extractPlainText: PartialFunction[RenderedResult, String] =
+    { case Right(RenderResult(plain, _, _, _, _, _)) => plain }
+
+  private val handleErrors: PartialFunction[RenderedResult, String] = {
+    case Left(MissingTemplateId(templateId)) =>
+      s"failed to rendered template with id == $templateId"
     case Left(TemplateRenderFailure(reason)) => reason
   }
 
 }
 
-object Preview extends HeaderCarrier with Preview  {
+object Preview extends Preview {
   def renderer = TemplateRenderer
 }

@@ -28,9 +28,7 @@ import uk.gov.hmrc.play.http.logging.MdcLoggingExecutionContext._
 
 import scala.concurrent.{Await, Future}
 
-trait PreferencesConnector {
-
-  def baseUrl: String
+trait PreferencesConnector extends ServicesConfig {
 
   def httpGet: HttpGet
 
@@ -39,7 +37,7 @@ trait PreferencesConnector {
   }
 
   def isWelsh(emailAddress: String)(implicit hc: HeaderCarrier): Future[Boolean] = {
-      val url = s"$baseUrl/preferences/language/${emailAddress}"
+    val url = baseUrl("preferences") + s"/preferences/language/${emailAddress}"
       val eventualResponse: Future[HttpResponse] = httpGet.doGet(url)
         val result =  eventualResponse.map { response =>
           (response.status, response.body) match {
@@ -56,10 +54,9 @@ trait PreferencesConnector {
 final case class LanguagePreference(lang: String)
 
 object  PreferencesConnector {
-  def apply(configuration: Config): PreferencesConnector = new PreferencesConnector with ServicesConfig {
+  def apply(): PreferencesConnector = new PreferencesConnector with ServicesConfig {
     override protected def mode: Mode = Play.current.mode
     override protected def runModeConfiguration: Configuration = Play.current.configuration
-    override def baseUrl: String = s"${configuration.getString("protocol")}://${configuration.getString("host")}:${configuration.getString("port")}"
     override def httpGet: HttpGet = WSHttp
   }
 }

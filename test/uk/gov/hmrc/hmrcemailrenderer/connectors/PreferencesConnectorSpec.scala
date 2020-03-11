@@ -19,9 +19,9 @@ package uk.gov.hmrc.hmrcemailrenderer.connectors
 import org.mockito.Matchers._
 import org.mockito.Mockito._
 import org.scalatest.mockito.MockitoSugar
+import play.api.Mode.Mode
+import play.api.{Configuration, Mode}
 import uk.gov.hmrc.emailaddress.EmailAddress
-import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.ErrorMessage
 import uk.gov.hmrc.http.{HeaderCarrier, HttpGet, HttpResponse}
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -50,8 +50,14 @@ class PreferencesConnectorSpec  extends UnitSpec with MockitoSugar {
     val mockHttp = mock[HttpGet]
     implicit val headerCarrier: HeaderCarrier = new HeaderCarrier()
     val preferencesConnector = new PreferencesConnector {
-      override def baseUrl: String = "http://localhost:8888"
+
       override def httpGet = mockHttp
+
+      override protected def mode: Mode = Mode.Dev
+
+      override protected def runModeConfiguration: Configuration = Configuration.empty
+
+      override def baseUrl(serviceName: String): String = "what ever"
     }
   }
 }
