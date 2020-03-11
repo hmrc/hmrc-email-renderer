@@ -39,12 +39,12 @@ object AtsTemplates {
       priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
-      templateId = "annual_tax_summaries_message_alert_cym",
+      templateId = "annual_tax_summaries_message_alert_cy",
       fromAddress = FromAddress.noReply("CThEM – Eich Crynodeb Treth Blynyddol"),
       service = AnnualTaxSummary,
       subject = ats_year_for_subject_welsh,
-      plainTemplate = txt.annualTaxSummariesMessageAlert_cym.f,
-      htmlTemplate = html.annualTaxSummariesMessageAlert_cym.f,
+      plainTemplate = txt.annualTaxSummariesMessageAlert_cy.f,
+      htmlTemplate = html.annualTaxSummariesMessageAlert_cy.f,
       priority = Some(MessagePriority.Background)
     )
   )

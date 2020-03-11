@@ -16,14 +16,20 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.Mode.Mode
 import play.api.{Configuration, Play}
 import play.twirl.api.Format
+import uk.gov.hmrc.hmrcemailrenderer.config.WelshTemplatesByLangPreference
+import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.model.Language
+import uk.gov.hmrc.hmrcemailrenderer.model.Language.{English, Welsh}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.config.RunMode
 
+import scala.concurrent.ExecutionContext
+import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
 
 object TemplateRenderer extends TemplateRenderer with RunMode {
@@ -42,6 +48,8 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
 
   override protected def runModeConfiguration: Configuration = Play.current.configuration
 
+  val preferencesConnector = PreferencesConnector()
+
 }
 
 trait TemplateRenderer {
@@ -49,6 +57,10 @@ trait TemplateRenderer {
   def commonParameters: Map[String, String]
 
   def locator: TemplateLocator
+
+  def preferencesConnector:PreferencesConnector
+
+  val templatesByLangPreference = WelshTemplatesByLangPreference.list
 
   def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
@@ -65,6 +77,17 @@ trait TemplateRenderer {
       template.priority
     )
   }
+
+  def languageTemplateId(templateId: String, emailAddress: Option[String])(implicit hc: HeaderCarrier, ec: ExecutionContext): Future[String] =  {for {
+    email <- emailAddress
+    welshTemplateId <- templatesByLangPreference.get(templateId)
+  } yield {
+    preferencesConnector.languageByEmail(email).map{
+      case English => templateId
+      case Welsh => welshTemplateId
+    }
+  }}.getOrElse(Future.successful(templateId))
+
 
   private def render(template: Map[String, String] => Format[_]#Appendable,
                      params: Map[String, String]): Either[ErrorMessage, String] =
