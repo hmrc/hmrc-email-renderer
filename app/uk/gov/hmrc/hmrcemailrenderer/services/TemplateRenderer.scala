@@ -62,36 +62,26 @@ trait TemplateRenderer {
 
   def render(templateId: String, parameters: Map[String, String], emailAddress: Option[String] = None)(implicit hc: HeaderCarrier): Future[Either[ErrorMessage, RenderResult]] = {
     val allParams = commonParameters ++ parameters
-    if (emailAddress.nonEmpty && shouldCheckLangPreference(templateId)) {
-      preferencesConnector.isWelsh(emailAddress.getOrElse("")).map { isWelsh =>
-        for {
-          template <- if (isWelsh) template(templatesByLangPreference.getOrElse(templateId, "")) else template(templateId)
-          plainText <- render(template.plainTemplate, allParams).right
-          htmlText <- render(template.htmlTemplate, allParams).right
-        } yield RenderResult(
-          plainText,
-          htmlText,
-          template.fromAddress(allParams),
-          template.subject(allParams),
-          template.service.name,
-          template.priority
-        )
-      }
-    } else {
-      Future {
-        for {
-          template <- template(templateId)
-          plainText <- render(template.plainTemplate, allParams).right
-          htmlText <- render(template.htmlTemplate, allParams).right
-        } yield RenderResult(
-          plainText,
-          htmlText,
-          template.fromAddress(allParams),
-          template.subject(allParams),
-          template.service.name,
-          template.priority
-        )
-      }
+
+     {for {
+      email <- emailAddress
+      welshTemplateId <- templatesByLangPreference.get(templateId)
+    } yield {
+      preferencesConnector.isWelsh(email).map(isWelsh => if (isWelsh) welshTemplateId else templateId)
+    }}.getOrElse(Future.successful(templateId)).map{
+     tId =>
+     for {
+       template <- template(tId)
+       plainText <- render(template.plainTemplate, allParams).right
+       htmlText <- render(template.htmlTemplate, allParams).right
+    } yield RenderResult(
+      plainText,
+      htmlText,
+      template.fromAddress(allParams),
+      template.subject(allParams),
+      template.service.name,
+      template.priority
+    )
     }
   }
 
