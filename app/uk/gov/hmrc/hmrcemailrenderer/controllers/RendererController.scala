@@ -43,8 +43,8 @@ trait RendererController extends BaseController with RunMode{
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
-    templateRenderer.languageTemplateId(templateId, renderReq.email).map {templateId =>
-        templateRenderer.render(templateId, renderReq.parameters) match {
+    templateRenderer.languageTemplateId(templateId, renderReq.email).map {tId =>
+        templateRenderer.render(tId, renderReq.parameters) match {
             case Right(rendered) => Ok(Json.toJson(rendered))
             case Left(MissingTemplateId(_)) => NotFound
             case Left(x@TemplateRenderFailure(_)) =>
