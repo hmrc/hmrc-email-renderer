@@ -27,41 +27,13 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
   "The template locator when requested Welsh template" should {
 
     "return Welsh version of template if it exists" in new TestCase {
-      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2_cym").get.templateId shouldBe "template-templateGroup-1-2_cym"
+      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2_cy"
     }
     "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
-      templateLocator.findTemplate("template-templateGroup-1-2_cym").get.templateId shouldBe "template-templateGroup-1-2"
+      templateLocator.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2"
     }
     "return None if template doesn't exist" in new TestCase {
       templateLocator.findTemplate("foobar-template") shouldBe None
-    }
-  }
-
-  "Welsh templates" should {
-
-    val welshTemplates = List(
-      "changeOfEmailAddress_cym",
-      "verifyEmailAddress_cym",
-      "digitalOptOutConfirmation_cym",
-      "changeOfEmailAddressNewAddress_cym",
-      "newMessageAlert_cym",
-      "rescindedMessageAlert_cym",
-      "verificationReminder_cym",
-      "tax_estimate_message_alert_cym",
-      "annual_tax_summaries_message_alert_cym"
-    )
-
-    "end with _cym for templateIds maintained by Digital contact" in {
-      welshTemplates.foreach{
-        _.endsWith("_cym") should be(true)
-      }
-    }
-
-    "not end with _cym for templateIds not maintained by digital contact" in{
-     val nonDigitalContactTemplates =  TemplateLocator.all.map(_.templateId).filterNot(welshTemplates.contains(_))
-      nonDigitalContactTemplates.foreach{
-        _.endsWith("_cym") should be(false)
-      }
     }
   }
 
@@ -157,15 +129,15 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apiApplicationRejectedNotification",
         "apiStatusChangedNotification",
         "changeOfEmailAddress",
-        "changeOfEmailAddress_cym",
+        "changeOfEmailAddress_cy",
         "verifyEmailAddress",
-        "verifyEmailAddress_cym",
+        "verifyEmailAddress_cy",
         "digitalOptOutConfirmation",
-        "digitalOptOutConfirmation_cym",
+        "digitalOptOutConfirmation_cy",
         "changeOfEmailAddressNewAddress",
-        "changeOfEmailAddressNewAddress_cym",
+        "changeOfEmailAddressNewAddress_cy",
         "newMessageAlert",
-        "newMessageAlert_cym",
+        "newMessageAlert_cy",
         "newMessageAlert_SA316",
         "newMessageAlert_SS300",
         "newMessageAlert_SA300",
@@ -183,9 +155,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_CA001",
         "amls_notification_received_template",
         "rescindedMessageAlert",
-        "rescindedMessageAlert_cym",
+        "rescindedMessageAlert_cy",
         "verificationReminder",
-        "verificationReminder_cym",
+        "verificationReminder_cy",
         "generic_access_invitation_template_id",
         "cato_access_invitation_template_id",
         "agents_access_invitation_template_id",
@@ -317,12 +289,12 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "childcare_taxfree_england_B",
         "childcare_taxfree_devolved_B",
         "tax_estimate_message_alert",
-        "tax_estimate_message_alert_cym",
+        "tax_estimate_message_alert_cy",
         "iht_access_invitation_template_id",
         "fandf_ask_help_notification",
         "fandf_offer_help_notification",
         "annual_tax_summaries_message_alert",
-        "annual_tax_summaries_message_alert_cym",
+        "annual_tax_summaries_message_alert_cy",
         "gmp_access_invitation_template_id",
         //        "indefensibleUpgrade",
         //        "indefensibleUpgradeWithDate",

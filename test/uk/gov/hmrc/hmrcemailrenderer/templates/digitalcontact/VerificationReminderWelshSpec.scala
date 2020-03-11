@@ -25,7 +25,7 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map("verificationLink" -> "/whatever", "verificationLinkSentDate" -> "2019-04-02")
 
-    val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "verificationReminder_cym").get
+    val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "verificationReminder_cy").get
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi")
       template.fromAddress(Map.empty) shouldBe "CThEM Digidol <noreply@tax.service.gov.uk>"

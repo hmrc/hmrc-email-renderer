@@ -26,7 +26,7 @@ class RescindedMessageAlertWelshSpec extends UnitSpec with EitherValues with Tem
 
   "rescindedMessageAlert_cy" should {
     val templateLocator = new TemplateLocator {}
-    val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "rescindedMessageAlert_cym").get
+    val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "rescindedMessageAlert_cy").get
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject" in {
