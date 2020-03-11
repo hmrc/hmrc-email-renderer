@@ -22,6 +22,7 @@ import play.api.Mode.Mode
 import play.api.libs.json.Json
 import uk.gov.hmrc.emailaddress.EmailAddress
 import uk.gov.hmrc.hmrcemailrenderer.WSHttp
+import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.http.{HeaderCarrier, HttpException, HttpGet, HttpPost, HttpReads, HttpResponse}
 import uk.gov.hmrc.play.config.ServicesConfig
 import uk.gov.hmrc.play.http.logging.MdcLoggingExecutionContext._
@@ -36,19 +37,10 @@ trait PreferencesConnector extends ServicesConfig {
     implicit val format = Json.format[LanguagePreference]
   }
 
-  def isWelsh(emailAddress: String)(implicit hc: HeaderCarrier): Future[Boolean] = {
+  def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier): Future[Language] = {
     val url = baseUrl("preferences") + s"/preferences/language/${emailAddress}"
-      val eventualResponse: Future[HttpResponse] = httpGet.doGet(url)
-        val result =  eventualResponse.map { response =>
-          (response.status, response.body) match {
-            case (200, body) if body == "cy" => true
-            case (200, _) => false
-            case (404, _) => false
-            case (statusCode, body) => throw new HttpException(s"Unexpected response ($body) from preferences service", statusCode)
-          }
-        }
-    result
-      }
+    httpGet.GET[Language](url)
+    }
 }
 
 final case class LanguagePreference(lang: String)

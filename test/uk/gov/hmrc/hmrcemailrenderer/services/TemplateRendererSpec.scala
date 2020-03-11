@@ -23,6 +23,7 @@ import org.scalatest.mockito.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
@@ -56,33 +57,31 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
   "LanguageTemplateId" should {
 
-    "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and exist in language preference" in new TestCase {      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(true))
+    "return the same template if the template doesnt exist in WelshTemplatesByLangPreference object and email preference is English" in new TestCase {      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.English))
       await(templateRenderer.languageTemplateId(templateId, Some("test@test.com")))  shouldBe templateId
     }
 
     "return welsh template if template is in WelshTemplatesByLangPreference and language preferences set to welsh" in new TestCase {
-      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(true))
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.Welsh))
       await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe welshTemplateId
     }
 
     "return english template if template is in WelshTemplatesByLangPreference and language preferences set to english" in new TestCase {
-      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.English))
       await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe engTemplateId
     }
 
-    "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and doesnt language preference" in new TestCase {
-      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
-      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe engTemplateId
+    "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and language preference is Welsh" in new TestCase {
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.Welsh))
+      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com")))  shouldBe templateId
     }
 
     "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
-      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
       await(templateRenderer.languageTemplateId(templateId, None))  shouldBe templateId
     }
 
     "return same template if the template exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
-      when(templateRenderer.preferencesConnector.isWelsh(anyString())(any())).thenReturn(Future.successful(false))
       await(templateRenderer.languageTemplateId(engTemplateId, None))  shouldBe engTemplateId
     }
   }

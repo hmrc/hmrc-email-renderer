@@ -16,6 +16,7 @@ private object AppDependencies {
     "uk.gov.hmrc"                 %% "domain"                 % "5.3.0",
     "uk.gov.hmrc"                 %% "emailaddress"           % "3.2.0",
     "net.codingwell"              %% "scala-guice"            % "4.1.1",
+    "com.beachape"           %% "enumeratum"               % "1.5.13",
     "org.jsoup"                   %  "jsoup"                  % "1.7.3"             % "test",
     "org.scalatestplus.play"      %% "scalatestplus-play"     % "2.0.1"             % "test, it",
     "uk.gov.hmrc"                 %% "hmrctest"               % "3.4.0-play-25"             % "test, it",

@@ -22,6 +22,7 @@ import org.scalatest.mockito.MockitoSugar
 import play.api.Mode.Mode
 import play.api.{Configuration, Mode}
 import uk.gov.hmrc.emailaddress.EmailAddress
+import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.http.{HeaderCarrier, HttpGet, HttpResponse}
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -29,22 +30,17 @@ import scala.concurrent.Future
 
 class PreferencesConnectorSpec  extends UnitSpec with MockitoSugar {
 
-  "PreferencesConnector" should {
-    "return false if language is en" in new TestCase {
-     when(mockHttp.doGet(anyString())(any())).thenReturn(Future.successful(HttpResponse(responseStatus = 200, responseString = Some("en"))))
-    await(preferencesConnector.isWelsh(EmailAddress("test@test.com"))) shouldBe(false)
+  "PreferencesConnector language by email" should {
+    "return English if preference returns English" in new TestCase {
+      when(mockHttp.GET[Language](anyString())(any(), any(), any())).thenReturn(Future.successful(Language.English))
+      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe(Language.English)
     }
-
-    "return true if language is cy" in new TestCase {
-      when(mockHttp.doGet(anyString())(any())).thenReturn(Future.successful(HttpResponse(responseStatus = 200, responseString = Some("cy"))))
-      await(preferencesConnector.isWelsh(EmailAddress("test@test.com"))) shouldBe(true)
-    }
-
-    "return false if we get 404 from preferences" in new TestCase {
-      when(mockHttp.doGet(anyString())(any())).thenReturn(Future.successful(HttpResponse(responseStatus = 404, responseString = Some(""))))
-      await(preferencesConnector.isWelsh(EmailAddress("test@test.com"))) shouldBe(false)
+    "return Welsh if preference returns Welsh" in new TestCase {
+      when(mockHttp.GET[Language](anyString())(any(), any(), any())).thenReturn(Future.successful(Language.Welsh))
+      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe(Language.Welsh)
     }
   }
+
 
   trait TestCase {
     val mockHttp = mock[HttpGet]

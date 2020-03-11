@@ -22,11 +22,13 @@ import uk.gov.hmrc.hmrcemailrenderer.config.WelshTemplatesByLangPreference
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.model.Language
+import uk.gov.hmrc.hmrcemailrenderer.model.Language.{English, Welsh}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.config.RunMode
-import scala.concurrent.ExecutionContext
 
+import scala.concurrent.ExecutionContext
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
 
@@ -80,7 +82,10 @@ trait TemplateRenderer {
     email <- emailAddress
     welshTemplateId <- templatesByLangPreference.get(templateId)
   } yield {
-    preferencesConnector.isWelsh(email).map(isWelsh => if(isWelsh) welshTemplateId else templateId)
+    preferencesConnector.languageByEmail(email).map{
+      case English => templateId
+      case Welsh => welshTemplateId
+    }
   }}.getOrElse(Future.successful(templateId))
 
 
