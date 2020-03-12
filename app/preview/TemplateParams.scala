@@ -143,6 +143,18 @@ object TemplateParams {
       "newStatus" -> "BETA",
       "environmentName" -> "Production"
     ),
+    "apiAddedClientSecretNotification" -> Map(
+      "actorEmailAddress" -> "joe.bloggs@gmail.com",
+      "clientSecretEnding" -> "1234",
+      "environmentName" -> "sandbox",
+      "applicationName" -> "Tax Software"
+    ),
+    "apiRemovedClientSecretNotification" -> Map(
+      "actorEmailAddress" -> "joe.bloggs@gmail.com",
+      "clientSecretEnding" -> "1234",
+      "environmentName" -> "sandbox",
+      "applicationName" -> "Tax Software"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),

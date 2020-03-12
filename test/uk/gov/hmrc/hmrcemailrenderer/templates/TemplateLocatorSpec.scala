@@ -128,6 +128,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apiDeveloperDeletedConfirmation",
         "apiApplicationRejectedNotification",
         "apiStatusChangedNotification",
+        "apiAddedClientSecretNotification",
+        "apiRemovedClientSecretNotification",
         "changeOfEmailAddress",
         "changeOfEmailAddress_cy",
         "verifyEmailAddress",
