@@ -1,9 +1,9 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
 @(params: Map[String, Any])Your Digital Services Tax registration number.
 
-    Dear @params("companyName")
+    Dear @params("name")
 
-    We confirm that @params("companyName") is now registered @if(params("groupCompanyName").toString != "unknown"){ on behalf of @params("groupCompanyName")} for the Digital Services Tax.
+    We confirm that @params("name") is now registered @if(params("groupCompanyName").toString != "unknown"){ on behalf of @params("groupCompanyName")} for the Digital Services Tax.
 
     Your Digital Services Tax registration number is @params("dstNumber")
 
@@ -21,7 +21,7 @@
 
     If you need to change your registered details, contact your HMRC Customer Compliance Manager (CCM).
 
-    If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk").
+    If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk")
 
     Why you got this email
 

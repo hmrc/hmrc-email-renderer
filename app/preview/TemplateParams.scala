@@ -1628,13 +1628,13 @@ object TemplateParams {
     ),
     "dst_registration_accepted" -> Map(
         "dstNumber" -> "XADST0000010000",
-        "companyName" -> "Some company Ltd.",
+        "name" -> "Joe Bloggs",
         "groupCompanyName" -> "Some group company Ltd.",
         "paymentDeadline" -> "20210401",
         "submitReturnDeadline" -> "20210731"
         ),
     "dst_registration_received" -> Map(
-        "companyName" -> "Some company Ltd.",
+        "name" -> "Joe Bloggs",
         "groupCompanyName" -> "Some group company Ltd."
     )
   )

@@ -1,8 +1,8 @@
 @(params: Map[String, Any])Digital Services Tax registration received
 
-Dear @params("companyName")
+Dear @params("name")
 
-    We received your registration for @params("companyName") @if(params("groupCompanyName").toString != "unknown"){on behalf of @params("groupCompanyName")} for the Digital Services Tax.
+    We received your registration for @params("name") @if(params("groupCompanyName").toString != "unknown"){on behalf of @params("groupCompanyName")} for the Digital Services Tax.
 
     What happens next
 
@@ -10,7 +10,7 @@ Dear @params("companyName")
 
     Contact your HMRC Customer Compliance Manager (CCM) if you do not receive your registration number.
 
-    If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk").
+    If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk")
 
     Why you got this email
 
