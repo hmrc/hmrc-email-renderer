@@ -87,7 +87,17 @@ Again, list the templates can then be previewed from
 
 [http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview)
 
-test
+### Handling Templates based on Language preference
+If templateId exists in 
+
+```bash
+WelshTemplatesByLangPreference
+```
+We make a call to preferences service to see weather language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
+
+####To work on a new template that has to work based on language preferences
+We  have to add this templateId to this object WelshTemplatesByLangPreference (key should be an english tempalteId and value should be welsh templateId)
+ 
 
 ### License
 
