@@ -544,7 +544,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cgtpd_account_created",
         "cgtpd_private_beta_access",
         "dst_registration_received",
-        "dst_registration_accepted"
+        "dst_registration_accepted",
+        "cgtpd_submission_confirmation"
       )
     }
   }
