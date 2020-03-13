@@ -143,6 +143,18 @@ object TemplateParams {
       "newStatus" -> "BETA",
       "environmentName" -> "Production"
     ),
+    "apiAddedClientSecretNotification" -> Map(
+      "actorEmailAddress" -> "joe.bloggs@gmail.com",
+      "clientSecretEnding" -> "1234",
+      "environmentName" -> "sandbox",
+      "applicationName" -> "Tax Software"
+    ),
+    "apiRemovedClientSecretNotification" -> Map(
+      "actorEmailAddress" -> "joe.bloggs@gmail.com",
+      "clientSecretEnding" -> "1234",
+      "environmentName" -> "sandbox",
+      "applicationName" -> "Tax Software"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -1625,6 +1637,17 @@ object TemplateParams {
     "cgtpd_private_beta_access" -> Map(
       "name" -> "Jamie Wilson",
       "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "dst_registration_accepted" -> Map(
+        "dstNumber" -> "XADST0000010000",
+        "name" -> "Joe Bloggs",
+        "groupCompanyName" -> "Some group company Ltd.",
+        "paymentDeadline" -> "20210401",
+        "submitReturnDeadline" -> "20210731"
+        ),
+    "dst_registration_received" -> Map(
+        "name" -> "Joe Bloggs",
+        "groupCompanyName" -> "Some group company Ltd."
     )
   )
 }

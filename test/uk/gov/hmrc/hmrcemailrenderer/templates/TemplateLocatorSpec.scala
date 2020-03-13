@@ -60,6 +60,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "DFS",
         "Digital Contact VAT",
         "Digital Tariffs",
+        "DST",
         "Childcare",
         "PAYE",
         "FANDF",
@@ -128,6 +129,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apiDeveloperDeletedConfirmation",
         "apiApplicationRejectedNotification",
         "apiStatusChangedNotification",
+        "apiAddedClientSecretNotification",
+        "apiRemovedClientSecretNotification",
         "changeOfEmailAddress",
         "changeOfEmailAddress_cy",
         "verifyEmailAddress",
@@ -539,7 +542,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
         "tdq_compliance_partially_compliant_valid_connection_method",
         "cgtpd_account_created",
-        "cgtpd_private_beta_access"
+        "cgtpd_private_beta_access",
+        "dst_registration_received",
+        "dst_registration_accepted"
       )
     }
   }
