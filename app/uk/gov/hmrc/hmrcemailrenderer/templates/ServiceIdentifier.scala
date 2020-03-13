@@ -99,4 +99,5 @@ object ServiceIdentifier {
   case object CustomsFinancials extends ServiceIdentifier { override val name = "customsFinancials"}
   case object Cgtpd extends ServiceIdentifier { override val name = "cgtpd"}
   case object Tdq extends ServiceIdentifier { override val name = "tdq"}
+  case object DigitalServicesTax extends ServiceIdentifier { override val name = "dst"}
 }
