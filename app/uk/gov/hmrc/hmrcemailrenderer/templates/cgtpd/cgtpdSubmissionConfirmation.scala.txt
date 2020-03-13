@@ -1,0 +1,41 @@
+@(params: Map[String, Any])
+HMRC has received your return
+
+Dear @{params("name")}
+
+HMRC received your Capital Gain Tax on UK property sales or disposals return.
+
+Return details
+
+Return reference number: @{params("submissionId")}
+
+Amount of Capital Gains Tax due: @{params("taxDue")}
+@if(params.contains("chargeRef")){
+Payment reference number: @{params("chargeRef")}
+  @if(params.contains("dueDate")){
+Payment due: @{params("dueDate")}
+  }
+
+How to sign in to your account and pay
+
+Go to GOV.UK and search for ’Capital Gains Tax on UK property‘. Sign in to your Capital Gains Tax on UK property account. Select ’View return and pay‘. You’ll need to have your payment reference number to hand: @{params("chargeRef")}.
+
+If your return or payment was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
+} else {
+How to sign in to your account
+
+Go to GOV.UK and search for ’Capital Gains Tax on UK property‘. You’ll need to have your Government Gateway user ID and password to hand.
+
+If your return was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
+}
+
+If you need to file a Self Assessment tax return
+
+You‘ll need to provide details from this return in your Self Assessment tax return.
+
+Do not reply to this email.
+From Capital Gains Tax on UK property
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
