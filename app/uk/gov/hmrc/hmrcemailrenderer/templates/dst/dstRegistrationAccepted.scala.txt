@@ -1,0 +1,34 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
+@(params: Map[String, Any])Your Digital Services Tax registration number.
+
+    Dear @params("name")
+
+    We confirm that @params("name") is now registered @if(params("groupCompanyName").toString != "unknown"){ on behalf of @params("groupCompanyName")} for the Digital Services Tax.
+
+    Your Digital Services Tax registration number is @params("dstNumber")
+
+    You will need this registration number when you pay the tax.
+
+    What you must do next
+
+    You must pay any Digital Services Tax you owe by @DateFormatter.formatDate(params("paymentDeadline").toString)
+
+    You must submit your first return by @DateFormatter.formatDate(params("submitReturnDeadline").toString).
+
+    Help using this service
+
+    For help with payments and returns, search GOV.UK for ‘digital services tax’.
+
+    If you need to change your registered details, contact your HMRC Customer Compliance Manager (CCM).
+
+    If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk")
+
+    Why you got this email
+
+    This email address is registered as the email address we can use to contact you about the Digital Services Tax.
+
+    Do not reply to this email.
+
+    From HMRC Digital Services Tax team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
