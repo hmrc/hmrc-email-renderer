@@ -25,7 +25,7 @@ object WelshTemplatesByLangPreference {
     "newMessageAlert" -> "newMessageAlert_cy",
     "rescindedMessageAlert" -> "rescindedMessageAlert_cy",
     "verificationReminder" -> "verificationReminder_cy",
-    "annual_tax_summaries_message_alert" -> "tax_estimate_message_alert_cy",
+    "tax_estimate_message_alert" -> "tax_estimate_message_alert_cy",
     "annual_tax_summaries_message_alert" -> "annual_tax_summaries_message_alert_cy"
   )
 }
