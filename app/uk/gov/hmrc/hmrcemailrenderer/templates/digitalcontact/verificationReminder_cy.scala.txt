@@ -12,6 +12,6 @@ Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.
 Cliciwch ar y cysylltiad yn yr e-bost a anfonwyd atoch ar @{params("verificationLinkSentDate")}.
 
 }
-Oddi wrth adran Ddigidol CThEM
+Oddi wrth Adran Ddigidol CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
