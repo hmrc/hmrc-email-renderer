@@ -10,6 +10,6 @@ Rydym bellach wedi dileu’r neges anghywir o’ch cyfrif CThEM.
 
 Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.
 
-Oddi wrth adran Ddigidol CThEM
+Oddi wrth Adran Ddigidol CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
