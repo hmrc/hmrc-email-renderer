@@ -66,7 +66,7 @@ object DigitalContactTemplates {
     ),
     MessageTemplate.create(
       templateId = "verifyEmailAddress_cy",
-      fromAddress = defaultFromAddress,
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
       plainTemplate = txt.verifyEmailAddress_cy.f,
@@ -84,7 +84,7 @@ object DigitalContactTemplates {
     ),
     MessageTemplate.create(
       templateId = "changeOfEmailAddress_cy",
-      fromAddress = defaultFromAddress,
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: newid cyfeiriad e-bost",
       plainTemplate = txt.changeOfEmailAddress_cy.f,
@@ -102,7 +102,7 @@ object DigitalContactTemplates {
     ),
     MessageTemplate.create(
       templateId = "digitalOptOutConfirmation_cy",
-      fromAddress = defaultFromAddress,
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Hysbysiadau drwy’r post",
       plainTemplate = txt.digitalOptOutConfirmation_cy.f,
@@ -120,7 +120,7 @@ object DigitalContactTemplates {
     ),
     MessageTemplate.create(
       templateId = "changeOfEmailAddressNewAddress_cy",
-      fromAddress = defaultFromAddress,
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
       plainTemplate = txt.changeOfEmailAddressNewAddress_cy.f,
