@@ -18,18 +18,15 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 
 import play.api.{Configuration, Play}
 import play.twirl.api.Format
-import uk.gov.hmrc.hmrcemailrenderer.config.WelshTemplatesByLangPreference
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MessagePriority, MissingTemplateId, TemplateRenderFailure}
-import uk.gov.hmrc.hmrcemailrenderer.model.Language
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.model.Language.{English, Welsh}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.config.RunMode
 
-import scala.concurrent.ExecutionContext
-import scala.concurrent.Future
+import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success, Try}
 
 object TemplateRenderer extends TemplateRenderer with RunMode {
@@ -40,6 +37,12 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
   override lazy val commonParameters: Map[String, String] = {
     Play.configuration
       .getConfig(s"$env.templates.config").
+      map(_.entrySet.toMap.mapValues(_.unwrapped.toString)).
+      getOrElse(Map.empty[String, String])
+  }
+
+ override lazy val templatesByLangPreference = {
+    Play.configuration.getConfig("welshTemplatesByLangPreferences").
       map(_.entrySet.toMap.mapValues(_.unwrapped.toString)).
       getOrElse(Map.empty[String, String])
   }
@@ -60,7 +63,7 @@ trait TemplateRenderer {
 
   def preferencesConnector:PreferencesConnector
 
-  val templatesByLangPreference = WelshTemplatesByLangPreference.list
+  val templatesByLangPreference: Map[String, String]
 
   def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
