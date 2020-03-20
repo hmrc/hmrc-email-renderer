@@ -58,14 +58,5 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
       txtContent should include("Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
     }
 
-    "render correct content for html and txt version when verificationLink is missing" in {
-      val params = commonParameters ++ Map("verificationLinkSentDate" -> "2019-04-02")
-      val htmlContent = template.htmlTemplate(params).toString
-      val txtContent = template.plainTemplate(params).toString
-
-      htmlContent should include("Cliciwch ar y cysylltiad yn yr e-bost a anfonwyd atoch ar 2019-04-02.")
-      txtContent should include("Cliciwch ar y cysylltiad yn yr e-bost a anfonwyd atoch ar 2019-04-02.")
-    }
-
   }
 }
