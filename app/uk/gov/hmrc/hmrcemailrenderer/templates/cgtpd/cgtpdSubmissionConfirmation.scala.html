@@ -19,12 +19,15 @@
   <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @{params("name")}
   </p>
+
   <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC received your Capital Gain Tax on UK property sales or disposals return.
   </p>
-  <p style="margin: 0 0 15px; font-weight: bold; font-size: 24px;">
+
+  <h2>
     Return details
-  </p>
+  </h2>
+
   <p style="margin: 0 0 30px; font-size: 19px;">
     Return reference number:
     @{params("submissionId")}
@@ -32,40 +35,44 @@
     Amount of Capital Gains Tax due:
     @{params("taxDue")}
 @if(params.contains("chargeRef")){
-  <br />
-  Payment reference number:
-  @{params("chargeRef")}
-  @if(params.contains("dueDate")){
-    <br />
-    Payment due:
-    @{params("dueDate")}
-  }
+      <br />
+      Payment reference number:
+      @{params("chargeRef")}
+      @if(params.contains("dueDate")){
+        <br />
+        Payment due:
+        @{params("dueDate")}
+      }
     </p>
-    <p style="margin: 0 0 15px; font-size: 24px; font-weight: bold;">
+
+    <h2>
       How to sign in to your account and pay
-    </p>
+    </h2>
+
     <p style="margin: 0 0 30px; font-size: 19px;">
       Go to GOV.UK and search for ’Capital Gains Tax on UK property‘. Sign in to your Capital Gains Tax on UK property account. Select ’View return and pay‘. You’ll need to have your payment reference number to hand: @{params("chargeRef")}.
     </p>
     <p style="margin: 0 0 30px; font-size: 19px;">
       If your return or payment was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
     </p>
-  } else {
+} else {
     </p>
-    <p style="margin: 0 0 15px; font-size: 24px; font-weight: bold;">
+    <h2>
       How to sign in to your account
-    </p>
+    </h2>
+
     <p style="margin: 0 0 30px; font-size: 19px;">
       Go to GOV.UK and search for ’Capital Gains Tax on UK property‘. You’ll need to have your Government Gateway user ID and password to hand.
     </p>
     <p style="margin: 0 0 30px; font-size: 19px;">
       If your return was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
     </p>
-  }
+}
 
-  <p style="margin: 0 0 15px; font-size: 24px; font-weight: bold;">
+  <h2>
     If you need to file a Self Assessment tax return
-  </p>
+  </h2>
+
   <p style="margin: 0 0 30px; font-size: 19px;">
     You‘ll need to provide details from this return in your Self Assessment tax return.
   </p>
