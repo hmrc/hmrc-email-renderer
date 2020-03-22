@@ -22,37 +22,26 @@
   <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC received your Capital Gain Tax on UK property sales or disposals return.
   </p>
-  <p style="margin: 0 0 30px; font-size: 19px; font-weight: bold;">
+  <p style="margin: 0 0 15px; font-weight: bold; font-size: 24px;">
     Return details
   </p>
   <p style="margin: 0 0 30px; font-size: 19px;">
-    <span style="font-weight: bold">
-      Return reference number:
-    </span>
+    Return reference number:
     @{params("submissionId")}
-  </p>
-  <p style="margin: 0 0 30px; font-size: 19px;">
-    <span style="font-weight: bold">
-      Amount of Capital Gains Tax due:
-    </span>
+    <br />
+    Amount of Capital Gains Tax due:
     @{params("taxDue")}
-  </p>
-  @if(params.contains("chargeRef")){
-    <p style="margin: 0 0 30px; font-size: 19px;">
-      <span style="font-weight: bold">
-        Payment reference number:
-      </span>
-      @{params("chargeRef")}
+@if(params.contains("chargeRef")){
+  <br />
+  Payment reference number:
+  @{params("chargeRef")}
+  @if(params.contains("dueDate")){
+    <br />
+    Payment due:
+    @{params("dueDate")}
+  }
     </p>
-    @if(params.contains("dueDate")){
-      <p style="margin: 0 0 30px; font-size: 19px;">
-        <span style="font-weight: bold">
-          Payment due:
-        </span>
-        @{params("dueDate")}
-      </p>
-    }
-    <p style="margin: 0 0 30px; font-size: 19px; font-weight: bold;">
+    <p style="margin: 0 0 15px; font-size: 24px; font-weight: bold;">
       How to sign in to your account and pay
     </p>
     <p style="margin: 0 0 30px; font-size: 19px;">
@@ -62,7 +51,8 @@
       If your return or payment was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
     </p>
   } else {
-    <p style="margin: 0 0 30px; font-size: 19px; font-weight: bold;">
+    </p>
+    <p style="margin: 0 0 15px; font-size: 24px; font-weight: bold;">
       How to sign in to your account
     </p>
     <p style="margin: 0 0 30px; font-size: 19px;">
@@ -73,7 +63,7 @@
     </p>
   }
 
-  <p style="margin: 0 0 30px; font-size: 19px; font-weight: bold;">
+  <p style="margin: 0 0 15px; font-size: 24px; font-weight: bold;">
     If you need to file a Self Assessment tax return
   </p>
   <p style="margin: 0 0 30px; font-size: 19px;">

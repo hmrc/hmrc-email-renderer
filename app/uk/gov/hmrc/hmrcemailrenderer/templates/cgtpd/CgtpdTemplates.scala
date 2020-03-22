@@ -45,7 +45,7 @@ object CgtpdTemplates {
       templateId ="cgtpd_submission_confirmation",
       fromAddress = govUkTeamAddress,
       service = Cgtpd,
-      subject = "HMRC received your Capital Gain Tax on UK property return",
+      subject = "HMRC received your Capital Gains Tax on UK property return",
       plainTemplate = txt.cgtpdSubmissionConfirmation.f,
       htmlTemplate = html.cgtpdSubmissionConfirmation.f,
       priority = Some(MessagePriority.Urgent)
