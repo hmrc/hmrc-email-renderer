@@ -68,6 +68,7 @@ class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec
 
     "include verificationReminder content for both the text and html versions" in {
       val params = Map(
+        "verificationLink" -> "/some/link",
         "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate())
       ) ++ commonParamsWithName
 
