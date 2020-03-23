@@ -3,7 +3,7 @@ HMRC has received your return
 
 Dear @{params("name")}
 
-HMRC received your Capital Gain Tax on UK property sales or disposals return.
+HMRC received your Capital Gains Tax on UK property sales or disposals return.
 
 Return details
 
