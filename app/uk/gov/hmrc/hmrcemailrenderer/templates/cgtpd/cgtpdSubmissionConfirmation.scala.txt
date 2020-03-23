@@ -18,13 +18,13 @@ Payment due: @{params("dueDate")}
 
 How to sign in to your account and pay
 
-Go to GOV.UK and search for ’Capital Gains Tax on UK property‘. Sign in to your Capital Gains Tax on UK property account. Select ’View return and pay‘. You’ll need to have your payment reference number to hand: @{params("chargeRef")}.
+Go to GOV.UK and search for ‘Capital Gains Tax on UK property’. Sign in to your Capital Gains Tax on UK property account. Select ‘View return and pay’. You’ll need to have your payment reference number to hand: @{params("chargeRef")}.
 
 If your return or payment was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
 } else {
 How to sign in to your account
 
-Go to GOV.UK and search for ’Capital Gains Tax on UK property‘. You’ll need to have your Government Gateway user ID and password to hand.
+Go to GOV.UK and search for ‘Capital Gains Tax on UK property’. You’ll need to have your Government Gateway user ID and password to hand.
 
 If your return was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
 }
