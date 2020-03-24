@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Cyfrif gwasanaethau asiant wedi’i greu
+
+Annwyl @params("agencyName")
+
+Rydych wedi creu cyfrif gwasanaethau asiant CThEM ar gyfer @params("agencyName").
+
+Cyfeirnod eich cyfrif yw @params("arn")
+
+Bydd angen y cyfeirnod hwn arnoch i gysylltu â CThEM os na allwch gael mynediad at eich cyfrif gwasanaethau asiant.
+
+Yr hyn y gallwch ei wneud nesaf
+
+I fewngofnodi i’ch cyfrif gwasanaethau asiant, ewch i www.gov.uk/guidance/sign-in-to-your-agent-services-account.cy a dilyn y cyfarwyddiadau.
+
+Gallwch ddefnyddio’ch cyfrif gwasanaethau asiant newydd i gael mynediad at wasanaethau Troi Treth yn Ddigidol a chofrestru ymddiriedolaeth neu ystâd.
+
+Am ganllaw cam wrth gam ar yr hyn sydd angen i chi ei wneud o ran y cynllun Troi Treth yn Ddigidol ar gyfer TAW, ewch i www.gov.uk/guidance/making-tax-digital-for-vat-as-an-agent-step-by-step.cy.
+
+Pam y cawsoch yr e-bost hwn
+
+Gwnaethoch roi’r cyfeiriad e-bost cyswllt hwn wrth greu’ch cyfrif gwasanaethau asiant.
+
+Peidiwch ag ymateb i'r e-bost hwn.
+
+Oddi wrth Dîm Gwasanaethau Asiant CThEM

@@ -69,6 +69,10 @@ object TemplateParams {
       "agencyName" -> "Agent 1",
       "arn" -> "XARN-123-4567"
     ),
+    "agent_services_account_created_cy" -> Map(
+      "agencyName" -> "Agent 1",
+      "arn" -> "XARN-123-4567"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"

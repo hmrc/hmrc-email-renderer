@@ -112,6 +112,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "client_accepted_authorisation_request",
         "client_expired_authorisation_request",
         "agent_services_account_created",
+        "agent_services_account_created_cy",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
