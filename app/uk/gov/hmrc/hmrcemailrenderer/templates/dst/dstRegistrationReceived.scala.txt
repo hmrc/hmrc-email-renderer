@@ -6,7 +6,7 @@ Dear @params("name")
 
     What happens next
 
-    We will send your Digital Services Tax registration number to this email address in the next 24 hours.
+    We will send your Digital Services Tax registration number to this email address within 5 working days.
 
     Contact your HMRC Customer Compliance Manager (CCM) if you do not receive your registration number.
 
