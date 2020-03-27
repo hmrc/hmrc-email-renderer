@@ -3,24 +3,20 @@
 Confirm your email address
 
 
-Dear customer,
+Dear Customer
 
-You requested a code to continue with your form.
+You requested a code to continue with the @params.get("emailFormName") service on GOV.UK.
 
 Your code is: @params.get("confirmationCode")
 
-What you need to do no
+What you need to do now
 
 Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.
 
-If this email account is not shared, and you did not request this code you need to contact us.
-
-What you can do now
-
-If this email account is not shared, and you did not request this code you need to contact us.
+If this email account is not shared, and you did not request this code you need to contact @params.get("emailContact")
 
 Do not reply to this email.
 
-From the Digital Contact Team
+From @params.get("emailTeam")
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
