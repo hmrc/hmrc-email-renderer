@@ -21,53 +21,16 @@
   </p>
 
   <p style="margin: 0 0 30px; font-size: 19px;">
-    HMRC received your Capital Gains Tax on UK property sales or disposals return.
+    Your return reference number is: @{params("submissionId")}
   </p>
 
   <h2>
-    Return details
+    What you must do next
   </h2>
 
   <p style="margin: 0 0 30px; font-size: 19px;">
-    Return reference number:
-    @{params("submissionId")}
-    <br />
-    Amount of Capital Gains Tax due:
-    @{params("taxDue")}
-@if(params.contains("chargeRef")){
-      <br />
-      Payment reference number:
-      @{params("chargeRef")}
-      @if(params.contains("dueDate")){
-        <br />
-        Payment due:
-        @{params("dueDate")}
-      }
-    </p>
-
-    <h2>
-      How to sign in to your account and pay
-    </h2>
-
-    <p style="margin: 0 0 30px; font-size: 19px;">
-      Go to GOV.UK and search for ‘Capital Gains Tax on UK property’. Sign in to your Capital Gains Tax on UK property account. Select ‘View return and pay’. You’ll need to have your payment reference number to hand: @{params("chargeRef")}.
-    </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">
-      If your return or payment was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
-    </p>
-} else {
-    </p>
-    <h2>
-      How to sign in to your account
-    </h2>
-
-    <p style="margin: 0 0 30px; font-size: 19px;">
-      Go to GOV.UK and search for ‘Capital Gains Tax on UK property’. You’ll need to have your Government Gateway user ID and password to hand.
-    </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">
-      If your return was late you might be charged a penalty and interest. Go to your Capital Gains Tax on UK account home to see any interest or penalties you might owe.
-    </p>
-}
+    Go to GOV.UK and search for ‘Report and pay Capital Gains Tax on UK property’. Sign in to your Capital Gains Tax on UK property account. Check if you have any actions to complete.
+  </p>
 
   <h2>
     If you need to file a Self Assessment tax return
