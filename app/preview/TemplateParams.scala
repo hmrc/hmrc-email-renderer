@@ -1640,10 +1640,7 @@ object TemplateParams {
     ),
     "cgtpd_submission_confirmation" -> Map(
       "name" -> "Jamie Wilson",
-      "submissionId" -> "000000000006",
-      "taxDue" -> "£2,650.53",
-      "chargeRef" -> "XCRG3333333336",
-      "dueDate" -> "5 October 2020"
+      "submissionId" -> "000000000006"
     ),
     "dst_registration_accepted" -> Map(
         "dstNumber" -> "XADST0000010000",
