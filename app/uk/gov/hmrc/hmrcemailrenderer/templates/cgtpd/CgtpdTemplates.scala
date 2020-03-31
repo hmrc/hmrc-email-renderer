@@ -40,6 +40,15 @@ object CgtpdTemplates {
       plainTemplate = txt.cgtpdAccountCreated.f,
       htmlTemplate = html.cgtpdAccountCreated.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId ="cgtpd_submission_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Cgtpd,
+      subject = "HMRC has received your return",
+      plainTemplate = txt.cgtpdSubmissionConfirmation.f,
+      htmlTemplate = html.cgtpdSubmissionConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
