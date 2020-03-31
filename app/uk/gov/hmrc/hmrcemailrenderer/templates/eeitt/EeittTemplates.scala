@@ -571,6 +571,15 @@ object EeittTemplates {
       plainTemplate = txt.civTransparencyCode.f,
       htmlTemplate = html.civTransparencyCode.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Statutory Parental Bereavement Pay",
+      plainTemplate = txt.spbpCode.f,
+      htmlTemplate = html.spbpCode.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
