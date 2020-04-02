@@ -580,6 +580,15 @@ object EeittTemplates {
       plainTemplate = txt.spbpCode.f,
       htmlTemplate = html.spbpCode.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your claim for an advance payment",
+      plainTemplate = txt.spbpClaimConfirmation.f,
+      htmlTemplate = html.spbpClaimConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

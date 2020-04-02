@@ -1,0 +1,33 @@
+@(params: Map[String, Any])
+
+You sent an advance payment claim form online
+
+Dear @params.get("customerName")
+
+We have received your claim for an advance payment of Statutory Parental Bereavement Pay.
+
+Your submission reference is: @params.get("submissionReference")
+
+If you need to contact us about this form, quote the submission reference.
+
+What happens next
+
+If you requested advance payment by Bacs, you will receive this within 2 weeks.
+
+If you requested advance payment by payable order, you will receive this within 4 weeks.
+
+You can contact us If you do not receive payment within these times. To find a full list of our contact details go to GOV.UK and search ‘Employers: general enquiries’.
+
+If you told us to pay a third party and did not upload an R38 form
+
+We need to receive your R38 within 4 weeks from now, or we will reject your claim. Post your R38 to: Corporate Treasury, HMRC, BX9 1BG.
+
+To download a form, search GOV.UK for ‘R38’, then select ‘Claim an Income Tax refund’.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the Advance Funding team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
