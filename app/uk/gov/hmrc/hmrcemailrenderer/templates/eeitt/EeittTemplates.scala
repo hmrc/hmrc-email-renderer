@@ -58,7 +58,7 @@ object EeittTemplates {
       plainTemplate = txt.eeitt_ce930_confirmation.f,
       htmlTemplate = html.eeitt_ce930_confirmation.f,
       priority = Some(MessagePriority.Standard)
-  ),
+    ),
     MessageTemplate.create(
       templateId = "eeitt_ho930_confirmation",
       fromAddress = govUkTeamAddress,
@@ -67,25 +67,25 @@ object EeittTemplates {
       plainTemplate = txt.eeitt_ho930_confirmation.f,
       htmlTemplate = html.eeitt_ho930_confirmation.f,
       priority = Some(MessagePriority.Standard)
-  ),
-  MessageTemplate.create(
-    templateId = "cir_return_confirmation",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "CIR Return",
-    plainTemplate = txt.cirReturnConfirmation.f,
-    htmlTemplate = html.cirReturnConfirmation.f,
-    priority = Some(MessagePriority.Standard)
-  ),
-  MessageTemplate.create(
-    templateId = "randd_confirmation_submission",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "R&D Submission",
-    plainTemplate = txt.researchAndDevelopmentSubmission.f,
-    htmlTemplate = html.researchAndDevelopmentSubmission.f,
-    priority = Some(MessagePriority.Standard)
-  ),
+    ),
+    MessageTemplate.create(
+      templateId = "cir_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "CIR Return",
+      plainTemplate = txt.cirReturnConfirmation.f,
+      htmlTemplate = html.cirReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "randd_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "R&D Submission",
+      plainTemplate = txt.researchAndDevelopmentSubmission.f,
+      htmlTemplate = html.researchAndDevelopmentSubmission.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "ho10_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -150,31 +150,31 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-    templateId = "lt100_return_confirmation",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "LT 100 return",
-    plainTemplate = txt.lt100ReturnConfirmation.f,
-    htmlTemplate = html.lt100ReturnConfirmation.f,
-    priority = Some(MessagePriority.Standard)
+      templateId = "lt100_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "LT 100 return",
+      plainTemplate = txt.lt100ReturnConfirmation.f,
+      htmlTemplate = html.lt100ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-    templateId = "gd95_return_confirmation",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "Your Gaming Duty return has been submitted",
-    plainTemplate = txt.gd95ReturnConfirmation.f,
-    htmlTemplate = html.gd95ReturnConfirmation.f,
-    priority = Some(MessagePriority.Standard)
+      templateId = "gd95_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your Gaming Duty return has been submitted",
+      plainTemplate = txt.gd95ReturnConfirmation.f,
+      htmlTemplate = html.gd95ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-    templateId = "gd94_return_confirmation",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "Your Gaming Duty return (GD94) has been submitted",
-    plainTemplate = txt.gd94ReturnConfirmation.f,
-    htmlTemplate = html.gd94ReturnConfirmation.f,
-    priority = Some(MessagePriority.Standard)
+      templateId = "gd94_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your Gaming Duty return (GD94) has been submitted",
+      plainTemplate = txt.gd94ReturnConfirmation.f,
+      htmlTemplate = html.gd94ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "al_registration_confirmation",
@@ -249,14 +249,14 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-    templateId = "c118_section3_part1_application_confirmation",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "HMRC received part of your AEO application",
-    plainTemplate = txt.c118Section3Part1ApplicationConfirmation.f,
-    htmlTemplate = html.c118Section3Part1ApplicationConfirmation.f,
-    priority = Some(MessagePriority.Standard)
-  ),
+      templateId = "c118_section3_part1_application_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received part of your AEO application",
+      plainTemplate = txt.c118Section3Part1ApplicationConfirmation.f,
+      htmlTemplate = html.c118Section3Part1ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "c118_section3_part2_application_confirmation",
       fromAddress = govUkTeamAddress,
@@ -265,7 +265,7 @@ object EeittTemplates {
       plainTemplate = txt.c118Section3Part2ApplicationConfirmation.f,
       htmlTemplate = html.c118Section3Part2ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
-  ),
+    ),
     MessageTemplate.create(
       templateId = "c118_section4_application_confirmation",
       fromAddress = govUkTeamAddress,
@@ -356,15 +356,15 @@ object EeittTemplates {
       htmlTemplate = html.ipt100RegistrationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-      MessageTemplate.create(
-        templateId = "csr_submission_confirmation",
-        fromAddress = govUkTeamAddress,
-        service = Eeitt,
-        subject = "HMRC received your self-report",
-        plainTemplate = txt.corporateSelfReportingSubmissionConfirmation.f,
-        htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
-        priority = Some(MessagePriority.Standard)
-      ),
+    MessageTemplate.create(
+      templateId = "csr_submission_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your self-report",
+      plainTemplate = txt.corporateSelfReportingSubmissionConfirmation.f,
+      htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "cash_declaration",
       fromAddress = govUkTeamAddress,
@@ -419,15 +419,15 @@ object EeittTemplates {
       htmlTemplate = html.registerForDutyOnGasForRoadFuelUse.f,
       priority = Some(MessagePriority.Standard)
     ),
-  MessageTemplate.create(
-    templateId = "register_for_duty_on_biofuels_and_other_fuel_substitutes",
-    fromAddress = govUkTeamAddress,
-    service = Eeitt,
-    subject = "HMRC received your registration for duty on biofuels and other fuel substitutes",
-    plainTemplate = txt.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
-    htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
-    priority = Some(MessagePriority.Standard)
-   ),
+    MessageTemplate.create(
+      templateId = "register_for_duty_on_biofuels_and_other_fuel_substitutes",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your registration for duty on biofuels and other fuel substitutes",
+      plainTemplate = txt.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
+      htmlTemplate = html.registerForDutyOnBiofuelsAndOtherFuelSubstitutes.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "rdec_email_confirmation",
       fromAddress = govUkTeamAddress,
@@ -570,6 +570,23 @@ object EeittTemplates {
       subject = "Confirm your email address - election for transparency",
       plainTemplate = txt.civTransparencyCode.f,
       htmlTemplate = html.civTransparencyCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your claim for an advance payment",
+      plainTemplate = txt.spbpClaimConfirmation.f,
+      htmlTemplate = html.spbpClaimConfirmation.f,
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Statutory Parental Bereavement Pay",
+      plainTemplate = txt.spbpCode.f,
+      htmlTemplate = html.spbpCode.f,
       priority = Some(MessagePriority.Standard)
     )
   )

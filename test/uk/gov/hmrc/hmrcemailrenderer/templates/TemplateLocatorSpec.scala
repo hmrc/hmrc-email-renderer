@@ -252,6 +252,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "c118_section6_part2_application_confirmation",
         "c118_section6_part3_application_confirmation",
         "c118_section6_part4_application_confirmation",
+        "spbp_confirmation_submission",
         "tsp_application_confirmation",
         "gd_application_confirmation",
         "rdec_email_confirmation",
