@@ -19,7 +19,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 object SddsTemplateParameters {
 
   val paramRegimeName = "sdds_regimeName"
-  val paramDdiReference = "sdds_ddi_reference"
+  val paramRegimeNameDefault = "Soft Drinks Industry Levy"
 
-  def regimeName(fromParams: Map[String, Any]): String = fromParams(paramRegimeName).toString
+  def regimeName(fromParams: Map[String, Any]): String =
+    fromParams.get(paramRegimeName).map(_.toString).getOrElse(paramRegimeNameDefault)
 }
