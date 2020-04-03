@@ -1423,6 +1423,13 @@ object TemplateParams {
     "ddi_08_alert_aa" -> Map(
       "recipientName_line1" -> "Colm Cavanagh"
     ),
+
+    "sdds_ddi_setup_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+    ),
+
+
     "dd_email_verifcation" -> Map(
         "name" -> "Joe",
         "verificationLink" -> exampleLinkWithRandomId
