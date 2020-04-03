@@ -140,6 +140,14 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.sdds_ddi_amended_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_amended_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "sdds_ddi_unpaid_dcs_alert",
+      fromAddress = FromAddress.noReply("Tax Return Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax Return Direct Debit: payment not collected",
+      plainTemplate = txt.sdds_ddi_unpaid_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
 
     //Passengers email template
     MessageTemplate.create(
