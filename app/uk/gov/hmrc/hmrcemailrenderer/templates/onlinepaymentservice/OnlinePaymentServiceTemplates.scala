@@ -126,11 +126,19 @@ object OnlinePaymentServiceTemplates {
     // Direct Debit generic SDDS templates
     MessageTemplate.create(
       templateId = "sdds_ddi_setup_dcs_alert",
-      fromAddress = FromAddress.noReply("[SDDS Regime] Direct Debit"),
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "[SDDS Regime] Return: Direct Debit set up",
+      subject = "Tax Return: Direct Debit set up",
       plainTemplate = txt.sdds_ddi_setup_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "sdds_ddi_amended_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax Return: Direct Debit amended",
+      plainTemplate = txt.sdds_ddi_amended_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_amended_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)),
 
     //Passengers email template
