@@ -1428,6 +1428,14 @@ object TemplateParams {
       "recipientName_line1" -> "Joe Smith",
       "sdds_regimeName" -> "Soft Drinks Industry Levy"
     ),
+    "sdds_ddi_amended_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_unpaid_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+    ),
 
 
     "dd_email_verifcation" -> Map(
