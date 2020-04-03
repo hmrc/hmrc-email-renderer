@@ -49,7 +49,7 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.payment_successful_parcels.f,
       priority = Some(MessagePriority.Urgent)),
 
-    // Direct Debit templates
+    // Direct Debit VAT templates
     MessageTemplate.create(
       templateId = "ddi_advance_notice",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
@@ -122,6 +122,17 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.ddi_08_alert_aa.f,
       htmlTemplate = html.ddi_08_alert_aa.f,
       priority = Some(MessagePriority.Urgent)),
+
+    // Direct Debit generic SDDS templates
+    MessageTemplate.create(
+      templateId = "sdds_ddi_setup_dcs_alert",
+      fromAddress = FromAddress.noReply("[SDDS Regime] Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "[SDDS Regime] Return: Direct Debit set up",
+      plainTemplate = txt.sdds_ddi_setup_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)),
+
     //Passengers email template
     MessageTemplate.create(
       templateId = "passengers_payment_confirmation",
