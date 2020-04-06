@@ -5,7 +5,7 @@ Dear @{params("name")}
 
 Your Capital Gains Tax on UK property account number is @{params("cgtReference")}.
 
-You'll need to provide this number to HMRC if you need to discuss your account.
+You’ll need to provide this number to HMRC if you need to discuss your account.
 
 Use your account to:
 
@@ -14,7 +14,7 @@ Use your account to:
 
 How to sign into your account
 
-Go to GOV.UK and search for 'Report and pay Capital Gains Tax on UK property'. You'll need to have your Government Gateway user ID and password to hand.
+Go to GOV.UK and search for ‘Report and pay Capital Gains Tax on UK property’. You’ll need to have your Government Gateway user ID and password to hand.
 
 
 Do not reply to this email.
