@@ -19,12 +19,22 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.twowaymessage
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TwoWayMessaging
+import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
 
 object twoWayMessagingTemplates {
 
   private def getWaitTimeSubject(params: Map[String, String]): String = {
     val waitTime = params.getOrElse("waitTime", "7 days")
     s"HMRC will reply within $waitTime"
+  }
+
+  private def getUpdateSubject(params: Map[String,String]): String = {
+    params.get("receivedAt") match {
+      case Some(receivedAt) =>
+        val shortDate = DateHelper.shortDateFormatter(receivedAt)
+        s"HMRC update on your $shortDate question"
+      case _ => "HMRC update on your question"
+    }
   }
 
   val templates = Seq(
@@ -44,6 +54,15 @@ object twoWayMessagingTemplates {
       subject = "HMRC answered your question by phone",
       plainTemplate = txt.twoWayMessageNotificationTemplate.f,
       htmlTemplate = html.twoWayMessageNotificationTemplate.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "twoWayMessageUpdate",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = TwoWayMessaging,
+      subject = getUpdateSubject(_),
+      plainTemplate = txt.twoWayMessageUpdate.f,
+      htmlTemplate = html.twoWayMessageUpdate.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
