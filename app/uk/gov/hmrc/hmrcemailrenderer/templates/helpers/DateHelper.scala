@@ -37,4 +37,16 @@ object DateHelper {
     val convert = LocalDate.parse(date: String)
     dateFormatter.print(convert)
   }
+
+  def shortDateFormatter(date:String): String = {
+    val dateFormatter = DateTimeFormat.forPattern("dd MMM")
+    val convert = LocalDate.parse(date: String)
+    val formatted = dateFormatter.print(convert)
+    if(formatted.startsWith("0")){
+      formatted.substring(1)
+    } else {
+      formatted
+    }
+  }
+
 }
