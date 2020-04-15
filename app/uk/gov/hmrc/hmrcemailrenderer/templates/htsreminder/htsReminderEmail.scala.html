@@ -16,19 +16,49 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Remember to save this " + {params("month")}) {
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Try and save as much of your monthly £50 Help to Save allowance as you can this @{params("month")}. </p>
-<p style="margin: 0 0 30px; font-size: 19px;">You can deposit as little as £1 at a time, as many times as you want, but you can only save £50 each calendar month.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Remember, you can get a bonus of 50p for every pound you save.</p>
 
-<h2 style="margin: 0 0 2px">How to sign in to your account </h2>
-<p style="margin: 0 0 30px; font-size: 19px;">Use the HMRC app to sign in to your account. The free app is available on the App Store for iOS or the Google Play Store for Android.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You can also sign in to your account by searching GOV.UK for ‘Help to Save’. You will need your Government Gateway ID and password.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Dear @{params("name")}
+    </p>
 
-<h2 style="margin: 0 0 2px">Why you got this email</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">You asked to get monthly Help to Save email reminders. </p>
-<p style="margin: 0 0 30px; font-size: 19px;">You can cancel or change your reminders at any time. Go to ‘savings reminders’ in your Help to Save account home.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Try and save as much of your monthly £50 Help to Save allowance as you can this @{params("month")}.
+    </p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">From Help to Save team</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You can deposit as little as £1 at a time, as many times as you want, but you can only save £50 each calendar month.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Remember, you can get a bonus of 50p for every pound you save.
+    </p>
+
+    <h2>How to sign in to your account </h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Use the HMRC app to sign in to your account. The free app is available on the App Store for iOS or the Google Play Store for Android.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You can also sign in to your account by searching GOV.UK for ‘Help to Save’. You will need your Government Gateway ID and password.
+    </p>
+
+    <h2>Why you got this email</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You asked to get monthly Help to Save email reminders.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You can cancel or change your reminders at any time. Go to ‘savings reminders’ in your Help to Save account home.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Do not reply to this email.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        From Help to Save team
+    </p>
+
 }
