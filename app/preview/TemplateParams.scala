@@ -1572,11 +1572,11 @@ object TemplateParams {
               "headerOrHeaders": "gov-client-public-ip",
               "errors": [
                 {
-                  "message": "Header value is not an IP address",
+                  "message": "The header value is not an IP address.",
                   "percentage": 5
                 },
                 {
-                  "message": "Header value is not a public IP address ",
+                  "message": "The header value is not a public IP address.",
                   "percentage": 10
                 }
               ],
@@ -1586,25 +1586,25 @@ object TemplateParams {
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
-                  "message": "Header value is not a key value data structure ",
+                  "message": "The header value is not a key-value data structure.",
                   "percentage": 10
                 },
                 {
-                  "message": "At least one of the keys or values is not percent encoded",
+                  "message": "At least one of the keys or values is not percent encoded.",
                   "percentage": 25
                 },
                 {
-                  "message": "At least one value for software version is missing",
+                  "message": "At least one value for software version is missing.",
                   "percentage": 15
                 },
                 {
-                  "message": "At least one separator (ampersand or equal sign) is percent encoded",
+                  "message": "At least one separator (ampersand or equal sign) is percent encoded.",
                   "percentage": 0
                 }
               ],
               "warnings": [
                 {
-                  "message": "For client server architecture, please supply at least a version for client and server",
+                  "message": "For client-server architecture, please supply at least a version for client and server. For all other architectures, please supply at least one version.",
                   "percentage": 10
                 }
               ]
@@ -1614,15 +1614,15 @@ object TemplateParams {
               "errors" : [],
               "warnings": [
                 {
-                  "message": "Use a UUID (also known as a GUID) as recommended in our documentation",
+                  "message": "The header value is not a recommended UUID. Please refer to the fraud prevention specification.",
                   "percentage": 0
                 },
                 {
-                  "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long",
+                  "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long.",
                   "percentage": 17
                 },
                 {
-                  "message": "Header value contains an email address. Device ID should not be derived from user-specific data ",
+                  "message": "The header value contains an email address. Device IDs must not be derived from user-specific data.",
                   "percentage": 22
                 }
               ]
