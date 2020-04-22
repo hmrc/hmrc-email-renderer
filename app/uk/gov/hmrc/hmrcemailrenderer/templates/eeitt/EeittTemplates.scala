@@ -607,6 +607,35 @@ object EeittTemplates {
       plainTemplate = txt.cjrsSubmissionConfirmation.f,
       htmlTemplate = html.cjrsSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr1_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your intellectual property rights application",
+      plainTemplate = txt.ipr1ApplicationConfirmation.f,
+      htmlTemplate = html.ipr1ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr2_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your intellectual property rights report",
+      plainTemplate = txt.ipr2ReportConfirmation.f,
+      htmlTemplate = html.ipr2ReportConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr3_confirmation_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your intellectual property rights application",
+      plainTemplate = txt.ipr3ApplicationConfirmation.f,
+      htmlTemplate = html.ipr3ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
+
+
   )
 }
