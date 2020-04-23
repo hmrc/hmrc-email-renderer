@@ -55,6 +55,6 @@ object TdqTemplates {
   private def extractSubject(params: Map[String, String]) =
     params
       .get("applicationName")
-      .map(appName => s"Fraud prevention headers for '$appName'")
+      .map(appName => s"Fraud prevention headers for $appName")
       .getOrElse(throw new RuntimeException("Missing parameter applicationName"))
 }

@@ -20,22 +20,52 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fraud prevention headers status report") {
 
     @defining(ValidConnectionMethodBase64EncodedDetails.parse(params("extraDetails").toString)) { extraDetails =>
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName")</p>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName"),</p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application '@params("applicationName")' (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
+            Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application @params("applicationName") (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) APIs.
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Our checks show that the fraud prevention headers submitted between these dates do not meet the requirements of the fraud prevention header specification on the HMRC Developer Hub.
+            Our checks show that the fraud prevention headers submitted during this period do not meet the requirements of the fraud prevention header specification on the HMRC Developer Hub.
+        </p>
+
+        <h2>The current situation </h2>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            We understand this is a difficult time due to Coronavirus (COVID-19) but we still need to help protect your user's data. If you have developer capacity, it's important to improve the fraud prevention headers you send.
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            However, if you are unable to collect a header value due to the restrictions explained within the fraud prevention header specification, and if you are omitting the header or leaving a value blank, then please contact HMRC.
+            We'll continue to monitor API call logs and give you feedback every month to help you do this. We'd like to reassure you that we'll continue to accept VAT MTD calls, including headers that are incorrect or missing.
+        </p>
+
+        <h2>What you need to do</h2>
+
+        <ol>
+            <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
+                Read the fraud prevention specification so that you can make sure that your application submits the correct fraud prevention headers.
+            </li>
+            <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
+                Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC's fraud prevention specification.
+            </li>
+            <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
+                If the Test Fraud Prevention Headers API shows that your application is submitting the correct headers, please check that your end user is using the latest version of your application.
+            </li>
+        </ol>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            Supplying header information for our VAT (MTD) APIs is required by law.
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            The report below is generated based on our basic checks on the fraud prevention header values sent by your application, for example:
+            If you are unable to collect a header value due to restrictions explained in the fraud prevention header specification, and if you are omitting the header or leaving a value blank, you need to contact us.
+        </p>
+
+        <h2>Your report</h2>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            This report is generated based on our basic checks on the fraud prevention header values sent by your application, for example:
         </p>
 
         <ul>
@@ -47,10 +77,8 @@
             </li>
         </ul>
 
-        <h2>Report</h2>
-
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            This report shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
+            It shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
@@ -62,7 +90,7 @@
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            '@params("applicationName")' using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
+            @params("applicationName") using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             These are the headers where errors and/or warnings have been found:
@@ -104,32 +132,31 @@
             </ul>
         }
 
-        <h2>What you must do next</h2>
+        <h2>Contacting us</h2>
 
-        <ol>
-            <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
-                Read the fraud prevention specification so that you can make sure that your application submits the correct fraud prevention headers.
-            </li>
-            <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
-                Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC’s fraud prevention specification.
-            </li>
-            <li style="font-size: 19px; line-height: 1.315789474; margin-bottom: 19px;">
-                If the Test Fraud Prevention Headers API shows that your application is submitting the correct headers, please check that your end user is using the latest version of your application.
-            </li>
-        </ol>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
+            HMRC is prioritising helping businesses and individuals through the period of disruption caused by Coronavirus (COVID-19). We may not be able to help you with header queries as quickly as we usually do.
+        </p>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            If you need to contact us, email SDSTeam@@hmrc.gov.uk
         </p>
 
         <h2>Why you have received this email</h2>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            This email address is registered as the point of contact for the application '@params("applicationName")'.
+            This email address is registered as the point of contact for the application @params("applicationName").
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            If you are not the right person to receive this email please forward it to the relevant person in your organisation.
+            If you are not the right person to receive this email, please forward it to the relevant person in your organisation.
         </p>
 
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Transaction Monitoring Team</p>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            From,
+        </p>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            HMRC Transaction Monitoring Team
+        </p>
 
     }
 
