@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd
 
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Cgtpd
 
 object CgtpdTemplates {
@@ -33,7 +33,7 @@ object CgtpdTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId ="cgtpd_account_created",
+      templateId = "cgtpd_account_created",
       fromAddress = govUkTeamAddress,
       service = Cgtpd,
       subject = "Capital Gains Tax on UK property account created",
@@ -42,7 +42,7 @@ object CgtpdTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId ="cgtpd_submission_confirmation",
+      templateId = "cgtpd_submission_confirmation",
       fromAddress = govUkTeamAddress,
       service = Cgtpd,
       subject = "HMRC has received your return",

@@ -36,7 +36,7 @@ object DateFormatter {
     case "10" => "October"
     case "11" => "November"
     case "12" => "December"
-    case _ => month
+    case _    => month
   }
 
   def formatPeriod(period: String): String = {
@@ -52,8 +52,11 @@ object DateFormatter {
     s"${formatDay(day)} ${formatMonth(month)} $year"
   }
 
-  private def formatDay(day: String): String = Try(day.toInt.toString).recover {
-    case NonFatal(e) => Logger.warn(s"Day parse exception: ${e.getMessage}"); day
-  }.getOrElse(day)
+  private def formatDay(day: String): String =
+    Try(day.toInt.toString)
+      .recover {
+        case NonFatal(e) => Logger.warn(s"Day parse exception: ${e.getMessage}"); day
+      }
+      .getOrElse(day)
 
 }
