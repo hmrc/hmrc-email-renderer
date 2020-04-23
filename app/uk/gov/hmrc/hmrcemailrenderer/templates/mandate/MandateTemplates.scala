@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.mandate
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, MessagePriority}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Mandate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -94,5 +94,6 @@ object MandateTemplates {
       plainTemplate = txt.mandateAgentSelfAuthRemoves.f,
       htmlTemplate = html.mandateAgentSelfAuthRemoves.f,
       priority = Some(MessagePriority.Urgent)
-    ))
+    )
+  )
 }

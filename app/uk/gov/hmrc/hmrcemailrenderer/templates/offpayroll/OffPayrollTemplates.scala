@@ -29,7 +29,8 @@ object OffPayrollTemplates {
       service = OffPayroll,
       subject = "Test the new employment status service",
       plainTemplate = txt.offpayrollPrivateBetaInvitation.f,
-      htmlTemplate = html.offpayrollPrivateBetaInvitation.f)
+      htmlTemplate = html.offpayrollPrivateBetaInvitation.f
+    )
   )
 
 }

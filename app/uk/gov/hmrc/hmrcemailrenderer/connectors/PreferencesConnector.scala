@@ -17,17 +17,17 @@
 package uk.gov.hmrc.hmrcemailrenderer.connectors
 
 import com.typesafe.config.Config
-import play.api.{Configuration, Play}
+import play.api.{ Configuration, Play }
 import play.api.Mode.Mode
 import play.api.libs.json.Json
 import uk.gov.hmrc.emailaddress.EmailAddress
 import uk.gov.hmrc.hmrcemailrenderer.WSHttp
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.{HeaderCarrier, HttpException, HttpGet, HttpPost, HttpReads, HttpResponse}
+import uk.gov.hmrc.http.{ HeaderCarrier, HttpException, HttpGet, HttpPost, HttpReads, HttpResponse }
 import uk.gov.hmrc.play.config.ServicesConfig
 import uk.gov.hmrc.play.http.logging.MdcLoggingExecutionContext._
 
-import scala.concurrent.{Await, Future}
+import scala.concurrent.{ Await, Future }
 
 trait PreferencesConnector extends ServicesConfig {
 
@@ -38,18 +38,17 @@ trait PreferencesConnector extends ServicesConfig {
   }
 
   def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier): Future[Language] = {
-    val url = baseUrl("preferences") + s"/preferences/language/${emailAddress}"
+    val url = baseUrl("preferences") + s"/preferences/language/$emailAddress"
     httpGet.GET[Language](url)
-    }
+  }
 }
 
 final case class LanguagePreference(lang: String)
 
-object  PreferencesConnector {
+object PreferencesConnector {
   def apply(): PreferencesConnector = new PreferencesConnector with ServicesConfig {
     override protected def mode: Mode = Play.current.mode
     override protected def runModeConfiguration: Configuration = Play.current.configuration
     override def httpGet: HttpGet = WSHttp
   }
 }
-

@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
@@ -43,16 +43,16 @@ object DigitalContactTemplates {
   )
 
   val newMessageAlertTemplates: Seq[MessageTemplate] =
-    templatesToMapToNewMessageAlert.map {
-      formId =>  MessageTemplate.create(
-              templateId = s"newMessageAlert_$formId",
-              fromAddress = defaultFromAddress,
-              service = SelfAssessment,
-              subject = "HMRC paperless notifications: new message",
-              plainTemplate = txt.newMessageAlert.f,
-              htmlTemplate = html.newMessageAlert.f)
+    templatesToMapToNewMessageAlert.map { formId =>
+      MessageTemplate.create(
+        templateId = s"newMessageAlert_$formId",
+        fromAddress = defaultFromAddress,
+        service = SelfAssessment,
+        subject = "HMRC paperless notifications: new message",
+        plainTemplate = txt.newMessageAlert.f,
+        htmlTemplate = html.newMessageAlert.f
+      )
     }
-
 
   val templates = Seq(
     MessageTemplate.create(
@@ -61,7 +61,7 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC electronic communications: verify your email address",
       plainTemplate = txt.verifyEmailAddress.f,
-      htmlTemplate  = html.verifyEmailAddress.f,
+      htmlTemplate = html.verifyEmailAddress.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -70,7 +70,7 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
       plainTemplate = txt.verifyEmailAddress_cy.f,
-      htmlTemplate  = html.verifyEmailAddress_cy.f,
+      htmlTemplate = html.verifyEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -133,14 +133,16 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: new message",
       plainTemplate = txt.newMessageAlert.f,
-      htmlTemplate = html.newMessageAlert.f),
+      htmlTemplate = html.newMessageAlert.f
+    ),
     MessageTemplate.create(
       templateId = "newMessageAlert_cy",
       fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "Hysbysiadau di-bapur CThEM: neges newydd",
       plainTemplate = txt.newMessageAlert_cy.f,
-      htmlTemplate = html.newMessageAlert_cy.f),
+      htmlTemplate = html.newMessageAlert_cy.f
+    ),
     MessageTemplate.create(
       templateId = "rescindedMessageAlert",
       fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
@@ -148,7 +150,8 @@ object DigitalContactTemplates {
       subject = "HMRC recalled a Self Assessment message",
       plainTemplate = txt.rescindedMessageAlert.f,
       htmlTemplate = html.rescindedMessageAlert.f,
-      priority = Some(MessagePriority.Urgent)),
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "rescindedMessageAlert_cy",
       fromAddress = FromAddress.noReply("CThEM – (Tîm) Cyswllt Digidol"),
@@ -156,7 +159,8 @@ object DigitalContactTemplates {
       subject = "Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl",
       plainTemplate = txt.rescindedMessageAlert_cy.f,
       htmlTemplate = html.rescindedMessageAlert_cy.f,
-      priority = Some(MessagePriority.Urgent)),
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "verificationReminder",
       fromAddress = defaultFromAddress,

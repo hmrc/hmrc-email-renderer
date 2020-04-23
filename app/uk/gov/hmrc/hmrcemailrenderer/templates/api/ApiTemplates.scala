@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
@@ -24,7 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  private def extractFromAddress(params : Map[String, String]): String = {
+  private def extractFromAddress(params: Map[String, String]): String = {
     val sender = params.get("developerHubTitle").getOrElse("Developer Hub")
     FromAddress.noReply(s"HMRC $sender")
   }

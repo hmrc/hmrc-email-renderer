@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
-import java.util.{Currency, Locale}
+import java.util.{ Currency, Locale }
 import play.api.Logger
 import scala.util.Try
 import scala.util.control.NonFatal
@@ -32,10 +32,13 @@ object AmountFormatter {
   }
 
   def formatAmount(amount: String): String = formatter.format(toDouble(amount))
-  def formatAmountInPence(amountInPence: String): String = formatter.format(toDouble(amountInPence)/100)
+  def formatAmountInPence(amountInPence: String): String = formatter.format(toDouble(amountInPence) / 100)
 
-  private def toDouble(s: String): Double = Try(s.toDouble).recover {
-    case NonFatal(e) => Logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0D
-  }.getOrElse(0D)
+  private def toDouble(s: String): Double =
+    Try(s.toDouble)
+      .recover {
+        case NonFatal(e) => Logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0D
+      }
+      .getOrElse(0D)
 
 }

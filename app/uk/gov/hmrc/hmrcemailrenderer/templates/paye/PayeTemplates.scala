@@ -20,13 +20,13 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
 
-object PayeTemplates  {
+object PayeTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
       templateId = "tax_estimate_message_alert",
       fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
-      service  = PayAsYouEarn,
+      service = PayAsYouEarn,
       subject = "Your Income Tax estimate has changed",
       plainTemplate = txt.newTaxEstimateMessageAlert.f,
       htmlTemplate = html.newTaxEstimateMessageAlert.f
@@ -34,7 +34,7 @@ object PayeTemplates  {
     MessageTemplate.create(
       templateId = "tax_estimate_message_alert_cy",
       fromAddress = FromAddress.noReply("CThEM – Gwasanaeth Gwirio eich Treth Incwm"),
-      service  = PayAsYouEarn,
+      service = PayAsYouEarn,
       subject = "Mae amcangyfrif o’ch Treth Incwm wedi newid",
       plainTemplate = txt.taxEstimateMessageAlert_cy.f,
       htmlTemplate = html.taxEstimateMessageAlert_cy.f

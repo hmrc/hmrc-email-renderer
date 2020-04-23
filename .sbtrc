@@ -1,0 +1,1 @@
+alias fmt=;scalafmt;test:scalafmt;it:scalafmt

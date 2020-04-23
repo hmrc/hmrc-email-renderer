@@ -25,7 +25,8 @@ object TransactionEngineFromAddress {
 
   private val defaultDomain = "confirmation.tax.service.gov.uk"
 
-  lazy val replyDomain = Try(Play.configuration.getString("transactionEngine.fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
+  lazy val replyDomain =
+    Try(Play.configuration.getString("transactionEngine.fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
 
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 

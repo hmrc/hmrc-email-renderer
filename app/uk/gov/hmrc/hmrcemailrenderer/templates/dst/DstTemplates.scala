@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.dst
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalServicesTax
 
@@ -24,22 +24,22 @@ object DstTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
-        templateId = "dst_registration_accepted",
-        fromAddress = FromAddress.noReply("Digital Services Tax"),
-        service = DigitalServicesTax,
-        subject = "Digital Services Tax Reference Number",
-        plainTemplate = txt.dstRegistrationAccepted.f,
-        htmlTemplate = html.dstRegistrationAccepted.f,
-        priority = Some(MessagePriority.Urgent)
-        ),
+      templateId = "dst_registration_accepted",
+      fromAddress = FromAddress.noReply("Digital Services Tax"),
+      service = DigitalServicesTax,
+      subject = "Digital Services Tax Reference Number",
+      plainTemplate = txt.dstRegistrationAccepted.f,
+      htmlTemplate = html.dstRegistrationAccepted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
-        templateId = "dst_registration_received",
-        fromAddress = FromAddress.noReply("Digital Services Tax"),
-        service = DigitalServicesTax,
-        subject = "Digital Services Tax application submitted",
-        plainTemplate = txt.dstRegistrationReceived.f,
-        htmlTemplate = html.dstRegistrationReceived.f,
-        priority = Some(MessagePriority.Urgent)
-        )
+      templateId = "dst_registration_received",
+      fromAddress = FromAddress.noReply("Digital Services Tax"),
+      service = DigitalServicesTax,
+      subject = "Digital Services Tax application submitted",
+      plainTemplate = txt.dstRegistrationReceived.f,
+      htmlTemplate = html.dstRegistrationReceived.f,
+      priority = Some(MessagePriority.Urgent)
     )
+  )
 }
