@@ -16,13 +16,13 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
 
 object PodsTemplates {
   val templates = Seq(
-       MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "pods_scheme_register",
       fromAddress = govUkTeamAddress,
       service = PODS,

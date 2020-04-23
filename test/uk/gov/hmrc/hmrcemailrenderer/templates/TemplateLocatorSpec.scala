@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, Subject}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -27,7 +27,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
   "The template locator when requested Welsh template" should {
 
     "return Welsh version of template if it exists" in new TestCase {
-      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2_cy"
+      templateLocatorWithWelsh
+        .findTemplate("template-templateGroup-1-2_cy")
+        .get
+        .templateId shouldBe "template-templateGroup-1-2_cy"
     }
     "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
       templateLocator.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2"
@@ -41,7 +44,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "loop through all groups and return the first template matching the provided template id" in new TestCase {
       templateLocator.findTemplate("template-templateGroup-1-2").get.templateId shouldBe "template-templateGroup-1-2"
-      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress.apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
+      templateLocator
+        .findTemplate("template-templateGroup-1-2")
+        .get
+        .fromAddress
+        .apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
       templateLocator.findTemplate("template-templateGroup-1-2").get.service shouldBe SelfAssessment
     }
 
@@ -50,7 +57,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
     }
 
     "enumerate all titles" in {
-      TemplateLocator.templateGroups.keys should contain only(
+      TemplateLocator.templateGroups.keys should contain only (
         "Agent",
         "API Platform",
         "Self Assessment",
@@ -104,7 +111,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
     }
 
     "enumerate all template identifiers" in {
-      TemplateLocator.all.map(_.templateId) should contain only(
+      TemplateLocator.all.map(_.templateId) should contain only (
         "overseas_application_rejected",
         "overseas_application_accepted",
         "overseas_application_received",
@@ -568,12 +575,17 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
     }
 
     val templateLocator = new TemplateLocator {
-      override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
+      override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
+        messageTemplates(s"templateGroup-$i")
+      }
     }
 
     val templateLocatorWithWelsh = new TemplateLocator {
-      val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
-      override lazy val all: Seq[MessageTemplate] = allEnglish ++ allEnglish.map(t => t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
+      val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
+        messageTemplates(s"templateGroup-$i")
+      }
+      override lazy val all: Seq[MessageTemplate] = allEnglish ++ allEnglish.map(t =>
+        t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
     }
   }
 

@@ -20,27 +20,26 @@ import org.mockito.Matchers._
 import org.mockito.Mockito._
 import org.scalatest.mockito.MockitoSugar
 import play.api.Mode.Mode
-import play.api.{Configuration, Mode}
+import play.api.{ Configuration, Mode }
 import uk.gov.hmrc.emailaddress.EmailAddress
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.{HeaderCarrier, HttpGet, HttpResponse}
+import uk.gov.hmrc.http.{ HeaderCarrier, HttpGet, HttpResponse }
 import uk.gov.hmrc.play.test.UnitSpec
 
 import scala.concurrent.Future
 
-class PreferencesConnectorSpec  extends UnitSpec with MockitoSugar {
+class PreferencesConnectorSpec extends UnitSpec with MockitoSugar {
 
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {
       when(mockHttp.GET[Language](anyString())(any(), any(), any())).thenReturn(Future.successful(Language.English))
-      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe(Language.English)
+      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe (Language.English)
     }
     "return Welsh if preference returns Welsh" in new TestCase {
       when(mockHttp.GET[Language](anyString())(any(), any(), any())).thenReturn(Future.successful(Language.Welsh))
-      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe(Language.Welsh)
+      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe (Language.Welsh)
     }
   }
-
 
   trait TestCase {
     val mockHttp = mock[HttpGet]
@@ -57,5 +56,3 @@ class PreferencesConnectorSpec  extends UnitSpec with MockitoSugar {
     }
   }
 }
-
-

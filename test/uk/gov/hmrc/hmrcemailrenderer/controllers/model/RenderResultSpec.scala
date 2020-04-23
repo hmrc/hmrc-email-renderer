@@ -27,7 +27,8 @@ class RenderResultSpec extends UnitSpec {
     def decode(value: String): String = new String(Base64.getDecoder.decode(value), "UTF-8")
 
     "have the plain and html fields Base64 encoded when rendered as JSON" in {
-      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
+      val result =
+        Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
 
       (result \ "plain").as[String] shouldBe "U29tZSBQbGFpbiBUZXh0"
       decode((result \ "plain").as[String]) shouldBe "Some Plain Text"

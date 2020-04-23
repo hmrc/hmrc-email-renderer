@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ated
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Ated
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -75,5 +75,6 @@ object AtedTemplates {
       plainTemplate = txt.disposalReturnSubmitted.f,
       htmlTemplate = html.disposalReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
-    ))
+    )
+  )
 }

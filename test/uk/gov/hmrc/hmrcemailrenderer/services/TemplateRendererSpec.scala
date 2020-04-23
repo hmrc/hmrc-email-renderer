@@ -22,7 +22,7 @@ import org.scalatest.concurrent.Eventually
 import org.scalatest.mockito.MockitoSugar
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
@@ -38,12 +38,12 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
     "render an existing template using the common parameters" in new TestCase with Eventually {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-     await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"))) shouldBe Right(validRenderedResult)
+      await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"))) shouldBe Right(validRenderedResult)
     }
 
     "return None if the template is not found" in new TestCase {
       when(locatorMock.findTemplate("unknown")).thenReturn(None)
-     await(templateRenderer.render("unknown", Map.empty)) shouldBe Left(MissingTemplateId("unknown"))
+      await(templateRenderer.render("unknown", Map.empty)) shouldBe Left(MissingTemplateId("unknown"))
     }
 
     "return error message in Left if it can't render the template" in new TestCase {
@@ -57,32 +57,37 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
   "LanguageTemplateId" should {
 
-    "return the same template if the template doesnt exist in WelshTemplatesByLangPreference object and email preference is English" in new TestCase {      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.English))
-      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com")))  shouldBe templateId
+    "return the same template if the template doesnt exist in WelshTemplatesByLangPreference object and email preference is English" in new TestCase {
+      when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any()))
+        .thenReturn(Future.successful(Language.English))
+      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com"))) shouldBe templateId
     }
 
     "return welsh template if template is in WelshTemplatesByLangPreference and language preferences set to welsh" in new TestCase {
-      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.Welsh))
-      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe welshTemplateId
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any()))
+        .thenReturn(Future.successful(Language.Welsh))
+      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe welshTemplateId
     }
 
     "return english template if template is in WelshTemplatesByLangPreference and language preferences set to english" in new TestCase {
-      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.English))
-      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")))  shouldBe engTemplateId
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any()))
+        .thenReturn(Future.successful(Language.English))
+      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe engTemplateId
     }
 
     "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and language preference is Welsh" in new TestCase {
-      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any())).thenReturn(Future.successful(Language.Welsh))
-      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com")))  shouldBe templateId
+      when(templateRenderer.preferencesConnector.languageByEmail(anyString())(any()))
+        .thenReturn(Future.successful(Language.Welsh))
+      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com"))) shouldBe templateId
     }
 
     "return same template if the template doesnt exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
-      await(templateRenderer.languageTemplateId(templateId, None))  shouldBe templateId
+      await(templateRenderer.languageTemplateId(templateId, None)) shouldBe templateId
     }
 
     "return same template if the template exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
-      await(templateRenderer.languageTemplateId(engTemplateId, None))  shouldBe engTemplateId
+      await(templateRenderer.languageTemplateId(engTemplateId, None)) shouldBe engTemplateId
     }
   }
 
@@ -96,11 +101,11 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
     val templateRenderer = new TemplateRenderer {
       override def locator: TemplateLocator = locatorMock
 
-      override val templatesByLangPreference = Map(engTemplateId-> welshTemplateId)
+      override val templatesByLangPreference = Map(engTemplateId -> welshTemplateId)
 
       override def commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
 
-      override val  preferencesConnector =  mock[PreferencesConnector]
+      override val preferencesConnector = mock[PreferencesConnector]
 
     }
 
@@ -126,8 +131,8 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
 
     object LocalConfig {
       val config = Map(
-        "Dev.services.preferences.host" -> "localhost",
-        "Dev.services.preferences.port" -> "1111",
+        "Dev.services.preferences.host"     -> "localhost",
+        "Dev.services.preferences.port"     -> "1111",
         "Dev.services.preferences.protocol" -> "http"
       )
     }
