@@ -48,9 +48,9 @@ object twoWayMessagingTemplates {
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_2WSM-reply",
-      fromAddress = FromAddress.noReply("HMRC adviser team"),
+      fromAddress = FromAddress.noReply("HMRC digital team"),
       service = TwoWayMessaging,
-      subject = "HMRC answered your question by phone",
+      subject = "HMRC reply: Sign in for new message",
       plainTemplate = txt.twoWayMessageNotificationTemplate.f,
       htmlTemplate = html.twoWayMessageNotificationTemplate.f,
       priority = Some(MessagePriority.Urgent)

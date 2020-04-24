@@ -17,15 +17,19 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have closed your query") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sign in to view your reply now") {
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Dear customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">We recently spoke to you by phone.</p>
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+
     <p style="margin: 0 0 30px; font-size: 19px;">
-        We believe we have now answered your @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) question about the Coronavirus Job Retention Scheme.
+        Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready.
     </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Because of this, we have now closed your query.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">If you need to ask another question, you must send a new message.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Do not contact HMRC by phone about this question, or reply to this email. We do not monitor this inbox.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From the Coronavirus Job Retention Scheme team.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">To read it:</p>
+    <ol>
+        <li style="margin: 0 0 30px; font-size: 19px;">Sign in to HMRC services.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Find the messages near the top of the page.</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Select your unread message.</li>
+    </ol>
+    <p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC digital team</p>
 }

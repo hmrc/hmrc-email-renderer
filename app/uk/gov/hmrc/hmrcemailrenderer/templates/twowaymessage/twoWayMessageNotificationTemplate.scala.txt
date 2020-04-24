@@ -1,18 +1,20 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
-@(params: Map[String, Any])We have closed your query
+@(params: Map[String, Any])
+Sign in to view your reply now
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
 
-Dear Customer
+Our reply to the message you sent on @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) is ready.
 
-We recently spoke to you by phone.
+To read it:
 
-We believe we have now answered your @params.get("date").fold("")(date => DateHelper.dateFormatter(date.toString)) question about the Coronavirus Job Retention Scheme.
+       1. Sign in to HMRC services.
 
-Because of this, we have now closed your query.
+       2. Find the messages near the top of the page.
 
-If you need to ask another question, you must send a new message.
+       3. Select your unread message.
 
-Do not contact HMRC by phone about this question, or reply to this email. We do not monitor this inbox.
+Do not reply to this email.
 
-From the Coronavirus Job Retention Scheme team
+From HMRC digital team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
