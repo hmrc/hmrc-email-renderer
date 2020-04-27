@@ -30,8 +30,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
       val params = commonParameters + (
         "developerName"   -> "John Smith",
-        "fromDate"        -> "22/09/2019",
-        "toDate"          -> "22/10/2019",
+        "fromDate"        -> "22 September 2019",
+        "toDate"          -> "22 October 2019",
         "applicationName" -> "MTD VAT Test Application",
         "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
@@ -52,8 +52,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
       val params = commonParameters + (
         "developerName"   -> "John Smith",
-        "fromDate"        -> "22/09/2019",
-        "toDate"          -> "22/10/2019",
+        "fromDate"        -> "22 September 2019",
+        "toDate"          -> "22 October 2019",
         "applicationName" -> "MTD VAT Test Application",
         "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
@@ -74,8 +74,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
       val params = commonParameters + (
         "developerName"   -> "John Smith",
-        "fromDate"        -> "22/09/2019",
-        "toDate"          -> "22/10/2019",
+        "fromDate"        -> "22 September 2019",
+        "toDate"          -> "22 October 2019",
         "applicationName" -> "MTD VAT Test Application",
         "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
         "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
