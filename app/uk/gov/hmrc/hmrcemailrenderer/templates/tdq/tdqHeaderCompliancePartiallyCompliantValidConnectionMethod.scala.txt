@@ -11,7 +11,7 @@ Our checks show that the fraud prevention headers submitted during this period d
 
 The current situation 
 
-We understand this is a difficult time due to Coronavirus (COVID-19) but we still need to help protect your user's data. If you have developer capacity, it's important to improve the fraud prevention headers you send.
+We understand this is a difficult time due to coronavirus (COVID-19) but we still need to help protect your user's data. If you have developer capacity, it's important to improve the fraud prevention headers you send.
 
 We'll continue to monitor API call logs and give you feedback every month to help you do this. We'd like to reassure you that we'll continue to accept VAT MTD calls, including headers that are incorrect or missing.
 
@@ -60,7 +60,7 @@ These are the headers where errors and/or warnings have been found:
 
 Contacting us
 
-HMRC is prioritising helping businesses and individuals through the period of disruption caused by Coronavirus (COVID-19). We may not be able to help you with header queries as quickly as we usually do.
+Due to the coronavirus (COVID-19) pandemic, we're having to focus our resources on essential activities. We may not be able to help you with header queries as quickly as we usually do.
 
 If you need to contact us, email SDSTeam@@hmrc.gov.uk
 

@@ -1666,22 +1666,22 @@ object TemplateParams {
     ),
     "tdq_compliance_all_required_headers_missing" -> Map(
       "developerName"   -> "John Smith",
-      "fromDate"        -> "22/09/2019",
-      "toDate"          -> "22/10/2019",
+      "fromDate"        -> "22 September 2019",
+      "toDate"          -> "22 October 2019",
       "applicationName" -> "MTD VAT Test Application",
       "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
     ),
     "tdq_compliance_partially_compliant_invalid_or_missing_connection_method" -> Map(
       "developerName"   -> "Joe Williams",
-      "fromDate"        -> "01/12/2019",
-      "toDate"          -> "31/12/2019",
+      "fromDate"        -> "1 December 2019",
+      "toDate"          -> "31 December 2019",
       "applicationName" -> "MTD VAT InvalidConnection App",
       "applicationId"   -> "1434b966-ea76-40a6-a312-1d58ff873a16"
     ),
     "tdq_compliance_partially_compliant_valid_connection_method" -> Map(
       "developerName"   -> "James Black",
-      "fromDate"        -> "01/01/2020",
-      "toDate"          -> "31/01/2020",
+      "fromDate"        -> "1 January 2020",
+      "toDate"          -> "31 January 2020",
       "applicationName" -> "MTD VAT ValidCM App",
       "applicationId"   -> "07b587d7-34d9-40b6-9d59-a0917490cf02",
       "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
