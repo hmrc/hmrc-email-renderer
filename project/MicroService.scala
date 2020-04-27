@@ -65,8 +65,7 @@ trait MicroService {
               task.map(_ => previousInputs)
             }.value
           )
-      ),
-      scalafmtTestOnCompile in ThisBuild := true
+      )
     )
     .settings(resolvers += Resolver.jcenterRepo)
     .settings(routesGenerator := StaticRoutesGenerator)
