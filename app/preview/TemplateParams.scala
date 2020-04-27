@@ -1775,6 +1775,19 @@ object TemplateParams {
     "dst_registration_received" -> Map(
       "name"             -> "Joe Bloggs",
       "groupCompanyName" -> "Some group company Ltd."
+    ),
+    "pods_file_aft_return" -> Map(
+      "schemeName"       -> "Smith Harper pension scheme",
+      "accountingPeriod" -> "1 April to 30 June 2020",
+      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk"
+    ),
+    "pods_aft_amended_return" -> Map(
+      "schemeName"       -> "Smith Harper pension scheme",
+      "accountingPeriod" -> "1 April to 30 June 2020",
+      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "submissionNumber" -> "3"
     )
   )
 }
