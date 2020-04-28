@@ -2,6 +2,10 @@
 
 You have submitted an Accounting for Tax return
 
+Dear @{params("psaName").toString}
+
+This email confirms your AFT submission:
+
 Scheme: @{params("schemeName").toString}
 Accounting period: @{params("accountingPeriod").toString}
 Date submitted: @{params("dateSubmitted").toString}

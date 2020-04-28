@@ -1780,13 +1780,15 @@ object TemplateParams {
       "schemeName"       -> "Smith Harper pension scheme",
       "accountingPeriod" -> "1 April to 30 June 2020",
       "dateSubmitted"    -> "2 July 2020 at 8:20pm",
-      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk"
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "psaName"          -> "Jane Doe"
     ),
     "pods_aft_amended_return" -> Map(
       "schemeName"       -> "Smith Harper pension scheme",
       "accountingPeriod" -> "1 April to 30 June 2020",
       "dateSubmitted"    -> "2 July 2020 at 8:20pm",
       "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "psaName"          -> "Jane Doe",
       "submissionNumber" -> "3"
     )
   )
