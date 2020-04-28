@@ -50,7 +50,6 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.payment_successful_parcels.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     // Direct Debit VAT templates
     MessageTemplate.create(
       templateId = "ddi_advance_notice",
@@ -133,7 +132,6 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.ddi_08_alert_aa.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     // Direct Debit generic SDDS templates
     MessageTemplate.create(
       templateId = "sdds_ddi_setup_dcs_alert",
@@ -180,7 +178,6 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     //Passengers email template
     MessageTemplate.create(
       templateId = "passengers_payment_confirmation",

@@ -1544,29 +1544,26 @@ object TemplateParams {
     "ddi_08_alert_aa" -> Map(
       "recipientName_line1" -> "Colm Cavanagh"
     ),
-
     "sdds_ddi_setup_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_amended_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_cancelled_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_reminder_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_unpaid_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName" -> "Soft Drinks Industry Levy"
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
-
-
     "dd_email_verifcation" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
