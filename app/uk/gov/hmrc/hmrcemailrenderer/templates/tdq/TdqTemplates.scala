@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Tdq
 
@@ -53,7 +53,8 @@ object TdqTemplates {
   )
 
   private def extractSubject(params: Map[String, String]) =
-    params.get("applicationName")
+    params
+      .get("applicationName")
       .map(appName => s"Fraud prevention headers for '$appName'")
       .getOrElse(throw new RuntimeException("Missing parameter applicationName"))
 }

@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.{ Matchers, WordSpec }
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 class ApiRemovedCollaboratorNotificationSpec extends WordSpec with Matchers {
@@ -26,23 +26,30 @@ class ApiRemovedCollaboratorNotificationSpec extends WordSpec with Matchers {
   val applicationName = "Application Name"
   val developerHubTitle = "Developer Hub Title"
 
-  val templateParams = Map("email" -> email, "applicationName" -> applicationName,
-    "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> "#005EA5")
+  val templateParams = Map(
+    "email"                -> email,
+    "applicationName"      -> applicationName,
+    "staticAssetUrlPrefix" -> "http://uri",
+    "staticAssetVersion"   -> "v1",
+    "borderColour"         -> "#005EA5")
 
   "htmlView" should {
     "render as" in new TestCase {
       val renderedHtml = api.html.apiRemovedCollaboratorNotification.render(templateParams)
       renderedHtml.contentType should include("text/html")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
-        "</strong> has been removed from <strong>" + applicationName +
-        "</strong> by another admin.</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They can no longer access this application.</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
+          "</strong> has been removed from <strong>" + applicationName +
+          "</strong> by another admin.</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">They can no longer access this application.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.apiRemovedCollaboratorNotification.render(templateParamsPlus)
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 

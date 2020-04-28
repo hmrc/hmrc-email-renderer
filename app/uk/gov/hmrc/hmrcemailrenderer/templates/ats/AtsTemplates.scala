@@ -17,19 +17,20 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.ats
 
 import org.joda.time.LocalDate
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummary
 
 object AtsTemplates {
 
-    val taxYearFrom = LocalDate.now().getYear - 2
-    val taxYearTo = LocalDate.now().getYear - 1
-    private val ats_year_for_subject = s"Your Annual Tax Summary for $taxYearFrom to $taxYearTo is now ready"
-    private val ats_year_for_subject_welsh = s"Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod"
+  val taxYearFrom = LocalDate.now().getYear - 2
+  val taxYearTo = LocalDate.now().getYear - 1
+  private val ats_year_for_subject = s"Your Annual Tax Summary for $taxYearFrom to $taxYearTo is now ready"
+  private val ats_year_for_subject_welsh =
+    s"Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod"
 
   val templates = Seq(
-      MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "annual_tax_summaries_message_alert",
       fromAddress = FromAddress.noReply("HMRC Your Annual Tax Summary"),
       service = AnnualTaxSummary,

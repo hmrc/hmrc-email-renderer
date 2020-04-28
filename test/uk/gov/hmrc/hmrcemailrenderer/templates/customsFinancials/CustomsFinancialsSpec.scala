@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.customsFinancials
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec, customsfinancials}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec, customsfinancials }
 
 class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
@@ -29,8 +29,8 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "include Supplementary statement content" in {
       val params = commonParameters + (
         "DefermentStatementType" -> "supplementary",
-        "date" -> "15 June 2018",
-        "DutyText" -> "The total Duty and VAT owed will be collected by direct debit on or after"
+        "date"                   -> "15 June 2018",
+        "DutyText"               -> "The total Duty and VAT owed will be collected by direct debit on or after"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
     }
@@ -38,8 +38,8 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "include Excise statement content" in {
       val params = commonParameters + (
         "DefermentStatementType" -> "excise",
-        "date" -> "29 June 2018",
-        "DutyText" -> "The total excise owed will be collected by direct debit on or before"
+        "date"                   -> "29 June 2018",
+        "DutyText"               -> "The total excise owed will be collected by direct debit on or before"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
     }
@@ -47,9 +47,9 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "include 4th week statement content" in {
       val params = commonParameters + (
         "DefermentStatementType" -> "weekly",
-        "PeriodIssueNumber" -> "4",
-        "date" -> "15 June 2018",
-        "DutyText" -> "The total Duty and VAT owed will be collected by direct debit on or after"
+        "PeriodIssueNumber"      -> "4",
+        "date"                   -> "15 June 2018",
+        "DutyText"               -> "The total Duty and VAT owed will be collected by direct debit on or after"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
     }
@@ -57,9 +57,9 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "include 1st week statement content" in {
       val params = commonParameters + (
         "DefermentStatementType" -> "weekly",
-        "PeriodIssueNumber" -> "1",
-        "date" -> "15 June 2018",
-        "DutyText" -> "The total Duty and VAT owed will be collected by direct debit on or after"
+        "PeriodIssueNumber"      -> "1",
+        "date"                   -> "15 June 2018",
+        "DutyText"               -> "The total Duty and VAT owed will be collected by direct debit on or after"
       )
       compareContent("customs_financials_new_statement_notification", params)(customsFinancialsTemplate)
     }
@@ -67,7 +67,8 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
 
   "Email notifications " should {
     "have matching content in the html and the text for requested duty deferment statements" in {
-      compareContent("customs_financials_requested_duty_deferment_statement", commonParameters)(customsFinancialsTemplate)
+      compareContent("customs_financials_requested_duty_deferment_statement", commonParameters)(
+        customsFinancialsTemplate)
     }
 
     "have matching content in the html and the text for import adjustment statements" in {

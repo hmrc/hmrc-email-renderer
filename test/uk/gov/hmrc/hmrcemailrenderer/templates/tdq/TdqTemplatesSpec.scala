@@ -19,8 +19,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 import java.util.Base64
 
 import org.scalatestplus.play.OneAppPerSuite
-import play.api.libs.json.Json.{parse, stringify}
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
+import play.api.libs.json.Json.{ parse, stringify }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
 class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
@@ -29,11 +29,11 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "be the same for text and html content" in {
 
       val params = commonParameters + (
-        "developerName" -> "John Smith",
-        "fromDate" -> "22/09/2019",
-        "toDate" -> "22/10/2019",
+        "developerName"   -> "John Smith",
+        "fromDate"        -> "22/09/2019",
+        "toDate"          -> "22/10/2019",
         "applicationName" -> "MTD VAT Test Application",
-        "applicationId" -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+        "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
 
       compareContent("tdq_compliance_all_required_headers_missing", params)(tdqTemplate)
@@ -51,11 +51,11 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "be the same for text and html content" in {
 
       val params = commonParameters + (
-        "developerName" -> "John Smith",
-        "fromDate" -> "22/09/2019",
-        "toDate" -> "22/10/2019",
+        "developerName"   -> "John Smith",
+        "fromDate"        -> "22/09/2019",
+        "toDate"          -> "22/10/2019",
         "applicationName" -> "MTD VAT Test Application",
-        "applicationId" -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+        "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
 
       compareContent("tdq_compliance_partially_compliant_invalid_or_missing_connection_method", params)(tdqTemplate)
@@ -73,12 +73,13 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "be the same for text and html content" in {
 
       val params = commonParameters + (
-        "developerName" -> "John Smith",
-        "fromDate" -> "22/09/2019",
-        "toDate" -> "22/10/2019",
+        "developerName"   -> "John Smith",
+        "fromDate"        -> "22/09/2019",
+        "toDate"          -> "22/10/2019",
         "applicationName" -> "MTD VAT Test Application",
-        "applicationId" -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
-        "extraDetails" -> Base64.getEncoder.encodeToString(stringify(parse("""
+        "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+        "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
+          parse("""
         {
           "connectionMethod": "WEB_APP_VIA_SERVER",
           "requestCount": 100,
@@ -156,8 +157,6 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for 'MTD VAT Test Application'"
     }
   }
-
-
 
   private def tdqTemplate(templateId: String) = messageTemplateF(templateId)(TdqTemplates.templates)
 

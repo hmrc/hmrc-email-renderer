@@ -1,3 +1,4 @@
+import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin.autoImport._
 import sbt.Keys._
 import sbt.Tests.{Group, SubProcess}
 import sbt._
@@ -54,7 +55,18 @@ trait MicroService {
       unmanagedSourceDirectories in IntegrationTest <<= (baseDirectory in IntegrationTest)(base => Seq(base / "it")),
       addTestReportOption(IntegrationTest, "int-test-reports"),
       testGrouping in IntegrationTest := oneForkedJvmPerTest((definedTests in IntegrationTest).value),
-      parallelExecution in IntegrationTest := false)
+      parallelExecution in IntegrationTest := false,
+      inConfig(IntegrationTest)(
+        scalafmtCoreSettings ++
+          Seq(
+            compileInputs in compile := Def.taskDyn {
+              val task = test in (resolvedScoped.value.scope in scalafmt.key)
+              val previousInputs = (compileInputs in compile).value
+              task.map(_ => previousInputs)
+            }.value
+          )
+      )
+    )
     .settings(resolvers += Resolver.jcenterRepo)
     .settings(routesGenerator := StaticRoutesGenerator)
 }

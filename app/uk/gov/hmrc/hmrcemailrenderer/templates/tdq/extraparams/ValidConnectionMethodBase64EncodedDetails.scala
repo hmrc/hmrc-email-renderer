@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams
 
 import java.util.Base64
 
-import play.api.libs.json.{Json, Reads}
+import play.api.libs.json.{ Json, Reads }
 
 final case class ValidConnectionMethodBase64EncodedDetails(
   connectionMethod: String,

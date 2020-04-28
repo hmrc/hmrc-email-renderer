@@ -18,9 +18,9 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 
 import java.util.Base64
 
-import org.scalatest.{Matchers, WordSpec}
-import play.api.libs.json.Json.{parse, stringify}
-import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams.{HeadersValidation, Problem, ValidConnectionMethodBase64EncodedDetails}
+import org.scalatest.{ Matchers, WordSpec }
+import play.api.libs.json.Json.{ parse, stringify }
+import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams.{ HeadersValidation, Problem, ValidConnectionMethodBase64EncodedDetails }
 
 class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matchers {
 

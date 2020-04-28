@@ -17,9 +17,9 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.scalatest.EitherValues
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader }
 import uk.gov.hmrc.play.test.UnitSpec
 
 class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
@@ -36,12 +36,12 @@ class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with Template
       priority = Some(MessagePriority.Standard)
     )
 
-
     "have the correct subject and body content" in {
 
       templateSA309.subject(commonParameters) shouldBe "You've got a new message from HMRC"
       val htmlContent = templateSA309.htmlTemplate(commonParameters).toString
-      htmlContent should include("You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January")
+      htmlContent should include(
+        "You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January")
       htmlContent should include("To view it, sign in to your HMRC online account")
     }
 
@@ -50,7 +50,11 @@ class NewMessageAlert_SA309Spec extends UnitSpec with EitherValues with Template
     }
 
     "have dear customer as salutation no forename parameter is provided" in {
-      val nameData = Map("recipientName_title" -> "Lord", "recipientName_secondForename" -> "Montogmery", "recipientName_surname" -> "Windsor", "recipientName_honours" -> "Viscount")
+      val nameData = Map(
+        "recipientName_title"          -> "Lord",
+        "recipientName_secondForename" -> "Montogmery",
+        "recipientName_surname"        -> "Windsor",
+        "recipientName_honours"        -> "Viscount")
       val htmlContent = templateSA309.htmlTemplate(commonParameters ++ nameData).toString
       htmlContent should include("Dear Lord Windsor")
       htmlContent shouldNot include("Customer")

@@ -16,12 +16,12 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.controllers
 
-import play.api.{Configuration, Logger, Play}
+import play.api.{ Configuration, Logger, Play }
 import play.api.libs.json.Json
 import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.config.RunMode
 import uk.gov.hmrc.play.microservice.controller.BaseController
@@ -31,7 +31,7 @@ object RendererController extends RendererController {
   override def templateRenderer: TemplateRenderer = TemplateRenderer
 }
 
-trait RendererController extends BaseController with RunMode{
+trait RendererController extends BaseController with RunMode {
 
   def runModeConfiguration: Configuration = Play.current.configuration
 
@@ -43,14 +43,15 @@ trait RendererController extends BaseController with RunMode{
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
-    templateRenderer.languageTemplateId(templateId, renderReq.email).map {tId =>
+      templateRenderer.languageTemplateId(templateId, renderReq.email).map { tId =>
         templateRenderer.render(tId, renderReq.parameters) match {
-            case Right(rendered) => Ok(Json.toJson(rendered))
-            case Left(MissingTemplateId(_)) => NotFound
-            case Left(x@TemplateRenderFailure(_)) =>
-              Logger.warn(s"Failed to render message, reason: ${x.reason}")
-              BadRequest(Json.toJson(x))
-          }}
+          case Right(rendered)            => Ok(Json.toJson(rendered))
+          case Left(MissingTemplateId(_)) => NotFound
+          case Left(x @ TemplateRenderFailure(_)) =>
+            Logger.warn(s"Failed to render message, reason: ${x.reason}")
+            BadRequest(Json.toJson(x))
         }
+      }
+    }
   }
 }
