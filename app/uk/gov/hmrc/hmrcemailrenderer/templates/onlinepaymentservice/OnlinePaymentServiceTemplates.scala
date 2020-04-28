@@ -50,7 +50,7 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.payment_successful_parcels.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    // Direct Debit templates
+    // Direct Debit VAT templates
     MessageTemplate.create(
       templateId = "ddi_advance_notice",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
@@ -130,6 +130,52 @@ object OnlinePaymentServiceTemplates {
       subject = "VAT Direct Debit",
       plainTemplate = txt.ddi_08_alert_aa.f,
       htmlTemplate = html.ddi_08_alert_aa.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // Direct Debit generic SDDS templates
+    MessageTemplate.create(
+      templateId = "sdds_ddi_setup_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax return: Direct Debit set up",
+      plainTemplate = txt.sdds_ddi_setup_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "sdds_ddi_amended_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax return: Direct Debit amended",
+      plainTemplate = txt.sdds_ddi_amended_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_amended_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "sdds_ddi_cancelled_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax return: Direct Debit cancelled",
+      plainTemplate = txt.sdds_ddi_cancelled_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_cancelled_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "sdds_ddi_reminder_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax return Direct Debit: reminder of payment collection",
+      plainTemplate = txt.sdds_ddi_reminder_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_reminder_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "sdds_ddi_unpaid_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Tax return Direct Debit: payment not collected",
+      plainTemplate = txt.sdds_ddi_unpaid_dcs_alert.f,
+      htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
     //Passengers email template
