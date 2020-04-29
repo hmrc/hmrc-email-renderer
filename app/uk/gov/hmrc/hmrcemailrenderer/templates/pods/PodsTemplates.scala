@@ -48,6 +48,24 @@ object PodsTemplates {
       plainTemplate = txt.psaInvited.f,
       htmlTemplate = html.psaInvited.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_file_aft_return",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - return submitted",
+      plainTemplate = txt.aftReturnSubmitted.f,
+      htmlTemplate = html.aftReturnSubmitted.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmitted.f,
+      htmlTemplate = html.aftAmendmentSubmitted.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
