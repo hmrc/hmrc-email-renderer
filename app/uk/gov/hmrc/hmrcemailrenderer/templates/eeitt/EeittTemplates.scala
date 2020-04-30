@@ -612,7 +612,8 @@ object EeittTemplates {
       templateId = "seiss_code_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - Dispute a decision about your eligibility to claim Self-employment Income Support",
+      subject =
+        "Confirm your email address - Dispute a decision about your eligibility to claim Self-employment Income Support",
       plainTemplate = txt.seissCode.f,
       htmlTemplate = html.seissCode.f,
       priority = Some(MessagePriority.Standard)
