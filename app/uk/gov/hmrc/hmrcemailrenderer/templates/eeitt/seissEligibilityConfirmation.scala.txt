@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You sent a Self-employment Income Support Scheme (SEISS) decision dispute online
+
+Dear @params.get("customerName")
+
+We have received your dispute about HMRC’s decision that you are not eligible to claim a grant from the Self-employment Income Support Scheme.
+
+What happens next
+
+We will review your dispute and call you using the details you provided @params.get("workingDays").
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the Self-employment Income Support Scheme (SEISS) team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
