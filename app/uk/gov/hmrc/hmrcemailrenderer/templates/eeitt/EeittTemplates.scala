@@ -607,6 +607,25 @@ object EeittTemplates {
       plainTemplate = txt.cjrsSubmissionConfirmation.f,
       htmlTemplate = html.cjrsSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Dispute a decision about your eligibility to claim Self-employment Income Support",
+      plainTemplate = txt.seissCode.f,
+      htmlTemplate = html.seissCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_eligibility_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your dispute about a Self-employment Income Support Scheme decision",
+      plainTemplate = txt.seissEligibilityConfirmation.f,
+      htmlTemplate = html.seissEligibilityConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
