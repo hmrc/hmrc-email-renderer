@@ -4,7 +4,7 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Dispute a decision about your eligibility to claim Self-employment Income Support’ service on GOV.UK.
+You requested a code to continue with the ‘Request an HMRC review of a decision about your eligibility to claim Self-Employment Income Support’ service on GOV.UK.
 
 Your code is: @params.get("confirmationCode")
 
@@ -18,6 +18,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From the Self-employment Income Support Scheme (SEISS) team
+From the Self-Employment Income Support Scheme (SEISS) team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
