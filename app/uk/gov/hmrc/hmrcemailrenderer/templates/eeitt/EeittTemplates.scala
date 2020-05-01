@@ -613,7 +613,7 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject =
-        "Confirm your email address - Dispute a decision about your eligibility to claim Self-employment Income Support",
+        "Confirm your email address - Request an HMRC review of a decision about your eligibility to claim Self-Employment Income Support",
       plainTemplate = txt.seissCode.f,
       htmlTemplate = html.seissCode.f,
       priority = Some(MessagePriority.Standard)
@@ -622,7 +622,8 @@ object EeittTemplates {
       templateId = "seiss_eligibility_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your dispute about a Self-employment Income Support Scheme decision",
+      subject =
+        "We received your request for an HMRC review of a decision about eligibility for the Self-Employment Income Support Scheme",
       plainTemplate = txt.seissEligibilityConfirmation.f,
       htmlTemplate = html.seissEligibilityConfirmation.f,
       priority = Some(MessagePriority.Standard)
