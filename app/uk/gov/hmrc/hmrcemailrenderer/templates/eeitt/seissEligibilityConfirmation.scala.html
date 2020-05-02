@@ -15,11 +15,11 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You asked HMRC to review a decision about eligibility for the Self-Employment Income Support Scheme (SEISS) online"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You asked HMRC to review your eligibility for the Self-Employment Income Support Scheme (SEISS) online"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We have received your request for an HMRC review of a decision about your eligibility to claim for the Self-Employment Income Support Scheme.</p>
+    We received your request for an HMRC review of your eligibility for the Self-Employment Income Support Scheme.</p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We will review your request and call you using the details you provided @params.get("workingDays").
