@@ -4,7 +4,7 @@ You asked HMRC to review your eligibility for the Self-Employment Income Support
 
 Dear @params.get("customerName")
 
-We received your request for an HMRC review of your eligibility for the Self-Employment Income Support Scheme.
+We have received your request for an HMRC review of your eligibility to claim for the Self-Employment Income Support Scheme.
 
 What happens next
 
