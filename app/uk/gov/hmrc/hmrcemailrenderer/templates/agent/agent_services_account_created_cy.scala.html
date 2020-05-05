@@ -1,0 +1,43 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agencyName() = {@params("agencyName")}
+@arn() = {@params("arn")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cyfrif gwasanaethau asiant wedi’i greu") {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agencyName</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Rydych wedi creu cyfrif gwasanaethau asiant CThEM ar gyfer @agencyName.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Cyfeirnod eich cyfrif yw <strong>@arn</strong></p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Gwnewch yn siŵr bod gennych chi hyn os ydych yn cysylltu â ni ynglŷn â’ch cyfrif gwasanaethau asiant.</p>
+
+    <h2>Yr hyn y gallwch ei wneud nesaf</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">I fewngofnodi i’ch cyfrif gwasanaethau asiant, chwiliwch ar GOV.UK am 'agent services account'. Yna, wrth agor y dudalen briodol, dewiswch y togl Cymraeg.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Gallwch ddefnyddio’ch cyfrif gwasanaethau asiant newydd i gael mynediad at wasanaethau Troi Treth yn Ddigidol a chofrestru ymddiriedolaeth neu ystâd.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Am ganllaw cam wrth gam ar yr hyn sydd angen i chi ei wneud o ran y cynllun Troi Treth yn Ddigidol ar gyfer TAW, chwiliwch ar GOV.UK am 'Making Tax Digital for VAT as an agent'. Yna, wrth agor y dudalen briodol, dewiswch y togl Cymraeg.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">I gofrestru ymddiriedolaeth neu ystâd eich cleient, ewch i GOV.UK a chwilio am ‘register a trust’ neu ‘register an estate’.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">I gael rhagor o wybodaeth am wasanaethau y gallwch eu defnyddio gyda’ch cyfrif gwasanaethau asiant, ewch i GOV.UK a chwilio am ‘HMRC services for tax agents’.</p>
+
+    <h2>Pam y cawsoch yr e-bost hwn</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Gwnaethoch roi’r cyfeiriad e-bost cyswllt hwn wrth greu’ch cyfrif gwasanaethau asiant.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Peidiwch ag ymateb i'r e-bost hwn.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Dîm Gwasanaethau Asiant CThEM</p>
+
+}

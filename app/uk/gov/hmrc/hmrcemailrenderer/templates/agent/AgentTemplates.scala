@@ -82,6 +82,14 @@ object AgentTemplates {
       subject = "HMRC: agent services account created",
       plainTemplate = txt.agent_services_account_created.f,
       htmlTemplate = html.agent_services_account_created.f,
+      priority = Some(MessagePriority.Urgent)),
+    MessageTemplate.create(
+      templateId = "agent_services_account_created_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEM"),
+      service = Agent,
+      subject = "Cyfrif gwasanaethau asiant CThEM wedi’i greu",
+      plainTemplate = txt.agent_services_account_created_cy.f,
+      htmlTemplate = html.agent_services_account_created_cy.f,
       priority = Some(MessagePriority.Urgent))
   )
 }
