@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You asked HMRC to review your eligibility for the Self-Employment Income Support Scheme (SEISS) online"
+
+Dear @params.get("customerName")
+
+We have received your request for an HMRC review of your eligibility to claim for the Self-Employment Income Support Scheme.
+
+What happens next
+
+We will review your request and call you using the details you provided @params.get("workingDays").
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the Self-Employment Income Support Scheme (SEISS) team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

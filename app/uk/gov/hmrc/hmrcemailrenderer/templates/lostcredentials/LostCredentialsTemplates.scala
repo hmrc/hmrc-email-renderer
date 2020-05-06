@@ -16,18 +16,20 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.lostcredentials
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.LostCredentials
 
 object LostCredentialsTemplates {
-  val templates: Seq[MessageTemplate] = Seq(MessageTemplate.create(
-    templateId = "retrieve_userid_notification",
-    fromAddress = FromAddress.noReply("Government Gateway service"),
-    service = LostCredentials,
-    subject = "Government Gateway User ID",
-    plainTemplate = txt.lostCredentialsRetrieveUseridNotificationEmail.f,
-    htmlTemplate = html.lostCredentialsRetrieveUseridNotificationEmail.f,
-    priority = Some(MessagePriority.Urgent)))
+  val templates: Seq[MessageTemplate] = Seq(
+    MessageTemplate.create(
+      templateId = "retrieve_userid_notification",
+      fromAddress = FromAddress.noReply("Government Gateway service"),
+      service = LostCredentials,
+      subject = "Government Gateway User ID",
+      plainTemplate = txt.lostCredentialsRetrieveUseridNotificationEmail.f,
+      htmlTemplate = html.lostCredentialsRetrieveUseridNotificationEmail.f,
+      priority = Some(MessagePriority.Urgent)
+    ))
 
 }

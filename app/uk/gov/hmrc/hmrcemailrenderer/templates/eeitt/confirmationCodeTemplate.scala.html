@@ -18,9 +18,10 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear customer,</p>
+    Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You requested a code to continue with your form.</p>
+    You requested a code to continue with the @params.get("emailFormName") service on GOV.UK.
+</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your code is: @params.get("confirmationCode")</p>
 <h2>
@@ -28,10 +29,9 @@
 <p style="margin: 0 0 30px; font-size: 19px;">
     Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If this email account is not shared, and you did not request this code you need to contact us.</p>
-<h2>What you can do now</h2>
+    If this email account is not shared, and you did not request this code you need to contact @params.get("emailContact").</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Do not reply to this email.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From the Digital Contact Team</p>
+    From @params.get("emailTeam")</p>
 }

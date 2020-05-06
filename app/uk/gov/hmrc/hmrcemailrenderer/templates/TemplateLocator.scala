@@ -64,67 +64,70 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.customsfinancials.CustomsFinancia
 import uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd.CgtpdTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.htsreminder.HtsReminderTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.dst.DstTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
-    Map("Agent"                     -> AgentTemplates.templates,
-        "API Platform"               -> ApiTemplates.templates,
-        "ATS"                        -> AtsTemplates.templates,
-        "AWRS"                       -> AwrsTemplates.templates,
-        "AMLS"                       -> AmlsTemplates.templates,
-        "BARS"                       -> BarsTemplates.templates,
-        "Childcare"                  -> ChildcareTemplates.templates,
-        "Digital Tariffs"            -> DigitalTariffTemplates.templates,
-        "DFS"                        -> DfsTemplates.templates,
-        "EMAC Helpdesk"              -> EmacHelpdeskTemplates.templates,
-        "EMAC"                       -> EmacTemplates.templates,
-        "FANDF"                      -> FandFTemplates.templates,
-        "GG"                         -> GgTemplates.templates,
-        "Passcodes"                  -> PasscodesTemplates.templates,
-        "GMP"                        -> GmpTemplates.templates,
-        "PAYE"                       -> PayeTemplates.templates,
-        "RALD"                       -> RaldTemplates.templates,
-        "register-your-company"      -> RegisterYourCompanyTemplates.templates,
-        "Self Assessment"            -> DigitalContactTemplates.templates,
-        "TAMC"                       -> TamcTemplates.templates,
-        "TCS"                        -> TcsTemplates.templates,
-        "Mandate"                    -> MandateTemplates.templates,
-        "Off Payroll"                -> OffPayrollTemplates.templates,
-        "Customs"                    -> CustomsTemplates.templates,
-        "Transaction Engine"         -> TransactionEngineTemplates.templates,
-        "ATED"                       -> AtedTemplates.templates,
-        "LifetimeISA"                -> LisaTemplates.templates,
-        "ITR"                        -> ItrTemplates.templates,
-        "CBCR"                       -> CBCRTemplates.templates,
-        "OnlinePaymentService"       -> OnlinePaymentServiceTemplates.templates,
-        "EEITT"                      -> EeittTemplates.templates,
-        "HTS"                        -> HtsTemplates.templates,
-        "HTSReminder"                -> HtsReminderTemplates.templates,
-        "FHDDS"                      -> FhddsTemplates.templates,
-        "Lost Credentials"           -> LostCredentialsTemplates.templates,
-        "FHDDS"                      -> FhddsTemplates.templates,
-        "SDIL"                       -> SdilTemplates.templates,
-        "CCA"                        -> CCATemplates.templates,
-        "CDS"                        -> cdsTestTemplates.templates,
-        "MTDfB-VAT"                  -> MtdfbVatTemplates.templates,
-        "PODS"                       -> PodsTemplates.templates,
-        "Parcels"                    -> ParcelsTemplates.templates,
-        "vat"                        -> vatTemplates.templates,
-        "Digital Contact VAT"        -> DigitalContactVatTemplates.templates,
-        "Two way messaging"          -> twoWayMessagingTemplates.templates,
-        "Customs Financials"         -> CustomsFinancialsTemplates.templates,
-        "Cgtpd"                      -> CgtpdTemplates.templates,
-        "TDQ"                        -> TdqTemplates.templates
+    Map(
+      "Agent"                 -> AgentTemplates.templates,
+      "API Platform"          -> ApiTemplates.templates,
+      "ATS"                   -> AtsTemplates.templates,
+      "AWRS"                  -> AwrsTemplates.templates,
+      "AMLS"                  -> AmlsTemplates.templates,
+      "BARS"                  -> BarsTemplates.templates,
+      "Childcare"             -> ChildcareTemplates.templates,
+      "Digital Tariffs"       -> DigitalTariffTemplates.templates,
+      "DST"                   -> DstTemplates.templates,
+      "DFS"                   -> DfsTemplates.templates,
+      "EMAC Helpdesk"         -> EmacHelpdeskTemplates.templates,
+      "EMAC"                  -> EmacTemplates.templates,
+      "FANDF"                 -> FandFTemplates.templates,
+      "GG"                    -> GgTemplates.templates,
+      "Passcodes"             -> PasscodesTemplates.templates,
+      "GMP"                   -> GmpTemplates.templates,
+      "PAYE"                  -> PayeTemplates.templates,
+      "RALD"                  -> RaldTemplates.templates,
+      "register-your-company" -> RegisterYourCompanyTemplates.templates,
+      "Self Assessment"       -> DigitalContactTemplates.templates,
+      "TAMC"                  -> TamcTemplates.templates,
+      "TCS"                   -> TcsTemplates.templates,
+      "Mandate"               -> MandateTemplates.templates,
+      "Off Payroll"           -> OffPayrollTemplates.templates,
+      "Customs"               -> CustomsTemplates.templates,
+      "Transaction Engine"    -> TransactionEngineTemplates.templates,
+      "ATED"                  -> AtedTemplates.templates,
+      "LifetimeISA"           -> LisaTemplates.templates,
+      "ITR"                   -> ItrTemplates.templates,
+      "CBCR"                  -> CBCRTemplates.templates,
+      "OnlinePaymentService"  -> OnlinePaymentServiceTemplates.templates,
+      "EEITT"                 -> EeittTemplates.templates,
+      "HTS"                   -> HtsTemplates.templates,
+      "HTSReminder"           -> HtsReminderTemplates.templates,
+      "FHDDS"                 -> FhddsTemplates.templates,
+      "Lost Credentials"      -> LostCredentialsTemplates.templates,
+      "FHDDS"                 -> FhddsTemplates.templates,
+      "SDIL"                  -> SdilTemplates.templates,
+      "CCA"                   -> CCATemplates.templates,
+      "CDS"                   -> cdsTestTemplates.templates,
+      "MTDfB-VAT"             -> MtdfbVatTemplates.templates,
+      "PODS"                  -> PodsTemplates.templates,
+      "Parcels"               -> ParcelsTemplates.templates,
+      "vat"                   -> vatTemplates.templates,
+      "Digital Contact VAT"   -> DigitalContactVatTemplates.templates,
+      "Two way messaging"     -> twoWayMessagingTemplates.templates,
+      "Customs Financials"    -> CustomsFinancialsTemplates.templates,
+      "Cgtpd"                 -> CgtpdTemplates.templates,
+      "TDQ"                   -> TdqTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
 
   def findTemplate(templateId: String): Option[MessageTemplate] =
-    all.find(_.templateId == templateId) orElse  {
+    all.find(_.templateId == templateId) orElse {
       all.find(_.templateId == templateId.stripSuffix(TemplateLocator.WELSH_SUFFIX))
     }
 }
 
 object TemplateLocator extends TemplateLocator {
-  final val WELSH_SUFFIX = "_cym"
+  final val WELSH_SUFFIX = "_cy"
 }

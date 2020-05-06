@@ -17,15 +17,15 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.scalatest.EitherValues
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 import uk.gov.hmrc.play.test.UnitSpec
 
-class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class VerificationReminderWelshSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
   "verificationReminder_cy" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map("verificationLink" -> "/whatever", "verificationLinkSentDate" -> "2019-04-02")
 
-    val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "verificationReminder_cym").get
+    val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "verificationReminder_cy").get
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi")
       template.fromAddress(Map.empty) shouldBe "CThEM Digidol <noreply@tax.service.gov.uk>"
@@ -37,12 +37,14 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
       htmlContent should include("Dilyswch eich cyfeiriad e-bost")
       htmlContent should include("Annwyl Gwsmer")
       htmlContent should include("Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.")
-      htmlContent should include("Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.")
+      htmlContent should include(
+        "Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.")
       htmlContent should include("Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.")
-      htmlContent should include("Oddi wrth adran Ddigidol CThEM")
+      htmlContent should include("Oddi wrth Adran Ddigidol CThEM")
       htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
       htmlContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
-      htmlContent should include("Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
+      htmlContent should include(
+        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
     }
 
     "render correct text content" in {
@@ -50,12 +52,14 @@ class VerificationReminderWelshSpec  extends UnitSpec with EitherValues with Tem
       txtContent should include("Dilyswch eich cyfeiriad e-bost")
       txtContent should include("Annwyl Gwsmer")
       txtContent should include("Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.")
-      txtContent should include("Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.")
+      txtContent should include(
+        "Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.")
       txtContent should include("Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.")
-      txtContent should include("Oddi wrth adran Ddigidol CThEM")
+      txtContent should include("Oddi wrth Adran Ddigidol CThEM")
       txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
       txtContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
-      txtContent should include("Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
+      txtContent should include(
+        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
     }
 
     "render correct content for html and txt version when verificationLink is missing" in {

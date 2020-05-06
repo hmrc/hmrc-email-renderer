@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
@@ -43,16 +43,16 @@ object DigitalContactTemplates {
   )
 
   val newMessageAlertTemplates: Seq[MessageTemplate] =
-    templatesToMapToNewMessageAlert.map {
-      formId =>  MessageTemplate.create(
-              templateId = s"newMessageAlert_$formId",
-              fromAddress = defaultFromAddress,
-              service = SelfAssessment,
-              subject = "HMRC paperless notifications: new message",
-              plainTemplate = txt.newMessageAlert.f,
-              htmlTemplate = html.newMessageAlert.f)
+    templatesToMapToNewMessageAlert.map { formId =>
+      MessageTemplate.create(
+        templateId = s"newMessageAlert_$formId",
+        fromAddress = defaultFromAddress,
+        service = SelfAssessment,
+        subject = "HMRC paperless notifications: new message",
+        plainTemplate = txt.newMessageAlert.f,
+        htmlTemplate = html.newMessageAlert.f
+      )
     }
-
 
   val templates = Seq(
     MessageTemplate.create(
@@ -61,16 +61,16 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC electronic communications: verify your email address",
       plainTemplate = txt.verifyEmailAddress.f,
-      htmlTemplate  = html.verifyEmailAddress.f,
+      htmlTemplate = html.verifyEmailAddress.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "verifyEmailAddress_cym",
-      fromAddress = defaultFromAddress,
+      templateId = "verifyEmailAddress_cy",
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
-      plainTemplate = txt.verifyEmailAddress_cym.f,
-      htmlTemplate  = html.verifyEmailAddress_cym.f,
+      plainTemplate = txt.verifyEmailAddress_cy.f,
+      htmlTemplate = html.verifyEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -83,12 +83,12 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "changeOfEmailAddress_cym",
-      fromAddress = defaultFromAddress,
+      templateId = "changeOfEmailAddress_cy",
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: newid cyfeiriad e-bost",
-      plainTemplate = txt.changeOfEmailAddress_cym.f,
-      htmlTemplate = html.changeOfEmailAddress_cym.f,
+      plainTemplate = txt.changeOfEmailAddress_cy.f,
+      htmlTemplate = html.changeOfEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -101,12 +101,12 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "digitalOptOutConfirmation_cym",
-      fromAddress = defaultFromAddress,
+      templateId = "digitalOptOutConfirmation_cy",
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Hysbysiadau drwy’r post",
-      plainTemplate = txt.digitalOptOutConfirmation_cym.f,
-      htmlTemplate = html.digitalOptOutConfirmation_cym.f,
+      plainTemplate = txt.digitalOptOutConfirmation_cy.f,
+      htmlTemplate = html.digitalOptOutConfirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -119,12 +119,12 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "changeOfEmailAddressNewAddress_cym",
-      fromAddress = defaultFromAddress,
+      templateId = "changeOfEmailAddressNewAddress_cy",
+      fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
-      plainTemplate = txt.changeOfEmailAddressNewAddress_cym.f,
-      htmlTemplate = html.changeOfEmailAddressNewAddress_cym.f,
+      plainTemplate = txt.changeOfEmailAddressNewAddress_cy.f,
+      htmlTemplate = html.changeOfEmailAddressNewAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -133,14 +133,16 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC paperless notifications: new message",
       plainTemplate = txt.newMessageAlert.f,
-      htmlTemplate = html.newMessageAlert.f),
+      htmlTemplate = html.newMessageAlert.f
+    ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_cym",
+      templateId = "newMessageAlert_cy",
       fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "Hysbysiadau di-bapur CThEM: neges newydd",
-      plainTemplate = txt.newMessageAlert_cym.f,
-      htmlTemplate = html.newMessageAlert_cym.f),
+      plainTemplate = txt.newMessageAlert_cy.f,
+      htmlTemplate = html.newMessageAlert_cy.f
+    ),
     MessageTemplate.create(
       templateId = "rescindedMessageAlert",
       fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
@@ -148,15 +150,17 @@ object DigitalContactTemplates {
       subject = "HMRC recalled a Self Assessment message",
       plainTemplate = txt.rescindedMessageAlert.f,
       htmlTemplate = html.rescindedMessageAlert.f,
-      priority = Some(MessagePriority.Urgent)),
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
-      templateId = "rescindedMessageAlert_cym",
+      templateId = "rescindedMessageAlert_cy",
       fromAddress = FromAddress.noReply("CThEM – (Tîm) Cyswllt Digidol"),
       service = SelfAssessment,
       subject = "Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl",
-      plainTemplate = txt.rescindedMessageAlert_cym.f,
-      htmlTemplate = html.rescindedMessageAlert_cym.f,
-      priority = Some(MessagePriority.Urgent)),
+      plainTemplate = txt.rescindedMessageAlert_cy.f,
+      htmlTemplate = html.rescindedMessageAlert_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "verificationReminder",
       fromAddress = defaultFromAddress,
@@ -166,12 +170,12 @@ object DigitalContactTemplates {
       htmlTemplate = html.verificationReminder.f
     ),
     MessageTemplate.create(
-      templateId = "verificationReminder_cym",
+      templateId = "verificationReminder_cy",
       fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi",
-      plainTemplate = txt.verificationReminder_cym.f,
-      htmlTemplate = html.verificationReminder_cym.f
+      plainTemplate = txt.verificationReminder_cy.f,
+      htmlTemplate = html.verificationReminder_cy.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA309",

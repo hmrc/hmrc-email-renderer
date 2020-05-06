@@ -16,65 +16,65 @@
 
 package preview
 
-import java.util.{Base64, UUID}
+import java.util.{ Base64, UUID }
 
-import play.api.libs.json.Json.{parse, stringify}
+import play.api.libs.json.Json.{ parse, stringify }
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
 
   val newMessageAlert_Names = Map(
-    "recipientName_title" -> "Mr",
-    "recipientName_forename" -> "Rich",
+    "recipientName_title"          -> "Mr",
+    "recipientName_forename"       -> "Rich",
     "recipientName_secondForename" -> "The Cat",
-    "recipientName_surname" -> "Johnston",
-    "recipientName_honours" -> "PA"
+    "recipientName_surname"        -> "Johnston",
+    "recipientName_honours"        -> "PA"
   )
 
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
     "overseas_application_rejected" -> Map(
-      "tradingName" -> "ABC Accountants Ltd",
-      "reason1" -> "We could not confirm your money laundering supervisory body",
-      "reason2" -> "We could not confirm your identity",
-      "reason3" -> "We could not confirm your business address",
-      "otherReason" -> "We had other reasons that are given here",
+      "tradingName"    -> "ABC Accountants Ltd",
+      "reason1"        -> "We could not confirm your money laundering supervisory body",
+      "reason2"        -> "We could not confirm your identity",
+      "reason3"        -> "We could not confirm your business address",
+      "otherReason"    -> "We had other reasons that are given here",
       "additionalText" -> "Additional text goes here."
     ),
     "overseas_application_accepted" -> Map(
       "tradingName" -> "ABC Accountants Ltd"
     ),
     "overseas_application_received" -> Map(
-      "tradingName" -> "ABC Accountants Ltd",
+      "tradingName"  -> "ABC Accountants Ltd",
       "receivedDate" -> "20190214"
     ),
     "client_rejected_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
-      "service" -> "submit their VAT returns through software."
+      "service"    -> "submit their VAT returns through software."
     ),
     "client_accepted_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
       "clientName" -> "Client 2",
-      "service" -> "view their PAYE income record."
+      "service"    -> "view their PAYE income record."
     ),
     "client_expired_authorisation_request" -> Map(
-      "agencyName" -> "Agent 1",
-      "clientName" -> "Client 2",
-      "expiryPeriod"  -> "14 days",
-      "service" -> "send their Income Tax updates through software."
+      "agencyName"   -> "Agent 1",
+      "clientName"   -> "Client 2",
+      "expiryPeriod" -> "14 days",
+      "service"      -> "send their Income Tax updates through software."
     ),
     "agent_services_account_created" -> Map(
       "agencyName" -> "Agent 1",
-      "arn" -> "XARN 123 4567"
+      "arn"        -> "XARN 123 4567"
     ),
     "agent_services_account_created_cy" -> Map(
       "agencyName" -> "Agent 1",
-      "arn" -> "XARN 123 4567"
+      "arn"        -> "XARN 123 4567"
     ),
     "apiDeveloperEmailVerification" -> Map(
-      "verificationLink" -> exampleLinkWithRandomId,
+      "verificationLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiDeveloperPasswordReset" -> Map(
@@ -85,129 +85,130 @@ object TemplateParams {
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedRegisteredDeveloperAsCollaboratorConfirmation" -> Map(
-      "role" -> "admin",
-      "applicationName" -> "Test Application",
+      "role"              -> "admin",
+      "applicationName"   -> "Test Application",
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation" -> Map(
-      "role" -> "admin",
-      "applicationName" -> "Test Application",
-      "developerHubLink" -> exampleLinkWithRandomId,
+      "role"              -> "admin",
+      "applicationName"   -> "Test Application",
+      "developerHubLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorConfirmation" -> Map(
-      "role" -> "admin",
-      "applicationName" -> "Test Application",
-      "developerHubLink" -> exampleLinkWithRandomId,
+      "role"              -> "admin",
+      "applicationName"   -> "Test Application",
+      "developerHubLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
-      "email" -> "joe.bloggs@gmail.com",
-      "role" -> "admin",
-      "applicationName" -> "Test Application",
+      "email"             -> "joe.bloggs@gmail.com",
+      "role"              -> "admin",
+      "applicationName"   -> "Test Application",
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiRemovedCollaboratorConfirmation" -> Map(
-      "applicationName" -> "Test Application",
+      "applicationName"   -> "Test Application",
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiRemovedCollaboratorNotification" -> Map(
-      "email" -> "joe.bloggs@gmail.com",
-      "applicationName" -> "Test Application",
+      "email"             -> "joe.bloggs@gmail.com",
+      "applicationName"   -> "Test Application",
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiApplicationApprovedGatekeeperConfirmation" -> Map(
-      "email" -> "joe.bloggs@gmail.com",
+      "email"           -> "joe.bloggs@gmail.com",
       "applicationName" -> "Test Application"
     ),
     "apiApplicationApprovedAdminConfirmation" -> Map(
       "developerHubLink" -> exampleLinkWithRandomId,
-      "applicationName" -> "Test Application"
+      "applicationName"  -> "Test Application"
     ),
     "apiApplicationApprovedNotification" -> Map(
       "applicationName" -> "Test Application"
     ),
     "apiApplicationDeletedNotification" -> Map(
       "applicationName" -> "Test Application",
-      "requestor" -> "joe.bloggs@gmail.com"
+      "requestor"       -> "joe.bloggs@gmail.com"
     ),
     "apiDeveloperDeletedConfirmation" -> Map(
       "applicationName" -> "Test Application",
-      "requestor" -> "joe.bloggs@gmail.com"
+      "requestor"       -> "joe.bloggs@gmail.com"
     ),
     "apiApplicationRejectedNotification" -> Map(
       "applicationName" -> "Test Application",
-      "supportUrl" -> exampleLinkWithRandomId,
-      "reason" -> "The name is too similar to an existing app."
+      "supportUrl"      -> exampleLinkWithRandomId,
+      "reason"          -> "The name is too similar to an existing app."
     ),
     "apiStatusChangedNotification" -> Map(
-      "apiName" -> "Test Microservice",
-      "apiVersion" -> "2.0",
-      "currentStatus" -> "ALPHA",
-      "newStatus" -> "BETA",
+      "apiName"         -> "Test Microservice",
+      "apiVersion"      -> "2.0",
+      "currentStatus"   -> "ALPHA",
+      "newStatus"       -> "BETA",
       "environmentName" -> "Production"
+    ),
+    "apiAddedClientSecretNotification" -> Map(
+      "actorEmailAddress"  -> "joe.bloggs@gmail.com",
+      "clientSecretEnding" -> "1234",
+      "environmentName"    -> "sandbox",
+      "applicationName"    -> "Tax Software"
+    ),
+    "apiRemovedClientSecretNotification" -> Map(
+      "actorEmailAddress"  -> "joe.bloggs@gmail.com",
+      "clientSecretEnding" -> "1234",
+      "environmentName"    -> "sandbox",
+      "applicationName"    -> "Tax Software"
     ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-
-    "changeOfEmailAddressNewAddress_cym" -> Map(
+    "changeOfEmailAddressNewAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-
-    "changeOfEmailAddress_cym" -> Map(
+    "changeOfEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-
-    "verifyEmailAddress_cym" -> Map(
+    "verifyEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "newMessageAlert" -> newMessageAlert_Names,
-    "newMessageAlert_cy" -> newMessageAlert_Names,
+    "newMessageAlert"       -> newMessageAlert_Names,
+    "newMessageAlert_cy"    -> newMessageAlert_Names,
     "rescindedMessageAlert" -> newMessageAlert_Names,
     "newMessageAlert_SA300" -> Map("recipientName_line1" -> "this is a line 1"),
     "newMessageAlert_SS300" -> newMessageAlert_Names,
-
     "newMessageAlert_SA316" -> (Map(
-      "isCurrentYear" -> "true",
-      "taxYearStart" -> "2014",
-      "taxYearEnd" -> "2015",
-      "paperDeadline" -> "2014-10-31",
+      "isCurrentYear"  -> "true",
+      "taxYearStart"   -> "2014",
+      "taxYearEnd"     -> "2015",
+      "paperDeadline"  -> "2014-10-31",
       "onlineDeadline" -> "2015-01-31"
     ) ++ newMessageAlert_Names),
-
     "newMessageAlert_SA309" -> newMessageAlert_Names,
-
     "newMessageAlert_VRT1214A" -> Map(
       "recipientName_line1" -> "Mr Bump"
     ),
-
     "newMessageAlert_VRT1214C" -> Map(
       "recipientName_line1" -> "Mrs Bump"
     ),
-
     "newMessageAlert_VRT12B" -> Map(
-      "clientName" -> "Tesla Limited",
+      "clientName"     -> "Tesla Limited",
       "transactorName" -> "Musk's Agent",
-      "clientVrn" -> "1234567890"
+      "clientVrn"      -> "1234567890"
     ),
-
     "newMessageAlert_VRT14B" -> Map(
-      "clientName" -> "Tesla Limited",
+      "clientName"     -> "Tesla Limited",
       "transactorName" -> "Musk's Agent",
-      "clientVrn" -> "1234567890"
+      "clientVrn"      -> "1234567890"
     ),
-
     "newMessageAlert_CC07C_SM11C" -> Map(
-      "clientName" -> "Tesla Limited",
+      "clientName"     -> "Tesla Limited",
       "transactorName" -> "Musk's Agent",
-      "clientVrn" -> "1234567890"
+      "clientVrn"      -> "1234567890"
     ),
-
     "verificationReminder" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "verificationReminder_cym" -> Map(
+    "verificationReminder_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "verifyEmailAddress" -> Map(
@@ -220,43 +221,43 @@ object TemplateParams {
       "name" -> "Mr Joe Bloggs"
     ),
     "awrs_notification_template_comfirmation_api4" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"     -> "Booze Inc.",
+      "submissionDate"       -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
     "awrs_notification_template_comfirmation_api4_new_business" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"     -> "Booze Inc.",
+      "submissionDate"       -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
     "awrs_notification_template_comfirmation_api6" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"     -> "Booze Inc.",
+      "submissionDate"       -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
     "awrs_notification_template_comfirmation_api6_pending" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"     -> "Booze Inc.",
+      "submissionDate"       -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
     "awrs_notification_template_comfirmation_api6_new_business" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"     -> "Booze Inc.",
+      "submissionDate"       -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
     "awrs_notification_template_comfirmation_api6_new_business_pending" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"     -> "Booze Inc.",
+      "submissionDate"       -> "12 March 2016",
       "applicationReference" -> "123456789012"
     ),
     "awrs_notification_template_cancellation_api10" -> Map(
-      "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016",
+      "organisationName"   -> "Booze Inc.",
+      "submissionDate"     -> "12 March 2016",
       "deregistrationDate" -> "23 April 2017"
     ),
     "awrs_notification_template_withdrawn_api8" -> Map(
       "organisationName" -> "Booze Inc.",
-      "submissionDate" -> "12 March 2016"
+      "submissionDate"   -> "12 March 2016"
     ),
     "awrs_email_verification" -> Map(
       "verificationLink" -> "http://host:8080/your/link/d2cbc3df-1895-45c8-9e22-1e79a087ad78"
@@ -270,7 +271,7 @@ object TemplateParams {
     "tamc_update_cancel" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_update_reject" -> Map(
       "full_name" -> "Mr Joe Bloggs"
@@ -278,12 +279,12 @@ object TemplateParams {
     "tamc_update_divorce_transferor_boy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_update_divorce_recipient_eoy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_current_year" -> Map(
       "full_name" -> "Mr Joe Bloggs"
@@ -297,16 +298,16 @@ object TemplateParams {
     "tamc_transferor_divorce_previous_yr" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_recipient_divorce_previous_yr" -> Map(
       "full_name" -> "Mr Joe Bloggs",
-      "endDate" -> "5 April 2016"
+      "endDate"   -> "5 April 2016"
     ),
     "tamc_transferor_divorce_current_yr" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_recipient_rejects_retro_yr" -> Map(
       "full_name" -> "Mr Joe Bloggs"
@@ -314,7 +315,7 @@ object TemplateParams {
     "tamc_update_cancel_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_update_reject_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs"
@@ -322,12 +323,12 @@ object TemplateParams {
     "tamc_update_divorce_transferor_boy_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_update_divorce_recipient_eoy_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_current_year_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs"
@@ -341,141 +342,141 @@ object TemplateParams {
     "tamc_transferor_divorce_previous_yr_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_recipient_divorce_previous_yr_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
-      "endDate" -> "5 April 2016"
+      "endDate"   -> "5 April 2016"
     ),
     "tamc_transferor_divorce_current_yr_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs",
       "startDate" -> "6 April 2016",
-      "endDate" -> "5 April 2017"
+      "endDate"   -> "5 April 2017"
     ),
     "tamc_recipient_rejects_retro_yr_cy" -> Map(
       "full_name" -> "Mr Joe Bloggs"
     ),
     "dfs_submission_success_r39_2015" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_r39_2015_welsh" -> Map(
-      "name" -> "Joe Bloggs",
+      "name"                -> "Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_cis_2015" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_cis_2015_welsh" -> Map(
-      "name" -> "Joe Bloggs",
+      "name"                -> "Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_sptu_2015" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_sptu_2015_welsh" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "1234"
     ),
     "dfs_submission_success_generic_2015" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
       "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "warningInformation" -> "true",
-      "turnAroundTime" -> "35 days"
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true",
+      "turnAroundTime"      -> "35 days"
     ),
     "dfs_submission_success_generic_2015_welsh" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
       "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "warningInformation" -> "true",
-      "turnAroundTime" -> "35 days"
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true",
+      "turnAroundTime"      -> "35 days"
     ),
     "dfs_submission_success_generic_2017" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
       "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "paragraphThree" -> "Some extra content for paragraph three...",
-      "warningInformation" -> "false",
-      "turnAroundTime" -> "35 days"
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree"      -> "Some extra content for paragraph three...",
+      "warningInformation"  -> "false",
+      "turnAroundTime"      -> "35 days"
     ),
     "dfs_submission_success_generic_2017_welsh" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
       "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "paragraphThree" -> "Some extra content for paragraph three...",
-      "warningInformation" -> "false",
-      "turnAroundTime" -> "35 days"
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree"      -> "Some extra content for paragraph three...",
+      "warningInformation"  -> "false",
+      "turnAroundTime"      -> "35 days"
     ),
     "dfs_submission_success_empty_turn_around_time_2015" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
       "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "warningInformation" -> "true"
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true"
     ),
     "dfs_submission_success_empty_turn_around_time_2015_welsh" -> Map(
-      "subject" -> "Test Subject",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
       "submissionReference" -> "1234",
-      "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-      "paragraphTwo" -> "If you’re not entitled to a refund we will write and explain the reason why",
-      "warningInformation" -> "true"
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true"
     ),
     "dfs_admin_notification" -> Map.empty[String, String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "dfs_trusts_submission_success" -> Map(
-      "subject" -> "Trust/Estate email confirmation",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your registration of a trust",
+      "subject"             -> "Trust/Estate email confirmation",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your registration of a trust",
       "submissionReference" -> "XWTRN0000000875",
-      "paragraphOne" -> "There is no need to call us, we will contact you if we need any more information",
-      "warningInformation" -> "false",
-      "turnAroundTime" -> "15 days"
+      "paragraphOne"        -> "There is no need to call us, we will contact you if we need any more information",
+      "warningInformation"  -> "false",
+      "turnAroundTime"      -> "15 days"
     ),
     "dfs_trusts_submission_success_welsh" -> Map(
-      "subject" -> "Trust/Estate email confirmation",
-      "greeting" -> "Mr Joe Bloggs",
-      "confirmation" -> "HM Revenue and Customs (HMRC) has received your registration of a trust",
+      "subject"             -> "Trust/Estate email confirmation",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your registration of a trust",
       "submissionReference" -> "XWTRN0000000875",
-      "paragraphOne" -> "There is no need to call us, we will contact you if we need any more information",
-      "warningInformation" -> "false",
-      "turnAroundTime" -> "15 days"
+      "paragraphOne"        -> "There is no need to call us, we will contact you if we need any more information",
+      "warningInformation"  -> "false",
+      "turnAroundTime"      -> "15 days"
     ),
     "dfs_submission_success_rcgt_2018" -> Map(
-      "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
-      "name" -> "Mr Joe Bloggs",
+      "subject"             -> "Capital Gains Tax real time transaction return submission confirmation",
+      "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
     ),
     "dfs_submission_success_rcgt_2018_welsh" -> Map(
-      "subject" -> "Capital Gains Tax real time transaction return submission confirmation",
-      "name" -> "Mr Joe Bloggs",
+      "subject"             -> "Capital Gains Tax real time transaction return submission confirmation",
+      "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
     ),
     "cato_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "agents_access_invitation_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "cbcr_subscription" -> Map(
@@ -484,39 +485,39 @@ object TemplateParams {
       "cbcrId" -> "XGCBC0000000001"
     ),
     "cbcr_report_confirmation" -> Map(
-      "name" -> "Tyrion Lannister",
+      "name"        -> "Tyrion Lannister",
       "received_at" -> "31 December 2017",
-      "hash" -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6",
-      "cbcrId" -> "XGCBC0000000001"
+      "hash"        -> "6753c4e3bf192b0f9881ceb2d822a75e1b618269fbdb44112d35a10b1987f6",
+      "cbcrId"      -> "XGCBC0000000001"
     ),
     "cbcr_cbcid_regeneration" -> Map(
-      "f_name" -> "Tyrion",
-      "s_name" -> "Lannister",
+      "f_name"      -> "Tyrion",
+      "s_name"      -> "Lannister",
       "received_at" -> "31 December 2017",
-      "cbcrId" -> "XGCBC0000000001"
+      "cbcrId"      -> "XGCBC0000000001"
     ),
     "agent_mapping_invitation_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "agent_subscription_invitation_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "agent_fi_invitation_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "agents_opt_in_exclude_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "agents_opt_in_rejoin_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "tamc_access_invitation_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "cc_registration_email" -> Map(
@@ -525,35 +526,35 @@ object TemplateParams {
     "tax_estimate_message_alert" -> Map(
       "fullName" -> "Mr Joe Bloggs"
     ),
-    "tax_estimate_message_alert_cym" -> Map(
+    "tax_estimate_message_alert_cy" -> Map(
       "fullName" -> "Mr Joe Bloggs"
     ),
     "fandf_ask_help_notification" -> Map(
-      "helperLastName" -> "Bloggs",
+      "helperLastName"  -> "Bloggs",
       "helperFirstName" -> "Joe",
-      "helpeeLastName" -> "Densmore",
+      "helpeeLastName"  -> "Densmore",
       "helpeeFirstName" -> "John"
     ),
     "fandf_offer_help_notification" -> Map(
-      "helperLastName" -> "Bloggs",
+      "helperLastName"  -> "Bloggs",
       "helperFirstName" -> "Joe",
-      "helpeeLastName" -> "Densmore",
+      "helpeeLastName"  -> "Densmore",
       "helpeeFirstName" -> "John"
     ),
     "tcs_renewal_confirmation" -> Map(
-      "awardStartDate" -> "6 April 2016",
-      "awardEndDate" -> "10 January 2017",
-      "customerFName" -> "Tom",
+      "awardStartDate"   -> "6 April 2016",
+      "awardEndDate"     -> "10 January 2017",
+      "customerFName"    -> "Tom",
       "renewalReference" -> "123 456 789 123 456",
-      "startDate" -> "6 April 2017",
-      "endDate" -> "5 April 2018",
-      "noticeDate" -> "7 July 2017",
+      "startDate"        -> "6 April 2017",
+      "endDate"          -> "5 April 2018",
+      "noticeDate"       -> "7 July 2017",
       "incompleteClaims" -> "2",
-      "anyEstimates" -> "3",
-      "currentTaxYear" -> "2018"
+      "anyEstimates"     -> "3",
+      "currentTaxYear"   -> "2018"
     ),
     "iht_access_invitation_template_id" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "gmp_access_invitation_template_id" -> Map(
@@ -563,35 +564,36 @@ object TemplateParams {
       "fileUploadReference" -> "Reference1234"
     ),
     "hts_reminder_email" -> Map(
-      "name" -> "Joe Bloggs"
+      "name"  -> "Joe Bloggs",
+      "month" -> "April"
     ),
     "gmp_bulk_upload_processed" -> Map(
       "fileUploadReference" -> "Reference1234",
-      "uploadDate" -> "10 February 2016",
-      "userId" -> "*****123"
+      "uploadDate"          -> "10 February 2016",
+      "userId"              -> "*****123"
     ),
     "rald_alert" -> Map(
       "referenceNumber" -> "Reference number: 9999000666",
-      "postcode" -> "Postcode: BN12 4AX",
-      "expiryDate" -> "We will delete any unsubmitted information on 28 July 2016"
+      "postcode"        -> "Postcode: BN12 4AX",
+      "expiryDate"      -> "We will delete any unsubmitted information on 28 July 2016"
     ),
     "rald_not_connected" -> Map(
       "referenceNumber" -> "9999000666",
-      "email" -> "jimm@jimmjimm.com",
-      "phoneNumber" -> "01234567890"
+      "email"           -> "jimm@jimmjimm.com",
+      "phoneNumber"     -> "01234567890"
     ),
     "bars_alert" -> Map(
-      "baRefNumber" -> "BA : ba5090",
-      "fileName" -> "File name : Barnet_CT.xml",
+      "baRefNumber"   -> "BA : ba5090",
+      "fileName"      -> "File name : Barnet_CT.xml",
       "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
-      "errorList" -> "Brap Brap"
+      "errorList"     -> "Brap Brap"
     ),
     "bars_alert_transaction" -> Map(
-      "baRefNumber" -> "BA : ba5090",
+      "baRefNumber"   -> "BA : ba5090",
       "transactionId" -> "Transaction id : 78918c8a-216a-4472-b886-9b81fcf4f64d",
-      "fileName" -> "File name : Barnet_CT.xml",
+      "fileName"      -> "File name : Barnet_CT.xml",
       "dateSubmitted" -> "Date Submitted : 2016-08-09T14:02:09.747+01:00",
-      "errorList" -> "Brap Brap"
+      "errorList"     -> "Brap Brap"
     ),
     "register_your_company_welcome_email" -> Map(
       "returnLink" -> "http://registeryourcompany.gov.uk"
@@ -600,30 +602,29 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "register_your_company_register_paye_confirmation_current_tax_year" -> Map(
-      "companyName" -> "ABC Logistics Ltd",
+      "companyName"     -> "ABC Logistics Ltd",
       "referenceNumber" -> "12345678910"
     ),
     "register_your_company_register_paye_confirmation_new_tax_year" -> Map(
-      "companyName" -> "Foo bar Wizz And Bang Ltd",
+      "companyName"     -> "Foo bar Wizz And Bang Ltd",
       "referenceNumber" -> "reference-test-12345678910"
     ),
     "investment_tax_relief_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "investment_tax_relief_confirmation_email" -> Map(
-      "companyName" -> "Test company name",
-      "date" -> "09-09-2999",
+      "companyName"         -> "Test company name",
+      "date"                -> "09-09-2999",
       "formBundleRefNumber" -> "XAFORMBUNDLEREF"
     ),
     "investment_tax_relief_no_docs_confirmation_email" -> Map(
-      "companyName" -> "Test company name",
-      "date" -> "09-09-2999",
+      "companyName"         -> "Test company name",
+      "date"                -> "09-09-2999",
       "formBundleRefNumber" -> "XAFORMBUNDLEREF"
     ),
     "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
-    "indefensible_upgrades" -> newMessageAlert_Names,
-    "indefensible_upgrades_with_dates" -> newMessageAlert_Names,
-
+    "indefensible_upgrades"              -> newMessageAlert_Names,
+    "indefensible_upgrades_with_dates"   -> newMessageAlert_Names,
     "client_approves_mandate" -> Map(
       "service" -> testServiceUpdate
     ),
@@ -649,11 +650,11 @@ object TemplateParams {
       "service" -> testServiceUpdate
     ),
     "offpayroll_private_beta_invitation" -> Map(
-      "name" -> "Mr Joe Bloggs",
+      "name"             -> "Mr Joe Bloggs",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "gg_userid_notification" -> Map(
-      "user_id" -> "914657894302",
+      "user_id"   -> "914657894302",
       "full_name" -> "Joe Bloggs"
     ),
     "2SV_reset_confirmation" -> Map(
@@ -664,23 +665,23 @@ object TemplateParams {
     ),
     "customs_registration_successful" -> Map(
       "recipientName_FullName" -> "Alex Smith",
-      "recipientOrgName" -> "SHD Fashion House",
-      "completionDate" -> "15 March 2019"
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "15 March 2019"
     ),
     "customs_registration_not_successful" -> Map(
       "recipientName_FullName" -> "Alex Smith",
-      "recipientOrgName" -> "SHD Fashion House",
-      "completionDate" -> "15 March 2019"
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "15 March 2019"
     ),
     "customs_migrate_successful" -> Map(
       "recipientName_FullName" -> "Alex Smith",
-      "recipientOrgName" -> "SHD Fashion House",
-      "completionDate" -> "22 March 2019"
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "22 March 2019"
     ),
     "customs_migrate_not_successful" -> Map(
       "recipientName_FullName" -> "Alex Smith",
-      "recipientOrgName" -> "SHD Fashion House",
-      "completionDate" -> "22 March 2019"
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "22 March 2019"
     ),
     "customs_declaration_success" -> Map(
       "details" -> "declaration success details will appear here"
@@ -695,17 +696,17 @@ object TemplateParams {
       "details" -> "validation success details will appear here"
     ),
     "customs_pull_notifications_warning" -> Map(
-      "queueThreshold" -> "1000",
-      "clientId_0" -> "3d34882b-0e73-4aaa-b156-afc037208871",
-      "notificationTotal_0" -> "1001",
+      "queueThreshold"       -> "1000",
+      "clientId_0"           -> "3d34882b-0e73-4aaa-b156-afc037208871",
+      "notificationTotal_0"  -> "1001",
       "oldestNotification_0" -> "2011-08-08T15:38:09.747+01:00",
       "latestNotification_0" -> "2018-08-08T10:02:10.627+01:00",
-      "clientId_1" -> "3d34882b-0e73-4aaa-b156-afc037208872",
-      "notificationTotal_1" -> "2001",
+      "clientId_1"           -> "3d34882b-0e73-4aaa-b156-afc037208872",
+      "notificationTotal_1"  -> "2001",
       "oldestNotification_1" -> "2012-08-08T15:38:09.747+01:00",
       "latestNotification_1" -> "2018-08-08T10:02:10.627+01:00",
-      "clientId_2" -> "3d34882b-0e73-4aaa-b156-afc037208873",
-      "notificationTotal_2" -> "3001",
+      "clientId_2"           -> "3d34882b-0e73-4aaa-b156-afc037208873",
+      "notificationTotal_2"  -> "3001",
       "oldestNotification_2" -> "2013-08-08T15:38:09.747+01:00",
       "latestNotification_2" -> "2018-08-08T10:02:10.627+01:00"
     ),
@@ -714,592 +715,723 @@ object TemplateParams {
     ),
     "transactionEngineHMRCSASA100Success" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100Failure" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100ATTSuccess" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100ATTFailure" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100ATTTILSuccess" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100ATTTILFailure" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100TILSuccess" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA100TILFailure" -> Map(
       "receivedDate" -> "01/01/01",
-      "identifier" -> "1234567890",
-      "subject" -> "subject"
+      "identifier"   -> "1234567890",
+      "subject"      -> "subject"
     ),
     "transactionEngineECSLORGV101Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineECSLORGV101Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRAACTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRAACTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRAAPAYESuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRAAPAYEFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRAASASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRAASAFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRCISCIS300MRSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRCISCIS300MRFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineIRCISVERIFYSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRCISVERIFYFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineIRCTFANNUALRETURNSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRCTFANNUALRETURNFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEEOYSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEEOYFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEEOYTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEEOYTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEEXBSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEEXBFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEMOVSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEMOVFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEMOVTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEMOVTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEP38ASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEP38AFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEUPDATESuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRPAYEUPDATEFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRSDLTLTRSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineIRSDLTLTRFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEASTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEPSTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIEYUTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTIFPSTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPAYERTINVRTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAACCTTAXSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAACCTTAXFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAADDSCHASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAADDSCHAFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAAMDDETSSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAAMDDETSFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAASSCSASuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAASSCSAFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSACOMBINEDREGSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSACOMBINEDREGFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAEVNTREPSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAEVNTREPFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAMAINTSCMSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAMAINTSCMFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSARASSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSARASFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAREGSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAREGFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSARETSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSARETFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAPRACAUTHSuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedTime" -> "21:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAPRACAUTHFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineHMRCPSAPRACDEAUTHSuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedTime" -> "21:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPSAPRACDEAUTHFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineHMRCSASA800ATTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800TILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800TILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800ATTTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA800Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900TILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900TILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900ATTTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900Success" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCSASA900Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMCENESEDIFACTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMCENESEDIFACTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCVATDECSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCVATDECFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCVATDECTILSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCVATDECTILFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCCTCT600Success" -> Map(
       "receivedDate" -> "20 April 2017",
-      "identifier" -> "12345",
-      "subject" -> "subject"
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCCTCT600Failure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCCTCT600TILSuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedTime" -> "21:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCCTCT600TILFailure" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject", "errorType" -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
+      "errorType"      -> "business",
       "errorTextBlock" -> "<p>Error Code: 123 Error Message: An Error</p>"
     ),
     "transactionEngineHMRCCTCT600TILFailure" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
-      "errorType" -> "fatal",
-      "errorNumber" -> "123", "errorMessage" -> "This is an error"
+      "receivedTime" -> "21:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject",
+      "errorType"    -> "fatal",
+      "errorNumber"  -> "123",
+      "errorMessage" -> "This is an error"
     ),
     "transactionEngineHMRCPPACCTFailure" -> Map(
       "receivedDate" -> "20 April 2017",
-      "subject" -> "subject"
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPAMDFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPEVNTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPEVNTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPEVNTSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPMAINTFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPPRACSuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedTime" -> "21:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPPRACFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineHMRCPPRETFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPRETSuccess" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineCHARCLMSuccess" -> Map(
-      "receivedTime" -> "09:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedTime" -> "09:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineCHARCLMFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineCHARCLMMULTIFailure" -> Map(
-      "errorType" -> "business",
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject",
+      "errorType"      -> "business",
+      "receivedTime"   -> "21:45",
+      "receivedDate"   -> "20 April 2017",
+      "identifier"     -> "12345",
+      "subject"        -> "subject",
       "errorTextBlock" -> "Error Code: 123 Error Message: Business Error Message",
       "errorHtmlBlock" -> "<p>Error Code: 123 Error Message: Business Error Message</p>",
-      "errorNumber" -> "1001",
-      "errorMessage" -> "Fatal Error Message"
+      "errorNumber"    -> "1001",
+      "errorMessage"   -> "Fatal Error Message"
     ),
     "transactionEngineCHARCLMMULTISuccess" -> Map(
-      "receivedTime" -> "21:45", "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedTime" -> "21:45",
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "transactionEngineHMRCPPRASFailure" -> Map(
-      "receivedDate" -> "20 April 2017", "identifier" -> "12345",
-      "subject" -> "subject"
+      "receivedDate" -> "20 April 2017",
+      "identifier"   -> "12345",
+      "subject"      -> "subject"
     ),
     "chargeable_return_submit" -> Map(
       "company_name" -> "Acme Limited",
-      "date" -> "23 September 2017"
+      "date"         -> "23 September 2017"
     ),
     "relief_return_submit" -> Map(
       "company_name" -> "Acme Limited",
-      "date" -> "23 September 2017",
-      "reference" -> "1234567890"
+      "date"         -> "23 September 2017",
+      "reference"    -> "1234567890"
     ),
     "amended_return_submit" -> Map(
       "company_name" -> "Acme Limited",
-      "date" -> "23 September 2017"
+      "date"         -> "23 September 2017"
     ),
     "further_return_submit" -> Map(
       "company_name" -> "Acme Limited",
-      "date" -> "23 September 2017"
+      "date"         -> "23 September 2017"
     ),
     "change_details_return_submit" -> Map(
       "company_name" -> "Acme Limited",
-      "date" -> "23 September 2017"
+      "date"         -> "23 September 2017"
     ),
     "disposal_return_submit" -> Map(
       "company_name" -> "Acme Limited",
-      "date" -> "23 September 2017"
+      "date"         -> "23 September 2017"
     ),
     "lisa_application_submit" -> Map(
       "application_reference" -> "ABC1234567890",
-      "email" -> "lisaTest@test.com",
-      "review_date" -> "7 February 2019",
-      "first_name" -> "Frank",
-      "last_name" -> "Customer"
+      "email"                 -> "lisaTest@test.com",
+      "review_date"           -> "7 February 2019",
+      "first_name"            -> "Frank",
+      "last_name"             -> "Customer"
     ),
     "emac_helpdesk_failure_confirmation_email" -> Map(
-      "service_name" -> "Self Assessment (SA)",
-      "full_name" -> "Troy Barnes",
+      "service_name"   -> "Self Assessment (SA)",
+      "full_name"      -> "Troy Barnes",
       "correlation_id" -> "H5JK4ITURY84783HJ345HJ345HJ342N3"
     ),
     "emac_helpdesk_successful_confirmation_email" -> Map(
-      "service_name" -> "Alcohol and Tobacco Warehousing Declarations (ATWD)",
-      "full_name" -> "Abed Nadir",
+      "service_name"   -> "Alcohol and Tobacco Warehousing Declarations (ATWD)",
+      "full_name"      -> "Abed Nadir",
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
     ),
     "emac_activation_code_not_received" -> Map(
       "serviceName" -> "Enrolment Team",
-      "name" -> "David Smith"
+      "name"        -> "David Smith"
     ),
     "eeitt_submission_confirmation" -> Map(
       "" -> ""
@@ -1340,62 +1472,64 @@ object TemplateParams {
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
     ),
-    "payment_successful" -> Map("taxType" -> "Self Assessment",
-      "taxReference" -> "1234567890K",
+    "payment_successful" -> Map(
+      "taxType"          -> "Self Assessment",
+      "taxReference"     -> "1234567890K",
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
-      "amountPaid" -> "123.45",
-      "commission" -> "2.55",
-      "totalPaid" -> "126.00"
+      "amountPaid"       -> "123.45",
+      "commission"       -> "2.55",
+      "totalPaid"        -> "126.00"
     ),
-    "payment_successful_cy" -> Map("taxType" -> "Self Assessment",
-      "taxReference" -> "1234567890K",
+    "payment_successful_cy" -> Map(
+      "taxType"          -> "Self Assessment",
+      "taxReference"     -> "1234567890K",
       "paymentReference" -> "4f3e3db2-c8e1-4db0-86ae-000bc992faa8",
-      "amountPaid" -> "123.45",
-      "commission" -> "2.55",
-      "totalPaid" -> "126.00"
+      "amountPaid"       -> "123.45",
+      "commission"       -> "2.55",
+      "totalPaid"        -> "126.00"
     ),
-    "payment_successful_parcels" -> Map("taxType" -> "Import VAT on parcels",
+    "payment_successful_parcels" -> Map(
+      "taxType"      -> "Import VAT on parcels",
       "taxReference" -> "1234 5678 90K",
-      "amountPaid" -> "123.45",
-      "commission" -> "2.55",
-      "totalPaid" -> "126.00"
-    ),
+      "amountPaid"   -> "123.45",
+      "commission"   -> "2.55",
+      "totalPaid"    -> "126.00"),
     "ddi_migration_letter" -> Map(
-      "NAME" -> "Customer",
+      "NAME"         -> "Customer",
       "ADDRESSLINE1" -> "15 Grand Avenue",
       "ADDRESSLINE2" -> "Floor 104",
       "ADDRESSLINE3" -> "Capital City",
       "ADDRESSLINE4" -> "",
       "ADDRESSLINE5" -> "",
-      "POSTCODE" -> "MZ1 1AA",
-      "COUNTRY" -> "United Kingdom",
-      "REGIME" -> "VATC",
-      "OLDSUN" -> "123456",
-      "NEWSUN" -> "448610",
+      "POSTCODE"     -> "MZ1 1AA",
+      "COUNTRY"      -> "United Kingdom",
+      "REGIME"       -> "VATC",
+      "OLDSUN"       -> "123456",
+      "NEWSUN"       -> "448610",
       "TRANSFERDATE" -> "20180501",
       "DDIREFERENCE" -> "123456789",
-      "OLDSUNNAME" -> "HMRC eVAT",
-      "NEWSUNNAME" -> "HMRC E VAT DDS",
-      "PHONENUMBER" -> "0300 200 3700"
+      "OLDSUNNAME"   -> "HMRC eVAT",
+      "NEWSUNNAME"   -> "HMRC E VAT DDS",
+      "PHONENUMBER"  -> "0300 200 3700"
     ),
     "ddi_advance_notice" -> Map(
-    "NAME" -> "Customer",
-    "DDIREFERENCE" -> "123456789",
-    "REGIME" -> "VATC",
-    "AMOUNT" -> "1215003.18",
-    "COLLECTIONDATE" -> "20180501",
-    "NEWSUNNAME" -> "HMRC E VAT DDS",
-    "PHONENUMBER" -> "0300 200 3700",
-    "CHARGETYPE_0" -> "VAT Return",
-    "PERIOD_0" -> "0118",
-    "AMOUNT_0" -> "5001.43",
-    "CHARGETYPE_1" -> "VAT Return",
-    "PERIOD_1" -> "0418",
-    "AMOUNT_1" -> "4049.57",
-    "CHARGETYPE_2" -> "VAT Return",
-    "PERIOD_2" -> "0718",
-    "AMOUNT_2" -> "5952"
-  ),
+      "NAME"           -> "Customer",
+      "DDIREFERENCE"   -> "123456789",
+      "REGIME"         -> "VATC",
+      "AMOUNT"         -> "1215003.18",
+      "COLLECTIONDATE" -> "20180501",
+      "NEWSUNNAME"     -> "HMRC E VAT DDS",
+      "PHONENUMBER"    -> "0300 200 3700",
+      "CHARGETYPE_0"   -> "VAT Return",
+      "PERIOD_0"       -> "0118",
+      "AMOUNT_0"       -> "5001.43",
+      "CHARGETYPE_1"   -> "VAT Return",
+      "PERIOD_1"       -> "0418",
+      "AMOUNT_1"       -> "4049.57",
+      "CHARGETYPE_2"   -> "VAT Return",
+      "PERIOD_2"       -> "0718",
+      "AMOUNT_2"       -> "5952"
+    ),
     "ddi_setup_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
@@ -1414,55 +1548,75 @@ object TemplateParams {
     "ddi_08_alert_aa" -> Map(
       "recipientName_line1" -> "Colm Cavanagh"
     ),
+    "sdds_ddi_setup_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_amended_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_cancelled_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_reminder_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_unpaid_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
     "dd_email_verifcation" -> Map(
-        "name" -> "Joe",
-        "verificationLink" -> exampleLinkWithRandomId
-      ),
+      "name"             -> "Joe",
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "recon_tps_report" -> Map(
-      "subject" -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
-      "vatLegal" -> "2,19400000,0,0,2,19400000",
-      "shipley" -> "4,20744424,1,9886240,5,30630664",
-      "debitCardFee" -> "3,0,0,0,3,0",
-      "vatAccount" -> "1,9700000,0,0,1,9700000",
-      "nirs" -> "1,9700000,0,0,1,9700000",
+      "subject"       -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
+      "vatLegal"      -> "2,19400000,0,0,2,19400000",
+      "shipley"       -> "4,20744424,1,9886240,5,30630664",
+      "debitCardFee"  -> "3,0,0,0,3,0",
+      "vatAccount"    -> "1,9700000,0,0,1,9700000",
+      "nirs"          -> "1,9700000,0,0,1,9700000",
       "commisionCard" -> "7,1344420,1,186240,8,1530660",
-      "total" -> "10,70588846,1,10072480,11,80661326",
-      "cumbernauld" -> "2,9700002,0,0,2,9700002")
-    ,
+      "total"         -> "10,70588846,1,10072480,11,80661326",
+      "cumbernauld"   -> "2,9700002,0,0,2,9700002"
+    ),
     "hts_verification_email" -> Map(
-      "name" -> "Joe",
+      "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "sdil_registration_accepted" -> Map(
-      "sdilNumber" -> "ZZSDIL0009999",
+      "sdilNumber"  -> "ZZSDIL0009999",
       "companyName" -> "Some company Ltd."
     ),
     "sdil_registration_received" -> Map(
       "companyName" -> "Some company Ltd.",
-      "sdilNumber" -> "ZZSDIL0009999"
+      "sdilNumber"  -> "ZZSDIL0009999"
     ),
     "retrieve_userid_notification" -> Map(
-      "user_id" -> "914657894302",
+      "user_id"   -> "914657894302",
       "full_name" -> "Joe Bloggs"
     ),
     "cca_enrolment_migration_confirmation" -> Map(
-      "name" -> "test user",
+      "name"     -> "test user",
       "personId" -> "123456789",
-      "orgName" -> "Test Organisation"
+      "orgName"  -> "Test Organisation"
     ),
     "cca_enrolment_confirmation" -> Map(
-      "name" -> "test user",
+      "name"     -> "test user",
       "personId" -> "123456789",
-      "orgName" -> "Test Organisation"
+      "orgName"  -> "Test Organisation"
     ),
     "cca_enrolment_confirmation_agent" -> Map(
-      "name" -> "test user",
-      "personId" -> "123456789",
-      "orgName" -> "Test Organisation",
+      "name"      -> "test user",
+      "personId"  -> "123456789",
+      "orgName"   -> "Test Organisation",
       "agentCode" -> "8888888"
     ),
     "cca_enrolment_confirmation_individual" -> Map(
-      "name" -> "test user",
+      "name"     -> "test user",
       "personId" -> "123456789"
     ),
     "cca_revaluation_subscription_confirmation" -> Map(
@@ -1479,49 +1633,49 @@ object TemplateParams {
     ),
     "pods_psa_invited" -> Map(
       "inviteeName" -> "Joe Bloggs",
-      "schemeName" -> "Some Pension Scheme",
-      "expiryDate" -> "20 July 1969"
+      "schemeName"  -> "Some Pension Scheme",
+      "expiryDate"  -> "20 July 1969"
     ),
     "parcels_registration_confirmation" -> Map(
-      "name" -> "Joe Bloggs",
+      "name"            -> "Joe Bloggs",
       "referenceNumber" -> "IM123456789A"
     ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
-      "reference" -> "BTI REFERENCE",
-      "itemName" -> "ITEM NAME"
+      "reference"           -> "BTI REFERENCE",
+      "itemName"            -> "ITEM NAME"
     ),
     "passengers_payment_confirmation" -> Map(
-      "NAME" -> "Alex Smith",
-      "DATE" -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
-      "PLACEOFARRIVAL" -> "Heathrow",
-      "DATEOFARRIVAL" -> "15 September 2018",
-      "TIMEOFARRIVAL" -> "12:15 PM",
+      "NAME"                 -> "Alex Smith",
+      "DATE"                 -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
+      "PLACEOFARRIVAL"       -> "Heathrow",
+      "DATEOFARRIVAL"        -> "15 September 2018",
+      "TIMEOFARRIVAL"        -> "12:15 PM",
       "TRANSACTIONREFERENCE" -> "tran-ref-value",
-      "REFERENCE" -> "XAPR9876543210",
-      "TOTAL" -> "£32.45",
-      "NAME_0" -> "5 litres spirits",
-      "CURRENCY_0" -> "60 Mexican Peso(MXN)",
-      "COSTGBP_0" -> "10.50",
-      "NAME_1" -> "All other electronic devices",
-      "CURRENCY_1" -> "100 USA Dollar(USD)",
-      "COSTGBP_1" -> "10.50",
-      "NAME_2" -> "All other electronic devices",
-      "CURRENCY_2" -> "600 USA Dollar(USD)",
-      "COSTGBP_2" -> "11.40"
+      "REFERENCE"            -> "XAPR9876543210",
+      "TOTAL"                -> "£32.45",
+      "NAME_0"               -> "5 litres spirits",
+      "CURRENCY_0"           -> "60 Mexican Peso(MXN)",
+      "COSTGBP_0"            -> "10.50",
+      "NAME_1"               -> "All other electronic devices",
+      "CURRENCY_1"           -> "100 USA Dollar(USD)",
+      "COSTGBP_1"            -> "10.50",
+      "NAME_2"               -> "All other electronic devices",
+      "CURRENCY_2"           -> "600 USA Dollar(USD)",
+      "COSTGBP_2"            -> "11.40"
     ),
     "digital_tariffs_advice_request" -> Map(
-      "reference" -> "REFERENCE",
-      "contactName" -> "FULL NAME",
-      "contactEmail" -> "EMAIL ADDRESS",
-      "itemName" -> "ITEM NAME",
-      "itemDescription" -> "ITEM DESCRIPTION",
-      "supportingDocuments" -> "www.hmrc.gov.uk|www.gov.co.uk",
+      "reference"             -> "REFERENCE",
+      "contactName"           -> "FULL NAME",
+      "contactEmail"          -> "EMAIL ADDRESS",
+      "itemName"              -> "ITEM NAME",
+      "itemDescription"       -> "ITEM DESCRIPTION",
+      "supportingDocuments"   -> "www.hmrc.gov.uk|www.gov.co.uk",
       "supportingInformation" -> "SUPPORTING INFO"
     ),
     "digital_tariffs_application_submitted" -> Map(
       "recipientName_line1" -> "FULL NAME",
-      "reference" -> "REFERENCE"
+      "reference"           -> "REFERENCE"
     ),
     "newMessageAlert_2WSM-question" -> Map(
       "recipientName_line1" -> "Alex Brown"
@@ -1532,29 +1686,30 @@ object TemplateParams {
     ),
     "cgtpd_email_verification" -> Map(
       "verificationLink" -> exampleLinkWithRandomId,
-      "name" -> "Susan Bartlett"
+      "name"             -> "Susan Bartlett"
     ),
     "tdq_compliance_all_required_headers_missing" -> Map(
-      "developerName"     -> "John Smith",
-      "fromDate"          -> "22/09/2019",
-      "toDate"            -> "22/10/2019",
-      "applicationName"   -> "MTD VAT Test Application",
-      "applicationId"     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+      "developerName"   -> "John Smith",
+      "fromDate"        -> "22/09/2019",
+      "toDate"          -> "22/10/2019",
+      "applicationName" -> "MTD VAT Test Application",
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
     ),
     "tdq_compliance_partially_compliant_invalid_or_missing_connection_method" -> Map(
-      "developerName"     -> "Joe Williams",
-      "fromDate"          -> "01/12/2019",
-      "toDate"            -> "31/12/2019",
-      "applicationName"   -> "MTD VAT InvalidConnection App",
-      "applicationId"     -> "1434b966-ea76-40a6-a312-1d58ff873a16"
+      "developerName"   -> "Joe Williams",
+      "fromDate"        -> "01/12/2019",
+      "toDate"          -> "31/12/2019",
+      "applicationName" -> "MTD VAT InvalidConnection App",
+      "applicationId"   -> "1434b966-ea76-40a6-a312-1d58ff873a16"
     ),
     "tdq_compliance_partially_compliant_valid_connection_method" -> Map(
-      "developerName"     -> "James Black",
-      "fromDate"          -> "01/01/2020",
-      "toDate"            -> "31/01/2020",
-      "applicationName"   -> "MTD VAT ValidCM App",
-      "applicationId"     -> "07b587d7-34d9-40b6-9d59-a0917490cf02",
-      "extraDetails"      -> Base64.getEncoder.encodeToString(stringify(parse("""
+      "developerName"   -> "James Black",
+      "fromDate"        -> "01/01/2020",
+      "toDate"          -> "31/01/2020",
+      "applicationName" -> "MTD VAT ValidCM App",
+      "applicationId"   -> "07b587d7-34d9-40b6-9d59-a0917490cf02",
+      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
+        parse("""
         {
           "connectionMethod": "WEB_APP_VIA_SERVER",
           "requestCount": 100,
@@ -1563,11 +1718,11 @@ object TemplateParams {
               "headerOrHeaders": "gov-client-public-ip",
               "errors": [
                 {
-                  "message": "Header value is not an IP address",
+                  "message": "The header value is not an IP address.",
                   "percentage": 5
                 },
                 {
-                  "message": "Header value is not a public IP address ",
+                  "message": "The header value is not a public IP address.",
                   "percentage": 10
                 }
               ],
@@ -1577,25 +1732,25 @@ object TemplateParams {
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
-                  "message": "Header value is not a key value data structure ",
+                  "message": "The header value is not a key-value data structure.",
                   "percentage": 10
                 },
                 {
-                  "message": "At least one of the keys or values is not percent encoded",
+                  "message": "At least one of the keys or values is not percent encoded.",
                   "percentage": 25
                 },
                 {
-                  "message": "At least one value for software version is missing",
+                  "message": "At least one value for software version is missing.",
                   "percentage": 15
                 },
                 {
-                  "message": "At least one separator (ampersand or equal sign) is percent encoded",
+                  "message": "At least one separator (ampersand or equal sign) is percent encoded.",
                   "percentage": 0
                 }
               ],
               "warnings": [
                 {
-                  "message": "For client server architecture, please supply at least a version for client and server",
+                  "message": "For client-server architecture, please supply at least a version for client and server. For all other architectures, please supply at least one version.",
                   "percentage": 10
                 }
               ]
@@ -1605,15 +1760,15 @@ object TemplateParams {
               "errors" : [],
               "warnings": [
                 {
-                  "message": "Use a UUID (also known as a GUID) as recommended in our documentation",
+                  "message": "The header value is not a recommended UUID. Please refer to the fraud prevention specification.",
                   "percentage": 0
                 },
                 {
-                  "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long",
+                  "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long.",
                   "percentage": 17
                 },
                 {
-                  "message": "Header value contains an email address. Device ID should not be derived from user-specific data ",
+                  "message": "The header value contains an email address. Device IDs must not be derived from user-specific data.",
                   "percentage": 22
                 }
               ]
@@ -1624,11 +1779,41 @@ object TemplateParams {
     ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
-      "name" -> "Jamie Wilson"
+      "name"         -> "Jamie Wilson"
     ),
     "cgtpd_private_beta_access" -> Map(
-      "name" -> "Jamie Wilson",
+      "name"             -> "Jamie Wilson",
       "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "cgtpd_submission_confirmation" -> Map(
+      "name"         -> "Jamie Wilson",
+      "submissionId" -> "000000000006"
+    ),
+    "dst_registration_accepted" -> Map(
+      "dstNumber"            -> "XADST0000010000",
+      "name"                 -> "Joe Bloggs",
+      "groupCompanyName"     -> "Some group company Ltd.",
+      "paymentDeadline"      -> "20210401",
+      "submitReturnDeadline" -> "20210731"
+    ),
+    "dst_registration_received" -> Map(
+      "name"             -> "Joe Bloggs",
+      "groupCompanyName" -> "Some group company Ltd."
+    ),
+    "pods_file_aft_return" -> Map(
+      "schemeName"       -> "Smith Harper pension scheme",
+      "accountingPeriod" -> "1 April to 30 June 2020",
+      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "psaName"          -> "Jane Doe"
+    ),
+    "pods_aft_amended_return" -> Map(
+      "schemeName"       -> "Smith Harper pension scheme",
+      "accountingPeriod" -> "1 April to 30 June 2020",
+      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "psaName"          -> "Jane Doe",
+      "submissionNumber" -> "3"
     )
   )
 }

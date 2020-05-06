@@ -16,10 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.hts
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.HelpToSave
-
 
 object HtsTemplates {
 
@@ -31,6 +30,7 @@ object HtsTemplates {
       subject = "Verify your email address",
       plainTemplate = txt.htsEmailVerification.f,
       htmlTemplate = html.htsEmailVerification.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }

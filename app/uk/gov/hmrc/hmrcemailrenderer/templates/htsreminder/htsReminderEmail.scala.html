@@ -14,13 +14,10 @@
  * limitations under the License.
  *@
 
-@import java.util.Calendar
-@import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
-
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Remember to save this " + DateFormatter.formatMonth(Calendar.MONTH.toString.reverse.padTo(2, '0').reverse)) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Remember to save this " + {params("month")}) {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Try and save as much of your monthly £50 Help to Save allowance as you can this @{DateFormatter.formatMonth(Calendar.MONTH.toString.reverse.padTo(2, '0').reverse)}. </p>
+<p style="margin: 0 0 30px; font-size: 19px;">Try and save as much of your monthly £50 Help to Save allowance as you can this @{params("month")}. </p>
 <p style="margin: 0 0 30px; font-size: 19px;">You can deposit any amount from £1 to £50, and anything you save now can help you earn the highest possible bonus.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">This bonus will be 50% of your highest savings total after two years of saving.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Just remember, you cannot carry over any of your unused £50 allowance to next month.</p>

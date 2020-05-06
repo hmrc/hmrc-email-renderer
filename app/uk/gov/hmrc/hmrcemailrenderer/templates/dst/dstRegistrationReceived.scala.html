@@ -1,0 +1,57 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Digital Services Tax registration received") {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        Dear @params("name")
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        We received your registration for @params("name") @if(params("groupCompanyName").toString != "unknown"){on behalf of @params("groupCompanyName")} for the Digital Services Tax.
+    </p>
+
+    <h2>What happens next</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        We will send your Digital Services Tax registration number to this email address within 5 working days.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Contact your HMRC Customer Compliance Manager (CCM) if you do not receive your registration number.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk")
+    </p>
+
+    <h2>Why you got this email</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        This email address is registered as the email address we can use to contact you about the Digital Services Tax.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Do not reply to this email.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        From HMRC Digital Services Tax team
+    </p>
+
+}

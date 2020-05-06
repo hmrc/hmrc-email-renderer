@@ -22,13 +22,15 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GuaranteedMinim
 
 object GmpTemplates {
   private val gmp_upload_reference_received_for_subject: Map[String, String] => String =
-    _.get("fileUploadReference").map(fileUploadReference => s"Your file $fileUploadReference has been received.").
-      getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
+    _.get("fileUploadReference")
+      .map(fileUploadReference => s"Your file $fileUploadReference has been received.")
+      .getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
 
   private val gmp_upload_reference_processed_for_subject: Map[String, String] => String =
-    _.get("fileUploadReference").map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.").
-      getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
-  
+    _.get("fileUploadReference")
+      .map(fileUploadReference => s"Your GMP calculation $fileUploadReference is ready.")
+      .getOrElse(throw new RuntimeException("Missing parameter fileUploadReference"))
+
   val from = FromAddress.noReply("GMP Checker")
 
   val templates = Seq(
@@ -38,13 +40,15 @@ object GmpTemplates {
       service = GuaranteedMinimumPension,
       subject = gmp_upload_reference_received_for_subject,
       plainTemplate = txt.gmpFileReceivedNotificationEmail.f,
-      htmlTemplate = html.gmpFileReceivedNotificationEmail.f),
+      htmlTemplate = html.gmpFileReceivedNotificationEmail.f
+    ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "gmp_bulk_upload_processed",
       fromAddress = from,
       service = GuaranteedMinimumPension,
       subject = gmp_upload_reference_processed_for_subject,
       plainTemplate = txt.gmpFileProcessedNotificationEmail.f,
-      htmlTemplate = html.gmpFileProcessedNotificationEmail.f)
+      htmlTemplate = html.gmpFileProcessedNotificationEmail.f
+    )
   )
 }

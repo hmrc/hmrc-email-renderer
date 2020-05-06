@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
@@ -24,7 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  private def extractFromAddress(params : Map[String, String]): String = {
+  private def extractFromAddress(params: Map[String, String]): String = {
     val sender = params.get("developerHubTitle").getOrElse("Developer Hub")
     FromAddress.noReply(s"HMRC $sender")
   }
@@ -173,6 +173,24 @@ object ApiTemplates {
       plainTemplate = txt.apiStatusChangedNotification.f,
       htmlTemplate = html.apiStatusChangedNotification.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedClientSecretNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Client Secret Added",
+      plainTemplate = txt.apiAddedClientSecretNotification.f,
+      htmlTemplate = html.apiAddedClientSecretNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiRemovedClientSecretNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Client Secret Removed",
+      plainTemplate = txt.apiRemovedClientSecretNotification.f,
+      htmlTemplate = html.apiRemovedClientSecretNotification.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

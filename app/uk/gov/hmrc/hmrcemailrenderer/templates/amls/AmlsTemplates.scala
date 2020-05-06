@@ -29,7 +29,8 @@ object AmlsTemplates {
       service = AntiMoneyLaunderingSupervision,
       subject = "New message",
       plainTemplate = txt.amlsNotificationReceived.f,
-      htmlTemplate = html.amlsNotificationReceived.f)
+      htmlTemplate = html.amlsNotificationReceived.f
+    )
   )
 
 }

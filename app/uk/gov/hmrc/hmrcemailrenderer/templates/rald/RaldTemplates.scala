@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.rald
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
 
@@ -28,8 +28,8 @@ object RaldTemplates {
       service = RentalAndLeaseDetails,
       subject = "Your saved Rent and Lease details expires in 90 days.",
       plainTemplate = txt.rald.f,
-      htmlTemplate = html.rald.f),
-
+      htmlTemplate = html.rald.f
+    ),
     MessageTemplate.create(
       templateId = "rald_not_connected",
       fromAddress = FromAddress.noReply("Rent and Lease Details"),
@@ -39,6 +39,5 @@ object RaldTemplates {
       htmlTemplate = html.raldNotConnected.f,
       priority = Some(MessagePriority.Standard)
     )
-
   )
 }

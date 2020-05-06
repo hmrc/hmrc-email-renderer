@@ -16,13 +16,13 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
 
 object PodsTemplates {
   val templates = Seq(
-       MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "pods_scheme_register",
       fromAddress = govUkTeamAddress,
       service = PODS,
@@ -47,6 +47,24 @@ object PodsTemplates {
       subject = "You have an invitation to be added as a scheme administrator of a pension scheme",
       plainTemplate = txt.psaInvited.f,
       htmlTemplate = html.psaInvited.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_file_aft_return",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - return submitted",
+      plainTemplate = txt.aftReturnSubmitted.f,
+      htmlTemplate = html.aftReturnSubmitted.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmitted.f,
+      htmlTemplate = html.aftAmendmentSubmitted.f,
       priority = Some(MessagePriority.Standard)
     )
   )

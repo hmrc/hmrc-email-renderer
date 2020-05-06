@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+HMRC has received your return
+
+Dear @{params("name")}
+
+Your return reference number is: @{params("submissionId")}
+
+What you must do next
+Go to GOV.UK and search for ‘Report and pay Capital Gains Tax on UK property’. Sign in to your Capital Gains Tax on UK property account. Check if you have any actions to complete.
+
+If you need to file a Self Assessment tax return
+You’ll need to provide details from this return in your Self Assessment tax return.
+
+Do not reply to this email.
+From Capital Gains Tax on UK property
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

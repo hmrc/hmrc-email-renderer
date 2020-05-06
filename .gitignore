@@ -1,7 +1,8 @@
 .*
 
 !.gitignore
-
+!.scalafmt.conf
+!.sbtrc
 .cache
 /.classpath
 db

@@ -21,31 +21,35 @@ import java.util.Base64
 
 import org.apache.commons.codec.Charsets
 import play.api.libs.json._
+import uk.gov.hmrc.emailaddress.EmailAddress
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 
-case class RenderRequest(parameters: Map[String, String])
+case class RenderRequest(parameters: Map[String, String], email: Option[String])
 
 object RenderRequest {
   implicit val reads = Json.reads[RenderRequest]
 }
 
-case class RenderResult(plain: String,
-                        html: String,
-                        fromAddress: String,
-                        subject: String,
-                        service: String,
-                        priority: Option[MessagePriority])
+case class RenderResult(
+  plain: String,
+  html: String,
+  fromAddress: String,
+  subject: String,
+  service: String,
+  priority: Option[MessagePriority])
 
 object RenderResult {
   private def base64Encoded(value: String) = Base64.getEncoder.encodeToString(value.getBytes(Charsets.UTF_8))
 
   implicit val writes = Writes[RenderResult] { (toRender: RenderResult) =>
     Json.obj(
-      "plain" -> base64Encoded(toRender.plain),
-      "html" -> base64Encoded(toRender.html),
+      "plain"       -> base64Encoded(toRender.plain),
+      "html"        -> base64Encoded(toRender.html),
       "fromAddress" -> toRender.fromAddress,
-      "subject" -> toRender.subject,
-      "service" -> toRender.service
-    ) ++ toRender.priority.fold(Json.obj()) { priority => Json.obj("priority" -> priority.toString) }
+      "subject"     -> toRender.subject,
+      "service"     -> toRender.service
+    ) ++ toRender.priority.fold(Json.obj()) { priority =>
+      Json.obj("priority" -> priority.toString)
+    }
   }
 }

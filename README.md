@@ -87,7 +87,17 @@ Again, list the templates can then be previewed from
 
 [http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview)
 
-test
+### Handling Templates based on Language preference
+If we want to make a template to work based on preference. 
+
+We have to add this to configuration in following place
+
+[https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf](https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf)
+
+key should be an english tempalteId and value should be welsh templateId
+
+We make a call to preferences service to see weather language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
+
 
 ### License
 
