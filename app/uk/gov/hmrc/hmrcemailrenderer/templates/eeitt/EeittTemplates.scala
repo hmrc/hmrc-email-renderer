@@ -633,7 +633,7 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject =
-        "You asked HMRC to review your grant amount for the Self-Employment Income Support Scheme online",
+        "You asked HMRC to review your grant amount for the Self-Employment Income Support Scheme onlin",
       plainTemplate = txt.seissGrantConfirmation.f,
       htmlTemplate = html.seissGrantConfirmation.f,
       priority = Some(MessagePriority.Standard)
