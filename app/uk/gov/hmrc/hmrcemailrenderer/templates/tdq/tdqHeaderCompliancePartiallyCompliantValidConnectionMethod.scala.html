@@ -20,7 +20,7 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fraud prevention headers status report") {
 
     @defining(ValidConnectionMethodBase64EncodedDetails.parse(params("extraDetails").toString)) { extraDetails =>
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName"),</p>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName")</p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application @params("applicationName") (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) APIs.
@@ -151,11 +151,7 @@
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            From,
-        </p>
-
-        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            HMRC Transaction Monitoring Team
+            From HMRC Transaction Monitoring Team
         </p>
 
     }

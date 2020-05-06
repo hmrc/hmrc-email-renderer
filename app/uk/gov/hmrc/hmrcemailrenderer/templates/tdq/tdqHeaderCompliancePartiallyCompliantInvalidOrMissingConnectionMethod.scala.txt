@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Fraud prevention headers status report
 
-Dear @params("developerName"),
+Dear @params("developerName")
 
 Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application @params("applicationName") (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) APIs.
 
@@ -40,8 +40,6 @@ This email address is registered as the point of contact for the application @{p
 
 If you are not the right person to receive this email, please forward it to the relevant person in your organisation.
 
-From,
-
-HMRC Transaction Monitoring Team
+From HMRC Transaction Monitoring Team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
