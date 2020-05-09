@@ -636,6 +636,15 @@ object EeittTemplates {
       plainTemplate = txt.seissGrantConfirmation.f,
       htmlTemplate = html.seissGrantConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_claim_now",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You can now make a Self-Employment Income Support Scheme grant claim online",
+      plainTemplate = txt.seissClaimNow.f,
+      htmlTemplate = html.seissClaimNow.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
