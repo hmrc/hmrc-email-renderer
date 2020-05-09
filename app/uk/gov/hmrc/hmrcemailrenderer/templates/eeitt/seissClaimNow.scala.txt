@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+The Self-Employment Income Support Scheme is now open
+
+Dear Customer
+
+It is time to make your claim for a grant through the Self-Employment Income Support Scheme.
+
+Search GOV.UK for ‘claim for a Self-Employment Income Support Scheme grant’.
+
+What you need to make your claim
+
+You will need your:
+ 
+    • Self Assessment Unique Taxpayer Reference
+
+    • National Insurance number
+
+    • Government Gateway user ID and password
+
+    • account sort code and account number for the account you want the grant paid into
+
+From the Self-Employment Income Support Scheme team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

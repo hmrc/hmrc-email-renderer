@@ -275,6 +275,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_code_submission",
         "seiss_eligibility_submission",
         "seiss_grant_submission",
+        "seiss_claim_now",
         "cjrs_confirmation_submission",
         "csr_submission_confirmation",
         "cet_email_confirmation",
