@@ -1,0 +1,14 @@
+@(params: Map[String, Any])
+
+We are processing your grant payment
+
+
+Dear @params.get("customerName")
+
+Your claim reference: @params.get("claim_ref_no")
+
+We have checked your claim and are processing your grant payment.
+
+From the Self-Employment Income Support team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
