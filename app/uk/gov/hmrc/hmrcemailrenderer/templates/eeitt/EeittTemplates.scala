@@ -672,6 +672,15 @@ object EeittTemplates {
       plainTemplate = txt.seissPaymentFailure.f,
       htmlTemplate = html.seissPaymentFailure.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_received_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You submitted a Self-Employment Income Support Scheme grant claim to HMRC",
+      plainTemplate = txt.seissReceivedConfirmation.f,
+      htmlTemplate = html.seissReceivedConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
