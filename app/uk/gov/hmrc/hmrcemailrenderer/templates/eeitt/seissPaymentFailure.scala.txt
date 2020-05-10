@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+
+We have processed your claim and now need you to check your bank details
+
+
+Dear @params.get("customerName")
+
+Your claim reference: @params.get("claim_ref_no")
+
+Your claim has been checked and you are eligible for a grant.
+
+We need you to check your bank details as we are unable to fully process your payment with the details you provided.
+
+What you need to do next
+
+Return to the GOV.UK website. Search for ‘claim for a Self-Employment Income Support Scheme grant’ and go to the section ‘return to my claim’.
+
+From the Self-Employment Income Support team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
