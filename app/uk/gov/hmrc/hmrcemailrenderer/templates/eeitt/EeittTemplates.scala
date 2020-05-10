@@ -663,6 +663,15 @@ object EeittTemplates {
       plainTemplate = txt.seissProcessingGrant.f,
       htmlTemplate = html.seissProcessingGrant.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_payment_failed",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC needs more details to pay your grant for the Self-Employment Income Support Scheme",
+      plainTemplate = txt.seissPaymentFailure.f,
+      htmlTemplate = html.seissPaymentFailure.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
