@@ -654,6 +654,15 @@ object EeittTemplates {
       plainTemplate = txt.seissClaimNow.f,
       htmlTemplate = html.seissClaimNow.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_processing_grant",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC is processing your grant for the Self-Employment Income Support Scheme",
+      plainTemplate = txt.seissProcessingGrant.f,
+      htmlTemplate = html.seissProcessingGrant.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
