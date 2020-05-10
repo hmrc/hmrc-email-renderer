@@ -18,8 +18,8 @@ You will need your:
 
     • Government Gateway user ID and password
 
-    • account sort code and account number for the account you want the grant paid into
+    • sort code and account number for the account you want the grant paid into
 
-From the Self-Employment Income Support Scheme team
+From the Self-Employment Income Support team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
