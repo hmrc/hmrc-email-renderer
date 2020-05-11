@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You asked HMRC to review your eligibility for the Self-Employment Income Support Scheme (SEISS) online
+You asked HMRC to review your eligibility for the Self-Employment Income Support Scheme (SEISS) online"
 
 Dear @params.get("customerName")
 
