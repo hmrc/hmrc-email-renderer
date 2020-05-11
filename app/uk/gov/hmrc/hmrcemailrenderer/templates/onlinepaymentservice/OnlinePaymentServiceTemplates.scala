@@ -206,6 +206,15 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.recon_tps_report.f,
       htmlTemplate = html.recon_tps_report.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_tops_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_tops_report.f,
+      htmlTemplate = html.recon_tops_report.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
