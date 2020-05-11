@@ -627,60 +627,6 @@ object EeittTemplates {
       plainTemplate = txt.seissEligibilityConfirmation.f,
       htmlTemplate = html.seissEligibilityConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "seiss_grant_submission",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "You asked HMRC to review your grant amount for the Self-Employment Income Support Scheme online",
-      plainTemplate = txt.seissGrantConfirmation.f,
-      htmlTemplate = html.seissGrantConfirmation.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "seiss_claim_now",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "You can now make a Self-Employment Income Support Scheme grant claim online",
-      plainTemplate = txt.seissClaimNow.f,
-      htmlTemplate = html.seissClaimNow.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "seiss_scheme_open",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "You can now make a Self-Employment Income Support Scheme grant claim online",
-      plainTemplate = txt.seissClaimNow.f,
-      htmlTemplate = html.seissClaimNow.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "seiss_processing_grant",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "HMRC is processing your grant for the Self-Employment Income Support Scheme",
-      plainTemplate = txt.seissProcessingGrant.f,
-      htmlTemplate = html.seissProcessingGrant.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "seiss_payment_failed",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "HMRC needs more details to pay your grant for the Self-Employment Income Support Scheme",
-      plainTemplate = txt.seissPaymentFailure.f,
-      htmlTemplate = html.seissPaymentFailure.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "seiss_received_confirmation",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "You submitted a Self-Employment Income Support Scheme grant claim to HMRC",
-      plainTemplate = txt.seissReceivedConfirmation.f,
-      htmlTemplate = html.seissReceivedConfirmation.f,
-      priority = Some(MessagePriority.Standard)
     )
   )
 }
