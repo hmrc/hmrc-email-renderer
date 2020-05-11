@@ -1579,6 +1579,12 @@ object TemplateParams {
       "total"         -> "10,70588846,1,10072480,11,80661326",
       "cumbernauld"   -> "2,9700002,0,0,2,9700002"
     ),
+    "recon_tops_report" -> Map(
+      "subject"         -> "ETMP Telephone Payment Service (TPS) Finance Report 27/09/2027",
+      "TOPS_ROW_P800"   -> "P800,4,11842279,2,0,2,14443,4,11842279",
+      "TOPS_ROW_SA"     -> "SA,94,911842279,92,90,92,914443,94,911842279",
+      "TOPS_ROW_TOTALS" -> "totals,84,811842279,82,80,82,814443,84,811842279"
+    ),
     "hts_verification_email" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
