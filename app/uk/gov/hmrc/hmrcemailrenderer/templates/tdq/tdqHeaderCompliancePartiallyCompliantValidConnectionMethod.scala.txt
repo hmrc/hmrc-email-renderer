@@ -5,27 +5,43 @@
 Dear @params("developerName")
 
 @defining(ValidConnectionMethodBase64EncodedDetails.parse(params("extraDetails").toString)) { extraDetails =>
-Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application '@params("applicationName")' (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
+Our API call logs show that between @params("fromDate") and @params("toDate") fraud prevention headers were submitted from application @params("applicationName") (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) APIs.
 
-Our checks show that the fraud prevention headers submitted between these dates do not meet the requirements of the fraud prevention header specification on the HMRC Developer Hub.
+Our checks show that the fraud prevention headers submitted during this period do not meet the requirements of the fraud prevention header specification on the HMRC Developer Hub.
 
-However, if you are unable to collect a header value due to the restrictions explained within the fraud prevention header specification, and if you are omitting the header or leaving a value blank, then please contact HMRC.
+The current situation 
 
-The report below is generated based on our basic checks on the fraud prevention header values sent by your application, for example:
+We understand this is a difficult time due to coronavirus (COVID-19) but we still need to help protect your user's data. If you have developer capacity, it's important to improve the fraud prevention headers you send.
+
+We'll continue to monitor API call logs and give you feedback every month to help you do this. We'd like to reassure you that we'll continue to accept VAT MTD calls, including headers that are incorrect or missing.
+
+What you need to do
+
+Read the fraud prevention specification so that you can make sure that your application submits the correct fraud prevention headers.
+
+Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC's fraud prevention specification.
+
+If the Test Fraud Prevention Headers API shows that your application is submitting the correct headers, please check that your end user is using the latest version of your application.
+
+Supplying header information for our VAT (MTD) APIs is required by law.
+
+If you are unable to collect a header value due to restrictions explained in the fraud prevention header specification, and if you are omitting the header or leaving a value blank, you need to contact us.
+
+Your report
+
+This report is generated based on our basic checks on the fraud prevention header values sent by your application, for example:
 
 is the value for Gov-Client-Public-IP an IP address?
 
 is the IP address value for Gov-Client-Public-IP a public IP?
 
-Report
-
-This report shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
+It shows results for requests that provided the value for Gov-Client-Connection-Method header as @extraDetails.connectionMethod. It does not include headers that appear to be valid.
 
 If your application sent additional requests with a different value for the Gov-Client-Connection-Method you will receive separate reports for each.
 
 Errors and/or warnings may relate to more than one version of your software as provided in the Gov-Vendor-Version header.
 
-'@params("applicationName")' using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
+@params("applicationName") using connection method @extraDetails.connectionMethod submitted @extraDetails.requestCount requests between @params("fromDate") and @params("toDate").
 
 These are the headers where errors and/or warnings have been found:
 
@@ -42,21 +58,17 @@ These are the headers where errors and/or warnings have been found:
     @warning.message (@warning.percentageDescription) }}
 }
 
-What you must do next
+Contacting us
 
-Read the fraud prevention specification so that you can make sure that your application submits the correct fraud prevention headers.
+Due to the coronavirus (COVID-19) pandemic, we're having to focus our resources on essential activities. We may not be able to help you with header queries as quickly as we usually do.
 
-Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC’s fraud prevention specification.
-
-If the Test Fraud Prevention Headers API shows that your application is submitting the correct headers, please check that your end user is using the latest version of your application.
-
-We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
+If you need to contact us, email SDSTeam@@hmrc.gov.uk
 
 Why you have received this email
 
-This email address is registered as the point of contact for the application '@{params("applicationName")}'.
+This email address is registered as the point of contact for the application @params("applicationName").
 
-If you are not the right person to receive this email please forward it to the relevant person in your organisation.
+If you are not the right person to receive this email, please forward it to the relevant person in your organisation.
 
 From HMRC Transaction Monitoring Team
 
