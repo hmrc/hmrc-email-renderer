@@ -30,8 +30,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
       val params = commonParameters + (
         "developerName"   -> "John Smith",
-        "fromDate"        -> "22/09/2019",
-        "toDate"          -> "22/10/2019",
+        "fromDate"        -> "22 September 2019",
+        "toDate"          -> "22 October 2019",
         "applicationName" -> "MTD VAT Test Application",
         "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
@@ -42,7 +42,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "contain subject with application name" in {
 
       val template = findTemplate("tdq_compliance_all_required_headers_missing")
-      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for 'MTD VAT Test Application'"
+      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
   }
 
@@ -52,8 +52,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
       val params = commonParameters + (
         "developerName"   -> "John Smith",
-        "fromDate"        -> "22/09/2019",
-        "toDate"          -> "22/10/2019",
+        "fromDate"        -> "22 September 2019",
+        "toDate"          -> "22 October 2019",
         "applicationName" -> "MTD VAT Test Application",
         "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
       )
@@ -64,7 +64,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "contain subject with application name" in {
 
       val template = findTemplate("tdq_compliance_partially_compliant_invalid_or_missing_connection_method")
-      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for 'MTD VAT Test Application'"
+      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
   }
 
@@ -74,8 +74,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
       val params = commonParameters + (
         "developerName"   -> "John Smith",
-        "fromDate"        -> "22/09/2019",
-        "toDate"          -> "22/10/2019",
+        "fromDate"        -> "22 September 2019",
+        "toDate"          -> "22 October 2019",
         "applicationName" -> "MTD VAT Test Application",
         "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
         "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
@@ -154,7 +154,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "contain subject with application name" in {
 
       val template = findTemplate("tdq_compliance_partially_compliant_valid_connection_method")
-      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for 'MTD VAT Test Application'"
+      template.subject.f(Map("applicationName" -> "MTD VAT Test Application")) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
   }
 
