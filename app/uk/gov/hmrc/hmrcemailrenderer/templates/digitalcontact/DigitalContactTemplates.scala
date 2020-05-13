@@ -218,6 +218,24 @@ object DigitalContactTemplates {
       plainTemplate = txt.dc_1462.f,
       htmlTemplate = html.dc_1462.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_BTA",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = SelfAssessment,
+      subject = "How we will send you online tax letters",
+      plainTemplate = txt.digitalOptInConfirmation_BTA.f,
+      htmlTemplate = html.digitalOptInConfirmation_BTA.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_PTA",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = SelfAssessment,
+      subject = "How we will send you online tax letters",
+      plainTemplate = txt.digitalOptInConfirmation_PTA.f,
+      htmlTemplate = html.digitalOptInConfirmation_PTA.f,
+      priority = Some(MessagePriority.Urgent)
     )
   ) ++ newMessageAlertTemplates
 }
