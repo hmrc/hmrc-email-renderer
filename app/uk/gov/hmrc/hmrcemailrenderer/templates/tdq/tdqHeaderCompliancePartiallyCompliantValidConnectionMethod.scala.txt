@@ -9,7 +9,7 @@ Our API call logs show that between @params("fromDate") and @params("toDate") fr
 
 Our checks show that the fraud prevention headers submitted during this period do not meet the requirements of the fraud prevention header specification on the HMRC Developer Hub.
 
-The current situation 
+The current situation
 
 We understand this is a difficult time due to coronavirus (COVID-19) but we still need to help protect your user's data. If you have developer capacity, it's important to improve the fraud prevention headers you send.
 
