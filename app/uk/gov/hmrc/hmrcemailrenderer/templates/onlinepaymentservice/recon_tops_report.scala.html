@@ -38,15 +38,15 @@
         case (taxType, lineWithCommas) =>
           val cells = lineWithCommas.toString.split(",").toList
             <tr>
-              <td>{cells(0)}</td>
-              <td>{cells(1)}</td>
-              <td>{formatAmountInPence(cells(2))}</td>
-              <td>{cells(3)}</td>
-              <td>{formatAmountInPence(cells(4))}</td>
-              <td>{cells(5)}</td>
-              <td>{formatAmountInPence(cells(6))}</td>
-              <td>{cells(7)}</td>
-              <td>{formatAmountInPence(cells(8))}</td>
+              <td style="font-weight:bold;">{cells(0)}</td>
+              <td style="text-align: center;">{cells(1)}</td>
+              <td style="text-align: center;">{formatAmountInPence(cells(2))}</td>
+              <td style="text-align: center;">{cells(3)}</td>
+              <td style="text-align: center;">{formatAmountInPence(cells(4))}</td>
+              <td style="text-align: center;">{cells(5)}</td>
+              <td style="text-align: center;">{formatAmountInPence(cells(6))}</td>
+              <td style="text-align: center;">{cells(7)}</td>
+              <td style="text-align: center;">{formatAmountInPence(cells(8))}</td>
             </tr>
       }
     }
@@ -56,15 +56,15 @@
       val totalsLine = params("TOPS_ROW_TOTALS")
       val cells = totalsLine.toString.split(",").toList
         <tr>
-          <td>{cells(0)}</td>
-          <td>{cells(1)}</td>
-          <td>{formatAmountInPence(cells(2))}</td>
-          <td>{cells(3)}</td>
-          <td>{formatAmountInPence(cells(4))}</td>
-          <td>{cells(5)}</td>
-          <td>{formatAmountInPence(cells(6))}</td>
-          <td>{cells(7)}</td>
-          <td>{formatAmountInPence(cells(8))}</td>
+          <td style="font-weight:bold;">{cells(0)}</td>
+          <td style="text-align: center;">{cells(1)}</td>
+          <td style="text-align: center;">{formatAmountInPence(cells(2))}</td>
+          <td style="text-align: center;">{cells(3)}</td>
+          <td style="text-align: center;">{formatAmountInPence(cells(4))}</td>
+          <td style="text-align: center;">{cells(5)}</td>
+          <td style="text-align: center;">{formatAmountInPence(cells(6))}</td>
+          <td style="text-align: center;">{cells(7)}</td>
+          <td style="text-align: center;">{formatAmountInPence(cells(8))}</td>
         </tr>
     }
   </table>
