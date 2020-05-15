@@ -9,16 +9,13 @@ Your claim reference: @params.get("claim_ref_no")
 
 We have checked your claim and can confirm that we are now processing your grant payment.
 
-What happens next
+This means you can now expect your payment within 3 working days of this email.
 
-You can expect to receive your payment within 6 working days after you submitted your claim.
-
-Please only call us if you cannot find the information you need on GOV.UK – this keeps our lines open for those who need our help most.
+Our phone lines are very busy at the moment so please don’t call HMRC about your payment before the next 3 working days have passed. For more advice you can use our guidance on GOV.UK, speak to your tax agent, if you have one, or access our webchat service.
 
 A word about scams
 
 @Html("We are aware of an increase in scam emails, calls and texts. If someone gets in touch claiming to be from HMRC, saying that financial help can be claimed or that a tax refund is owed, and asks you to click on a link or to give information such as your name, credit card or bank details, please do not respond. You can forward suspicious emails claiming to be from HMRC to phishing@hmrc.gov.uk and texts to 60599.")
-
 
 From the Self-Employment Income Support team
 
