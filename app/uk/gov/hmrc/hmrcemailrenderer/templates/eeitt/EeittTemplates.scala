@@ -675,7 +675,7 @@ object EeittTemplates {
     ),
     MessageTemplate.create(
       templateId = "seiss_payment_failed",
-      fromAddress = govUkTeamAddress,
+      fromAddress = seissFromAddress,
       service = Eeitt,
       subject = "HMRC needs more details to pay your grant for the Self-Employment Income Support Scheme",
       plainTemplate = txt.seissPaymentFailure.f,
