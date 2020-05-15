@@ -35,4 +35,8 @@ object FromAddress {
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 
   lazy val govUkTeamAddress = noReply("Gov.uk Team")
+  lazy val govUkTeamAddressWelsh = noReply("Gov.uk Tîm")
+
+  lazy val seissFromAddress = noReply("Self-Employment Income Support Scheme")
+  lazy val seissFromAddressWelsh = noReply("CThEM Cymhorthdal Incwm Hunangyflogaeth")
 }
