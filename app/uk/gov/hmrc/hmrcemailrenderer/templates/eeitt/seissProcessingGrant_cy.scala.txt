@@ -19,4 +19,4 @@ Gair ynghylch sgamiau
 
 Oddi wrth y tîm Cymhorthdal Incwm Hunangyflogaeth
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
