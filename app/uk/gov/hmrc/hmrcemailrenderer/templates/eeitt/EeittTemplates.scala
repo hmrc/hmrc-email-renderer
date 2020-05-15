@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.eeitt
 
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.{ govUkTeamAddress, seissFromAddress, seissFromAddressWelsh }
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Eeitt
 
@@ -657,21 +657,30 @@ object EeittTemplates {
     ),
     MessageTemplate.create(
       templateId = "seiss_processing_grant",
-      fromAddress = govUkTeamAddress,
+      fromAddress = seissFromAddress,
       service = Eeitt,
       subject = "HMRC is processing your grant for the Self-Employment Income Support Scheme",
       plainTemplate = txt.seissProcessingGrant.f,
       htmlTemplate = html.seissProcessingGrant.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_processing_grant_cy",
+      fromAddress = seissFromAddressWelsh,
+      service = Eeitt,
+      subject = "Mae CThEM yn prosesu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
+      plainTemplate = txt.seissProcessingGrant_cy.f,
+      htmlTemplate = html.seissProcessingGrant_cy.f,
+      priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
       templateId = "seiss_payment_failed",
-      fromAddress = govUkTeamAddress,
+      fromAddress = seissFromAddress,
       service = Eeitt,
       subject = "HMRC needs more details to pay your grant for the Self-Employment Income Support Scheme",
       plainTemplate = txt.seissPaymentFailure.f,
       htmlTemplate = html.seissPaymentFailure.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
       templateId = "seiss_received_confirmation",
