@@ -1,8 +1,6 @@
 @(params: Map[String, Any])
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
-
-TYou can now apply for goods movement reference numbers every time you move goods.
+You can now apply for goods movement reference numbers every time you move goods.
 
 To start, search GOV.UK for ‘goods movement reference’.
 
