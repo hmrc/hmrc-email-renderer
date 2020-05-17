@@ -36,7 +36,4 @@ object FromAddress {
 
   lazy val govUkTeamAddress = noReply("Gov.uk Team")
   lazy val govUkTeamAddressWelsh = noReply("Gov.uk Tîm")
-
-  lazy val seissFromAddress = noReply("Self-Employment Income Support Scheme")
-  lazy val seissFromAddressWelsh = noReply("Cynllun Cymhorthdal Incwm Hunangyflogaeth")
 }

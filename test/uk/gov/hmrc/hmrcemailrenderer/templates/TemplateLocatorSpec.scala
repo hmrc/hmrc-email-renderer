@@ -106,7 +106,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Parcels",
         "Customs Financials",
         "Cgtpd",
-        "TDQ"
+        "TDQ",
+        "SEISS"
       )
     }
 
