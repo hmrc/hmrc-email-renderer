@@ -16,9 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.seiss
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.noReply
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Seiss
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.{govUkTeamAddress, noReply}
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{Eeitt, Seiss}
+import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.{html, txt}
 
 object SeissTemplates {
 
@@ -51,6 +52,24 @@ object SeissTemplates {
       plainTemplate = txt.seissPaymentFailure.f,
       htmlTemplate = html.seissPaymentFailure.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_scheme_open",
+      fromAddress = seissFromAddress,
+      service = Eeitt,
+      subject = "You can now make a Self-Employment Income Support Scheme grant claim online",
+      plainTemplate = txt.seissSchemeOpen.f,
+      htmlTemplate = html.seissSchemeOpen.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_received_confirmation",
+      fromAddress = seissFromAddress,
+      service = Eeitt,
+      subject = "You submitted a Self-Employment Income Support Scheme grant claim to HMRC",
+      plainTemplate = txt.seissReceivedConfirmation.f,
+      htmlTemplate = html.seissReceivedConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
