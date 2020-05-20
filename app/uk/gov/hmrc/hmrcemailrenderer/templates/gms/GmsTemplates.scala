@@ -27,7 +27,7 @@ object GmsTemplates {
       templateId = "gms_enrolment_confirmation",
       fromAddress = FromAddress.noReply("Get a goods movement reference"),
       service = GoodsMovementSystem,
-      subject = "Goods movement references registration",
+      subject = "Your registration to Get a goods movement reference",
       plainTemplate = txt.gms_enrolment_confirmation.f,
       htmlTemplate = html.gms_enrolment_confirmation.f,
       priority = None

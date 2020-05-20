@@ -1,10 +1,12 @@
 @(params: Map[String, Any])
 
-You can now apply for goods movement reference numbers every time you move goods.
+Dear @{params("name")}
+
+You can now apply for goods movement references every time you move goods.
 
 To start, search GOV.UK for ‘goods movement reference’.
 
-You will need to sign in with the Government Gateway User ID that you used to register.
+You will need to sign in with the Government Gateway user ID that you used to register.
 
 From Get a goods movement reference
 
