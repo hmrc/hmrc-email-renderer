@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Dear @{params("recipientName_line1")}
+Dear @{params("userName")}
 
 You can now apply for goods movement references every time you move goods.
 
