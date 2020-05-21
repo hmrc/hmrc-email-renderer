@@ -1822,7 +1822,7 @@ object TemplateParams {
       "submissionNumber" -> "3"
     ),
     "gms_enrolment_confirmation" -> Map(
-      "userName"-> "Customer"
+      "userName" -> "Customer"
     )
   )
 }
