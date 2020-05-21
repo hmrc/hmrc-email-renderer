@@ -1820,9 +1820,6 @@ object TemplateParams {
       "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
       "psaName"          -> "Jane Doe",
       "submissionNumber" -> "3"
-    ),
-    "gms_enrolment_confirmation" -> Map(
-      "userName" -> "Customer"
     )
   )
 }

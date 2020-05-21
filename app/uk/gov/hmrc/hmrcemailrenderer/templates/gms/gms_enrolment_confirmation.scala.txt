@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Dear @{params("userName")}
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You can now apply for goods movement references every time you move goods.
 
