@@ -9,15 +9,19 @@ Your claim reference: @params.get("claim_ref_no")
 
 We have checked your claim and can confirm that you are eligible to receive a grant.
 
-However, we cannot process your payment with the bank details you provided, so we need you to check these now.
+However, we are unable to process your payment with the bank details you provided so we need you to check these.
 
-How to check your bank details
+If you asked us to pay your grant into a building society account, you need to make sure you give us the roll number where one exists.
 
-Return to the GOV.UK website and search for ‘claim for a Self-Employment Income Support Scheme grant’. Go to the section ‘return to your claim’ where you will have the option to check and amend your details.
+How to update your details
 
-We will then process your payment, which you can expect to receive within 6 working days.
+From Thursday 28 May you can return to your claim and update your details. We will contact you again when it’s time to return to your claim.
 
-Please only call us if you cannot find the information you need on GOV.UK – this keeps our lines open for those who need our help most.
+Go to the GOV.UK website and search for ‘Claim a grant through the Self-Employment Income Support Scheme’. In the section ‘Return to your claim’ you will have the option to check and amend your details.
+
+We will then process your payment and contact you again within 72 hours to confirm your payment is on its way.
+
+Please only call us if you can’t find the information you need on GOV.UK – this will leave our lines open for those who need our help most.
 
 A word about scams
 
