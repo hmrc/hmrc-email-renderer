@@ -2,11 +2,11 @@
 
 Dear @params("name")
 
-    We received your registration for @params("name") @if(params("groupCompanyName").toString != "unknown"){on behalf of @params("groupCompanyName")} for the Digital Services Tax.
+    We received your registration for @params("companyName") @if(params("groupCompanyName").toString != "unknown"){on behalf of @params("groupCompanyName")} for the Digital Services Tax.
 
     What happens next
 
-    We will send your Digital Services Tax registration number to this email address within 5 working days.
+    We will send your Digital Services Tax registration number to this email address in the next 24 hours.
 
     Contact your HMRC Customer Compliance Manager (CCM) if you do not receive your registration number.
 
