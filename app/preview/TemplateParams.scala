@@ -1798,12 +1798,14 @@ object TemplateParams {
     "dst_registration_accepted" -> Map(
       "dstNumber"            -> "XADST0000010000",
       "name"                 -> "Joe Bloggs",
+      "companyName"          -> "Some company Ltd.",
       "groupCompanyName"     -> "Some group company Ltd.",
       "paymentDeadline"      -> "20210401",
       "submitReturnDeadline" -> "20210731"
     ),
     "dst_registration_received" -> Map(
       "name"             -> "Joe Bloggs",
+      "companyName"      -> "Some company Ltd.",
       "groupCompanyName" -> "Some group company Ltd."
     ),
     "pods_file_aft_return" -> Map(
