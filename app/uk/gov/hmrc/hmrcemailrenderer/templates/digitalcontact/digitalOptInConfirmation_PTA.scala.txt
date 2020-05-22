@@ -1,0 +1,39 @@
+@(params: Map[String, Any])How we will send you online tax letters
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
+
+Now you have signed up to online tax letters, we wanted to tell you more.
+
+
+How it works
+
+We will send online tax letters for any Self Assessment or tax code letters you get. Whenever you have a new online tax letter, we will email to let you know.
+
+You will find all these saved together in one place, and you can read them on any device, then download and share them. You can also print them at any time, so you have a paper copy if you ever need one. To read your tax letters, sign in to HMRC services and select 'Messages'.
+
+This service is still growing, so at the moment we only send some tax letters online. Over time, we will be able to send most tax letters by message and email, though some will always need to come by post.
+
+
+What you have opted in to
+
+If you use Self Assessment, we will send you tax letters and emails like these:
+
+* Self Assessment notice to file (SA316)
+* Self Assessment penalty notice (SA370)
+* Email notifications to let you know you have a message waiting
+
+If you get letters about your tax code, we will also contact you online. For example:
+
+* Notice of coding (P2) by email
+
+
+Our promises
+
+If an email notification ever bounces (we send an email, but it does not reach you and is returned to us), we’ll let you know by post, and send a paper copy of the letter. This means you will never miss a tax letter.
+
+We will never send private or sensitive information by email.
+
+You can change the email address you use to get tax letters, and you can also choose to leave this service at any time and go back to getting all tax letters by post. Just go to check your settings.
+
+
+HMRC digital team
