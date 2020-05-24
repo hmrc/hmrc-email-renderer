@@ -107,7 +107,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Customs Financials",
         "Cgtpd",
         "TDQ",
-        "SEISS"
+        "SEISS",
+        "GVMS"
       )
     }
 
@@ -577,7 +578,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cgtpd_private_beta_access",
         "dst_registration_received",
         "dst_registration_accepted",
-        "cgtpd_submission_confirmation"
+        "cgtpd_submission_confirmation",
+        "gms_enrolment_confirmation"
       )
     }
   }
