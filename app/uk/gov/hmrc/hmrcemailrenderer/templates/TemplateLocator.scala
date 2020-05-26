@@ -65,6 +65,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd.CgtpdTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.htsreminder.HtsReminderTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dst.DstTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.gms.GmsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 
 trait TemplateLocator {
@@ -84,8 +85,9 @@ trait TemplateLocator {
       "EMAC"                  -> EmacTemplates.templates,
       "FANDF"                 -> FandFTemplates.templates,
       "GG"                    -> GgTemplates.templates,
-      "Passcodes"             -> PasscodesTemplates.templates,
       "GMP"                   -> GmpTemplates.templates,
+      "GVMS"                  -> GmsTemplates.templates,
+      "Passcodes"             -> PasscodesTemplates.templates,
       "PAYE"                  -> PayeTemplates.templates,
       "RALD"                  -> RaldTemplates.templates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
