@@ -284,6 +284,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_processing_grant",
         "seiss_processing_grant_cy",
         "seiss_payment_failed",
+        "seiss_payment_failed_cy",
         "seiss_received_confirmation",
         "cjrs_confirmation_submission",
         "csr_submission_confirmation",
