@@ -55,7 +55,7 @@ object SeissTemplates {
     ),
     MessageTemplate.create(
       templateId = "seiss_payment_failed_cy",
-      fromAddress = seissFromAddress,
+      fromAddress = seissFromAddressWelsh,
       service = Seiss,
       subject = "Mae angen mwy o fanylion ar CThEM i dalu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
       plainTemplate = txt.seissPaymentFailure_cy.f,
