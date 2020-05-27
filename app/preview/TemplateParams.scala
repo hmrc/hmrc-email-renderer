@@ -1632,13 +1632,14 @@ object TemplateParams {
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
     ),
     "pods_scheme_register" -> Map(
-      "srn" -> "S12345 67890"
+      "psaName" -> "Jane Doe",
+      "srn"     -> "S12345 67890"
     ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
     ),
     "pods_psa_invited" -> Map(
-      "inviteeName" -> "Joe Bloggs",
+      "inviteeName" -> "Jane Doe",
       "schemeName"  -> "Some Pension Scheme",
       "expiryDate"  -> "20 July 1969"
     ),
@@ -1822,6 +1823,9 @@ object TemplateParams {
       "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
       "psaName"          -> "Jane Doe",
       "submissionNumber" -> "3"
+    ),
+    "pods_psa_register" -> Map(
+      "psaName" -> "Jane Doe"
     )
   )
 }
