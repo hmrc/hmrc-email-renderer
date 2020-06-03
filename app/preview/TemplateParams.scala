@@ -163,9 +163,8 @@ object TemplateParams {
       "userFirstName" -> "Fred",
       "userLastName" -> "Bloggs",
       "applicationName" -> "Test Application",
-      "environmentName" -> "External Test",
+      "environmentName" -> "Sandbox",
       "timeSinceLastUse" -> "11 months",
-      "timeBeforeDeletion" -> "365 days",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
     "changeOfEmailAddressNewAddress" -> Map(

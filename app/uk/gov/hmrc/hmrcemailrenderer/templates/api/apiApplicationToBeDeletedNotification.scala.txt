@@ -1,21 +1,16 @@
-@(params: Map[String, Any])Take action to stop your application being deleted
+@(params: Map[String, Any])We’re deleting your application
 
 Dear @{params("userFirstName")} @{params("userLastName")}
 
-According to our records, your application @{params("applicationName")} in our @{params("environmentName")} environment has not been used for @{params("timeSinceLastUse")}.
+Your @{params("environmentName")} application @{params("applicationName")} has been inactive for more than @{params("timeSinceLastUse")} and will be deleted on @{params("dateOfScheduledDeletion")}.
 
-We permanently delete applications that have not been used for @{params("timeBeforeDeletion")}. They cannot be restored.
+To keep this application, use it to make an API call before the deletion date.
 
-Your application will be deleted on or after @{params("dateOfScheduledDeletion")}.
+If you do nothing, we will automatically delete this application.
 
-What you can do now
+You can manage your email preferences on the Developer Hub at https://developer.service.hmrc.gov.uk
 
-If you want to keep this application you need to:
-- make an API call using its credentials before the scheduled deletion date
-
-If you do not want to keep this application you can either:
-- sign in to Developer Hub and delete it manually
-- allow it to be removed automatically on the scheduled deletion date
+Do not reply to this email, this inbox is not monitored.
 
 From HMRC Developer Hub
 

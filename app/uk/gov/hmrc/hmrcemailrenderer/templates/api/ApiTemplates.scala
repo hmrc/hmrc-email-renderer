@@ -196,7 +196,7 @@ object ApiTemplates {
       templateId = "apiApplicationToBeDeletedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "We will delete your application soon",
+      subject = "We’re deleting your application",
       plainTemplate = txt.apiApplicationToBeDeletedNotification.f,
       htmlTemplate = html.apiApplicationToBeDeletedNotification.f,
       priority = Some(MessagePriority.Standard)
