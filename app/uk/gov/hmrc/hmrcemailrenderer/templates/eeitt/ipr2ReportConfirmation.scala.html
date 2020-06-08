@@ -1,0 +1,35 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You reported goods that infringe intellectual property rights"){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params.get("customerName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HMRC received your report of goods which infringe intellectual property rights.
+</p>
+<h2>
+    What happens next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We will now review the details you have given us, then contact you at this email address.
+</p>
+<h2>
+    Why you are receiving this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We send a confirmation email for reports of goods that infringe intellectual property rights.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC Intellectual Property Rights team</p>
+}

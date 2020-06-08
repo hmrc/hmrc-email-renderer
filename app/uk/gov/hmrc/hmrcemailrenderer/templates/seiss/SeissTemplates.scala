@@ -54,6 +54,15 @@ object SeissTemplates {
       priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
+      templateId = "seiss_payment_failed_cy",
+      fromAddress = seissFromAddressWelsh,
+      service = Seiss,
+      subject = "Mae angen mwy o fanylion ar CThEM i dalu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
+      plainTemplate = txt.seissPaymentFailure_cy.f,
+      htmlTemplate = html.seissPaymentFailure_cy.f,
+      priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
       templateId = "seiss_scheme_open",
       fromAddress = seissFromAddress,
       service = Eeitt,
