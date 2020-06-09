@@ -159,6 +159,14 @@ object TemplateParams {
       "environmentName"    -> "sandbox",
       "applicationName"    -> "Tax Software"
     ),
+    "apiApplicationToBeDeletedNotification" -> Map(
+      "userFirstName"           -> "Fred",
+      "userLastName"            -> "Bloggs",
+      "applicationName"         -> "Test Application",
+      "environmentName"         -> "Sandbox",
+      "timeSinceLastUse"        -> "11 months",
+      "dateOfScheduledDeletion" -> "1 April 2025"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),

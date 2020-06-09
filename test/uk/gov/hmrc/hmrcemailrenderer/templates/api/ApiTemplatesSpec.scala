@@ -91,6 +91,11 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
         templateId = "apiRemovedClientSecretNotification",
         expectedSubject = "Client Secret Removed",
         expectedPriority = MessagePriority.Urgent)
+
+      validateTemplate(
+        templateId = "apiApplicationToBeDeletedNotification",
+        expectedSubject = "We’re deleting your application",
+        expectedPriority = MessagePriority.Standard)
     }
   }
 
