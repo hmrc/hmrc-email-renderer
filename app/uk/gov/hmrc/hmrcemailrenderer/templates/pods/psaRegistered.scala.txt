@@ -2,7 +2,7 @@
 
 You have registered as a pension scheme administrator
 
-Dear Pension Scheme Administrator,
+Dear @{params("psaName").toString}
 
 You have successfully registered as a pension scheme administrator.
 

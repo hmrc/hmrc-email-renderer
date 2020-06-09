@@ -2,7 +2,7 @@
 
 You have an invitation to be added as a scheme administrator of a pension scheme
 
-Dear Pension Scheme Administrator,
+Dear @{params("inviteeName").toString}
 
 You have an invitation to be added as a scheme administrator of @{params("schemeName").toString}.
 
