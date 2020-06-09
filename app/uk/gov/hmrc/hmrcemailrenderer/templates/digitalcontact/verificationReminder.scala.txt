@@ -4,14 +4,11 @@
 You’ve chosen to get electronic communications from HMRC.
 
 You still need to verify your email address with HMRC to complete the sign-up process.
-@if(params.contains("verificationLink")){
+
 Click on the link below to verify your email address.
 
 @{params("verificationLink")}
-} else {
-Click on the link in the email sent to you on @{params("verificationLinkSentDate")}.
 
-}
 From HMRC Digital
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
