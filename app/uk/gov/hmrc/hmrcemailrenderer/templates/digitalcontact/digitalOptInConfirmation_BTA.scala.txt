@@ -24,13 +24,13 @@ What you have opted in to
 
 We will send you Self Assessment tax letters and emails like these:
 
-* Self Assessment notice to file (SA316)
-* Self Assessment penalty notice (SA370)
+* Self Assessment notice to file (an SA316 notice)
+* Self Assessment penalty notice (an SA370 notice)
 * Email notifications to let you know you have a message waiting
 
-If you use the same Government Gateway user ID for your personal tax account, and you get letters about your PAYE personal tax code, we will also contact you online. For example:
+If you also get letters about your PAYE personal tax code, we will now send you email notifications. For example:
 
-* Notice of coding (P2) by email
+* Changes to your tax code (a P2 letter)
 
 If you have a different Government Gateway user ID which you use for a personal tax code, you need to use these details to opt in if you want to get your P2 online.
 
