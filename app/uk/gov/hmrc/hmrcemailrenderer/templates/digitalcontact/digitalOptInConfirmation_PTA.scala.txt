@@ -18,13 +18,13 @@ What you have opted in to
 
 If you use Self Assessment, we will send you tax letters and emails like these:
 
-* Self Assessment notice to file (SA316)
-* Self Assessment penalty notice (SA370)
+* Self Assessment notice to file (an SA316 notice)
+* Self Assessment penalty notice (an SA370 notice)
 * Email notifications to let you know you have a message waiting
 
-If you get letters about your tax code, we will also contact you online. For example:
+If you also get letters about your PAYE personal tax code, we will now send you email notifications. For example:
 
-* Notice of coding (P2) by email
+* Changes to your tax code (a P2 letter)
 
 
 Our promises
