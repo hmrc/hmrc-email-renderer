@@ -148,6 +148,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "verifyEmailAddress_cy",
         "digitalOptInConfirmation_BTA",
         "digitalOptInConfirmation_PTA",
+        "digitalOptInConfirmation_PTA_cy",
         "digitalOptOutConfirmation",
         "digitalOptOutConfirmation_cy",
         "changeOfEmailAddressNewAddress",
