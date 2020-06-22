@@ -236,6 +236,14 @@ object DigitalContactTemplates {
       plainTemplate = txt.digitalOptInConfirmation_PTA.f,
       htmlTemplate = html.digitalOptInConfirmation_PTA.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_PTA_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Sut y byddwn yn anfon llythyrau treth ar-lein atoch",
+      plainTemplate = txt.digitalOptInConfirmation_PTA_cy.f,
+      htmlTemplate = html.digitalOptInConfirmation_PTA_cy.f
     )
   ) ++ newMessageAlertTemplates
 }
