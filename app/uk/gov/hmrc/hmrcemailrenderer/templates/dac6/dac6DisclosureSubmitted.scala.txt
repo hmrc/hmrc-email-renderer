@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You have submitted a disclosure
+Dear [first name]  [last name]
+This email confirms the submission of your disclosure for the DAC6 service:
+Arrangement reference number: [number]
+Disclosure ID: [ID]
+Date submitted: [date]
+File name: [name]
+Submission number: [number]
+What to do next
+Share the arrangement reference number with anyone else involved in the arrangement.
+For security reasons, we have not included a link with this email.
+From HMRC DAC6 service
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
