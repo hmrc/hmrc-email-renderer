@@ -1,13 +1,13 @@
 @(params: Map[String, Any])
 
 You have successfully replaced a disclosure
-Dear [first name]  [last name]
+Dear  @{params("name")}
 This email confirms the replacement of your disclosure.
-Arrangement reference number: [number]
-Original disclosure ID: [ID]
-Replacement disclosure ID: [ID]
-Date submitted: [date]
-File name: [name]
+Arrangement reference number: @{params("arrangementReference")}
+Original disclosure ID: @{params("disclosureID")}
+Replacement disclosure ID: @{params("replacementDisclosureID")}
+Date submitted: @{params("dateSubmitted")}
+File name: @{params("fileName")}
 What to do next
 Share the arrangement reference number with anyone else involved in the arrangement.
 For security reasons, we have not included a link with this email.

@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 You have registered for the DAC6 service
-Dear [first name] [last name]
+Dear @{params("name")}
 You can now submit a disclosure.
 Search for ‘DAC6’ on GOV.UK and sign in to the service.
 For security reasons, we have not included a link in this email.

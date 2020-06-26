@@ -1834,6 +1834,39 @@ object TemplateParams {
     ),
     "pods_psa_register" -> Map(
       "psaName" -> "Jane Doe"
+    ),
+    "dac6_registration_successful" -> Map(
+      "name" -> "Joe Bloggs"
+    ),
+    "dac6_disclosure_additional_information" -> Map(
+      "name"                 -> "Joe Bloggs",
+      "arrangementReference" -> "123456789",
+      "disclosureID"         -> "987654321",
+      "dateSubmitted"        -> "2 July 2020",
+      "fileName"             -> "filename.xml"
+    ),
+    "dac6_disclosure_deleted" -> Map(
+      "name"                 -> "Joe Bloggs",
+      "arrangementReference" -> "123456789",
+      "disclosureID"         -> "987654321",
+      "dateSubmitted"        -> "2 July 2020",
+      "fileName"             -> "filename.xml"
+    ),
+    "dac6_disclosure_replaced" -> Map(
+      "name"                    -> "Joe Bloggs",
+      "arrangementReference"    -> "123456789",
+      "disclosureID"            -> "987654321",
+      "replacementDisclosureID" -> "987654321",
+      "dateSubmitted"           -> "2 July 2020",
+      "fileName"                -> "filename.xml"
+    ),
+    "dac6_disclosure_submitted" -> Map(
+      "name"                 -> "Joe Bloggs",
+      "arrangementReference" -> "123456789",
+      "disclosureID"         -> "987654321",
+      "dateSubmitted"        -> "2 July 2020",
+      "fileName"             -> "filename.xml",
+      "submissionNumber"     -> "212121212"
     )
   )
 }

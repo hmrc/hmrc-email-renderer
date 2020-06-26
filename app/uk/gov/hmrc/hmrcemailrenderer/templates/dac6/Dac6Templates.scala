@@ -20,11 +20,19 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DAC6
 
-
 object Dac6Templates {
   val templates = Seq(
-
-   //  UPLOAD - DISCLOSURE SUBMITTED
+    // REGISTRATION - REGISTRATION SUCCESSFUL
+    MessageTemplate.create(
+      templateId = "dac6_registration_successful",
+      fromAddress = govUkTeamAddress,
+      service = DAC6,
+      subject = "You have registered for the DAC6 service ",
+      plainTemplate = txt.dac6RegistrationSuccessful.f,
+      htmlTemplate = html.dac6RegistrationSuccessful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    //  UPLOAD - DISCLOSURE SUBMITTED
     MessageTemplate.create(
       templateId = "dac6_disclosure_submitted",
       fromAddress = govUkTeamAddress,
@@ -34,7 +42,6 @@ object Dac6Templates {
       htmlTemplate = html.dac6DisclosureSubmitted.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     // UPLOAD - DISCLOSURE ADDITIONAL INFORMATION
     MessageTemplate.create(
       templateId = "dac6_disclosure_additional_information",
@@ -45,7 +52,6 @@ object Dac6Templates {
       htmlTemplate = html.dac6DisclosureAdditionalInformation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     // UPLOAD - DISCLOSURE DELETED
     MessageTemplate.create(
       templateId = "dac6_disclosure_deleted",
@@ -56,26 +62,14 @@ object Dac6Templates {
       htmlTemplate = html.dac6DisclosureDeleted.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     // UPLOAD - DISCLOSURE REPLACED
     MessageTemplate.create(
       templateId = "dac6_disclosure_replaced",
       fromAddress = govUkTeamAddress,
       service = DAC6,
-      subject = "You replaced disclosure" ,
+      subject = "You replaced disclosure",
       plainTemplate = txt.dac6DisclosureReplaced.f,
       htmlTemplate = html.dac6DisclosureReplaced.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-
-    // REGISTRATION - REGISTRATION SUCCESSFUL
-    MessageTemplate.create(
-      templateId = "dac6_registration_successful",
-      fromAddress = govUkTeamAddress,
-      service = DAC6,
-      subject = "You have registered for the DAC6 service ",
-      plainTemplate = txt.dac6RegistrationSuccessful.f,
-      htmlTemplate = html.dac6RegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

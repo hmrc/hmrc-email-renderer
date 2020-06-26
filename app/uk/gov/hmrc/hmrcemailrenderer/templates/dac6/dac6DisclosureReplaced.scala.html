@@ -17,15 +17,16 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have successfully replaced a disclosure ") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear - </p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")} </p>
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">This email confirms the replacement of your disclosure.
 </p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">
-Arrangement reference number: [number]
-Disclosure ID: [ID]
-Date submitted: [date]
-File name: [name]
+<li>Arrangement reference number: @{params("arrangementReference")} </li>
+<li>Disclosure ID: @{params("disclosureID")} </li>
+<li>Replacement Disclosure ID: @{params("replacementDisclosureID")} </li>
+<li>Date submitted: @{params("dateSubmitted")} </li>
+<li>File name: @{params("fileName")} </li>
 </p>
 
 <h2>What to do next</h2>

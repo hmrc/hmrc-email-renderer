@@ -17,15 +17,15 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have successfully deleted a disclosure ") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear - </p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")} </p>
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">This email confirms the deletion of your disclosure.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">
 <ul>
- <li>Arrangement reference number: - </li>
- <li>Disclosure ID: - </li>
- <li>Date submitted: - </li>
- <li>File name: - </li>
+ <li>Arrangement reference number: @{params("arrangementReference")} </li>
+ <li>Disclosure ID: @{params("disclosureID")} </li>
+ <li>Date submitted: @{params("dateSubmitted")} </li>
+ <li>File name: @{params("fileName")} </li>
 </ul>
 </p>
 
