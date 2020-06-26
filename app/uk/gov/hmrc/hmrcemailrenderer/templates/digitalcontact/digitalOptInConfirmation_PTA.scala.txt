@@ -7,9 +7,11 @@ Now you have signed up to online tax letters, we wanted to tell you more.
 
 How it works
 
-We will send online tax letters for any Self Assessment or tax code letters you get. Whenever you have a new online tax letter, we will email to let you know.
+We will send online tax letters for the key Self Assessment or tax code letters you may get. Whenever you have a new online tax letter, we will email to let you know.
 
 You will find all these saved together in one place, and you can read them on any device, then download and share them. You can also print them at any time, so you have a paper copy if you ever need one. To read your tax letters, sign in to HMRC services and select 'Messages'.
+
+You can also use HMRC’s free mobile app to read your tax letters. Search for ‘HMRC app’ to download it.
 
 This service is still growing, so at the moment we only send some tax letters online. Over time, we will be able to send most tax letters by message and email, though some will always need to come by post.
 
