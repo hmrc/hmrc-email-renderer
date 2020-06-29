@@ -16,7 +16,7 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sut y byddwn yn anfon llythyrau treth ar-lein atoch") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sut y byddwn yn anfon llythyrau treth ar-lein atoch", isWelsh = true) {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh = true)
     <p style="margin: 0 0 30px; font-size: 19px;">Gan eich bod bellach wedi cofrestru ar gyfer llythyrau treth ar-lein, roeddem eisiau rhoi rhagor o wybodaeth i chi.</p>
     <h2 style="margin: 0 0 30px; font-size: 19px;">Sut mae’n gweithio</h2>
