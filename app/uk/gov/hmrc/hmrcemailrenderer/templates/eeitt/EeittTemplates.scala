@@ -668,8 +668,7 @@ object EeittTemplates {
       templateId = "vishing_code_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject =
-        "Confirm your email address - Report a suspicious HMRC phone call",
+      subject = "Confirm your email address - Report a suspicious HMRC phone call",
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
       priority = Some(MessagePriority.Standard)
