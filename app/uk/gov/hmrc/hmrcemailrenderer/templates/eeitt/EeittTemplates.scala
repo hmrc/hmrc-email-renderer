@@ -663,6 +663,16 @@ object EeittTemplates {
       plainTemplate = txt.ipr3ApplicationConfirmation.f,
       htmlTemplate = html.ipr3ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vishing_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Report a suspicious HMRC phone call",
+      plainTemplate = txt.vishingCode.f,
+      htmlTemplate = html.vishingCode.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
