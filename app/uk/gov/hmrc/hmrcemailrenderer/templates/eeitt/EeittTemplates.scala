@@ -663,6 +663,15 @@ object EeittTemplates {
       plainTemplate = txt.ipr3ApplicationConfirmation.f,
       htmlTemplate = html.ipr3ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_repay_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your notification about Self-Employment Income Support Scheme grant money",
+      plainTemplate = txt.seissRepayConfirmation.f,
+      htmlTemplate = html.seissRepayConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
