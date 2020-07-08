@@ -88,11 +88,11 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
               "headerOrHeaders": "gov-client-public-ip",
               "errors": [
                 {
-                  "message": "Header value is not an IP address",
+                  "message": "Value is not an IP address",
                   "percentage": 5
                 },
                 {
-                  "message": "Header value is not a public IP address ",
+                  "message": "Value is not a public IP address",
                   "percentage": 10
                 }
               ],
@@ -102,25 +102,25 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
-                  "message": "Header value is not a key value data structure ",
+                  "message": "Value must be a key-value data structure",
                   "percentage": 10
                 },
                 {
-                  "message": "At least one of the keys or values is not percent encoded",
+                  "message": "At least 1 key or value is not percent encoded",
                   "percentage": 25
                 },
                 {
-                  "message": "At least one value for software version is missing",
+                  "message": "At least 1 software version value is missing",
                   "percentage": 15
                 },
                 {
-                  "message": "At least one separator (ampersand or equal sign) is percent encoded",
+                  "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
                   "percentage": 0
                 }
               ],
               "warnings": [
                 {
-                  "message": "For client server architecture, please supply at least a version for client and server",
+                  "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
                   "percentage": 10
                 }
               ]
@@ -130,15 +130,15 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
               "errors" : [],
               "warnings": [
                 {
-                  "message": "Use a UUID (also known as a GUID) as recommended in our documentation",
+                  "message": "Use a recommended UUID. Check the specification.",
                   "percentage": 0
                 },
                 {
-                  "message": "ID needs to be longer to ensure it is unique. As a benchmark we use a UUID which is 128 bits or 32 hex characters long",
+                  "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
                   "percentage": 17
                 },
                 {
-                  "message": "Header value contains an email address. Device ID should not be derived from user-specific data ",
+                  "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
                   "percentage": 22
                 }
               ]
