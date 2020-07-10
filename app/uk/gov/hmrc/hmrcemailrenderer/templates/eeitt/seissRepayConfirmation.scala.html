@@ -19,7 +19,7 @@
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We received your notification to tell us that you are repaying Self-Employment Income Support Scheme grant money today.</p>
+    We received your notification to tell us you intend to repay Self-Employment Income Support Scheme grant money.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
      @params.get("miscText")
 </p>
@@ -27,5 +27,5 @@
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for all forms submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From the Self-Employment Income Support team</p>
+    From @params.get("emailTeam")</p>
 }
