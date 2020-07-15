@@ -16,23 +16,23 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.{Configuration, Logger, Play}
+import play.api.{ Configuration, Logger, Play }
 import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.MicroserviceAuditConnector
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.hmrcemailrenderer.model.Language.{English, Welsh}
+import uk.gov.hmrc.hmrcemailrenderer.model.Language.{ English, Welsh }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
-import uk.gov.hmrc.play.audit.http.connector.{AuditConnector, AuditResult}
+import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
 import uk.gov.hmrc.play.audit.model.DataEvent
 import uk.gov.hmrc.play.config.RunMode
 
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success, Try}
+import scala.concurrent.{ ExecutionContext, Future }
+import scala.util.{ Failure, Success, Try }
 
 object TemplateRenderer extends TemplateRenderer with RunMode {
 
@@ -90,33 +90,32 @@ trait TemplateRenderer {
       )
   }
 
-  def sendLanguageEvents(email: String,
-                         language: Language,
-                         originalTemplateId: String,
-                         selectedTemplateId: String,
-                         description: String)
-                        (implicit ec: ExecutionContext): Future[AuditResult] = {
+  def sendLanguageEvents(
+    email: String,
+    language: Language,
+    originalTemplateId: String,
+    selectedTemplateId: String,
+    description: String)(implicit ec: ExecutionContext): Future[AuditResult] = {
 
     val event = DataEvent(
       "hmrc-email-renderer",
       auditType = Succeeded,
       tags = Map("transactionName" -> "Template Language"),
       detail = templatesByLangPreference ++ Map(
-        "email" -> email,
+        "email"              -> email,
         "originalTemplateId" -> originalTemplateId,
         "selectedTemplateId" -> selectedTemplateId,
-        "language" -> language.toString,
-        "description"-> description
+        "language"           -> language.toString,
+        "description"        -> description
       )
     )
 
-    auditConnector.sendEvent(event) map {
-      success =>
-        Logger.debug("Language event successfully audited")
-        success
+    auditConnector.sendEvent(event) map { success =>
+      Logger.debug("Language event successfully audited")
+      success
     } recover {
-      case e@AuditResult.Failure(msg, _) =>
-        Logger.warn(s"Language event failed to audit: ${msg}")
+      case e @ AuditResult.Failure(msg, _) =>
+        Logger.warn(s"Language event failed to audit: $msg")
         e
     }
   }
@@ -136,7 +135,7 @@ trait TemplateRenderer {
       preferencesConnector.languageByEmail(email).map { lang =>
         val selectedTemplateId = lang match {
           case English => originalTemplateId
-          case Welsh => welshTemplateId
+          case Welsh   => welshTemplateId
         }
         sendLanguageEvents(email, lang, originalTemplateId, selectedTemplateId, "Language preference found")
         selectedTemplateId
