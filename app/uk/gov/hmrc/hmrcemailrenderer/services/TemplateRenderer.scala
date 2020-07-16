@@ -16,14 +16,19 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.{ Configuration, Play }
+import play.api.{ Configuration, Logger, Play }
 import play.twirl.api.Format
+import uk.gov.hmrc.hmrcemailrenderer.MicroserviceAuditConnector
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
+import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.hmrcemailrenderer.model.Language.{ English, Welsh }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
+import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
+import uk.gov.hmrc.play.audit.model.DataEvent
 import uk.gov.hmrc.play.config.RunMode
 
 import scala.concurrent.{ ExecutionContext, Future }
@@ -52,8 +57,8 @@ object TemplateRenderer extends TemplateRenderer with RunMode {
 
   override protected def runModeConfiguration: Configuration = Play.current.configuration
 
+  val auditConnector = MicroserviceAuditConnector
   val preferencesConnector = PreferencesConnector()
-
 }
 
 trait TemplateRenderer {
@@ -61,6 +66,8 @@ trait TemplateRenderer {
   def commonParameters: Map[String, String]
 
   def locator: TemplateLocator
+
+  def auditConnector: AuditConnector
 
   def preferencesConnector: PreferencesConnector
 
@@ -83,19 +90,74 @@ trait TemplateRenderer {
       )
   }
 
-  def languageTemplateId(templateId: String, emailAddress: Option[String])(
+  def sendLanguageEvents(
+    email: String,
+    language: Language,
+    originalTemplateId: String,
+    selectedTemplateId: String,
+    description: String)(implicit ec: ExecutionContext): Future[AuditResult] = {
+
+    val event = DataEvent(
+      "hmrc-email-renderer",
+      auditType = Succeeded,
+      tags = Map("transactionName" -> "Template Language"),
+      detail = templatesByLangPreference ++ Map(
+        "email"              -> email,
+        "originalTemplateId" -> originalTemplateId,
+        "selectedTemplateId" -> selectedTemplateId,
+        "language"           -> language.toString,
+        "description"        -> description
+      )
+    )
+
+    auditConnector.sendEvent(event) map { success =>
+      Logger.debug("Language event successfully audited")
+      success
+    } recover {
+      case e @ AuditResult.Failure(msg, _) =>
+        Logger.warn(s"Language event failed to audit: $msg")
+        e
+    }
+  }
+
+  def languageTemplateId(originalTemplateId: String, emailAddress: Option[String])(
     implicit hc: HeaderCarrier,
     ec: ExecutionContext): Future[String] = {
-    for {
+
+    if (templatesByLangPreference.size <= 0) {
+      Logger.warn("WelshTemplatesByLangPreferences whitelist is empty")
+    }
+
+    val result = for {
       email           <- emailAddress
-      welshTemplateId <- templatesByLangPreference.get(templateId)
+      welshTemplateId <- templatesByLangPreference.get(originalTemplateId)
     } yield {
-      preferencesConnector.languageByEmail(email).map {
-        case English => templateId
-        case Welsh   => welshTemplateId
+      preferencesConnector.languageByEmail(email).map { lang =>
+        val selectedTemplateId = lang match {
+          case English => originalTemplateId
+          case Welsh   => welshTemplateId
+        }
+        sendLanguageEvents(email, lang, originalTemplateId, selectedTemplateId, "Language preference found")
+        selectedTemplateId
+      } recover {
+        case e: Throwable =>
+          Logger.error(s"Error retrieving language preference from preferences service: ${e.getMessage}")
+          originalTemplateId
       }
     }
-  }.getOrElse(Future.successful(templateId))
+    result match {
+      case Some(templateId) => templateId
+      case None =>
+        sendLanguageEvents(
+          emailAddress.getOrElse("N/A"),
+          Language.English,
+          originalTemplateId,
+          originalTemplateId,
+          "Defaulting to English"
+        )
+        Future.successful(originalTemplateId)
+    }
+  }
 
   private def render(
     template: Map[String, String] => Format[_]#Appendable,
