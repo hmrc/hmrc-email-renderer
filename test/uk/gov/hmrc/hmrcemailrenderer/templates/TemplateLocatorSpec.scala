@@ -64,6 +64,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "AMLS",
         "Passcodes",
         "TAMC",
+        "DAC6",
         "DFS",
         "Digital Contact VAT",
         "Digital Tariffs",
@@ -586,7 +587,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dst_registration_received",
         "dst_registration_accepted",
         "cgtpd_submission_confirmation",
-        "gms_enrolment_confirmation"
+        "gms_enrolment_confirmation",
+        "dac6_registration_successful"
       )
     }
   }
