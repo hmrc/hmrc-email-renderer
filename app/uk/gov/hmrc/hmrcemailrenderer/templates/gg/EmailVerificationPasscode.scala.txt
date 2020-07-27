@@ -1,0 +1,4 @@
+@(params: Map[String, Any])Email Verification
+
+Your pin is @params("passcode"),
+

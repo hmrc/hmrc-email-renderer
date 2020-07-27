@@ -115,6 +115,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "enumerate all template identifiers" in {
       TemplateLocator.all.map(_.templateId) should contain only (
+        "email_verification_passcode",
         "overseas_application_rejected",
         "overseas_application_accepted",
         "overseas_application_received",
