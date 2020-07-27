@@ -47,6 +47,14 @@ object GgTemplates {
       subject = "Password change confirmation",
       plainTemplate = txt.PasswordChangeConfirmation.f,
       htmlTemplate = html.PasswordChangeConfirmation.f
+    ),
+    MessageTemplate.create(
+      templateId = "email_verification_passcode",
+      fromAddress = FromAddress.noReply("Government Gateway service"),
+      service = GovernmentGateway,
+      subject = "Confirm your email address - Government Gateway",
+      plainTemplate = txt.EmailVerificationPasscode.f,
+      htmlTemplate = html.EmailVerificationPasscode.f
     )
   )
 }
