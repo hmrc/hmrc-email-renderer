@@ -588,11 +588,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dst_registration_accepted",
         "cgtpd_submission_confirmation",
         "gms_enrolment_confirmation",
-        "dac6_registration_successful",
-        "dac6_disclosure_submitted",
-        "dac6_disclosure_additional_information",
-        "dac6_disclosure_deleted",
-        "dac6_disclosure_replaced"
+        "dac6_registration_successful"
       )
     }
   }

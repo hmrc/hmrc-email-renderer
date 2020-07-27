@@ -31,46 +31,6 @@ object Dac6Templates {
       plainTemplate = txt.dac6RegistrationSuccessful.f,
       htmlTemplate = html.dac6RegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
-    ),
-    //  UPLOAD - DISCLOSURE SUBMITTED
-    MessageTemplate.create(
-      templateId = "dac6_disclosure_submitted",
-      fromAddress = govUkTeamAddress,
-      service = DAC6,
-      subject = "HMRC received your DAC6 disclosure",
-      plainTemplate = txt.dac6DisclosureSubmitted.f,
-      htmlTemplate = html.dac6DisclosureSubmitted.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    // UPLOAD - DISCLOSURE ADDITIONAL INFORMATION
-    MessageTemplate.create(
-      templateId = "dac6_disclosure_additional_information",
-      fromAddress = govUkTeamAddress,
-      service = DAC6,
-      subject = "HMRC received your additional information about a disclosure",
-      plainTemplate = txt.dac6DisclosureAdditionalInformation.f,
-      htmlTemplate = html.dac6DisclosureAdditionalInformation.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    // UPLOAD - DISCLOSURE DELETED
-    MessageTemplate.create(
-      templateId = "dac6_disclosure_deleted",
-      fromAddress = govUkTeamAddress,
-      service = DAC6,
-      subject = "You deleted disclosure",
-      plainTemplate = txt.dac6DisclosureDeleted.f,
-      htmlTemplate = html.dac6DisclosureDeleted.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    // UPLOAD - DISCLOSURE REPLACED
-    MessageTemplate.create(
-      templateId = "dac6_disclosure_replaced",
-      fromAddress = govUkTeamAddress,
-      service = DAC6,
-      subject = "You replaced disclosure",
-      plainTemplate = txt.dac6DisclosureReplaced.f,
-      htmlTemplate = html.dac6DisclosureReplaced.f,
-      priority = Some(MessagePriority.Urgent)
     )
   )
 }
