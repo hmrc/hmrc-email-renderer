@@ -34,6 +34,9 @@ object TemplateParams {
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
+    "email_verification_passcode" -> Map(
+      "passcode" -> "NVFYRY"
+    ),
     "overseas_application_rejected" -> Map(
       "tradingName"    -> "ABC Accountants Ltd",
       "reason1"        -> "We could not confirm your money laundering supervisory body",
