@@ -27,7 +27,7 @@ object Dac6Templates {
       templateId = "dac6_registration_successful",
       fromAddress = govUkTeamAddress,
       service = DAC6,
-      subject = "You have registered for the DAC6 service ",
+      subject = "DAC6 registration successful",
       plainTemplate = txt.dac6RegistrationSuccessful.f,
       htmlTemplate = html.dac6RegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
