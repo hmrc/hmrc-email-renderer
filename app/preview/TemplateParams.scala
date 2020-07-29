@@ -35,7 +35,8 @@ object TemplateParams {
 
   val exampleParams = Map(
     "email_verification_passcode" -> Map(
-      "passcode" -> "NVFYRY"
+      "passcode"  -> "NVFYRY",
+      "team_name" -> "Government Gateway"
     ),
     "overseas_application_rejected" -> Map(
       "tradingName"    -> "ABC Accountants Ltd",
