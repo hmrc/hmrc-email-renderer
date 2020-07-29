@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You asked HMRC to check your eligibility for the Self-Employment Income Support Scheme
+
+Dear @params.get("customerName")
+
+We received your request to check your eligibility for the Self-Employment Income Support Scheme @params.get("serviceName")
+
+@params.get("slaDetails")
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the @params.get("serviceTeamName")
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
