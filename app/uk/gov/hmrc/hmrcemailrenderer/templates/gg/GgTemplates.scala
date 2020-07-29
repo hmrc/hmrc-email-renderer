@@ -52,7 +52,7 @@ object GgTemplates {
       templateId = "email_verification_passcode",
       fromAddress = FromAddress.noReply("Government Gateway service"),
       service = GovernmentGateway,
-      subject = "Confirm your email address - Government Gateway",
+      subject = "Your email confirmation code",
       plainTemplate = txt.EmailVerificationPasscode.f,
       htmlTemplate = html.EmailVerificationPasscode.f
     )
