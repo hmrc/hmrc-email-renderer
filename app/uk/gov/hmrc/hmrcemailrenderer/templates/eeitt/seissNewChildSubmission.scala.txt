@@ -4,7 +4,7 @@ You asked HMRC to check your eligibility for the Self-Employment Income Support 
 
 Dear @params.get("customerName")
 
-We received your request to check your eligibility for the Self-Employment Income Support @List("Scheme", params.get("serviceName"))
+We received your request to check your eligibility for the Self-Employment Income Support @{if(params.isDefinedAt("serviceName")) List("Scheme ", params.get("serviceName"), ".") else "Scheme."}
 
 @params.get("slaDetails")
 
