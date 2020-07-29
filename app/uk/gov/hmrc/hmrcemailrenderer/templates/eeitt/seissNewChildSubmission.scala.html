@@ -19,7 +19,7 @@
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We received your request to check your eligibility for the Self-Employment Income Support @List("Scheme", params.get("serviceName"))</p>
+    We received your request to check your eligibility for the Self-Employment Income Support @{if(params.isDefinedAt("serviceName")) List("Scheme ", params.get("serviceName"), ".") else "Scheme."}</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     @params.get("slaDetails")
 </p>
