@@ -629,6 +629,16 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "seiss_new_child_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "HMRC received your request to check your eligibility for the Self-Employment Income Support Scheme",
+      plainTemplate = txt.seissNewChildSubmission.f,
+      htmlTemplate = html.seissNewChildSubmission.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "seiss_grant_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
