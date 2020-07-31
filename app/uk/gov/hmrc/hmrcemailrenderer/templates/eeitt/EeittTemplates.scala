@@ -632,7 +632,7 @@ object EeittTemplates {
       templateId = "seiss_new_child_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your request to check your eligibility for the Self-Employment Income Support Scheme",
+      subject = "HMRC received your request to verify information",
       plainTemplate = txt.seissNewChildSubmission.f,
       htmlTemplate = html.seissNewChildSubmission.f,
       priority = Some(MessagePriority.Standard)
