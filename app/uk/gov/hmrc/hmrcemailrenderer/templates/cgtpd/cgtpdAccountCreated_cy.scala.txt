@@ -1,0 +1,24 @@
+@(params: Map[String, Any])Gwnaethoch greu cyfrif Treth Enillion Cyfalaf ar eiddo yn y DU
+
+Annwyl @{params("name")}
+
+Eich rhif cyfrif Treth Enillion Cyfalaf ar eiddo yn y DU yw @{params("cgtReference")}.
+
+Bydd angen i chi rhoi’r rhif hwn i CThEM os bydd angen i chi drafod eich cyfrif.
+
+Defnyddiwch eich cyfrif i wneud y canlynol:
+
+- rhoi gwybod am a thalu Treth Enillion Cyfalaf ar werthu neu waredu eiddo yn y DU
+- bwrw golwg dros eich Ffurflenni Treth
+
+Sut i fewngofnodi i’ch cyfrif
+
+Ewch i GOV.UK a chwilio am ‘Report and pay Capital Gains Tax on UK property’. Bydd angen eich Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth arnoch.
+
+Peidiwch ag ymateb i’r e-bost hwn.
+
+Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
