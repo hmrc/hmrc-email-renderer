@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+Mae CThEM wedi cael eich Ffurflen Dreth
+
+Annwyl @{params("name")}
+
+Cyfeirnod eich Ffurflen Dreth yw: @{params("submissionId")}
+
+Yr hyn sy’n rhaid i chi ei wneud nesaf
+
+Ewch i GOV.UK a chwiliwch am ‘Report and pay Capital Gains Tax on UK property’. Mewngofnodwch i’ch cyfrif Treth Enillion Cyfalaf ar eiddo yn y DU. Gwiriwch a oes gennych unrhyw gamau i’w cwblhau.
+
+Os oes angen i chi gyflwyno Ffurflen Dreth Hunanasesiad
+
+Bydd angen i chi ddarparu manylion o’r Ffurflen Dreth hon yn eich Ffurflen Dreth Hunanasesiad.
+
+Peidiwch ag ymateb i’r e-bost hwn.
+
+Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

@@ -1804,11 +1804,19 @@ object TemplateParams {
       "cgtReference" -> "XYCGTP123456780",
       "name"         -> "Jamie Wilson"
     ),
+    "cgtpd_account_created_cy" -> Map(
+      "cgtReference" -> "XYCGTP123456780",
+      "name"         -> "Jamie Wilson"
+    ),
     "cgtpd_private_beta_access" -> Map(
       "name"             -> "Jamie Wilson",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "cgtpd_submission_confirmation" -> Map(
+      "name"         -> "Jamie Wilson",
+      "submissionId" -> "000000000006"
+    ),
+    "cgtpd_submission_confirmation_cy" -> Map(
       "name"         -> "Jamie Wilson",
       "submissionId" -> "000000000006"
     ),
