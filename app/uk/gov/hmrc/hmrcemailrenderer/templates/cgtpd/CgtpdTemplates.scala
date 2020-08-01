@@ -33,6 +33,15 @@ object CgtpdTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "cgtpd_email_verification_cy",
+      fromAddress = govUkTeamAddress,
+      service = Cgtpd,
+      subject = "Cadarnhau e-bost ar gyfer Treth Enillion Cyfalaf ar eiddo yn y DU",
+      plainTemplate = txt.cgtpdEmailVerification_cy.f,
+      htmlTemplate = html.cgtpdEmailVerification_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "cgtpd_account_created",
       fromAddress = govUkTeamAddress,
       service = Cgtpd,

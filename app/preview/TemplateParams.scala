@@ -1707,6 +1707,10 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId,
       "name"             -> "Susan Bartlett"
     ),
+    "cgtpd_email_verification_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId,
+      "name" -> "Susan Bartlett"
+    ),
     "tdq_compliance_all_required_headers_missing" -> Map(
       "developerName"   -> "John Smith",
       "fromDate"        -> "22 September 2019",
