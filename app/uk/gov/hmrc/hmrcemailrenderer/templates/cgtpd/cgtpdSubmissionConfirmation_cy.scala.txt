@@ -1,5 +1,4 @@
-@(params: Map[String, Any])
-Mae CThEM wedi cael eich Ffurflen Dreth
+@(params: Map[String, Any])Mae CThEM wedi cael eich Ffurflen Dreth
 
 Annwyl @{params("name")}
 
