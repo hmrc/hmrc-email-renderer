@@ -581,14 +581,17 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_financials_historic_c79_certificate",
         "customs_financials_new_postponed_vat_notification",
         "cgtpd_email_verification",
+        "cgtpd_email_verification_cy",
         "tdq_compliance_all_required_headers_missing",
         "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
         "tdq_compliance_partially_compliant_valid_connection_method",
         "cgtpd_account_created",
+        "cgtpd_account_created_cy",
         "cgtpd_private_beta_access",
         "dst_registration_received",
         "dst_registration_accepted",
         "cgtpd_submission_confirmation",
+        "cgtpd_submission_confirmation_cy",
         "gms_enrolment_confirmation",
         "dac6_registration_successful"
       )
