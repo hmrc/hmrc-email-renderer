@@ -1,15 +1,23 @@
-@(params: Map[String, Any])Sign up complete
+@(params: Map[String, Any])Welcome to Making Tax Digital for VAT
 
 Dear Customer
 
-You’ve signed up to use software to submit your VAT Returns.
+You’ve successfully signed up your business to Making Tax Digital for VAT.
 
-What happens next
-1. Choose relevant third party software.
-2. Allow your software to submit VAT Returns to HMRC. You might need to sign in with your Government Gateway details.
-3. Use software to record your sales and purchases.
-4. Submit your VAT Returns before your deadlines.
+Your VAT registration number is: @params("vatNumber")
 
-From HMRC Digital
+You must now use your software to submit your VAT returns to HMRC.
+
+Do not use the old way of sending your VAT Return, for example VAT online services
+
+What you must do next
+1. Make sure you have accounting software that works with Making Tax Digital for VAT.
+2. Check the software is connected to send VAT Returns to HMRC directly. You must allow and authorise your software using your Government Gateway details to verify your identity.
+3. Only use your software to keep records about your business sales and purchases.
+4. Manage and update all your business details using HMRC Services (this is also called a Business tax account).
+
+Do not reply to this email.
+
+From HMRC VAT
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
