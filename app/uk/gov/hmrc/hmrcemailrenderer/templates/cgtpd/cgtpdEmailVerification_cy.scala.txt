@@ -14,8 +14,6 @@ Dilynwch y cysylltiad isod er mwyn cadarnhau’ch cyfeiriad e-bost.
 
 @{params("verificationLink")}
 
-Ar ôl 30 munud bydd y cysylltiad hwn yn dod i ben a bydd angen i chi ddechrau eto.
-
 Peidiwch ag ymateb i’r e-bost hwn.
 
 Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM
