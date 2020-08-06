@@ -14,8 +14,6 @@ Follow the link below to confirm your email address.
 
 @{params("verificationLink")}
 
-After 30 minutes this link will expire and you’ll need to start again.
-
 Do not reply to this email.
 
 From HMRC Capital Gains Tax on UK property

@@ -1707,6 +1707,10 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId,
       "name"             -> "Susan Bartlett"
     ),
+    "cgtpd_email_verification_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId,
+      "name"             -> "Susan Bartlett"
+    ),
     "tdq_compliance_all_required_headers_missing" -> Map(
       "developerName"   -> "John Smith",
       "fromDate"        -> "22 September 2019",
@@ -1800,11 +1804,19 @@ object TemplateParams {
       "cgtReference" -> "XYCGTP123456780",
       "name"         -> "Jamie Wilson"
     ),
+    "cgtpd_account_created_cy" -> Map(
+      "cgtReference" -> "XYCGTP123456780",
+      "name"         -> "Jamie Wilson"
+    ),
     "cgtpd_private_beta_access" -> Map(
       "name"             -> "Jamie Wilson",
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "cgtpd_submission_confirmation" -> Map(
+      "name"         -> "Jamie Wilson",
+      "submissionId" -> "000000000006"
+    ),
+    "cgtpd_submission_confirmation_cy" -> Map(
       "name"         -> "Jamie Wilson",
       "submissionId" -> "000000000006"
     ),

@@ -1,0 +1,23 @@
+@(params: Map[String, Any])E-bost dilysu o ran rhoi gwybod am a thalu Treth Enillion Cyfalaf ar eiddo yn y DU
+
+Cadarnhewch eich cyfeiriad e-bost
+
+Annwyl @{params("name")}
+
+Gwnaethoch roi gwybod i ni eich bod am i ni ddefnyddio’r cyfeiriad e-bost hwn i gysylltu â chi ynghylch rhoi gwybod am a thalu Treth Enillion Cyfalaf ar eiddo yn y DU.
+
+Cyn y gallwn ddechrau defnyddio’r cyfeiriad hwn, bydd angen i chi ei gadarnhau.
+
+Bydd y cysylltiad isod yn rhoi’r gorau i weithio ar ôl 30 munud. Os na fydd y cysylltiad yn gweithio, bydd angen i chi ddechrau eto.
+
+Dilynwch y cysylltiad isod er mwyn cadarnhau’ch cyfeiriad e-bost.
+
+@{params("verificationLink")}
+
+Peidiwch ag ymateb i’r e-bost hwn.
+
+Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM
+
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
