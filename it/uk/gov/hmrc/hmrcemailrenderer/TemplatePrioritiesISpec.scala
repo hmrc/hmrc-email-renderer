@@ -482,11 +482,11 @@ class TemplatePrioritiesISpec
       (
         "cbcr_cbcid_regeneration",
         Map(
-          "f_name"      -> "Tyrion",
-          "s_name"      -> "Lannister",
-          "received_at" -> "31 December 2017",
-          "cbcrId"      -> "XGCBC0000000001")),
-      ("mtdfb_vat_principal_sign_up_successful", Map.empty),
+          "f_name"                                               -> "Tyrion",
+          "s_name"                                               -> "Lannister",
+          "received_at"                                          -> "31 December 2017",
+          "cbcrId"                                               -> "XGCBC0000000001")),
+      ("mtdfb_vat_principal_sign_up_successful", Map("vatNumber" -> "123456782")),
       ("mtdfb_vat_principal_sign_up_failure", Map.empty),
       ("mtdfb_vat_agent_sign_up_successful", Map("vatNumber" -> "123456782"))
     )

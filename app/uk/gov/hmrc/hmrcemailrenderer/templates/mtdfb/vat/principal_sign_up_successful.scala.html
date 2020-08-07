@@ -16,19 +16,28 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sign up complete") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Welcome to Making Tax Digital for VAT") {
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">You’ve signed up to use software to submit your VAT Returns.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You’ve successfully signed up your business to Making Tax Digital for VAT.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;font-weight: bold;">What happens next</p>
-    <ol>
-        <li>Choose relevant third party software.</li>
-        <li>Allow your software to submit VAT Returns to HMRC. You might need to sign in with your Government Gateway details.</li>
-        <li>Use software to record your sales and purchases.</li>
-        <li>Submit your VAT Returns before your deadlines.</li>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your VAT registration number is: <span style="font-size: 19px; font-weight: bold;">@params("vatNumber")</span></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You must now use your software to submit your VAT returns to HMRC.</p>
+
+    <div style="clear: both; border-left-style: solid; border-color: #bfc1c3; border-left-width: 10px; padding: 0.78947em; margin-bottom: 0.78947em;">
+        <p style="margin: 0 0 0;  font-size: 19px;">Do not use the old way of sending your VAT Return, for example VAT online services</p>
+    </div>
+
+    <p style="margin: 30px 0 30px; font-size: 19px;font-weight: bold;">What you must do next</p>
+    <ol style="margin-top: 5px; margin-bottom: 20px; padding-left: 20px;">
+        <li style="font-size: 19px; margin-bottom: 5px;">Make sure you have accounting software that works with Making Tax Digital for VAT.</li>
+        <li style="font-size: 19px; margin-bottom: 5px;">Check the software is connected to send VAT Returns to HMRC directly. You must allow and authorise your software using your Government Gateway details to verify your identity.</li>
+        <li style="font-size: 19px; margin-bottom: 5px;">Only use your software to keep records about your business sales and purchases.</li>
+        <li style="font-size: 19px; margin-bottom: 5px;">Manage and update all your business details using HMRC Services (this is also called a Business tax account).</li>
     </ol>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email.</p>
 
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC VAT</p>
 }
