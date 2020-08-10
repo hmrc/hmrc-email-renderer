@@ -79,6 +79,15 @@ object SeissTemplates {
       plainTemplate = txt.seissReceivedConfirmation.f,
       htmlTemplate = html.seissReceivedConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_phase_2_previously_claimed_stagger",
+      fromAddress = seissFromAddress,
+      service = Eeitt,
+      subject = "How to claim self-employment support",
+      plainTemplate = txt.seissPhase2PreviouslyClaimedStagger.f,
+      htmlTemplate = html.seissPhase2PreviouslyClaimedStagger.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
