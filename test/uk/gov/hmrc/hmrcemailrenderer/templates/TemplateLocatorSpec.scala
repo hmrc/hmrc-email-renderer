@@ -109,7 +109,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Cgtpd",
         "TDQ",
         "SEISS",
-        "GVMS"
+        "GVMS",
+        "EOTHO"
       )
     }
 
@@ -595,7 +596,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cgtpd_submission_confirmation",
         "cgtpd_submission_confirmation_cy",
         "gms_enrolment_confirmation",
-        "dac6_registration_successful"
+        "dac6_registration_successful",
+        "discounted_dining_payment_sent",
+        "discounted_dining_payment_sent_cy"
       )
     }
   }

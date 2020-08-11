@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+
+We have sent a payment
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
+
+We have now checked your claim @params.get("claimRefNo"), and sent a payment to the account details provided when the business was registered.
+
+From the Eat Out to Help Out team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
