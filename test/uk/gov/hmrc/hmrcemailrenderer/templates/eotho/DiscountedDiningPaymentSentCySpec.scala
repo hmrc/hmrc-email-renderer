@@ -21,30 +21,31 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 import uk.gov.hmrc.play.test.UnitSpec
 
-class DiscountedDiningPaymentSentSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class DiscountedDiningPaymentSentCySpec
+    extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
 
-  "discounted_dining_payment_sent" should {
+  "discounted_dining_payment_sent_cy" should {
     val templateLocator = new TemplateLocator {}
-    val template = templateLocator.templateGroups("EOTHO").find(_.templateId == "discounted_dining_payment_sent").get
+    val template = templateLocator.templateGroups("EOTHO").find(_.templateId == "discounted_dining_payment_sent_cy").get
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names ++ Map("claimRefNo" -> "1234")
 
     "render correct subject and fromAddress" in {
-      template.subject(Map.empty) shouldBe ("HMRC has sent a payment for the Eat Out to Help Out Scheme")
+      template.subject(Map.empty) shouldBe ("Mae CThEM wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan")
       template.fromAddress(Map.empty) shouldBe "Eat Out to Help Out Scheme <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
       htmlContent should include(
-        "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered.")
-      htmlContent should include("From the Eat Out to Help Out team")
+        "Erbyn hyn rydym wedi gwirio’ch hawliad 1234, ac wedi anfon taliad i’r manylion cyfrif a roddwyd pan gofrestrwyd y busnes.")
+      htmlContent should include("Oddi wrth y tîm Bwyta Allan i Helpu Allan")
     }
 
     "render correct text content" in {
       val htmlContent = template.plainTemplate(params).toString
       htmlContent should include(
-        "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered.")
-      htmlContent should include("From the Eat Out to Help Out team")
+        "Erbyn hyn rydym wedi gwirio’ch hawliad 1234, ac wedi anfon taliad i’r manylion cyfrif a roddwyd pan gofrestrwyd y busnes.")
+      htmlContent should include("Oddi wrth y tîm Bwyta Allan i Helpu Allan")
     }
   }
 }
