@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydym wedi anfon taliad") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydym wedi anfon taliad", isWelsh = true) {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh=true)
 <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn rydym wedi gwirio’ch hawliad @params.get("claimRefNo"), ac wedi anfon taliad i’r manylion cyfrif a roddwyd pan gofrestrwyd y busnes.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth y tîm Bwyta Allan i Helpu Allan</p>
