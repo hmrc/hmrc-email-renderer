@@ -91,7 +91,7 @@ object SeissTemplates {
     ),
     MessageTemplate.create(
       templateId = "seiss_phase_2_previously_claimed_stagger_cy",
-      fromAddress = seissFromAddress,
+      fromAddress = seissFromAddressWelsh,
       service = Eeitt,
       subject = "Sut i hawlio cymhorthdal hunangyflogaeth",
       plainTemplate = txt.seissPhase2PreviouslyClaimedStagger_cy.f,
