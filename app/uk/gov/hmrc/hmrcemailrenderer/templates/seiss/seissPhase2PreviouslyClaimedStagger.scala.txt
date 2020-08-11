@@ -6,7 +6,7 @@ Dear @params.get("customerName")
 
 From 17 August the Self-Employment Income Support Scheme will open for claims for a second and final grant. Our records indicate you might be eligible for a grant.
 
-You will be able to claim at any time from @params.get("staggerDate") until the scheme closes on 19 October. Please do not try to claim before this date as you will not be able to access the service online or over the phone.
+You will be able to claim at any time from @params.get("staggerDate") August until the scheme closes on 19 October. Please do not try to claim before this date as you will not be able to access the service online or over the phone.
 
 The eligibility criteria remain the same as for the first grant. You will need to confirm your business has been adversely affected by coronavirus (COVID-19) at any time since 14 July.
 

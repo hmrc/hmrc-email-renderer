@@ -7,7 +7,7 @@ Annwyl @params.get("customerName")
 
 O 17 Awst ymlaen, bydd y Cynllun Cymhorthdal Incwm Hunangyflogaeth yn agor ar gyfer hawliadau am ail grant, sef y grant terfynol. Yn ôl ein cofnodion, gallech fod yn gymwys i gael grant.
 
-Byddwch yn gallu hawlio ar unrhyw adeg o @params.get("staggerDate") hyd nes i’r cynllun ddod i ben ar 19 Hydref. Peidiwch â cheisio hawlio cyn y dyddiad hwn gan na fyddwch yn gallu cael mynediad at y gwasanaeth ar-lein na thros y ffôn.
+Byddwch yn gallu hawlio ar unrhyw adeg o @params.get("staggerDate") Awst hyd nes i’r cynllun ddod i ben ar 19 Hydref. Peidiwch â cheisio hawlio cyn y dyddiad hwn gan na fyddwch yn gallu cael mynediad at y gwasanaeth ar-lein na thros y ffôn.
 
 Mae’r meini prawf cymhwystra yn aros yr un fath â’r grant cyntaf. Bydd angen i chi gadarnhau bod coronafeirws (COVID-19) wedi effeithio’n andwyol ar eich busnes ar unrhyw adeg ers 14 Gorffennaf.
 
