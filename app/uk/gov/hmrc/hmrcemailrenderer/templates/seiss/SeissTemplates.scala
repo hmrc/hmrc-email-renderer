@@ -88,6 +88,15 @@ object SeissTemplates {
       plainTemplate = txt.seissPhase2PreviouslyClaimedStagger.f,
       htmlTemplate = html.seissPhase2PreviouslyClaimedStagger.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_phase_2_previously_claimed_stagger_cy",
+      fromAddress = seissFromAddress,
+      service = Eeitt,
+      subject = "Sut i hawlio cymhorthdal hunangyflogaeth",
+      plainTemplate = txt.seissPhase2PreviouslyClaimedStagger_cy.f,
+      htmlTemplate = html.seissPhase2PreviouslyClaimedStagger_cy.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
