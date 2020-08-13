@@ -1,3 +1,4 @@
+@import scala.util.Try
 @(params: Map[String, Any])Fraud prevention headers status report
 
 Dear @params("developerName")
@@ -15,6 +16,10 @@ We understand this is a difficult time due to coronavirus (COVID-19) but we stil
 We'll continue to monitor API call logs and give you feedback every month to help you do this. We'd like to reassure you that we'll continue to accept VAT MTD calls, including headers that are incorrect or missing.
 
 What you need to do
+
+@for(allHeadersMissingPercentage <- Try(params("allHeadersMissingPercentage").toString.toInt).toOption) {
+    You need to send header data with every request made by your application. @if(allHeadersMissingPercentage > 0) { Currently, your application is missing all of the header data in @{allHeadersMissingPercentage}% of requests. }
+}
 
 Read the fraud prevention specification so that you can make sure that your application submits the correct fraud prevention headers.
 
