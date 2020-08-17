@@ -1856,6 +1856,14 @@ object TemplateParams {
     ),
     "dac6_registration_successful" -> Map(
       "name" -> "Joe Bloggs"
+    ),
+    "dac6_disclosure_confirmation" -> Map(
+      "name" -> "Joe Bloggs",
+      "date" -> "18 August 2020",
+      "arrangementID" -> "GB0000000XXX",
+      "disclosureID" -> "GB99999999ZZZ",
+      "filename" -> "test.xml",
+      "submissionNumber" -> "4"
     )
   )
 }

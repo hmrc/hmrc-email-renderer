@@ -31,6 +31,15 @@ object Dac6Templates {
       plainTemplate = txt.dac6RegistrationSuccessful.f,
       htmlTemplate = html.dac6RegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dac6_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = DAC6,
+      subject = " HMRC received your DAC6 disclosure",
+      plainTemplate = txt.dac6DisclosureConfirmation.f,
+      htmlTemplate = html.dac6DisclosureConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
