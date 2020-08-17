@@ -31,7 +31,7 @@ class DiscountedDiningPaymentSentCySpec
 
     "render correct subject and fromAddress" in {
       template.subject(Map.empty) shouldBe ("Mae CThEM wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan")
-      template.fromAddress(Map.empty) shouldBe "Eat Out to Help Out Scheme <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "Cynllun Bwyta Allan i Helpu Allan <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
