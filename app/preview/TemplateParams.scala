@@ -1736,7 +1736,7 @@ object TemplateParams {
       "applicationName"             -> "MTD VAT ValidCM App",
       "applicationId"               -> "07b587d7-34d9-40b6-9d59-a0917490cf02",
       "allHeadersMissingPercentage" -> "10",
-      "extraDetails"                -> Base64.getEncoder.encodeToString(stringify(
+      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
         parse("""
         {
           "connectionMethod": "WEB_APP_VIA_SERVER",
