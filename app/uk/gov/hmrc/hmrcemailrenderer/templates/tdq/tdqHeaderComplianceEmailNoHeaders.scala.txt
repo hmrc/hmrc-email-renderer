@@ -10,7 +10,7 @@ We'll continue to monitor API call logs and give you feedback every month to hel
 
 What you need to do
 
-Make sure your application submits the correct fraud prevention headers.
+You need to send header data with every request made by your application. Currently, your application is missing all of the header data.
 
 Go to the HMRC Developer Hub.
 
