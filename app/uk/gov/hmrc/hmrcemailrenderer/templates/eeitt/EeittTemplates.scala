@@ -681,6 +681,15 @@ object EeittTemplates {
       plainTemplate = txt.seissRepayConfirmation.f,
       htmlTemplate = html.seissRepayConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vishing_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report a suspicious HMRC phone call",
+      plainTemplate = txt.vishingCode.f,
+      htmlTemplate = html.vishingCode.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

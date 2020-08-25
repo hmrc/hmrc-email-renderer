@@ -23,6 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.EOTHO
 object EothoTemplates {
 
   lazy val eothoFromAddress = noReply("Eat Out to Help Out Scheme")
+  lazy val eothoFromAddressWelsh = noReply("Cynllun Bwyta Allan i Helpu Allan")
   val templates = Seq(
     MessageTemplate.create(
       templateId = "discounted_dining_payment_sent",
@@ -35,7 +36,7 @@ object EothoTemplates {
     ),
     MessageTemplate.create(
       templateId = "discounted_dining_payment_sent_cy",
-      fromAddress = eothoFromAddress,
+      fromAddress = eothoFromAddressWelsh,
       service = EOTHO,
       subject = "Mae CThEM wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan",
       plainTemplate = txt.discountedDiningPaymentSent_cy.f,

@@ -31,21 +31,23 @@ class DiscountedDiningPaymentSentCySpec
 
     "render correct subject and fromAddress" in {
       template.subject(Map.empty) shouldBe ("Mae CThEM wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan")
-      template.fromAddress(Map.empty) shouldBe "Eat Out to Help Out Scheme <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "Cynllun Bwyta Allan i Helpu Allan <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
       htmlContent should include(
         "Erbyn hyn rydym wedi gwirio’ch hawliad 1234, ac wedi anfon taliad i’r manylion cyfrif a roddwyd pan gofrestrwyd y busnes.")
-      htmlContent should include("Oddi wrth y tîm Bwyta Allan i Helpu Allan")
+      htmlContent should include("Bydd y taliad yn cyrraedd y cyfrif o fewn 3 i 5 diwrnod gwaith.")
+      htmlContent should include("Cynllun Bwyta Allan i Helpu Allan")
     }
 
     "render correct text content" in {
       val htmlContent = template.plainTemplate(params).toString
       htmlContent should include(
         "Erbyn hyn rydym wedi gwirio’ch hawliad 1234, ac wedi anfon taliad i’r manylion cyfrif a roddwyd pan gofrestrwyd y busnes.")
-      htmlContent should include("Oddi wrth y tîm Bwyta Allan i Helpu Allan")
+      htmlContent should include("Bydd y taliad yn cyrraedd y cyfrif o fewn 3 i 5 diwrnod gwaith.")
+      htmlContent should include("Cynllun Bwyta Allan i Helpu Allan")
     }
   }
 }

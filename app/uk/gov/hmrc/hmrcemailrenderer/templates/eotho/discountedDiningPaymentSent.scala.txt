@@ -6,6 +6,8 @@ We have sent a payment
 
 We have now checked your claim @params.get("claimRefNo"), and sent a payment to the account details provided when the business was registered.
 
-From the Eat Out to Help Out team
+The payment will reach the account in 3 to 5 working days.
+
+Eat Out to Help Out Scheme
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

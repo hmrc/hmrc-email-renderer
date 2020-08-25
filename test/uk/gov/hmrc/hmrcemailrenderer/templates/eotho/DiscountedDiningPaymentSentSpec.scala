@@ -37,14 +37,16 @@ class DiscountedDiningPaymentSentSpec extends UnitSpec with EitherValues with Te
       val htmlContent = template.htmlTemplate(params).toString
       htmlContent should include(
         "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered.")
-      htmlContent should include("From the Eat Out to Help Out team")
+      htmlContent should include("The payment will reach the account in 3 to 5 working days.")
+      htmlContent should include("Eat Out to Help Out Scheme")
     }
 
     "render correct text content" in {
       val htmlContent = template.plainTemplate(params).toString
       htmlContent should include(
         "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered.")
-      htmlContent should include("From the Eat Out to Help Out team")
+      htmlContent should include("The payment will reach the account in 3 to 5 working days.")
+      htmlContent should include("Eat Out to Help Out Scheme")
     }
   }
 }
