@@ -28,7 +28,7 @@ Example request body - parameters with String type key and values.
 ```json
 {
   "parameters": {
-    "param1" : "Parameter to be used in the email template"
+    "param1" : "Parameter to be used in the email template",
     "param2" : "Parameter to be used in the email template"
   }
 }
