@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have submitted an Accounting for Tax return
+You have submitted an amended Accounting for Tax return
 
 Dear @{params("psaName").toString}
 
@@ -9,8 +9,13 @@ This email confirms your AFT submission:
 Scheme: @{params("schemeName").toString}
 Accounting period: @{params("accountingPeriod").toString}
 Date submitted: @{params("dateSubmitted").toString}
+Submission number: @{params("submissionNumber").toString}
 
 What to do next
+
+This amended Accounting for Tax return has resulted in nothing additional to pay.
+
+You can view your payments and charges by signing in to the Managing Pension Schemes service.
 
 Search for 'manage a registered pension scheme' on GOV.UK and then choose the online service.
 
