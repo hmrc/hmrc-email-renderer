@@ -59,12 +59,30 @@ object PodsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "pods_aft_amended_return",
+      templateId = "pods_aft_amended_return_decrease",
       fromAddress = govUkTeamAddress,
       service = PODS,
       subject = "Accounting for Tax - amended return submitted",
-      plainTemplate = txt.aftAmendmentSubmitted.f,
-      htmlTemplate = html.aftAmendmentSubmitted.f,
+      plainTemplate = txt.aftAmendmentSubmittedDecrease.f,
+      htmlTemplate = html.aftAmendmentSubmittedDecrease.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return_no_change",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmittedNoChange.f,
+      htmlTemplate = html.aftAmendmentSubmittedNoChange.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return_increase",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmittedIncrease.f,
+      htmlTemplate = html.aftAmendmentSubmittedIncrease.f,
       priority = Some(MessagePriority.Standard)
     )
   )

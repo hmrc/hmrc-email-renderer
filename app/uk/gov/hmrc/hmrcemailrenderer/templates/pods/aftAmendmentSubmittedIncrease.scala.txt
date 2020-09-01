@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have submitted an Accounting for Tax return
+You have submitted an amended Accounting for Tax return
 
 Dear @{params("psaName").toString}
 
@@ -9,8 +9,13 @@ This email confirms your AFT submission:
 Scheme: @{params("schemeName").toString}
 Accounting period: @{params("accountingPeriod").toString}
 Date submitted: @{params("dateSubmitted").toString}
+Submission number: @{params("submissionNumber").toString}
 
 What to do next
+
+A new charge reference has been created for the additional amount included in this amendment. You must use this charge reference when making payment.
+
+You can view your charge references by signing in to the Managing Pension Schemes service.
 
 Search for 'manage a registered pension scheme' on GOV.UK and then choose the online service.
 

@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have submitted an Accounting for Tax return
+You have submitted an amended Accounting for Tax return
 
 Dear @{params("psaName").toString}
 
@@ -9,8 +9,19 @@ This email confirms your AFT submission:
 Scheme: @{params("schemeName").toString}
 Accounting period: @{params("accountingPeriod").toString}
 Date submitted: @{params("dateSubmitted").toString}
+Submission number: @{params("submissionNumber").toString}
 
 What to do next
+
+The amendment you have submitted has reduced the charge for this Accounting for Tax return.
+
+You must email @{params("hmrcEmail").toString} to ensure your account is updated correctly. Include these details in your email:
+
+    the name of the pension scheme
+    the date and time of the submission
+    the submission number
+
+You can view your payments and charges by signing in to the Managing Pension Schemes service.
 
 Search for 'manage a registered pension scheme' on GOV.UK and then choose the online service.
 
