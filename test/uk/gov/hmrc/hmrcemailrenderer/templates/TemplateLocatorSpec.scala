@@ -601,7 +601,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "gms_enrolment_confirmation",
         "dac6_registration_successful",
         "discounted_dining_payment_sent",
-        "discounted_dining_payment_sent_cy"
+        "discounted_dining_payment_sent_cy",
+        "ipr1_code",
+        "ipr2_code",
+        "ipr3_code"
       )
     }
   }
