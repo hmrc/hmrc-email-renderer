@@ -690,6 +690,34 @@ object EeittTemplates {
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr1_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for action to protect your intellectual property rights",
+      plainTemplate = txt.ipr1Code.f,
+      htmlTemplate = html.ipr1Code.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr2_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report goods that infringe your intellectual property rights",
+      plainTemplate = txt.ipr2Code.f,
+      htmlTemplate = html.ipr2Code.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr3_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Apply to extend your application to protect your intellectual property rights",
+      plainTemplate = txt.ipr3Code.f,
+      htmlTemplate = html.ipr3Code.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
