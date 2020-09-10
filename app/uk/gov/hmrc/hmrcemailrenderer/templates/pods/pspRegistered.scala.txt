@@ -2,7 +2,7 @@
 
 You have been registered as a pension scheme practitioner
 
-Dear @{params("psaName").toString}
+Dear @{params("pspName").toString}
 
 This email confirms your registration as a pension scheme practitioner.
 
