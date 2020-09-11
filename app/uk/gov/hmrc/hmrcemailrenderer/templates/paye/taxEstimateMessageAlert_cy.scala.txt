@@ -1,39 +1,41 @@
 
-@(params: Map[String, Any])Mae amcangyfrif o’ch Treth Incwm wedi newid
+@(params: Map[String, Any])Mae’ch cod treth wedi newid
+
 
 Annwyl @{params("fullName")}
 
-Mae gennych newid i’ch cod treth
+Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd swm y dreth rydych yn ei thalu yn newid.
 
-Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar. Oherwydd rhesymau diogelwch nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd newid i rywbeth fel y canlynol:
+Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:
 
-swydd
-eich cyflog
-eich buddiannau cwmni megis car cwmni
-eich pensiwn
+- rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2021 i 2022)
+- newidiodd eich swydd
+- newidiodd eich cyflog
+- newidiodd eich buddiannau cwmni, megis car cwmni
+- newidiodd eich pensiwn
 
-Mae hyn yn golygu bydd swm y Dreth Incwm y byddwch yn ei dalu yn newid.
 
-Dylech wirio’ch manylion i wneud yn siŵr eu bod yn gywir. Mae hyn fel eich bod yn talu’r swm cywir o Dreth Incwm.
+Sut i wirio’ch cofnodion i wneud yn siŵr eich bod yn talu’r swm cywir o dreth
 
-Gwiriwch eich manylion
+Chwiliwch am ‘personal tax account’ ar GOV.UK, mewngofnodwch ac ewch i’r adran ‘Talu Wrth Ennill (TWE)’.
 
-Mewngofnodwch i’ch Cyfrif Treth Personol ac ewch i’r adran ‘Talu Wrth Ennill (TWE)’.
+Os ydych yn mewngofnodi gan ddefnyddio cyfrif treth busnes, mae’n bosibl y gallwch ei ddefnyddio i gael mynediad at eich cyfrif treth personol.
 
-Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad yn yr e-bost hwn. I gyrraedd eich Cyfrif Treth Personol, chwiliwch am ‘Cyfrif Treth Personol CThEM’.
 
-Mewngofnodi
+Os nad oes cyfrif treth personol gennych
 
-Defnyddiwch eich manylion Dynodydd Defnyddiwr neu Ddilysu i fewngofnodi i’ch Cyfrif Treth Personol.
+Mae angen i chi greu un cyn y gallwch weld y newid i’ch cod treth.
 
-Dylech gael mynediad at y rhain gan eich bod eisoes wedi defnyddio’r gwasanaeth i ddewis cael e-byst.
+Chwiliwch am ‘Personal tax account: sign in or set up’ ar GOV.UK.
 
-Cysylltwch â CThEM os nad oes gennych eich manylion Dynodydd Defnyddiwr neu Ddilysu.
 
 Pam y cawsoch yr e-bost hwn
 
-Cawsoch yr e-bost hwn am eich bod wedi dewis cael diweddariadau e-bost yn lle llythyrau drwy’r bost
+Rydych wedi dewis cael diweddariadau drwy e-bost yn hytrach na chael llythyrau drwy’r post.
+
+Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.
 
 Oddi wrth CThEM: Gwirio’ch Treth Incwm
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

@@ -1,39 +1,41 @@
 
-@(params: Map[String, Any])Your Income Tax estimate has changed
+@(params: Map[String, Any])You have a tax code change
+
 
 Dear @{params("fullName")}
 
-You have a tax code change
+Your PAYE Income Tax records have recently changed, which means the amount of tax you pay will change.
 
-Your PAYE Income Tax records have recently changed. For security reasons we do not give the full details here but it could be because of a change in something like:
+For security reasons we do not give the full details here, but it could be because:
 
-a job
-your pay
-your company benefits such as a company car
-your pension
+- we have now calculated your tax code for the next tax year (tax year 2021 to 2022)
+- your job changed
+- your pay changed
+- your company benefits, such as a company car changed
+- your pension changed
 
-This means that the amount of Income Tax you will pay will change.
 
-You should check your details to make sure they are right. This is so you pay the right amount of Income Tax.
+How to check your details to make sure you pay the right amount of tax
 
-Check your details
+Search GOV.UK for ‘personal tax account’, sign in and go to the ‘Pay As You Earn (PAYE)’ section.
 
-Sign in to your Personal Tax Account and go to the 'Pay As You Earn (PAYE)' section. 
+If you sign in using a business tax account, you may be able to use it to access your personal tax account.
 
-For security reasons we have not included a link in this email. To get to your Personal Tax Account search for 'HMRC Personal Tax Account'.
 
-Signing In
+If you do not have a personal tax account
 
-Use your Government Gateway or Verify details to sign in to your Personal Tax Account.
+You need to set one up before you can see your tax code change.
 
-You should have access to these as you have already used the service to choose to receive emails.
+Search GOV.UK for ‘Personal tax account: sign in or set up’.
 
-Contact HMRC if you do not have your Government Gateway or Verify details.
 
 Why you got this email
 
-You got this email because you've chosen to receive email updates instead of letters by post
+You have chosen to receive email updates instead of letters by post.
+
+For security reasons we have not included any links in this email.
 
 From HMRC Check your Income Tax
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
