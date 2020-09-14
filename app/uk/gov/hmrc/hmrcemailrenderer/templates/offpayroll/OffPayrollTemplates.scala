@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,8 @@ object OffPayrollTemplates {
       service = OffPayroll,
       subject = "Test the new employment status service",
       plainTemplate = txt.offpayrollPrivateBetaInvitation.f,
-      htmlTemplate = html.offpayrollPrivateBetaInvitation.f)
+      htmlTemplate = html.offpayrollPrivateBetaInvitation.f
+    )
   )
 
 }

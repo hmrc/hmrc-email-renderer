@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
@@ -24,7 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  private def extractFromAddress(params : Map[String, String]): String = {
+  private def extractFromAddress(params: Map[String, String]): String = {
     val sender = params.get("developerHubTitle").getOrElse("Developer Hub")
     FromAddress.noReply(s"HMRC $sender")
   }
@@ -164,6 +164,42 @@ object ApiTemplates {
       plainTemplate = txt.apiApplicationRejectedNotification.f,
       htmlTemplate = html.apiApplicationRejectedNotification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiStatusChangedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "API Status Changed",
+      plainTemplate = txt.apiStatusChangedNotification.f,
+      htmlTemplate = html.apiStatusChangedNotification.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedClientSecretNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Client Secret Added",
+      plainTemplate = txt.apiAddedClientSecretNotification.f,
+      htmlTemplate = html.apiAddedClientSecretNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiRemovedClientSecretNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Client Secret Removed",
+      plainTemplate = txt.apiRemovedClientSecretNotification.f,
+      htmlTemplate = html.apiRemovedClientSecretNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiApplicationToBeDeletedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "We’re deleting your application",
+      plainTemplate = txt.apiApplicationToBeDeletedNotification.f,
+      htmlTemplate = html.apiApplicationToBeDeletedNotification.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

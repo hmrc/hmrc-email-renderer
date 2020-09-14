@@ -1,5 +1,5 @@
 @*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,11 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We sent you messages in error") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rescindment: File your Self Assessment tax return") {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
-<p style="margin: 0 0 30px; font-size: 19px;">You received one or more messages on 16 July 2015 from HMRC as a result of an IT error. These messages have now been withdrawn.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">We apologise for any concern this might have caused.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital</p>
+<p style="margin: 0 0 30px; font-size: 19px;">HMRC sent you an email alert and online message on 19 February 2019.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We sent this to you too early in error, and we are sorry for the mistake.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We have now removed the incorrect message from your HMRC account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You will receive a new email alert and message soon after the new tax year begins on 6 April.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Contact</p>
 }

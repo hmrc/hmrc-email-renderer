@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+Submitted: your C118 Section 3 Part 1 Authorised Economic Operator (AEO) application
+
+Dear Customer
+
+We have received your part application for AEO, the C118 Section 3 Part 1 form.
+
+What you need to do next
+
+You must submit the C117 and all relevant sections of the C118 within 24 hours of submitting your first form.
+
+If you do not do this, we will reject your application.
+
+Why you are receiving this email
+
+We send a confirmation email for applications submitted online.
+
+If you need to contact us about your application, quote your EORI number.
+
+From HMRC AEO team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

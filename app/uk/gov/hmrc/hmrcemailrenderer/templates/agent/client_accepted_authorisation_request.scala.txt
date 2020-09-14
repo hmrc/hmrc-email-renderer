@@ -1,0 +1,10 @@
+@(params: Map[String, Any])Your client accepted your authorisation request
+
+Dear @params("agencyName")
+
+Your client @params("clientName") has authorised you to @params("service")
+
+Do not reply to this email.
+
+From HMRC Agent Services Team
+

@@ -1,0 +1,31 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Binding Tariff Information (BTI) application") {
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+    <p>
+        Your BTI application @params("reference") has been submitted.
+    </p>
+    <p>
+        We will email you to tell you when your ruling is complete within 30 to 60 days.
+    </p>
+    <p>
+        To check the status of your application or to get information on samples go to GOV.UK and search for 'Apply for a Binding Tariff Information decision (Notice 600)'.
+    </p>
+    <p>For security reasons we have not included a link with this email.</p>
+    <p>From Tariff Classification Service</p>
+}

@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Rydych wedi rhoi’r gorau i gyfathrebu drwy ddull electronig
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
+
+Rydych wedi dewis rhoi’r gorau i gyfathrebu drwy ddull electronig.
+
+O hyn allan, caiff eich hysbysiadau eu hanfon drwy’r post.
+
+Gallwch ddewis mynd yn ddi-bapur unwaith eto ar unrhyw adeg drwy ddefnyddio’ch cyfrif ar-lein gyda CThEM.
+
+Oddi wrth Adran Ddigidol CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

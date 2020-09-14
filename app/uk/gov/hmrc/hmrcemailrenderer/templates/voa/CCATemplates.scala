@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.voa
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CCA
 import registration._
@@ -30,15 +30,43 @@ object CCATemplates {
       subject = "Valuation Office Agency - check and challenge registration",
       plainTemplate = txt.ccaEnrolmentConfirmationExisting.f,
       htmlTemplate = html.ccaEnrolmentConfirmationExisting.f,
-      priority = Some(MessagePriority.Standard)),
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
-        templateId = "cca_enrolment_confirmation",
-        fromAddress = govUkTeamAddress,
-        service = CCA,
-        subject = "Valuation Office Agency - check and challenge registration",
-        plainTemplate = registration.txt.ccaEnrolmentConfirmation.f,
-        htmlTemplate = registration.html.ccaEnrolmentConfirmation.f,
-        priority = Some(MessagePriority.Standard)
-      )
+      templateId = "cca_enrolment_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = CCA,
+      subject = "Valuation Office Agency - check and challenge registration",
+      plainTemplate = registration.txt.ccaEnrolmentConfirmation.f,
+      htmlTemplate = registration.html.ccaEnrolmentConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cca_enrolment_confirmation_agent",
+      fromAddress = govUkTeamAddress,
+      service = CCA,
+      subject = "Valuation Office Agency - check and challenge registration",
+      plainTemplate = registration.txt.ccaEnrolmentConfirmationAgent.f,
+      htmlTemplate = registration.html.ccaEnrolmentConfirmationAgent.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cca_enrolment_confirmation_individual",
+      fromAddress = govUkTeamAddress,
+      service = CCA,
+      subject = "Valuation Office Agency - check and challenge registration",
+      plainTemplate = registration.txt.ccaEnrolmentConfirmationIndividual.f,
+      htmlTemplate = registration.html.ccaEnrolmentConfirmationIndividual.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cca_revaluation_subscription_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = CCA,
+      subject = "You signed up for news about business rate revaluations",
+      plainTemplate = subscription.txt.ccaRevalSubscriptionConfirmation.f,
+      htmlTemplate = subscription.html.ccaRevalSubscriptionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
 }

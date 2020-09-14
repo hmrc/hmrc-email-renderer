@@ -1,0 +1,28 @@
+@(params: Map[String, Any])
+
+You have submitted an amended Accounting for Tax return
+
+Dear @{params("psaName").toString}
+
+This email confirms your AFT submission:
+
+Scheme: @{params("schemeName").toString}
+Accounting period: @{params("accountingPeriod").toString}
+Date submitted: @{params("dateSubmitted").toString}
+Submission number: @{params("submissionNumber").toString}
+
+What to do next
+
+If you need to make a payment for this submission, you must include a charge reference with your payment.
+
+To get your charge reference send an email to @{params("hmrcEmail").toString} with these details:
+
+    the name of the pension scheme
+    the date and time of the submission
+    the submission number
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

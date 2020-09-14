@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,17 +16,19 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
-import com.ning.http.util.Base64
+import java.util.Base64
+
 import play.api.libs.json._
 import uk.gov.hmrc.play.test.UnitSpec
 
 class RenderResultSpec extends UnitSpec {
   "RenderResult" should {
 
-    def decode(value: String): String = new String(Base64.decode(value), "UTF-8")
+    def decode(value: String): String = new String(Base64.getDecoder.decode(value), "UTF-8")
 
     "have the plain and html fields Base64 encoded when rendered as JSON" in {
-      val result = Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
+      val result =
+        Json.toJson(RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", None))
 
       (result \ "plain").as[String] shouldBe "U29tZSBQbGFpbiBUZXh0"
       decode((result \ "plain").as[String]) shouldBe "Some Plain Text"

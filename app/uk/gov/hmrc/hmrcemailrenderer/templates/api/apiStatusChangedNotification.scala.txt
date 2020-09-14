@@ -1,0 +1,5 @@
+@(params: Map[String, Any])API Status Changed
+
+The Status of API @{params("apiName")} Version @{params("apiVersion")} has changed from @{params("currentStatus")} to @{params("newStatus")} in the @{params("environmentName")} environment.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

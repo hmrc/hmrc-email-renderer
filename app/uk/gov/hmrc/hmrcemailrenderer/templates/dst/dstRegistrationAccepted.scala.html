@@ -1,0 +1,76 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Digital Services Tax registration number") {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        Dear @params("name")
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        We confirm that @params("companyName") is now registered @if(params("groupCompanyName").toString != "unknown"){ on behalf of @params("groupCompanyName")} for the Digital Services Tax.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        Your Digital Services Tax registration number is <span style="font-weight: bold;">@params("dstNumber")</span>
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        You will need this registration number when you pay the tax.
+    </p>
+
+    <h2>What you must do next</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You must pay any Digital Services Tax you owe by @DateFormatter.formatDate(params("paymentDeadline").toString).
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        You must submit your first return by @DateFormatter.formatDate(params("submitReturnDeadline").toString).
+    </p>
+
+    <h2>Help using this service</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        For help with payments and returns, search GOV.UK for ‘digital services tax’.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        If you need to change your registered details, contact your HMRC Customer Compliance Manager (CCM).
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        If you do not know who your CCM is, or do not have one, email @Html("ccgdstmailbox@hmrc.gov.uk")
+    </p>
+
+    <h2>Why you got this email</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        This email address is registered as the email address we can use to contact you about the Digital Services Tax.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        Do not reply to this email.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        From HMRC Digital Services Tax team
+    </p>
+
+}

@@ -1,27 +1,31 @@
 @(params: Map[String, Any])Sign up complete
 Sign up complete
 
-Dear agent,
+Dear Agent
 
 You have signed up your client to use software to submit their VAT Returns.
 
-Client VAT registration number
+Your client’s VAT registration number is:
 @params("vatNumber")
 
 
-You must tell your client that you have signed them up for this trial.
+You must tell your client that you have signed them up for Making Tax Digital for VAT
 
 
-What happens next
+What you need to do next
 
-1. Choose relevant third party software. If your client will use software, it is important they choose a package that can interact with yours.
+1. Choose relevant third party software. If your client will use software, it is important they choose a package that can work with yours.
 2. Allow your software to submit VAT Returns to HMRC. You might need to sign in with your Government Gateway details.
 3. Use software to record your client’s sales and purchases.
 4. Submit your client’s VAT Returns before their deadlines.
 
 Your client can view their VAT Return deadlines in their accounting software or business tax account.
 
-From HMRC Digital
+Why you are receiving this email
+
+We send a confirmation email when you sign up a client.
+
+From HMRC Making Tax Digital for Business VAT
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

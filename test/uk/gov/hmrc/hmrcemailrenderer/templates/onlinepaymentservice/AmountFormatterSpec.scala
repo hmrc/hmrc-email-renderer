@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,9 @@ class AmountFormatterSpec extends UnitSpec {
     AmountFormatter.formatAmount("1234sdf") shouldBe "£0.00"
     AmountFormatter.formatAmount("1234.00") shouldBe "£1,234.00"
     AmountFormatter.formatAmount("123456789.56") shouldBe "£123,456,789.56"
+  }
+  "amount should be correctly formatted for display tps" in {
+    AmountFormatter.formatAmountInPence("1233") shouldBe "£12.33"
   }
 
 }

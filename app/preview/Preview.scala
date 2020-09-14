@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 package preview
 
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 
 trait Preview {
@@ -31,11 +31,13 @@ trait Preview {
   def plain(templateId: String, parameters: Map[String, String]): String =
     extractPlainText.orElse(handleErrors)(renderer.render(templateId, parameters))
 
-  private val extractHtml: PartialFunction[RenderedResult, String] =
-    { case Right(RenderResult(_, html, _, _, _, _)) => html }
+  private val extractHtml: PartialFunction[RenderedResult, String] = {
+    case Right(RenderResult(_, html, _, _, _, _)) => html
+  }
 
-  private val extractPlainText: PartialFunction[RenderedResult, String] =
-    { case Right(RenderResult(plain, _, _, _, _, _)) => plain }
+  private val extractPlainText: PartialFunction[RenderedResult, String] = {
+    case Right(RenderResult(plain, _, _, _, _, _)) => plain
+  }
 
   private val handleErrors: PartialFunction[RenderedResult, String] = {
     case Left(MissingTemplateId(templateId)) =>

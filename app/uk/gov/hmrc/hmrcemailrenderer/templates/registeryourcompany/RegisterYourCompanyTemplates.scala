@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RegisterYourCompany
 
@@ -29,34 +29,39 @@ object RegisterYourCompanyTemplates {
       subject = "Confirm your email address - Set up a limited company and register for Corporation Tax service",
       plainTemplate = txt.registerYourCompanyVerificationEmail.f,
       htmlTemplate = html.registerYourCompanyVerificationEmail.f,
-      priority = Some(MessagePriority.Urgent)),
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "register_your_company_welcome_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "Access the ‘Register your company’ service",
       plainTemplate = txt.registerYourCompanyWelcomeEmail.f,
-      htmlTemplate = html.registerYourCompanyWelcomeEmail.f),
+      htmlTemplate = html.registerYourCompanyWelcomeEmail.f
+    ),
     MessageTemplate.create(
       templateId = "register_your_company_register_vat_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "Register for VAT online - new service",
       plainTemplate = txt.registerYourCompanyRegisterVATEmail.f,
-      htmlTemplate = html.registerYourCompanyRegisterVATEmail.f),
+      htmlTemplate = html.registerYourCompanyRegisterVATEmail.f
+    ),
     MessageTemplate.create(
       templateId = "register_your_company_register_paye_confirmation_new_tax_year",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "'Register an employer for PAYE' - application received",
       plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f,
-      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f),
+      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f
+    ),
     MessageTemplate.create(
       templateId = "register_your_company_register_paye_confirmation_current_tax_year",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "'Register an employer for PAYE' - application received",
       plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmation.f,
-      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmation.f)
+      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmation.f
     )
+  )
 }

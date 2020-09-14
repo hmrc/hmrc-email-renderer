@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Submitted: your Transitional simplified procedures application
+
+Dear Dear @params.get("appName")
+
+We have received your application for transitional simplified procedures
+
+We will reply with a decision within 15 working days.
+
+Your submission reference is: @params.get("submissionReference")
+
+Why you are receiving this email
+
+We send a confirmation email for applications submitted online.
+
+If you need to contact us about your application, quote your EORI number.
+
+From HMRC Transitional simplified procedures team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

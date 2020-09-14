@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+
+We have received your claim
+
+
+Dear @params.get("customerName")
+
+Your claim reference: @params.get("claim_ref_no")
+
+We have received your claim and we are now processing your grant.
+
+What happens next
+
+You can expect to receive your grant payment within 6 working days.
+
+You should not contact HMRC before this.
+
+If you do not receive payment within 6 working days, you should check your email spam folder before contacting HMRC.
+
+From the Self-Employment Income Support team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

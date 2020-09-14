@@ -1,0 +1,29 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhewch eich cyfeiriad e-bost", isWelsh = true){
+  <p style="margin: 0 0 30px; font-size: 19px;">Annwyl @{params("name")}</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Gwnaethoch roi gwybod i ni eich bod am i ni ddefnyddio’r cyfeiriad e-bost hwn i gysylltu â chi ynghylch rhoi gwybod am a thalu Treth Enillion Cyfalaf ar eiddo yn y DU.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Cyn y gallwn ddechrau defnyddio’r cyfeiriad hwn, bydd angen i chi ei gadarnhau.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Bydd y cysylltiad isod yn rhoi’r gorau i weithio ar ôl 30 munud. Os na fydd y cysylltiad yn gweithio, bydd angen i chi ddechrau eto.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Dilynwch y cysylltiad isod er mwyn cadarnhau’ch cyfeiriad e-bost.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">
+    <a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a>
+  </p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Peidiwch ag ymateb i’r e-bost hwn.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM</p>
+}

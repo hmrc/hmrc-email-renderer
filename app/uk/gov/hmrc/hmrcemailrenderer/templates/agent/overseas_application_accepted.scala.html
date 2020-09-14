@@ -1,0 +1,33 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application for agent services account approved") {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear Customer</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">
+        We have approved your application for an agent services account for @params("tradingName").</p>
+
+    <h2>What you need to do next</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You now need to finish setting up your agent services account. You can do this online.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        To finish setting up your account, search GOV.UK for 'finish setting up your agent services account if you are overseas' and follow the instructions.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services team</p>
+
+
+}

@@ -1,11 +1,15 @@
 @(params: Map[String, Any])
 
-Two way messing Template
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
 
-Thank you for making contact through secure messaging.
+Thank you for the message you sent to HMRC today.
 
-We’ll email you again when your reply is ready to view in your secure account inbox.
+We are working on your message and will reply within @params.getOrElse("waitTime", "7 days").
 
-From HMRC Team
+You do not need to follow up by sending another message or by calling us.
+
+When your reply is ready, we will send you an email to let you know. You can view your messages by signing in to HMRC services.
+
+From HMRC digital team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

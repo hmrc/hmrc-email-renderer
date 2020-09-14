@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+Rent and lease details - Not connected property
+
+Reference number: @params("referenceNumber")
+
+@params.get("email").map { email =>Email address: @email}.getOrElse("")
+@params.get("phoneNumber").map { phoneNumber =>Phone number: @phoneNumber}.getOrElse("")
+
+From Valuation Office Agency - Rent and lease details service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

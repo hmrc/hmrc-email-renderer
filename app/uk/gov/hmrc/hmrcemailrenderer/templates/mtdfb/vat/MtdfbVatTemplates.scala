@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,10 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vat
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MTDfBVatSignUp
-
 
 object MtdfbVatTemplates {
 
@@ -46,7 +45,7 @@ object MtdfbVatTemplates {
       templateId = "mtdfb_vat_agent_sign_up_successful",
       fromAddress = FromAddress.noReply("HMRC Making Tax Digital for VAT"),
       service = MTDfBVatSignUp,
-      subject = "Client sign up complete | Making Tax Digital for VAT",
+      subject = "HMRC client sign up successful for Making Tax Digital",
       plainTemplate = txt.agent_sign_up_successful.f,
       htmlTemplate = html.agent_sign_up_successful.f,
       priority = Some(MessagePriority.Urgent)

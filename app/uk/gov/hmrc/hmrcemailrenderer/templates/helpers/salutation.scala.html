@@ -1,5 +1,5 @@
 @*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any], overrideSalutation: Option[String] = None)
+@(params: Map[String, Any], overrideSalutation: Option[String] = None, isWelsh: Boolean = false)
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">
-    @overrideSalutation.getOrElse(salutationFrom(params))
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @overrideSalutation.getOrElse(salutationFrom(params, isWelsh))
 </p>

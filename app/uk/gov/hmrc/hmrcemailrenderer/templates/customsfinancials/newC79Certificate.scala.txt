@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Import VAT certificate (C79)
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+You have a new certificate. To view it:
+
+Go to GOV.UK.
+
+Search for 'Get your import VAT certificates'.
+
+For security reasons, we have not included a link in this email.
+
+If you need help
+
+Phone HMRC on 0300 200 3701. Opening times 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From the Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

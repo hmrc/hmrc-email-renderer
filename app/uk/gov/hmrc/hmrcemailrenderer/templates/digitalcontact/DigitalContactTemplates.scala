@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
-import uk.gov.hmrc.hmrcemailrenderer.templates.{FromAddress, ServiceIdentifier}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 
 object DigitalContactTemplates {
   val defaultFromAddress = FromAddress.noReply("HMRC digital")
+
+  val defaultFromAddressWelsh = FromAddress.noReply("CThEM Digidol")
+
+  //TODO: waiting for welsh translation
+  val defaultWelshFrom = FromAddress.noReply("")
 
   val templatesToMapToNewMessageAlert = Seq(
     "R002A",
@@ -38,16 +43,16 @@ object DigitalContactTemplates {
   )
 
   val newMessageAlertTemplates: Seq[MessageTemplate] =
-    templatesToMapToNewMessageAlert.map {
-      formId =>  MessageTemplate.create(
-              templateId = s"newMessageAlert_$formId",
-              fromAddress = defaultFromAddress,
-              service = SelfAssessment,
-              subject = "HMRC paperless notifications: new message",
-              plainTemplate = txt.newMessageAlert.f,
-              htmlTemplate = html.newMessageAlert.f)
+    templatesToMapToNewMessageAlert.map { formId =>
+      MessageTemplate.create(
+        templateId = s"newMessageAlert_$formId",
+        fromAddress = defaultFromAddress,
+        service = SelfAssessment,
+        subject = "HMRC paperless notifications: new message",
+        plainTemplate = txt.newMessageAlert.f,
+        htmlTemplate = html.newMessageAlert.f
+      )
     }
-
 
   val templates = Seq(
     MessageTemplate.create(
@@ -56,7 +61,16 @@ object DigitalContactTemplates {
       service = SelfAssessment,
       subject = "HMRC electronic communications: verify your email address",
       plainTemplate = txt.verifyEmailAddress.f,
-      htmlTemplate  = html.verifyEmailAddress.f,
+      htmlTemplate = html.verifyEmailAddress.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "verifyEmailAddress_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
+      plainTemplate = txt.verifyEmailAddress_cy.f,
+      htmlTemplate = html.verifyEmailAddress_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -69,12 +83,30 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "changeOfEmailAddress_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: newid cyfeiriad e-bost",
+      plainTemplate = txt.changeOfEmailAddress_cy.f,
+      htmlTemplate = html.changeOfEmailAddress_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "digitalOptOutConfirmation",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "HMRC notifications by post",
       plainTemplate = txt.digitalOptOutConfirmation.f,
       htmlTemplate = html.digitalOptOutConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptOutConfirmation_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "CThEM – Hysbysiadau drwy’r post",
+      plainTemplate = txt.digitalOptOutConfirmation_cy.f,
+      htmlTemplate = html.digitalOptOutConfirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -87,19 +119,48 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "changeOfEmailAddressNewAddress_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "CThEM – Cyfathrebu drwy ddull electronig: dilysu’ch cyfeiriad e-bost newydd",
+      plainTemplate = txt.changeOfEmailAddressNewAddress_cy.f,
+      htmlTemplate = html.changeOfEmailAddressNewAddress_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "newMessageAlert",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "HMRC paperless notifications: new message",
       plainTemplate = txt.newMessageAlert.f,
-      htmlTemplate = html.newMessageAlert.f),
+      htmlTemplate = html.newMessageAlert.f
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Hysbysiadau di-bapur CThEM: neges newydd",
+      plainTemplate = txt.newMessageAlert_cy.f,
+      htmlTemplate = html.newMessageAlert_cy.f
+    ),
     MessageTemplate.create(
       templateId = "rescindedMessageAlert",
-      fromAddress = defaultFromAddress,
+      fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
       service = SelfAssessment,
-      subject = "HMRC paperless notifications: message updated",
+      subject = "HMRC recalled a Self Assessment message",
       plainTemplate = txt.rescindedMessageAlert.f,
-      htmlTemplate = html.rescindedMessageAlert.f),
+      htmlTemplate = html.rescindedMessageAlert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "rescindedMessageAlert_cy",
+      fromAddress = FromAddress.noReply("CThEM – (Tîm) Cyswllt Digidol"),
+      service = SelfAssessment,
+      subject = "Gwnaeth CThEM alw neges ynghylch Hunanasesiad yn ei hôl",
+      plainTemplate = txt.rescindedMessageAlert_cy.f,
+      htmlTemplate = html.rescindedMessageAlert_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "verificationReminder",
       fromAddress = defaultFromAddress,
@@ -107,6 +168,14 @@ object DigitalContactTemplates {
       subject = "HMRC electronic communications: complete the sign-up process",
       plainTemplate = txt.verificationReminder.f,
       htmlTemplate = html.verificationReminder.f
+    ),
+    MessageTemplate.create(
+      templateId = "verificationReminder_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi",
+      plainTemplate = txt.verificationReminder_cy.f,
+      htmlTemplate = html.verificationReminder_cy.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA309",
@@ -149,6 +218,33 @@ object DigitalContactTemplates {
       plainTemplate = txt.dc_1462.f,
       htmlTemplate = html.dc_1462.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_BTA",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = SelfAssessment,
+      subject = "How we will send you online tax letters",
+      plainTemplate = txt.digitalOptInConfirmation_BTA.f,
+      htmlTemplate = html.digitalOptInConfirmation_BTA.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_PTA",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = SelfAssessment,
+      subject = "How we will send you online tax letters",
+      plainTemplate = txt.digitalOptInConfirmation_PTA.f,
+      htmlTemplate = html.digitalOptInConfirmation_PTA.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_PTA_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Sut y byddwn yn anfon llythyrau treth ar-lein atoch",
+      plainTemplate = txt.digitalOptInConfirmation_PTA_cy.f,
+      htmlTemplate = html.digitalOptInConfirmation_PTA_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   ) ++ newMessageAlertTemplates
 }

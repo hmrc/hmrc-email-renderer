@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+
+We are processing your grant payment
+
+
+Dear @params.get("customerName")
+
+Your claim reference: @params.get("claim_ref_no")
+
+We have checked your claim and can confirm that we are now processing your grant payment.
+
+This means you can now expect your payment within 3 working days of this email.
+
+Our phone lines are very busy at the moment so please don’t call HMRC about your payment before the next 3 working days have passed. For more advice you can use our guidance on GOV.UK, speak to your tax agent, if you have one, or access our webchat service.
+
+A word about scams
+
+@Html("We are aware of an increase in scam emails, calls and texts. If someone gets in touch claiming to be from HMRC, saying that financial help can be claimed or that a tax refund is owed, and asks you to click on a link or to give information such as your name, credit card or bank details, please do not respond. You can forward suspicious emails claiming to be from HMRC to phishing@hmrc.gov.uk and texts to 60599.")
+
+From the Self-Employment Income Support team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

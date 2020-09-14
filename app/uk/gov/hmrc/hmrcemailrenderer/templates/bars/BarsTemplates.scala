@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.BusinessRates
 
-object BarsTemplates  {
+object BarsTemplates {
 
   private val getBARefCode: Map[String, String] => String =
     _.getOrElse("baRefNumber", "No BA CODE")
@@ -32,6 +32,15 @@ object BarsTemplates  {
       service = BusinessRates,
       subject = getBARefCode,
       plainTemplate = txt.bars.f,
-      htmlTemplate = html.bars.f)
+      htmlTemplate = html.bars.f
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "bars_alert_transaction",
+      fromAddress = FromAddress.noReply("Business Rates"),
+      service = BusinessRates,
+      subject = getBARefCode,
+      plainTemplate = txt.barsTransaction.f,
+      htmlTemplate = html.barsTransaction.f
+    )
   )
 }

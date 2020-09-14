@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,17 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
 
 object PodsTemplates {
   val templates = Seq(
-       MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "pods_scheme_register",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = "The pension scheme details have been sent to HMRC",
+      subject = "HMRC received your application",
       plainTemplate = txt.schemeRegSubmitted.f,
       htmlTemplate = html.schemeRegSubmitted.f,
       priority = Some(MessagePriority.Standard)
@@ -47,6 +47,42 @@ object PodsTemplates {
       subject = "You have an invitation to be added as a scheme administrator of a pension scheme",
       plainTemplate = txt.psaInvited.f,
       htmlTemplate = html.psaInvited.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_file_aft_return",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - return submitted",
+      plainTemplate = txt.aftReturnSubmitted.f,
+      htmlTemplate = html.aftReturnSubmitted.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return_decrease",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmittedDecrease.f,
+      htmlTemplate = html.aftAmendmentSubmittedDecrease.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return_no_change",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmittedNoChange.f,
+      htmlTemplate = html.aftAmendmentSubmittedNoChange.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_aft_amended_return_increase",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Accounting for Tax - amended return submitted",
+      plainTemplate = txt.aftAmendmentSubmittedIncrease.f,
+      htmlTemplate = html.aftAmendmentSubmittedIncrease.f,
       priority = Some(MessagePriority.Standard)
     )
   )

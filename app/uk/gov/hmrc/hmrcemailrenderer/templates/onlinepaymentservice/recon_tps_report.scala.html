@@ -1,0 +1,43 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.tps_recon_row
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Telephone Payment Service (TPS2) finance report") {
+ <table border="1px" width="100%"  cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 19px;c">
+  <tr>
+   <th> </th>
+   <th>TPS Volumes</th>
+   <th>TPS Amount</th>
+   <th>Automated payments Volume</th>
+   <th>Automated payments Amount</th>
+   <th>Total TPS and Automated Volume</th>
+   <th>Total TPS and Automated Amount</th>
+  </tr>
+ <tr><td style="font-weight:bold;">Shipley Account</td>@tps_recon_row(params("shipley").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">Cumbernauld Account</td> @tps_recon_row(params("cumbernauld").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">NIRS Account</td> @tps_recon_row(params("nirs").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">VAT Account</td>@tps_recon_row(params("vatAccount").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">VAT Distraint/Legal costs</td>  @tps_recon_row(params("vatLegal").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">Debit Card Fee</td> @tps_recon_row(params("debitCardFee").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">Commission Card</td>  @tps_recon_row(params("commisionCard").toString.split(",").toArray)
+  <tr><td style="font-weight:bold;">Total </td>@tps_recon_row(params("total").toString.split(",").toArray)
+ </table>
+
+    <p><STRONG>From HMRC Online Payments team</STRONG></p>
+}

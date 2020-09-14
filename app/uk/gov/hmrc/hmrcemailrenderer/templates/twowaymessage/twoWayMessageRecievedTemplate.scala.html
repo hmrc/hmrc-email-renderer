@@ -1,5 +1,5 @@
 @*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,23 @@
  * limitations under the License.
  *@
 
+@import org.joda.time.LocalDate
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.DateHelper
+
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Team") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received your message") {
 
-    <p>Thank you for making contact through secure messaging.</p>
+  @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 
-    <p>We’ll email you again when your reply is ready to view in your secure account inbox.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Thank you for the message you sent to HMRC today.</p>
 
-    <p>From HMRC Team</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">We are working on your message and will reply within @params.getOrElse("waitTime", "7 days").</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">You do not need to follow up by sending another message or by calling us.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">When your reply is ready, we will send you an email to let you know. You can view your messages by signing in to HMRC services.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">From HMRC digital team</p>
+
 }

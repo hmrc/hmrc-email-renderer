@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You submitted an IPT1 Application for Registration online
+
+Dear params.get("customerName")
+
+We have received your application to register for Insurance Premium Tax.
+
+Your submission reference is: @params.get("submissionReference")
+
+What happens next
+
+If your application is successful, we will send a certificate of registration to your correspondence address. We will issue this within 15 working days of you submitting the IPT1.
+
+The certificate will give your IPT registration number and show your date of registration. It will also tell you when your first return is due.
+
+From HMRC Excise team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

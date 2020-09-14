@@ -1,5 +1,5 @@
 @*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,49 +19,49 @@
 @(params: Map[String, Any])
 
 @breakdown = @{
-  val indices = Stream.from(0).takeWhile(i => params.get(s"CHARGETYPE_$i").isDefined).toList
-  indices.map { i =>
-    val chargeType = params(s"CHARGETYPE_$i")
-    val period = params(s"PERIOD_$i")
-    val amount = params(s"AMOUNT_$i")
-    (chargeType, DateFormatter.formatPeriod(period.toString), formatAmount(amount.toString))
-  }
+    val indices = Stream.from(0).takeWhile(i => params.get(s"CHARGETYPE_$i").isDefined).toList
+    indices.map { i =>
+        val chargeType = params(s"CHARGETYPE_$i")
+        val period = params(s"PERIOD_$i")
+        val amount = params(s"AMOUNT_$i")
+        (chargeType, DateFormatter.formatPeriod(period.toString), formatAmount(amount.toString))
+    }
 }
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "VAT Return Direct Debit: Advance notice of your payment") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("NAME")</p>
+    <p style="margin: 0 0 30px; font-size: 19px;"><strong>Direct Debit mandate reference</strong> @params("DDIREFERENCE")</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">This notice is for information purposes only. We will collect @formatAmount(params("AMOUNT").toString) on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This notice is for information purposes only. We will collect @formatAmount(params("AMOUNT").toString) on or just after @DateFormatter.formatDate(params("COLLECTIONDATE").toString).</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;"></p>
-  <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
-    <thead>
-      <tr>
-        <th>Charge type</th>
-        <th>Period</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for((chargeType, period, amount) <- breakdown) {
-        <tr>
-          <td>@chargeType</td>
-          <td>@period</td>
-          <td>@amount</td>
-        </tr>
-      }
-    </tbody>
-  </table>
-</p>
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+        <thead>
+            <tr>
+                <th>Charge type</th>
+                <th>Period</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+        @for((chargeType, period, amount) <- breakdown) {
+            <tr>
+                <td>@chargeType</td>
+                <td>@period</td>
+                <td>@amount</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    </p>
 
-<br/>
-<p style="margin: 0 0 30px; font-size: 19px;">Make sure you have enough funds in your account to meet this payment.</p>
-  <p style="margin: 0 0 30px; font-size: 19px;"> Payments will appear on your bank statement as '@params("NEWSUNNAME")'.</p>
-  <p style="margin: 0 0 30px; font-size: 19px;"> If there are any changes to the amount, date or frequency of your Direct Debit we will let you know at least 2
-      working days in advance of your account being debited.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">If you have any questions, call @params("PHONENUMBER") and quote your Direct Debit reference.</p>
+    <br/>
+    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you have enough funds in your account to meet this payment.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;"> Payments will appear on your bank statement as ‘@params("NEWSUNNAME")’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;"> If there are any changes to the amount, date or frequency of your Direct Debit we will let you know at least 2
+        working days in advance of your account being debited.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you have any questions, call @params("PHONENUMBER") and quote your Direct Debit reference.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
 }

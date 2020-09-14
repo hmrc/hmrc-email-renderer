@@ -1,0 +1,26 @@
+@(params: Map[String, Any])
+
+Dear Customer
+
+Your payment has been received by HMRC.
+
+Tax: @params("taxType")
+Report payment reference: @params("taxReference")
+Amount paid: @params("amountPaid")
+@params.get("commission").map { commission =>
+Credit card fee (non-refundable): £@commission
+}
+@params.get("totalPaid").map { totalPaid =>
+Total paid: £@totalPaid
+}
+
+This payment will take up to 5 days to appear in the import VAT on parcels online service.
+
+Why you got this email
+
+You chose to receive payment confirmation by email.
+
+From HMRC Online Payments
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+

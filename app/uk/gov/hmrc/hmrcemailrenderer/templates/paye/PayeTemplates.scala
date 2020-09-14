@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,16 +20,24 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
 
-object PayeTemplates  {
+object PayeTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
       templateId = "tax_estimate_message_alert",
       fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
-      service  = PayAsYouEarn,
-      subject = "Your Income Tax estimate has changed",
+      service = PayAsYouEarn,
+      subject = "Check your PAYE code change online",
       plainTemplate = txt.newTaxEstimateMessageAlert.f,
       htmlTemplate = html.newTaxEstimateMessageAlert.f
+    ),
+    MessageTemplate.create(
+      templateId = "tax_estimate_message_alert_cy",
+      fromAddress = FromAddress.noReply("CThEM – Gwasanaeth Gwirio eich Treth Incwm"),
+      service = PayAsYouEarn,
+      subject = "Gwirio newid i’ch cod TWE ar-lein",
+      plainTemplate = txt.taxEstimateMessageAlert_cy.f,
+      htmlTemplate = html.taxEstimateMessageAlert_cy.f
     )
   )
 }

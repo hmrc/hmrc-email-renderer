@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You applied to extend protection of intellectual property rights
+
+Dear @params.get("customerName")
+
+HMRC received your request to extend protection of intellectual property rights at the UK border.
+
+What happens next
+
+We will now review the details you have given us, then contact you at this email address.
+
+This usually takes 30 working days.
+
+Why you are receiving this email
+
+We send a confirmation email for applications to extend protection of intellectual property rights.
+
+From HMRC Intellectual Property Rights team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

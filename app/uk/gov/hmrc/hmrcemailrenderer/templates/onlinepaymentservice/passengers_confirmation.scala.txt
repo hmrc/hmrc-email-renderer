@@ -7,24 +7,26 @@
     (item,  amount)
   }
 }
-You have paid the duty you owe
+You have paid the duty you owe for these goods
 
-If these are the only items you are declaring, go to the green channel. You may be asked to show your email receipt on your phone or tablet by a member of Border Force.
+Proceed through the green channel if these are the only items you are declaring. You may be asked to show your receipt on your mobile phone or tablet to a member of Border Force.
 
-If you have something else to declare, go to the red channel or red phone point and speak to a member of Border Force.
+Go to the red channel or red-point phone if you have something else to declare or if you are carrying restricted items such as firearms or ammunition.
 
-If you are carrying restricted items such as firearms or ammunition, go to the red channel.
+At locations without a red channel, please visit GOV.UK for more information.
 
 Your details
 
 Name: @params("NAME")
-Date: @params("DATE")
+Date of payment: @params("DATE")
 Place of arrival in UK: @params("PLACEOFARRIVAL")
 Date of arrival: @params("DATEOFARRIVAL")
+Time of arrival: @params("TIMEOFARRIVAL")
 Payment reference: @params("REFERENCE")
-Duty paid: @params("TOTAL")
+Transaction ID: @params("TRANSACTIONREFERENCE")
+Amount paid: @params("TOTAL")
 
-Duty and tax paid per item
+Duty and tax to pay for each item
 @for((item, amount) <- breakdown) {
 - Item: @item, Amount: @amount
 }

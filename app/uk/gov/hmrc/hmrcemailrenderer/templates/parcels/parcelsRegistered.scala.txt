@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+HMRC received your parcels import VAT registration
+
+Dear @{params("name").toString},
+
+Your import VAT on parcels reference is @{params("referenceNumber").toString}.
+
+You can now access your account. Search for 'Manage your import VAT on parcels' on GOV.UK and sign in to the service.
+
+For security reasons, we have not included a link in this email.
+
+From HMRC import VAT on parcels service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

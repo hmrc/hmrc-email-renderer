@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.{ Matchers, WordSpec }
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 class ApiAddedDeveloperAsCollaboratorNotificationSpec extends WordSpec with Matchers {
@@ -27,25 +27,33 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends WordSpec with Matc
   val role = "role"
   val developerHubTitle = "Developer Hub Title"
 
-  val templateParams = Map("email" -> email, "applicationName" -> applicationName, "role" -> role,
-                           "staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1",
-                            "borderColour" -> "#005EA5")
+  val templateParams = Map(
+    "email"                -> email,
+    "applicationName"      -> applicationName,
+    "role"                 -> role,
+    "staticAssetUrlPrefix" -> "http://uri",
+    "staticAssetVersion"   -> "v1",
+    "borderColour"         -> "#005EA5"
+  )
 
   "htmlView" should {
     "render as" in new TestCase {
       val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorNotification.render(templateParams)
       renderedHtml.contentType should include("text/html")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
-                                     "</strong> has been added to <strong>" + applicationName +
-                                     "</strong> by another admin.</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They now have " + role +
-                                     " rights over the application.</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
+          "</strong> has been added to <strong>" + applicationName +
+          "</strong> by another admin.</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">They now have " + role +
+          " rights over the application.</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorNotification.render(templateParamsPlus)
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 
