@@ -90,7 +90,7 @@ object PodsTemplates {
       templateId = "pods_psp_register",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = "You have been registered as a pension scheme practitioner",
+      subject = "Registered: pension scheme practitioner",
       plainTemplate = txt.pspRegistered.f,
       htmlTemplate = html.pspRegistered.f,
       priority = Some(MessagePriority.Standard)
