@@ -64,10 +64,10 @@ object TemplateParams {
       "service"    -> "view their PAYE income record."
     ),
     "client_expired_authorisation_request" -> Map(
-      "agencyName"   -> "Agent 1",
-      "clientName"   -> "Client 2",
-      "expiryPeriod" -> "14 days",
-      "service"      -> "send their Income Tax updates through software."
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "expiryDate" -> "1 October 2020",
+      "service"    -> "send their Income Tax updates through software."
     ),
     "agent_services_account_created" -> Map(
       "agencyName" -> "Agent 1",
