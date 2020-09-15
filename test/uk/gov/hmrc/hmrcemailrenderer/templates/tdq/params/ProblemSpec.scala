@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams
+package uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params
 
 import org.scalatest.WordSpec
 import org.scalatest.Matchers
