@@ -158,6 +158,26 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     }
   }
 
+  "tdq_fph_report_heuristically_compliant" should {
+
+    val params = commonParameters + (
+      "developerName"   -> "John Smith",
+      "fromDate"        -> "22 September 2019",
+      "toDate"          -> "22 October 2019",
+      "applicationName" -> "MTD VAT Test Application",
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+    )
+
+    "be the same for text and html content" in {
+      compareContent("tdq_fph_report_heuristically_compliant", params)(tdqTemplate)
+    }
+
+    "contain subject with application name" in {
+      val template = findTemplate("tdq_fph_report_heuristically_compliant")
+      template.subject.f(params) mustEqual "Fraud prevention headers for MTD VAT Test Application"
+    }
+  }
+
   "tdq_fph_report_non_compliant" should {
 
     val baseParams = commonParameters + (

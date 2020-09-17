@@ -595,6 +595,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
         "tdq_compliance_partially_compliant_valid_connection_method",
         "tdq_fph_report_non_compliant",
+        "tdq_fph_report_heuristically_compliant",
         "cgtpd_account_created",
         "cgtpd_account_created_cy",
         "cgtpd_private_beta_access",

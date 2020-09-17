@@ -59,6 +59,15 @@ object TdqTemplates {
       plainTemplate = txt.tdqFphReportNonCompliant.f,
       htmlTemplate = html.tdqFphReportNonCompliant.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tdq_fph_report_heuristically_compliant",
+      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
+      service = Tdq,
+      subject = extractSubject,
+      plainTemplate = txt.tdqFphReportHeuristicallyCompliant.f,
+      htmlTemplate = html.tdqFphReportHeuristicallyCompliant.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
