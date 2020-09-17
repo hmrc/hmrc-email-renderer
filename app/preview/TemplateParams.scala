@@ -1872,6 +1872,9 @@ object TemplateParams {
     "pods_psa_register" -> Map(
       "psaName" -> "Jane Doe"
     ),
+    "pods_psp_register" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
     "dac6_registration_successful" -> Map(
       "name" -> "Joe Bloggs"
     )
