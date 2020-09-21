@@ -4,7 +4,7 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Report goods that infringe your intellectual property rights’ service on GOV.UK.
+You requested a code to continue with the ‘Apply to extend your application to protect your intellectual property rights’ service on GOV.UK.
 
 Your code is: @params.get("confirmationCode")
 
