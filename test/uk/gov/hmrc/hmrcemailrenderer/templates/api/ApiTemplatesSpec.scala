@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.play.test.UnitSpec
 
@@ -28,13 +29,9 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
     "of are setup correctly" in new TestCase {
 
-      validateTemplate(
-        templateId = "apiDeveloperEmailVerification",
-        expectedSubject = "Verify your email address")
+      validateTemplate(templateId = "apiDeveloperEmailVerification", expectedSubject = "Verify your email address")
 
-      validateTemplate(
-        templateId = "apiDeveloperPasswordReset",
-        expectedSubject = "Reset your password")
+      validateTemplate(templateId = "apiDeveloperPasswordReset", expectedSubject = "Reset your password")
 
       validateTemplate(
         templateId = "apiDeveloperChangedPasswordConfirmation",
@@ -72,37 +69,52 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
         templateId = "apiApplicationApprovedAdminConfirmation",
         expectedSubject = "Application check passed: Verify your email address")
 
-      validateTemplate(
-        templateId = "apiApplicationApprovedNotification",
-        expectedSubject = "Application check passed")
+      validateTemplate(templateId = "apiApplicationApprovedNotification", expectedSubject = "Application check passed")
+
+      validateTemplate(templateId = "apiApplicationDeletedNotification", expectedSubject = "We deleted an application")
+
+      validateTemplate(templateId = "apiDeveloperDeletedConfirmation", expectedSubject = "We deleted your account")
+
+      validateTemplate(templateId = "apiApplicationRejectedNotification", expectedSubject = "Application check failed")
 
       validateTemplate(
-        templateId = "apiApplicationDeletedNotification",
-        expectedSubject = "We deleted an application")
+        templateId = "apiStatusChangedNotification",
+        expectedSubject = "API Status Changed",
+        expectedPriority = MessagePriority.Standard)
 
       validateTemplate(
-        templateId = "apiDeveloperDeletedConfirmation",
-        expectedSubject = "We deleted your account")
+        templateId = "apiAddedClientSecretNotification",
+        expectedSubject = "Client Secret Added",
+        expectedPriority = MessagePriority.Urgent)
 
       validateTemplate(
-        templateId = "apiApplicationRejectedNotification",
-        expectedSubject = "Application check failed")
+        templateId = "apiRemovedClientSecretNotification",
+        expectedSubject = "Client Secret Removed",
+        expectedPriority = MessagePriority.Urgent)
+
+      validateTemplate(
+        templateId = "apiApplicationToBeDeletedNotification",
+        expectedSubject = "We’re deleting your application",
+        expectedPriority = MessagePriority.Standard)
     }
   }
 
-  def findTemplate(templateId: String): MessageTemplate = {
+  def findTemplate(templateId: String): MessageTemplate =
     ApiTemplates.templates.filter(t => t.templateId == templateId).head
-  }
 
-  def validateTemplate(templateId: String, expectedSubject: String) = {
+  def validateTemplate(
+    templateId: String,
+    expectedSubject: String,
+    expectedPriority: MessagePriority = MessagePriority.Urgent) = {
     val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
-    template.fromAddress.apply(Map.empty) should be ("HMRC Developer Hub <noreply@tax.service.gov.uk>")
-    template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be("HMRC test account <noreply@tax.service.gov.uk>")
+    template.fromAddress.apply(Map.empty) should be("HMRC Developer Hub <noreply@tax.service.gov.uk>")
+    template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be(
+      "HMRC test account <noreply@tax.service.gov.uk>")
     template.service should be(ApiDeveloperHub)
     subject(Map.empty) should be(expectedSubject)
-    template.plainTemplate should not be(null)
-    template.htmlTemplate should not be(null)
-    template.priority.get should be(MessagePriority.Urgent)
+    template.plainTemplate should not be (null)
+    template.htmlTemplate should not be (null)
+    template.priority.get should be(expectedPriority)
   }
 }

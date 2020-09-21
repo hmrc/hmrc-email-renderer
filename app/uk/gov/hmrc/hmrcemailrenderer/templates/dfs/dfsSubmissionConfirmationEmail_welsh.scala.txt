@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+
+Annwyl @{params("name")},
+
+Mae’ch cais am ad-daliad treth wedi dod i law Cyllid a Thollau EM (CThEM).
+
+Eich cyfeirnod yw @{params("submissionReference")}.
+
+Os oes gennych hawl i ad-daliad, byddwn yn anfon cyfrifiad treth diwygiedig atoch a thalu’r hyn sy’n ddyledus i chi.
+Os nad oes gennych hawl i ad-daliad, byddwn yn ysgrifennu atoch ac yn esbonio pam.
+Os oes angen unrhyw wybodaeth bellach arnom, byddwn yn cysylltu â chi drwy lythyr neu dros y ffôn. Ni fyddwn yn gofyn am wybodaeth bellach oddi wrthych chi drwy e-bost.
+ 
+Fel arfer, byddwch yn cael ateb cyn pen 35 diwrnod.
+ 
+Yn gywir,
+ 
+Cyllid a Thollau EM
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

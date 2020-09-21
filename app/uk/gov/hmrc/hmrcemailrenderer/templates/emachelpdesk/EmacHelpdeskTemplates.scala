@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.EmacHelpdesk
 
@@ -30,7 +30,8 @@ object EmacHelpdeskTemplates {
       subject = "You've submitted a document to HMRC",
       plainTemplate = txt.emacHelpdeskFailureConfirmationEmail.f,
       htmlTemplate = html.emacHelpdeskFailureConfirmationEmail.f,
-      priority = Some(MessagePriority.Urgent)),
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "emac_helpdesk_successful_confirmation_email",
       fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
@@ -38,6 +39,7 @@ object EmacHelpdeskTemplates {
       subject = "You've submitted a document to HMRC",
       plainTemplate = txt.emacHelpdeskSuccessfulConfirmationEmail.f,
       htmlTemplate = html.emacHelpdeskSuccessfulConfirmationEmail.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }

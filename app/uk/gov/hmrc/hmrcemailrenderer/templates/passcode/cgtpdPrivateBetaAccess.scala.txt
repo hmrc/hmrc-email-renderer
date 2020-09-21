@@ -1,0 +1,65 @@
+@(params: Map[String, Any])How to start the trial of HMRC’s new online service
+
+  Dear @{params("name")}
+
+  Thank you for volunteering to help HMRC test the new Report and pay Capital Gains Tax on UK property service.
+
+  You’ll be one of the first to use the new service. Your feedback will help HMRC improve it.
+
+  Where and when will the trial will take place
+
+  You will be able to take part online in your own home or at a location you choose.
+
+  The trial will take place between 6 January 2020 to 5 April 2020.
+
+  How long it will take
+
+  The trial will take around 30 minutes to complete.
+
+  What you will need to take part
+
+  You will need to use a device that is connected to the internet.
+
+  When taking part in the online trial, you will need to provide certain personal details to create your Capital Gains Tax on UK property account. These details may include:
+  
+    - a contact name
+    - contact address
+    - email address
+    - Self Assessment Unique Taxpayer Reference
+    - National Insurance number
+    - Trust Registration Number (only if you’re representing a trust)
+  
+  You can find links to our cookies policy, terms and conditions page, and privacy policy in footer section of the new service. You’ll be able to read these before you start to create an account.
+
+  What you will be expected to do
+
+  You will be asked to:
+  
+    - create an online Capital Gains Tax on UK property account
+    - complete an exit survey
+  
+  We may:
+  
+    - contact you and ask you to take part in a screen share so we can remotely view your screen as you take part in the trial
+    - call you afterwards to get your feedback over the phone
+
+  What you will not be able to do
+
+  You will not be able to use the new service to Report and pay Capital Gains Tax on UK property before 6 April 2020. You’ll need to go to GOV.UK and search for ‘Capital Gains Tax’ to find out how to use existing services to pay the tax.
+
+  What happens after the trial has finished
+
+  You will have a Capital Gains Tax on UK property account, will be able to use it from 6 April 2020 to report and pay your Capital Gains Tax on UK property.
+  Once HMRC has tested and improved the service they will add it to GOV.UK so anyone who needs to use it will be able to.
+
+  How to start the trial
+
+  Follow the link below to start the trial. You’ll be able to find out about the new service, then start to use it to create an account. You can also use the link to come back later and sign into your account.
+
+  You can use the link 5 times. You’ll be able to use the link for 90 days.
+
+  To start the trial, go to <a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a>
+
+  Do not reply to this email.
+
+  From Capital Gains Tax on UK property

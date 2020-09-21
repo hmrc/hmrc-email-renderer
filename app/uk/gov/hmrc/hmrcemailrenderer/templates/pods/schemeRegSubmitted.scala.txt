@@ -1,20 +1,18 @@
 @(params: Map[String, Any])
 
-The pension scheme details have been sent to HMRC
+You have applied to register a new pension scheme with HMRC
 
-Dear Pension Scheme Administrator,
+Dear @{params("psaName").toString}
 
-You have applied to register a new pension scheme with HMRC.
-
-Your submission reference number is @{params("srn").toString}.
+Your submission reference number is: @{params("srn").toString}
 
 The pension scheme has not been registered yet. HMRC will review the application and make a decision. You will be contacted if there are any other details needed.
 
-You can view the status of the registration by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
+How to check the status of the application
 
-You can do this by searching for the ‘apply to register a pension scheme’ page on GOV.UK and then choosing to apply online to register the pension scheme.
+You can use the ‘Managing Pension Schemes’ service to check the status of the application. More information can be found on the ‘apply to register a pension scheme’ page on GOV.UK.
 
-There is no time limit for how long it will take HMRC to make a decision. You can appeal to a tribunal if HMRC decline the application or if a decision has not been made within 6 months. You can find details of how to do this on the ‘apply to register a pension scheme’ page on GOV.UK.
+There is no time limit for how long it will take HMRC to make a decision. You can appeal to a tribunal if HMRC declines the application or if a decision has not been made within 6 months. You can find details of how to do this on the ‘apply to register a pension scheme’ page on GOV.UK.
 
 For security reasons, we have not included a link with this email.
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.passcode
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier._
 
@@ -37,21 +37,24 @@ object PasscodesTemplates {
       service = AgentOptInExclude,
       subject = "Switch back from Agent Services to the original HMRC online services",
       plainTemplate = txt.agentOptInExcludeEmail.f,
-      htmlTemplate = html.agentOptInExcludeEmail.f),
+      htmlTemplate = html.agentOptInExcludeEmail.f
+    ),
     MessageTemplate.create(
       templateId = "agents_opt_in_rejoin_template_id",
       fromAddress = govUkTeamAddress,
       service = AgentOptInRejoin,
       subject = "Rejoin the new Agent Services from HMRC",
       plainTemplate = txt.agentOptInRejoinEmail.f,
-      htmlTemplate = html.agentOptInRejoinEmail.f),
+      htmlTemplate = html.agentOptInRejoinEmail.f
+    ),
     MessageTemplate.create(
       templateId = "agents_access_invitation_template_id",
       fromAddress = govUkTeamAddress,
       service = Agent,
       subject = "Invite: Test and view your clients’ PAYE for employers accounts",
       plainTemplate = txt.agentVerificationEmail.f,
-      htmlTemplate = html.agentVerificationEmail.f),
+      htmlTemplate = html.agentVerificationEmail.f
+    ),
     MessageTemplate.create(
       templateId = "agent_mapping_invitation_template_id",
       fromAddress = govUkTeamAddress,
@@ -94,20 +97,31 @@ object PasscodesTemplates {
       service = InheritanceTax,
       subject = "How to access HMRC’s Inheritance Tax Online service",
       plainTemplate = txt.ihtVerificationEmail.f,
-      htmlTemplate = html.ihtVerificationEmail.f),
+      htmlTemplate = html.ihtVerificationEmail.f
+    ),
     MessageTemplate.create(
       templateId = "tamc_access_invitation_template_id",
       fromAddress = govUkTeamAddress,
       service = TaxAllowanceForMarriedCouples,
       subject = "Your HMRC Marriage Allowance link",
       plainTemplate = txt.tamcVerificationEmail.f,
-      htmlTemplate = html.tamcVerificationEmail.f),
+      htmlTemplate = html.tamcVerificationEmail.f
+    ),
     MessageTemplate.create(
       templateId = "gmp_access_invitation_template_id",
       fromAddress = govUkTeamAddress,
       service = GuaranteedMinimumPension,
       subject = "Your check a GMP link",
       plainTemplate = txt.gmpVerificationEmail.f,
-      htmlTemplate = html.gmpVerificationEmail.f)
+      htmlTemplate = html.gmpVerificationEmail.f
+    ),
+    MessageTemplate.create(
+      templateId = "cgtpd_private_beta_access",
+      fromAddress = govUkTeamAddress,
+      service = Cgtpd,
+      subject = "How to start the trial of the new ‘Report and pay Capital Gains Tax on UK property service’",
+      plainTemplate = txt.cgtpdPrivateBetaAccess.f,
+      htmlTemplate = html.cgtpdPrivateBetaAccess.f
+    )
   )
 }

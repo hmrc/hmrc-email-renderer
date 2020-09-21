@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Diddymiad: Cyflwyno’ch Ffurflen Dreth Hunanasesiad
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
+
+Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar 19 February 2019.
+
+Anfonom hon atoch yn rhy gynnar mewn camgymeriad, ac mae’n flin gennym am y camgymeriad.
+
+Rydym bellach wedi dileu’r neges anghywir o’ch cyfrif CThEM.
+
+Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.
+
+Oddi wrth Adran Ddigidol CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

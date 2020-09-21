@@ -1,5 +1,5 @@
 @*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,27 +15,43 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to register a non-resident company for Corporation Tax"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You notified HMRC that a non-resident company or CIV has disposed of an interest in UK property or land"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("customerName") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    HMRC has received your application to register a non-resident company for Corporation Tax.</p>
+    HMRC has received your notification that a company or collective investment vehicle has disposed of an interest in UK property or land.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your submission reference is: <b>@params.get("submissionReference")</b></p>
 <h2>
     What happens next</h2>
 <p><b style="margin: 0 0 30px; font-size: 19px;">
-    If you are registering a company for Corporation Tax for the first time</b></p>
+    If you are registering a company or collective investment vehicle for Corporation Tax for the first time</b></p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will use the information you have provided to set up a Corporation Tax record and send the company a Corporation Tax Unique Taxpayer Reference. We will also send you more information about what you need to do next.
+    We will use the information you have provided to set up a Corporation Tax record and send the company or collective investment vehicle a Corporation Tax Unique Taxpayer Reference. We will also send you more information about what you need to do next.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You will only be able to register for HMRC online services and file the company’s tax returns once you have received the company’s Unique Taxpayer Reference.
+    You will only be able to register for HMRC online services and file the company or collective investment vehicle’s tax returns once you have received the company or collective investment vehicle’s Unique Taxpayer Reference.
 </p>
 <p><b style="margin: 0 0 30px; font-size: 19px;">
-    If you are registering a company for Corporation Tax</b></p>
+    If you are registering a company or collective investment vehicle for Corporation Tax</b></p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If you are re-registering for Corporation Tax we will use the information provided to update our records. You will then be able to use HMRC online services to file returns and make payments.</p>
+   We will use the information provided to update our records. You will then be able to use HMRC online services to file returns and make payments.</p>
+<p><b style="margin: 0 0 30px; font-size: 19px;">
+    If you expect to make fewer than 4 disposals of interests in UK property or land in this tax year</b></p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You’ll need to :</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    • notify us each time you make a disposal</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    • file a Corporation Tax return for each disposal</p>
+<p><b style="margin: 0 0 30px; font-size: 19px;">
+    If you expect to make 4 or more disposals of interests in UK property or land in this tax year</b></p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Special rules apply that allow you to:</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    • not have to notify us separately about each disposal (this form covers all the disposals)</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    • file one Corporation Tax return for all the disposals made within the accounting period (rather than one return for each disposal)</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     From HMRC Corporation Tax Services</p>
 }

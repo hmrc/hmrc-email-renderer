@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,10 +19,11 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 import org.joda.time.LocalDate
 import org.joda.time.format.DateTimeFormat
 import org.scalatest.Matchers
-import org.scalatestplus.play.{OneAppPerSuite, PlaySpec}
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
+import org.scalatestplus.play.{ OneAppPerSuite, PlaySpec }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class TemplateContentComparisonSpec
+    extends PlaySpec with TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
   val commonParamsWithName = commonParameters.updated("recipientName_forename", "forename")
 
@@ -33,11 +34,11 @@ class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec
 
     "include newMessageAlert" in {
       val params = Map(
-        "recipientName_title" -> "title",
-        "recipientName_forename" -> "forename",
+        "recipientName_title"          -> "title",
+        "recipientName_forename"       -> "forename",
         "recipientName_secondForename" -> "a",
-        "recipientName_surname" -> "b",
-        "recipientName_honours" -> "c"
+        "recipientName_surname"        -> "b",
+        "recipientName_honours"        -> "c"
       ) ++ commonParameters
       compareContent("newMessageAlert", params)(digitalContactTemplate)
     }
@@ -56,11 +57,11 @@ class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec
 
     "render the identical rescindedMessageAlert content for both the text and html versions" in {
       val params = Map(
-        "recipientName_title" -> "title",
-        "recipientName_forename" -> "forename",
+        "recipientName_title"          -> "title",
+        "recipientName_forename"       -> "forename",
         "recipientName_secondForename" -> "a",
-        "recipientName_surname" -> "b",
-        "recipientName_honours" -> "c"
+        "recipientName_surname"        -> "b",
+        "recipientName_honours"        -> "c"
       ) ++ commonParameters
 
       compareContent("rescindedMessageAlert", params)(digitalContactTemplate)
@@ -68,6 +69,7 @@ class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec
 
     "include verificationReminder content for both the text and html versions" in {
       val params = Map(
+        "verificationLink"         -> "/some/link",
         "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate())
       ) ++ commonParamsWithName
 
@@ -83,11 +85,11 @@ class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec
 
     "include SA309 templates" in {
       val params = Map(
-        "recipientName_title" -> "title",
-        "recipientName_forename" -> "forename",
+        "recipientName_title"          -> "title",
+        "recipientName_forename"       -> "forename",
         "recipientName_secondForename" -> "a",
-        "recipientName_surname" -> "b",
-        "recipientName_honours" -> "c"
+        "recipientName_surname"        -> "b",
+        "recipientName_honours"        -> "c"
       ) ++ commonParameters
 
       compareContent("newMessageAlert_SA309", params)(digitalContactTemplate)
@@ -95,10 +97,10 @@ class TemplateContentComparisonSpec extends PlaySpec with TemplateComparisonSpec
 
     "include SA316 templates" in {
       val params = Map(
-        "recipientName_title" -> "title",
-        "recipientName_forename" -> "forename",
+        "recipientName_title"          -> "title",
+        "recipientName_forename"       -> "forename",
         "recipientName_secondForename" -> "a",
-        "recipientName_honours" -> "c"
+        "recipientName_honours"        -> "c"
       ) ++ commonParameters
 
       compareContent("newMessageAlert_SA316", params)(digitalContactTemplate)

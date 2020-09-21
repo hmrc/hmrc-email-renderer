@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+
+VAT Return Direct Debit: Cancelled Direct Debit
+
+ @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
+
+We will automatically collect the payment for your VAT Return shortly.
+
+Get full details by signing into your HMRC online services account and going to your messages.
+
+From HMRC Direct Debits

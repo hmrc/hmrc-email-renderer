@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,12 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.jsoup.Jsoup
 import org.scalatestplus.play.PlaySpec
-import play.twirl.api.{HtmlFormat, TxtFormat}
+import play.twirl.api.{ HtmlFormat, TxtFormat }
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 
 trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
-  def compareContent(id: String, params: Map[String, String])(getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
+  def compareContent(id: String, params: Map[String, String])(
+    getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
     getTemplates(id) match {
       case Some((htmlTemplate, textTemplate)) =>
         val html = TemplateContentNormalisation.html(htmlTemplate(params))
@@ -33,7 +34,6 @@ trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
     }
 }
 
-
 object TemplateContentNormalisation {
 
   def html(content: HtmlFormat.Appendable) = normaliseWhiteSpace(
@@ -41,9 +41,7 @@ object TemplateContentNormalisation {
   )
 
   def text(content: TxtFormat.Appendable) = normaliseWhiteSpace(
-    content.body.lines.
-      map(_.replaceAll("""^((\s*)- )""", "")).
-      mkString(" ")
+    content.body.lines.map(_.replaceAll("""^((\s*)- )""", "")).mkString(" ")
   )
 
   def normaliseWhiteSpace(input: String) =

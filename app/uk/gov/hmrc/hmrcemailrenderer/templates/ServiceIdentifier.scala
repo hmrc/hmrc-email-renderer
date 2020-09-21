@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,28 +27,29 @@ object ServiceIdentifier {
   case object AntiMoneyLaunderingSupervision extends ServiceIdentifier { override val name = "amls" }
   case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
   case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
-  case object BTIOperationalService extends ServiceIdentifier {override val name = "tariff-classification-frontend"}
-  case object BTIApplicationService extends ServiceIdentifier {override val name = "binding-tariff-trader-frontend"}
-  case object BTIAdviceService extends ServiceIdentifier {override val name = "binding-tariff-advice-frontend"}
+  case object BTIOperationalService extends ServiceIdentifier { override val name = "tariff-classification-frontend" }
+  case object BTIApplicationService extends ServiceIdentifier { override val name = "binding-tariff-trader-frontend" }
+  case object BTIAdviceService extends ServiceIdentifier { override val name = "binding-tariff-advice-frontend" }
   case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
   case object Charities extends ServiceIdentifier { override val name = "charities" }
   case object Childcare extends ServiceIdentifier { override val name = "cc" }
   case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
-  case object CorporationTax extends ServiceIdentifier { override val name  = "ct" }
+  case object CorporationTax extends ServiceIdentifier { override val name = "ct" }
+  case object DAC6 extends ServiceIdentifier { override val name = "dac6" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
-  case object Eeitt extends ServiceIdentifier {override val name = "eeitt"}
-  case object Fhdds extends ServiceIdentifier {override val name = "fhdds"}
+  case object Eeitt extends ServiceIdentifier { override val name = "eeitt" }
+  case object Fhdds extends ServiceIdentifier { override val name = "fhdds" }
   case object FriendsAndFamily extends ServiceIdentifier { override val name = "fandf" }
   case object GovernmentGateway extends ServiceIdentifier { override val name = "gg" }
   case object GuaranteedMinimumPension extends ServiceIdentifier { override val name = "gmp" }
   case object Generic extends ServiceIdentifier { override val name = "generic" }
   case object InheritanceTax extends ServiceIdentifier { override val name = "iht" }
   case object PayAsYouEarn extends ServiceIdentifier { override val name = "paye" }
-  case object PensionSchemesforPractitioners extends ServiceIdentifier { override val name  = "pp" }
+  case object PensionSchemesforPractitioners extends ServiceIdentifier { override val name = "pp" }
   case object RegisterYourCompany extends ServiceIdentifier { override val name = "register-your-company" }
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
   case object SecurityConsole extends ServiceIdentifier { override val name = "security-console" }
-  case object SelfAssessment extends ServiceIdentifier { override val name  = "sa" }
+  case object SelfAssessment extends ServiceIdentifier { override val name = "sa" }
   case object TaxAdvantagedVentureCapital extends ServiceIdentifier { override val name = "tavc" }
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
@@ -88,13 +89,19 @@ object ServiceIdentifier {
   case object HelpToSave extends ServiceIdentifier { override val name = "hts" }
   case object SoftDrinksIndustryLevy extends ServiceIdentifier { override def name: String = "sdil" }
   case object LostCredentials extends ServiceIdentifier { override val name = "lostcredentials" }
-  case object CCA extends ServiceIdentifier { override val name = "check-challenge-assessment"}
-  case object CDS extends ServiceIdentifier { override val name = "cds"}
+  case object CCA extends ServiceIdentifier { override val name = "check-challenge-assessment" }
+  case object CDS extends ServiceIdentifier { override val name = "cds" }
   case object MTDfBVatSignUp extends ServiceIdentifier { override val name = "mtdfb-vat-sign-up" }
   case object PODS extends ServiceIdentifier { override val name = "pods" }
   case object Parcels extends ServiceIdentifier { override val name = "parcels" }
-  case object Vat extends ServiceIdentifier { override val name = "vat"}
-  case object DigitalContactVat extends ServiceIdentifier { override val name = "digitalContactVat"}
-  case object TwoWayMessaging extends ServiceIdentifier { override val name = "twoWayMessaging"}
-  case object CustomsFinancials extends ServiceIdentifier { override val name = "customsFinancials"}
+  case object Vat extends ServiceIdentifier { override val name = "vat" }
+  case object DigitalContactVat extends ServiceIdentifier { override val name = "digitalContactVat" }
+  case object TwoWayMessaging extends ServiceIdentifier { override val name = "twoWayMessaging" }
+  case object CustomsFinancials extends ServiceIdentifier { override val name = "customsFinancials" }
+  case object Cgtpd extends ServiceIdentifier { override val name = "cgtpd" }
+  case object Tdq extends ServiceIdentifier { override val name = "tdq" }
+  case object DigitalServicesTax extends ServiceIdentifier { override val name = "dst" }
+  case object Seiss extends ServiceIdentifier { override val name = "seiss" }
+  case object GoodsMovementSystem extends ServiceIdentifier { override val name = "goods-movement-system" }
+  case object EOTHO extends ServiceIdentifier { override val name = "eotho" }
 }

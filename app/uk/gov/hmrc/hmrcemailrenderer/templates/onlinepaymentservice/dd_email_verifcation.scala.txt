@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+Verify your email address
+
+Dear @{params("name")}
+
+You told us you want us to use this email address to contact you about your Direct Debit.
+
+Before we can start using this email address, you'll need to verify it.
+
+How to verify your email address
+
+You must click the link below within the next 30 minutes to verify your email address:
+
+@{params("verificationLink")}
+
+After 30 minutes this link will expire and you'll need to start again.
+
+From HMRC Direct Debits
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

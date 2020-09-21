@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.mandate
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, MessagePriority}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Mandate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -94,5 +94,6 @@ object MandateTemplates {
       plainTemplate = txt.mandateAgentSelfAuthRemoves.f,
       htmlTemplate = html.mandateAgentSelfAuthRemoves.f,
       priority = Some(MessagePriority.Urgent)
-    ))
+    )
+  )
 }

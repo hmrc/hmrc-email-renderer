@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,24 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.fandf
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.FriendsAndFamily
 
-object FandFTemplates  {
+object FandFTemplates {
   val trustedHelpersTeamAddress = FromAddress.noReply("HMRC Trusted Helpers")
 
-  private def ask_help_subject(params : Map[String, String]) =
-    params.get("helpeeFirstName").flatMap(fname => params.get("helpeeLastName").map(lname => s"$fname $lname " )).getOrElse("Someone ") +"would like your help with tax online"
+  private def ask_help_subject(params: Map[String, String]) =
+    params
+      .get("helpeeFirstName")
+      .flatMap(fname => params.get("helpeeLastName").map(lname => s"$fname $lname "))
+      .getOrElse("Someone ") + "would like your help with tax online"
 
-  private def offer_help_subject(params : Map[String, String]) =
-    params.get("helperFirstName").flatMap(fname => params.get("helperLastName").map(lname => s"$fname $lname " )).getOrElse("Someone ") +"wants to help you with your tax online"
+  private def offer_help_subject(params: Map[String, String]) =
+    params
+      .get("helperFirstName")
+      .flatMap(fname => params.get("helperLastName").map(lname => s"$fname $lname "))
+      .getOrElse("Someone ") + "wants to help you with your tax online"
 
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(

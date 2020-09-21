@@ -5,8 +5,7 @@ Dear Customer
 Your payment has been received by HMRC.
 
 Tax: @params("taxType")
-Tax reference: @params("taxReference")
-Report payment reference: @params("paymentReference")
+Report payment reference: @params("taxReference")
 Amount paid: @params("amountPaid")
 @params.get("commission").map { commission =>
 Credit card fee (non-refundable): £@commission

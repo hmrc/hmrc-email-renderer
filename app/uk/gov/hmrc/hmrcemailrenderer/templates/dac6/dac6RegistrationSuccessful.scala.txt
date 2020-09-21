@@ -1,0 +1,8 @@
+@(params: Map[String, Any])
+You have registered for the DAC6 service
+Dear @{params("name")}
+You can now submit a disclosure.
+Search for ‘DAC6’ on GOV.UK and sign in to the service.
+For security reasons, we have not included a link in this email.
+From HMRC DAC6 service
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+You submitted an Alternative Dispute Resolution (ADR) application to HMRC
+
+Dear @params.get("customerName")
+
+Your submission reference is: @params.get("submissionReference")
+
+What happens next
+
+We will contact you within 30 days to confirm if you can use the service.
+
+If we have not contacted you within this time, let us know by emailing: mailbox.adr&#64;hmrc.gsi.gov.uk
+
+If you prefer to phone, contact the Alternative Dispute Resolution team on 03000 510994 or 03000 537314 (8.30am to 5.00pm, Monday to Friday).
+
+Why you are receiving this email
+
+We send an automated confirmation for an application submitted online.
+
+Do not reply to this email
+
+From HMRC Alternative Dispute Resolution team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

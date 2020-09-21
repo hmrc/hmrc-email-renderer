@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.lisa
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.LifetimeISA
 
 object LisaTemplates {
   val templates = Seq(
-       MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "lisa_application_submit",
       fromAddress = govUkTeamAddress,
       service = LifetimeISA,
@@ -30,6 +30,5 @@ object LisaTemplates {
       plainTemplate = txt.applicationSubmitted.f,
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Urgent)
-
     ))
 }

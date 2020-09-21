@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,27 +27,30 @@ class ApiVerificationEmailSpec extends UnitSpec with Matchers {
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "recipientName_title" -> "Mr",
+    "recipientName_title"   -> "Mr",
     "recipientName_surname" -> "Smith",
-    "verificationLink" -> verificationLink,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion" -> "v1",
-    "borderColour" -> "#005EA5"
+    "verificationLink"      -> verificationLink,
+    "staticAssetUrlPrefix"  -> "http://uri",
+    "staticAssetVersion"    -> "v1",
+    "borderColour"          -> "#005EA5"
   )
 
   "htmlView" should {
     "render as" in new TestCase {
       val renderedHtml = api.html.verificationEmail.render(templateParams)
       renderedHtml.contentType should include("text/html")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
-        "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
+          "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.verificationEmail.render(templateParamsPlus)
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
   }
 

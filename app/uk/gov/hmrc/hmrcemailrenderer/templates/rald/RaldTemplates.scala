@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.rald
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
 
@@ -28,6 +28,16 @@ object RaldTemplates {
       service = RentalAndLeaseDetails,
       subject = "Your saved Rent and Lease details expires in 90 days.",
       plainTemplate = txt.rald.f,
-      htmlTemplate = html.rald.f)
+      htmlTemplate = html.rald.f
+    ),
+    MessageTemplate.create(
+      templateId = "rald_not_connected",
+      fromAddress = FromAddress.noReply("Rent and Lease Details"),
+      service = RentalAndLeaseDetails,
+      subject = "RALD - Not connected to",
+      plainTemplate = txt.raldNotConnected.f,
+      htmlTemplate = html.raldNotConnected.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
 }

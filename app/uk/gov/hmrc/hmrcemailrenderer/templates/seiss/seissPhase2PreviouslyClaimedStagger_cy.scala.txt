@@ -1,0 +1,58 @@
+@(params: Map[String, Any])
+
+Gallech gael help drwy’r Cynllun Cymhorthdal Incwm Hunangyflogaeth
+
+Annwyl @params.get("customerName")
+
+
+O 17 Awst ymlaen, bydd y Cynllun Cymhorthdal Incwm Hunangyflogaeth yn agor ar gyfer hawliadau am ail grant, sef y grant terfynol. Yn ôl ein cofnodion, gallech fod yn gymwys i gael grant.
+
+Byddwch yn gallu hawlio ar unrhyw adeg o @params.get("staggerDate") Awst hyd nes i’r cynllun ddod i ben ar 19 Hydref. Peidiwch â cheisio hawlio cyn y dyddiad hwn gan na fyddwch yn gallu cael mynediad at y gwasanaeth ar-lein na thros y ffôn.
+
+Mae’r meini prawf cymhwystra yn aros yr un fath â’r grant cyntaf. Bydd angen i chi gadarnhau bod coronafeirws (COVID-19) wedi effeithio’n andwyol ar eich busnes ar unrhyw adeg ers 14 Gorffennaf.
+
+Fel arfer, mae hyn yn golygu bod eich busnes wedi wynebu incwm is a / neu gostau uwch oherwydd coronafeirws (COVID-19) ar unrhyw adeg ers 14 Gorffennaf.
+
+Fel y person sy’n adnabod eich busnes orau, rydym yn disgwyl i chi wneud asesiad gonest ynghylch a yw coronafeirws wedi effeithio’n andwyol ar eich busnes. Nid oes rhaid i incwm neu gostau’ch busnes fod wedi newid yn fwy na swm penodol. Bydd angen i chi gadw cofnod o dystiolaeth o’r effaith andwyol ar eich busnes.
+
+I weld manylion llawn, ewch i GOV.UK a chwilio am ‘Self-Employment Income Support Scheme’.
+
+Mae’r ail grant trethadwy yn werth 70 y cant o’ch elw masnachu misol cyfartalog, a chaiff ei dalu mewn un rhandaliad. Bydd hyn yn seiliedig ar werth tri mis o elw ac wedi’i gyfyngu i £6,570.
+
+
+Sut i hawlio
+
+Chwiliwch ar GOV.UK am ‘Self-Employment Income Support Scheme’. Hawlio ar-lein yw’r ffordd gyflymaf a hawsaf o gael eich grant.
+
+Fel y grant cyntaf, bydd angen y canlynol arnoch i gadarnhau eich bod yn gymwys ac i gyflwyno’ch hawliad:
+
+    1. eich rhif Yswiriant Gwladol – os nad ydych yn gwybod beth yw hwn, ewch i ap CThEM, eich cyfrif treth ar-lein, neu holwch eich asiant treth (os oes gennych un)
+    2. eich Cyfeirnod Unigryw y Trethdalwr (UTR) ar gyfer Hunanasesiad – gallwch ddod o hyd i hwn ar eich papurau Hunanasesiad neu drwy’ch asiant
+    3. eich Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth - os nad oes gennych gyfrif, neu os ydych wedi anghofio’ch manylion, dilynwch y cyfarwyddiadau ar GOV.UK drwy chwilio am ‘self-employment income support scheme’. Gwiriwch fod eich manylion cyswllt yn gywir yn eich cyfrif Porth y Llywodraeth
+    4. rhif eich cyfrif banc a’r cod didoli. Ar gyfer cyfrif cymdeithas adeiladu, cofiwch gynnwys y rhif rôl os oes gennych un.
+
+Byddwn hefyd yn gofyn am y cyfeiriad y cofrestrir eich cyfrif banc neu gymdeithas adeiladu iddo. Sylwer - hwn yw’ch cyfeiriad, yn fwyaf tebygol yn safle’ch cartref neu’ch busnes – nid cyfeiriad eich banc na’ch cymdeithas adeiladu.
+
+Byddwn yn defnyddio’r wybodaeth a gyflwynwyd gennych yn eich Ffurflenni Treth blaenorol i gyfrifo’r grant y mae gennych hawl iddo.
+
+Ar ôl i chi lenwi’ch hawliad ac i ni ei ddilysu, byddwn yn talu’r arian yn uniongyrchol i’ch cyfrif banc cyn pen chwe diwrnod gwaith.
+
+
+Cymorth gyda’ch hawliad
+
+Mae’n bwysig eich bod yn gwneud yr hawliad hwn eich hun, ond gallwch ofyn am gymorth eich ffrind, aelod o’ch teulu, cyfrifydd neu’ch asiant treth. Peidiwch â throsglwyddo’ch gwybodaeth i bobl sy’n cynnig gwneud hawliad ar eich rhan. Bydd hynny’n arwain at oedi yn eich taliad.
+
+Hawliwch ar-lein. Mae’n gyflymach ac yn haws na thros y ffôn ac ond yn cymryd 5 munud gan ddefnyddio’ch cyfrif Porth y Llywodraeth. Mae hefyd yn golygu y gallwn ddefnyddio’n llinellau ffôn i roi cymorth i bobl nad ydynt yn gallu mynd ar-lein i hawlio. Gofynnwn i chi beidio â’n ffonio oni bai na allwch ddod o hyd i’r cymorth sydd ei angen arnoch ar GOV.UK – bydd hyn yn cadw ein llinellau’n rhydd i’r sawl sydd angen ein help fwyaf.
+
+
+Gair ynghylch sgamiau
+
+@Html("Rydym yn ymwybodol bod nifer yr e-byst, galwadau a negeseuon testun sy’n sgamio wedi cynyddu. Os bydd rhywun yn cysylltu â chi, gan honni ei fod yn gweithio i CThEM a chan ddweud bod modd hawlio cymorth ariannol neu fod ad-daliad treth yn ddyledus, a’i fod yn gofyn i chi glicio ar gysylltiad, neu roi gwybodaeth megis eich enw neu fanylion eich cerdyn credyd neu’ch banc, peidiwch ag ymateb.")
+
+@Html("Gallwch anfon e-byst amheus sy’n honni eu bod yn dod oddi wrth CThEM i gwasanaeth.cymraeg@hmrc.gov.uk neu phishing@hmrc.gov.uk, a gallwch anfon negeseuon testun i 60599.")
+
+Yn gywir,
+
+Jim Harra
+Ysgrifennydd Parhaol a Phrif Weithredwr, CThEM
+

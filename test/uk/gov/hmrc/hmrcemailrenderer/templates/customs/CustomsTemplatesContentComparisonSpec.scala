@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.customs
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class CustomsTemplatesContentComparisonSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class CustomsTemplatesContentComparisonSpec
+    extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
   private def customsTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(CustomsTemplates.templates)
@@ -29,8 +30,8 @@ class CustomsTemplatesContentComparisonSpec extends TemplateComparisonSpec with 
     "include customs_registration_successful" in {
       val params = commonParameters + (
         "recipientName_forename" -> "Forename",
-        "recipientName_surname" -> "Surname",
-        "completionDate" -> "17-06-2018"
+        "recipientName_surname"  -> "Surname",
+        "completionDate"         -> "17-06-2018"
       )
 
       compareContent("customs_registration_successful", params)(customsTemplate)
@@ -39,7 +40,7 @@ class CustomsTemplatesContentComparisonSpec extends TemplateComparisonSpec with 
     "include customs_registration_not_successful" in {
       val params = commonParameters + (
         "recipientName_forename" -> "Forename",
-        "recipientName_surname" -> "Surname"
+        "recipientName_surname"  -> "Surname"
       )
 
       compareContent("customs_registration_not_successful", params)(customsTemplate)
@@ -48,8 +49,8 @@ class CustomsTemplatesContentComparisonSpec extends TemplateComparisonSpec with 
     "include customs_migrate_successful" in {
       val params = commonParameters + (
         "recipientName_forename" -> "Forename",
-        "recipientName_surname" -> "Surname",
-        "completionDate" -> "17-06-2018"
+        "recipientName_surname"  -> "Surname",
+        "completionDate"         -> "17-06-2018"
       )
 
       compareContent("customs_migrate_successful", params)(customsTemplate)
@@ -58,32 +59,32 @@ class CustomsTemplatesContentComparisonSpec extends TemplateComparisonSpec with 
     "include customs_migrate_not_successful" in {
       val params = commonParameters + (
         "recipientName_forename" -> "Forename",
-        "recipientName_surname" -> "Surname"
+        "recipientName_surname"  -> "Surname"
       )
 
       compareContent("customs_migrate_not_successful", params)(customsTemplate)
     }
 
     "include customs_declaration_success" in {
-      val params = Map( "details" -> "details") ++ commonParameters
+      val params = Map("details" -> "details") ++ commonParameters
 
       compareContent("customs_declaration_success", params)(customsTemplate)
     }
 
     "include customs_validation_success" in {
-      val params = Map( "details" -> "details") ++ commonParameters
+      val params = Map("details" -> "details") ++ commonParameters
 
       compareContent("customs_validation_success", params)(customsTemplate)
     }
 
     "include customs_payment_required" in {
-      val params = Map( "details" -> "details") ++ commonParameters
+      val params = Map("details" -> "details") ++ commonParameters
 
       compareContent("customs_payment_required", params)(customsTemplate)
     }
 
     "include customs_payment_success" in {
-      val params = Map( "details" -> "details") ++ commonParameters
+      val params = Map("details" -> "details") ++ commonParameters
 
       compareContent("customs_payment_success", params)(customsTemplate)
     }

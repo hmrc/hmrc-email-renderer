@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 HM Revenue & Customs
+ * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,9 +29,11 @@ object FromAddress {
 
   private val defaultDomain = "tax.service.gov.uk"
 
-  lazy val replyDomain = Try(Play.configuration.getString("fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
+  lazy val replyDomain =
+    Try(Play.configuration.getString("fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
 
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 
   lazy val govUkTeamAddress = noReply("Gov.uk Team")
+  lazy val govUkTeamAddressWelsh = noReply("Gov.uk Tîm")
 }

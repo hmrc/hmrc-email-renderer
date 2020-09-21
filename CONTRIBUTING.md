@@ -14,7 +14,7 @@ If you are unsure on how to make the Pull Request please have a look at the [MDT
 2. Decide what is the most suitable priority for the template. See our [Volumes and priority recommendations](#volumes-and-priority-recommendations)
 3. Fork this repository and make the necessary code changes. See [How to add a template](#how-to-add-a-template)
 4. Verify that your template looks right when rendered - use the [preview mode](/README.md#preview-mode)
-5. Run the tests locally with `sbt clean test it:test`
+5. Run the tests locally with `sbt fmt clean test it:test`
 6. Submit a Pull Request and [let the Digital Contact team know](#i-have-created-a-pull-request---now-what)
 
 ### I have created a pull request - now what?
@@ -24,8 +24,9 @@ Once you've got your code changes done and a pull request created, it's time to 
 1. Create a JIRA ticket for project "Digital Contact (DC)" in Jira with details of the pull request and what it's for
 2. Make sure you've attached the [rendered preview of your email](/README.md#preview-mode)
 3. Tag Tom [~tom.hughes] in the ticket, so we can review and get it prioritised for you
-4. Join Slack channel #team-digital-contact to ask about progress and/or ask questions
-5. Our QA's will contact you when the they have merged and deployed to QA so you can check you are happy before we create a release ticket
+4. Join Slack channel #team-digital-contact to tell us you've created a ticket, and also ask about progress or any other questions
+5. Because the process makes backing out individual changes complicated, we'll work with you to make sure your email content is production-ready before promoting to our QA environment.
+6. Our QA will contact you when they have merged and deployed to the QA environment so you can check you are happy before we create a release ticket
 
 
 ### Content recommendations
