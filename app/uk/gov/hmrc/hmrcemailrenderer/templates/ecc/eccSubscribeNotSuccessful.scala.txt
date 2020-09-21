@@ -1,0 +1,22 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
+
+@(params: Map[String, Any])You applied to get access to @serviceName(params, "a service")
+
+@salutationFullName(params)
+
+Your @serviceName(params) application @forOrgName(params) @onCompletionDate(params)has been unsuccessful.
+
+
+If you need help
+
+Phone the Enrolment support team on 0300 322 7067. This is available 8am to 6pm, Monday to Friday (closed bank holidays).
+
+You can also find more information about this subject on GOV.UK.
+
+For security reasons we have not included a link with this email.
+
+From HMRC CDS Support Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
