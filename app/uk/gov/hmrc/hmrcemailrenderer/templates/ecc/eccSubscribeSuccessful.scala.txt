@@ -1,4 +1,4 @@
-@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
@@ -7,7 +7,7 @@
 
 @salutationFullName(params)
 
-Your @serviceName(params) application @forOrgName(params) @onCompletionDate(params)has been successful.
+Your @serviceName(params) application @forOrgName("for", params) @onCompletionDate("on", params)has been successful.
 
 
 If you need help

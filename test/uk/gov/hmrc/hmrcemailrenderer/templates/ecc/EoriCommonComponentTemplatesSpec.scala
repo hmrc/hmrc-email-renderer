@@ -24,26 +24,29 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
   private def eoriCommonComponents(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(ecc.EoriCommonComponentTemplates.templates)
 
+  private val fullParams = commonParameters + (
+    "recipientName_FullName" -> "Jane Jones",
+    "recipientOrgName"       -> "JJ Components",
+    "serviceName"            -> "Advance Tariff Rulings",
+    "completionDate"         -> "22 March 2019"
+  )
+
   "Templates for which the text and html content are identical" should {
 
     "include subscription successful content" in {
-      val params = commonParameters + (
-        "recipientName_FullName" -> "Jane Jones",
-        "recipientOrgName"       -> "JJ Components",
-        "serviceName"            -> "Advance Tariff Rulings",
-        "completionDate"         -> "22 March 2019"
-      )
-      compareContent("ecc_subscription_successful", params)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful", fullParams)(eoriCommonComponents)
+    }
+
+    "include subscription successful content in welsh" in {
+      compareContent("ecc_subscription_successful_cy", fullParams, isWelsh = true)(eoriCommonComponents)
     }
 
     "include subscription not successful content" in {
-      val params = commonParameters + (
-        "recipientName_FullName" -> "Jane Jones",
-        "recipientOrgName"       -> "JJ Components",
-        "serviceName"            -> "Advance Tariff Rulings",
-        "completionDate"         -> "22 March 2019"
-      )
-      compareContent("ecc_subscription_not_successful", params)(eoriCommonComponents)
+      compareContent("ecc_subscription_not_successful", fullParams)(eoriCommonComponents)
+    }
+
+    "include subscription not successful content in welsh" in {
+      compareContent("ecc_subscription_not_successful_cy", fullParams, isWelsh = true)(eoriCommonComponents)
     }
 
   }
@@ -53,8 +56,16 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
       compareContent("ecc_subscription_successful", commonParameters)(eoriCommonComponents)
     }
 
+    "have matching content in the html and the text for ecc_subscription_successful_cy" in {
+      compareContent("ecc_subscription_successful_cy", commonParameters, isWelsh = true)(eoriCommonComponents)
+    }
+
     "have matching content in the html and the text for ecc_subscription_not_successful" in {
       compareContent("ecc_subscription_not_successful", commonParameters)(eoriCommonComponents)
+    }
+
+    "have matching content in the html and the text for ecc_subscription_not_successful_cy" in {
+      compareContent("ecc_subscription_not_successful_cy", commonParameters, isWelsh = true)(eoriCommonComponents)
     }
 
   }

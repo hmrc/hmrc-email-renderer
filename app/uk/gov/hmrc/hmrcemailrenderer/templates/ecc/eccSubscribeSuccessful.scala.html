@@ -14,7 +14,7 @@
  * limitations under the License.
  *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
 
@@ -23,7 +23,7 @@
 
 <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your @serviceName(params) application @forOrgName(params) @onCompletionDate(params)has been successful.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your @serviceName(params) application @forOrgName("for", params) @onCompletionDate("on", params)has been successful.</p>
 
 <br />
 <h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>

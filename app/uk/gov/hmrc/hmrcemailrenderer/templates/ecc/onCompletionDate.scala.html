@@ -14,4 +14,4 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])@params.get("completionDate").map(_.toString).filterNot(_.isEmpty).map(date => s"on $date ").getOrElse("")
+@(onVal: String, params: Map[String, Any])@params.get("completionDate").map(_.toString).filterNot(_.isEmpty).map(date => s"$onVal $date ").getOrElse("")

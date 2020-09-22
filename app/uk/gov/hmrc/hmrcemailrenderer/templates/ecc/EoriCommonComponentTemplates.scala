@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.ecc
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.EoriCommonComponent
 
 object EoriCommonComponentTemplates {
@@ -31,12 +31,28 @@ object EoriCommonComponentTemplates {
       htmlTemplate = html.eccSubscribeSuccessful.f
     ),
     MessageTemplate.create(
+      templateId = "ecc_subscription_successful_cy",
+      fromAddress = govUkTeamAddressWelsh,
+      service = EoriCommonComponent,
+      subject = "HMRC approved your service application",
+      plainTemplate = txt.eccSubscribeSuccessful_cy.f,
+      htmlTemplate = html.eccSubscribeSuccessful_cy.f
+    ),
+    MessageTemplate.create(
       templateId = "ecc_subscription_not_successful",
       fromAddress = govUkTeamAddress,
       service = EoriCommonComponent,
       subject = "Your service application was unsuccessful",
       plainTemplate = txt.eccSubscribeNotSuccessful.f,
       htmlTemplate = html.eccSubscribeNotSuccessful.f
+    ),
+    MessageTemplate.create(
+      templateId = "ecc_subscription_not_successful_cy",
+      fromAddress = govUkTeamAddressWelsh,
+      service = EoriCommonComponent,
+      subject = "Your service application was unsuccessful",
+      plainTemplate = txt.eccSubscribeNotSuccessful_cy.f,
+      htmlTemplate = html.eccSubscribeNotSuccessful_cy.f
     )
   )
 }

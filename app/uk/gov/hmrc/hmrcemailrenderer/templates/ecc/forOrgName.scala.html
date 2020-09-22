@@ -14,4 +14,4 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])@params.get("recipientOrgName").map(_.toString).filterNot(_.isEmpty).map("for " + _).getOrElse("")
+@(forVal: String, params: Map[String, Any])@params.get("recipientOrgName").map(_.toString).filterNot(_.isEmpty).map(company => s"$forVal $company").getOrElse("")

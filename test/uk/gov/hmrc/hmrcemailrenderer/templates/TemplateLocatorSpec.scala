@@ -608,7 +608,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ipr2_code",
         "ipr3_code",
         "ecc_subscription_successful",
-        "ecc_subscription_not_successful"
+        "ecc_subscription_successful_cy",
+        "ecc_subscription_not_successful",
+        "ecc_subscription_not_successful_cy"
       )
     }
   }
