@@ -605,7 +605,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "discounted_dining_payment_sent_cy",
         "ipr1_code",
         "ipr2_code",
-        "ipr3_code"
+        "ipr3_code",
+        "vat_declaration_confirmation"
       )
     }
   }
