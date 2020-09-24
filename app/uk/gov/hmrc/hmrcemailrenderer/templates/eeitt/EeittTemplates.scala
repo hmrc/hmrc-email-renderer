@@ -718,6 +718,15 @@ object EeittTemplates {
       plainTemplate = txt.ipr3Code.f,
       htmlTemplate = html.ipr3Code.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vat_declaration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your VAT status update",
+      plainTemplate = txt.vatDeclarationApplicationConfirmation.f,
+      htmlTemplate = html.vatDeclarationApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
