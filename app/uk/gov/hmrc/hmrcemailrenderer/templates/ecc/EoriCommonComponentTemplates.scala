@@ -34,7 +34,7 @@ object EoriCommonComponentTemplates {
       templateId = "ecc_subscription_successful_cy",
       fromAddress = govUkTeamAddressWelsh,
       service = EoriCommonComponent,
-      subject = "HMRC approved your service application",
+      subject = "Mae CThEM wedi cymeradwyo’ch cais i’r gwasanaeth",
       plainTemplate = txt.eccSubscribeSuccessful_cy.f,
       htmlTemplate = html.eccSubscribeSuccessful_cy.f
     ),
@@ -50,7 +50,7 @@ object EoriCommonComponentTemplates {
       templateId = "ecc_subscription_not_successful_cy",
       fromAddress = govUkTeamAddressWelsh,
       service = EoriCommonComponent,
-      subject = "Your service application was unsuccessful",
+      subject = "Roedd eich cais i’r gwasanaeth yn aflwyddiannus",
       plainTemplate = txt.eccSubscribeNotSuccessful_cy.f,
       htmlTemplate = html.eccSubscribeNotSuccessful_cy.f
     )
