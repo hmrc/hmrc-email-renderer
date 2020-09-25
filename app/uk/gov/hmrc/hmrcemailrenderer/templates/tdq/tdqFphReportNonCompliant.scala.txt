@@ -63,7 +63,7 @@ This email address is registered on Developer Hub for @reportParams.applicationN
 
 If you're no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub.
 
-You need to have at least 1 contact for each application - you may need to add a new team member.
+You need to have at least 1 contact for each application, you may need to add a new team member.
 
 From HMRC Transaction Monitoring Team
 }
