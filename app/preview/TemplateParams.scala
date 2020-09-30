@@ -1877,6 +1877,30 @@ object TemplateParams {
     ),
     "dac6_registration_successful" -> Map(
       "name" -> "Joe Bloggs"
+    ),
+    "ecc_subscription_successful" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_subscription_successful_ey" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_subscription_not_successful" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_subscription_not_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
     )
   )
 }
