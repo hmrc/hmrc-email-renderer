@@ -110,7 +110,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "TDQ",
         "SEISS",
         "GVMS",
-        "EOTHO"
+        "EOTHO",
+        "Eori Common Component"
       )
     }
 
@@ -606,7 +607,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ipr1_code",
         "ipr2_code",
         "ipr3_code",
-        "vat_declaration_confirmation"
+        "vat_declaration_confirmation",
+        "ecc_subscription_successful",
+        "ecc_subscription_successful_cy",
+        "ecc_subscription_not_successful",
+        "ecc_subscription_not_successful_cy"
       )
     }
   }

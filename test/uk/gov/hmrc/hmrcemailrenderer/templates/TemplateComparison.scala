@@ -22,13 +22,13 @@ import play.twirl.api.{ HtmlFormat, TxtFormat }
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 
 trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
-  def compareContent(id: String, params: Map[String, String])(
+  def compareContent(id: String, params: Map[String, String], isWelsh: Boolean = false)(
     getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
     getTemplates(id) match {
       case Some((htmlTemplate, textTemplate)) =>
         val html = TemplateContentNormalisation.html(htmlTemplate(params))
         val text = TemplateContentNormalisation.text(textTemplate(params))
-        html mustEqual s"GOV.UK HM Revenue & Customs $text"
+        html mustEqual s"GOV.UK ${if (isWelsh) "Cyllid a Thollau EM" else "HM Revenue & Customs"} $text"
 
       case _ => fail(s"could not locate template with id $id")
     }
