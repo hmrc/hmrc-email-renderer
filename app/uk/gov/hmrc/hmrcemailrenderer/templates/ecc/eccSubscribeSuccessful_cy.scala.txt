@@ -1,0 +1,23 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
+
+@(params: Map[String, Any])Rydych wedi llwyddo i wneud cais i gael mynediad at y gwasanaeth o’r enw @serviceName(params, "gwasanaeth")
+
+@salutationFullName(params, isWelsh=true)
+
+Mae eich cais ar gyfer y gwasanaeth @serviceName(params) @forOrgName("dros", params) @onCompletionDate("ar", params) wedi bod yn llwyddiannus.
+
+
+Os oes angen help arnoch
+
+Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEM ar 0300 200 1900, rhwng 08:00 a 16:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc).
+
+Gallwch hefyd ddod o hyd i ragor o wybodaeth am y pwnc hwn ar GOV.UK.
+
+Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
+
+Oddi wrth Dîm Cymorth Ymrestru CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
