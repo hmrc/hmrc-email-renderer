@@ -1,10 +1,6 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
-@(params: Map[String, Any])Fraud prevention headers report
+@(params: Map[String, Any])Fraud prevention headers report for VAT (Making Tax Digital)
 @defining(TdqFphReportParams(params)) { reportParams =>
-VAT Making Tax Digital (MTD)
-
-@reportParams.applicationName
-
 Dear @reportParams.developerName
 
 To help protect your customers' confidential data from criminals and fraudsters, we monitor API calls and send you feedback every month.

@@ -16,12 +16,8 @@
 
 @import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fraud prevention headers report") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fraud prevention headers report for VAT (Making Tax Digital)") {
     @defining(TdqFphReportParams(params)) { reportParams =>
-        <h2>VAT Making Tax Digital (MTD)</h2>
-
-        <p style="font-size: 19px; font-weight: bold; line-height: 1.315789474; margin: 0 0 30px 0;">@reportParams.applicationName</p>
-
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @reportParams.developerName</p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
@@ -29,7 +25,7 @@
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Our logs show that all of the fraud prevention headers submitted for @reportParams.applicationName between
+            Our logs show that all of the fraud prevention headers submitted for <b>@reportParams.applicationName</b> between
             @reportParams.fromDate and @reportParams.toDate meet the current specification on the HMRC Developer Hub.
             Thank you, we'll send you a report if this changes.
         </p>
