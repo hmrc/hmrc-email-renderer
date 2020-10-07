@@ -1809,6 +1809,91 @@ object TemplateParams {
         }
           """)).getBytes("UTF-8"))
     ),
+    "tdq_fph_report_non_compliant" -> Map(
+      "developerName"                     -> "John Smith",
+      "fromDate"                          -> "22 September 2019",
+      "toDate"                            -> "22 October 2019",
+      "applicationName"                   -> "My Basic MTD App",
+      "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "allHeadersMissingPercentage"       -> "5",
+      "invalidConnectionMethodPercentage" -> "23",
+      "relatesToMultipleVersions"         -> "true",
+      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
+        parse("""
+        {
+          "connectionMethod": "WEB_APP_VIA_SERVER",
+          "requestCount": 100,
+          "headerValidations": [
+            {
+              "headerOrHeaders": "gov-client-public-ip",
+              "errors": [
+                {
+                  "message": "Value is not an IP address",
+                  "percentage": 5
+                },
+                {
+                  "message": "Value is not a public IP address",
+                  "percentage": 10
+                }
+              ],
+              "warnings": []
+            },
+            {
+              "headerOrHeaders": "gov-vendor-version",
+              "errors": [
+                {
+                  "message": "Value must be a key-value data structure",
+                  "percentage": 10
+                },
+                {
+                  "message": "At least 1 key or value is not percent encoded",
+                  "percentage": 25
+                },
+                {
+                  "message": "At least 1 software version value is missing",
+                  "percentage": 15
+                },
+                {
+                  "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
+                  "percentage": 0
+                }
+              ],
+              "warnings": [
+                {
+                  "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
+                  "percentage": 10
+                }
+              ]
+            },
+            {
+              "headerOrHeaders": "gov-client-device-id",
+              "errors" : [],
+              "warnings": [
+                {
+                  "message": "Use a recommended UUID. Check the specification.",
+                  "percentage": 0
+                },
+                {
+                  "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
+                  "percentage": 17
+                },
+                {
+                  "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
+                  "percentage": 22
+                }
+              ]
+            }
+          ]
+        }
+          """)).getBytes("UTF-8"))
+    ),
+    "tdq_fph_report_heuristically_compliant" -> Map(
+      "developerName"   -> "John Smith",
+      "fromDate"        -> "22 September 2019",
+      "toDate"          -> "22 October 2019",
+      "applicationName" -> "My Well Behaved MTD App",
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+    ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
       "name"         -> "Jamie Wilson"
