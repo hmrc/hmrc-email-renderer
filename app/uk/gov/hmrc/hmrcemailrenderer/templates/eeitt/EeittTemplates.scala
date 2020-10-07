@@ -727,6 +727,15 @@ object EeittTemplates {
       plainTemplate = txt.vatDeclarationApplicationConfirmation.f,
       htmlTemplate = html.vatDeclarationApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "trading_status_before_seiss_claimed",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your trading status details",
+      plainTemplate = txt.tradingStatusBeforeSEISSClaimed.f,
+      htmlTemplate = html.tradingStatusBeforeSEISSClaimed.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
