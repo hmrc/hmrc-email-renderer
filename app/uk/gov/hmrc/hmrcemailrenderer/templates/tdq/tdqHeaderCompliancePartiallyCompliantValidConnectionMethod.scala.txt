@@ -1,5 +1,5 @@
 @import scala.util.Try
-@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams.ValidConnectionMethodBase64EncodedDetails
+@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.ValidConnectionMethodBase64EncodedDetails
 
 @(params: Map[String, Any])Fraud prevention headers status report
 

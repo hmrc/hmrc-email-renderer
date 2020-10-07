@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams
+package uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params
 
 import java.util.Base64
 
@@ -49,6 +49,13 @@ final case class Problem(message: String, percentage: Int) {
       "found in fewer than 1% of your requests"
     } else {
       s"found in $percentage% of your requests"
+    }
+
+  val shortPercentageDescription: String =
+    if (percentage < 1) {
+      "Fewer than 1% of requests"
+    } else {
+      s"$percentage% of requests"
     }
 }
 
