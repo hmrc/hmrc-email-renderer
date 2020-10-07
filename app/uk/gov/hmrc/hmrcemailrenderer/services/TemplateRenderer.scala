@@ -125,7 +125,7 @@ trait TemplateRenderer {
     ec: ExecutionContext): Future[String] = {
 
     if (templatesByLangPreference.size <= 0) {
-      Logger.warn("WelshTemplatesByLangPreferences whitelist is empty")
+      Logger.warn("WelshTemplatesByLangPreferences allowlist is empty")
     }
 
     val result = for {
