@@ -38,6 +38,10 @@ object TemplateParams {
       "passcode"  -> "NVFYRY",
       "team_name" -> "Government Gateway"
     ),
+    "email_verification_passcode_welsh" -> Map(
+      "passcode"  -> "NVFYRY",
+      "team_name" -> "Government Gateway"
+    ),
     "overseas_application_rejected" -> Map(
       "tradingName"    -> "ABC Accountants Ltd",
       "reason1"        -> "We could not confirm your money laundering supervisory body",
