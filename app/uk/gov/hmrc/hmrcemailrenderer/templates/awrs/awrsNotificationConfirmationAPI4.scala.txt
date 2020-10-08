@@ -14,6 +14,8 @@ What happens next
 
 More detailed information can be found in the guidance on GOV.UK.
 
+HMRC will delete your Government Gateway user ID after 3 years if you do not use it. Keep your user ID active by signing in regularly.
+
 Remember to keep your Government Gateway user ID and password safe as you will need them if you need to make changes. If your circumstances change you must update your application.
 
 Excise Notice 2002 Section 10.4 has a full list of changes and the circumstances where you need to immediately inform us.
