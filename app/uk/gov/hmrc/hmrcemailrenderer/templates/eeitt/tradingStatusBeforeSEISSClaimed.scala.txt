@@ -17,7 +17,8 @@ If you had stopped trading before you claimed we will contact you within 60 days
 - provide more information if we need it
 - pay any amount due
 
-Do not reply to this email.
+Do not reply to this email, or call HMRC. We will contact you when we have more information.
+
 From the Self-Employment Income Support Scheme team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
