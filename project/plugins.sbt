@@ -1,4 +1,7 @@
 resolvers += Resolver.url("HMRC Sbt Plugin Releases", url("https://dl.bintray.com/hmrc/sbt-plugin-releases"))(Resolver.ivyStylePatterns)
+resolvers += Resolver.url(
+  "HMRC Private Sbt Plugin Releases",
+  url("https://artefacts.tax.service.gov.uk/artifactory/hmrc-sbt-plugin-releases-local"))(Resolver.ivyStylePatterns)
 resolvers += "HMRC Releases" at "https://dl.bintray.com/hmrc/releases"
 
 addSbtPlugin("uk.gov.hmrc" % "sbt-auto-build" % "2.6.0")
@@ -16,6 +19,6 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 
 addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.2")
 
-addSbtPlugin("uk.gov.hmrc" % "sbt-service-manager" % "0.4.0")
+addSbtPlugin("uk.gov.hmrc" % "sbt-service-manager" % "0.6.0")
 
 addSbtPlugin("com.lucidchart" % "sbt-scalafmt" % "1.16")
