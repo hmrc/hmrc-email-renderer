@@ -1,23 +1,27 @@
 @(params: Map[String, Any])
-Advanced Tariff Ruling (ATaR) application
+Your Advanced Tariff Ruling (ATaR) application
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
 
-Your ATaR application reference @params("reference") has been sent.
+We received your ATaR application reference: @params("reference")
 
-We try to issue ATaR decisions within 30 working days from the date that the application was accepted. Although it can take up to 120 days, as per UK law.
+We try to issue ATaR decisions within 30 working days from the date that the application is accepted. Although it can take up to 120 days, as per UK law.
 
-We will make a decision when we receive all of the necessary information.
+We will make a decision when we receive all necessary information.
 
-Do not send samples to us during the coronavirus pandemic. If a sample is needed then it will be asked for by the team on a case by case basis.
+Samples
+
+Do not send samples to us during the coronavirus pandemic. If a sample is needed then we will ask you to provide one.
+
+What you can do next
 
 Communicating with us through email is not secure and therefore no confidential information should be passed through emails with our team. If you choose to contact us by email, then you accept the risks.
 
-To check the status of your application, or to get information on samples, go to gov.uk and search for 'Apply for an Advanced Tariff Ruling (ATaR)'.
+To check the status of your application, or to get information on samples, go to GOV.UK and search for 'Apply for an Advanced Tariff Ruling (ATaR)'.
 
 For security reasons we have not included a link in this email.
 
-Tariff Classification Service
+From the Tariff Classification Service
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

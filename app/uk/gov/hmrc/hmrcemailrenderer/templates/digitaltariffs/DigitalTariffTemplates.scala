@@ -27,7 +27,7 @@ object DigitalTariffTemplates {
       templateId = "digital_tariffs_application_submitted",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
       service = BTIApplicationService,
-      subject = "Submitted: Binding Tariff Information (BTI) application",
+      subject = "HMRC received your Advance Tariff Ruling (ATaR) application",
       plainTemplate = txt.applicationSubmitted.f,
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Background)
