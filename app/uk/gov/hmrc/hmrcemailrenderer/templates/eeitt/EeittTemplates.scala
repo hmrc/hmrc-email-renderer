@@ -736,6 +736,15 @@ object EeittTemplates {
       plainTemplate = txt.tradingStatusBeforeSEISSClaimed.f,
       htmlTemplate = html.tradingStatusBeforeSEISSClaimed.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "settlement_request",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your settlement request",
+      plainTemplate = txt.settlementRequest.f,
+      htmlTemplate = html.settlementRequest.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
