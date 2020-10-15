@@ -8,7 +8,7 @@ We received your request to settle disguised remuneration use.
 
 What happens next
 
-We will respond within 4 weeks by post or email to either:
+We will respond @params.get("slaParam") to either:
 
 - ask for further information
 - send a settlement calculation
