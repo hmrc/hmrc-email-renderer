@@ -131,6 +131,15 @@ object DfsTemplates {
       htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime_welsh.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_empty_turn_around_time_2020",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric4ParagraphsEmptyTurnAroundTime.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric4ParagraphsEmptyTurnAroundTime.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "dfs_admin_notification",
       fromAddress = govUkTeamAddress,
