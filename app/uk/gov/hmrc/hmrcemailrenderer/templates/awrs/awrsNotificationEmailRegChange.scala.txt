@@ -9,6 +9,8 @@ To view it, sign in to your HMRC online account.
 
 For security reasons, we have not included a link with this email.
 
+HMRC will delete your Government Gateway user ID after 3 years if you do not use it. Keep your user ID active by signing in regularly.
+
 From the HMRC Alcohol Wholesaler Registration Scheme
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
