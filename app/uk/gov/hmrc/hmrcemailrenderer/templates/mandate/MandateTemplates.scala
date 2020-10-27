@@ -54,7 +54,7 @@ object MandateTemplates {
       templateId = "agent_removes_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
-      subject = "Your agent has removed you as a client",
+      subject = "Your agent removed you as a client",
       plainTemplate = txt.mandateAgentRemoves.f,
       htmlTemplate = html.mandateAgentRemoves.f,
       priority = Some(MessagePriority.Urgent)
