@@ -736,6 +736,33 @@ object EeittTemplates {
       plainTemplate = txt.tradingStatusBeforeSEISSClaimed.f,
       htmlTemplate = html.tradingStatusBeforeSEISSClaimed.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "settlement_request",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your settlement request",
+      plainTemplate = txt.settlementRequest.f,
+      htmlTemplate = html.settlementRequest.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "complaint_consultation_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report a comment or complaint about a consultation",
+      plainTemplate = txt.consultationComplaint.f,
+      htmlTemplate = html.consultationComplaint.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "consultation_complaint_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your consultation feedback",
+      plainTemplate = txt.consultationComplaintConfirmation.f,
+      htmlTemplate = html.consultationComplaintConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

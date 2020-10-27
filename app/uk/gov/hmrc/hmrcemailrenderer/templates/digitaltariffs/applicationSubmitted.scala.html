@@ -15,17 +15,29 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Binding Tariff Information (BTI) application") {
-    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Advance Tariff Ruling (ATaR) application") {
+
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params)
     <p>
-        Your BTI application @params("reference") has been submitted.
+        We received your ATaR application reference: @params("reference")
     </p>
     <p>
-        We will email you to tell you when your ruling is complete within 30 to 60 days.
+        We try to issue ATaR decisions within 30 working days from the date that the application is accepted. Although it can take up to 120 days, as per UK law.
     </p>
     <p>
-        To check the status of your application or to get information on samples go to GOV.UK and search for 'Apply for a Binding Tariff Information decision (Notice 600)'.
+        We will make a decision when we receive all necessary information.
     </p>
-    <p>For security reasons we have not included a link with this email.</p>
-    <p>From Tariff Classification Service</p>
+    <h2>Samples</h2>
+    <p>
+        Do not send samples to us during the coronavirus pandemic. If a sample is needed then we will ask you to provide one.
+    </p>
+    <h2>What you can do next</h2>
+    <p>
+        Communicating with us through email is not secure and therefore no confidential information should be passed through emails with our team. If you choose to contact us by email, then you accept the risks.
+    </p>
+    <p>
+        To check the status of your application, or to get information on samples, go to GOV.UK and search for 'Apply for an Advance Tariff Ruling (ATaR)'.
+    </p>
+    <p>For security reasons we have not included a link in this email.</p>
+    <p>From the Tariff Classification Service</p>
 }

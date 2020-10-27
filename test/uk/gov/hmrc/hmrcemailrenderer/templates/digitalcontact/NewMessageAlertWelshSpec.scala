@@ -49,7 +49,7 @@ class NewMessageAlertWelshSpec extends UnitSpec with EitherValues with TemplateL
       htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
       htmlContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent should include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
 
     "render correct text content" in {
@@ -67,7 +67,7 @@ class NewMessageAlertWelshSpec extends UnitSpec with EitherValues with TemplateL
       txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
       txtContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       txtContent should include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i gov.uk a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 }
