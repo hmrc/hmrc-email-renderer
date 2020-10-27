@@ -575,7 +575,6 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
         "twoWayMessageUpdate",
-        "passengers_payment_confirmation",
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
         "newMessageAlert_CC07C_SM11C",
