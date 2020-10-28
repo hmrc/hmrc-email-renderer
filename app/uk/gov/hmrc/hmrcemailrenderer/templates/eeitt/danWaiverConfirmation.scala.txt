@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+
+You applied for Customs Comprehensive Guarantee authorisation
+
+
+Dear @params.get("decName")
+
+HMRC received an application on behalf of your business.
+
+Your submission reference is: @params.get("submissionReference")
+
+What happens next
+
+We will review your business's application. If we approve the application, we will confirm the level of guarantee we require from your guarantor.
+
+If we have any questions before we make this decision, we will contact you by email.
+
+What you can do now
+
+You may want to contact an approved financial institution to discuss your guarantee requirements. This could save you time later if we approve your application.
+
+You should not finalise any guarantee arrangements or use any customs procedures until you receive confirmation from HMRC that your application is approved.
+
+
+From the Customs Comprehensive Guarantee team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
