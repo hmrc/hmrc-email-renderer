@@ -651,7 +651,8 @@ object TemplateParams {
       "service" -> testServiceUpdate
     ),
     "agent_removes_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"      -> testServiceUpdate,
+      "uniqueAuthNo" -> "123456789"
     ),
     "client_removes_mandate" -> Map(
       "service" -> testServiceUpdate
