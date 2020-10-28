@@ -618,7 +618,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "trading_status_before_seiss_claimed",
         "settlement_request",
         "complaint_consultation_code",
-        "consultation_complaint_confirmation"
+        "consultation_complaint_confirmation",
+        "duty_deferment_account_confirmation"
       )
     }
   }
