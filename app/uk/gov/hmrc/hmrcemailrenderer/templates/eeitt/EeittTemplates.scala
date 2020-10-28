@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.eeitt
 
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Eeitt
 
 object EeittTemplates {
@@ -765,14 +765,13 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-     templateId = "duty_deferment_account_confirmation",
-     fromAddress = govUkTeamAddress,
-     service = Eeitt,
-     subject = "HMRC received your application for a Duty Deferment Account",
-     plainTemplate = txt.dutyDefermentAccountConfirmation.f,
-     htmlTemplate = html.dutyDefermentAccountConfirmation.f,
-     priority = Some(MessagePriority.Standard)
-  )
-
+      templateId = "duty_deferment_account_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for a Duty Deferment Account",
+      plainTemplate = txt.dutyDefermentAccountConfirmation.f,
+      htmlTemplate = html.dutyDefermentAccountConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    )
   )
 }
