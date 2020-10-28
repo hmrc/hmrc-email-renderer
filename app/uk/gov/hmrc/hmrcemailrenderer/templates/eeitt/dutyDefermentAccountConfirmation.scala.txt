@@ -1,0 +1,29 @@
+@(params: Map[String, Any])
+
+You applied for a Duty Deferment Account
+
+Dear Dear @params.get("customerName")
+
+HMRC received an application for a Duty Deferment Account (DDA) on behalf of your business.
+
+Your submission reference is: @params.get("submissionReference")
+
+If we have any questions, we will contact you by your preferred method, quoting the submission reference shown above.
+
+If you have not applied for a guarantee waiver as part of your DDA application, you will need to contact an approved financial institution to discuss your guarantee requirements. This could save you time later, if we approve your application.
+
+What you can do now
+
+You need to complete your Direct Debit instruction. Search GOV.UK for ‘Set up a Direct Debit for a duty deferment account’.
+
+If you have not applied for a guarantee waiver as part of your DDA application, you will need to contact an approved financial institution to discuss your guarantee requirements. This could save you time later, if we approve your application.
+
+You should not finalise any guarantee arrangements or use any customs procedures until we confirm that your application has been approved.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
