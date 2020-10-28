@@ -772,6 +772,15 @@ object EeittTemplates {
       plainTemplate = txt.dutyDefermentAccountConfirmation.f,
       htmlTemplate = html.dutyDefermentAccountConfirmation.f,
       priority = Some(MessagePriority.Standard)
+     ),
+   MessageTemplate.create(    
+      templateId = "dan_waiver_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your consultation feedback",
+      plainTemplate = txt.danWaiverConfirmation.f,
+      htmlTemplate = html.danWaiverConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

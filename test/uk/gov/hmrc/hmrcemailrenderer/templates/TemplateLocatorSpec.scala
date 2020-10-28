@@ -309,6 +309,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cash_declaration_EU",
         "cash_declaration_UK",
         "ccg1_confirmation_submission",
+        "dan_waiver_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
