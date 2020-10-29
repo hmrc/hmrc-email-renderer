@@ -781,6 +781,15 @@ object EeittTemplates {
       plainTemplate = txt.dutyDefermentAccountConfirmation.f,
       htmlTemplate = html.dutyDefermentAccountConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "eat_out_help_out_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your disclosure about Eat Out to Help Out Scheme payment",
+      plainTemplate = txt.eatOuttoHelpOutConfirmation.f,
+      htmlTemplate = html.eatOuttoHelpOutConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
