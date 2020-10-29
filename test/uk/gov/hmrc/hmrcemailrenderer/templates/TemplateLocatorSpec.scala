@@ -621,7 +621,6 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "consultation_complaint_confirmation",
         "duty_deferment_account_confirmation",
         "eat_out_help_out_confirmation"
-
       )
     }
   }
