@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You sent a disclosure online about Eat Out to Help Out Scheme payment
+
+Dear @params.get("customerName")
+
+We received your disclosure to tell us you intend to repay Eat Out to Help Out Scheme payment.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the Eat Out to Help Out Scheme team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
