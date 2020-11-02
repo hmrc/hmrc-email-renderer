@@ -176,9 +176,9 @@ object TemplateParams {
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
     "ppnsCallbackUrlChangedNotification" -> Map(
-      "applicationName"  -> "Test Application",
-      "newCallbackURL"   -> "https://some.remote.server/callback",
-      "dateTimeOfChange" -> "28 October 2020 12:23"
+      "applicationName" -> "Test Application",
+      "dateOfChange"    -> "28 October 2020",
+      "timeOfChange"    -> "12:23"
     ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
