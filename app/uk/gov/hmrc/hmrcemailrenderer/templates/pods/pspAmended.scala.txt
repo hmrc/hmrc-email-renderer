@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You have updated your pension scheme practitioner details
+
+Dear @{params("pspName").toString}
+
+This email confirms your pension scheme practitioner details have been updated.
+
+What to do next
+
+You can check your pension scheme practitioner details by searching for 'manage a registered pension scheme' on GOV.UK and then choosing the online service.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

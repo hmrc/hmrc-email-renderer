@@ -94,6 +94,15 @@ object PodsTemplates {
       plainTemplate = txt.pspRegistered.f,
       htmlTemplate = html.pspRegistered.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psp_amend",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Amended: pension scheme practitioner",
+      plainTemplate = txt.pspAmended.f,
+      htmlTemplate = html.pspAmended.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
