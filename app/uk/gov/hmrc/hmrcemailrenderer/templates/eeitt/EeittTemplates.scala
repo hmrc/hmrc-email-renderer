@@ -745,6 +745,51 @@ object EeittTemplates {
       plainTemplate = txt.settlementRequest.f,
       htmlTemplate = html.settlementRequest.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "complaint_consultation_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report a comment or complaint about a consultation",
+      plainTemplate = txt.consultationComplaint.f,
+      htmlTemplate = html.consultationComplaint.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "consultation_complaint_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your consultation feedback",
+      plainTemplate = txt.consultationComplaintConfirmation.f,
+      htmlTemplate = html.consultationComplaintConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "dan_waiver_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for a guarantee waiver",
+      plainTemplate = txt.danWaiverConfirmation.f,
+      htmlTemplate = html.danWaiverConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "duty_deferment_account_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for a Duty Deferment Account",
+      plainTemplate = txt.dutyDefermentAccountConfirmation.f,
+      htmlTemplate = html.dutyDefermentAccountConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "eat_out_help_out_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your disclosure about Eat Out to Help Out Scheme payment",
+      plainTemplate = txt.eatOuttoHelpOutConfirmation.f,
+      htmlTemplate = html.eatOuttoHelpOutConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

@@ -178,16 +178,6 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    //Passengers email template
-    MessageTemplate.create(
-      templateId = "passengers_payment_confirmation",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Receipt for payment on goods brought into the UK",
-      plainTemplate = txt.passengers_confirmation.f,
-      htmlTemplate = html.passengers_confirmation.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
     MessageTemplate.create(
       templateId = "dd_email_verifcation",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),

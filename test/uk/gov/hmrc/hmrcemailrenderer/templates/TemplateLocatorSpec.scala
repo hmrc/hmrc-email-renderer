@@ -309,6 +309,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cash_declaration_EU",
         "cash_declaration_UK",
         "ccg1_confirmation_submission",
+        "dan_waiver_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
@@ -576,7 +577,6 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
         "twoWayMessageUpdate",
-        "passengers_payment_confirmation",
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
         "newMessageAlert_CC07C_SM11C",
@@ -617,7 +617,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ecc_subscription_not_successful",
         "ecc_subscription_not_successful_cy",
         "trading_status_before_seiss_claimed",
-        "settlement_request"
+        "settlement_request",
+        "complaint_consultation_code",
+        "consultation_complaint_confirmation",
+        "duty_deferment_account_confirmation",
+        "eat_out_help_out_confirmation"
       )
     }
   }
