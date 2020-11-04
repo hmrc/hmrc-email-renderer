@@ -1965,6 +1965,9 @@ object TemplateParams {
     "pods_psp_register" -> Map(
       "pspName" -> "Jane Doe"
     ),
+    "pods_psp_amend" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
     "pods_authorise_psp" -> Map(
       "psaInvitor" -> "Jane Doe",
       "pspInvitee" -> "Joe Bloggs",

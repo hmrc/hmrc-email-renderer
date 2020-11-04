@@ -768,7 +768,7 @@ object EeittTemplates {
       templateId = "dan_waiver_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your consultation feedback",
+      subject = "HMRC received your application for a guarantee waiver",
       plainTemplate = txt.danWaiverConfirmation.f,
       htmlTemplate = html.danWaiverConfirmation.f,
       priority = Some(MessagePriority.Standard)

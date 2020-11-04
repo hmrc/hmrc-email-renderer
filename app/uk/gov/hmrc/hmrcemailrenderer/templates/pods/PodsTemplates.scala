@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
@@ -92,6 +93,15 @@ object PodsTemplates {
       subject = "Registered: pension scheme practitioner",
       plainTemplate = txt.pspRegistered.f,
       htmlTemplate = html.pspRegistered.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psp_amend",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Amended: pension scheme practitioner",
+      plainTemplate = txt.pspAmended.f,
+      htmlTemplate = html.pspAmended.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
