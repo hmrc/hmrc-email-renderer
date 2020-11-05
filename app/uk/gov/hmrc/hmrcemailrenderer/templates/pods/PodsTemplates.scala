@@ -103,6 +103,24 @@ object PodsTemplates {
       plainTemplate = txt.pspAmended.f,
       htmlTemplate = html.pspAmended.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psp_de_auth_psp_individual",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "You have deauthorised as a pension scheme practitioner",
+      plainTemplate = txt.pspDeAuthorisedIndividual.f,
+      htmlTemplate = html.pspDeAuthorisedIndividual.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psp_de_auth_psp_company_partnership",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "You have deauthorised a pension scheme practitioner",
+      plainTemplate = txt.pspDeAuthorisedCompanyPartnership.f,
+      htmlTemplate = html.pspDeAuthorisedCompanyPartnership.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

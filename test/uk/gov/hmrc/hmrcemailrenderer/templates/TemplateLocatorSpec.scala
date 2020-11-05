@@ -573,6 +573,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_aft_amended_return_increase",
         "pods_psp_register",
         "pods_psp_amend",
+        "pods_psp_de_auth_psp_individual",
+        "pods_psp_de_auth_psp_company_partnership",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",

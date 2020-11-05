@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You have deauthorised as a pension scheme practitioner
+
+Dear @{params("pspName").toString}
+
+You have deauthorised yourself as a pension scheme practitioner for @{params("schemeName").toString}.
+
+What happens next
+
+A letter will be sent to @{params("authorisingPsaName").toString} to let them know that you have deauthorised yourself from the scheme.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
