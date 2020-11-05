@@ -1968,6 +1968,11 @@ object TemplateParams {
     "pods_psp_amend" -> Map(
       "pspName" -> "Jane Doe"
     ),
+    "pods_psa_deauthorise_psp" -> Map(
+      "psaName"    -> "Bill Bloggs",
+      "pspName"    -> "Jane Doe",
+      "schemeName" -> "Smith Harper pension scheme"
+    ),
     "dac6_registration_successful" -> Map(
       "name" -> "Joe Bloggs"
     ),
