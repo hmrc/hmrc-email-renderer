@@ -8,7 +8,7 @@ You have deauthorised @{params("pspName")} as a pension scheme practitioner for 
 
 What happens next
 
-A letter will be sent to @{params("pspName")} to confirm they have been deauthorised as a pension scheme practitioner for @{params("schemeName")}.
+We will send a letter to @{params("pspName")} to confirm they have been deauthorised.
 
 From HMRC Pension Schemes Services
 
