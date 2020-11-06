@@ -8,7 +8,7 @@ Dear @{params("pspName").toString}
 
 What happens next
 
-A letter will be sent to @{params("authorisingPsaName").toString} to let them know that @{params("pspName").toString} has been deauthorised from the scheme.
+We will send a letter to @{params("authorisingPsaName").toString} to confirm @{params("pspName").toString} has been deauthorised.
 
 From HMRC Pension Schemes Services
 

@@ -8,7 +8,7 @@ You have deauthorised yourself as a pension scheme practitioner for @{params("sc
 
 What happens next
 
-A letter will be sent to @{params("authorisingPsaName").toString} to let them know that you have deauthorised yourself from the scheme.
+We will send a letter to @{params("authorisingPsaName").toString} to confirm you have been deauthorised.
 
 From HMRC Pension Schemes Services
 
