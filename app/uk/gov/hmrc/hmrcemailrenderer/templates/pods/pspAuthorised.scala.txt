@@ -8,7 +8,7 @@ Dear @{params("psaInvitor").toString}
 
 What happens next
 
-A letter will be sent to @{params("pspInvitee").toString} to confirm they have been authorised as a pension scheme practitioner for @{params("schemeName").toString}.
+A letter will be sent to @{params("pspInvitee").toString} to confirm they have been authorised.
 
 They can create and submit Accounting for Tax returns for @{params("schemeName").toString} by signing in to Managing Pension Schemes on GOV.UK.
 
