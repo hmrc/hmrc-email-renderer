@@ -112,6 +112,15 @@ object PodsTemplates {
       plainTemplate = txt.pspAuthorised.f,
       htmlTemplate = html.pspAuthorised.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psa_deauthorise_psp",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Pension scheme practitioner deauthorised",
+      plainTemplate = txt.pspDeauthorisedByPsa.f,
+      htmlTemplate = html.pspDeauthorisedByPsa.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
