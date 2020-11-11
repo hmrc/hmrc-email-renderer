@@ -27,28 +27,22 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
 @Singleton
-class PreviewController @Inject()(mcc: MessagesControllerComponents, preview1: Preview)
-    extends FrontendController(mcc) {
+class PreviewController @Inject()(mcc: MessagesControllerComponents, preview: Preview) extends FrontendController(mcc) {
 
   def previewHome = Action {
     Ok(views.html.previews(previewGroups))
   }
 
   def previewHtml(templateId: String) = Action { implicit request =>
-    val p: String = preview1.html(templateId, flattenParameterValues(request.queryString))
-    val html: Html = play.twirl.api.Html(p)
-    Ok(views.html.previewHtml(html))
+    Ok(views.html.previewHtml(Html(preview.html(templateId, flattenParameterValues(request.queryString)))))
   }
 
   def previewText(templateId: String) = Action { implicit request =>
-    val s = preview1.plain(templateId, flattenParameterValues(request.queryString))
-
-    Ok(views.txt.previewText(s))
+    Ok(views.txt.previewText(preview.plain(templateId, flattenParameterValues(request.queryString))))
   }
 
   def previewSource(templateId: String) = Action { implicit request =>
-    val hh: String = preview1.html(templateId, flattenParameterValues(request.queryString)).toString
-    Ok(views.html.previewHtmlSource(hh))
+    Ok(views.txt.previewText(preview.html(templateId, flattenParameterValues(request.queryString))))
   }
 
   private lazy val previewGroups: Stream[PreviewGroup] =
