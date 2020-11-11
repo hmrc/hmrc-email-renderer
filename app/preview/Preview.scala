@@ -16,14 +16,14 @@
 
 package preview
 
+import com.google.inject.Inject
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 
-trait Preview {
+class Preview @Inject() (renderer: TemplateRenderer) {
   type RenderedResult = Either[ErrorMessage, RenderResult]
 
-  def renderer: TemplateRenderer
 
   def html(templateId: String, parameters: Map[String, String]): String =
     extractHtml.orElse(handleErrors).apply(renderer.render(templateId, parameters))
@@ -45,8 +45,4 @@ trait Preview {
     case Left(TemplateRenderFailure(reason)) => reason
   }
 
-}
-
-object Preview extends Preview {
-  def renderer = TemplateRenderer
 }

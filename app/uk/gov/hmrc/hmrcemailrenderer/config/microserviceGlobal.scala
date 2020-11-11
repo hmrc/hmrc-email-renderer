@@ -14,55 +14,55 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer
+//package uk.gov.hmrc.hmrcemailrenderer
+//
+//import com.typesafe.config.Config
+//import play.api.{ Application, Configuration, Play }
+//import uk.gov.hmrc.play.microservice.filters.AuditFilter
+//import uk.gov.hmrc.play.auth.controllers.AuthParamsControllerConfig
+//import uk.gov.hmrc.play.config.{ AppName, ControllerConfig, RunMode }
+//import uk.gov.hmrc.play.microservice.filters.LoggingFilter
+//import uk.gov.hmrc.play.microservice.bootstrap.DefaultMicroserviceGlobal
+//import uk.gov.hmrc.play.auth.microservice.filters.AuthorisationFilter
+//import net.ceedubs.ficus.Ficus._
+//import uk.gov.hmrc.play.microservice.filters.MicroserviceFilterSupport
 
-import com.typesafe.config.Config
-import play.api.{ Application, Configuration, Play }
-import uk.gov.hmrc.play.microservice.filters.AuditFilter
-import uk.gov.hmrc.play.auth.controllers.AuthParamsControllerConfig
-import uk.gov.hmrc.play.config.{ AppName, ControllerConfig, RunMode }
-import uk.gov.hmrc.play.microservice.filters.LoggingFilter
-import uk.gov.hmrc.play.microservice.bootstrap.DefaultMicroserviceGlobal
-import uk.gov.hmrc.play.auth.microservice.filters.AuthorisationFilter
-import net.ceedubs.ficus.Ficus._
-import uk.gov.hmrc.play.microservice.filters.MicroserviceFilterSupport
+//object ControllerConfiguration extends ControllerConfig {
+//  lazy val controllerConfigs = Play.current.configuration.underlying.as[Config]("controllers")
+//}
+//
+//object AuthParamsControllerConfiguration extends AuthParamsControllerConfig {
+//  lazy val controllerConfigs = ControllerConfiguration.controllerConfigs
+//}
 
-object ControllerConfiguration extends ControllerConfig {
-  lazy val controllerConfigs = Play.current.configuration.underlying.as[Config]("controllers")
-}
+//object MicroserviceAuditFilter extends AuditFilter with AppName with MicroserviceFilterSupport {
+//
+//  override val auditConnector = MicroserviceAuditConnector
+//  override def controllerNeedsAuditing(controllerName: String) =
+//    ControllerConfiguration.paramsForController(controllerName).needsAuditing
+//
+//  override protected def appNameConfiguration: Configuration = Play.current.configuration
+//}
 
-object AuthParamsControllerConfiguration extends AuthParamsControllerConfig {
-  lazy val controllerConfigs = ControllerConfiguration.controllerConfigs
-}
+//object MicroserviceLoggingFilter extends LoggingFilter with MicroserviceFilterSupport {
+//  override def controllerNeedsLogging(controllerName: String) =
+//    ControllerConfiguration.paramsForController(controllerName).needsLogging
+//}
 
-object MicroserviceAuditFilter extends AuditFilter with AppName with MicroserviceFilterSupport {
-
-  override val auditConnector = MicroserviceAuditConnector
-  override def controllerNeedsAuditing(controllerName: String) =
-    ControllerConfiguration.paramsForController(controllerName).needsAuditing
-
-  override protected def appNameConfiguration: Configuration = Play.current.configuration
-}
-
-object MicroserviceLoggingFilter extends LoggingFilter with MicroserviceFilterSupport {
-  override def controllerNeedsLogging(controllerName: String) =
-    ControllerConfiguration.paramsForController(controllerName).needsLogging
-}
-
-object MicroserviceGlobal extends DefaultMicroserviceGlobal with RunMode {
-
-  override protected def mode: play.api.Mode.Mode = Play.current.mode
-
-  override protected def runModeConfiguration: Configuration = Play.current.configuration
-
-  override val auditConnector = MicroserviceAuditConnector
-
-  override def microserviceMetricsConfig(implicit app: Application): Option[Configuration] =
-    app.configuration.getConfig(s"microservice.metrics")
-
-  override val loggingFilter = MicroserviceLoggingFilter
-
-  override val microserviceAuditFilter = MicroserviceAuditFilter
-
-  override val authFilter = None
-}
+//object MicroserviceGlobal extends DefaultMicroserviceGlobal with RunMode {
+//
+//  override protected def mode: play.api.Mode.Mode = Play.current.mode
+//
+//  override protected def runModeConfiguration: Configuration = Play.current.configuration
+//
+//  override val auditConnector = MicroserviceAuditConnector
+//
+//  override def microserviceMetricsConfig(implicit app: Application): Option[Configuration] =
+//    app.configuration.getConfig(s"microservice.metrics")
+//
+//  override val loggingFilter = MicroserviceLoggingFilter
+//
+//  override val microserviceAuditFilter = MicroserviceAuditFilter
+//
+//  override val authFilter = None
+//}

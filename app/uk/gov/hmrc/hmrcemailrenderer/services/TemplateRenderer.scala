@@ -16,62 +16,34 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.{ Configuration, Logger, Play }
+import com.google.inject.Inject
+import play.api.{Configuration, Logger}
 import play.twirl.api.Format
-import uk.gov.hmrc.hmrcemailrenderer.MicroserviceAuditConnector
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.hmrcemailrenderer.model.Language.{ English, Welsh }
+import uk.gov.hmrc.hmrcemailrenderer.model.Language.{English, Welsh}
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
-import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
-import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
+import uk.gov.hmrc.play.audit.http.connector.{AuditConnector, AuditResult}
 import uk.gov.hmrc.play.audit.model.DataEvent
-import uk.gov.hmrc.play.config.RunMode
+import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
+import uk.gov.hmrc.play.bootstrap.config.RunMode
 
-import scala.concurrent.{ ExecutionContext, Future }
-import scala.util.{ Failure, Success, Try }
+import scala.concurrent.{ExecutionContext, Future}
+import scala.util.{Failure, Success, Try}
 
-object TemplateRenderer extends TemplateRenderer with RunMode {
 
-  import play.api.Play.current
+class TemplateRenderer @Inject() (configuration: Configuration, runMode: RunMode, auditConnector: AuditConnector, preferencesConnector: PreferencesConnector) {
 
-  override val locator = TemplateLocator
-  override lazy val commonParameters: Map[String, String] = {
-    Play.configuration
-      .getConfig(s"$env.templates.config")
-      .map(_.entrySet.toMap.mapValues(_.unwrapped.toString))
-      .getOrElse(Map.empty[String, String])
-  }
 
-  override lazy val templatesByLangPreference = {
-    Play.configuration
-      .getConfig("welshTemplatesByLangPreferences")
-      .map(_.entrySet.toMap.mapValues(_.unwrapped.toString))
-      .getOrElse(Map.empty[String, String])
-  }
+  val locator = TemplateLocator
+  val env = runMode.env
 
-  override protected def mode: play.api.Mode.Mode = Play.current.mode
+  lazy val commonParameters: Map[String, String] =  configuration.get[Configuration](s"$env.templates.config").entrySet.toMap.mapValues(_.unwrapped.toString)
 
-  override protected def runModeConfiguration: Configuration = Play.current.configuration
-
-  val auditConnector = MicroserviceAuditConnector
-  val preferencesConnector = PreferencesConnector()
-}
-
-trait TemplateRenderer {
-
-  def commonParameters: Map[String, String]
-
-  def locator: TemplateLocator
-
-  def auditConnector: AuditConnector
-
-  def preferencesConnector: PreferencesConnector
-
-  val templatesByLangPreference: Map[String, String]
+  lazy val templatesByLangPreference = configuration.get[Configuration]("welshTemplatesByLangPreferences").entrySet.toMap.mapValues(_.unwrapped.toString)
 
   def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
@@ -91,11 +63,11 @@ trait TemplateRenderer {
   }
 
   def sendLanguageEvents(
-    email: String,
-    language: Language,
-    originalTemplateId: String,
-    selectedTemplateId: String,
-    description: String)(implicit ec: ExecutionContext): Future[AuditResult] = {
+                          email: String,
+                          language: Language,
+                          originalTemplateId: String,
+                          selectedTemplateId: String,
+                          description: String)(implicit ec: ExecutionContext): Future[AuditResult] = {
 
     val event = DataEvent(
       "hmrc-email-renderer",
@@ -119,6 +91,7 @@ trait TemplateRenderer {
         e
     }
   }
+
 
   def languageTemplateId(originalTemplateId: String, emailAddress: Option[String])(
     implicit hc: HeaderCarrier,
@@ -159,11 +132,14 @@ trait TemplateRenderer {
     }
   }
 
+
   private def render(
-    template: Map[String, String] => Format[_]#Appendable,
-    params: Map[String, String]): Either[ErrorMessage, String] =
+                      template: Map[String, String] => Format[_]#Appendable,
+                      params: Map[String, String]): Either[ErrorMessage, String] =
     Try(template(params)) match {
       case Success(output) => Right(output.toString)
       case Failure(error)  => Left(TemplateRenderFailure(error.getMessage))
     }
+
+
 }
