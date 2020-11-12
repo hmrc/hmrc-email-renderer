@@ -53,7 +53,7 @@
         @surcharge_recon_row(params("tpsRcsSurchargeReport_ct").toString.split(",").toArray)
     </tr>
     <tr>
-        <td style="font-weight:bold;">EPAYE</td>
+        <td style="font-weight:bold;">PAYE</td>
         @surcharge_recon_row(params("tpsRcsSurchargeReport_epaye").toString.split(",").toArray)
     </tr>
     <tr>
@@ -67,6 +67,14 @@
     <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("tpsRcsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td ></td>
+        <td ></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS TPS Credit Card Commission</td>
     </tr>
 </table>
 
@@ -106,12 +114,28 @@
         @surcharge_recon_row(params("opsRcsSurchargeReport_totalShipley").toString.split(",").toArray)
     </tr>
     <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS OPS Credit Card Commission</td>
+    </tr>
+    <tr>
         <td style="font-weight:bold;">VAT</td>
         @surcharge_recon_row(params("opsRcsSurchargeReport_vat").toString.split(",").toArray)
     </tr>
     <tr>
         <td style="font-weight:bold;">Total Cumbernauld</td>
         @surcharge_recon_row(params("opsRcsSurchargeReport_totalCumbernauld").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Cumbernauld RCS OPS Credit Card Commission</td>
     </tr>
 </table>
 
@@ -141,6 +165,15 @@
     <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row_personal_included(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance (see below)</td>
     </tr>
 </table>
 <br>
@@ -201,6 +234,15 @@
     <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row_personal_included(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance (see below)</td>
     </tr>
 </table>
 <br>
