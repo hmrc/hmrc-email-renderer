@@ -535,6 +535,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "payment_successful_parcels",
         "recon_tps_report",
         "recon_tops_report",
+        "recon_surcharge_report",
         "ddi_migration_letter",
         "ddi_setup_dcs_alert",
         "ddi_setup_aa_dcs_alert",
