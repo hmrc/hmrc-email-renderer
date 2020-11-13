@@ -1,7 +1,57 @@
-@(params: Map[String, Any])Import Declaration
+@(params: Map[String, Any])You declared and paid for commercial goods you are bringing into the UK
+@goodsGrid = @{
+  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  goods.map { i =>
+    val category = params(s"goodsCategory_$i")
+    val quantity = params(s"goodsQuantity_$i")
+    val country = params(s"goodsCountry_$i")
+    val price = params(s"goodsPrice_$i")
+      (category, quantity, country, price)
+  }
+}
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
 
-This is a test email only. Should you receive this email please ignore it
+We received your declaration and payment for the commercial goods you are bringing into the UK in your baggage or small vehicle.
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+Your declaration reference is: @params("declarationReference")
+
+What you need to do next
+
+When you arrive in the UK, go to the green ‘nothing to declare’ channel.
+
+Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.
+
+Date of declaration
+
+@params("dateOfDeclaration")
+
+Details of the goods
+
+@for((category, quantity, country, price) <- goodsGrid) {
+  Type of goods: @category
+  Number of items: @quantity
+  Country: @country
+  Price paid: @price
+
+}
+
+Amount paid
+
+Customs Duty: @params("customsDuty")
+VAT: @params("vat")
+Total: @params("total")
+
+Personal details
+
+Name of person carrying goods: @params("nameOfPersonCarryingGoods")
+EORI number: @params("eori")
+
+Changing your declaration
+
+If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.
+
+To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of the UK in accompanied baggage or small vehicles’.
+
+From the commercial goods declaration service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

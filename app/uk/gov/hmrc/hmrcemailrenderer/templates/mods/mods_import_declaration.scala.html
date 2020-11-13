@@ -15,7 +15,99 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Import Declaration") {
-    <h4>This is a test email only. Should you receive this email please ignore it</h4>
-    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+
+@goodsGrid = @{
+  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  goods.map { i =>
+    val category = params(s"goodsCategory_$i")
+    val quantity = params(s"goodsQuantity_$i")
+    val country = params(s"goodsCountry_$i")
+    val price = params(s"goodsPrice_$i")
+      (category, quantity, country, price)
+  }
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You declared and paid for commercial goods you are bringing into the UK") {
+
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params)
+
+    <p>We received your declaration and payment for the commercial goods you are bringing into the UK in your baggage or small vehicle.</p>
+
+    <p>Your declaration reference is: <strong>@params("declarationReference")</strong></p>
+
+    <h3>What you need to do next</h3>
+
+    <p>When you arrive in the UK, go to the green ‘nothing to declare’ channel.</p>
+
+    <p>Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.</p>
+
+    <h3>Date of declaration</h3>
+
+    <p>@params("dateOfDeclaration")</p>
+
+    <h3>Details of the goods</h3>
+
+    @for((category, quantity, country, price) <- goodsGrid) {
+        <table style="padding:10px;text-align:left;font-size: 19px;">
+            <tbody>
+                <tr>
+                    <th>Type of goods</th>
+                    <td style="padding-left:10px">@category</td>
+                </tr>
+                <tr>
+                    <th>Number of items</th>
+                    <td style="padding-left:10px">@quantity</td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td style="padding-left:10px">@country</td>
+                </tr>
+                <tr>
+                    <th>Price paid</th>
+                    <td style="padding-left:10px">@price</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+
+  <h3>Amount paid</h3>
+
+  <table style="padding:10px;text-align: left;font-size: 19px;">
+      <tbody>
+          <tr>
+              <th>Customs Duty</th>
+              <td style="padding-left:10px">@params("customsDuty")</td>
+          </tr>
+          <tr>
+              <th>VAT</th>
+              <td style="padding-left:10px">@params("vat")</td>
+          </tr>
+          <tr>
+              <th>Total</th>
+              <td style="padding-left:10px">@params("total")</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h3>Personal details</h3>
+
+    <table style="padding:10px;text-align: left;font-size: 19px;">
+        <tbody>
+            <tr>
+                <th>Name of person carrying goods</th>
+                <td style="padding-left:10px">@params("nameOfPersonCarryingGoods")</td>
+            </tr>
+            <tr>
+                <th>EORI number</th>
+                <td style="padding-left:10px">@params("eori")</td>
+            </tr>
+        </tbody>
+    </table>
+
+  <h3>Changing your declaration</h3>
+
+  <p style="color:red;">If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.</p>
+  <p style="color:red;">To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of the UK in accompanied baggage or small vehicles’.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">From the commercial goods declaration service</p>
 }
