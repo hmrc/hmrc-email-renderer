@@ -17,8 +17,6 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import com.typesafe.config.ConfigFactory
-import play.api.{Configuration, Play}
-
 import scala.util.Try
 
 case class FromAddress(f: Map[String, String] => String) {

@@ -21,14 +21,17 @@ import play.api.Logger
 import play.api.libs.json.Json
 import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.bootstrap.config.RunMode
 import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-class RendererController @Inject() (templateRenderer: TemplateRenderer, runMode: RunMode,  mcc: MessagesControllerComponents) extends FrontendController(mcc) {
+class RendererController @Inject()(
+  templateRenderer: TemplateRenderer,
+  mcc: MessagesControllerComponents)
+    extends FrontendController(mcc) {
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>

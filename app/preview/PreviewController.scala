@@ -18,16 +18,17 @@ package preview
 
 import com.google.inject.Inject
 import javax.inject.Singleton
-import play.api.mvc.{Action, MessagesControllerComponents}
+import play.api.mvc.{ Action, MessagesControllerComponents }
 import play.twirl.api.Html
 import play.utils.UriEncoding
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
 @Singleton
-class PreviewController @Inject() (mcc: MessagesControllerComponents, preview1: Preview) extends FrontendController(mcc) {
+class PreviewController @Inject()(mcc: MessagesControllerComponents, preview1: Preview)
+    extends FrontendController(mcc) {
 
   def previewHome = Action {
     Ok(views.html.previews(previewGroups))
@@ -39,9 +40,7 @@ class PreviewController @Inject() (mcc: MessagesControllerComponents, preview1: 
     Ok(views.html.previewHtml(html))
   }
 
-
   def previewText(templateId: String) = Action { implicit request =>
-
     val s = preview1.plain(templateId, flattenParameterValues(request.queryString))
 
     Ok(views.txt.previewText(s))
@@ -49,9 +48,8 @@ class PreviewController @Inject() (mcc: MessagesControllerComponents, preview1: 
 
   def previewSource(templateId: String) = Action { implicit request =>
     val hh: String = preview1.html(templateId, flattenParameterValues(request.queryString)).toString
-   Ok(views.html.previewHtmlSource(hh))
+    Ok(views.html.previewHtmlSource(hh))
   }
-
 
   private lazy val previewGroups: Stream[PreviewGroup] =
     TemplateLocator.templateGroups.toStream.map {
@@ -61,9 +59,7 @@ class PreviewController @Inject() (mcc: MessagesControllerComponents, preview1: 
 
   private def flattenParameterValues(qs: Map[String, Seq[String]]): Map[String, String] = qs.map(t => (t._1, t._2.head))
 
-
 }
-
 
 final case class PreviewGroup private (name: String, items: Seq[PreviewListItem])
 object PreviewGroup {

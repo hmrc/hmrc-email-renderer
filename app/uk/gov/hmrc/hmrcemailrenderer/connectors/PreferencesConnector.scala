@@ -23,9 +23,9 @@ import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 import uk.gov.hmrc.play.bootstrap.http.HttpClient
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{ ExecutionContext, Future }
 
-class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: HttpClient) {
+class PreferencesConnector @Inject()(servicesConfig: ServicesConfig, http: HttpClient) {
 
   object LanguagePreference {
     implicit val format = Json.format[LanguagePreference]
@@ -33,10 +33,8 @@ class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: Http
 
   def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier, ec: ExecutionContext): Future[Language] = {
     val url = servicesConfig.baseUrl("preferences") + s"/preferences/language/$emailAddress"
-   http.GET[Language](url)
+    http.GET[Language](url)
   }
 }
 
 final case class LanguagePreference(lang: String)
-
-
