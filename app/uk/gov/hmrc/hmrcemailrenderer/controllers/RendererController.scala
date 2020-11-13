@@ -28,9 +28,7 @@ import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-class RendererController @Inject()(
-  templateRenderer: TemplateRenderer,
-  mcc: MessagesControllerComponents)
+class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)
     extends FrontendController(mcc) {
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
