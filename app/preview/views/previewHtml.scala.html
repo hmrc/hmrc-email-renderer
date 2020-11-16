@@ -14,6 +14,5 @@
  * limitations under the License.
  *@
 
-@import preview.Preview
-@(templateId: String, queryString: Map[String, String])
-@{Html(Preview.html(templateId, queryString))}
+@(content: Html)
+@{content}
