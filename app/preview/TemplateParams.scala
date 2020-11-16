@@ -1968,6 +1968,11 @@ object TemplateParams {
     "pods_psp_amend" -> Map(
       "pspName" -> "Jane Doe"
     ),
+    "pods_authorise_psp" -> Map(
+      "psaInvitor" -> "Jane Doe",
+      "pspInvitee" -> "Joe Bloggs",
+      "schemeName" -> "XYZ PENSION SCHEME"
+    ),
     "pods_psa_deauthorise_psp" -> Map(
       "psaName"    -> "Bill Bloggs",
       "pspName"    -> "Jane Doe",
