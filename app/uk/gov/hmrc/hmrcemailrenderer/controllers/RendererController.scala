@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.controllers
 
 import com.google.inject.Inject
+import javax.inject.Singleton
 import play.api.Logger
 import play.api.libs.json.Json
 import play.api.mvc._
@@ -26,9 +27,12 @@ import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.bootstrap.config.RunMode
 import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
+import scala.concurrent.ExecutionContext
 import scala.concurrent.ExecutionContext.Implicits.global
 
-class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)
+@Singleton
+class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)(
+  implicit ec: ExecutionContext)
     extends FrontendController(mcc) {
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
