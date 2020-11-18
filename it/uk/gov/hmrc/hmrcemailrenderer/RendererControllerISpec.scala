@@ -17,17 +17,16 @@
 package uk.gov.hmrc.hmrcemailrenderer
 
 import org.scalatest.concurrent.ScalaFutures
-import org.scalatestplus.play.{ OneServerPerSuite, ServerProvider, WsScalaTestClient }
+import org.scalatestplus.play.guice.GuiceOneServerPerSuite
+import org.scalatestplus.play.{ ServerProvider, WsScalaTestClient }
 import play.api.libs.json._
 import play.api.libs.ws.WSClient
-import play.api.{ Configuration, Play }
-import uk.gov.hmrc.play.config.ServicesConfig
 import uk.gov.hmrc.play.http.test.ResponseMatchers
 import uk.gov.hmrc.play.test.UnitSpec
 
 class RendererControllerISpec
-    extends UnitSpec with ServicesConfig with WsScalaTestClient with OneServerPerSuite with ScalaFutures
-    with ResponseMatchers with ServerProvider {
+    extends UnitSpec with WsScalaTestClient with GuiceOneServerPerSuite with ScalaFutures with ResponseMatchers
+    with ServerProvider {
   "POST /templates/:templateId" should {
     "return 200 and yield the rendered template data when supplied a valid templateId thats not defined in WelshTemplatesByLangPreference" in {
       val params = Map(
@@ -63,8 +62,4 @@ class RendererControllerISpec
       )
     }
   }
-
-  override protected def mode: play.api.Mode.Mode = Play.current.mode
-
-  override protected def runModeConfiguration: Configuration = Play.current.configuration
 }

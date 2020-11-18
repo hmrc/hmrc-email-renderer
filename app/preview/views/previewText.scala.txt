@@ -1,3 +1,4 @@
-@import preview.Preview
-@(templateId: String, queryString: Map[String, String])
-@{Preview.plain(templateId, queryString)}
+
+
+@(content: String)
+@{content}
