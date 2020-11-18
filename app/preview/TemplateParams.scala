@@ -2009,7 +2009,8 @@ object TemplateParams {
       "schemeName" -> "Smith Harper pension scheme"
     ),
     "dac6_registration_successful" -> Map(
-      "name" -> "Joe Bloggs"
+      "name"   -> "Joe Bloggs",
+      "dac6ID" -> "XXDAC000012345"
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
