@@ -1,0 +1,48 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Estyniad i Grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth (SEISS): Trydydd grant ar gael yn fuan", isWelsh = true){
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Annwyl  @params.get("customerName")</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae llywodraeth y DU wedi ymestyn y cymorth sydd ar gael o dan y Cynllun Cymhorthdal Incwm Hunangyflogaeth (SEISS) ar gyfer pobl hunangyflogedig y mae coronafeirws (COVID-19) wedi effeithio arnynt. Bydd y grant diweddaraf yn cwmpasu’r cyfnod rhwng mis Tachwedd a diwedd mis Ionawr.</p>
+
+    <h2>Gwirio a ydych yn gymwys i hawlio</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>Mae’r rheolau o ran pwy sy’n gymwys i hawlio wedi newid.</b></p>
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>Fodd bynnag, er mwyn hawlio mae’n rhaid i chi fod wedi cyflwyno Ffurflen Dreth Hunanasesiad o hyd ar gyfer blwyddyn dreth 2018 i 2019 sy’n dangos incwm hunangyflogaeth.</b></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">I wirio a ydych yn gymwys i hawlio ac i gael gwybod sut i hawlio, ewch i GOV.UK a chwilio am ‘Self employment income support scheme’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn gymwys, a bod angen cymorth arnoch, byddwch yn gallu hawlio’r trydydd grant unrhyw bryd o  @params.get("dayOfMonth") @params.get("monthCy") ymlaen tan ddiwedd mis Ionawr.</p>
+
+    <h2>Help gyda’ch hawliad</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae’n hawdd hawlio - nid oes angen i chi gyfrifo’ch grant, bydd CThEM yn gwneud hynny ar eich rhan. Mae’n bwysig eich bod yn gwneud unrhyw hawliad eich hun, ond gallwch ofyn am gymorth cyfrifydd neu asiant treth. Peidiwch â throsglwyddo’ch gwybodaeth i bobl sy’n cynnig cyflwyno hawliad ar eich rhan. Bydd hynny’n arwain at oedi cyn eich talu.</p>
+
+    <h2>Cymorth pellach</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae arweiniad a gweminarau byw, sy’n cynnig rhagor o gymorth ar SEISS a chymorth busnes arall, ar gael ar-lein – gallwch gadw lle drwy fynd i GOV.UK a chwilio am ‘help and support if your business is affected by coronavirus’.</p>
+
+
+    <h2>Diogelu’ch hun rhag sgamiau</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">
+    @Html("Dylech fod yn wyliadwrus rhag sgamiau a allai esgus bod yn negeseuon gan y llywodraeth er mwyn ymddangos yn ddilys. Chwiliwch am ‘scams’ ar GOV.UK i gael gwybodaeth am sut i adnabod cysylltiadau dilys gan CThEM. Gallwch anfon e-byst amheus sy’n honni eu bod yn dod oddi wrth CThEM i gwasanaeth.cymraeg@hmrc.gov.uk neu phishing@hmrc.gov.uk, a gallwch anfon negeseuon testun i 60599.")
+    </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">
+    @Html("Gallwch ddarllen canllaw newydd y Ganolfan Seiberddiogelwch Genedlaethol ar sut i gadw’n ddiogel ar-lein a sut i ddiogelu’ch hun neu’ch busnes yn erbyn seiberdroseddu drwy chwilio am ‘Cyber Aware’.")
+    </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Rwy’n gobeithio y bydd yr wybodaeth hon yn eich helpu chi a’ch busnes. Byddwn yn parhau i roi’r wybodaeth ddiweddaraf i chi am ddatblygiadau’r cynllun dros yr wythnosau nesaf.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Yn gywir,</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Jim Harra<br>Ysgrifennydd Parhaol a Phrif Weithredwr, CThEM</p>
+}
