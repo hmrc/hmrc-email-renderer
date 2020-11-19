@@ -8,14 +8,13 @@ Dear @{params("name")}
 Remember to save this @{params("month")}
 
 Try and save as much of your monthly £50 Help to Save allowance as you can this @{params("month")}.
-You can deposit any amount from £1 to £50, and anything you save now can help you earn the highest possible bonus.
-This bonus will be 50% of your highest savings total after two years of saving.
-Just remember, you cannot carry over any of your unused £50 allowance to next month.
+You can deposit as little as £1 at a time, as many times as you want, but you can only save £50 each calendar month.
+Remember, you can get a bonus of 50p for every pound you save.
 
 How to sign in to your account
 
 Use the HMRC app to sign in to your account. The free app is available on the App Store for iOS or the Google Play Store for Android.
-You can also sign in to your account by searching GOV.UK for ‘Help to Save’. You will need your Government Gateway ID and password.
+You can also sign in to your account by searching GOV.UK for ‘Help to Save’. You’ll need your Government Gateway ID and password.
 
 Why you got this email
 
@@ -23,6 +22,6 @@ You asked to get monthly Help to Save email reminders.
 You can cancel or change your reminders at any time. Go to ‘savings reminders’ in your Help to Save account home.
 Do not reply to this email.
 
-From Help to Save team
+From the Help to Save team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
