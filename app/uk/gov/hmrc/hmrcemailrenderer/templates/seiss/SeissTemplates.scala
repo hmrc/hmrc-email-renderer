@@ -87,7 +87,7 @@ object SeissTemplates {
       subject = "More help for the self-employed affected by COVID-19",
       plainTemplate = txt.seissPhase3PreviouslyClaimedStagger.f,
       htmlTemplate = html.seissPhase3PreviouslyClaimedStagger.f,
-      priority = Some(MessagePriority.Background)
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "seiss_phase_3_previously_claimed_stagger_cy",
@@ -96,7 +96,7 @@ object SeissTemplates {
       subject = "Rhagor o help i bobl hunangyflogedig y mae COVID-19 wedi effeithio arnynt",
       plainTemplate = txt.seissPhase3PreviouslyClaimedStagger_cy.f,
       htmlTemplate = html.seissPhase3PreviouslyClaimedStagger_cy.f,
-      priority = Some(MessagePriority.Background)
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
