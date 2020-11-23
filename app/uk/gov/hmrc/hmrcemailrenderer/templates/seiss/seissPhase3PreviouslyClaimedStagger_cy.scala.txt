@@ -1,0 +1,43 @@
+@(params: Map[String, Any])
+
+Estyniad i Grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth (SEISS): Trydydd grant ar gael yn fuan
+
+Annwyl @params.get("customerName")
+
+Mae llywodraeth y DU wedi ymestyn y cymorth sydd ar gael o dan y Cynllun Cymhorthdal Incwm Hunangyflogaeth (SEISS) ar gyfer pobl hunangyflogedig y mae coronafeirws (COVID-19) wedi effeithio arnynt. Bydd y grant diweddaraf yn cwmpasu’r cyfnod rhwng mis Tachwedd a diwedd mis Ionawr.
+
+
+Gwirio a ydych yn gymwys i hawlio
+
+Mae’r rheolau o ran pwy sy’n gymwys i hawlio wedi newid.
+
+Fodd bynnag, er mwyn hawlio mae’n rhaid i chi fod wedi cyflwyno Ffurflen Dreth Hunanasesiad o hyd ar gyfer blwyddyn dreth 2018 i 2019 sy’n dangos incwm hunangyflogaeth.
+
+I wirio a ydych yn gymwys i hawlio ac i gael gwybod sut i hawlio, ewch i GOV.UK a chwilio am ‘Self employment income support scheme’.
+
+Os ydych yn gymwys, a bod angen cymorth arnoch, byddwch yn gallu hawlio’r trydydd grant unrhyw bryd o @params.get("dayOfMonth") @params.get("monthCy") ymlaen tan ddiwedd mis Ionawr.
+
+
+Help gyda’ch hawliad
+
+Mae’n hawdd hawlio - nid oes angen i chi gyfrifo’ch grant, bydd CThEM yn gwneud hynny ar eich rhan. Mae’n bwysig eich bod yn gwneud unrhyw hawliad eich hun, ond gallwch ofyn am gymorth cyfrifydd neu asiant treth. Peidiwch â throsglwyddo’ch gwybodaeth i bobl sy’n cynnig cyflwyno hawliad ar eich rhan. Bydd hynny’n arwain at oedi cyn eich talu.
+
+
+Cymorth pellach
+
+Mae arweiniad a gweminarau byw, sy’n cynnig rhagor o gymorth ar SEISS a chymorth busnes arall, ar gael ar-lein – gallwch gadw lle drwy fynd i GOV.UK a chwilio am ‘help and support if your business is affected by coronavirus’.
+
+
+Diogelu’ch hun rhag sgamiau
+
+@Html("Stay vigilant about scams, which may mimic government messages to make them seem authentic. Search 'scams' on GOV.UK for information on how to recognise genuine HMRC contact. You can also forward suspicious emails claiming to be from HMRC to phishing@hmrc.gov.uk and texts to 60599.")
+
+@Html("Access the National Cyber Security Centre’s new guide on how to stay secure online and protect yourself or your business against cyber crime by searching ‘Cyber Aware’.")
+
+
+Rwy’n gobeithio y bydd yr wybodaeth hon yn eich helpu chi a’ch busnes. Byddwn yn parhau i roi’r wybodaeth ddiweddaraf i chi am ddatblygiadau’r cynllun dros yr wythnosau nesaf.
+
+Yn gywir,
+
+Jim Harra
+Ysgrifennydd Parhaol a Phrif Weithredwr, CThEM
