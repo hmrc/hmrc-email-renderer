@@ -28,7 +28,7 @@ object HtsReminderTemplates {
       templateId = "hts_reminder_email",
       fromAddress = FromAddress.noReply("Help to Save"),
       service = HelpToSave,
-      subject = "Hts Reminder Service",
+      subject = "Remember to save this month",
       plainTemplate = txt.htsReminderEmail.f,
       htmlTemplate = html.htsReminderEmail.f,
       priority = Some(MessagePriority.Urgent))
