@@ -1,4 +1,4 @@
-@(params: Map[String, Any])You declared and paid for Commercial goods you are bringing into Great Britain
+@(params: Map[String, Any])You declared and paid for commercial goods you are bringing into Great Britain
 @goodsGrid = @{
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
@@ -52,6 +52,6 @@ If you travel with other goods that you have not declared in advance, you must g
 
 To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of Great Britain in accompanied baggage or small vehicles’.
 
-From the commercial goods declaration service
+From the Commercial goods declaration service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

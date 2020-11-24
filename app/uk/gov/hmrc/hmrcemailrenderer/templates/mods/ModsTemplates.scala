@@ -26,7 +26,7 @@ object ModsTemplates {
       templateId = "mods_import_declaration",
       fromAddress = govUkTeamAddress,
       service = MODS,
-      subject = "Declaration and payment for Commercial goods you bring into Great Britain",
+      subject = "Declaration and payment for commercial goods you bring into Great Britain",
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
       priority = Some(MessagePriority.Standard)
