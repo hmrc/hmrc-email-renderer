@@ -1,25 +1,23 @@
-@(params: Map[String, Any])You declared and paid for commercial goods you are bringing into Great Britain
+@(params: Map[String, Any])You declared commercial goods you are taking out of the UK
 @goodsGrid = @{
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val quantity = params(s"goodsQuantity_$i")
-    val country = params(s"goodsCountry_$i")
+    val country = params(s"goodsDestination_$i")
     val price = params(s"goodsPrice_$i")
       (category, quantity, country, price)
   }
 }
 Dear @params("nameOfPersonCarryingGoods")
 
-We received your declaration and payment for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.
+We received your declaration for the commercial goods you are taking out of the UK in your baggage or small vehicle.
 
 Your declaration reference is: @params("declarationReference")
 
 What you need to do next
 
-When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.
-
-Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.
+Take this declaration and the purchase receipts for the goods with you when you travel. You may be asked to provide these at the border.
 
 Date of declaration
 
@@ -30,16 +28,9 @@ Details of the goods
 @for((category, quantity, country, price) <- goodsGrid) {
 Type of goods: @category
 Number of items: @quantity
-Country: @country
+Destination: @country
 Price paid: @price
-
 }
-
-Amount paid
-
-Customs Duty: @params("customsDuty")
-VAT: @params("vat")
-Total: @params("total")
 
 Personal details
 
@@ -50,7 +41,7 @@ Changing your declaration
 
 If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.
 
-To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you're bringing into the UK in accompanied baggage or small vehicles’.
+To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of Great Britain in accompanied baggage or small vehicles’.
 
 From the Commercial goods declaration service
 
