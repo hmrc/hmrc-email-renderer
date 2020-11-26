@@ -2035,6 +2035,20 @@ object TemplateParams {
       "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
       "completionDate"         -> "22 March 2019"
+    ),
+    "mods_import_declaration" -> Map(
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsCountry_0"            -> "Spain",
+      "goodsPrice_0"              -> "150, Euro (EUR)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "eori"                      -> "GB123456789000000"
     )
   )
 }

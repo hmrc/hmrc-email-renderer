@@ -105,4 +105,5 @@ object ServiceIdentifier {
   case object GoodsMovementSystem extends ServiceIdentifier { override val name = "goods-movement-system" }
   case object EOTHO extends ServiceIdentifier { override val name = "eotho" }
   case object EoriCommonComponent extends ServiceIdentifier { override val name = "ecc" }
+  case object MODS extends ServiceIdentifier { override val name = "mods" }
 }
