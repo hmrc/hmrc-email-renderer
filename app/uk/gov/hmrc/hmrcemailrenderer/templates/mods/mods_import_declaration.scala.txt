@@ -9,7 +9,7 @@
       (category, quantity, country, price)
   }
 }
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
+Dear @params("nameOfPersonCarryingGoods")
 
 We received your declaration and payment for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.
 
@@ -28,10 +28,10 @@ Date of declaration
 Details of the goods
 
 @for((category, quantity, country, price) <- goodsGrid) {
-  Type of goods: @category
-  Number of items: @quantity
-  Country: @country
-  Price paid: @price
+Type of goods: @category
+Number of items: @quantity
+Country: @country
+Price paid: @price
 
 }
 

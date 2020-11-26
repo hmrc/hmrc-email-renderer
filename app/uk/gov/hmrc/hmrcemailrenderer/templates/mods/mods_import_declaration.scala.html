@@ -29,42 +29,42 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You declared and paid for commercial goods you are bringing into Great Britain") {
 
-    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params)
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear @params("nameOfPersonCarryingGoods")</p>
 
-    <p>We received your declaration and payment for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We received your declaration and payment for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.</p>
 
-    <p>Your declaration reference is: <strong>@params("declarationReference")</strong></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your declaration reference is: <strong>@params("declarationReference")</strong></p>
 
     <h3>What you need to do next</h3>
 
-    <p>When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.</p>
 
-    <p>Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.</p>
 
     <h3>Date of declaration</h3>
 
-    <p>@params("dateOfDeclaration")</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@params("dateOfDeclaration")</p>
 
     <h3>Details of the goods</h3>
 
     @for((category, quantity, country, price) <- goodsGrid) {
-        <table style="padding:10px;text-align:left;font-size: 19px;">
+        <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
                 <tr>
-                    <th>Type of goods</th>
-                    <td style="padding-left:10px">@category</td>
+                    <th width="60%">Type of goods</th>
+                    <td>@category</td>
                 </tr>
                 <tr>
-                    <th>Number of items</th>
-                    <td style="padding-left:10px">@quantity</td>
+                    <th width="60%">Number of items</th>
+                    <td>@quantity</td>
                 </tr>
                 <tr>
-                    <th>Country</th>
-                    <td style="padding-left:10px">@country</td>
+                    <th width="60%">Country</th>
+                    <td>@country</td>
                 </tr>
                 <tr>
-                    <th>Price paid</th>
-                    <td style="padding-left:10px">@price</td>
+                    <th width="60%">Price paid</th>
+                    <td>@price</td>
                 </tr>
             </tbody>
         </table>
@@ -72,42 +72,42 @@
 
   <h3>Amount paid</h3>
 
-  <table style="padding:10px;text-align: left;font-size: 19px;">
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
       <tbody>
           <tr>
-              <th>Customs Duty</th>
-              <td style="padding-left:10px">@params("customsDuty")</td>
+              <th width="60%">Customs Duty</th>
+              <td>@params("customsDuty")</td>
           </tr>
           <tr>
-              <th>VAT</th>
-              <td style="padding-left:10px">@params("vat")</td>
+              <th width="60%">VAT</th>
+              <td>@params("vat")</td>
           </tr>
           <tr>
-              <th>Total</th>
-              <td style="padding-left:10px">@params("total")</td>
+              <th width="60%">Total</th>
+              <td>@params("total")</td>
           </tr>
       </tbody>
   </table>
 
   <h3>Personal details</h3>
 
-    <table style="padding:10px;text-align: left;font-size: 19px;">
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
             <tr>
-                <th>Name of person carrying goods</th>
-                <td style="padding-left:10px">@params("nameOfPersonCarryingGoods")</td>
+                <th width="60%">Name of person carrying goods</th>
+                <td>@params("nameOfPersonCarryingGoods")</td>
             </tr>
             <tr>
-                <th>EORI number</th>
-                <td style="padding-left:10px">@params("eori")</td>
+                <th width="60%">EORI number</th>
+                <td>@params("eori")</td>
             </tr>
         </tbody>
     </table>
 
   <h3>Changing your declaration</h3>
 
-  <p>If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.</p>
-  <p>To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of Great Britain in accompanied baggage or small vehicles’.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of Great Britain in accompanied baggage or small vehicles’.</p>
 
   <p style="margin: 0 0 30px; font-size: 19px;">From the Commercial goods declaration service</p>
 }
