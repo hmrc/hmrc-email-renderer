@@ -111,7 +111,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "SEISS",
         "GVMS",
         "EOTHO",
-        "Eori Common Component"
+        "Eori Common Component",
+        "MODS"
       )
     }
 
@@ -625,7 +626,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "complaint_consultation_code",
         "consultation_complaint_confirmation",
         "duty_deferment_account_confirmation",
-        "eat_out_help_out_confirmation"
+        "eat_out_help_out_confirmation",
+        "mods_import_declaration"
       )
     }
   }
