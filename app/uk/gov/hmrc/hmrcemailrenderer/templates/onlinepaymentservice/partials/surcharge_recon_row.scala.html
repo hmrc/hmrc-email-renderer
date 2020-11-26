@@ -1,4 +1,4 @@
-/*
+@*
  * Copyright 2020 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,22 +12,14 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *@
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmount
+@(surchargeRow: Array[String])
 
-import com.typesafe.config.ConfigFactory
-
-import scala.util.Try
-
-object TransactionEngineFromAddress {
-
-  private val defaultDomain = "confirmation.tax.service.gov.uk"
-
-  lazy val replyDomain =
-    Try(ConfigFactory.load().getString("transactionEngine.fromAddress.domain")).toOption.getOrElse(defaultDomain)
-
-  def noReply(name: String): String = s"$name <noreply@$replyDomain>"
-
-  lazy val transactionEngineAddress = noReply("Gateway Confirmation")
-}
+<td style="text-align: center;">@surchargeRow(0)</td>
+<td style="text-align: center;">@formatAmount(surchargeRow(1))</td>
+<td style="text-align: center;">@surchargeRow(2)</td>
+<td style="text-align: center;">@formatAmount(surchargeRow(3))</td>
+<td style="text-align: center;">@surchargeRow(4)</td>
+<td style="text-align: center;">@formatAmount(surchargeRow(5))</td>

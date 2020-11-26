@@ -179,6 +179,15 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "passengers_payment_confirmation",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Receipt for payment on goods brought into the UK",
+      plainTemplate = txt.passengers_confirmation.f,
+      htmlTemplate = html.passengers_confirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "dd_email_verifcation",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
@@ -204,6 +213,15 @@ object OnlinePaymentServiceTemplates {
       subject = _.apply("subject"),
       plainTemplate = txt.recon_tops_report.f,
       htmlTemplate = html.recon_tops_report.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_surcharge_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_surcharge_report.f,
+      htmlTemplate = html.recon_surcharge_report.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

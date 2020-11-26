@@ -1,0 +1,269 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.surcharge_recon_row
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.surcharge_recon_row_personal_included
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("subject").toString) {
+
+<h2>Telephone payments via RCS</h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SDLT</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_sdlt").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">VAT</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_vat").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SA</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_sa").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SAFE</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_safe").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">CT</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_ct").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PAYE</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_epaye").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">NTC</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_ntc").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">NPS/NIRS</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_nps").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total</td>
+        @surcharge_recon_row(params("tpsRcsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td ></td>
+        <td ></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS TPS Credit Card Commission</td>
+    </tr>
+</table>
+
+<h2>Online payments via RCS</h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SA</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_sa").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">COTAX</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_cotax").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PAYE</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_paye").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">MISC</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_misc").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SDLT</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_sdlt").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total Shipley</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_totalShipley").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS OPS Credit Card Commission</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">VAT</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_vat").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total Cumbernauld</td>
+        @surcharge_recon_row(params("opsRcsSurchargeReport_totalCumbernauld").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Cumbernauld RCS OPS Credit Card Commission</td>
+    </tr>
+</table>
+
+<h2>Telephone payments via DES plus MODS</h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+        <th>Personal Credit Card Volume</th>
+        <th>Personal Credit Card Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">P800</td>
+        @surcharge_recon_row(params("topsNoModsSurchargeReport_p800").toString.split(",").toArray)
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PNGR</td>
+        @surcharge_recon_row_personal_included(params("topsNoModsSurchargeReport_pngr").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total</td>
+        @surcharge_recon_row_personal_included(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance (see below)</td>
+    </tr>
+</table>
+<br>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+        <th>Personal Credit Card Volume</th>
+        <th>Personal Credit Card Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">MODS</td>
+        @surcharge_recon_row_personal_included(params("topsJustModsSurchargeReport_mods").toString.split(",").toArray)
+    </tr>
+</table>
+
+
+<h2>Online payments via DES plus MODS</h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+        <th>Personal Credit Card Volume</th>
+        <th>Personal Credit Card Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">P800</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_p800").toString.split(",").toArray)
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SIMPLE ASSESSMENT</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_simpleAssessment").toString.split(",").toArray)
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">CGT</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_cgt").toString.split(",").toArray)
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PNGR</td>
+        @surcharge_recon_row_personal_included(params("opsDesNoModsSurchargeReport_pngr").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total</td>
+        @surcharge_recon_row_personal_included(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance (see below)</td>
+    </tr>
+</table>
+<br>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+        <th>Personal Credit Card Volume</th>
+        <th>Personal Credit Card Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">MODS</td>
+        @surcharge_recon_row_personal_included(params("opsDesJustModsSurchargeReport_mods").toString.split(",").toArray)
+    </tr>
+</table>
+
+<p><STRONG>From HMRC Online Payments team</STRONG></p>
+
+}

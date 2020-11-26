@@ -3,7 +3,7 @@ HMRC has received your return
 
 Dear @{params("name")}
 
-Your return reference number is: @{params("submissionId")}
+You have sent a Capital Gains Tax on UK property return to HMRC.
 
 What you must do next
 Go to GOV.UK and search for ‘Report and pay Capital Gains Tax on UK property’. Sign in to your Capital Gains Tax on UK property account. Check if you have any actions to complete.

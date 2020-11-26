@@ -1606,6 +1606,36 @@ object TemplateParams {
       "TOPS_ROW_SA"     -> "SA,94,911842279,92,90,92,914443,94,911842279",
       "TOPS_ROW_TOTALS" -> "totals,84,811842279,82,80,82,814443,84,811842279"
     ),
+    "recon_surcharge_report" -> Map(
+      "subject"                                      -> "Surcharge report 27/09/2027",
+      "tpsRcsSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_sa"                     -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_safe"                   -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_ct"                     -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_epaye"                  -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_ntc"                    -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_nps"                    -> "1,10.0,2,20.0,3,30.0,0,0",
+      "tpsRcsSurchargeReport_total"                  -> "8,80.0,16,160.0,24,240.0,0,0",
+      "opsRcsSurchargeReport_sa"                     -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsRcsSurchargeReport_cotax"                  -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsRcsSurchargeReport_paye"                   -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsRcsSurchargeReport_misc"                   -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsRcsSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsRcsSurchargeReport_totalShipley"           -> "5,50.0,10,100.0,15,150.0,0,0",
+      "opsRcsSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsRcsSurchargeReport_totalCumbernauld"       -> "1,10.0,2,20.0,3,30.0,0,0",
+      "topsNoModsSurchargeReport_p800"               -> "1,10.0,2,20.0,3,30.0,0,0",
+      "topsNoModsSurchargeReport_pngr"               -> "1,10.0,2,20.0,3,30.0,1,10.0",
+      "topsNoModsSurchargeReport_total"              -> "2,20.0,4,40.0,6,60.0,1,10.0",
+      "topsJustModsSurchargeReport_mods"             -> "1,10.0,2,20.0,3,30.0,1,10.0",
+      "opsDesNoModsSurchargeReport_p800"             -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsDesNoModsSurchargeReport_simpleAssessment" -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsDesNoModsSurchargeReport_cgt"              -> "1,10.0,2,20.0,3,30.0,0,0",
+      "opsDesNoModsSurchargeReport_pngr"             -> "1,10.0,2,20.0,3,30.0,1,10.0",
+      "opsDesNoModsSurchargeReport_total"            -> "4,40.0,8,80.0,12,120.0,1,10.0",
+      "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0,1,10.0"
+    ),
     "hts_verification_email" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
@@ -1978,8 +2008,19 @@ object TemplateParams {
       "schemeName"         -> "Smith Harper pension scheme",
       "authorisingPsaName" -> "Nigel Robert Smith"
     ),
+    "pods_authorise_psp" -> Map(
+      "psaInvitor" -> "Jane Doe",
+      "pspInvitee" -> "Joe Bloggs",
+      "schemeName" -> "XYZ PENSION SCHEME"
+    ),
+    "pods_psa_deauthorise_psp" -> Map(
+      "psaName"    -> "Bill Bloggs",
+      "pspName"    -> "Jane Doe",
+      "schemeName" -> "Smith Harper pension scheme"
+    ),
     "dac6_registration_successful" -> Map(
-      "name" -> "Joe Bloggs"
+      "name"   -> "Joe Bloggs",
+      "dac6ID" -> "XXDAC000012345"
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
@@ -2004,6 +2045,20 @@ object TemplateParams {
       "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
       "completionDate"         -> "22 March 2019"
+    ),
+    "mods_import_declaration" -> Map(
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsCountry_0"            -> "Spain",
+      "goodsPrice_0"              -> "150, Euro (EUR)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "eori"                      -> "GB123456789000000"
     )
   )
 }

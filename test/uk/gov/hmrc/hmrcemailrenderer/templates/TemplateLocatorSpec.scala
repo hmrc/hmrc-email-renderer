@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -111,7 +111,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "SEISS",
         "GVMS",
         "EOTHO",
-        "Eori Common Component"
+        "Eori Common Component",
+        "MODS"
       )
     }
 
@@ -298,8 +299,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_payment_failed",
         "seiss_payment_failed_cy",
         "seiss_received_confirmation",
-        "seiss_phase_2_previously_claimed_stagger",
-        "seiss_phase_2_previously_claimed_stagger_cy",
+        "seiss_phase_3_previously_claimed_stagger",
+        "seiss_phase_3_previously_claimed_stagger_cy",
         "vishing_code_submission",
         "cjrs_confirmation_submission",
         "csr_submission_confirmation",
@@ -535,6 +536,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "payment_successful_parcels",
         "recon_tps_report",
         "recon_tops_report",
+        "recon_surcharge_report",
         "ddi_migration_letter",
         "ddi_setup_dcs_alert",
         "ddi_setup_aa_dcs_alert",
@@ -575,10 +577,13 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_psp_amend",
         "pods_psp_de_auth_psp_individual",
         "pods_psp_de_auth_psp_company_partnership",
+        "pods_authorise_psp",
+        "pods_psa_deauthorise_psp",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
         "twoWayMessageUpdate",
+        "passengers_payment_confirmation",
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
         "newMessageAlert_CC07C_SM11C",
@@ -623,7 +628,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "complaint_consultation_code",
         "consultation_complaint_confirmation",
         "duty_deferment_account_confirmation",
-        "eat_out_help_out_confirmation"
+        "eat_out_help_out_confirmation",
+        "mods_import_declaration"
       )
     }
   }

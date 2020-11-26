@@ -1,24 +1,18 @@
 import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin.autoImport._
+import play.routes.compiler.InjectedRoutesGenerator
+import play.sbt.routes.RoutesKeys.routesGenerator
 import sbt.Keys._
 import sbt.Tests.{Group, SubProcess}
 import sbt._
-import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin._
-import play.sbt.routes.RoutesKeys.routesGenerator
-import play.routes.compiler.StaticRoutesGenerator
 import uk.gov.hmrc.ServiceManagerPlugin.Keys.itDependenciesList
+import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin._
 
 trait MicroService {
 
-  import uk.gov.hmrc._
-  import DefaultBuildSettings._
-  import uk.gov.hmrc.SbtAutoBuildPlugin
+  import TestPhases.oneForkedJvmPerTest
+  import uk.gov.hmrc.{SbtAutoBuildPlugin, _}
   import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin
   import uk.gov.hmrc.versioning.SbtGitVersioning
-
-  import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
-
-
-  import TestPhases.oneForkedJvmPerTest
 
   val appName: String
 
@@ -68,7 +62,7 @@ trait MicroService {
       )
     )
     .settings(resolvers += Resolver.jcenterRepo)
-    .settings(routesGenerator := StaticRoutesGenerator)
+    .settings(routesGenerator := InjectedRoutesGenerator)
 }
 
 private object TestPhases {
