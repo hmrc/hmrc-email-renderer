@@ -6,7 +6,7 @@ You have created an HMRC agent services account for @params("agencyName").
 
 Your account reference number is @params("arn")
 
-You will need this reference number to contact HMRC if you cannot access your agent services account.
+Make sure you have this with you if you contact us about your agent services account.
 
 What you can do next
 
@@ -15,6 +15,10 @@ To sign in to your agent services account, search GOV.UK for 'agent services acc
 You can use your new agent services account to access Making Tax Digital services and register a trust or estate.
 
 For a step-by-step guide to what you need to do for Making Tax Digital for VAT, search GOV.UK for 'Making Tax Digital for VAT as an agent'.
+
+To register your client's trust or estate, search GOV.UK for 'register a trust' or 'register an estate'.
+
+To find out more about services you can access with your agent services account, search GOV.UK for 'HMRC services for tax agents'.
 
 Why you got this email
 

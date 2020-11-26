@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.mandate
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, MessagePriority}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Mandate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
@@ -54,7 +54,7 @@ object MandateTemplates {
       templateId = "agent_removes_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
-      subject = "Your agent has removed you as a client",
+      subject = "Your agent removed you as a client",
       plainTemplate = txt.mandateAgentRemoves.f,
       htmlTemplate = html.mandateAgentRemoves.f,
       priority = Some(MessagePriority.Urgent)
@@ -94,5 +94,6 @@ object MandateTemplates {
       plainTemplate = txt.mandateAgentSelfAuthRemoves.f,
       htmlTemplate = html.mandateAgentSelfAuthRemoves.f,
       priority = Some(MessagePriority.Urgent)
-    ))
+    )
+  )
 }

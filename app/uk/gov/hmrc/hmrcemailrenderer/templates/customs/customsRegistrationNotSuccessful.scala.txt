@@ -11,7 +11,7 @@ Your EORI application @forOrgName(params) @onCompletionDate(params)has been unsu
 
 If you need help
 
-Phone the EORI support team on 0300 322 7067. This is available 8am to 6pm, Monday to Friday (closed bank holidays).
+Phone HMRC on 0300 200 3700. This is available 8am to 6pm, Monday to Friday (closed bank holidays).
 
 You can also find more information about this subject on GOV.UK.
 

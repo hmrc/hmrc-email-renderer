@@ -15,21 +15,25 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reminder to use fraud prevention headers") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reminder to provide fraud prevention headers") {
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("developerName")</p>
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Our API call logs show that between @params("fromDate") and @params("toDate") no fraud prevention headers were submitted from '@params("applicationName")' (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) API(s).
+        Our API call logs show that between @params("fromDate") and @params("toDate") no fraud prevention headers were submitted from @params("applicationName") (id: @params("applicationId")) to our VAT Making Tax Digital (MTD) APIs.
     </p>
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Supplying header information for our VAT (MTD) API is required by law.
+        We understand this is a difficult time due to coronavirus (COVID-19) but we still need to help protect your user's data. If you have developer capacity, it's important to start sending fraud prevention headers.
     </p>
 
-    <h2>What you must do next</h2>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        Make sure your application submits the correct fraud prevention headers immediately.
+        We'll continue to monitor API call logs and give you feedback every month to help you do this. We'd like to reassure you that we'll continue to accept VAT MTD calls, including headers that are incorrect or missing.
+    </p>
+
+    <h2>What you need to do</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        You need to send header data with every request made by your application. Currently, your application is missing all of the header data.
     </p>
     <ol>
         <li style="font-size: 19px; line-height: 1.315789474;">
@@ -42,19 +46,27 @@
             Read the specification to learn how your application must submit the correct fraud prevention headers.
         </li>
         <li style="font-size: 19px; line-height: 1.315789474;">
-            Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC’s fraud prevention specification.
+            Use the Test Fraud Prevention Headers API (found in the list of VAT (MTD) APIs on the API documentation page) to check that the fraud prevention headers submitted by your application meet the requirements of HMRC's fraud prevention specification.
         </li>
     </ol>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        We will continue to monitor API call logs every month and give you feedback to help you meet the legal requirements.
+        Supplying header information for our VAT (MTD) APIs is required by law.
+    </p>
+
+    <h2>Contacting us</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        Due to the coronavirus (COVID-19) pandemic, we're having to focus our resources on essential activities. We may not be able to help you with header queries as quickly as we usually do.
+    </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        If you need to contact us, email SDSTeam@@hmrc.gov.uk
     </p>
     
     <h2>Why you have received this email</h2>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        This email address is registered as the point of contact for the application '@params("applicationName")'.
+        This email address is registered as the point of contact for the application @params("applicationName").
     </p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-        If you are not the right person to receive this email please forward it to the relevant person in your organisation.
+        If you are not the right person to receive this email, please forward it to the relevant person in your organisation.
     </p>
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Transaction Monitoring Team</p>

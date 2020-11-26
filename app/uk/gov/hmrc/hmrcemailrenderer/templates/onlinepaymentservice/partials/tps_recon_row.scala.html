@@ -17,4 +17,9 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(tpsRow: Array[String])
 
-<td>@tpsRow(0)</td><td>@formatAmountInPence(tpsRow(1))</td><td>@tpsRow(2)</td><td>@formatAmountInPence(tpsRow(3))</td><td>@tpsRow(4)</td><td>@formatAmountInPence(tpsRow(5))</td>
+<td style="text-align: center;">@tpsRow(0)</td>
+<td style="text-align: center;">@formatAmountInPence(tpsRow(1))</td>
+<td style="text-align: center;">@tpsRow(2)</td>
+<td style="text-align: center;">@formatAmountInPence(tpsRow(3))</td>
+<td style="text-align: center;">@tpsRow(4)</td>
+<td style="text-align: center;">@formatAmountInPence(tpsRow(5))</td>

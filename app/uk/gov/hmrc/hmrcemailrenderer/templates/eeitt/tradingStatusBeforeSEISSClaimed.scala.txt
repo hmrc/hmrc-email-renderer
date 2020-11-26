@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+
+You confirmed whether you stopped trading before you claimed Self-Employment Income Support
+
+Dear @params.get("customerName")
+
+Your submission reference is: @params.get("submissionReference")
+
+We received your confirmation about your trading status when you claimed a Self-Employment Income Support Scheme grant.
+
+What happens next
+
+If you were trading when you claimed, we may contact you within 60 days to ask you to provide evidence of your trading.
+
+If you had stopped trading before you claimed we will contact you within 60 days to tell you how to either:
+
+- provide more information if we need it
+- pay any amount due
+
+Do not reply to this email, or call HMRC. We will contact you when we have more information.
+
+From the Self-Employment Income Support Scheme team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

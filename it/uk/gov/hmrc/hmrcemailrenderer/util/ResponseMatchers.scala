@@ -16,8 +16,8 @@
 
 package uk.gov.hmrc.play.http.test
 
-import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
-import org.scalatest.matchers.{HavePropertyMatchResult, HavePropertyMatcher}
+import org.scalatest.concurrent.{ IntegrationPatience, ScalaFutures }
+import org.scalatest.matchers.{ HavePropertyMatchResult, HavePropertyMatcher }
 import play.api.libs.json._
 import play.api.libs.ws.WSResponse
 
@@ -58,14 +58,13 @@ trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
   def jsonContent(expected: String) = new HavePropertyMatcher[Future[WSResponse], JsValue] {
     val expectedAsJson = Json.parse(expected)
 
-    def apply(response: Future[WSResponse]) = {
+    def apply(response: Future[WSResponse]) =
       HavePropertyMatchResult(
         matches = response.futureValue.json == expectedAsJson,
         propertyName = "Response Content JSON",
         expectedValue = expectedAsJson,
         actualValue = response.futureValue.json
       )
-    }
   }
 
   /**
@@ -73,17 +72,18 @@ trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
     * Enables syntax like:
     * <code>resource("/write/audit").post(validAuditRequest) should <b>have (jsonProperty (__ \ "valid", true))</b></code>
     */
-  def jsonProperty[E](path: JsPath, expected: E)(implicit eReads: Reads[E]) = new HavePropertyMatcher[Future[WSResponse], String] {
-    def apply(response: Future[WSResponse]) = HavePropertyMatchResult(
-      matches = response.futureValue.json.validate(path.read[E]).map(_ == expected).getOrElse(false),
-      propertyName = "Response JSON at path " + path,
-      expectedValue = expected.toString,
-      actualValue = {
-        val json = response.futureValue.json
-        json.validate(path.read[E]).map(_.toString).getOrElse(json.toString)
-      }
-    )
-  }
+  def jsonProperty[E](path: JsPath, expected: E)(implicit eReads: Reads[E]) =
+    new HavePropertyMatcher[Future[WSResponse], String] {
+      def apply(response: Future[WSResponse]) = HavePropertyMatchResult(
+        matches = response.futureValue.json.validate(path.read[E]).map(_ == expected).getOrElse(false),
+        propertyName = "Response JSON at path " + path,
+        expectedValue = expected.toString,
+        actualValue = {
+          val json = response.futureValue.json
+          json.validate(path.read[E]).map(_.toString).getOrElse(json.toString)
+        }
+      )
+    }
 
   /**
     * Checks if a property is defined

@@ -17,24 +17,23 @@
 package preview
 
 import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{Body, MessagePriority, MessageTemplate, TemplateRenderFailure}
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ServiceIdentifier, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ ServiceIdentifier, TemplateLocator }
 import uk.gov.hmrc.play.test.UnitSpec
 
-class PreviewSpec extends UnitSpec with OneAppPerSuite {
+class PreviewSpec extends UnitSpec with GuiceOneAppPerSuite {
 
   "createPreviewGroup" should {
     "generate a  preview item for each template id that resolves to a message template" in {
       val templates: Seq[MessageTemplate] = List("does not exist", "also does not exist").map { id =>
-        MessageTemplate.create(id, "", ServiceIdentifier.SelfAssessment, id, (_ => ???): Body.Plain, (_ => ???): Body.Html)
+        MessageTemplate
+          .create(id, "", ServiceIdentifier.SelfAssessment, id, (_ => ???): Body.Plain, (_ => ???): Body.Html)
       }
-
       val result = PreviewGroup.createPreviewGroup("Self Assessment", templates)
-
       result.name shouldBe "Self Assessment"
-      result.items should contain only(
+      result.items should contain only (
         PreviewListItem("does not exist", "does not exist", MessagePriority.Standard, Map.empty),
         PreviewListItem("also does not exist", "also does not exist", MessagePriority.Standard, Map.empty)
       )
@@ -50,17 +49,16 @@ class PreviewSpec extends UnitSpec with OneAppPerSuite {
 
     def allTemplates = TemplateLocator.all
 
-    forAll(Table.apply("templateId", allTemplates: _*)) { mt: MessageTemplate =>
+    val templateRenderer = app.injector.instanceOf[TemplateRenderer]
 
+    forAll(Table.apply("templateId", allTemplates: _*)) { mt: MessageTemplate =>
       s"be able to render ${mt.templateId}" in {
 
         val parameters = TemplateParams.exampleParams.getOrElse(mt.templateId, Map.empty)
-        TemplateRenderer.render(mt.templateId, parameters) should not matchPattern {
+        templateRenderer.render(mt.templateId, parameters) should not matchPattern {
           case Left(TemplateRenderFailure(reason)) =>
         }
       }
     }
-
   }
-
 }

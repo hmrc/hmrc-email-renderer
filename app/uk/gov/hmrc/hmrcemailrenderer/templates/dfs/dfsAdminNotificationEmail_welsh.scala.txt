@@ -9,4 +9,4 @@ Adolygwch gyflwyniadau wedi’u parcio cyn pen 5 diwrnod o’r e-bost cyntaf. Ce
  
 Oddi wrth dîm gweinyddu Budd-dal Plant CThEM
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

@@ -16,13 +16,13 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.lisa
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.LifetimeISA
 
 object LisaTemplates {
   val templates = Seq(
-       MessageTemplate.create(
+    MessageTemplate.create(
       templateId = "lisa_application_submit",
       fromAddress = govUkTeamAddress,
       service = LifetimeISA,
@@ -30,6 +30,5 @@ object LisaTemplates {
       plainTemplate = txt.applicationSubmitted.f,
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Urgent)
-
     ))
 }

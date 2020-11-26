@@ -1,0 +1,36 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
+<h1 style="margin: 0 0 30px; font-size: 36px;">
+    You told HMRC that @params.get("companyName") is not required to register for Making Tax Digital for VAT</h1>
+
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params.get("customerName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We received your VAT declaration about your business and will now update our records.</p>
+<h2>
+    What happens next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    If your annual taxable turnover goes above £85,000, you must sign up to and use Making Tax Digital for VAT.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    <b>From 1 April 2022</b> you must use Making Tax Digital for VAT to submit your VAT returns – even if your annual taxable turnover is below £85,000.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    For more information, search GOV.UK for 'sign your business up for Making Tax Digital for VAT’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC VAT</p>
+}

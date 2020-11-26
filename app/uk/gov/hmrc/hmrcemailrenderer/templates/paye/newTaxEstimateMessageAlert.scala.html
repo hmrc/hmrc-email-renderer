@@ -17,21 +17,21 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have a tax code change") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("fullName")}</p>
-<p style="margin: 0 0 0px; font-size: 19px;">Your PAYE Income Tax records have recently changed. For security reasons we do not give the full details here but it could be because of a change in something like:</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your PAYE Income Tax records have recently changed, which means the amount of tax you pay will change.</p>
+<p style="margin: 0 0 0px; font-size: 19px;">For security reasons we do not give the full details here, but it could be because:</p>
 <ul>
-    <li>a job</li>
-    <li>your pay</li>
-    <li>your company benefits such as a company car</li>
-    <li>your pension</li></ul>
-<p style="margin: 0 0 30px; font-size: 19px;">This means that the amount of Income Tax you will pay will change.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You should check your details to make sure they are right. This is so you pay the right amount of Income Tax.</p>
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Check your details</strong></p>
-<p style="margin: 0 0 30px; font-size: 19px;">Sign in to your Personal Tax Account and go to the 'Pay As You Earn (PAYE)' section.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">For security reasons we have not included a link in this email. To get to your Personal Tax Account search for 'HMRC Personal Tax Account'.</p>
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Signing in</strong></p>
-<p style="margin: 0 0 30px; font-size: 19px;">Use your Government Gateway or Verify details to sign in to your Personal Tax Account.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You should have access to these as you have already used the service to choose to receive emails.</p>
+    <li>your job changed</li>
+    <li>your pay changed</li>
+    <li>your company benefits, such as a company car changed</li>
+    <li>your pension changed</li></ul>
+<p style="margin: 30px 0 30px; font-size: 19px;"><strong>How to check your details to make sure you pay the right amount of tax</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘personal tax account’, sign in and go to the ‘Pay As You Earn (PAYE)’ section.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you sign in using a business tax account, you may be able to use it to access your personal tax account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>If you do not have a personal tax account</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">You need to set one up before you can see your tax code change.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Personal tax account: sign in or set up’.</p>
 <h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Why you got this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">You got this email because you've chosen to receive email updates instead of letters by post.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons we have not included any links in this email.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Check your Income Tax</p>
 }

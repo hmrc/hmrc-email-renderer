@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.cds
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CDS
 
@@ -26,18 +26,20 @@ object cdsTestTemplates {
     MessageTemplate.create(
       templateId = "cdsTestTemplate",
       fromAddress = FromAddress.noReply("CDS Test Email"),
-      service  = CDS,
+      service = CDS,
       subject = "CDS Test Email",
       plainTemplate = txt.cdsTestTemplate.f,
       htmlTemplate = html.cdsTestTemplate.f,
-      priority = Some(MessagePriority.Urgent)),
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
-      templateId ="cdsEmailTemplate",
+      templateId = "cdsEmailTemplate",
       fromAddress = FromAddress.noReply("CDS Email"),
       service = CDS,
       subject = "CDS Email",
       plainTemplate = txt.cdsEmailTemplate.f,
       htmlTemplate = html.cdsEmailTemplate.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }

@@ -16,10 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.htsreminder
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.HelpToSave
-
 
 object HtsReminderTemplates {
 
@@ -31,6 +30,7 @@ object HtsReminderTemplates {
       subject = "Remember to save this month",
       plainTemplate = txt.htsReminderEmail.f,
       htmlTemplate = html.htsReminderEmail.f,
-      priority = Some(MessagePriority.Urgent))
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 }

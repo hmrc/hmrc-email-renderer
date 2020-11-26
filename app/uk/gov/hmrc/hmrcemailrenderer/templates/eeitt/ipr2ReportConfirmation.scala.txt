@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You reported goods that infringe intellectual property rights
+
+Dear @params.get("customerName")
+
+HMRC received your report of goods which infringe intellectual property rights.
+
+What happens next
+
+We will now review the details you have given us, then contact you at this email address.
+
+Why you are receiving this email
+
+We send a confirmation email for reports of goods that infringe intellectual property rights.
+
+From HMRC Intellectual Property Rights team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

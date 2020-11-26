@@ -17,8 +17,8 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
 import uk.gov.hmrc.lingua.NameCase
-import Salutation.{EnglishSalutation, WelshSalutation}
-import DefaultName.{DefaultEnglishName, DefaultWelshName}
+import Salutation.{ EnglishSalutation, WelshSalutation }
+import DefaultName.{ DefaultEnglishName, DefaultWelshName }
 
 object SalutationHelper {
 
@@ -26,28 +26,30 @@ object SalutationHelper {
     param.map { value =>
       val buffer = scala.collection.mutable.ArrayBuffer.empty[Char]
       value.toString.copyToBuffer(buffer)
-      buffer.zipWithIndex.map { case (char, idx) =>
-        if (idx == 0 || !buffer(idx - 1).isLetter) char.toUpper
-        else char.toLower
+      buffer.zipWithIndex.map {
+        case (char, idx) =>
+          if (idx == 0 || !buffer(idx - 1).isLetter) char.toUpper
+          else char.toLower
       }.mkString
     }
 
   def salutationFrom(params: Map[String, Any], isWelsh: Boolean = false): String = {
 
-    val defaultName = if(isWelsh) DefaultWelshName else DefaultEnglishName
-    val salutation = if(isWelsh) WelshSalutation else EnglishSalutation
+    val defaultName = if (isWelsh) DefaultWelshName else DefaultEnglishName
+    val salutation = if (isWelsh) WelshSalutation else EnglishSalutation
 
     val salutationParams = (
       capitalised(params.getNonEmpty("recipientName_title")),
       capitalised(params.getNonEmpty("recipientName_surname")),
-
-      params.getNonEmpty("recipientName_line1").map{line1 => NameCase.nc(s"${line1}")}
+      params.getNonEmpty("recipientName_line1").map { line1 =>
+        NameCase.nc(s"$line1")
+      }
     )
 
     salutationParams match {
       case (Some(title), Some(surname), _) => s"$salutation $title $surname"
-      case (_, _, Some(line1)) => s"$salutation $line1"
-      case _ => s"$salutation $defaultName"
+      case (_, _, Some(line1))             => s"$salutation $line1"
+      case _                               => s"$salutation $defaultName"
     }
   }
 
@@ -59,28 +61,30 @@ object SalutationHelper {
 
     salutationParams match {
       case List(Some(forename), Some(surname)) => s"$EnglishSalutation $forename $surname"
-      case _ =>  s"$EnglishSalutation $DefaultEnglishName"
+      case _                                   => s"$EnglishSalutation $DefaultEnglishName"
     }
   }
 
-  def saluteFullName(params: Map[String, Any]): String = {
+  def saluteFullName(params: Map[String, Any], isWelsh: Boolean = false): String = {
+    val defaultName = if (isWelsh) DefaultWelshName else DefaultEnglishName
+    val salutation = if (isWelsh) WelshSalutation else EnglishSalutation
+
     val salutationParams: List[Option[String]] = List(
       capitalised(params.getNonEmpty("recipientName_FullName"))
     )
 
     salutationParams match {
-      case List(Some(fullName)) => s"$EnglishSalutation $fullName"
-      case _ => s"$EnglishSalutation $DefaultEnglishName"
+      case List(Some(fullName)) => s"$salutation $fullName"
+      case _                    => s"$salutation $defaultName"
     }
   }
 
-  private implicit class ParamsOps(params: Map[String,Any]){
-    def getNonEmpty(key: String): Option[Any] = {
+  private implicit class ParamsOps(params: Map[String, Any]) {
+    def getNonEmpty(key: String): Option[Any] =
       params.get(key) match {
         case Some(value) if value.toString.trim.length > 0 => Some(value)
-        case _ => None
+        case _                                             => None
       }
-    }
   }
 }
 

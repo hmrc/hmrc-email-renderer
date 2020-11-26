@@ -16,9 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Tdq
+import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
 
 object TdqTemplates {
 
@@ -49,11 +50,48 @@ object TdqTemplates {
       plainTemplate = txt.tdqHeaderCompliancePartiallyCompliantValidConnectionMethod.f,
       htmlTemplate = html.tdqHeaderCompliancePartiallyCompliantValidConnectionMethod.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tdq_fph_report_non_compliant",
+      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
+      service = Tdq,
+      subject = extractNonCompliantSubject,
+      plainTemplate = txt.tdqFphReportNonCompliant.f,
+      htmlTemplate = html.tdqFphReportNonCompliant.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tdq_fph_report_heuristically_compliant",
+      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
+      service = Tdq,
+      subject = extractSubject,
+      plainTemplate = txt.tdqFphReportHeuristicallyCompliant.f,
+      htmlTemplate = html.tdqFphReportHeuristicallyCompliant.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
   private def extractSubject(params: Map[String, String]) =
-    params.get("applicationName")
-      .map(appName => s"Fraud prevention headers for '$appName'")
+    params
+      .get("applicationName")
+      .map(appName => s"Fraud prevention headers for $appName")
       .getOrElse(throw new RuntimeException("Missing parameter applicationName"))
+
+  private def extractNonCompliantSubject(params: Map[String, String]) = {
+    val reportParams = TdqFphReportParams(params)
+
+    val verb =
+      (
+        reportParams.hasAllHeadersMissing,
+        reportParams.hasInvalidConnectionMethod,
+        reportParams.hasErrors,
+        reportParams.hasWarnings) match {
+        case (true, _, _, _)         => "Submit"
+        case (_, true, false, false) => "Submit"
+        case (_, false, true, false) => "Correct"
+        case _                       => "Improve"
+      }
+
+    s"$verb fraud prevention headers for ${reportParams.applicationName}"
+  }
 }

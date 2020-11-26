@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
@@ -24,7 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
   * Templates used by the API Platform.
   */
 object ApiTemplates {
-  private def extractFromAddress(params : Map[String, String]): String = {
+  private def extractFromAddress(params: Map[String, String]): String = {
     val sender = params.get("developerHubTitle").getOrElse("Developer Hub")
     FromAddress.noReply(s"HMRC $sender")
   }
@@ -191,6 +191,15 @@ object ApiTemplates {
       plainTemplate = txt.apiRemovedClientSecretNotification.f,
       htmlTemplate = html.apiRemovedClientSecretNotification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiApplicationToBeDeletedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "We’re deleting your application",
+      plainTemplate = txt.apiApplicationToBeDeletedNotification.f,
+      htmlTemplate = html.apiApplicationToBeDeletedNotification.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

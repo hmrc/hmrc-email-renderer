@@ -16,16 +16,16 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine
 
-import play.api.Play
+import com.typesafe.config.ConfigFactory
 
 import scala.util.Try
 
 object TransactionEngineFromAddress {
-  import play.api.Play.current
 
   private val defaultDomain = "confirmation.tax.service.gov.uk"
 
-  lazy val replyDomain = Try(Play.configuration.getString("transactionEngine.fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
+  lazy val replyDomain =
+    Try(ConfigFactory.load().getString("transactionEngine.fromAddress.domain")).toOption.getOrElse(defaultDomain)
 
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 

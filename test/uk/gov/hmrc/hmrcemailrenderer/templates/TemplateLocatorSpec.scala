@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessageTemplate, Subject}
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -27,7 +27,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
   "The template locator when requested Welsh template" should {
 
     "return Welsh version of template if it exists" in new TestCase {
-      templateLocatorWithWelsh.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2_cy"
+      templateLocatorWithWelsh
+        .findTemplate("template-templateGroup-1-2_cy")
+        .get
+        .templateId shouldBe "template-templateGroup-1-2_cy"
     }
     "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
       templateLocator.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2"
@@ -41,7 +44,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
 
     "loop through all groups and return the first template matching the provided template id" in new TestCase {
       templateLocator.findTemplate("template-templateGroup-1-2").get.templateId shouldBe "template-templateGroup-1-2"
-      templateLocator.findTemplate("template-templateGroup-1-2").get.fromAddress.apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
+      templateLocator
+        .findTemplate("template-templateGroup-1-2")
+        .get
+        .fromAddress
+        .apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
       templateLocator.findTemplate("template-templateGroup-1-2").get.service shouldBe SelfAssessment
     }
 
@@ -50,13 +57,14 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
     }
 
     "enumerate all titles" in {
-      TemplateLocator.templateGroups.keys should contain only(
+      TemplateLocator.templateGroups.keys should contain only (
         "Agent",
         "API Platform",
         "Self Assessment",
         "AMLS",
         "Passcodes",
         "TAMC",
+        "DAC6",
         "DFS",
         "Digital Contact VAT",
         "Digital Tariffs",
@@ -99,12 +107,19 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Parcels",
         "Customs Financials",
         "Cgtpd",
-        "TDQ"
+        "TDQ",
+        "SEISS",
+        "GVMS",
+        "EOTHO",
+        "Eori Common Component",
+        "MODS"
       )
     }
 
     "enumerate all template identifiers" in {
-      TemplateLocator.all.map(_.templateId) should contain only(
+      TemplateLocator.all.map(_.templateId) should contain only (
+        "email_verification_passcode",
+        "email_verification_passcode_welsh",
         "overseas_application_rejected",
         "overseas_application_accepted",
         "overseas_application_received",
@@ -112,6 +127,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "client_accepted_authorisation_request",
         "client_expired_authorisation_request",
         "agent_services_account_created",
+        "agent_services_account_created_cy",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
@@ -131,10 +147,14 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "apiStatusChangedNotification",
         "apiAddedClientSecretNotification",
         "apiRemovedClientSecretNotification",
+        "apiApplicationToBeDeletedNotification",
         "changeOfEmailAddress",
         "changeOfEmailAddress_cy",
         "verifyEmailAddress",
         "verifyEmailAddress_cy",
+        "digitalOptInConfirmation_BTA",
+        "digitalOptInConfirmation_PTA",
+        "digitalOptInConfirmation_PTA_cy",
         "digitalOptOutConfirmation",
         "digitalOptOutConfirmation_cy",
         "changeOfEmailAddressNewAddress",
@@ -239,6 +259,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "adr_confirmation_submission",
         "air597_return_confirmation",
         "confirmationCode_confirmation_submission",
+        "ipr1_confirmation_submission",
+        "ipr2_confirmation_submission",
+        "ipr3_confirmation_submission",
+        "seiss_repay_submission",
         "c117_application_confirmation",
         "c118_section1_part1_application_confirmation",
         "c118_section1_part2_application_confirmation",
@@ -264,6 +288,21 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "civQualifying_code_submission",
         "civTransparency_code_submission",
         "spbp_code_submission",
+        "cjrs_code_submission",
+        "seiss_code_submission",
+        "seiss_eligibility_submission",
+        "seiss_new_child_submission",
+        "seiss_grant_submission",
+        "seiss_scheme_open",
+        "seiss_processing_grant",
+        "seiss_processing_grant_cy",
+        "seiss_payment_failed",
+        "seiss_payment_failed_cy",
+        "seiss_received_confirmation",
+        "seiss_phase_3_previously_claimed_stagger",
+        "seiss_phase_3_previously_claimed_stagger_cy",
+        "vishing_code_submission",
+        "cjrs_confirmation_submission",
         "csr_submission_confirmation",
         "cet_email_confirmation",
         "gss_email_confirmation",
@@ -271,6 +310,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cash_declaration_EU",
         "cash_declaration_UK",
         "ccg1_confirmation_submission",
+        "dan_waiver_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
@@ -495,6 +535,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "payment_successful_cy",
         "payment_successful_parcels",
         "recon_tps_report",
+        "recon_tops_report",
+        "recon_surcharge_report",
         "ddi_migration_letter",
         "ddi_setup_dcs_alert",
         "ddi_setup_aa_dcs_alert",
@@ -505,6 +547,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ddi_08_alert_aa",
         "ddi_advance_notice",
         "dd_email_verifcation",
+        "sdds_ddi_setup_dcs_alert",
+        "sdds_ddi_amended_dcs_alert",
+        "sdds_ddi_cancelled_dcs_alert",
+        "sdds_ddi_reminder_dcs_alert",
+        "sdds_ddi_unpaid_dcs_alert",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
@@ -522,9 +569,18 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_scheme_register",
         "pods_psa_register",
         "pods_psa_invited",
+        "pods_file_aft_return",
+        "pods_aft_amended_return_decrease",
+        "pods_aft_amended_return_no_change",
+        "pods_aft_amended_return_increase",
+        "pods_psp_register",
+        "pods_psp_amend",
+        "pods_authorise_psp",
+        "pods_psa_deauthorise_psp",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
+        "twoWayMessageUpdate",
         "passengers_payment_confirmation",
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
@@ -540,14 +596,38 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_financials_historic_c79_certificate",
         "customs_financials_new_postponed_vat_notification",
         "cgtpd_email_verification",
+        "cgtpd_email_verification_cy",
         "tdq_compliance_all_required_headers_missing",
         "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
         "tdq_compliance_partially_compliant_valid_connection_method",
+        "tdq_fph_report_non_compliant",
+        "tdq_fph_report_heuristically_compliant",
         "cgtpd_account_created",
+        "cgtpd_account_created_cy",
         "cgtpd_private_beta_access",
         "dst_registration_received",
         "dst_registration_accepted",
-        "cgtpd_submission_confirmation"
+        "cgtpd_submission_confirmation",
+        "cgtpd_submission_confirmation_cy",
+        "gms_enrolment_confirmation",
+        "dac6_registration_successful",
+        "discounted_dining_payment_sent",
+        "discounted_dining_payment_sent_cy",
+        "ipr1_code",
+        "ipr2_code",
+        "ipr3_code",
+        "vat_declaration_confirmation",
+        "ecc_subscription_successful",
+        "ecc_subscription_successful_cy",
+        "ecc_subscription_not_successful",
+        "ecc_subscription_not_successful_cy",
+        "trading_status_before_seiss_claimed",
+        "settlement_request",
+        "complaint_consultation_code",
+        "consultation_complaint_confirmation",
+        "duty_deferment_account_confirmation",
+        "eat_out_help_out_confirmation",
+        "mods_import_declaration"
       )
     }
   }
@@ -565,12 +645,17 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
     }
 
     val templateLocator = new TemplateLocator {
-      override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
+      override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
+        messageTemplates(s"templateGroup-$i")
+      }
     }
 
     val templateLocatorWithWelsh = new TemplateLocator {
-      val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i => messageTemplates(s"templateGroup-$i") }
-      override lazy val all: Seq[MessageTemplate] = allEnglish ++ allEnglish.map(t => t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
+      val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
+        messageTemplates(s"templateGroup-$i")
+      }
+      override lazy val all: Seq[MessageTemplate] = allEnglish ++ allEnglish.map(t =>
+        t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
     }
   }
 

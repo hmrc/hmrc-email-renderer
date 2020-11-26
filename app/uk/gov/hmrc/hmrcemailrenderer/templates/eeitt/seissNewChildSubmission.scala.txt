@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You asked HMRC to verify information about a child
+
+Dear @params.get("customerName")
+
+@params.get("serviceName")
+
+@params.get("slaDetails")
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the @params.get("serviceTeamName")
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
