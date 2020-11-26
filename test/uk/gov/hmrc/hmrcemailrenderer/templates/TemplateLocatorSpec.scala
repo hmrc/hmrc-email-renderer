@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -111,7 +111,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "SEISS",
         "GVMS",
         "EOTHO",
-        "Eori Common Component"
+        "Eori Common Component",
+        "MODS"
       )
     }
 
@@ -298,8 +299,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_payment_failed",
         "seiss_payment_failed_cy",
         "seiss_received_confirmation",
-        "seiss_phase_2_previously_claimed_stagger",
-        "seiss_phase_2_previously_claimed_stagger_cy",
+        "seiss_phase_3_previously_claimed_stagger",
+        "seiss_phase_3_previously_claimed_stagger_cy",
         "vishing_code_submission",
         "cjrs_confirmation_submission",
         "csr_submission_confirmation",
@@ -625,7 +626,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "complaint_consultation_code",
         "consultation_complaint_confirmation",
         "duty_deferment_account_confirmation",
-        "eat_out_help_out_confirmation"
+        "eat_out_help_out_confirmation",
+        "mods_import_declaration"
       )
     }
   }
