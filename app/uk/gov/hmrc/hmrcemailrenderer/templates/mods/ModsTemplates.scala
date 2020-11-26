@@ -30,6 +30,15 @@ object ModsTemplates {
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "mods_export_declaration",
+      fromAddress = govUkTeamAddress,
+      service = MODS,
+      subject = "Declaration for commercial goods leaving Great Britain",
+      plainTemplate = txt.mods_export_declaration.f,
+      htmlTemplate = html.mods_export_declaration.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
