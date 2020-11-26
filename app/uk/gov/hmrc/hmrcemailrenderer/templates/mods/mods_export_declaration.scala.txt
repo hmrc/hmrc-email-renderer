@@ -1,4 +1,4 @@
-@(params: Map[String, Any])You declared commercial goods you are taking out of the UK
+@(params: Map[String, Any])You declared commercial goods you are taking out of Great Britain
 @goodsGrid = @{
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
@@ -11,7 +11,7 @@
 }
 Dear @params("nameOfPersonCarryingGoods")
 
-We received your declaration for the commercial goods you are taking out of the UK in your baggage or small vehicle.
+We received your declaration for the commercial goods you are taking out of Great Britain in your baggage or small vehicle.
 
 Your declaration reference is: @params("declarationReference")
 
