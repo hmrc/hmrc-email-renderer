@@ -14,4 +14,4 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any], default: String = "")@params.get("serviceName").map(_.toString).getOrElse(default)
+@(params: Map[String, Any], default: String = "") @Html(params.get("serviceName").map(_.toString).getOrElse(default))
