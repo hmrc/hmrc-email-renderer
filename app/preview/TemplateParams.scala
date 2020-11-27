@@ -1818,6 +1818,9 @@ object TemplateParams {
       "pspName"    -> "Jane Doe",
       "schemeName" -> "Smith Harper pension scheme"
     ),
+    "pods_psp_deauthorise_self" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
