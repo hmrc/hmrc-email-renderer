@@ -37,17 +37,6 @@ import scala.concurrent.Future
 
 class PreferencesConnectorSpec extends UnitSpec with MockitoSugar with GuiceOneAppPerSuite {
 
-  /*
-  override def app(): Application =
-    new GuiceApplicationBuilder()
-      .overrides(new AbstractModule with ScalaModule {
-        override def configure(): Unit = {
-        }
-      })
-      .configure("appName" -> "hmrc-email-renderer")
-      .build()
-   */
-
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {
       when(httpClient.GET[Language](eqTo(url))(any(), any(), any())).thenReturn(Future.successful(Language.English))
