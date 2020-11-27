@@ -1,7 +1,8 @@
 @(params: Map[String, Any])
 You have registered for the DAC6 service
 Dear @{params("name")}
-You can now submit a disclosure.
+Your DAC6 User ID is: @{params("dac6ID")}
+You can now disclose cross-border arrangements.
 Search for ‘DAC6’ on GOV.UK and sign in to the service.
 For security reasons, we have not included a link in this email.
 From HMRC DAC6 service
