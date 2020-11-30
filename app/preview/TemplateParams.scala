@@ -1500,7 +1500,13 @@ object TemplateParams {
     ),
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
-    ),
+    )
+  )
+}
+object TemplateParams2 {
+
+  val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
+  val exampleParams = Map(
     "payment_successful" -> Map(
       "taxType"          -> "Self Assessment",
       "taxReference"     -> "1234567890K",
