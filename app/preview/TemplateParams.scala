@@ -328,6 +328,94 @@ object TemplateParams {
     "tamc_recipient_rejects_retro_yr" -> Map(
       "full_name" -> "Mr Joe Bloggs"
     ),
+    "tamc_update_cancel_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs",
+      "startDate" -> "6 April 2016",
+      "endDate"   -> "5 April 2017"
+    ),
+    "tamc_update_reject_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs"
+    ),
+    "tamc_update_divorce_transferor_boy_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs",
+      "startDate" -> "6 April 2016",
+      "endDate"   -> "5 April 2017"
+    ),
+    "tamc_update_divorce_recipient_eoy_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs",
+      "startDate" -> "6 April 2016",
+      "endDate"   -> "5 April 2017"
+    ),
+    "tamc_current_year_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs"
+    ),
+    "tamc_retro_year_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs"
+    ),
+    "tamc_current_retro_year_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs"
+    ),
+    "tamc_transferor_divorce_previous_yr_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs",
+      "startDate" -> "6 April 2016",
+      "endDate"   -> "5 April 2017"
+    ),
+    "tamc_recipient_divorce_previous_yr_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs",
+      "endDate"   -> "5 April 2016"
+    ),
+    "tamc_transferor_divorce_current_yr_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs",
+      "startDate" -> "6 April 2016",
+      "endDate"   -> "5 April 2017"
+    ),
+    "tamc_recipient_rejects_retro_yr_cy" -> Map(
+      "full_name" -> "Mr Joe Bloggs"
+    ),
+    "dfs_submission_success_r39_2015" -> Map(
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_r39_2015_welsh" -> Map(
+      "name"                -> "Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_cis_2015" -> Map(
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_cis_2015_welsh" -> Map(
+      "name"                -> "Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_sptu_2015" -> Map(
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_sptu_2015_welsh" -> Map(
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "1234"
+    ),
+    "dfs_submission_success_generic_2015" -> Map(
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true",
+      "turnAroundTime"      -> "35 days"
+    ),
+    "dfs_submission_success_generic_2015_welsh" -> Map(
+      "subject"             -> "Test Subject",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true",
+      "turnAroundTime"      -> "35 days"
+    ),
     "dfs_submission_success_generic_2017" -> Map(
       "subject"             -> "Test Subject",
       "greeting"            -> "Mr Joe Bloggs",
@@ -548,6 +636,108 @@ object TemplateParams {
     "register_your_company_register_paye_confirmation_new_tax_year" -> Map(
       "companyName"     -> "Foo bar Wizz And Bang Ltd",
       "referenceNumber" -> "reference-test-12345678910"
+    ),
+    "investment_tax_relief_verification_email" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "investment_tax_relief_confirmation_email" -> Map(
+      "companyName"         -> "Test company name",
+      "date"                -> "09-09-2999",
+      "formBundleRefNumber" -> "XAFORMBUNDLEREF"
+    ),
+    "investment_tax_relief_no_docs_confirmation_email" -> Map(
+      "companyName"         -> "Test company name",
+      "date"                -> "09-09-2999",
+      "formBundleRefNumber" -> "XAFORMBUNDLEREF"
+    ),
+    "annual_tax_summaries_message_alert" -> (newMessageAlert_Names + ("taxYear" -> "2014-15")),
+    "indefensible_upgrades"              -> newMessageAlert_Names,
+    "indefensible_upgrades_with_dates"   -> newMessageAlert_Names,
+    "client_approves_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_activates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_rejects_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_removes_mandate" -> Map(
+      "service"      -> testServiceUpdate,
+      "uniqueAuthNo" -> "123456789"
+    ),
+    "client_removes_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "client_cancels_active_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_self_auth_activates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "agent_self_auth_deactivates_mandate" -> Map(
+      "service" -> testServiceUpdate
+    ),
+    "offpayroll_private_beta_invitation" -> Map(
+      "name"             -> "Mr Joe Bloggs",
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
+    "gg_userid_notification" -> Map(
+      "user_id"   -> "914657894302",
+      "full_name" -> "Joe Bloggs"
+    ),
+    "2SV_reset_confirmation" -> Map(
+      "full_name" -> "Joe Bloggs"
+    ),
+    "password_change_confirmation" -> Map(
+      "full_name" -> "Joe Bloggs"
+    ),
+    "customs_registration_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "15 March 2019"
+    ),
+    "customs_registration_not_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "15 March 2019"
+    ),
+    "customs_migrate_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "customs_migrate_not_successful" -> Map(
+      "recipientName_FullName" -> "Alex Smith",
+      "recipientOrgName"       -> "SHD Fashion House",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "customs_declaration_success" -> Map(
+      "details" -> "declaration success details will appear here"
+    ),
+    "customs_payment_required" -> Map(
+      "details" -> "payment required details will appear here"
+    ),
+    "customs_payment_success" -> Map(
+      "details" -> "payment success details will appear here"
+    ),
+    "customs_validation_success" -> Map(
+      "details" -> "validation success details will appear here"
+    ),
+    "customs_pull_notifications_warning" -> Map(
+      "queueThreshold"       -> "1000",
+      "clientId_0"           -> "3d34882b-0e73-4aaa-b156-afc037208871",
+      "notificationTotal_0"  -> "1001",
+      "oldestNotification_0" -> "2011-08-08T15:38:09.747+01:00",
+      "latestNotification_0" -> "2018-08-08T10:02:10.627+01:00",
+      "clientId_1"           -> "3d34882b-0e73-4aaa-b156-afc037208872",
+      "notificationTotal_1"  -> "2001",
+      "oldestNotification_1" -> "2012-08-08T15:38:09.747+01:00",
+      "latestNotification_1" -> "2018-08-08T10:02:10.627+01:00",
+      "clientId_2"           -> "3d34882b-0e73-4aaa-b156-afc037208873",
+      "notificationTotal_2"  -> "3001",
+      "oldestNotification_2" -> "2013-08-08T15:38:09.747+01:00",
+      "latestNotification_2" -> "2018-08-08T10:02:10.627+01:00"
     ),
     "customs_push_notifications_warning" -> Map(
       "timestamp" -> "2018-07-05T09:08:12.831Z"
