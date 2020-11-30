@@ -2,7 +2,7 @@
 
 Annwyl @{params("name")}
 
-Cyfeirnod eich Ffurflen Dreth yw: @{params("submissionId")}
+Rydych wedi anfon Ffurflen Dreth Enillion Cyfalaf ar eiddo yn y DU i CThEM.
 
 Yr hyn sy’n rhaid i chi ei wneud nesaf
 
