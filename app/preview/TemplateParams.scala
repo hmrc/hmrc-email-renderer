@@ -368,6 +368,18 @@ object TemplateParams {
       "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation"  -> "true"
     ),
+    "dfs_submission_success_empty_turn_around_time_2020" -> Map(
+      "subject"             -> "Test Subject",
+      "heading"             -> "Test Heading",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree"      -> "If you've asked us to write to you, we'll send you a letter within 15 working days",
+      "paragraphFour"       -> "Some extra content for paragraph four...",
+      "warningInformation"  -> "true"
+    ),
     "dfs_admin_notification" -> Map.empty[String, String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
