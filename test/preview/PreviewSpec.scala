@@ -25,7 +25,7 @@ import uk.gov.hmrc.play.test.UnitSpec
 
 class PreviewSpec extends UnitSpec with GuiceOneAppPerSuite {
 
-  "createPreviewGroup" ignore {
+  "createPreviewGroup" should {
     "generate a  preview item for each template id that resolves to a message template" in {
       val templates: Seq[MessageTemplate] = List("does not exist", "also does not exist").map { id =>
         MessageTemplate
@@ -45,7 +45,7 @@ class PreviewSpec extends UnitSpec with GuiceOneAppPerSuite {
     }
   }
 
-  "The preview" ignore {
+  "The preview" should {
 
     def allTemplates = TemplateLocator.all
 
@@ -54,7 +54,9 @@ class PreviewSpec extends UnitSpec with GuiceOneAppPerSuite {
     forAll(Table.apply("templateId", allTemplates: _*)) { mt: MessageTemplate =>
       s"be able to render ${mt.templateId}" in {
 
-        val parameters = TemplateParams.exampleParams.getOrElse(mt.templateId, Map.empty)
+        val parameters = TemplateParams.exampleParams
+          .getOrElse(mt.templateId, TemplateParams2.exampleParams.getOrElse(mt.templateId, Map.empty))
+
         templateRenderer.render(mt.templateId, parameters) should not matchPattern {
           case Left(TemplateRenderFailure(reason)) =>
         }

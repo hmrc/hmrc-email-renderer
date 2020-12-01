@@ -61,7 +61,8 @@ object PreviewGroup {
     PreviewGroup(
       title,
       templates.map { template =>
-        val params = TemplateParams.exampleParams.getOrElse(template.templateId, Map.empty)
+        val params = TemplateParams.exampleParams
+          .getOrElse(template.templateId, TemplateParams2.exampleParams.getOrElse(template.templateId, Map.empty))
         val priority = template.priority.getOrElse(MessagePriority.Standard)
         PreviewListItem(template.templateId, template.subject(params), priority, params)
       }
