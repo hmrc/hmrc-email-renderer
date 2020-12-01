@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Northern Ireland Protocol
+You sent a Northern Ireland Protocol application
 
 Dear Customer
 
