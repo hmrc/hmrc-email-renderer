@@ -30,10 +30,17 @@
             @reportParams.fromDate and @reportParams.toDate do not meet the specification on the HMRC Developer Hub.
         </p>
 
+        <h2>Changes to the specification</h2>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            From feedback and suggestions, we've updated the fraud prevention specification. Version 3.0 includes new headers and formatting requirements. In these reports, you'll start to get warnings related to the changes.
+        </p>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            You have 6 months to implement changes that affect your application. From June 2021, warnings about the changes will become errors.
+        </p>
+
         <h2>What you need to do</h2>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Submitting header data for VAT (MTD) APIs is required by law. You'll find the fraud prevention specification
-            and the Test API on the HMRC Developer Hub.
+            Submitting header data for VAT (MTD) APIs is required by law. You'll find version 3.0 of fraud prevention specification and the Test Fraud Prevention Headers API on the HMRC Developer Hub.
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             To meet the specification, you need to:
@@ -41,7 +48,7 @@
         <ol>
             @if(reportParams.hasInvalidConnectionMethod) {
                 <li style="font-size: 19px; line-height: 1.315789474;">
-                    Go to the specification and select the correct connection method for your application.
+                    Go to the specification and select the correct connection method for your application. Check what has changed.
                     Your application has an invalid connection method in @reportParams.invalidConnectionMethodPercentage% of requests.
                 </li>
             }
@@ -62,13 +69,11 @@
                 </li>
             }
             <li style="font-size: 19px; line-height: 1.315789474;">
-                Use the Test API before you submit any headers. You need to check your data meets the specification and
-                is formatted correctly.
+                Use the Test Fraud Prevention Headers API before you submit any headers. You need to check your data meets the specification and is formatted correctly.
             </li>
         </ol>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            If the Test API shows that you're submitting the correct headers, check if your end users are using an outdated
-            version of your application.
+            If the Test Fraud Prevention Headers API shows that you're submitting the correct headers, check if your end users are using an outdated version of your application.
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             Most organisations are able to send all header data required for their connection method. If you're unable to
