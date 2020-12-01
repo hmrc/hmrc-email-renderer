@@ -16,14 +16,11 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.dac6
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DAC6
 
 object Dac6Templates {
-
-  private def extractID(params: Map[String, String]): String = params.getOrElse("disclosureID", "")
-  //  private def extractSubject(params: Map[String, String]): String = params.getOrElse("disclosureID", "")
 
   val templates = Seq(
     // REGISTRATION - REGISTRATION SUCCESSFUL
