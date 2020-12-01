@@ -2,7 +2,7 @@
 
 Northern Ireland Protocol
 
-Dear @params.get("customerName")
+Dear Customer
 
 This email confirms that you have told HMRC your business will operate under the terms of the Northern Ireland Protocol.
 
