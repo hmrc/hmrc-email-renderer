@@ -22,20 +22,20 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MODS
 
 object ModsTemplates {
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "mods_import_declaration",
       fromAddress = govUkTeamAddress,
       service = MODS,
-      subject = "Declaration and payment for commercial goods you bring into Great Britain",
+      subject = params => s"Import declaration and payment for commercial goods - ${params.get("declarationReference")}",
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "mods_export_declaration",
       fromAddress = govUkTeamAddress,
       service = MODS,
-      subject = "Declaration for commercial goods leaving Great Britain",
+      subject = params => s"Export declaration for commercial goods - ${params.get("declarationReference")}",
       plainTemplate = txt.mods_export_declaration.f,
       htmlTemplate = html.mods_export_declaration.f,
       priority = Some(MessagePriority.Standard)
