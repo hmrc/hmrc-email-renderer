@@ -217,6 +217,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "digital_tariffs_case_completed",
         "digital_tariffs_advice_request",
         "digital_tariffs_application_submitted",
+        "digital_tariffs_application_submitted_cy",
         "dfs_submission_success_r39_2015",
         "dfs_submission_success_r39_2015_welsh",
         "dfs_submission_success_cis_2015",

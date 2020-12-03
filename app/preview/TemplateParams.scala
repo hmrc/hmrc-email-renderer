@@ -1752,6 +1752,10 @@ object TemplateParams2 {
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "REFERENCE"
     ),
+    "digital_tariffs_application_submitted_cy" -> Map(
+      "recipientName_line1" -> "FULL NAME",
+      "reference"           -> "REFERENCE"
+    ),
     "newMessageAlert_2WSM-question" -> Map(
       "recipientName_line1" -> "Alex Brown"
     ),

@@ -1,0 +1,43 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Eich cais am Ddyfarniad Tariffau Uwch (ATaR)", isWelsh = true) {
+
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params, isWelsh = true)
+    <p>
+        Cawsom eich cais am Ddyfarniad Tariffau Uwch, gyda’r cyfeirnod: @params("reference")
+    </p>
+    <p>
+        Rydym yn ceisio anfon penderfyniadau o ran Dyfarniadau Tariffau Uwch (ATaR) cyn pen 30 diwrnod i ddyddiad derbyn y cais. Fodd bynnag, mae’n gallu cymryd hyd at 120 diwrnod, yn unol â chyfraith y DU.
+    </p>
+    <p>
+        Byddwn yn gwneud penderfyniad pan fydd yr holl wybodaeth angenrheidiol yn dod i law.
+    </p>
+    <h2>Samplau</h2>
+    <p>
+        Peidiwch ag anfon samplau atom yn ystod y pandemig coronafeirws. Os bydd angen sampl arnom, byddwn yn gofyn i chi ddarparu un.
+    </p>
+    <h2>Yr hyn y gallwch ei wneud nesaf</h2>
+    <p>
+        Nid yw cyfathrebu â ni drwy e-bost yn ddiogel, ac felly ni ddylid anfon unrhyw wybodaeth gyfrinachol drwy e-bost at ein tîm. Os byddwch yn dewis cysylltu â ni drwy e-bost, rydych yn derbyn y peryglon.
+    </p>
+    <p>
+        I wirio statws eich cais, neu i gael gwybodaeth am samplau, ewch i GOV.UK a chwilio am ‘Apply for an Advanced Tariff Ruling (ATaR)’.
+    </p>
+    <p>Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad yn yr e-bost hwn.</p>
+    <p>Oddi wrth y Gwasanaeth Dosbarthu Tariffau</p>
+}
