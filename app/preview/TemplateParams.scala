@@ -2034,32 +2034,32 @@ object TemplateParams2 {
       "dac6ID" -> "XXDAC000012345"
     ),
     "dac6_new_disclosure_confirmation" -> Map(
-      "name" -> "Joe New",
-      "dateSubmitted" -> "1 August 2020",
+      "name"          -> "Joe New",
       "arrangementID" -> "GBA20200101AAA123",
-      "disclosureID" -> "GBD20200101AAA123",
-      "messageRefID" -> "GB0000000XXX"
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 1 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
     ),
     "dac6_additional_disclosure_confirmation" -> Map(
-      "name" -> "Joe Add",
-      "dateSubmitted" -> "2 August 2020",
+      "name"          -> "Joe Add",
       "arrangementID" -> "GBA20200101AAA123",
-      "disclosureID" -> "GBD20200101AAA123",
-      "messageRefID" -> "GB0000000XXX"
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 2 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
     ),
     "dac6_replace_disclosure_confirmation" -> Map(
-      "name" -> "Joe Replace",
-      "dateSubmitted" -> "3 August 2020",
+      "name"          -> "Joe Replace",
       "arrangementID" -> "GBA20200101AAA123",
-      "disclosureID" -> "GBD20200101AAA123",
-      "messageRefID" -> "GB0000000XXX"
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 3 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
     ),
     "dac6_delete_disclosure_confirmation" -> Map(
-      "name" -> "Joe Delete",
-      "dateSubmitted" -> "4 August 2020",
+      "name"          -> "Joe Delete",
       "arrangementID" -> "GBA20200101AAA123",
-      "disclosureID" -> "GBD20200101AAA123",
-      "messageRefID" -> "GB0000000XXX"
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 4 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",

@@ -1,5 +1,4 @@
-@(params: Map[String, Any])
-You have submitted a disclosure for the DAC6 service
+@(params: Map[String, Any])You have submitted a disclosure for the DAC6 service
 
 Dear @{params("name")}
 

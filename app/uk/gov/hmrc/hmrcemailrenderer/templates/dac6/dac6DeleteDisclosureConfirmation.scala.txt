@@ -1,5 +1,4 @@
-@(params: Map[String, Any])
-You have successfully deleted a disclosure
+@(params: Map[String, Any])You have successfully deleted a disclosure
 
 Dear @{params("name")}
 

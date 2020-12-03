@@ -1,5 +1,4 @@
-@(params: Map[String, Any])
-You have reported additional information about a disclosure
+@(params: Map[String, Any])You have reported additional information about a disclosure
 
 Dear @{params("name")}
 
