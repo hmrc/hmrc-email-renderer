@@ -4,15 +4,13 @@ You sent a Northern Ireland Protocol application
 
 Dear Customer
 
-Thank you for contacting HMRC.
+This email confirms that you have told HMRC your business will be operating under the terms of the Northern Ireland Protocol for VAT.
 
-This email confirms that you have told HMRC your VAT registered business:
+This is because it will do one or more of the following:
 
-- Sells goods located in Northern Ireland at the time of sale, or
-- Receives goods in Northern Ireland from VAT registered EU businesses for the business purposes, or
-- Sells or moves goods from Northern Ireland to an EU Member State.
-
-This means it will be operating under the terms of the Northern Ireland Protocol for VAT.
+- sell goods located in Northern Ireland at the time of sale
+- receive goods in Northern Ireland from VAT registered EU businesses for business purposes
+- sell or move goods from Northern Ireland to an EU member state
 
 You do not need to take any further action.
 
