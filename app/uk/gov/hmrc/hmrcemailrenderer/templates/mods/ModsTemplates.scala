@@ -26,7 +26,13 @@ object ModsTemplates {
       templateId = "mods_import_declaration",
       fromAddress = govUkTeamAddress,
       service = MODS,
-      subject = params => s"Import declaration and payment for commercial goods - ${params.get("declarationReference")}",
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Import declaration"
+        } else {
+          "Declaration and payment for commercial goods you bring into Great Britain"
+        }
+      },
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
       priority = Some(MessagePriority.Standard)
@@ -35,7 +41,13 @@ object ModsTemplates {
       templateId = "mods_export_declaration",
       fromAddress = govUkTeamAddress,
       service = MODS,
-      subject = params => s"Export declaration for commercial goods - ${params.get("declarationReference")}",
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Export declaration"
+        } else {
+          "Declaration for commercial goods leaving Great Britain"
+        }
+      },
       plainTemplate = txt.mods_export_declaration.f,
       htmlTemplate = html.mods_export_declaration.f,
       priority = Some(MessagePriority.Standard)
