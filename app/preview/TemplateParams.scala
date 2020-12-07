@@ -2026,7 +2026,7 @@ object TemplateParams2 {
       "pspName"    -> "Jane Doe",
       "schemeName" -> "Smith Harper pension scheme"
     ),
-    "pods_psp_deauthorise_self" -> Map(
+    "pods_psp_deregister_self" -> Map(
       "pspName" -> "Jane Doe"
     ),
     "dac6_registration_successful" -> Map(
