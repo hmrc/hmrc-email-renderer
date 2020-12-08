@@ -2058,6 +2058,7 @@ object TemplateParams2 {
       "completionDate"         -> "22 March 2019"
     ),
     "mods_import_declaration" -> Map(
+      "emailTo"                   -> "BorderForce",
       "recipientName_FullName"    -> "Joe Bloggs",
       "declarationReference"      -> "ABC123",
       "dateOfDeclaration"         -> "11 November 2020, 4:22 pm",
@@ -2069,9 +2070,11 @@ object TemplateParams2 {
       "vat"                       -> "£30.91",
       "total"                     -> "£35.44",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     ),
     "mods_export_declaration" -> Map(
+      "emailTo"                   -> "BorderForce",
       "recipientName_FullName"    -> "Joe Bloggs",
       "declarationReference"      -> "ABC123",
       "dateOfDeclaration"         -> "26 November 2020, 4:22 pm",
@@ -2080,6 +2083,7 @@ object TemplateParams2 {
       "goodsDestination_0"        -> "Spain",
       "goodsPrice_0"              -> "£150",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     )
   )
