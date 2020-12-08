@@ -790,6 +790,15 @@ object EeittTemplates {
       plainTemplate = txt.eatOuttoHelpOutConfirmation.f,
       htmlTemplate = html.eatOuttoHelpOutConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ni_vat_Status_reporting_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC Northern Ireland Protocol: application received",
+      plainTemplate = txt.niVatStatusReporting.f,
+      htmlTemplate = html.niVatStatusReporting.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
