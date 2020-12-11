@@ -123,12 +123,12 @@ object PodsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "pods_psp_deauthorise_self",
+      templateId = "pods_psp_deregister_self",
       fromAddress = govUkTeamAddress,
       service = PODS,
       subject = "You are no longer a pension scheme practitioner",
-      plainTemplate = txt.pspDeauthorisedSelf.f,
-      htmlTemplate = html.pspDeauthorisedSelf.f,
+      plainTemplate = txt.pspDeregisteredSelf.f,
+      htmlTemplate = html.pspDeregisteredSelf.f,
       priority = Some(MessagePriority.Standard)
     )
   )
