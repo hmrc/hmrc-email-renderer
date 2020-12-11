@@ -6,6 +6,8 @@ Dear @params.get("customerName")
 
 HMRC received your request to protect intellectual property rights.
 
+Your submission reference is: @params.get("submissionReference")
+
 What happens next
 
 We will now review the details you have given us, then contact you at this email address.
