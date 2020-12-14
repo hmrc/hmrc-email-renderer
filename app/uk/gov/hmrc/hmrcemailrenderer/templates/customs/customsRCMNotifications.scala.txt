@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+
+Get Access CDS Rcm exception at @params("timestamp"),  please investigate.
+
+Name: @params("name")
+Email: @params("email")
+EORI: @params("eori")
+
+From HMRC Get Access CDS
