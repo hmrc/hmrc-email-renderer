@@ -153,6 +153,15 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "penaltyChargeApologies",
+      fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
+      service = SelfAssessment,
+      subject = "You've got a new message from HMRC",
+      plainTemplate = txt.penaltyChargeApologies.f,
+      htmlTemplate = html.penaltyChargeApologies.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "rescindedMessageAlert_cy",
       fromAddress = FromAddress.noReply("CThEM – (Tîm) Cyswllt Digidol"),
       service = SelfAssessment,
