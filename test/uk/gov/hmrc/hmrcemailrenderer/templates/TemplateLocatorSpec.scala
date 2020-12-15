@@ -578,7 +578,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_psp_amend",
         "pods_authorise_psp",
         "pods_psa_deauthorise_psp",
-        "pods_psp_deauthorise_self",
+        "pods_psp_deregister_self",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
@@ -634,7 +634,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "duty_deferment_account_confirmation",
         "eat_out_help_out_confirmation",
         "mods_import_declaration",
-        "mods_export_declaration"
+        "mods_export_declaration",
+        "ni_vat_Status_reporting_confirmation"
       )
     }
   }
