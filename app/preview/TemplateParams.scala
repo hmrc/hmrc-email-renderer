@@ -2033,6 +2033,34 @@ object TemplateParams2 {
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
     ),
+    "dac6_new_disclosure_confirmation" -> Map(
+      "name"          -> "Joe New",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 1 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_additional_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Add",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 2 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_replace_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Replace",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 3 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_delete_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Delete",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 4 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
       "recipientOrgName"       -> "JJ Components",
