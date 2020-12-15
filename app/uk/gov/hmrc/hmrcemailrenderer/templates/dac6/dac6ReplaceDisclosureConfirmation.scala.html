@@ -1,0 +1,35 @@
+@*
+ * Copyright 2020 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have successfully replaced a disclosure") {
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">This email confirms your DAC6 disclosure replacement has been received.</p>
+
+<p style="font-size: 20px;  margin: 0 0 0 0;">Arrangement ID: @{params("arrangementID")}</p>
+<p style="font-size: 20px;  margin: 0 0 0 0;">Disclosure ID: @{params("disclosureID")}</p>
+<p style="font-size: 20px;  margin: 0 0 0 0;">Time and date of submission: @{params("dateSubmitted")}</p>
+<p style="font-size: 20px;  margin: 0 0 0 0;">Message reference ID: @{params("messageRefID")}</p>
+
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">What to do next</h2>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Share the arrangement ID with any new people or organisations involved in this arrangement.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you or another party needs to submit an additional disclosure for the same arrangement, upload a DAC6ADD file, using the same arrangement ID.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">To replace another disclosure, upload a DAC6REP file, using the same arrangement and disclosure IDs as the file it replaces.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">To delete a disclosure, upload a DAC6DEL file, using the same arrangement and disclosure IDs as the original file it deletes.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link with this email.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC DAC6 service</p>
+}
