@@ -190,6 +190,7 @@ object TemplateParams {
     "newMessageAlert"       -> newMessageAlert_Names,
     "newMessageAlert_cy"    -> newMessageAlert_Names,
     "rescindedMessageAlert" -> newMessageAlert_Names,
+    "penaltyChargeApologies" -> newMessageAlert_Names,
     "newMessageAlert_SA300" -> Map("recipientName_line1" -> "this is a line 1"),
     "newMessageAlert_SS300" -> newMessageAlert_Names,
     "newMessageAlert_SA316" -> (Map(

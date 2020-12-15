@@ -179,6 +179,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "amls_notification_received_template",
         "rescindedMessageAlert",
         "rescindedMessageAlert_cy",
+        "penaltyChargeApologies",
         "verificationReminder",
         "verificationReminder_cy",
         "generic_access_invitation_template_id",
