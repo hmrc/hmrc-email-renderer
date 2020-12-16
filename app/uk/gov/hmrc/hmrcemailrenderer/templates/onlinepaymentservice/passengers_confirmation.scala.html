@@ -108,7 +108,7 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
 
 <table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
     <thead>
-    <tr role="row">
+    <tr>
         <td scope="col" style="font-weight:bold;text-align:left;">Item</td>
         <td scope="col" style="font-weight:bold;text-align:left;">Price</td>
         <td scope="col" style="font-weight:bold;text-align:left;">Purchased in</td>
@@ -117,7 +117,7 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
     </thead>
     <tbody>
     @for((itemDesc,localValue,originCountry,itemTax) <- itemList) {
-    <tr role="row">
+    <tr>
         <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@itemDesc</td>
         <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@localValue</td>
         <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@originCountry</td>
@@ -136,7 +136,7 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
 <h2>Payment breakdown</h2>
 <table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
     <thead>
-    <tr role="row">
+    <tr>
         <th style="border-bottom: 1px solid #bfc1c3">Type of tax or duty</th>
         <th style="text-align:right;border-bottom: 1px solid #bfc1c3">
             <span style="text-align:right">Amount paid</span></th>

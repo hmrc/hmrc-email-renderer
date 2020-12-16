@@ -180,7 +180,7 @@ object OnlinePaymentServiceTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "passengers_payment_confirmation",
-      fromAddress = "HMRC Online Service for Passengers <noreply@confirmations.tax.service.co.uk>",
+      fromAddress = "HMRC Online Service for Passengers <noreply@confirmations.tax.service.gov.uk>",
       service = ServiceIdentifier.PassengerService,
       subject = _.apply("subject"),
       plainTemplate = txt.passengers_confirmation.f,
