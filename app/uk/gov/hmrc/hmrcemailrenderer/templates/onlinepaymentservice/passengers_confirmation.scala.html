@@ -24,7 +24,7 @@ case items:String => Json.parse(items).as[List[JsObject]]
 case _ => List()
 }}
 
-@isZeroCondition = @{params("TOTAL").toString().equalsIgnoreCase("£ 0.00")}
+@isZeroCondition = @{params("TOTAL").toString().equalsIgnoreCase("£0.00")}
 
 @pageHeaderNormal = @{"You have paid the tax and duty you owe for your goods"}
 @pageHeaderZero = @{"You have declared your goods"}
@@ -32,11 +32,12 @@ case _ => List()
 @pageHeader = @{if(isZeroCondition)pageHeaderZero else pageHeaderNormal}
 
 @itemList = @{ allItems.map( item => {
-val commodityDescription = (item \ "commodityDescription").as[String]
+val commodityDescription = (item \ "commodityDescription").as[String].toLowerCase
 val volume = item \ "volume"
 val quantity = item \ "quantity"
-val volOrQuantity = if (quantity.isDefined) quantity.as[String]  else (volume.as[String] + " litres")
-val itemDesc = s"$volOrQuantity $commodityDescription"
+val weight = item \ "weight"
+val volOrQuantityOrWeight = if (quantity.isDefined) quantity.as[String]  else if (weight.isDefined) {BigDecimal(weight.as[String]).setScale(2,RoundingMode.apply(2)) + "g of "} else (volume.as[String] + " litres")
+val itemDesc = s"$volOrQuantityOrWeight $commodityDescription"
 
 val goodsValue = (item \ "goodsValue").as[String]
 val valueCurrency = (item \ "valueCurrency").as[String]
@@ -64,77 +65,76 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
 
 <h2>Your details</h2>
 
-<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;font-size: 19px;c">
+<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
     <tbody>
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Name</th>
-        <td style="border-bottom: 1px solid #bfc1c3">@params("NAME")</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Name</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("NAME")</td>
     </tr>
 
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Place of arrival in UK</th>
-        <td style="border-bottom: 1px solid #bfc1c3">@params("PLACEOFARRIVAL")</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Place of arrival in UK</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("PLACEOFARRIVAL")</td>
     </tr>
 
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Date of arrival</th>
-        <td style="border-bottom: 1px solid #bfc1c3">@params("DATEOFARRIVAL")</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Date of arrival</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("DATEOFARRIVAL")</td>
     </tr>
 
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Time of arrival</th>
-        <td style="border-bottom: 1px solid #bfc1c3">@params("TIMEOFARRIVAL")</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Time of arrival</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("TIMEOFARRIVAL")</td>
     </tr>
     @if(!isZeroCondition) {
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Date of payment</th>
-        <td style="border-bottom: 1px solid #bfc1c3">@params("DATE")</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Date of payment</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("DATE")</td>
     </tr>
     }
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Reference number</th>
-        <td style="border-bottom: 1px solid #bfc1c3">@params("REFERENCE")</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Reference number</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("REFERENCE")</td>
     </tr>
 
     <tr>
-        <th style="border-bottom: 1px solid #bfc1c3">Amount paid</th>
-        <th style="border-bottom: 1px solid #bfc1c3">@params("TOTAL")</th>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Amount paid</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">@params("TOTAL")</td>
     </tr>
     </tbody>
 </table>
 
-<h2>Items declared</h2>
+<h2 style="text-align:left;">Items declared</h2>
 
-<table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
+<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
     <thead>
     <tr role="row">
-        <th scope="col">Item</th>
-        <th scope="col">Price</th>
-        <th scope="col">Purchased in</th>
-        <th style="text-align:right;" class="numeric" scope="col">
-            <span class="table-25">Tax paid</span>
-        </th>
+        <td scope="col" style="font-weight:bold;text-align:left;">Item</td>
+        <td scope="col" style="font-weight:bold;text-align:left;">Price</td>
+        <td scope="col" style="font-weight:bold;text-align:left;">Purchased in</td>
+        <td scope="col" style="font-weight:bold;text-align:right;">Tax paid</td>
     </tr>
     </thead>
     <tbody>
     @for((itemDesc,localValue,originCountry,itemTax) <- itemList) {
     <tr role="row">
-        <td style="border-bottom: 1px solid #bfc1c3">@itemDesc</td>
-        <td style="border-bottom: 1px solid #bfc1c3">@localValue</td>
-        <td style="border-bottom: 1px solid #bfc1c3">@originCountry</td>
-        <td style="text-align:right;border-bottom: 1px solid #bfc1c3">£ @itemTax</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@itemDesc</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@localValue</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@originCountry</td>
+        <td scope="col" style="text-align:right;border-bottom: 1px solid #bfc1c3">£@itemTax</td>
     </tr>
     }
+    <tr>
+        <td style="font-weight:bold;border-bottom: 1px solid #bfc1c3;">Total</td>
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        <td style="font-weight:bold;text-align: right;border-bottom: 1px solid #bfc1c3;">@params("TOTAL")</td>
+    </tr>
     </tbody>
 </table>
 
-<div style="border-bottom: 1px solid #bfc1c3;display: flex;font-weight: 700;justify-content: space-between;padding: .63158em 0 .47368em 0;">
-    <span style="font-size: 20px;font-weight: 700">Total</span>
-    <span style="text-align: right;font-size: 20px;font-weight: 700">@params("TOTAL")</span>
-</div>
-
 <h2>Payment breakdown</h2>
-<table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
+<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
     <thead>
     <tr role="row">
         <th style="border-bottom: 1px solid #bfc1c3">Type of tax or duty</th>
@@ -158,17 +158,25 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
         <td style="border-bottom: 1px solid #bfc1c3">VAT</td>
         <td style="text-align:right;border-bottom: 1px solid #bfc1c3">@params("TOTALVATGBP")</td>
     </tr>
+
+    <tr>
+        <td style="font-weight:bold;border-bottom: 1px solid #bfc1c3;font-weight: 700">Total</td>
+        <td style="font-weight:bold;text-align: right;border-bottom: 1px solid #bfc1c3">@params("TOTAL")</td>
+    </tr>
     </tbody>
 </table>
-<div style="border-bottom: 1px solid #bfc1c3;display: flex;font-weight: 700;justify-content: space-between;padding: .63158em 0 .47368em 0;">
-    <span style="font-size: 20px;font-weight: 700">Total</span>
-    <span style="text-align: right;font-size: 20px;font-weight: 700">@params("TOTAL")</span>
-</div>
+
 <p></p>
 @if(isZeroCondition) {
-<div class="panel panel-border-wide margin-top-30">Tax or duty was either not due on these goods or was paid when the
-    goods were purchased.
-</div>
+<div style = "
+                line-height: 1.25;
+                color: #0b0c0c;
+                padding: 15px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                clear: both;
+                border-left: 10px solid #bfc1c3;">
+Tax or duty was either not due on these goods or was paid when the goods were purchased.</div>
 }
 
 <h2 class="heading-medium">Amending your declaration</h2>
