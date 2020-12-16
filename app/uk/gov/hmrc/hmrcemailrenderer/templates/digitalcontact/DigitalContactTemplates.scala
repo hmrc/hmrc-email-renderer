@@ -154,7 +154,7 @@ object DigitalContactTemplates {
     ),
     MessageTemplate.create(
       templateId = "penaltyChargeApologies",
-      fromAddress = FromAddress.noReply("HMRC Digital Contact (Team)"),
+      fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "You've got a new message from HMRC",
       plainTemplate = txt.penaltyChargeApologies.f,
