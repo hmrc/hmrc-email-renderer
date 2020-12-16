@@ -14,11 +14,21 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params,
-    "Get Access CDS Rcm exception", showHeading1 = false) {
-    <h4>Get Access CDS Rcm exception at @params("timestamp"),  please investigate.</h4>
-    <p>Name: @params("name")</p>
-    <p>Email: @params("email")</p>
-    <p>EORI: @params("eori")</p>
+@template_main(params, "Get Access to CDS Rcm exception") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Get Access to CDS Rcm exception at @params("timestamp"),  please investigate.</p>
+
+<br />
+<p>Name: @params("name")</p>
+<p>Email: @params("email")</p>
+<p>EORI: @params("eori")</p>
+
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">From HMRC CDS Support Team</h2>
+
 }
