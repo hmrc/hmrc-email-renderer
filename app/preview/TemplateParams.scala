@@ -187,11 +187,12 @@ object TemplateParams {
     "verifyEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "newMessageAlert"       -> newMessageAlert_Names,
-    "newMessageAlert_cy"    -> newMessageAlert_Names,
-    "rescindedMessageAlert" -> newMessageAlert_Names,
-    "newMessageAlert_SA300" -> Map("recipientName_line1" -> "this is a line 1"),
-    "newMessageAlert_SS300" -> newMessageAlert_Names,
+    "newMessageAlert"        -> newMessageAlert_Names,
+    "newMessageAlert_cy"     -> newMessageAlert_Names,
+    "rescindedMessageAlert"  -> newMessageAlert_Names,
+    "penaltyChargeApologies" -> newMessageAlert_Names,
+    "newMessageAlert_SA300"  -> Map("recipientName_line1" -> "this is a line 1"),
+    "newMessageAlert_SS300"  -> newMessageAlert_Names,
     "newMessageAlert_SA316" -> (Map(
       "isCurrentYear"  -> "true",
       "taxYearStart"   -> "2014",
@@ -1728,10 +1729,10 @@ object TemplateParams2 {
       "DATEOFARRIVAL"   -> "4 December 2020",
       "TIMEOFARRIVAL"   -> "12:15 PM",
       "REFERENCE"       -> "XAPR9876543210",
-      "TOTAL"           -> "£ 32.45",
-      "TOTALEXCISEGBP"  -> "£ 10.50",
-      "TOTALCUSTOMSGBP" -> "£ 5.50",
-      "TOTALVATGBP"     -> "£ 20.50",
+      "TOTAL"           -> "£50.00",
+      "TOTALEXCISEGBP"  -> "£10.50",
+      "TOTALCUSTOMSGBP" -> "£5.50",
+      "TOTALVATGBP"     -> "£20.50",
       "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"35\",\"goodsValue\":\"3254.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"2446.06\",\"VATRESClaimed\":false,\"exciseGBP\":\"28.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"494.81\"},{\"commodityDescription\":\"Cigarettes\",\"quantity\":\"357\",\"goodsValue\":\"753.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"566.03\",\"VATRESClaimed\":false,\"exciseGBP\":\"108.96\",\"customsGBP\":\"283.01\",\"vatGBP\":\"191.60\"},{\"commodityDescription\":\"Adult clothing\",\"quantity\":\"1\",\"goodsValue\":\"258.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"193.94\",\"VATRESClaimed\":false,\"exciseGBP\":\"0.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"0.00\"}]"
     ),
     "digital_tariffs_advice_request" -> Map(
@@ -2031,6 +2032,34 @@ object TemplateParams2 {
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
+    ),
+    "dac6_new_disclosure_confirmation" -> Map(
+      "name"          -> "Joe New",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 1 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_additional_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Add",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 2 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_replace_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Replace",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 3 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_delete_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Delete",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 4 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
