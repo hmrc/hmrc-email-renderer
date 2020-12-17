@@ -17,8 +17,8 @@
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("service").toString + " update") {
-
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You have successfully removed your client, you no longer have the authority to act for them on @{params("service").toString}.</p>
-
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("recipient").toString}</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You have successfully removed your client.</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You no longer have the authority to act for them on @{params("service").toString}.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC @{params("service").toString}</p>
 }

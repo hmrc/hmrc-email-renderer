@@ -2,8 +2,12 @@
 
 @{params("service")} update
 
-Your agent has rejected your request to act as their @{params("service")} agent. If you think this is an error, ask your agent to add your company details again.
+Dear @{params("recipient")}
 
-From HMRC
+Your agent has rejected your request to act as their @{params("service")} agent.
+
+If you think this is an error, ask your agent to add your company details again.
+
+From HMRC @{params("service")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
