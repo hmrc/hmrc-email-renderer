@@ -54,7 +54,9 @@ class PreviewSpec extends UnitSpec with GuiceOneAppPerSuite {
     forAll(Table.apply("templateId", allTemplates: _*)) { mt: MessageTemplate =>
       s"be able to render ${mt.templateId}" in {
 
-        val parameters = TemplateParams.exampleParams.getOrElse(mt.templateId, Map.empty)
+        val parameters = TemplateParams.exampleParams
+          .getOrElse(mt.templateId, TemplateParams2.exampleParams.getOrElse(mt.templateId, Map.empty))
+
         templateRenderer.render(mt.templateId, parameters) should not matchPattern {
           case Left(TemplateRenderFailure(reason)) =>
         }

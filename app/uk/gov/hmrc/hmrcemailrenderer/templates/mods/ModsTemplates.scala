@@ -22,13 +22,34 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MODS
 
 object ModsTemplates {
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "mods_import_declaration",
       fromAddress = govUkTeamAddress,
       service = MODS,
-      subject = "Declaration and payment for commercial goods you bring into Great Britain",
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Import declaration"
+        } else {
+          "Declaration and payment for commercial goods you bring into Great Britain"
+        }
+      },
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "mods_export_declaration",
+      fromAddress = govUkTeamAddress,
+      service = MODS,
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Export declaration"
+        } else {
+          "Declaration for commercial goods leaving Great Britain"
+        }
+      },
+      plainTemplate = txt.mods_export_declaration.f,
+      htmlTemplate = html.mods_export_declaration.f,
       priority = Some(MessagePriority.Standard)
     )
   )

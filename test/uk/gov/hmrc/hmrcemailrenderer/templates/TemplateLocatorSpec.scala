@@ -179,6 +179,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "amls_notification_received_template",
         "rescindedMessageAlert",
         "rescindedMessageAlert_cy",
+        "penaltyChargeApologies",
         "verificationReminder",
         "verificationReminder_cy",
         "generic_access_invitation_template_id",
@@ -217,6 +218,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "digital_tariffs_case_completed",
         "digital_tariffs_advice_request",
         "digital_tariffs_application_submitted",
+        "digital_tariffs_application_submitted_cy",
         "dfs_submission_success_r39_2015",
         "dfs_submission_success_r39_2015_welsh",
         "dfs_submission_success_cis_2015",
@@ -229,6 +231,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_submission_success_generic_2017_welsh",
         "dfs_submission_success_empty_turn_around_time_2015",
         "dfs_submission_success_empty_turn_around_time_2015_welsh",
+        "dfs_submission_success_empty_turn_around_time_2020",
         "dfs_admin_notification",
         "dfs_admin_notification_welsh",
         "dfs_trusts_submission_success",
@@ -579,6 +582,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_psp_de_auth_psp_company_partnership",
         "pods_authorise_psp",
         "pods_psa_deauthorise_psp",
+        "pods_psp_deregister_self",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
@@ -613,6 +617,10 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cgtpd_submission_confirmation_cy",
         "gms_enrolment_confirmation",
         "dac6_registration_successful",
+        "dac6_new_disclosure_confirmation",
+        "dac6_additional_disclosure_confirmation",
+        "dac6_replace_disclosure_confirmation",
+        "dac6_delete_disclosure_confirmation",
         "discounted_dining_payment_sent",
         "discounted_dining_payment_sent_cy",
         "ipr1_code",
@@ -629,7 +637,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "consultation_complaint_confirmation",
         "duty_deferment_account_confirmation",
         "eat_out_help_out_confirmation",
-        "mods_import_declaration"
+        "mods_import_declaration",
+        "mods_export_declaration",
+        "ni_vat_Status_reporting_confirmation"
       )
     }
   }

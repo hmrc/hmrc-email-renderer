@@ -15,26 +15,24 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to extend protection of intellectual property rights"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a Northern Ireland Protocol application"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    HMRC received your request to extend protection of intellectual property rights at the UK border.
-</p>
+    This email confirms that you have told HMRC your business will be operating under the terms of the Northern Ireland Protocol for VAT.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    This is because it will do one or more of the following:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>sell goods located in Northern Ireland at the time of sale</li>
+
+    <li>receive goods in Northern Ireland from VAT registered EU businesses for business purposes</li>
+
+    <li>sell or move goods from Northern Ireland to an EU member state</li>
+</ul>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You do not need to take any further action.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your submission reference is: @params.get("submissionReference")</p>
-<h2>
-    What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will now review the details you have given us, then contact you at this email address.
-</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    This usually takes 30 working days.
-</p>
-<h2>
-    Why you are receiving this email</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for applications to extend protection of intellectual property rights.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Intellectual Property Rights team</p>
+    From HMRC</p>
 }

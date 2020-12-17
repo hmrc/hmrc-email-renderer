@@ -178,11 +178,11 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "passengers_payment_confirmation",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Receipt for payment on goods brought into the UK",
+      fromAddress = "HMRC Online Service for Passengers <noreply@confirmation.tax.service.gov.uk>",
+      service = ServiceIdentifier.PassengerService,
+      subject = _.apply("subject"),
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent)

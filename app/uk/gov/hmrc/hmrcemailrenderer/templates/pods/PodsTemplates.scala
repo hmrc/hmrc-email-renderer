@@ -139,6 +139,15 @@ object PodsTemplates {
       plainTemplate = txt.pspDeauthorisedByPsa.f,
       htmlTemplate = html.pspDeauthorisedByPsa.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psp_deregister_self",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "You are no longer a pension scheme practitioner",
+      plainTemplate = txt.pspDeregisteredSelf.f,
+      htmlTemplate = html.pspDeregisteredSelf.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

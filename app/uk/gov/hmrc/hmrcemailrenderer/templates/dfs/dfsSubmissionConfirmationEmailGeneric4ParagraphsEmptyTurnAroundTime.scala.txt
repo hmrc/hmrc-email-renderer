@@ -1,0 +1,31 @@
+@(params: Map[String, Any])@{params("heading")}
+
+
+@if(params("greeting").asInstanceOf[String].length>0) {Dear @{params("greeting")}}
+
+@{params("confirmation")}.
+
+Your reference is: @{params("submissionReference")}
+
+
+
+What happens next
+
+@if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}.}
+
+@if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}.}
+
+@if(params.isDefinedAt("paragraphThree")) {@{params("paragraphThree")}.}
+
+@if(params.isDefinedAt("paragraphFour")) {@{params("paragraphFour")}.}
+
+@if(params("warningInformation").equals("true")) {If we need any further details, we'll contact you by letter or phone.
+
+We may ask you to sign into a service to provide more details, but we will not ask for your personal details by email.} 
+
+
+From HMRC
+
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

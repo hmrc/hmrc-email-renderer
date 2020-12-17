@@ -579,7 +579,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Statutory Parental Bereavement Pay",
       plainTemplate = txt.spbpCode.f,
       htmlTemplate = html.spbpCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "spbp_confirmation_submission",
@@ -689,7 +689,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Report a suspicious HMRC phone call",
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ipr1_code",
@@ -789,6 +789,15 @@ object EeittTemplates {
       subject = "HMRC received your disclosure about Eat Out to Help Out Scheme payment",
       plainTemplate = txt.eatOuttoHelpOutConfirmation.f,
       htmlTemplate = html.eatOuttoHelpOutConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ni_vat_Status_reporting_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC Northern Ireland Protocol: application received",
+      plainTemplate = txt.niVatStatusReporting.f,
+      htmlTemplate = html.niVatStatusReporting.f,
       priority = Some(MessagePriority.Standard)
     )
   )

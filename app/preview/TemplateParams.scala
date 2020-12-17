@@ -187,11 +187,12 @@ object TemplateParams {
     "verifyEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "newMessageAlert"       -> newMessageAlert_Names,
-    "newMessageAlert_cy"    -> newMessageAlert_Names,
-    "rescindedMessageAlert" -> newMessageAlert_Names,
-    "newMessageAlert_SA300" -> Map("recipientName_line1" -> "this is a line 1"),
-    "newMessageAlert_SS300" -> newMessageAlert_Names,
+    "newMessageAlert"        -> newMessageAlert_Names,
+    "newMessageAlert_cy"     -> newMessageAlert_Names,
+    "rescindedMessageAlert"  -> newMessageAlert_Names,
+    "penaltyChargeApologies" -> newMessageAlert_Names,
+    "newMessageAlert_SA300"  -> Map("recipientName_line1" -> "this is a line 1"),
+    "newMessageAlert_SS300"  -> newMessageAlert_Names,
     "newMessageAlert_SA316" -> (Map(
       "isCurrentYear"  -> "true",
       "taxYearStart"   -> "2014",
@@ -454,6 +455,18 @@ object TemplateParams {
       "submissionReference" -> "1234",
       "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
       "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "warningInformation"  -> "true"
+    ),
+    "dfs_submission_success_empty_turn_around_time_2020" -> Map(
+      "subject"             -> "Test Subject",
+      "heading"             -> "Test Heading",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree"      -> "If you've asked us to write to you, we'll send you a letter within 15 working days",
+      "paragraphFour"       -> "Some extra content for paragraph four...",
       "warningInformation"  -> "true"
     ),
     "dfs_admin_notification" -> Map.empty[String, String],
@@ -1488,7 +1501,13 @@ object TemplateParams {
     ),
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
-    ),
+    )
+  )
+}
+object TemplateParams2 {
+
+  val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
+  val exampleParams = Map(
     "payment_successful" -> Map(
       "taxType"          -> "Self Assessment",
       "taxReference"     -> "1234567890K",
@@ -1703,23 +1722,18 @@ object TemplateParams {
       "itemName"            -> "ITEM NAME"
     ),
     "passengers_payment_confirmation" -> Map(
-      "NAME"                 -> "Alex Smith",
-      "DATE"                 -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
-      "PLACEOFARRIVAL"       -> "Heathrow",
-      "DATEOFARRIVAL"        -> "15 September 2018",
-      "TIMEOFARRIVAL"        -> "12:15 PM",
-      "TRANSACTIONREFERENCE" -> "tran-ref-value",
-      "REFERENCE"            -> "XAPR9876543210",
-      "TOTAL"                -> "£32.45",
-      "NAME_0"               -> "5 litres spirits",
-      "CURRENCY_0"           -> "60 Mexican Peso(MXN)",
-      "COSTGBP_0"            -> "10.50",
-      "NAME_1"               -> "All other electronic devices",
-      "CURRENCY_1"           -> "100 USA Dollar(USD)",
-      "COSTGBP_1"            -> "10.50",
-      "NAME_2"               -> "All other electronic devices",
-      "CURRENCY_2"           -> "600 USA Dollar(USD)",
-      "COSTGBP_2"            -> "11.40"
+      "subject"         -> "Receipt for payment on goods brought into the UK - Reference number XAPR9876543210",
+      "NAME"            -> "Jura Smith",
+      "DATE"            -> "5 December 2020",
+      "PLACEOFARRIVAL"  -> "LHR",
+      "DATEOFARRIVAL"   -> "4 December 2020",
+      "TIMEOFARRIVAL"   -> "12:15 PM",
+      "REFERENCE"       -> "XAPR9876543210",
+      "TOTAL"           -> "£50.00",
+      "TOTALEXCISEGBP"  -> "£10.50",
+      "TOTALCUSTOMSGBP" -> "£5.50",
+      "TOTALVATGBP"     -> "£20.50",
+      "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"35\",\"goodsValue\":\"3254.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"2446.06\",\"VATRESClaimed\":false,\"exciseGBP\":\"28.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"494.81\"},{\"commodityDescription\":\"Cigarettes\",\"quantity\":\"357\",\"goodsValue\":\"753.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"566.03\",\"VATRESClaimed\":false,\"exciseGBP\":\"108.96\",\"customsGBP\":\"283.01\",\"vatGBP\":\"191.60\"},{\"commodityDescription\":\"Adult clothing\",\"quantity\":\"1\",\"goodsValue\":\"258.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"193.94\",\"VATRESClaimed\":false,\"exciseGBP\":\"0.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"0.00\"}]"
     ),
     "digital_tariffs_advice_request" -> Map(
       "reference"             -> "REFERENCE",
@@ -1731,6 +1745,10 @@ object TemplateParams {
       "supportingInformation" -> "SUPPORTING INFO"
     ),
     "digital_tariffs_application_submitted" -> Map(
+      "recipientName_line1" -> "FULL NAME",
+      "reference"           -> "REFERENCE"
+    ),
+    "digital_tariffs_application_submitted_cy" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "REFERENCE"
     ),
@@ -2018,9 +2036,40 @@ object TemplateParams {
       "pspName"    -> "Jane Doe",
       "schemeName" -> "Smith Harper pension scheme"
     ),
+    "pods_psp_deregister_self" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
+    ),
+    "dac6_new_disclosure_confirmation" -> Map(
+      "name"          -> "Joe New",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 1 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_additional_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Add",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 2 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_replace_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Replace",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 3 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_delete_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Delete",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 4 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
@@ -2047,6 +2096,7 @@ object TemplateParams {
       "completionDate"         -> "22 March 2019"
     ),
     "mods_import_declaration" -> Map(
+      "emailTo"                   -> "BorderForce",
       "recipientName_FullName"    -> "Joe Bloggs",
       "declarationReference"      -> "ABC123",
       "dateOfDeclaration"         -> "11 November 2020, 4:22 pm",
@@ -2058,6 +2108,20 @@ object TemplateParams {
       "vat"                       -> "£30.91",
       "total"                     -> "£35.44",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_export_declaration" -> Map(
+      "emailTo"                   -> "BorderForce",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Spain",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     )
   )
