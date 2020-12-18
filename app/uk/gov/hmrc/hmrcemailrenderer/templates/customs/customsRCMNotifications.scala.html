@@ -17,18 +17,14 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @(params: Map[String, Any])
-@template_main(params, "Get Access to CDS Rcm exception") {
+@template_main(params, "You need to review a CDS Rcm exception") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
+<h2 style="margin: 0 0 30px; font-size: 19px;">You need to review a CDS Rcm exception at @params("timestamp")</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Get Access to CDS Rcm exception at @params("timestamp"),  please investigate.</p>
-
-<br />
 <p>Name: @params("name")</p>
 <p>Email: @params("email")</p>
-<p>EORI: @params("eori")</p>
-
-
-<h2 style="margin: 0 0 30px; font-size: 24px;">From HMRC CDS Support Team</h2>
+<p>EORI: <b> @params("eori") </b> </p>
+<br>
+<p>From HMRC CDS Support Team</p>
 
 }
