@@ -1655,6 +1655,13 @@ object TemplateParams2 {
       "opsDesNoModsSurchargeReport_total"            -> "4,40.0,8,80.0,12,120.0,1,10.0",
       "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0,1,10.0"
     ),
+    "recon_mods_finance_report" -> Map(
+      "subject"              -> "MODS Finance Report 27/09/2027",
+      "MODS_ROW_123-456-789" -> "123-456-789,MIBREF1234,100,100,200,100,300",
+      "MODS_ROW_234-567-890" -> "234-567-890,MIBREF2345,100,100,200,100,300",
+      "MODS_ROW_098-765-432" -> "098-765-432,MIBREF3456,100,100,200,100,300",
+      "MODS_ROW_987-654-321" -> "987-654-321,MIBREF4567,100,100,200,100,300"
+    ),
     "hts_verification_email" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
