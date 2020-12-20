@@ -639,6 +639,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "eat_out_help_out_confirmation",
         "mods_import_declaration",
         "mods_export_declaration",
+        "mods_import_declaration_cy",
+        "mods_export_declaration_cy",
         "ni_vat_Status_reporting_confirmation"
       )
     }
