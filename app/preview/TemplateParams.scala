@@ -2131,6 +2131,35 @@ object TemplateParams2 {
       "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     ),
+    "mods_import_declaration_cy" -> Map(
+      "emailTo"                   -> "BorderForce",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsCountry_0"            -> "Spain",
+      "goodsPrice_0"              -> "150, Euro (EUR)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_export_declaration_cy" -> Map(
+      "emailTo"                   -> "BorderForce",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Spain",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
     "customs_rcm_notifications" -> Map(
       "timestamp" -> "2018-07-05T09:08:12.831Z",
       "name"      -> "Joe Bloggs",
