@@ -631,6 +631,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ecc_subscription_successful_cy",
         "ecc_subscription_not_successful",
         "ecc_subscription_not_successful_cy",
+        "ecc_rcm_notifications",
         "trading_status_before_seiss_claimed",
         "settlement_request",
         "complaint_consultation_code",
