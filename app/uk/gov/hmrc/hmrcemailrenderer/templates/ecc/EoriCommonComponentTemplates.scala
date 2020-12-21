@@ -53,6 +53,14 @@ object EoriCommonComponentTemplates {
       subject = "Roedd eich cais i’r gwasanaeth yn aflwyddiannus",
       plainTemplate = txt.eccSubscribeNotSuccessful_cy.f,
       htmlTemplate = html.eccSubscribeNotSuccessful_cy.f
+    ),
+    MessageTemplate.create(
+      templateId = "ecc_rcm_notifications",
+      fromAddress = govUkTeamAddress,
+      service = EoriCommonComponent,
+      subject = "ECC RCM Exception",
+      plainTemplate = txt.eccRCMNotifications.f,
+      htmlTemplate = html.eccRCMNotifications.f
     )
   )
 }
