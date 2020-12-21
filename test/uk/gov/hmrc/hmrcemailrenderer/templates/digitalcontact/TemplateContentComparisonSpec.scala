@@ -67,6 +67,18 @@ class TemplateContentComparisonSpec
       compareContent("rescindedMessageAlert", params)(digitalContactTemplate)
     }
 
+    "render the identical penaltyChargeApologies content for both the text and html versions" in {
+      val params = Map(
+        "recipientName_title"          -> "title",
+        "recipientName_forename"       -> "forename",
+        "recipientName_secondForename" -> "a",
+        "recipientName_surname"        -> "b",
+        "recipientName_honours"        -> "c"
+      ) ++ commonParameters
+
+      compareContent("penaltyChargeApologies", params)(digitalContactTemplate)
+    }
+
     "include verificationReminder content for both the text and html versions" in {
       val params = Map(
         "verificationLink"         -> "/some/link",

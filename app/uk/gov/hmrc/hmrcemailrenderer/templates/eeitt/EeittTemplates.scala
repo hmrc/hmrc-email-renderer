@@ -579,7 +579,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Statutory Parental Bereavement Pay",
       plainTemplate = txt.spbpCode.f,
       htmlTemplate = html.spbpCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "spbp_confirmation_submission",
@@ -689,7 +689,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Report a suspicious HMRC phone call",
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ipr1_code",

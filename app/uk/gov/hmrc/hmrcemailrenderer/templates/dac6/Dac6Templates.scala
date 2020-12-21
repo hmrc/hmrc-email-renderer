@@ -21,6 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DAC6
 
 object Dac6Templates {
+
   val templates = Seq(
     // REGISTRATION - REGISTRATION SUCCESSFUL
     MessageTemplate.create(
@@ -30,6 +31,42 @@ object Dac6Templates {
       subject = "DAC6 registration successful",
       plainTemplate = txt.dac6RegistrationSuccessful.f,
       htmlTemplate = html.dac6RegistrationSuccessful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dac6_new_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = DAC6,
+      subject = "HMRC received your DAC6 disclosure",
+      plainTemplate = txt.dac6NewDisclosureConfirmation.f,
+      htmlTemplate = html.dac6NewDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dac6_additional_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = DAC6,
+      subject = "HMRC received your additional information about a disclosure",
+      plainTemplate = txt.dac6AdditionalDisclosureConfirmation.f,
+      htmlTemplate = html.dac6AdditionalDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dac6_replace_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = DAC6,
+      subject = params => s"You replaced disclosure ${params.apply("disclosureID")}",
+      plainTemplate = txt.dac6ReplaceDisclosureConfirmation.f,
+      htmlTemplate = html.dac6ReplaceDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dac6_delete_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = DAC6,
+      subject = params => s"You deleted disclosure ${params.apply("disclosureID")}",
+      plainTemplate = txt.dac6DeleteDisclosureConfirmation.f,
+      htmlTemplate = html.dac6DeleteDisclosureConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

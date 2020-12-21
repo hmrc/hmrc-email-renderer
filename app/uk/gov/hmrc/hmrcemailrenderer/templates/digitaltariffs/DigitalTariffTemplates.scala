@@ -49,6 +49,15 @@ object DigitalTariffTemplates {
       plainTemplate = txt.adviceRequest.f,
       htmlTemplate = html.adviceRequest.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "digital_tariffs_application_submitted_cy",
+      fromAddress = FromAddress.noReply("Tîm Dosbarthu Tariffau CThEM"),
+      service = BTIApplicationService,
+      subject = "Mae’ch cais am Ddyfarniad Tariffau Uwch (ATaR) wedi dod i law CThEM",
+      plainTemplate = txt.applicationSubmitted_cy.f,
+      htmlTemplate = html.applicationSubmitted_cy.f,
+      priority = Some(MessagePriority.Background)
     )
   )
 }
