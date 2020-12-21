@@ -393,6 +393,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_payment_required",
         "customs_payment_success",
         "customs_declaration_success",
+        "customs_rcm_notifications",
         "customs_pull_notifications_warning",
         "customs_push_notifications_warning",
         "transactionEngineHMRCSASA100Success",
