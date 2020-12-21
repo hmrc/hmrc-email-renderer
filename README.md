@@ -7,10 +7,17 @@
 
 Manages the rendering of parameterised email using templates. 
 
-
+## Before requesting to merge your PR, please ensure that you have re-based with master
 | **Note: Before sending a pull request with template changes, please look at our [guidelines](/CONTRIBUTING.md).** |
 | --- |
 
+
+## How to deal with pull requests for transactional email templates
+| **DC Team Note: Before accepting a PR and merging, please ensure you read through the following [acceptance criteria](https://confluence.tools.tax.service.gov.uk/display/DCT/Pull+request+acceptance+criteria).** |
+| --- |
+
+| **Follow these instructions: [How to deal with pull requests for transactional email templates](https://confluence.tools.tax.service.gov.uk/display/DCT/How+to+deal+with+pull+requests+for+transactional+email+templates)** |
+| --- |
 
 ## API
 
