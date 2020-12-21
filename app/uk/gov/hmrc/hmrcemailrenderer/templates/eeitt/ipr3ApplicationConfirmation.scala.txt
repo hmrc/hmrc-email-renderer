@@ -6,6 +6,8 @@ Dear @params.get("customerName")
 
 HMRC received your request to extend protection of intellectual property rights at the UK border.
 
+Your submission reference is: @params.get("submissionReference")
+
 What happens next
 
 We will now review the details you have given us, then contact you at this email address.

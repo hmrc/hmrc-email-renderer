@@ -10,7 +10,7 @@ case items:String => Json.parse(items).as[List[JsObject]]
 case _ => List()
 }}
 
-@isZeroCondition = @{params("TOTAL").toString().equalsIgnoreCase("£ 0.00")}
+@isZeroCondition = @{params("TOTAL").toString().equalsIgnoreCase("£0.00")}
 
 @pageHeaderNormal = @{"You have paid the tax and duty you owe for your goods"}
 @pageHeaderZero = @{"You have declared your goods"}
@@ -18,11 +18,12 @@ case _ => List()
 @pageHeader = @{if(isZeroCondition)pageHeaderZero else pageHeaderNormal}
 
 @itemList = @{ allItems.map( item => {
-    val commodityDescription = (item \ "commodityDescription").as[String]
+    val commodityDescription = (item \ "commodityDescription").as[String]toLowerCase
     val volume = item \ "volume"
     val quantity = item \ "quantity"
-    val volOrQuantity = if (quantity.isDefined) quantity.as[String]  else (volume.as[String] + " litres")
-    val itemDesc = s"$volOrQuantity $commodityDescription"
+    val weight = item \ "weight"
+    val volOrQuantityOrWeight = if (quantity.isDefined) quantity.as[String]  else if (weight.isDefined) {BigDecimal(weight.as[String]).setScale(2,RoundingMode.apply(2)) + "g of "} else (volume.as[String] + " litres")
+    val itemDesc = s"$volOrQuantityOrWeight $commodityDescription"
 
     val goodsValue = (item \ "goodsValue").as[String]
     val valueCurrency = (item \ "valueCurrency").as[String]
