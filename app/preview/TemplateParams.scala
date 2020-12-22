@@ -2166,4 +2166,5 @@ object TemplateParams2 {
       "email"     -> "joebloggs@email.com",
       "eori"      -> "GB1234456789000"
     )
+  )
 }
