@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -395,6 +395,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_declaration_success",
         "customs_pull_notifications_warning",
         "customs_push_notifications_warning",
+        "customs_rcm_notifications",
         "transactionEngineHMRCSASA100Success",
         "transactionEngineHMRCSASA100Failure",
         "transactionEngineHMRCSASA100ATTSuccess",
@@ -584,6 +585,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_authorise_psp",
         "pods_psa_deauthorise_psp",
         "pods_psp_deregister_self",
+        "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
@@ -632,6 +634,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ecc_subscription_successful_cy",
         "ecc_subscription_not_successful",
         "ecc_subscription_not_successful_cy",
+        "ecc_rcm_notifications",
         "trading_status_before_seiss_claimed",
         "settlement_request",
         "complaint_consultation_code",
@@ -640,6 +643,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "eat_out_help_out_confirmation",
         "mods_import_declaration",
         "mods_export_declaration",
+        "mods_import_declaration_cy",
+        "mods_export_declaration_cy",
         "ni_vat_Status_reporting_confirmation"
       )
     }
