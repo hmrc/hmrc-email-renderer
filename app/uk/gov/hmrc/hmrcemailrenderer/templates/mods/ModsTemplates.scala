@@ -16,15 +16,15 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.mods
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MODS
+import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineFromAddress.transactionEngineAddress
 
 object ModsTemplates {
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
       templateId = "mods_import_declaration",
-      fromAddress = govUkTeamAddress,
+      fromAddress = transactionEngineAddress,
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
@@ -39,7 +39,7 @@ object ModsTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "mods_import_declaration_cy",
-      fromAddress = govUkTeamAddress,
+      fromAddress = transactionEngineAddress,
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
@@ -54,7 +54,7 @@ object ModsTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "mods_export_declaration",
-      fromAddress = govUkTeamAddress,
+      fromAddress = transactionEngineAddress,
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
@@ -69,7 +69,7 @@ object ModsTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "mods_export_declaration_cy",
-      fromAddress = govUkTeamAddress,
+      fromAddress = transactionEngineAddress,
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
