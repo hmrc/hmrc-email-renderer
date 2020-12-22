@@ -175,6 +175,11 @@ object TemplateParams {
       "timeSinceLastUse"        -> "11 months",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
+    "ppnsCallbackUrlChangedNotification" -> Map(
+      "applicationName" -> "Test Application",
+      "dateOfChange"    -> "28 October 2020",
+      "timeOfChange"    -> "12:23"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),

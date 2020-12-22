@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -393,9 +393,9 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_payment_required",
         "customs_payment_success",
         "customs_declaration_success",
-        "customs_rcm_notifications",
         "customs_pull_notifications_warning",
         "customs_push_notifications_warning",
+        "customs_rcm_notifications",
         "transactionEngineHMRCSASA100Success",
         "transactionEngineHMRCSASA100Failure",
         "transactionEngineHMRCSASA100ATTSuccess",
@@ -584,6 +584,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_authorise_psp",
         "pods_psa_deauthorise_psp",
         "pods_psp_deregister_self",
+        "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
