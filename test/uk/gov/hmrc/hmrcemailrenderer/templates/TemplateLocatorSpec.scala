@@ -111,7 +111,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "SEISS",
         "GVMS",
         "EOTHO",
-        "Eori Common Component"
+        "Eori Common Component",
+        "MODS"
       )
     }
 
@@ -298,8 +299,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_payment_failed",
         "seiss_payment_failed_cy",
         "seiss_received_confirmation",
-        "seiss_phase_2_previously_claimed_stagger",
-        "seiss_phase_2_previously_claimed_stagger_cy",
+        "seiss_phase_3_previously_claimed_stagger",
+        "seiss_phase_3_previously_claimed_stagger_cy",
         "vishing_code_submission",
         "cjrs_confirmation_submission",
         "csr_submission_confirmation",
@@ -618,7 +619,28 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "trading_status_before_seiss_claimed",
         "settlement_request",
         "complaint_consultation_code",
-        "consultation_complaint_confirmation"
+        "consultation_complaint_confirmation",
+        "dac6_additional_disclosure_confirmation",
+        "dac6_delete_disclosure_confirmation",
+        "dac6_new_disclosure_confirmation",
+        "dac6_replace_disclosure_confirmation",
+        "dan_waiver_confirmation",
+        "dfs_submission_success_empty_turn_around_time_2020",
+        "digital_tariffs_application_submitted_cy",
+        "duty_deferment_account_confirmation",
+        "eat_out_help_out_confirmation",
+        "mods_export_declaration",
+        "mods_import_declaration",
+        "ni_vat_Status_reporting_confirmation",
+        "passengers_payment_confirmation",
+        "penaltyChargeApologies",
+        "pods_authorise_psp",
+        "pods_psa_deauthorise_psp",
+        "pods_psp_amend",
+        "pods_psp_de_auth_psp_company_partnership",
+        "pods_psp_de_auth_psp_individual",
+        "pods_psp_deregister_self",
+        "recon_surcharge_report"
       )
     }
   }
