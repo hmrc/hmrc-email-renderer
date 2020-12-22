@@ -1,0 +1,7 @@
+@(params: Map[String, Any])
+
+ROWS:
+@{params.filter(_._1.startsWith("MODS")).map { row =>
+        val cells = row._2.toString.split(",").toList
+        row._2 + "\n"}
+}
