@@ -1,0 +1,16 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+
+@(params: Map[String, Any])You need to review an ECC Rcm exception
+
+You need to review an ECC Rcm exception at @params("timestamp").
+
+Name: @params("name")
+Email: @params("email")
+EORI: @params("eori")
+Service: @params("serviceName")
+
+
+From HMRC ECC Support Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

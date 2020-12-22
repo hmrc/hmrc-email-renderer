@@ -103,6 +103,15 @@ object CustomsTemplates {
       plainTemplate = txt.customsPushNotificationsWarning.f,
       htmlTemplate = html.customsPushNotificationsWarning.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_rcm_notifications",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "CDS RCM Exception",
+      plainTemplate = txt.customsRCMNotifications.f,
+      htmlTemplate = html.customsRCMNotifications.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
