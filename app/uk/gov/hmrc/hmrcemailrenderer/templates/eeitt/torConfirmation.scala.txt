@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You applied for transfer of residence tax relief
+
+Dear @params.get("customerName")
+
+HMRC received an application for transfer of residence tax relief using this email address.
+
+Your submission reference is: @params.get("submissionReference")
+
+If we have any questions, we'll email you, quoting the submission
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
