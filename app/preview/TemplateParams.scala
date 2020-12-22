@@ -2095,6 +2095,13 @@ object TemplateParams2 {
       "serviceName"            -> "Advance Tariff Rulings",
       "completionDate"         -> "22 March 2019"
     ),
+    "ecc_rcm_notifications" -> Map(
+      "timestamp"   -> "2018-07-05T09:08:12.831Z",
+      "name"        -> "Joe Bloggs",
+      "email"       -> "joebloggs@email.com",
+      "eori"        -> "GB1234456789000",
+      "serviceName" -> "Advance Tariff Rulings"
+    ),
     "mods_import_declaration" -> Map(
       "emailTo"                   -> "BorderForce",
       "recipientName_FullName"    -> "Joe Bloggs",
@@ -2152,6 +2159,11 @@ object TemplateParams2 {
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
       "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
+    ),
+    "customs_rcm_notifications" -> Map(
+      "timestamp" -> "2018-07-05T09:08:12.831Z",
+      "name"      -> "Joe Bloggs",
+      "email"     -> "joebloggs@email.com",
+      "eori"      -> "GB1234456789000"
     )
-  )
 }
