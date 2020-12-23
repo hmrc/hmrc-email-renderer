@@ -807,7 +807,7 @@ object EeittTemplates {
       subject = "Confirm your email address – Apply for transfer of residence tax relief - HMRC",
       plainTemplate = txt.torCode.f,
       htmlTemplate = html.torCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "tor_confirmation",
