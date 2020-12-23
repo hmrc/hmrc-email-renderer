@@ -8,12 +8,12 @@ HMRC received an application for transfer of residence tax relief using this ema
 
 Your submission reference is: @params.get("submissionReference")
 
-If we have any questions, we'll email you, quoting the submission
+If we have any questions we will email you, quoting the reference.
 
 Why you are receiving this email
 
 We send a confirmation email for all forms submitted online.
 
-From HMRC
+From Transfer of residence tax relief
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
