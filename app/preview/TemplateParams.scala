@@ -175,6 +175,11 @@ object TemplateParams {
       "timeSinceLastUse"        -> "11 months",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
+    "ppnsCallbackUrlChangedNotification" -> Map(
+      "applicationName" -> "Test Application",
+      "dateOfChange"    -> "28 October 2020",
+      "timeOfChange"    -> "12:23"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -1655,6 +1660,13 @@ object TemplateParams2 {
       "opsDesNoModsSurchargeReport_total"            -> "4,40.0,8,80.0,12,120.0,1,10.0",
       "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0,1,10.0"
     ),
+    "recon_mods_finance_report" -> Map(
+      "subject"              -> "MODS Finance Report 27/09/2027",
+      "MODS_ROW_123-456-789" -> "123-456-789,MIBREF1234,100,100,200,100,300",
+      "MODS_ROW_234-567-890" -> "234-567-890,MIBREF2345,100,100,200,100,300",
+      "MODS_ROW_098-765-432" -> "098-765-432,MIBREF3456,100,100,200,100,300",
+      "MODS_ROW_987-654-321" -> "987-654-321,MIBREF4567,100,100,200,100,300"
+    ),
     "hts_verification_email" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
@@ -2095,6 +2107,13 @@ object TemplateParams2 {
       "serviceName"            -> "Advance Tariff Rulings",
       "completionDate"         -> "22 March 2019"
     ),
+    "ecc_rcm_notifications" -> Map(
+      "timestamp"   -> "2018-07-05T09:08:12.831Z",
+      "name"        -> "Joe Bloggs",
+      "email"       -> "joebloggs@email.com",
+      "eori"        -> "GB1234456789000",
+      "serviceName" -> "Advance Tariff Rulings"
+    ),
     "mods_import_declaration" -> Map(
       "emailTo"                   -> "BorderForce",
       "recipientName_FullName"    -> "Joe Bloggs",
@@ -2123,6 +2142,41 @@ object TemplateParams2 {
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
       "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
+    ),
+    "mods_import_declaration_cy" -> Map(
+      "emailTo"                   -> "BorderForce",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsCountry_0"            -> "Sbaen",
+      "goodsPrice_0"              -> "150, Ewro (EUR)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_export_declaration_cy" -> Map(
+      "emailTo"                   -> "BorderForce",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "ABC123",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22 pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Sbaen",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "customs_rcm_notifications" -> Map(
+      "timestamp" -> "2018-07-05T09:08:12.831Z",
+      "name"      -> "Joe Bloggs",
+      "email"     -> "joebloggs@email.com",
+      "eori"      -> "GB1234456789000"
     )
   )
 }
