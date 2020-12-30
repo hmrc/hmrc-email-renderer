@@ -306,6 +306,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_phase_3_previously_claimed_stagger_cy",
         "vishing_code_submission",
         "cjrs_confirmation_submission",
+        "jrsRemoval_submission_confirmation",
         "csr_submission_confirmation",
         "cet_email_confirmation",
         "gss_email_confirmation",
