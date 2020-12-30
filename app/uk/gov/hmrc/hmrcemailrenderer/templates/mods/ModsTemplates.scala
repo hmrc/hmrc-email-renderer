@@ -43,7 +43,7 @@ object ModsTemplates {
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
-          s"${params("surname")} - ${params("declarationReference")} - mewnforio datganiad"
+          s"${params("surname")} - ${params("declarationReference")} - Datganiad mewnforio"
         } else {
           "Datganiad a thaliad am nwyddau masnachol rydych yn dod â nhw i Brydain Fawr"
         }
@@ -73,7 +73,7 @@ object ModsTemplates {
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
-          s"${params("surname")} - ${params("declarationReference")} - allforio datganiad"
+          s"${params("surname")} - ${params("declarationReference")} - Datganiad allforio"
         } else {
           "Datganiad am nwyddau masnachol yn gadael Prydain Fawr"
         }
