@@ -817,6 +817,15 @@ object EeittTemplates {
       plainTemplate = txt.torConfirmation.f,
       htmlTemplate = html.torConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "jrsRemoval_submission_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Job Retention Scheme application",
+      plainTemplate = txt.jrsRemovalSubmissionConfirmation.f,
+      htmlTemplate = html.jrsRemovalSubmissionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
