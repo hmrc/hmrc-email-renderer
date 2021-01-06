@@ -579,7 +579,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Statutory Parental Bereavement Pay",
       plainTemplate = txt.spbpCode.f,
       htmlTemplate = html.spbpCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "spbp_confirmation_submission",
@@ -689,7 +689,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Report a suspicious HMRC phone call",
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ipr1_code",
@@ -798,6 +798,33 @@ object EeittTemplates {
       subject = "HMRC Northern Ireland Protocol: application received",
       plainTemplate = txt.niVatStatusReporting.f,
       htmlTemplate = html.niVatStatusReporting.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "tor_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Apply for transfer of residence tax relief - HMRC",
+      plainTemplate = txt.torCode.f,
+      htmlTemplate = html.torCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tor_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for transfer of residence tax relief",
+      plainTemplate = txt.torConfirmation.f,
+      htmlTemplate = html.torConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "jrsRemoval_submission_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Job Retention Scheme application",
+      plainTemplate = txt.jrsRemovalSubmissionConfirmation.f,
+      htmlTemplate = html.jrsRemovalSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

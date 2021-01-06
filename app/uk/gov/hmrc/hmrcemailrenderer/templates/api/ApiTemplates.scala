@@ -200,6 +200,15 @@ object ApiTemplates {
       plainTemplate = txt.apiApplicationToBeDeletedNotification.f,
       htmlTemplate = html.apiApplicationToBeDeletedNotification.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "ppnsCallbackUrlChangedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Changes made to Callback URL",
+      plainTemplate = txt.ppnsCallbackUrlChangedNotification.f,
+      htmlTemplate = html.ppnsCallbackUrlChangedNotification.f,
+      priority = Some(MessagePriority.Urgent) // Email is a mitigation for a security risk, so increased priority
     )
   )
 }

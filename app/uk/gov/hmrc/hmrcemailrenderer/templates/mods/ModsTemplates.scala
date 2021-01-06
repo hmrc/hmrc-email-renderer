@@ -17,27 +17,69 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.mods
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MODS
+import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineFromAddress.transactionEngineAddress
 
 object ModsTemplates {
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
       templateId = "mods_import_declaration",
-      fromAddress = govUkTeamAddress,
+      fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => s"Import declaration and payment for commercial goods - ${params.get("declarationReference")}",
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Import declaration"
+        } else {
+          "Declaration and payment for commercial goods you bring into Great Britain"
+        }
+      },
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicSubject(
-      templateId = "mods_export_declaration",
-      fromAddress = govUkTeamAddress,
+      templateId = "mods_import_declaration_cy",
+      fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => s"Export declaration for commercial goods - ${params.get("declarationReference")}",
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Datganiad mewnforio"
+        } else {
+          "Datganiad a thaliad am nwyddau masnachol rydych yn dod â nhw i Brydain Fawr"
+        }
+      },
+      plainTemplate = txt.mods_import_declaration_cy.f,
+      htmlTemplate = html.mods_import_declaration_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "mods_export_declaration",
+      fromAddress = transactionEngineAddress,
+      service = MODS,
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Export declaration"
+        } else {
+          "Declaration for commercial goods leaving Great Britain"
+        }
+      },
       plainTemplate = txt.mods_export_declaration.f,
       htmlTemplate = html.mods_export_declaration.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "mods_export_declaration_cy",
+      fromAddress = transactionEngineAddress,
+      service = MODS,
+      subject = params => {
+        if (params("emailTo") == "BorderForce") {
+          s"${params("surname")} - ${params("declarationReference")} - Datganiad allforio"
+        } else {
+          "Datganiad am nwyddau masnachol yn gadael Prydain Fawr"
+        }
+      },
+      plainTemplate = txt.mods_export_declaration_cy.f,
+      htmlTemplate = html.mods_export_declaration_cy.f,
       priority = Some(MessagePriority.Standard)
     )
   )
