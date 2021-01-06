@@ -12,7 +12,7 @@ Changes to the specification
 
 From feedback and suggestions, we've updated the fraud prevention specification. Version 3.0 includes new headers and formatting requirements. In these reports, you'll start to get warnings related to the changes.
 
-You have 6 months to implement changes that affect your application. From June 2021, warnings about the changes will become errors.
+You have 6 months to implement changes that affect your application. From July 2021, warnings about the changes will become errors.
 
 What you need to do
 
