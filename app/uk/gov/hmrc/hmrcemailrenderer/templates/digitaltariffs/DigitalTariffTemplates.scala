@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,11 +32,11 @@ object DigitalTariffTemplates {
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Background)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "digital_tariffs_case_completed",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
       service = BTIOperationalService,
-      subject = "Binding Tariff Ruling issued",
+      subject = params => s"Issued: Advance Tariff Ruling for ${params("reference")}",
       plainTemplate = txt.caseCompleted.f,
       htmlTemplate = html.caseCompleted.f,
       priority = Some(MessagePriority.Background)
