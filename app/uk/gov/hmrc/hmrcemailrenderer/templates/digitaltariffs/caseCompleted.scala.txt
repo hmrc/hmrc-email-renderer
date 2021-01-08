@@ -1,20 +1,29 @@
-@(params: Map[String, Any])
-Issued: Binding Tariff Information (BTI) ruling
+@(params: Map[String, Any])We have issued your Advance Tariff Ruling for application @params("reference") for @params("goodsName")
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-We have issued your BTI ruling for application @params("reference") for @params("itemName").
+Thank you for your Advance Tariff Ruling (ATaR) application dated @params("dateSubmitted"). I have made a decision and your ruling certificate can be viewed online in your ATaR account.
 
-Sign into your BTI account on GOV.UK in Binding Tariff Information (Notice 600) to:
+How to view your ruling for @params("goodsName")
 
-- find out how we made our decision
-- view and download your ruling certificate
+You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Manage your Advance Tariff Rulings'.
 
-Get more information on BTI rulings including how to appeal on GOV.UK in the guide on Binding Tariff Information (Notice 600).
+In your account you will be able to:
 
-For security reasons we have not included a link with this email.
+- print or download your ruling certificate
+- find out how I made this decision
+- find out how to review or appeal my decision
 
-From Tariff Classification Service
+Important information about communicating with us by email
 
+Communicating with us through email is not secure and therefore no confidential information should be passed through emails with our team. By choosing to contact us by email you are accepting these risks.
+
+For security reasons we have not included any links with this email.
+
+Yours sincerely,
+
+@params("officerName")
+
+HMRC Tariff Classification Service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

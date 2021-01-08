@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1730,8 +1730,10 @@ object TemplateParams2 {
     ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
-      "reference"           -> "BTI REFERENCE",
-      "itemName"            -> "ITEM NAME"
+      "reference"           -> "ATaR REFERENCE",
+      "goodsName"           -> "GOODS NAME",
+      "dateSubmitted"       -> "20 December 2020",
+      "officerName"         -> "Dan The Officer"
     ),
     "passengers_payment_confirmation" -> Map(
       "subject"         -> "Receipt for payment on goods brought into the UK - Reference number XAPR9876543210",
