@@ -23,7 +23,7 @@ Make sure you take this declaration and the purchase receipts for the goods with
 
 Date of declaration
 
-@params("dateOfDeclaration")
+@{params("dateOfDeclaration") + "." }
 
 Details of the goods
 
