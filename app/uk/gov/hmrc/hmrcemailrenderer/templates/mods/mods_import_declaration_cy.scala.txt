@@ -23,7 +23,7 @@ Gwnewch yn siŵr eich bod yn cymryd y datganiad hwn a’r derbynebau prynu ar gy
 
 Dyddiad y datganiad
 
-@params("dateOfDeclaration")
+@{params("dateOfDeclaration") + "." }
 
 Manylion y nwyddau
 
