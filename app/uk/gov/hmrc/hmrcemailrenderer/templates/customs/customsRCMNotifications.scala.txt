@@ -1,0 +1,17 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.customs.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+
+@(params: Map[String, Any])Get Access to CDS Rcm exception
+
+@salutationFullName(params)
+
+Get Access to CDS Rcm exception at @params("timestamp"),  please investigate.
+
+Name: @params("name")
+Email: @params("email")
+EORI: @params("eori")
+
+
+From HMRC CDS Support Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

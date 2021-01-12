@@ -15,22 +15,22 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted a cash declaration online"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
+
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName") </p>
+    Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    HMRC received your declaration of carrying a cash amount of £10,000 or more into or out of the Great Britain.</p>
+    You requested a code to continue with the ‘Apply for transfer of residence tax relief’ service on GOV.UK.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    This includes the equivalent of £10,000 in other currencies.</p>
+    Your code is: @params.get("confirmationCode")</p>
 <h2>
-    What you need to do next</h2>
+    What you need to do now</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You need to make a note of this reference. It also helps if you print a copy of your online declaration, so you can show these to a customs official if they ask for proof of your submission.</p>
-<h2>Why you are receiving this email</h2>
+    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for a declaration submitted online.</p>
+    Do not reply to this email.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Cash Declarations</p>
+    From Transfer of residence tax relief</p>
 }

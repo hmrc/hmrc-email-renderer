@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -306,6 +306,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_phase_3_previously_claimed_stagger_cy",
         "vishing_code_submission",
         "cjrs_confirmation_submission",
+        "jrsRemoval_submission_confirmation",
         "csr_submission_confirmation",
         "cet_email_confirmation",
         "gss_email_confirmation",
@@ -314,6 +315,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cash_declaration_UK",
         "ccg1_confirmation_submission",
         "dan_waiver_confirmation",
+        "tor_code",
+        "tor_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
@@ -395,6 +398,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_declaration_success",
         "customs_pull_notifications_warning",
         "customs_push_notifications_warning",
+        "customs_rcm_notifications",
         "transactionEngineHMRCSASA100Success",
         "transactionEngineHMRCSASA100Failure",
         "transactionEngineHMRCSASA100ATTSuccess",
@@ -540,6 +544,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "recon_tps_report",
         "recon_tops_report",
         "recon_surcharge_report",
+        "recon_mods_finance_report",
         "ddi_migration_letter",
         "ddi_setup_dcs_alert",
         "ddi_setup_aa_dcs_alert",
@@ -583,6 +588,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_authorise_psp",
         "pods_psa_deauthorise_psp",
         "pods_psp_deregister_self",
+        "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
@@ -631,6 +637,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ecc_subscription_successful_cy",
         "ecc_subscription_not_successful",
         "ecc_subscription_not_successful_cy",
+        "ecc_rcm_notifications",
         "trading_status_before_seiss_claimed",
         "settlement_request",
         "complaint_consultation_code",
@@ -639,6 +646,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "eat_out_help_out_confirmation",
         "mods_import_declaration",
         "mods_export_declaration",
+        "mods_import_declaration_cy",
+        "mods_export_declaration_cy",
         "ni_vat_Status_reporting_confirmation"
       )
     }

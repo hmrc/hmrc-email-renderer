@@ -27,87 +27,87 @@
   }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You declared and paid for commercial goods you are bringing into Great Britain") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gwnaethoch ddatgan a thalu am nwyddau masnachol rydych yn dod â nhw i Brydain Fawr") {
 
-    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear @params("nameOfPersonCarryingGoods")</p>
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl @params("nameOfPersonCarryingGoods")</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">We received your declaration and payment for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Daeth eich datganiad a’ch taliad am y nwyddau masnachol rydych yn dod â nhw i Brydain Fawr yn eich bagiau neu gerbyd bach i law.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Your declaration reference is: <strong>@params("declarationReference")</strong></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Cyfeirnod eich datganiad yw: <strong>@params("declarationReference")</strong></p>
 
-    <h2>What you need to do next</h2>
+    <h2>Yr hyn y mae angen i chi ei wneud nesaf</h2>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Pan fyddwch yn cyrraedd Prydain Fawr, ewch i’r sianel werdd ’dim byd i’w ddatgan’.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Gwnewch yn siŵr eich bod yn cymryd y datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi. Efallai y gofynnir i chi ddangos y rhain ar y ffin.</p>
 
-    <h2>Date of declaration</h2>
+    <h2>Dyddiad y datganiad</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
 
-    <h2>Details of the goods</h2>
+    <h2>Manylion y nwyddau</h2>
 
     @for((category, quantity, country, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
                 <tr>
-                    <th width="60%">Type of goods</th>
+                    <th width="60%">Math o nwyddau</th>
                     <td>@category</td>
                 </tr>
                 <tr>
-                    <th width="60%">Number of items</th>
+                    <th width="60%">Nifer yr eitemau</th>
                     <td>@quantity</td>
                 </tr>
                 <tr>
-                    <th width="60%">Country</th>
+                    <th width="60%">Gwlad</th>
                     <td>@country</td>
                 </tr>
                 <tr>
-                    <th width="60%">Price paid</th>
+                    <th width="60%">Y pris a dalwyd</th>
                     <td>@price</td>
                 </tr>
             </tbody>
         </table>
     }
 
-  <h2>Amount paid</h2>
+  <h2>Swm a dalwyd</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
       <tbody>
           <tr>
-              <th width="60%">Customs Duty</th>
+              <th width="60%">Toll Dramor</th>
               <td>@params("customsDuty")</td>
           </tr>
           <tr>
-              <th width="60%">VAT</th>
+              <th width="60%">TAW</th>
               <td>@params("vat")</td>
           </tr>
           <tr>
-              <th width="60%">Total</th>
+              <th width="60%">Cyfanswm</th>
               <td>@params("total")</td>
           </tr>
       </tbody>
   </table>
 
-  <h2>Personal details</h2>
+  <h2>Manylion personol</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
             <tr>
-                <th width="60%">Name of person carrying goods</th>
+                <th width="60%">Enw’r person sy’n cludo’r nwyddau</th>
                 <td>@params("nameOfPersonCarryingGoods")</td>
             </tr>
             <tr>
-                <th width="60%">EORI number</th>
+                <th width="60%">Rhif EORI</th>
                 <td>@params("eori")</td>
             </tr>
         </tbody>
     </table>
 
-  <h2>Changing your declaration</h2>
+  <h2>Newid eich datganiad</h2>
 
-  <p style="margin: 0 0 30px; font-size: 19px;">If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.</p>
-  <p style="margin: 0 0 30px; font-size: 19px;">To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ’Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">I gael gwybod sut i ddileu nwyddau o’r datganiad hwn, chwiliwch ar GOV.UK am ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’.</p>
 
-  <p style="margin: 0 0 30px; font-size: 19px;">From the Commercial goods declaration service</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">O’r gwasanaeth datgan nwyddau masnachol</p>
 }
