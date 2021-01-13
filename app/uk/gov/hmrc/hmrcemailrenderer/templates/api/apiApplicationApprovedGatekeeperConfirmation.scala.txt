@@ -6,4 +6,6 @@ We’ve sent an email to @{params("email")} to confirm this.
 
 From HMRC Developer Hub
 
+Manage the emails you receive from us in your Developer Hub account under email preferences.
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
