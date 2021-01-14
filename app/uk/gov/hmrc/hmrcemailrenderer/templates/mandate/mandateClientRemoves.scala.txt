@@ -2,8 +2,12 @@
 
 @{params("service")} update
 
-Your client has cancelled your request to act as their @{params("service")} agent. If you think this is an error, try adding your client again.
+Dear @{params("recipient")}
 
-From HMRC
+Your client has cancelled your request to act as their @{params("service")} agent.
+
+If you think this is an error, try adding your client again.
+
+From HMRC @{params("service")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
