@@ -660,29 +660,37 @@ object TemplateParams {
     "indefensible_upgrades"              -> newMessageAlert_Names,
     "indefensible_upgrades_with_dates"   -> newMessageAlert_Names,
     "client_approves_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "agent_activates_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Brown"
     ),
     "agent_rejects_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Brown"
     ),
     "agent_removes_mandate" -> Map(
       "service"      -> testServiceUpdate,
-      "uniqueAuthNo" -> "123456789"
+      "recipient"    -> "Mrs Brown",
+      "uniqueAuthNo" -> "12345678"
     ),
     "client_removes_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "client_cancels_active_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "agent_self_auth_activates_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "agent_self_auth_deactivates_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "offpayroll_private_beta_invitation" -> Map(
       "name"             -> "Mr Joe Bloggs",
