@@ -8,7 +8,7 @@ HMRC received an application for a guarantee waiver on behalf of your business.
 
 Your submission reference is: @params.get("submissionReference")
 
-If we have any questions, we will contact you by your preferred method, quoting the submission reference shown above.
+If we have any questions we will contact you quoting the submission reference shown above.
 
 If we approve your application, we will tell you whether we require a guarantee from a guarantor and, if so, how much it will need to be for.
 
