@@ -18,6 +18,6 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Activate your account") {
 <p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to verify your email address:</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}" style="color: #005EA5;">@{params("verificationLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under email preferences.</p>
 }

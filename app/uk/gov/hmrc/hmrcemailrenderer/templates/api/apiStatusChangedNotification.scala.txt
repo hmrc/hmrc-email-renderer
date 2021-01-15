@@ -2,6 +2,6 @@
 
 The Status of API @{params("apiName")} Version @{params("apiVersion")} has changed from @{params("currentStatus")} to @{params("newStatus")} in the @{params("environmentName")} environment.
 
-Manage the emails you receive from us in your Developer Hub account under email preferences.
+Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
