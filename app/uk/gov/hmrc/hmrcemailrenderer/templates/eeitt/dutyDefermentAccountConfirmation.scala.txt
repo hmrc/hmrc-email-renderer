@@ -8,7 +8,7 @@ HMRC received an application for a Duty Deferment Account (DDA) on behalf of you
 
 Your submission reference is: @params.get("submissionReference")
 
-If we have any questions, we will contact you by your preferred method, quoting the submission reference shown above.
+If we have any questions we will contact you quoting the submission reference shown above.
 
 If you have not applied for a guarantee waiver as part of your DDA application, you will need to contact an approved financial institution to discuss your guarantee requirements. This could save you time later, if we approve your application.
 
