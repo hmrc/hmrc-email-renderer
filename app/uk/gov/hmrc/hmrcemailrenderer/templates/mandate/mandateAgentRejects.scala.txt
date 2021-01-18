@@ -4,7 +4,7 @@
 
 Dear @{params("recipient")}
 
-Your agent has rejected your request to act as their @{params("service")} agent.
+Your agent has rejected your request to act as your @{params("service")} agent.
 
 If you think this is an error, ask your agent to add your company details again.
 
