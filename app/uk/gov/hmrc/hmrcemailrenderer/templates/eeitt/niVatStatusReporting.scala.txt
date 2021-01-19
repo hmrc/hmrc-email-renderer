@@ -12,6 +12,8 @@ This is because it will do one or more of the following:
 - receive goods in Northern Ireland from VAT registered EU businesses for business purposes
 - sell or move goods from Northern Ireland to an EU member state
 
+Note:  it may take up to 2 working days before your suppliers can validate your VAT registration number using the EU’s VAT Information Exchange System (VIES) web service.
+
 You do not need to take any further action.
 
 Your submission reference is: @params.get("submissionReference")
