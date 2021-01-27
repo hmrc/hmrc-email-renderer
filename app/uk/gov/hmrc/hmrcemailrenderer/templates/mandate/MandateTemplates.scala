@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +54,7 @@ object MandateTemplates {
       templateId = "agent_removes_mandate",
       fromAddress = govUkTeamAddress,
       service = Mandate,
-      subject = "Your agent has removed you as a client",
+      subject = "Your agent removed you as a client",
       plainTemplate = txt.mandateAgentRemoves.f,
       htmlTemplate = html.mandateAgentRemoves.f,
       priority = Some(MessagePriority.Urgent)

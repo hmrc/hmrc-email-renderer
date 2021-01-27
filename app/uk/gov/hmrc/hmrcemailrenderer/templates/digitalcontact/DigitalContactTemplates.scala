@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -150,6 +150,15 @@ object DigitalContactTemplates {
       subject = "HMRC recalled a Self Assessment message",
       plainTemplate = txt.rescindedMessageAlert.f,
       htmlTemplate = html.rescindedMessageAlert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "penaltyChargeApologies",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "You've got a new message from HMRC",
+      plainTemplate = txt.penaltyChargeApologies.f,
+      htmlTemplate = html.penaltyChargeApologies.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(

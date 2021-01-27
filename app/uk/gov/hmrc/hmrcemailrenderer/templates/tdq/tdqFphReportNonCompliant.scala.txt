@@ -1,0 +1,74 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
+@(params: Map[String, Any])Fraud prevention headers report for VAT (Making Tax Digital)
+@defining(TdqFphReportParams(params)) { reportParams =>
+
+Dear @reportParams.developerName
+
+To help protect your customers' confidential data from criminals and fraudsters, we monitor API calls and send you feedback every month.
+
+Our logs show that the fraud prevention headers submitted for @reportParams.applicationName between @reportParams.fromDate and @reportParams.toDate do not meet the specification on the HMRC Developer Hub.
+
+Changes to the specification
+
+From feedback and suggestions, we've updated the fraud prevention specification. Version 3.0 includes new headers and formatting requirements. In these reports, you'll start to get warnings related to the changes.
+
+You have 6 months to implement changes that affect your application. From July 2021, warnings about the changes will become errors.
+
+What you need to do
+
+Submitting header data for VAT (MTD) APIs is required by law. You'll find version 3.0 of fraud prevention specification and the Test Fraud Prevention Headers API on the HMRC Developer Hub.
+
+To meet the specification, you need to:
+
+@if(reportParams.hasInvalidConnectionMethod) {Go to the specification and select the correct connection method for your application. Check what has changed. Your application has an invalid connection method in @reportParams.invalidConnectionMethodPercentage% of requests.}
+
+Submit header data for every request made by your application.@if(reportParams.hasAllHeadersMissing) { Your application is missing all of the header data in @reportParams.allHeadersMissingPercentage% of requests.}
+
+@if(reportParams.hasErrors) {Correct the errors @if(reportParams.hasWarnings){and consider the warnings }shown in this report.}
+@if(reportParams.hasWarnings && !reportParams.hasErrors) {Consider the warnings shown in this report.}
+
+Use the Test Fraud Prevention Headers API before you submit any headers. You need to check your data meets the specification and is formatted correctly.
+
+If the Test Fraud Prevention Headers API shows that you're submitting the correct headers, check if your end users are using an outdated version of your application.
+
+Most organisations are able to send all header data required for their connection method. If you're unable to submit a value, check what you need to do in the missing header section of the specification.
+
+@if(reportParams.hasErrors || reportParams.hasWarnings) {
+@if(reportParams.hasErrors) {You need to correct errors @if(reportParams.hasWarnings){and consider warnings}} else {You need to consider warnings}
+
+We've made basic checks on header values sent by your application. This includes requests with all headers missing. It does not include headers that appear to be valid.
+
+If your application sent requests via an additional connection method, you'll receive a separate report.
+
+@if(reportParams.relatesToMultipleVersions) {Errors and warnings relate to more than 1 version of your software, as provided in the Gov-Vendor-Version header.}
+
+@for(extraDetails <- reportParams.extraDetails) {Connection method @extraDetails.connectionMethod
+@for(headersValidation <- extraDetails.headerValidations) {
+@headersValidation.headerOrHeaders
+@for(error <- headersValidation.errors) {
+Error @error.message @error.shortPercentageDescription
+}
+@for(warning <- headersValidation.warnings) {
+Warning @warning.message @warning.shortPercentageDescription
+}
+}
+
+We continue to accept calls with missing or incorrect headers but improving the header data you submit will help protect your customers' data.
+}}
+
+Contact us
+
+If you need to contact us, email SDSTeam@@hmrc.gov.uk. Make sure you include your application ID: @reportParams.applicationId.
+
+Why you have received this email
+
+This email address is registered on Developer Hub for @reportParams.applicationName.
+
+If you're no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub.
+
+You need to have at least 1 contact for each application, you may need to add a new team member.
+
+From HMRC Transaction Monitoring Team
+}
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

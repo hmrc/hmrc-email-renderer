@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -66,8 +66,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cgtpd.CgtpdTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.htsreminder.HtsReminderTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dst.DstTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.EoriCommonComponentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.eotho.EothoTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gms.GmsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mods.ModsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 
 trait TemplateLocator {
@@ -125,7 +127,9 @@ trait TemplateLocator {
       "Cgtpd"                 -> CgtpdTemplates.templates,
       "TDQ"                   -> TdqTemplates.templates,
       "SEISS"                 -> SeissTemplates.templates,
-      "EOTHO"                 -> EothoTemplates.templates
+      "EOTHO"                 -> EothoTemplates.templates,
+      "Eori Common Component" -> EoriCommonComponentTemplates.templates,
+      "MODS"                  -> ModsTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

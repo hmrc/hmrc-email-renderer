@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ object HtsReminderTemplates {
       templateId = "hts_reminder_email",
       fromAddress = FromAddress.noReply("Help to Save"),
       service = HelpToSave,
-      subject = "Hts Reminder Service",
+      subject = "Remember to save this month",
       plainTemplate = txt.htsReminderEmail.f,
       htmlTemplate = html.htsReminderEmail.f,
       priority = Some(MessagePriority.Urgent)

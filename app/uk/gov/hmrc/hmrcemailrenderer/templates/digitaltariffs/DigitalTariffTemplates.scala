@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,16 +27,16 @@ object DigitalTariffTemplates {
       templateId = "digital_tariffs_application_submitted",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
       service = BTIApplicationService,
-      subject = "Submitted: Binding Tariff Information (BTI) application",
+      subject = "HMRC received your Advance Tariff Ruling (ATaR) application",
       plainTemplate = txt.applicationSubmitted.f,
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Background)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "digital_tariffs_case_completed",
       fromAddress = FromAddress.noReply("HMRC Tariff Classification Team"),
       service = BTIOperationalService,
-      subject = "Binding Tariff Ruling issued",
+      subject = params => s"Issued: Advance Tariff Ruling for ${params("reference")}",
       plainTemplate = txt.caseCompleted.f,
       htmlTemplate = html.caseCompleted.f,
       priority = Some(MessagePriority.Background)
@@ -48,6 +48,15 @@ object DigitalTariffTemplates {
       subject = params => s"${params("reference")}: ${params("itemName")}",
       plainTemplate = txt.adviceRequest.f,
       htmlTemplate = html.adviceRequest.f,
+      priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "digital_tariffs_application_submitted_cy",
+      fromAddress = FromAddress.noReply("Tîm Dosbarthu Tariffau CThEM"),
+      service = BTIApplicationService,
+      subject = "Mae’ch cais am Ddyfarniad Tariffau Uwch (ATaR) wedi dod i law CThEM",
+      plainTemplate = txt.applicationSubmitted_cy.f,
+      htmlTemplate = html.applicationSubmitted_cy.f,
       priority = Some(MessagePriority.Background)
     )
   )

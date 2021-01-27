@@ -1,0 +1,40 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a Northern Ireland Protocol application"){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear Customer</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    This email confirms that you have told HMRC your business will be operating under the terms of the Northern Ireland Protocol for VAT.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    This is because it will do one or more of the following:</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>sell goods located in Northern Ireland at the time of sale</li>
+
+    <li>receive goods in Northern Ireland from VAT registered EU businesses for business purposes</li>
+
+    <li>sell or move goods from Northern Ireland to an EU member state</li>
+</ul>
+<p style="margin: 0 0 30px; font-size: 19px;">
+Note:  it may take up to 2 working days before your suppliers can validate your VAT registration number using the EU’s VAT Information Exchange System (VIES) web service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You do not need to take any further action.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: @params.get("submissionReference")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC</p>
+}

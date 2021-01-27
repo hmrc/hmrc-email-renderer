@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,39 +16,27 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.connectors
 
-import com.typesafe.config.Config
-import play.api.{ Configuration, Play }
-import play.api.Mode.Mode
+import com.google.inject.Inject
 import play.api.libs.json.Json
-import uk.gov.hmrc.emailaddress.EmailAddress
-import uk.gov.hmrc.hmrcemailrenderer.WSHttp
+import uk.gov.hmrc.crypto.{ ApplicationCrypto, PlainText }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.{ HeaderCarrier, HttpException, HttpGet, HttpPost, HttpReads, HttpResponse }
-import uk.gov.hmrc.play.config.ServicesConfig
-import uk.gov.hmrc.play.http.logging.MdcLoggingExecutionContext._
+import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
+import uk.gov.hmrc.play.bootstrap.http.HttpClient
 
-import scala.concurrent.{ Await, Future }
+import scala.concurrent.{ ExecutionContext, Future }
 
-trait PreferencesConnector extends ServicesConfig {
-
-  def httpGet: HttpGet
+class PreferencesConnector @Inject()(servicesConfig: ServicesConfig, http: HttpClient, crypto: ApplicationCrypto) {
 
   object LanguagePreference {
     implicit val format = Json.format[LanguagePreference]
   }
 
-  def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier): Future[Language] = {
-    val url = baseUrl("preferences") + s"/preferences/language/$emailAddress"
-    httpGet.GET[Language](url)
+  def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier, ec: ExecutionContext): Future[Language] = {
+    val encryptedEmail = new String(crypto.QueryParameterCrypto.encrypt(PlainText(emailAddress)).toBase64)
+    val url = servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail"
+    http.GET[Language](url)
   }
 }
 
 final case class LanguagePreference(lang: String)
-
-object PreferencesConnector {
-  def apply(): PreferencesConnector = new PreferencesConnector with ServicesConfig {
-    override protected def mode: Mode = Play.current.mode
-    override protected def runModeConfiguration: Configuration = Play.current.configuration
-    override def httpGet: HttpGet = WSHttp
-  }
-}

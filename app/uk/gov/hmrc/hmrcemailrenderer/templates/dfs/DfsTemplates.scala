@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -129,6 +129,15 @@ object DfsTemplates {
       subject = _.apply("subject"),
       plainTemplate = txt.dfsSubmissionConfirmationEmailEmptyTurnAroundTime_welsh.f,
       htmlTemplate = html.dfsSubmissionConfirmationEmailEmptyTurnAroundTime_welsh.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_empty_turn_around_time_2020",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailGeneric4ParagraphsEmptyTurnAroundTime.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailGeneric4ParagraphsEmptyTurnAroundTime.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(

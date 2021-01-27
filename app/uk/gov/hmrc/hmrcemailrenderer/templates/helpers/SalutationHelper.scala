@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,14 +65,17 @@ object SalutationHelper {
     }
   }
 
-  def saluteFullName(params: Map[String, Any]): String = {
+  def saluteFullName(params: Map[String, Any], isWelsh: Boolean = false): String = {
+    val defaultName = if (isWelsh) DefaultWelshName else DefaultEnglishName
+    val salutation = if (isWelsh) WelshSalutation else EnglishSalutation
+
     val salutationParams: List[Option[String]] = List(
       capitalised(params.getNonEmpty("recipientName_FullName"))
     )
 
     salutationParams match {
-      case List(Some(fullName)) => s"$EnglishSalutation $fullName"
-      case _                    => s"$EnglishSalutation $DefaultEnglishName"
+      case List(Some(fullName)) => s"$salutation $fullName"
+      case _                    => s"$salutation $defaultName"
     }
   }
 

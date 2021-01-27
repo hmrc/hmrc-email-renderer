@@ -1,0 +1,28 @@
+@(params: Map[String, Any])You have submitted a disclosure for the DAC6 service
+
+Dear @{params("name")}
+
+This email confirms your DAC6 disclosure has been received.
+
+Keep the following information for your records.
+
+Arrangement ID: @{params("arrangementID")}
+Disclosure ID: @{params("disclosureID")}
+Time and date of submission: @{params("dateSubmitted")}
+Message reference ID: @{params("messageRefID")}
+
+What to do next
+
+Share the arrangement ID with any people or organisations involved in this arrangement.
+
+If you or another party needs to submit an additional disclosure for the same arrangement, upload a DAC6ADD file, using the same arrangement ID.
+
+To replace this disclosure, upload a DAC6REP file, using the arrangement and disclosure IDs above.
+
+To delete a disclosure, upload a DAC6DEL file, using the same arrangement and disclosure IDs as the original file it deletes.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC DAC6 service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

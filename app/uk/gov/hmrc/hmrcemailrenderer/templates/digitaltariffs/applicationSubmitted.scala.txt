@@ -1,17 +1,27 @@
 @(params: Map[String, Any])
-Issued: Binding Tariff Information (BTI) ruling
+Your Advance Tariff Ruling (ATaR) application
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
 
-Your BTI application @params("reference") has been submitted.
+We received your ATaR application reference: @params("reference")
 
-We will email you to tell you when your ruling is complete within 30 to 60 days.
+We try to issue ATaR decisions within 30 working days from the date that the application is accepted. Although it can take up to 120 days, as per UK law.
 
-To check the status of your application or to get information on samples go to GOV.UK and search for 'Apply for a Binding Tariff Information decision (Notice 600)'.
+We will make a decision when we receive all necessary information.
 
-For security reasons we have not included a link with this email.
+Samples
 
-From Tariff Classification Service
+Do not send samples to us during the coronavirus pandemic. If a sample is needed then we will ask you to provide one.
+
+What you can do next
+
+Communicating with us through email is not secure and therefore no confidential information should be passed through emails with our team. If you choose to contact us by email, then you accept the risks.
+
+To check the status of your application, or to get information on samples, go to GOV.UK and search for 'Apply for an Advance Tariff Ruling (ATaR)'.
+
+For security reasons we have not included a link in this email.
+
+From the Tariff Classification Service
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

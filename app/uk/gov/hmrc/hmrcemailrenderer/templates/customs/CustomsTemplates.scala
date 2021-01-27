@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -102,6 +102,15 @@ object CustomsTemplates {
       subject = "Customs push notifications failure - do not reply",
       plainTemplate = txt.customsPushNotificationsWarning.f,
       htmlTemplate = html.customsPushNotificationsWarning.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_rcm_notifications",
+      fromAddress = govUkTeamAddress,
+      service = Customs,
+      subject = "CDS RCM Exception",
+      plainTemplate = txt.customsRCMNotifications.f,
+      htmlTemplate = html.customsRCMNotifications.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

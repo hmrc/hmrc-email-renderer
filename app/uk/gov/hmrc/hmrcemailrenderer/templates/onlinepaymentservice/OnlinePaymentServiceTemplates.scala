@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -178,12 +178,11 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    //Passengers email template
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "passengers_payment_confirmation",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Receipt for payment on goods brought into the UK",
+      fromAddress = "HMRC Online Service for Passengers <noreply@confirmation.tax.service.gov.uk>",
+      service = ServiceIdentifier.PassengerService,
+      subject = _.apply("subject"),
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent)
@@ -214,6 +213,24 @@ object OnlinePaymentServiceTemplates {
       subject = _.apply("subject"),
       plainTemplate = txt.recon_tops_report.f,
       htmlTemplate = html.recon_tops_report.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_surcharge_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_surcharge_report.f,
+      htmlTemplate = html.recon_surcharge_report.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_mods_finance_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_mods_finance_report.f,
+      htmlTemplate = html.recon_mods_finance_report.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

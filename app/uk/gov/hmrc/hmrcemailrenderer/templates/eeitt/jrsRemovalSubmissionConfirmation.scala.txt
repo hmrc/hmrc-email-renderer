@@ -1,0 +1,30 @@
+@(params: Map[String, Any])
+
+You applied to remove an employer’s name from the register
+
+Dear @params.get("customerName")
+
+We received your application to remove an employer’s name from the Job Retention Scheme register.
+
+Your submission reference is: @params.get("submissionReference")
+
+We will now review the details you have given us.
+
+What happens next
+
+We will contact you using the email address you provided to let you know that either:
+
+
+ • the business meets the exclusion criteria, and HMRC will not publish its details on the register
+
+ • you need to provide more information to help HMRC make a decision
+
+If you do not qualify to be removed from the register
+
+We will contact you to offer the business the opportunity of repaying the grant, which would mean the business’s details will not be included on the register.
+
+For more information, search GOV.UK for ‘Job Retention Scheme’.
+
+From the Job Retention Scheme team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

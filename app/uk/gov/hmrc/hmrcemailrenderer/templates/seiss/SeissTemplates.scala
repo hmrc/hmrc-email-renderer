@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,7 +65,7 @@ object SeissTemplates {
     MessageTemplate.create(
       templateId = "seiss_scheme_open",
       fromAddress = seissFromAddress,
-      service = Eeitt,
+      service = Seiss,
       subject = "You can now make a Self-Employment Income Support Scheme grant claim online",
       plainTemplate = txt.seissSchemeOpen.f,
       htmlTemplate = html.seissSchemeOpen.f,
@@ -74,29 +74,29 @@ object SeissTemplates {
     MessageTemplate.create(
       templateId = "seiss_received_confirmation",
       fromAddress = seissFromAddress,
-      service = Eeitt,
+      service = Seiss,
       subject = "You submitted a Self-Employment Income Support Scheme grant claim to HMRC",
       plainTemplate = txt.seissReceivedConfirmation.f,
       htmlTemplate = html.seissReceivedConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "seiss_phase_2_previously_claimed_stagger",
+      templateId = "seiss_phase_3_previously_claimed_stagger",
       fromAddress = seissFromAddress,
-      service = Eeitt,
-      subject = "How to claim self-employment support",
-      plainTemplate = txt.seissPhase2PreviouslyClaimedStagger.f,
-      htmlTemplate = html.seissPhase2PreviouslyClaimedStagger.f,
-      priority = Some(MessagePriority.Standard)
+      service = Seiss,
+      subject = "More help for the self-employed affected by COVID-19",
+      plainTemplate = txt.seissPhase3PreviouslyClaimedStagger.f,
+      htmlTemplate = html.seissPhase3PreviouslyClaimedStagger.f,
+      priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
-      templateId = "seiss_phase_2_previously_claimed_stagger_cy",
+      templateId = "seiss_phase_3_previously_claimed_stagger_cy",
       fromAddress = seissFromAddressWelsh,
-      service = Eeitt,
-      subject = "Sut i hawlio cymhorthdal hunangyflogaeth",
-      plainTemplate = txt.seissPhase2PreviouslyClaimedStagger_cy.f,
-      htmlTemplate = html.seissPhase2PreviouslyClaimedStagger_cy.f,
-      priority = Some(MessagePriority.Standard)
+      service = Seiss,
+      subject = "Rhagor o help i bobl hunangyflogedig y mae COVID-19 wedi effeithio arnynt",
+      plainTemplate = txt.seissPhase3PreviouslyClaimedStagger_cy.f,
+      htmlTemplate = html.seissPhase3PreviouslyClaimedStagger_cy.f,
+      priority = Some(MessagePriority.Background)
     )
   )
 }

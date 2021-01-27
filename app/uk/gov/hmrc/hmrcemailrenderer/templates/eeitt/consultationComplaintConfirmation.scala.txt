@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You sent a comment or complaint about a consultation
+
+Dear @params.get("customerName")
+
+We have received your comment or complaint about @params.get("consultationName").
+
+We will contact you as soon as possible, using your preferred method.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the Consultation Coordinator
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

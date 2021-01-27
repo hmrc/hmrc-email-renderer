@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,6 +65,18 @@ class TemplateContentComparisonSpec
       ) ++ commonParameters
 
       compareContent("rescindedMessageAlert", params)(digitalContactTemplate)
+    }
+
+    "render the identical penaltyChargeApologies content for both the text and html versions" in {
+      val params = Map(
+        "recipientName_title"          -> "title",
+        "recipientName_forename"       -> "forename",
+        "recipientName_secondForename" -> "a",
+        "recipientName_surname"        -> "b",
+        "recipientName_honours"        -> "c"
+      ) ++ commonParameters
+
+      compareContent("penaltyChargeApologies", params)(digitalContactTemplate)
     }
 
     "include verificationReminder content for both the text and html versions" in {
