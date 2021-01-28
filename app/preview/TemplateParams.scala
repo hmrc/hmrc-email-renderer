@@ -1431,27 +1431,39 @@ object TemplateParams {
       "subject"      -> "subject"
     ),
     "chargeable_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "relief_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017",
       "reference"    -> "1234567890"
     ),
     "amended_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "further_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "change_details_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "disposal_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),

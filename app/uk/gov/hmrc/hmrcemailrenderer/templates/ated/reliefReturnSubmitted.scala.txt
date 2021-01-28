@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have submitted your return for Annual Tax on Enveloped Dwellings (ATED)
+Dear @{params("first_name")} @{params("last_name")}
 
 You are receiving this email as your ATED relief return(s) for @{params("company_name")} have been successfully submitted on @{params("date")}
 
