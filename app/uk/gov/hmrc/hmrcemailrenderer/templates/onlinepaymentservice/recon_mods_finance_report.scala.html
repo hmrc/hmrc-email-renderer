@@ -19,7 +19,9 @@
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("subject").toString) {
-<table border="1px" width="100%"  cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 19px;c">
+<!--<style>tr:nth-child(even) {background-color: #f2f2f2;}</style>-->
+<h2>Online Payments (OPS)</h2>
+<table border="1px" width="100%"  cellspacing="0px" cellpadding="3px" style="text-align:center;font-size: 16px;">
     <tr>
         <th>Transaction Reference</th>
         <th>Mib Reference</th>
@@ -29,7 +31,7 @@
         <th>Commission</th>
         <th>Total Paid</th>
     </tr>
-    @{params.filter(_._1.startsWith("MODS")).map { row =>
+    @{params.filter(_._1.startsWith("MODS_OPS")).map { row =>
         val cells = row._2.toString.split(",").toList
             <tr>
                 <td>{cells(0)}</td>
@@ -41,6 +43,32 @@
                 <td>{formatAmountInPence(cells(6))}</td>
             </tr>
         }
+    }
+</table>
+
+<h2>Telephone Payments (TPS)</h2>
+<table border="1px" width="100%"  cellspacing="0px" cellpadding="3px" style="text-align:center;font-size: 16px;">
+    <tr>
+        <th>Transaction Reference</th>
+        <th>Mib Reference</th>
+        <th>Customs Duty</th>
+        <th>Vat</th>
+        <th>Total Tax</th>
+        <th>Commission</th>
+        <th>Total Paid</th>
+    </tr>
+    @{params.filter(_._1.startsWith("MODS_TOPS")).map { row =>
+    val cells = row._2.toString.split(",").toList
+    <tr>
+        <td>{cells(0)}</td>
+        <td>{cells(1)}</td>
+        <td>{formatAmountInPence(cells(2))}</td>
+        <td>{formatAmountInPence(cells(3))}</td>
+        <td>{formatAmountInPence(cells(4))}</td>
+        <td>{formatAmountInPence(cells(5))}</td>
+        <td>{formatAmountInPence(cells(6))}</td>
+    </tr>
+    }
     }
 </table>
 
