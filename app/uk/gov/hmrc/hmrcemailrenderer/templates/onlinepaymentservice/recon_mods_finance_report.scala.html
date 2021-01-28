@@ -30,7 +30,7 @@
         <th>Commission</th>
         <th>Total Paid</th>
     </tr>
-    @{params.filter(_._1.startsWith("MODS_OPS")).map { row =>
+    @{params.filter(_._1.startsWith("MODS_ROW_OPS")).map { row =>
         val cells = row._2.toString.split(",").toList
             <tr>
                 <td>{cells(0)}</td>
@@ -56,7 +56,7 @@
         <th>Commission</th>
         <th>Total Paid</th>
     </tr>
-    @{params.filter(_._1.startsWith("MODS_TOPS")).map { row =>
+    @{params.filter(_._1.startsWith("MODS_ROW_TOPS")).map { row =>
     val cells = row._2.toString.split(",").toList
     <tr>
         <td>{cells(0)}</td>
