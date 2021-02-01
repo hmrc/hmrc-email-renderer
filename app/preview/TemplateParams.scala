@@ -81,6 +81,17 @@ object TemplateParams {
       "agencyName" -> "Agent 1",
       "arn"        -> "XARN 123 4567"
     ),
+    "agent_invitations_about_to_expire" -> Map(
+      "agencyName"          -> "My Tax Agency",
+      "numberOfInvitations" -> "22",
+      "createdDate"         -> "22 March 2021",
+      "expiryDate"          -> "4 April 2021"
+    ),
+    "agent_invitation_about_to_expire_single" -> Map(
+      "agencyName"  -> "My Tax Agency",
+      "createdDate" -> "22 March 2021",
+      "expiryDate"  -> "4 April 2021"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
