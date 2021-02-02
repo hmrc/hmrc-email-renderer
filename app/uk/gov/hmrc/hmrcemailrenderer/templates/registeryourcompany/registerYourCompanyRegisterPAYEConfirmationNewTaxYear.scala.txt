@@ -4,7 +4,7 @@ Dear Customer
 
 Your application reference number is: @params("referenceNumber")
 
-Please do not contact us about the application until after 31 August.
+Please do not contact us about the application until after 17 May.
 
 What happens next
 
