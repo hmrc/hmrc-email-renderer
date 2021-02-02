@@ -17,6 +17,8 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
 
+<h1>We have received your rent and lease details</h1>
+
 <div style="margin: 0 0 30px; font-size: 19px;">
     <p>Dear @{params("customerName").toString}</p>
 
@@ -26,8 +28,6 @@
 
     <p>We may need to contact you to check some of the details you provided.</p>
 
-    <p>Thank you</p>
-
-    <p><b>Valuation Office Agency</b></p>
+    <p>From Valuation Office Agency - Rent and lease details service</p>
 </div>
 }

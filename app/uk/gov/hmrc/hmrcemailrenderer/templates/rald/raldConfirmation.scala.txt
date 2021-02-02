@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+We have received your rent and lease details
+
 Dear @{params("customerName")}
 
 This email is confirmation that we have received your rent and lease details form.
@@ -8,8 +10,6 @@ What happens next
 
 We may need to contact you to check some of the details you provided.
 
-Thank you
-
-Valuation Office Agency
+From Valuation Office Agency - Rent and lease details service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
