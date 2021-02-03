@@ -8,9 +8,9 @@ To keep this application, use it to make an API call before the deletion date.
 
 If you do nothing, we will automatically delete this application.
 
-You can now manage the types of emails you receive from us in your Developer Hub account under email preferences.
-
 Do not reply to this email, this inbox is not monitored.
+
+Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 
 From HMRC Developer Hub
 
