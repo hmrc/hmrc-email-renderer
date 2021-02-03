@@ -1,5 +1,4 @@
 @(params: Map[String, Any])
-
 We have received your rent and lease details
 
 Dear @{params("customerName")}

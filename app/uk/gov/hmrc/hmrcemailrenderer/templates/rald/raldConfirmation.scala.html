@@ -15,10 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
-
-<h1>We have received your rent and lease details</h1>
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have received your rent and lease details"){
 <div style="margin: 0 0 30px; font-size: 19px;">
     <p>Dear @{params("customerName").toString}</p>
 

@@ -43,7 +43,7 @@ object RaldTemplates {
       templateId = "rald_submission_confirmation",
       fromAddress = FromAddress.noReply("Rent and Lease Details"),
       service = RentalAndLeaseDetails,
-      subject = "Valuation Office Agency – we have received your rent and lease details",
+      subject = "Valuation Office Agency received your form",
       plainTemplate = txt.raldConfirmation.f,
       htmlTemplate = html.raldConfirmation.f,
       priority = Some(MessagePriority.Standard)
