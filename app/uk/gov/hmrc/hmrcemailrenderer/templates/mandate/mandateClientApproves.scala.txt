@@ -2,10 +2,12 @@
 
 @{params("service")} update
 
+Dear @{params("recipient")}
+
 Your client has requested you to act as their agent.
 
 You can accept the client by going to your @{params("service")} online service and clicking the accept button.
 
-From HMRC
+From HMRC @{params("service")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
