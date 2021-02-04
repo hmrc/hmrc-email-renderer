@@ -1,0 +1,52 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agencyName() = {@params("agencyName")}
+@numberOfInvitations() = {@params("numberOfInvitations")}
+@expiryDate() = {@params("expiryDate")}
+@createdDate() = {@params("createdDate")}
+
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"The authorisation requests you sent to your clients will expire on ${expiryDate()}") {
+
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">Dear @agencyName()</p>
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">@numberOfInvitations() authorisation requests you created on @createdDate() will expire on @expiryDate(). </p>
+
+    <h2>What you can do next</h2>
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">
+        If you still want your clients to authorise you, remind them to select the link you sent them. Selecting this link takes them through the authorisation process.</p>
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">
+        To track or cancel your authorisation requests, sign in to your agent services account and follow the links to ‘track your recent authorisation requests’.</p>
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">Do not reply to this email – it is an automatic message from an unmonitored account.</p>
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">From HMRC Agent Services Team</p>
+
+
+}
+

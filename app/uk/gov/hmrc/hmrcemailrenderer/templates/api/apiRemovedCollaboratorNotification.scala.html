@@ -18,5 +18,6 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A team member has been removed from your application") {
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>@{params("email")}</strong> has been removed from <strong>@{params("applicationName")}</strong> by another admin.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">They can no longer access this application.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}</p>
 }

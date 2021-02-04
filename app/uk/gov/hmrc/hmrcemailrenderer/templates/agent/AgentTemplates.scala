@@ -95,6 +95,24 @@ object AgentTemplates {
       plainTemplate = txt.agent_services_account_created_cy.f,
       htmlTemplate = html.agent_services_account_created_cy.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_invitation_about_to_expire_single",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "Reminder: authorisation request will expire in 5 days",
+      plainTemplate = txt.agent_invitation_about_to_expire_single.f,
+      htmlTemplate = html.agent_invitation_about_to_expire_single.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_invitations_about_to_expire",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "Reminder: authorisation requests will expire in 5 days",
+      plainTemplate = txt.agent_invitations_about_to_expire.f,
+      htmlTemplate = html.agent_invitations_about_to_expire.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
