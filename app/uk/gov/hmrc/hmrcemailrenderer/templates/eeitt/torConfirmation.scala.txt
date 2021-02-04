@@ -10,6 +10,12 @@ Your submission reference is: @params.get("submissionReference")
 
 If we have any questions we will email you, quoting the reference.
 
+If you forgot to add any items to this application
+
+Do not start again.
+
+If your application is approved, we will contact you with a ‘URN’ code to let you add items.
+
 Why you are receiving this email
 
 We send a confirmation email for all forms submitted online.
