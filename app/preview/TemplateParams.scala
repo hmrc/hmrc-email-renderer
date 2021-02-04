@@ -627,6 +627,9 @@ object TemplateParams {
       "email"           -> "jimm@jimmjimm.com",
       "phoneNumber"     -> "01234567890"
     ),
+    "rald_submission_confirmation" -> Map(
+      "customerName" -> "John Doe"
+    ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",
       "fileName"      -> "File name : Barnet_CT.xml",
