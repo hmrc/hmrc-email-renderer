@@ -4,9 +4,10 @@
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val quantity = params(s"goodsQuantity_$i")
-    val country = params(s"goodsCountry_$i")
+    val country = params.get(s"goodsCountry_$i")
+    val producedInEu = params.get(s"goodsProducedInEu_$i")
     val price = params(s"goodsPrice_$i")
-      (category, quantity, country, price)
+      (category, quantity, country, producedInEu, price)
   }
 }
 Dear @params("nameOfPersonCarryingGoods")
@@ -27,10 +28,11 @@ Date of declaration
 
 Details of the goods
 
-@for((category, quantity, country, price) <- goodsGrid) {
+@for((category, quantity, country, producedInEu, price) <- goodsGrid) {
 Type of goods: @category
 Number of items: @quantity
-Country: @country
+@for(cntry <- country) {Country: @cntry  }
+@for(eu <- producedInEu) {Produced in EU: @eu  }
 Price paid: @price
 
 }
