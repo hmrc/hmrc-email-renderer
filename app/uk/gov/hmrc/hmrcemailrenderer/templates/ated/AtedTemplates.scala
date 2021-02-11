@@ -26,7 +26,7 @@ object AtedTemplates {
       templateId = "chargeable_return_submit",
       fromAddress = govUkTeamAddress,
       service = Ated,
-      subject = "Your chargeable return has been successfully submitted",
+      subject = "Update to Annual Tax on Enveloped Dwellings",
       plainTemplate = txt.chargeableReturnSubmitted.f,
       htmlTemplate = html.chargeableReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
@@ -35,7 +35,7 @@ object AtedTemplates {
       templateId = "relief_return_submit",
       fromAddress = govUkTeamAddress,
       service = Ated,
-      subject = "Your relief return(s) have been successfully submitted",
+      subject = "Update to Annual Tax on Enveloped Dwellings",
       plainTemplate = txt.reliefReturnSubmitted.f,
       htmlTemplate = html.reliefReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
@@ -44,7 +44,7 @@ object AtedTemplates {
       templateId = "amended_return_submit",
       fromAddress = govUkTeamAddress,
       service = Ated,
-      subject = "Your amended return has been successfully submitted",
+      subject = "Update to Annual Tax on Enveloped Dwellings",
       plainTemplate = txt.amendedReturnSubmitted.f,
       htmlTemplate = html.amendedReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
@@ -53,7 +53,7 @@ object AtedTemplates {
       templateId = "further_return_submit",
       fromAddress = govUkTeamAddress,
       service = Ated,
-      subject = "Your further return has been successfully submitted",
+      subject = "Update to Annual Tax on Enveloped Dwellings",
       plainTemplate = txt.furtherReturnSubmitted.f,
       htmlTemplate = html.furtherReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
@@ -62,7 +62,7 @@ object AtedTemplates {
       templateId = "change_details_return_submit",
       fromAddress = govUkTeamAddress,
       service = Ated,
-      subject = "Your change in details has been successfully submitted",
+      subject = "Update to Annual Tax on Enveloped Dwellings",
       plainTemplate = txt.changedDetailsReturnSubmitted.f,
       htmlTemplate = html.changedDetailsReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
@@ -71,7 +71,7 @@ object AtedTemplates {
       templateId = "disposal_return_submit",
       fromAddress = govUkTeamAddress,
       service = Ated,
-      subject = "Your disposal has been successfully submitted",
+      subject = "Update to Annual Tax on Enveloped Dwellings",
       plainTemplate = txt.disposalReturnSubmitted.f,
       htmlTemplate = html.disposalReturnSubmitted.f,
       priority = Some(MessagePriority.Urgent)
