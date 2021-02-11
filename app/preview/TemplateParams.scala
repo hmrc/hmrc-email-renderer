@@ -81,6 +81,17 @@ object TemplateParams {
       "agencyName" -> "Agent 1",
       "arn"        -> "XARN 123 4567"
     ),
+    "agent_invitations_about_to_expire" -> Map(
+      "agencyName"          -> "My Tax Agency",
+      "numberOfInvitations" -> "22",
+      "createdDate"         -> "22 March 2021",
+      "expiryDate"          -> "4 April 2021"
+    ),
+    "agent_invitation_about_to_expire_single" -> Map(
+      "agencyName"  -> "My Tax Agency",
+      "createdDate" -> "22 March 2021",
+      "expiryDate"  -> "4 April 2021"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
@@ -615,6 +626,9 @@ object TemplateParams {
       "referenceNumber" -> "9999000666",
       "email"           -> "jimm@jimmjimm.com",
       "phoneNumber"     -> "01234567890"
+    ),
+    "rald_submission_confirmation" -> Map(
+      "customerName" -> "John Doe"
     ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",
@@ -1681,11 +1695,15 @@ object TemplateParams2 {
       "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0,1,10.0"
     ),
     "recon_mods_finance_report" -> Map(
-      "subject"              -> "MODS Finance Report 27/09/2027",
-      "MODS_ROW_123-456-789" -> "123-456-789,MIBREF1234,100,100,200,100,300",
-      "MODS_ROW_234-567-890" -> "234-567-890,MIBREF2345,100,100,200,100,300",
-      "MODS_ROW_098-765-432" -> "098-765-432,MIBREF3456,100,100,200,100,300",
-      "MODS_ROW_987-654-321" -> "987-654-321,MIBREF4567,100,100,200,100,300"
+      "subject"                   -> "MODS Finance Report 27/09/2027",
+      "MODS_ROW_OPS_123-456-789"  -> "123-456-789,OPSMIBREF1234,100,100,200,100,300",
+      "MODS_ROW_OPS_234-567-890"  -> "234-567-890,OPSMIBREF2345,100,100,200,100,300",
+      "MODS_ROW_OPS_098-765-432"  -> "098-765-432,OPSMIBREF3456,100,100,200,100,300",
+      "MODS_ROW_OPS_987-654-321"  -> "987-654-321,OPSMIBREF4567,100,100,200,100,300",
+      "MODS_ROW_TOPS_123-456-789" -> "123-456-789,TOPSMIBREF1234,100,100,200,100,300",
+      "MODS_ROW_TOPS_234-567-890" -> "234-567-890,TOPSMIBREF2345,100,100,200,100,300",
+      "MODS_ROW_TOPS_098-765-432" -> "098-765-432,TOPSMIBREF3456,100,100,200,100,300",
+      "MODS_ROW_TOPS_987-654-321" -> "987-654-321,TOPSMIBREF4567,100,100,200,100,300"
     ),
     "hts_verification_email" -> Map(
       "name"             -> "Joe",

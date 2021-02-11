@@ -5,6 +5,8 @@ A team member has been removed from your application
 
 They can no longer access this application.
 
+Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
+
 From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

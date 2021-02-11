@@ -11,6 +11,8 @@ Or contact us for help on submitting your application.
 
 @{params("supportUrl")}
 
+Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
+
 From HMRC Developer Hub
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
