@@ -21,9 +21,10 @@
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val quantity = params(s"goodsQuantity_$i")
-    val country = params(s"goodsCountry_$i")
+    val country = params.get(s"goodsCountry_$i")
+    val producedInEu = params.get(s"goodsProducedInEu_$i")
     val price = params(s"goodsPrice_$i")
-      (category, quantity, country, price)
+      (category, quantity, country, producedInEu, price)
   }
 }
 
@@ -47,7 +48,7 @@
 
     <h2>Details of the goods</h2>
 
-    @for((category, quantity, country, price) <- goodsGrid) {
+    @for((category, quantity, country, producedInEu, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
                 <tr>
@@ -58,14 +59,23 @@
                     <th width="60%">Number of items</th>
                     <td>@quantity</td>
                 </tr>
-                <tr>
-                    <th width="60%">Country</th>
-                    <td>@country</td>
-                </tr>
+                @for(cntry <- country) {
+                        <tr>
+                        <th width="60%">Country</th>
+                        <td>@cntry</td>
+                        </tr>
+                }
+                @for( eu <- producedInEu) {
+                        <tr>
+                        <th width="60%">Produced in EU</th>
+                        <td>@eu</td>
+                        </tr>
+                }
                 <tr>
                     <th width="60%">Price paid</th>
                     <td>@price</td>
                 </tr>
+                <br>
             </tbody>
         </table>
     }
