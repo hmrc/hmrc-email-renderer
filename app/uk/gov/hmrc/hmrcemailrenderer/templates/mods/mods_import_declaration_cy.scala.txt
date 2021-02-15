@@ -32,7 +32,7 @@ Manylion y nwyddau
 Math o nwyddau: @category
 Nifer yr eitemau: @quantity
 @for(cntry <- country) {Gwlad: @cntry  }
-@for(eu <- producedInEu) {Produced in EU: @eu  }
+@for(eu <- producedInEu) {Cynhyrchwyd yn yr UE: @eu  }
 Y pris a dalwyd: @price
 
 }
