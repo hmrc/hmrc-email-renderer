@@ -63,7 +63,6 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-
       txtContent should include("Mae’ch Crynodeb Treth Blynyddol yn barod")
       txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
