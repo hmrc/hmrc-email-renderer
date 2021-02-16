@@ -49,10 +49,10 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
       htmlContent should include(
         "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a Chyfrinair a ddefnyddioch i gofrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
       htmlContent should include(
-        "Os oes gennych Gyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
+        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
       htmlContent should include(
         "Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.")
-      htmlContent should include("Cyfarwyddwr Cyffredinol, Gwasanaeth i Gwsmeriaid CThEM")
+      htmlContent should include("Dirprwy Brif Weithredwr a’r Ail Ysgrifennydd Parhaol")
       htmlContent should include("I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEM ar-lein.")
       htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
       htmlContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
@@ -71,10 +71,10 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
       txtContent should include(
         "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a Chyfrinair a ddefnyddioch i gofrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
       txtContent should include(
-        "Os oes gennych Gyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
+        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
       txtContent should include(
         "Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.")
-      txtContent should include("Cyfarwyddwr Cyffredinol, Gwasanaeth i Gwsmeriaid CThEM")
+      txtContent should include("Dirprwy Brif Weithredwr a’r Ail Ysgrifennydd Parhaol")
 
       //TODO This text is commented becuase "To manage your paperless notifications - sign in to your HMRC online account." is missing in english version just on txt and not on HTML version
       // not sure which one is right. referer to DC-2251 for updates
