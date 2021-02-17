@@ -783,6 +783,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "duty_deferment_account_amend_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request to change or cancel a duty deferment account",
+      plainTemplate = txt.dutyDefermentAccountAmendConfirmation.f,
+      htmlTemplate = html.dutyDefermentAccountAmendConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "eat_out_help_out_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
