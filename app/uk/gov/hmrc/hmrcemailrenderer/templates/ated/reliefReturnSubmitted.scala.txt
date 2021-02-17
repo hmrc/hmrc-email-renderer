@@ -2,7 +2,7 @@
 
 Dear @{params("first_name")} @{params("last_name")}
 
-You are receiving this email as your ATED relief return(s) for @{params("company_name")} have been successfully submitted on @{params("date")}
+You are receiving this email as your ATED relief return(s) for @{params("company_name")} have been successfully submitted on @{params("date")}.
 
 You can view your completed returns, payment references and ways to pay in your ATED online service. There can be a 24 hour delay before you see any updates. There is no liability for these returns.
 
@@ -10,7 +10,7 @@ There is no liability for these returns.
 
 This amount does not reflect any payments you have already made, or penalties that have been issued.
 
-Your references for these returns are @{params("reference")}.
+Your reference for these returns is @{params("reference")}.
 
 From HMRC ATED
 
