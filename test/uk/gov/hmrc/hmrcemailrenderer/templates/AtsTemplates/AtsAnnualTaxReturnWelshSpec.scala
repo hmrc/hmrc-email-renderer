@@ -45,9 +45,9 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
       htmlContent should include("Annwyl Mr Johnston")
       htmlContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       htmlContent should include(
-        "Mae’ch crynodeb treth blynyddol bellach ar-lein. Mae’n dangos faint o dreth ac Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
+        "Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
       htmlContent should include(
-        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a Chyfrinair a ddefnyddioch i gofrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
+        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
       htmlContent should include(
         "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
       htmlContent should include(
@@ -67,9 +67,9 @@ class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with Templa
       txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       txtContent should include(
-        "Mae’ch crynodeb treth blynyddol bellach ar-lein. Mae’n dangos faint o dreth ac Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
+        "Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
       txtContent should include(
-        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a Chyfrinair a ddefnyddioch i gofrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
+        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
       txtContent should include(
         "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
       txtContent should include(
