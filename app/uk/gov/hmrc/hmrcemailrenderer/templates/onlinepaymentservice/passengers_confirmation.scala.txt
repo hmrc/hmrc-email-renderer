@@ -43,7 +43,7 @@ case _ => List()
 
 @pageHeader
 
-When you arrive in the UK, go to the green 'nothing to declare' channel if these are the only items you are declaring. If asked, show your receipt on your mobile phone or tablet to a member of Border Force, or provide your reference number.
+When you arrive in the UK, go to the green 'nothing to declare' channel if these are the only items you are declaring. If asked, show this receipt on your mobile phone or tablet to a member of Border Force, or provide your reference number.
 
 Your details
 
@@ -82,10 +82,10 @@ Tax or duty was either not due on these goods or was paid when the goods were pu
 
 Amending your declaration:
 
-From February 2021, you will be able to use the online service to add goods to an existing declaration.
+From April 2021, you will be able to use the online service to add goods to an existing declaration.
 
 If you have goods to declare, go to the red 'goods to declare' channel or use the red-point phone at your arrival location.
 
-If you need to remove goods from your declaration and request a refund, visit GOV.UK and search for 'HMRC customs debt'.
+If you need to remove goods from your declaration and request a refund, visit GOV.UK and search for 'C82'. Look for the page 'Request a refund of overpaid VAT or duty for goods declared using the Online Service for Passengers.
 
-From HMRC Online Service for Passengers
+From HMRC Online Service for Passengers'.
