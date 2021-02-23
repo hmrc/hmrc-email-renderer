@@ -1777,7 +1777,7 @@ object TemplateParams2 {
       "subject"         -> "Receipt for payment on goods brought into the UK - Reference number XAPR9876543210",
       "NAME"            -> "Jura Smith",
       "DATE"            -> "5 December 2020",
-      "PLACEOFARRIVAL"  -> "LHR",
+      "PLACEOFARRIVAL"  -> "Heathrow Airport",
       "DATEOFARRIVAL"   -> "4 December 2020",
       "TIMEOFARRIVAL"   -> "12:15 PM",
       "REFERENCE"       -> "XAPR9876543210",
