@@ -39,9 +39,12 @@ Rhif EORI: @params("eori")
 
 Newid eich datganiad
 
-Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ’Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau.
-
-I gael gwybod sut i ddileu nwyddau o’r datganiad hwn, chwiliwch ar GOV.UK am ‘Declare commercial goods you’re taking out of Great Britain in accompanied baggage or small vehicles’.
+Os ydych yn teithio gyda nwyddau nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un ar gael.
+O fis Ebrill 2021 ymlaen, byddwch yn gallu defnyddio’r gwasanaeth hwn i ychwanegu nwyddau at ddatganiad sy’n bodoli eisoes, os yw’r canlynol yn wir:
+- at ei gilydd, maent yn werth hyd at £1,500
+- at ei gilydd, maent yn pwyso hyd at 1,000 cilogram
+- nid ydynt yn agored i doll ecséis (alcohol, tybaco, tanwydd)
+- nid ydynt yn nwyddau o dan reolaeth nac yn nwyddau cyfyngedig.
 
 O’r gwasanaeth datgan nwyddau masnachol
 
