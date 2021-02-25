@@ -39,9 +39,15 @@ EORI number: @params("eori")
 
 Changing your declaration
 
-If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area.
 
-To find out how to remove goods from this declaration, search GOV.UK for ‘Declare commercial goods you’re taking out of Great Britain in accompanied baggage or small vehicles’.
+If you take goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.
+
+From April 2021, you will be able to use this service to add goods to an existing declaration, if they:
+
+- have a total value of £1,500 or less
+- weigh a total of 1,000 kilograms or less
+- are not subject to excise duty (alcohol, tobacco, fuel)
+- are not controlled goods or restricted goods.
 
 From the Commercial goods declaration service
 
