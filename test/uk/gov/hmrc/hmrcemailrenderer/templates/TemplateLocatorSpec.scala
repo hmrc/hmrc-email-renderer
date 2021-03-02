@@ -112,6 +112,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "GVMS",
         "EOTHO",
         "Eori Common Component",
+        "Exports (CDS)",
         "MODS"
       )
     }
@@ -575,6 +576,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cca_revaluation_subscription_confirmation",
         "cdsTestTemplate",
         "cdsEmailTemplate",
+        "dmsdoc_notification",
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
         "mtdfb_vat_agent_sign_up_successful",

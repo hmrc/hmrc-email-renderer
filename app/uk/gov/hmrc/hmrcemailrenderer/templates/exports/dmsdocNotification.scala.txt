@@ -1,0 +1,43 @@
+@(params: Map[String, Any])
+MRN @params("mrn") is set to go Route 1
+
+Dear Declarant
+
+A Route 1 means the required documents must be uploaded and attached to your declaration.
+
+What you need to do now
+
+If you have not already attached the required documents to this declaration, then you need to sign in and do this now so they can be checked when your goods progress.
+
+To access the online service and upload files to the declaration with movement reference number (MRN) @params("mrn"):
+
+  1. Search online for 'Upload documents and get messages for the Customs Declaration Service' on the GOV.UK website.
+  2. Sign in from that page using the Government Gateway user ID and password that are linked to your EORI number.
+  3. Select the option to 'Attach documents to a declaration'. You will need to enter @params("mrn") and then upload your documents.
+
+You can also sign into the CDS exports declaration service and upload documents from the declaration information page for this MRN.
+
+Required documents
+
+You need to attach scans or PDFs of:
+
+  - documents declared in section 4 (previous documents)
+  - certificates, permits, licences etc declared in section 5 (documents produced)
+  - packing list
+  - evidence of value (invoice(s)) if needed
+
+If you have already attached these you do not have to attach them again unless you get a query that asks you to do so.
+
+If a query is raised in Documentary Control
+
+If a query is raised, we will send an alert to this email address about the action you need to take.
+
+Why you got this email
+
+You chose to receive exports notifications about the Customs Declaration Service to this email address.
+
+Please note, these email notifications are only sent to this email address, which is the CDS registered email address. If you cannot deal with this declaration, you need to forward this email notification on to the right person.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
