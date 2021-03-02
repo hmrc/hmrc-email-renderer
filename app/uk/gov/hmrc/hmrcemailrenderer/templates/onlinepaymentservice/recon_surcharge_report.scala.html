@@ -16,7 +16,6 @@
 
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.surcharge_recon_row
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.surcharge_recon_row_personal_included
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("subject").toString) {
@@ -149,22 +148,18 @@
         <th>Credit Card Commission Value</th>
         <th>Grand Total Volume</th>
         <th>Grand Total Commission Value</th>
-        <th>Personal Credit Card Volume</th>
-        <th>Personal Credit Card Value</th>
     </tr>
     <tr>
         <td style="font-weight:bold;">P800</td>
         @surcharge_recon_row(params("topsNoModsSurchargeReport_p800").toString.split(",").toArray)
-        <td>N/A</td>
-        <td>N/A</td>
     </tr>
     <tr>
         <td style="font-weight:bold;">PNGR</td>
-        @surcharge_recon_row_personal_included(params("topsNoModsSurchargeReport_pngr").toString.split(",").toArray)
+        @surcharge_recon_row(params("topsNoModsSurchargeReport_pngr").toString.split(",").toArray)
     </tr>
     <tr>
         <td style="font-weight:bold;">Total</td>
-        @surcharge_recon_row_personal_included(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
+        @surcharge_recon_row(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
     </tr>
     <tr>
         <td></td>
@@ -186,12 +181,10 @@
         <th>Credit Card Commission Value</th>
         <th>Grand Total Volume</th>
         <th>Grand Total Commission Value</th>
-        <th>Personal Credit Card Volume</th>
-        <th>Personal Credit Card Value</th>
     </tr>
     <tr>
         <td style="font-weight:bold;">MODS</td>
-        @surcharge_recon_row_personal_included(params("topsJustModsSurchargeReport_mods").toString.split(",").toArray)
+        @surcharge_recon_row(params("topsJustModsSurchargeReport_mods").toString.split(",").toArray)
     </tr>
 </table>
 
@@ -206,34 +199,26 @@
         <th>Credit Card Commission Value</th>
         <th>Grand Total Volume</th>
         <th>Grand Total Commission Value</th>
-        <th>Personal Credit Card Volume</th>
-        <th>Personal Credit Card Value</th>
     </tr>
     <tr>
         <td style="font-weight:bold;">P800</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_p800").toString.split(",").toArray)
-        <td>N/A</td>
-        <td>N/A</td>
     </tr>
     <tr>
         <td style="font-weight:bold;">SIMPLE ASSESSMENT</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_simpleAssessment").toString.split(",").toArray)
-        <td>N/A</td>
-        <td>N/A</td>
     </tr>
     <tr>
         <td style="font-weight:bold;">CGT</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_cgt").toString.split(",").toArray)
-        <td>N/A</td>
-        <td>N/A</td>
     </tr>
     <tr>
         <td style="font-weight:bold;">PNGR</td>
-        @surcharge_recon_row_personal_included(params("opsDesNoModsSurchargeReport_pngr").toString.split(",").toArray)
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_pngr").toString.split(",").toArray)
     </tr>
     <tr>
         <td style="font-weight:bold;">Total</td>
-        @surcharge_recon_row_personal_included(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
     </tr>
     <tr>
         <td></td>
@@ -255,12 +240,10 @@
         <th>Credit Card Commission Value</th>
         <th>Grand Total Volume</th>
         <th>Grand Total Commission Value</th>
-        <th>Personal Credit Card Volume</th>
-        <th>Personal Credit Card Value</th>
     </tr>
     <tr>
         <td style="font-weight:bold;">MODS</td>
-        @surcharge_recon_row_personal_included(params("opsDesJustModsSurchargeReport_mods").toString.split(",").toArray)
+        @surcharge_recon_row(params("opsDesJustModsSurchargeReport_mods").toString.split(",").toArray)
     </tr>
 </table>
 
