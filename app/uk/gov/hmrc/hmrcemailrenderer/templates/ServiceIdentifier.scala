@@ -107,4 +107,5 @@ object ServiceIdentifier {
   case object EOTHO extends ServiceIdentifier { override val name = "eotho" }
   case object EoriCommonComponent extends ServiceIdentifier { override val name = "ecc" }
   case object MODS extends ServiceIdentifier { override val name = "mods" }
+  case object CDSRC extends ServiceIdentifier { override val name = "cdsrc" }
 }
