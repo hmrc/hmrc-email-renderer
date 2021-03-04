@@ -112,6 +112,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "GVMS",
         "EOTHO",
         "Eori Common Component",
+        "Exports (CDS)",
         "MODS",
         "CDSRC"
       )
