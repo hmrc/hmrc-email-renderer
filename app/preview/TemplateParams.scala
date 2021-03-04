@@ -2220,6 +2220,9 @@ object TemplateParams2 {
       "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     ),
+    "dmsdoc_notification" -> Map(
+      "mrn" -> "18GB9JLC3CU1LFGVR1"
+    ),
     "customs_rcm_notifications" -> Map(
       "timestamp" -> "2018-07-05T09:08:12.831Z",
       "name"      -> "Joe Bloggs",

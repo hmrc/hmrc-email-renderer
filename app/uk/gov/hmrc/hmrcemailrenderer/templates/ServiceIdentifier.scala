@@ -38,6 +38,7 @@ object ServiceIdentifier {
   case object DAC6 extends ServiceIdentifier { override val name = "dac6" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
   case object Eeitt extends ServiceIdentifier { override val name = "eeitt" }
+  case object Exports extends ServiceIdentifier { override val name = "customs-declare-exports" }
   case object Fhdds extends ServiceIdentifier { override val name = "fhdds" }
   case object FriendsAndFamily extends ServiceIdentifier { override val name = "fandf" }
   case object GovernmentGateway extends ServiceIdentifier { override val name = "gg" }

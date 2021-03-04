@@ -35,6 +35,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs.DigitalTariffTempl
 import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.EeittTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emac.EmacTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.emachelpdesk.EmacHelpdeskTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.exports.ExportsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fandf.FandFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.fhdds.FhddsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.gg.GgTemplates
@@ -89,6 +90,7 @@ trait TemplateLocator {
       "DFS"                   -> DfsTemplates.templates,
       "EMAC Helpdesk"         -> EmacHelpdeskTemplates.templates,
       "EMAC"                  -> EmacTemplates.templates,
+      "Exports (CDS)"         -> ExportsTemplates.templates,
       "FANDF"                 -> FandFTemplates.templates,
       "GG"                    -> GgTemplates.templates,
       "GMP"                   -> GmpTemplates.templates,
