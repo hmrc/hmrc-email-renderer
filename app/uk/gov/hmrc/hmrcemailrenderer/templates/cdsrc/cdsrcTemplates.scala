@@ -27,7 +27,7 @@ object cdsrcTemplates {
       templateId = "reimbursement_claim_submission",
       fromAddress = govUkTeamAddress,
       service = CDSRC,
-      subject = "HMRC Claim Submission",
+      subject = "HMRC claim submission",
       plainTemplate = txt.reimbursement_claim_submission.f,
       htmlTemplate = html.reimbursement_claim_submission.f,
       priority = Some(MessagePriority.Urgent)
