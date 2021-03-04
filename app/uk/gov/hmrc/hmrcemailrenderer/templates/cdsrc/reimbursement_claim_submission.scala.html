@@ -1,0 +1,49 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@name() = {@params("name")}
+@reference() = {@params("caseNumber")}
+@claimAmount() = {@params("claimAmount")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your import charge reimbursement claim submission"){
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear @name</p>
+
+    <p style="margin:0 0 30px; font-size: 19px;">This confirms you have applied to claim for reimbursement on import charges such as Customs Duties, Excise Duties, Countervailing Duties and VAT.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Your claim reference number is: <strong>@reference</strong></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Your claim amount is: <strong>@claimAmount</strong></p>
+
+    <h2>What happens next </h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">HMRC will review your application and we will email you the outcome within 30 working days once we receive valid documents to support your claim. We will contact you to either:</p>
+
+    <ul>
+        <li style="font-size: 19px;line-height: 1.315789474; margin: 0 0 10px 0;">confirm your claim and bank transfer</li>
+        <li style="font-size: 19px;line-height: 1.315789474; margin: 0 0 10px 0;">ask for more information</li>
+        <li style="font-size: 19px;line-height: 1.315789474; margin: 0 0 10px 0;">explain why your claim was rejected</li>
+    </ul>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">For help, you can phone the HMRC CDS Support Team on 0300 322 9434. Open Monday to Friday, 8am to 10pm, (closed bank holidays). Saturday and Sunday, 8am to 4pm.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">For more contact details, search GOV.UK for 'import and exports: general enquiries'.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Customs Declaration Service</p>
+
+}
