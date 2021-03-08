@@ -1691,6 +1691,7 @@ object TemplateParams2 {
       "opsDesNoModsSurchargeReport_simpleAssessment" -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_cgt"              -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_pngr"             -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cds"              -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_total"            -> "4,40.0,8,80.0,12,120.0",
       "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0"
     ),
