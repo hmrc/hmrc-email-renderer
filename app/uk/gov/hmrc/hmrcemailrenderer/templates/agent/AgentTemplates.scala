@@ -73,7 +73,7 @@ object AgentTemplates {
       templateId = "client_expired_authorisation_request",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = "HMRC: Your authorisation request expired",
+      subject = "HMRC: Your authorisation request has expired",
       plainTemplate = txt.client_expired_authorisation_request.f,
       htmlTemplate = html.client_expired_authorisation_request.f,
       priority = Some(MessagePriority.Urgent)
