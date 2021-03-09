@@ -1771,8 +1771,7 @@ object TemplateParams2 {
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "ATaR REFERENCE",
       "goodsName"           -> "GOODS NAME",
-      "dateSubmitted"       -> "20 December 2020",
-      "officerName"         -> "Dan The Officer"
+      "officerName"         -> "Dan Officer"
     ),
     "passengers_payment_confirmation" -> Map(
       "subject"         -> "Receipt for payment on goods brought into the UK - Reference number XAPR9876543210",
