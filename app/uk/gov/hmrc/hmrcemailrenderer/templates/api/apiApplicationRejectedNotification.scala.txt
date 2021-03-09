@@ -6,10 +6,7 @@ It failed because:
 
 @{params("reason")}
 
-Submit your application again if you still want to access production credentials.
-Or contact us for help on submitting your application.
-
-@{params("supportUrl")}
+You can change your request for production credentials or contact us for help using the support page on the HMRC Developer Hub. 
 
 Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 
