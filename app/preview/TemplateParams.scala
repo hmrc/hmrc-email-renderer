@@ -1786,7 +1786,8 @@ object TemplateParams2 {
       "TOTALEXCISEGBP"  -> "£10.50",
       "TOTALCUSTOMSGBP" -> "£5.50",
       "TOTALVATGBP"     -> "£20.50",
-      "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"35\",\"goodsValue\":\"3254.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"2446.06\",\"VATRESClaimed\":false,\"exciseGBP\":\"28.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"494.81\"},{\"commodityDescription\":\"Cigarettes\",\"quantity\":\"357\",\"goodsValue\":\"753.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"566.03\",\"VATRESClaimed\":false,\"exciseGBP\":\"108.96\",\"customsGBP\":\"283.01\",\"vatGBP\":\"191.60\"},{\"commodityDescription\":\"Adult clothing\",\"quantity\":\"1\",\"goodsValue\":\"258.00\",\"valueCurrency\":\"USD\",\"originCountry\":\"BQ\",\"exchangeRate\":\"1.3303\",\"exchangeRateDate\":\"2020-12-07\",\"goodsValueGBP\":\"193.94\",\"VATRESClaimed\":false,\"exciseGBP\":\"0.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"0.00\"}]"
+      "TRAVELLINGFROM"  -> "EU Only",
+      "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"100\",\"goodsValue\":\"400.00\",\"valueCurrency\":\"EUR\",\"valueCurrencyName\":\"Euro (EUR)\",\"originCountry\":\"FR\",\"originCountryName\":\"France\",\"exchangeRate\":\"1.1577\",\"exchangeRateDate\":\"2021-03-09\",\"goodsValueGBP\":\"345.51\",\"VATRESClaimed\":false,\"exciseGBP\":\"80.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"85.10\",\"ukVATPaid\":false,\"ukExcisePaid\":false}]"
     ),
     "digital_tariffs_advice_request" -> Map(
       "reference"             -> "REFERENCE",
