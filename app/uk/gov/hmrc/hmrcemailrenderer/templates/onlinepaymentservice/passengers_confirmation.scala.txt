@@ -16,6 +16,7 @@ case _ => List()
 @pageHeaderZero = @{"You have declared your goods"}
 
 @pageHeader = @{if(isZeroCondition)pageHeaderZero else pageHeaderNormal}
+@isEUJourney = @{params("TRAVELLINGFROM").toString().equalsIgnoreCase("EU Only")}
 
 @itemList = @{ allItems.map( item => {
     val commodityDescription = (item \ "commodityDescription").as[String]toLowerCase
@@ -36,8 +37,14 @@ case _ => List()
     val vatGBP = (item \ "vatGBP").as[String]
     val itemTaxRaw = BigDecimal(exciseGBP) + BigDecimal(customsGBP) + BigDecimal(vatGBP)
     val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
+    val madeIn = (item \ "madeIn").asOpt[String].getOrElse("N/A")
 
-    (itemDesc,localValue,originCountry,itemTax)
+    val evidence: String = (item \ "euCustomsRelief") match {
+        case JsDefined(v) if (v.toString == "true") => "Yes"
+        case _ => "No"
+    }
+
+    (itemDesc,localValue,originCountry,madeIn,evidence,itemTax)
     })
 }
 
@@ -60,10 +67,16 @@ Amount paid: @params("TOTAL")
 
 Items declared:
 
-
-@for((itemDesc,localValue,originCountry,itemTax) <- itemList) {
+@if(isEUJourney) {
+@for((itemDesc,localValue,originCountry,madeIn, evidence,itemTax) <- itemList) {
+- Item: @itemDesc, Price: @localValue, Purchased In: @originCountry, Produced in: @madeIn, Evidence of origin: @evidence, Tax Paid:@itemTax
+}
+} else {
+@for((itemDesc,localValue,originCountry,madeIn, evidence,itemTax) <- itemList) {
 - Item: @itemDesc, Price: @localValue, Purchased In: @originCountry, Tax Paid:@itemTax
 }
+}
+
 
 Total: @params("TOTAL")
 
