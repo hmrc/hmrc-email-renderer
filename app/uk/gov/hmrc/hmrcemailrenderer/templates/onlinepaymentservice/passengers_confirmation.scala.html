@@ -14,7 +14,7 @@
  * limitations under the License.
  *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json}
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import scala.math.BigDecimal.RoundingMode
 
 @(params: Map[String, Any])
@@ -30,6 +30,7 @@ case _ => List()
 @pageHeaderZero = @{"You have declared your goods"}
 
 @pageHeader = @{if(isZeroCondition)pageHeaderZero else pageHeaderNormal}
+@isEUJourney = @{params("TRAVELLINGFROM").toString().equalsIgnoreCase("EU Only")}
 
 @itemList = @{ allItems.map( item => {
 val commodityDescription = (item \ "commodityDescription").as[String].toLowerCase
@@ -50,9 +51,14 @@ val customsGBP = (item \ "customsGBP").as[String]
 val vatGBP = (item \ "vatGBP").as[String]
 val itemTaxRaw = BigDecimal(exciseGBP) + BigDecimal(customsGBP) + BigDecimal(vatGBP)
 val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
+val madeIn = (item \ "madeIn").asOpt[String].getOrElse("N/A")
 
+val evidence: String = (item \ "euCustomsRelief") match {
+    case JsDefined(v) if (v.toString == "true") => "Yes"
+    case _ => "No"
+}
 
-(itemDesc,localValue,originCountry,itemTax)
+(itemDesc,localValue,originCountry,madeIn,evidence,itemTax)
 })
 }
 
@@ -112,15 +118,23 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
         <td scope="col" style="font-weight:bold;text-align:left;">Item</td>
         <td scope="col" style="font-weight:bold;text-align:left;">Price</td>
         <td scope="col" style="font-weight:bold;text-align:left;">Purchased in</td>
+        @if(isEUJourney) {
+        <td scope="col" style="font-weight:bold;text-align:left;">Produced in</td>
+        <td scope="col" style="font-weight:bold;text-align:left;">Evidence of origin</td>
+        }
         <td scope="col" style="font-weight:bold;text-align:right;">Tax paid</td>
     </tr>
     </thead>
     <tbody>
-    @for((itemDesc,localValue,originCountry,itemTax) <- itemList) {
+    @for((itemDesc,localValue,originCountry,madeIn,evidence,itemTax) <- itemList) {
     <tr>
         <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@itemDesc</td>
         <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@localValue</td>
         <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@originCountry</td>
+        @if(isEUJourney) {
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@madeIn</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@evidence</td>
+        }
         <td scope="col" style="text-align:right;border-bottom: 1px solid #bfc1c3">£@itemTax</td>
     </tr>
     }
@@ -128,6 +142,10 @@ val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
         <td style="font-weight:bold;border-bottom: 1px solid #bfc1c3;">Total</td>
         <td style="border-bottom: 1px solid #bfc1c3;"></td>
         <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        @if(isEUJourney) {
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        }
         <td style="font-weight:bold;text-align: right;border-bottom: 1px solid #bfc1c3;">@params("TOTAL")</td>
     </tr>
     </tbody>
