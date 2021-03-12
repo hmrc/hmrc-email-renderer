@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+Urgent: Your Declaration or Goods are being queried
+
+Dear Declarant
+
+The customs authority dealing with a Documentary or Physical Control on your goods has raised a query, or they have a further query for you.
+
+What you need to do now
+
+You must sign in to view and act on the query message each time in order for your goods to progress.
+
+  1. Search online for 'Upload documents and get messages for the Customs Declaration Service' on the GOV.UK website.
+  2. Sign in from that page using the Government Gateway user ID and password that are linked to your EORI number.
+  3. Select the View messages option.
+
+Why you got this email
+
+You chose to have notifications about the Customs Declaration Service sent to this email address.
+
+Please note, these email notifications are only sent to the CDS registered email address. If you cannot deal with this query, you need to forward this email notification on to the right person.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

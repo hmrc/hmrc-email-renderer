@@ -1,0 +1,50 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Urgent: Your Declaration or Goods are being queried"){
+    <div style="margin: 0 0 30px; font-size: 18px;">
+        <p>Dear Declarant</p>
+
+        <p>
+            The customs authority dealing with a Documentary or Physical Control on your goods has raised a query,
+            or they have a further query for you.
+        </p>
+
+        <p style="font-weight: bold;">What you need to do now</p>
+
+        <p>You must sign in to view and act on the query message each time in order for your goods to progress.</p>
+
+        <p>
+            <ol>
+                <li>Search online for 'Upload documents and get messages for the Customs Declaration Service' on the GOV.UK website.</li>
+                <li>Sign in from that page using the Government Gateway user ID and password that are linked to your EORI number.</li>
+                <li>Select the View messages option.</li>
+            </ol>
+        </p>
+
+        <p style="font-weight: bold;">Why you got this email</p>
+
+        <p>You chose to have notifications about the Customs Declaration Service sent to this email address.</p>
+
+        <p>
+            Please note, these email notifications are only sent to the CDS registered email address.
+            If you cannot deal with this query, you need to forward this email notification on to the right person.
+        </p>
+
+        <p>From HMRC</p>
+    </div>
+}
