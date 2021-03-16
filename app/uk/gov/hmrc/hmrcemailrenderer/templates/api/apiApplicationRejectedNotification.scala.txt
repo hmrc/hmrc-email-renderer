@@ -4,7 +4,7 @@
 
 It failed because:
 
-@{params("reason")}
+• @{params("reason")}
 
 You can change your request for production credentials or contact us for help using the support page on the HMRC Developer Hub. 
 
