@@ -28,8 +28,7 @@ class CaseCompletedSpec extends UnitSpec with EitherValues with TemplateLoader w
       "reference"           -> "ATaR REFERENCE",
       "recipientName_line1" -> "Full Name",
       "goodsName"           -> "GOODS NAME",
-      "dateSubmitted"       -> "20 December 2020",
-      "officerName"         -> "Dan The Officer"
+      "officerName"         -> "Dan Officer"
     )
     val template = templateLocator
       .templateGroups("Digital Tariffs")
@@ -47,20 +46,16 @@ class CaseCompletedSpec extends UnitSpec with EitherValues with TemplateLoader w
         "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME")
       htmlContent should include("Dear Full Name")
       htmlContent should include(
-        "Thank you for your Advance Tariff Ruling (ATaR) application dated 20 December 2020. I have made a decision and your ruling certificate can be viewed online in your ATaR account.")
-      htmlContent should include("How to view your ruling for GOODS NAME")
+        "I have reviewed your Binding Tariff Information (BTI) application, and you will receive your ruling certificate with commodity code by email shortly.")
+      htmlContent should include("The email will also include an explanation of the ruling.")
       htmlContent should include(
-        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Manage your Advance Tariff Rulings'.")
-      htmlContent should include("In your account you will be able to:")
-      htmlContent should include("print or download your ruling certificate")
-      htmlContent should include("find out how I made this decision")
-      htmlContent should include("find out how to review or appeal my decision")
-      htmlContent should include("Important information about communicating with us by email")
+        "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.")
+      htmlContent should include("Because you applied before 1 January 2021")
+      htmlContent should include("You cannot view your ruling online through an ATaR account.")
       htmlContent should include(
-        "Communicating with us through email is not secure and therefore no confidential information should be passed through emails with our team. By choosing to contact us by email you are accepting these risks.")
+        "You can sign up for an ATaR account to send future applications by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
       htmlContent should include("For security reasons we have not included any links with this email.")
-      htmlContent should include("Yours sincerely,")
-      htmlContent should include("Dan The Officer")
+      htmlContent should include("From Dan Officer")
       htmlContent should include("HMRC Tariff Classification Service")
     }
 
@@ -71,20 +66,16 @@ class CaseCompletedSpec extends UnitSpec with EitherValues with TemplateLoader w
         "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME")
       txtContent should include("Dear Full Name")
       txtContent should include(
-        "Thank you for your Advance Tariff Ruling (ATaR) application dated 20 December 2020. I have made a decision and your ruling certificate can be viewed online in your ATaR account.")
-      txtContent should include("How to view your ruling for GOODS NAME")
+        "I have reviewed your Binding Tariff Information (BTI) application, and you will receive your ruling certificate with commodity code by email shortly.")
+      txtContent should include("The email will also include an explanation of the ruling.")
       txtContent should include(
-        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Manage your Advance Tariff Rulings'.")
-      txtContent should include("In your account you will be able to:")
-      txtContent should include("print or download your ruling certificate")
-      txtContent should include("find out how I made this decision")
-      txtContent should include("find out how to review or appeal my decision")
-      txtContent should include("Important information about communicating with us by email")
+        "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.")
+      txtContent should include("Because you applied before 1 January 2021")
+      txtContent should include("You cannot view your ruling online through an ATaR account.")
       txtContent should include(
-        "Communicating with us through email is not secure and therefore no confidential information should be passed through emails with our team. By choosing to contact us by email you are accepting these risks.")
+        "You can sign up for an ATaR account to send future applications by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
       txtContent should include("For security reasons we have not included any links with this email.")
-      txtContent should include("Yours sincerely,")
-      txtContent should include("Dan The Officer")
+      txtContent should include("From Dan Officer")
       txtContent should include("HMRC Tariff Classification Service")
       txtContent should include("If you’re unsure an email is from HMRC:")
       txtContent should include("- Do not reply to it or click on any links")
