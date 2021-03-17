@@ -20,10 +20,8 @@
 @reference() = {@params("caseNumber")}
 @claimAmount() = {@params("claimAmount")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"HMRC claim submission: Ref: ${reference}"){
-
-    <h2>Your import charge reimbursement claim submission</h2>
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your import charge reimbursement claim submission"){
+    
     <p style="margin: 0 0 30px; font-size: 19px;">Dear @name</p>
 
     <p style="margin:0 0 30px; font-size: 19px;">This confirms you have applied to claim for reimbursement on import charges such as Customs Duties, Excise Duties, Countervailing Duties and VAT.</p>
