@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-Urgent: Your Declaration or Goods are being queried
+You need to view and act on a customs query
 
 Dear Declarant
 
