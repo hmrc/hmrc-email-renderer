@@ -157,7 +157,7 @@ object TemplateParams {
     "apiApplicationRejectedNotification" -> Map(
       "applicationName" -> "Test Application",
       "supportUrl"      -> exampleLinkWithRandomId,
-      "reason"          -> "The name is too similar to an existing app."
+      "reason"          -> "the name is too similar to an existing application"
     ),
     "apiStatusChangedNotification" -> Map(
       "apiName"         -> "Test Microservice",
