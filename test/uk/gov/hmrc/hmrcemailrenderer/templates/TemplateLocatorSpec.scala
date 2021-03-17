@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -577,6 +577,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cdsTestTemplate",
         "cdsEmailTemplate",
         "dmsdoc_notification",
+        "nudge_notification",
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
         "mtdfb_vat_agent_sign_up_successful",

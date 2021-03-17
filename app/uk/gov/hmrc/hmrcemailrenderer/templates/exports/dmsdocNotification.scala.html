@@ -15,9 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
-    <h1 style="margin: 0 0 30px;">MRN @params("mrn") is set to go Route 1</h1>
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"MRN ${params("mrn")} is set to go Route 1"){
     <div style="margin: 0 0 30px; font-size: 18px;">
         <p>Dear Declarant</p>
 

@@ -31,6 +31,15 @@ object ExportsTemplates {
       plainTemplate = txt.dmsdocNotification.f,
       htmlTemplate = html.dmsdocNotification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "nudge_notification",
+      fromAddress = FromAddress.noReply("HMRC CDS Exports Team"),
+      service = ServiceIdentifier.Exports,
+      subject = "Urgent: Your Declaration or Goods are being queried",
+      plainTemplate = txt.nudgeNotification.f,
+      htmlTemplate = html.nudgeNotification.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
