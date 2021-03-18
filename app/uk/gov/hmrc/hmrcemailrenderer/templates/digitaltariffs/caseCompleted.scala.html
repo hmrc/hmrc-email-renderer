@@ -18,17 +18,24 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"We have issued your Advance Tariff Ruling for application ${params("reference")} for ${params("goodsName")}") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
     <p style="margin: 0px 0 30px; font-size: 19px;">
-        I have reviewed your Binding Tariff Information (BTI) application, and you will receive your ruling certificate with commodity code by email shortly.
+        I have made a decision on your Advance Tariff Ruling (ATaR) application dated @params("dateSubmitted"). You can see your ruling certificate online in your ATaR account.
     </p>
-    <p style="margin: 0px 0 30px; font-size: 19px;">The email will also include an explanation of the ruling.</p>
     <p style="margin: 0px 0 30px; font-size: 19px;">
         The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.
     </p>
-    <h2>Because you applied before 1 January 2021</h2>
-    <p style="margin: 0px 0 30px; font-size: 19px;">You cannot view your ruling online through an ATaR account.</p>
+    <h2>How to view your ruling for @params("goodsName")</h2>
     <p style="margin: 0px 0 30px; font-size: 19px;">
-        You can sign up for an ATaR account to send future applications by going to GOV.UK and searching for 'Advance Tariff Ruling'.
+        You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.
     </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        In your account you will be able to:
+        <ul>
+            <li style="font-size: 19px;">print or download your ruling certificate</li>
+            <li style="font-size: 19px;">find out how I made this decision</li>
+            <li style="font-size: 19px;">find out how to review or appeal my decision</li>
+        </ul>
+    </p>
+    <br>
     <p style="margin: 0px 0 30px; font-size: 19px;">For security reasons we have not included any links with this email.</p>
     <br>
     <p style="margin: 0px 0 30px; font-size: 19px;">From @params("officerName")</p>
