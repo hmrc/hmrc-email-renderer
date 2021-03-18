@@ -113,7 +113,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "EOTHO",
         "Eori Common Component",
         "Exports (CDS)",
-        "MODS"
+        "MODS",
+        "CDSRC"
       )
     }
 
@@ -655,7 +656,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "mods_export_declaration",
         "mods_import_declaration_cy",
         "mods_export_declaration_cy",
-        "ni_vat_Status_reporting_confirmation"
+        "ni_vat_Status_reporting_confirmation",
+        "reimbursement_claim_submission"
       )
     }
   }
