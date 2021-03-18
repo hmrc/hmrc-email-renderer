@@ -2229,6 +2229,11 @@ object TemplateParams2 {
       "name"      -> "Joe Bloggs",
       "email"     -> "joebloggs@email.com",
       "eori"      -> "GB1234456789000"
+    ),
+    "reimbursement_claim_submission" -> Map(
+      "name"        -> "Sir Arthur Dent",
+      "caseNumber"  -> "0004201hog42",
+      "claimAmount" -> "£500"
     )
   )
 }
