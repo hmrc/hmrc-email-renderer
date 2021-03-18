@@ -1771,6 +1771,7 @@ object TemplateParams2 {
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "ATaR REFERENCE",
       "goodsName"           -> "GOODS NAME",
+      "dateSubmitted"       -> "20 December 2020",
       "officerName"         -> "Dan Officer"
     ),
     "passengers_payment_confirmation" -> Map(
