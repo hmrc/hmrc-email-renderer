@@ -578,7 +578,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cdsTestTemplate",
         "cdsEmailTemplate",
         "dmsdoc_notification",
-        "nudge_notification",
+        "newMessageAlert_CDS_exp",
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
         "mtdfb_vat_agent_sign_up_successful",

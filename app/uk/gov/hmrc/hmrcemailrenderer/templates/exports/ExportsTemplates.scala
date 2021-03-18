@@ -33,7 +33,7 @@ object ExportsTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "nudge_notification",
+      templateId = "newMessageAlert_CDS_exp",
       fromAddress = FromAddress.noReply("HMRC CDS Exports Team"),
       service = ServiceIdentifier.Exports,
       subject = "Urgent: Your Declaration or Goods are being queried",
