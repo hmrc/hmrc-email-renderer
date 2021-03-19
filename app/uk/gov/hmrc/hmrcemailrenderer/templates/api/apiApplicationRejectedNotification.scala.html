@@ -15,6 +15,7 @@
  *@
 
 @(params: Map[String, Any])
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Production credentials request unsuccessful") {
 <p style="margin: 0 0 30px; font-size: 19px;"><strong>Your request for production credentials is unsuccessful</strong>.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Production credentials for @{params("applicationName")} are not available because @{params("reason")}.<p>
