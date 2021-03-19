@@ -14,12 +14,12 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application check failed") {
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>@{params("applicationName")}</strong> failed its application check and you cannot access its production credentials.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">It failed because:</p>
-<ul style="margin: 0 0 30px; font-size: 19px;"><li>@{params("reason")}</li></ul>
-<p style="margin: 0 0 30px; font-size: 19px;">You can change your request for production credentials or contact us for help using the support page on the HMRC Developer Hub.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
-}
+ @(params: Map[String, Any])
+ @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Production credentials request unsuccessful") {
+ <p style="margin: 0 0 30px; font-size: 19px;"><strong>Your request for production credentials is unsuccessful</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Production credentials for @{params("applicationName")} are not available because @{params("reason")}.<p>
+ <p style="margin: 0 0 30px; font-size: 19px;">You can change your request for production credentials or contact us for help using the support page on the HMRC Developer Hub.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
+ }
+  
