@@ -2,19 +2,22 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-I have reviewed your Binding Tariff Information (BTI) application, and you will receive your ruling certificate with commodity code by email shortly.
-
-The email will also include an explanation of the ruling.
+I have made a decision on your Advance Tariff Ruling (ATaR) application dated @params("dateSubmitted"). You can see your ruling certificate online in your ATaR account.
 
 The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.
 
-Because you applied before 1 January 2021
+How to view your ruling for @params("goodsName")
 
-You cannot view your ruling online through an ATaR account.
+You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.
 
-You can sign up for an ATaR account to send future applications by going to GOV.UK and searching for 'Advance Tariff Ruling'.
+In your account you will be able to:
+
+- print or download your ruling certificate
+- find out how I made this decision
+- find out how to review or appeal my decision
 
 For security reasons we have not included any links with this email.
+
 
 From @params("officerName")
 

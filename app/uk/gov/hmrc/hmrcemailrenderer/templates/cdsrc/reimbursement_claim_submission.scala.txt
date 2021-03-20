@@ -11,7 +11,11 @@ This confirms you have applied to claim for reimbursement on import charges such
 
 Your claim reference number is: @params("caseNumber")
 
+<<<<<<< HEAD
 Your claim amount is: £@params("claimAmount")
+=======
+Your claim amount is: @params("claimAmount")
+>>>>>>> 2f81fdc5892d3d2af9026a5c4bda5fc5a13a6b82
 
 What happens next
 

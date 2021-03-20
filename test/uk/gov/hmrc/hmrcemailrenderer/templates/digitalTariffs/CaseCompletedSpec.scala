@@ -28,6 +28,7 @@ class CaseCompletedSpec extends UnitSpec with EitherValues with TemplateLoader w
       "reference"           -> "ATaR REFERENCE",
       "recipientName_line1" -> "Full Name",
       "goodsName"           -> "GOODS NAME",
+      "dateSubmitted"       -> "20 December 2020",
       "officerName"         -> "Dan Officer"
     )
     val template = templateLocator
@@ -46,14 +47,16 @@ class CaseCompletedSpec extends UnitSpec with EitherValues with TemplateLoader w
         "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME")
       htmlContent should include("Dear Full Name")
       htmlContent should include(
-        "I have reviewed your Binding Tariff Information (BTI) application, and you will receive your ruling certificate with commodity code by email shortly.")
-      htmlContent should include("The email will also include an explanation of the ruling.")
+        "I have made a decision on your Advance Tariff Ruling (ATaR) application dated 20 December 2020. You can see your ruling certificate online in your ATaR account.")
       htmlContent should include(
         "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.")
-      htmlContent should include("Because you applied before 1 January 2021")
-      htmlContent should include("You cannot view your ruling online through an ATaR account.")
+      htmlContent should include("How to view your ruling for GOODS NAME")
       htmlContent should include(
-        "You can sign up for an ATaR account to send future applications by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
+        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
+      htmlContent should include("In your account you will be able to:")
+      htmlContent should include("print or download your ruling certificate")
+      htmlContent should include("find out how I made this decision")
+      htmlContent should include("find out how to review or appeal my decision")
       htmlContent should include("For security reasons we have not included any links with this email.")
       htmlContent should include("From Dan Officer")
       htmlContent should include("HMRC Tariff Classification Service")
@@ -66,14 +69,16 @@ class CaseCompletedSpec extends UnitSpec with EitherValues with TemplateLoader w
         "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME")
       txtContent should include("Dear Full Name")
       txtContent should include(
-        "I have reviewed your Binding Tariff Information (BTI) application, and you will receive your ruling certificate with commodity code by email shortly.")
-      txtContent should include("The email will also include an explanation of the ruling.")
+        "I have made a decision on your Advance Tariff Ruling (ATaR) application dated 20 December 2020. You can see your ruling certificate online in your ATaR account.")
       txtContent should include(
         "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.")
-      txtContent should include("Because you applied before 1 January 2021")
-      txtContent should include("You cannot view your ruling online through an ATaR account.")
+      txtContent should include("How to view your ruling for GOODS NAME")
       txtContent should include(
-        "You can sign up for an ATaR account to send future applications by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
+        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
+      txtContent should include("In your account you will be able to:")
+      txtContent should include("print or download your ruling certificate")
+      txtContent should include("find out how I made this decision")
+      txtContent should include("find out how to review or appeal my decision")
       txtContent should include("For security reasons we have not included any links with this email.")
       txtContent should include("From Dan Officer")
       txtContent should include("HMRC Tariff Classification Service")

@@ -157,7 +157,7 @@ object TemplateParams {
     "apiApplicationRejectedNotification" -> Map(
       "applicationName" -> "Test Application",
       "supportUrl"      -> exampleLinkWithRandomId,
-      "reason"          -> "The name is too similar to an existing app."
+      "reason"          -> "the name is too similar to an existing application"
     ),
     "apiStatusChangedNotification" -> Map(
       "apiName"         -> "Test Microservice",
@@ -1771,6 +1771,7 @@ object TemplateParams2 {
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "ATaR REFERENCE",
       "goodsName"           -> "GOODS NAME",
+      "dateSubmitted"       -> "20 December 2020",
       "officerName"         -> "Dan Officer"
     ),
     "passengers_payment_confirmation" -> Map(
@@ -2233,7 +2234,11 @@ object TemplateParams2 {
     "reimbursement_claim_submission" -> Map(
       "name"        -> "Sir Arthur Dent",
       "caseNumber"  -> "0004201hog42",
+<<<<<<< HEAD
       "claimAmount" -> "500"
+=======
+      "claimAmount" -> "£500"
+>>>>>>> 2f81fdc5892d3d2af9026a5c4bda5fc5a13a6b82
     )
   )
 }
