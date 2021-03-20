@@ -2234,11 +2234,7 @@ object TemplateParams2 {
     "reimbursement_claim_submission" -> Map(
       "name"        -> "Sir Arthur Dent",
       "caseNumber"  -> "0004201hog42",
-<<<<<<< HEAD
       "claimAmount" -> "500"
-=======
-      "claimAmount" -> "£500"
->>>>>>> 2f81fdc5892d3d2af9026a5c4bda5fc5a13a6b82
     )
   )
 }
