@@ -75,7 +75,9 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
       validateTemplate(templateId = "apiDeveloperDeletedConfirmation", expectedSubject = "We deleted your account")
 
-      validateTemplate(templateId = "apiApplicationRejectedNotification", expectedSubject = "Application check failed")
+      validateTemplate(
+        templateId = "apiApplicationRejectedNotification",
+        expectedSubject = "Production credentials request unsuccessful")
 
       validateTemplate(
         templateId = "apiStatusChangedNotification",
