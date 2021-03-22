@@ -160,7 +160,7 @@ object ApiTemplates {
       templateId = "apiApplicationRejectedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Application check failed",
+      subject = "Production credentials request unsuccessful",
       plainTemplate = txt.apiApplicationRejectedNotification.f,
       htmlTemplate = html.apiApplicationRejectedNotification.f,
       priority = Some(MessagePriority.Urgent)
