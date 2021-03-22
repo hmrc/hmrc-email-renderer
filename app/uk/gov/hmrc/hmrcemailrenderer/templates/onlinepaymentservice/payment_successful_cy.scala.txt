@@ -9,7 +9,7 @@ Cyfeirnod treth: @params("taxReference")
 Cyfeirnod y taliad: @params("paymentReference")
 Swm a dalwyd: @params("amountPaid")
 @params.get("commission").map { commission =>
-Ffi cerdyn credyd: £@commission
+Ffi cerdyn: £@commission
 }
 @params.get("totalPaid").map { totalPaid =>
 Cyfanswm a dalwyd: £@totalPaid

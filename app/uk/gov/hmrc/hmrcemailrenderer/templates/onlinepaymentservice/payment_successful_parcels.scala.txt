@@ -8,7 +8,7 @@ Tax: @params("taxType")
 Report payment reference: @params("taxReference")
 Amount paid: @params("amountPaid")
 @params.get("commission").map { commission =>
-Credit card fee (non-refundable): £@commission
+Card fee (non-refundable): £@commission
 }
 @params.get("totalPaid").map { totalPaid =>
 Total paid: £@totalPaid
