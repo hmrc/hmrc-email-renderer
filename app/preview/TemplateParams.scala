@@ -115,9 +115,9 @@ object TemplateParams {
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorConfirmation" -> Map(
+      "article"           -> "an",
       "role"              -> "admin",
       "applicationName"   -> "Test Application",
-      "developerHubLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
