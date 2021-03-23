@@ -322,6 +322,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "duty_deferment_account_amend_confirmation",
         "tor_code",
         "tor_confirmation",
+        "nrsDLT_code",
+        "nrsDLT_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
@@ -566,6 +568,12 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "sdds_ddi_cancelled_dcs_alert",
         "sdds_ddi_reminder_dcs_alert",
         "sdds_ddi_unpaid_dcs_alert",
+        "cds_ddi_setup_dcs_alert",
+        "cds_ddi_amended_dcs_alert",
+        "cds_ddi_cancelled_dcs_alert",
+        "cds_ddi_reminder_dcs_alert",
+        "cds_ddi_unpaid_dcs_alert",
+        "cds_ddi_not_acceptable_dcs_alert",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
@@ -653,11 +661,16 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "duty_deferment_account_confirmation",
         "eat_out_help_out_confirmation",
         "mods_import_declaration",
+        "mods_amend_import_declaration",
         "mods_export_declaration",
+        "mods_amend_export_declaration",
         "mods_import_declaration_cy",
+        "mods_amend_import_declaration_cy",
         "mods_export_declaration_cy",
+        "mods_amend_export_declaration_cy",
         "ni_vat_Status_reporting_confirmation",
-        "reimbursement_claim_submission"
+        "reimbursement_claim_submission",
+        "newMessageAlert_P800"
       )
     }
   }

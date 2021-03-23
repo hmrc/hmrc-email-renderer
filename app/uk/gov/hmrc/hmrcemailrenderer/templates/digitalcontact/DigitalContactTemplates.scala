@@ -254,6 +254,15 @@ object DigitalContactTemplates {
       plainTemplate = txt.digitalOptInConfirmation_PTA_cy.f,
       htmlTemplate = html.digitalOptInConfirmation_PTA_cy.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_P800",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "You have a new message from HMRC",
+      plainTemplate = txt.newMessageAlert_P800.f,
+      htmlTemplate = html.newMessageAlert_P800.f,
+      priority = Some(MessagePriority.Standard)
     )
   ) ++ newMessageAlertTemplates
 }

@@ -17,8 +17,8 @@
 package preview
 
 import java.util.{ Base64, UUID }
-
 import play.api.libs.json.Json.{ parse, stringify }
+import preview.TemplateParams.newMessageAlert_Names
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -115,9 +115,9 @@ object TemplateParams {
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorConfirmation" -> Map(
+      "article"           -> "an",
       "role"              -> "admin",
       "applicationName"   -> "Test Application",
-      "developerHubLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
@@ -2176,7 +2176,40 @@ object TemplateParams2 {
       "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     ),
+    "mods_amend_import_declaration" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010000",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsProducedInEu_0"       -> "I do not know",
+      "goodsPrice_0"              -> "150, Euro (EUR)",
+      "goodsCategory_1"           -> "hats",
+      "goodsQuantity_1"           -> "100",
+      "goodsCountry_1"            -> "Mexico",
+      "goodsPrice_1"              -> "150, Peso (MXN)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
     "mods_export_declaration" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010001",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Spain",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_amend_export_declaration" -> Map(
       "emailTo"                   -> "joebloggs@email.com",
       "recipientName_FullName"    -> "Joe Bloggs",
       "declarationReference"      -> "XADST0000010001",
@@ -2209,7 +2242,40 @@ object TemplateParams2 {
       "surname"                   -> "Bloggs",
       "eori"                      -> "GB123456789000000"
     ),
+    "mods_amend_import_declaration_cy" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010002",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsProducedInEu_0"       -> "Iawn",
+      "goodsPrice_0"              -> "150, Ewro (EUR)",
+      "goodsCategory_1"           -> "hats",
+      "goodsQuantity_1"           -> "100",
+      "goodsCountry_1"            -> "Mecsico",
+      "goodsPrice_1"              -> "150, Peso (MXN)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
     "mods_export_declaration_cy" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010003",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Sbaen",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_amend_export_declaration_cy" -> Map(
       "emailTo"                   -> "joebloggs@email.com",
       "recipientName_FullName"    -> "Joe Bloggs",
       "declarationReference"      -> "XADST0000010003",
@@ -2235,6 +2301,7 @@ object TemplateParams2 {
       "name"        -> "Sir Arthur Dent",
       "caseNumber"  -> "0004201hog42",
       "claimAmount" -> "500"
-    )
+    ),
+    "newMessageAlert_P800" -> newMessageAlert_Names
   )
 }

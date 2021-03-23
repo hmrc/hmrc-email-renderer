@@ -835,6 +835,24 @@ object EeittTemplates {
       plainTemplate = txt.jrsRemovalSubmissionConfirmation.f,
       htmlTemplate = html.jrsRemovalSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "nrsDLT_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address",
+      plainTemplate = txt.nrsDLTCode.f,
+      htmlTemplate = html.nrsDLTCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "nrsDLT_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Reclaim non-UK Resident Stamp Duty Land Tax surcharge: application received",
+      plainTemplate = txt.nrsDLTConfirmation.f,
+      htmlTemplate = html.nrsDLTConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

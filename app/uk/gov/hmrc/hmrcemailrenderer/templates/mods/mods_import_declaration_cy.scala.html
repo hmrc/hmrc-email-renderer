@@ -28,19 +28,23 @@
   }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gwnaethoch ddatgan a thalu am nwyddau masnachol rydych yn dod â nhw i Brydain Fawr") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gwnaethoch ddatgan nwyddau masnachol yr ydych yn dod â nhw i Brydain Fawr") {
 
     <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl @params("nameOfPersonCarryingGoods")</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Daeth eich datganiad a’ch taliad am y nwyddau masnachol rydych yn dod â nhw i Brydain Fawr yn eich bagiau neu gerbyd bach i law.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Daeth eich datganiad i law ar gyfer y nwyddau masnachol yr ydych yn dod â nhw i Brydain Fawr yn eich bagiau neu gerbyd bach.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Cyfeirnod eich datganiad yw: <strong>@params("declarationReference")</strong></p>
 
     <h2>Yr hyn y mae angen i chi ei wneud nesaf</h2>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Pan fyddwch yn cyrraedd Prydain Fawr, ewch i’r sianel werdd ’dim byd i’w ddatgan’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Pan fyddwch yn cyrraedd Prydain Fawr, ewch i’r sianel werdd ‘dim byd i’w ddatgan’.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Gwnewch yn siŵr eich bod yn cymryd y datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi. Efallai y gofynnir i chi ddangos y rhain ar y ffin.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Gwnewch yn siŵr eich bod yn mynd â’r datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi. Efallai y gofynnir i chi ddangos y rhain wrth i chi gyrraedd.</p>
+
+    <h2>Dod â nwyddau o’r UE gyda chi</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn dod â nwyddau a gynhyrchwyd yn yr UE gyda chi y mae cyfanswm eu gwerth dros £1,000, mae’n rhaid i chi gario tystiolaeth y cawsant eu gwneud yn yr UE.</p>
 
     <h2>Dyddiad y datganiad</h2>
 
@@ -56,7 +60,7 @@
                     <td>@category</td>
                 </tr>
                 <tr>
-                    <th width="60%">Nifer yr eitemau</th>
+                    <th width="60%">Nifer</th>
                     <td>@quantity</td>
                 </tr>
                 @for(cntry <- country) {
@@ -67,20 +71,22 @@
                 }
                 @for( eu <- producedInEu) {
                     <tr>
-                        <th width="60%">Cynhyrchwyd yn yr UE</th>
+                        <th width="60%">Gwnaed yn yr UE</th>
                         <td>@eu</td>
                     </tr>
                 }
                 <tr>
-                    <th width="60%">Y pris a dalwyd</th>
+                    <th width="60%">Swm a dalwyd</th>
                     <td>@price</td>
                 </tr>
                 <br>
             </tbody>
         </table>
+        <br>
     }
 
-  <h2>Swm a dalwyd</h2>
+@if(params("total").toString().substring(1).toDouble > 0) {
+  <h2>Crynodeb o’r taliadau</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
       <tbody>
@@ -98,6 +104,7 @@
           </tr>
       </tbody>
   </table>
+}
 
   <h2>Manylion personol</h2>
 
@@ -116,22 +123,11 @@
 
   <h2>Newid eich datganiad</h2>
 
+    <p style="margin: 0 0 30px; font-size: 19px;">Gallwch ychwanegu nwyddau at y datganiad hwn gan ddefnyddio’r un gwasanaeth.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn teithio gyda nwyddau nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un ar gael.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Os oes angen ad-daliad arnoch, ewch i ‘Declare commercial goods you're taking out of Great Britain in accompanied baggage or small vehicles’ ar GOV.UK.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Os oes angen ad-daliad arnoch, ewch i ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’ ar GOV.UK.</p>
 
-    <p style="margin: 0 0 0px; font-size: 19px;">O fis <b>Ebrill 2021</b> ymlaen, byddwch yn gallu defnyddio’r gwasanaeth hwn i ychwanegu nwyddau at ddatganiad sy’n bodoli eisoes, os yw’r canlynol yn wir:</p>
-
-    <p>
-    <ul>
-        <li style="font-size: 19px;">at ei gilydd, maent yn werth hyd at £1,500</li>
-        <li style="font-size: 19px;">at ei gilydd, maent yn pwyso hyd at 1,000 cilogram</li>
-        <li style="font-size: 19px;">nid ydynt yn agored i doll ecséis (alcohol, tybaco, tanwydd)</li>
-        <li style="font-size: 19px;">nid ydynt yn nwyddau o dan reolaeth nac yn nwyddau cyfyngedig.</li>
-    </ul>
-    </p>
-
-
-  <p style="margin: 0 0 30px; font-size: 19px;">O’r gwasanaeth datgan nwyddau masnachol</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">O’r gwasanaeth datgan nwyddau masnachol</p>
 }

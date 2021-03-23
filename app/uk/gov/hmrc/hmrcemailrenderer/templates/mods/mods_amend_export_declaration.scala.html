@@ -27,41 +27,41 @@
   }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gwnaethoch ddatgan nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You added goods to your declaration") {
 
-    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl @params("nameOfPersonCarryingGoods")</p>
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear @params("nameOfPersonCarryingGoods")</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Daeth eich datganiad i law ar gyfer y nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr yn eich bagiau neu gerbyd bach.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This is your updated declaration for all the goods which you are taking out of Great Britain in your baggage or small vehicle.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Cyfeirnod eich datganiad yw: <strong>@params("declarationReference")</strong></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your declaration reference is: <strong>@params("declarationReference")</strong></p>
 
-    <h2>Yr hyn y mae angen i chi ei wneud nesaf</h2>
+    <h2>What you need to do next</h2>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Ewch â’r datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi pan fyddwch yn teithio. Efallai y gofynnir i chi ddangos y rhain wrth i chi ymadael.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Take this updated declaration and the purchase receipts for the goods with you when you travel. You may be asked to provide these on your departure.</p>
 
-    <h2>Dyddiad y datganiad</h2>
+    <h2>Date of declaration</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
 
-    <h2>Manylion y nwyddau</h2>
+    <h2>Details of the goods</h2>
 
     @for((category, quantity, country, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
                 <tr>
-                    <th width="60%">Math o nwyddau</th>
+                    <th width="60%">Type of goods</th>
                     <td>@category</td>
                 </tr>
                 <tr>
-                    <th width="60%">Nifer</th>
+                    <th width="60%">Quantity</th>
                     <td>@quantity</td>
                 </tr>
                 <tr>
-                    <th width="60%">Cyrchfan</th>
+                    <th width="60%">Destination</th>
                     <td>@country</td>
                 </tr>
                 <tr>
-                    <th width="60%">Swm a dalwyd</th>
+                    <th width="60%">Amount paid</th>
                     <td>@price</td>
                 </tr>
             </tbody>
@@ -69,26 +69,24 @@
         <br>
     }
 
-  <h2>Manylion personol</h2>
+  <h2>Personal details</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
             <tr>
-                <th width="60%">Enw’r person sy’n cludo’r nwyddau</th>
+                <th width="60%">Name of person carrying goods</th>
                 <td>@params("nameOfPersonCarryingGoods")</td>
             </tr>
             <tr>
-                <th width="60%">Rhif EORI</th>
+                <th width="60%">EORI number</th>
                 <td>@params("eori")</td>
             </tr>
         </tbody>
     </table>
 
-  <h2>Newid eich datganiad</h2>
+  <h2>Changing your declaration</h2>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Gallwch ychwanegu nwyddau at y datganiad hwn gan ddefnyddio’r un gwasanaeth.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.</p>
-
-    <p style="margin: 0 0 30px; font-size: 19px;">O’r gwasanaeth datgan nwyddau masnachol</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From the Commercial goods declaration service</p>
 }
