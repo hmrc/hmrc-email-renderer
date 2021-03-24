@@ -1,4 +1,4 @@
-@(params: Map[String, Any])You declared commercial goods you are bringing into Great Britain
+@(params: Map[String, Any])You added goods to your declaration
 @goodsGrid = @{
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
@@ -12,7 +12,7 @@
 }
 Dear @params("nameOfPersonCarryingGoods")
 
-We received your declaration for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.
+This is your updated declaration for all the goods you are bringing into Great Britain in your baggage or small vehicle.
 
 Your declaration reference is: @params("declarationReference")
 
@@ -20,7 +20,7 @@ What you need to do next
 
 When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.
 
-Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these on your arrival.
+Make sure you take this updated declaration and the purchase receipts for the goods with you. You may be asked to provide these on your arrival.
 
 Bringing EU goods
 
@@ -56,9 +56,9 @@ EORI number: @params("eori")
 
 Changing your declaration
 
-If you need a refund, go to ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’ on GOV.UK.
+If you bring goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.
 
-If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.
+If you need a refund, go to ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’ on GOV.UK.
 
 From the Commercial goods declaration service
 
