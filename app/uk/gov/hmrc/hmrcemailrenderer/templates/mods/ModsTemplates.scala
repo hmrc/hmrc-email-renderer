@@ -43,7 +43,7 @@ object ModsTemplates {
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
-          s"${params("surname")} - ${params("declarationReference")} - Import declaration"
+          s"${params("surname")} - ${params("declarationReference")} - Updated import declaration"
         } else {
           "Updated declaration for commercial goods you bring into Great Britain"
         }
@@ -103,7 +103,7 @@ object ModsTemplates {
       service = MODS,
       subject = params => {
         if (params("emailTo") == "BorderForce") {
-          s"${params("surname")} - ${params("declarationReference")} - Export declaration"
+          s"${params("surname")} - ${params("declarationReference")} - Updated export declaration"
         } else {
           "Updated declaration for commercial goods you take out of Great Britain"
         }
