@@ -75,7 +75,7 @@ object ModsTemplates {
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Datganiad mewnforio"
         } else {
-          "Datganiad a thaliad am nwyddau masnachol rydych yn dod â nhw i Brydain Fawr"
+          "Datganiad wedi’i ddiweddaru ar gyfer nwyddau masnachol yr ydych yn dod â nhw i Brydain Fawr"
         }
       },
       plainTemplate = txt.mods_amend_import_declaration_cy.f,
@@ -135,7 +135,7 @@ object ModsTemplates {
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Datganiad allforio"
         } else {
-          "Datganiad am nwyddau masnachol yn gadael Prydain Fawr"
+          "Datganiad wedi’i ddiweddaru ar gyfer nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr"
         }
       },
       plainTemplate = txt.mods_amend_export_declaration_cy.f,

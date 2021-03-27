@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Gwnaethoch ddatgan a thalu am nwyddau masnachol rydych yn dod â nhw i Brydain Fawr
+@(params: Map[String, Any])Rydych wedi ychwanegu nwyddau at eich datganiad
 @goodsGrid = @{
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
@@ -12,15 +12,19 @@
 }
 Annwyl @params("nameOfPersonCarryingGoods")
 
-Daeth eich datganiad a’ch taliad am y nwyddau masnachol rydych yn dod â nhw i Brydain Fawr yn eich bagiau neu gerbyd bach i law.
+Dyma’ch datganiad wedi’i ddiweddaru ar gyfer yr holl nwyddau masnachol yr ydych yn dod â nhw i Brydain Fawr yn eich bagiau neu gerbyd bach.
 
 Cyfeirnod eich datganiad yw: @params("declarationReference")
 
 Yr hyn y mae angen i chi ei wneud nesaf
 
-Pan fyddwch yn cyrraedd Prydain Fawr, ewch i’r sianel werdd ’dim byd i’w ddatgan’.
+Pan fyddwch yn cyrraedd Prydain Fawr, ewch i’r sianel werdd ‘dim byd i’w ddatgan’.
 
-Gwnewch yn siŵr eich bod yn cymryd y datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi. Efallai y gofynnir i chi ddangos y rhain ar y ffin.
+Gwnewch yn siŵr eich bod yn mynd â’r datganiad wedi’i ddiweddaru hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi. Efallai y gofynnir i chi ddangos y rhain wrth i chi gyrraedd.
+
+Dod â nwyddau o’r UE gyda chi
+
+Mae’n rhaid i chi gario tystiolaeth sy’n dangos y cafodd eich nwyddau eu gwneud yn yr UE os yw cyfanswm eu gwerth dros £1,000.
 
 Dyddiad y datganiad
 
@@ -30,15 +34,15 @@ Manylion y nwyddau
 
 @for((category, quantity, country, producedInEu, price) <- goodsGrid) {
 Math o nwyddau: @category
-Nifer yr eitemau: @quantity
+Nifer: @quantity
 @for(cntry <- country) {Gwlad: @cntry  }
-@for(eu <- producedInEu) {Cynhyrchwyd yn yr UE: @eu  }
-Y pris a dalwyd: @price
+@for(eu <- producedInEu) {Gwnaed yn yr UE: @eu  }
+Swm a dalwyd: @price
 
 }
 
 @if(params("total").toString().substring(1).toDouble > 0) {
-Swm a dalwyd
+Crynodeb o’r taliadau
 
 Toll Dramor: @params("customsDuty")
 TAW: @params("vat")
@@ -52,8 +56,9 @@ Rhif EORI: @params("eori")
 
 Newid eich datganiad
 
-Os ydych yn teithio gyda nwyddau nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un ar gael.
-Os oes angen ad-daliad arnoch, ewch i ‘Declare commercial goods you're taking out of Great Britain in accompanied baggage or small vehicles’ ar GOV.UK.
+Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.
+
+Os oes angen ad-daliad arnoch, ewch i ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’ ar GOV.UK.
 
 O’r gwasanaeth datgan nwyddau masnachol
 
