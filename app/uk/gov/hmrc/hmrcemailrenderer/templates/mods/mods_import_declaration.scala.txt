@@ -10,6 +10,7 @@
       (category, quantity, country, producedInEu, price)
   }
 }
+
 Dear @params("nameOfPersonCarryingGoods")
 
 We received your declaration for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.
@@ -55,6 +56,8 @@ Name of person carrying goods: @params("nameOfPersonCarryingGoods")
 EORI number: @params("eori")
 
 Changing your declaration
+
+You can add goods to this declaration using the same service.
 
 If you need a refund, go to ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’ on GOV.UK.
 

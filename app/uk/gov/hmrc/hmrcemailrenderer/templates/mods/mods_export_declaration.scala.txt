@@ -39,6 +39,8 @@ EORI number: @params("eori")
 
 Changing your declaration
 
+You can add goods to this declaration using the same service.
+
 If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.
 
 From the Commercial goods declaration service
