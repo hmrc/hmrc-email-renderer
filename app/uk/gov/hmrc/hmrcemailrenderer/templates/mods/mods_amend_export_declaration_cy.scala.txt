@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Datganiad ar gyfer nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr
+@(params: Map[String, Any])Rydych wedi ychwanegu nwyddau at eich datganiad
 @goodsGrid = @{
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
@@ -11,13 +11,13 @@
 }
 Annwyl @params("nameOfPersonCarryingGoods")
 
-Daeth eich datganiad i law ar gyfer y nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr yn eich bagiau neu gerbyd bach.
+Dyma’ch datganiad wedi’i ddiweddaru ar gyfer yr holl nwyddau yr ydych yn mynd â nhw allan o Brydain Fawr yn eich bagiau neu gerbyd bach.
 
 Cyfeirnod eich datganiad yw: @params("declarationReference")
 
 Yr hyn y mae angen i chi ei wneud nesaf
 
-Ewch â’r datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi pan fyddwch yn teithio. Efallai y gofynnir i chi ddangos y rhain wrth i chi ymadael.
+Ewch â’r datganiad wedi’i ddiweddaru hwn a’r derbyniadau prynu ar gyfer y nwyddau gyda chi pan fyddwch yn teithio. Efallai y gofynnir i chi ddangos y rhain wrth i chi ymadael.
 
 Dyddiad y datganiad
 
@@ -38,8 +38,6 @@ Enw’r person sy’n cludo’r nwyddau: @params("nameOfPersonCarryingGoods")
 Rhif EORI: @params("eori")
 
 Newid eich datganiad
-
-Gallwch ychwanegu nwyddau at y datganiad hwn gan ddefnyddio’r un gwasanaeth.
 
 Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.
 
