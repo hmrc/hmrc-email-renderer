@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Reclaim non-UK Resident Stamp Duty Land Tax surcharge
+
+Dear Customer,
+
+This email confirms that you have submitted an application to reclaim non-UK Resident Stamp Duty Land Tax surcharge on a property transaction.
+
+We aim to respond within 35 calendar days.
+
+Your submission reference is: @params.get("submissionReference")
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

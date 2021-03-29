@@ -322,6 +322,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "duty_deferment_account_amend_confirmation",
         "tor_code",
         "tor_confirmation",
+        "nrsDLT_code",
+        "nrsDLT_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
