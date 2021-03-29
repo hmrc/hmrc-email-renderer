@@ -12,8 +12,6 @@ What you need to do now
 
 Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.
 
-If this email account is not shared, and you did not request this code you need to contact us.
-
 If this email account is not shared, and you did not request this code you need to contact HMRC.
 
 Do not reply to this email.

@@ -2,9 +2,9 @@
 
 Confirm your email address
 
-Dear Customer
+Dear Customer,
 
-You requested a code to continue with the ‘Apply to extend your application to protect your intellectual property rights’ service on GOV.UK.
+You requested a code to continue with the ‘Apply for a repayment of non-UK Resident Stamp Duty Land Tax Surcharge’ service on GOV.UK.
 
 Your code is: @params.get("confirmationCode")
 
@@ -16,6 +16,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From HMRC Intellectual Property Rights team
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
