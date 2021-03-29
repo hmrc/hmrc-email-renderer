@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reclaim non-UK Resident Stamp Duty Land Tax surcharge"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer,</p>
+    Dear @params.get("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     This email confirms that you have submitted an application to reclaim non-UK Resident Stamp Duty Land Tax surcharge on a property transaction.</p>
 
