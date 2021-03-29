@@ -28,11 +28,11 @@
   }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You declared and paid for commercial goods you are bringing into Great Britain") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You declared commercial goods you are bringing into Great Britain") {
 
     <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear @params("nameOfPersonCarryingGoods")</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">We received your declaration and payment for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We received your declaration for the commercial goods you are bringing into Great Britain in your baggage or small vehicle.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Your declaration reference is: <strong>@params("declarationReference")</strong></p>
 
@@ -40,7 +40,11 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these at the border.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these on your arrival.</p>
+
+    <h2>Bringing EU goods</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You need to carry proof your goods were made in the EU if they have a total value over £1,000.</p>
 
     <h2>Date of declaration</h2>
 
@@ -56,7 +60,7 @@
                     <td>@category</td>
                 </tr>
                 <tr>
-                    <th width="60%">Number of items</th>
+                    <th width="60%">Quantity</th>
                     <td>@quantity</td>
                 </tr>
                 @for(cntry <- country) {
@@ -67,12 +71,12 @@
                 }
                 @for( eu <- producedInEu) {
                         <tr>
-                        <th width="60%">Produced in EU</th>
+                        <th width="60%">Made in EU</th>
                         <td>@eu</td>
                         </tr>
                 }
                 <tr>
-                    <th width="60%">Price paid</th>
+                    <th width="60%">Amount paid</th>
                     <td>@price</td>
                 </tr>
                 <br>
@@ -80,7 +84,8 @@
         </table>
     }
 
-  <h2>Amount paid</h2>
+@if(params("total").toString().substring(1).toDouble > 0) {
+  <h2>Payment summary</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
       <tbody>
@@ -98,6 +103,7 @@
           </tr>
       </tbody>
   </table>
+}
 
   <h2>Personal details</h2>
 
@@ -116,21 +122,11 @@
 
   <h2>Changing your declaration</h2>
 
+    <p style="margin: 0 0 30px; font-size: 19px;">You can add goods to this declaration using the same service.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If you bring goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you need a refund, go to ‘Declare commercial goods you’re bringing into Great Britain in accompanied baggage or small vehicles’ on GOV.UK.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If you need a refund, go to ‘Declare commercial goods you're taking out of Great Britain in accompanied baggage or small vehicles’ on GOV.UK.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you travel with other goods that you have not declared in advance, you must go to the ‘Goods to Declare’ channel or the red point phone in the customs area, if there is one.</p>
 
-    <p style="margin: 0 0 0px; font-size: 19px;">From <b>April 2021</b>, you will be able to use this service to add goods to an existing declaration, if they:</p>
-
-    <p>
-        <ul>
-            <li style="font-size: 19px;">have a total value of £1,500 or less</li>
-            <li style="font-size: 19px;">weigh a total of 1,000 kilograms or less</li>
-            <li style="font-size: 19px;">are not subject to excise duty (alcohol, tobacco, fuel)</li>
-            <li style="font-size: 19px;">are not controlled goods or restricted goods.</li>
-        </ul>
-    </p>
-
-  <p style="margin: 0 0 30px; font-size: 19px;">From the Commercial goods declaration service</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From the Commercial goods declaration service</p>
 }
