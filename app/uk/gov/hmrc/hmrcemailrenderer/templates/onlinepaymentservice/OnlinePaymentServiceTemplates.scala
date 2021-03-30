@@ -179,10 +179,28 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "cds_ddi_setup_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred: Direct Debit set up",
+      plainTemplate = txt.cds_ddi_setup_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_cancelled_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred: Direct Debit cancelled",
+      plainTemplate = txt.cds_ddi_cancelled_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_cancelled_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "cds_ddi_unpaid_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Duty Deferred Direct Debit instruction: cannot be used",
+      subject = "HMRC Duty Deferred Direct Debit: payment not collected",
       plainTemplate = txt.cds_ddi_unpaid_dcs_alert.f,
       htmlTemplate = html.cds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)

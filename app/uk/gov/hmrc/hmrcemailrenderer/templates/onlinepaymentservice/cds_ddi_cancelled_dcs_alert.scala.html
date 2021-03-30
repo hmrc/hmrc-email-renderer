@@ -16,10 +16,10 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Duty Deferred Direct Debit: payment not collected") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"HMRC Duty Deferred: Direct Debit cancelled") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit payment has not been collected.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit has been cancelled.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">We have sent you a secure message. To read it:</p>
 
