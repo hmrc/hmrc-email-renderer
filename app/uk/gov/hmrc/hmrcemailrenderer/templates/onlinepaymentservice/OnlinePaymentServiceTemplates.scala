@@ -223,6 +223,34 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.dd_email_verifcation.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    // CDS templates
+    MessageTemplate.create(
+      templateId = "cds_ddi_amended_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit: confirmation of details",
+      plainTemplate = txt.cds_ddi_amended_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_amended_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_reminder_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit: advance notice of payment",
+      plainTemplate = txt.cds_ddi_reminder_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_reminder_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_unpaid_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit instruction: cannot be used",
+      plainTemplate = txt.cds_ddi_unpaid_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_unpaid_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     //Recon tps
     MessageTemplate.createWithDynamicSubject(
       templateId = "recon_tps_report",
