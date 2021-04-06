@@ -1,4 +1,4 @@
-@(params: Map[String, Any])HMRC Duty Deferred Direct Debit instruction: cannot be used
+@(params: Map[String, Any])HMRC Duty Deferred Direct Debit: instruction cannot be used
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 Your Direct Debit instruction was not set up successfully.
