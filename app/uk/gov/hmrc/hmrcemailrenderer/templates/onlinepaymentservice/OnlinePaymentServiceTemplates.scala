@@ -285,7 +285,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "cds_ddi_not_acceptable_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Duty Deferred Direct Debit instruction: cannot be used",
+      subject = "HMRC Duty Deferred Direct Debit: instruction cannot be used",
       plainTemplate = txt.cds_ddi_not_acceptable_dcs_alert.f,
       htmlTemplate = html.cds_ddi_not_acceptable_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
