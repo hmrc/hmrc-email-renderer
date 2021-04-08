@@ -30,6 +30,7 @@ Type of goods: @category
 Quantity: @quantity
 Destination: @country
 Amount paid: @price
+
 }
 
 Personal details

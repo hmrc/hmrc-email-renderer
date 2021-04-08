@@ -36,21 +36,21 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">Cyfeirnod eich datganiad yw: <strong>@params("declarationReference")</strong></p>
 
-    <h2>Yr hyn y mae angen i chi ei wneud nesaf</h2>
+    <h1>Yr hyn y mae angen i chi ei wneud nesaf</h1>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Pan fyddwch yn cyrraedd Prydain Fawr, ewch i’r sianel werdd ‘dim byd i’w ddatgan’.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Gwnewch yn siŵr eich bod yn mynd â’r datganiad wedi’i ddiweddaru hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi. Efallai y gofynnir i chi ddangos y rhain wrth i chi gyrraedd.</p>
 
-    <h2>Dod â nwyddau o’r UE gyda chi</h2>
+    <h1>Dod â nwyddau o’r UE gyda chi</h1>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Mae’n rhaid i chi gario tystiolaeth sy’n dangos y cafodd eich nwyddau eu gwneud yn yr UE os yw cyfanswm eu gwerth dros £1,000.</p>
 
-    <h2>Dyddiad y datganiad</h2>
+    <h1>Dyddiad y datganiad</h1>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
 
-    <h2>Manylion y nwyddau</h2>
+    <h1>Manylion y nwyddau</h1>
 
     @for((category, quantity, country, producedInEu, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
@@ -82,10 +82,11 @@
                 <br>
             </tbody>
         </table>
+        <br>
     }
 
 @if(params("total").toString().substring(1).toDouble > 0) {
-  <h2>Crynodeb o’r taliadau</h2>
+  <h1>Crynodeb o’r taliadau</h1>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
       <tbody>
@@ -105,7 +106,7 @@
   </table>
 }
 
-  <h2>Manylion personol</h2>
+  <h1>Manylion personol</h1>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
@@ -120,7 +121,7 @@
         </tbody>
     </table>
 
-  <h2>Newid eich datganiad</h2>
+  <h1>Newid eich datganiad</h1>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.</p>
 
