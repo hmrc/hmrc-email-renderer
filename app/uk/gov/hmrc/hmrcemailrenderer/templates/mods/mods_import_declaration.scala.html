@@ -36,21 +36,21 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">Your declaration reference is: <strong>@params("declarationReference")</strong></p>
 
-    <h1>What you need to do next</h1>
+    <h2>What you need to do next</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">When you arrive in Great Britain, go to the green ‘nothing to declare’ channel.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Make sure you take this declaration and the purchase receipts for the goods with you. You may be asked to provide these on your arrival.</p>
 
-    <h1>Bringing EU goods</h1>
+    <h2>Bringing EU goods</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">You need to carry proof your goods were made in the EU if they have a total value over £1,000.</p>
 
-    <h1>Date of declaration</h1>
+    <h2>Date of declaration</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
 
-    <h1>Details of the goods</h1>
+    <h2>Details of the goods</h2>
 
     @for((category, quantity, country, producedInEu, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
@@ -86,7 +86,7 @@
     }
 
 @if(params("total").toString().substring(1).toDouble > 0) {
-  <h1>Payment summary</h1>
+  <h2>Payment summary</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
       <tbody>
@@ -106,7 +106,7 @@
   </table>
 }
 
-  <h1>Personal details</h1>
+  <h2>Personal details</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
@@ -121,7 +121,7 @@
         </tbody>
     </table>
 
-  <h1>Changing your declaration</h1>
+  <h2>Changing your declaration</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">You can add goods to this declaration using the same service.</p>
 

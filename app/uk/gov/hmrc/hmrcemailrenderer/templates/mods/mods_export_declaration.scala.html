@@ -35,15 +35,15 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">Your declaration reference is: <strong>@params("declarationReference")</strong></p>
 
-    <h1>What you need to do next</h1>
+    <h2>What you need to do next</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Take this declaration and the purchase receipts for the goods with you when you travel. You may be asked to provide these on your departure.</p>
 
-    <h1>Date of declaration</h1>
+    <h2>Date of declaration</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
 
-    <h1>Details of the goods</h1>
+    <h2>Details of the goods</h2>
 
     @for((category, quantity, country, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
@@ -69,7 +69,7 @@
         <br>
     }
 
-  <h1>Personal details</h1>
+  <h2>Personal details</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
@@ -84,7 +84,7 @@
         </tbody>
     </table>
 
-  <h1>Changing your declaration</h1>
+  <h2>Changing your declaration</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">You can add goods to this declaration using the same service.</p>
 

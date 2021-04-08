@@ -35,15 +35,15 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">Cyfeirnod eich datganiad yw: <strong>@params("declarationReference")</strong></p>
 
-    <h1>Yr hyn y mae angen i chi ei wneud nesaf</h1>
+    <h2>Yr hyn y mae angen i chi ei wneud nesaf</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Ewch â’r datganiad wedi’i ddiweddaru hwn a’r derbyniadau prynu ar gyfer y nwyddau gyda chi pan fyddwch yn teithio. Efallai y gofynnir i chi ddangos y rhain wrth i chi ymadael.</p>
 
-    <h1>Dyddiad y datganiad</h1>
+    <h2>Dyddiad y datganiad</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
 
-    <h1>Manylion y nwyddau</h1>
+    <h2>Manylion y nwyddau</h2>
 
     @for((category, quantity, country, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
@@ -69,7 +69,7 @@
         <br>
     }
 
-  <h1>Manylion personol</h1>
+  <h2>Manylion personol</h2>
 
     <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
         <tbody>
@@ -84,7 +84,7 @@
         </tbody>
     </table>
 
-  <h1>Newid eich datganiad</h1>
+  <h2>Newid eich datganiad</h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.</p>
 
