@@ -103,7 +103,7 @@ We have to add this to configuration in following place
 
 key should be an english tempalteId and value should be welsh templateId
 
-We make a call to preferences service to see weather language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
+We make a call to preferences service to see whether language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
 
 
 ### License
