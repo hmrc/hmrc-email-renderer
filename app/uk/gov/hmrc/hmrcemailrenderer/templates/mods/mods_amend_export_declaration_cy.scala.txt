@@ -30,6 +30,7 @@ Math o nwyddau: @category
 Nifer: @quantity
 Cyrchfan: @country
 Swm a dalwyd: @price
+
 }
 
 Manylion personol
