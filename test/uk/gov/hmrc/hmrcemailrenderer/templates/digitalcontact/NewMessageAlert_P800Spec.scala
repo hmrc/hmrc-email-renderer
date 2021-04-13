@@ -21,26 +21,26 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class SecureMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
+class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
 
-  "SecureMessageAlert_P800" must {
+  "NewMessageAlert_P800" must {
 
-    val secureMessageAlert: MessageTemplate = MessageTemplate.create(
-      templateId = "secureMessageAlert_P800",
+    val newMessageAlert: MessageTemplate = MessageTemplate.create(
+      templateId = "newMessageAlert_P800",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = SelfAssessment,
       subject = "You have a new message from HMRC",
-      plainTemplate = txt.secureMessageAlert_P800.f,
-      htmlTemplate = html.secureMessageAlert_P800.f,
+      plainTemplate = txt.newMessageAlert_P800.f,
+      htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
     )
 
     "include correct subject" in {
-      secureMessageAlert.subject(commonParameters) mustBe "You have a new message from HMRC"
+      newMessageAlert.subject(commonParameters) mustBe "You have a new message from HMRC"
     }
 
     "include htmlTemplate body and footer" in {
-      val htmlContent = secureMessageAlert
+      val htmlContent = newMessageAlert
         .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
         .toString
       htmlContent must include("Mrs John")

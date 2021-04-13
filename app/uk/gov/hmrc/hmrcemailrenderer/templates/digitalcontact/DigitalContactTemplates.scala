@@ -256,12 +256,12 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "secureMessageAlert_P800",
+      templateId = "newMessageAlert_P800",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "You have a new message from HMRC",
-      plainTemplate = txt.secureMessageAlert_P800.f,
-      htmlTemplate = html.secureMessageAlert_P800.f,
+      plainTemplate = txt.newMessageAlert_P800.f,
+      htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
     )
   ) ++ newMessageAlertTemplates
