@@ -669,7 +669,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "mods_export_declaration_cy",
         "mods_amend_export_declaration_cy",
         "ni_vat_Status_reporting_confirmation",
-        "reimbursement_claim_submission"
+        "reimbursement_claim_submission",
+        "secureMessageAlert_P800"
       )
     }
   }
