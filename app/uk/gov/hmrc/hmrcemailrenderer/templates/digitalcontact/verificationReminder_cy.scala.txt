@@ -1,14 +1,20 @@
-@(params: Map[String, Any])Dilyswch eich cyfeiriad e-bost
+@(params: Map[String, Any]) Dilyswch eich cyfeiriad e-bost i gael llythyrau treth ar-lein
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
-Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.
+@defining(params("daysAgo").toString.toInt) { daysAgo =>
+@if(daysAgo == 5){Bum diwrnod yn ôl rhoesoch wybod i ni eich bod am gael llythyrau treth ar-lein.}
+@if(daysAgo == 2){Ddeuddydd yn ôl rhoesoch wybod i ni eich bod am gael llythyrau treth ar-lein.}
 
-Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.
-
-Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.
+Mae dal angen i chi glicio’r cysylltiad hwn cyn y gallwn ddechrau anfon llythyrau a gwybodaeth atoch ar-lein:
 
 @{params("verificationLink")}
 
-Oddi wrth Adran Ddigidol CThEM
+@if(daysAgo == 5){Mae angen i chi wneud hyn cyn pen 2 ddiwrnod, neu byddwn yn parhau i anfon llythyrau treth atoch drwy’r post.}
+@if(daysAgo == 2){Mae angen i chi wneud hyn cyn pen 5 diwrnod, neu byddwn yn parhau i anfon llythyrau treth atoch drwy’r post.}
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
+Pam ein bod wedi anfon e-bost atoch
+
+Rydym yn gwneud i chi ddilysu’ch cyfeiriad e-bost er mwyn helpu i gadw’ch manylion yn ddiogel.
+
+Oddi wrth adran Ddigidol CThEM
+}

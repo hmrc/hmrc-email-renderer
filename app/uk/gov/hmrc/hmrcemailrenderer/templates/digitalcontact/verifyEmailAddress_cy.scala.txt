@@ -1,13 +1,14 @@
 @(params: Map[String, Any])Dilyswch eich cyfeiriad e-bost
-
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
-Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.
-
-Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.
+Mae angen i chi glicio’r cysylltiad hwn cyn y gallwn ddechrau anfon llythyrau treth a gwybodaeth atoch ar-lein:
 
 @{params("verificationLink")}
 
-Oddi wrth Adran Ddigidol CThEM
+Mae angen i chi wneud hyn cyn pen 7 diwrnod, neu byddwn yn parhau i anfon llythyrau treth atoch drwy’r post.
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+Pam ein bod wedi anfon e-bost atoch
+
+Rydym yn gwneud i chi ddilysu’ch cyfeiriad e-bost er mwyn helpu i gadw’ch manylion yn ddiogel.
+
+Oddi wrth adran Ddigidol CThEM
