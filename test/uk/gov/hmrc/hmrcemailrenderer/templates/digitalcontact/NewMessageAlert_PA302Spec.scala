@@ -16,22 +16,22 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import org.scalatestplus.play.{ OneAppPerSuite, PlaySpec }
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import org.scalatestplus.play.PlaySpec
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
+class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
 
-  "NewMessageAlert_P800" must {
+  "NewMessageAlert_PA302" must {
 
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
-      templateId = "newMessageAlert_P800",
+      templateId = "newMessageAlert_PA302",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = SelfAssessment,
       subject = "You have a new message from HMRC",
-      plainTemplate = txt.newMessageAlert_P800.f,
-      htmlTemplate = html.newMessageAlert_P800.f,
+      plainTemplate = txt.newMessageAlert_PA302.f,
+      htmlTemplate = html.newMessageAlert_PA302.f,
       priority = Some(MessagePriority.Standard)
     )
 

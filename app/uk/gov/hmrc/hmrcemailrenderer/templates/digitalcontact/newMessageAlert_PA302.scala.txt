@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Your new tax calculation is ready
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+You can now view your latest tax calculation.
+
+Sign in to HMRC online with your Government Gateway password and ID, and go to your messages.
+
+For security reasons, we have not included a link with this email.
+
+Why you got this email
+
+You chose to get online tax letters instead of letters by post.
+
+This means we send you an email to let you know when you have a new message.
+
+From HMRC PAYE
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

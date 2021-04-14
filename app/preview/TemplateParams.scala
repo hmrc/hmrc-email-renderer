@@ -2302,6 +2302,7 @@ object TemplateParams2 {
       "caseNumber"  -> "0004201hog42",
       "claimAmount" -> "500"
     ),
-    "newMessageAlert_P800" -> newMessageAlert_Names
+    "newMessageAlert_P800" -> newMessageAlert_Names,
+    "newMessageAlert_PA302" -> newMessageAlert_Names
   )
 }
