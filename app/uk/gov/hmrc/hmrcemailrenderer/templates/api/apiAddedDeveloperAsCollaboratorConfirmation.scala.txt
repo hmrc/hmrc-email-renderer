@@ -1,5 +1,7 @@
 @(params: Map[String, Any])You have been added to an application
 
+Dear Customer
+
 You are now @{params("article")} @{params("role")} on @{params("applicationName")}.
 
 Sign in or register on HMRC Developer Hub to access the application.
