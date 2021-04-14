@@ -263,6 +263,15 @@ object DigitalContactTemplates {
       plainTemplate = txt.newMessageAlert_P800.f,
       htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_PA302",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "You have a new message from HMRC",
+      plainTemplate = txt.newMessageAlert_PA302.f,
+      htmlTemplate = html.newMessageAlert_PA302.f,
+      priority = Some(MessagePriority.Standard)
     )
   ) ++ newMessageAlertTemplates
 }
