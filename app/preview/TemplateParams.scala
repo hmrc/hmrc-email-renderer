@@ -239,10 +239,12 @@ object TemplateParams {
       "clientVrn"      -> "1234567890"
     ),
     "verificationReminder" -> Map(
-      "verificationLink" -> exampleLinkWithRandomId
+      "verificationLink" -> exampleLinkWithRandomId,
+      "daysAgo" -> "3"
     ),
     "verificationReminder_cy" -> Map(
-      "verificationLink" -> exampleLinkWithRandomId
+      "verificationLink" -> exampleLinkWithRandomId,
+      "daysAgo" -> "3"
     ),
     "verifyEmailAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
