@@ -89,9 +89,9 @@ class TemplatePrioritiesISpec
       (
         "apiAddedDeveloperAsCollaboratorConfirmation",
         Map(
-          "role"             -> "role",
-          "applicationName"  -> "applicationName",
-          "developerHubLink" -> "/developerHubLink"
+          "article"         -> "a",
+          "role"            -> "role",
+          "applicationName" -> "applicationName"
         )),
       (
         "apiAddedDeveloperAsCollaboratorNotification",
