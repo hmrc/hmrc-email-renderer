@@ -1,14 +1,21 @@
-@(params: Map[String, Any])Verify your email address
+@(params: Map[String, Any])Verify your email address to get online tax letters
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-You’ve chosen to get electronic communications from HMRC.
+@defining(params.getOrElse("daysAgo", "3").toString.toInt) { daysAgo =>
+@if(daysAgo == 5){Five days ago you told us you want to get online tax letters.}
+@if(daysAgo  == 3){Two days ago you told us you want to get online tax letters.}
 
-You still need to verify your email address with HMRC to complete the sign-up process.
-
-Click on the link below to verify your email address.
+You still need to click this link before we can start sending you letters and information online:
 
 @{params("verificationLink")}
 
-From HMRC Digital
+@if(daysAgo == 5){You need to do this within 2 days, or we will keep sending you tax letters by post.}
+@if(daysAgo  == 3){You need to do this within 5 days, or we will keep sending you tax letters by post.}
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+Why we sent you this email
+
+We make you verify your email address to help keep your details secure.
+
+From HMRC digital
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}}
