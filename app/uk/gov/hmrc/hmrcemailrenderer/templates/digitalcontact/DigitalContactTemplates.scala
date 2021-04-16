@@ -265,12 +265,30 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "newMessageAlert_P800_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      plainTemplate = txt.newMessageAlert_P800_cy.f,
+      htmlTemplate = html.newMessageAlert_P800_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "newMessageAlert_PA302",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
       subject = "You have a new message from HMRC",
       plainTemplate = txt.newMessageAlert_PA302.f,
       htmlTemplate = html.newMessageAlert_PA302.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_PA302_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      plainTemplate = txt.newMessageAlert_PA302_cy.f,
+      htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
     )
   ) ++ newMessageAlertTemplates
