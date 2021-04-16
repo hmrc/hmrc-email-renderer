@@ -18,7 +18,7 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost i gael llythyrau treth ar-lein", isWelsh = true) {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh=true)
 
-@defining(params("daysAgo").toString.toInt) { daysAgo =>
+@defining(params.getOrElse("daysAgo", "3").toString.toInt) { daysAgo =>
 @if(daysAgo == 5){<p style="margin: 0 0 30px; font-size: 19px;">Bum diwrnod yn ôl rhoesoch wybod i ni eich bod am gael llythyrau treth ar-lein.</p>}
 @if(daysAgo  == 3){<p style="margin: 0 0 30px; font-size: 19px;">Ddeuddydd yn ôl rhoesoch wybod i ni eich bod am gael llythyrau treth ar-lein.</p>}
 

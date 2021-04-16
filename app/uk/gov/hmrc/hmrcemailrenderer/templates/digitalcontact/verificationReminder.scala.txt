@@ -1,7 +1,7 @@
 @(params: Map[String, Any])Verify your email address to get online tax letters
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-@defining(params("daysAgo").toString.toInt) { daysAgo =>
+@defining(params.getOrElse("daysAgo", "3").toString.toInt) { daysAgo =>
 @if(daysAgo == 5){Five days ago you told us you want to get online tax letters.}
 @if(daysAgo  == 3){Two days ago you told us you want to get online tax letters.}
 
