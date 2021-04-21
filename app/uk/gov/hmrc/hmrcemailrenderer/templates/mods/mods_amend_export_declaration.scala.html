@@ -20,10 +20,9 @@
   val goods = Stream.from(0).takeWhile(i => params.contains(s"goodsCategory_$i")).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
-    val quantity = params(s"goodsQuantity_$i")
     val country = params(s"goodsDestination_$i")
     val price = params(s"goodsPrice_$i")
-      (category, quantity, country, price)
+    (category, country, price)
   }
 }
 
@@ -45,16 +44,12 @@
 
     <h2>Details of the goods</h2>
 
-    @for((category, quantity, country, price) <- goodsGrid) {
+    @for((category, country, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
                 <tr>
                     <th width="60%">Type of goods</th>
                     <td>@category</td>
-                </tr>
-                <tr>
-                    <th width="60%">Quantity</th>
-                    <td>@quantity</td>
                 </tr>
                 <tr>
                     <th width="60%">Destination</th>
