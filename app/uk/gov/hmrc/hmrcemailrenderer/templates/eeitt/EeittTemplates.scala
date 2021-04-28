@@ -840,7 +840,8 @@ object EeittTemplates {
       templateId = "nrsDLT_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address – Apply for a repayment of the non-UK Resident Stamp Duty Land Tax surcharge - HMRC",
+      subject =
+        "Confirm your email address – Apply for a repayment of the non-UK Resident Stamp Duty Land Tax surcharge - HMRC",
       plainTemplate = txt.nrsDLTCode.f,
       htmlTemplate = html.nrsDLTCode.f,
       priority = Some(MessagePriority.Urgent)
