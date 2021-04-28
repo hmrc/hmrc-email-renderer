@@ -1786,7 +1786,7 @@ object TemplateParams2 {
       "TOTALEXCISEGBP"  -> "£10.50",
       "TOTALCUSTOMSGBP" -> "£5.50",
       "TOTALVATGBP"     -> "£20.50",
-      "TRAVELLINGFROM"  -> "EU Only",
+      "TRAVELLINGFROM"  -> "Great Britain",
       "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"100\",\"goodsValue\":\"400.00\",\"valueCurrency\":\"EUR\",\"valueCurrencyName\":\"Euro (EUR)\",\"originCountry\":\"FR\",\"originCountryName\":\"France\",\"exchangeRate\":\"1.1577\",\"exchangeRateDate\":\"2021-03-09\",\"goodsValueGBP\":\"345.51\",\"VATRESClaimed\":false,\"exciseGBP\":\"80.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"85.10\",\"ukVATPaid\":false,\"ukExcisePaid\":false}]"
     ),
     "digital_tariffs_advice_request" -> Map(
