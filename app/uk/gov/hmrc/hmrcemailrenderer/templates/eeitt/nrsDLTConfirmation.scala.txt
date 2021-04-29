@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-Apply for a repayment of the non-UK Resident Stamp Duty Land Tax surcharge
+You applied for repayment of the non-UK Resident Stamp Duty Land Tax surcharge
 
-Dear Customer,
+Dear Customer
 
-This email confirms that you have submitted an application apply for a repayment of the non-UK Resident Stamp Duty Land Tax surcharge on a property transaction.
+This email confirms that you have submitted an application for repayment of the non-UK Resident Stamp Duty Land Tax surcharge.
 
 We aim to respond within 35 calendar days.
 
