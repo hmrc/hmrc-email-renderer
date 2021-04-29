@@ -2,7 +2,7 @@
 
 Confirm your email address
 
-Dear Customer,
+Dear Customer
 
 You requested a code to continue with the ‘Apply for a repayment of non-UK Resident Stamp Duty Land Tax Surcharge’ service on GOV.UK.
 
