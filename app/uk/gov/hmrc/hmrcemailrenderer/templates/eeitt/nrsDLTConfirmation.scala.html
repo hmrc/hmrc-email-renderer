@@ -15,18 +15,16 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Reclaim non-UK Resident Stamp Duty Land Tax surcharge"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied for repayment of the non-UK Resident Stamp Duty Land Tax surcharge"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params.get("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    This email confirms that you have submitted an application to reclaim non-UK Resident Stamp Duty Land Tax surcharge on a property transaction.</p>
-
+    This email confirms that you have submitted an application for repayment of the non-UK Resident Stamp Duty Land Tax surcharge.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We aim to respond within 35 calendar days.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your submission reference is: @params.get("submissionReference")</p>
-
 <p style="margin: 0 0 30px; font-size: 19px;">
     From HMRC</p>
 }

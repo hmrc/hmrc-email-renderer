@@ -552,7 +552,7 @@ object EeittTemplates {
       subject = "Confirm your email address - election for exemption",
       plainTemplate = txt.civOffshoreCode.f,
       htmlTemplate = html.civOffshoreCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "civQualifying_code_submission",
@@ -561,7 +561,7 @@ object EeittTemplates {
       subject = "Confirm your email address - election for exemption",
       plainTemplate = txt.civQualifyingCode.f,
       htmlTemplate = html.civQualifyingCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "civTransparency_code_submission",
@@ -570,7 +570,7 @@ object EeittTemplates {
       subject = "Confirm your email address - election for transparency",
       plainTemplate = txt.civTransparencyCode.f,
       htmlTemplate = html.civTransparencyCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "spbp_code_submission",
@@ -597,7 +597,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Coronavirus Job Retention Scheme enquiry",
       plainTemplate = txt.cjrsCode.f,
       htmlTemplate = html.cjrsCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "cjrs_confirmation_submission",
@@ -616,7 +616,7 @@ object EeittTemplates {
         "Confirm your email address - Request an HMRC review of your eligibility to claim Self-Employment Income Support",
       plainTemplate = txt.seissCode.f,
       htmlTemplate = html.seissCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "seiss_eligibility_submission",
@@ -698,7 +698,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Apply for action to protect your intellectual property rights",
       plainTemplate = txt.ipr1Code.f,
       htmlTemplate = html.ipr1Code.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ipr2_code",
@@ -707,7 +707,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Report goods that infringe your intellectual property rights",
       plainTemplate = txt.ipr2Code.f,
       htmlTemplate = html.ipr2Code.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ipr3_code",
@@ -717,7 +717,7 @@ object EeittTemplates {
         "Confirm your email address - Apply to extend your application to protect your intellectual property rights",
       plainTemplate = txt.ipr3Code.f,
       htmlTemplate = html.ipr3Code.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "vat_declaration_confirmation",
@@ -753,7 +753,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Report a comment or complaint about a consultation",
       plainTemplate = txt.consultationComplaint.f,
       htmlTemplate = html.consultationComplaint.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "consultation_complaint_confirmation",
@@ -840,7 +840,8 @@ object EeittTemplates {
       templateId = "nrsDLT_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address",
+      subject =
+        "Confirm your email address – Apply for a repayment of the non-UK Resident Stamp Duty Land Tax surcharge - HMRC",
       plainTemplate = txt.nrsDLTCode.f,
       htmlTemplate = html.nrsDLTCode.f,
       priority = Some(MessagePriority.Urgent)
@@ -849,7 +850,7 @@ object EeittTemplates {
       templateId = "nrsDLT_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Reclaim non-UK Resident Stamp Duty Land Tax surcharge: application received",
+      subject = "HMRC received your application for repayment of the non-UK Resident Stamp Duty Land Tax surcharge",
       plainTemplate = txt.nrsDLTConfirmation.f,
       htmlTemplate = html.nrsDLTConfirmation.f,
       priority = Some(MessagePriority.Standard)
