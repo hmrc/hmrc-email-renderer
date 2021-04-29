@@ -256,6 +256,24 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_NinoPTA",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = SelfAssessment,
+      subject = "Your online tax letters",
+      plainTemplate = txt.digitalOptInConfirmation_NinoPTA.f,
+      htmlTemplate = html.digitalOptInConfirmation_NinoPTA.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_NinoPTA_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Eich llythyrau treth ar-lein",
+      plainTemplate = txt.digitalOptInConfirmation_NinoPTA_cy.f,
+      htmlTemplate = html.digitalOptInConfirmation_NinoPTA_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "newMessageAlert_P800",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
