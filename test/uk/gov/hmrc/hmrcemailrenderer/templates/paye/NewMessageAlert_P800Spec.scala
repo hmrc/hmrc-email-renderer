@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
+package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
-import org.scalatestplus.play.{ OneAppPerSuite, PlaySpec }
+import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
+import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.{ html, txt }
 
 class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
 
