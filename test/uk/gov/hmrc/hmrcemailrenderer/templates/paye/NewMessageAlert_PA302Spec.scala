@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
+package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
 import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
+import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.{ html, txt }
 
 class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
 
@@ -28,7 +29,7 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
       templateId = "newMessageAlert_PA302",
       fromAddress = "HMRC@tax.service.gov.uk",
-      service = SelfAssessment,
+      service = PayAsYouEarn,
       subject = "You have a new message from HMRC",
       plainTemplate = txt.newMessageAlert_PA302.f,
       htmlTemplate = html.newMessageAlert_PA302.f,
@@ -64,7 +65,7 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
       templateId = "newMessageAlert_PA302_cy",
       fromAddress = "HMRC@tax.service.gov.uk",
-      service = SelfAssessment,
+      service = PayAsYouEarn,
       subject = "Mae gennych neges newydd oddi wrth CThEM",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
