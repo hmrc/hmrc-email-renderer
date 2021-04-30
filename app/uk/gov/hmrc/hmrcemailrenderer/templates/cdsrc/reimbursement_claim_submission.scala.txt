@@ -15,7 +15,7 @@ Your claim amount is: £@params("claimAmount")
 
 What happens next
 
-HMRC will review your application and we will email you the outcome within 30 working days once we receive valid documents to support your claim. We will contact you to either:
+HMRC will review your application and we will aim to email or write a letter to you about the outcome within 30 working days once we receive valid documents to support your claim. We will contact you to either:
 
     - confirm your claim and bank transfer
     - ask for more information
@@ -23,7 +23,7 @@ HMRC will review your application and we will email you the outcome within 30 wo
 
 Print or save a copy of this email for your records.
 
-For help, you can phone the HMRC CDS Support Team on 0300 322 9434. Open Monday to Friday, 8am to 10pm, (closed bank holidays). Saturday and Sunday, 8am to 4pm.
+For help, you can phone the HMRC CDS Support Team on 0300 322 9434. Open Monday to Friday, 8am to 10pm, (closed bank holidays), Saturday and Sunday, 8am to 4pm.
 
 For more contact details, search GOV.UK for 'import and exports: general enquiries'.
 
