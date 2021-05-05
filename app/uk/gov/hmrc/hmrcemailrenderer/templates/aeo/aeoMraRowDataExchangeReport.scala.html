@@ -1,0 +1,50 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@import _root_.uk.gov.hmrc.hmrcemailrenderer.templates.aeo.ReportFormatter.{ parseRows, timeFormat }
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Data Exchange Status Report", showHeading1 = false) {
+
+<h1>Monthly AEO MRA Data Exchange Status report</h1>
+
+<p>Dear AEO MRA Team</p>
+
+<p>This report covers the latest status of the data exchange between Rest of World to UK and UK to Rest of World.</p>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <td>Sending Country</td>
+      <td>Receiving Country</td>
+      <td>Status</td>
+      <td>Date and Time</td>
+    </tr>
+  </thead>
+  <tbody>
+    @for(row <- parseRows(params("country_rows").toString)) {
+    <tr>
+      <td>@row.sendingCountry</td>
+      <td>@row.receivingCountry</td>
+      <td>@row.status</td>
+      <td>@timeFormat(row.dateTime)</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+}

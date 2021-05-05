@@ -34,6 +34,16 @@ object TemplateParams {
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
+    "aeo_mra_row_data_exchange_report" -> Map(
+      "country_rows" -> Base64.getEncoder.encodeToString(stringify(
+        parse("""
+          [
+            {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:16:49.938044Z"},
+            {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:17:49.938044Z"},
+            {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:18:49.938044Z"}
+          ]
+          """)).getBytes("UTF-8"))
+    ),
     "email_verification_passcode" -> Map(
       "passcode"  -> "NVFYRY",
       "team_name" -> "Government Gateway"
