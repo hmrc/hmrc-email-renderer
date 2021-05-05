@@ -1,33 +1,103 @@
+
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json}
+@import scala.math.BigDecimal.RoundingMode
+
 @(params: Map[String, Any])
-@breakdown = @{
-  val indices = Stream.from(0).takeWhile(i => params.get(s"NAME_$i").isDefined).toList
-  indices.map { i =>
-    val item = params(s"NAME_$i")
-    val amount = params(s"COSTGBP_$i")
-    (item,  amount)
-  }
+
+
+@allItems = @{params("AllITEMS") match {
+case items:String => Json.parse(items).as[List[JsObject]]
+case _ => List()
+}}
+
+@isZeroCondition = @{params("TOTAL").toString().equalsIgnoreCase("£0.00")}
+
+@pageHeaderNormal = @{"You have paid the tax and duty you owe for your goods"}
+@pageHeaderZero = @{"You have declared your goods"}
+
+@pageHeader = @{if(isZeroCondition)pageHeaderZero else pageHeaderNormal}
+@isEUJourney = @{params("TRAVELLINGFROM").toString().equalsIgnoreCase("EU Only")}
+
+@itemList = @{ allItems.map( item => {
+    val commodityDescription = (item \ "commodityDescription").as[String]toLowerCase
+    val volume = item \ "volume"
+    val quantity = item \ "quantity"
+    val weight = item \ "weight"
+    val volOrQuantityOrWeight = if (quantity.isDefined) quantity.as[String]  else if (weight.isDefined) {BigDecimal(weight.as[String]).setScale(2,RoundingMode.apply(2)) + "g of "} else (volume.as[String] + " litres")
+    val itemDesc = s"$volOrQuantityOrWeight $commodityDescription"
+
+    val goodsValue = (item \ "goodsValue").as[String]
+    val valueCurrency = (item \ "valueCurrency").as[String]
+    val localValue = s"$goodsValue $valueCurrency"
+
+    val originCountry = (item \ "originCountry").as[String]
+
+    val exciseGBP = (item \ "exciseGBP").as[String]
+    val customsGBP = (item \ "customsGBP").as[String]
+    val vatGBP = (item \ "vatGBP").as[String]
+    val itemTaxRaw = BigDecimal(exciseGBP) + BigDecimal(customsGBP) + BigDecimal(vatGBP)
+    val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
+    val madeIn = (item \ "madeIn").asOpt[String].getOrElse("N/A")
+
+    val evidence: String = (item \ "euCustomsRelief") match {
+        case JsDefined(v) if (v.toString == "true") => "Yes"
+        case _ => "No"
+    }
+
+    (itemDesc,localValue,originCountry,madeIn,evidence,itemTax)
+    })
 }
-You have paid the duty you owe for these goods
 
-Proceed through the green channel if these are the only items you are declaring. You may be asked to show your receipt on your mobile phone or tablet to a member of Border Force.
+@pageHeader
 
-Go to the red channel or red-point phone if you have something else to declare or if you are carrying restricted items such as firearms or ammunition.
-
-At locations without a red channel, please visit GOV.UK for more information.
+When you arrive in the UK, go to the green 'nothing to declare' channel if these are the only items you are declaring. If asked, show this receipt on your mobile phone or tablet to a member of Border Force, or provide your reference number.
 
 Your details
 
 Name: @params("NAME")
-Date of payment: @params("DATE")
+
 Place of arrival in UK: @params("PLACEOFARRIVAL")
 Date of arrival: @params("DATEOFARRIVAL")
 Time of arrival: @params("TIMEOFARRIVAL")
+@if(!isZeroCondition) {
+Date of payment: @params("DATE")
+}
 Payment reference: @params("REFERENCE")
-Transaction ID: @params("TRANSACTIONREFERENCE")
 Amount paid: @params("TOTAL")
 
-Duty and tax to pay for each item
-@for((item, amount) <- breakdown) {
-- Item: @item, Amount: @amount
+Items declared:
+
+@if(isEUJourney) {
+@for((itemDesc,localValue,originCountry,madeIn, evidence,itemTax) <- itemList) {
+- Item: @itemDesc, Price: @localValue, Purchased In: @originCountry, Produced in: @madeIn, Evidence of origin: @evidence, Tax Paid:@itemTax
 }
+} else {
+@for((itemDesc,localValue,originCountry,madeIn, evidence,itemTax) <- itemList) {
+- Item: @itemDesc, Price: @localValue, Purchased In: @originCountry, Tax Paid:@itemTax
+}
+}
+
+
 Total: @params("TOTAL")
+
+Payment breakdown:
+
+Type of tax or duty:Amount paid
+Customs: @params("TOTALCUSTOMSGBP")
+Excise: @params("TOTALEXCISEGBP")
+VAT: @params("TOTALVATGBP")
+
+Total: @params("TOTAL")
+
+@if(isZeroCondition) {
+Tax or duty was either not due on these goods or was paid when the goods were purchased.
+}
+
+Amending your declaration:
+
+
+You can use this service to add goods to your existing declaration before you arrive in the UK. You will need to enter your reference number.
+
+If you need to remove goods from your declaration and request a refund, visit GOV.UK and search for 'C82'. Look for the page 'Request a refund of overpaid VAT or duty for goods declared using the Online Service for Passengers.
+
+From HMRC Online Service for Passengers'.

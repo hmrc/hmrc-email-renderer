@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
-import play.api.Play
-
+import com.typesafe.config.ConfigFactory
 import scala.util.Try
 
 case class FromAddress(f: Map[String, String] => String) {
@@ -25,12 +24,9 @@ case class FromAddress(f: Map[String, String] => String) {
 }
 
 object FromAddress {
-  import play.api.Play.current
-
   private val defaultDomain = "tax.service.gov.uk"
 
-  lazy val replyDomain =
-    Try(Play.configuration.getString("fromAddress.domain")).toOption.flatten.getOrElse(defaultDomain)
+  lazy val replyDomain = Try(ConfigFactory.load().getString("fromAddress.domain")).toOption.getOrElse(defaultDomain)
 
   def noReply(name: String): String = s"$name <noreply@$replyDomain>"
 

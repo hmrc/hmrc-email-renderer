@@ -1,5 +1,5 @@
 @*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your change in details has been submitted") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Annual Tax on Enveloped Dwellings (ATED) change of details has been submitted") {
 
-<p style="font-size: 32px; line-height: 1.315789474; margin: 0 0 30px 0; font-weight: bold;">You have submitted your return for Annual Tax on Enveloped Dwellings (ATED)</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("first_name")} @{params("last_name")}</p>
 
-<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">You are receiving this email as your ATED change in details for @{params("company_name").toString} has been successfully submitted on @{params("date").toString}.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You are receiving this email as your ATED change in details for @{params("company_name").toString} has been successfully submitted on @{params("date").toString}.</p>
 
-<p style="font-size: 24px; line-height: 1.315789474; margin: 0 0 30px 0;">You can view your completed returns, payment references, and ways to pay in your ATED online service.  There can be a 24 hour delay before you see any updates.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can view your completed returns, payment references, and ways to pay in your ATED online service.  There can be a 24 hour delay before you see any updates.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC ATED</p>
 }

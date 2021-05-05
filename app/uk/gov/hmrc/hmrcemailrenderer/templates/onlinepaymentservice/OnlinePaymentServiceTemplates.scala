@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ FromAddress, ServiceIdentifier 
 
 object OnlinePaymentServiceTemplates {
 
-  val templates = Seq(
+  lazy val templates = cdsTemplates ++ Seq(
     // Card payments templates
     MessageTemplate.create(
       templateId = "payment_successful",
@@ -178,12 +178,11 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    //Passengers email template
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "passengers_payment_confirmation",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Receipt for payment on goods brought into the UK",
+      fromAddress = "HMRC Online Service for Passengers <noreply@confirmation.tax.service.gov.uk>",
+      service = ServiceIdentifier.PassengerService,
+      subject = _.apply("subject"),
       plainTemplate = txt.passengers_confirmation.f,
       htmlTemplate = html.passengers_confirmation.f,
       priority = Some(MessagePriority.Urgent)
@@ -214,6 +213,81 @@ object OnlinePaymentServiceTemplates {
       subject = _.apply("subject"),
       plainTemplate = txt.recon_tops_report.f,
       htmlTemplate = html.recon_tops_report.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_surcharge_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_surcharge_report.f,
+      htmlTemplate = html.recon_surcharge_report.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "recon_mods_finance_report",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.recon_mods_finance_report.f,
+      htmlTemplate = html.recon_mods_finance_report.f,
+      priority = Some(MessagePriority.Urgent)
+    )
+  )
+
+  val cdsTemplates = List(
+    MessageTemplate.create(
+      templateId = "cds_ddi_setup_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred: Direct Debit set up",
+      plainTemplate = txt.cds_ddi_setup_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_setup_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_amended_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit: confirmation of details",
+      plainTemplate = txt.cds_ddi_amended_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_amended_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_cancelled_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred: Direct Debit cancelled",
+      plainTemplate = txt.cds_ddi_cancelled_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_cancelled_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_reminder_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit: advance notice of payment",
+      plainTemplate = txt.cds_ddi_reminder_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_reminder_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_unpaid_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit: payment not collected",
+      plainTemplate = txt.cds_ddi_unpaid_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_unpaid_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_not_acceptable_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred Direct Debit: instruction cannot be used",
+      plainTemplate = txt.cds_ddi_not_acceptable_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_not_acceptable_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,6 +55,14 @@ object GgTemplates {
       subject = "Your email confirmation code",
       plainTemplate = txt.EmailVerificationPasscode.f,
       htmlTemplate = html.EmailVerificationPasscode.f
+    ),
+    MessageTemplate.create(
+      templateId = "email_verification_passcode_welsh",
+      fromAddress = FromAddress.noReply("Government Gateway service"),
+      service = GovernmentGateway,
+      subject = "Eich cod cadarnhau e-bost",
+      plainTemplate = txt.EmailVerificationPasscodeWelsh.f,
+      htmlTemplate = html.EmailVerificationPasscodeWelsh.f
     )
   )
 }

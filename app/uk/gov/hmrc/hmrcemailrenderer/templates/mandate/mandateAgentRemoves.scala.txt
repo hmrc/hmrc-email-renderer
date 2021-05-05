@@ -1,9 +1,17 @@
 @(params: Map[String, Any])
 
-@{params("service")} update
+Update to @{params("service")}
 
-Your agent has removed you as their client for the @{params("service")}. If you think this is an error, ask your agent to add your company details again.
+Dear @{params("recipient")}
 
-From HMRC
+Your agent has removed you as their client for the @{params("service")}.
+
+If you think this is an error, ask your agent to add your company details again.
+
+Your unique authorisation number is @{params("uniqueAuthNo")}
+
+You need to give this number to your new agent.
+
+From HMRC @{params("service")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

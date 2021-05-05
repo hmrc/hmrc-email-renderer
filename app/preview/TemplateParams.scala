@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@
 package preview
 
 import java.util.{ Base64, UUID }
-
 import play.api.libs.json.Json.{ parse, stringify }
+import preview.TemplateParams.newMessageAlert_Names
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -35,6 +35,10 @@ object TemplateParams {
 
   val exampleParams = Map(
     "email_verification_passcode" -> Map(
+      "passcode"  -> "NVFYRY",
+      "team_name" -> "Government Gateway"
+    ),
+    "email_verification_passcode_welsh" -> Map(
       "passcode"  -> "NVFYRY",
       "team_name" -> "Government Gateway"
     ),
@@ -64,10 +68,10 @@ object TemplateParams {
       "service"    -> "view their PAYE income record."
     ),
     "client_expired_authorisation_request" -> Map(
-      "agencyName"   -> "Agent 1",
-      "clientName"   -> "Client 2",
-      "expiryPeriod" -> "14 days",
-      "service"      -> "send their Income Tax updates through software."
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "expiryDate" -> "1 October 2020",
+      "service"    -> "send their Income Tax updates through software."
     ),
     "agent_services_account_created" -> Map(
       "agencyName" -> "Agent 1",
@@ -76,6 +80,17 @@ object TemplateParams {
     "agent_services_account_created_cy" -> Map(
       "agencyName" -> "Agent 1",
       "arn"        -> "XARN 123 4567"
+    ),
+    "agent_invitations_about_to_expire" -> Map(
+      "agencyName"          -> "My Tax Agency",
+      "numberOfInvitations" -> "22",
+      "createdDate"         -> "22 March 2021",
+      "expiryDate"          -> "4 April 2021"
+    ),
+    "agent_invitation_about_to_expire_single" -> Map(
+      "agencyName"  -> "My Tax Agency",
+      "createdDate" -> "22 March 2021",
+      "expiryDate"  -> "4 April 2021"
     ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
@@ -100,9 +115,9 @@ object TemplateParams {
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorConfirmation" -> Map(
+      "article"           -> "an",
       "role"              -> "admin",
       "applicationName"   -> "Test Application",
-      "developerHubLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
     ),
     "apiAddedDeveloperAsCollaboratorNotification" -> Map(
@@ -142,7 +157,7 @@ object TemplateParams {
     "apiApplicationRejectedNotification" -> Map(
       "applicationName" -> "Test Application",
       "supportUrl"      -> exampleLinkWithRandomId,
-      "reason"          -> "The name is too similar to an existing app."
+      "reason"          -> "the name is too similar to an existing application"
     ),
     "apiStatusChangedNotification" -> Map(
       "apiName"         -> "Test Microservice",
@@ -171,6 +186,11 @@ object TemplateParams {
       "timeSinceLastUse"        -> "11 months",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
+    "ppnsCallbackUrlChangedNotification" -> Map(
+      "applicationName" -> "Test Application",
+      "dateOfChange"    -> "28 October 2020",
+      "timeOfChange"    -> "12:23"
+    ),
     "changeOfEmailAddressNewAddress" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -183,11 +203,12 @@ object TemplateParams {
     "verifyEmailAddress_cy" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "newMessageAlert"       -> newMessageAlert_Names,
-    "newMessageAlert_cy"    -> newMessageAlert_Names,
-    "rescindedMessageAlert" -> newMessageAlert_Names,
-    "newMessageAlert_SA300" -> Map("recipientName_line1" -> "this is a line 1"),
-    "newMessageAlert_SS300" -> newMessageAlert_Names,
+    "newMessageAlert"        -> newMessageAlert_Names,
+    "newMessageAlert_cy"     -> newMessageAlert_Names,
+    "rescindedMessageAlert"  -> newMessageAlert_Names,
+    "penaltyChargeApologies" -> newMessageAlert_Names,
+    "newMessageAlert_SA300"  -> Map("recipientName_line1" -> "this is a line 1"),
+    "newMessageAlert_SS300"  -> newMessageAlert_Names,
     "newMessageAlert_SA316" -> (Map(
       "isCurrentYear"  -> "true",
       "taxYearStart"   -> "2014",
@@ -452,6 +473,18 @@ object TemplateParams {
       "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
       "warningInformation"  -> "true"
     ),
+    "dfs_submission_success_empty_turn_around_time_2020" -> Map(
+      "subject"             -> "Test Subject",
+      "heading"             -> "Test Heading",
+      "greeting"            -> "Mr Joe Bloggs",
+      "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
+      "submissionReference" -> "1234",
+      "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+      "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
+      "paragraphThree"      -> "If you've asked us to write to you, we'll send you a letter within 15 working days",
+      "paragraphFour"       -> "Some extra content for paragraph four...",
+      "warningInformation"  -> "true"
+    ),
     "dfs_admin_notification" -> Map.empty[String, String],
     "generic_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
@@ -594,6 +627,9 @@ object TemplateParams {
       "email"           -> "jimm@jimmjimm.com",
       "phoneNumber"     -> "01234567890"
     ),
+    "rald_submission_confirmation" -> Map(
+      "customerName" -> "John Doe"
+    ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",
       "fileName"      -> "File name : Barnet_CT.xml",
@@ -638,28 +674,37 @@ object TemplateParams {
     "indefensible_upgrades"              -> newMessageAlert_Names,
     "indefensible_upgrades_with_dates"   -> newMessageAlert_Names,
     "client_approves_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "agent_activates_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Brown"
     ),
     "agent_rejects_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Brown"
     ),
     "agent_removes_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"      -> testServiceUpdate,
+      "recipient"    -> "Mrs Brown",
+      "uniqueAuthNo" -> "12345678"
     ),
     "client_removes_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "client_cancels_active_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "agent_self_auth_activates_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "agent_self_auth_deactivates_mandate" -> Map(
-      "service" -> testServiceUpdate
+      "service"   -> testServiceUpdate,
+      "recipient" -> "Mrs Agent"
     ),
     "offpayroll_private_beta_invitation" -> Map(
       "name"             -> "Mr Joe Bloggs",
@@ -1400,27 +1445,39 @@ object TemplateParams {
       "subject"      -> "subject"
     ),
     "chargeable_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "relief_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017",
       "reference"    -> "1234567890"
     ),
     "amended_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "further_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "change_details_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
     "disposal_return_submit" -> Map(
+      "first_name"   -> "FirstName",
+      "last_name"    -> "SecondName",
       "company_name" -> "Acme Limited",
       "date"         -> "23 September 2017"
     ),
@@ -1483,7 +1540,13 @@ object TemplateParams {
     ),
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
-    ),
+    )
+  )
+}
+object TemplateParams2 {
+
+  val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
+  val exampleParams = Map(
     "payment_successful" -> Map(
       "taxType"          -> "Self Assessment",
       "taxReference"     -> "1234567890K",
@@ -1585,7 +1648,7 @@ object TemplateParams {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "recon_tps_report" -> Map(
-      "subject"       -> "Telephone Payment System (TPS2) Finance Report 22/01/1989",
+      "subject"       -> "Telephone Payment System (TPS) Finance Report 22/01/1989",
       "vatLegal"      -> "2,19400000,0,0,2,19400000",
       "shipley"       -> "4,20744424,1,9886240,5,30630664",
       "debitCardFee"  -> "3,0,0,0,3,0",
@@ -1600,6 +1663,48 @@ object TemplateParams {
       "TOPS_ROW_P800"   -> "P800,4,11842279,2,0,2,14443,4,11842279",
       "TOPS_ROW_SA"     -> "SA,94,911842279,92,90,92,914443,94,911842279",
       "TOPS_ROW_TOTALS" -> "totals,84,811842279,82,80,82,814443,84,811842279"
+    ),
+    "recon_surcharge_report" -> Map(
+      "subject"                                      -> "Surcharge report 27/09/2027",
+      "tpsRcsSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_sa"                     -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_safe"                   -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_ct"                     -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_epaye"                  -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_ntc"                    -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_nps"                    -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_total"                  -> "8,80.0,16,160.0,24,240.0",
+      "opsRcsSurchargeReport_sa"                     -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_cotax"                  -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_paye"                   -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_misc"                   -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_totalShipley"           -> "5,50.0,10,100.0,15,150.0",
+      "opsRcsSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_totalCumbernauld"       -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_p800"               -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_pngr"               -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_total"              -> "2,20.0,4,40.0,6,60.0",
+      "topsJustModsSurchargeReport_mods"             -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_p800"             -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_simpleAssessment" -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cgt"              -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_pngr"             -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cds"              -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_total"            -> "5,50.0,10,100.0,15,150.0",
+      "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0"
+    ),
+    "recon_mods_finance_report" -> Map(
+      "subject"                   -> "MODS Finance Report 27/09/2027",
+      "MODS_ROW_OPS_123-456-789"  -> "123-456-789,OPSMIBREF1234,100,100,200,100,300",
+      "MODS_ROW_OPS_234-567-890"  -> "234-567-890,OPSMIBREF2345,100,100,200,100,300",
+      "MODS_ROW_OPS_098-765-432"  -> "098-765-432,OPSMIBREF3456,100,100,200,100,300",
+      "MODS_ROW_OPS_987-654-321"  -> "987-654-321,OPSMIBREF4567,100,100,200,100,300",
+      "MODS_ROW_TOPS_123-456-789" -> "123-456-789,TOPSMIBREF1234,100,100,200,100,300",
+      "MODS_ROW_TOPS_234-567-890" -> "234-567-890,TOPSMIBREF2345,100,100,200,100,300",
+      "MODS_ROW_TOPS_098-765-432" -> "098-765-432,TOPSMIBREF3456,100,100,200,100,300",
+      "MODS_ROW_TOPS_987-654-321" -> "987-654-321,TOPSMIBREF4567,100,100,200,100,300"
     ),
     "hts_verification_email" -> Map(
       "name"             -> "Joe",
@@ -1664,27 +1769,25 @@ object TemplateParams {
     ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
-      "reference"           -> "BTI REFERENCE",
-      "itemName"            -> "ITEM NAME"
+      "reference"           -> "ATaR REFERENCE",
+      "goodsName"           -> "GOODS NAME",
+      "dateSubmitted"       -> "20 December 2020",
+      "officerName"         -> "Dan Officer"
     ),
     "passengers_payment_confirmation" -> Map(
-      "NAME"                 -> "Alex Smith",
-      "DATE"                 -> "15 September 2018 13:34:02 GMT+0000 (UTC)",
-      "PLACEOFARRIVAL"       -> "Heathrow",
-      "DATEOFARRIVAL"        -> "15 September 2018",
-      "TIMEOFARRIVAL"        -> "12:15 PM",
-      "TRANSACTIONREFERENCE" -> "tran-ref-value",
-      "REFERENCE"            -> "XAPR9876543210",
-      "TOTAL"                -> "£32.45",
-      "NAME_0"               -> "5 litres spirits",
-      "CURRENCY_0"           -> "60 Mexican Peso(MXN)",
-      "COSTGBP_0"            -> "10.50",
-      "NAME_1"               -> "All other electronic devices",
-      "CURRENCY_1"           -> "100 USA Dollar(USD)",
-      "COSTGBP_1"            -> "10.50",
-      "NAME_2"               -> "All other electronic devices",
-      "CURRENCY_2"           -> "600 USA Dollar(USD)",
-      "COSTGBP_2"            -> "11.40"
+      "subject"         -> "Receipt for payment on goods brought into the UK - Reference number XAPR9876543210",
+      "NAME"            -> "Jura Smith",
+      "DATE"            -> "5 December 2020",
+      "PLACEOFARRIVAL"  -> "Heathrow Airport",
+      "DATEOFARRIVAL"   -> "4 December 2020",
+      "TIMEOFARRIVAL"   -> "12:15 PM",
+      "REFERENCE"       -> "XAPR9876543210",
+      "TOTAL"           -> "£50.00",
+      "TOTALEXCISEGBP"  -> "£10.50",
+      "TOTALCUSTOMSGBP" -> "£5.50",
+      "TOTALVATGBP"     -> "£20.50",
+      "TRAVELLINGFROM"  -> "Great Britain",
+      "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"100\",\"goodsValue\":\"400.00\",\"valueCurrency\":\"EUR\",\"valueCurrencyName\":\"Euro (EUR)\",\"originCountry\":\"FR\",\"originCountryName\":\"France\",\"exchangeRate\":\"1.1577\",\"exchangeRateDate\":\"2021-03-09\",\"goodsValueGBP\":\"345.51\",\"VATRESClaimed\":false,\"exciseGBP\":\"80.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"85.10\",\"ukVATPaid\":false,\"ukExcisePaid\":false}]"
     ),
     "digital_tariffs_advice_request" -> Map(
       "reference"             -> "REFERENCE",
@@ -1696,6 +1799,10 @@ object TemplateParams {
       "supportingInformation" -> "SUPPORTING INFO"
     ),
     "digital_tariffs_application_submitted" -> Map(
+      "recipientName_line1" -> "FULL NAME",
+      "reference"           -> "REFERENCE"
+    ),
+    "digital_tariffs_application_submitted_cy" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "REFERENCE"
     ),
@@ -1805,6 +1912,91 @@ object TemplateParams {
         }
           """)).getBytes("UTF-8"))
     ),
+    "tdq_fph_report_non_compliant" -> Map(
+      "developerName"                     -> "John Smith",
+      "fromDate"                          -> "22 September 2019",
+      "toDate"                            -> "22 October 2019",
+      "applicationName"                   -> "My Basic MTD App",
+      "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "allHeadersMissingPercentage"       -> "5",
+      "invalidConnectionMethodPercentage" -> "23",
+      "relatesToMultipleVersions"         -> "true",
+      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
+        parse("""
+        {
+          "connectionMethod": "WEB_APP_VIA_SERVER",
+          "requestCount": 100,
+          "headerValidations": [
+            {
+              "headerOrHeaders": "gov-client-public-ip",
+              "errors": [
+                {
+                  "message": "Value is not an IP address",
+                  "percentage": 5
+                },
+                {
+                  "message": "Value is not a public IP address",
+                  "percentage": 10
+                }
+              ],
+              "warnings": []
+            },
+            {
+              "headerOrHeaders": "gov-vendor-version",
+              "errors": [
+                {
+                  "message": "Value must be a key-value data structure",
+                  "percentage": 10
+                },
+                {
+                  "message": "At least 1 key or value is not percent encoded",
+                  "percentage": 25
+                },
+                {
+                  "message": "At least 1 software version value is missing",
+                  "percentage": 15
+                },
+                {
+                  "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
+                  "percentage": 0
+                }
+              ],
+              "warnings": [
+                {
+                  "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
+                  "percentage": 10
+                }
+              ]
+            },
+            {
+              "headerOrHeaders": "gov-client-device-id",
+              "errors" : [],
+              "warnings": [
+                {
+                  "message": "Use a recommended UUID. Check the specification.",
+                  "percentage": 0
+                },
+                {
+                  "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
+                  "percentage": 17
+                },
+                {
+                  "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
+                  "percentage": 22
+                }
+              ]
+            }
+          ]
+        }
+          """)).getBytes("UTF-8"))
+    ),
+    "tdq_fph_report_heuristically_compliant" -> Map(
+      "developerName"   -> "John Smith",
+      "fromDate"        -> "22 September 2019",
+      "toDate"          -> "22 October 2019",
+      "applicationName" -> "My Well Behaved MTD App",
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+    ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
       "name"         -> "Jamie Wilson"
@@ -1845,7 +2037,23 @@ object TemplateParams {
       "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
       "psaName"          -> "Jane Doe"
     ),
-    "pods_aft_amended_return" -> Map(
+    "pods_aft_amended_return_decrease" -> Map(
+      "schemeName"       -> "Smith Harper pension scheme",
+      "accountingPeriod" -> "1 April to 30 June 2020",
+      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "psaName"          -> "Jane Doe",
+      "submissionNumber" -> "3"
+    ),
+    "pods_aft_amended_return_no_change" -> Map(
+      "schemeName"       -> "Smith Harper pension scheme",
+      "accountingPeriod" -> "1 April to 30 June 2020",
+      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
+      "psaName"          -> "Jane Doe",
+      "submissionNumber" -> "3"
+    ),
+    "pods_aft_amended_return_increase" -> Map(
       "schemeName"       -> "Smith Harper pension scheme",
       "accountingPeriod" -> "1 April to 30 June 2020",
       "dateSubmitted"    -> "2 July 2020 at 8:20pm",
@@ -1856,8 +2064,247 @@ object TemplateParams {
     "pods_psa_register" -> Map(
       "psaName" -> "Jane Doe"
     ),
+    "pods_psp_register" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
+    "pods_psp_amend" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
+    "pods_psp_de_auth_psp_individual" -> Map(
+      "pspName"            -> "Jane Doe",
+      "schemeName"         -> "Smith Harper pension scheme",
+      "authorisingPsaName" -> "Nigel Robert Smith"
+    ),
+    "pods_psp_de_auth_psp_company_partnership" -> Map(
+      "pspName"            -> "Jane Doe Inc",
+      "schemeName"         -> "Smith Harper pension scheme",
+      "authorisingPsaName" -> "Nigel Robert Smith"
+    ),
+    "pods_authorise_psp" -> Map(
+      "psaInvitor" -> "Jane Doe",
+      "pspInvitee" -> "Joe Bloggs",
+      "schemeName" -> "XYZ PENSION SCHEME"
+    ),
+    "pods_psa_deauthorise_psp" -> Map(
+      "psaName"    -> "Bill Bloggs",
+      "pspName"    -> "Jane Doe",
+      "schemeName" -> "Smith Harper pension scheme"
+    ),
+    "pods_psp_deregister_self" -> Map(
+      "pspName" -> "Jane Doe"
+    ),
     "dac6_registration_successful" -> Map(
-      "name" -> "Joe Bloggs"
-    )
+      "name"   -> "Joe Bloggs",
+      "dac6ID" -> "XXDAC000012345"
+    ),
+    "dac6_new_disclosure_confirmation" -> Map(
+      "name"          -> "Joe New",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 1 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_additional_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Add",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 2 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_replace_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Replace",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 3 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "dac6_delete_disclosure_confirmation" -> Map(
+      "name"          -> "Joe Delete",
+      "arrangementID" -> "GBA20200101AAA123",
+      "disclosureID"  -> "GBD20200101AAA123",
+      "dateSubmitted" -> "12:00pm on 4 August 2020",
+      "messageRefID"  -> "GB0000000XXX"
+    ),
+    "ecc_subscription_successful" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_subscription_successful_ey" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_subscription_not_successful" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_subscription_not_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019"
+    ),
+    "ecc_rcm_notifications" -> Map(
+      "timestamp"   -> "2018-07-05T09:08:12.831Z",
+      "name"        -> "Joe Bloggs",
+      "email"       -> "joebloggs@email.com",
+      "eori"        -> "GB1234456789000",
+      "serviceName" -> "Advance Tariff Rulings"
+    ),
+    "mods_import_declaration" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010000",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsProducedInEu_0"       -> "I do not know",
+      "goodsPrice_0"              -> "150, Euro (EUR)",
+      "goodsCategory_1"           -> "hats",
+      "goodsQuantity_1"           -> "100",
+      "goodsCountry_1"            -> "Mexico",
+      "goodsPrice_1"              -> "150, Peso (MXN)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_amend_import_declaration" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010000",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsProducedInEu_0"       -> "I do not know",
+      "goodsPrice_0"              -> "150, Euro (EUR)",
+      "goodsCategory_1"           -> "hats",
+      "goodsQuantity_1"           -> "100",
+      "goodsCountry_1"            -> "Mexico",
+      "goodsPrice_1"              -> "150, Peso (MXN)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_export_declaration" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010001",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Spain",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_amend_export_declaration" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010001",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Spain",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_import_declaration_cy" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010002",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsProducedInEu_0"       -> "Iawn",
+      "goodsPrice_0"              -> "150, Ewro (EUR)",
+      "goodsCategory_1"           -> "hats",
+      "goodsQuantity_1"           -> "100",
+      "goodsCountry_1"            -> "Mecsico",
+      "goodsPrice_1"              -> "150, Peso (MXN)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_amend_import_declaration_cy" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010002",
+      "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsProducedInEu_0"       -> "Iawn",
+      "goodsPrice_0"              -> "150, Ewro (EUR)",
+      "goodsCategory_1"           -> "hats",
+      "goodsQuantity_1"           -> "100",
+      "goodsCountry_1"            -> "Mecsico",
+      "goodsPrice_1"              -> "150, Peso (MXN)",
+      "customsDuty"               -> "£4.53",
+      "vat"                       -> "£30.91",
+      "total"                     -> "£35.44",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_export_declaration_cy" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010003",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Sbaen",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "mods_amend_export_declaration_cy" -> Map(
+      "emailTo"                   -> "joebloggs@email.com",
+      "recipientName_FullName"    -> "Joe Bloggs",
+      "declarationReference"      -> "XADST0000010003",
+      "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
+      "goodsCategory_0"           -> "shoes",
+      "goodsQuantity_0"           -> "10",
+      "goodsDestination_0"        -> "Sbaen",
+      "goodsPrice_0"              -> "£150",
+      "nameOfPersonCarryingGoods" -> "Joe Bloggs",
+      "surname"                   -> "Bloggs",
+      "eori"                      -> "GB123456789000000"
+    ),
+    "dmsdoc_notification" -> Map(
+      "mrn" -> "18GB9JLC3CU1LFGVR1"
+    ),
+    "customs_rcm_notifications" -> Map(
+      "timestamp" -> "2018-07-05T09:08:12.831Z",
+      "name"      -> "Joe Bloggs",
+      "email"     -> "joebloggs@email.com",
+      "eori"      -> "GB1234456789000"
+    ),
+    "reimbursement_claim_submission" -> Map(
+      "name"        -> "Sir Arthur Dent",
+      "caseNumber"  -> "0004201hog42",
+      "claimAmount" -> "500"
+    ),
+    "newMessageAlert_P800"     -> newMessageAlert_Names,
+    "newMessageAlert_P800_cy"  -> newMessageAlert_Names,
+    "newMessageAlert_PA302"    -> newMessageAlert_Names,
+    "newMessageAlert_PA302_cy" -> newMessageAlert_Names
   )
 }

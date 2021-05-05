@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,28 +16,33 @@
 
 package preview
 
-import play.api.mvc.Action
+import com.google.inject.Inject
+import javax.inject.Singleton
+import play.api.mvc.{ Action, MessagesControllerComponents }
+import play.twirl.api.Html
 import play.utils.UriEncoding
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
-import uk.gov.hmrc.play.microservice.controller.BaseController
+import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
-object PreviewController extends BaseController {
+@Singleton
+class PreviewController @Inject()(mcc: MessagesControllerComponents, preview: Preview) extends FrontendController(mcc) {
+
   def previewHome = Action {
     Ok(views.html.previews(previewGroups))
   }
 
   def previewHtml(templateId: String) = Action { implicit request =>
-    Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString)))
+    Ok(views.html.previewHtml(Html(preview.html(templateId, flattenParameterValues(request.queryString)))))
   }
 
   def previewText(templateId: String) = Action { implicit request =>
-    Ok(views.txt.previewText(templateId, flattenParameterValues(request.queryString)))
+    Ok(views.txt.previewText(preview.plain(templateId, flattenParameterValues(request.queryString))))
   }
 
   def previewSource(templateId: String) = Action { implicit request =>
-    Ok(views.html.previewHtml(templateId, flattenParameterValues(request.queryString)).toString)
+    Ok(views.txt.previewText(preview.html(templateId, flattenParameterValues(request.queryString))))
   }
 
   private lazy val previewGroups: Stream[PreviewGroup] =
@@ -56,7 +61,8 @@ object PreviewGroup {
     PreviewGroup(
       title,
       templates.map { template =>
-        val params = TemplateParams.exampleParams.getOrElse(template.templateId, Map.empty)
+        val params = TemplateParams.exampleParams
+          .getOrElse(template.templateId, TemplateParams2.exampleParams.getOrElse(template.templateId, Map.empty))
         val priority = template.priority.getOrElse(MessagePriority.Standard)
         PreviewListItem(template.templateId, template.subject(params), priority, params)
       }

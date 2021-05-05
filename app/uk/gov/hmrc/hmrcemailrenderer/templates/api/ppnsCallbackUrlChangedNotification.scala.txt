@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Changes made to Callback URL
+
+The Callback URL for @{params("applicationName")} was changed on @{params("dateOfChange")} at @{params("timeOfChange")}.
+
+If you did not expect this change, sign in to the Developer Hub to check the new value.
+
+You can protect your account by changing your password and enabling 2-step verification.
+
+Do not respond to this email. Replies to this email address are not monitored.
+
+Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
+
+From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

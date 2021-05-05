@@ -1,0 +1,39 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
+
+@(params: Map[String, Any])
+@template_main(params, s"Rydych wedi gwneud cais i gael mynediad at y gwasanaeth o’r enw ${serviceName(params, "gwasanaeth")}", isWelsh=true) {
+
+ <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params, isWelsh=true)</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">Mae eich cais ar gyfer y gwasanaeth @serviceName(params) @forOrgName("dros", params) @onCompletionDate("ar", params) wedi bod yn aflwyddiannus.</p>
+
+ <br />
+ <h2 style="margin: 0 0 30px; font-size: 24px;">Os oes angen help arnoch</h2>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEM ar 0300 200 1900, rhwng 08:00 a 16:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc).</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">Gallwch hefyd ddod o hyd i ragor o wybodaeth am y pwnc hwn ar GOV.UK.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.</p>
+
+ <h2 style="margin: 0 0 30px; font-size: 24px;">Oddi wrth Dîm Cymorth Ymrestru CThEM</h2>
+
+}

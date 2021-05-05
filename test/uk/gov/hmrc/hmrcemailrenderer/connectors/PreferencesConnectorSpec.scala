@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,43 +16,46 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.connectors
 
-import org.mockito.Matchers._
-import org.mockito.Mockito._
-import org.scalatest.mockito.MockitoSugar
-import play.api.Mode.Mode
-import play.api.{ Configuration, Mode }
-import uk.gov.hmrc.emailaddress.EmailAddress
+import com.google.inject.AbstractModule
+import net.codingwell.scalaguice.ScalaModule
+import org.mockito.ArgumentMatchers.{ any, anyString, eq => eqTo }
+import org.mockito.Matchers
+import org.mockito.Mockito.when
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import play.api.Application
+import play.api.inject.guice.GuiceApplicationBuilder
+import uk.gov.hmrc.crypto.{ ApplicationCrypto, PlainText }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.{ HeaderCarrier, HttpGet, HttpResponse }
+import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
+import uk.gov.hmrc.play.bootstrap.http.HttpClient
 import uk.gov.hmrc.play.test.UnitSpec
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class PreferencesConnectorSpec extends UnitSpec with MockitoSugar {
+class PreferencesConnectorSpec extends UnitSpec with MockitoSugar with GuiceOneAppPerSuite {
 
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {
-      when(mockHttp.GET[Language](anyString())(any(), any(), any())).thenReturn(Future.successful(Language.English))
-      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe (Language.English)
+      when(httpClient.GET[Language](eqTo(url))(any(), any(), any())).thenReturn(Future.successful(Language.English))
+      await(preferencesConnector.languageByEmail(email)) shouldBe (Language.English)
     }
     "return Welsh if preference returns Welsh" in new TestCase {
-      when(mockHttp.GET[Language](anyString())(any(), any(), any())).thenReturn(Future.successful(Language.Welsh))
-      await(preferencesConnector.languageByEmail("test@test.com")) shouldBe (Language.Welsh)
+      when(httpClient.GET[Language](eqTo(url))(any(), any(), any())).thenReturn(Future.successful(Language.Welsh))
+      await(preferencesConnector.languageByEmail(email)) shouldBe (Language.Welsh)
     }
   }
 
   trait TestCase {
-    val mockHttp = mock[HttpGet]
     implicit val headerCarrier: HeaderCarrier = new HeaderCarrier()
-    val preferencesConnector = new PreferencesConnector {
-
-      override def httpGet = mockHttp
-
-      override protected def mode: Mode = Mode.Dev
-
-      override protected def runModeConfiguration: Configuration = Configuration.empty
-
-      override def baseUrl(serviceName: String): String = "what ever"
-    }
+    val servicesConfig = mock[ServicesConfig]
+    val httpClient = mock[HttpClient]
+    val crypto = app.injector.instanceOf[ApplicationCrypto]
+    val preferencesConnector = new PreferencesConnector(servicesConfig, httpClient, crypto)
+    val email = "test@tetst.com"
+    val encryptedEmail = new String(crypto.QueryParameterCrypto.encrypt(PlainText(email)).toBase64)
+    val url = servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail"
   }
 }

@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You are no longer a pension scheme practitioner
+
+Dear @{params("pspName").toString}
+
+You have deregistered yourself as a pension scheme practitioner.
+
+What happens next
+
+You can no longer access the Managing Pension Schemes service using your practitioner ID.
+
+You will have to register as a pension scheme practitioner again if you need a practitioner ID in the future.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

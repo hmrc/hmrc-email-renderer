@@ -1,0 +1,26 @@
+@(params: Map[String, Any])
+
+You requested to change or cancel a duty deferment account
+
+Dear Dear @params.get("customerName")
+
+HMRC received your request to change or cancel a duty deferment account.
+
+Your submission reference is: @params.get("submissionReference")
+
+We may contact you if we need further information.
+
+What happens next
+
+We will contact you to confirm that a change or cancellation has been made, unless you are adding or removing an agent.
+
+Changes and cancellations usually take up to 10 working days from the date we receive your form.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From HMRC Duty deferment account waiver team
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

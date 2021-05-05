@@ -1,5 +1,5 @@
 @*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,21 +15,29 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Issued: Binding Tariff Information (BTI) ruling") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"We have issued your Advance Tariff Ruling for application ${params("reference")} for ${params("goodsName")}") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
-    <p>
-        We have issued your BTI ruling for application @params("reference") for @params("itemName").
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        I have made a decision on your Advance Tariff Ruling (ATaR) application dated @params("dateSubmitted"). You can see your ruling certificate online in your ATaR account.
     </p>
-    <p>
-        Sign into your BTI account on GOV.UK in Binding Tariff Information (Notice 600) to:
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.
+    </p>
+    <h2>How to view your ruling for @params("goodsName")</h2>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        In your account you will be able to:
         <ul>
-          <li>find out how we made our decision</li>
-          <li>view and download your ruling certificate</li>
+            <li style="font-size: 19px;">print or download your ruling certificate</li>
+            <li style="font-size: 19px;">find out how I made this decision</li>
+            <li style="font-size: 19px;">find out how to review or appeal my decision</li>
         </ul>
     </p>
-    <p>
-        Get more information on BTI rulings including how to appeal on GOV.UK in the guide on Binding Tariff Information (Notice 600).
-    </p>
-    <p>For security reasons we have not included a link with this email.</p>
-    <p>From Tariff Classification Service</p>
+    <br>
+    <p style="margin: 0px 0 30px; font-size: 19px;">For security reasons we have not included any links with this email.</p>
+    <br>
+    <p style="margin: 0px 0 30px; font-size: 19px;">From @params("officerName")</p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">HMRC Tariff Classification Service</p>
 }

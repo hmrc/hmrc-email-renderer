@@ -1,5 +1,5 @@
 @*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,89 +14,194 @@
  * limitations under the License.
  *@
 
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
+@import scala.math.BigDecimal.RoundingMode
+
 @(params: Map[String, Any])
 
-@breakdown = @{
-    val indices = Stream.from(0).takeWhile(i => params.get(s"NAME_$i").isDefined).toList
-    indices.map { i =>
-        val item = params(s"NAME_$i")
-        val amount = params(s"COSTGBP_$i")
-        (item,  amount)
-    }
+@allItems = @{params("AllITEMS") match {
+case items:String => Json.parse(items).as[List[JsObject]]
+case _ => List()
+}}
+
+@isZeroCondition = @{params("TOTAL").toString().equalsIgnoreCase("£0.00")}
+
+@pageHeaderNormal = @{"You have paid the tax and duty you owe for your goods"}
+@pageHeaderZero = @{"You have declared your goods"}
+
+@pageHeader = @{if(isZeroCondition)pageHeaderZero else pageHeaderNormal}
+@isEUJourney = @{params("TRAVELLINGFROM").toString().equalsIgnoreCase("EU Only")}
+
+@itemList = @{ allItems.map( item => {
+val commodityDescription = (item \ "commodityDescription").as[String].toLowerCase
+val volume = item \ "volume"
+val quantity = item \ "quantity"
+val weight = item \ "weight"
+val volOrQuantityOrWeight = if (quantity.isDefined) quantity.as[String]  else if (weight.isDefined) {BigDecimal(weight.as[String]).setScale(2,RoundingMode.apply(2)) + "g of "} else (volume.as[String] + " litres")
+val itemDesc = s"$volOrQuantityOrWeight $commodityDescription"
+
+val goodsValue = (item \ "goodsValue").as[String]
+val valueCurrency = (item \ "valueCurrency").as[String]
+val localValue = s"$goodsValue $valueCurrency"
+
+val originCountry = (item \ "originCountry").as[String]
+
+val exciseGBP = (item \ "exciseGBP").as[String]
+val customsGBP = (item \ "customsGBP").as[String]
+val vatGBP = (item \ "vatGBP").as[String]
+val itemTaxRaw = BigDecimal(exciseGBP) + BigDecimal(customsGBP) + BigDecimal(vatGBP)
+val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
+val madeIn = (item \ "madeIn").asOpt[String].getOrElse("N/A")
+
+val evidence: String = (item \ "euCustomsRelief") match {
+    case JsDefined(v) if (v.toString == "true") => "Yes"
+    case _ => "No"
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have paid the duty you owe for these goods") {
+(itemDesc,localValue,originCountry,madeIn,evidence,itemTax)
+})
+}
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Proceed through the green channel if these are the only items you are declaring. You may be asked to show your receipt on your mobile phone or tablet to a member of Border Force.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, pageHeader) {
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Go to the red channel or red-point phone if you have something else to declare or if you are carrying restricted items such as firearms or ammunition.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">At locations without a red channel, please visit GOV.UK for more information.</p>
+<p>When you arrive in the UK, go to the green 'nothing to declare' channel if these are the only items you are
+    declaring. If asked, show this receipt on your mobile phone or tablet to a member of Border Force, or provide your
+    reference number.</p>
 
-    <h2>Your details</h2>
+<h2>Your details</h2>
 
-    <table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;font-size: 19px;c">
-        <tbody>
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Name</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("NAME")</td>
-            </tr>
+<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
+    <tbody>
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Name</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("NAME")</td>
+    </tr>
 
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Date of payment</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("DATE")</td>
-            </tr>
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Place of arrival in UK</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("PLACEOFARRIVAL")</td>
+    </tr>
 
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Place of arrival in UK</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("PLACEOFARRIVAL")</td>
-            </tr>
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Date of arrival</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("DATEOFARRIVAL")</td>
+    </tr>
 
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Date of arrival</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("DATEOFARRIVAL")</td>
-            </tr>
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Time of arrival</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("TIMEOFARRIVAL")</td>
-            </tr>
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Payment reference</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("REFERENCE")</td>
-            </tr>
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Time of arrival</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("TIMEOFARRIVAL")</td>
+    </tr>
+    @if(!isZeroCondition) {
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Date of payment</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("DATE")</td>
+    </tr>
+    }
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Reference number</td>
+        <td style="text-align:left;border-bottom: 1px solid #bfc1c3">@params("REFERENCE")</td>
+    </tr>
 
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Transaction ID</th>
-                <td style="border-bottom: 1px solid #bfc1c3">@params("TRANSACTIONREFERENCE")</td>
-            </tr>
-            <tr>
-                <th style="border-bottom: 1px solid #bfc1c3">Amount paid</th>
-                <th style="border-bottom: 1px solid #bfc1c3">@params("TOTAL")</th>
-            </tr>
-        </tbody>
-    </table>
+    <tr>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">Amount paid</td>
+        <td style="font-weight:bold;text-align:left;border-bottom: 1px solid #bfc1c3">@params("TOTAL")</td>
+    </tr>
+    </tbody>
+</table>
 
-    <h2>Duty and tax paid for each item</h2>
-    <table width="100%" cellspacing="4px" cellpadding="2px" style="text-align:left;font-size: 19px;">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-        @for((item, amount) <- breakdown) {
-            <tr role="row">
-                <td>@item</td>
-                <td>£@amount</td>
-            </tr>
+<h2 style="text-align:left;">Items declared</h2>
+
+<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
+    <thead>
+    <tr>
+        <td scope="col" style="font-weight:bold;text-align:left;">Item</td>
+        <td scope="col" style="font-weight:bold;text-align:left;">Price</td>
+        <td scope="col" style="font-weight:bold;text-align:left;">Purchased in</td>
+        @if(isEUJourney) {
+        <td scope="col" style="font-weight:bold;text-align:left;">Produced in</td>
+        <td scope="col" style="font-weight:bold;text-align:left;">Evidence of origin</td>
         }
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Total</th>
-                <th>@params("TOTAL")</th>
-            </tr>
-        </tfoot>
-    </table>
+        <td scope="col" style="font-weight:bold;text-align:right;">Tax paid</td>
+    </tr>
+    </thead>
+    <tbody>
+    @for((itemDesc,localValue,originCountry,madeIn,evidence,itemTax) <- itemList) {
+    <tr>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@itemDesc</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@localValue</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@originCountry</td>
+        @if(isEUJourney) {
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@madeIn</td>
+        <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@evidence</td>
+        }
+        <td scope="col" style="text-align:right;border-bottom: 1px solid #bfc1c3">£@itemTax</td>
+    </tr>
+    }
+    <tr>
+        <td style="font-weight:bold;border-bottom: 1px solid #bfc1c3;">Total</td>
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        @if(isEUJourney) {
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        <td style="border-bottom: 1px solid #bfc1c3;"></td>
+        }
+        <td style="font-weight:bold;text-align: right;border-bottom: 1px solid #bfc1c3;">@params("TOTAL")</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Payment breakdown</h2>
+<table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #bfc1c3">Type of tax or duty</th>
+        <th style="text-align:right;border-bottom: 1px solid #bfc1c3">
+            <span style="text-align:right">Amount paid</span></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td style="border-bottom: 1px solid #bfc1c3">Customs</td>
+        <td style="text-align:right;border-bottom: 1px solid #bfc1c3">@params("TOTALCUSTOMSGBP")</td>
+    </tr>
+
+    <tr>
+        <td style="border-bottom: 1px solid #bfc1c3">Excise</td>
+        <td style="text-align:right;border-bottom: 1px solid #bfc1c3"> @params("TOTALEXCISEGBP")</td>
+    </tr>
+
+    <tr>
+        <td style="border-bottom: 1px solid #bfc1c3">VAT</td>
+        <td style="text-align:right;border-bottom: 1px solid #bfc1c3">@params("TOTALVATGBP")</td>
+    </tr>
+
+    <tr>
+        <td style="font-weight:bold;border-bottom: 1px solid #bfc1c3;font-weight: 700">Total</td>
+        <td style="font-weight:bold;text-align: right;border-bottom: 1px solid #bfc1c3">@params("TOTAL")</td>
+    </tr>
+    </tbody>
+</table>
+
+<p></p>
+@if(isZeroCondition) {
+<div style = "
+                line-height: 1.25;
+                color: #0b0c0c;
+                padding: 15px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                clear: both;
+                border-left: 10px solid #bfc1c3;">
+Tax or duty was either not due on these goods or was paid when the goods were purchased.</div>
+}
+
+<h2 class="heading-medium">Amending your declaration</h2>
+
+<p>You can use this service to add goods to your existing declaration before you arrive in the UK. You will need to enter your reference number.</p>
+<p>If you need to remove goods from your declaration and request a refund, visit GOV.UK and search for 'C82'.
+    Look for the page 'Request a refund of overpaid VAT or duty for goods declared using the Online Service for Passengers'.</p>
+<p>From HMRC Online Service for Passengers</p>
+
 }

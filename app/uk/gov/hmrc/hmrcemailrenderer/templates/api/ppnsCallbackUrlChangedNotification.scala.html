@@ -1,0 +1,25 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Changes made to Callback URL") {
+ <p style="margin: 0 0 30px; font-size: 19px;">The Callback URL for <strong>@{params("applicationName")}</strong> was changed on <strong>@{params("dateOfChange")}</strong> at <strong>@{params("timeOfChange")}</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">If you did not expect this change, sign in to the Developer Hub to check the new value.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">You can protect your account by changing your password and enabling 2-step verification.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Do not respond to this email. Replies to this email address are not monitored.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">From HMRC @{params.getOrElse("developerHubTitle", "Developer Hub")}</p>
+}

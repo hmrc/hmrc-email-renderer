@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -160,7 +160,7 @@ object ApiTemplates {
       templateId = "apiApplicationRejectedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Application check failed",
+      subject = "Production credentials request unsuccessful",
       plainTemplate = txt.apiApplicationRejectedNotification.f,
       htmlTemplate = html.apiApplicationRejectedNotification.f,
       priority = Some(MessagePriority.Urgent)
@@ -200,6 +200,15 @@ object ApiTemplates {
       plainTemplate = txt.apiApplicationToBeDeletedNotification.f,
       htmlTemplate = html.apiApplicationToBeDeletedNotification.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "ppnsCallbackUrlChangedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Changes made to Callback URL",
+      plainTemplate = txt.ppnsCallbackUrlChangedNotification.f,
+      htmlTemplate = html.ppnsCallbackUrlChangedNotification.f,
+      priority = Some(MessagePriority.Urgent) // Email is a mitigation for a security risk, so increased priority
     )
   )
 }

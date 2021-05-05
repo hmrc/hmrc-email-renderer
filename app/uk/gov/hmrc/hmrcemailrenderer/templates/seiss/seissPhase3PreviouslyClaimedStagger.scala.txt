@@ -1,0 +1,44 @@
+@(params: Map[String, Any])
+
+Self-Employment Income Support Scheme (SEISS) Grant Extension: Third grant available soon
+
+Dear @params.get("customerName")
+
+The UK government has extended the support available under the Self-Employment Income Support Scheme (SEISS) for self-employed people affected by coronavirus (COVID-19). The latest grant will cover from November to the end of January.
+
+
+Check if you are eligible to claim
+
+The rules on who is eligible to claim have changed.
+
+However, you still need to have submitted a Self Assessment tax return for the tax year 2018 to 2019 showing self-employment income in order to claim.
+
+To check if you’re eligible and find out how to claim, please go to GOV.UK and search for ‘Self employment income support scheme’.
+
+If you’re eligible, and in need of support, you’ll be able to claim the third grant at any time from @params.get("dayOfMonth") @params.get("monthEn") until the end of January.
+
+
+Getting help with your claim
+
+Claiming is simple – you don’t need to work out your grant, HMRC will do that for you. It’s important that you make any claim yourself, although you can ask an accountant or tax agent to help you. Please don’t pass on any of your information to people who offer to make a claim on your behalf. That will lead to delays in your payment.
+
+
+Further support
+
+Guidance and live webinars offering you more support on the SEISS and other business support are available to book online – go to GOV.UK and search 'help and support if your business is affected by coronavirus'.
+
+
+Protect yourself from scams
+
+@Html("Stay vigilant about scams, which may mimic government messages to make them seem authentic. Search 'scams' on GOV.UK for information on how to recognise genuine HMRC contact. You can also forward suspicious emails claiming to be from HMRC to phishing@hmrc.gov.uk and texts to 60599.")
+
+@Html("Access the National Cyber Security Centre’s new guide on how to stay secure online and protect yourself or your business against cyber crime by searching ‘Cyber Aware’.")
+
+
+I hope this information helps you and your business. We’ll continue to keep you updated on scheme developments over the coming weeks.
+
+
+Yours sincerely,
+
+Jim Harra
+Permanent Secretary and Chief Executive, HMRC

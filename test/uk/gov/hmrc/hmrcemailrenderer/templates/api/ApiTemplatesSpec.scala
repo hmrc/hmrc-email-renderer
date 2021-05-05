@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -75,7 +75,9 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
 
       validateTemplate(templateId = "apiDeveloperDeletedConfirmation", expectedSubject = "We deleted your account")
 
-      validateTemplate(templateId = "apiApplicationRejectedNotification", expectedSubject = "Application check failed")
+      validateTemplate(
+        templateId = "apiApplicationRejectedNotification",
+        expectedSubject = "Production credentials request unsuccessful")
 
       validateTemplate(
         templateId = "apiStatusChangedNotification",
@@ -96,6 +98,11 @@ class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
         templateId = "apiApplicationToBeDeletedNotification",
         expectedSubject = "We’re deleting your application",
         expectedPriority = MessagePriority.Standard)
+
+      validateTemplate(
+        templateId = "ppnsCallbackUrlChangedNotification",
+        expectedSubject = "Changes made to Callback URL",
+        expectedPriority = MessagePriority.Urgent)
     }
   }
 

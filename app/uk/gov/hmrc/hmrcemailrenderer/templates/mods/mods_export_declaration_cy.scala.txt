@@ -1,0 +1,49 @@
+@(params: Map[String, Any])Datganiad ar gyfer nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr
+@goodsGrid = @{
+  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  goods.map { i =>
+    val category = params(s"goodsCategory_$i")
+    val quantity = params(s"goodsQuantity_$i")
+    val country = params(s"goodsDestination_$i")
+    val price = params(s"goodsPrice_$i")
+      (category, quantity, country, price)
+  }
+}
+Annwyl @params("nameOfPersonCarryingGoods")
+
+Daeth eich datganiad i law ar gyfer y nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr yn eich bagiau neu gerbyd bach.
+
+Cyfeirnod eich datganiad yw: @params("declarationReference")
+
+Yr hyn y mae angen i chi ei wneud nesaf
+
+Ewch â’r datganiad hwn a’r derbynebau prynu ar gyfer y nwyddau gyda chi pan fyddwch yn teithio. Efallai y gofynnir i chi ddangos y rhain wrth i chi ymadael.
+
+Dyddiad y datganiad
+
+@{params("dateOfDeclaration") + "." }
+
+Manylion y nwyddau
+
+@for((category, quantity, country, price) <- goodsGrid) {
+Math o nwyddau: @category
+Nifer: @quantity
+Cyrchfan: @country
+Swm a dalwyd: @price
+
+}
+
+Manylion personol
+
+Enw’r person sy’n cludo’r nwyddau: @params("nameOfPersonCarryingGoods")
+Rhif EORI: @params("eori")
+
+Newid eich datganiad
+
+Gallwch ychwanegu nwyddau at y datganiad hwn gan ddefnyddio’r un gwasanaeth.
+
+Os ydych yn teithio gyda nwyddau eraill nad ydych wedi’u datgan ymlaen llaw, mae’n rhaid i chi fynd i’r sianel ‘Nwyddau i’w Datgan’ neu’r ffôn pwynt coch yn ardal y tollau, os oes un.
+
+O’r gwasanaeth datgan nwyddau masnachol
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

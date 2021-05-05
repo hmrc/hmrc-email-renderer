@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import play.api.{ Configuration, Logger, Play }
+import com.google.inject.Inject
+import play.api.{ Configuration, Logger }
 import play.twirl.api.Format
-import uk.gov.hmrc.hmrcemailrenderer.MicroserviceAuditConnector
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
@@ -27,51 +27,27 @@ import uk.gov.hmrc.hmrcemailrenderer.model.Language.{ English, Welsh }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
-import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
 import uk.gov.hmrc.play.audit.model.DataEvent
-import uk.gov.hmrc.play.config.RunMode
+import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
+import uk.gov.hmrc.play.bootstrap.config.RunMode
 
 import scala.concurrent.{ ExecutionContext, Future }
 import scala.util.{ Failure, Success, Try }
 
-object TemplateRenderer extends TemplateRenderer with RunMode {
+class TemplateRenderer @Inject()(
+  configuration: Configuration,
+  runMode: RunMode,
+  auditConnector: AuditConnector,
+  preferencesConnector: PreferencesConnector) {
 
-  import play.api.Play.current
+  val locator: TemplateLocator = TemplateLocator
+  val env = runMode.env
 
-  override val locator = TemplateLocator
-  override lazy val commonParameters: Map[String, String] = {
-    Play.configuration
-      .getConfig(s"$env.templates.config")
-      .map(_.entrySet.toMap.mapValues(_.unwrapped.toString))
-      .getOrElse(Map.empty[String, String])
-  }
+  lazy val commonParameters: Map[String, String] =
+    configuration.get[Configuration](s"$env.templates.config").entrySet.toMap.mapValues(_.unwrapped.toString)
 
-  override lazy val templatesByLangPreference = {
-    Play.configuration
-      .getConfig("welshTemplatesByLangPreferences")
-      .map(_.entrySet.toMap.mapValues(_.unwrapped.toString))
-      .getOrElse(Map.empty[String, String])
-  }
-
-  override protected def mode: play.api.Mode.Mode = Play.current.mode
-
-  override protected def runModeConfiguration: Configuration = Play.current.configuration
-
-  val auditConnector = MicroserviceAuditConnector
-  val preferencesConnector = PreferencesConnector()
-}
-
-trait TemplateRenderer {
-
-  def commonParameters: Map[String, String]
-
-  def locator: TemplateLocator
-
-  def auditConnector: AuditConnector
-
-  def preferencesConnector: PreferencesConnector
-
-  val templatesByLangPreference: Map[String, String]
+  lazy val templatesByLangPreference =
+    configuration.get[Configuration]("welshTemplatesByLangPreferences").entrySet.toMap.mapValues(_.unwrapped.toString)
 
   def render(templateId: String, parameters: Map[String, String]): Either[ErrorMessage, RenderResult] = {
     val allParams = commonParameters ++ parameters
@@ -125,7 +101,7 @@ trait TemplateRenderer {
     ec: ExecutionContext): Future[String] = {
 
     if (templatesByLangPreference.size <= 0) {
-      Logger.warn("WelshTemplatesByLangPreferences whitelist is empty")
+      Logger.warn("WelshTemplatesByLangPreferences allowlist is empty")
     }
 
     val result = for {
@@ -166,4 +142,5 @@ trait TemplateRenderer {
       case Success(output) => Right(output.toString)
       case Failure(error)  => Left(TemplateRenderFailure(error.getMessage))
     }
+
 }

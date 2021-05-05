@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -153,6 +153,15 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "penaltyChargeApologies",
+      fromAddress = defaultFromAddress,
+      service = SelfAssessment,
+      subject = "You've got a new message from HMRC",
+      plainTemplate = txt.penaltyChargeApologies.f,
+      htmlTemplate = html.penaltyChargeApologies.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "rescindedMessageAlert_cy",
       fromAddress = FromAddress.noReply("CThEM – (Tîm) Cyswllt Digidol"),
       service = SelfAssessment,
@@ -244,6 +253,24 @@ object DigitalContactTemplates {
       subject = "Sut y byddwn yn anfon llythyrau treth ar-lein atoch",
       plainTemplate = txt.digitalOptInConfirmation_PTA_cy.f,
       htmlTemplate = html.digitalOptInConfirmation_PTA_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_NinoPTA",
+      fromAddress = FromAddress.noReply("HMRC digital team"),
+      service = SelfAssessment,
+      subject = "Your online tax letters",
+      plainTemplate = txt.digitalOptInConfirmation_NinoPTA.f,
+      htmlTemplate = html.digitalOptInConfirmation_NinoPTA.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "digitalOptInConfirmation_NinoPTA_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = SelfAssessment,
+      subject = "Eich llythyrau treth ar-lein",
+      plainTemplate = txt.digitalOptInConfirmation_NinoPTA_cy.f,
+      htmlTemplate = html.digitalOptInConfirmation_NinoPTA_cy.f,
       priority = Some(MessagePriority.Urgent)
     )
   ) ++ newMessageAlertTemplates

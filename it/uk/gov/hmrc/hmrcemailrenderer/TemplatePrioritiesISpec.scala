@@ -19,18 +19,16 @@ package uk.gov.hmrc.hmrcemailrenderer
 import org.scalactic.source.Position
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.prop.TableDrivenPropertyChecks
-import org.scalatestplus.play.{ OneServerPerSuite, ServerProvider, WsScalaTestClient }
-import play.api.{ Configuration, Play }
-import play.api.Mode.Mode
+import org.scalatestplus.play.guice.GuiceOneServerPerSuite
+import org.scalatestplus.play.{ ServerProvider, WsScalaTestClient }
 import play.api.libs.json._
 import play.api.libs.ws.WSClient
-import uk.gov.hmrc.play.config.ServicesConfig
 import uk.gov.hmrc.play.http.test.ResponseMatchers
 import uk.gov.hmrc.play.test.UnitSpec
 
 class TemplatePrioritiesISpec
-    extends UnitSpec with ServicesConfig with WsScalaTestClient with OneServerPerSuite with ScalaFutures
-    with ResponseMatchers with ServerProvider with TableDrivenPropertyChecks {
+    extends UnitSpec with WsScalaTestClient with GuiceOneServerPerSuite with ScalaFutures with ResponseMatchers
+    with ServerProvider with TableDrivenPropertyChecks {
 
   "Rendered templates" should {
 
@@ -91,9 +89,9 @@ class TemplatePrioritiesISpec
       (
         "apiAddedDeveloperAsCollaboratorConfirmation",
         Map(
-          "role"             -> "role",
-          "applicationName"  -> "applicationName",
-          "developerHubLink" -> "/developerHubLink"
+          "article"         -> "a",
+          "role"            -> "role",
+          "applicationName" -> "applicationName"
         )),
       (
         "apiAddedDeveloperAsCollaboratorNotification",
@@ -512,7 +510,4 @@ class TemplatePrioritiesISpec
     )
   }
 
-  override protected def mode: play.api.Mode.Mode = Play.current.mode
-
-  override protected def runModeConfiguration: Configuration = Play.current.configuration
 }

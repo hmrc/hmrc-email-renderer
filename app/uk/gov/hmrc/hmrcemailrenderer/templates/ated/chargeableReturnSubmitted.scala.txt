@@ -2,6 +2,8 @@
 
 You have submitted your return for Annual Tax on Enveloped Dwellings (ATED)
 
+Dear @{params("first_name")} @{params("last_name")}
+
 You are receiving this email as your ATED chargeable return for @{params("company_name")} has ben successfully submitted on @{params("date")}.
 
 You can view your completed returns, payment references, and ways to pay in your ATED online service.  There can be a 24 hour delay before you see any updates.

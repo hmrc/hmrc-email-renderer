@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import java.util.Base64
 
 import org.scalatest.{ Matchers, WordSpec }
 import play.api.libs.json.Json.{ parse, stringify }
-import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.extraparams.{ HeadersValidation, Problem, ValidConnectionMethodBase64EncodedDetails }
+import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.{ HeadersValidation, Problem, ValidConnectionMethodBase64EncodedDetails }
 
 class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matchers {
 

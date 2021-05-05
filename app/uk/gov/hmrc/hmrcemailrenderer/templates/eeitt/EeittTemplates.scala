@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -552,7 +552,7 @@ object EeittTemplates {
       subject = "Confirm your email address - election for exemption",
       plainTemplate = txt.civOffshoreCode.f,
       htmlTemplate = html.civOffshoreCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "civQualifying_code_submission",
@@ -561,7 +561,7 @@ object EeittTemplates {
       subject = "Confirm your email address - election for exemption",
       plainTemplate = txt.civQualifyingCode.f,
       htmlTemplate = html.civQualifyingCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "civTransparency_code_submission",
@@ -570,7 +570,7 @@ object EeittTemplates {
       subject = "Confirm your email address - election for transparency",
       plainTemplate = txt.civTransparencyCode.f,
       htmlTemplate = html.civTransparencyCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "spbp_code_submission",
@@ -579,7 +579,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Statutory Parental Bereavement Pay",
       plainTemplate = txt.spbpCode.f,
       htmlTemplate = html.spbpCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "spbp_confirmation_submission",
@@ -597,7 +597,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Coronavirus Job Retention Scheme enquiry",
       plainTemplate = txt.cjrsCode.f,
       htmlTemplate = html.cjrsCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "cjrs_confirmation_submission",
@@ -616,7 +616,7 @@ object EeittTemplates {
         "Confirm your email address - Request an HMRC review of your eligibility to claim Self-Employment Income Support",
       plainTemplate = txt.seissCode.f,
       htmlTemplate = html.seissCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "seiss_eligibility_submission",
@@ -689,6 +689,170 @@ object EeittTemplates {
       subject = "Confirm your email address - Report a suspicious HMRC phone call",
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr1_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for action to protect your intellectual property rights",
+      plainTemplate = txt.ipr1Code.f,
+      htmlTemplate = html.ipr1Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr2_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report goods that infringe your intellectual property rights",
+      plainTemplate = txt.ipr2Code.f,
+      htmlTemplate = html.ipr2Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ipr3_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Apply to extend your application to protect your intellectual property rights",
+      plainTemplate = txt.ipr3Code.f,
+      htmlTemplate = html.ipr3Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "vat_declaration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your VAT status update",
+      plainTemplate = txt.vatDeclarationApplicationConfirmation.f,
+      htmlTemplate = html.vatDeclarationApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "trading_status_before_seiss_claimed",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your trading status details",
+      plainTemplate = txt.tradingStatusBeforeSEISSClaimed.f,
+      htmlTemplate = html.tradingStatusBeforeSEISSClaimed.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "settlement_request",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your settlement request",
+      plainTemplate = txt.settlementRequest.f,
+      htmlTemplate = html.settlementRequest.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "complaint_consultation_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report a comment or complaint about a consultation",
+      plainTemplate = txt.consultationComplaint.f,
+      htmlTemplate = html.consultationComplaint.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "consultation_complaint_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your consultation feedback",
+      plainTemplate = txt.consultationComplaintConfirmation.f,
+      htmlTemplate = html.consultationComplaintConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "dan_waiver_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for a guarantee waiver",
+      plainTemplate = txt.danWaiverConfirmation.f,
+      htmlTemplate = html.danWaiverConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "duty_deferment_account_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for a Duty Deferment Account",
+      plainTemplate = txt.dutyDefermentAccountConfirmation.f,
+      htmlTemplate = html.dutyDefermentAccountConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "duty_deferment_account_amend_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request to change or cancel a duty deferment account",
+      plainTemplate = txt.dutyDefermentAccountAmendConfirmation.f,
+      htmlTemplate = html.dutyDefermentAccountAmendConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "eat_out_help_out_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your disclosure about Eat Out to Help Out Scheme payment",
+      plainTemplate = txt.eatOuttoHelpOutConfirmation.f,
+      htmlTemplate = html.eatOuttoHelpOutConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ni_vat_Status_reporting_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC Northern Ireland Protocol: application received",
+      plainTemplate = txt.niVatStatusReporting.f,
+      htmlTemplate = html.niVatStatusReporting.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "tor_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Apply for transfer of residence tax relief - HMRC",
+      plainTemplate = txt.torCode.f,
+      htmlTemplate = html.torCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tor_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for transfer of residence tax relief",
+      plainTemplate = txt.torConfirmation.f,
+      htmlTemplate = html.torConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "jrsRemoval_submission_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Job Retention Scheme application",
+      plainTemplate = txt.jrsRemovalSubmissionConfirmation.f,
+      htmlTemplate = html.jrsRemovalSubmissionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "nrsDLT_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address – Apply for a repayment of the non-UK Resident Stamp Duty Land Tax surcharge - HMRC",
+      plainTemplate = txt.nrsDLTCode.f,
+      htmlTemplate = html.nrsDLTCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "nrsDLT_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your application for repayment of the non-UK Resident Stamp Duty Land Tax surcharge",
+      plainTemplate = txt.nrsDLTConfirmation.f,
+      htmlTemplate = html.nrsDLTConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

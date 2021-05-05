@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,13 +24,13 @@ class apiAddedDeveloperAsCollaboratorConfirmationSpec extends WordSpec with Matc
 
   val applicationName = "Application Name"
   val role = "role"
-  val developerHubLink = "Developer Hub Link"
+  val article = "a"
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
     "applicationName"      -> applicationName,
+    "article"              -> article,
     "role"                 -> role,
-    "developerHubLink"     -> developerHubLink,
     "staticAssetUrlPrefix" -> "http://uri",
     "staticAssetVersion"   -> "v1",
     "borderColour"         -> "#005EA5"
@@ -41,23 +41,16 @@ class apiAddedDeveloperAsCollaboratorConfirmationSpec extends WordSpec with Matc
       val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
-          " rights over <strong>" + applicationName + "</strong>.</p>")
-      renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Not already registered? To register with the HMRC " +
-          "Developer Hub, click on the link below.</p>")
-      renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" +
-          developerHubLink + "\" style=\"color: #005EA5;\">" +
-          developerHubLink + "</a></p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You are now " + article + " " + role +
+          " on " + applicationName + ".</p>")
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Not already registered? To register with the HMRC " +
-          developerHubTitle + ", click on the link below.</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You are now " + article + " " + role +
+          " on " + applicationName + ".</p>")
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
     }
@@ -67,17 +60,13 @@ class apiAddedDeveloperAsCollaboratorConfirmationSpec extends WordSpec with Matc
     "render as" in new TestCase {
       val renderedTxt = api.txt.apiAddedDeveloperAsCollaboratorConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include("You’ve been given " + role + " rights over " + applicationName + ".")
-      renderedTxt.body should include(
-        "Not already registered? To register with the HMRC Developer Hub, click on the link below.")
-      renderedTxt.body should include(developerHubLink)
+      renderedTxt.body should include("You are now " + article + " " + role + " on " + applicationName + ".")
       renderedTxt.body should include("From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedTxt = api.txt.apiAddedDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
-      renderedTxt.body should include(
-        "Not already registered? To register with the HMRC " + developerHubTitle + ", click on the link below.")
+      renderedTxt.body should include("You are now " + article + " " + role + " on " + applicationName + ".")
       renderedTxt.body should include("From HMRC " + developerHubTitle)
     }
   }

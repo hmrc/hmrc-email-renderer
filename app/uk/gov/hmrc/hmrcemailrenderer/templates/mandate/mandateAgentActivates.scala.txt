@@ -2,8 +2,12 @@
 
 @{params("service")} update
 
-Your agent has now accepted your request, they now have the authority to act for you on @{params("service")}.
+Dear @{params("recipient")}
 
-From HMRC
+Your agent has now accepted your request.
+
+They now have the authority to act for you on @{params("service")}.
+
+From HMRC @{params("service")}
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

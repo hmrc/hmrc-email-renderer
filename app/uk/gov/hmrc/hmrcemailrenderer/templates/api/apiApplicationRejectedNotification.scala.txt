@@ -1,15 +1,10 @@
-@(params: Map[String, Any])Application check failed
+@(params: Map[String, Any])Production credentials request unsuccessful
 
-@{params("applicationName")} failed its application check and you cannot access its production credentials.
+Production credentials for @{params("applicationName")} are not available because @{params("reason")}.
 
-It failed because:
+You can change your request for production credentials or contact us for help using the support page on the HMRC Developer Hub.
 
-@{params("reason")}
-
-Submit your application again if you still want to access production credentials.
-Or contact us for help on submitting your application.
-
-@{params("supportUrl")}
+Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 
 From HMRC Developer Hub
 

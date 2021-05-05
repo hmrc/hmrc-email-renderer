@@ -7,10 +7,17 @@
 
 Manages the rendering of parameterised email using templates. 
 
-
+## Before requesting to merge your PR, please ensure that you have re-based with master
 | **Note: Before sending a pull request with template changes, please look at our [guidelines](/CONTRIBUTING.md).** |
 | --- |
 
+
+## How to deal with pull requests for transactional email templates
+| **DC Team Note: Before accepting a PR and merging, please ensure you read through the following [acceptance criteria](https://confluence.tools.tax.service.gov.uk/display/DCT/Pull+request+acceptance+criteria).** |
+| --- |
+
+| **Follow these instructions: [How to deal with pull requests for transactional email templates](https://confluence.tools.tax.service.gov.uk/display/DCT/How+to+deal+with+pull+requests+for+transactional+email+templates)** |
+| --- |
 
 ## API
 
@@ -94,12 +101,11 @@ We have to add this to configuration in following place
 
 [https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf](https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf)
 
-key should be an english tempalteId and value should be welsh templateId
+key should be an english templateId and value should be welsh templateId
 
-We make a call to preferences service to see weather language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
+We make a call to preferences service to see whether language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
 
 
 ### License
 
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html")
-Test test

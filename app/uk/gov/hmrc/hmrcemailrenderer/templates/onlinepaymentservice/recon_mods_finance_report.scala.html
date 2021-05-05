@@ -1,0 +1,75 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("subject").toString) {
+<h2>Online Payments (OPS)</h2>
+<table border="1px" width="100%"  cellspacing="0px" cellpadding="3px" style="text-align:center;font-size: 16px;">
+    <tr>
+        <th>Transaction Reference</th>
+        <th>Mib Reference</th>
+        <th>Customs Duty</th>
+        <th>Vat</th>
+        <th>Total Tax</th>
+        <th>Commission</th>
+        <th>Total Paid</th>
+    </tr>
+    @{params.filter(_._1.startsWith("MODS_ROW_OPS")).map { row =>
+        val cells = row._2.toString.split(",").toList
+            <tr>
+                <td>{cells(0)}</td>
+                <td>{cells(1)}</td>
+                <td>{formatAmountInPence(cells(2))}</td>
+                <td>{formatAmountInPence(cells(3))}</td>
+                <td>{formatAmountInPence(cells(4))}</td>
+                <td>{formatAmountInPence(cells(5))}</td>
+                <td>{formatAmountInPence(cells(6))}</td>
+            </tr>
+        }
+    }
+</table>
+
+<h2>Telephone Payments (TPS)</h2>
+<table border="1px" width="100%"  cellspacing="0px" cellpadding="3px" style="text-align:center;font-size: 16px;">
+    <tr>
+        <th>Transaction Reference</th>
+        <th>Mib Reference</th>
+        <th>Customs Duty</th>
+        <th>Vat</th>
+        <th>Total Tax</th>
+        <th>Commission</th>
+        <th>Total Paid</th>
+    </tr>
+    @{params.filter(_._1.startsWith("MODS_ROW_TOPS")).map { row =>
+    val cells = row._2.toString.split(",").toList
+    <tr>
+        <td>{cells(0)}</td>
+        <td>{cells(1)}</td>
+        <td>{formatAmountInPence(cells(2))}</td>
+        <td>{formatAmountInPence(cells(3))}</td>
+        <td>{formatAmountInPence(cells(4))}</td>
+        <td>{formatAmountInPence(cells(5))}</td>
+        <td>{formatAmountInPence(cells(6))}</td>
+    </tr>
+    }
+    }
+</table>
+
+<p><STRONG>From HMRC Online Payments team</STRONG></p>
+}

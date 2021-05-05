@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate, Subject }
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.play.test.UnitSpec
@@ -110,13 +110,18 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "TDQ",
         "SEISS",
         "GVMS",
-        "EOTHO"
+        "EOTHO",
+        "Eori Common Component",
+        "Exports (CDS)",
+        "MODS",
+        "CDSRC"
       )
     }
 
     "enumerate all template identifiers" in {
       TemplateLocator.all.map(_.templateId) should contain only (
         "email_verification_passcode",
+        "email_verification_passcode_welsh",
         "overseas_application_rejected",
         "overseas_application_accepted",
         "overseas_application_received",
@@ -125,6 +130,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "client_expired_authorisation_request",
         "agent_services_account_created",
         "agent_services_account_created_cy",
+        "agent_invitation_about_to_expire_single",
+        "agent_invitations_about_to_expire",
         "dc-1462-test-message",
         "apiDeveloperEmailVerification",
         "apiDeveloperPasswordReset",
@@ -152,6 +159,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "digitalOptInConfirmation_BTA",
         "digitalOptInConfirmation_PTA",
         "digitalOptInConfirmation_PTA_cy",
+        "digitalOptInConfirmation_NinoPTA",
+        "digitalOptInConfirmation_NinoPTA_cy",
         "digitalOptOutConfirmation",
         "digitalOptOutConfirmation_cy",
         "changeOfEmailAddressNewAddress",
@@ -176,6 +185,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "amls_notification_received_template",
         "rescindedMessageAlert",
         "rescindedMessageAlert_cy",
+        "penaltyChargeApologies",
         "verificationReminder",
         "verificationReminder_cy",
         "generic_access_invitation_template_id",
@@ -214,6 +224,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "digital_tariffs_case_completed",
         "digital_tariffs_advice_request",
         "digital_tariffs_application_submitted",
+        "digital_tariffs_application_submitted_cy",
         "dfs_submission_success_r39_2015",
         "dfs_submission_success_r39_2015_welsh",
         "dfs_submission_success_cis_2015",
@@ -226,6 +237,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "dfs_submission_success_generic_2017_welsh",
         "dfs_submission_success_empty_turn_around_time_2015",
         "dfs_submission_success_empty_turn_around_time_2015_welsh",
+        "dfs_submission_success_empty_turn_around_time_2020",
         "dfs_admin_notification",
         "dfs_admin_notification_welsh",
         "dfs_trusts_submission_success",
@@ -296,10 +308,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "seiss_payment_failed",
         "seiss_payment_failed_cy",
         "seiss_received_confirmation",
-        "seiss_phase_2_previously_claimed_stagger",
-        "seiss_phase_2_previously_claimed_stagger_cy",
+        "seiss_phase_3_previously_claimed_stagger",
+        "seiss_phase_3_previously_claimed_stagger_cy",
         "vishing_code_submission",
         "cjrs_confirmation_submission",
+        "jrsRemoval_submission_confirmation",
         "csr_submission_confirmation",
         "cet_email_confirmation",
         "gss_email_confirmation",
@@ -307,6 +320,12 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cash_declaration_EU",
         "cash_declaration_UK",
         "ccg1_confirmation_submission",
+        "dan_waiver_confirmation",
+        "duty_deferment_account_amend_confirmation",
+        "tor_code",
+        "tor_confirmation",
+        "nrsDLT_code",
+        "nrsDLT_confirmation",
         "tspDeReg_confirmation_submission",
         "tspCHIEF_confirmation_submission",
         "challengeChildcare_confirmation_submission",
@@ -355,6 +374,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "gmp_bulk_upload_processed",
         "rald_alert",
         "rald_not_connected",
+        "rald_submission_confirmation",
         "bars_alert",
         "bars_alert_transaction",
         "tcs_renewal_confirmation",
@@ -388,6 +408,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "customs_declaration_success",
         "customs_pull_notifications_warning",
         "customs_push_notifications_warning",
+        "customs_rcm_notifications",
         "transactionEngineHMRCSASA100Success",
         "transactionEngineHMRCSASA100Failure",
         "transactionEngineHMRCSASA100ATTSuccess",
@@ -532,6 +553,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "payment_successful_parcels",
         "recon_tps_report",
         "recon_tops_report",
+        "recon_surcharge_report",
+        "recon_mods_finance_report",
         "ddi_migration_letter",
         "ddi_setup_dcs_alert",
         "ddi_setup_aa_dcs_alert",
@@ -547,6 +570,12 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "sdds_ddi_cancelled_dcs_alert",
         "sdds_ddi_reminder_dcs_alert",
         "sdds_ddi_unpaid_dcs_alert",
+        "cds_ddi_setup_dcs_alert",
+        "cds_ddi_amended_dcs_alert",
+        "cds_ddi_cancelled_dcs_alert",
+        "cds_ddi_reminder_dcs_alert",
+        "cds_ddi_unpaid_dcs_alert",
+        "cds_ddi_not_acceptable_dcs_alert",
         "hts_verification_email",
         "sdil_registration_accepted",
         "sdil_registration_received",
@@ -558,6 +587,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cca_revaluation_subscription_confirmation",
         "cdsTestTemplate",
         "cdsEmailTemplate",
+        "dmsdoc_notification",
+        "newMessageAlert_CDS_exp",
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
         "mtdfb_vat_agent_sign_up_successful",
@@ -565,7 +596,17 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "pods_psa_register",
         "pods_psa_invited",
         "pods_file_aft_return",
-        "pods_aft_amended_return",
+        "pods_aft_amended_return_decrease",
+        "pods_aft_amended_return_no_change",
+        "pods_aft_amended_return_increase",
+        "pods_psp_register",
+        "pods_psp_amend",
+        "pods_psp_de_auth_psp_individual",
+        "pods_psp_de_auth_psp_company_partnership",
+        "pods_authorise_psp",
+        "pods_psa_deauthorise_psp",
+        "pods_psp_deregister_self",
+        "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",
         "newMessageAlert_2WSM-reply",
@@ -589,6 +630,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "tdq_compliance_all_required_headers_missing",
         "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
         "tdq_compliance_partially_compliant_valid_connection_method",
+        "tdq_fph_report_non_compliant",
+        "tdq_fph_report_heuristically_compliant",
         "cgtpd_account_created",
         "cgtpd_account_created_cy",
         "cgtpd_private_beta_access",
@@ -598,8 +641,41 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "cgtpd_submission_confirmation_cy",
         "gms_enrolment_confirmation",
         "dac6_registration_successful",
+        "dac6_new_disclosure_confirmation",
+        "dac6_additional_disclosure_confirmation",
+        "dac6_replace_disclosure_confirmation",
+        "dac6_delete_disclosure_confirmation",
         "discounted_dining_payment_sent",
-        "discounted_dining_payment_sent_cy"
+        "discounted_dining_payment_sent_cy",
+        "ipr1_code",
+        "ipr2_code",
+        "ipr3_code",
+        "vat_declaration_confirmation",
+        "ecc_subscription_successful",
+        "ecc_subscription_successful_cy",
+        "ecc_subscription_not_successful",
+        "ecc_subscription_not_successful_cy",
+        "ecc_rcm_notifications",
+        "trading_status_before_seiss_claimed",
+        "settlement_request",
+        "complaint_consultation_code",
+        "consultation_complaint_confirmation",
+        "duty_deferment_account_confirmation",
+        "eat_out_help_out_confirmation",
+        "mods_import_declaration",
+        "mods_amend_import_declaration",
+        "mods_export_declaration",
+        "mods_amend_export_declaration",
+        "mods_import_declaration_cy",
+        "mods_amend_import_declaration_cy",
+        "mods_export_declaration_cy",
+        "mods_amend_export_declaration_cy",
+        "ni_vat_Status_reporting_confirmation",
+        "reimbursement_claim_submission",
+        "newMessageAlert_P800",
+        "newMessageAlert_P800_cy",
+        "newMessageAlert_PA302",
+        "newMessageAlert_PA302_cy"
       )
     }
   }

@@ -1,5 +1,5 @@
 @*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,24 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost", isWelsh = true) {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Dilyswch eich cyfeiriad e-bost i gael llythyrau treth ar-lein", isWelsh = true) {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh=true)
-<p style="margin: 0 0 30px; font-size: 19px;">Rydych wedi dewis i CThEM gyfathrebu â chi drwy ddull electronig.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Mae dal angen i chi ddilysu’ch cyfeiriad e-bost â CThEM i gwblhau’r broses fewngofnodi.</p>
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Cliciwch ar y cysylltiad isod er mwyn dilysu’ch cyfeiriad e-bost.</p>
-<a href="@{params("verificationLink")}" style="text-decoration: underline; color: #005ea5; display: block; font-size: 19px; line-height: 1.315789474; padding: 0 0 30px 0;">@{params("verificationLink")}</a>
-<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Adran Ddigidol CThEM</p>
+
+@defining(params.getOrElse("daysAgo", "3").toString.toInt) { daysAgo =>
+@if(daysAgo == 5){<p style="margin: 0 0 30px; font-size: 19px;">Bum diwrnod yn ôl rhoesoch wybod i ni eich bod am gael llythyrau treth ar-lein.</p>}
+@if(daysAgo  == 3){<p style="margin: 0 0 30px; font-size: 19px;">Ddeuddydd yn ôl rhoesoch wybod i ni eich bod am gael llythyrau treth ar-lein.</p>}
+
+<p style="margin: 0 0 30px; font-size: 19px;">Mae dal angen i chi glicio’r cysylltiad hwn cyn y gallwn ddechrau anfon llythyrau a gwybodaeth atoch ar-lein:</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("verificationLink")}"style="color: #005EA5;">@{params("verificationLink")}</a></p>
+
+@if(daysAgo == 5){<p style="margin: 0 0 30px; font-size: 19px;">Mae angen i chi wneud hyn cyn pen 2 diwrnod, neu byddwn yn parhau i anfon llythyrau treth atoch drwy’r post.</p>}
+@if(daysAgo  == 3){<p style="margin: 0 0 30px; font-size: 19px;">Mae angen i chi wneud hyn cyn pen 5 diwrnod, neu byddwn yn parhau i anfon llythyrau treth atoch drwy’r post.</p>}
+
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Pam ein bod wedi anfon e-bost atoch</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Rydym yn gwneud i chi ddilysu’ch cyfeiriad e-bost er mwyn helpu i gadw’ch manylion yn ddiogel.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth adran Ddigidol CThEM</p>
+}
 }

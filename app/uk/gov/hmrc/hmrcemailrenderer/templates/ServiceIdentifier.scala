@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,7 @@ object ServiceIdentifier {
   case object DAC6 extends ServiceIdentifier { override val name = "dac6" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
   case object Eeitt extends ServiceIdentifier { override val name = "eeitt" }
+  case object Exports extends ServiceIdentifier { override val name = "customs-declare-exports" }
   case object Fhdds extends ServiceIdentifier { override val name = "fhdds" }
   case object FriendsAndFamily extends ServiceIdentifier { override val name = "fandf" }
   case object GovernmentGateway extends ServiceIdentifier { override val name = "gg" }
@@ -86,6 +87,7 @@ object ServiceIdentifier {
   case object LifetimeISA extends ServiceIdentifier { override val name = "lisa" }
   case object CountryByCountryReporting extends ServiceIdentifier { override val name = "cbcr" }
   case object OnlinePaymentService extends ServiceIdentifier { override val name = "online-payment-service" }
+  case object PassengerService extends ServiceIdentifier { override val name = "bc-passenger-service" }
   case object HelpToSave extends ServiceIdentifier { override val name = "hts" }
   case object SoftDrinksIndustryLevy extends ServiceIdentifier { override def name: String = "sdil" }
   case object LostCredentials extends ServiceIdentifier { override val name = "lostcredentials" }
@@ -104,4 +106,7 @@ object ServiceIdentifier {
   case object Seiss extends ServiceIdentifier { override val name = "seiss" }
   case object GoodsMovementSystem extends ServiceIdentifier { override val name = "goods-movement-system" }
   case object EOTHO extends ServiceIdentifier { override val name = "eotho" }
+  case object EoriCommonComponent extends ServiceIdentifier { override val name = "ecc" }
+  case object MODS extends ServiceIdentifier { override val name = "mods" }
+  case object CDSRC extends ServiceIdentifier { override val name = "cdsrc" }
 }
