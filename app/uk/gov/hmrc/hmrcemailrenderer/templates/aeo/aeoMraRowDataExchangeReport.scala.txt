@@ -11,5 +11,7 @@ This report covers the latest status of the data exchange between Rest of World 
 @for(row <- parseRows(params("country_rows").toString)) {
   @row.sendingCountry @row.receivingCountry @row.status @timeFormat(row.dateTime) }
 
+From MDTP Digital Support Team
+
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 
