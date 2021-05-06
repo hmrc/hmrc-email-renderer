@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.aeo.AEOMRATemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.agent.AgentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
@@ -77,6 +78,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
     Map(
+      "AEO MRA"               -> AEOMRATemplates.templates,
       "Agent"                 -> AgentTemplates.templates,
       "API Platform"          -> ApiTemplates.templates,
       "ATS"                   -> AtsTemplates.templates,
