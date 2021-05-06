@@ -22,6 +22,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CCA
 
 object CCATemplates {
 
+  private def appealsSubject(params: Map[String, String]) =
+    s"EIPP ${params.getOrElse("submissionDate", "")} ${params.getOrElse("postcode", "")}"
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "cca_enrolment_migration_confirmation",
@@ -68,11 +71,11 @@ object CCATemplates {
       htmlTemplate = subscription.html.ccaRevalSubscriptionConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "cca_appeals_submission_data",
       fromAddress = govUkTeamAddress,
       service = CCA,
-      subject = "Valuation Office Agency - appeals submission data",
+      subject = appealsSubject(_),
       plainTemplate = appeals.txt.ccaAppealsSubmissionData.f,
       htmlTemplate = appeals.html.ccaAppealsSubmissionData.f,
       priority = Some(MessagePriority.Standard)

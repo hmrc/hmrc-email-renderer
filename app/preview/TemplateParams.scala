@@ -1789,7 +1789,8 @@ object TemplateParams2 {
       "submissionDate"            -> "03 January 2018",
       "agentsReference"           -> "123444",
       "faxNumber"                 -> "01273123444",
-      "proposalNumber"            -> "45341111"
+      "proposalNumber"            -> "45341111",
+      "postcode"                  -> "BN1 1AA"
     ),
     "cdsEmailTemplate" -> Map(
       "ref" -> "NAT-VAT-0001-18 Operation: Wheelbarrow"
