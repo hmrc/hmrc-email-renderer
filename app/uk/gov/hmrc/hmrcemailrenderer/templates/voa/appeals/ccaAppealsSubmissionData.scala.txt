@@ -1,0 +1,95 @@
+@(params: Map[String, Any])
+
+Valuation Office Agency – check and challenge registration
+
+Proposal Number: @params.getOrElse("proposalNumber", "")
+Assessment Reference: @params.getOrElse("assessmentRef", "")
+Lodged: @params.getOrElse("submissionDate", "")
+List year: @params.getOrElse("listYear", "")
+
+
+Part A - Details of the property/rating assessment:
+Address of the Property: @params.getOrElse("address", "")
+Property description: @params.getOrElse("propertyDescription", "")
+Name of Occupier: @params.getOrElse("nameOfOccupier", "")
+Occupier address if different: @params.getOrElse("occupierAddressIfDifferent", "")
+Rateable value: @params.getOrElse("rateableValue", "")
+Effective date: @params.getOrElse("effectiveDate", "")
+Name of Owner if NOT owner occupied: @params.getOrElse("ownerOccupier", "")
+Owner Address if different: @params.getOrElse("ownersAddressIfDifferent", "")
+Current rent £: @params.getOrElse("currentRent", "")
+Rent period: @params.getOrElse("rentPeriod", "")
+Date first payable: @params.getOrElse("dateFirstPayable", "")
+Date next review: @params.getOrElse("dateNextReview", "")
+Billing Authority Code: @params.getOrElse("billingAuthorityCode", "")
+Billing Authority Reference: @params.getOrElse("billingAuthorityReference", "")
+NLPG UPRN Number : @params.getOrElse("nlpgUprnNumber", "")
+
+
+Part B – Details of the Proposed List Alteration
+I propose the Rating List entry shown for the property should be altered as follows:
+@if(params.isDefinedAt("rateableValueAltered")){
+    A Rateable Value change to @params("rateableValueAltered") WEF @params("effectiveDateChanged")
+}
+@if(params.isDefinedAt("existingEntryDeleted")){
+    B Delete existing property WEF @params("effectiveDateChanged")
+}
+@if(params.isDefinedAt("existingEntryDividedInto")){
+    C Split existing property into (@params("existingEntryDividedInto")) WEF @params("effectiveDateChanged")
+}
+@if(params.isDefinedAt("effectiveDateChanged")){
+    E Effective Date Change – @params("effectiveDateChanged")
+}
+@if(params.isDefinedAt("otherChanges")){
+    F Other Changes @params("otherChanges") WEF @params("effectiveDateChanged")
+}
+
+Part C – Grounds for your proposed alteration:
+@if(params.isDefinedAt("inaccurate")){
+    01 Rateable Value Inaccurate when the property was revalued on @params("effectiveDate")
+}
+@if(params.isDefinedAt("rateableValueInaccurate")){
+    02 Rateable Value Inaccurate because of an alteration made by the Valuation Officer to the 2017 list on: @params("effectiveDate")
+}
+@if(params.isDefinedAt("effdtInaccurate")){
+    03 Effective Date of the alteration made by the Valuation Officer on @params("effectiveDate") is inaccurate
+}
+@if(params.isDefinedAt("circumstancesChangedDate")){
+    04 A physical Change In Circumstances effecting the Rateable Value occurred on: @params("effectiveDate")
+}
+@if(params.isDefinedAt("propertyDemolished")){
+    05 Property has been demolished
+}
+@if(params.isDefinedAt("propertyDomestic")){
+    06 Property is now domestic or exempt
+}
+@if(params.isDefinedAt("deleteForOtherReasons")){
+    07 Property to be deleted for other reasons
+}
+@if(params.isDefinedAt("moreThanOneAssessment")){
+    08 Split into More than one assessment
+}
+@if(params.isDefinedAt("rateableValueAltered")){
+    11 Wrong due to previous decision: @params("wrongByDecisionOf") on @params("effectiveDate")
+}
+@if(params.isDefinedAt("statementOmitted")){
+    12 Statement about the property is wrong or has been omitted
+}
+@if(params.isDefinedAt("detailedReason")){
+    Detailed Reason: @params("detailedReason")
+}
+
+Part D – Details of the person completing this form:
+Capacity: @params.getOrElse("capacity", "")
+Name: @params.getOrElse("name", "")
+Submitted date: @params.getOrElse("submissionDate", "")
+Correspondence Address: @params.getOrElse("correspondenceAddress", "")
+Daytime Telephone Number: @params.getOrElse("daytimeTelephoneNumber", "")
+Fax Number: @params.getOrElse("faxNumber", "")
+Email: @params.getOrElse("emailAddress", "")
+Your reference: @params.getOrElse("agentsReference", "")
+
+
+From Valuation Office Agency (VOA)
+
+ @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

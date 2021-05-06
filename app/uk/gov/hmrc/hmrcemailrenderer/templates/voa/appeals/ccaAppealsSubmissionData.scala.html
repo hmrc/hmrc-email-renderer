@@ -1,0 +1,115 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
+
+<h1>Valuation Office Agency – check and challenge registration</h1>
+
+<div style="margin: 0 0 30px; font-size: 19px;">
+    <h3>Proposal Number: @params.getOrElse("proposalNumber", "")</h3>
+    <h3>Assessment Reference: @params.getOrElse("assessmentRef", "")</h3>
+    <h3>Lodged: @params.getOrElse("submissionDate", "")</h3>
+    <h3>List year: @params.getOrElse("listYear", "")</h3>
+
+
+    <h2>Part A - Details of the property/rating assessment:</h2>
+    <p>Address of the Property: @params.getOrElse("address", "")</p>
+    <p>Property description: @params.getOrElse("propertyDescription", "")</p>
+    <p>Name of Occupier: @params.getOrElse("nameOfOccupier", "")</p>
+    <p>Occupier address if different: @params.getOrElse("occupierAddressIfDifferent", "")</p>
+    <p>Rateable value: @params.getOrElse("rateableValue", "")</p>
+    <p>Effective date: @params.getOrElse("effectiveDate", "")</p>
+    <p>Name of Owner if NOT owner occupied: @params.getOrElse("ownerOccupier", "")</p>
+    <p>Owner Address if different: @params.getOrElse("ownersAddressIfDifferent", "")</p>
+        <p>Current rent £: @params.getOrElse("currentRent", "")</p>
+        <p>Rent period: @params.getOrElse("rentPeriod", "")</p>
+        <p>Date first payable: @params.getOrElse("dateFirstPayable", "")</p>
+        <p>Date next review: @params.getOrElse("dateNextReview", "")</p>
+    <p>Billing Authority Code: @params.getOrElse("billingAuthorityCode", "")</p>
+    <p>Billing Authority Reference: @params.getOrElse("billingAuthorityReference", "")</p>
+    <p>NLPG UPRN Number : @params.getOrElse("nlpgUprnNumber", "")</p>
+
+
+    <h2>Part B – Details of the Proposed List Alteration</h2>
+    <p>I propose the Rating List entry shown for the property should be altered as follows:</p>
+    @if(params.isDefinedAt("rateableValueAltered")){
+        <p>A Rateable Value change to @params("rateableValueAltered") WEF @params("effectiveDateChanged") </p>
+    }
+    @if(params.isDefinedAt("existingEntryDeleted")){
+        <p>B Delete existing property WEF @params("effectiveDateChanged") </p>
+    }
+    @if(params.isDefinedAt("existingEntryDividedInto")){
+        <p>C Split existing property into (@params("existingEntryDividedInto")) WEF @params("effectiveDateChanged") </p>
+    }
+    @if(params.isDefinedAt("effectiveDateChanged")){
+        <p>E Effective Date Change – @params("effectiveDateChanged") </p>
+    }
+    @if(params.isDefinedAt("otherChanges")){
+        <p>F Other Changes @params("otherChanges") WEF @params("effectiveDateChanged") </p>
+    }
+
+    <h2>Part C – Grounds for your proposed alteration:</h2>
+    @if(params.isDefinedAt("inaccurate")){
+        <p>01 Rateable Value Inaccurate when the property was revalued on @params("effectiveDate")</p>
+    }
+    @if(params.isDefinedAt("rateableValueInaccurate")){
+        <p>02 Rateable Value Inaccurate because of an alteration made by the Valuation Officer to the 2017 list on: @params("rateableValueInaccurate")</p>
+    }
+    @if(params.isDefinedAt("effdtInaccurate")){
+        <p>03 Effective Date of the alteration made by the Valuation Officer on @params("effdtInaccurate") is inaccurate</p>
+    }
+    @if(params.isDefinedAt("circumstancesChangedDate")){
+        <p>04 A physical Change In Circumstances effecting the Rateable Value occurred on: @params("circumstancesChangedDate")</p>
+    }
+    @if(params.isDefinedAt("propertyDemolished")){
+        <p>05 Property has been demolished</p>
+    }
+    @if(params.isDefinedAt("propertyDomestic")){
+        <p>06 Property is now domestic or exempt</p>
+    }
+    @if(params.isDefinedAt("deleteForOtherReasons")){
+        <p>07 Property to be deleted for other reasons</p>
+    }
+    @if(params.isDefinedAt("moreThanOneAssessment")){
+        <p>08 Split into More than one assessment</p>
+    }
+    @if(params.isDefinedAt("rateableValueAltered")){
+        <p>11 Wrong due to previous decision: @params("wrongByDecisionOf") on @params("effectiveDate") </p>
+    }
+    @if(params.isDefinedAt("statementOmitted")){
+        <p>12 Statement about the property is wrong or has been omitted</p>
+    }
+    @if(params.isDefinedAt("detailedReason")){
+        <p>Detailed Reason: @params("detailedReason") </p>
+    }
+
+    <h2>Part D – Details of the person completing this form:</h2>
+    <p>Capacity: @params.getOrElse("capacity", "")</p>
+    <p>Name: @params.getOrElse("name", "")</p>
+    <p>Submitted date: @params.getOrElse("submissionDate", "")</p>
+    <p>Correspondence Address: @params.getOrElse("correspondenceAddress", "")</p>
+    <p>Daytime Telephone Number: @params.getOrElse("daytimeTelephoneNumber", "")</p>
+    <p>Fax Number: @params.getOrElse("faxNumber", "")</p>
+    <p>Email: @params.getOrElse("emailAddress", "")</p>
+    <p>Your reference: @params.getOrElse("agentsReference", "")</p>
+
+    <br/>
+
+    <p>From Valuation Office Agency (VOA)</p>
+
+</div>
+}

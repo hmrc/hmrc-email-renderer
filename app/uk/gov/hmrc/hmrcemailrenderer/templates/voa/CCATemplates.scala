@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.voa
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CCA
-import registration._
+
 object CCATemplates {
 
   val templates = Seq(
@@ -28,8 +28,8 @@ object CCATemplates {
       fromAddress = govUkTeamAddress,
       service = CCA,
       subject = "Valuation Office Agency - check and challenge registration",
-      plainTemplate = txt.ccaEnrolmentConfirmationExisting.f,
-      htmlTemplate = html.ccaEnrolmentConfirmationExisting.f,
+      plainTemplate = registration.txt.ccaEnrolmentConfirmationExisting.f,
+      htmlTemplate = registration.html.ccaEnrolmentConfirmationExisting.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -66,6 +66,15 @@ object CCATemplates {
       subject = "You signed up for news about business rate revaluations",
       plainTemplate = subscription.txt.ccaRevalSubscriptionConfirmation.f,
       htmlTemplate = subscription.html.ccaRevalSubscriptionConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cca_appeals_submission_data",
+      fromAddress = govUkTeamAddress,
+      service = CCA,
+      subject = "Valuation Office Agency - appeals submission data",
+      plainTemplate = appeals.txt.ccaAppealsSubmissionData.f,
+      htmlTemplate = appeals.html.ccaAppealsSubmissionData.f,
       priority = Some(MessagePriority.Standard)
     )
   )
