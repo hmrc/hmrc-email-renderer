@@ -176,5 +176,4 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
     }
   }
 
-
 }
