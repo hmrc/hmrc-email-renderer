@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You have declared as scheme administrator for a RAC/DAC
+
+Dear @{params("psaName").toString}
+
+This email confirms your declaration as scheme administrator for @{params("schemeName").toString}.
+
+You can view the details of the RAC/DAC, including its Pension Scheme Tax Reference (PSTR), in the Managing Pension Schemes online service.
+
+For security reasons, we have not included any links with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

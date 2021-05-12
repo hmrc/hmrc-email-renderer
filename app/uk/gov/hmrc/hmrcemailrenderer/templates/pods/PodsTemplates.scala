@@ -33,6 +33,15 @@ object PodsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "pods_racdac_scheme_register",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "HMRC received your application",
+      plainTemplate = txt.racdacSchemeRegSubmitted.f,
+      htmlTemplate = html.racdacSchemeRegSubmitted.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "pods_psa_register",
       fromAddress = govUkTeamAddress,
       service = PODS,
