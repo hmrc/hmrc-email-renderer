@@ -1752,8 +1752,8 @@ object TemplateParams2 {
       "srn"     -> "S12345 67890"
     ),
     "pods_racdac_scheme_register" -> Map(
-      "psaName" -> "Jane Doe",
-      "schemeName"     -> "test scheme"
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "test scheme"
     ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
