@@ -854,6 +854,15 @@ object EeittTemplates {
       plainTemplate = txt.nrsDLTConfirmation.f,
       htmlTemplate = html.nrsDLTConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seissOverPayment_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "SEISS - Tell HMRC about a change to your tax return ",
+      plainTemplate = txt.seissOverPaymentConfirmation.f,
+      htmlTemplate = html.seissOverPaymentConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
