@@ -36,7 +36,7 @@ object PodsTemplates {
       templateId = "pods_racdac_scheme_register",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = "HMRC received your application",
+      subject = "HMRC received your RAC/DAC declaration",
       plainTemplate = txt.racdacSchemeRegSubmitted.f,
       htmlTemplate = html.racdacSchemeRegSubmitted.f,
       priority = Some(MessagePriority.Standard)
