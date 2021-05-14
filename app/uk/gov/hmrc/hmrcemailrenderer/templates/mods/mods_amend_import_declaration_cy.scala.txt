@@ -3,10 +3,11 @@
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
+    val quantity = params(s"goodsQuantity_$i")
     val country = params.get(s"goodsCountry_$i")
     val producedInEu = params.get(s"goodsProducedInEu_$i")
     val price = params(s"goodsPrice_$i")
-    (category, country, producedInEu, price)
+      (category, quantity, country, producedInEu, price)
   }
 }
 Annwyl @params("nameOfPersonCarryingGoods")
@@ -31,8 +32,9 @@ Dyddiad y datganiad
 
 Manylion y nwyddau
 
-@for((category, country, producedInEu, price) <- goodsGrid) {
+@for((category, quantity, country, producedInEu, price) <- goodsGrid) {
 Math o nwyddau: @category
+Nifer: @quantity
 @for(cntry <- country) {Gwlad: @cntry  }
 @for(eu <- producedInEu) {Gwnaed yn yr UE: @eu  }
 Swm a dalwyd: @price
