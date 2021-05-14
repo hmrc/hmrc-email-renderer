@@ -59,9 +59,9 @@ object PayeTemplates {
       htmlTemplate = html.newMessageAlert_P800_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
-    // DC-3393 Duplicate of newMessageAlert_P800 template id - that is used for D1 nudge email
+    // DC-3393 Duplicate of newMessageAlert_P800 template id - that is used for D2 nudge email
     MessageTemplate.create(
-      templateId = "newMessageAlert_P800_D1",
+      templateId = "newMessageAlert_P800_D2",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
       subject = "You have a new message from HMRC",
@@ -71,7 +71,7 @@ object PayeTemplates {
     ),
     // DC-3393 Duplicate of newMessageAlert_P800_cy template id - that is used for D1 nudge email
     MessageTemplate.create(
-      templateId = "newMessageAlert_P800_D1_cy",
+      templateId = "newMessageAlert_P800_D2_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
       subject = "Mae gennych neges newydd oddi wrth CThEM",
@@ -97,9 +97,9 @@ object PayeTemplates {
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
-    // DC-3393 Duplicate of newMessageAlert_PA302 template id - that is used for D1 nudge email
+    // DC-3393 Duplicate of newMessageAlert_PA302 template id - that is used for D2 nudge email
     MessageTemplate.create(
-      templateId = "newMessageAlert_PA302_D1",
+      templateId = "newMessageAlert_PA302_D2",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
       subject = "You have a new message from HMRC",
@@ -109,7 +109,7 @@ object PayeTemplates {
     ),
     // DC-3393 Duplicate of newMessageAlert_PA302_cy template id - that is used for D1 nudge email
     MessageTemplate.create(
-      templateId = "newMessageAlert_PA302_D1_cy",
+      templateId = "newMessageAlert_PA302_D2_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
       subject = "Mae gennych neges newydd oddi wrth CThEM",
