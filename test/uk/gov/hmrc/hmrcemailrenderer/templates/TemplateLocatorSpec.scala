@@ -679,7 +679,11 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_P800",
         "newMessageAlert_P800_cy",
         "newMessageAlert_PA302",
-        "newMessageAlert_PA302_cy"
+        "newMessageAlert_PA302_cy",
+        "newMessageAlert_P800_D1",
+        "newMessageAlert_P800_D1_cy",
+        "newMessageAlert_PA302_D1",
+        "newMessageAlert_PA302_D1_cy"
       )
     }
   }
