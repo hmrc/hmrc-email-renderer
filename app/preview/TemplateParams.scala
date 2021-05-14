@@ -2308,9 +2308,9 @@ object TemplateParams2 {
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,
     "newMessageAlert_PA302_cy"    -> newMessageAlert_Names,
-    "newMessageAlert_P800_D1"     -> newMessageAlert_Names,
-    "newMessageAlert_P800_D1_cy"  -> newMessageAlert_Names,
-    "newMessageAlert_PA302_D1"    -> newMessageAlert_Names,
-    "newMessageAlert_PA302_D1_cy" -> newMessageAlert_Names
+    "newMessageAlert_P800_D2"     -> newMessageAlert_Names,
+    "newMessageAlert_P800_D2_cy"  -> newMessageAlert_Names,
+    "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
+    "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names
   )
 }

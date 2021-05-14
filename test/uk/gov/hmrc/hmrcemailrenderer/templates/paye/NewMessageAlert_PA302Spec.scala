@@ -99,10 +99,10 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
     }
   }
 
-  "NewMessageAlert_PA302_D1" must {
+  "NewMessageAlert_PA302_D2" must {
 
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
-      templateId = "newMessageAlert_PA302_D1",
+      templateId = "newMessageAlert_PA302_D2",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = PayAsYouEarn,
       subject = "You have a new message from HMRC",
@@ -135,10 +135,10 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
     }
   }
 
-  "NewMessageAlert_PA302_D1_cy welsh template" must {
+  "NewMessageAlert_PA302_D2_cy welsh template" must {
 
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
-      templateId = "newMessageAlert_PA302_D1_cy",
+      templateId = "newMessageAlert_PA302_D2_cy",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = PayAsYouEarn,
       subject = "Mae gennych neges newydd oddi wrth CThEM",
