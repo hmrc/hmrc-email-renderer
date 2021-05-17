@@ -810,6 +810,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ni_vat_Status_withdrawal_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC Northern Ireland Protocol: notification of withdrawal received",
+      plainTemplate = txt.niVatStatusWithdrawal.f,
+      htmlTemplate = html.niVatStatusWithdrawal.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "tor_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
