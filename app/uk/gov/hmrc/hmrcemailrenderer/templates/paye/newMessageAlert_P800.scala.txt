@@ -4,7 +4,7 @@
 
 You can now view your latest tax calculation.
 
-Sign in to HMRC online with your Government Gateway password and ID, and go to your messages.
+Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.
 
 For security reasons, we have not included a link with this email.
 
