@@ -4,7 +4,7 @@
 
 Gallwch nawr fwrw golwg dros eich cyfrifiad treth diweddaraf.
 
-Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon.
+Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEM sy’n rhad ac am ddim.
 
 Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
 
