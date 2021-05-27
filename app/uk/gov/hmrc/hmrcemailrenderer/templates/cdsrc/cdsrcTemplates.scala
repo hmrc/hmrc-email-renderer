@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc
 
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CDSRC
 
 object cdsrcTemplates {
@@ -33,14 +33,14 @@ object cdsrcTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-    templateId = "reimbursement_claim_submission_cy",
-    fromAddress = govUkTeamAddress,
-    service = CDSRC,
-    subject = "Cyflwyniad i CThEM am Hawliad: Cyf",
-    plainTemplate = txt.reimbursement_claim_submission_cy.f,
-    htmlTemplate = html.reimbursement_claim_submission_cy.f,
-    priority = Some(MessagePriority.Urgent)
-  )
+      templateId = "reimbursement_claim_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = CDSRC,
+      subject = "Cyflwyniad i CThEM am Hawliad: Cyf",
+      plainTemplate = txt.reimbursement_claim_submission_cy.f,
+      htmlTemplate = html.reimbursement_claim_submission_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 
 }
