@@ -2306,6 +2306,11 @@ object TemplateParams2 {
       "caseNumber"  -> "0004201hog42",
       "claimAmount" -> "500"
     ),
+    "reimbursement_claim_submission_cy" -> Map(
+      "name"        -> "Sir Arthur Dent",
+      "caseNumber"  -> "0004201hog42",
+      "claimAmount" -> "500"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,
