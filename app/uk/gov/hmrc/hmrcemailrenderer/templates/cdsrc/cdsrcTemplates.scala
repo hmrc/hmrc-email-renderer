@@ -31,6 +31,15 @@ object cdsrcTemplates {
       plainTemplate = txt.reimbursement_claim_submission.f,
       htmlTemplate = html.reimbursement_claim_submission.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "reimbursement_claim_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = CDSRC,
+      subject = "Cyflwyniad i CThEM am Hawliad: Cyf",
+      plainTemplate = txt.reimbursement_claim_submission_cy.f,
+      htmlTemplate = html.reimbursement_claim_submission_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
