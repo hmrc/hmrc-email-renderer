@@ -1557,6 +1557,16 @@ object TemplateParams2 {
 
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
   val exampleParams = Map(
+    "open_banking_payment_successful" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
+    "open_banking_payment_successful_cy" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
     "payment_successful" -> Map(
       "taxType"          -> "Self Assessment",
       "taxReference"     -> "1234567890K",
