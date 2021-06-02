@@ -4,6 +4,8 @@ Dear @params("agencyName")
 
 Your client @params("clientName") has authorised you to @params("service")
 
+@if(!params("additionalInfo").asInstanceOf[String].isEmpty) { @{params("additionalInfo")} } else {}
+
 Do not reply to this email.
 
 From HMRC Agent Services Team

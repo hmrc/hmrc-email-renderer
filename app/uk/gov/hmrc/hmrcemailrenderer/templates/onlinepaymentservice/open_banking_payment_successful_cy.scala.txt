@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Annwyl Gwsmer
+
+Mae'ch taliad wedi dod i law.
+
+Treth: @params("taxType")
+Cyfeirnod y taliad: @params("reference")
+Swm a dalwyd: @params("amountPaid")
+
+Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.
+
+Pam y cawsoch yr e-bost hwn
+
+Gwnaethoch ddewis cael cadarnhad o daliad drwy e-bost.
+
+O Daliadau Ar-lein CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -73,9 +73,10 @@ object TemplateParams {
       "service"    -> "submit their VAT returns through software."
     ),
     "client_accepted_authorisation_request" -> Map(
-      "agencyName" -> "Agent 1",
-      "clientName" -> "Client 2",
-      "service"    -> "view their PAYE income record."
+      "agencyName"     -> "Agent 1",
+      "clientName"     -> "Client 2",
+      "service"        -> "view their PAYE income record.",
+      "additionalInfo" -> ""
     ),
     "client_expired_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
@@ -1557,6 +1558,16 @@ object TemplateParams2 {
 
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
   val exampleParams = Map(
+    "open_banking_payment_successful" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
+    "open_banking_payment_successful_cy" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
     "payment_successful" -> Map(
       "taxType"          -> "Self Assessment",
       "taxReference"     -> "1234567890K",
