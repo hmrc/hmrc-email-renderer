@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You told HMRC your organisation stopped trading or has never traded
+
+Dear @params.get("customerName")
+
+HMRC received your notification about your organisation.
+
+Your submission reference is: @params.get("submissionReference")
+
+What happens next
+
+We will now make your organisation dormant and update our records.
+
+We will only contact you if we need more information.
+
+Why you are receiving this emailWe send a confirmation email for a notification submitted online.
+
+From HMRC Corporation Tax
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
