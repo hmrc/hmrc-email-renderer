@@ -146,7 +146,7 @@ To access optional parameters, you can use the `.getOrElse` or `.get` method on 
 ```
 @(params: Map[String, Any])
 
-This is my optional parameter @params.get("param1").
+This is my optional parameter @params.getOrElse("param1", "default value").
 ```
 *Note:* Because `None` get silently displayed as an empty string `""` we recommend to favour `.getOrElse` instead of `.get` or
 to make the parameter mandatory.
