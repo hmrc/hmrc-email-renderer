@@ -84,7 +84,7 @@ If you'd like to add a template to the hmrc email template service, then:
   * If you just have a static template, you can use `MessageTemplate`. 
 5. Add the content to your new template, making sure that your template uses the standard main template for `.html` and the standard footer for `.txt`
 
-#####Example of html template:
+##### Example of html template:
 ```
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You’ve got a new message from HMRC") {
@@ -99,7 +99,7 @@ If you'd like to add a template to the hmrc email template service, then:
 }
 ```
 
-#####Example of txt template:
+##### Example of txt template:
 NOTE: that there is no return character after the parameters.
 ```
 @(params: Map[String, Any])You’ve got a new message from HMRC
@@ -122,5 +122,33 @@ From HMRC Self Assessment
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 ```
+
+##### Mandatory and Optional parameters
+
+Both `Html` and `Txt` templates take a `Map[String, Any]` as parameter.
+The way you access this `Map` of parameters determines whether the parameters are optional or mandatory.
+
+**Mandatory Parameters**
+
+To access mandatory parameters you can use the `.apply()` or the shorthand `()` on `Map[String, Any]`.
+```
+@(params: Map[String, Any])
+
+This is my mandatory parameter @params("param1").
+```
+
+When a mandatory parameters is missing - the [`/tempate/:templateId`](README.md#post-templatestemplateid) endpoint
+will return `Bad Request`.
+
+**Optional Parameters**
+
+To access optional parameters, you can use the `.getOrElse` or `.get` method on the `Map[String, Any]`
+```
+@(params: Map[String, Any])
+
+This is my optional parameter @params.get("param1").
+```
+*Note:* Because `None` get silently displayed as an empty string `""` we recommend to favour `.getOrElse` instead of `.get` or
+to make the parameter mandatory.
 
 

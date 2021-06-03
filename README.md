@@ -35,7 +35,7 @@ Example request body - parameters with String type key and values.
 ```json
 {
   "parameters": {
-    "param1" : "Parameter to be used in the email template"
+    "param1" : "Parameter to be used in the email template",
     "param2" : "Parameter to be used in the email template"
   }
 }
@@ -56,7 +56,9 @@ Responds with status:
  ```
 * 404 When the template with the provided template Id cannot be resolved.
  
-* 400 When an insufficient set of parameters for rendering the template is specified in the request. Only the first missing value is reported.
+* 400 When an insufficient set of parameters for rendering the template is specified in the request. Only the first missing mandatory value is reported.  
+
+See the [How to add a template](CONTRIBUTING.md#how-to-add-a-template) section to see the distinction between optional and mandatory parameters.
 
  ```json
 {
