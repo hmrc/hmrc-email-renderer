@@ -73,10 +73,9 @@ object TemplateParams {
       "service"    -> "submit their VAT returns through software."
     ),
     "client_accepted_authorisation_request" -> Map(
-      "agencyName"     -> "Agent 1",
-      "clientName"     -> "Client 2",
-      "service"        -> "view their PAYE income record.",
-      "additionalInfo" -> ""
+      "agencyName" -> "Agent 1",
+      "clientName" -> "Client 2",
+      "service"    -> "view their PAYE income record."
     ),
     "client_expired_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",

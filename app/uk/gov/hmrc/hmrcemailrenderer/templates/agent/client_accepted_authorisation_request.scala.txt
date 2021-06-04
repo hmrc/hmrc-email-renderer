@@ -4,7 +4,7 @@ Dear @params("agencyName")
 
 Your client @params("clientName") has authorised you to @params("service")
 
-@if(!params("additionalInfo").asInstanceOf[String].isEmpty) { @{params("additionalInfo")} } else {}
+@params.getOrElse("additionalInfo", "")
 
 Do not reply to this email.
 
