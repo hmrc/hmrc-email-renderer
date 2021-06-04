@@ -2,11 +2,11 @@
 
 You told HMRC your organisation stopped trading or has never traded
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 HMRC received your notification about your organisation.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

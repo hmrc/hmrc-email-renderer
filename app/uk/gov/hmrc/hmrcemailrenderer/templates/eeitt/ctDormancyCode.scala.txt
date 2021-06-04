@@ -6,7 +6,7 @@ Dear Customer
 
 You requested a code to continue with the ‘Tell HMRC your organisation has stopped trading or has never traded’ service on GOV.UK.
 
-Your code is: @params.get("confirmationCode")
+Your code is: @params("confirmationCode")
 
 What you need to do now
 

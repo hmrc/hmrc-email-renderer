@@ -2,11 +2,11 @@
 
 You applied for a PESM for your business
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 HMRC received your Partial exemption special measures application.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 
