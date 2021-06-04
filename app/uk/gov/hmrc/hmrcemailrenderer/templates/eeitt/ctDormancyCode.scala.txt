@@ -4,7 +4,7 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Ask a question about the Coronavirus Job Retention Scheme’ service on GOV.UK.
+You requested a code to continue with the ‘Tell HMRC your organisation has stopped trading or has never traded’ service on GOV.UK.
 
 Your code is: @params.get("confirmationCode")
 

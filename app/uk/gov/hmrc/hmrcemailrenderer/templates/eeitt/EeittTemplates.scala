@@ -886,7 +886,7 @@ object EeittTemplates {
       templateId = "pesm_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address – Apply for a Partial exemption special method’ service on GOV.UK",
+      subject = "Confirm your email address – Apply for a Partial exemption special method",
       plainTemplate = txt.pesmCode.f,
       htmlTemplate = html.pesmCode.f,
       priority = Some(MessagePriority.Urgent)
@@ -904,8 +904,7 @@ object EeittTemplates {
       templateId = "ctDormancy_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject =
-        "Confirm your email address – Tell HMRC your organisation has stopped trading or has never traded’ service on GOV.UK",
+      subject = "Confirm your email address – Tell HMRC your organisation has stopped trading or has never traded",
       plainTemplate = txt.ctDormancyCode.f,
       htmlTemplate = html.ctDormancyCode.f,
       priority = Some(MessagePriority.Urgent)
