@@ -872,6 +872,42 @@ object EeittTemplates {
       plainTemplate = txt.seissOverPaymentConfirmation.f,
       htmlTemplate = html.seissOverPaymentConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pesm_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "We received your PESM application",
+      plainTemplate = txt.pesmConfirmation.f,
+      htmlTemplate = html.pesmConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pesm_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Apply for a Partial exemption special method",
+      plainTemplate = txt.pesmCode.f,
+      htmlTemplate = html.pesmCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ctDormancy_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "We received your Corporation Tax notification",
+      plainTemplate = txt.ctDormancyConfirmation.f,
+      htmlTemplate = html.ctDormancyConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ctDormancy_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Tell HMRC your organisation has stopped trading or has never traded",
+      plainTemplate = txt.ctDormancyCode.f,
+      htmlTemplate = html.ctDormancyCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
