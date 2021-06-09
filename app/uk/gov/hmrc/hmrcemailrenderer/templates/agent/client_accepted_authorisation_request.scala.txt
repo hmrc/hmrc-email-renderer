@@ -4,6 +4,8 @@ Dear @params("agencyName")
 
 Your client @params("clientName") has authorised you to @params("service")
 
+@params.getOrElse("additionalInfo", "")
+
 Do not reply to this email.
 
 From HMRC Agent Services Team
