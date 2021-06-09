@@ -11,19 +11,19 @@ Accounting period: @{params("accountingPeriod").toString}
 Date submitted: @{params("dateSubmitted").toString}
 Submission number: @{params("submissionNumber").toString}
 
-What to do next
+Reduced charge
 
 The amendment you have submitted has reduced the charge for this Accounting for Tax return.
 
-You must email @{params("hmrcEmail").toString} to ensure your account is updated correctly. Include these details in your email:
+If you have any outstanding AFT charges for this quarter
+A credit has been created and will be allocated to another AFT charge for this quarter.
 
-    the name of the pension scheme
-    the date and time of the submission
-    the submission number
+You can view this in your payments and charges by signing in to the Managing Pension Schemes service. Search for 'manage a registered pension scheme' on GOV.UK and then choose the online service.
 
-You can view your payments and charges by signing in to the Managing Pension Schemes service.
+If you’ve paid all AFT charges for this quarter
+The credit will sit on the scheme’s account. You can contact HMRC to request a refund, or a reallocation of the credit to other charges in other periods.
 
-Search for 'manage a registered pension scheme' on GOV.UK and then choose the online service.
+To do this search for ‘Pension schemes refund or reallocation request’ on GOV.UK.
 
 For security reasons, we have not included a link with this email.
 
