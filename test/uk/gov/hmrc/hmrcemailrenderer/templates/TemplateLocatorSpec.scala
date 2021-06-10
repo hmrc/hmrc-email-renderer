@@ -115,7 +115,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "Eori Common Component",
         "Exports (CDS)",
         "MODS",
-        "CDSRC"
+        "CDSRC",
+        "OSS"
       )
     }
 
@@ -691,7 +692,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "newMessageAlert_P800_D2",
         "newMessageAlert_P800_D2_cy",
         "newMessageAlert_PA302_D2",
-        "newMessageAlert_PA302_D2_cy"
+        "newMessageAlert_PA302_D2_cy",
+        "oss_registration_confirmation"
       )
     }
   }
