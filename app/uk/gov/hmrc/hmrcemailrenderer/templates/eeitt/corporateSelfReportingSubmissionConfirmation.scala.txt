@@ -2,7 +2,7 @@
 
 You submitted a self-report online
 
-Dear @params.get("customerName"),
+Dear @params("customerName"),
 
 We have received your report for the service: Tell HMRC your organisation failed to prevent the facilitation of tax evasion.
 
@@ -10,7 +10,7 @@ Why you are receiving this email
 
 We send a confirmation email for all reports submitted online.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 Keep a note of this as HMRC may use it in future contact with you about
 

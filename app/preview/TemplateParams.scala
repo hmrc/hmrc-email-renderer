@@ -2336,6 +2336,106 @@ object TemplateParams2 {
     "ctDormancy_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "tsp_application_confirmation" -> Map(
+      "appName"             -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "gd_application_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "ipt100_registration_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "csr_submission_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cash_declaration" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cash_declaration_EU" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cash_declaration_UK" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cet_email_confirmation" -> Map(
+      "regContactName1"     -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "gss_email_confirmation" -> Map(
+      "regContactName1"     -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "register_for_duty_on_gas_for_road_fuel_use" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "register_for_duty_on_biofuels_and_other_fuel_substitutes" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "rdec_email_confirmation" -> Map(
+      "fillerName"          -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "corporation_tax_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "register_for_fuel_duty_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "adr_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ccg1_confirmation_submission" -> Map(
+      "decName"             -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tspDeReg_confirmation_submission" -> Map(
+      "appName"             -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tspCHIEF_confirmation_submission" -> Map(
+      "fullNameFilling"     -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "challengeChildcare_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "bd600_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "civOffShore_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "civQualifying_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "civTransparency_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "confirmationCode_confirmation_submission" -> Map(
+      "emailFormName"    -> "Form name",
+      "confirmationCode" -> "HGDY",
+      "emailContact"     -> "HMRC Contact",
+      "emailTeam"        -> "HMRC Team"
+    ),
+    "civOffshore_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "civQualifying_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,

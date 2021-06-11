@@ -17,11 +17,11 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to activate a badge for CHIEF declarations"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("fullNameFilling")</p>
+    Dear @params("fullNameFilling")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC received your request to access CHIEF for transitional simplified procedures.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We will review the details you have given us and contact you on the email you provided.</p>

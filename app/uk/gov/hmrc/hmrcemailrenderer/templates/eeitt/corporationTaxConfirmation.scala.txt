@@ -2,11 +2,11 @@
 
 You notified HMRC that a non-resident company or CIV has disposed of an interest in UK property or land
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 HMRC has received your notification that a company or collective investment vehicle has disposed of an interest in UK property or land
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

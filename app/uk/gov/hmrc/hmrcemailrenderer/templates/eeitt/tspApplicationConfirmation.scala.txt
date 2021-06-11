@@ -2,13 +2,13 @@
 
 Submitted: your Transitional simplified procedures application
 
-Dear Dear @params.get("appName")
+Dear Dear @params("appName")
 
 We have received your application for transitional simplified procedures
 
 We will reply with a decision within 15 working days.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 Why you are receiving this email
 

@@ -3,11 +3,11 @@
 You applied to request a mandatory review of a childcare service application decision
 
 
-Dear @params.get("name")
+Dear @params("name")
 
 HMRC received your request for a mandatory review to challenge a childcare service application decision.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

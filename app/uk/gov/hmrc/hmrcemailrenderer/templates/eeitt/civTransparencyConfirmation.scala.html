@@ -18,11 +18,11 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a transparency election form online"){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("name") </p>
+    Dear @params("name") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your election for a collective investment vehicle to be transparent for UK capital gains tax purposes.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     If you need to contact us about this form, quote the submission reference.</p>
 <h2>

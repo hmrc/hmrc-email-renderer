@@ -2,7 +2,7 @@
 
 HM Revenue and Customs has received your application to register your business for Gaming Duty.
 
-Dear params.get("customerName")
+Dear params("customerName")
 
 We have received your application to register your business for Gaming Duty.
 
