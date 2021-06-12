@@ -17,7 +17,9 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.oss
 
 import org.scalatest.EitherValues
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
 import uk.gov.hmrc.play.test.UnitSpec
 
 class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
@@ -34,8 +36,12 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       .find(_.templateId == "oss_registration_confirmation")
       .get
 
-    "render correct subject" in {
+    "render correct meta information" in {
+      template.templateId shouldBe "oss_registration_confirmation"
+      template.service shouldBe OSS
+      template.fromAddress(Map.empty) shouldBe "HMRC One Stop Shop Team <noreply@tax.service.gov.uk>"
       template.subject(Map.empty) shouldBe "HMRC: your registration to pay VAT to the EU"
+      template.priority shouldBe Some(MessagePriority.Background)
     }
 
     "render correct html content" in {
