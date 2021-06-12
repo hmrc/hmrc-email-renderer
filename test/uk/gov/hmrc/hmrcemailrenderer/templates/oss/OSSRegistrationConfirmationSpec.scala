@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.oss
 import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 import uk.gov.hmrc.play.test.UnitSpec
 
 class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
