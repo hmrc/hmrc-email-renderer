@@ -1,7 +1,15 @@
-@(params: Map[String, Any])OSS Registration Confirmation - Title
+@(params: Map[String, Any])You are registered to pay VAT to the EU on sales of goods from Northern Ireland
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-OSS Registration Confirmation
+HMRC has received the registration from @params("businessName").
+
+We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
+
+If you need to contact us, quote your UK VAT registration number:
+
+@params("reference")
+
+From Pay VAT on sales of goods from Northern Ireland to the EU
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

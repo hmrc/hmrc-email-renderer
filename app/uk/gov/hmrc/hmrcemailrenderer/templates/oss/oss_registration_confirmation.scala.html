@@ -15,9 +15,25 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "OSS Registration Confirmation - Title") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on sales of goods from Northern Ireland") {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 <p style="margin: 0px 0 30px; font-size: 19px;">
- OSS Registration Confirmation
+ HMRC has received the registration from @params("businessName").
+</p>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+ We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
+</p>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+ If you need to contact us, quote your UK VAT registration number:
+</p>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+ @params("reference")
+</p>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+ From Pay VAT on sales of goods from Northern Ireland to the EU
 </p>
 }

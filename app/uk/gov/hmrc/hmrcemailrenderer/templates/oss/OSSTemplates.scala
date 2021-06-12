@@ -24,9 +24,9 @@ object OSSTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "oss_registration_confirmation",
-      fromAddress = FromAddress.noReply("OSS"),
+      fromAddress = FromAddress.noReply("HMRC One Stop Shop  Team"),
       service = OSS,
-      subject = "OSS Registration Confirmation",
+      subject = "HMRC: your registration to pay VAT to the EU",
       plainTemplate = txt.oss_registration_confirmation.f,
       htmlTemplate = html.oss_registration_confirmation.f,
       priority = Some(MessagePriority.Background)

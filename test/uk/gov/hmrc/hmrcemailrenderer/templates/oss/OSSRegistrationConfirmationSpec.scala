@@ -24,28 +24,42 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
 
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
-    val params = commonParameters
+    val params = commonParameters ++ Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName" -> "Test Business",
+      "reference" -> "123456789"
+    )
     val template = templateLocator
       .templateGroups("OSS")
       .find(_.templateId == "oss_registration_confirmation")
       .get
 
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe ("OSS Registration Confirmation")
+      template.subject(Map.empty) shouldBe "HMRC: your registration to pay VAT to the EU"
     }
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
-      htmlContent should include("OSS Registration Confirmation - Title")
-      htmlContent should include("OSS Registration Confirmation")
+      htmlContent should include("You are registered to pay VAT to the EU on sales of goods from Northern Ireland")
+      htmlContent should include("Dear Joe Bloggs")
+      htmlContent should include("HMRC has received the registration from Test Business.")
+      htmlContent should include("We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
+      htmlContent should include("If you need to contact us, quote your UK VAT registration number:")
+      htmlContent should include("123456789")
+      htmlContent should include("From Pay VAT on sales of goods from Northern Ireland to the EU")
     }
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-      txtContent should include("OSS Registration Confirmation")
-      txtContent should include("OSS Registration Confirmation - Title")
+      txtContent should include("You are registered to pay VAT to the EU on sales of goods from Northern Ireland")
+      txtContent should include("Dear Joe Bloggs")
+      txtContent should include("HMRC has received the registration from Test Business.")
+      txtContent should include("We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
+      txtContent should include("If you need to contact us, quote your UK VAT registration number:")
+      txtContent should include("123456789")
+      txtContent should include("From Pay VAT on sales of goods from Northern Ireland to the EU")
     }
   }
 }
