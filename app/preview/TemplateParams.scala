@@ -1554,8 +1554,8 @@ object TemplateParams {
     ),
     "oss_registration_confirmation" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
-      "businessName" -> "Test Business",
-      "reference" -> "123456789"
+      "businessName"        -> "Test Business",
+      "reference"           -> "123456789"
     )
   )
 }
@@ -2351,8 +2351,8 @@ object TemplateParams2 {
     "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
     "oss_registration_confirmation" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
-      "businessName" -> "Test Business",
-      "reference" -> "123456789"
+      "businessName"        -> "Test Business",
+      "reference"           -> "123456789"
     )
   )
 }

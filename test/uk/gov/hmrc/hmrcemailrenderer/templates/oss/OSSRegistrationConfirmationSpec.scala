@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.oss
 
 import org.scalatest.EitherValues
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 import uk.gov.hmrc.play.test.UnitSpec
 
 class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
@@ -26,8 +26,8 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
       "recipientName_line1" -> "Joe Bloggs",
-      "businessName" -> "Test Business",
-      "reference" -> "123456789"
+      "businessName"        -> "Test Business",
+      "reference"           -> "123456789"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -44,7 +44,8 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       htmlContent should include("You are registered to pay VAT to the EU on sales of goods from Northern Ireland")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received the registration from Test Business.")
-      htmlContent should include("We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
+      htmlContent should include(
+        "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
       htmlContent should include("If you need to contact us, quote your UK VAT registration number:")
       htmlContent should include("123456789")
       htmlContent should include("From Pay VAT on sales of goods from Northern Ireland to the EU")
@@ -56,7 +57,8 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       txtContent should include("You are registered to pay VAT to the EU on sales of goods from Northern Ireland")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received the registration from Test Business.")
-      txtContent should include("We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
+      txtContent should include(
+        "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
       txtContent should include("If you need to contact us, quote your UK VAT registration number:")
       txtContent should include("123456789")
       txtContent should include("From Pay VAT on sales of goods from Northern Ireland to the EU")
