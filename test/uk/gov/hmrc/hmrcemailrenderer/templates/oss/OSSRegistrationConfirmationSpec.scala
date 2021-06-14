@@ -39,7 +39,7 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
     "render correct meta information" in {
       template.templateId shouldBe "oss_registration_confirmation"
       template.service shouldBe OSS
-      template.fromAddress(Map.empty) shouldBe "HMRC One Stop Shop Team <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "VAT One Stop Shop Team <noreply@tax.service.gov.uk>"
       template.subject(Map.empty) shouldBe "HMRC: your registration to pay VAT to the EU"
       template.priority shouldBe Some(MessagePriority.Background)
     }
