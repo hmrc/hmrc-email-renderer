@@ -2,9 +2,9 @@
 
 You submitted an Alternative Dispute Resolution (ADR) application to HMRC
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

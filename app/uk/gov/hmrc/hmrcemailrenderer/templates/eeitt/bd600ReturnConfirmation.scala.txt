@@ -3,11 +3,11 @@
 You submitted a Lottery Duty return
 
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We have received your Lottery Duty return online.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 If you need to contact us about this return, quote the submission reference.
 

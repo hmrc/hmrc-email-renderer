@@ -1,8 +1,6 @@
 @(params: Map[String, Any])
 
-Dear @params.get("customerName")
-
-Dear Customer,
+Dear @params("customerName")
 
 You submitted a form to register for Fuel Duty online
 

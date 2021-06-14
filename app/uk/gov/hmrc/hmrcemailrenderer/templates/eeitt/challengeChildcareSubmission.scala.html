@@ -18,11 +18,11 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to request a mandatory review of a childcare service application decision"){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("name") </p>
+    Dear @params("name") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC received your request for a mandatory review to challenge a childcare service application decision. </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <h2>
     What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">

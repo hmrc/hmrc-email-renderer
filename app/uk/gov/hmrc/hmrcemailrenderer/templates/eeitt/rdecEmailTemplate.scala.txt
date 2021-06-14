@@ -2,11 +2,11 @@
 
 Supporting details for an R&D Expenditure Credit claim
 
-Dear @params.get("fillerName")
+Dear @params("fillerName")
 
 We have received your supporting details form for a Research and Development Expenditure Credit (RDEC) claim.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 If you need to contact us about this, please quote the submission reference.
 

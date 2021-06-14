@@ -17,11 +17,11 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to cancel your registration for transitional simplified procedures"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("appName")</p>
+    Dear @params("appName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC received your request to cancel your registration from transitional simplified procedures.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We will cancel your registration for transitional simplified procedures and write to you to let you know that your registration has been cancelled.</p>

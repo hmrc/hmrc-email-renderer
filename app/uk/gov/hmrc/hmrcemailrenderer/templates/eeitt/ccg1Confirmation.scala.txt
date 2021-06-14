@@ -3,11 +3,11 @@
 You applied for Customs Comprehensive Guarantee authorisation
 
 
-Dear @params.get("decName")
+Dear @params("decName")
 
 HMRC received an application on behalf of your business.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 
