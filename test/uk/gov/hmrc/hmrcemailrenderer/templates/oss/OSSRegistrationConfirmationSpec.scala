@@ -47,27 +47,31 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
-      htmlContent should include("You are registered to pay VAT to the EU on sales of goods from Northern Ireland")
+      htmlContent should include(
+        "You are registered to pay VAT to the EU on online sales of goods from Northern Ireland")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received the registration from Test Business.")
+      htmlContent should include("What happens next")
       htmlContent should include(
         "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
-      htmlContent should include("If you need to contact us, quote your UK VAT registration number:")
-      htmlContent should include("123456789")
-      htmlContent should include("From Pay VAT on sales of goods from Northern Ireland to the EU")
+      htmlContent should include("If you need to contact us")
+      htmlContent should include("Quote your UK VAT registration number: 123456789")
+      htmlContent should include("From the VAT One Stop Shop team")
     }
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-      txtContent should include("You are registered to pay VAT to the EU on sales of goods from Northern Ireland")
+      txtContent should include(
+        "You are registered to pay VAT to the EU on online sales of goods from Northern Ireland")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received the registration from Test Business.")
+      txtContent should include("What happens next")
       txtContent should include(
         "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
-      txtContent should include("If you need to contact us, quote your UK VAT registration number:")
-      txtContent should include("123456789")
-      txtContent should include("From Pay VAT on sales of goods from Northern Ireland to the EU")
+      txtContent should include("If you need to contact us")
+      txtContent should include("Quote your UK VAT registration number: 123456789")
+      txtContent should include("From the VAT One Stop Shop team")
     }
   }
 }

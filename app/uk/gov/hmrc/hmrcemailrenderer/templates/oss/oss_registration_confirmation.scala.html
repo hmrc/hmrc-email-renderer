@@ -15,25 +15,29 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on sales of goods from Northern Ireland") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on online sales of goods from Northern Ireland") {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 <p style="margin: 0px 0 30px; font-size: 19px;">
  HMRC has received the registration from @params("businessName").
 </p>
 
+<h2 style="margin: 0 0 30px; font-size: 19px;">
+ What happens next
+</h2>
+
 <p style="margin: 0px 0 30px; font-size: 19px;">
  We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
 </p>
 
+<h2 style="margin: 0 0 30px; font-size: 19px;">
+ If you need to contact us
+</h2>
+
 <p style="margin: 0px 0 30px; font-size: 19px;">
- If you need to contact us, quote your UK VAT registration number:
+ Quote your UK VAT registration number: @params("reference")
 </p>
 
 <p style="margin: 0px 0 30px; font-size: 19px;">
- @params("reference")
-</p>
-
-<p style="margin: 0px 0 30px; font-size: 19px;">
- From Pay VAT on sales of goods from Northern Ireland to the EU
+ From the VAT One Stop Shop team
 </p>
 }
