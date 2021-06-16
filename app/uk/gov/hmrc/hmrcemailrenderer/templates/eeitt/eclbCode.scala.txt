@@ -4,9 +4,9 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Apply for a Partial Exemption Special Method’ service on GOV.UK.
+You requested a code to continue with the ‘Apply for extended loss carry back’ service on GOV.UK.
 
-Your code is: @params("confirmationCode")
+Your code is: @params.get("confirmationCode")
 
 What you need to do now
 
@@ -16,6 +16,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From HMRC Partial Exemption Special Methods
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

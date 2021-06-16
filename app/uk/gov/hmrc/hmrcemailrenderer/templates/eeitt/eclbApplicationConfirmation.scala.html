@@ -15,22 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have made a claim for extended loss carry back"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer</p>
+    Dear @params.get("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You requested a code to continue with the ‘Apply for a Partial Exemption Special Method’ service on GOV.UK.</p>
+    HMRC has received your claim for extended loss carry back.
+</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your code is: @params("confirmationCode")</p>
-<h2>
-    What you need to do now</h2>
+    Your submission reference is: @params.get("submissionReference")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
+    We will assess your claim within 28 days, then write to tell you if a repayment is due.
+</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    Do not reply to this email.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Partial Exemption Special Methods</p>
+    From HMRC</p>
 }

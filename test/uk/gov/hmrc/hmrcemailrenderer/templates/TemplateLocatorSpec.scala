@@ -331,6 +331,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "nrsDLT_confirmation",
         "pesm_confirmation",
         "pesm_code",
+        "eclb_code",
+        "eclb_confirmation",
         "ctDormancy_code",
         "ctDormancy_confirmation",
         "tspDeReg_confirmation_submission",
