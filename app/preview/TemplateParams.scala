@@ -1551,6 +1551,11 @@ object TemplateParams {
     ),
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
+    ),
+    "oss_registration_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "reference"           -> "123456789"
     )
   )
 }
@@ -2443,6 +2448,11 @@ object TemplateParams2 {
     "newMessageAlert_P800_D2"     -> newMessageAlert_Names,
     "newMessageAlert_P800_D2_cy"  -> newMessageAlert_Names,
     "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
-    "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names
+    "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
+    "oss_registration_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "reference"           -> "123456789"
+    )
   )
 }

@@ -1,0 +1,17 @@
+@(params: Map[String, Any])You are registered to pay VAT to the EU on online sales of goods from Northern Ireland
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+HMRC has received the registration from @params("businessName").
+
+What happens next
+
+We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
+
+If you need to contact us
+
+Quote your UK VAT registration number: @params("reference")
+
+From the VAT One Stop Shop team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
