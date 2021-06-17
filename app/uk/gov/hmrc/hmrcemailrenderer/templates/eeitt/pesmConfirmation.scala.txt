@@ -4,7 +4,7 @@ You applied for a PESM for your business
 
 Dear @params("customerName")
 
-HMRC received your Partial exemption special method application.
+HMRC received your Partial Exemption Special Method application.
 
 Your submission reference is: @params("submissionReference")
 
@@ -22,6 +22,6 @@ Why you are receiving this email
 We send a confirmation email for an application submitted online.
 
 
-From HMRC Partial exemption special methods
+From HMRC Partial Exemption Special Methods
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

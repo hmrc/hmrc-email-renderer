@@ -504,7 +504,7 @@ object EeittTemplates {
       templateId = "bd600_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your exemption election",
+      subject = "HMRC received your Lottery Duty return",
       plainTemplate = txt.bd600ReturnConfirmation.f,
       htmlTemplate = html.bd600ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
@@ -908,6 +908,24 @@ object EeittTemplates {
       plainTemplate = txt.ctDormancyCode.f,
       htmlTemplate = html.ctDormancyCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "eclb_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Apply for extended loss carry back",
+      plainTemplate = txt.eclbCode.f,
+      htmlTemplate = html.eclbCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "eclb_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your claim for extended loss carry back",
+      plainTemplate = txt.eclbApplicationConfirmation.f,
+      htmlTemplate = html.eclbApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
