@@ -931,7 +931,7 @@ object EeittTemplates {
       templateId = "ioss_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address – Tell HMRC about your EU Import One Stop Shop (IOSS) registration",
+      subject = "Confirm your email address – Tell HMRC you are registered for the VAT Import One Stop Shop in the EU",
       plainTemplate = txt.iossCode.f,
       htmlTemplate = html.iossCode.f,
       priority = Some(MessagePriority.Urgent)
