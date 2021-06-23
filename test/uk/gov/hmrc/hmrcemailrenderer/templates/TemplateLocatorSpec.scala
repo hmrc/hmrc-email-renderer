@@ -275,6 +275,8 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "ipr2_confirmation_submission",
         "ipr3_confirmation_submission",
         "seiss_repay_submission",
+        "ioss_code",
+        "ioss_confirmation",
         "c117_application_confirmation",
         "c118_section1_part1_application_confirmation",
         "c118_section1_part2_application_confirmation",

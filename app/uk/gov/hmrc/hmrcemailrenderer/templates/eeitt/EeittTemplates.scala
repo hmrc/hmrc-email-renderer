@@ -922,9 +922,27 @@ object EeittTemplates {
       templateId = "eclb_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your claim for extended loss carry back",
+      subject = " HMRC received your claim for extended loss carry back",
       plainTemplate = txt.eclbApplicationConfirmation.f,
       htmlTemplate = html.eclbApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Tell HMRC you are registered for the VAT Import One Stop Shop in the EU",
+      plainTemplate = txt.iossCode.f,
+      htmlTemplate = html.iossCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You told HMRC about an IOSS registration",
+      plainTemplate = txt.iossConfirmation.f,
+      htmlTemplate = html.iossConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )
