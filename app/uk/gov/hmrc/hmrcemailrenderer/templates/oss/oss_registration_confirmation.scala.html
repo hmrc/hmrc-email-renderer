@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on online sales of goods from Northern Ireland") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland") {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
 <p style="margin: 0px 0 30px; font-size: 19px;">
  HMRC has received the registration from @params("businessName").
@@ -24,6 +24,14 @@
 <h2 style="margin: 0 0 30px; font-size: 19px;">
  What happens next
 </h2>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+ We will contact you if we need to check any information.
+</p>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+ Your sales starting from @params("startDate") will be included in this scheme.
+</p>
 
 <p style="margin: 0px 0 30px; font-size: 19px;">
  We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.

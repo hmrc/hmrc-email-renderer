@@ -29,6 +29,7 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
     val params = commonParameters ++ Map(
       "recipientName_line1" -> "Joe Bloggs",
       "businessName"        -> "Test Business",
+      "startDate"           -> "12 June 2021",
       "reference"           -> "123456789"
     )
     val template = templateLocator
@@ -48,10 +49,12 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include(
-        "You are registered to pay VAT to the EU on online sales of goods from Northern Ireland")
+        "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received the registration from Test Business.")
       htmlContent should include("What happens next")
+      htmlContent should include("We will contact you if we need to check any information.")
+      htmlContent should include("Your sales starting from 12 June 2021 will be included in this scheme.")
       htmlContent should include(
         "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
       htmlContent should include("If you need to contact us")
@@ -63,10 +66,12 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       val txtContent = template.plainTemplate(params).toString
 
       txtContent should include(
-        "You are registered to pay VAT to the EU on online sales of goods from Northern Ireland")
+        "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received the registration from Test Business.")
       txtContent should include("What happens next")
+      txtContent should include("We will contact you if we need to check any information.")
+      txtContent should include("Your sales starting from 12 June 2021 will be included in this scheme.")
       txtContent should include(
         "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
       txtContent should include("If you need to contact us")
