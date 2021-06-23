@@ -4,7 +4,7 @@ We received your EU Import One Stop Shop (IOSS) notification
 
 Dear @params("customerName")
 
-You told HMRC the IOSS registrations details for @params("businessName").
+You told HMRC the IOSS registration details for @params("businessName").
 
 Your submission reference is: @params("submissionReference")
 
@@ -14,6 +14,6 @@ Why you are receiving this email
 
 We send a confirmation email for a notification submitted online.
 
-From HMRC Import One Stop Shop Team
+From HMRC Import One Stop Shop team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
