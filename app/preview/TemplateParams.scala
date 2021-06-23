@@ -1555,6 +1555,7 @@ object TemplateParams {
     "oss_registration_confirmation" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
       "businessName"        -> "Test Business",
+      "startDate"           -> "12 June 2021",
       "reference"           -> "123456789"
     )
   )
@@ -2467,6 +2468,7 @@ object TemplateParams2 {
     "oss_registration_confirmation" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
       "businessName"        -> "Test Business",
+      "startDate"           -> "12 June 2021",
       "reference"           -> "123456789"
     )
   )

@@ -1,10 +1,14 @@
-@(params: Map[String, Any])You are registered to pay VAT to the EU on online sales of goods from Northern Ireland
+@(params: Map[String, Any])You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 HMRC has received the registration from @params("businessName").
 
 What happens next
+
+We will contact you if we need to check any information.
+
+Your sales starting from @params("startDate") will be included in this scheme.
 
 We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
 
