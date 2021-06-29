@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Gwnaethoch gŵyn ynghylch CThEM
+
+Annwyl @{params("name")}
+
+Y cyfeirnod ar gyfer eich cwyn yw: @{params("submissionReference")}
+
+Byddwn yn cynnwys hyn os cysylltwn â chi drwy e-bost neu drwy lythyr.
+
+Os gwnaethoch ofyn i ni eich ateb dros y ffôn, byddwn yn eich ffonio o rif sy’n dechrau gyda 03000, neu sy’n dangos fel rhif anhysbys neu rif sydd wedi’i ddal yn ôl.
+ 
+Os na allwn gael gafael arnoch dros y ffôn a’ch bod wedi rhoi cyfeiriad e-bost i ni, byddwn yn anfon e-bost atoch er mwyn trefnu amser cyfleus i drafod eich cwyn.
+ 
+Byddwn yn delio â’ch cwyn mewn ffordd deg a chyfrinachol ac yn ymchwilio i’r materion yn drwyadl. Byddwn hefyd yn rhoi’r  rhoi’r diweddaraf i chi am hynt eich cwyn.
+ 
+Oddi wrth Gyllid a Thollau EM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

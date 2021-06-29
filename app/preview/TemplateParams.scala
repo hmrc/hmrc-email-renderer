@@ -528,6 +528,16 @@ object TemplateParams {
       "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
     ),
+    "dfs_submission_success_gencompsub_2021" -> Map(
+      "subject"             -> "Test subject",
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "123-ABCD-456"
+    ),
+    "dfs_submission_success_gencompsub_2021_welsh" -> Map(
+      "subject"             -> "Test Subject",
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "123-ABCD-456"
+    ),
     "cato_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),

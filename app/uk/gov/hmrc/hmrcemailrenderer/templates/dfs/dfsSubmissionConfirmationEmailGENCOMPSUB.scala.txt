@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You made a complaint about HMRC
+
+Dear @{params("name")}
+
+The reference number for your complaint is: @{params("submissionReference")}
+
+We will include this if we contact you by email or by letter.
+
+If you asked us to reply by telephone we will call you from a number that begins with 03000, or displays as unknown or withheld.
+ 
+If we cannot reach you by telephone, and you have provided an email address, we will email you to arrange a convenient time to talk about your complaint.
+ 
+We will handle your complaint fairly, confidentially and investigate the issues thoroughly. We will also keep you informed of the progress of your complaint.
+ 
+From HM Revenue and Customs
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

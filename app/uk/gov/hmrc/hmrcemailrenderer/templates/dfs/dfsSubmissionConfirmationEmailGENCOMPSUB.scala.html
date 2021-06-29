@@ -1,0 +1,34 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "") {
+    <h2 style="margin: 0 0 30px; font-size: 19px;">You made a complaint about HMRC</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")}</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">The reference number for your complaint is: @{params("submissionReference")}</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We will include this if we contact you by email or by letter.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you asked us to reply by telephone we will call you from a number that begins with 03000, or displays as unknown or withheld.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If we cannot reach you by telephone, and you have provided an email address, we will email you to arrange a convenient time to talk about your complaint.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We will handle your complaint fairly, confidentially and investigate the issues thoroughly. We will also keep you informed of the progress of your complaint.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HM Revenue and Customs</p>
+
+}
