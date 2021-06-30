@@ -1686,10 +1686,10 @@ object TemplateParams2 {
       "cumbernauld"   -> "2,9700002,0,0,2,9700002"
     ),
     "recon_tops_report" -> Map(
-      "subject"         -> "ETMP Telephone Payment Service (TPS) Finance Report 27/09/2027",
+      "subject"         -> "ETMP Telephone Payment Service (TPS) Finance report 27 September 2027",
       "TOPS_ROW_P800"   -> "P800,4,11842279,2,0,2,14443,4,11842279",
       "TOPS_ROW_SA"     -> "SA,94,911842279,92,90,92,914443,94,911842279",
-      "TOPS_ROW_TOTALS" -> "totals,84,811842279,82,80,82,814443,84,811842279"
+      "TOPS_ROW_TOTALS" -> "Totals,84,811842279,82,80,82,814443,84,811842279"
     ),
     "recon_surcharge_report" -> Map(
       "subject"                                            -> "Surcharge report 27/09/2027",
