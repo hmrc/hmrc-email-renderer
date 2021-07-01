@@ -2,11 +2,11 @@
 
 You applied to remove an employer’s name from the register
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We received your application to remove an employer’s name from the Job Retention Scheme register.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 We will now review the details you have given us.
 

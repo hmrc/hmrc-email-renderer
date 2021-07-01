@@ -17,14 +17,14 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have told HMRC about a change to your tax return that could affect your SEISS grant"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     This email confirms that you have told us of an amendment to your tax returns on or after 3 March 2021 which could affect your eligibility for the Self-Employment Income Support Scheme grant.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We will now recalculate your eligibility and then write to tell you how much to repay and how to do so.
 </p>
-<p style="margin: 0 0 30px; font-size: 19px;">Your reference is:  @params.get("submissionReference")<p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your reference is:  @params("submissionReference")<p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     From: Tax Administration Directorate - Self Employment Income Support, HMRC</p>
 }

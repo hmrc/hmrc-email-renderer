@@ -910,21 +910,21 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "eclb_code",
+      templateId = "elcb_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Confirm your email address – Apply for extended loss carry back",
-      plainTemplate = txt.eclbCode.f,
-      htmlTemplate = html.eclbCode.f,
+      plainTemplate = txt.elcbCode.f,
+      htmlTemplate = html.elcbCode.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "eclb_confirmation",
+      templateId = "elcb_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = " HMRC received your claim for extended loss carry back",
-      plainTemplate = txt.eclbApplicationConfirmation.f,
-      htmlTemplate = html.eclbApplicationConfirmation.f,
+      subject = "HMRC received your claim for extended loss carry back",
+      plainTemplate = txt.elcbApplicationConfirmation.f,
+      htmlTemplate = html.elcbApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(

@@ -2,7 +2,7 @@
 
 Submitted: your Transitional simplified procedures application
 
-Dear Dear @params("appName")
+Dear @params("appName")
 
 We have received your application for transitional simplified procedures
 

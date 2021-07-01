@@ -1,8 +1,8 @@
 @(params: Map[String, Any])
 
-You told HMRC that @params.get("companyName") is not required to register for Making Tax Digital for VAT
+You told HMRC that @params("companyName") is not required to register for Making Tax Digital for VAT
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We received your VAT declaration about your business and will now update our records.
 

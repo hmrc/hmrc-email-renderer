@@ -2,7 +2,7 @@
 
 You have made a claim for extended loss carry back
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 HMRC has received your claim for extended loss carry back.
 

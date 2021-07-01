@@ -2,16 +2,16 @@
 
 You asked HMRC to verify information about a child
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
-@params.get("serviceName")
+@params("serviceName")
 
-@params.get("slaDetails")
+@params("slaDetails")
 
 Why you are receiving this email
 
 We send a confirmation email for all forms submitted online.
 
-From the @params.get("serviceTeamName")
+From the @params("serviceTeamName")
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

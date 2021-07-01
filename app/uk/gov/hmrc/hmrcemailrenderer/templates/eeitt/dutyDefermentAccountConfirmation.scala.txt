@@ -2,11 +2,11 @@
 
 You applied for a Duty Deferment Account
 
-Dear Dear @params.get("customerName")
+Dear @params("customerName")
 
 HMRC received an application for a Duty Deferment Account (DDA) on behalf of your business.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 If we have any questions we will contact you quoting the submission reference shown above.
 
