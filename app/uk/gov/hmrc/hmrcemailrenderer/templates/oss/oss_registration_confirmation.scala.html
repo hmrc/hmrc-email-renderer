@@ -17,35 +17,43 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland") {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
-<p style="margin: 0px 0 30px; font-size: 19px;">
- HMRC has received the registration from @params("businessName").
-</p>
-
-<h2 style="margin: 0 0 30px; font-size: 19px;">
- What happens next
-</h2>
-
-<p style="margin: 0px 0 30px; font-size: 19px;">
- We will contact you if we need to check any information.
-</p>
-
-<p style="margin: 0px 0 30px; font-size: 19px;">
- Your sales starting from @params("startDate") will be included in this scheme.
-</p>
-
-<p style="margin: 0px 0 30px; font-size: 19px;">
- We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
-</p>
-
-<h2 style="margin: 0 0 30px; font-size: 19px;">
- If you need to contact us
-</h2>
-
-<p style="margin: 0px 0 30px; font-size: 19px;">
- Quote your UK VAT registration number: @params("reference")
-</p>
-
-<p style="margin: 0px 0 30px; font-size: 19px;">
- From the VAT One Stop Shop team
-</p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    HMRC has received the registration from @params("businessName").
+ </p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    Your eligible sales starting from @params("startDate") will be included in this scheme.
+ </p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    You should:
+   <ul>
+     <li style="font-size: 19px;">
+       charge VAT at the rate of the EU country where the goods are sent to
+     </li>
+     <li style="font-size: 19px;">
+       complete a single quarterly return using this scheme for eligible sales of goods to consumers in the EU
+     </li>
+     <li style="font-size: 19px;">
+       make a quarterly payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
+     </li>
+   </ul>
+ </p>
+ <br>
+ <h2 style="margin: 0 0 30px; font-size: 19px;">
+    What happens next
+ </h2>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    We will contact you if we need to check any information.
+ </p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
+ </p>
+ <h2 style="margin: 0 0 30px; font-size: 19px;">
+    If you need to contact us
+ </h2>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    Quote your UK VAT registration number: @params("reference")
+ </p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    From the VAT One Stop Shop team
+ </p>
 }

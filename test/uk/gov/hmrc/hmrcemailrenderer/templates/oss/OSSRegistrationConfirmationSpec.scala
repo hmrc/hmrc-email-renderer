@@ -41,7 +41,7 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       template.templateId shouldBe "oss_registration_confirmation"
       template.service shouldBe OSS
       template.fromAddress(Map.empty) shouldBe "VAT One Stop Shop Team <noreply@tax.service.gov.uk>"
-      template.subject(Map.empty) shouldBe "HMRC: your registration to pay VAT to the EU"
+      template.subject(Map.empty) shouldBe "HMRC: your registration for the One Stop Shop Union scheme"
       template.priority shouldBe Some(MessagePriority.Background)
     }
 
@@ -52,9 +52,15 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
         "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received the registration from Test Business.")
+      htmlContent should include("Your eligible sales starting from 12 June 2021 will be included in this scheme.")
+      htmlContent should include("You should:")
+      htmlContent should include("charge VAT at the rate of the EU country where the goods are sent to")
+      htmlContent should include(
+        "complete a single quarterly return using this scheme for eligible sales of goods to consumers in the EU")
+      htmlContent should include(
+        "make a quarterly payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
-      htmlContent should include("Your sales starting from 12 June 2021 will be included in this scheme.")
       htmlContent should include(
         "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
       htmlContent should include("If you need to contact us")
@@ -69,9 +75,15 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
         "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received the registration from Test Business.")
+      txtContent should include("Your eligible sales starting from 12 June 2021 will be included in this scheme.")
+      txtContent should include("You should:")
+      txtContent should include("charge VAT at the rate of the EU country where the goods are sent to")
+      txtContent should include(
+        "complete a single quarterly return using this scheme for eligible sales of goods to consumers in the EU")
+      txtContent should include(
+        "make a quarterly payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
-      txtContent should include("Your sales starting from 12 June 2021 will be included in this scheme.")
       txtContent should include(
         "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
       txtContent should include("If you need to contact us")

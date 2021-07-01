@@ -26,7 +26,7 @@ object OSSTemplates {
       templateId = "oss_registration_confirmation",
       fromAddress = FromAddress.noReply("VAT One Stop Shop Team"),
       service = OSS,
-      subject = "HMRC: your registration to pay VAT to the EU",
+      subject = "HMRC: your registration for the One Stop Shop Union scheme",
       plainTemplate = txt.oss_registration_confirmation.f,
       htmlTemplate = html.oss_registration_confirmation.f,
       priority = Some(MessagePriority.Background)
