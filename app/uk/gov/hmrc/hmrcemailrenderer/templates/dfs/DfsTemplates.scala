@@ -193,6 +193,24 @@ object DfsTemplates {
       plainTemplate = txt.dfsSubmissionConfirmationEmailRCGT_welsh.f,
       htmlTemplate = html.dfsSubmissionConfirmationEmailRCGT_welsh.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_gencompsub_2021",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailGENCOMPSUB.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailGENCOMPSUB.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dfs_submission_success_gencompsub_2021_welsh",
+      fromAddress = govUkTeamAddress,
+      service = DigitalFormsService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.dfsSubmissionConfirmationEmailGENCOMPSUB_welsh.f,
+      htmlTemplate = html.dfsSubmissionConfirmationEmailGENCOMPSUB_welsh.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
