@@ -7,7 +7,7 @@ Dear Customer
 
 You requested a code to continue with the ‘Transparency Election for UK Capital Gains Tax - Offshore Collective Investment Vehicles’ service on GOV.UK.
 
-Your code is: @params.get("confirmationCode")
+Your code is: @params("confirmationCode")
 
 What you need to do now
 

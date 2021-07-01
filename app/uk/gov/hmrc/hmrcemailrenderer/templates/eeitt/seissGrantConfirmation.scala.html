@@ -17,12 +17,12 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC received your request to review your Self-Employment Income Support Scheme grant amount"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your request to review your Self-Employment Income Support Scheme grant amount.</p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will @params.get("workingDays").
+    We will @params("workingDays").
 </p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">

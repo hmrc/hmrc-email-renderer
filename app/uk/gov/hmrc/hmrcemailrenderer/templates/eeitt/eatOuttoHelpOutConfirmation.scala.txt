@@ -2,7 +2,7 @@
 
 You sent a disclosure online about Eat Out to Help Out Scheme payment
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We received your disclosure to tell us you intend to repay Eat Out to Help Out Scheme payment.
 

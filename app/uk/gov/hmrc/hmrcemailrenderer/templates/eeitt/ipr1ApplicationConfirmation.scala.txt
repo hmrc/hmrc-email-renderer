@@ -2,11 +2,11 @@
 
 You applied to protect intellectual property rights at the UK border
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 HMRC received your request to protect intellectual property rights.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

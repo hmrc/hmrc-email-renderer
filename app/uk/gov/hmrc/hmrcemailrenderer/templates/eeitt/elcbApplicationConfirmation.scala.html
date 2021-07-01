@@ -17,12 +17,12 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have made a claim for extended loss carry back"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC has received your claim for extended loss carry back.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We will assess your claim within 28 days, then write to tell you if a repayment is due.
 </p>

@@ -14,7 +14,7 @@ This is because it will no longer:
 
 - sell or move goods from Northern Ireland to an EU member state
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 From HMRC
 

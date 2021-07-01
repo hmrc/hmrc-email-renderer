@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a notification online about Self-Employment Income Support Scheme grant money"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We received your notification to tell us you intend to repay Self-Employment Income Support Scheme grant money.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
@@ -27,5 +27,5 @@
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for all forms submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From @params.get("emailTeam")</p>
+    From @params("emailTeam")</p>
 }

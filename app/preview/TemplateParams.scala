@@ -2328,20 +2328,6 @@ object TemplateParams2 {
       "caseNumber"  -> "0004201hog42",
       "claimAmount" -> "500"
     ),
-    "pesm_confirmation" -> Map(
-      "customerName"        -> "Hugh Mann",
-      "submissionReference" -> "NC38-N2ZC-TH68"
-    ),
-    "pesm_code" -> Map(
-      "confirmationCode" -> "HGDY"
-    ),
-    "ctDormancy_confirmation" -> Map(
-      "customerName"        -> "Hugh Mann",
-      "submissionReference" -> "NC38-N2ZC-TH68"
-    ),
-    "ctDormancy_code" -> Map(
-      "confirmationCode" -> "HGDY"
-    ),
     "tsp_application_confirmation" -> Map(
       "appName"             -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
@@ -2442,12 +2428,151 @@ object TemplateParams2 {
     "civQualifying_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
     ),
-    "eclb_confirmation" -> Map(
+    "civTransparency_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "civTransparency_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_confirmation_submission" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
-    "eclb_code" -> Map(
+    "cjrs_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
+    ),
+    "cjrs_confirmation_submission" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "seiss_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "seiss_eligibility_submission" -> Map(
+      "customerName" -> "Hugh Mann",
+      "workingDays"  -> "contact you in..."
+    ),
+    "seiss_new_child_submission" -> Map(
+      "customerName"    -> "Hugh Mann",
+      "serviceName"     -> "We received your request for...",
+      "slaDetails"      -> "We will reply in...",
+      "serviceTeamName" -> "HMRC Team"
+    ),
+    "seiss_grant_submission" -> Map(
+      "customerName" -> "Hugh Mann",
+      "workingDays"  -> "contact you in..."
+    ),
+    "ipr1_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ipr2_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ipr3_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seiss_repay_submission" -> Map(
+      "customerName" -> "Hugh Mann",
+      "emailTeam"    -> "HMRC Team"
+    ),
+    "vishing_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ipr1_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ipr2_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ipr3_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "vat_declaration_confirmation" -> Map(
+      "customerName" -> "Hugh Mann",
+      "companyName"  -> "Acquisitions Incorporated"
+    ),
+    "trading_status_before_seiss_claimed" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "settlement_request" -> Map(
+      "customerName" -> "Hugh Mann",
+      "slaParam"     -> "within..."
+    ),
+    "complaint_consultation_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "consultation_complaint_confirmation" -> Map(
+      "customerName"     -> "Hugh Mann",
+      "consultationName" -> "Mr P Staker"
+    ),
+    "dan_waiver_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "duty_deferment_account_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "duty_deferment_account_amend_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "eat_out_help_out_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "ni_vat_Status_reporting_confirmation" -> Map(
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ni_vat_Status_withdrawal_confirmation" -> Map(
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tor_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "tor_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "jrsRemoval_submission_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "nrsDLT_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "nrsDLT_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seissOverPayment_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "pesm_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "pesm_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ctDormancy_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ctDormancy_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "elcb_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "elcb_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "ioss_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",

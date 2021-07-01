@@ -2,11 +2,11 @@
 
 You requested to change or cancel a duty deferment account
 
-Dear Dear @params.get("customerName")
+Dear Dear @params("customerName")
 
 HMRC received your request to change or cancel a duty deferment account.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 We may contact you if we need further information.
 

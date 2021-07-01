@@ -2,7 +2,7 @@
 
 You sent a notification online about Self-Employment Income Support Scheme grant money
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We received your notification to tell us you intend to repay Self-Employment Income Support Scheme grant money.
 
@@ -12,6 +12,6 @@ Why you are receiving this email
 
 We send a confirmation email for all forms submitted online.
 
-From @params.get("emailTeam")
+From @params("emailTeam")
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

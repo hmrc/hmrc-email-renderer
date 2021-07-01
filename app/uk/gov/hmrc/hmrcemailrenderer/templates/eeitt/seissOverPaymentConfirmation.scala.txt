@@ -2,13 +2,13 @@
 
 You have told HMRC about a change to your tax return that could affect your SEISS grant
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 This email confirms that you have told us of an amendment to your tax returns on or after 3 March 2021 which could affect your eligibility for the Self-Employment Income Support Scheme grant.
 
 We will now recalculate your eligibility and then write to tell you how much to repay and how to do so.
 
-Your reference is:  @params.get("submissionReference")
+Your reference is:  @params("submissionReference")
 
 From: Tax Administration Directorate - Self Employment Income Support, HMRC
 

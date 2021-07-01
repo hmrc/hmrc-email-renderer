@@ -2,11 +2,11 @@
 
 You sent an advance payment claim form online
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We have received your claim for an advance payment of Statutory Parental Bereavement Pay.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 If you need to contact us about this form, quote the submission reference.
 

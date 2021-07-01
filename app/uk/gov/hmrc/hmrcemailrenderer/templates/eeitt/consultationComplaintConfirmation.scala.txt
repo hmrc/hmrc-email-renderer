@@ -2,9 +2,9 @@
 
 You sent a comment or complaint about a consultation
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
-We have received your comment or complaint about @params.get("consultationName").
+We have received your comment or complaint about @params("consultationName").
 
 We will contact you as soon as possible, using your preferred method.
 

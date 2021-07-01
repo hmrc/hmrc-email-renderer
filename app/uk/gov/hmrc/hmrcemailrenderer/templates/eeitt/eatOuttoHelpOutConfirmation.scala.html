@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a disclosure online about Eat Out to Help Out Scheme payment"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName") </p>
+    Dear @params("customerName") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We received your disclosure to tell us you intend to repay Eat Out to Help Out Scheme payment.</b></p>
 <h2>
