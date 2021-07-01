@@ -2,7 +2,7 @@
 
 You requested to change or cancel a duty deferment account
 
-Dear Dear @params("customerName")
+Dear @params("customerName")
 
 HMRC received your request to change or cancel a duty deferment account.
 

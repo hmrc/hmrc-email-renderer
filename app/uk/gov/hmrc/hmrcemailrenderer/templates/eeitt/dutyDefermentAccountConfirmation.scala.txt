@@ -2,7 +2,7 @@
 
 You applied for a Duty Deferment Account
 
-Dear Dear @params("customerName")
+Dear @params("customerName")
 
 HMRC received an application for a Duty Deferment Account (DDA) on behalf of your business.
 
