@@ -23,8 +23,8 @@ class ProblemSpec extends WordSpec with Matchers {
 
   "Problem" should {
     "provide meaningful description for percentages lower than 1%" in {
-      Problem("Header value is not an IP address", 1).percentageDescription shouldBe "found in 1% of your requests"
-      Problem("Header value is not an IP address", 0).percentageDescription shouldBe "found in fewer than 1% of your requests"
+      Problem("Header value is not an IP address", 1, 1).percentageDescription shouldBe "found in 1% of your requests"
+      Problem("Header value is not an IP address", 0, 1).percentageDescription shouldBe "found in fewer than 1% of your requests"
     }
   }
 }
