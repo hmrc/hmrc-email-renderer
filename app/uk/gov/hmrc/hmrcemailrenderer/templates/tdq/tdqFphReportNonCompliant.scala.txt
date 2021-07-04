@@ -56,9 +56,9 @@ If your application sent requests via an additional connection method, you'll re
 @for(headersValidation <- extraDetails.headerValidations) {
 @headersValidation.prettyHeaderOrHeaders
 
-@for(error <- headersValidation.errors) {Error @error.message @error.count @error.shortPercentageDescription
+@for(error <- headersValidation.errors) {Error @error.message @error.prettyCount @error.shortPercentageDescription
 
-}@for(warning <- headersValidation.warnings) {Warning @warning.message @warning.count @warning.shortPercentageDescription
+}@for(warning <- headersValidation.warnings) {Warning @warning.message @warning.prettyCount @warning.shortPercentageDescription
 
 }}
 Missing data

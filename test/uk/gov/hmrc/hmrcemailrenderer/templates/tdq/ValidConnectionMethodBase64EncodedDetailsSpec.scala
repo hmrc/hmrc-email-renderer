@@ -34,7 +34,7 @@ class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matche
     }
   }
 
-  "Extra details needed" should {
+  "Extra details" should {
 
     "have a single header in the same format as the specification" in {
       val validation = HeadersValidation("gov-client-public-ip", Set.empty, Set.empty)
@@ -42,7 +42,8 @@ class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matche
     }
 
     "have multiple headers in the same format as the specification" in {
-      val validation = HeadersValidation("gov-vendor-forwarded, gov-vendor-public-ip, gov-client-public-ip", Set.empty, Set.empty)
+      val validation =
+        HeadersValidation("gov-vendor-forwarded, gov-vendor-public-ip, gov-client-public-ip", Set.empty, Set.empty)
       validation.prettyHeaderOrHeaders shouldBe "Gov-Vendor-Forwarded, Gov-Vendor-Public-IP, Gov-Client-Public-IP"
     }
 

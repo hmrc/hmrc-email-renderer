@@ -1961,7 +1961,7 @@ object TemplateParams2 {
         parse("""
         {
           "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 100,
+          "requestCount": 10500,
           "headerValidations": [
             {
               "headerOrHeaders": "gov-client-public-ip",
@@ -1969,11 +1969,11 @@ object TemplateParams2 {
                 {
                   "message": "Value is not an IP address",
                   "percentage": 5,
-                  "count": 5
+                  "count": 525
                 }, {
                   "message": "Value is not a public IP address",
                   "percentage": 10,
-                  "count": 10
+                  "count": 1050
                 }
               ],
               "warnings": []
@@ -1983,26 +1983,22 @@ object TemplateParams2 {
                 {
                   "message": "Value must be a key-value data structure",
                   "percentage": 10,
-                  "count": 10
-                }, {
-                  "message": "At least 1 key or value is not percent encoded",
-                  "percentage": 25,
-                  "count": 25
+                  "count": 1075
                 }, {
                   "message": "At least 1 software version value is missing",
                   "percentage": 15,
-                  "count": 15
+                  "count": 1580
                 }, {
                   "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
                   "percentage": 0,
-                  "count": 1
+                  "count": 10
                 }
               ],
               "warnings": [
                 {
                   "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
                   "percentage": 10,
-                  "count": 10
+                  "count": 107
                 }
               ]
             },
@@ -2011,19 +2007,13 @@ object TemplateParams2 {
               "errors" : [],
               "warnings": [
                 {
-                  "message": "Use a recommended UUID. Check the specification.",
-                  "percentage": 0,
-                  "count": 1
-                },
-                {
                   "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
                   "percentage": 17,
-                  "count": 17
-                },
-                {
+                  "count": 1801
+                }, {
                   "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
                   "percentage": 22,
-                  "count": 22
+                  "count": 2315
                 }
               ]
             }
