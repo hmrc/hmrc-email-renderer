@@ -4,21 +4,21 @@
 
 HMRC has received the registration from @params("businessName").
 
-Your eligible sales starting from @params("startDate") will be included in this scheme.
+You need to charge VAT at the rate of the EU country where the goods are sent to.
 
-You should:
+For each calendar quarter, you need to use the new One Stop Shop service to:
 
-- charge VAT at the rate of the EU country where the goods are sent to
+- complete a single return for eligible sales of goods to consumers in the EU
 
-- complete a single quarterly return using this scheme for eligible sales of goods to consumers in the EU
+- make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
 
-- make a quarterly payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
+Your first return will be for eligible sales starting from @params("startDate") to @params("lastDayOfCalendarQuarter").
 
 What happens next
 
 We will contact you if we need to check any information.
 
-We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.
+We will contact you about how to use the new service to submit your first return by @params("lastDayOfMonthAfterCalendarQuarter") and make payment.
 
 If you need to contact us
 

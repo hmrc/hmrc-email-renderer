@@ -2601,10 +2601,12 @@ object TemplateParams2 {
     "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
     "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
     "oss_registration_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "startDate"           -> "12 June 2021",
-      "reference"           -> "123456789"
+      "recipientName_line1"                 -> "Joe Bloggs",
+      "businessName"                        -> "Test Business",
+      "startDate"                           -> "12 June 2021",
+      "reference"                           -> "123456789",
+      "lastDayOfCalendarQuarter"            -> "30 September 2021",
+      "lastDayOfMonthAfterCalendarQuarter"  -> "31 October 2021"
     )
   )
 }
