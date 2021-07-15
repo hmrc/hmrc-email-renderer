@@ -27,10 +27,12 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "startDate"           -> "12 June 2021",
-      "reference"           -> "123456789"
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "startDate"                          -> "1 July 2021",
+      "reference"                          -> "123456789",
+      "lastDayOfCalendarQuarter"           -> "30 September 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -52,17 +54,17 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
         "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received the registration from Test Business.")
-      htmlContent should include("Your eligible sales starting from 12 June 2021 will be included in this scheme.")
-      htmlContent should include("You should:")
-      htmlContent should include("charge VAT at the rate of the EU country where the goods are sent to")
+      htmlContent should include("You need to charge VAT at the rate of the EU country where the goods are sent to.")
+      htmlContent should include("For each calendar quarter, you need to use the new One Stop Shop service to:")
+      htmlContent should include("complete a single return for eligible sales of goods to consumers in the EU")
       htmlContent should include(
-        "complete a single quarterly return using this scheme for eligible sales of goods to consumers in the EU")
+        "make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
       htmlContent should include(
-        "make a quarterly payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
+        "Your first return will be for eligible sales starting from 1 July 2021 to 30 September 2021.")
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
-        "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
+        "We will contact you about how to use the new service to submit your first return by 31 October 2021 and make payment.")
       htmlContent should include("If you need to contact us")
       htmlContent should include("Quote your UK VAT registration number: 123456789")
       htmlContent should include("From the VAT One Stop Shop team")
@@ -75,17 +77,17 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
         "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received the registration from Test Business.")
-      txtContent should include("Your eligible sales starting from 12 June 2021 will be included in this scheme.")
-      txtContent should include("You should:")
-      txtContent should include("charge VAT at the rate of the EU country where the goods are sent to")
+      txtContent should include("You need to charge VAT at the rate of the EU country where the goods are sent to.")
+      txtContent should include("For each calendar quarter, you need to use the new One Stop Shop service to:")
+      txtContent should include("complete a single return for eligible sales of goods to consumers in the EU")
       txtContent should include(
-        "complete a single quarterly return using this scheme for eligible sales of goods to consumers in the EU")
+        "make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
       txtContent should include(
-        "make a quarterly payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
+        "Your first return will be for eligible sales starting from 1 July 2021 to 30 September 2021.")
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include(
-        "We will send you details about how to submit returns and make payments before your first VAT return for this scheme is due.")
+        "We will contact you about how to use the new service to submit your first return by 31 October 2021 and make payment.")
       txtContent should include("If you need to contact us")
       txtContent should include("Quote your UK VAT registration number: 123456789")
       txtContent should include("From the VAT One Stop Shop team")
