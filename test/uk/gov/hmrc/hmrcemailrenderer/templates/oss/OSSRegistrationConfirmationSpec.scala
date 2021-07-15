@@ -27,12 +27,12 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
-      "recipientName_line1"                 -> "Joe Bloggs",
-      "businessName"                        -> "Test Business",
-      "startDate"                           -> "1 July 2021",
-      "reference"                           -> "123456789",
-      "lastDayOfCalendarQuarter"            -> "30 September 2021",
-      "lastDayOfMonthAfterCalendarQuarter"  -> "31 October 2021"
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "startDate"                          -> "1 July 2021",
+      "reference"                          -> "123456789",
+      "lastDayOfCalendarQuarter"           -> "30 September 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -63,7 +63,8 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
         "Your first return will be for eligible sales starting from 1 July 2021 to 30 September 2021.")
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
-      htmlContent should include("We will contact you about how to use the new service to submit your first return by 31 October 2021 and make payment.")
+      htmlContent should include(
+        "We will contact you about how to use the new service to submit your first return by 31 October 2021 and make payment.")
       htmlContent should include("If you need to contact us")
       htmlContent should include("Quote your UK VAT registration number: 123456789")
       htmlContent should include("From the VAT One Stop Shop team")
