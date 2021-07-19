@@ -18,7 +18,7 @@ What you need to do
 
 Submitting header data for VAT (MTD) APIs is required by law.
 
-@if(reportParams.hasInvalidConnectionMethod) {Your application has an invalid connection method in @reportParams.invalidConnectionMethodPercentage% of requests.}
+@if(reportParams.hasInvalidConnectionMethod) {@if(reportParams.invalidConnectionMethodPercentage == 100) {Your application has an invalid connection method in all requests.} else {Your application has an invalid connection method in @reportParams.invalidConnectionMethodCount requests (@reportParams.invalidConnectionMethodPercentage% of all requests).}}
 
 To meet the specification, you need to:
 

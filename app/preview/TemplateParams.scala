@@ -1956,6 +1956,8 @@ object TemplateParams2 {
       "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "allHeadersMissingPercentage"       -> "5",
       "invalidConnectionMethodPercentage" -> "23",
+      "allHeadersMissingCount"            -> "729",
+      "invalidConnectionMethodCount"      -> "3354",
       "relatesToMultipleVersions"         -> "true",
       "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
         parse("""

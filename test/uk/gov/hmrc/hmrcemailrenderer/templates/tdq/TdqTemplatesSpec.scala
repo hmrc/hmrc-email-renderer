@@ -212,9 +212,12 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     }
 
     "include optional content when a percentage of requests have an invalid connection method" in {
-      val params = baseParams + ("invalidConnectionMethodPercentage" -> "4")
+      val params = baseParams + (
+        "invalidConnectionMethodPercentage" -> "4",
+        "invalidConnectionMethodCount"      -> "40"
+      )
       renderedEmail("tdq_fph_report_non_compliant", params) must include(
-        "Your application has an invalid connection method in 4% of requests.")
+        "Your application has an invalid connection method in 40 requests (4% of all requests).")
     }
     "not include optional content when there are no requests with invalid connection method" in {
       val params = baseParams + ("invalidConnectionMethodPercentage" -> "0")
