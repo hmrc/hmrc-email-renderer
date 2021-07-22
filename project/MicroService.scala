@@ -2,7 +2,7 @@ import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin.autoImport._
 import play.routes.compiler.InjectedRoutesGenerator
 import play.sbt.routes.RoutesKeys.routesGenerator
 import sbt.Keys._
-import sbt.Tests.{Group, SubProcess}
+import sbt.Tests.{ Group, SubProcess }
 import sbt._
 import uk.gov.hmrc.ServiceManagerPlugin.Keys.itDependenciesList
 import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin._
@@ -10,16 +10,15 @@ import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin._
 trait MicroService {
 
   import TestPhases.oneForkedJvmPerTest
-  import uk.gov.hmrc.{SbtAutoBuildPlugin, _}
+  import uk.gov.hmrc.{ SbtAutoBuildPlugin, _ }
   import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin
   import uk.gov.hmrc.versioning.SbtGitVersioning
 
   val appName: String
 
-  lazy val appDependencies : Seq[ModuleID] = ???
-  lazy val plugins : Seq[Plugins] = Seq.empty
-  lazy val playSettings : Seq[Setting[_]] = Seq.empty
-
+  lazy val appDependencies: Seq[ModuleID] = ???
+  lazy val plugins: Seq[Plugins] = Seq.empty
+  lazy val playSettings: Seq[Setting[_]] = Seq.empty
 
   import DefaultBuildSettings._
   import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
@@ -30,15 +29,15 @@ trait MicroService {
 
   lazy val microservice = Project(appName, file("."))
     .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtDistributablesPlugin, SbtArtifactory)
-    .settings( majorVersion := 2 )
-    .settings(playSettings : _*)
+    .settings(majorVersion := 2)
+    .settings(playSettings: _*)
     .settings(scalaSettings: _*)
     .settings(publishingSettings: _*)
     .settings(defaultSettings(): _*)
     .settings(
       libraryDependencies ++= appDependencies,
-      scalaVersion := "2.11.11",
-        retrieveManaged := true,
+      scalaVersion := "2.12.12",
+      retrieveManaged := true,
       evictionWarningOptions in update := EvictionWarningOptions.default.withWarnScalaVersionEviction(false)
     )
     .configs(IntegrationTest)
@@ -68,7 +67,7 @@ trait MicroService {
 private object TestPhases {
 
   def oneForkedJvmPerTest(tests: Seq[TestDefinition]) =
-    tests map {
-      test => new Group(test.name, Seq(test), SubProcess(ForkOptions(runJVMOptions = Seq("-Dtest.name=" + test.name))))
+    tests map { test =>
+      new Group(test.name, Seq(test), SubProcess(ForkOptions(runJVMOptions = Seq("-Dtest.name=" + test.name))))
     }
 }
