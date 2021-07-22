@@ -39,11 +39,13 @@ class PreferencesConnectorSpec extends UnitSpec with MockitoSugar with GuiceOneA
 
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {
-      when(httpClient.GET[Language](eqTo(url))(any(), any(), any())).thenReturn(Future.successful(Language.English))
+      when(httpClient.GET[Language](eqTo(url), any(), any())(any(), any(), any()))
+        .thenReturn(Future.successful(Language.English))
       await(preferencesConnector.languageByEmail(email)) shouldBe (Language.English)
     }
     "return Welsh if preference returns Welsh" in new TestCase {
-      when(httpClient.GET[Language](eqTo(url))(any(), any(), any())).thenReturn(Future.successful(Language.Welsh))
+      when(httpClient.GET[Language](eqTo(url), any(), any())(any(), any(), any()))
+        .thenReturn(Future.successful(Language.Welsh))
       await(preferencesConnector.languageByEmail(email)) shouldBe (Language.Welsh)
     }
   }
