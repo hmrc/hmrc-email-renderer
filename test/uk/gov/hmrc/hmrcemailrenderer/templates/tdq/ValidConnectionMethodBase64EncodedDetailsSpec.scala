@@ -24,28 +24,56 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.{ HeadersValidation, P
 
 class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matchers {
 
-  "Extra details needed" should {
+  val requestCount = 100
+
+  "Details" should {
+
+    "have connection method in the same format as the specification" in {
+      val details = ValidConnectionMethodBase64EncodedDetails("WEB_APP_VIA_SERVER", requestCount, Set.empty)
+      details.prettyConnectionMethod shouldBe "Web application via server"
+    }
+  }
+
+  "Extra details" should {
+
+    "have a single header in the same format as the specification" in {
+      val validation = HeadersValidation("gov-client-public-ip", Set.empty, Set.empty)
+      validation.prettyHeaderOrHeaders shouldBe "Gov-Client-Public-IP"
+    }
+
+    "have multiple headers in the same format as the specification" in {
+      val validation =
+        HeadersValidation("gov-vendor-forwarded, gov-vendor-public-ip, gov-client-public-ip", Set.empty, Set.empty)
+      validation.prettyHeaderOrHeaders shouldBe "Gov-Vendor-Forwarded, Gov-Vendor-Public-IP, Gov-Client-Public-IP"
+    }
 
     "deserialise from a base64 encoded string" in {
 
+      val errorPercentage = 10
+      val errorCount = 10
+      val warningPercentage = 20
+      val warningCount = 20
+
       val base64EncodedDetails: String =
-        Base64.getEncoder.encodeToString(stringify(parse("""
+        Base64.getEncoder.encodeToString(stringify(parse(s"""
           {
             "connectionMethod": "MOBILE_APP_DIRECT",
-            "requestCount": 100,
+            "requestCount": $requestCount,
             "headerValidations": [
               {
                 "headerOrHeaders": "gov-client-timezone",
                 "errors": [
                   {
                     "message": "Some error",
-                    "percentage": 10
+                    "percentage": $errorPercentage,
+                    "count": $errorCount
                   }
                 ],
                 "warnings": [
                   {
                     "message": "Some warning",
-                    "percentage": 20
+                    "percentage": $warningPercentage,
+                    "count": $warningCount
                   }
                 ]
               }
@@ -57,18 +85,15 @@ class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matche
 
       result shouldBe ValidConnectionMethodBase64EncodedDetails(
         connectionMethod = "MOBILE_APP_DIRECT",
-        requestCount = 100,
+        requestCount = requestCount,
         headerValidations = Set(
           HeadersValidation(
             headerOrHeaders = "gov-client-timezone",
-            errors = Set(Problem("Some error", percentage = 10)),
-            warnings = Set((Problem("Some warning", percentage = 20)))
+            errors = Set(Problem("Some error", percentage = errorPercentage, count = errorCount)),
+            warnings = Set(Problem("Some warning", percentage = warningPercentage, count = warningCount))
           )
         )
       )
-
     }
-
   }
-
 }

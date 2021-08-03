@@ -24,6 +24,8 @@ final case class TdqFphReportParams(
   toDate: String,
   allHeadersMissingPercentage: Int,
   invalidConnectionMethodPercentage: Int,
+  allHeadersMissingCount: Int,
+  invalidConnectionMethodCount: Int,
   relatesToMultipleVersions: Boolean,
   extraDetails: Option[ValidConnectionMethodBase64EncodedDetails]
 ) {
@@ -48,6 +50,8 @@ object TdqFphReportParams {
       params("toDate").toString,
       params.get("allHeadersMissingPercentage").fold(0)(_.toString.toInt),
       params.get("invalidConnectionMethodPercentage").fold(0)(_.toString.toInt),
+      params.get("allHeadersMissingCount").fold(0)(_.toString.toInt),
+      params.get("invalidConnectionMethodCount").fold(0)(_.toString.toInt),
       params.get("relatesToMultipleVersions").fold(false)(_.toString.toBoolean),
       params.get("extraDetails").map(details => ValidConnectionMethodBase64EncodedDetails.parse(details.toString))
     )
