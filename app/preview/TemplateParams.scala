@@ -1899,39 +1899,41 @@ object TemplateParams2 {
               "errors": [
                 {
                   "message": "Value is not an IP address",
-                  "percentage": 5
-                },
-                {
+                  "percentage": 5,
+                  "count": 5
+                }, {
                   "message": "Value is not a public IP address",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 10
                 }
               ],
               "warnings": []
-            },
-            {
+            }, {
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
                   "message": "Value must be a key-value data structure",
-                  "percentage": 10
-                },
-                {
+                  "percentage": 10,
+                  "count": 10
+                }, {
                   "message": "At least 1 key or value is not percent encoded",
-                  "percentage": 25
-                },
-                {
+                  "percentage": 25,
+                  "count": 25
+                }, {
                   "message": "At least 1 software version value is missing",
-                  "percentage": 15
-                },
-                {
+                  "percentage": 15,
+                  "count": 15
+                }, {
                   "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0
+                  "percentage": 0,
+                  "count": 1
                 }
               ],
               "warnings": [
                 {
                   "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 10
                 }
               ]
             },
@@ -1941,15 +1943,16 @@ object TemplateParams2 {
               "warnings": [
                 {
                   "message": "Use a recommended UUID. Check the specification.",
-                  "percentage": 0
-                },
-                {
+                  "percentage": 0,
+                  "count": 0
+                }, {
                   "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17
-                },
-                {
+                  "percentage": 17,
+                  "count": 17
+                }, {
                   "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22
+                  "percentage": 22,
+                  "count": 22
                 }
               ]
             }
@@ -1965,51 +1968,51 @@ object TemplateParams2 {
       "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "allHeadersMissingPercentage"       -> "5",
       "invalidConnectionMethodPercentage" -> "23",
+      "allHeadersMissingCount"            -> "729",
+      "invalidConnectionMethodCount"      -> "3354",
       "relatesToMultipleVersions"         -> "true",
       "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
         parse("""
         {
           "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 100,
+          "requestCount": 10500,
           "headerValidations": [
             {
               "headerOrHeaders": "gov-client-public-ip",
               "errors": [
                 {
                   "message": "Value is not an IP address",
-                  "percentage": 5
-                },
-                {
+                  "percentage": 5,
+                  "count": 525
+                }, {
                   "message": "Value is not a public IP address",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 1050
                 }
               ],
               "warnings": []
-            },
-            {
+            }, {
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
                   "message": "Value must be a key-value data structure",
-                  "percentage": 10
-                },
-                {
-                  "message": "At least 1 key or value is not percent encoded",
-                  "percentage": 25
-                },
-                {
+                  "percentage": 10,
+                  "count": 1075
+                }, {
                   "message": "At least 1 software version value is missing",
-                  "percentage": 15
-                },
-                {
+                  "percentage": 15,
+                  "count": 1580
+                }, {
                   "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0
+                  "percentage": 0,
+                  "count": 10
                 }
               ],
               "warnings": [
                 {
                   "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 107
                 }
               ]
             },
@@ -2018,16 +2021,13 @@ object TemplateParams2 {
               "errors" : [],
               "warnings": [
                 {
-                  "message": "Use a recommended UUID. Check the specification.",
-                  "percentage": 0
-                },
-                {
                   "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17
-                },
-                {
+                  "percentage": 17,
+                  "count": 1801
+                }, {
                   "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22
+                  "percentage": 22,
+                  "count": 2315
                 }
               ]
             }

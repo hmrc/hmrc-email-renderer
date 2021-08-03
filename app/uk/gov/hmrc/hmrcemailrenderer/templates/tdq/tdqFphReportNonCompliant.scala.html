@@ -30,18 +30,29 @@
             @reportParams.fromDate and @reportParams.toDate do not meet the specification on the HMRC Developer Hub.
         </p>
 
-        <h2>Changes to the specification</h2>
+        <h2>Check your application meets version 3.0</h2>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            From feedback and suggestions, we've updated the fraud prevention specification. Version 3.0 includes new headers and formatting requirements. In these reports, you'll start to get warnings related to the changes.
+            The 6 month period to implement changes in version 3.0 of the Fraud Prevention Headers specification ended in July 2021. Warnings about changes are now shown as errors.
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            You have 6 months to implement changes that affect your application. From July 2021, warnings about the changes will become errors.
+            You'll find version 3.0 of the fraud prevention specification on the HMRC Developer Hub. Select your connection method or view the change log to check you've made all of the changes.
         </p>
 
         <h2>What you need to do</h2>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Submitting header data for VAT (MTD) APIs is required by law. You'll find version 3.0 of fraud prevention specification and the Test Fraud Prevention Headers API on the HMRC Developer Hub.
+            Submitting header data for VAT (MTD) APIs is required by law.
         </p>
+        @if(reportParams.hasInvalidConnectionMethod) {
+        <div style="padding: 10px; border-left: 10px solid #b1b4b6; margin-top: 30px; margin-bottom: 30px;">
+            <p style="font-size: 19px; line-height: 1.315789474;">
+                @if(reportParams.invalidConnectionMethodPercentage == 100) {
+                    Your application has an invalid connection method in all requests.
+                } else {
+                    Your application has an invalid connection method in @reportParams.invalidConnectionMethodCount requests (@reportParams.invalidConnectionMethodPercentage% of all requests).
+                }
+            </p></div>
+        }
+
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
             To meet the specification, you need to:
         </p>
@@ -49,7 +60,6 @@
             @if(reportParams.hasInvalidConnectionMethod) {
                 <li style="font-size: 19px; line-height: 1.315789474;">
                     Go to the specification and select the correct connection method for your application. Check what has changed.
-                    Your application has an invalid connection method in @reportParams.invalidConnectionMethodPercentage% of requests.
                 </li>
             }
             <li style="font-size: 19px; line-height: 1.315789474;">
@@ -69,15 +79,19 @@
                 </li>
             }
             <li style="font-size: 19px; line-height: 1.315789474;">
-                Use the Test Fraud Prevention Headers API before you submit any headers. You need to check your data meets the specification and is formatted correctly.
+                Check your data meets the specification and is formatted correctly.
             </li>
         </ol>
+
+        <h2>Use the testing tools</h2>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            If the Test Fraud Prevention Headers API shows that you're submitting the correct headers, check if your end users are using an outdated version of your application.
+            Before submitting data, you need to use the Test Fraud Prevention Headers API. You can access it from the specification on the HMRC Developer Hub.
         </p>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Most organisations are able to send all header data required for their connection method. If you're unable to
-            submit a value, check what you need to do in the missing header section of the specification.
+            Use the <code>validate</code> endpoint to get immediate feedback for a single request. Then, use the <code>validation-feedback</code> endpoint to get feedback on the last request made to each endpoint.
+        </p>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            If the Test Fraud Prevention Headers API shows that you're submitting the correct headers, check if your end users are using an outdated version of your application.
         </p>
 
         @if(reportParams.hasErrors || reportParams.hasWarnings) {
@@ -101,30 +115,36 @@
             }
 
             @for(extraDetails <- reportParams.extraDetails) {
-                <h2>Connection method @extraDetails.connectionMethod</h2>
+                <h2>@extraDetails.prettyConnectionMethod</h2>
+                <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+                    @reportParams.extraDetails.get.requestCount requests between @reportParams.fromDate and @reportParams.toDate
+                </p>
                 @for(headersValidation <- extraDetails.headerValidations) {
-                    <h3>@headersValidation.headerOrHeaders</h3>
+                    <h3>@headersValidation.prettyHeaderOrHeaders</h3>
                     <table width="100%" cellpadding="5px" style="margin: 0 0 30px 0;">
                         <tbody>
                             @for(error <- headersValidation.errors) {
                                 <tr>
                                     <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474; font-weight: bold; width: 70px;">Error</td>
                                     <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474;">@error.message</td>
-                                    <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474; width: 80px;">@error.shortPercentageDescription</td>
+                                    <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474; width: 80px;">@error.prettyCount<br>
+                                        @error.shortPercentageDescription</td>
                                 </tr>
                             }
                             @for(warning <- headersValidation.warnings) {
                                 <tr>
                                     <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474; width: 70px;">Warning</td>
                                     <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474;">@warning.message</td>
-                                    <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474; width: 80px;">@warning.shortPercentageDescription</td>
+                                    <td style="vertical-align: top; font-size: 19px; line-height: 1.315789474; width: 80px;">@warning.prettyCount<br>
+                                        @warning.shortPercentageDescription</td>
                                 </tr>
                             }
                         </tbody>
                     </table>
                 }
+                <h2>Missing data</h2>
                 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-                    We continue to accept calls with missing or incorrect headers but improving the header data you submit will help protect your customers' data.
+                    Most organisations are able to send all header data required for their connection method. If you're unable to submit a value, check what you need to do in the missing header section of the specification.
                 </p>
             }
         }
