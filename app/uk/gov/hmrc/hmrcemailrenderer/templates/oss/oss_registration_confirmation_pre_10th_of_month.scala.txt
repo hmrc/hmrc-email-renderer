@@ -18,7 +18,7 @@ What happens next
 
 We will contact you if we need to check any information.
 
-We will contact you about how to use the new service to submit your first return by @params("lastDayOfMonthAfterCalendarQuarter") and make payment.
+We will contact you about how to use the new service to submit your first return and make payment by @params("lastDayOfMonthAfterCalendarQuarter").
 
 If you need to contact us
 

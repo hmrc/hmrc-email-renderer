@@ -23,12 +23,21 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
 object OSSTemplates {
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "oss_registration_confirmation",
+      templateId = "oss_registration_confirmation_pre_10th_of_month",
       fromAddress = FromAddress.noReply("VAT One Stop Shop Team"),
       service = OSS,
       subject = "HMRC: your registration for the One Stop Shop Union scheme",
-      plainTemplate = txt.oss_registration_confirmation.f,
-      htmlTemplate = html.oss_registration_confirmation.f,
+      plainTemplate = txt.oss_registration_confirmation_pre_10th_of_month.f,
+      htmlTemplate = html.oss_registration_confirmation_pre_10th_of_month.f,
+      priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "oss_registration_confirmation_post_10th_of_month",
+      fromAddress = FromAddress.noReply("VAT One Stop Shop Team"),
+      service = OSS,
+      subject = "HMRC: your registration for the One Stop Shop Union scheme",
+      plainTemplate = txt.oss_registration_confirmation_post_10th_of_month.f,
+      htmlTemplate = html.oss_registration_confirmation_post_10th_of_month.f,
       priority = Some(MessagePriority.Background)
     )
   )
