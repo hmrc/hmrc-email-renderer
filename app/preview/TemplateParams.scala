@@ -1573,11 +1573,12 @@ object TemplateParams {
     "oss_registration_confirmation_post_10th_of_month" -> Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
-      "startDate"                          -> "12 June 2021",
       "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
-      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021",
-      "firstDayOfNextCalendarQuarter"      -> "01 October 2021"
+      "firstDayOfNextCalendarQuarter"      -> "1 October 2021",
+      "startDate"                          -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"       -> "31 December 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 January 2022"
     )
   )
 }
@@ -2614,19 +2615,20 @@ object TemplateParams2 {
     "oss_registration_confirmation_pre_10th_of_month" -> Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
-      "startDate"                          -> "12 June 2021",
       "reference"                          -> "123456789",
+      "startDate"                          -> "12 June 2021",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
       "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
     ),
     "oss_registration_confirmation_post_10th_of_month" -> Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
-      "startDate"                          -> "12 June 2021",
       "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
-      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021",
-      "firstDayOfNextCalendarQuarter"      -> "1 October 2021"
+      "firstDayOfNextCalendarQuarter"      -> "1 October 2021",
+      "startDate"                          -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"       -> "31 December 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 January 2022"
     )
   )
 }

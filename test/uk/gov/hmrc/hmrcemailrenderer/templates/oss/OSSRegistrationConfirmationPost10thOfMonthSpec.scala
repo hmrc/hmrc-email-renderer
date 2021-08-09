@@ -30,11 +30,12 @@ class OSSRegistrationConfirmationPost10thOfMonthSpec
     val params = commonParameters ++ Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
-      "startDate"                          -> "1 July 2021",
       "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
-      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021",
-      "firstDayOfNextCalendarQuarter"      -> "01 October 2021"
+      "firstDayOfNextCalendarQuarter"      -> "01 October 2021",
+      "startDate"                          -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"       -> "31 December 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 January 2022"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -68,11 +69,11 @@ class OSSRegistrationConfirmationPost10thOfMonthSpec
       htmlContent should include(
         "make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
       htmlContent should include(
-        "Your first return will be for eligible sales starting from 1 July 2021 to 30 September 2021.")
+        "Your first return will be for eligible sales starting from 1 October 2021 to 31 December 2021.")
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
-        "We will contact you about how to use the new service to submit your first return and make payment by 31 October 2021.")
+        "We will contact you about how to use the new service to submit your first return and make payment by 31 January 2022.")
       htmlContent should include("If you need to contact us")
       htmlContent should include("Quote your UK VAT registration number: 123456789")
       htmlContent should include("From the VAT One Stop Shop team")
@@ -97,11 +98,11 @@ class OSSRegistrationConfirmationPost10thOfMonthSpec
       txtContent should include(
         "make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU")
       txtContent should include(
-        "Your first return will be for eligible sales starting from 1 July 2021 to 30 September 2021.")
+        "Your first return will be for eligible sales starting from 1 October 2021 to 31 December 2021.")
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include(
-        "We will contact you about how to use the new service to submit your first return and make payment by 31 October 2021.")
+        "We will contact you about how to use the new service to submit your first return and make payment by 31 January 2022.")
       txtContent should include("If you need to contact us")
       txtContent should include("Quote your UK VAT registration number: 123456789")
       txtContent should include("From the VAT One Stop Shop team")

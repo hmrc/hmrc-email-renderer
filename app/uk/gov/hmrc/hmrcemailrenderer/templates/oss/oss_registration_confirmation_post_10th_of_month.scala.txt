@@ -20,7 +20,7 @@ For each calendar quarter, you need to use the new One Stop Shop service to:
 
 - make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
 
-Your first return will be for eligible sales starting from @params("startDate") to @params("lastDayOfCalendarQuarter").
+Your first return will be for eligible sales starting from @params("startDate") to @params("lastDayOfNextCalendarQuarter").
 
 What happens next
 
