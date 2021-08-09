@@ -2626,7 +2626,7 @@ object TemplateParams2 {
       "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
       "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021",
-      "firstDayOfNextCalendarQuarter"      -> "01 October 2021"
+      "firstDayOfNextCalendarQuarter"      -> "1 October 2021"
     )
   )
 }

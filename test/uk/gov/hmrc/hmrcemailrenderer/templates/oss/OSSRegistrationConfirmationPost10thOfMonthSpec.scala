@@ -61,7 +61,7 @@ class OSSRegistrationConfirmationPost10thOfMonthSpec
       htmlContent should include("Between 1 July 2021 and 30 September 2021")
       htmlContent should include(
         "If your eligible sales in any 12-month period goes over £8,818 (10,000 euros), you need to register for and pay VAT in each EU country where you made those sales.")
-      htmlContent should include("01 October 2021 onwards")
+      htmlContent should include("1 October 2021 onwards")
       htmlContent should include("You need to charge VAT at the rate of the EU country where the goods are sent to.")
       htmlContent should include("For each calendar quarter, you need to use the new One Stop Shop service to:")
       htmlContent should include("complete a single return for eligible sales of goods to consumers in the EU")
