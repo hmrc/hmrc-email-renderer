@@ -1562,13 +1562,23 @@ object TemplateParams {
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
     ),
-    "oss_registration_confirmation" -> Map(
+    "oss_registration_confirmation_pre_10th_of_month" -> Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
       "startDate"                          -> "12 June 2021",
       "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
       "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
+    ),
+    "oss_registration_confirmation_post_10th_of_month" -> Map(
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "reference"                          -> "123456789",
+      "lastDayOfCalendarQuarter"           -> "30 September 2021",
+      "firstDayOfNextCalendarQuarter"      -> "1 October 2021",
+      "startDate"                          -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"       -> "31 December 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 January 2022"
     )
   )
 }
@@ -2602,13 +2612,23 @@ object TemplateParams2 {
     "newMessageAlert_P800_D2_cy"  -> newMessageAlert_Names,
     "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
     "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
-    "oss_registration_confirmation" -> Map(
+    "oss_registration_confirmation_pre_10th_of_month" -> Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
-      "startDate"                          -> "12 June 2021",
       "reference"                          -> "123456789",
+      "startDate"                          -> "12 June 2021",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
       "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
+    ),
+    "oss_registration_confirmation_post_10th_of_month" -> Map(
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "reference"                          -> "123456789",
+      "lastDayOfCalendarQuarter"           -> "30 September 2021",
+      "firstDayOfNextCalendarQuarter"      -> "1 October 2021",
+      "startDate"                          -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"       -> "31 December 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 January 2022"
     )
   )
 }

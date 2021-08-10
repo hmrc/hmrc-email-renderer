@@ -1,0 +1,71 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    HMRC has received the registration from @params("businessName").
+ </p>
+<p style="margin: 0px 0 30px; font-size: 19px;">
+    You registered after the 10th day of the next month following your first eligible sale.
+</p>
+<h2 style="margin: 0 0 30px; font-size: 19px;">
+    Between 1 July 2021 and @params("lastDayOfCalendarQuarter")
+</h2>
+<p style="margin: 0px 0 30px; font-size: 19px;">
+    If your eligible sales in any 12-month period goes over £8,818 (10,000 euros), you need to register for and pay VAT in each EU country where you made those sales.
+</p>
+<h2 style="margin: 0 0 30px; font-size: 19px;">
+    @params("firstDayOfNextCalendarQuarter") onwards
+</h2>
+<p style="margin: 0px 0 30px; font-size: 19px;">
+    You need to charge VAT at the rate of the EU country where the goods are sent to.
+</p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+     For each calendar quarter, you need to use the new One Stop Shop service to:
+   <ul>
+     <li style="font-size: 19px;">
+         complete a single return for eligible sales of goods to consumers in the EU
+     </li>
+     <li style="font-size: 19px;">
+         make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
+     </li>
+   </ul>
+ </p>
+<p style="margin: 0px 0 30px; font-size: 19px;">
+    Your first return will be for eligible sales starting from @params("startDate") to @params("lastDayOfNextCalendarQuarter").
+</p>
+ <br>
+ <h2 style="margin: 0 0 30px; font-size: 19px;">
+    What happens next
+ </h2>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    We will contact you if we need to check any information.
+ </p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+     We will contact you about how to use the new service to submit your first return and make payment by @params("lastDayOfMonthAfterCalendarQuarter").
+ </p>
+ <h2 style="margin: 0 0 30px; font-size: 19px;">
+    If you need to contact us
+ </h2>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    Quote your UK VAT registration number: @params("reference")
+ </p>
+ <p style="margin: 0px 0 30px; font-size: 19px;">
+    From the VAT One Stop Shop team
+ </p>
+}

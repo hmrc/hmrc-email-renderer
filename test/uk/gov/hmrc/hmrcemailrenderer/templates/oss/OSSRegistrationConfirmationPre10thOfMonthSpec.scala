@@ -22,7 +22,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 import uk.gov.hmrc.play.test.UnitSpec
 
-class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class OSSRegistrationConfirmationPre10thOfMonthSpec
+    extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
 
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
@@ -36,11 +37,11 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
     )
     val template = templateLocator
       .templateGroups("OSS")
-      .find(_.templateId == "oss_registration_confirmation")
+      .find(_.templateId == "oss_registration_confirmation_pre_10th_of_month")
       .get
 
     "render correct meta information" in {
-      template.templateId shouldBe "oss_registration_confirmation"
+      template.templateId shouldBe "oss_registration_confirmation_pre_10th_of_month"
       template.service shouldBe OSS
       template.fromAddress(Map.empty) shouldBe "VAT One Stop Shop Team <noreply@tax.service.gov.uk>"
       template.subject(Map.empty) shouldBe "HMRC: your registration for the One Stop Shop Union scheme"
@@ -64,7 +65,7 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
-        "We will contact you about how to use the new service to submit your first return by 31 October 2021 and make payment.")
+        "We will contact you about how to use the new service to submit your first return and make payment by 31 October 2021.")
       htmlContent should include("If you need to contact us")
       htmlContent should include("Quote your UK VAT registration number: 123456789")
       htmlContent should include("From the VAT One Stop Shop team")
@@ -87,7 +88,7 @@ class OSSRegistrationConfirmationSpec extends UnitSpec with EitherValues with Te
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include(
-        "We will contact you about how to use the new service to submit your first return by 31 October 2021 and make payment.")
+        "We will contact you about how to use the new service to submit your first return and make payment by 31 October 2021.")
       txtContent should include("If you need to contact us")
       txtContent should include("Quote your UK VAT registration number: 123456789")
       txtContent should include("From the VAT One Stop Shop team")

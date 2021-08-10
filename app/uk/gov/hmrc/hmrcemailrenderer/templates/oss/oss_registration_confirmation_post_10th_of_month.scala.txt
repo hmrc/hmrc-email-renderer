@@ -1,0 +1,37 @@
+@(params: Map[String, Any])You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+HMRC has received the registration from @params("businessName").
+
+You registered after the 10th day of the next month following your first eligible sale.
+
+Between 1 July 2021 and @params("lastDayOfCalendarQuarter")
+
+If your eligible sales in any 12-month period goes over £8,818 (10,000 euros), you need to register for and pay VAT in each EU country where you made those sales.
+
+@params("firstDayOfNextCalendarQuarter") onwards
+
+You need to charge VAT at the rate of the EU country where the goods are sent to.
+
+For each calendar quarter, you need to use the new One Stop Shop service to:
+
+- complete a single return for eligible sales of goods to consumers in the EU
+
+- make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
+
+Your first return will be for eligible sales starting from @params("startDate") to @params("lastDayOfNextCalendarQuarter").
+
+What happens next
+
+We will contact you if we need to check any information.
+
+We will contact you about how to use the new service to submit your first return and make payment by @params("lastDayOfMonthAfterCalendarQuarter").
+
+If you need to contact us
+
+Quote your UK VAT registration number: @params("reference")
+
+From the VAT One Stop Shop team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
