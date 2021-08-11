@@ -582,6 +582,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "spbp_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Tâl Statudol Rhieni mewn Profedigaeth",
+      plainTemplate = txt.spbpCode_cy.f,
+      htmlTemplate = html.spbpCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "spbp_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -600,6 +609,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "cjrs_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Ymholiad ynghylch y Cynllun Cadw Swyddi yn sgil Coronafeirws",
+      plainTemplate = txt.cjrsCode_cy.f,
+      htmlTemplate = html.cjrsCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "cjrs_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -613,9 +631,19 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject =
-        "Confirm your email address - Request an HMRC review of your eligibility to claim Self-Employment Income Support",
+        "Confirm your email address - Ask for a review of your eligibility to claim Self-Employment Income Support",
       plainTemplate = txt.seissCode.f,
       htmlTemplate = html.seissCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost - Gofyn am adolygiad o’ch cymhwystra i hawlio Cymhorthdal Incwm Hunangyflogaeth",
+      plainTemplate = txt.seissCode_cy.f,
+      htmlTemplate = html.seissCode_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -692,6 +720,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "vishing_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Rhoi gwybod am alwad ffôn amheus sy’n honni ei fod gan CThEM",
+      plainTemplate = txt.vishingCode_cy.f,
+      htmlTemplate = html.vishingCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ipr1_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -750,9 +787,18 @@ object EeittTemplates {
       templateId = "complaint_consultation_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - Report a comment or complaint about a consultation",
+      subject = "Confirm your email address - Make a comment or complaint about HMRC consultations",
       plainTemplate = txt.consultationComplaint.f,
       htmlTemplate = html.consultationComplaint.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "complaint_consultation_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Gwneud sylw neu gŵyn am ymgynghoriadau CThEM",
+      plainTemplate = txt.consultationComplaint_cy.f,
+      htmlTemplate = html.consultationComplaint_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -892,6 +938,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "pesm_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost  – Gwneud cais am ddull eithriad rhannol arbennig",
+      plainTemplate = txt.pesmCode_cy.f,
+      htmlTemplate = html.pesmCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ctDormancy_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -910,12 +965,31 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ctDormancy_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost – Rhowch wybod i CThEM bod eich sefydliad wedi rhoi’r gorau i fasnachu neu nad yw erioed wedi masnachu",
+      plainTemplate = txt.ctDormancyCode_cy.f,
+      htmlTemplate = html.ctDormancyCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "elcb_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address – Apply for extended loss carry back",
+      subject = "Confirm your email address – Make a claim for extended loss carry back",
       plainTemplate = txt.elcbCode.f,
       htmlTemplate = html.elcbCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "elcb_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost – Gwneud hawliad i gario colled yn ôl dros gyfnod estynedig",
+      plainTemplate = txt.elcbCode_cy.f,
+      htmlTemplate = html.elcbCode_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -937,12 +1011,31 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ioss_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost – Rhowch wybod i CThEM eich bod wedi’ch cofrestru ar gyfer y Gwasanaeth Un Cam ar gyfer TAW o ran Mewnforio yn yr EU",
+      plainTemplate = txt.iossCode_cy.f,
+      htmlTemplate = html.iossCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ioss_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "You told HMRC about an IOSS registration",
       plainTemplate = txt.iossConfirmation.f,
       htmlTemplate = html.iossConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "xiEORI_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You applied for an XI EORI number",
+      plainTemplate = txt.xiEORIConfirmation.f,
+      htmlTemplate = html.xiEORIConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

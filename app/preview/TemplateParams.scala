@@ -2449,6 +2449,9 @@ object TemplateParams2 {
     "spbp_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "spbp_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "spbp_confirmation_submission" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
@@ -2456,10 +2459,16 @@ object TemplateParams2 {
     "cjrs_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "cjrs_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "cjrs_confirmation_submission" -> Map(
       "customerName" -> "Hugh Mann"
     ),
     "seiss_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "seiss_code_submission_cy" -> Map(
       "confirmationCode" -> "HGDY"
     ),
     "seiss_eligibility_submission" -> Map(
@@ -2495,6 +2504,9 @@ object TemplateParams2 {
     "vishing_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "vishing_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "ipr1_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
@@ -2516,6 +2528,9 @@ object TemplateParams2 {
       "slaParam"     -> "within..."
     ),
     "complaint_consultation_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "complaint_consultation_code_cy" -> Map(
       "confirmationCode" -> "HGDY"
     ),
     "consultation_complaint_confirmation" -> Map(
@@ -2572,6 +2587,9 @@ object TemplateParams2 {
     "pesm_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "pesm_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "ctDormancy_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
@@ -2579,7 +2597,13 @@ object TemplateParams2 {
     "ctDormancy_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "ctDormancy_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "elcb_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "elcb_code_cy" -> Map(
       "confirmationCode" -> "HGDY"
     ),
     "elcb_confirmation" -> Map(
@@ -2593,6 +2617,14 @@ object TemplateParams2 {
     ),
     "ioss_code" -> Map(
       "confirmationCode" -> "HGDY"
+    ),
+    "ioss_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "xiEORI_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,

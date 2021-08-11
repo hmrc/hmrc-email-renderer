@@ -4,7 +4,7 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Request an HMRC review of your eligibility to claim Self-Employment Income Support’ service on GOV.UK.
+You requested a code to continue with the ‘Ask for a review of your eligibility to claim Self-Employment Income Support’ service on GOV.UK.
 
 Your code is: @params("confirmationCode")
 
