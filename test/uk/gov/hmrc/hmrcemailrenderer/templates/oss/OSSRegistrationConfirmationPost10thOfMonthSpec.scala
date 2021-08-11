@@ -28,14 +28,14 @@ class OSSRegistrationConfirmationPost10thOfMonthSpec
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
-      "recipientName_line1"                -> "Joe Bloggs",
-      "businessName"                       -> "Test Business",
-      "reference"                          -> "123456789",
-      "lastDayOfCalendarQuarter"           -> "30 September 2021",
-      "firstDayOfNextCalendarQuarter"      -> "01 October 2021",
-      "startDate"                          -> "1 October 2021",
-      "lastDayOfNextCalendarQuarter"       -> "31 December 2021",
-      "lastDayOfMonthAfterCalendarQuarter" -> "31 January 2022"
+      "recipientName_line1"                    -> "Joe Bloggs",
+      "businessName"                           -> "Test Business",
+      "reference"                              -> "123456789",
+      "lastDayOfCalendarQuarter"               -> "30 September 2021",
+      "firstDayOfNextCalendarQuarter"          -> "01 October 2021",
+      "startDate"                              -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"           -> "31 December 2021",
+      "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
     )
     val template = templateLocator
       .templateGroups("OSS")
