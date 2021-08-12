@@ -15,22 +15,22 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhau’ch cyfeiriad e-bost", isWelsh = true){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer</p>
+    Annwyl Gwsmer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You requested a code to continue with the ‘Make a comment or complaint about HMRC consultations’ service on GOV.UK.</p>
+    Gwnaethoch ofyn am god er mwyn parhau â’r gwasanaeth ‘Gwneud cais am daliad ymlaen llaw o Dâl Statudol Rhieni mewn Profedigaeth’ ar GOV.UK.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your code is: @params("confirmationCode")</p>
+    Eich cod yw: @params("confirmationCode")</p>
 <h2>
-    What you need to do now</h2>
+    Yr hyn y mae angen i chi ei wneud nawr</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
+    Ewch yn ôl i’r dudalen ‘Nodwch eich cod i gadarnhau’ch cyfeiriad e-bost’ yn y gwasanaeth i ddefnyddio’r cod hwn. Unwaith yn unig y gall y cod gael ei ddefnyddio.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
+    Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac na wnaethoch ofyn am y cod hwn, mae’n rhaid i chi gysylltu â CThEM.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Do not reply to this email.</p>
+    Peidiwch ag ateb yr e-bost hwn.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From the HMRC Customer Protection Team</p>
+    Oddi wrth – Tîm Arian Ymlaen Llaw</p>
 }

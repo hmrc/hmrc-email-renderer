@@ -4,7 +4,7 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Report a comment or complaint about a consultation’ service on GOV.UK.
+You requested a code to continue with the ‘Make a comment or complaint about HMRC consultations’ service on GOV.UK.
 
 Your code is: @params("confirmationCode")
 

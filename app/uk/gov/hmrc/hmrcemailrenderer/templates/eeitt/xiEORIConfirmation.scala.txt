@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+We received your application to get an XI EORI number for your business
+
+Dear @params("customerName")
+
+We will send the XI EORI number for @params("businessName") by email within 5 working days.
+
+Your submission reference is: @params("submissionReference")
+
+Why you are receiving this email
+
+We send a confirmation email for an application submitted online.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
