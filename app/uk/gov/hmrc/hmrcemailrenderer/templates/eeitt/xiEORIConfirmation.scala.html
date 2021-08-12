@@ -15,22 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received your application to get an XI EORI number for your business"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You requested a code to continue with the ‘Make a comment or complaint about HMRC consultations’ service on GOV.UK.</p>
+    We will send the XI EORI number for @params("businessName") by email within 5 working days.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your code is: @params("confirmationCode")</p>
+    Your submission reference is: <b>@params("submissionReference")</b></p>
 <h2>
-    What you need to do now</h2>
+    Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
+    We send a confirmation email for an application submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    Do not reply to this email.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    From the HMRC Customer Protection Team</p>
+    From HMRC</p>
 }
