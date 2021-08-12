@@ -46,7 +46,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
-import uk.gov.hmrc.play.bootstrap.config.RunMode
+
 import uk.gov.hmrc.play.test.UnitSpec
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{ ExecutionContext, Future }
@@ -83,7 +83,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
         .thenReturn(Future.successful(Language.English))
 
       override val templateRenderer =
-        new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+        new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
@@ -111,7 +111,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any()))
         .thenReturn(Future.successful(Language.Welsh))
       override val templateRenderer =
-        new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+        new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
@@ -142,7 +142,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
         .thenReturn(Future.successful(Language.English))
 
       override val templateRenderer =
-        new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+        new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
@@ -174,7 +174,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
         .thenReturn(Future.successful(Language.Welsh))
 
       override val templateRenderer =
-        new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+        new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
@@ -204,7 +204,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
         .thenReturn(Future.successful(AuditResult.Success))
 
       override val templateRenderer =
-        new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+        new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
@@ -233,7 +233,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
       override val templateRenderer =
-        new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+        new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
@@ -265,11 +265,11 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
     val welshTemplateId = "welshTemplateId"
 
     val configuration = mock[Configuration]
-    val runMode = mock[RunMode]
+    // val runMode = mock[RunMode]
     val auditConnector = mock[AuditConnector]
     val preferencesConnector = mock[PreferencesConnector]
 
-    val templateRenderer = new TemplateRenderer(configuration, runMode, auditConnector, preferencesConnector) {
+    val templateRenderer = new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
       override val locator = locatorMock
       override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
       override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
