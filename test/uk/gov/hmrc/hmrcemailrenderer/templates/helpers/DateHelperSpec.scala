@@ -16,9 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 
-class DateHelperSpec extends UnitSpec {
+class DateHelperSpec extends WordSpecLike with Matchers with OptionValues {
 
   "The short date formatter" should {
 

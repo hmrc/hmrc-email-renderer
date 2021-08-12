@@ -16,10 +16,11 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.connectors
 
+import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 import com.google.inject.AbstractModule
 import net.codingwell.scalaguice.ScalaModule
 import org.mockito.ArgumentMatchers.{ any, anyString, eq => eqTo }
-import org.mockito.Matchers
+
 import org.mockito.Mockito.when
 import org.scalatestplus.mockito.MockitoSugar
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
@@ -30,12 +31,12 @@ import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 import uk.gov.hmrc.play.bootstrap.http.HttpClient
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class PreferencesConnectorSpec extends UnitSpec with MockitoSugar with GuiceOneAppPerSuite {
+class PreferencesConnectorSpec  extends WordSpecLike with Matchers with OptionValues with MockitoSugar with GuiceOneAppPerSuite {
 
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {

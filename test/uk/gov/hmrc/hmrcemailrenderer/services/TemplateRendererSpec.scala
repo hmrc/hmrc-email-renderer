@@ -32,6 +32,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
+import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 import org.mockito.ArgumentCaptor
 import org.mockito.ArgumentMatchers.{ any, anyString }
 import org.mockito.Mockito._
@@ -47,11 +48,11 @@ import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
 
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{ ExecutionContext, Future }
 
-class TemplateRendererSpec extends UnitSpec with MockitoSugar {
+class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues with MockitoSugar {
   "The template renderer" should {
     "render an existing template using the common parameters" in new TestCase {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
@@ -265,7 +266,7 @@ class TemplateRendererSpec extends UnitSpec with MockitoSugar {
     val welshTemplateId = "welshTemplateId"
 
     val configuration = mock[Configuration]
-    // val runMode = mock[RunMode]
+    
     val auditConnector = mock[AuditConnector]
     val preferencesConnector = mock[PreferencesConnector]
 

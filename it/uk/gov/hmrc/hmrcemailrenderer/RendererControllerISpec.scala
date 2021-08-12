@@ -22,10 +22,10 @@ import org.scalatestplus.play.{ ServerProvider, WsScalaTestClient }
 import play.api.libs.json._
 import play.api.libs.ws.WSClient
 import uk.gov.hmrc.play.http.test.ResponseMatchers
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 
 class RendererControllerISpec
-    extends UnitSpec with WsScalaTestClient with GuiceOneServerPerSuite with ScalaFutures with ResponseMatchers
+    extends WordSpecLike with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite with ScalaFutures with ResponseMatchers
     with ServerProvider {
   "POST /templates/:templateId" should {
     "return 200 and yield the rendered template data when supplied a valid templateId thats not defined in WelshTemplatesByLangPreference" in {
