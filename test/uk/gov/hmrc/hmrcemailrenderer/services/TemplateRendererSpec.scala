@@ -51,24 +51,28 @@ import uk.gov.hmrc.play.audit.model.DataEvent
 import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{ ExecutionContext, Future }
+import play.api.test.Helpers.await
+import org.scalatest.concurrent.ScalaFutures
 
-class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues with MockitoSugar {
+class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues with MockitoSugar with ScalaFutures {
   "The template renderer" should {
     "render an existing template using the common parameters" in new TestCase {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      await(templateRenderer.render(templateId, Map("KEY" -> "VALUE"))) shouldBe Right(validRenderedResult)
+      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Right(validRenderedResult)
     }
 
     "return None if the template is not found" in new TestCase {
       when(locatorMock.findTemplate("unknown")).thenReturn(None)
-      await(templateRenderer.render("unknown", Map.empty)) shouldBe Left(MissingTemplateId("unknown"))
+      // await(templateRenderer.render("unknown", Map.empty)) shouldBe Left(MissingTemplateId("unknown"))
+       templateRenderer.render("unknown", Map.empty) shouldBe  Left(MissingTemplateId("unknown"))
     }
+    
 
     "return error message in Left if it can't render the template" in new TestCase {
       val errorMessage = TemplateRenderFailure("key not found: KEY")
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-
-      await(templateRenderer.render(templateId, Map.empty)) shouldBe Left(errorMessage)
+      // await(templateRenderer.render(templateId, Map.empty)) shouldBe Left(errorMessage)
+      templateRenderer.render(templateId, Map.empty) shouldBe Left(errorMessage)
     }
   }
 
@@ -89,7 +93,8 @@ class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
-      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com"))) shouldBe templateId
+        // await(templateRenderer.languageTemplateId(templateId, Some("test@test.com"))) shouldBe templateId
+        templateRenderer.languageTemplateId(templateId, Some("test@test.com")) shouldBe templateId
       verify(auditConnector)
         .sendEvent(dataEventArgumentCaptor.capture())(any[HeaderCarrier], any[ExecutionContext])
       dataEventArgumentCaptor.getValue.auditSource shouldBe "hmrc-email-renderer"
@@ -117,7 +122,8 @@ class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
-      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe welshTemplateId
+      // await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe welshTemplateId
+      templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")) shouldBe welshTemplateId
 
       verify(auditConnector)
         .sendEvent(dataEventArgumentCaptor.capture())(any[HeaderCarrier], any[ExecutionContext])
@@ -149,7 +155,8 @@ class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
 
-      await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe engTemplateId
+        // await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe engTemplateId
+        templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")) shouldBe engTemplateId
 
       verify(auditConnector)
         .sendEvent(dataEventArgumentCaptor.capture())(any[HeaderCarrier], any[ExecutionContext])
@@ -181,7 +188,8 @@ class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
 
-      await(templateRenderer.languageTemplateId(templateId, Some("test@test.com"))) shouldBe templateId
+        // await(templateRenderer.languageTemplateId(templateId, Some("test@test.com"))) shouldBe templateId
+        templateRenderer.languageTemplateId(templateId, Some("test@test.com")) shouldBe templateId
 
       verify(auditConnector)
         .sendEvent(dataEventArgumentCaptor.capture())(any[HeaderCarrier], any[ExecutionContext])
@@ -211,7 +219,8 @@ class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
 
-      await(templateRenderer.languageTemplateId(templateId, None)) shouldBe templateId
+        // await(templateRenderer.languageTemplateId(templateId, None)) shouldBe templateId
+        templateRenderer.languageTemplateId(templateId, None) shouldBe templateId
 
       verify(auditConnector)
         .sendEvent(dataEventArgumentCaptor.capture())(any[HeaderCarrier], any[ExecutionContext])
@@ -240,7 +249,8 @@ class TemplateRendererSpec  extends WordSpecLike with Matchers with OptionValues
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
 
-      await(templateRenderer.languageTemplateId(engTemplateId, None)) shouldBe engTemplateId
+        // await(templateRenderer.languageTemplateId(engTemplateId, None)) shouldBe engTemplateId
+        templateRenderer.languageTemplateId(engTemplateId, None) shouldBe engTemplateId
 
       verify(auditConnector)
         .sendEvent(dataEventArgumentCaptor.capture())(any[HeaderCarrier], any[ExecutionContext])
