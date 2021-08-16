@@ -16,9 +16,11 @@
 
 package preview
 
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import play.api.Configuration
+import play.api.inject.guice.GuiceApplicationBuilder
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ ServiceIdentifier, TemplateLocator }
