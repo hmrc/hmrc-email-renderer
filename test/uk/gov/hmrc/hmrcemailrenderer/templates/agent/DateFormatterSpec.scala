@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.agent
 
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
 class DateFormatterSpec extends WordSpecLike with Matchers with OptionValues {
 

@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
 class ApiVerificationEmailSpec extends WordSpecLike with OptionValues with Matchers {
 

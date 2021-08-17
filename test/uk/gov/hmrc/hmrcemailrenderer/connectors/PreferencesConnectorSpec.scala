@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.connectors
 
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 import com.google.inject.AbstractModule
 import net.codingwell.scalaguice.ScalaModule
 import org.mockito.ArgumentMatchers.{ any, anyString, eq => eqTo }
@@ -31,26 +31,27 @@ import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 import uk.gov.hmrc.play.bootstrap.http.HttpClient
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import play.api.test.Helpers.await
 import org.scalatest.concurrent.ScalaFutures
-class PreferencesConnectorSpec  extends WordSpecLike with Matchers with OptionValues with MockitoSugar with GuiceOneAppPerSuite with ScalaFutures {
+class PreferencesConnectorSpec
+    extends WordSpecLike with Matchers with OptionValues with MockitoSugar with GuiceOneAppPerSuite with ScalaFutures {
 
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {
       when(httpClient.GET[Language](eqTo(url), any(), any())(any(), any(), any()))
         .thenReturn(Future.successful(Language.English))
       // await(preferencesConnector.languageByEmail(email)) shouldBe (Language.English)
-        preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.English)
+      preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.English)
     }
     "return Welsh if preference returns Welsh" in new TestCase {
       when(httpClient.GET[Language](eqTo(url), any(), any())(any(), any(), any()))
         .thenReturn(Future.successful(Language.Welsh))
       //await(preferencesConnector.languageByEmail(email)) shouldBe (Language.Welsh)
-      preferencesConnector.languageByEmail(email).futureValue shouldBe  (Language.Welsh)
+      preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.Welsh)
     }
   }
 

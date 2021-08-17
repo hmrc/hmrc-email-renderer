@@ -30,7 +30,6 @@ import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
 import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
 
-
 import scala.concurrent.{ ExecutionContext, Future }
 import scala.util.{ Failure, Success, Try }
 
@@ -40,7 +39,6 @@ class TemplateRenderer @Inject()(
   preferencesConnector: PreferencesConnector) {
 
   val locator: TemplateLocator = TemplateLocator
-  
 
   lazy val commonParameters: Map[String, String] =
     configuration.get[Configuration](s"templates.config").entrySet.toMap.mapValues(_.unwrapped.toString)

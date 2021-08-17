@@ -118,7 +118,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
-      
+
       templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")).futureValue shouldBe welshTemplateId
 
       verify(auditConnector)
@@ -151,7 +151,6 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
 
-      
       templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")).futureValue shouldBe engTemplateId
 
       verify(auditConnector)

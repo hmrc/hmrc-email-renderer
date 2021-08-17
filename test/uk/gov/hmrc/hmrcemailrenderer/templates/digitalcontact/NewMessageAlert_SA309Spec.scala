@@ -20,9 +20,11 @@ import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader }
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class NewMessageAlert_SA309Spec  extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader with CommonParamsForSpec {
+class NewMessageAlert_SA309Spec
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
 
   "NewMessageAlert_SA309" should {
 
