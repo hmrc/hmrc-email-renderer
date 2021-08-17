@@ -63,14 +63,12 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
 
     "return None if the template is not found" in new TestCase {
       when(locatorMock.findTemplate("unknown")).thenReturn(None)
-      // await(templateRenderer.render("unknown", Map.empty)) shouldBe Left(MissingTemplateId("unknown"))
       templateRenderer.render("unknown", Map.empty) shouldBe Left(MissingTemplateId("unknown"))
     }
 
     "return error message in Left if it can't render the template" in new TestCase {
       val errorMessage = TemplateRenderFailure("key not found: KEY")
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      // await(templateRenderer.render(templateId, Map.empty)) shouldBe Left(errorMessage)
       templateRenderer.render(templateId, Map.empty) shouldBe Left(errorMessage)
     }
   }
@@ -120,7 +118,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
-      // await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe welshTemplateId
+      
       templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")).futureValue shouldBe welshTemplateId
 
       verify(auditConnector)
@@ -153,7 +151,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
           override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
         }
 
-      // await(templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com"))) shouldBe engTemplateId
+      
       templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")).futureValue shouldBe engTemplateId
 
       verify(auditConnector)
