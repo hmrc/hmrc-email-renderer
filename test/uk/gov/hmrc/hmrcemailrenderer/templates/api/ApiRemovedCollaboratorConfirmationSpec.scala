@@ -18,9 +18,9 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class ApiRemovedCollaboratorConfirmationSpec extends UnitSpec {
+class ApiRemovedCollaboratorConfirmationSpec extends WordSpecLike with Matchers with OptionValues {
 
   val applicationName = "Application Name"
   val developerHubTitle = "Developer Hub Title"

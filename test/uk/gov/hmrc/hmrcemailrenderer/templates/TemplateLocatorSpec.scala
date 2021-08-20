@@ -20,9 +20,9 @@ import org.scalatestplus.play.OneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
+class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues with OneAppPerSuite {
 
   "The template locator when requested Welsh template" should {
 

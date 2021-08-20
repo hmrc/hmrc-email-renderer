@@ -16,9 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class AmountFormatterSpec extends UnitSpec {
+class AmountFormatterSpec extends WordSpecLike with Matchers with OptionValues {
 
   "amount should be correctly formatted for display" in {
     AmountFormatter.formatAmount("123456789") shouldBe "£123,456,789.00"

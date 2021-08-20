@@ -20,10 +20,11 @@ import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
 class OSSRegistrationConfirmationPre10thOfMonthSpec
-    extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
 
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}

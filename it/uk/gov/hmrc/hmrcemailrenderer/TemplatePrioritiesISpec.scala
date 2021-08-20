@@ -24,11 +24,11 @@ import org.scalatestplus.play.{ ServerProvider, WsScalaTestClient }
 import play.api.libs.json._
 import play.api.libs.ws.WSClient
 import uk.gov.hmrc.play.http.test.ResponseMatchers
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
 class TemplatePrioritiesISpec
-    extends UnitSpec with WsScalaTestClient with GuiceOneServerPerSuite with ScalaFutures with ResponseMatchers
-    with ServerProvider with TableDrivenPropertyChecks {
+    extends WordSpecLike with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite
+    with ScalaFutures with ResponseMatchers with ServerProvider with TableDrivenPropertyChecks {
 
   "Rendered templates" should {
 

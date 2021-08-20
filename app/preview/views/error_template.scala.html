@@ -1,4 +1,4 @@
-/*
+@*
  * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,24 +12,16 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *@
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
+@this()
 
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+@(pageTitle: String, heading: String, message: String)(implicit request: Request[_], messages: Messages)
 
-class DateHelperSpec extends WordSpecLike with Matchers with OptionValues {
+<html>
+<title>@pageTitle</title>
 
-  "The short date formatter" should {
+<h1>@heading</h1>
 
-    "return 2 digit day and 3 letter month abbreviation in" in {
-      DateHelper.shortDateFormatter("2020-04-22") shouldBe "22 Apr"
-    }
-
-    "return 1 single digit day and 3 letter month abbreviation" in {
-      DateHelper.shortDateFormatter("2020-04-01") shouldBe "1 Apr"
-    }
-
-  }
-
-}
+<p>@message</p>
+</html>

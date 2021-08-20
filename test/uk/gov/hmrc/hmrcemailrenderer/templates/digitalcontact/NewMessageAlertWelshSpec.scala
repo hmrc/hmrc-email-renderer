@@ -19,9 +19,11 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 import org.scalatest.EitherValues
 import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class NewMessageAlertWelshSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class NewMessageAlertWelshSpec
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
 
   "newMessageAlert_cy" should {
     val templateLocator = new TemplateLocator {}
