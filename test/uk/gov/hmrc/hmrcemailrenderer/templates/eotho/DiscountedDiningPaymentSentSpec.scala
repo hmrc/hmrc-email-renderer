@@ -19,9 +19,11 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.eotho
 import org.scalatest.EitherValues
 import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class DiscountedDiningPaymentSentSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class DiscountedDiningPaymentSentSpec
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
 
   "discounted_dining_payment_sent" should {
     val templateLocator = new TemplateLocator {}

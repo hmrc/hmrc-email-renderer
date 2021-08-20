@@ -23,7 +23,7 @@ import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
-import uk.gov.hmrc.play.bootstrap.config.RunMode
+
 import uk.gov.hmrc.play.bootstrap.controller.FrontendController
 
 import scala.concurrent.ExecutionContext.Implicits.global

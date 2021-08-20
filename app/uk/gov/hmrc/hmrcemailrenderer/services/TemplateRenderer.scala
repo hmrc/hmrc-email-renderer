@@ -29,22 +29,19 @@ import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
 import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
-import uk.gov.hmrc.play.bootstrap.config.RunMode
 
 import scala.concurrent.{ ExecutionContext, Future }
 import scala.util.{ Failure, Success, Try }
 
 class TemplateRenderer @Inject()(
   configuration: Configuration,
-  runMode: RunMode,
   auditConnector: AuditConnector,
   preferencesConnector: PreferencesConnector) {
 
   val locator: TemplateLocator = TemplateLocator
-  val env = runMode.env
 
   lazy val commonParameters: Map[String, String] =
-    configuration.get[Configuration](s"$env.templates.config").entrySet.toMap.mapValues(_.unwrapped.toString)
+    configuration.get[Configuration](s"templates.config").entrySet.toMap.mapValues(_.unwrapped.toString)
 
   lazy val templatesByLangPreference =
     configuration.get[Configuration]("welshTemplatesByLangPreferences").entrySet.toMap.mapValues(_.unwrapped.toString)

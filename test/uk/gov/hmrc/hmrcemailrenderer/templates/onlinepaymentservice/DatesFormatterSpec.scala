@@ -16,9 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class DateFormatterSpec extends UnitSpec {
+class DateFormatterSpec extends WordSpecLike with Matchers with OptionValues {
 
   val formatter = DateFormatter
 

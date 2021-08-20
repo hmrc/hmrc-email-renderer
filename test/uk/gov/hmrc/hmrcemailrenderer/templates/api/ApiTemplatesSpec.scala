@@ -21,9 +21,9 @@ import org.scalatestplus.play.OneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class ApiTemplatesSpec extends UnitSpec with OneAppPerSuite {
+class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with OneAppPerSuite {
 
   "The API templates" should {
 

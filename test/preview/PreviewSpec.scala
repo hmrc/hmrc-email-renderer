@@ -16,14 +16,17 @@
 
 package preview
 
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import play.api.Configuration
+import play.api.inject.guice.GuiceApplicationBuilder
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ ServiceIdentifier, TemplateLocator }
-import uk.gov.hmrc.play.test.UnitSpec
+// import org.scalatest.{Matchers, OptionValues, WordSpecLike}
 
-class PreviewSpec extends UnitSpec with GuiceOneAppPerSuite {
+class PreviewSpec extends WordSpecLike with Matchers with OptionValues with GuiceOneAppPerSuite {
 
   "createPreviewGroup" should {
     "generate a  preview item for each template id that resolves to a message template" in {

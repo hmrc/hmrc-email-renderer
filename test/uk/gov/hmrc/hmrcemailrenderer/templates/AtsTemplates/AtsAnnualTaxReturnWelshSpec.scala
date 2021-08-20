@@ -15,13 +15,16 @@
  */
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.AtsTemplates
+
 import org.joda.time.LocalDate
 import org.scalatest.EitherValues
 import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class AtsAnnualTaxReturnWelshSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class AtsAnnualTaxReturnWelshSpec
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
 
   "annual_tax_summaries_message_alert_cy" should {
 
