@@ -20,9 +20,9 @@ import com.google.inject.{ Inject, Singleton }
 import play.api.libs.json.Json
 import uk.gov.hmrc.crypto.{ ApplicationCrypto, PlainText }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.http.{ HeaderCarrier, HttpClient }
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
-import uk.gov.hmrc.play.bootstrap.http.HttpClient
+import uk.gov.hmrc.play.audit.http.HttpAuditing
 
 import scala.concurrent.{ ExecutionContext, Future }
 @Singleton
