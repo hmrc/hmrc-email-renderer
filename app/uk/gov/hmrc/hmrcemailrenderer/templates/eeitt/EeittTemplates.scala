@@ -1037,6 +1037,15 @@ object EeittTemplates {
       plainTemplate = txt.xiEORIConfirmation.f,
       htmlTemplate = html.xiEORIConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "nipbe_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You told HMRC about a Northern Ireland business establishment",
+      plainTemplate = txt.nipbeConfirmation.f,
+      htmlTemplate = html.nipbeConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

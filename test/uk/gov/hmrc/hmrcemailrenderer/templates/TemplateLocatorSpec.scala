@@ -710,7 +710,8 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "newMessageAlert_PA302_D2",
         "newMessageAlert_PA302_D2_cy",
         "oss_registration_confirmation_pre_10th_of_month",
-        "oss_registration_confirmation_post_10th_of_month"
+        "oss_registration_confirmation_post_10th_of_month",
+        "nipbe_confirmation",
       )
     }
   }
