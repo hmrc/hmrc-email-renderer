@@ -99,13 +99,15 @@ final case class Problem(message: String, percentage: Int, count: Int) {
 
   val shortPercentageDescription: String =
     if (percentage < 1) {
-      "Fewer than 1% of requests"
+      "Fewer than 1% of total"
     } else {
-      s"$percentage% of requests"
+      s"$percentage% of total"
     }
 
-  val prettyCount: String = Problem.prettyCount(count)
-
+  val prettyCount: String = {
+    val suffix = if (count > 1) "requests" else "request"
+    s"${Problem.prettyCount(count)} $suffix"
+  }
 }
 
 object Problem {

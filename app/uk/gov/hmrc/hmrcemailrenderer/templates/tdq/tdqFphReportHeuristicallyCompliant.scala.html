@@ -16,8 +16,10 @@
 
 @import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
 @(params: Map[String, Any])
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Fraud prevention headers report for VAT (Making Tax Digital)") {
     @defining(TdqFphReportParams(params)) { reportParams =>
+
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @reportParams.developerName</p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
@@ -25,10 +27,18 @@
         </p>
 
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-            Our logs show that all of the fraud prevention headers submitted for <b>@reportParams.applicationName</b> between
-            @reportParams.fromDate and @reportParams.toDate meet the current specification on the HMRC Developer Hub.
-            Thank you, we'll send you a report if this changes.
+            Our logs show that all of the fraud prevention headers submitted for <b>@reportParams.applicationName</b>
+            @for(extraDetails <- reportParams.extraDetails) {
+              using <b>@{extraDetails.prettyConnectionMethod.toLowerCase}</b>
+            }
+            between @reportParams.fromDate and @reportParams.toDate meet the current specification on the HMRC Developer Hub.
         </p>
+
+        @if(reportParams.hasOtherConnectionMethods) {
+            <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+                Your application sent requests using another connection method, you'll receive a separate report.
+            </p>
+        }
 
         <h2>Why you have received this email</h2>
         <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">

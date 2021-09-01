@@ -27,7 +27,8 @@ final case class TdqFphReportParams(
   allHeadersMissingCount: Int,
   invalidConnectionMethodCount: Int,
   relatesToMultipleVersions: Boolean,
-  extraDetails: Option[ValidConnectionMethodBase64EncodedDetails]
+  extraDetails: Option[ValidConnectionMethodBase64EncodedDetails],
+  hasOtherConnectionMethods: Boolean
 ) {
 
   def hasAllHeadersMissing: Boolean = allHeadersMissingPercentage > 0
@@ -53,7 +54,8 @@ object TdqFphReportParams {
       params.get("allHeadersMissingCount").fold(0)(_.toString.toInt),
       params.get("invalidConnectionMethodCount").fold(0)(_.toString.toInt),
       params.get("relatesToMultipleVersions").fold(false)(_.toString.toBoolean),
-      params.get("extraDetails").map(details => ValidConnectionMethodBase64EncodedDetails.parse(details.toString))
+      params.get("extraDetails").map(details => ValidConnectionMethodBase64EncodedDetails.parse(details.toString)),
+      params.get("hasOtherConnectionMethods").fold(false)(_.toString.toBoolean)
     )
 
 }

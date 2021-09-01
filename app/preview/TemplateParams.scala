@@ -2043,14 +2043,22 @@ object TemplateParams2 {
             }
           ]
         }
-          """)).getBytes("UTF-8"))
+        """)).getBytes("UTF-8"))
     ),
     "tdq_fph_report_heuristically_compliant" -> Map(
-      "developerName"   -> "John Smith",
-      "fromDate"        -> "22 September 2019",
-      "toDate"          -> "22 October 2019",
-      "applicationName" -> "My Well Behaved MTD App",
-      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+      "developerName"             -> "John Smith",
+      "fromDate"                  -> "22 September 2019",
+      "toDate"                    -> "22 October 2019",
+      "applicationName"           -> "My Well Behaved MTD App",
+      "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "hasOtherConnectionMethods" -> "true",
+      "extraDetails"              -> Base64.getEncoder.encodeToString(stringify(parse("""
+        {
+          "connectionMethod": "WEB_APP_VIA_SERVER",
+          "requestCount": 10500,
+          "headerValidations": []
+        }
+        """)).getBytes("UTF-8"))
     ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
