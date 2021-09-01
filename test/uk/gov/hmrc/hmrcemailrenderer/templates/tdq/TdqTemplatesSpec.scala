@@ -17,12 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 
 import java.util.Base64
-
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import play.api.libs.json.Json.{ parse, stringify }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
 
   private val headerWithErrors =
     """{
@@ -170,7 +169,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
   "tdq_fph_report_heuristically_compliant" should {
 
-    val params = commonParameters + (
+    val baseParams = commonParameters + (
       "developerName"   -> "John Smith",
       "fromDate"        -> "22 September 2019",
       "toDate"          -> "22 October 2019",
@@ -179,12 +178,38 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     )
 
     "be the same for text and html content" in {
-      compareContent("tdq_fph_report_heuristically_compliant", params)(tdqTemplate)
+      compareContent("tdq_fph_report_heuristically_compliant", baseParams)(tdqTemplate)
+    }
+
+    "include the connection method when present in the parameters" in {
+      val params = baseParams + (
+        "extraDetails" -> extraDetails()
+      )
+      renderedEmail("tdq_fph_report_heuristically_compliant", params) must include
+      "using web application via server"
+    }
+
+    "render without the connection method when not present in the parameters" in {
+      renderedEmail("tdq_fph_report_heuristically_compliant", baseParams) must not include
+        "using web application via server"
+    }
+
+    "include a message about other connection method reports when there are some" in {
+      val params = baseParams + (
+        "hasOtherConnectionMethods" -> "true"
+      )
+      renderedEmail("tdq_fph_report_heuristically_compliant", params) must include
+      "Your application sent requests using another connection method, you'll receive a separate report"
+    }
+
+    "not include a message about other connection method reports when there are none" in {
+      renderedEmail("tdq_fph_report_heuristically_compliant", baseParams) must not include
+        "Your application sent requests using another connection method, you'll receive a separate report"
     }
 
     "contain subject with application name" in {
       val template = findTemplate("tdq_fph_report_heuristically_compliant")
-      template.subject.f(params) mustEqual "Fraud prevention headers for MTD VAT Test Application"
+      template.subject.f(baseParams) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
   }
 
