@@ -1723,7 +1723,7 @@ object TemplateParams2 {
     ),
     "cca_appeals_submission_link" -> Map(
       "proposalNumber" -> "341112111",
-      "submissionUrl" -> "http://test.cokm/blah-blah",
+      "submissionUrl" -> "http://test.com/blah-blah",
       "submissionDate"  -> "15 Sep 2021",
       "postcode"  -> "AA1 1AA"
     ),"cca_enrolment_migration_confirmation" -> Map(
