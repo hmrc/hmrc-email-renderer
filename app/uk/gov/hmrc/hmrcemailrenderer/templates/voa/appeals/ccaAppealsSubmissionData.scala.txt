@@ -1,0 +1,12 @@
+
+@(params: Map[String, Any])
+
+Valuation Office Agency – check and challenge registration
+
+Dear caseworker,
+Proposal Number: @params.getOrElse("proposalNumber", "")
+Submission data: @params.getOrElse("submissionUrl", "")
+
+You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
+
+Valuation Office Agency (VOA)

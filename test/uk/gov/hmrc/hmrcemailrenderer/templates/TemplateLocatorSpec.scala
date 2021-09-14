@@ -567,6 +567,7 @@ class TemplateLocatorSpec extends UnitSpec with OneAppPerSuite {
         "sdil_registration_accepted",
         "sdil_registration_received",
         "retrieve_userid_notification",
+        "cca_appeals_submission_link",
         "cca_enrolment_migration_confirmation",
         "cca_enrolment_confirmation",
         "cca_enrolment_confirmation_agent",
