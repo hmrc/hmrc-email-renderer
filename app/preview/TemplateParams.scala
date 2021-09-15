@@ -2670,6 +2670,13 @@ object TemplateParams2 {
       "lastDayOfNextCalendarQuarter"           -> "31 December 2021",
       "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
     ),
+    "oss_returns_email_confirmation" -> Map(
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "period"                             -> "1 July to 30 September 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021",
+      "VATOwed"                            -> "£1250"
+    ),
     "nipbe_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
