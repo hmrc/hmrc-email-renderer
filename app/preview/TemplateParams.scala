@@ -2127,6 +2127,9 @@ object TemplateParams2 {
     "pods_psa_register" -> Map(
       "psaName" -> "Jane Doe"
     ),
+    "pods_psa_register_company" -> Map(
+      "psaName" -> "Jane Doe"
+    ),
     "pods_psp_register" -> Map(
       "pspName" -> "Jane Doe"
     ),
