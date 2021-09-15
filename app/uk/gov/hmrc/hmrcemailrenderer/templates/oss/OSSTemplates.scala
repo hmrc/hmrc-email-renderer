@@ -19,6 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.oss
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
+import views.{ html, txt }
 
 object OSSTemplates {
   val templates = Seq(
@@ -38,6 +39,15 @@ object OSSTemplates {
       subject = "HMRC: your registration for the One Stop Shop Union scheme",
       plainTemplate = txt.oss_registration_confirmation_post_10th_of_month.f,
       htmlTemplate = html.oss_registration_confirmation_post_10th_of_month.f,
+      priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "oss_returns_email_confirmation",
+      fromAddress = FromAddress.noReply("VAT One Stop Shop Team"),
+      service = OSS,
+      subject = "HMRC: VAT return submitted",
+      plainTemplate = txt.oss_returns_email_confirmation.f,
+      htmlTemplate = html.oss_returns_email_confirmation.f,
       priority = Some(MessagePriority.Background)
     )
   )
