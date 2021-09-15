@@ -2,17 +2,17 @@
 
 Dear Customer
 
-Your payment has been received by HMRC.
+You have sent a payment to HMRC
 
 Tax: @params("taxType")
 Payment reference: @params("reference")
-Amount paid: @params("amountPaid")
+Amount: @params("amountPaid")
 
 If you have an online tax account your payment will take 3 to 5 days to show in your account.
 
 Why you got this email
 
-You chose to receive payment confirmation by email.
+You chose to receive an email about your payment
 
 From HMRC Online Payments
 
