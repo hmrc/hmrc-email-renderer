@@ -16,14 +16,14 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
-import org.scalatest.{EitherValues, Matchers, OptionValues, WordSpecLike}
+import org.scalatest.{ EitherValues, Matchers, OptionValues, WordSpecLike }
 import preview.TemplateParams2
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader }
 
 class PsaRegisteredCompanySpec
-  extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
   "pods_psa_register_company" should {
