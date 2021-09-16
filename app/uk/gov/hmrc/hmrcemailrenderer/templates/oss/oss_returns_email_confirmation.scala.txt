@@ -29,10 +29,11 @@ You can also pay using the ‘Pay your VAT bill’ service.
 
     1. Search GOV.UK for ‘Pay your VAT bill’.
     2. Select ‘Pay now’.
-    3. When asked ‘Do you want to sign in to your tax account?’, select ‘No, continue to payment options’.
-    4. Enter your UK VAT registration number.
-    5. Confirm the return period.
+    3. Select ‘VAT One Stop Shop Union scheme’
 
+If you need to contact EU countries
+
+Quote your return reference: @params("reference")
 
 From the VAT One Stop Shop team
 
