@@ -31,7 +31,7 @@ class OSSReturnsEmailConfirmationSpec
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
       "period"                             -> "1 July to 30 September 2021",
-      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021",
+      "paymentDeadline"                    -> "31 October 2021",
       "VATOwed"                            -> "£1250",
       "reference"                          -> "XI/XI100000002/Q3.2021"
     )
@@ -62,18 +62,17 @@ class OSSReturnsEmailConfirmationSpec
       htmlContent should include("You can pay by signing back into your One Stop Shop account.")
       htmlContent should include("Search GOV.UK for ‘Submit your One Stop Shop return and pay VAT’.")
       htmlContent should include(
-        "Sign in from that page using the Government Gateway user ID and password used to register for UK VAT.")
-      htmlContent should include("Select ‘View past returns’ in your account.")
+        "Sign in with the Government Gateway user ID and password you used to register for UK VAT.")
+      htmlContent should include("Select ‘View past returns’.")
       htmlContent should include("Select your return period.")
-      htmlContent should include("Select ‘Pay now’.")
-      htmlContent should include("Choose a way to pay.")
+      htmlContent should include("Select ‘Pay now’ and choose a way to pay.")
       htmlContent should include("You can also pay using the ‘Pay your VAT bill’ service.")
       htmlContent should include("Search GOV.UK for ‘Pay your VAT bill’.")
       htmlContent should include("Select ‘Pay now’.")
       htmlContent should include("Select ‘VAT One Stop Shop Union scheme’")
       htmlContent should include("If you need to contact EU countries")
       htmlContent should include("Quote your return reference: XI/XI100000002/Q3.2021")
-      htmlContent should include("From the VAT One Stop Shop team")
+      htmlContent should include("Regards, the VAT One Stop Shop team")
     }
 
     "render correct text content" in {
@@ -90,18 +89,17 @@ class OSSReturnsEmailConfirmationSpec
       txtContent should include("You can pay by signing back into your One Stop Shop account.")
       txtContent should include("Search GOV.UK for ‘Submit your One Stop Shop return and pay VAT’.")
       txtContent should include(
-        "Sign in from that page using the Government Gateway user ID and password used to register for UK VAT.")
-      txtContent should include("Select ‘View past returns’ in your account.")
+        "Sign in with the Government Gateway user ID and password you used to register for UK VAT.")
+      txtContent should include("Select ‘View past returns’.")
       txtContent should include("Select your return period.")
-      txtContent should include("Select ‘Pay now’.")
-      txtContent should include("Choose a way to pay.")
+      txtContent should include("Select ‘Pay now’ and choose a way to pay.")
       txtContent should include("You can also pay using the ‘Pay your VAT bill’ service.")
       txtContent should include("Search GOV.UK for ‘Pay your VAT bill’.")
       txtContent should include("Select ‘Pay now’.")
       txtContent should include("Select ‘VAT One Stop Shop Union scheme’")
       txtContent should include("If you need to contact EU countries")
       txtContent should include("Quote your return reference: XI/XI100000002/Q3.2021")
-      txtContent should include("From the VAT One Stop Shop team")
+      txtContent should include("Regards, the VAT One Stop Shop team")
     }
   }
 }

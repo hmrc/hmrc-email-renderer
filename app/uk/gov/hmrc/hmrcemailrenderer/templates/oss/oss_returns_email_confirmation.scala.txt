@@ -10,7 +10,7 @@ VAT owed
 
 @params("VATOwed")
 
-You need to pay by @params("lastDayOfMonthAfterCalendarQuarter").
+You need to pay by @params("paymentDeadline").
 
 EU countries can charge you interest or penalties for late payments.
 
@@ -19,11 +19,10 @@ How to pay
 You can pay by signing back into your One Stop Shop account.
 
     1. Search GOV.UK for ‘Submit your One Stop Shop return and pay VAT’.
-    2. Sign in from that page using the Government Gateway user ID and password used to register for UK VAT.
-    3. Select ‘View past returns’ in your account.
+    2. Sign in with the Government Gateway user ID and password you used to register for UK VAT.
+    3. Select ‘View past returns’.
     4. Select your return period.
-    5. Select ‘Pay now’.
-    6. Choose a way to pay.
+    5. Select ‘Pay now’ and choose a way to pay.
 
 You can also pay using the ‘Pay your VAT bill’ service.
 
@@ -35,7 +34,7 @@ If you need to contact EU countries
 
 Quote your return reference: @params("reference")
 
-From the VAT One Stop Shop team
+Regards, the VAT One Stop Shop team
 
 
 
