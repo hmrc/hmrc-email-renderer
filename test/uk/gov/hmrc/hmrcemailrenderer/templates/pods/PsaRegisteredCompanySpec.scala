@@ -50,7 +50,7 @@ class PsaRegisteredCompanySpec
       htmlContent should include("Pension scheme administrator registration successful")
       htmlContent should include(s"Dear ${params("psaName")}")
       htmlContent should include(
-        s"${params("psaName")} has been successfully registered as a pension scheme administrator on the Managing Pension Schemes service.")
+        s"You have successfully registered ${params("psaName")} as a pension scheme administrator on the Managing Pension Schemes service.")
       htmlContent should include(s"The administrator ID for ${params("psaName")} has not changed.")
       htmlContent should include(
         "The pension scheme administrator can now manage pension schemes by applying to register a new pension scheme. " +

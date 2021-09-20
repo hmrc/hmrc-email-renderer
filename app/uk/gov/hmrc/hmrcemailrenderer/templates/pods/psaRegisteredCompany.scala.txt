@@ -4,7 +4,7 @@ Pension scheme administrator registration successful
 
 Dear @{params("psaName").toString}
 
-@{params("psaName").toString} has been successfully registered as a pension scheme administrator on the Managing Pension Schemes service.
+You have successfully registered @{params("psaName").toString} as a pension scheme administrator on the Managing Pension Schemes service.
 
 The administrator ID for @{params("psaName").toString} has not changed.
 
