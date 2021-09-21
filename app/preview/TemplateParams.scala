@@ -1581,12 +1581,12 @@ object TemplateParams {
       "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
     ),
     "oss_returns_email_confirmation" -> Map(
-      "recipientName_line1"                -> "Joe Bloggs",
-      "businessName"                       -> "Test Business",
-      "period"                             -> "1 July to 30 September 2021",
-      "paymentDeadline"                    -> "31 October 2021",
-      "VATOwed"                            -> "£1250",
-      "reference"                          -> "XI/XI100000002/Q3.2021"
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021",
+      "VATOwed"             -> "£1250",
+      "reference"           -> "XI/XI100000002/Q3.2021"
     )
   )
 }
@@ -2679,12 +2679,12 @@ object TemplateParams2 {
       "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
     ),
     "oss_returns_email_confirmation" -> Map(
-      "recipientName_line1"                -> "Joe Bloggs",
-      "businessName"                       -> "Test Business",
-      "period"                             -> "1 July to 30 September 2021",
-      "paymentDeadline"                    -> "31 October 2021",
-      "VATOwed"                            -> "£1250",
-      "reference"                          -> "XI/XI100000002/Q3.2021"
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021",
+      "VATOwed"             -> "£1250",
+      "reference"           -> "XI/XI100000002/Q3.2021"
     ),
     "nipbe_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",

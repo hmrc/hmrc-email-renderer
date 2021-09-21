@@ -6,9 +6,7 @@ Dear @params("recipientName_line1").
 
 HMRC has received your VAT return for @params("period").
 
-VAT owed
-
-@params("VATOwed")
+VAT owed: @params("VATOwed")
 
 You need to pay by @params("paymentDeadline").
 
@@ -34,7 +32,7 @@ If you need to contact EU countries
 
 Quote your return reference: @params("reference")
 
-Regards, the VAT One Stop Shop team
+From the VAT One Stop Shop team
 
 
 

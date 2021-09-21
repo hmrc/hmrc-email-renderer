@@ -28,12 +28,12 @@ class OSSReturnsEmailConfirmationSpec
   "OSS Returns Email Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
-      "recipientName_line1"                -> "Joe Bloggs",
-      "businessName"                       -> "Test Business",
-      "period"                             -> "1 July to 30 September 2021",
-      "paymentDeadline"                    -> "31 October 2021",
-      "VATOwed"                            -> "£1250",
-      "reference"                          -> "XI/XI100000002/Q3.2021"
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021",
+      "VATOwed"             -> "£1250",
+      "reference"           -> "XI/XI100000002/Q3.2021"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -54,7 +54,7 @@ class OSSReturnsEmailConfirmationSpec
       htmlContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      htmlContent should include("VAT owed")
+      htmlContent should include("VAT owed: ")
       htmlContent should include("£1250")
       htmlContent should include("You need to pay by 31 October 2021.")
       htmlContent should include("EU countries can charge you interest or penalties for late payments.")
@@ -72,7 +72,7 @@ class OSSReturnsEmailConfirmationSpec
       htmlContent should include("Select ‘VAT One Stop Shop Union scheme’")
       htmlContent should include("If you need to contact EU countries")
       htmlContent should include("Quote your return reference: XI/XI100000002/Q3.2021")
-      htmlContent should include("Regards, the VAT One Stop Shop team")
+      htmlContent should include("From the VAT One Stop Shop team")
     }
 
     "render correct text content" in {
@@ -81,7 +81,7 @@ class OSSReturnsEmailConfirmationSpec
       txtContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      txtContent should include("VAT owed")
+      txtContent should include("VAT owed: ")
       txtContent should include("£1250")
       txtContent should include("You need to pay by 31 October 2021.")
       txtContent should include("EU countries can charge you interest or penalties for late payments.")
@@ -99,7 +99,7 @@ class OSSReturnsEmailConfirmationSpec
       txtContent should include("Select ‘VAT One Stop Shop Union scheme’")
       txtContent should include("If you need to contact EU countries")
       txtContent should include("Quote your return reference: XI/XI100000002/Q3.2021")
-      txtContent should include("Regards, the VAT One Stop Shop team")
+      txtContent should include("From the VAT One Stop Shop team")
     }
   }
 }

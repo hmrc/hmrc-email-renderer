@@ -20,11 +20,8 @@
     <p style="margin: 0px 0 30px; font-size: 19px;">
         HMRC has received your VAT return for @params("period").
     </p>
-    <h2 style="margin: 0px 0 30px; font-size: 19px;">
-        VAT owed
-    </h2>
-    <p style="margin: 0px 0 30px; font-size: 19px;">
-        @params("VATOwed")
+    <p style="margin: 0px 0 30px; font-size: 19px; font-weight: bold;">
+        VAT owed: <span style="font-weight: normal;">@params("VATOwed")</span>
     </p>
     <p style="margin: 0px 0 30px; font-size: 19px;">
         You need to pay by @params("paymentDeadline").
@@ -78,7 +75,7 @@
         Quote your return reference: @params("reference")
     </p>
     <p style="margin: 0px 0 30px; font-size: 19px;">
-        Regards, the VAT One Stop Shop team
+        From the VAT One Stop Shop team
     </p>
 }
 >
