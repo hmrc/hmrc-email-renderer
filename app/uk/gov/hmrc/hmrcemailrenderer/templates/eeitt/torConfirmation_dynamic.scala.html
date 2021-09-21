@@ -15,32 +15,33 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied for transfer of residence tax relief"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied for transfer of residence tax relief", showHeading1 = false){
+<h1>@params("heading1")</h1>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    HMRC received an application for transfer of residence tax relief using this email address.
+    HMRC @params("para1") for transfer of residence tax relief using this email address.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your submission reference is: @params("submissionReference")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will contact you by email or telephone within 15 working days to let you know if your application is approved, or to ask for more information.
+    We will contact you by email or telephone within 15 working days to let you know if @params("para2") approved, or to ask for more information.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You cannot use the submission reference in this email to make additions to your application.
+    @params.get("para3")
 </p>
 <h2>
-    If you need to add any items to this application</h2>
+    If you need to add any @params.get("para4") items to this application</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Do not do anything now.
+    @params.get("para5")
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If we approve this application, we will email a Unique Reference Number (URN).
+   @params.get("para6")
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You can then use this URN to make additions, including adding an animal health certificate.</p>
+    @params("para7")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    When you have your URN, select ‘start now’ from the GOV.UK page you used to start this application. You can then confirm your email, then select ‘Make additions to an already approved application’.</p>
+    @params("para8")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     From Transfer of residence tax relief</p>
 }

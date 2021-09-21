@@ -22,6 +22,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Eeitt
 
 object EeittTemplates {
 
+  private val getTorDySub: Map[String, String] => String =
+    _.getOrElse("torDySub", "You applied for transfer of residence tax relief")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -167,6 +170,7 @@ object EeittTemplates {
       htmlTemplate = html.gd95ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //GD94 Template deleted from gForms repo
     MessageTemplate.create(
       templateId = "gd94_return_confirmation",
       fromAddress = govUkTeamAddress,
@@ -320,6 +324,7 @@ object EeittTemplates {
       htmlTemplate = html.c118Section6Part4ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //TSP Form shuttered
     MessageTemplate.create(
       templateId = "tsp_application_confirmation",
       fromAddress = govUkTeamAddress,
@@ -365,6 +370,7 @@ object EeittTemplates {
       htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //Cash dec template outdated - split into NI and GB
     MessageTemplate.create(
       templateId = "cash_declaration",
       fromAddress = govUkTeamAddress,
@@ -473,6 +479,7 @@ object EeittTemplates {
       htmlTemplate = html.ccg1Confirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //TSP DeReg Shuttered
     MessageTemplate.create(
       templateId = "tspDeReg_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -482,6 +489,7 @@ object EeittTemplates {
       htmlTemplate = html.tspDeRegConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //TSP Chief Shuttered
     MessageTemplate.create(
       templateId = "tspCHIEF_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -657,6 +665,7 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      //SEISS Child Shuttered
       templateId = "seiss_new_child_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -708,6 +717,15 @@ object EeittTemplates {
       subject = "HMRC received your notification about Self-Employment Income Support Scheme grant money",
       plainTemplate = txt.seissRepayConfirmation.f,
       htmlTemplate = html.seissRepayConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_repay_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae’ch hysbysiad am arian grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth wedi dod i law CThEM.",
+      plainTemplate = txt.seissRepayConfirmation_cy.f,
+      htmlTemplate = html.seissRepayConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -882,6 +900,15 @@ object EeittTemplates {
       htmlTemplate = html.torConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tor_confirmation_dynamic",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getTorDySub,
+      plainTemplate = txt.torConfirmation_dynamic.f,
+      htmlTemplate = html.torConfirmation_dynamic.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "jrsRemoval_submission_confirmation",
       fromAddress = govUkTeamAddress,
@@ -914,9 +941,18 @@ object EeittTemplates {
       templateId = "seissOverPayment_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "SEISS - Tell HMRC about a change to your tax return ",
+      subject = "Confirmation we received your SEISS amendments",
       plainTemplate = txt.seissOverPaymentConfirmation.f,
       htmlTemplate = html.seissOverPaymentConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seissOverPayment_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhad bod eich diwygiadau SEISS wedi dod i law",
+      plainTemplate = txt.seissOverPaymentConfirmation_cy.f,
+      htmlTemplate = html.seissOverPaymentConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(

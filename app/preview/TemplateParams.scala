@@ -2520,7 +2520,13 @@ object TemplateParams2 {
     ),
     "seiss_repay_submission" -> Map(
       "customerName" -> "Hugh Mann",
-      "emailTeam"    -> "HMRC Team"
+      "miscText"     -> "When making the repayment, you must only use the bank details provided to repay the grant money. You must not use these bank details to make any other payment to HMRC.",
+      "emailTeam"    -> "the Self-Employment Income Support team"
+    ),
+    "seiss_repay_submission_cy" -> Map(
+      "customerName" -> "Hugh Mann",
+      "miscText"     -> "Wrth wneud yr ad-daliad, dim ond i ad-dalu arian grant y dylech ddefnyddio’r manylion banc hyn. Peidiwch â defnyddio’r manylion banc hyn i wneud unrhyw daliad arall i CThEM.",
+      "emailTeam"    -> "y tîm Cymhorthdal Incwm Hunangyflogaeth"
     ),
     "vishing_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
@@ -2586,6 +2592,20 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "tor_confirmation_dynamic" -> Map(
+      "torDySub"            -> "HMRC received the additions to your for transfer of residence tax relief",
+      "heading1"            -> "You made additions to your application for transfer  of residence tax relief",
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "para1"               -> "received additions to your application",
+      "para2"               -> "the additions to your application are",
+      "para3"               -> "",
+      "para4"               -> "more",
+      "para5"               -> "",
+      "para6"               -> "",
+      "para7"               -> "You can still use your URN to make further additions.",
+      "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
+    ),
     "jrsRemoval_submission_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
@@ -2598,6 +2618,10 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "seissOverPayment_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seissOverPayment_confirmation_cy" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
