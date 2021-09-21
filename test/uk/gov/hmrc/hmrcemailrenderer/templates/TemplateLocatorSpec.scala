@@ -619,6 +619,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "pods_scheme_register",
         "pods_racdac_scheme_register",
         "pods_psa_register",
+        "pods_psa_register_company",
         "pods_psa_invited",
         "pods_file_aft_return",
         "pods_aft_amended_return_decrease",
