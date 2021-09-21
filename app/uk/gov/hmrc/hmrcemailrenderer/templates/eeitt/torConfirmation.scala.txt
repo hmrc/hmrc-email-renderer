@@ -6,7 +6,7 @@ Dear @params("customerName")
 
 HMRC received an application for transfer of residence tax relief using this email address.
 
-You cannot use the submission reference in this email to make changes to your application.
+You cannot use the submission reference in this email to make additions to your application.
 
 Your submission reference is: @params("submissionReference")
 
@@ -18,7 +18,7 @@ Do not do anything now.
 
 If we approve this application, we will email a Unique Reference Number (URN).
 
-You can then use this URN to make changes, including adding an animal health certificate.
+You can then use this URN to make additions, including adding an animal health certificate.
 
 When you have your URN, select ‘start now’ from the GOV.UK page you used to start this application. You can then confirm your email, then select ‘Make additions to an already approved application’.
 

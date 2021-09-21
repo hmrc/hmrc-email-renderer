@@ -1,0 +1,31 @@
+@(params: Map[String, Any])
+
+You applied for transfer of residence tax relief
+
+@params("heading1")
+
+Dear @params("customerName")
+
+HMRC @params("para1") for transfer of residence tax relief using this email address.
+
+You cannot use the submission reference in this email to make changes to your application.
+
+Your submission reference is: @params("submissionReference")
+
+We will contact you by email or telephone within 15 working days to let you know if @params("para2") approved, or to ask for more information.
+
+@params.get("para3")
+
+If you need to add any @params.get("para4") items to this application
+
+@params.get("para5")
+
+@params.get("para6")
+
+@params("para7")
+
+@params("para8")
+
+From Transfer of residence tax relief
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

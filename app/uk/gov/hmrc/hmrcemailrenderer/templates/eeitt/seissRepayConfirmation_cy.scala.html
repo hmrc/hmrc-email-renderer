@@ -1,0 +1,32 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gwnaethoch anfon hysbysiad ar-lein am arian grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth", isWelsh = true){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Annwyl @params("customerName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Cawsom eich hysbysiad yn rhoi gwybod i ni eich bod yn bwriadu ad-dalu arian grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+     @params.get("miscText")
+</p>
+<h2>Pam eich bod yn cael yr e-bost hwn</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Rydym yn anfon e-bost cadarnhau ar gyfer bob ffurflen a chyflwynir ar-lein.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Oddi wrth  @params("emailTeam")</p>
+}

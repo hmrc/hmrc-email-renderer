@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Gwnaethoch roi gwybod i CThEM am ddiwygiad i’ch Ffurflen Dreth all effeithio ar eich grant SEISS 4 neu grant SEISS 5.
+
+Annwyl @params("customerName")
+
+Mae’r e-bost hwn yn cadarnhau eich bod wedi rhoi gwybod i ni am ddiwygiadau i’ch Ffurflen Dreth neu i’ch ffigurau trosiant.
+
+Rydych yn ymwybodol y gall hyn effeithio ar gymhwystra ar gyfer bedwerydd neu bumed grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth.
+
+Eich cyfeirnod yw:  @params("submissionReference")
+
+Byddwn yn defnyddio’r wybodaeth a ddarparwyd gennych i ail-gyfrifo’ch cymhwystra ar gyfer grant. Byddwn yn ysgrifennu atoch o fewn 30 diwrnod i amlinellu unrhyw ad-daliad sy’n ddyledus.
+
+Byddwn yn ymateb mewn cysylltiad â gordaliadau SEISS 4 a SEISS 5 yn unig.
+
+Oddi wrth Gyfarwyddiaeth Gweinyddu Trethi - Cymhorthdal Incwm Hunangyflogaeth, CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
