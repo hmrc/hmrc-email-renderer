@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Gwnaethoch anfon hysbysiad ar-lein am arian grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth
+
+Annwyl @params("customerName")
+
+Cawsom eich hysbysiad yn rhoi gwybod i ni eich bod yn bwriadu ad-dalu arian grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth.
+
+@params.get("miscText")
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost cadarnhau ar gyfer bob ffurflen a chyflwynir ar-lein.
+
+Oddi wrth  @params("emailTeam")
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
