@@ -50,6 +50,15 @@ object PodsTemplates {
       htmlTemplate = html.psaRegistered.f,
       priority = Some(MessagePriority.Standard)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "pods_psa_register_company",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = params => s"${params("psaName")} has registered as a pension scheme administrator",
+      plainTemplate = txt.psaRegisteredCompany.f,
+      htmlTemplate = html.psaRegisteredCompany.f,
+      priority = Some(MessagePriority.Standard)
+    ),
     MessageTemplate.create(
       templateId = "pods_psa_invited",
       fromAddress = govUkTeamAddress,
