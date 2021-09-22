@@ -1,0 +1,38 @@
+@(params: Map[String, Any])You submitted a VAT return for the One Stop Shop Union scheme
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Dear @params("recipientName_line1").
+
+HMRC has received your VAT return for @params("period").
+
+VAT owed: @params("VATOwed")
+
+You need to pay by @params("paymentDeadline").
+
+EU countries can charge you interest or penalties for late payments.
+
+How to pay
+
+You can pay by signing back into your One Stop Shop account.
+
+    1. Search GOV.UK for ‘Submit your One Stop Shop return and pay VAT’.
+    2. Sign in with the Government Gateway user ID and password you used to register for UK VAT.
+    3. Select ‘View past returns’.
+    4. Select your return period.
+    5. Select ‘Pay now’ and choose a way to pay.
+
+You can also pay using the ‘Pay your VAT bill’ service.
+
+    1. Search GOV.UK for ‘Pay your VAT bill’.
+    2. Select ‘Pay now’.
+    3. Select ‘VAT One Stop Shop Union scheme’
+
+If you need to contact EU countries
+
+Quote your return reference: @params("reference")
+
+From the VAT One Stop Shop team
+
+
+
