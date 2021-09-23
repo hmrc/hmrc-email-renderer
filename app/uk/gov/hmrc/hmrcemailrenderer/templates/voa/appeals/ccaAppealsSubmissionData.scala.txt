@@ -3,10 +3,10 @@
 
 Valuation Office Agency – check and challenge registration
 
-Dear caseworker
+Dear registration team
 Proposal Number: @params.getOrElse("proposalNumber", "")
-Submission data: @params.getOrElse("submissionUrl", "")
+@params.getOrElse("submissionUrl", "")
 
-Continue to use your Government Gateway details to sign in.
+Use the submission data to create a case in CDB. Speak to your line manager if you cannot access the submission data.
 
 From the Valuation Office Agency
