@@ -71,7 +71,7 @@ object CCATemplates {
       htmlTemplate = subscription.html.ccaRevalSubscriptionConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-      MessageTemplate.createWithDynamicSubject(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "cca_appeals_submission_link",
       fromAddress = govUkTeamAddress,
       service = CCA,
@@ -79,6 +79,6 @@ object CCATemplates {
       plainTemplate = appeals.txt.ccaAppealsSubmissionData.f,
       htmlTemplate = appeals.html.ccaAppealsSubmissionData.f,
       priority = Some(MessagePriority.Standard)
-  )
+    )
   )
 }
