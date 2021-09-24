@@ -1,7 +1,7 @@
 
 @(params: Map[String, Any])
 
-Valuation Office Agency – check and challenge registration
+Valuation Office Agency – Electronic business rates proposal
 
 Dear registration team
 Proposal Number: @params.getOrElse("proposalNumber", "")
