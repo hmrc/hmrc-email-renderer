@@ -4,7 +4,7 @@ Your pension scheme has been added from Pension Schemes Online
 
 Dear @{params("psaName").toString}
 
-Your pension scheme @{params("schemeName").toString} has been added from Pension Schemes Online
+Your pension scheme @{params("schemeName").toString} has been added from Pension Schemes Online.
 
 How to manage your pension scheme
 
