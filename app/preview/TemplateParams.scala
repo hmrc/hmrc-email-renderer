@@ -1781,6 +1781,12 @@ object TemplateParams2 {
       "user_id"   -> "914657894302",
       "full_name" -> "Joe Bloggs"
     ),
+    "cca_appeals_submission_link" -> Map(
+      "proposalNumber" -> "341112111",
+      "submissionUrl"  -> "http://test.com/blah-blah",
+      "submissionDate" -> "15 Sep 2021",
+      "postcode"       -> "AA1 1AA"
+    ),
     "cca_enrolment_migration_confirmation" -> Map(
       "name"     -> "test user",
       "personId" -> "123456789",
