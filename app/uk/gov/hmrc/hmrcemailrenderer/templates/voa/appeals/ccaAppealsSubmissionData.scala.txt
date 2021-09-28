@@ -1,0 +1,12 @@
+
+@(params: Map[String, Any])
+
+Valuation Office Agency – Electronic business rates proposal
+
+Dear registration team
+Proposal Number: @params.getOrElse("proposalNumber", "")
+@params.getOrElse("submissionUrl", "")
+
+Use the submission data to create a case in CDB. Speak to your line manager if you cannot access the submission data.
+
+From the Valuation Office Agency
