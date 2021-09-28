@@ -1,0 +1,11 @@
+@(params: Map[String, Any])You submitted a VAT return for the One Stop Shop Union scheme
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+HMRC has received your VAT return for @params("period").
+
+You do not owe any VAT for this period.
+
+Return reference: @params("reference").
+
+From the VAT One Stop Shop team
