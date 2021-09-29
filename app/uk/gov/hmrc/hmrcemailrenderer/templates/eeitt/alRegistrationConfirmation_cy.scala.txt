@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Mae’ch cofrestriad ar gyfer Ardoll Agregau wedi dod i law
+
+Annwyl Gwsmer,
+
+Mae’ch cofrestriad ar-lein ar gyfer Ardoll Agregau wedi dod i law
+
+Ewch i GOV.UK i weld a oes angen i chi lenwi rhagor o ffurflenni i gwblhau eich cofrestriad ar gyfer Ardoll Agregau.
+
+Er enghraifft, os mai partneriaeth yw eich busnes, bydd angen i chi lenwi ffurflen AL2 hefyd.
+
+Pam eich bod yn derbyn y neges e-bost hon
+
+Rydym yn anfon e-bost cadarnhau ar gyfer cofrestriad sydd wedi’i gyflwyno ar-lein.
+
+Diolch.
+
+Gan dîm Ecséis CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
