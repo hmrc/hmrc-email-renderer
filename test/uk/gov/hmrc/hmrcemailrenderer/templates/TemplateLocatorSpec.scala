@@ -637,6 +637,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "sdil_registration_accepted",
         "sdil_registration_received",
         "retrieve_userid_notification",
+        "cca_appeals_submission_link",
         "cca_enrolment_migration_confirmation",
         "cca_enrolment_confirmation",
         "cca_enrolment_confirmation_agent",
@@ -665,6 +666,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "pods_authorise_psp",
         "pods_psa_deauthorise_psp",
         "pods_psp_deregister_self",
+        "pods_scheme_migration_confirmation",
         "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",
@@ -748,6 +750,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "oss_registration_confirmation_pre_10th_of_month",
         "oss_registration_confirmation_post_10th_of_month",
         "oss_returns_email_confirmation",
+        "oss_returns_email_confirmation_no_vat_owed"
       )
     }
   }
