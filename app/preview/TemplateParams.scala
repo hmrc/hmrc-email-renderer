@@ -1826,6 +1826,10 @@ object TemplateParams2 {
       "psaName"    -> "Jane Doe",
       "schemeName" -> "test scheme"
     ),
+    "pods_scheme_migration_confirmation" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "Some Pension Scheme"
+    ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
     ),
