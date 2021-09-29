@@ -4,7 +4,7 @@ We received your evidence of a permanent business establishment in Northern Irel
 
 Dear @params("customerName")
 
-We will email within 10 days to confirm if we have validated your permanent business establishment using the proof you provided.
+We will email within 10 working days to confirm if we have validated your permanent business establishment using the proof you provided.
 
 If we do not accept the proof, the email will explain what you can do next.
 
