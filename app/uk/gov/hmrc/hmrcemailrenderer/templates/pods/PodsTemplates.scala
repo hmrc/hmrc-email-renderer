@@ -166,6 +166,15 @@ object PodsTemplates {
       plainTemplate = txt.pspDeregisteredSelf.f,
       htmlTemplate = html.pspDeregisteredSelf.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_scheme_migration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Your pension scheme has been added from Pension Schemes Online",
+      plainTemplate = txt.schemeMigrationConfirmation.f,
+      htmlTemplate = html.schemeMigrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
