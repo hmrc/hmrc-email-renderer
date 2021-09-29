@@ -49,6 +49,15 @@ object OSSTemplates {
       plainTemplate = txt.oss_returns_email_confirmation.f,
       htmlTemplate = html.oss_returns_email_confirmation.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "oss_returns_email_confirmation_no_vat_owed",
+      fromAddress = FromAddress.noReply("VAT One Stop Shop Team"),
+      service = OSS,
+      subject = "HMRC: VAT return submitted",
+      plainTemplate = txt.oss_returns_email_confirmation_no_vat_owed.f,
+      htmlTemplate = html.oss_returns_email_confirmation_no_vat_owed.f,
+      priority = Some(MessagePriority.Background)
     )
   )
 }

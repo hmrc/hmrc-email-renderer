@@ -2,8 +2,6 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-Dear @params("recipientName_line1").
-
 HMRC has received your VAT return for @params("period").
 
 VAT owed: @params("VATOwed")

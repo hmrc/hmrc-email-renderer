@@ -1587,6 +1587,11 @@ object TemplateParams {
       "paymentDeadline"     -> "31 October 2021",
       "VATOwed"             -> "£1250",
       "reference"           -> "XI/XI100000002/Q3.2021"
+    ),
+    "oss_returns_email_confirmation_no_vat_owed" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "period"              -> "1 July to 30 September 2021",
+      "reference"           -> "XI/XI100000002/Q3.2021"
     )
   )
 }
@@ -1820,6 +1825,10 @@ object TemplateParams2 {
     "pods_racdac_scheme_register" -> Map(
       "psaName"    -> "Jane Doe",
       "schemeName" -> "test scheme"
+    ),
+    "pods_scheme_migration_confirmation" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "Some Pension Scheme"
     ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
@@ -2717,6 +2726,11 @@ object TemplateParams2 {
       "period"              -> "1 July to 30 September 2021",
       "paymentDeadline"     -> "31 October 2021",
       "VATOwed"             -> "£1250",
+      "reference"           -> "XI/XI100000002/Q3.2021"
+    ),
+    "oss_returns_email_confirmation_no_vat_owed" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "period"              -> "1 July to 30 September 2021",
       "reference"           -> "XI/XI100000002/Q3.2021"
     ),
     "nipbe_confirmation" -> Map(
