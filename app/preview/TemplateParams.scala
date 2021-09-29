@@ -2746,6 +2746,5 @@ object TemplateParams2 {
       "period"              -> "1 July to 30 September 2021",
       "reference"           -> "XI/XI100000002/Q3.2021"
     )
-    )
   )
 }
