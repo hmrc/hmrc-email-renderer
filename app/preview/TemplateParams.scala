@@ -2680,6 +2680,11 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68",
       "businessName"        -> "Acquisitions Incorporated"
     ),
+    "ioss_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated"
+    ),
     "ioss_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
@@ -2690,6 +2695,14 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68",
       "businessName"        -> "Acquisitions Incorporated"
+    ),
+    "nipbe_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "nipbe_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
@@ -2726,10 +2739,6 @@ object TemplateParams2 {
     "oss_returns_email_confirmation_no_vat_owed" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
       "period"              -> "1 July to 30 September 2021"
-    ),
-    "nipbe_confirmation" -> Map(
-      "customerName"        -> "Hugh Mann",
-      "submissionReference" -> "NC38-N2ZC-TH68"
     )
   )
 }

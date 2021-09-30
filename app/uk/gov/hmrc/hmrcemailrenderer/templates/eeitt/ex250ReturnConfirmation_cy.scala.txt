@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Mae’ch cofrestriad i fod yn hyrwyddwr bingo wedi cael ei gyflwyno
+
+Annwyl Gwsmer,
+
+Mae’ch cofrestriad ar-lein i fod yn hyrwyddwr bingo wedi dod i law.
+
+Pam eich bod yn derbyn y neges e-bost hon
+
+Rydym yn anfon e-bost cadarnhau ar gyfer cofrestriad sydd wedi’i gyflwyno ar-lein.
+
+Os bydd angen i chi gysylltu â ni am eich cofrestriad, byddwch angen eich Cyfeirnod Unigryw y Trethdalwr (UTR).
+
+Diolch.
+
+Gan dîm Ecséis CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

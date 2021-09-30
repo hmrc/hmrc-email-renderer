@@ -15,20 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received evidence of your permanent business establishment"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch tystiolaeth am gyfeiriad sefydliad busnes parhaol yng Ngogledd Iwerddon wedi dod i law", isWelsh = true){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params("customerName")</p>
+    Annwyl @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
+    Byddwn yn anfon e-bost atoch cyn pen 5 diwrnod i gadarnhau a ydym wedi dilysu eich sefydliad busnes parhaol gan ddefnyddio’r prawf rydych wedi’i roi.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If we do not accept this, the email will explain what you can do next.
+    Os na fyddwn yn derbyn y prawf, bydd yr e-bost yn esbonio beth allwch ei wneud nesaf.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: <b>@params("submissionReference")</b></p>
-<h2>Why you are receiving this email</h2>
+    Cyfeirnod eich cyflwyniad yw: @params("submissionReference")</p>
+<h2>Pam eich bod yn cael y neges e-bost hon</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for claims submitted online.</p>
+    Rydym yn anfon e-bost cadarnhau ar gyfer cais sy’n cael ei gyflwyno ar-lein.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Customer Services Group</p>
+    Gan CThEM</p>
 }

@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+Mae’ch cais ar gyfer ffurflen Treth Premiwm Yswiriant wedi ei gyflwyno’n llwyddiannus
+
+Annwyl Gwsmer,
+
+Mae’ch cais i gyflwyno’ch ffurflen Treth Premiwm Yswiriant ar-lein wedi dod i law.
+
+Yr hyn sy’n digwydd nesaf
+
+Byddwn yn cysylltu â chi neu’ch asiant os oes problem gyda’ch ffurflen.
+
+Byddwn yn adolygu unrhyw hawliad a wnaed am ad-daliad.
+
+Pam eich bod yn derbyn y neges e-bost hon
+
+Rydym yn anfon e-bost cadarnhau ar gyfer ffurflenni sydd wedi’u ffeilio ar-lein.
+
+Os bydd angen i chi gysylltu â ni ynghylch eich cais, nodwch eich rhif cofrestru IPT.
+
+Diolch.
+
+Gan Gynllun Treth Premiwm Yswiriant CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
