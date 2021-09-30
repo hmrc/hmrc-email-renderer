@@ -2739,7 +2739,7 @@ object TemplateParams2 {
     "oss_returns_email_confirmation_no_vat_owed" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
       "period"              -> "1 July to 30 September 2021",
-      "reference"           -> "XI/XI100000002/Q3.2021"
+      "reference"           -> "XI/XI100000002/Q3.2021",
       "period"              -> "1 July to 30 September 2021"
     )
   )
