@@ -1,12 +1,12 @@
 @(params: Map[String, Any])
 
-We received your evidence of a permanent business establishment in Northern Ireland
+We received your evidence of your permanent business establishment in Northern Ireland
 
 Dear @params("customerName")
 
-We will email within 10 working days to confirm if we have validated your permanent business establishment using the proof you provided.
+We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
 
-If we do not accept the proof, the email will explain what you can do next.
+If we do not accept this, the email will explain what you can do next.
 
 Your submission reference is: @params("submissionReference")
 
