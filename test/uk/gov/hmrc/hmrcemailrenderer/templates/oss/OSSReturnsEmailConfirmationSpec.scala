@@ -31,9 +31,7 @@ class OSSReturnsEmailConfirmationSpec
       "recipientName_line1" -> "Joe Bloggs",
       "businessName"        -> "Test Business",
       "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021",
-      "VATOwed"             -> "£1250",
-      "reference"           -> "XI/XI100000002/Q3.2021"
+      "paymentDeadline"     -> "31 October 2021"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -54,24 +52,17 @@ class OSSReturnsEmailConfirmationSpec
       htmlContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      htmlContent should include("VAT owed: ")
-      htmlContent should include("£1250")
-      htmlContent should include("You need to pay by 31 October 2021.")
+      htmlContent should include("You need to pay the return in full by 31 October 2021.")
       htmlContent should include("EU countries can charge you interest or penalties for late payments.")
       htmlContent should include("How to pay")
-      htmlContent should include("You can pay by signing back into your One Stop Shop account.")
+      htmlContent should include(
+        "You can see how much you owe and pay by signing back into your One Stop Shop account.")
       htmlContent should include("Search GOV.UK for ‘Submit your One Stop Shop return and pay VAT’.")
       htmlContent should include(
         "Sign in with the Government Gateway user ID and password you used to register for UK VAT.")
       htmlContent should include("Select ‘View past returns’.")
       htmlContent should include("Select your return period.")
       htmlContent should include("Select ‘Pay now’ and choose a way to pay.")
-      htmlContent should include("You can also pay using the ‘Pay your VAT bill’ service.")
-      htmlContent should include("Search GOV.UK for ‘Pay your VAT bill’.")
-      htmlContent should include("Select ‘Pay now’.")
-      htmlContent should include("Select ‘VAT One Stop Shop Union scheme’")
-      htmlContent should include("If you need to contact EU countries")
-      htmlContent should include("Quote your return reference: XI/XI100000002/Q3.2021")
       htmlContent should include("From the VAT One Stop Shop team")
     }
 
@@ -81,24 +72,16 @@ class OSSReturnsEmailConfirmationSpec
       txtContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      txtContent should include("VAT owed: ")
-      txtContent should include("£1250")
-      txtContent should include("You need to pay by 31 October 2021.")
+      txtContent should include("You need to pay the return in full by 31 October 2021.")
       txtContent should include("EU countries can charge you interest or penalties for late payments.")
       txtContent should include("How to pay")
-      txtContent should include("You can pay by signing back into your One Stop Shop account.")
+      txtContent should include("You can see how much you owe and pay by signing back into your One Stop Shop account.")
       txtContent should include("Search GOV.UK for ‘Submit your One Stop Shop return and pay VAT’.")
       txtContent should include(
         "Sign in with the Government Gateway user ID and password you used to register for UK VAT.")
       txtContent should include("Select ‘View past returns’.")
       txtContent should include("Select your return period.")
       txtContent should include("Select ‘Pay now’ and choose a way to pay.")
-      txtContent should include("You can also pay using the ‘Pay your VAT bill’ service.")
-      txtContent should include("Search GOV.UK for ‘Pay your VAT bill’.")
-      txtContent should include("Select ‘Pay now’.")
-      txtContent should include("Select ‘VAT One Stop Shop Union scheme’")
-      txtContent should include("If you need to contact EU countries")
-      txtContent should include("Quote your return reference: XI/XI100000002/Q3.2021")
       txtContent should include("From the VAT One Stop Shop team")
     }
   }
