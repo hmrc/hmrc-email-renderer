@@ -29,8 +29,7 @@ class OSSReturnsEmailConfirmationNoVatOwedSpec
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
       "recipientName_line1" -> "Joe Bloggs",
-      "period"              -> "1 July to 30 September 2021",
-      "reference"           -> "XI/XI100000002/Q3.2021"
+      "period"              -> "1 July to 30 September 2021"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -51,8 +50,6 @@ class OSSReturnsEmailConfirmationNoVatOwedSpec
       htmlContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      htmlContent should include("You do not owe any VAT for this period.")
-      htmlContent should include("Return reference: XI/XI100000002/Q3.2021.")
       htmlContent should include("From the VAT One Stop Shop team")
     }
 
@@ -62,8 +59,6 @@ class OSSReturnsEmailConfirmationNoVatOwedSpec
       txtContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      txtContent should include("You do not owe any VAT for this period.")
-      txtContent should include("Return reference: XI/XI100000002/Q3.2021.")
       txtContent should include("From the VAT One Stop Shop team")
     }
   }

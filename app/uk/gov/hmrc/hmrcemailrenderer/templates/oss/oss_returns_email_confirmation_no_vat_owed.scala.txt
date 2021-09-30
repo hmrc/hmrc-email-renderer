@@ -4,8 +4,4 @@
 
 HMRC has received your VAT return for @params("period").
 
-You do not owe any VAT for this period.
-
-Return reference: @params("reference").
-
 From the VAT One Stop Shop team
