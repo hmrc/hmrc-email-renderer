@@ -8,8 +8,6 @@ You told HMRC the IOSS registration details for @params("businessName").
 
 Your submission reference is: @params("submissionReference")
 
-We will now update our records with the information you provided.
-
 Why you are receiving this email
 
 We send a confirmation email for a notification submitted online.

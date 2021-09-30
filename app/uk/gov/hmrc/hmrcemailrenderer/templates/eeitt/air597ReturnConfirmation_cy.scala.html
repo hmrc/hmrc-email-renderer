@@ -15,20 +15,18 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received evidence of your permanent business establishment"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch ffurflen hawlio Rhyddhad ar Gynnwys Alcoholig wedi cael ei chyflwyno", isWelsh = true){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params("customerName")</p>
+    Annwyl Gwsmer,</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
-</p>
+    Mae’ch ffurflen hawlio Rhyddhad ar Gynnwys Alcoholig ar-lein wedi dod i law.</p>
+<h2>Pam eich bod yn derbyn y neges e-bost hon</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If we do not accept this, the email will explain what you can do next.
-</p>
+    Rydym yn anfon e-bost cadarnhau ar gyfer ffurflenni hawlio sydd wedi’u cyflwyno ar-lein.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: <b>@params("submissionReference")</b></p>
-<h2>Why you are receiving this email</h2>
+    Os bydd angen i chi gysylltu â ni ynghylch eich hawliad, nodwch eich rhif cofrestru Rhyddhad ar Gynnwys Alcoholig.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for claims submitted online.</p>
+    Diolch.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Customer Services Group</p>
+    Gan dîm Ecséis CThEM</p>
 }

@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Mae eich cais i ddirymu cwmni adrodd wedi cael ei gyflwyno
+
+Annwyl Gwsmer,
+
+Rydym wedi derbyn eich dirymiad.
+
+Pam eich bod yn derbyn hwn
+
+Dyma neges e-bost i gadarnhau dirymiad ffurflen cyfyngiadau ar log corfforaethol ar gyfer cwmni sy’n adrodd.
+
+Diolch.
+
+Gan Gyfyngiad Llog Corfforaethol CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

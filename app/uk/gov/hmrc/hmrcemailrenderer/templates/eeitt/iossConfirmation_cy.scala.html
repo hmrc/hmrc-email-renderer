@@ -15,20 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received evidence of your permanent business establishment"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydym wedi cael eich hysbysiad Gwasanaeth Un Cam ar gyfer Mewnforio (IOSS) yr UE", isWelsh = true){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params("customerName")</p>
+    Annwyl @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
+    Rydych wedi rhoi gwybod i CThEM beth yw manylion cofrestru IOSS ar gyfer @params("businessName").
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If we do not accept this, the email will explain what you can do next.
-</p>
+    Cyfeirnod eich cyflwyniad yw: <b>@params("submissionReference")</b></p>
+<h2>Pam eich bod yn cael y neges e-bost hon</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: <b>@params("submissionReference")</b></p>
-<h2>Why you are receiving this email</h2>
+    Rydym yn anfon e-bost cadarnhau ar gyfer hysbysiad sy’n cael ei gyflwyno ar-lein.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for claims submitted online.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Customer Services Group</p>
+    Gan Dîm Gwasanaeth Un Cam ar gyfer Mewnforio CThEM</p>
 }
