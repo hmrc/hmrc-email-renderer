@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-We received your evidence of your permanent business establishment in Northern Ireland
+We received evidence of your permanent business establishment
 
 Dear @params("customerName")
 
