@@ -17,9 +17,11 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params.ApiCatalogueReportParams.getQuestions
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We’ve sent your message") { 
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have sent your message") { 
 
-  <p style="margin: 0 0 30px; font-size: 19px;">Here’s a summary.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("senderName")}</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">Here is a summary of your message sent to the platform team.</p>
 
   <p style="margin: 0 0 30px; font-size: 19px;"><strong>API</strong>: @{params("apiTitle")}</p>
 
@@ -44,4 +46,6 @@
   <p style="margin: 0 0 30px; font-size: 19px;"><strong>Sent to:</strong> @{params("apiEmail")}</p>
   
   <p style="margin: 0 0 30px; font-size: 19px;">You should get a reply in 7 days.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC API catalogue</p>
 }

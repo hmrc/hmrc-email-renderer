@@ -1,7 +1,9 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params.ApiCatalogueReportParams.getQuestions
-@(params: Map[String, Any])We’ve sent your message
+@(params: Map[String, Any])We have sent your message
 
-Here’s a summary.
+Dear @{params("senderName")}
+
+Here is a summary of your message sent to the platform team.
 
 API: @{params("apiTitle")}
 
@@ -25,3 +27,5 @@ Do you have a specific question?
 Sent to: @{params("apiEmail")}
 
 You should get a reply in 7 days.
+
+From HMRC API catalogue

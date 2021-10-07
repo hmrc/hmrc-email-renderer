@@ -19,7 +19,9 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Information request about " + params("apiTitle")) { 
 
-  <p style="margin: 0 0 30px; font-size: 19px;">We’ve received an information request about @{params("apiTitle")} on the API catalogue.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">Dear platform team</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">We have received an information request about @{params("apiTitle")} on the API catalogue.</p>
 
   <p style="margin: 0 0 30px; font-size: 19px;">Here’s a summary.</p>
 
@@ -41,5 +43,7 @@
 
   <p style="margin: 0 0 30px; font-size: 19px;">@{params("specificQuestion")}</p>
 
-  <p style="margin: 0 0 30px; font-size: 19px;">You should reply to @{params("senderEmail")} in 7 days. </p>
+  <p style="margin: 0 0 30px; font-size: 19px;">You should reply to @{params("senderEmail")} in 7 days.</p>
+
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC API catalogue</p>
 }

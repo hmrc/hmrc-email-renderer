@@ -1,7 +1,9 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params.ApiCatalogueReportParams.getQuestions
 @(params: Map[String, Any])Information request about @{params("apiTitle")}
 
-We’ve received an information request about @{params("apiTitle")} on the API catalogue. 
+Dear platform team
+
+We have received an information request about @{params("apiTitle")} on the API catalogue. 
 
 Here’s a summary.
 
@@ -23,3 +25,5 @@ Do you have a specific question?
 
 
 You should reply to @{params("senderEmail")} in 7 days. 
+
+From HMRC API catalogue
