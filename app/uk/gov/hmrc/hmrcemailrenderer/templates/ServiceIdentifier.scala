@@ -28,6 +28,7 @@ object ServiceIdentifier {
   case object AntiMoneyLaunderingSupervision extends ServiceIdentifier { override val name = "amls" }
   case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
   case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
+  case object ApiCatalogue extends ServiceIdentifier { override val name = "api-catalogue" }
   case object BTIOperationalService extends ServiceIdentifier { override val name = "tariff-classification-frontend" }
   case object BTIApplicationService extends ServiceIdentifier { override val name = "binding-tariff-trader-frontend" }
   case object BTIAdviceService extends ServiceIdentifier { override val name = "binding-tariff-advice-frontend" }
