@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You have completed your request to add your RAC/DACs from Pension Schemes Online
+
+Dear @{params("psaName").toString}
+
+You have completed your request to add your RAC/DACs from the Pension Schemes Online service.
+
+What happens next
+
+It can take up to 48 hours for your RAC/DACs to be added to your list of schemes on the Managing Pension Schemes service.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
