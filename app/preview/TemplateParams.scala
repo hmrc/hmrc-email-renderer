@@ -1827,6 +1827,9 @@ object TemplateParams2 {
       "psaName"    -> "Jane Doe",
       "schemeName" -> "Some Pension Scheme"
     ),
+    "pods_racdac_bulk_migration_confirmation" -> Map(
+      "psaName" -> "Jane Doe"
+    ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
     ),
