@@ -5,7 +5,7 @@ Dear platform team
 
 We have received an information request about @{params("apiTitle")} on the API catalogue. 
 
-Here’s a summary.
+Here is a summary.
 
 Name: @{params("senderName")}
 
