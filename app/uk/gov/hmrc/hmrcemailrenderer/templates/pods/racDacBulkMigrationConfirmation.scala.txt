@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-You have completed your request to add your RAC/DACs from Pension Schemes Online
+We are adding your RAC/DACs
 
 Dear @{params("psaName").toString}
 
-You have completed your request to add your RAC/DACs from the Pension Schemes Online service.
+You have completed your request to add your RAC/DACs to Managing Pension Schemes from Pension Schemes Online.
 
 What happens next
 

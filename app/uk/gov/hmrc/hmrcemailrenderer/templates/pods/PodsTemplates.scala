@@ -180,7 +180,7 @@ object PodsTemplates {
       templateId = "pods_racdac_bulk_migration_confirmation",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = "You have completed your request to add your RAC/DACs from Pension Schemes Online",
+      subject = "We are adding your RAC/DACs",
       plainTemplate = txt.racDacBulkMigrationConfirmation.f,
       htmlTemplate = html.racDacBulkMigrationConfirmation.f,
       priority = Some(MessagePriority.Standard)
