@@ -116,7 +116,8 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "Exports (CDS)",
         "MODS",
         "CDSRC",
-        "OSS"
+        "OSS",
+        "API Catalogue"
       )
     }
 
@@ -751,7 +752,9 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "oss_registration_confirmation_pre_10th_of_month",
         "oss_registration_confirmation_post_10th_of_month",
         "oss_returns_email_confirmation",
-        "oss_returns_email_confirmation_no_vat_owed"
+        "oss_returns_email_confirmation_no_vat_owed",
+        "platformContact",
+        "platformContactConfirmation"
       )
     }
   }
