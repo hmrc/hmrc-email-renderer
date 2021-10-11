@@ -21,6 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.aeo.AEOMRATemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.agent.AgentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.ApiCatalogueTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
@@ -82,6 +83,7 @@ trait TemplateLocator {
       "AEO MRA"               -> AEOMRATemplates.templates,
       "Agent"                 -> AgentTemplates.templates,
       "API Platform"          -> ApiTemplates.templates,
+      "API Catalogue"         -> ApiCatalogueTemplates.templates,
       "ATS"                   -> AtsTemplates.templates,
       "AWRS"                  -> AwrsTemplates.templates,
       "AMLS"                  -> AmlsTemplates.templates,

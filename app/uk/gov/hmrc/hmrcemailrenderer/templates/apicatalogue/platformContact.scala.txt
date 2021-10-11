@@ -1,0 +1,29 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params.ApiCatalogueReportParams.getQuestions
+@(params: Map[String, Any])Information request about @{params("apiTitle")}
+
+Dear platform team
+
+We have received an information request about @{params("apiTitle")} on the API catalogue. 
+
+Here is a summary.
+
+Name: @{params("senderName")}
+
+Email: @{params("senderEmail")}
+@defining(getQuestions(params)){ questions =>
+@if(questions.nonEmpty){
+
+Why do you need to contact the API team?
+@for(question <- questions){
+  @question
+}
+
+}}
+Do you have a specific question?
+
+  @{params("specificQuestion")}
+
+
+You should reply to @{params("senderEmail")} in 7 days. 
+
+From HMRC API catalogue

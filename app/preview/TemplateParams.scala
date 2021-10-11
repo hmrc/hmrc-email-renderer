@@ -1589,6 +1589,29 @@ object TemplateParams {
     "oss_returns_email_confirmation_no_vat_owed" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
       "period"              -> "1 July to 30 September 2021"
+    ),
+    "platformContact" -> Map(
+      "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
+      "senderName"  -> "Alice Example",
+      "senderEmail" -> "alice@example.com",
+      "contactReasons" -> Base64.getEncoder.encodeToString(
+        stringify(parse("""[
+          "I want to know if I can reuse this API",
+          "I need more information, like schemas or examples"
+        ]""")).getBytes("UTF-8")),
+      "specificQuestion" -> "I need some stuff."
+    ),
+    "platformContactConfirmation" -> Map(
+      "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
+      "senderName"  -> "Alice Example",
+      "senderEmail" -> "alice@example.com",
+      "contactReasons" -> Base64.getEncoder.encodeToString(
+        stringify(parse("""[
+          "I want to know if I can reuse this API",
+          "I need more information, like schemas or examples"
+        ]""")).getBytes("UTF-8")),
+      "specificQuestion" -> "I need some stuff.",
+      "apiEmail"         -> "api-platform@example.com"
     )
   )
 }
