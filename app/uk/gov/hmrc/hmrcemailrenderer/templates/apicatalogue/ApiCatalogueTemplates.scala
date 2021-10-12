@@ -27,7 +27,7 @@ object ApiCatalogueTemplates {
   val templates = Seq(
     MessageTemplate.create(
       templateId = "platformContact",
-      fromAddress = "notsure@example.com", // TODO - what should this be?,
+      fromAddress = FromAddress.noReply("API catalogue"),
       service = ApiCatalogue,
       subject = "Information request from the API catalogue",
       plainTemplate = txt.platformContact.f,
@@ -36,7 +36,7 @@ object ApiCatalogueTemplates {
     ),
     MessageTemplate.create(
       templateId = "platformContactConfirmation",
-      fromAddress = "notsure@example.com", // TODO - what should this be?,
+      fromAddress = FromAddress.noReply("API catalogue"),
       service = ApiCatalogue,
       subject = "A summary of your message sent from the API catalogue",
       plainTemplate = txt.platformContactConfirmation.f,
