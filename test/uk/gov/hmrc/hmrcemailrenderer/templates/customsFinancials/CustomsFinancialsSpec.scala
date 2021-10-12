@@ -95,6 +95,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       compareContent(
         "customs_financials_requested_postponed_vat_notification", commonParameters)(customsFinancialsTemplate)
     }
+
   }
 
 }
