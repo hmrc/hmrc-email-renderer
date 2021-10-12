@@ -1,0 +1,34 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch tystiolaeth am gyfeiriad sefydliad busnes parhaol yng Ngogledd Iwerddon wedi dod i law", isWelsh = true){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Annwyl @params("customerName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Byddwn yn anfon e-bost atoch cyn pen 5 diwrnod i gadarnhau a ydym wedi dilysu eich sefydliad busnes parhaol gan ddefnyddio’r prawf rydych wedi’i roi.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Os na fyddwn yn derbyn y prawf, bydd yr e-bost yn esbonio beth allwch ei wneud nesaf.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Cyfeirnod eich cyflwyniad yw: @params("submissionReference")</p>
+<h2>Pam eich bod yn cael y neges e-bost hon</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Rydym yn anfon e-bost cadarnhau ar gyfer cais sy’n cael ei gyflwyno ar-lein.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Gan CThEM</p>
+}

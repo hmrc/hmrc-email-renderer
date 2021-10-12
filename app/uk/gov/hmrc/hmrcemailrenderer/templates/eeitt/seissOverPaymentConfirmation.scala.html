@@ -15,16 +15,18 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have told HMRC about a change to your tax return that could affect your SEISS grant"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You told HMRC about an amendment to your tax return that could affect your SEISS 4 or SEISS 5 grant"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    This email confirms that you have told us of an amendment to your tax returns on or after 3 March 2021 which could affect your eligibility for the Self-Employment Income Support Scheme grant.
+    This email confirms that you have told us of amendments to your tax return or turnover figures.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will now recalculate your eligibility and then write to tell you how much to repay and how to do so.
+    You are aware this may affect eligibility for the fourth or fifth Self-Employment Income Support Scheme grant.
 </p>
-<p style="margin: 0 0 30px; font-size: 19px;">Your reference is:  @params("submissionReference")<p>
+<p style="margin: 0 0 30px; font-size: 19px;"><b>Your reference is:  @params("submissionReference")</b><p>
+<p style="margin: 0 0 30px; font-size: 19px;">We will use the information you supplied to recalculate your grant eligibility. We will write to you within 30 days outlining any repayment due.<p>
+<p style="margin: 0 0 30px; font-size: 19px;">We will only respond in connection with SEISS 4 and SEISS 5 overpayments.<p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From: Tax Administration Directorate - Self Employment Income Support, HMRC</p>
+    From Tax Administration Directorate - Self Employment Income Support, HMRC</p>
 }

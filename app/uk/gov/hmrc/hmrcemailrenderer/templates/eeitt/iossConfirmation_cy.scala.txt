@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Rydym wedi cael eich hysbysiad Gwasanaeth Un Cam ar gyfer Mewnforio (IOSS) yr UE
+
+Annwyl @params("customerName")
+
+Rydych wedi rhoi gwybod i CThEM beth yw manylion cofrestru IOSS ar gyfer @params("businessName").
+
+Cyfeirnod eich cyflwyniad yw: @params("submissionReference")
+
+Byddwn nawr yn diweddaru’n cofnodion gan ddefnyddio’r wybodaeth a roddwyd gennych.
+
+Pam eich bod yn cael y neges e-bost hon
+
+Rydym yn anfon e-bost cadarnhau ar gyfer hysbysiad sy’n cael ei gyflwyno ar-lein.
+
+Gan Dîm Gwasanaeth Un Cam ar gyfer Mewnforio CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

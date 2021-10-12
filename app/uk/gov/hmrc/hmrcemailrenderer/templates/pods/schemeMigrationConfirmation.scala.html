@@ -1,0 +1,32 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your pension scheme has been added from Pension Schemes Online") {
+
+ <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("psaName").toString}</p>
+
+ <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your pension scheme @{params("schemeName").toString} has been added from Pension Schemes Online.</span></p>
+
+ <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0; font-weight: bold">How to manage your pension scheme</p>
+
+ <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;"> You can use the ‘Managing Pension Schemes’ service to manage your pension scheme. More information can be found on the ‘manage a registered pension scheme’ page on GOV.UK.</p>
+
+ <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link with this email.</p>
+
+ <p style="font-size: 20px; line-height: 0; margin: 0 0 30px 0;"> From HMRC Pension Schemes Services</p>
+}

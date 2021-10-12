@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+
+Cyflwynwyd: Cais C117 AEO
+
+Annwyl Gwsmer
+
+Mae rhan o’ch cais ar gyfer AEO, y ffurflen C117 wedi dod i law.
+
+Yr hyn y mae angen i chi ei wneud nesaf
+
+Mae’n rhaid i chi gyflwyno pob adran berthnasol o’r C118 o fewn 24 awr i gyflwyno’ch ffurflen gyntaf.
+
+Os na fyddwch yn gwneud hyn, byddwn yn gwrthod eich cais.
+
+Pam eich bod yn derbyn y neges e-bost hon
+
+Rydym yn anfon e-bost cadarnhau ar gyfer ceisiadau sydd wedi’u cyflwyno ar-lein.
+
+Os bydd angen i chi gysylltu â ni ynghylch eich cais, byddwch angen eich rhif EORI.
+
+Gan dîm AEO CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
+

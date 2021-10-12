@@ -1579,6 +1579,39 @@ object TemplateParams {
       "startDate"                              -> "1 October 2021",
       "lastDayOfNextCalendarQuarter"           -> "31 December 2021",
       "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
+    ),
+    "oss_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
+    "oss_returns_email_confirmation_no_vat_owed" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "period"              -> "1 July to 30 September 2021"
+    ),
+    "platformContact" -> Map(
+      "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
+      "senderName"  -> "Alice Example",
+      "senderEmail" -> "alice@example.com",
+      "contactReasons" -> Base64.getEncoder.encodeToString(
+        stringify(parse("""[
+          "I want to know if I can reuse this API",
+          "I need more information, like schemas or examples"
+        ]""")).getBytes("UTF-8")),
+      "specificQuestion" -> "I need some stuff."
+    ),
+    "platformContactConfirmation" -> Map(
+      "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
+      "senderName"  -> "Alice Example",
+      "senderEmail" -> "alice@example.com",
+      "contactReasons" -> Base64.getEncoder.encodeToString(
+        stringify(parse("""[
+          "I want to know if I can reuse this API",
+          "I need more information, like schemas or examples"
+        ]""")).getBytes("UTF-8")),
+      "specificQuestion" -> "I need some stuff.",
+      "apiEmail"         -> "api-platform@example.com"
     )
   )
 }
@@ -1773,6 +1806,12 @@ object TemplateParams2 {
       "user_id"   -> "914657894302",
       "full_name" -> "Joe Bloggs"
     ),
+    "cca_appeals_submission_link" -> Map(
+      "proposalNumber" -> "341112111",
+      "submissionUrl"  -> "http://test.com/blah-blah",
+      "submissionDate" -> "15 Sep 2021",
+      "postcode"       -> "AA1 1AA"
+    ),
     "cca_enrolment_migration_confirmation" -> Map(
       "name"     -> "test user",
       "personId" -> "123456789",
@@ -1806,6 +1845,13 @@ object TemplateParams2 {
     "pods_racdac_scheme_register" -> Map(
       "psaName"    -> "Jane Doe",
       "schemeName" -> "test scheme"
+    ),
+    "pods_scheme_migration_confirmation" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "Some Pension Scheme"
+    ),
+    "pods_racdac_bulk_migration_confirmation" -> Map(
+      "psaName" -> "Jane Doe"
     ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
@@ -2520,7 +2566,13 @@ object TemplateParams2 {
     ),
     "seiss_repay_submission" -> Map(
       "customerName" -> "Hugh Mann",
-      "emailTeam"    -> "HMRC Team"
+      "miscText"     -> "When making the repayment, you must only use the bank details provided to repay the grant money. You must not use these bank details to make any other payment to HMRC.",
+      "emailTeam"    -> "the Self-Employment Income Support team"
+    ),
+    "seiss_repay_submission_cy" -> Map(
+      "customerName" -> "Hugh Mann",
+      "miscText"     -> "Wrth wneud yr ad-daliad, dim ond i ad-dalu arian grant y dylech ddefnyddio’r manylion banc hyn. Peidiwch â defnyddio’r manylion banc hyn i wneud unrhyw daliad arall i CThEM.",
+      "emailTeam"    -> "y tîm Cymhorthdal Incwm Hunangyflogaeth"
     ),
     "vishing_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
@@ -2586,6 +2638,20 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "tor_confirmation_dynamic" -> Map(
+      "torDySub"            -> "HMRC received the additions to your for transfer of residence tax relief",
+      "heading1"            -> "You made additions to your application for transfer  of residence tax relief",
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "para1"               -> "received additions to your application",
+      "para2"               -> "the additions to your application are",
+      "para3"               -> "",
+      "para4"               -> "more",
+      "para5"               -> "",
+      "para6"               -> "",
+      "para7"               -> "You can still use your URN to make further additions.",
+      "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
+    ),
     "jrsRemoval_submission_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
@@ -2598,6 +2664,10 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "seissOverPayment_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seissOverPayment_confirmation_cy" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
@@ -2636,6 +2706,11 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68",
       "businessName"        -> "Acquisitions Incorporated"
     ),
+    "ioss_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated"
+    ),
     "ioss_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
@@ -2646,6 +2721,14 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68",
       "businessName"        -> "Acquisitions Incorporated"
+    ),
+    "nipbe_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "nipbe_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
@@ -2673,9 +2756,15 @@ object TemplateParams2 {
       "lastDayOfNextCalendarQuarter"           -> "31 December 2021",
       "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
     ),
-    "nipbe_confirmation" -> Map(
-      "customerName"        -> "Hugh Mann",
-      "submissionReference" -> "NC38-N2ZC-TH68"
+    "oss_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
+    "oss_returns_email_confirmation_no_vat_owed" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "period"              -> "1 July to 30 September 2021"
     )
   )
 }

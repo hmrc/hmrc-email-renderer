@@ -15,20 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received your evidence of a permanent business establishment in Northern Ireland"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received evidence of your permanent business establishment"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will email within 5 days to confirm if we have validated your permanent business establishment using the proof you provided.
+    We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If we do not accept the proof, the email will explain what you can do next.
+    If we do not accept this, the email will explain what you can do next.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params("submissionReference")</p>
+    Your submission reference is: <b>@params("submissionReference")</b></p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for claims submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC</p>
+    From HMRC Customer Services Group</p>
 }
