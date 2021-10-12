@@ -94,7 +94,6 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "have matching content in the html and the text for requested postponed VAT statements" in {
       compareContent("customs_financials_requested_postponed_vat_notification", commonParameters)(customsFinancialsTemplate)
     }
-
   }
 
 }
