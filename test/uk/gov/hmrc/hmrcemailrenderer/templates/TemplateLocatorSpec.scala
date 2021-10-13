@@ -688,6 +688,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "customs_financials_new_c79_certificate",
         "customs_financials_historic_c79_certificate",
         "customs_financials_new_postponed_vat_notification",
+        "customs_financials_requested_postponed_vat_notification",
         "cgtpd_email_verification",
         "cgtpd_email_verification_cy",
         "tdq_compliance_all_required_headers_missing",
