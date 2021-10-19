@@ -669,6 +669,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "pods_psp_deregister_self",
         "pods_scheme_migration_confirmation",
         "pods_racdac_bulk_migration_confirmation",
+        "pods_racdac_individual_migration_confirmation",
         "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",

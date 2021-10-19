@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Your RAC/DAC has been added from Pension Schemes Online
+
+Dear @{params("psaName").toString}
+
+Your RAC/DAC @{params("schemeName").toString} has been added from Pension Schemes Online.
+
+How to manage your RAC/DAC
+
+You can use the ‘Managing Pension Schemes’ service to manage your RAC/DAC. More information can be found on the ‘manage a registered pension scheme’ page on GOV.UK.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

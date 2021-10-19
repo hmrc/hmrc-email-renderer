@@ -1853,6 +1853,10 @@ object TemplateParams2 {
     "pods_racdac_bulk_migration_confirmation" -> Map(
       "psaName" -> "Jane Doe"
     ),
+    "pods_racdac_individual_migration_confirmation" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "Test RAC/DAC"
+    ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
     ),
