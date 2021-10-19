@@ -6,7 +6,7 @@ Dear @params("customerName")
 
 We have received your agreement to repay your Self-Employment Income Support Scheme (SEISS) grant.
 
-We will now write to tell you the repayment amount together with the repayment options that will be available to you.
+We will now write to tell you the repayment amount and the repayment options that are available to you.
 
 Why you are receiving this email
 
