@@ -184,6 +184,15 @@ object PodsTemplates {
       plainTemplate = txt.racDacBulkMigrationConfirmation.f,
       htmlTemplate = html.racDacBulkMigrationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_racdac_individual_migration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Your RAC/DAC has been added from Pension Schemes Online",
+      plainTemplate = txt.racDacIndividualMigrationConfirmation.f,
+      htmlTemplate = html.racDacIndividualMigrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
