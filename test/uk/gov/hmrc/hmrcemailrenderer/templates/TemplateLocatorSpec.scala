@@ -347,6 +347,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "seiss_grant_submission",
         "seissOverPayment_confirmation",
         "seissOverPayment_confirmation_cy",
+        "seiss_voluntary_disclosure_confirmation",
         "seiss_scheme_open",
         "seiss_processing_grant",
         "seiss_processing_grant_cy",
