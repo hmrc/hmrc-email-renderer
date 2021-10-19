@@ -1361,6 +1361,15 @@ object EeittTemplates {
       plainTemplate = txt.nipbeConfirmation_cy.f,
       htmlTemplate = html.nipbeConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_voluntary_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Self Employment Income Support Scheme: Agreement to repay",
+      plainTemplate = txt.seissVoluntaryDisclosureConfirmation.f,
+      htmlTemplate = html.seissVoluntaryDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
