@@ -6,19 +6,11 @@ Annwyl @params.get("customerName")
 
 Eich cyfeirnod hawlio: @params.get("claim_ref_no")
 
-Rydym wedi gwirio’ch hawliad a gallwn gadarnhau eich bod yn gymwys i gael grant.
-
-Fodd bynnag, nid ydym yn gallu prosesu’ch taliad gyda’r manylion banc a roesoch, felly mae angen i chi wirio’r rhain.
-
-Os gofynnoch i ni dalu’ch grant i gyfrif cymdeithas adeiladu, mae angen i chi sicrhau’ch bod yn rhoi’r rhif rôl i ni os oes un yn bodoli.
-
-Sut i ddiweddaru’ch manylion
-
-Ewch i wefan GOV.UK a chwilio am 'Claim a grant through the Self-Employment Income Support Scheme'. Yn yr adran ‘Return to your claim’ cewch yr opsiwn i wirio a newid eich manylion.
-
-Yna byddwn yn prosesu’ch taliad ac yn cysylltu â chi eto cyn pen 72 awr i gadarnhau bod eich taliad ar ei ffordd.
+Nid ydym yn gallu prosesu’ch taliad gyda’r manylion banc a roesoch. Rydym angen i chi wirio a newid y rhain er mwyn cwblhau’ch hawliad.
 
 Gofynnwn i chi beidio â’n ffonio oni bai na allwch ddod o hyd i’r wybodaeth sydd ei hangen arnoch ar GOV.UK – bydd hyn yn cadw ein llinellau ar agor i’r sawl sydd angen ein help fwyaf.
+
+Mae’n rhaid i chi gwblhau’ch hawliad erbyn 23:59 ar 30 Tachwedd 2021 er mwyn cael eich grant.
 
 Gair ynghylch sgamiau
 
