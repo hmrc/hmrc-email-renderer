@@ -17,39 +17,20 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydym wedi prosesu’ch hawliad ac nawr mae angen i chi wirio’ch manylion banc", isWelsh = true) {
 
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
+<p style="margin: 0 0 30px; font-size: 19px;">
     Annwyl @params.get("customerName")</p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
+<p style="margin: 0 0 30px; font-size: 19px;">
     Eich cyfeirnod hawlio: @params.get("claim_ref_no")</p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
-    Rydym wedi gwirio’ch hawliad a gallwn gadarnhau eich bod yn gymwys i gael grant.</p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
-    Fodd bynnag, nid ydym yn gallu prosesu’ch taliad gyda’r manylion banc a roesoch, felly mae angen i chi wirio’r rhain.</p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
-    Os gofynnoch i ni dalu’ch grant i gyfrif cymdeithas adeiladu, mae angen i chi sicrhau’ch bod yn rhoi’r rhif rôl i ni os oes un yn bodoli.</p>
-  <h2>Sut i ddiweddaru’ch manylion</h2>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
-    Ewch i wefan GOV.UK a chwilio am ‘Claim a grant through the Self-Employment Income Support Scheme’. Yn yr adran ‘Return to your claim’ cewch yr opsiwn i wirio a newid eich manylion.
-  </p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
-    Yna byddwn yn prosesu’ch taliad ac yn cysylltu â chi eto cyn pen 72 awr i gadarnhau bod eich taliad ar ei ffordd.
-  </p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Nid ydym yn gallu prosesu’ch taliad gyda’r manylion banc a roesoch. Rydym angen i chi wirio a newid y rhain er mwyn cwblhau’ch hawliad.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Mae’n rhaid i chi gwblhau’ch hawliad erbyn 23:59 ar 30 Tachwedd 2021 er mwyn cael eich grant.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
     Gofynnwn i chi beidio â’n ffonio oni bai na allwch ddod o hyd i’r wybodaeth sydd ei hangen arnoch ar GOV.UK – bydd hyn yn cadw ein llinellau ar agor i’r sawl sydd angen ein help fwyaf.</p>
-  <h2>Gair ynghylch sgamiau</h2>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
+<h2>Gair ynghylch sgamiau</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
   @Html("Rydym yn ymwybodol o gynnydd mewn e-byst, galwadau ffôn a negeseuon testun twyllodrus. Os bydd rhywun yn cysylltu â chi, gan honni ei fod yn gweithio i CThEM a chan ddweud bod modd hawlio cymorth ariannol neu fod ad-daliad treth yn ddyledus, a’i fod yn gofyn i chi glicio ar gysylltiad, neu roi gwybodaeth megis eich enw neu fanylion eich cerdyn credyd neu’ch banc, peidiwch ag ymateb. Gallwch anfon e-byst amheus sy’n honni eu bod yn dod oddi wrth CThEM i gwasanaeth.cymraeg@hmrc.gov.uk neu phishing@hmrc.gov.uk, ac anfon negeseuon testun i 60599.")
-  </p>
-  <p style="margin: 0 0 30px;
-    font-size: 19px;">
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
     Oddi wrth y tîm Cymhorthdal Incwm Hunangyflogaeth</p>
 }
