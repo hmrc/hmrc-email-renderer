@@ -21,11 +21,11 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 
-class OSSReturnsEmailConfirmationSpec
+class OSSOverdueReturnsEmailConfirmationSpec
     extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
-  "OSS Returns Email Confirmation" should {
+  "OSS Overdue Returns Email Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
       "recipientName_line1" -> "Joe Bloggs",
@@ -35,11 +35,11 @@ class OSSReturnsEmailConfirmationSpec
     )
     val template = templateLocator
       .templateGroups("OSS")
-      .find(_.templateId == "oss_returns_email_confirmation")
+      .find(_.templateId == "oss_overdue_returns_email_confirmation")
       .get
 
     "render correct meta information" in {
-      template.templateId shouldBe "oss_returns_email_confirmation"
+      template.templateId shouldBe "oss_overdue_returns_email_confirmation"
       template.service shouldBe OSS
       template.fromAddress(Map.empty) shouldBe "VAT One Stop Shop Team <noreply@tax.service.gov.uk>"
       template.subject(Map.empty) shouldBe "HMRC: VAT return submitted"
@@ -52,7 +52,8 @@ class OSSReturnsEmailConfirmationSpec
       htmlContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      htmlContent should include("You need to pay the return in full by 31 October 2021.")
+      htmlContent should include("Payment for this return was due by 31 October 2021.")
+      htmlContent should include("You need to pay the return in full as soon as you can.")
       htmlContent should include("EU countries can charge you interest or penalties for late payments.")
       htmlContent should include("How to pay")
       htmlContent should include("Search GOV.UK for ‘Pay your OSS VAT Return’.")
@@ -67,7 +68,8 @@ class OSSReturnsEmailConfirmationSpec
       txtContent should include("You submitted a VAT return for the One Stop Shop Union scheme")
       txtContent should include("Dear Joe Bloggs")
       txtContent should include("HMRC has received your VAT return for 1 July to 30 September 2021.")
-      txtContent should include("You need to pay the return in full by 31 October 2021.")
+      txtContent should include("Payment for this return was due by 31 October 2021.")
+      txtContent should include("You need to pay the return in full as soon as you can.")
       txtContent should include("EU countries can charge you interest or penalties for late payments.")
       txtContent should include("How to pay")
       txtContent should include("Search GOV.UK for ‘Pay your OSS VAT Return’.")

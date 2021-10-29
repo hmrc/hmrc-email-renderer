@@ -1590,6 +1590,12 @@ object TemplateParams {
       "recipientName_line1" -> "Joe Bloggs",
       "period"              -> "1 July to 30 September 2021"
     ),
+    "oss_overdue_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
     "platformContact" -> Map(
       "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
       "senderName"  -> "Alice Example",
@@ -2773,6 +2779,12 @@ object TemplateParams2 {
     "oss_returns_email_confirmation_no_vat_owed" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
       "period"              -> "1 July to 30 September 2021"
+    ),
+    "oss_overdue_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
     )
   )
 }
