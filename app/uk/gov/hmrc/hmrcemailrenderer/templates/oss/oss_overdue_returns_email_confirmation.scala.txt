@@ -4,7 +4,9 @@
 
 HMRC has received your VAT return for @params("period").
 
-You need to pay the return in full by @params("paymentDeadline").
+Payment for this return was due by @params("paymentDeadline").
+
+You need to pay the return in full as soon as you can.
 
 EU countries can charge you interest or penalties for late payments.
 
@@ -17,3 +19,6 @@ Sign into your Government Gateway account using your ID and password.
 You can also pay without signing in using your VAT registration number.
 
 From the VAT One Stop Shop team
+
+
+
