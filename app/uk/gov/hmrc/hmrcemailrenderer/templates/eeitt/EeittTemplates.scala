@@ -1336,6 +1336,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ioss_dereg_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You sent HMRC an IOSS notification",
+      plainTemplate = txt.iossDeregConfirmation.f,
+      htmlTemplate = html.iossDeregConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "xiEORI_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -1369,6 +1378,15 @@ object EeittTemplates {
       subject = "Self Employment Income Support Scheme: Agreement to repay",
       plainTemplate = txt.seissVoluntaryDisclosureConfirmation.f,
       htmlTemplate = html.seissVoluntaryDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "netp_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You told HMRC about bank details to be used for VAT repayments.",
+      plainTemplate = txt.netpConfirmation.f,
+      htmlTemplate = html.netpConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

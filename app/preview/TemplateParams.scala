@@ -2715,6 +2715,12 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68",
       "businessName"        -> "Acquisitions Incorporated"
     ),
+    "ioss_dereg_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated",
+      "changeNotice"        -> "deregistered from"
+    ),
     "ioss_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
@@ -2736,6 +2742,11 @@ object TemplateParams2 {
     ),
     "seiss_voluntary_disclosure_confirmation" -> Map(
       "customerName" -> "Hugh Mann"
+    ),
+    "netp_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "vatLink"             -> "http://www.gov.uk"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,

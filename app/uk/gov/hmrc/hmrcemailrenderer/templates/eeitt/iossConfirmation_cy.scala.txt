@@ -8,8 +8,6 @@ Rydych wedi rhoi gwybod i CThEM beth yw manylion cofrestru IOSS ar gyfer @params
 
 Cyfeirnod eich cyflwyniad yw: @params("submissionReference")
 
-Byddwn nawr yn diweddaru’n cofnodion gan ddefnyddio’r wybodaeth a roddwyd gennych.
-
 Pam eich bod yn cael y neges e-bost hon
 
 Rydym yn anfon e-bost cadarnhau ar gyfer hysbysiad sy’n cael ei gyflwyno ar-lein.
