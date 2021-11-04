@@ -15,17 +15,22 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received your change notice for an IOSS registration"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
+
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params("customerName")</p>
+    Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You told HMRC that @params("businessName") has @params("changeNotice") an Import One Stop Shop (IOSS) in an EU member state.
-</p>
+    You requested a code to continue with the ‘Tell HMRC about changes to a registration with the VAT Import One Stop Shop in the EU’ service on GOV.UK.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: <b>@params("submissionReference")</b></p>
-<h2>Why are you getting this email?</h2>
+    Your code is: @params("confirmationCode")</p>
+<h2>
+    What you need to do now</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for a notice that is submitted online.</p>
+    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Import One Stop Shop team</p>
+    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Do not reply to this email.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC Import One Stop Shop team
 }

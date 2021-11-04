@@ -296,6 +296,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "seiss_repay_submission",
         "seiss_repay_submission_cy",
         "ioss_code",
+        "ioss_dereg_code",
         "ioss_code_cy",
         "ioss_confirmation",
         "ioss_confirmation_cy",

@@ -12,6 +12,6 @@ Why are you getting this email?
 
 We send a confirmation email for a notice that is submitted online.
 
-From HMRC's One-Step Service Team for Import
+From HMRC Import One Stop Shop team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

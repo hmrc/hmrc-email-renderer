@@ -1308,6 +1308,16 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ioss_dereg_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address – Tell HMRC about changes to a registration with the VAT Import One Stop Shop in the EU",
+      plainTemplate = txt.iossDeregCode.f,
+      htmlTemplate = html.iossDeregCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ioss_code_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,

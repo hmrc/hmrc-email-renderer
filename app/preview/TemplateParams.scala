@@ -2724,6 +2724,9 @@ object TemplateParams2 {
     "ioss_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "ioss_dereg_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "ioss_code_cy" -> Map(
       "confirmationCode" -> "HGDY"
     ),
