@@ -1,34 +1,32 @@
 @(params: Map[String, Any])
 
-Confirmation we received your overseas bank details
+We received your bank details to make VAT repayments
 
 Dear @params("customerName")
 
-This email confirms you have provided bank details which HMRC can use to make bank transfers for any future VAT repayments due.
+This email confirms you provided bank details which HMRC can use to make VAT repayments.
 
 Your reference is: @params("submissionReference")
 
 What happens next
 
-Setting up this new payment method will take up to 3 working days. Any future VAT repayments will be sent directly to your bank account.
+It will take 3 working days to set up the new payment. All future VAT repayments will be made to this account.
+
+If you reported unprocessed payable orders
+
+We will attempt to cancel POs and resend the money by bank transfer. This takes up to 10 working days.
 
 If we need to clarify details we will contact you using the email you provided.
 
-Payable orders
-
-If you told us about unprocessed payable orders, we will attempt to cancel these and resend the money via bank transfer. This can take up to 10 working days.
-
-No payment notification will be sent by HMRC. Check your bank statement for confirmation of payment.
+No payment notification will be sent. Check your bank statement for confirmation of payment.
 
 Keep your details up to date
 
-You can use this service to update your bank detail:
-
-· <a href=""@{params("vatLink")}"">Provide bank details for a UK VAT registered overseas trader</a>
+Use the same service to keep your bank details up to date. Search GOV.UK for 'provide banks details for a UK VAT registered overseas trader'.
 
 Contacting HMRC
 
-For your security HMRC will not send personal data by email. You can contact HMRC via <a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/vat-enquiries"> the VAT helpline</a>.
+For your security HMRC will not send personal data by email. You can contact HMRC via the VAT helpline on 0300 200 3700, open Monday to Friday, 8am to 6pm.
 
 From Tax Administration Directorate, HMRC
 

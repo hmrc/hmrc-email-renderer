@@ -1394,7 +1394,7 @@ object EeittTemplates {
       templateId = "netp_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "You told HMRC about bank details to be used for VAT repayments.",
+      subject = "You submitted your overseas bank details",
       plainTemplate = txt.netpConfirmation.f,
       htmlTemplate = html.netpConfirmation.f,
       priority = Some(MessagePriority.Standard)

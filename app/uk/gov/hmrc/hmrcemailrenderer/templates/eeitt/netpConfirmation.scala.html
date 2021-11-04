@@ -15,34 +15,31 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirmation we received your overseas bank details"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received your bank details to make VAT repayments"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    This email confirms you have provided bank details which HMRC can use to make bank transfers for any future VAT repayments due.
+    This email confirms you provided bank details which HMRC can use to make VAT repayments.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your reference is: <b>@params("submissionReference")</b></p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Setting up this new payment method will take up to 3 working days. Any future VAT repayments will be sent directly to your bank account.
+    It will take 3 working days to set up the new payment. All future VAT repayments will be made to this account.
 </p>
+<h2>If you reported unprocessed payable orders</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If we need to clarify details we will contact you using the email you provided.
-</p>
-<h2>Payable orders</h2>
+    We will attempt to cancel POs and resend the money by bank transfer. This takes up to 10 working days.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If you told us about unprocessed payable orders, we will attempt to cancel these and resend the money via bank transfer. This can take up to 10 working days.</p>
+    If we need to clarify details we will contact you using the email you provided.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    No payment notification will be sent by HMRC. Check your bank statement for confirmation of payment.</p>
+    No payment notification will be sent. Check your bank statement for confirmation of payment.</p>
 <h2>Keep your details up to date</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You can use this service to update your bank detail:</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-<BLOCKQUOTE>· <a href="@{params("vatLink")}">Provide bank details for a UK VAT registered overseas trader</a></BLOCKQUOTE></p>
+    Use the same service to keep your bank details up to date. Search GOV.UK for 'provide banks details for a UK VAT registered overseas trader'.</p>
 <h2>Contacting HMRC</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    For your security HMRC will not send personal data by email. You can contact HMRC via <a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/vat-enquiries"> the VAT helpline</a>.</p>
+    For your security HMRC will not send personal data by email. You can contact HMRC via the VAT helpline on 0300 200 3700, open Monday to Friday, 8am to 6pm.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     <b>From Tax Administration Directorate, HMRC</b></p>
 }
