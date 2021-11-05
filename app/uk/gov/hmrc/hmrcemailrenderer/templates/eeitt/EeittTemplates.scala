@@ -1308,6 +1308,16 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ioss_dereg_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address – Tell HMRC about changes to a registration with the VAT Import One Stop Shop in the EU",
+      plainTemplate = txt.iossDeregCode.f,
+      htmlTemplate = html.iossDeregCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ioss_code_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -1333,6 +1343,15 @@ object EeittTemplates {
       subject = "Gwnaethoch roi gwybod i CThEM am gofrestriad IOSS",
       plainTemplate = txt.iossConfirmation_cy.f,
       htmlTemplate = html.iossConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_dereg_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You sent HMRC an IOSS notification",
+      plainTemplate = txt.iossDeregConfirmation.f,
+      htmlTemplate = html.iossDeregConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -1369,6 +1388,15 @@ object EeittTemplates {
       subject = "Self Employment Income Support Scheme: Agreement to repay",
       plainTemplate = txt.seissVoluntaryDisclosureConfirmation.f,
       htmlTemplate = html.seissVoluntaryDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "netp_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You submitted your overseas bank details",
+      plainTemplate = txt.netpConfirmation.f,
+      htmlTemplate = html.netpConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

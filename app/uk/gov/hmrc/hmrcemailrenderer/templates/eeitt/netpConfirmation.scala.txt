@@ -1,0 +1,33 @@
+@(params: Map[String, Any])
+
+We received your bank details to make VAT repayments
+
+Dear @params("customerName")
+
+This email confirms you provided bank details which HMRC can use to make VAT repayments.
+
+Your reference is: @params("submissionReference")
+
+What happens next
+
+It will take 3 working days to set up the new payment. All future VAT repayments will be made to this account.
+
+If you reported unprocessed payable orders
+
+We will attempt to cancel POs and resend the money by bank transfer. This takes up to 10 working days.
+
+If we need to clarify details we will contact you using the email you provided.
+
+No payment notification will be sent. Check your bank statement for confirmation of payment.
+
+Keep your details up to date
+
+Use the same service to keep your bank details up to date. Search GOV.UK for 'provide banks details for a UK VAT registered overseas trader'.
+
+Contacting HMRC
+
+For your security HMRC will not send personal data by email. You can contact HMRC via the VAT helpline on 0300 200 3700, open Monday to Friday, 8am to 6pm.
+
+From Tax Administration Directorate, HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

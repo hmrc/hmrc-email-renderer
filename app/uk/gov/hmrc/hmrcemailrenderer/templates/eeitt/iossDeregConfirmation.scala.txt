@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+We received your change notice for an IOSS registration
+
+Dear @params("customerName")
+
+You told HMRC that @params("businessName") has @params("changeNotice") an Import One Stop Shop (IOSS) in an EU member state.
+
+Your submission reference is: @params("submissionReference")
+
+Why are you getting this email?
+
+We send a confirmation email for a notice that is submitted online.
+
+From HMRC Import One Stop Shop team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
