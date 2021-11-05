@@ -15,20 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch tystiolaeth am gyfeiriad eich sefydliad busnes parhaol wedi dod i law", isWelsh = true){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We received your change notice for an IOSS registration"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Annwyl @params("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Byddwn yn anfon e-bost atoch cyn pen 10 diwrnod i gadarnhau a ydym wedi dilysu eich cyfeiriad yng Ngogledd Iwerddon gan ddefnyddio’r prawf rydych wedi’i roi.
+    You told HMRC that @params("businessName") has @params("changeNotice") an Import One Stop Shop (IOSS) in an EU member state.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Os na fyddwn yn derbyn y prawf, bydd yr e-bost yn esbonio beth allwch ei wneud nesaf.
-</p>
+    Your submission reference is: <b>@params("submissionReference")</b></p>
+<h2>Why are you getting this email?</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Cyfeirnod eich cyflwyniad yw: @params("submissionReference")</p>
-<h2>Pam eich bod yn cael y neges e-bost hon</h2>
+    We send a confirmation email for a notice that is submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Rydym yn anfon e-bost cadarnhau ar gyfer cais sy’n cael ei gyflwyno ar-lein.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    Gan CThEM</p>
+    From HMRC Import One Stop Shop team</p>
 }

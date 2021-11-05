@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-Mae’ch tystiolaeth am gyfeiriad sefydliad busnes parhaol yng Ngogledd Iwerddon wedi dod i law
+Mae’ch tystiolaeth am gyfeiriad eich sefydliad busnes parhaol wedi dod i law
 
 Annwyl @params("customerName")
 
-Byddwn yn anfon e-bost atoch cyn pen 10 diwrnod i gadarnhau a ydym wedi dilysu eich sefydliad busnes parhaol gan ddefnyddio’r prawf rydych wedi’i roi.
+Byddwn yn anfon e-bost atoch cyn pen 10 diwrnod i gadarnhau a ydym wedi dilysu eich cyfeiriad yng Ngogledd Iwerddon gan ddefnyddio’r prawf rydych wedi’i roi.
 
 Os na fyddwn yn derbyn y prawf, bydd yr e-bost yn esbonio beth allwch ei wneud nesaf.
 

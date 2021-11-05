@@ -15,20 +15,22 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch tystiolaeth am gyfeiriad eich sefydliad busnes parhaol wedi dod i law", isWelsh = true){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
+
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Annwyl @params("customerName")</p>
+    Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Byddwn yn anfon e-bost atoch cyn pen 10 diwrnod i gadarnhau a ydym wedi dilysu eich cyfeiriad yng Ngogledd Iwerddon gan ddefnyddio’r prawf rydych wedi’i roi.
-</p>
+    You requested a code to continue with the ‘Tell HMRC about changes to a registration with the VAT Import One Stop Shop in the EU’ service on GOV.UK.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Os na fyddwn yn derbyn y prawf, bydd yr e-bost yn esbonio beth allwch ei wneud nesaf.
-</p>
+    Your code is: @params("confirmationCode")</p>
+<h2>
+    What you need to do now</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Cyfeirnod eich cyflwyniad yw: @params("submissionReference")</p>
-<h2>Pam eich bod yn cael y neges e-bost hon</h2>
+    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Rydym yn anfon e-bost cadarnhau ar gyfer cais sy’n cael ei gyflwyno ar-lein.</p>
+    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Gan CThEM</p>
+    Do not reply to this email.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC Import One Stop Shop team
 }
