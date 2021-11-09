@@ -8,6 +8,8 @@ Payment for this return was due by @params("paymentDeadline").
 
 You need to pay the return in full as soon as you can.
 
+If you submit late payments and returns, we may remove you from the scheme. More information about One Stop Shop return deadlines is available on GOV.UK.
+
 EU countries can charge you interest or penalties for late payments.
 
 How to pay
