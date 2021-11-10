@@ -1364,6 +1364,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "xiEORI_change_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You applied for a change to your XI EORI number",
+      plainTemplate = txt.xiEORIChangeConfirmation.f,
+      htmlTemplate = html.xiEORIChangeConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "nipbe_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,

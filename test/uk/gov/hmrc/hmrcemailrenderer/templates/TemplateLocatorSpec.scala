@@ -742,6 +742,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "ni_vat_Status_reporting_confirmation",
         "ni_vat_Status_withdrawal_confirmation",
         "xiEORI_confirmation",
+        "xiEORI_change_confirmation",
         "nipbe_confirmation",
         "nipbe_confirmation_cy",
         "netp_confirmation",
