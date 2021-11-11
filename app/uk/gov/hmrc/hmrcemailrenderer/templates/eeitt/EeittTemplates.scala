@@ -1355,7 +1355,7 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "-_confirmation",
+      templateId = "xiEORI_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "You applied for an XI EORI number",
