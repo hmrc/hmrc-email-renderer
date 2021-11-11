@@ -8,11 +8,9 @@ To help protect your customers' confidential data from criminals and fraudsters,
 
 Our logs show that the fraud prevention headers submitted for @reportParams.applicationName between @reportParams.fromDate and @reportParams.toDate do not meet the specification on the HMRC Developer Hub.
 
-Check your application meets version 3.0
+Check your application meets the specification
 
-The 6 month period to implement changes in version 3.0 of the Fraud Prevention Headers specification ended in July 2021. Warnings about changes are now shown as errors.
-
-You'll find version 3.0 of the fraud prevention specification on the HMRC Developer Hub. Select your connection method or view the change log to check you've made all of the changes.
+You'll find the latest version of the fraud prevention specification on the HMRC Developer Hub. Select your connection method or view the change log to check you've made all of the changes.
 
 What you need to do
 
