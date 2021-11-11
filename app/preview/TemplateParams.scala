@@ -2742,6 +2742,10 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68",
       "businessName"        -> "Acquisitions Incorporated"
     ),
+    "xiEORI_change_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
     "nipbe_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
