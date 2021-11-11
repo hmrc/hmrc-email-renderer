@@ -4,7 +4,7 @@ We received your application to change XI EORI number details for your business
 
 Dear @params("customerName")
 
-We have received your application and will make the amendments requested shortly.
+We have received your application. We will complete it within 5 working days and notify you by email.
 
 Your submission reference is: @params("submissionReference")
 
