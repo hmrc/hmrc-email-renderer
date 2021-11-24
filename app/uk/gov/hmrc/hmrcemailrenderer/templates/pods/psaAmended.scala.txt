@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+You have updated your pension scheme administrator details
+
+Dear @{params("psaName").toString}
+
+This email confirms your pension scheme administrator details have been updated.
+
+What to do next
+
+You can check your pension scheme administrator details by searching for ‘Manage a registered pension scheme’ on GOV.UK and then choosing the online service.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
