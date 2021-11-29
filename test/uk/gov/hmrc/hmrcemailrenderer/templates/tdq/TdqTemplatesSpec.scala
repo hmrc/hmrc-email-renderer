@@ -261,53 +261,54 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
         "Your application is missing all of the header data")
     }
 
-    "include optional content when errors and warnings relate to more than 1 version" in {
+    "include optional content when errors and advisories relate to more than 1 version" in {
       val params = baseParams + ("relatesToMultipleVersions" -> "true")
       renderedEmail("tdq_fph_report_non_compliant", params) must include(
-        "Errors and warnings relate to more than 1 version of your software")
-    }
-    "not include optional content when the errors and warnings do not relate to more than 1 version" in {
-      val params = baseParams + ("relatesToMultipleVersions" -> "false")
-      renderedEmail("tdq_fph_report_non_compliant", params) mustNot include(
-        "Errors and warnings relate to more than 1 version of your software")
+        "Errors and advisories relate to more than 1 version of your software")
     }
 
-    "include a report when there are errors but no warnings" in {
+    "not include optional content when the errors and advisories do not relate to more than 1 version" in {
+      val params = baseParams + ("relatesToMultipleVersions" -> "false")
+      renderedEmail("tdq_fph_report_non_compliant", params) mustNot include(
+        "Errors and advisories relate to more than 1 version of your software")
+    }
+
+    "include a report when there are errors but no advisories" in {
       val params = baseParams + ("extraDetails" -> extraDetails(headerWithErrors))
       val email = renderedEmail("tdq_fph_report_non_compliant", params)
 
-      email must include("Correct the errors shown in this report")
-      email mustNot include("Correct the errors and consider the warnings shown in this report")
-      email mustNot include("Consider the warnings shown in this report")
+      email must include("Fix all of the errors shown in this report")
+      email mustNot include("Fix all of the errors and check the advisories shown in this report")
+      email mustNot include("Check the advisories shown in this report")
 
-      email must include("You need to correct errors")
-      email mustNot include("You need to correct errors and consider warnings")
-      email mustNot include("You need to consider warnings")
+      email must include("You need to fix all errors")
+      email mustNot include("You need to fix all errors and check advisories")
+      email mustNot include("You need to check advisories")
     }
 
-    "include a report when there are errors and warnings" in {
+    "include a report when there are errors and advisories" in {
       val params = baseParams + ("extraDetails" -> extraDetails(headerWithErrors, headerWithWarnings))
       val email = renderedEmail("tdq_fph_report_non_compliant", params)
 
-      email must include("Correct the errors and consider the warnings shown in this report")
-      email mustNot include("Correct the errors shown in this report")
-      email mustNot include("Consider the warnings shown in this report")
+      email must include("Fix all of the errors and check the advisories shown in this report")
+      email mustNot include("Fix all of the errors shown in this report")
+      email mustNot include("Check the advisories shown in this report")
 
-      email must include("You need to correct errors and consider warnings")
-      email mustNot include("You need to consider warnings")
+      email must include("You need to fix all errors and check advisories")
+      email mustNot include("You need to check advisories")
     }
 
-    "include a report when there are warnings but no errors" in {
+    "include a report when there are advisories but no errors" in {
       val params = baseParams + ("extraDetails" -> extraDetails(headerWithWarnings))
       val email = renderedEmail("tdq_fph_report_non_compliant", params)
 
-      email must include("Consider the warnings shown in this report")
-      email mustNot include("Correct the errors shown in this report")
-      email mustNot include("Correct the errors and consider the warnings shown in this report")
+      email must include("Check the advisories shown in this report")
+      email mustNot include("Fix all of the errors shown in this report")
+      email mustNot include("Fix all of the errors and check the advisories shown in this report")
 
-      email must include("You need to consider warnings")
-      email mustNot include("You need to correct errors")
-      email mustNot include("You need to correct errors and consider warnings")
+      email must include("You need to check advisories")
+      email mustNot include("You need to fix all errors")
+      email mustNot include("You need to fix all errors and check advisories")
     }
 
     "not include a report when there are no errors or warnings" in {
