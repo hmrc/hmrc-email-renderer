@@ -229,48 +229,21 @@ object DigitalContactTemplates {
       priority = Some(MessagePriority.Background)
     ),
     MessageTemplate.create(
-      templateId = "digitalOptInConfirmation_BTA",
-      fromAddress = FromAddress.noReply("HMRC digital team"),
-      service = SelfAssessment,
-      subject = "How we will send you online tax letters",
-      plainTemplate = txt.digitalOptInConfirmation_BTA.f,
-      htmlTemplate = html.digitalOptInConfirmation_BTA.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "digitalOptInConfirmation_PTA",
-      fromAddress = FromAddress.noReply("HMRC digital team"),
-      service = SelfAssessment,
-      subject = "How we will send you online tax letters",
-      plainTemplate = txt.digitalOptInConfirmation_PTA.f,
-      htmlTemplate = html.digitalOptInConfirmation_PTA.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "digitalOptInConfirmation_PTA_cy",
-      fromAddress = defaultFromAddressWelsh,
-      service = SelfAssessment,
-      subject = "Sut y byddwn yn anfon llythyrau treth ar-lein atoch",
-      plainTemplate = txt.digitalOptInConfirmation_PTA_cy.f,
-      htmlTemplate = html.digitalOptInConfirmation_PTA_cy.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "digitalOptInConfirmation_NinoPTA",
+      templateId = "digitalOptInConfirmation",
       fromAddress = FromAddress.noReply("HMRC digital team"),
       service = SelfAssessment,
       subject = "Your online tax letters",
-      plainTemplate = txt.digitalOptInConfirmation_NinoPTA.f,
-      htmlTemplate = html.digitalOptInConfirmation_NinoPTA.f,
+      plainTemplate = txt.digitalOptInConfirmation.f,
+      htmlTemplate = html.digitalOptInConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "digitalOptInConfirmation_NinoPTA_cy",
+      templateId = "digitalOptInConfirmation_cy",
       fromAddress = defaultFromAddressWelsh,
       service = SelfAssessment,
       subject = "Eich llythyrau treth ar-lein",
-      plainTemplate = txt.digitalOptInConfirmation_NinoPTA_cy.f,
-      htmlTemplate = html.digitalOptInConfirmation_NinoPTA_cy.f,
+      plainTemplate = txt.digitalOptInConfirmation_cy.f,
+      htmlTemplate = html.digitalOptInConfirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
     )
   ) ++ newMessageAlertTemplates
