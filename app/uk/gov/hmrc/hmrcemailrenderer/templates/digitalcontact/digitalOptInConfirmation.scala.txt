@@ -1,0 +1,20 @@
+@(params: Map[String, Any])How we will send you online tax letters
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)}
+
+Now you have signed up to online tax letters, we wanted to tell you more.
+How it works
+Whenever you have a new online tax letter, we will email to let you know.
+You will find all these saved together in one place. You can read them on any device, download and share them. You can also print them at any time, so you have a paper copy if you ever need one. To read your tax letters, sign in to your HMRC account and select ‘Messages’.
+You can also use HMRC’s free mobile app to read your tax letters. Search for ‘HMRC app’ to download it.
+This service is still growing, so at the moment we only send some tax letters online. Over time, we will be able to send most tax letters by message and email, though some will always need to come by post.
+
+What you have opted in to
+You can get a variety of tax letters online, such as if you owe tax or are due a refund (P800, PA302) or if you have a Self Assessment notice to file (an SA316 notice).
+
+Our promises
+If an email notification does not reach you and is returned to us, we’ll send the letter by post. This means you will never miss a tax letter.
+We will never send private or sensitive information by email.
+You can change the email address you use to get tax letters, and you can also choose to go back to getting all tax letters by post. Just go to ‘Check your settings’.
+
+From HMRC digital team

@@ -7,7 +7,7 @@
 
 Manages the rendering of parameterised email using templates. 
 
-## Before requesting to merge your PR, please ensure that you have re-based with master
+## Before requesting to merge your PR, please ensure that you have re-based with main
 | **Note: Before sending a pull request with template changes, please look at our [guidelines](/CONTRIBUTING.md).** |
 | --- |
 
@@ -88,7 +88,7 @@ sm --start ASSETS_FRONTEND -f
 Alternatively, you can do a preview of emails by starting the service using `sm` to preview the source, snapshot or release versions of the micro-service.
 
 ```bash
-sm --start ASSETS_FRONTEND -f
+sm --start ASSETS_FRONTEND -r
 sm --start HMRC_EMAIL_RENDERER [-f|-r]
 ```
 
