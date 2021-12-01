@@ -62,6 +62,7 @@ trait MicroService {
     )
     .settings(resolvers += Resolver.jcenterRepo)
     .settings(routesGenerator := InjectedRoutesGenerator)
+    .settings(ScoverageSettings())
 }
 
 private object TestPhases {
