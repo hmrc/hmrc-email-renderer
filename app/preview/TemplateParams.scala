@@ -2802,6 +2802,9 @@ object TemplateParams2 {
       "businessName"        -> "Test Business",
       "period"              -> "1 July to 30 September 2021",
       "paymentDeadline"     -> "31 October 2021"
-    )
+    ),
+    "pods_psa_amend" -> Map(
+      "psaName" -> "Jane Doe"
+    ),
   )
 }

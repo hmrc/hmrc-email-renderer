@@ -16,7 +16,6 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
@@ -192,6 +191,15 @@ object PodsTemplates {
       subject = "Your RAC/DAC has been added from Pension Schemes Online",
       plainTemplate = txt.racDacIndividualMigrationConfirmation.f,
       htmlTemplate = html.racDacIndividualMigrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_psa_amend",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "You have updated your pension scheme administrator details",
+      plainTemplate = txt.psaAmended.f,
+      htmlTemplate = html.psaAmended.f,
       priority = Some(MessagePriority.Standard)
     )
   )
