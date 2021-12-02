@@ -1,0 +1,39 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "How we will send you online tax letters") {
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Now you have signed up to online tax letters, we wanted to tell you more.</p>
+    <h2 style="margin: 0 0 30px; font-size: 19px;">How it works</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Whenever you have a new online tax letter, we will email to let you know.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You will find all these saved together in one place. You can read them on any device, download and share them. You can also print them at any time, so you have a paper copy if you ever need one. To read your tax letters, sign in to your HMRC account and select ‘Messages’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You can also use HMRC’s free mobile app to read your tax letters. Search for ‘HMRC app’ to download it.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This service is still growing, so at the moment we only send some tax letters online. Over time, we will be able to send most tax letters by message and email, though some will always need to come by post.</p>
+
+
+    <h2 style="margin: 0 0 30px; font-size: 19px;">What you have opted in to</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">You can get a variety of tax letters online, such as if you owe tax or are due a refund (P800, PA302) or if you have a Self Assessment notice to file (an SA316 notice).</p>
+
+
+    <h2 style="margin: 0 0 30px; font-size: 19px;">Our promisess</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">If an email notification does not reach you and is returned to us, we’ll send the letter by post. This means you will never miss a tax letter.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We will never send private or sensitive information by email.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You can change the email address you use to get tax letters, and you can also choose to go back to getting all tax letters by post. Just go to ‘Check your settings’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">HMRC digital team</p>
+}

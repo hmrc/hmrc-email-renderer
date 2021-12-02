@@ -1,0 +1,38 @@
+@*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Sut y byddwn yn anfon llythyrau treth ar-lein atoch", isWelsh = true) {
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params, isWelsh = true)
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Gan eich bod wedi cofrestru i gael llythyrau treth ar-lein erbyn hyn, roeddem am roi rhagor o wybodaeth i chi.</p>
+    <h2 style="margin: 0 0 30px; font-size: 19px;">Sut mae’n gweithio</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Pryd bynnag y cewch lythyr treth ar-lein newydd, byddwn yn anfon e-bost i roi gwybod i chi.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Byddwch yn eu gweld i gyd mewn un lle. Gallwch eu darllen ar unrhyw ddyfais, eu lawrlwytho a’u rhannu. Gallwch hefyd eu hargraffu ar unrhyw adeg, a hynny fel bod gennych gopi papur os bydd angen un arnoch am unrhyw reswm. I ddarllen eich llythyrau treth, mewngofnodwch i wasanaethau CThEM a dewiswch ‘Negeseuon’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Gallwch hefyd ddefnyddio ap ffôn symudol CThEM sy’n rhad ac am ddim i ddarllen eich llythyrau treth. Chwiliwch am ‘HMRC app’ i’w lawrlwytho.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae’r gwasanaeth hwn yn tyfu o hyd, felly ar hyn o bryd rydym ond yn anfon rhai llythyrau treth ar-lein. Dros amser, byddwn yn gallu anfon y rhan fwyaf o lythyrau treth drwy negeseuon ac e-byst, er bydd yn rhaid i rai ohonynt gyrraedd drwy’r post o hyd.</p>
+
+
+    <h2 style="margin: 0 0 30px; font-size: 19px;">Yr hyn rydych wedi optio mewn iddo</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Gallwch gael amrywiaeth o lythyrau treth ar-lein, er enghraifft os oes treth arnoch neu fod ad-daliad yn ddyledus (P800, PA302) neu a oes gennych hysbysiad i gyflwyno Hunanasesiad (hysbysiad SA316).</p>
+
+    <h2 style="margin: 0 0 30px; font-size: 19px;">Ein haddewidion</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Os nad yw hysbysiad drwy e-bost yn eich cyrraedd ac yn dod yn ôl atom, byddwn yn anfon y llythyr drwy’r post. O ganlyniad, ni fyddwch byth yn methu llythyr treth.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Ni fyddwn byth yn anfon gwybodaeth breifat na sensitif drwy e-bost.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Gallwch newid y cyfeiriad e-bost a ddefnyddiwch i gael llythyrau treth, a gallwch hefyd ddewis mynd yn ôl i gael pob llythyr treth drwy’r post. Ewch i ‘Gwirio’ch gosodiadau’.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Dîm Digidol CThEM</p>
+}
