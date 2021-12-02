@@ -2805,6 +2805,6 @@ object TemplateParams2 {
     ),
     "pods_psa_amend" -> Map(
       "psaName" -> "Jane Doe"
-    ),
+    )
   )
 }
