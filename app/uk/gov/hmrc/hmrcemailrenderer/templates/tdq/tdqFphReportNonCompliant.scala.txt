@@ -24,8 +24,8 @@ To meet the specification, you need to:
 
 Submit header data for every request made by your application.@if(reportParams.hasAllHeadersMissing) { Your application is missing all of the header data in @reportParams.allHeadersMissingPercentage% of requests.}
 
-@if(reportParams.hasErrors) {Correct the errors @if(reportParams.hasWarnings){and consider the warnings }shown in this report.}
-@if(reportParams.hasWarnings && !reportParams.hasErrors) {Consider the warnings shown in this report.}
+@if(reportParams.hasErrors) {Fix all of the errors @if(reportParams.hasWarnings){and check the advisories }shown in this report.}
+@if(reportParams.hasWarnings && !reportParams.hasErrors) {Check the advisories shown in this report.}
 
 Check your data meets the specification and is formatted correctly.
 
@@ -38,13 +38,13 @@ Use the validate endpoint to get immediate feedback for a single request. Then, 
 If the Test Fraud Prevention Headers API shows that you're submitting the correct headers, check if your end users are using an outdated version of your application.
 
 @if(reportParams.hasErrors || reportParams.hasWarnings) {
-@if(reportParams.hasErrors) {You need to correct errors @if(reportParams.hasWarnings){and consider warnings}} else {You need to consider warnings}
+@if(reportParams.hasErrors) {You need to fix all errors @if(reportParams.hasWarnings){and check advisories}} else {You need to check advisories}
 
 We've made basic checks on header values sent by your application. This includes requests with all headers missing. It does not include headers that appear to be valid.
 
 If your application sent requests via an additional connection method, you'll receive a separate report.
 
-@if(reportParams.relatesToMultipleVersions) {Errors and warnings relate to more than 1 version of your software, as provided in the Gov-Vendor-Version header.}
+@if(reportParams.relatesToMultipleVersions) {Errors and advisories relate to more than 1 version of your software, as submitted in the Gov-Vendor-Version header.}
 
 
 @for(extraDetails <- reportParams.extraDetails) {@extraDetails.prettyConnectionMethod
@@ -54,9 +54,9 @@ If your application sent requests via an additional connection method, you'll re
 @for(headersValidation <- extraDetails.headerValidations) {
 @headersValidation.prettyHeaderOrHeaders
 
-@for(error <- headersValidation.errors) {Error @error.message @error.prettyCount @error.shortPercentageDescription
+@for(error <- headersValidation.errors) {Fix @error.message @error.prettyCount @error.shortPercentageDescription
 
-}@for(warning <- headersValidation.warnings) {Warning @warning.message @warning.prettyCount @warning.shortPercentageDescription
+}@for(warning <- headersValidation.warnings) {Check @warning.message @warning.prettyCount @warning.shortPercentageDescription
 
 }}
 Missing data
