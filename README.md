@@ -103,7 +103,7 @@ We have to add this to configuration in following place
 
 [https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf](https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf)
 
-key should be an english templateId and value should be welsh templateId
+key should be an english templateId and value should be a Welsh templateId
 
 We make a call to preferences service to see whether language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
 
