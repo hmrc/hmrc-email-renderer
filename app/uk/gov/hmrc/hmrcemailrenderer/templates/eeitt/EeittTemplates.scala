@@ -25,6 +25,9 @@ object EeittTemplates {
   private val getTorDySub: Map[String, String] => String =
     _.getOrElse("torDySub", "You applied for transfer of residence tax relief")
 
+  private val getConfDySub: Map[String, String] => String =
+    _.getOrElse("confDySub", "Confirm your email address")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -805,14 +808,14 @@ object EeittTemplates {
       htmlTemplate = html.civTransparencyConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "confirmationCode_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address",
+      subject = getConfDySub,
       plainTemplate = txt.confirmationCodeTemplate.f,
       htmlTemplate = html.confirmationCodeTemplate.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "civOffshore_code_submission",
@@ -1406,6 +1409,15 @@ object EeittTemplates {
       subject = "You submitted your overseas bank details",
       plainTemplate = txt.netpConfirmation.f,
       htmlTemplate = html.netpConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cjrs_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Notification of intent to disclose CJRS overclaim - application received",
+      plainTemplate = txt.cjrsDisclosureConfirmation.f,
+      htmlTemplate = html.cjrsDisclosureConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

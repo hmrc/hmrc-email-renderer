@@ -2507,10 +2507,12 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "confirmationCode_confirmation_submission" -> Map(
-      "emailFormName"    -> "Form name",
+      "headingCode"      -> "Confirm your email address - Coronavirus Job Retention Scheme Overclaim Notification",
+      "confDySub"        -> "Confirm your email address - Coronavirus Job Retention Scheme Overclaim Notification",
+      "emailFormName"    -> "Coronavirus Job Retention Scheme Overclaim Notification",
       "confirmationCode" -> "HGDY",
-      "emailContact"     -> "HMRC Contact",
-      "emailTeam"        -> "HMRC Team"
+      "emailContact"     -> "HMRC",
+      "emailTeam"        -> "the Coronavirus Job Retention Scheme team"
     ),
     "civOffshore_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
@@ -2758,6 +2760,10 @@ object TemplateParams2 {
       "customerName" -> "Hugh Mann"
     ),
     "netp_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cjrs_disclosure_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),

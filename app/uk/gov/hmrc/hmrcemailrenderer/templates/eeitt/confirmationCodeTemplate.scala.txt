@@ -1,11 +1,10 @@
 @(params: Map[String, Any])
 
-Confirm your email address
-
+@params("headingCode")
 
 Dear Customer
 
-You requested a code to continue with the @params("emailFormName") service on GOV.UK.
+You requested a code to continue with the ‘@params("emailFormName")’ service on GOV.UK.
 
 Your code is: @params("confirmationCode")
 

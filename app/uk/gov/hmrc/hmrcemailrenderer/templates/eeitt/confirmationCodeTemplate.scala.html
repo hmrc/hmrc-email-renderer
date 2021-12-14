@@ -15,12 +15,13 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address", showHeading1 = false){
+<h1>
+    @params("headingCode")</h1>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You requested a code to continue with the @params("emailFormName") service on GOV.UK.
+    You requested a code to continue with the ‘@params("emailFormName")’ service on GOV.UK.
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your code is: @params("confirmationCode")</p>

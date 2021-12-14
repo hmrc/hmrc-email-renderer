@@ -358,6 +358,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "vishing_code_submission",
         "vishing_code_submission_cy",
         "cjrs_confirmation_submission",
+        "cjrs_disclosure_confirmation",
         "jrsRemoval_submission_confirmation",
         "csr_submission_confirmation",
         "cet_email_confirmation",
