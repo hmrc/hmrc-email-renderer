@@ -1419,6 +1419,15 @@ object EeittTemplates {
       plainTemplate = txt.cjrsDisclosureConfirmation.f,
       htmlTemplate = html.cjrsDisclosureConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    )
+    ),
+    MessageTemplate.create(
+      templateId = "cjrsDisclosure_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Coronavirus Job Retention Scheme Overclaim Notification",
+      plainTemplate = txt.cjrsDisclosureCode.f,
+      htmlTemplate = html.cjrsDisclosureCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
   )
 }
