@@ -1428,6 +1428,6 @@ object EeittTemplates {
       plainTemplate = txt.cjrsDisclosureCode.f,
       htmlTemplate = html.cjrsDisclosureCode.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 }
