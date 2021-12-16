@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+You have notified HMRC that you intend to make a Coronavirus Job Retention Scheme overclaim disclosure
+
+Dear @params("customerName")
+
+We have received your notification of intention to make a Coronavirus Job Retention Scheme overclaim disclosure.
+
+Your submission reference is: @params("submissionReference")
+
+When you know how much you need to pay back, you must:
+
+• use the online service to get a payment reference number
+
+• pay us back within 30 days
+
+If you tell us about an overclaim and do not follow this up by telling us the amount, you may have to repay the grant and pay a penalty.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the Coronavirus Job Retention Scheme team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
