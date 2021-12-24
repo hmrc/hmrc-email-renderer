@@ -17,26 +17,27 @@
 package uk.gov.hmrc.hmrcemailrenderer.services
 
 import com.google.inject.Inject
-import play.api.{Configuration, Logging}
+import play.api.{ Configuration, Logging }
 import play.twirl.api.Format
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ErrorMessage, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.hmrcemailrenderer.model.Language.{English, Welsh}
+import uk.gov.hmrc.hmrcemailrenderer.model.Language.{ English, Welsh }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
-import uk.gov.hmrc.play.audit.http.connector.{AuditConnector, AuditResult}
+import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
 import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
 
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success, Try}
+import scala.concurrent.{ ExecutionContext, Future }
+import scala.util.{ Failure, Success, Try }
 
 class TemplateRenderer @Inject()(
   configuration: Configuration,
   auditConnector: AuditConnector,
-  preferencesConnector: PreferencesConnector) extends Logging {
+  preferencesConnector: PreferencesConnector)
+    extends Logging {
 
   val locator: TemplateLocator = TemplateLocator
 

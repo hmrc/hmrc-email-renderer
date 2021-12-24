@@ -33,22 +33,22 @@
 package uk.gov.hmrc.hmrcemailrenderer.services
 
 import org.scalatest.OptionValues
-import org.mockito.{ArgumentCaptor, MockitoSugar}
-import org.mockito.ArgumentMatchers.{any, anyString}
+import org.mockito.{ ArgumentCaptor, MockitoSugar }
+import org.mockito.ArgumentMatchers.{ any, anyString }
 import org.mockito.Mockito._
 import play.api.Configuration
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.http.HeaderCarrier
-import uk.gov.hmrc.play.audit.http.connector.{AuditConnector, AuditResult}
+import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{ ExecutionContext, Future }
 import play.api.test.Helpers.await
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.matchers.should.Matchers

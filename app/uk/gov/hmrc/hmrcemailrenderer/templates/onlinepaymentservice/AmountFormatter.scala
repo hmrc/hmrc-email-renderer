@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
-import java.util.{Currency, Locale}
+import java.util.{ Currency, Locale }
 import play.api.Logging
 
 import scala.util.Try
