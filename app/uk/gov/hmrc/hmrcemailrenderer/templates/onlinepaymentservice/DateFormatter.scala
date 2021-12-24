@@ -16,12 +16,12 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
-import play.api.Logger
+import play.api.Logging
 
 import scala.util.Try
 import scala.util.control.NonFatal
 
-object DateFormatter {
+object DateFormatter extends Logging {
 
   def formatMonth(month: String): String = month match {
     case "01" => "January"
@@ -55,7 +55,7 @@ object DateFormatter {
   private def formatDay(day: String): String =
     Try(day.toInt.toString)
       .recover {
-        case NonFatal(e) => Logger.warn(s"Day parse exception: ${e.getMessage}"); day
+        case NonFatal(e) => logger.warn(s"Day parse exception: ${e.getMessage}"); day
       }
       .getOrElse(day)
 
