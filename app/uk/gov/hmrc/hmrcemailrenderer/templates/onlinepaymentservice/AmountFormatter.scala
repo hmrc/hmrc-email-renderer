@@ -17,11 +17,12 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice
 
 import java.util.{ Currency, Locale }
-import play.api.Logger
+import play.api.Logging
+
 import scala.util.Try
 import scala.util.control.NonFatal
 
-object AmountFormatter {
+object AmountFormatter extends Logging {
 
   private val formatter = {
     Locale.setDefault(Locale.UK)
@@ -37,7 +38,7 @@ object AmountFormatter {
   private def toDouble(s: String): Double =
     Try(s.toDouble)
       .recover {
-        case NonFatal(e) => Logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0D
+        case NonFatal(e) => logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0D
       }
       .getOrElse(0D)
 

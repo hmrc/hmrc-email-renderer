@@ -17,15 +17,17 @@
 package uk.gov.hmrc.hmrcemailrenderer
 
 import org.scalatest.concurrent.ScalaFutures
+import org.scalatest.wordspec.AnyWordSpec
 import org.scalatestplus.play.guice.GuiceOneServerPerSuite
 import org.scalatestplus.play.{ ServerProvider, WsScalaTestClient }
 import play.api.libs.json._
 import play.api.libs.ws.WSClient
 import uk.gov.hmrc.play.http.test.ResponseMatchers
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
 
 class RendererControllerISpec
-    extends WordSpecLike with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite
+    extends AnyWordSpec with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite
     with ScalaFutures with ResponseMatchers with ServerProvider {
   "POST /templates/:templateId" should {
     "return 200 and yield the rendered template data when supplied a valid templateId thats not defined in WelshTemplatesByLangPreference" in {

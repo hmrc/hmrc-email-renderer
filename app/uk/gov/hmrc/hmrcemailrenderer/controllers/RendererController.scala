@@ -17,19 +17,18 @@
 package uk.gov.hmrc.hmrcemailrenderer.controllers
 
 import com.google.inject.Inject
-import play.api.Logger
+import play.api.Logging
 import play.api.libs.json.Json
 import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
-
-import uk.gov.hmrc.play.bootstrap.controller.FrontendController
+import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendController
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
 class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)
-    extends FrontendController(mcc) {
+    extends FrontendController(mcc) with Logging {
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
@@ -38,7 +37,7 @@ class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: Mess
           case Right(rendered)            => Ok(Json.toJson(rendered))
           case Left(MissingTemplateId(_)) => NotFound
           case Left(x @ TemplateRenderFailure(_)) =>
-            Logger.warn(s"Failed to render message, reason: ${x.reason}")
+            logger.warn(s"Failed to render message, reason: ${x.reason}")
             BadRequest(Json.toJson(x))
         }
       }
