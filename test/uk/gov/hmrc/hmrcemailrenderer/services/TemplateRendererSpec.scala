@@ -32,11 +32,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.services
 
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
-import org.mockito.ArgumentCaptor
+import org.scalatest.OptionValues
+import org.mockito.{ ArgumentCaptor, MockitoSugar }
 import org.mockito.ArgumentMatchers.{ any, anyString }
 import org.mockito.Mockito._
-import org.scalatestplus.mockito.MockitoSugar
 import play.api.Configuration
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
@@ -48,13 +47,14 @@ import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.audit.http.connector.{ AuditConnector, AuditResult }
 import uk.gov.hmrc.play.audit.model.DataEvent
 
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{ ExecutionContext, Future }
 import play.api.test.Helpers.await
 import org.scalatest.concurrent.ScalaFutures
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues with MockitoSugar with ScalaFutures {
+class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues with MockitoSugar with ScalaFutures {
   "The template renderer" should {
     "render an existing template using the common parameters" in new TestCase {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
@@ -76,7 +76,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
   "LanguageTemplateId" should {
 
     "return the same template if the template doesn't exist in WelshTemplatesByLangPreference object and email preference is English" in new TestCase {
-      val dataEventArgumentCaptor = ArgumentCaptor.forClass(classOf[DataEvent])
+      val dataEventArgumentCaptor: ArgumentCaptor[DataEvent] = ArgumentCaptor.forClass(classOf[DataEvent])
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
@@ -106,7 +106,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
     }
 
     "return welsh template if template is in WelshTemplatesByLangPreference and language preferences set to welsh" in new TestCase {
-      val dataEventArgumentCaptor = ArgumentCaptor.forClass(classOf[DataEvent])
+      val dataEventArgumentCaptor: ArgumentCaptor[DataEvent] = ArgumentCaptor.forClass(classOf[DataEvent])
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
@@ -137,7 +137,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
     }
 
     "return english template if template is in WelshTemplatesByLangPreference and language preferences set to english" in new TestCase {
-      val dataEventArgumentCaptor = ArgumentCaptor.forClass(classOf[DataEvent])
+      val dataEventArgumentCaptor: ArgumentCaptor[DataEvent] = ArgumentCaptor.forClass(classOf[DataEvent])
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
@@ -169,7 +169,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
     }
 
     "return same template if the template doesn't exist in WelshTemplatesByLangPreference object and language preference is Welsh" in new TestCase {
-      val dataEventArgumentCaptor = ArgumentCaptor.forClass(classOf[DataEvent])
+      val dataEventArgumentCaptor: ArgumentCaptor[DataEvent] = ArgumentCaptor.forClass(classOf[DataEvent])
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
@@ -201,7 +201,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
     }
 
     "return same template if the template doesn't exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
-      val dataEventArgumentCaptor = ArgumentCaptor.forClass(classOf[DataEvent])
+      val dataEventArgumentCaptor: ArgumentCaptor[DataEvent] = ArgumentCaptor.forClass(classOf[DataEvent])
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
@@ -231,7 +231,7 @@ class TemplateRendererSpec extends WordSpecLike with Matchers with OptionValues 
     }
 
     "return same template if the template exist in WelshTemplatesByLangPreference object and no email is provided" in new TestCase {
-      val dataEventArgumentCaptor = ArgumentCaptor.forClass(classOf[DataEvent])
+      val dataEventArgumentCaptor: ArgumentCaptor[DataEvent] = ArgumentCaptor.forClass(classOf[DataEvent])
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
