@@ -8,6 +8,7 @@ Your PAYE Income Tax records have recently changed, which means the amount of ta
 
 For security reasons we do not give the full details here, but it could be because:
 
+- we have now calculated your tax code for the next tax year (tax year 2022 to 2023)
 - your job changed
 - your pay changed
 - your company benefits, such as a company car changed

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,6 +43,8 @@ class TaxEstimateMessageAlertWelshSpec
         "Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd swm y dreth rydych yn ei thalu yn newid.")
       htmlContent should include(
         "Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:")
+      htmlContent should include(
+        "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2021 i 2022)")
       htmlContent should include("newidiodd eich swydd")
       htmlContent should include("newidiodd eich cyflog")
       htmlContent should include("newidiodd eich buddiannau cwmni, megis car cwmni")
