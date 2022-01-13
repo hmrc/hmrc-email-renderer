@@ -3,13 +3,13 @@ You created a Capital Gains Tax on UK property account
 
 Dear Licence Applicant
 
-You used the tax check service on @{params("taxCheckDate")}.
+You used the tax check service on @{params("currentDate")}.
 
 You asked us to email your tax check code for the @{params("licenceType")} licence type.
 
-Your tax check code is @{params("taxCheckCode")}.
+Your tax check code is @{params("hecTaxCheckCode")}.
 
-This code will last for 120 days. The last day you can use it is @{params("lastValidDate")}.
+This code will last for 120 days. The last day you can use it is @{params("expiresAfter")}.
 
 From HMRC tax check service
 --
