@@ -2816,10 +2816,10 @@ object TemplateParams2 {
       "psaName" -> "Jane Doe"
     ),
     "hec_tax_check_code" -> Map(
-      "currentDate" -> "13 January 2022",
-      "licenceType" -> "Driver of taxis and private hires",
+      "currentDate"     -> "13 January 2022",
+      "licenceType"     -> "Driver of taxis and private hires",
       "hecTaxCheckCode" -> "FK9 BRG 2JJ",
-      "expiresAfter" -> "13 May 2022"
+      "expiresAfter"    -> "13 May 2022"
     )
   )
 }
