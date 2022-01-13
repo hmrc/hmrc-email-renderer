@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-You created a Capital Gains Tax on UK property account
+Your Tax Check Code
 
 Dear Licence Applicant
 
