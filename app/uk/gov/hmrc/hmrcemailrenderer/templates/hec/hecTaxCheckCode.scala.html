@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Tax Check Code"){
+  <p style="margin: 0 0 30px; font-size: 19px;">Dear Licence Applicant</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">You used the tax check service on @{params("taxCheckDate")}.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">You asked us to email your tax check code for the @{params("licenceType")} licence type.</p>
+  <p style="margin: 0 0 15px; font-size: 19px;">Your tax check code is @{params("taxCheckCode")}.</p>
+  <p style="margin: 0 0 15px; font-size: 19px;">This code will last for 120 days. The last day you can use it is @{params("lastValidDate")}.</p>
+  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC tax check service</p>
+}
