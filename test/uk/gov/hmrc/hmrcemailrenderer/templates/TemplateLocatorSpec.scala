@@ -117,7 +117,8 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "MODS",
         "CDSRC",
         "OSS",
-        "API Catalogue"
+        "API Catalogue",
+        "HEC"
       )
     }
 
@@ -762,7 +763,8 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "oss_returns_email_confirmation_no_vat_owed",
         "platformContact",
         "platformContactConfirmation",
-        "pods_psa_amend"
+        "pods_psa_amend",
+        "hec_tax_check_code"
       )
     }
   }
