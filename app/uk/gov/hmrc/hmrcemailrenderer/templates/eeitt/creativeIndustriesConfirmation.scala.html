@@ -1,0 +1,37 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You told HMRC about a claim for creative industries tax relief"){
+
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params("customerName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You provided information about a creative industries tax relief for Corporation Tax claim for <b>@params("companyName")</b>.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: @params("submissionReference")</p>
+<h2>What happens next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We will email within 10 working days to confirm if we have accepted the information about your claim for tax relief.
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    If we need more information the email will explain what to do next.</p>
+<h2>Why you are receiving this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We send a confirmation email for all forms submitted online.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC creative industries tax reliefs</p>
+}

@@ -28,6 +28,9 @@ object EeittTemplates {
   private val getConfDySub: Map[String, String] => String =
     _.getOrElse("confDySub", "Confirm your email address")
 
+  private val getQAHCDySub: Map[String, String] => String =
+    _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -1428,6 +1431,42 @@ object EeittTemplates {
       plainTemplate = txt.cjrsDisclosureCode.f,
       htmlTemplate = html.cjrsDisclosureCode.f,
       priority = Some(MessagePriority.Urgent)
-    )
+    ),
+    MessageTemplate.create(
+      templateId = "creative_industries_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your creative industries tax relief application",
+      plainTemplate = txt.creativeIndustriesConfirmation.f,
+      htmlTemplate = html.creativeIndustriesConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "creative_industries_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for creative industries tax relief for Corporation Tax",
+      plainTemplate = txt.creativeIndustriesCode.f,
+      htmlTemplate = html.creativeIndustriesCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "qahc_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getQAHCDySub,
+      plainTemplate = txt.qahcConfirmation.f,
+      htmlTemplate = html.qahcConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "qahc_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for creative industries tax relief for Corporation Tax",
+      plainTemplate = txt.qahcCode.f,
+      htmlTemplate = html.qahcCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
   )
 }
