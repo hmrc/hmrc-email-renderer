@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-Your Tax Check Code
+Your tax check code
 
 Dear Licence Applicant
 
