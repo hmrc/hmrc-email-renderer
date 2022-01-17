@@ -2220,6 +2220,10 @@ object TemplateParams2 {
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
     ),
+    "mdr_registration_successful" -> Map(
+      "name"  -> "Joe Bloggs",
+      "mdrID" -> "XWDAC0000000058"
+    ),
     "dac6_new_disclosure_confirmation" -> Map(
       "name"          -> "Joe New",
       "arrangementID" -> "GBA20200101AAA123",
