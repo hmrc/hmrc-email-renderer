@@ -26,7 +26,7 @@ object HecTemplates {
       templateId = "hec_tax_check_code",
       fromAddress = govUkTeamAddress,
       service = HEC,
-      subject = "Your tax check code",
+      subject = "Tax check code for your licence application",
       plainTemplate = txt.hecTaxCheckCode.f,
       htmlTemplate = html.hecTaxCheckCode.f,
       priority = Some(MessagePriority.Urgent)
