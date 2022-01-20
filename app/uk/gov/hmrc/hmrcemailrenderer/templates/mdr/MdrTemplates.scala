@@ -28,7 +28,7 @@ object MdrTemplates {
       templateId = "mdr_registration_successful",
       fromAddress = govUkTeamAddress,
       service = MDR,
-      subject = "MDR registration successful",
+      subject = "You have registered for Mandatory Disclosure Rules (MDR)",
       plainTemplate = txt.mdrRegistrationSuccessful.f,
       htmlTemplate = html.mdrRegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
