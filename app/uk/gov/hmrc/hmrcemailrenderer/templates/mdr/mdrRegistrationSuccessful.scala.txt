@@ -3,9 +3,9 @@ You have registered for Mandatory Disclosure Rules (MDR)
 
 Dear @{params("name")}
 
-Your MDR ID is: @{params("mdrID")}
-
 You can now report cross-border arrangements.
+
+Your MDR ID is: @{params("mdrID")}
 
 What happens next
 
