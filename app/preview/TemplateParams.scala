@@ -2770,6 +2770,29 @@ object TemplateParams2 {
     "cjrsDisclosure_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "creative_industries_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "companyName"         -> "Acquisitions Incorporated"
+    ),
+    "qahc_confirmation" -> Map(
+      "qahcDySub"           -> "HMRC received your QAHC information",
+      "heading1"            -> "You notified HMRC about a QAHC",
+      "heading2"            -> "Registering for Corporation Tax",
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "notification"        -> "your notification",
+      "companyName"         -> "Acquisitions Incorporated",
+      "para1"               -> "You told us you do not currently have a Corporation Tax Unique Taxpayer Reference.",
+      "para2"               -> "If you are not currently waiting to receive this reference, you should register for Corporation Tax as soon as possible.",
+      "para3"               -> "Search GOV.UK for ‘Set up a limited company’, and go to step seven of the guide."
+    ),
+    "creative_industries_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "qahc_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,
