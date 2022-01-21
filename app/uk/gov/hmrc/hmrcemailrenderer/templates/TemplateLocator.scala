@@ -31,6 +31,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dac6.Dac6Templates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mdr.MdrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs.DigitalTariffTemplates
@@ -91,6 +92,7 @@ trait TemplateLocator {
       "BARS"                  -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
+      "MDR"                   -> MdrTemplates.templates,
       "Digital Tariffs"       -> DigitalTariffTemplates.templates,
       "DST"                   -> DstTemplates.templates,
       "DFS"                   -> DfsTemplates.templates,

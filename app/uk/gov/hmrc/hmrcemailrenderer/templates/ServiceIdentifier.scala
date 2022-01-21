@@ -38,6 +38,7 @@ object ServiceIdentifier {
   case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
   case object CorporationTax extends ServiceIdentifier { override val name = "ct" }
   case object DAC6 extends ServiceIdentifier { override val name = "dac6" }
+  case object MDR extends ServiceIdentifier { override val name = "mdr" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
   case object Eeitt extends ServiceIdentifier { override val name = "eeitt" }
   case object Exports extends ServiceIdentifier { override val name = "customs-declare-exports" }
