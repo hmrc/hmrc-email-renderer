@@ -1467,6 +1467,6 @@ object EeittTemplates {
       plainTemplate = txt.qahcCode.f,
       htmlTemplate = html.qahcCode.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 }
