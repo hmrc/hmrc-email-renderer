@@ -112,4 +112,5 @@ object ServiceIdentifier {
   case object MODS extends ServiceIdentifier { override val name = "mods" }
   case object CDSRC extends ServiceIdentifier { override val name = "cdsrc" }
   case object OSS extends ServiceIdentifier { override val name = "oss" }
+  case object HEC extends ServiceIdentifier { override val name = "hec" }
 }

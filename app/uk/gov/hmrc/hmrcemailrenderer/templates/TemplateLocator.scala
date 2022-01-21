@@ -76,6 +76,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.mods.ModsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -139,7 +140,8 @@ trait TemplateLocator {
       "Eori Common Component" -> EoriCommonComponentTemplates.templates,
       "MODS"                  -> ModsTemplates.templates,
       "CDSRC"                 -> cdsrcTemplates.templates,
-      "OSS"                   -> OSSTemplates.templates
+      "OSS"                   -> OSSTemplates.templates,
+      "HEC"                   -> HecTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

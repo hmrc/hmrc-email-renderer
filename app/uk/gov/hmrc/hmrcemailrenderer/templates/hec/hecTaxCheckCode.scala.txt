@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+Your tax check code
+
+Dear Licence Applicant
+
+You used the tax check service on @{params("currentDate")}.
+
+You asked us to email your tax check code for the @{params("licenceType")} licence type.
+
+Your tax check code is @{params("hecTaxCheckCode")}.
+
+This code will last for 120 days. The last day you can use it is @{params("expiresAfter")}.
+
+From HMRC tax check service
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
