@@ -78,6 +78,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
@@ -100,6 +101,7 @@ trait TemplateLocator {
       "DST"                   -> DstTemplates.templates,
       "DFS"                   -> DfsTemplates.templates,
       "EMAC Helpdesk"         -> EmacHelpdeskTemplates.templates,
+      "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "EMAC"                  -> EmacTemplates.templates,
       "Exports (CDS)"         -> ExportsTemplates.templates,
       "FANDF"                 -> FandFTemplates.templates,

@@ -2723,6 +2723,11 @@ object TemplateParams2 {
     "pesm_code_cy" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "create_undertaking_by_lead" -> Map(
+      "eori" -> "GB123456789012",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef" -> "UID0001234"
+    ),
     "ctDormancy_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
