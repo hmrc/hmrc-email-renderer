@@ -12,8 +12,8 @@ For Business Tax Account holders, select Self Assessment and then ‘more detail
 
 Tax summaries are for information only so there’s no need to take any further action.
 
-Myrtle Lloyd
+Angela MacDonald
 
-Director General of HMRC Customer Services
+Deputy Chief Executive and Second Permanent Secretary
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
