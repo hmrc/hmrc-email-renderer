@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+Confirmation HMRC received your request for a pension scheme tax refund
+
+Dear @params("customerName")
+
+This email confirms you have requested a refund through the Managing Pension Schemes service and have provided details of a bank account into which the refund should be paid.
+
+Your reference is: @params("submissionReference")
+
+What happens next
+
+We aim to process your refund request within 15 working days. If you need to contact us about your refund request, please use the reference above.
+
+Your account balance will be adjusted once your refund has been processed.
+
+Contacting HMRC
+
+For your security HMRC will not send personal data by email. You can contact HMRC via the Pension Schemes Services helpline, on 0300 123 1079.
+
+From Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
