@@ -101,7 +101,6 @@ trait TemplateLocator {
       "DST"                   -> DstTemplates.templates,
       "DFS"                   -> DfsTemplates.templates,
       "EMAC Helpdesk"         -> EmacHelpdeskTemplates.templates,
-      "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "EMAC"                  -> EmacTemplates.templates,
       "Exports (CDS)"         -> ExportsTemplates.templates,
       "FANDF"                 -> FandFTemplates.templates,
@@ -150,7 +149,8 @@ trait TemplateLocator {
       "CDSRC"                 -> cdsrcTemplates.templates,
       "OSS"                   -> OSSTemplates.templates,
       "HEC"                   -> HecTemplates.templates,
-      "ITSA"                  -> ItsaTemplates.templates
+      "ITSA"                  -> ItsaTemplates.templates,
+      "EU Subsidy"            -> EUSubsidyTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
