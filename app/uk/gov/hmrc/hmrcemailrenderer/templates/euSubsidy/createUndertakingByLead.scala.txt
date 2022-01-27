@@ -1,5 +1,4 @@
 @(params: Map[String, Any])
-You created a new single undertaking
 
 This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:
 

@@ -30,6 +30,24 @@ object EUSubsidyTemplates {
       plainTemplate = txt.createUndertakingByLead.f,
       htmlTemplate = html.createUndertakingByLead.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "undertaking_member_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = EUSubsidy,
+      subject = "You are now a member of a single undertaking",
+      plainTemplate = txt.undertakingMemberConfirmation.f,
+      htmlTemplate = html.undertakingMemberConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "undertaking_member_added_by_lead",
+      fromAddress = govUkTeamAddress,
+      service = EUSubsidy,
+      subject = "You have been added to a single undertaking ",
+      plainTemplate = txt.undertakingMemberAddedByLead.f,
+      htmlTemplate = html.undertakingMemberAddedByLead.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
