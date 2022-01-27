@@ -13,7 +13,9 @@ If you need further information
 
 Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
 
-From HMRC EU Subsidy Service
+Thank you
+Kind regards
+HMRC
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
