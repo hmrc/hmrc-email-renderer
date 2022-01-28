@@ -16,24 +16,30 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatest.matchers.should
+import org.scalatest.wordspec.AnyWordSpecLike
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, contactFormsGroup }
 
-class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues with OneAppPerSuite {
+class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with OptionValues with GuiceOneAppPerSuite {
 
   "The template locator when requested Welsh template" should {
 
     "return Welsh version of template if it exists" in new TestCase {
       templateLocatorWithWelsh
         .findTemplate("template-templateGroup-1-2_cy")
-        .get
+        .value
         .templateId shouldBe "template-templateGroup-1-2_cy"
     }
     "return English version of template if Welsh virsion doesn't exists  " in new TestCase {
-      templateLocator.findTemplate("template-templateGroup-1-2_cy").get.templateId shouldBe "template-templateGroup-1-2"
+      templateLocator
+        .findTemplate("template-templateGroup-1-2_cy")
+        .value
+        .templateId shouldBe "template-templateGroup-1-2"
     }
     "return None if template doesn't exist" in new TestCase {
       templateLocator.findTemplate("foobar-template") shouldBe None
@@ -43,13 +49,13 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
   "The template locator" should {
 
     "loop through all groups and return the first template matching the provided template id" in new TestCase {
-      templateLocator.findTemplate("template-templateGroup-1-2").get.templateId shouldBe "template-templateGroup-1-2"
+      templateLocator.findTemplate("template-templateGroup-1-2").value.templateId shouldBe "template-templateGroup-1-2"
       templateLocator
         .findTemplate("template-templateGroup-1-2")
-        .get
+        .value
         .fromAddress
         .apply(Map.empty) shouldBe "from@test <noreply@tax.service.gov.uk>"
-      templateLocator.findTemplate("template-templateGroup-1-2").get.service shouldBe SelfAssessment
+      templateLocator.findTemplate("template-templateGroup-1-2").value.service shouldBe SelfAssessment
     }
 
     "return none if the template is not found" in new TestCase {
@@ -79,6 +85,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "AWRS",
         "GMP",
         "RALD",
+        contactFormsGroup,
         "BARS",
         "TCS",
         "register-your-company",
@@ -439,6 +446,7 @@ class TemplateLocatorSpec extends WordSpecLike with Matchers with OptionValues w
         "rald_alert",
         "rald_not_connected",
         "rald_submission_confirmation",
+        cf_enquiry_confirmation,
         "bars_alert",
         "bars_alert_transaction",
         "tcs_renewal_confirmation",

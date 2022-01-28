@@ -76,6 +76,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.gms.GmsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mods.ModsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 
@@ -106,6 +108,7 @@ trait TemplateLocator {
       "Passcodes"             -> PasscodesTemplates.templates,
       "PAYE"                  -> PayeTemplates.templates,
       "RALD"                  -> RaldTemplates.templates,
+      contactFormsGroup       -> ContactFormsTemplates.templates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
       "Self Assessment"       -> DigitalContactTemplates.templates,
       "TAMC"                  -> TamcTemplates.templates,
