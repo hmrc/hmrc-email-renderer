@@ -19,6 +19,7 @@ package preview
 import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.cf_enquiry_confirmation
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -650,6 +651,12 @@ object TemplateParams {
     ),
     "rald_submission_confirmation" -> Map(
       "customerName" -> "John Doe"
+    ),
+    cf_enquiry_confirmation -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "enquirySubject"         -> "Council Tax - My Council Tax bill",
+      "submissionDate"         -> "28 January 2022",
+      "submissionTime"         -> "13:45"
     ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",
