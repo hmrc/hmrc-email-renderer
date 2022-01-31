@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Valuation Office Agency received your enquiry
+@(params: Map[String, Any])We have received your enquiry
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
 
@@ -14,6 +14,6 @@ What happens next
 
 We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.
 
-Valuation Office Agency
+From Valuation Office Agency
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

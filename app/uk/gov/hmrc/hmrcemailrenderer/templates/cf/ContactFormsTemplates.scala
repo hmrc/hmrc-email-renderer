@@ -33,7 +33,7 @@ object ContactFormsTemplates {
       templateId = cf_enquiry_confirmation,
       fromAddress = fromNoReplyVOA,
       service = ContactForms,
-      subject = "Valuation Office Agency received your enquiry",
+      subject = "You have sent an enquiry to the Valuation Office Agency",
       plainTemplate = txt.cf_enquiry_confirmation.f,
       htmlTemplate = html.cf_enquiry_confirmation.f,
       priority = standardPriority
