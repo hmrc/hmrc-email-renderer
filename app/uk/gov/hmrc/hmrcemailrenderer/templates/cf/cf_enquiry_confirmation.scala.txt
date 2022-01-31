@@ -4,7 +4,7 @@
 
 Thank you for contacting us. This email is confirmation that we have received your enquiry.
 
-Details:
+Details
 
 Subject: @params("enquirySubject")
 Date: @params("submissionDate")
