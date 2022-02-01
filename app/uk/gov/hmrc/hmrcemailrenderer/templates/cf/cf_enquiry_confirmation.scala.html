@@ -15,14 +15,14 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Valuation Office Agency received your enquiry") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have received your enquiry") {
 <p style="margin: 0 0 30px; font-size: 19px;">@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params)</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Thank you for contacting us. This email is confirmation that we have received your enquiry.</p>
-<h2 style="font-size: 24px;">Details:</h2>
+<h2 style="font-size: 24px;">Details</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">Subject: @params("enquirySubject")<br/>
 Date: @params("submissionDate")<br/>
 Time: @params("submissionTime")</p>
 <h2 style="font-size: 24px;">What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.</p>
-<h2 style="font-size: 24px;">Valuation Office Agency</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">From Valuation Office Agency</p>
 }

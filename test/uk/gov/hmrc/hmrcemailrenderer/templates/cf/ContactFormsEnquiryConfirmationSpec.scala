@@ -37,7 +37,7 @@ class ContactFormsEnquiryConfirmationSpec
 
   cf_enquiry_confirmation should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Valuation Office Agency received your enquiry"
+      template.subject(Map.empty) shouldBe "You have sent an enquiry to the Valuation Office Agency"
     }
 
     "render correct from address" in {
@@ -48,24 +48,26 @@ class ContactFormsEnquiryConfirmationSpec
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include("HM Revenue &amp; Customs")
-      htmlContent should include("Valuation Office Agency received your enquiry")
+      htmlContent should include("We have received your enquiry")
       htmlContent should include("Dear David Jones")
       htmlContent should include(
         "Thank you for contacting us. This email is confirmation that we have received your enquiry.")
       htmlContent should include(
         "We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.")
+      htmlContent should include("From Valuation Office Agency")
       htmlContent should include("Report the suspicious email to HMRC")
     }
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-      txtContent should include("Valuation Office Agency received your enquiry")
+      txtContent should include("We have received your enquiry")
       txtContent should include("Dear David Jones")
       txtContent should include(
         "Thank you for contacting us. This email is confirmation that we have received your enquiry.")
       txtContent should include(
         "We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.")
+      txtContent should include("From Valuation Office Agency")
       txtContent should include("Report the suspicious email to HMRC")
     }
   }
