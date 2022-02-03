@@ -1476,6 +1476,6 @@ object EeittTemplates {
       plainTemplate = txt.podsConfirmation.f,
       htmlTemplate = html.podsConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    ),
+    )
   )
 }
