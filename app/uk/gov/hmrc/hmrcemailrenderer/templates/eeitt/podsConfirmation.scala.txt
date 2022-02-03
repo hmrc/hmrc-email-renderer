@@ -4,7 +4,7 @@ Confirmation HMRC received your request for a pension scheme tax refund
 
 Dear @params("customerName")
 
-This email confirms you have requested a refund through the Managing Pension Schemes service and have provided details of a bank account into which the refund should be paid.
+We confirm your request for a tax refund through the Managing Pension Schemes service. We also confirm you have told us which bank account the refund should be paid into.
 
 Your reference is: @params("submissionReference")
 
