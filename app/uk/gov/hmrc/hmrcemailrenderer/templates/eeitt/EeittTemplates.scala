@@ -1467,6 +1467,15 @@ object EeittTemplates {
       plainTemplate = txt.qahcCode.f,
       htmlTemplate = html.qahcCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You requested a pension scheme tax refund from HMRC",
+      plainTemplate = txt.podsConfirmation.f,
+      htmlTemplate = html.podsConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
