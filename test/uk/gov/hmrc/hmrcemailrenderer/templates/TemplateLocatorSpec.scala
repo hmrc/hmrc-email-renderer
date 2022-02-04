@@ -126,7 +126,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "CDSRC",
         "OSS",
         "API Catalogue",
-        "HEC"
+        "HEC",
+        "ITSA"
       )
     }
 
@@ -192,6 +193,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_SA373",
         "newMessageAlert_IgnorePaperFiling",
         "newMessageAlert_CA001",
+        "new_message_alert_itsa",
+        "new_message_alert_itsa_cy",
         "amls_notification_received_template",
         "rescindedMessageAlert",
         "rescindedMessageAlert_cy",
