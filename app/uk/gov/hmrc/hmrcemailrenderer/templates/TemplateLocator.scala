@@ -80,6 +80,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -146,7 +147,8 @@ trait TemplateLocator {
       "MODS"                  -> ModsTemplates.templates,
       "CDSRC"                 -> cdsrcTemplates.templates,
       "OSS"                   -> OSSTemplates.templates,
-      "HEC"                   -> HecTemplates.templates
+      "HEC"                   -> HecTemplates.templates,
+      "ITSA"                  -> ItsaTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
