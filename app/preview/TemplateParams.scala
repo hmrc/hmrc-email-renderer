@@ -2816,6 +2816,8 @@ object TemplateParams2 {
     "newMessageAlert_P800_D2_cy"  -> newMessageAlert_Names,
     "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
     "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
+    "new_message_alert_itsa"      -> newMessageAlert_Names,
+    "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
     "oss_registration_confirmation_pre_10th_of_month" -> Map(
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
