@@ -19,18 +19,26 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.mdr
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MDR
-import uk.gov.hmrc.hmrcemailrenderer.templates.mdr.{ html, txt }
 
 object MdrTemplates {
   val templates = Seq(
-    // REGISTRATION - REGISTRATION SUCCESSFUL
+    // REGISTRATION - REGISTRATION SUCCESSFUL ORGANISATION
     MessageTemplate.create(
-      templateId = "mdr_registration_successful",
+      templateId = "mdr_registration_successful_organisation",
       fromAddress = govUkTeamAddress,
       service = MDR,
       subject = "You have registered for Mandatory Disclosure Rules (MDR)",
-      plainTemplate = txt.mdrRegistrationSuccessful.f,
-      htmlTemplate = html.mdrRegistrationSuccessful.f,
+      plainTemplate = txt.mdrRegistrationSuccessfulOrganisation.f,
+      htmlTemplate = html.mdrRegistrationSuccessfulOrganisation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mdr_registration_successful_individual",
+      fromAddress = govUkTeamAddress,
+      service = MDR,
+      subject = "You have registered for Mandatory Disclosure Rules (MDR)",
+      plainTemplate = txt.mdrRegistrationSuccessfulIndividual.f,
+      htmlTemplate = html.mdrRegistrationSuccessfulIndividual.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
