@@ -656,7 +656,8 @@ object TemplateParams {
       "recipientName_FullName" -> "David Jones",
       "enquirySubject"         -> "Council Tax - My Council Tax bill",
       "submissionDate"         -> "28 January 2022",
-      "submissionTime"         -> "13:45"
+      "submissionTime"         -> "13:45",
+      "nextStep"               -> "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
     ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",

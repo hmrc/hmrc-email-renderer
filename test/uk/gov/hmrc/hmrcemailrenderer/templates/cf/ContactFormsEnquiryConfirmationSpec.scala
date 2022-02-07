@@ -53,7 +53,7 @@ class ContactFormsEnquiryConfirmationSpec
       htmlContent should include(
         "Thank you for contacting us. This email is confirmation that we have received your enquiry.")
       htmlContent should include(
-        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.")
+        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days.")
       htmlContent should include("From Valuation Office Agency")
       htmlContent should include("Report the suspicious email to HMRC")
     }
@@ -66,7 +66,7 @@ class ContactFormsEnquiryConfirmationSpec
       txtContent should include(
         "Thank you for contacting us. This email is confirmation that we have received your enquiry.")
       txtContent should include(
-        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.")
+        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days.")
       txtContent should include("From Valuation Office Agency")
       txtContent should include("Report the suspicious email to HMRC")
     }
