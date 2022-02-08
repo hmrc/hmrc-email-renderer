@@ -12,7 +12,7 @@ Time: @params("submissionTime")
 
 What happens next
 
-We usually respond to enquiries within a few days. However, complex enquiries can take up to 30 days.
+@params("nextStep")
 
 From Valuation Office Agency
 
