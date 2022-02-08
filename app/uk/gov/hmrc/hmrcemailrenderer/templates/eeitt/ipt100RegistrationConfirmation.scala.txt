@@ -2,11 +2,11 @@
 
 You submitted an IPT1 Application for Registration online
 
-Dear params.get("customerName")
+Dear params("customerName")
 
 We have received your application to register for Insurance Premium Tax.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

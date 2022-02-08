@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +20,10 @@
   val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
-    val quantity = params(s"goodsQuantity_$i")
     val country = params.get(s"goodsCountry_$i")
     val producedInEu = params.get(s"goodsProducedInEu_$i")
     val price = params(s"goodsPrice_$i")
-      (category, quantity, country, producedInEu, price)
+    (category, country, producedInEu, price)
   }
 }
 
@@ -52,17 +51,14 @@
 
     <h2>Details of the goods</h2>
 
-    @for((category, quantity, country, producedInEu, price) <- goodsGrid) {
+    @for((category, country, producedInEu, price) <- goodsGrid) {
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
                 <tr>
                     <th width="60%">Type of goods</th>
                     <td>@category</td>
                 </tr>
-                <tr>
-                    <th width="60%">Quantity</th>
-                    <td>@quantity</td>
-                </tr>
+
                 @for(cntry <- country) {
                         <tr>
                         <th width="60%">Country</th>

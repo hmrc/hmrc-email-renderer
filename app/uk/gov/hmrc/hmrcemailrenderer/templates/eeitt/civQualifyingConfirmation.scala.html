@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent an exemption election form online"){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("name") </p>
+    Dear @params("name") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your election for a collective investment vehicle’s qualifying companies to be exempt from tax on UK capital gains.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     If you need to contact us about this form, quote the submission reference.</p>
 <h2>

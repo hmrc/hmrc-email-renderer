@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ package preview
 import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.cf_enquiry_confirmation
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -34,6 +35,16 @@ object TemplateParams {
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
+    "aeo_mra_row_data_exchange_report" -> Map(
+      "country_rows" -> Base64.getEncoder.encodeToString(stringify(
+        parse("""
+          [
+            {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:16:49.938044Z"},
+            {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:17:49.938044Z"},
+            {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:18:49.938044Z"}
+          ]
+          """)).getBytes("UTF-8"))
+    ),
     "email_verification_passcode" -> Map(
       "passcode"  -> "NVFYRY",
       "team_name" -> "Government Gateway"
@@ -63,9 +74,10 @@ object TemplateParams {
       "service"    -> "submit their VAT returns through software."
     ),
     "client_accepted_authorisation_request" -> Map(
-      "agencyName" -> "Agent 1",
-      "clientName" -> "Client 2",
-      "service"    -> "view their PAYE income record."
+      "agencyName"     -> "Agent 1",
+      "clientName"     -> "Client 2",
+      "service"        -> "Your client Client 2 has authorised you to manage their Income Tax.",
+      "additionalInfo" -> "You now have 4 months to sign Client 2 up to Making Tax Digital for Income Tax."
     ),
     "client_expired_authorisation_request" -> Map(
       "agencyName" -> "Agent 1",
@@ -517,6 +529,16 @@ object TemplateParams {
       "name"                -> "Mr Joe Bloggs",
       "submissionReference" -> "123-ABCD-456"
     ),
+    "dfs_submission_success_gencompsub_2021" -> Map(
+      "subject"             -> "Test subject",
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "123-ABCD-456"
+    ),
+    "dfs_submission_success_gencompsub_2021_welsh" -> Map(
+      "subject"             -> "Test Subject",
+      "name"                -> "Mr Joe Bloggs",
+      "submissionReference" -> "123-ABCD-456"
+    ),
     "cato_access_invitation_template_id" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
@@ -629,6 +651,13 @@ object TemplateParams {
     ),
     "rald_submission_confirmation" -> Map(
       "customerName" -> "John Doe"
+    ),
+    cf_enquiry_confirmation -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "enquirySubject"         -> "Council Tax - My Council Tax bill",
+      "submissionDate"         -> "28 January 2022",
+      "submissionTime"         -> "13:45",
+      "nextStep"               -> "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
     ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",
@@ -1540,6 +1569,63 @@ object TemplateParams {
     ),
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
+    ),
+    "oss_registration_confirmation_pre_10th_of_month" -> Map(
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "startDate"                          -> "12 June 2021",
+      "reference"                          -> "123456789",
+      "lastDayOfCalendarQuarter"           -> "30 September 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
+    ),
+    "oss_registration_confirmation_post_10th_of_month" -> Map(
+      "recipientName_line1"                    -> "Joe Bloggs",
+      "businessName"                           -> "Test Business",
+      "reference"                              -> "123456789",
+      "lastDayOfCalendarQuarter"               -> "30 September 2021",
+      "firstDayOfNextCalendarQuarter"          -> "1 October 2021",
+      "startDate"                              -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"           -> "31 December 2021",
+      "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
+    ),
+    "oss_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
+    "oss_returns_email_confirmation_no_vat_owed" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "period"              -> "1 July to 30 September 2021"
+    ),
+    "oss_overdue_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
+    "platformContact" -> Map(
+      "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
+      "senderName"  -> "Alice Example",
+      "senderEmail" -> "alice@example.com",
+      "contactReasons" -> Base64.getEncoder.encodeToString(
+        stringify(parse("""[
+          "I want to know if I can reuse this API",
+          "I need more information, like schemas or examples"
+        ]""")).getBytes("UTF-8")),
+      "specificQuestion" -> "I need some stuff."
+    ),
+    "platformContactConfirmation" -> Map(
+      "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
+      "senderName"  -> "Alice Example",
+      "senderEmail" -> "alice@example.com",
+      "contactReasons" -> Base64.getEncoder.encodeToString(
+        stringify(parse("""[
+          "I want to know if I can reuse this API",
+          "I need more information, like schemas or examples"
+        ]""")).getBytes("UTF-8")),
+      "specificQuestion" -> "I need some stuff.",
+      "apiEmail"         -> "api-platform@example.com"
     )
   )
 }
@@ -1547,6 +1633,16 @@ object TemplateParams2 {
 
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
   val exampleParams = Map(
+    "open_banking_payment_successful" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
+    "open_banking_payment_successful_cy" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
     "payment_successful" -> Map(
       "taxType"          -> "Self Assessment",
       "taxReference"     -> "1234567890K",
@@ -1659,41 +1755,44 @@ object TemplateParams2 {
       "cumbernauld"   -> "2,9700002,0,0,2,9700002"
     ),
     "recon_tops_report" -> Map(
-      "subject"         -> "ETMP Telephone Payment Service (TPS) Finance Report 27/09/2027",
+      "subject"         -> "ETMP Telephone Payment Service (TPS) Finance report 27 September 2027",
       "TOPS_ROW_P800"   -> "P800,4,11842279,2,0,2,14443,4,11842279",
       "TOPS_ROW_SA"     -> "SA,94,911842279,92,90,92,914443,94,911842279",
-      "TOPS_ROW_TOTALS" -> "totals,84,811842279,82,80,82,814443,84,811842279"
+      "TOPS_ROW_TOTALS" -> "Totals,84,811842279,82,80,82,814443,84,811842279"
     ),
     "recon_surcharge_report" -> Map(
-      "subject"                                      -> "Surcharge report 27/09/2027",
-      "tpsRcsSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_sa"                     -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_safe"                   -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_ct"                     -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_epaye"                  -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_ntc"                    -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_nps"                    -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_total"                  -> "8,80.0,16,160.0,24,240.0",
-      "opsRcsSurchargeReport_sa"                     -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_cotax"                  -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_paye"                   -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_misc"                   -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_totalShipley"           -> "5,50.0,10,100.0,15,150.0",
-      "opsRcsSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_totalCumbernauld"       -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_p800"               -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_pngr"               -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_total"              -> "2,20.0,4,40.0,6,60.0",
-      "topsJustModsSurchargeReport_mods"             -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_p800"             -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_simpleAssessment" -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_cgt"              -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_pngr"             -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_cds"              -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_total"            -> "5,50.0,10,100.0,15,150.0",
-      "opsDesJustModsSurchargeReport_mods"           -> "1,10.0,2,20.0,3,30.0"
+      "subject"                                            -> "Surcharge report 27/09/2027",
+      "tpsRcsSurchargeReport_sdlt"                         -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_vat"                          -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_sa"                           -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_safe"                         -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_ct"                           -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_epaye"                        -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_ntc"                          -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_nps"                          -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_total"                        -> "8,80.0,16,160.0,24,240.0",
+      "opsRcsSurchargeReport_sa"                           -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_cotax"                        -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_paye"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_misc"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_sdlt"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_totalShipley"                 -> "5,50.0,10,100.0,15,150.0",
+      "opsRcsSurchargeReport_vat"                          -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_totalCumbernauld"             -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_p800"                     -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_pngr"                     -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_childBenefitRepayments"   -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_total"                    -> "3,30.0,6,60.0,9,90.0",
+      "topsJustModsSurchargeReport_mods"                   -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_p800"                   -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_simpleAssessment"       -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cgt"                    -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_pngr"                   -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cds"                    -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_childBenefitRepayments" -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_vatOss"                 -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_total"                  -> "7,70.0,14,140.0,21,210.0",
+      "opsDesJustModsSurchargeReport_mods"                 -> "1,10.0,2,20.0,3,30.0"
     ),
     "recon_mods_finance_report" -> Map(
       "subject"                   -> "MODS Finance Report 27/09/2027",
@@ -1721,6 +1820,12 @@ object TemplateParams2 {
     "retrieve_userid_notification" -> Map(
       "user_id"   -> "914657894302",
       "full_name" -> "Joe Bloggs"
+    ),
+    "cca_appeals_submission_link" -> Map(
+      "proposalNumber" -> "341112111",
+      "submissionUrl"  -> "http://test.com/blah-blah",
+      "submissionDate" -> "15 Sep 2021",
+      "postcode"       -> "AA1 1AA"
     ),
     "cca_enrolment_migration_confirmation" -> Map(
       "name"     -> "test user",
@@ -1751,6 +1856,21 @@ object TemplateParams2 {
     "pods_scheme_register" -> Map(
       "psaName" -> "Jane Doe",
       "srn"     -> "S12345 67890"
+    ),
+    "pods_racdac_scheme_register" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "test scheme"
+    ),
+    "pods_scheme_migration_confirmation" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "Some Pension Scheme"
+    ),
+    "pods_racdac_bulk_migration_confirmation" -> Map(
+      "psaName" -> "Jane Doe"
+    ),
+    "pods_racdac_individual_migration_confirmation" -> Map(
+      "psaName"    -> "Jane Doe",
+      "schemeName" -> "Test RAC/DAC"
     ),
     "mtdfb_vat_agent_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
@@ -1854,39 +1974,41 @@ object TemplateParams2 {
               "errors": [
                 {
                   "message": "Value is not an IP address",
-                  "percentage": 5
-                },
-                {
+                  "percentage": 5,
+                  "count": 5
+                }, {
                   "message": "Value is not a public IP address",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 10
                 }
               ],
               "warnings": []
-            },
-            {
+            }, {
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
                   "message": "Value must be a key-value data structure",
-                  "percentage": 10
-                },
-                {
+                  "percentage": 10,
+                  "count": 10
+                }, {
                   "message": "At least 1 key or value is not percent encoded",
-                  "percentage": 25
-                },
-                {
+                  "percentage": 25,
+                  "count": 25
+                }, {
                   "message": "At least 1 software version value is missing",
-                  "percentage": 15
-                },
-                {
+                  "percentage": 15,
+                  "count": 15
+                }, {
                   "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0
+                  "percentage": 0,
+                  "count": 1
                 }
               ],
               "warnings": [
                 {
                   "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 10
                 }
               ]
             },
@@ -1896,15 +2018,16 @@ object TemplateParams2 {
               "warnings": [
                 {
                   "message": "Use a recommended UUID. Check the specification.",
-                  "percentage": 0
-                },
-                {
+                  "percentage": 0,
+                  "count": 0
+                }, {
                   "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17
-                },
-                {
+                  "percentage": 17,
+                  "count": 17
+                }, {
                   "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22
+                  "percentage": 22,
+                  "count": 22
                 }
               ]
             }
@@ -1920,51 +2043,51 @@ object TemplateParams2 {
       "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "allHeadersMissingPercentage"       -> "5",
       "invalidConnectionMethodPercentage" -> "23",
+      "allHeadersMissingCount"            -> "729",
+      "invalidConnectionMethodCount"      -> "3354",
       "relatesToMultipleVersions"         -> "true",
       "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
         parse("""
         {
           "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 100,
+          "requestCount": 10500,
           "headerValidations": [
             {
               "headerOrHeaders": "gov-client-public-ip",
               "errors": [
                 {
                   "message": "Value is not an IP address",
-                  "percentage": 5
-                },
-                {
+                  "percentage": 5,
+                  "count": 525
+                }, {
                   "message": "Value is not a public IP address",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 1050
                 }
               ],
               "warnings": []
-            },
-            {
+            }, {
               "headerOrHeaders": "gov-vendor-version",
               "errors": [
                 {
                   "message": "Value must be a key-value data structure",
-                  "percentage": 10
-                },
-                {
-                  "message": "At least 1 key or value is not percent encoded",
-                  "percentage": 25
-                },
-                {
+                  "percentage": 10,
+                  "count": 1075
+                }, {
                   "message": "At least 1 software version value is missing",
-                  "percentage": 15
-                },
-                {
+                  "percentage": 15,
+                  "count": 1580
+                }, {
                   "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0
+                  "percentage": 0,
+                  "count": 10
                 }
               ],
               "warnings": [
                 {
                   "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10
+                  "percentage": 10,
+                  "count": 107
                 }
               ]
             },
@@ -1973,29 +2096,34 @@ object TemplateParams2 {
               "errors" : [],
               "warnings": [
                 {
-                  "message": "Use a recommended UUID. Check the specification.",
-                  "percentage": 0
-                },
-                {
                   "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17
-                },
-                {
+                  "percentage": 17,
+                  "count": 1801
+                }, {
                   "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22
+                  "percentage": 22,
+                  "count": 2315
                 }
               ]
             }
           ]
         }
-          """)).getBytes("UTF-8"))
+        """)).getBytes("UTF-8"))
     ),
     "tdq_fph_report_heuristically_compliant" -> Map(
-      "developerName"   -> "John Smith",
-      "fromDate"        -> "22 September 2019",
-      "toDate"          -> "22 October 2019",
-      "applicationName" -> "My Well Behaved MTD App",
-      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+      "developerName"             -> "John Smith",
+      "fromDate"                  -> "22 September 2019",
+      "toDate"                    -> "22 October 2019",
+      "applicationName"           -> "My Well Behaved MTD App",
+      "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "hasOtherConnectionMethods" -> "true",
+      "extraDetails"              -> Base64.getEncoder.encodeToString(stringify(parse("""
+        {
+          "connectionMethod": "WEB_APP_VIA_SERVER",
+          "requestCount": 10500,
+          "headerValidations": []
+        }
+        """)).getBytes("UTF-8"))
     ),
     "cgtpd_account_created" -> Map(
       "cgtReference" -> "XYCGTP123456780",
@@ -2064,6 +2192,9 @@ object TemplateParams2 {
     "pods_psa_register" -> Map(
       "psaName" -> "Jane Doe"
     ),
+    "pods_psa_register_company" -> Map(
+      "psaName" -> "Jane Doe"
+    ),
     "pods_psp_register" -> Map(
       "pspName" -> "Jane Doe"
     ),
@@ -2096,6 +2227,10 @@ object TemplateParams2 {
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
+    ),
+    "mdr_registration_successful" -> Map(
+      "name"  -> "Joe Bloggs",
+      "mdrID" -> "XWDAC0000000058"
     ),
     "dac6_new_disclosure_confirmation" -> Map(
       "name"          -> "Joe New",
@@ -2162,11 +2297,9 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010000",
       "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsProducedInEu_0"       -> "I do not know",
       "goodsPrice_0"              -> "150, Euro (EUR)",
       "goodsCategory_1"           -> "hats",
-      "goodsQuantity_1"           -> "100",
       "goodsCountry_1"            -> "Mexico",
       "goodsPrice_1"              -> "150, Peso (MXN)",
       "customsDuty"               -> "£4.53",
@@ -2182,11 +2315,9 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010000",
       "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsProducedInEu_0"       -> "I do not know",
       "goodsPrice_0"              -> "150, Euro (EUR)",
       "goodsCategory_1"           -> "hats",
-      "goodsQuantity_1"           -> "100",
       "goodsCountry_1"            -> "Mexico",
       "goodsPrice_1"              -> "150, Peso (MXN)",
       "customsDuty"               -> "£4.53",
@@ -2202,7 +2333,6 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010001",
       "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsDestination_0"        -> "Spain",
       "goodsPrice_0"              -> "£150",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
@@ -2215,7 +2345,6 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010001",
       "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsDestination_0"        -> "Spain",
       "goodsPrice_0"              -> "£150",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
@@ -2228,11 +2357,9 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010002",
       "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsProducedInEu_0"       -> "Iawn",
       "goodsPrice_0"              -> "150, Ewro (EUR)",
       "goodsCategory_1"           -> "hats",
-      "goodsQuantity_1"           -> "100",
       "goodsCountry_1"            -> "Mecsico",
       "goodsPrice_1"              -> "150, Peso (MXN)",
       "customsDuty"               -> "£4.53",
@@ -2248,11 +2375,9 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010002",
       "dateOfDeclaration"         -> "11 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsProducedInEu_0"       -> "Iawn",
       "goodsPrice_0"              -> "150, Ewro (EUR)",
       "goodsCategory_1"           -> "hats",
-      "goodsQuantity_1"           -> "100",
       "goodsCountry_1"            -> "Mecsico",
       "goodsPrice_1"              -> "150, Peso (MXN)",
       "customsDuty"               -> "£4.53",
@@ -2268,7 +2393,6 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010003",
       "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsDestination_0"        -> "Sbaen",
       "goodsPrice_0"              -> "£150",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
@@ -2281,7 +2405,6 @@ object TemplateParams2 {
       "declarationReference"      -> "XADST0000010003",
       "dateOfDeclaration"         -> "26 November 2020, 4:22pm",
       "goodsCategory_0"           -> "shoes",
-      "goodsQuantity_0"           -> "10",
       "goodsDestination_0"        -> "Sbaen",
       "goodsPrice_0"              -> "£150",
       "nameOfPersonCarryingGoods" -> "Joe Bloggs",
@@ -2302,9 +2425,442 @@ object TemplateParams2 {
       "caseNumber"  -> "0004201hog42",
       "claimAmount" -> "500"
     ),
-    "newMessageAlert_P800"     -> newMessageAlert_Names,
-    "newMessageAlert_P800_cy"  -> newMessageAlert_Names,
-    "newMessageAlert_PA302"    -> newMessageAlert_Names,
-    "newMessageAlert_PA302_cy" -> newMessageAlert_Names
+    "reimbursement_claim_submission_cy" -> Map(
+      "name"        -> "Sir Arthur Dent",
+      "caseNumber"  -> "0004201hog42",
+      "claimAmount" -> "500"
+    ),
+    "tsp_application_confirmation" -> Map(
+      "appName"             -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "gd_application_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "ipt100_registration_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "csr_submission_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cash_declaration" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cash_declaration_EU" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cash_declaration_UK" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cet_email_confirmation" -> Map(
+      "regContactName1"     -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "gss_email_confirmation" -> Map(
+      "regContactName1"     -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "register_for_duty_on_gas_for_road_fuel_use" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "register_for_duty_on_biofuels_and_other_fuel_substitutes" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "rdec_email_confirmation" -> Map(
+      "fillerName"          -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "corporation_tax_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "register_for_fuel_duty_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "adr_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ccg1_confirmation_submission" -> Map(
+      "decName"             -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tspDeReg_confirmation_submission" -> Map(
+      "appName"             -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tspCHIEF_confirmation_submission" -> Map(
+      "fullNameFilling"     -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "challengeChildcare_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "bd600_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "civOffShore_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "civQualifying_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "civTransparency_confirmation_submission" -> Map(
+      "name"                -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "confirmationCode_confirmation_submission" -> Map(
+      "headingCode"      -> "Confirm your email address - Coronavirus Job Retention Scheme Overclaim Notification",
+      "confDySub"        -> "Confirm your email address - Coronavirus Job Retention Scheme Overclaim Notification",
+      "emailFormName"    -> "Coronavirus Job Retention Scheme Overclaim Notification",
+      "confirmationCode" -> "HGDY",
+      "emailContact"     -> "HMRC",
+      "emailTeam"        -> "the Coronavirus Job Retention Scheme team"
+    ),
+    "civOffshore_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "civQualifying_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "civTransparency_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "civTransparency_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cjrs_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "cjrs_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "cjrs_confirmation_submission" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "seiss_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "seiss_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "seiss_eligibility_submission" -> Map(
+      "customerName" -> "Hugh Mann",
+      "workingDays"  -> "contact you in..."
+    ),
+    "seiss_new_child_submission" -> Map(
+      "customerName"    -> "Hugh Mann",
+      "serviceName"     -> "We received your request for...",
+      "slaDetails"      -> "We will reply in...",
+      "serviceTeamName" -> "HMRC Team"
+    ),
+    "seiss_grant_submission" -> Map(
+      "customerName" -> "Hugh Mann",
+      "workingDays"  -> "contact you in..."
+    ),
+    "ipr1_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ipr2_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ipr3_confirmation_submission" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seiss_repay_submission" -> Map(
+      "customerName" -> "Hugh Mann",
+      "miscText"     -> "When making the repayment, you must only use the bank details provided to repay the grant money. You must not use these bank details to make any other payment to HMRC.",
+      "emailTeam"    -> "the Self-Employment Income Support team"
+    ),
+    "seiss_repay_submission_cy" -> Map(
+      "customerName" -> "Hugh Mann",
+      "miscText"     -> "Wrth wneud yr ad-daliad, dim ond i ad-dalu arian grant y dylech ddefnyddio’r manylion banc hyn. Peidiwch â defnyddio’r manylion banc hyn i wneud unrhyw daliad arall i CThEM.",
+      "emailTeam"    -> "y tîm Cymhorthdal Incwm Hunangyflogaeth"
+    ),
+    "vishing_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "vishing_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ipr1_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ipr2_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ipr3_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "vat_declaration_confirmation" -> Map(
+      "customerName" -> "Hugh Mann",
+      "companyName"  -> "Acquisitions Incorporated"
+    ),
+    "trading_status_before_seiss_claimed" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "settlement_request" -> Map(
+      "customerName" -> "Hugh Mann",
+      "slaParam"     -> "within..."
+    ),
+    "complaint_consultation_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "complaint_consultation_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "consultation_complaint_confirmation" -> Map(
+      "customerName"     -> "Hugh Mann",
+      "consultationName" -> "Mr P Staker"
+    ),
+    "dan_waiver_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "duty_deferment_account_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "duty_deferment_account_amend_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "eat_out_help_out_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "ni_vat_Status_reporting_confirmation" -> Map(
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ni_vat_Status_withdrawal_confirmation" -> Map(
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tor_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "tor_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "tor_confirmation_dynamic" -> Map(
+      "torDySub"            -> "HMRC received the additions to your for transfer of residence tax relief",
+      "heading1"            -> "You made additions to your application for transfer  of residence tax relief",
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "para1"               -> "received additions to your application",
+      "para2"               -> "the additions to your application are",
+      "para3"               -> "",
+      "para4"               -> "more",
+      "para5"               -> "",
+      "para6"               -> "",
+      "para7"               -> "You can still use your URN to make further additions.",
+      "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
+    ),
+    "jrsRemoval_submission_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "nrsDLT_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "nrsDLT_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seissOverPayment_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seissOverPayment_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "pesm_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "pesm_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "pesm_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ctDormancy_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ctDormancy_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ctDormancy_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "elcb_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "elcb_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "elcb_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ioss_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated"
+    ),
+    "ioss_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated"
+    ),
+    "ioss_dereg_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated",
+      "changeNotice"        -> "deregistered from"
+    ),
+    "ioss_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ioss_dereg_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ioss_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "xiEORI_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "businessName"        -> "Acquisitions Incorporated"
+    ),
+    "xiEORI_change_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "nipbe_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "nipbe_confirmation_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "seiss_voluntary_disclosure_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
+    "netp_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cjrs_disclosure_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cjrsDisclosure_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "creative_industries_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "companyName"         -> "Acquisitions Incorporated"
+    ),
+    "qahc_confirmation" -> Map(
+      "qahcDySub"           -> "HMRC received your QAHC information",
+      "heading1"            -> "You notified HMRC about a QAHC",
+      "heading2"            -> "Registering for Corporation Tax",
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "notification"        -> "your notification",
+      "companyName"         -> "Acquisitions Incorporated",
+      "para1"               -> "You told us you do not currently have a Corporation Tax Unique Taxpayer Reference.",
+      "para2"               -> "If you are not currently waiting to receive this reference, you should register for Corporation Tax as soon as possible.",
+      "para3"               -> "Search GOV.UK for ‘Set up a limited company’, and go to step seven of the guide."
+    ),
+    "creative_industries_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "qahc_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "pods_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "newMessageAlert_P800"        -> newMessageAlert_Names,
+    "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
+    "newMessageAlert_PA302"       -> newMessageAlert_Names,
+    "newMessageAlert_PA302_cy"    -> newMessageAlert_Names,
+    "newMessageAlert_P800_D2"     -> newMessageAlert_Names,
+    "newMessageAlert_P800_D2_cy"  -> newMessageAlert_Names,
+    "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
+    "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
+    "new_message_alert_itsa"      -> newMessageAlert_Names,
+    "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
+    "oss_registration_confirmation_pre_10th_of_month" -> Map(
+      "recipientName_line1"                -> "Joe Bloggs",
+      "businessName"                       -> "Test Business",
+      "reference"                          -> "123456789",
+      "startDate"                          -> "12 June 2021",
+      "lastDayOfCalendarQuarter"           -> "30 September 2021",
+      "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
+    ),
+    "oss_registration_confirmation_post_10th_of_month" -> Map(
+      "recipientName_line1"                    -> "Joe Bloggs",
+      "businessName"                           -> "Test Business",
+      "reference"                              -> "123456789",
+      "lastDayOfCalendarQuarter"               -> "30 September 2021",
+      "firstDayOfNextCalendarQuarter"          -> "1 October 2021",
+      "startDate"                              -> "1 October 2021",
+      "lastDayOfNextCalendarQuarter"           -> "31 December 2021",
+      "lastDayOfMonthAfterNextCalendarQuarter" -> "31 January 2022"
+    ),
+    "oss_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
+    "oss_returns_email_confirmation_no_vat_owed" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "period"              -> "1 July to 30 September 2021"
+    ),
+    "oss_overdue_returns_email_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "businessName"        -> "Test Business",
+      "period"              -> "1 July to 30 September 2021",
+      "paymentDeadline"     -> "31 October 2021"
+    ),
+    "pods_psa_amend" -> Map(
+      "psaName" -> "Jane Doe"
+    ),
+    "hec_tax_check_code" -> Map(
+      "currentDate"     -> "13 January 2022",
+      "licenceType"     -> "Driver of taxis and private hires",
+      "hecTaxCheckCode" -> "FK9 BRG 2JJ",
+      "expiresAfter"    -> "13 May 2022"
+    )
   )
 }

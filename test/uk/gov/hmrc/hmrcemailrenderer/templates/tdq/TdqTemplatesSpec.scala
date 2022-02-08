@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 
 import java.util.Base64
-
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import play.api.libs.json.Json.{ parse, stringify }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
 
   private val headerWithErrors =
     """{
@@ -30,11 +29,13 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
           "errors": [
             {
               "message": "Value is not an IP address",
-              "percentage": 5
+              "percentage": 5,
+              "count": 25
             },
             {
               "message": "Value is not a public IP address",
-              "percentage": 10
+              "percentage": 10,
+              "count": 50
             }
           ],
           "warnings": []
@@ -47,15 +48,18 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
           "warnings": [
             {
               "message": "Use a recommended UUID. Check the specification.",
-              "percentage": 0
+              "percentage": 0,
+              "count": 1
             },
             {
               "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-              "percentage": 17
+              "percentage": 17,
+              "count": 34
             },
             {
               "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-              "percentage": 22
+              "percentage": 22,
+              "count": 44
             }
           ]
         }"""
@@ -66,25 +70,30 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
           "errors": [
             {
               "message": "Value must be a key-value data structure",
-              "percentage": 10
+              "percentage": 10,
+              "count": 20
             },
             {
               "message": "At least 1 key or value is not percent encoded",
-              "percentage": 25
+              "percentage": 25,
+              "count": 50
             },
             {
               "message": "At least 1 software version value is missing",
-              "percentage": 15
+              "percentage": 15,
+              "count": 30
             },
             {
               "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-              "percentage": 0
+              "percentage": 0,
+              "count": 1
             }
           ],
           "warnings": [
             {
               "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-              "percentage": 10
+              "percentage": 10,
+              "count": 20
             }
           ]
         }"""
@@ -160,7 +169,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
   "tdq_fph_report_heuristically_compliant" should {
 
-    val params = commonParameters + (
+    val baseParams = commonParameters + (
       "developerName"   -> "John Smith",
       "fromDate"        -> "22 September 2019",
       "toDate"          -> "22 October 2019",
@@ -169,12 +178,38 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     )
 
     "be the same for text and html content" in {
-      compareContent("tdq_fph_report_heuristically_compliant", params)(tdqTemplate)
+      compareContent("tdq_fph_report_heuristically_compliant", baseParams)(tdqTemplate)
+    }
+
+    "include the connection method when present in the parameters" in {
+      val params = baseParams + (
+        "extraDetails" -> extraDetails()
+      )
+      renderedEmail("tdq_fph_report_heuristically_compliant", params) must include
+      "using web application via server"
+    }
+
+    "render without the connection method when not present in the parameters" in {
+      renderedEmail("tdq_fph_report_heuristically_compliant", baseParams) must not include
+        "using web application via server"
+    }
+
+    "include a message about other connection method reports when there are some" in {
+      val params = baseParams + (
+        "hasOtherConnectionMethods" -> "true"
+      )
+      renderedEmail("tdq_fph_report_heuristically_compliant", params) must include
+      "Your application sent requests using another connection method, you'll receive a separate report"
+    }
+
+    "not include a message about other connection method reports when there are none" in {
+      renderedEmail("tdq_fph_report_heuristically_compliant", baseParams) must not include
+        "Your application sent requests using another connection method, you'll receive a separate report"
     }
 
     "contain subject with application name" in {
       val template = findTemplate("tdq_fph_report_heuristically_compliant")
-      template.subject.f(params) mustEqual "Fraud prevention headers for MTD VAT Test Application"
+      template.subject.f(baseParams) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
   }
 
@@ -202,9 +237,12 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     }
 
     "include optional content when a percentage of requests have an invalid connection method" in {
-      val params = baseParams + ("invalidConnectionMethodPercentage" -> "4")
+      val params = baseParams + (
+        "invalidConnectionMethodPercentage" -> "4",
+        "invalidConnectionMethodCount"      -> "40"
+      )
       renderedEmail("tdq_fph_report_non_compliant", params) must include(
-        "Your application has an invalid connection method in 4% of requests.")
+        "Your application has an invalid connection method in 40 requests (4% of all requests).")
     }
     "not include optional content when there are no requests with invalid connection method" in {
       val params = baseParams + ("invalidConnectionMethodPercentage" -> "0")
@@ -223,53 +261,54 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
         "Your application is missing all of the header data")
     }
 
-    "include optional content when errors and warnings relate to more than 1 version" in {
+    "include optional content when errors and advisories relate to more than 1 version" in {
       val params = baseParams + ("relatesToMultipleVersions" -> "true")
       renderedEmail("tdq_fph_report_non_compliant", params) must include(
-        "Errors and warnings relate to more than 1 version of your software")
-    }
-    "not include optional content when the errors and warnings do not relate to more than 1 version" in {
-      val params = baseParams + ("relatesToMultipleVersions" -> "false")
-      renderedEmail("tdq_fph_report_non_compliant", params) mustNot include(
-        "Errors and warnings relate to more than 1 version of your software")
+        "Errors and advisories relate to more than 1 version of your software")
     }
 
-    "include a report when there are errors but no warnings" in {
+    "not include optional content when the errors and advisories do not relate to more than 1 version" in {
+      val params = baseParams + ("relatesToMultipleVersions" -> "false")
+      renderedEmail("tdq_fph_report_non_compliant", params) mustNot include(
+        "Errors and advisories relate to more than 1 version of your software")
+    }
+
+    "include a report when there are errors but no advisories" in {
       val params = baseParams + ("extraDetails" -> extraDetails(headerWithErrors))
       val email = renderedEmail("tdq_fph_report_non_compliant", params)
 
-      email must include("Correct the errors shown in this report")
-      email mustNot include("Correct the errors and consider the warnings shown in this report")
-      email mustNot include("Consider the warnings shown in this report")
+      email must include("Fix all of the errors shown in this report")
+      email mustNot include("Fix all of the errors and check the advisories shown in this report")
+      email mustNot include("Check the advisories shown in this report")
 
-      email must include("You need to correct errors")
-      email mustNot include("You need to correct errors and consider warnings")
-      email mustNot include("You need to consider warnings")
+      email must include("You need to fix all errors")
+      email mustNot include("You need to fix all errors and check advisories")
+      email mustNot include("You need to check advisories")
     }
 
-    "include a report when there are errors and warnings" in {
+    "include a report when there are errors and advisories" in {
       val params = baseParams + ("extraDetails" -> extraDetails(headerWithErrors, headerWithWarnings))
       val email = renderedEmail("tdq_fph_report_non_compliant", params)
 
-      email must include("Correct the errors and consider the warnings shown in this report")
-      email mustNot include("Correct the errors shown in this report")
-      email mustNot include("Consider the warnings shown in this report")
+      email must include("Fix all of the errors and check the advisories shown in this report")
+      email mustNot include("Fix all of the errors shown in this report")
+      email mustNot include("Check the advisories shown in this report")
 
-      email must include("You need to correct errors and consider warnings")
-      email mustNot include("You need to consider warnings")
+      email must include("You need to fix all errors and check advisories")
+      email mustNot include("You need to check advisories")
     }
 
-    "include a report when there are warnings but no errors" in {
+    "include a report when there are advisories but no errors" in {
       val params = baseParams + ("extraDetails" -> extraDetails(headerWithWarnings))
       val email = renderedEmail("tdq_fph_report_non_compliant", params)
 
-      email must include("Consider the warnings shown in this report")
-      email mustNot include("Correct the errors shown in this report")
-      email mustNot include("Correct the errors and consider the warnings shown in this report")
+      email must include("Check the advisories shown in this report")
+      email mustNot include("Fix all of the errors shown in this report")
+      email mustNot include("Fix all of the errors and check the advisories shown in this report")
 
-      email must include("You need to consider warnings")
-      email mustNot include("You need to correct errors")
-      email mustNot include("You need to correct errors and consider warnings")
+      email must include("You need to check advisories")
+      email mustNot include("You need to fix all errors")
+      email mustNot include("You need to fix all errors and check advisories")
     }
 
     "not include a report when there are no errors or warnings" in {

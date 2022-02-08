@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You notified HMRC that a non-resident company or CIV has disposed of an interest in UK property or land"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName") </p>
+    Dear @params("customerName") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC has received your notification that a company or collective investment vehicle has disposed of an interest in UK property or land.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: <b>@params.get("submissionReference")</b></p>
+    Your submission reference is: <b>@params("submissionReference")</b></p>
 <h2>
     What happens next</h2>
 <p><b style="margin: 0 0 30px; font-size: 19px;">

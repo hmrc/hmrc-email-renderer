@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
 import java.util.Base64
-
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 import play.api.libs.json._
-import uk.gov.hmrc.play.test.UnitSpec
 
-class RenderResultSpec extends UnitSpec {
+class RenderResultSpec extends WordSpecLike with Matchers with OptionValues {
   "RenderResult" should {
 
     def decode(value: String): String = new String(Base64.getDecoder.decode(value), "UTF-8")

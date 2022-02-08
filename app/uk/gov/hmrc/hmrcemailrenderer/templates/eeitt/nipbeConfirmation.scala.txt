@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+We received evidence of your permanent business establishment
+
+Dear @params("customerName")
+
+We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
+
+If we do not accept this, the email will explain what you can do next.
+
+Your submission reference is: @params("submissionReference")
+
+Why you are receiving this email
+
+We send a confirmation email for an application submitted online.
+
+From HMRC Customer Services Group
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

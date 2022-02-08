@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ sealed trait ServiceIdentifier extends Product with Serializable {
   def name: String
 }
 object ServiceIdentifier {
+  case object AEOMRA extends ServiceIdentifier { override val name = "aeo-mra" }
   case object Agent extends ServiceIdentifier { override val name = "agent" }
   case object AgentOptInExclude extends ServiceIdentifier { override val name = "agent-optin-exclude" }
   case object AgentOptInRejoin extends ServiceIdentifier { override val name = "agent-optin-rejoin" }
@@ -27,6 +28,7 @@ object ServiceIdentifier {
   case object AntiMoneyLaunderingSupervision extends ServiceIdentifier { override val name = "amls" }
   case object AnnualTaxSummary extends ServiceIdentifier { override val name = "ats" }
   case object ApiDeveloperHub extends ServiceIdentifier { override val name = "api" }
+  case object ApiCatalogue extends ServiceIdentifier { override val name = "api-catalogue" }
   case object BTIOperationalService extends ServiceIdentifier { override val name = "tariff-classification-frontend" }
   case object BTIApplicationService extends ServiceIdentifier { override val name = "binding-tariff-trader-frontend" }
   case object BTIAdviceService extends ServiceIdentifier { override val name = "binding-tariff-advice-frontend" }
@@ -36,6 +38,7 @@ object ServiceIdentifier {
   case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
   case object CorporationTax extends ServiceIdentifier { override val name = "ct" }
   case object DAC6 extends ServiceIdentifier { override val name = "dac6" }
+  case object MDR extends ServiceIdentifier { override val name = "mdr" }
   case object DigitalFormsService extends ServiceIdentifier { override val name = "dfs" }
   case object Eeitt extends ServiceIdentifier { override val name = "eeitt" }
   case object Exports extends ServiceIdentifier { override val name = "customs-declare-exports" }
@@ -44,11 +47,13 @@ object ServiceIdentifier {
   case object GovernmentGateway extends ServiceIdentifier { override val name = "gg" }
   case object GuaranteedMinimumPension extends ServiceIdentifier { override val name = "gmp" }
   case object Generic extends ServiceIdentifier { override val name = "generic" }
+  case object Itsa extends ServiceIdentifier { override val name = "itsa" }
   case object InheritanceTax extends ServiceIdentifier { override val name = "iht" }
   case object PayAsYouEarn extends ServiceIdentifier { override val name = "paye" }
   case object PensionSchemesforPractitioners extends ServiceIdentifier { override val name = "pp" }
   case object RegisterYourCompany extends ServiceIdentifier { override val name = "register-your-company" }
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
+  case object ContactForms extends ServiceIdentifier { override val name = "voa-contact-forms" }
   case object SecurityConsole extends ServiceIdentifier { override val name = "security-console" }
   case object SelfAssessment extends ServiceIdentifier { override val name = "sa" }
   case object TaxAdvantagedVentureCapital extends ServiceIdentifier { override val name = "tavc" }
@@ -109,4 +114,6 @@ object ServiceIdentifier {
   case object EoriCommonComponent extends ServiceIdentifier { override val name = "ecc" }
   case object MODS extends ServiceIdentifier { override val name = "mods" }
   case object CDSRC extends ServiceIdentifier { override val name = "cdsrc" }
+  case object OSS extends ServiceIdentifier { override val name = "oss" }
+  case object HEC extends ServiceIdentifier { override val name = "hec" }
 }

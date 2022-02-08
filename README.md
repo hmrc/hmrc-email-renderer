@@ -3,11 +3,25 @@
 
 [![Build Status](https://travis-ci.org/hmrc/hmrc-email-renderer.svg)](https://travis-ci.org/hmrc/hmrc-email-renderer) [ ![Download](https://api.bintray.com/packages/hmrc/releases/hmrc-email-renderer/images/download.svg) ](https://bintray.com/hmrc/releases/hmrc-email-renderer/_latestVersion)
 
+## Run the tests and sbt fmt before raising a PR
 
+Ensure you have service-manager python environment setup:
+
+`source ../servicemanager/bin/activate`
+
+Format:
+
+`sbt fmt`
+
+Then run the tests and coverage report:
+
+`sbt clean coverage test coverageReport`
+
+If your build fails due to poor testing coverage, *DO NOT* lower the test coverage, instead inspect the generated report located here on your local repo: `/target/scala-2.12/scoverage-report/index.html`
 
 Manages the rendering of parameterised email using templates. 
 
-## Before requesting to merge your PR, please ensure that you have re-based with master
+## Before requesting to merge your PR, please ensure that you have re-based with main
 | **Note: Before sending a pull request with template changes, please look at our [guidelines](/CONTRIBUTING.md).** |
 | --- |
 
@@ -35,7 +49,7 @@ Example request body - parameters with String type key and values.
 ```json
 {
   "parameters": {
-    "param1" : "Parameter to be used in the email template"
+    "param1" : "Parameter to be used in the email template",
     "param2" : "Parameter to be used in the email template"
   }
 }
@@ -56,7 +70,9 @@ Responds with status:
  ```
 * 404 When the template with the provided template Id cannot be resolved.
  
-* 400 When an insufficient set of parameters for rendering the template is specified in the request. Only the first missing value is reported.
+* 400 When an insufficient set of parameters for rendering the template is specified in the request. Only the first missing mandatory value is reported.  
+
+See the [How to add a template](CONTRIBUTING.md#how-to-add-a-template) section to see the distinction between optional and mandatory parameters.
 
  ```json
 {
@@ -86,7 +102,7 @@ sm --start ASSETS_FRONTEND -f
 Alternatively, you can do a preview of emails by starting the service using `sm` to preview the source, snapshot or release versions of the micro-service.
 
 ```bash
-sm --start ASSETS_FRONTEND -f
+sm --start ASSETS_FRONTEND -r
 sm --start HMRC_EMAIL_RENDERER [-f|-r]
 ```
 
@@ -101,7 +117,7 @@ We have to add this to configuration in following place
 
 [https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf](https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf)
 
-key should be an english templateId and value should be welsh templateId
+key should be an english templateId and value should be a Welsh templateId
 
 We make a call to preferences service to see whether language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
 

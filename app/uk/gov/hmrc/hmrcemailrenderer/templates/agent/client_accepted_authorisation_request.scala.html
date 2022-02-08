@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,9 +24,7 @@
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agencyName</p>
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Your client @clientName has authorised you to @service</p>
-
+@if(!params("additionalInfo").asInstanceOf[String].isEmpty) { <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@{params("additionalInfo")}</p> } else {}
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email.</p>
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services Team</p>
-
-
 }

@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied to get help with a tax issue for a mid-sized business"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("regContactName1") </p>
+    Dear @params("regContactName1") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your application reference is: @params.get("submissionReference")</p>
+    Your application reference is: @params("submissionReference")</p>
 <h2>
     What happens next</h2>
 

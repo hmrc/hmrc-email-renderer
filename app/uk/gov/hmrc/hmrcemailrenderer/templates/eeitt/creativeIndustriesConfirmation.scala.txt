@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+You told HMRC about a claim for creative industries tax relief
+
+Dear @params("customerName")
+
+You provided information about a creative industries tax relief for Corporation Tax claim for @params("companyName").
+
+Your submission reference is: @params("submissionReference")
+
+What happens next
+
+We will email within 10 working days to confirm if we have accepted the information about your claim for tax relief.
+
+If we need more information the email will explain what to do next.
+
+Why you are receiving this email
+
+We send a confirmation email for forms submitted online.
+
+From HMRC creative industries tax reliefs
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

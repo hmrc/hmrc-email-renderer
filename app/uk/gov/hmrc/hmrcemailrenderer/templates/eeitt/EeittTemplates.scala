@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,15 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Eeitt
 
 object EeittTemplates {
 
+  private val getTorDySub: Map[String, String] => String =
+    _.getOrElse("torDySub", "You applied for transfer of residence tax relief")
+
+  private val getConfDySub: Map[String, String] => String =
+    _.getOrElse("confDySub", "Confirm your email address")
+
+  private val getQAHCDySub: Map[String, String] => String =
+    _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -42,12 +51,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cir_appointment_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau Penodiad",
+      plainTemplate = txt.cirAppointmentConfirmation_cy.f,
+      htmlTemplate = html.cirAppointmentConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "cir_revocation_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Revocation Confirmation",
       plainTemplate = txt.cirRevocationConfirmation.f,
       htmlTemplate = html.cirRevocationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cir_revocation_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau Dirymiad",
+      plainTemplate = txt.cirRevocationConfirmation_cy.f,
+      htmlTemplate = html.cirRevocationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -60,12 +87,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "eeitt_ce930_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau CE930",
+      plainTemplate = txt.eeitt_ce930_confirmation_cy.f,
+      htmlTemplate = html.eeitt_ce930_confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "eeitt_ho930_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HO930 Confirmation",
       plainTemplate = txt.eeitt_ho930_confirmation.f,
       htmlTemplate = html.eeitt_ho930_confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "eeitt_ho930_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau HO930",
+      plainTemplate = txt.eeitt_ho930_confirmation_cy.f,
+      htmlTemplate = html.eeitt_ho930_confirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -78,12 +123,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cir_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Ffurflen CIR",
+      plainTemplate = txt.cirReturnConfirmation_cy.f,
+      htmlTemplate = html.cirReturnConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "randd_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "R&D Submission",
       plainTemplate = txt.researchAndDevelopmentSubmission.f,
       htmlTemplate = html.researchAndDevelopmentSubmission.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "randd_confirmation_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cyflwyno manylion Ymchwil a Datblygu",
+      plainTemplate = txt.researchAndDevelopmentSubmission_cy.f,
+      htmlTemplate = html.researchAndDevelopmentSubmission_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -96,6 +159,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ho10_confirmation_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cyflwyno HO10",
+      plainTemplate = txt.ho10Confirmation_cy.f,
+      htmlTemplate = html.ho10Confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "apd_return_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -105,12 +177,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "apd_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "ffurflen apd",
+      plainTemplate = txt.apdReturnConfirmation_cy.f,
+      htmlTemplate = html.apdReturnConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "apd_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received your Air Passenger Duty registration",
       plainTemplate = txt.apdRegistrationConfirmation.f,
       htmlTemplate = html.apdRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "apd_registration_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae’ch cofrestriad ar gyfer Toll Teithwyr Awyr wedi dod i law CThEM",
+      plainTemplate = txt.apdRegistrationConfirmation_cy.f,
+      htmlTemplate = html.apdRegistrationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -132,12 +222,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ipt100_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Ffurflen IPT 100",
+      plainTemplate = txt.ipt100ReturnConfirmation_cy.f,
+      htmlTemplate = html.ipt100ReturnConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "bd510_return_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "BD 510 return",
       plainTemplate = txt.bd510ReturnConfirmation.f,
       htmlTemplate = html.bd510ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "bd510_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Ffurflen BD 510",
+      plainTemplate = txt.bd510ReturnConfirmation_cy.f,
+      htmlTemplate = html.bd510ReturnConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -159,6 +267,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "lt100_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Ffurflen LT 100",
+      plainTemplate = txt.lt100ReturnConfirmation_cy.f,
+      htmlTemplate = html.lt100ReturnConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "gd95_return_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -167,6 +284,16 @@ object EeittTemplates {
       htmlTemplate = html.gd95ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    MessageTemplate.create(
+      templateId = "gd95_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae eich ffurflen Toll Hapchwarae wed’i chyflwyno",
+      plainTemplate = txt.gd95ReturnConfirmation_cy.f,
+      htmlTemplate = html.gd95ReturnConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    //GD94 Template deleted from gForms repo
     MessageTemplate.create(
       templateId = "gd94_return_confirmation",
       fromAddress = govUkTeamAddress,
@@ -186,12 +313,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "al_registration_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae’ch cofrestriad ar gyfer Ardoll Agregau wedi dod i law",
+      plainTemplate = txt.alRegistrationConfirmation_cy.f,
+      htmlTemplate = html.alRegistrationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "ex250_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Your registration to be a bingo promoter has been submitted",
       plainTemplate = txt.ex250ReturnConfirmation.f,
       htmlTemplate = html.ex250ReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ex250_registration_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae’ch cofrestriad i fod yn hyrwyddwr bingo wedi cael ei gyflwyno",
+      plainTemplate = txt.ex250ReturnConfirmation_cy.f,
+      htmlTemplate = html.ex250ReturnConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -204,12 +349,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "air597_return_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae’ch ffurflen hawlio Rhyddhad ar Gynnwys Alcoholig wedi cael ei chyflwyno",
+      plainTemplate = txt.air597ReturnConfirmation_cy.f,
+      htmlTemplate = html.air597ReturnConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c117_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received part of your AEO application",
       plainTemplate = txt.c117ApplicationConfirmation.f,
       htmlTemplate = html.c117ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c117_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c117ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c117ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -222,12 +385,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "c118_section1_part1_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section1Part1ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section1Part1ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c118_section1_part2_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received part of your AEO application",
       plainTemplate = txt.c118Section1Part2ApplicationConfirmation.f,
       htmlTemplate = html.c118Section1Part2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section1_part2_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section1Part2ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section1Part2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -240,12 +421,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "c118_section1_part3_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section1Part3ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section1Part3ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c118_section2_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received part of your AEO application",
       plainTemplate = txt.c118Section2ApplicationConfirmation.f,
       htmlTemplate = html.c118Section2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section2_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section2ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -258,12 +457,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "c118_section3_part1_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section3Part1ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section3Part1ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c118_section3_part2_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received part of your AEO application",
       plainTemplate = txt.c118Section3Part2ApplicationConfirmation.f,
       htmlTemplate = html.c118Section3Part2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section3_part2_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section3Part2ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section3Part2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -276,12 +493,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "c118_section4_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section4ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section4ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c118_section5_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received part of your AEO application",
       plainTemplate = txt.c118Section5ApplicationConfirmation.f,
       htmlTemplate = html.c118Section5ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section5_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section5ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section5ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -294,12 +529,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "c118_section6_part1_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section6Part1ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section6Part1ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c118_section6_part2_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "HMRC received part of your AEO application",
       plainTemplate = txt.c118Section6Part2ApplicationConfirmation.f,
       htmlTemplate = html.c118Section6Part2ApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "c118_section6_part2_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section6Part2ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section6Part2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -312,6 +565,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "c118_section6_part3_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section6Part3ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section6Part3ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "c118_section6_part4_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -320,6 +582,16 @@ object EeittTemplates {
       htmlTemplate = html.c118Section6Part4ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    MessageTemplate.create(
+      templateId = "c118_section6_part4_application_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      plainTemplate = txt.c118Section6Part4ApplicationConfirmation_cy.f,
+      htmlTemplate = html.c118Section6Part4ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    //TSP Form shuttered
     MessageTemplate.create(
       templateId = "tsp_application_confirmation",
       fromAddress = govUkTeamAddress,
@@ -365,6 +637,7 @@ object EeittTemplates {
       htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //Cash dec template outdated - split into NI and GB
     MessageTemplate.create(
       templateId = "cash_declaration",
       fromAddress = govUkTeamAddress,
@@ -473,6 +746,7 @@ object EeittTemplates {
       htmlTemplate = html.ccg1Confirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //TSP DeReg Shuttered
     MessageTemplate.create(
       templateId = "tspDeReg_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -482,6 +756,7 @@ object EeittTemplates {
       htmlTemplate = html.tspDeRegConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
+    //TSP Chief Shuttered
     MessageTemplate.create(
       templateId = "tspCHIEF_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -504,7 +779,7 @@ object EeittTemplates {
       templateId = "bd600_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received your exemption election",
+      subject = "HMRC received your Lottery Duty return",
       plainTemplate = txt.bd600ReturnConfirmation.f,
       htmlTemplate = html.bd600ReturnConfirmation.f,
       priority = Some(MessagePriority.Standard)
@@ -536,14 +811,14 @@ object EeittTemplates {
       htmlTemplate = html.civTransparencyConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "confirmationCode_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address",
+      subject = getConfDySub,
       plainTemplate = txt.confirmationCodeTemplate.f,
       htmlTemplate = html.confirmationCodeTemplate.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "civOffshore_code_submission",
@@ -582,6 +857,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "spbp_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Tâl Statudol Rhieni mewn Profedigaeth",
+      plainTemplate = txt.spbpCode_cy.f,
+      htmlTemplate = html.spbpCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "spbp_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -600,6 +884,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "cjrs_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Ymholiad ynghylch y Cynllun Cadw Swyddi yn sgil Coronafeirws",
+      plainTemplate = txt.cjrsCode_cy.f,
+      htmlTemplate = html.cjrsCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "cjrs_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -613,9 +906,19 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject =
-        "Confirm your email address - Request an HMRC review of your eligibility to claim Self-Employment Income Support",
+        "Confirm your email address - Ask for a review of your eligibility to claim Self-Employment Income Support",
       plainTemplate = txt.seissCode.f,
       htmlTemplate = html.seissCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost - Gofyn am adolygiad o’ch cymhwystra i hawlio Cymhorthdal Incwm Hunangyflogaeth",
+      plainTemplate = txt.seissCode_cy.f,
+      htmlTemplate = html.seissCode_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -629,6 +932,7 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      //SEISS Child Shuttered
       templateId = "seiss_new_child_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -683,12 +987,30 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "seiss_repay_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae’ch hysbysiad am arian grant y Cynllun Cymhorthdal Incwm Hunangyflogaeth wedi dod i law CThEM.",
+      plainTemplate = txt.seissRepayConfirmation_cy.f,
+      htmlTemplate = html.seissRepayConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "vishing_code_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Confirm your email address - Report a suspicious HMRC phone call",
       plainTemplate = txt.vishingCode.f,
       htmlTemplate = html.vishingCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "vishing_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Rhoi gwybod am alwad ffôn amheus sy’n honni ei fod gan CThEM",
+      plainTemplate = txt.vishingCode_cy.f,
+      htmlTemplate = html.vishingCode_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -750,9 +1072,18 @@ object EeittTemplates {
       templateId = "complaint_consultation_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - Report a comment or complaint about a consultation",
+      subject = "Confirm your email address - Make a comment or complaint about HMRC consultations",
       plainTemplate = txt.consultationComplaint.f,
       htmlTemplate = html.consultationComplaint.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "complaint_consultation_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Gwneud sylw neu gŵyn am ymgynghoriadau CThEM",
+      plainTemplate = txt.consultationComplaint_cy.f,
+      htmlTemplate = html.consultationComplaint_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -810,6 +1141,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ni_vat_Status_withdrawal_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC Northern Ireland Protocol: notification of withdrawal received",
+      plainTemplate = txt.niVatStatusWithdrawal.f,
+      htmlTemplate = html.niVatStatusWithdrawal.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "tor_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -825,6 +1165,15 @@ object EeittTemplates {
       subject = "HMRC received your application for transfer of residence tax relief",
       plainTemplate = txt.torConfirmation.f,
       htmlTemplate = html.torConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tor_confirmation_dynamic",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getTorDySub,
+      plainTemplate = txt.torConfirmation_dynamic.f,
+      htmlTemplate = html.torConfirmation_dynamic.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -853,6 +1202,279 @@ object EeittTemplates {
       subject = "HMRC received your application for repayment of the non-UK Resident Stamp Duty Land Tax surcharge",
       plainTemplate = txt.nrsDLTConfirmation.f,
       htmlTemplate = html.nrsDLTConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seissOverPayment_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirmation we received your SEISS amendments",
+      plainTemplate = txt.seissOverPaymentConfirmation.f,
+      htmlTemplate = html.seissOverPaymentConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seissOverPayment_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhad bod eich diwygiadau SEISS wedi dod i law",
+      plainTemplate = txt.seissOverPaymentConfirmation_cy.f,
+      htmlTemplate = html.seissOverPaymentConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pesm_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "We received your PESM application",
+      plainTemplate = txt.pesmConfirmation.f,
+      htmlTemplate = html.pesmConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pesm_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Apply for a Partial exemption special method",
+      plainTemplate = txt.pesmCode.f,
+      htmlTemplate = html.pesmCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "pesm_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost  – Gwneud cais am ddull eithriad rhannol arbennig",
+      plainTemplate = txt.pesmCode_cy.f,
+      htmlTemplate = html.pesmCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ctDormancy_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "We received your Corporation Tax notification",
+      plainTemplate = txt.ctDormancyConfirmation.f,
+      htmlTemplate = html.ctDormancyConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ctDormancy_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Tell HMRC your organisation has stopped trading or has never traded",
+      plainTemplate = txt.ctDormancyCode.f,
+      htmlTemplate = html.ctDormancyCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ctDormancy_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost – Rhowch wybod i CThEM bod eich sefydliad wedi rhoi’r gorau i fasnachu neu nad yw erioed wedi masnachu",
+      plainTemplate = txt.ctDormancyCode_cy.f,
+      htmlTemplate = html.ctDormancyCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "elcb_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Make a claim for extended loss carry back",
+      plainTemplate = txt.elcbCode.f,
+      htmlTemplate = html.elcbCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "elcb_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost – Gwneud hawliad i gario colled yn ôl dros gyfnod estynedig",
+      plainTemplate = txt.elcbCode_cy.f,
+      htmlTemplate = html.elcbCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "elcb_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your claim for extended loss carry back",
+      plainTemplate = txt.elcbApplicationConfirmation.f,
+      htmlTemplate = html.elcbApplicationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address – Tell HMRC you are registered for the VAT Import One Stop Shop in the EU",
+      plainTemplate = txt.iossCode.f,
+      htmlTemplate = html.iossCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_dereg_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address – Tell HMRC about changes to a registration with the VAT Import One Stop Shop in the EU",
+      plainTemplate = txt.iossDeregCode.f,
+      htmlTemplate = html.iossDeregCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost – Rhowch wybod i CThEM eich bod wedi’ch cofrestru ar gyfer y Gwasanaeth Un Cam ar gyfer TAW o ran Mewnforio yn yr EU",
+      plainTemplate = txt.iossCode_cy.f,
+      htmlTemplate = html.iossCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You told HMRC about an IOSS registration",
+      plainTemplate = txt.iossConfirmation.f,
+      htmlTemplate = html.iossConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Gwnaethoch roi gwybod i CThEM am gofrestriad IOSS",
+      plainTemplate = txt.iossConfirmation_cy.f,
+      htmlTemplate = html.iossConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ioss_dereg_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You sent HMRC an IOSS notification",
+      plainTemplate = txt.iossDeregConfirmation.f,
+      htmlTemplate = html.iossDeregConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "xiEORI_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You applied for an XI EORI number",
+      plainTemplate = txt.xiEORIConfirmation.f,
+      htmlTemplate = html.xiEORIConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "xiEORI_change_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You applied for a change to your XI EORI number",
+      plainTemplate = txt.xiEORIChangeConfirmation.f,
+      htmlTemplate = html.xiEORIChangeConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "nipbe_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You told HMRC about a Northern Ireland business establishment",
+      plainTemplate = txt.nipbeConfirmation.f,
+      htmlTemplate = html.nipbeConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "nipbe_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Gwnaethoch roi gwybod i CThEM am busnes parhaol yng Ngogledd Iwerddon",
+      plainTemplate = txt.nipbeConfirmation_cy.f,
+      htmlTemplate = html.nipbeConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seiss_voluntary_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Self Employment Income Support Scheme: Agreement to repay",
+      plainTemplate = txt.seissVoluntaryDisclosureConfirmation.f,
+      htmlTemplate = html.seissVoluntaryDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "netp_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You submitted your overseas bank details",
+      plainTemplate = txt.netpConfirmation.f,
+      htmlTemplate = html.netpConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cjrs_disclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Notification of intent to disclose CJRS overclaim - application received",
+      plainTemplate = txt.cjrsDisclosureConfirmation.f,
+      htmlTemplate = html.cjrsDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cjrsDisclosure_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Coronavirus Job Retention Scheme Overclaim Notification",
+      plainTemplate = txt.cjrsDisclosureCode.f,
+      htmlTemplate = html.cjrsDisclosureCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "creative_industries_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your creative industries tax relief application",
+      plainTemplate = txt.creativeIndustriesConfirmation.f,
+      htmlTemplate = html.creativeIndustriesConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "creative_industries_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for creative industries tax relief for Corporation Tax",
+      plainTemplate = txt.creativeIndustriesCode.f,
+      htmlTemplate = html.creativeIndustriesCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "qahc_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getQAHCDySub,
+      plainTemplate = txt.qahcConfirmation.f,
+      htmlTemplate = html.qahcConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "qahc_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for creative industries tax relief for Corporation Tax",
+      plainTemplate = txt.qahcCode.f,
+      htmlTemplate = html.qahcCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You requested a pension scheme tax refund from HMRC",
+      plainTemplate = txt.podsConfirmation.f,
+      htmlTemplate = html.podsConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

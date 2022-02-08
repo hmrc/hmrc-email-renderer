@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted an IPT1 Application for Registration online"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your application to register for Insurance Premium Tax.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     If your application is successful, we will send a certificate of registration to your correspondence address. We will issue this within 15 working days of you submitting the IPT1.</p>

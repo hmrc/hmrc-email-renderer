@@ -2,9 +2,9 @@
 
 You applied to get help with a tax issue for a mid-sized business
 
-Dear @params.get("regContactName1")
+Dear @params("regContactName1")
 
-Your application reference is: @params.get("submissionReference")
+Your application reference is: @params("submissionReference")
 
 What happens next
 

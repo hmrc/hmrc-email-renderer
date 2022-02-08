@@ -7,7 +7,7 @@ Dear Customer
 
 You requested a code to continue with the ‘Apply for an advance payment of Statutory Parental Bereavement Pay’ service on GOV.UK.
 
-Your code is: @params.get("confirmationCode")
+Your code is: @params("confirmationCode")
 
 What you need to do now
 

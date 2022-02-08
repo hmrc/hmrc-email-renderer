@@ -12,8 +12,8 @@ Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rh
 
 Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.
 
-Angela MacDonald
+Myrtle Lloyd
 
-Dirprwy Brif Weithredwr a’r Ail Ysgrifennydd Parhaol
+Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

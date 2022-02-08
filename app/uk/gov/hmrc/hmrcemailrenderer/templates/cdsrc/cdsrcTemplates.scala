@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,15 @@ object cdsrcTemplates {
       subject = "HMRC claim submission",
       plainTemplate = txt.reimbursement_claim_submission.f,
       htmlTemplate = html.reimbursement_claim_submission.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "reimbursement_claim_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = CDSRC,
+      subject = "Cyflwyniad i CThEM am Hawliad: Cyf",
+      plainTemplate = txt.reimbursement_claim_submission_cy.f,
+      htmlTemplate = html.reimbursement_claim_submission_cy.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

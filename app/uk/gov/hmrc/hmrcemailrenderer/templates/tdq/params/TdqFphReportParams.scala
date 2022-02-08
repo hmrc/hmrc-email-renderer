@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,11 @@ final case class TdqFphReportParams(
   toDate: String,
   allHeadersMissingPercentage: Int,
   invalidConnectionMethodPercentage: Int,
+  allHeadersMissingCount: Int,
+  invalidConnectionMethodCount: Int,
   relatesToMultipleVersions: Boolean,
-  extraDetails: Option[ValidConnectionMethodBase64EncodedDetails]
+  extraDetails: Option[ValidConnectionMethodBase64EncodedDetails],
+  hasOtherConnectionMethods: Boolean
 ) {
 
   def hasAllHeadersMissing: Boolean = allHeadersMissingPercentage > 0
@@ -48,8 +51,11 @@ object TdqFphReportParams {
       params("toDate").toString,
       params.get("allHeadersMissingPercentage").fold(0)(_.toString.toInt),
       params.get("invalidConnectionMethodPercentage").fold(0)(_.toString.toInt),
+      params.get("allHeadersMissingCount").fold(0)(_.toString.toInt),
+      params.get("invalidConnectionMethodCount").fold(0)(_.toString.toInt),
       params.get("relatesToMultipleVersions").fold(false)(_.toString.toBoolean),
-      params.get("extraDetails").map(details => ValidConnectionMethodBase64EncodedDetails.parse(details.toString))
+      params.get("extraDetails").map(details => ValidConnectionMethodBase64EncodedDetails.parse(details.toString)),
+      params.get("hasOtherConnectionMethods").fold(false)(_.toString.toBoolean)
     )
 
 }

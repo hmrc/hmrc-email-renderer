@@ -2,7 +2,7 @@
 
 You sent a question about the Coronavirus Job Retention Scheme online
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We have received your question about the Coronavirus Job Retention Scheme.
 

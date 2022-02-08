@@ -2,13 +2,13 @@
 
 You sent a request to settle disguised remuneration
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We received your request to settle disguised remuneration use.
 
 What happens next
 
-We will respond @params.get("slaParam") to either:
+We will respond @params("slaParam") to either:
 
 - ask for further information
 - send a settlement calculation

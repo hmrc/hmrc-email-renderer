@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,6 @@
  * limitations under the License.
  *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.surcharge_recon_row
 @(params: Map[String, Any])
 
@@ -158,6 +157,10 @@
         @surcharge_recon_row(params("topsNoModsSurchargeReport_pngr").toString.split(",").toArray)
     </tr>
     <tr>
+        <td style="font-weight:bold;">FChB</td>
+        @surcharge_recon_row(params("topsNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
+    </tr>
+    <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
     </tr>
@@ -168,7 +171,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance (see below)</td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance 210102014</td>
     </tr>
 </table>
 <br>
@@ -221,6 +224,14 @@
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_cds").toString.split(",").toArray)
     </tr>
     <tr>
+        <td style="font-weight:bold;">FChB</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">VOSS</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_vatOss").toString.split(","))
+    </tr>
+    <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
     </tr>
@@ -231,7 +242,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance (see below)</td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance 210102014</td>
     </tr>
 </table>
 <br>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,9 +18,11 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class VerificationReminderWelshSpec extends UnitSpec with EitherValues with TemplateLoader with CommonParamsForSpec {
+class VerificationReminderWelshSpec
+    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
   "verificationReminder_cy" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(

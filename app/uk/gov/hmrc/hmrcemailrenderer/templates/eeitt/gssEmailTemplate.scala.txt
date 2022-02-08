@@ -2,9 +2,9 @@
 
  You requested support from the Growth Support Service
 
- Dear @params.get("regContactName1")
+ Dear @params("regContactName1")
 
- Your submission reference is: @params.get("submissionReference")
+ Your submission reference is: @params("submissionReference")
 
  What happens next
 

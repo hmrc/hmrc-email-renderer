@@ -1,0 +1,21 @@
+@(params: Map[String, Any])Sut y byddwn yn anfon llythyrau treth ar-lein atoch
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh = true)}
+
+Gan eich bod wedi cofrestru i gael llythyrau treth ar-lein erbyn hyn, rydym am roi rhagor o wybodaeth i chi.
+
+Sut mae’n gweithio
+Pryd bynnag y cewch lythyr treth ar-lein newydd, byddwn yn anfon e-bost i roi gwybod i chi.
+Byddwch yn eu gweld i gyd mewn un lle. Gallwch eu darllen ar unrhyw ddyfais, eu lawrlwytho a’u rhannu. Gallwch hefyd eu hargraffu ar unrhyw adeg, a hynny fel bod gennych gopi papur os bydd angen un arnoch am unrhyw reswm. I ddarllen eich llythyrau treth, mewngofnodwch i wasanaethau CThEM a dewiswch ‘Negeseuon’.
+Gallwch hefyd ddefnyddio ap ffôn symudol CThEM sy’n rhad ac am ddim i ddarllen eich llythyrau treth. Chwiliwch am ‘HMRC app’ i’w lawrlwytho.
+Mae’r gwasanaeth hwn yn tyfu o hyd, felly ar hyn o bryd rydym ond yn anfon rhai llythyrau treth ar-lein. Dros amser, byddwn yn gallu anfon y rhan fwyaf o lythyrau treth drwy negeseuon ac e-byst, er bydd yn rhaid i rai ohonynt gyrraedd drwy’r post o hyd.
+
+Yr hyn rydych wedi optio mewn iddo
+Gallwch gael amrywiaeth o lythyrau treth ar-lein, er enghraifft os oes treth arnoch neu fod ad-daliad yn ddyledus (P800, PA302) neu a oes gennych hysbysiad i gyflwyno Hunanasesiad (hysbysiad SA316).
+
+Ein haddewidion
+Os nad yw hysbysiad drwy e-bost yn eich cyrraedd ac yn dod yn ôl atom, byddwn yn anfon y llythyr drwy’r post. O ganlyniad, ni fyddwch byth yn methu llythyr treth.
+Ni fyddwn byth yn anfon gwybodaeth breifat na sensitif drwy e-bost.
+Gallwch newid y cyfeiriad e-bost a ddefnyddiwch i gael llythyrau treth, a gallwch hefyd ddewis mynd yn ôl i gael pob llythyr treth drwy’r post. Ewch i ‘Gwirio’ch gosodiadau’.
+
+Oddi wrth Dîm Digidol CThEM

@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a question about the Coronavirus Job Retention Scheme online"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("customerName")</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your question about the Coronavirus Job Retention Scheme.</p>
 <h2>What happens next</h2>

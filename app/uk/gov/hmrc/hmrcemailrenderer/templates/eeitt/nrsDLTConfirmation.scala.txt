@@ -2,13 +2,13 @@
 
 You applied for repayment of the non-UK Resident Stamp Duty Land Tax surcharge
 
-Dear Customer
+Dear @params("customerName")
 
 This email confirms that you have submitted an application for repayment of the non-UK Resident Stamp Duty Land Tax surcharge.
 
 We aim to respond within 35 calendar days.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 From HMRC
 

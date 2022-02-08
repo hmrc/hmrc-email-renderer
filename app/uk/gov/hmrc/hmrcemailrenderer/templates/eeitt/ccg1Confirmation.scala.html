@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You applied for Customs Comprehensive Guarantee authorisation"){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("decName") </p>
+    Dear @params("decName") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     HMRC received an application on behalf of your business.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <h2>
     What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">

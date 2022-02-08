@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@
     c">
     <tr>
       <th> </th>
-      <th>TPS Volumes</th>
-      <th>TPS Amount</th>
-      <th>Debit Card Fee Volumes</th>
-      <th>Debit Card Fee Amount</th>
-      <th>Commission Card Volumes</th>
-      <th>Commission Card Amount</th>
-      <th>Total Volumes</th>
-      <th>Total Amount</th>
+      <th>TPS volumes</th>
+      <th>TPS amount</th>
+      <th>Debit card fee volumes</th>
+      <th>Debit card fee amount</th>
+      <th>Commission card volumes</th>
+      <th>Commission card amount</th>
+      <th>Total volumes</th>
+      <th>Total amount</th>
     </tr>
     @{
       (params.filter(_._1.startsWith("TOPS_ROW_")) - "TOPS_ROW_TOTALS").map {

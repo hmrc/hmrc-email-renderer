@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -87,6 +87,15 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.newPostponedImportVATStatement.f,
       htmlTemplate = html.newPostponedImportVATStatement.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_postponed_vat_notification",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New requested postponed import VAT statement",
+      plainTemplate = txt.requestedPostponedVATStatement.f,
+      htmlTemplate = html.requestedPostponedVATStatement.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

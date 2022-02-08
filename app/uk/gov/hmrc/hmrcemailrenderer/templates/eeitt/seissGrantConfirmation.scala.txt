@@ -2,13 +2,13 @@
 
 HMRC received your request to review your Self-Employment Income Support Scheme grant amount
 
-Dear @params.get("customerName")
+Dear @params("customerName")
 
 We have received your request to review your Self-Employment Income Support Scheme grant amount.
 
 What happens next
 
-We will @params.get("workingDays").
+We will @params("workingDays").
 
 Why you are receiving this email
 

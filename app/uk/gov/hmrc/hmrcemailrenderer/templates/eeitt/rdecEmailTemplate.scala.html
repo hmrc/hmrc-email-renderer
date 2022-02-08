@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Supporting details for an R&D Expenditure Credit claim"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("fillerName") </p>
+    Dear @params("fillerName") </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your supporting details form for a Research and Development Expenditure Credit (RDEC) claim.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     If you need to contact us about this, please quote the submission reference.</p>
 <h2>Why you are receiving this email</h2>

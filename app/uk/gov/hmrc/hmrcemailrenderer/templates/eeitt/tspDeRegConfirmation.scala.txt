@@ -2,9 +2,9 @@
 
 You applied to cancel your registration for transitional simplified procedures
 
-Dear @params.get("appName")
+Dear @params("appName")
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

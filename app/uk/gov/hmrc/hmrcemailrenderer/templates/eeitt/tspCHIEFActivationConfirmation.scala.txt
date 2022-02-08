@@ -2,11 +2,11 @@
 
 You applied to activate a badge for CHIEF declarations
 
-Dear @params.get("fullNameFilling")
+Dear @params("fullNameFilling")
 
 HMRC received your request to access CHIEF for transitional simplified procedures.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 What happens next
 

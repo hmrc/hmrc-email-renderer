@@ -1,0 +1,19 @@
+@(params: Map[String, Any])You submitted a VAT return for the One Stop Shop Union scheme
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+HMRC has received your VAT return for @params("period").
+
+You need to pay the return in full by @params("paymentDeadline").
+
+EU countries can charge you interest or penalties for late payments.
+
+How to pay
+
+Search GOV.UK for ‘Pay your OSS VAT Return’.
+
+Sign into your Government Gateway account using your ID and password.
+
+You can also pay without signing in using your VAT registration number.
+
+From the VAT One Stop Shop team

@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+Mae eich ffurflen Toll Hapchwarae wed’i chyflwyno
+
+Annwyl Gwsmer,
+
+Mae’ch datganiad Toll Hapchwarae ar-lein wedi dod i law.
+
+Pam eich bod yn derbyn y neges e-bost hon
+
+Rydym yn anfon e-bost cadarnhau ar gyfer ffurflenni sydd wedi’u cyflwyno ar-lein.
+
+Os bydd angen i chi gysylltu â ni ynghylch eich cais, nodwch eich rhif cofrestru Toll Hapchwarae.
+
+Diolch.
+
+Gan dîm Ecséis CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

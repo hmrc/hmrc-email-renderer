@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Pension scheme administrator registration successful
+
+Dear @{params("psaName").toString}
+
+You have successfully registered @{params("psaName").toString} as a pension scheme administrator on the Managing Pension Schemes service.
+
+The administrator ID for @{params("psaName").toString} has not changed.
+
+What happens next
+
+The pension scheme administrator can now manage pension schemes by applying to register a new pension scheme. To do this search for ‘apply to register a pension scheme’ on GOV.UK and then choose to use the online service.
+
+They can also be invited to be a pension scheme administrator for an existing pension scheme.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

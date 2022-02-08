@@ -1,0 +1,52 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted a VAT return for the One Stop Shop Union scheme") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        HMRC has received your VAT return for @params("period").
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        Payment for this return was due by @params("paymentDeadline").
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        You need to pay the return in full as soon as you can.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        If you submit late payments and returns, we may remove you from the scheme. More information about One Stop Shop return deadlines is available on GOV.UK.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        EU countries can charge you interest or penalties for late payments.
+    </p>
+    <h2 style="margin: 0px 0 30px; font-size: 19px;">
+        How to pay
+    </h2>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        Search GOV.UK for ‘Pay your OSS VAT Return’.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        Sign into your Government Gateway account using your ID and password.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        You can also pay without signing in using your VAT registration number.
+    </p>
+
+    <br>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        From the VAT One Stop Shop team
+    </p>
+}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatest.Matchers
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
-import uk.gov.hmrc.play.test.UnitSpec
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
-class ApiVerificationEmailSpec extends UnitSpec with Matchers {
+class ApiVerificationEmailSpec extends WordSpecLike with OptionValues with Matchers {
 
   val verificationLink = "http://verify.com"
   val developerHubTitle = "Developer Hub Title"

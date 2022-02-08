@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.aeo.AEOMRATemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.agent.AgentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.ApiCatalogueTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
@@ -29,6 +31,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dac6.Dac6Templates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mdr.MdrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dfs.DfsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitaltariffs.DigitalTariffTemplates
@@ -73,18 +76,26 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.gms.GmsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mods.ModsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
     Map(
+      "AEO MRA"               -> AEOMRATemplates.templates,
       "Agent"                 -> AgentTemplates.templates,
       "API Platform"          -> ApiTemplates.templates,
+      "API Catalogue"         -> ApiCatalogueTemplates.templates,
       "ATS"                   -> AtsTemplates.templates,
       "AWRS"                  -> AwrsTemplates.templates,
       "AMLS"                  -> AmlsTemplates.templates,
       "BARS"                  -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
+      "MDR"                   -> MdrTemplates.templates,
       "Digital Tariffs"       -> DigitalTariffTemplates.templates,
       "DST"                   -> DstTemplates.templates,
       "DFS"                   -> DfsTemplates.templates,
@@ -98,6 +109,7 @@ trait TemplateLocator {
       "Passcodes"             -> PasscodesTemplates.templates,
       "PAYE"                  -> PayeTemplates.templates,
       "RALD"                  -> RaldTemplates.templates,
+      contactFormsGroup       -> ContactFormsTemplates.templates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
       "Self Assessment"       -> DigitalContactTemplates.templates,
       "TAMC"                  -> TamcTemplates.templates,
@@ -133,7 +145,10 @@ trait TemplateLocator {
       "EOTHO"                 -> EothoTemplates.templates,
       "Eori Common Component" -> EoriCommonComponentTemplates.templates,
       "MODS"                  -> ModsTemplates.templates,
-      "CDSRC"                 -> cdsrcTemplates.templates
+      "CDSRC"                 -> cdsrcTemplates.templates,
+      "OSS"                   -> OSSTemplates.templates,
+      "HEC"                   -> HecTemplates.templates,
+      "ITSA"                  -> ItsaTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

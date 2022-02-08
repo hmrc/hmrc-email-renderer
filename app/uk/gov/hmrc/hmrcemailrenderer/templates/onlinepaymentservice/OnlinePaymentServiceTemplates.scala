@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ FromAddress, ServiceIdentifier 
 
 object OnlinePaymentServiceTemplates {
 
-  lazy val templates = cdsTemplates ++ Seq(
+  lazy val templates: List[MessageTemplate] = cdsTemplates ++ Seq(
     // Card payments templates
     MessageTemplate.create(
       templateId = "payment_successful",
@@ -48,6 +48,25 @@ object OnlinePaymentServiceTemplates {
       subject = "Receipt for payment of import VAT on parcels",
       plainTemplate = txt.payment_successful_parcels.f,
       htmlTemplate = html.payment_successful_parcels.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // Open Banking payment receipts
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "You sent a payment to HMRC",
+      plainTemplate = txt.open_banking_payment_successful.f,
+      htmlTemplate = html.open_banking_payment_successful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Rydych wedi anfon taliad i CThEM",
+      plainTemplate = txt.open_banking_payment_successful_cy.f,
+      htmlTemplate = html.open_banking_payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     // Direct Debit VAT templates

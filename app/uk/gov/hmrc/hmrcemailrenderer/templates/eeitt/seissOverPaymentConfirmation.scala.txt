@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You told HMRC about an amendment to your tax return that could affect your SEISS 4 or SEISS 5 grant
+
+Dear @params("customerName")
+
+This email confirms that you have told us of amendments to your tax return or turnover figures.
+
+You are aware this may affect eligibility for the fourth or fifth Self-Employment Income Support Scheme grant.
+
+Your reference is:  @params("submissionReference")
+
+We will use the information you supplied to recalculate your grant eligibility. We will write to you within 30 days outlining any repayment due.
+
+We will only respond in connection with SEISS 4 and SEISS 5 overpayments.
+
+From Tax Administration Directorate - Self Employment Income Support, HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

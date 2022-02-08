@@ -1,5 +1,5 @@
 @*
- * Copyright 2021 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +17,13 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: your transitional simplified procedures application"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params.get("appName")</p>
+    Dear @params("appName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your application for transitional simplified procedures.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We will reply with a decision within 15 working days.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: @params.get("submissionReference")</p>
+    Your submission reference is: @params("submissionReference")</p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for applications submitted online.</p>

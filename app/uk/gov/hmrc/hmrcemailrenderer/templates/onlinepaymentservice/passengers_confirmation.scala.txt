@@ -37,11 +37,12 @@ case _ => List()
     val vatGBP = (item \ "vatGBP").as[String]
     val itemTaxRaw = BigDecimal(exciseGBP) + BigDecimal(customsGBP) + BigDecimal(vatGBP)
     val itemTax = itemTaxRaw.setScale(2,RoundingMode.apply(2))
-    val madeIn = (item \ "madeIn").asOpt[String].getOrElse("N/A")
+    val madeIn = (item \ "madeIn").asOpt[String].getOrElse("Unknown")
 
     val evidence: String = (item \ "euCustomsRelief") match {
         case JsDefined(v) if (v.toString == "true") => "Yes"
-        case _ => "No"
+        case JsDefined(v) if (v.toString == "false") => "No"
+        case _ => "Not required"
     }
 
     (itemDesc,localValue,originCountry,madeIn,evidence,itemTax)

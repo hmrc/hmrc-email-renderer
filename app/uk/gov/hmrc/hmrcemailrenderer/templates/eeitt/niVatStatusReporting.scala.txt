@@ -16,7 +16,7 @@ Note:  it may take up to 2 working days before your suppliers can validate your 
 
 You do not need to take any further action.
 
-Your submission reference is: @params.get("submissionReference")
+Your submission reference is: @params("submissionReference")
 
 From HMRC
 

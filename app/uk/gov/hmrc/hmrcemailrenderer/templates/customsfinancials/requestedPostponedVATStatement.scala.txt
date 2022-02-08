@@ -1,0 +1,19 @@
+@(params: Map[String, Any])The postponed import VAT statements you requested are now available
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Your requested postponed import VAT statements are available to view and download for the next 10 days. To access your statements:
+
+Go to GOV.UK.
+
+Search for ‘Get your postponed import VAT statements’.
+
+For security reasons, we have not included a link in this email.
+
+If you need help
+
+Phone HMRC on 0300 200 3701. Opening times 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From the Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
