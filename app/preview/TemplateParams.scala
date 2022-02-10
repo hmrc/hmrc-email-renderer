@@ -1748,6 +1748,11 @@ object TemplateParams2 {
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "telephone_payments_service" -> Map(
+      "totalAmountPaid"    -> "1000",
+      "transactionReference"  -> "12345FFF",
+      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionNumber\":\"12345\"}, {\"taxType\":\"SA\",\"amount\":\"50\",\"transactionNumber\":\"00000\"}]"
+    ),
     "recon_tps_report" -> Map(
       "subject"       -> "Telephone Payment System (TPS) Finance Report 22/01/1989",
       "vatLegal"      -> "2,19400000,0,0,2,19400000",
@@ -2233,7 +2238,11 @@ object TemplateParams2 {
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
     ),
-    "mdr_registration_successful" -> Map(
+    "mdr_registration_successful_organisation" -> Map(
+      "name"  -> "Joe Bloggs",
+      "mdrID" -> "XWDAC0000000058"
+    ),
+    "mdr_registration_successful_individual" -> Map(
       "name"  -> "Joe Bloggs",
       "mdrID" -> "XWDAC0000000058"
     ),
