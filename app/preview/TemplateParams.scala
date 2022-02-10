@@ -19,7 +19,7 @@ package preview
 import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
-import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.cf_enquiry_confirmation
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -658,6 +658,14 @@ object TemplateParams {
       "submissionDate"         -> "28 January 2022",
       "submissionTime"         -> "13:45",
       "nextStep"               -> "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
+    ),
+    cf_enquiry_confirmation_cy -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "enquirySubject"         -> "Treth Gyngor - Fy mil Treth Gyngor",
+      "submissionDate"         -> "28 Ionawr 2022",
+      "submissionTime"         -> "13:45",
+      "nextStep" ->
+        "Rydym yn ymateb i’r mwyafrif o ymholiadau o fewn ychydig ddyddiau. Fodd bynnag, gall ymholiadau cymhleth gymryd hyd at 28 diwrnod."
     ),
     "bars_alert" -> Map(
       "baRefNumber"   -> "BA : ba5090",
