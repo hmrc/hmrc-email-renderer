@@ -1743,6 +1743,11 @@ object TemplateParams2 {
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "telephone_payments_service" -> Map(
+      "totalAmountPaid"    -> "1000",
+      "transactionReference"  -> "12345FFF",
+      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionNumber\":\"12345\"}, {\"taxType\":\"SA\",\"amount\":\"50\",\"transactionNumber\":\"00000\"}]"
+    ),
     "recon_tps_report" -> Map(
       "subject"       -> "Telephone Payment System (TPS) Finance Report 22/01/1989",
       "vatLegal"      -> "2,19400000,0,0,2,19400000",
