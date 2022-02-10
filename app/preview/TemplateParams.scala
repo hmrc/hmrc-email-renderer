@@ -1638,6 +1638,11 @@ object TemplateParams2 {
       "reference"  -> "1234567890K",
       "amountPaid" -> "123.45"
     ),
+    "telephone_payments_service" -> Map(
+      "totalAmountPaid"         -> "1000",
+      "transactionReference"    -> "12345FFF",
+      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionNumber\":\"12345\"}]"
+    ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",
       "reference"  -> "1234567890K",
