@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+You have registered for Mandatory Disclosure Rules (MDR)
+
+Dear @{params("name")}
+
+You can now report cross-border arrangements.
+
+Your MDR ID is: @{params("mdrID")}
+
+Print or save a copy of this email for your records.
+
+How to make a report 
+
+To make a report:
+
+    search for ‘DAC6’ on GOV.UK
+    sign in to the service
+
+For security reasons, we have not included a link to this service in this email.
+
+You can email enquiries.aeoi@@hmrc.gov.uk for help.
+
+For more information, search GOV.UK for ‘MDR’.
+
+From the HMRC MDR service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
