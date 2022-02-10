@@ -251,6 +251,15 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.recon_mods_finance_report.f,
       htmlTemplate = html.recon_mods_finance_report.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "telephone_payments_service",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Payment confirmation",
+      plainTemplate = txt.telephone_payments_service.f,
+      htmlTemplate = html.telephone_payments_service.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
