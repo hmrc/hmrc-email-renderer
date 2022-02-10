@@ -1,0 +1,91 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
+
+@(params: Map[String, Any])
+
+@allItems = @{params("tpsPaymentItemsForEmail") match {
+    case items:String => Json.parse(items).as[List[JsObject]]
+    case _ => List()
+}}
+
+@itemList = @{ allItems.map( item => {
+
+    val taxType: String = (item \ "taxType").as[String]
+    val amount: String = (item \ "amount").as[String]
+    val transactionNumber = (item \ "transactionNumber").as[String]
+    (taxType, amount, transactionNumber)
+})
+}
+
+@singleItem = @{itemList.size == 1}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You sent a payment to HMRC") {
+
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
+
+    @if(singleItem){
+        <p style="margin: 0 0 30px; font-size: 19px;">Thank you for making a telephone payment. The following payment has been received by HMRC.</p>
+    }
+
+    @if(!singleItem){
+        <p style="margin: 0 0 30px; font-size: 19px;">Thank you for making a telephone payment. The following payments have been received by HMRC.</p>
+    }
+
+    <table width="100%" cellspacing="0px" cellpadding="2px" style="text-align:left;">
+        <thead>
+            <tr>
+                <td scope="col" style="font-weight:bold;text-align:left;">Tax</td>
+                <td scope="col" style="font-weight:bold;text-align:left;">Amount Paid</td>
+                <td scope="col" style="font-weight:bold;text-align:left;">Transaction Number</td>
+            </tr>
+        </thead>
+        <tbody>
+        @for((taxType,amount,transactionNumber) <- itemList) {
+            <tr>
+                <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@taxType</td>
+                <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">£@amount</td>
+                <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@transactionNumber</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <p>
+<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+    <tbody>
+        <tr>
+            <th>Total amount paid</th>
+            <td>£@params("totalAmountPaid")</td>
+        </tr>
+
+        <tr>
+            <th>Transaction Reference</th>
+            <td>@params("transactionReference")</td>
+        </tr>
+    </tbody>
+</table>
+    </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">If you have an online tax account your payment will take 3 to 5 days to show in your account.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><h2>Why you got this email</h2></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You chose to receive an email about your payment.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue and Customs</p>
+
+}
