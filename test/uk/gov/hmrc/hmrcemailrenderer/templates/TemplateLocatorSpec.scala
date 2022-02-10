@@ -783,7 +783,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "platformContact",
         "platformContactConfirmation",
         "pods_psa_amend",
-        "hec_tax_check_code"
+        "hec_tax_check_code",
+        "telephone_payments_service"
       )
     }
   }
