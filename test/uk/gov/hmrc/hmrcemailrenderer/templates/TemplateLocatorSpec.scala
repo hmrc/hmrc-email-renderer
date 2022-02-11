@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import org.scalatest.OptionValues
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, contactFormsGroup }
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy, contactFormsGroup }
 
 class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with OptionValues with GuiceOneAppPerSuite {
 
@@ -451,6 +451,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "rald_not_connected",
         "rald_submission_confirmation",
         cf_enquiry_confirmation,
+        cf_enquiry_confirmation_cy,
         "bars_alert",
         "bars_alert_transaction",
         "tcs_renewal_confirmation",
