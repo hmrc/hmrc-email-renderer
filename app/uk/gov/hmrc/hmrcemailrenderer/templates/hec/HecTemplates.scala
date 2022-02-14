@@ -30,6 +30,15 @@ object HecTemplates {
       plainTemplate = txt.hecTaxCheckCode.f,
       htmlTemplate = html.hecTaxCheckCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hec_tax_check_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = HEC,
+      subject = "Cod gwirio treth ar gyfer eich cais am drwydded",
+      plainTemplate = txt.hecTaxCheckCode_cy.f,
+      htmlTemplate = html.hecTaxCheckCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

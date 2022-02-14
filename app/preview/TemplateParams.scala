@@ -2878,6 +2878,12 @@ object TemplateParams2 {
       "licenceType"     -> "Driver of taxis and private hires",
       "hecTaxCheckCode" -> "FK9 BRG 2JJ",
       "expiresAfter"    -> "13 May 2022"
+    ),
+    "hec_tax_check_code_cy" -> Map(
+      "currentDate"     -> "13 Ionawr 2022",
+      "licenceType"     -> "Gyrrwr tacsis a cherbydau hurio preifat",
+      "hecTaxCheckCode" -> "FK9 BRG 2JJ",
+      "expiresAfter"    -> "13 Mai 2022"
     )
   )
 }
