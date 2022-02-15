@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have asked to leave a single undertaking "){
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have informed HMRC that you will leave the single undertaking:</p>
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
     @{params("undertakingRef")}</p>
@@ -25,7 +25,5 @@
     <p style="margin: 0 0 30px; font-size: 19px;">If you wish to claim Customs Duty waivers in the future you will have to be a member of another undertaking, or create your own. </p>
     <h2>If you need further information </h2>
     <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Thank you<br>
-        Kind regards<br>
-        HMRC</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 }

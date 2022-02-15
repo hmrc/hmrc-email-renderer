@@ -1,7 +1,8 @@
 @(params: Map[String, Any])
 
-This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:
+Your status has changed and you are now an undertaking member
 
+This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:
 
 @{params("undertakingName")}
 @{params("undertakingRef")}
@@ -14,9 +15,7 @@ Once the transfer is complete you will no longer be the undertaking administrato
 
 Make sure EORI: @{params("beEORI")} is aware it is now their responsibility to make sure all single undertaking
 
-Thank you
-Kind regards
-HMRC
+From HMRC
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

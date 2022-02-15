@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+You have changed from undertaking administrator to undertaking member"
+
 This email confirms that you (EORI: @{params("eori")}) are no longer the undertaking administrator for the single undertaking:
 
 @{params("undertakingName")}
@@ -11,9 +13,7 @@ If you need further information
 
 Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
 
-Thank you
-Kind regards
-HMRC
+From HMRC
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

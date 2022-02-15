@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your status has changed and you are now an undertaking member"){
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:</p>
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
     @{params("undertakingRef")}</p>
@@ -23,7 +23,5 @@
     <p style="margin: 0 0 30px; font-size: 19px;">To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Once the transfer is complete you will no longer be the undertaking administrator. You will need to keep the new undertaking administrator updated on your usage of de minimis aid, unrelated to Customs Duty waivers. </p>
     <h2>Make sure EORI: @{params("beEORI")} is aware it is now their responsibility to make sure all single undertaking </h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">Thank you<br>
-        Kind regards<br>
-        HMRC</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 }

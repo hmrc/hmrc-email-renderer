@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are now a member of a single undertaking "){
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have been added to the following undertaking:</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
@@ -34,7 +34,5 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">If you have questions about being added to this single undertaking, contact the undertaking administrator.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Thank you<br>
-        Kind regards<br>
-        HMRC</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 }
