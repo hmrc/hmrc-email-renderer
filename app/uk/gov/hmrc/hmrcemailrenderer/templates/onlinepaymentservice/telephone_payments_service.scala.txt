@@ -11,7 +11,7 @@ case _ => List()
 
     val taxType: String = (item \ "taxType").as[String]
     val amount: String = (item \ "amount").as[String]
-    val transactionFee: String = (item \ “transactionFee”).as[String]
+    val transactionFee: String = (item \ "transactionFee").as[String]
     val transactionNumber = (item \ "transactionNumber").as[String]
     (taxType, amount, transactionFee, transactionNumber)
 })

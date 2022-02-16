@@ -27,7 +27,7 @@
 
     val taxType: String = (item \ "taxType").as[String]
     val amount: String = (item \ "amount").as[String]
-    val transactionFee: String = (item \ “transactionFee”).as[String]
+    val transactionFee: String = (item \ "transactionFee").as[String]
     val transactionNumber = (item \ "transactionNumber").as[String]
     (taxType, amount, transactionFee, transactionNumber)
 })
@@ -77,7 +77,7 @@
         </tr>
         <tr>
             <th>Card details</th>
-            <td>Paid with @params(“cardType”), ending in @params(“cardNumber”)</td>
+            <td>Paid with @params("cardType"), ending in @params("cardNumber")</td>
         </tr>
         <tr>
             <th>Transaction reference</th>
