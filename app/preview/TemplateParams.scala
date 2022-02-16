@@ -20,6 +20,7 @@ import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ rald_connection_removed, rald_connection_removed_cy }
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -651,6 +652,16 @@ object TemplateParams {
     ),
     "rald_submission_confirmation" -> Map(
       "customerName" -> "John Doe"
+    ),
+    rald_connection_removed -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "submissionDate"         -> "22 March 2022",
+      "submissionTime"         -> "15:45",
+    ),
+    rald_connection_removed_cy -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "submissionDate"         -> "22 Mawrth 2022",
+      "submissionTime"         -> "15:45",
     ),
     cf_enquiry_confirmation -> Map(
       "recipientName_FullName" -> "David Jones",
