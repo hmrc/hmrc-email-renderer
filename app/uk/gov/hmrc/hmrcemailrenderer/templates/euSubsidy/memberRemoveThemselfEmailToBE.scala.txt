@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+You have asked to leave a single undertaking
+
+This email confirms that you (EORI: @{params("eori")}) have informed HMRC that you will leave the single undertaking:
+
+@{params("undertakingName")}
+@{params("undertakingRef")}
+
+This is effective from @{params("effectiveDate")}.
+
+You will no longer be able to claim Customs Duty waivers as part of this undertaking.
+
+We have also informed the undertaking administrator of your decision.
+
+If you wish to claim Customs Duty waivers in the future you will have to be a member of another undertaking, or create your own.
+
+If you need further information
+
+Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+
+From HMRC
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

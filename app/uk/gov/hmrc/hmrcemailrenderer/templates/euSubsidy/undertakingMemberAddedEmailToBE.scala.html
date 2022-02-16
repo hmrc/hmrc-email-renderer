@@ -1,0 +1,38 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are now a member of a single undertaking "){
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have been added to the following undertaking:</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
+        @{params("undertakingRef")}</p>
+
+    <h2>You must provide information about your de minimis aid, unrelated to Customs Duty waivers, to the undertaking administrator
+    </h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland' at <a href = "https://www.gov.uk">www.gov.uk</a> to:</p>
+
+    <ul style="margin: 0 0 30px; font-size: 19px;">
+        <li>claim Customs Duty waivers on your import declaration</li>
+        <li>view your de minimis balance</li>
+        <li>find further guidance</li>
+    </ul>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">If you have questions about being added to this single undertaking, contact the undertaking administrator.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+}

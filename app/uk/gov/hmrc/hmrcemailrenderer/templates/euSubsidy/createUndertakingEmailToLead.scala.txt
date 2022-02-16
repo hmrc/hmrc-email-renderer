@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+
+You created a new single undertaking
+
+This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:
+
+@{params("undertakingName")}
+@{params("undertakingRef")}
+
+Your responsibilities as the undertaking administrator for @{params("undertakingName")}
+
+Every 90 days you must check:
+
+all undertaking details are correct and up to date
+any de minimis payments received by your single undertaking are reported
+
+If you need further information
+
+Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+
+From HMRC
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
