@@ -127,8 +127,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "OSS",
         "API Catalogue",
         "HEC",
-        "ITSA",
-        "EU Subsidy"
+        "EU Subsidy",
+        "ITSA"
       )
     }
 
@@ -797,7 +797,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "member_remove_themself_email_to_lead",
         "member_remove_themself_email_to_be",
         "promoted_themself_as_lead_email_to_lead",
-        "removed_as_lead_email_to_previous_lead"
+        "removed_as_lead_email_to_previous_lead",
+        "telephone_payments_service"
       )
     }
   }

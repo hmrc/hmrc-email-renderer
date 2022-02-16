@@ -149,8 +149,8 @@ trait TemplateLocator {
       "CDSRC"                 -> cdsrcTemplates.templates,
       "OSS"                   -> OSSTemplates.templates,
       "HEC"                   -> HecTemplates.templates,
-      "ITSA"                  -> ItsaTemplates.templates,
-      "EU Subsidy"            -> EUSubsidyTemplates.templates
+      "EU Subsidy"            -> EUSubsidyTemplates.templates,
+      "ITSA"                  -> ItsaTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
