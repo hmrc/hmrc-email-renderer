@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Your status has changed and you are now an undertaking member
+
+This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:
+
+@{params("undertakingName")}
+@{params("undertakingRef")}
+
+You need to sign in to complete the transfer.
+
+To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+
+Once the transfer is complete you will no longer be the undertaking administrator. You will need to keep the new undertaking administrator updated on your usage of de minimis aid, unrelated to Customs Duty waivers.
+
+Make sure EORI: @{params("beEORI")} is aware it is now their responsibility to make sure all single undertaking
+
+From HMRC
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

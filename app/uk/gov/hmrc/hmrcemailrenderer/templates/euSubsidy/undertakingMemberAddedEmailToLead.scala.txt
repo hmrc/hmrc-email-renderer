@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You have added a member to your single undertaking
+
+This email confirms that you (EORI: @{params("eori")}) have added the following EORI: @{params("beEORI")} to a single undertaking:
+
+@{params("undertakingName")}
+@{params("undertakingRef")}
+
+You must tell the undertaking member they have been added to the single undertaking.
+
+As undertaking administrator it is your responsibility to make sure all single undertaking details are correct and kept up to date.
+
+If you need further information
+
+Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+
+From HMRC
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

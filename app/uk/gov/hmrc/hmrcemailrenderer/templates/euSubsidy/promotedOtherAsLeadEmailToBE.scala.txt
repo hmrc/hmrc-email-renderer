@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You are now undertaking administrator
+
+This email confirms (EORI: @{params("eori")}) that you have been asked to take over as undertaking administrator for the single undertaking:
+
+@{params("undertakingName")}
+@{params("undertakingRef")}
+
+You must sign in to make yourself the undertaking administrator.
+
+To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+
+It is now your responsibility to make sure all undertaking details are correct and up to date.
+
+If you think this is a mistake, please contact your undertaking administrator.
+
+From HMRC
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
