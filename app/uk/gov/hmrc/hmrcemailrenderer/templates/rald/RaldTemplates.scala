@@ -21,10 +21,20 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
 
 object RaldTemplates {
+
+  val raldGroup = "RALD"
+  val rald_connection_removed = "rald_connection_removed"
+  val rald_connection_removed_cy = "rald_connection_removed_cy"
+
+  private val fromNoReplyVOA = FromAddress.noReply("Valuation Office Agency")
+  private val fromNoReplyVOA_cy = FromAddress.noReply("Asiantaeth y Swyddfa Brisio")
+  private val fromRALD = FromAddress.noReply("Rent and Lease Details")
+  private val standardPriority = Some(MessagePriority.Standard)
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "rald_alert",
-      fromAddress = FromAddress.noReply("Rent and Lease Details"),
+      fromAddress = fromRALD,
       service = RentalAndLeaseDetails,
       subject = "Your saved Rent and Lease details expires in 90 days.",
       plainTemplate = txt.rald.f,
@@ -32,21 +42,40 @@ object RaldTemplates {
     ),
     MessageTemplate.create(
       templateId = "rald_not_connected",
-      fromAddress = FromAddress.noReply("Rent and Lease Details"),
+      fromAddress = fromRALD,
       service = RentalAndLeaseDetails,
       subject = "RALD - Not connected to",
       plainTemplate = txt.raldNotConnected.f,
       htmlTemplate = html.raldNotConnected.f,
-      priority = Some(MessagePriority.Standard)
+      priority = standardPriority
     ),
     MessageTemplate.create(
       templateId = "rald_submission_confirmation",
-      fromAddress = FromAddress.noReply("Rent and Lease Details"),
+      fromAddress = fromRALD,
       service = RentalAndLeaseDetails,
       subject = "Valuation Office Agency received your form",
       plainTemplate = txt.raldConfirmation.f,
       htmlTemplate = html.raldConfirmation.f,
-      priority = Some(MessagePriority.Standard)
+      priority = standardPriority
+    ),
+    MessageTemplate.create(
+      templateId = rald_connection_removed,
+      fromAddress = fromNoReplyVOA,
+      service = RentalAndLeaseDetails,
+      subject = "Valuation Office Agency: You have removed your connection to a property",
+      plainTemplate = txt.rald_connection_removed.f,
+      htmlTemplate = html.rald_connection_removed.f,
+      priority = standardPriority
+    ),
+    MessageTemplate.create(
+      templateId = rald_connection_removed_cy,
+      fromAddress = fromNoReplyVOA_cy,
+      service = RentalAndLeaseDetails,
+      subject = "Asiantaeth y Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo",
+      plainTemplate = txt.rald_connection_removed_cy.f,
+      htmlTemplate = html.rald_connection_removed_cy.f,
+      priority = standardPriority
     )
   )
+
 }
