@@ -55,6 +55,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.pods.PodsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.raldGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
@@ -109,7 +110,7 @@ trait TemplateLocator {
       "GVMS"                  -> GmsTemplates.templates,
       "Passcodes"             -> PasscodesTemplates.templates,
       "PAYE"                  -> PayeTemplates.templates,
-      "RALD"                  -> RaldTemplates.templates,
+      raldGroup               -> RaldTemplates.templates,
       contactFormsGroup       -> ContactFormsTemplates.templates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
       "Self Assessment"       -> DigitalContactTemplates.templates,
