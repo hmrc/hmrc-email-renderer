@@ -656,12 +656,12 @@ object TemplateParams {
     rald_connection_removed -> Map(
       "recipientName_FullName" -> "David Jones",
       "submissionDate"         -> "22 March 2022",
-      "submissionTime"         -> "15:45",
+      "submissionTime"         -> "15:45"
     ),
     rald_connection_removed_cy -> Map(
       "recipientName_FullName" -> "David Jones",
       "submissionDate"         -> "22 Mawrth 2022",
-      "submissionTime"         -> "15:45",
+      "submissionTime"         -> "15:45"
     ),
     cf_enquiry_confirmation -> Map(
       "recipientName_FullName" -> "David Jones",
