@@ -27,8 +27,9 @@
 
     val taxType: String = (item \ "taxType").as[String]
     val amount: String = (item \ "amount").as[String]
+    val transactionFee: String = (item \ "transactionFee").as[String]
     val transactionNumber = (item \ "transactionNumber").as[String]
-    (taxType, amount, transactionNumber)
+    (taxType, amount, transactionFee, transactionNumber)
 })
 }
 
@@ -51,14 +52,16 @@
             <tr>
                 <td scope="col" style="font-weight:bold;text-align:left;">Tax</td>
                 <td scope="col" style="font-weight:bold;text-align:left;">Amount Paid</td>
+                <td scope="col" style="font-weight:bold;text-align:left;">Transaction fee</td>
                 <td scope="col" style="font-weight:bold;text-align:left;">Transaction Number</td>
             </tr>
         </thead>
         <tbody>
-        @for((taxType,amount,transactionNumber) <- itemList) {
+        @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
             <tr>
                 <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@taxType</td>
                 <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">£@amount</td>
+                <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">£@transactionFee</td>
                 <td scope="col" style="text-align:left;border-bottom: 1px solid #bfc1c3">@transactionNumber</td>
             </tr>
         }
@@ -73,6 +76,10 @@
             <td>£@params("totalAmountPaid")</td>
         </tr>
 
+        <tr>
+            <th>Card details</th>
+            <td>Paid with @params("cardType"), ending in @params("cardNumber")</td>
+        </tr>
         <tr>
             <th>Transaction Reference</th>
             <td>@params("transactionReference")</td>
