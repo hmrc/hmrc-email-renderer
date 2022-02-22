@@ -11,8 +11,9 @@ case _ => List()
 
 val taxType: String = (item \ "taxType").as[String]
 val amount: String = (item \ "amount").as[String]
+val transactionFee: String = (item \ "transactionFee").as[String]
 val transactionNumber = (item \ "transactionNumber").as[String]
-(taxType, amount, transactionNumber)
+(taxType, amount, transactionFee, transactionNumber)
 })
 }
 
@@ -28,17 +29,20 @@ Thank you for making a telephone payment. The following payment has been receive
 Thank you for making a telephone payment. The following payments have been received by HMRC.
 }
 
-Tax   Amount Paid  Transaction Number
+Tax   Amount paid  Transaction number
 
-    @for((taxType, amount, transactionNumber) <- itemList) {
-    - Item: @taxType, £@amount, @transactionNumber
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+    - Item: @taxType, £@amount, @transactionFee, @transactionNumber
     }
 
 
 Total amount paid
 £@params("totalAmountPaid")
 
-Transaction Reference</th>
+Card details
+Paid with @params("cardType"), ending in @params("cardNumber")
+
+Transaction reference</th>
 @params("transactionReference")
 
 
