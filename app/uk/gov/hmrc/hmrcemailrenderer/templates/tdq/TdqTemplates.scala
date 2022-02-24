@@ -25,35 +25,8 @@ object TdqTemplates {
 
   val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.createWithDynamicSubject(
-      templateId = "tdq_compliance_all_required_headers_missing",
-      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
-      service = Tdq,
-      subject = extractSubject,
-      plainTemplate = txt.tdqHeaderComplianceEmailNoHeaders.f,
-      htmlTemplate = html.tdqHeaderComplianceEmailNoHeaders.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
-      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
-      service = Tdq,
-      subject = extractSubject,
-      plainTemplate = txt.tdqHeaderCompliancePartiallyCompliantInvalidOrMissingConnectionMethod.f,
-      htmlTemplate = html.tdqHeaderCompliancePartiallyCompliantInvalidOrMissingConnectionMethod.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "tdq_compliance_partially_compliant_valid_connection_method",
-      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
-      service = Tdq,
-      subject = extractSubject,
-      plainTemplate = txt.tdqHeaderCompliancePartiallyCompliantValidConnectionMethod.f,
-      htmlTemplate = html.tdqHeaderCompliancePartiallyCompliantValidConnectionMethod.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.createWithDynamicSubject(
       templateId = "tdq_fph_report_non_compliant",
-      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
+      fromAddress = FromAddress.noReply("HMRC fraud prevention"),
       service = Tdq,
       subject = extractNonCompliantSubject,
       plainTemplate = txt.tdqFphReportNonCompliant.f,
@@ -62,7 +35,7 @@ object TdqTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "tdq_fph_report_heuristically_compliant",
-      fromAddress = FromAddress.noReply("Transaction Monitoring Team – HMRC Digital"),
+      fromAddress = FromAddress.noReply("HMRC fraud prevention"),
       service = Tdq,
       subject = extractSubject,
       plainTemplate = txt.tdqFphReportHeuristicallyCompliant.f,
