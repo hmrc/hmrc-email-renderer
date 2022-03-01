@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You have submitted a certificate of residence application
+
+Dear @params("customerName")
+
+We have received your certificate of residence application.
+
+Your submission reference is: @params("submissionReference")
+
+Once we have processed your application we will send the certificates to you in the post.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the @params("emailTeam")
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

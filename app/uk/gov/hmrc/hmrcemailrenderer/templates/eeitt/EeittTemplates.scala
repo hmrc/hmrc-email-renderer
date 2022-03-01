@@ -1476,6 +1476,24 @@ object EeittTemplates {
       plainTemplate = txt.podsConfirmation.f,
       htmlTemplate = html.podsConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "res1_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for certification of residence",
+      plainTemplate = txt.res1Code.f,
+      htmlTemplate = html.res1Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "res1_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Certificate of residence - application received",
+      plainTemplate = txt.res1Confirmation.f,
+      htmlTemplate = html.res1Confirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
