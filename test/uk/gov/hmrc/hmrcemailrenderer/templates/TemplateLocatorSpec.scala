@@ -385,6 +385,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "dan_waiver_confirmation",
         "duty_deferment_account_amend_confirmation",
         "pods_confirmation",
+        "res1_code",
+        "res1_confirmation",
         "tor_code",
         "tor_confirmation",
         "tor_confirmation_dynamic",
