@@ -2263,14 +2263,16 @@ object TemplateParams2 {
       "mdrID" -> "XWDAC0000000058"
     ),
     "mdr_file_upload_successful" -> Map(
-      "name"  -> "Joe Bloggs",
-      "mdrID" -> "XWDAC0000000058",
-      "dateAndTime" -> "19:29 27th January 2012"
+      "contactName"        -> "Joe Bloggs",
+      "mdrID"       -> "XWDAC0000000058",
+      "dateAndTime" -> "19:29 27th January 2012",
+      "messageRefId" -> "XXXXXTESTXXXXX"
     ),
     "mdr_file_upload_unsuccessful" -> Map(
-      "name"  -> "Joe Bloggs",
-      "mdrID" -> "XWDAC0000000058",
-      "dateAndTime" -> "19:29 27th January 2012"
+      "contactName"        -> "Joe Bloggs",
+      "mdrID"       -> "XWDAC0000000058",
+      "dateAndTime" -> "19:29 27th January 2012",
+      "messageRefId" -> "XXXXXTESTXXXXX"
     ),
     "dac6_new_disclosure_confirmation" -> Map(
       "name"          -> "Joe New",
