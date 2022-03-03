@@ -2262,6 +2262,16 @@ object TemplateParams2 {
       "name"  -> "Joe Bloggs",
       "mdrID" -> "XWDAC0000000058"
     ),
+    "mdr_file_upload_successful" -> Map(
+      "name"  -> "Joe Bloggs",
+      "mdrID" -> "XWDAC0000000058",
+      "dateAndTime" -> "19:29 27th January 2012"
+    ),
+    "mdr_file_upload_unsuccessful" -> Map(
+      "name"  -> "Joe Bloggs",
+      "mdrID" -> "XWDAC0000000058",
+      "dateAndTime" -> "19:29 27th January 2012"
+    ),
     "dac6_new_disclosure_confirmation" -> Map(
       "name"          -> "Joe New",
       "arrangementID" -> "GBA20200101AAA123",
