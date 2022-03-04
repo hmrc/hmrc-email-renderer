@@ -5,7 +5,7 @@ Dear @{params("contactName")}
 
 We received your file at @{params("dateAndTime")} with the following MessageRefId and it has passed the MDR checks:
 
-@{params("mdrID")}
+@{params("messageRefId")}
 
 What happens next
 

@@ -5,7 +5,7 @@ Dear @{params("contactName")}
 
 We received your file at @{params("dateAndTime")} with the following MessageRefId and it has failed the MDR checks:
 
-@{params("mdrID")}
+@{params("messageRefId")}
 
 You can view the errors when you log back into the service.
 
