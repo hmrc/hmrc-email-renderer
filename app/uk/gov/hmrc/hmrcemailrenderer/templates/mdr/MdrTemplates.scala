@@ -46,7 +46,7 @@ object MdrTemplates {
       templateId = "mdr_file_upload_successful",
       fromAddress = FromAddress.noReply("MDR@notifications.service.gov.uk"),
       service = MDR,
-      subject = "File has passed MDR checks",
+      subject = "Your file has passed MDR checks",
       plainTemplate = txt.mdrFileUploadSuccessful.f,
       htmlTemplate = html.mdrFileUploadSuccessful.f,
       priority = Some(MessagePriority.Urgent)
@@ -55,7 +55,7 @@ object MdrTemplates {
       templateId = "mdr_file_upload_unsuccessful",
       fromAddress = FromAddress.noReply("MDR@notifications.service.gov.uk"),
       service = MDR,
-      subject = "File has failed MDR checks",
+      subject = "Your file has failed MDR checks",
       plainTemplate = txt.mdrFileUploadUnsuccessful.f,
       htmlTemplate = html.mdrFileUploadUnsuccessful.f,
       priority = Some(MessagePriority.Urgent)
