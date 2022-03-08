@@ -15,18 +15,18 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: C117 AEO application"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: C118 Section 1 Part 1 AEO application", showHeading1 = false){
+<h1>Submitted: @params("c118Section") Authorised Economic Operator application</h1>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We have received your C117 form. This is the first part of your AEO application.</p>
+    We have received your @params("c118Section") form. This is part of your AEO application.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your AEO application requires between 9 and 13 completed forms depending on the type of authorisation.</p>
 <h2>What you need to do next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You must submit all relevant sections of the C118 within 24 hours of submitting your C117 form.
-<p style="margin: 0 0 30px; font-size: 19px;">
-<p style="margin: 0 0 30px; font-size: 19px;">
-    If you do not do this, your application will be rejected.
-<p style="margin: 0 0 30px; font-size: 19px;">
+    After first submitting your C117 form you must submit all relevant sections of the C118 within 24 hours.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you do not do this, your application will be rejected.</p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for applications submitted online.</p>

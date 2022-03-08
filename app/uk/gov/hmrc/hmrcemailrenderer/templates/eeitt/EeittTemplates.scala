@@ -31,6 +31,9 @@ object EeittTemplates {
   private val getQAHCDySub: Map[String, String] => String =
     _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
 
+  private val getc118CDySub: Map[String, String] => String =
+    _.getOrElse("c118DySub", "You submitted accounting period information for a QAHC")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -373,6 +376,15 @@ object EeittTemplates {
       subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
       plainTemplate = txt.c117ApplicationConfirmation_cy.f,
       htmlTemplate = html.c117ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "c118_confirmation_dynamic",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getc118CDySub,
+      plainTemplate = txt.c118Confirmation_dynamic.f,
+      htmlTemplate = html.c118Confirmation_dynamic.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(

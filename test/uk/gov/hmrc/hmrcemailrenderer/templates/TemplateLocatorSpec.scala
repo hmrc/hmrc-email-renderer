@@ -314,6 +314,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ioss_dereg_confirmation",
         "c117_application_confirmation",
         "c117_application_confirmation_cy",
+        "c118_confirmation_dynamic",
         "c118_section1_part1_application_confirmation",
         "c118_section1_part1_application_confirmation_cy",
         "c118_section1_part2_application_confirmation",
