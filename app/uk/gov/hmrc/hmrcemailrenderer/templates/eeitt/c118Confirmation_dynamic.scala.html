@@ -18,7 +18,7 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: C118 Section 1 Part 1 AEO application", showHeading1 = false){
 <h1>Submitted: @params("c118Section") Authorised Economic Operator application</h1>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We have received your @params("c118Section") form. This is part of your AEO application.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">

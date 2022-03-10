@@ -2,7 +2,7 @@
 
 Submitted: @params("c118Section") Authorised Economic Operator application
 
-Dear Customer
+Dear @params("customerName")
 
 We have received your @params("c118Section") form. This is part of your AEO application.
 

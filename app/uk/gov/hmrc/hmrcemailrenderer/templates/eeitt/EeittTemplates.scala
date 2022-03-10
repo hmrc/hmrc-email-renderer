@@ -32,7 +32,7 @@ object EeittTemplates {
     _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
 
   private val getc118CDySub: Map[String, String] => String =
-    _.getOrElse("c118DySub", "You submitted accounting period information for a QAHC")
+    _.getOrElse("c118DySub", "HMRC received part of your AEO application")
 
   val templates = Seq(
     MessageTemplate.create(

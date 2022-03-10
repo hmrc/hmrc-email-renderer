@@ -3,7 +3,7 @@
 
 Submitted: C117 AEO application
 
-Dear Customer
+Dear @params("customerName")
 
 We have received your C117 form. This is the first part of your AEO application.
 

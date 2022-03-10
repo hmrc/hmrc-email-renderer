@@ -2707,9 +2707,13 @@ object TemplateParams2 {
       "para7"               -> "You can still use your URN to make further additions.",
       "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
     ),
+    "c117_application_confirmation" -> Map(
+      "customerName" -> "Hugh Mann"
+    ),
     "c118_confirmation_dynamic" -> Map(
-      "c118DySub"   -> "HMRC received the additions to your for transfer of residence tax relief",
-      "c118Section" -> "C118 Section 1 Part 1",
+      "customerName" -> "Hugh Mann",
+      "c118DySub"    -> "HMRC received part of your AEO application",
+      "c118Section"  -> "C118 Section 1 Part 1",
     ),
     "jrsRemoval_submission_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
