@@ -7,8 +7,6 @@ This email confirms that you (EORI: @{params("eori")}) are no longer the underta
 @{params("undertakingName")}
 @{params("undertakingRef")}
 
-Update the new undertaking administrator on your usage of de minimis aid, unrelated to Customs Duty waivers.
-
 If you need further information
 
 Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
