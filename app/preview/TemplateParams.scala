@@ -1904,6 +1904,18 @@ object TemplateParams2 {
     "mtdfb_vat_principal_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
     ),
+    "mtdfb_vatreg_registration_received" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_email" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_post" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
     "pods_psa_invited" -> Map(
       "inviteeName" -> "Jane Doe",
       "schemeName"  -> "Some Pension Scheme",

@@ -83,6 +83,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -135,6 +136,7 @@ trait TemplateLocator {
       "CCA"                   -> CCATemplates.templates,
       "CDS"                   -> cdsTestTemplates.templates,
       "MTDfB-VAT"             -> MtdfbVatTemplates.templates,
+      "VATREG"                -> VatRegTemplates.templates,
       "PODS"                  -> PodsTemplates.templates,
       "Parcels"               -> ParcelsTemplates.templates,
       "vat"                   -> vatTemplates.templates,

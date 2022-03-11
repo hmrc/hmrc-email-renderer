@@ -1,0 +1,19 @@
+@(params: Map[String, Any])We’ve received your VAT registration application
+
+Dear @params("name")
+
+Reference number: @params("ref")
+
+We’ve received your application. So we can process it, you need to post us a cover letter and copies of your identity documents. For information on how to do this, sign in to ‘Register for VAT’ online and view your existing applications.
+
+What happens next
+
+After we get copies of your documents, we’ll write to you with a decision on your application. This usually takes us about 30 days.
+
+You should wait until your VAT registration is confirmed before you:
+- get any software
+- charge customers for VAT
+
+From HMRC VAT team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
