@@ -736,6 +736,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "dac6_delete_disclosure_confirmation",
         "mdr_registration_successful_organisation",
         "mdr_registration_successful_individual",
+        "mdr_file_upload_successful",
+        "mdr_file_upload_unsuccessful",
         "discounted_dining_payment_sent",
         "discounted_dining_payment_sent_cy",
         "ipr1_code",

@@ -1,0 +1,32 @@
+@(params: Map[String, Any])
+Your file has failed checks for the Mandatory Disclosure Rules (MDR) service
+
+Dear @{params("contactName")}
+
+We received your file at @{params("dateAndTime")} with the following MessageRefId and it has failed the MDR checks:
+
+@{params("messageRefId")}
+
+You can view the errors when you log back into the service.
+
+What happens next
+
+We will contact you if we have any questions about the file you uploaded.
+
+For security reasons, we have not included a link to this service in this email.
+
+If you need help
+
+You can email enquiries.aeoi@@hmrc.gov.uk for help.
+
+For more information, you can visit GOV.UK and search for ‘MDR’.
+
+If you’re unsure an email is from the MDR service:
+
+    do not reply to it or click any links
+    report the suspicious email to HMRC - to find out how go to GOV.UK
+    and search for ‘Avoid and report internet scams and phishing’
+
+From the HMRC MDR service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
