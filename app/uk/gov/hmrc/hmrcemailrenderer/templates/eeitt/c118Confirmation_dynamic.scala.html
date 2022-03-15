@@ -15,13 +15,16 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirmation HMRC received form C117 as part of your AEO application"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirmation HMRC received form C118 Section 1 Part 1 as part of your AEO application", showHeading1 = false){
+<h1>Confirmation HMRC received form @params("c118Section") as part of your AEO application</h1>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We confirm that we have received your C117 form as part of your application for AEO status.</p>
+    We confirm that we have received your @params("c118Section") as part of your application for AEO status.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-Your submission reference is: @params("submissionReference")</p>
+    Your AEO application requires between 9 and 13 completed forms depending on the type of authorisation.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: @params("submissionReference")</p>
 <h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     You must also submit all relevant sections of the C118 form within 24 hours of submitting your C117 form. If you do not do this your application will be rejected.</p>

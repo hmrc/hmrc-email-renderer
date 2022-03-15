@@ -16,6 +16,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From HMRC qualifying asset holding companies
+From the HMRC Qualifying Asset Holding Company team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
