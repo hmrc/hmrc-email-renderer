@@ -2708,12 +2708,14 @@ object TemplateParams2 {
       "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
     ),
     "c117_application_confirmation" -> Map(
-      "customerName" -> "Hugh Mann"
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "c118_confirmation_dynamic" -> Map(
-      "customerName" -> "Hugh Mann",
-      "c118DySub"    -> "HMRC received part of your AEO application",
-      "c118Section"  -> "C118 Section 1 Part 1",
+      "customerName"        -> "Hugh Mann",
+      "c118DySub"           -> "HMRC received part of your AEO application",
+      "c118Section"         -> "C118 Section 1 Part 1",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "jrsRemoval_submission_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",

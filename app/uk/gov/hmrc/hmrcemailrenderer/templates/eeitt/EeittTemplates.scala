@@ -32,7 +32,7 @@ object EeittTemplates {
     _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
 
   private val getc118CDySub: Map[String, String] => String =
-    _.getOrElse("c118DySub", "HMRC received part of your AEO application")
+    _.getOrElse("c118DySub", "Your application for AEO status")
 
   val templates = Seq(
     MessageTemplate.create(
@@ -364,7 +364,7 @@ object EeittTemplates {
       templateId = "c117_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received part of your AEO application",
+      subject = "Your application for AEO status",
       plainTemplate = txt.c117ApplicationConfirmation.f,
       htmlTemplate = html.c117ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
