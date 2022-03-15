@@ -1,11 +1,12 @@
-
 @(params: Map[String, Any])
 
-Confirmation HMRC received form C117 as part of your AEO application
+Confirmation HMRC received form @params("c118Section") as part of your AEO application
 
 Dear @params("customerName")
 
-We confirm that we have received your C117 form as part of your application for AEO status.
+We confirm that we have received your @params("c118Section") as part of your application for AEO status.
+
+Your AEO application requires between 9 and 13 completed forms, depending on the type of authorisation requested.
 
 Your submission reference is: @params("submissionReference")
 
@@ -16,9 +17,8 @@ You must also submit all relevant sections of the C118 form within 24 hours of s
 Contacting HMRC
 
 For your security HMRC will not send personal data by email.
-
 You can contact HMRC about your AEO application by calling the telephone helpline on 0300 322 9451. You will need to quote your EORI number.
 
 From HMRC's AEO Team
-
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
