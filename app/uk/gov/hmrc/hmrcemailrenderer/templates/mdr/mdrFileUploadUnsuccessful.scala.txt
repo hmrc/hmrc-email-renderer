@@ -3,7 +3,7 @@ Your file has failed checks for the Mandatory Disclosure Rules (MDR) service
 
 Dear @{params("contactName")}
 
-We received your file at @{params("dateAndTime")} with the following MessageRefId and it has failed the MDR checks:
+We received your file at @{params("dateAndTime")} with the following MessageRefId and it has failed the checks:
 
 @{params("messageRefId")}
 
