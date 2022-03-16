@@ -3,7 +3,7 @@ Your file has passed checks for the Mandatory Disclosure Rules (MDR) service
 
 Dear @{params("contactName")}
 
-We received your file at @{params("dateAndTime")} with the following MessageRefId and it has passed the MDR checks:
+We received your file at @{params("dateAndTime")} with the following MessageRefId and it has passed the checks:
 
 @{params("messageRefId")}
 
