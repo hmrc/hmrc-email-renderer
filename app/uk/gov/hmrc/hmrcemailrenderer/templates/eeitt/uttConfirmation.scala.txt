@@ -16,6 +16,6 @@ Why you are receiving this email
 
 We send a confirmation email for forms submitted online.
 
-From the HMRC Uncertain Tax Treatment Central Team
+From the HMRC Uncertain Tax Treatment Central team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
