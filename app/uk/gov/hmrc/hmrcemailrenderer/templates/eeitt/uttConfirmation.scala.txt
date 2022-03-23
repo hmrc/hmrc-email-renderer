@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You notified HMRC about an uncertain tax treatment
+
+Dear @params("customerName")
+
+You provided uncertain tax treatment information for @params("companyName").
+
+Your submission reference is: @params("submissionReference")
+
+What happens next
+
+If we need to contact you about your notification, we will use the details you provided.
+
+Why you are receiving this email
+
+We send a confirmation email for forms submitted online.
+
+From the HMRC Uncertain Tax Treatment Central team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
