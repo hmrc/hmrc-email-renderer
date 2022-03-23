@@ -1506,6 +1506,24 @@ object EeittTemplates {
       plainTemplate = txt.res1Confirmation.f,
       htmlTemplate = html.res1Confirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "utt_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Notify HMRC about an uncertain tax treatment",
+      plainTemplate = txt.uttCode.f,
+      htmlTemplate = html.uttCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "utt_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your uncertain tax treatment notification",
+      plainTemplate = txt.uttConfirmation.f,
+      htmlTemplate = html.uttConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
