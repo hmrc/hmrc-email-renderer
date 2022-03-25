@@ -1524,6 +1524,42 @@ object EeittTemplates {
       plainTemplate = txt.uttConfirmation.f,
       htmlTemplate = html.uttConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ptt_registration_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Register for plastic packaging tax",
+      plainTemplate = txt.pttRegistrationCode.f,
+      htmlTemplate = html.pttRegistrationCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ptt_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your registration for plastic packaging tax",
+      plainTemplate = txt.pttRegistrationConfirmation.f,
+      htmlTemplate = html.pttRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ptt_enquiry_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Enquire about plastic packaging tax",
+      plainTemplate = txt.pttEnquiryCode.f,
+      htmlTemplate = html.pttEnquiryCode.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ptt_enquiry_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your plastic packaging tax query",
+      plainTemplate = txt.pttEnquiryConfirmation.f,
+      htmlTemplate = html.pttEnquiryConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
