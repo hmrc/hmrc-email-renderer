@@ -4,7 +4,7 @@ Confirmation HMRC received your registration for plastic packaging tax
 
 Dear @params("customerName")
 
-We confirm that we have received your registration for plastic packaging tax. Registration can take up to 28 days to complete.
+We confirm that we have received your registration for plastic packaging tax. Registration can take up to 28 working days to complete.
 
 Your submission reference is: @params("submissionReference")
 
@@ -12,7 +12,7 @@ If you need to contact us about your registration, use this reference.
 
 What happens next
 
-We aim to complete your registration within 28 days. You will receive a letter containing your registration reference number and help with completing plastic packing tax returns.
+We aim to complete your registration within 28 working days. You will receive a letter containing your registration reference number and help with completing plastic packing tax returns.
 
 Contacting HMRC
 
