@@ -1514,7 +1514,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Notify HMRC about an uncertain tax treatment",
       plainTemplate = txt.uttCode.f,
       htmlTemplate = html.uttCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "utt_confirmation",
@@ -1532,7 +1532,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Register for plastic packaging tax",
       plainTemplate = txt.pttRegistrationCode.f,
       htmlTemplate = html.pttRegistrationCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ptt_registration_confirmation",
@@ -1550,7 +1550,7 @@ object EeittTemplates {
       subject = "Confirm your email address - Enquire about plastic packaging tax",
       plainTemplate = txt.pttEnquiryCode.f,
       htmlTemplate = html.pttEnquiryCode.f,
-      priority = Some(MessagePriority.Standard)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ptt_enquiry_confirmation",
@@ -1559,6 +1559,24 @@ object EeittTemplates {
       subject = "Your plastic packaging tax query",
       plainTemplate = txt.pttEnquiryConfirmation.f,
       htmlTemplate = html.pttEnquiryConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "psa1_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Tell HMRC your annual PAYE Settlement Agreement amount",
+      plainTemplate = txt.psa1Code.f,
+      htmlTemplate = html.psa1Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "psa1_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "PAYE Settlement Agreement amount notification",
+      plainTemplate = txt.psa1Confirmation.f,
+      htmlTemplate = html.psa1Confirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )
