@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+Confirmation HMRC received your registration for plastic packaging tax
+
+Dear @params("customerName")
+
+We confirm that we have received your registration for plastic packaging tax. Registration can take up to 28 working days to complete.
+
+Your submission reference is: @params("submissionReference")
+
+If you need to contact us about your registration, use this reference.
+
+What happens next
+
+We aim to complete your registration within 28 working days. You will receive a letter containing your registration reference number and help with completing plastic packing tax returns.
+
+Contacting HMRC
+
+For your security HMRC will not send personal data by email. You can contact HMRC about your plastic packaging tax registration by calling the telephone helpline on 0300 200 3700.
+
+You can also submit queries online. Search HMRC for the 'Enquire about plastic packaging tax' service.
+
+From HMRC's Plastic Packaging Tax team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
