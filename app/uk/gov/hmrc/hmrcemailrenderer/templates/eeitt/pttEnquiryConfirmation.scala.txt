@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+Confirmation HMRC received your plastic packaging tax query
+
+Dear @params("customerName")
+
+We confirm that we have received your query about plastic packaging tax.
+
+Your submission reference is: @params("submissionReference")
+
+If you need to contact us about your query, use this reference.
+
+What happens next
+
+HMRC will attempt to respond to your query in the shortest possible time. Depending on the complexity of the query, this can take up to 28 working days.
+
+We will respond by email or by telephone.
+
+Contacting HMRC
+
+For your security HMRC will not send personal data by email. You can contact HMRC about plastic packaging tax by calling the telephone helpline on 0300 200 3700.
+
+From HMRC's Plastic Packaging Tax team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+You have notified HMRC of your PAYE Settlement Agreement amount
+
+Dear @params("customerName")
+
+We have received your PAYE Settlement Agreement amount notification.
+
+Your submission reference is: @params("submissionReference")
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the PAYE Settlement Agreement team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

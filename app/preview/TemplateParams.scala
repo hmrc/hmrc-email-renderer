@@ -2887,6 +2887,27 @@ object TemplateParams2 {
     "utt_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "ptt_registration_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ptt_registration_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ptt_enquiry_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ptt_enquiry_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "psa1_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "psa1_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,
