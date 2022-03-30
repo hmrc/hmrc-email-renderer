@@ -19,15 +19,16 @@ package preview
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import play.api.Configuration
-import play.api.inject.guice.GuiceApplicationBuilder
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, TemplateRenderFailure }
+import org.mockito.{ MockitoSugar }
+import org.mockito.Mockito
+import org.mockito.ArgumentMatchers.{ any, anyString }
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ ServiceIdentifier, TemplateLocator }
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.OptionValues
 
-class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with GuiceOneAppPerSuite {
+class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with GuiceOneAppPerSuite with MockitoSugar {
 
   "createPreviewGroup" should {
     "generate a  preview item for each template id that resolves to a message template" in {
@@ -65,6 +66,14 @@ class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with Guice
           case Left(TemplateRenderFailure(reason)) =>
         }
       }
+    }
+
+    val mock: TemplateRenderer = Mockito.mock(classOf[TemplateRenderer])
+    "return an error string if the template not found" in {
+      when(mock.render(anyString(), any[Map[String, String]]()))
+        .thenReturn(Left(MissingTemplateId("12")))
+      val preview = new Preview(mock)
+      preview.html("", Map.empty) shouldBe "failed to rendered template with id == 12"
     }
   }
 }
