@@ -2,6 +2,8 @@
 
 You created a new single undertaking
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:
 
 @{params("undertakingName")}

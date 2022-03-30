@@ -2,6 +2,8 @@
 
 You have asked to leave a single undertaking
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) have informed HMRC that you will leave the single undertaking:
 
 @{params("undertakingName")}

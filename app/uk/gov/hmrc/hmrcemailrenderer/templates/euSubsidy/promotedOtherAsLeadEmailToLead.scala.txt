@@ -2,6 +2,8 @@
 
 You have promoted an undertaking member to become the new undertaking administrator (lead)
 
+Dear Customer
+
 This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:
 
 @{params("undertakingName")}
