@@ -1,6 +1,8 @@
 @(params: Map[String, Any])
 
-You are removed from a single undertaking
+You have been removed from a single undertaking
+
+Dear Customer
 
 This email confirms that you (EORI: @{params("eori")}) have been removed from the single undertaking:
 
@@ -11,7 +13,7 @@ This is effective from @{params("effectiveDate")}.
 
 You will no longer be able to claim Customs Duty waivers as part of this single undertaking.
 
-If you think have been removed by mistake, contact the undertaking administrator.
+If you think you have been removed by mistake, contact the undertaking administrator.
 
 If you need further information
 

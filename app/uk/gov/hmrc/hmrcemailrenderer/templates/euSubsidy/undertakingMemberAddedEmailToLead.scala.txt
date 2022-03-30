@@ -2,6 +2,8 @@
 
 You have added a member to your single undertaking
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) have added the following EORI: @{params("beEORI")} to a single undertaking:
 
 @{params("undertakingName")}

@@ -16,6 +16,7 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have removed a member from your single undertaking"){
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have removed EORI: @{params("beEORI")} from the single undertaking:
     </p>
     <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>

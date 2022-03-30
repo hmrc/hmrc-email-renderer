@@ -2,6 +2,8 @@
 
 You have changed from undertaking administrator to undertaking member"
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) are no longer the undertaking administrator for the single undertaking:
 
 @{params("undertakingName")}
