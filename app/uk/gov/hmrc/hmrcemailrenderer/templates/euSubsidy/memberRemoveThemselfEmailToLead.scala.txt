@@ -1,6 +1,8 @@
 @(params: Map[String, Any])
 
-An undertaking member has removed themselves from your single undertaking
+A member has removed themselves from your single undertaking
+
+Dear Customer
 
 This email confirms that (EORI: @{params("eori")}) has informed HMRC they want to leave the single undertaking:
 

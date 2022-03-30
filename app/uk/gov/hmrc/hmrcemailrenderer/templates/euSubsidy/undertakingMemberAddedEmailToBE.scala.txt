@@ -2,16 +2,17 @@
 
 You are now a member of a single undertaking
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) have been added to the following undertaking:
 
 @{params("undertakingName")}
 @{params("undertakingRef")}
 
-You must provide information about your de minimis aid, unrelated to Customs Duty waivers, to the undertaking administrator
+You must provide information about your de minimis aid (less Customs Duty waivers), to the undertaking administrator.
 
 Search 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland' at www.gov.uk to:
 
-claim Customs Duty waivers on your import declaration
 view your de minimis balance
 find further guidance
 

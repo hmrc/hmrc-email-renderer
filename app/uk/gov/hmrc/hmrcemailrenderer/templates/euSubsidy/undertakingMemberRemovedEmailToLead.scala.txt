@@ -2,6 +2,8 @@
 
 You have removed a member from your single undertaking
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) have removed EORI: @{params("beEORI")} from the single undertaking
 
 @{params("undertakingName")}

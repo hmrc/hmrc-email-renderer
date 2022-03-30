@@ -2,6 +2,8 @@
 
 You created a new single undertaking
 
+Dear Customer
+
 This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:
 
 @{params("undertakingName")}
@@ -12,7 +14,7 @@ Your responsibilities as the undertaking administrator for @{params("undertaking
 Every 90 days you must check:
 
 all undertaking details are correct and up to date
-any de minimis payments received by your single undertaking are reported
+any de minimis payments awarded by your single undertaking are reported
 
 If you need further information
 
