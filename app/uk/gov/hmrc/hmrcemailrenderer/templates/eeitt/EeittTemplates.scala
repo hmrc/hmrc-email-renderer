@@ -1526,6 +1526,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "ppt_registration_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Register for plastic packaging tax",
+      plainTemplate = txt.pptRegistrationCode.f,
+      htmlTemplate = html.pptRegistrationCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ppt_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -1533,6 +1542,15 @@ object EeittTemplates {
       plainTemplate = txt.pptRegistrationConfirmation.f,
       htmlTemplate = html.pptRegistrationConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_enquiry_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Enquire about plastic packaging tax",
+      plainTemplate = txt.pptEnquiryCode.f,
+      htmlTemplate = html.pptEnquiryCode.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ppt_enquiry_confirmation",
