@@ -1526,39 +1526,39 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "ppt_registration_code",
+      templateId = "ptt_registration_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Confirm your email address - Register for plastic packaging tax",
-      plainTemplate = txt.pptRegistrationCode.f,
-      htmlTemplate = html.pptRegistrationCode.f,
+      plainTemplate = txt.pttRegistrationCode.f,
+      htmlTemplate = html.pttRegistrationCode.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "ppt_registration_confirmation",
+      templateId = "ptt_registration_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Your registration for plastic packaging tax",
-      plainTemplate = txt.pptRegistrationConfirmation.f,
-      htmlTemplate = html.pptRegistrationConfirmation.f,
+      plainTemplate = txt.pttRegistrationConfirmation.f,
+      htmlTemplate = html.pttRegistrationConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "ppt_enquiry_code",
+      templateId = "ptt_enquiry_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Confirm your email address - Enquire about plastic packaging tax",
-      plainTemplate = txt.pptEnquiryCode.f,
-      htmlTemplate = html.pptEnquiryCode.f,
+      plainTemplate = txt.pttEnquiryCode.f,
+      htmlTemplate = html.pttEnquiryCode.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "ppt_enquiry_confirmation",
+      templateId = "ptt_enquiry_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Your plastic packaging tax query",
-      plainTemplate = txt.pptEnquiryConfirmation.f,
-      htmlTemplate = html.pptEnquiryConfirmation.f,
+      plainTemplate = txt.pttEnquiryConfirmation.f,
+      htmlTemplate = html.pttEnquiryConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
