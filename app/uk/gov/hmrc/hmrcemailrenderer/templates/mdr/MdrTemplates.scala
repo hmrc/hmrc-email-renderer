@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.mdr
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MDR
 
@@ -39,6 +40,24 @@ object MdrTemplates {
       subject = "You have registered for Mandatory Disclosure Rules (MDR)",
       plainTemplate = txt.mdrRegistrationSuccessfulIndividual.f,
       htmlTemplate = html.mdrRegistrationSuccessfulIndividual.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mdr_file_upload_successful",
+      fromAddress = FromAddress.noReply("MDR@notifications.service.gov.uk"),
+      service = MDR,
+      subject = "Your file has passed MDR checks",
+      plainTemplate = txt.mdrFileUploadSuccessful.f,
+      htmlTemplate = html.mdrFileUploadSuccessful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mdr_file_upload_unsuccessful",
+      fromAddress = FromAddress.noReply("MDR@notifications.service.gov.uk"),
+      service = MDR,
+      subject = "Your file has failed MDR checks",
+      plainTemplate = txt.mdrFileUploadUnsuccessful.f,
+      htmlTemplate = html.mdrFileUploadUnsuccessful.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

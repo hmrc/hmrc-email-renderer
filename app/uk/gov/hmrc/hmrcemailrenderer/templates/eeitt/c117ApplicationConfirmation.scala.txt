@@ -1,24 +1,24 @@
 
 @(params: Map[String, Any])
 
-Submitted: C117 AEO application
+Confirmation HMRC received form C117 as part of your AEO application
 
-Dear Customer
+Dear @params("customerName")
 
-We have received your part application for AEO, the C117 form.
+We confirm that we have received your C117 form as part of your application for AEO status.
 
-What you need to do next
+Your submission reference is: @params("submissionReference")
 
-You must submit all relevant sections of the C118 within 24 hours of submitting your first form.
+What happens next
 
-If you do not do this, we will reject your application.
+You must also submit all relevant sections of the C118 form within 24 hours of submitting your C117 form. If you do not do this your application will be rejected.
 
-Why you are receiving this email
+Contacting HMRC
 
-We send a confirmation email for applications submitted online.
+For your security HMRC will not send personal data by email.
 
-If you need to contact us about your application, quote your EORI number.
+You can contact HMRC about your AEO application by calling the telephone helpline on 0300 322 9451. You will need to quote your EORI number.
 
-From HMRC AEO team
+From HMRC's AEO Team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

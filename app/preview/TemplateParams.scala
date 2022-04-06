@@ -20,6 +20,7 @@ import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ rald_connection_removed, rald_connection_removed_cy }
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -651,6 +652,16 @@ object TemplateParams {
     ),
     "rald_submission_confirmation" -> Map(
       "customerName" -> "John Doe"
+    ),
+    rald_connection_removed -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "submissionDate"         -> "22 March 2022",
+      "submissionTime"         -> "15:45"
+    ),
+    rald_connection_removed_cy -> Map(
+      "recipientName_FullName" -> "David Jones",
+      "submissionDate"         -> "22 Mawrth 2022",
+      "submissionTime"         -> "15:45"
     ),
     cf_enquiry_confirmation -> Map(
       "recipientName_FullName" -> "David Jones",
@@ -1647,9 +1658,11 @@ object TemplateParams2 {
       "amountPaid" -> "123.45"
     ),
     "telephone_payments_service" -> Map(
-      "totalAmountPaid"         -> "1000",
+      "totalAmountPaid"         -> "1000.00",
       "transactionReference"    -> "12345FFF",
-      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionNumber\":\"12345\"}]"
+      "cardType"                -> "Visa Debit",
+      "cardNumber"              -> "1234",
+      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",
@@ -1890,6 +1903,18 @@ object TemplateParams2 {
     ),
     "mtdfb_vat_principal_sign_up_successful" -> Map(
       "vatNumber" -> "123456782"
+    ),
+    "mtdfb_vatreg_registration_received" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_email" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_post" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
     ),
     "pods_psa_invited" -> Map(
       "inviteeName" -> "Jane Doe",
@@ -2248,6 +2273,16 @@ object TemplateParams2 {
     "mdr_registration_successful_individual" -> Map(
       "name"  -> "Joe Bloggs",
       "mdrID" -> "XWDAC0000000058"
+    ),
+    "mdr_file_upload_successful" -> Map(
+      "contactName"  -> "Joe Bloggs",
+      "dateAndTime"  -> "2:29pm on 27th January 2012",
+      "messageRefId" -> "XAMDR00012345671234567890123456789012345678901234567890123456789012345678901234567890"
+    ),
+    "mdr_file_upload_unsuccessful" -> Map(
+      "contactName"  -> "Joe Bloggs",
+      "dateAndTime"  -> "2:29pm on 27th January 2012",
+      "messageRefId" -> "XAMDR00012345671234567890123456789012345678901234567890123456789012345678901234567890"
     ),
     "dac6_new_disclosure_confirmation" -> Map(
       "name"          -> "Joe New",
@@ -2694,6 +2729,16 @@ object TemplateParams2 {
       "para7"               -> "You can still use your URN to make further additions.",
       "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
     ),
+    "c117_application_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "c118_confirmation_dynamic" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "c118DySub"           -> "HMRC received part of your AEO application",
+      "c118Section"         -> "C118 Section 1 Part 1",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
     "jrsRemoval_submission_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
@@ -2826,6 +2871,43 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "res1_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "res1_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "emailTeam"           -> "Pay As You Earn and Self Assessment team"
+    ),
+    "utt_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "companyName"         -> "Acquisitions Incorporated"
+    ),
+    "utt_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ppt_registration_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ppt_registration_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "ppt_enquiry_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ppt_enquiry_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "psa1_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "psa1_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,
@@ -2884,6 +2966,68 @@ object TemplateParams2 {
       "licenceType"     -> "Gyrrwr tacsis a cherbydau hurio preifat",
       "hecTaxCheckCode" -> "FK9 BRG 2JJ",
       "expiresAfter"    -> "13 Mai 2022"
+    ),
+    "create_undertaking_email_to_lead" -> Map(
+      "eori"            -> "GB123456789012",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
+    ),
+    "undertaking_member_added_email_to_be" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
+    ),
+    "undertaking_member_added_email_to_lead" -> Map(
+      "eori"            -> "GB123456789012",
+      "beEORI"          -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
+    ),
+    "undertaking_member_removed_email_to_lead" -> Map(
+      "eori"            -> "GB123456789012",
+      "beEORI"          -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234",
+      "effectiveDate"   -> "27 January 2022"
+    ),
+    "undertaking_member_removed_email_to_be" -> Map(
+      "eori"            -> "GB123456789012",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234",
+      "effectiveDate"   -> "27 January 2022"
+    ),
+    "promoted_other_as_lead_email_to_be" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
+    ),
+    "promoted_other_as_lead_email_to_lead" -> Map(
+      "eori"            -> "GB123456789012",
+      "beEORI"          -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
+    ),
+    "member_remove_themself_email_to_lead" -> Map(
+      "eori"            -> "GB123456789012",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234",
+      "effectiveDate"   -> "27 January 2022"
+    ),
+    "member_remove_themself_email_to_be" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234",
+      "effectiveDate"   -> "27 January 2022"
+    ),
+    "promoted_themself_as_lead_email_to_lead" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
+    ),
+    "removed_as_lead_email_to_previous_lead" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234"
     )
   )
 }

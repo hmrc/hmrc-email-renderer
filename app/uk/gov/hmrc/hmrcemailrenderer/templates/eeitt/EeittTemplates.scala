@@ -31,6 +31,9 @@ object EeittTemplates {
   private val getQAHCDySub: Map[String, String] => String =
     _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
 
+  private val getc118CDySub: Map[String, String] => String =
+    _.getOrElse("c118DySub", "Your application for AEO status")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -361,7 +364,7 @@ object EeittTemplates {
       templateId = "c117_application_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received part of your AEO application",
+      subject = "Your application for AEO status",
       plainTemplate = txt.c117ApplicationConfirmation.f,
       htmlTemplate = html.c117ApplicationConfirmation.f,
       priority = Some(MessagePriority.Standard)
@@ -373,6 +376,15 @@ object EeittTemplates {
       subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
       plainTemplate = txt.c117ApplicationConfirmation_cy.f,
       htmlTemplate = html.c117ApplicationConfirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "c118_confirmation_dynamic",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getc118CDySub,
+      plainTemplate = txt.c118Confirmation_dynamic.f,
+      htmlTemplate = html.c118Confirmation_dynamic.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
@@ -1475,6 +1487,96 @@ object EeittTemplates {
       subject = "You requested a pension scheme tax refund from HMRC",
       plainTemplate = txt.podsConfirmation.f,
       htmlTemplate = html.podsConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "res1_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for certification of residence",
+      plainTemplate = txt.res1Code.f,
+      htmlTemplate = html.res1Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "res1_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Certificate of residence - application received",
+      plainTemplate = txt.res1Confirmation.f,
+      htmlTemplate = html.res1Confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "utt_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Notify HMRC about an uncertain tax treatment",
+      plainTemplate = txt.uttCode.f,
+      htmlTemplate = html.uttCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "utt_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your uncertain tax treatment notification",
+      plainTemplate = txt.uttConfirmation.f,
+      htmlTemplate = html.uttConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_registration_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Register for plastic packaging tax",
+      plainTemplate = txt.pptRegistrationCode.f,
+      htmlTemplate = html.pptRegistrationCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_registration_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your registration for plastic packaging tax",
+      plainTemplate = txt.pptRegistrationConfirmation.f,
+      htmlTemplate = html.pptRegistrationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_enquiry_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Enquire about plastic packaging tax",
+      plainTemplate = txt.pptEnquiryCode.f,
+      htmlTemplate = html.pptEnquiryCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_enquiry_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your plastic packaging tax query",
+      plainTemplate = txt.pptEnquiryConfirmation.f,
+      htmlTemplate = html.pptEnquiryConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "psa1_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Tell HMRC your annual PAYE Settlement Agreement amount",
+      plainTemplate = txt.psa1Code.f,
+      htmlTemplate = html.psa1Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "psa1_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "PAYE Settlement Agreement amount notification",
+      plainTemplate = txt.psa1Confirmation.f,
+      htmlTemplate = html.psa1Confirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

@@ -1,0 +1,15 @@
+@(params: Map[String, Any])We’ve received your VAT registration application
+
+Dear @params("name")
+
+Reference number: @params("ref")
+
+We’ve received your application and will write to you with a decision. This usually takes about 30 days.
+
+You should wait until your VAT registration is confirmed before you:
+- get any software
+- charge customers for VAT
+
+From HMRC VAT team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -55,6 +55,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.pods.PodsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.raldGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
@@ -78,9 +79,11 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -108,7 +111,7 @@ trait TemplateLocator {
       "GVMS"                  -> GmsTemplates.templates,
       "Passcodes"             -> PasscodesTemplates.templates,
       "PAYE"                  -> PayeTemplates.templates,
-      "RALD"                  -> RaldTemplates.templates,
+      raldGroup               -> RaldTemplates.templates,
       contactFormsGroup       -> ContactFormsTemplates.templates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
       "Self Assessment"       -> DigitalContactTemplates.templates,
@@ -133,6 +136,7 @@ trait TemplateLocator {
       "CCA"                   -> CCATemplates.templates,
       "CDS"                   -> cdsTestTemplates.templates,
       "MTDfB-VAT"             -> MtdfbVatTemplates.templates,
+      "VATREG"                -> VatRegTemplates.templates,
       "PODS"                  -> PodsTemplates.templates,
       "Parcels"               -> ParcelsTemplates.templates,
       "vat"                   -> vatTemplates.templates,
@@ -148,6 +152,7 @@ trait TemplateLocator {
       "CDSRC"                 -> cdsrcTemplates.templates,
       "OSS"                   -> OSSTemplates.templates,
       "HEC"                   -> HecTemplates.templates,
+      "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "ITSA"                  -> ItsaTemplates.templates
     )
 

@@ -24,6 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import org.scalatest.OptionValues
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy, contactFormsGroup }
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed, rald_connection_removed_cy }
 
 class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with OptionValues with GuiceOneAppPerSuite {
 
@@ -84,7 +85,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ATS",
         "AWRS",
         "GMP",
-        "RALD",
+        raldGroup,
         contactFormsGroup,
         "BARS",
         "TCS",
@@ -110,6 +111,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "CCA",
         "CDS",
         "MTDfB-VAT",
+        "VATREG",
         "PODS",
         "vat",
         "Two way messaging",
@@ -127,6 +129,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "OSS",
         "API Catalogue",
         "HEC",
+        "EU Subsidy",
         "ITSA"
       )
     }
@@ -312,6 +315,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ioss_dereg_confirmation",
         "c117_application_confirmation",
         "c117_application_confirmation_cy",
+        "c118_confirmation_dynamic",
         "c118_section1_part1_application_confirmation",
         "c118_section1_part1_application_confirmation_cy",
         "c118_section1_part2_application_confirmation",
@@ -383,6 +387,16 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "dan_waiver_confirmation",
         "duty_deferment_account_amend_confirmation",
         "pods_confirmation",
+        "res1_code",
+        "res1_confirmation",
+        "utt_confirmation",
+        "utt_code",
+        "ppt_registration_confirmation",
+        "ppt_registration_code",
+        "ppt_enquiry_confirmation",
+        "ppt_enquiry_code",
+        "psa1_confirmation",
+        "psa1_code",
         "tor_code",
         "tor_confirmation",
         "tor_confirmation_dynamic",
@@ -450,6 +464,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "rald_alert",
         "rald_not_connected",
         "rald_submission_confirmation",
+        rald_connection_removed,
+        rald_connection_removed_cy,
         cf_enquiry_confirmation,
         cf_enquiry_confirmation_cy,
         "bars_alert",
@@ -672,6 +688,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "mtdfb_vat_principal_sign_up_successful",
         "mtdfb_vat_principal_sign_up_failure",
         "mtdfb_vat_agent_sign_up_successful",
+        "mtdfb_vatreg_registration_received",
+        "mtdfb_vatreg_registration_received_email",
+        "mtdfb_vatreg_registration_received_post",
         "pods_scheme_register",
         "pods_racdac_scheme_register",
         "pods_psa_register",
@@ -713,9 +732,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "customs_financials_requested_postponed_vat_notification",
         "cgtpd_email_verification",
         "cgtpd_email_verification_cy",
-        "tdq_compliance_all_required_headers_missing",
-        "tdq_compliance_partially_compliant_invalid_or_missing_connection_method",
-        "tdq_compliance_partially_compliant_valid_connection_method",
         "tdq_fph_report_non_compliant",
         "tdq_fph_report_heuristically_compliant",
         "cgtpd_account_created",
@@ -733,6 +749,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "dac6_delete_disclosure_confirmation",
         "mdr_registration_successful_organisation",
         "mdr_registration_successful_individual",
+        "mdr_file_upload_successful",
+        "mdr_file_upload_unsuccessful",
         "discounted_dining_payment_sent",
         "discounted_dining_payment_sent_cy",
         "ipr1_code",
@@ -786,6 +804,17 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "pods_psa_amend",
         "hec_tax_check_code",
         "hec_tax_check_code_cy",
+        "create_undertaking_email_to_lead",
+        "undertaking_member_added_email_to_be",
+        "undertaking_member_added_email_to_lead",
+        "undertaking_member_removed_email_to_lead",
+        "undertaking_member_removed_email_to_be",
+        "promoted_other_as_lead_email_to_be",
+        "promoted_other_as_lead_email_to_lead",
+        "member_remove_themself_email_to_lead",
+        "member_remove_themself_email_to_be",
+        "promoted_themself_as_lead_email_to_lead",
+        "removed_as_lead_email_to_previous_lead",
         "telephone_payments_service"
       )
     }

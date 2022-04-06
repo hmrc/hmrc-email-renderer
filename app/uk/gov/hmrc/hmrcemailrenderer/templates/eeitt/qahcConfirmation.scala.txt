@@ -22,6 +22,6 @@ Why you are receiving this email
 
 We send a confirmation email for all forms submitted online.
 
-From HMRC qualifying asset holding companies
+From the HMRC Qualifying Asset Holding Company team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

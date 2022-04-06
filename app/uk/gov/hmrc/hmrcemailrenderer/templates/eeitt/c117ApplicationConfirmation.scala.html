@@ -15,23 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: C117 Authorised Economic Operator (AEO) application"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirmation HMRC received form C117 as part of your AEO application"){
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear Customer,</p>
+    Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We have received your part application for AEO, the C117 form.</p>
-<h2>What you need to do next</h2>
+    We confirm that we have received your C117 form as part of your application for AEO status.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You must submit all relevant sections of the C118 within 24 hours of submitting your first form.
+Your submission reference is: @params("submissionReference")</p>
+<h2>What happens next</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
+    You must also submit all relevant sections of the C118 form within 24 hours of submitting your C117 form. If you do not do this your application will be rejected.</p>
+<h2>Contacting HMRC</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If you do not do this, we will reject your application.
+    For your security HMRC will not send personal data by email.
+    You can contact HMRC about your AEO application by calling the telephone helpline on 0300 322 9451. You will need to quote your EORI number.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-<h2>Why you are receiving this email</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for applications submitted online.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    If you need to contact us about your application, quote your EORI number.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC AEO Team</p>
+    From HMRC's AEO Team</p>
 }
