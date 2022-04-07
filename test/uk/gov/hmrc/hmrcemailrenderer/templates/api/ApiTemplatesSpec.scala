@@ -101,7 +101,7 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
 
       validateTemplate(
         templateId = "apiVerifyResponsibleIndividual",
-        expectedSubject = "Application check: Verify your email address")
+        expectedSubject = "Responsible Individual Verification")
 
       validateTemplate(
         templateId = "ppnsCallbackUrlChangedNotification",
