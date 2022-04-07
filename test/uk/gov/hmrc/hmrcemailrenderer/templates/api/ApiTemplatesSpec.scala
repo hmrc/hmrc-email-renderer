@@ -100,6 +100,10 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
         expectedPriority = MessagePriority.Standard)
 
       validateTemplate(
+        templateId = "apiVerifyResponsibleIndividual",
+        expectedSubject = "Application check: Verify your email address")
+
+      validateTemplate(
         templateId = "ppnsCallbackUrlChangedNotification",
         expectedSubject = "Changes made to Callback URL",
         expectedPriority = MessagePriority.Urgent)
