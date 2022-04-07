@@ -803,6 +803,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "platformContactConfirmation",
         "pods_psa_amend",
         "hec_tax_check_code",
+        "hec_tax_check_code_cy",
         "create_undertaking_email_to_lead",
         "undertaking_member_added_email_to_be",
         "undertaking_member_added_email_to_lead",
