@@ -199,6 +199,11 @@ object TemplateParams {
       "timeSinceLastUse"        -> "11 months",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
+    "apiVerifyResponsibleIndividual" -> Map(
+      "developerHubLink"          -> exampleLinkWithRandomId,
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs"
+    ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
       "dateOfChange"    -> "28 October 2020",

@@ -149,6 +149,13 @@ class TemplatePrioritiesISpec
           "reason"          -> "reason",
           "supportUrl"      -> "supportUrl"
         )),
+      (
+        "apiVerifyResponsibleIndividual",
+        Map(
+          "applicationName"           -> "applicationName",
+          "developerHubLink"          -> "/developerHubLink",
+          "responsibleIndividualName" -> "responsibleIndividualName"
+        )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),

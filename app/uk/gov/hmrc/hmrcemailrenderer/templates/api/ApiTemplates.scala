@@ -209,6 +209,15 @@ object ApiTemplates {
       plainTemplate = txt.ppnsCallbackUrlChangedNotification.f,
       htmlTemplate = html.ppnsCallbackUrlChangedNotification.f,
       priority = Some(MessagePriority.Urgent) // Email is a mitigation for a security risk, so increased priority
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiVerifyResponsibleIndividual",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Responsible Individual Verification",
+      plainTemplate = txt.apiVerifyResponsibleIndividual.f,
+      htmlTemplate = html.apiVerifyResponsibleIndividual.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
