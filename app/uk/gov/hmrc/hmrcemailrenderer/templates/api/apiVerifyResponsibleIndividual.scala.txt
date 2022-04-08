@@ -4,7 +4,7 @@ Dear @{params("responsibleIndividualName")}
 
 You have been made responsible for @{params("applicationName")} on the HMRC Developer Hub.
 
-Click on the link to verify that you are responsible for @{params("applicationName")}.
+Select the link to verify that you are responsible for @{params("applicationName")}.
 
 @{params("developerHubLink")}
 
