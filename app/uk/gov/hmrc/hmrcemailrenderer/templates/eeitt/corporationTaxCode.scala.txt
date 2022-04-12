@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Confirm your email address
+
+Dear Customer
+
+You requested a code to continue with the ‘Register a non-resident company or CIV for Corporation Tax and notify us that it has disposed of an interest in UK property or land’ service on GOV.UK.
+
+Your code is: @params("confirmationCode")
+
+What you need to do now
+
+Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.
+
+If this email account is not shared, and you did not request this code you need to contact HMRC.
+
+Do not reply to this email.
+
+From HMRC Corporation Tax Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
