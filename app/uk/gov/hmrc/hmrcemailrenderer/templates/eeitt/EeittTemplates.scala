@@ -669,6 +669,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cashDecEU_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Declare cash you carry into or out of Northern Ireland",
+      plainTemplate = txt.cashDecEUCode.f,
+      htmlTemplate = html.cashDecEUCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "cash_declaration_UK",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -676,6 +685,15 @@ object EeittTemplates {
       plainTemplate = txt.cashDeclaration_UK.f,
       htmlTemplate = html.cashDeclaration_UK.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cashDecUK_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Declare cash you carry into or out of Great Britain",
+      plainTemplate = txt.cashDecUKCode.f,
+      htmlTemplate = html.cashDecUKCode.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "cet_email_confirmation",
@@ -732,6 +750,16 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "corporation_tax_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Register a non-resident company or CIV for Corporation Tax and notify us that it has disposed of an interest in UK property or land",
+      plainTemplate = txt.corporationTaxCode.f,
+      htmlTemplate = html.corporationTaxCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "register_for_fuel_duty_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -748,6 +776,25 @@ object EeittTemplates {
       plainTemplate = txt.adrConfirmation.f,
       htmlTemplate = html.adrConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "adr_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for Alternative Dispute Resolution to settle a tax dispute",
+      plainTemplate = txt.adrCode.f,
+      htmlTemplate = html.adrCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "adr_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost - Gwneud cais am Ddull Amgen o Ddatrys Anghydfod (ADR) i setlo anghydfod treth",
+      plainTemplate = txt.adrCode_cy.f,
+      htmlTemplate = html.adrCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "ccg1_confirmation_submission",
@@ -786,6 +833,24 @@ object EeittTemplates {
       plainTemplate = txt.challengeChildcareSubmission.f,
       htmlTemplate = html.challengeChildcareSubmission.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "challengeChildcare_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Challenge a Childcare Service application decision",
+      plainTemplate = txt.challengeChildcareCode.f,
+      htmlTemplate = html.challengeChildcareCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "challengeChildcare_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Herio penderfyniad ynghylch cais i’r Gwasanaeth Gofal Plant",
+      plainTemplate = txt.challengeChildcareCode_cy.f,
+      htmlTemplate = html.challengeChildcareCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "bd600_confirmation_submission",
@@ -885,6 +950,62 @@ object EeittTemplates {
       plainTemplate = txt.spbpClaimConfirmation.f,
       htmlTemplate = html.spbpClaimConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_claim_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Claim Statutory Parental Bereavement Pay (SPBP3)",
+      plainTemplate = txt.spbpClaimCode.f,
+      htmlTemplate = html.spbpClaimCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_claim_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Hawlio Tâl Statudol Rhieni mewn Profedigaeth (SPBP3)",
+      plainTemplate = txt.spbpClaimCode_cy.f,
+      htmlTemplate = html.spbpClaimCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_notification_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Tell the employee they are not eligible for Statutory Parental Bereavement Pay (SPBP1)",
+      plainTemplate = txt.spbpNotificationCode.f,
+      htmlTemplate = html.spbpNotificationCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_notification_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Cadarnhau’ch cyfeiriad e-bost - Rhoi gwybod i’r cyflogai nad yw’n gymwys ar gyfer Tâl Statudol Rhieni mewn Profedigaeth (SPBP1)",
+      plainTemplate = txt.spbpNotificationCode_cy.f,
+      htmlTemplate = html.spbpNotificationCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_record_code_submission",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Record Statutory Parental Bereavement Pay claims (SPBP2)",
+      plainTemplate = txt.spbpRecordCode.f,
+      htmlTemplate = html.spbpRecordCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "spbp_record_code_submission_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Cadarnhau’ch cyfeiriad e-bost - Cofnodi hawliadau am Dâl Statudol Rhieni mewn Profedigaeth (SPBP2)",
+      plainTemplate = txt.spbpRecordCode_cy.f,
+      htmlTemplate = html.spbpRecordCode_cy.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "cjrs_code_submission",

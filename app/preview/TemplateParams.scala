@@ -2510,9 +2510,15 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "cashDecEU_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "cash_declaration_UK" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "cashDecUK_code" -> Map(
+      "confirmationCode" -> "HGDY"
     ),
     "cet_email_confirmation" -> Map(
       "regContactName1"     -> "Hugh Mann",
@@ -2536,12 +2542,21 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "corporation_tax_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "register_for_fuel_duty_confirmation" -> Map(
       "customerName" -> "Hugh Mann"
     ),
     "adr_confirmation_submission" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "adr_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "adr_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
     ),
     "ccg1_confirmation_submission" -> Map(
       "decName"             -> "Hugh Mann",
@@ -2558,6 +2573,12 @@ object TemplateParams2 {
     "challengeChildcare_confirmation_submission" -> Map(
       "name"                -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "challengeChildcare_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "challengeChildcare_code_cy" -> Map(
+      "confirmationCode" -> "HGDY"
     ),
     "bd600_confirmation_submission" -> Map(
       "customerName"        -> "Hugh Mann",
@@ -2604,6 +2625,24 @@ object TemplateParams2 {
     "spbp_confirmation_submission" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "spbp_claim_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_claim_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_notification_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_notification_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_record_code_submission" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "spbp_record_code_submission_cy" -> Map(
+      "confirmationCode" -> "HGDY"
     ),
     "cjrs_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
