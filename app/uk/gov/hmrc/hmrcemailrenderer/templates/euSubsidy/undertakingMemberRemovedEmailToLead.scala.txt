@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have removed a member from your single undertaking
+An undertaking member has been removed from your single undertaking
 
 Dear Customer
 
@@ -14,6 +14,10 @@ This will be effective from @{params("effectiveDate")}.
 The former member will no longer be able to claim Customs Duty waivers as part of this single undertaking.
 
 You must inform them they have been removed.
+
+This change does not take effect immediately and may take up to 24 hours to go through.
+
+This means the former member will still be in the undertaking until the change happens.
 
 If you need further information
 
