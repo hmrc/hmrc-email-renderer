@@ -17,22 +17,23 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue
 
 import junit.framework.TestCase
-import org.scalatest.{Matchers, OptionValues, WordSpecLike}
-import uk.gov.hmrc.hmrcemailrenderer.templates.{api, apicatalogue}
+import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ api, apicatalogue }
 
 import java.util.Base64
 
 class PlatformContactSpec extends WordSpecLike with OptionValues with Matchers {
 
   val templateParams = Map(
-    "apiTitle" -> "Corporation Tax",
-    "senderName" -> "Joe Bloggs",
+    "apiTitle"    -> "Corporation Tax",
+    "senderName"  -> "Joe Bloggs",
     "senderEmail" -> "joe.bloggs@example.com",
-    "contactReasons" -> Base64.getEncoder.encodeToString("Test contact reason one|Test contact reason two|Test contact reason three".getBytes),
-    "specificQuestion" -> "How many engineers does it to change a light bulb?",
+    "contactReasons" -> Base64.getEncoder.encodeToString(
+      "Test contact reason one|Test contact reason two|Test contact reason three".getBytes),
+    "specificQuestion"     -> "How many engineers does it to change a light bulb?",
     "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion" -> "v1",
-    "borderColour" -> "#005EA5"
+    "staticAssetVersion"   -> "v1",
+    "borderColour"         -> "#005EA5"
   )
 
   val paragraphWithInlineCss = "<p style=\"margin: 0 0 30px; font-size: 19px;\">"
@@ -43,7 +44,8 @@ class PlatformContactSpec extends WordSpecLike with OptionValues with Matchers {
 
       renderedHtml.contentType should include("text/html")
 
-      renderedHtml.body should include(s"<title>Information request about " + s"${templateParams.get("apiTitle").get}</title>")
+      renderedHtml.body should include(
+        s"<title>Information request about " + s"${templateParams.get("apiTitle").get}</title>")
 
       renderedHtml.body should include(paragraphWithInlineCss + "Dear platform team</p>")
 
@@ -52,11 +54,14 @@ class PlatformContactSpec extends WordSpecLike with OptionValues with Matchers {
 
       renderedHtml.body should include(paragraphWithInlineCss + "Here is a summary.</p>")
 
-      renderedHtml.body should include(paragraphWithInlineCss + "<strong>Name</strong>: " + s"${templateParams.get("senderName").get}</p>")
+      renderedHtml.body should include(
+        paragraphWithInlineCss + "<strong>Name</strong>: " + s"${templateParams.get("senderName").get}</p>")
 
-      renderedHtml.body should include(paragraphWithInlineCss + "<strong>Email</strong>: " + s"${templateParams.get("senderEmail").get}</p>")
+      renderedHtml.body should include(
+        paragraphWithInlineCss + "<strong>Email</strong>: " + s"${templateParams.get("senderEmail").get}</p>")
 
-      renderedHtml.body should include(paragraphWithInlineCss + "<strong>Why do you need to contact the API team?</strong></p>")
+      renderedHtml.body should include(
+        paragraphWithInlineCss + "<strong>Why do you need to contact the API team?</strong></p>")
 
       renderedHtml.body should include(paragraphWithInlineCss + "Test contact reason one</p>")
       renderedHtml.body should include(paragraphWithInlineCss + "Test contact reason two</p>")
@@ -66,7 +71,8 @@ class PlatformContactSpec extends WordSpecLike with OptionValues with Matchers {
 
       renderedHtml.body should include(paragraphWithInlineCss + s"${templateParams.get("specificQuestion").get}</p>")
 
-      renderedHtml.body should include(paragraphWithInlineCss + s"You should reply to ${templateParams.get("senderEmail").get} in 7 days.</p>")
+      renderedHtml.body should include(
+        paragraphWithInlineCss + s"You should reply to ${templateParams.get("senderEmail").get} in 7 days.</p>")
 
       renderedHtml.body should include(paragraphWithInlineCss + "From HMRC API catalogue</p>")
     }
@@ -81,7 +87,8 @@ class PlatformContactSpec extends WordSpecLike with OptionValues with Matchers {
 
       renderedTxt.body should include("Dear platform team")
 
-      renderedTxt.body should include("We have received an information request about " + s"${templateParams.get("apiTitle").get} on the API catalogue.")
+      renderedTxt.body should include(
+        "We have received an information request about " + s"${templateParams.get("apiTitle").get} on the API catalogue.")
 
       renderedTxt.body should include("Here is a summary.")
 
