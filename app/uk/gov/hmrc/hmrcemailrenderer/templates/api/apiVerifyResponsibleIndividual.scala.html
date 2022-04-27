@@ -17,11 +17,9 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are now responsible for a Developer Hub application") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("responsibleIndividualName")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You have been made responsible for @{params("applicationName")} on the HMRC Developer Hub.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Select the link to verify that you are responsible for @{params("applicationName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You have been made responsible for @{params("applicationName")} by @{params("requesterName")} on the HMRC Developer Hub. You must make sure that your software conforms to our terms of use.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Select the link and tell us if you are responsible for @{params("applicationName")}. Do not forward this email to someone else.</p>
 <p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("developerHubLink")}" style="padding-bottom:10px;color:#005ea5;text-decoration:underline;">@{params("developerHubLink")}</a></p>
-<p style="margin: 0 0 30px; font-size: 19px;">You have 10 working days to verify that you are responsible for @{params("applicationName")}. After that, you will need to request production access again.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">As the person responsible for @{params("applicationName")}, you must make sure that your software conforms to our terms of use.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Contact the person who requested credentials for @{params("applicationName")} if you think there has been a mistake or you do not want to verify.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">The link expires in 10 working days. After that, you may need to request production access again.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
 }

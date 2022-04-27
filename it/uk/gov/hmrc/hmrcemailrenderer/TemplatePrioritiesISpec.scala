@@ -154,7 +154,8 @@ class TemplatePrioritiesISpec
         Map(
           "applicationName"           -> "applicationName",
           "developerHubLink"          -> "/developerHubLink",
-          "responsibleIndividualName" -> "responsibleIndividualName"
+          "responsibleIndividualName" -> "responsibleIndividualName",
+          "requesterName"             -> "requesterName"
         )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),

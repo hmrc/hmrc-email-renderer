@@ -202,7 +202,8 @@ object TemplateParams {
     "apiVerifyResponsibleIndividual" -> Map(
       "developerHubLink"          -> exampleLinkWithRandomId,
       "applicationName"           -> "Test Application",
-      "responsibleIndividualName" -> "Joe Bloggs"
+      "responsibleIndividualName" -> "Joe Bloggs",
+      "requesterName"             -> "Bob Roberts"
     ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
