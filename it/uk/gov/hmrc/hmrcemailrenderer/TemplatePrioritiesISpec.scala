@@ -157,13 +157,6 @@ class TemplatePrioritiesISpec
           "responsibleIndividualName" -> "responsibleIndividualName",
           "requesterName"             -> "requesterName"
         )),
-      (
-        "apiResponsibleIndividualReminderToAdmin",
-        Map(
-          "applicationName"           -> "applicationName",
-          "responsibleIndividualName" -> "responsibleIndividualName",
-          "requesterName"             -> "requesterName"
-        )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
