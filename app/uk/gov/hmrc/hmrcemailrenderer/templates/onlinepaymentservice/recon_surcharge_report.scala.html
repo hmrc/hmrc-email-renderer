@@ -161,6 +161,10 @@
         @surcharge_recon_row(params("topsNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
     </tr>
     <tr>
+        <td style="font-weight:bold;">ZPPT</td>
+        @surcharge_recon_row(params("topsNoModsSurchargeReport_ppt").toString.split(","))
+    </tr>
+    <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
     </tr>

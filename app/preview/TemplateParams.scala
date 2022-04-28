@@ -1813,6 +1813,7 @@ object TemplateParams2 {
       "topsNoModsSurchargeReport_p800"                     -> "1,10.0,2,20.0,3,30.0",
       "topsNoModsSurchargeReport_pngr"                     -> "1,10.0,2,20.0,3,30.0",
       "topsNoModsSurchargeReport_childBenefitRepayments"   -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_ppt"                      -> "1,10.0,2,20.0,3,30.0",
       "topsNoModsSurchargeReport_total"                    -> "3,30.0,6,60.0,9,90.0",
       "topsJustModsSurchargeReport_mods"                   -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_p800"                   -> "1,10.0,2,20.0,3,30.0",
