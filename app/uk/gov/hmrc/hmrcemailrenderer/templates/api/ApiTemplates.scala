@@ -227,6 +227,15 @@ object ApiTemplates {
       plainTemplate = txt.apiResponsibleIndividualReminderToAdmin.f,
       htmlTemplate = html.apiResponsibleIndividualReminderToAdmin.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualDeclined",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Production credentials request declined",
+      plainTemplate = txt.apiResponsibleIndividualDeclined.f,
+      htmlTemplate = html.apiResponsibleIndividualDeclined.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

@@ -210,6 +210,11 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiResponsibleIndividualDeclined" -> Map(
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs",
+      "requesterName"             -> "Bob Roberts"
+    ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
       "dateOfChange"    -> "28 October 2020",
