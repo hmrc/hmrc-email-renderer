@@ -218,6 +218,15 @@ object ApiTemplates {
       plainTemplate = txt.apiVerifyResponsibleIndividual.f,
       htmlTemplate = html.apiVerifyResponsibleIndividual.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualReminderToAdmin",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Update about your request for production credentials",
+      plainTemplate = txt.apiResponsibleIndividualReminderToAdmin.f,
+      htmlTemplate = html.apiResponsibleIndividualReminderToAdmin.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
