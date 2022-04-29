@@ -161,6 +161,10 @@
         @surcharge_recon_row(params("topsNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
     </tr>
     <tr>
+        <td style="font-weight:bold;">ZPPT</td>
+        @surcharge_recon_row(params("topsNoModsSurchargeReport_ppt").toString.split(","))
+    </tr>
+    <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
     </tr>
@@ -224,13 +228,16 @@
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_cds").toString.split(",").toArray)
     </tr>
     <tr>
+        <td style="font-weight:bold;">ZPPT</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_ppt").toString.split(","))
+    </tr>
+    <tr>
         <td style="font-weight:bold;">FChB</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
     </tr>
     <tr>
         <td style="font-weight:bold;">VOSS</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_vatOss").toString.split(","))
-    </tr>
     <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
