@@ -26,6 +26,6 @@ object ApiCatalogueReportParams {
       .fold(List.empty[String])(contactReasons => {
         val encoded = contactReasons.toString
         val decoded = new String(Base64.getDecoder.decode(encoded), "UTF-8")
-        Json.parse(decoded).as[List[String]]
+        decoded.split("[|]").toList
       })
 }
