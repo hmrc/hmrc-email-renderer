@@ -4,6 +4,8 @@ Dear @{params("requesterName")}
 
 @{params("responsibleIndividualName")} has declined responsibility for @{params("applicationName")}.
 
+We need someone in your organisation to verify that your software conforms to our terms of use.
+
 You can change the responsible individual's details on the Developer Hub and request production credentials again.
 
 From HMRC Developer Hub
