@@ -232,9 +232,18 @@ object ApiTemplates {
       templateId = "apiResponsibleIndividualDeclined",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Production credentials request declined",
+      subject = "Important update about your production credentials request",
       plainTemplate = txt.apiResponsibleIndividualDeclined.f,
       htmlTemplate = html.apiResponsibleIndividualDeclined.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualDidNotVerify",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Production credentials request declined",
+      plainTemplate = txt.apiResponsibleIndividualDidNotVerify.f,
+      htmlTemplate = html.apiResponsibleIndividualDidNotVerify.f,
       priority = Some(MessagePriority.Standard)
     )
   )
