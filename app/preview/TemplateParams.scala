@@ -1813,6 +1813,7 @@ object TemplateParams2 {
       "topsNoModsSurchargeReport_p800"                     -> "1,10.0,2,20.0,3,30.0",
       "topsNoModsSurchargeReport_pngr"                     -> "1,10.0,2,20.0,3,30.0",
       "topsNoModsSurchargeReport_childBenefitRepayments"   -> "1,10.0,2,20.0,3,30.0",
+      "topsNoModsSurchargeReport_ppt"                      -> "1,10.0,2,20.0,3,30.0",
       "topsNoModsSurchargeReport_total"                    -> "3,30.0,6,60.0,9,90.0",
       "topsJustModsSurchargeReport_mods"                   -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_p800"                   -> "1,10.0,2,20.0,3,30.0",
@@ -1820,9 +1821,10 @@ object TemplateParams2 {
       "opsDesNoModsSurchargeReport_cgt"                    -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_pngr"                   -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_cds"                    -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_ppt"                    -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_childBenefitRepayments" -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_vatOss"                 -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_total"                  -> "7,70.0,14,140.0,21,210.0",
+      "opsDesNoModsSurchargeReport_total"                  -> "8,80.0,16,160.0,22,240.0",
       "opsDesJustModsSurchargeReport_mods"                 -> "1,10.0,2,20.0,3,30.0"
     ),
     "recon_mods_finance_report" -> Map(
