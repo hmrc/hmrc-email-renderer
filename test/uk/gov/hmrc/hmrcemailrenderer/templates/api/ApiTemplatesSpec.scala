@@ -107,7 +107,8 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
       validateTemplate(
         templateId = "apiResponsibleIndividualReminderToAdmin",
         expectedSubject = "Update about your request for production credentials",
-        expectedPriority = MessagePriority.Standard)
+        expectedPriority = MessagePriority.Standard
+      )
 
       validateTemplate(
         templateId = "apiResponsibleIndividualDidNotVerify",
@@ -117,7 +118,8 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
       validateTemplate(
         templateId = "apiResponsibleIndividualDeclined",
         expectedSubject = "Important update about your production credentials request",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "ppnsCallbackUrlChangedNotification",
