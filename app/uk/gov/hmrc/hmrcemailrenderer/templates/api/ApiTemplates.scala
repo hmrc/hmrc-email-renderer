@@ -214,7 +214,7 @@ object ApiTemplates {
       templateId = "apiVerifyResponsibleIndividual",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Responsible Individual Verification",
+      subject = "Responsible individual verification",
       plainTemplate = txt.apiVerifyResponsibleIndividual.f,
       htmlTemplate = html.apiVerifyResponsibleIndividual.f,
       priority = Some(MessagePriority.Urgent)
