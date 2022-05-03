@@ -2009,104 +2009,12 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId,
       "name"             -> "Susan Bartlett"
     ),
-    "tdq_compliance_all_required_headers_missing" -> Map(
-      "developerName"   -> "John Smith",
-      "fromDate"        -> "22 September 2019",
-      "toDate"          -> "22 October 2019",
-      "applicationName" -> "MTD VAT Test Application",
-      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
-    ),
-    "tdq_compliance_partially_compliant_invalid_or_missing_connection_method" -> Map(
-      "developerName"               -> "Joe Williams",
-      "fromDate"                    -> "1 December 2019",
-      "toDate"                      -> "31 December 2019",
-      "applicationName"             -> "MTD VAT InvalidConnection App",
-      "applicationId"               -> "1434b966-ea76-40a6-a312-1d58ff873a16",
-      "allHeadersMissingPercentage" -> "10"
-    ),
-    "tdq_compliance_partially_compliant_valid_connection_method" -> Map(
-      "developerName"               -> "James Black",
-      "fromDate"                    -> "1 January 2020",
-      "toDate"                      -> "31 January 2020",
-      "applicationName"             -> "MTD VAT ValidCM App",
-      "applicationId"               -> "07b587d7-34d9-40b6-9d59-a0917490cf02",
-      "allHeadersMissingPercentage" -> "10",
-      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
-        parse("""
-        {
-          "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 100,
-          "headerValidations": [
-            {
-              "headerOrHeaders": "gov-client-public-ip",
-              "errors": [
-                {
-                  "message": "Value is not an IP address",
-                  "percentage": 5,
-                  "count": 5
-                }, {
-                  "message": "Value is not a public IP address",
-                  "percentage": 10,
-                  "count": 10
-                }
-              ],
-              "warnings": []
-            }, {
-              "headerOrHeaders": "gov-vendor-version",
-              "errors": [
-                {
-                  "message": "Value must be a key-value data structure",
-                  "percentage": 10,
-                  "count": 10
-                }, {
-                  "message": "At least 1 key or value is not percent encoded",
-                  "percentage": 25,
-                  "count": 25
-                }, {
-                  "message": "At least 1 software version value is missing",
-                  "percentage": 15,
-                  "count": 15
-                }, {
-                  "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0,
-                  "count": 1
-                }
-              ],
-              "warnings": [
-                {
-                  "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10,
-                  "count": 10
-                }
-              ]
-            },
-            {
-              "headerOrHeaders": "gov-client-device-id",
-              "errors" : [],
-              "warnings": [
-                {
-                  "message": "Use a recommended UUID. Check the specification.",
-                  "percentage": 0,
-                  "count": 0
-                }, {
-                  "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17,
-                  "count": 17
-                }, {
-                  "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22,
-                  "count": 22
-                }
-              ]
-            }
-          ]
-        }
-          """)).getBytes("UTF-8"))
-    ),
     "tdq_fph_report_non_compliant" -> Map(
       "developerName"                     -> "John Smith",
       "fromDate"                          -> "22 September 2019",
       "toDate"                            -> "22 October 2019",
+      "regimeLongForm"                    -> "VAT (Making Tax Digital)",
+      "regimeShortForm"                   -> "VAT (MTD)",
       "applicationName"                   -> "My Basic MTD App",
       "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "allHeadersMissingPercentage"       -> "5",
@@ -2141,10 +2049,6 @@ object TemplateParams2 {
                   "message": "Value must be a key-value data structure",
                   "percentage": 10,
                   "count": 1075
-                }, {
-                  "message": "At least 1 software version value is missing",
-                  "percentage": 15,
-                  "count": 1580
                 }, {
                   "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
                   "percentage": 0,
@@ -2182,6 +2086,8 @@ object TemplateParams2 {
       "developerName"             -> "John Smith",
       "fromDate"                  -> "22 September 2019",
       "toDate"                    -> "22 October 2019",
+      "regimeLongForm"            -> "VAT (Making Tax Digital)",
+      "regimeShortForm"           -> "VAT (MTD)",
       "applicationName"           -> "My Well Behaved MTD App",
       "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "hasOtherConnectionMethods" -> "true",
