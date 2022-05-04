@@ -16,16 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params
 
-import java.util.Base64
-import play.api.libs.json.Json
 object ApiCatalogueReportParams {
 
   def getQuestions(params: Map[String, Any]): List[String] =
     params
       .get("contactReasons")
-      .fold(List.empty[String])(contactReasons => {
-        val encoded = contactReasons.toString
-        val decoded = new String(Base64.getDecoder.decode(encoded), "UTF-8")
-        decoded.split("[|]").toList
-      })
+      .fold(List.empty[String])(_.toString.split("[|]").toList)
 }
