@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Check responsible individual details are correct
+
+Dear @{params("requesterName")}
+
+@{params("responsibleIndividualName")} has not verified that the @{params("applicationName")} software conforms to our terms of use.
+
+The responsible individual has 10 working days from today to verify. After that, we will decline your request for production credentials.
+
+Check or update the responsible individual's details on the Developer Hub and request production credentials again. Or speak to the person you nominated and ask them to verify.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
