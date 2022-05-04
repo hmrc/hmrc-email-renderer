@@ -17,19 +17,18 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue
 
 import junit.framework.TestCase
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ api, apicatalogue }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
+import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue
 
-import java.util.Base64
-
-class PlatformContactSpec extends WordSpecLike with OptionValues with Matchers {
+class PlatformContactSpec extends AnyWordSpecLike with OptionValues with Matchers {
 
   val templateParams = Map(
-    "apiTitle"    -> "Corporation Tax",
-    "senderName"  -> "Joe Bloggs",
-    "senderEmail" -> "joe.bloggs@example.com",
-    "contactReasons" -> Base64.getEncoder.encodeToString(
-      "Test contact reason one|Test contact reason two|Test contact reason three".getBytes),
+    "apiTitle"             -> "Corporation Tax",
+    "senderName"           -> "Joe Bloggs",
+    "senderEmail"          -> "joe.bloggs@example.com",
+    "contactReasons"       -> "Test contact reason one|Test contact reason two|Test contact reason three",
     "specificQuestion"     -> "How many engineers does it to change a light bulb?",
     "staticAssetUrlPrefix" -> "http://uri",
     "staticAssetVersion"   -> "v1",
