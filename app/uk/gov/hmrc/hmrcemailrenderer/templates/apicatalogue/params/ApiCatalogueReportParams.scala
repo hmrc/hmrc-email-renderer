@@ -15,6 +15,7 @@
  */
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params
+
 object ApiCatalogueReportParams {
 
   def getQuestions(params: Map[String, Any]): List[String] =
