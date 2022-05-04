@@ -2,17 +2,13 @@
 
 Dear @{params("responsibleIndividualName")}
 
-You have been made responsible for @{params("applicationName")} on the HMRC Developer Hub.
+You have been made responsible for @{params("applicationName")} by @{params("requesterName")} on the HMRC Developer Hub. You must make sure that your software conforms to our terms of use.
 
-Select the link to verify that you are responsible for @{params("applicationName")}.
+Select the link and tell us if you are responsible for @{params("applicationName")}. Do not forward this email to someone else.
 
 @{params("developerHubLink")}
 
-You have 10 working days to verify that you are responsible for @{params("applicationName")}. After that, you will need to request production access again
-
-As the person responsible for @{params("applicationName")}, you must make sure that your software conforms to our terms of use.
-
-Contact the person who requested credentials for @{params("applicationName")} if you think there has been a mistake or you do not want to verify.
+The link expires in 10 working days. After that, you may need to request production access again.
 
 From HMRC Developer Hub
 

@@ -214,10 +214,37 @@ object ApiTemplates {
       templateId = "apiVerifyResponsibleIndividual",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Responsible Individual Verification",
+      subject = "Responsible individual verification",
       plainTemplate = txt.apiVerifyResponsibleIndividual.f,
       htmlTemplate = html.apiVerifyResponsibleIndividual.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualReminderToAdmin",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Update about your request for production credentials",
+      plainTemplate = txt.apiResponsibleIndividualReminderToAdmin.f,
+      htmlTemplate = html.apiResponsibleIndividualReminderToAdmin.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualDeclined",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Important update about your production credentials request",
+      plainTemplate = txt.apiResponsibleIndividualDeclined.f,
+      htmlTemplate = html.apiResponsibleIndividualDeclined.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualDidNotVerify",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Production credentials request declined",
+      plainTemplate = txt.apiResponsibleIndividualDidNotVerify.f,
+      htmlTemplate = html.apiResponsibleIndividualDidNotVerify.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
