@@ -25,41 +25,44 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.params.ApiCatalogueR
 class ApiCatalogueReportParamsSpec extends AnyWordSpecLike with OptionValues with Matchers {
 
   val paramsWithReasons = Map(
-    "apiTitle" -> "Corporation Tax",
-    "senderName" -> "Joe Bloggs",
-    "senderEmail" -> "joe.bloggs@example.com",
-    "contactReasons" -> "Test contact reason one|Test contact reason two|Test contact reason three",
-    "specificQuestion" -> "How many engineers does it to change a light bulb?",
+    "apiTitle"             -> "Corporation Tax",
+    "senderName"           -> "Joe Bloggs",
+    "senderEmail"          -> "joe.bloggs@example.com",
+    "contactReasons"       -> "Test contact reason one|Test contact reason two|Test contact reason three",
+    "specificQuestion"     -> "How many engineers does it to change a light bulb?",
     "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion" -> "v1",
-    "borderColour" -> "#005EA5"
+    "staticAssetVersion"   -> "v1",
+    "borderColour"         -> "#005EA5"
   )
 
   val paramsWithOneReason = Map(
-    "apiTitle" -> "Corporation Tax",
-    "senderName" -> "Joe Bloggs",
-    "senderEmail" -> "joe.bloggs@example.com",
-    "contactReasons" -> "Test contact reason one",
-    "specificQuestion" -> "How many engineers does it to change a light bulb?",
+    "apiTitle"             -> "Corporation Tax",
+    "senderName"           -> "Joe Bloggs",
+    "senderEmail"          -> "joe.bloggs@example.com",
+    "contactReasons"       -> "Test contact reason one",
+    "specificQuestion"     -> "How many engineers does it to change a light bulb?",
     "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion" -> "v1",
-    "borderColour" -> "#005EA5"
+    "staticAssetVersion"   -> "v1",
+    "borderColour"         -> "#005EA5"
   )
 
   val paramsWithNoReasons = Map(
-    "apiTitle" -> "Corporation Tax",
-    "senderName" -> "Joe Bloggs",
-    "senderEmail" -> "joe.bloggs@example.com",
-    "contactReasons" -> "",
-    "specificQuestion" -> "How many engineers does it to change a light bulb?",
+    "apiTitle"             -> "Corporation Tax",
+    "senderName"           -> "Joe Bloggs",
+    "senderEmail"          -> "joe.bloggs@example.com",
+    "contactReasons"       -> "",
+    "specificQuestion"     -> "How many engineers does it to change a light bulb?",
     "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion" -> "v1",
-    "borderColour" -> "#005EA5"
+    "staticAssetVersion"   -> "v1",
+    "borderColour"         -> "#005EA5"
   )
 
   "ApiCatalogueReportParams" should {
     "getQuestions splits the string correctly into a List" in new Setup {
-      ApiCatalogueReportParams.getQuestions(paramsWithReasons) shouldBe List("Test contact reason one", "Test contact reason two", "Test contact reason three")
+      ApiCatalogueReportParams.getQuestions(paramsWithReasons) shouldBe List(
+        "Test contact reason one",
+        "Test contact reason two",
+        "Test contact reason three")
 
     }
 
