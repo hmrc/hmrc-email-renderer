@@ -60,7 +60,6 @@ object ServiceIdentifier {
   case object TaxAllowanceForMarriedCouples extends ServiceIdentifier { override val name = "tamc" }
   case object TaxCreditsService extends ServiceIdentifier { override val name = "tcs" }
   case object Mandate extends ServiceIdentifier { override val name = "agent-client-mandate" }
-  case object OffPayroll extends ServiceIdentifier { override val name = "off-payroll" }
   case object Customs extends ServiceIdentifier { override val name = "cds" }
   case object AgentAuthorisation extends ServiceIdentifier { override val name = "aa" }
   case object ConstructionIndustryScheme extends ServiceIdentifier { override val name = "cis" }
