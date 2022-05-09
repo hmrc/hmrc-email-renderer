@@ -1,0 +1,34 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"We have received your PAYE application for ${params("companyName")}") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">@params.getOrElse("salutation", "")</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your application reference number is: @params("referenceNumber")</p>
+
+<h2>What happens next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You will receive an email within 10 working days letting you know the outcome of your application.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If your application is successful, we will send you:</p>
+
+<ul style="margin: 0 0 30px; font-size: 19px;">
+    <li>a letter with PAYE and Accounts Office reference numbers within 5 working days (you will need these to send payroll information to HMRC)</li>
+    <li>an activation code in the post so that you can manage the company’s PAYE online</li>
+</ul>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital</p>
+}
