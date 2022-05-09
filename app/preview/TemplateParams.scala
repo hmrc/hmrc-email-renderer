@@ -720,11 +720,22 @@ object TemplateParams {
     ),
     "register_your_company_register_paye_confirmation_current_tax_year" -> Map(
       "companyName"     -> "ABC Logistics Ltd",
-      "referenceNumber" -> "12345678910"
+      "referenceNumber" -> "BRPY12345678910"
     ),
     "register_your_company_register_paye_confirmation_new_tax_year" -> Map(
-      "companyName"     -> "Foo bar Wizz And Bang Ltd",
-      "referenceNumber" -> "reference-test-12345678910"
+      "companyName"     -> "ABC Logistics Ltd",
+      "referenceNumber" -> "BRPY12345678910"
+    ),
+    "register_your_company_register_paye_confirmation_current_tax_year_v2" -> Map(
+      "companyName"     -> "ABC Logistics Ltd",
+      "referenceNumber" -> "BRPY12345678910",
+      "salutation"      -> "Dear Dave"
+    ),
+    "register_your_company_register_paye_confirmation_new_tax_year_v2" -> Map(
+      "companyName"     -> "ABC Logistics Ltd",
+      "referenceNumber" -> "BRPY12345678910",
+      "salutation"      -> "Dear Dave",
+      "contactDate"     -> "17 May"
     ),
     "investment_tax_relief_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
