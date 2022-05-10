@@ -8,7 +8,7 @@ To help protect your customers' confidential data from criminals and fraudsters,
 
 Our logs show that all of the fraud prevention headers submitted for @reportParams.applicationName to @reportParams.regimeShortForm APIs @for(extraDetails <- reportParams.extraDetails) {using @{extraDetails.prettyConnectionMethod.toLowerCase}} between @reportParams.fromDate and @reportParams.toDate meet the current specification on the HMRC Developer Hub.
 
-@if(reportParams.hasOtherConnectionMethods) {Your application sent requests using another connection method, you'll receive a separate report.}
+@if(reportParams.hasOtherConnectionMethods) {Your application sent requests using another connection method, so you'll receive a separate report.}
 
 Why you have received this email
 
