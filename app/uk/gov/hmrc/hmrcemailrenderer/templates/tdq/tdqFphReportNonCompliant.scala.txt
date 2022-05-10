@@ -1,12 +1,12 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
-@(params: Map[String, Any])Fraud prevention headers report for VAT (Making Tax Digital)
-@defining(TdqFphReportParams(params)) { reportParams =>
+@(params: Map[String, Any])
+@defining(TdqFphReportParams(params)) { reportParams =>Fraud prevention headers report for @reportParams.regimeLongForm
 
 Dear @reportParams.developerName
 
 To help protect your customers' confidential data from criminals and fraudsters, we monitor API calls and send you feedback every month.
 
-Our logs show that the fraud prevention headers submitted for @reportParams.applicationName between @reportParams.fromDate and @reportParams.toDate do not meet the specification on the HMRC Developer Hub.
+Our logs show that the fraud prevention headers submitted for @reportParams.applicationName to @reportParams.regimeShortForm APIs between @reportParams.fromDate and @reportParams.toDate do not meet the specification on the HMRC Developer Hub.
 
 Check your application meets the specification
 
@@ -14,15 +14,15 @@ You'll find the latest version of the fraud prevention specification on the HMRC
 
 What you need to do
 
-Submitting header data for VAT (MTD) APIs is required by law.
+Submitting header data for @reportParams.regimeShortForm APIs is required by law.
 
-@if(reportParams.hasInvalidConnectionMethod) {@if(reportParams.invalidConnectionMethodPercentage == 100) {Your application has an invalid connection method in all requests.} else {Your application has an invalid connection method in @reportParams.invalidConnectionMethodCount requests (@reportParams.invalidConnectionMethodPercentage% of all requests).}}
+@if(reportParams.hasInvalidConnectionMethod) {@if(reportParams.invalidConnectionMethodPercentage == 100) {Your application has an invalid connection method in all @reportParams.regimeShortForm API requests.} else {Your application has an invalid connection method in @reportParams.invalidConnectionMethodCount requests (@reportParams.invalidConnectionMethodPercentage% of all @reportParams.regimeShortForm API requests).}}
 
 To meet the specification, you need to:
 
 @if(reportParams.hasInvalidConnectionMethod) {Go to the specification and select the correct connection method for your application. Check what has changed.}
 
-Submit header data for every request made by your application.@if(reportParams.hasAllHeadersMissing) { Your application is missing all of the header data in @reportParams.allHeadersMissingPercentage% of requests.}
+Submit header data for every request made by your application.@if(reportParams.hasAllHeadersMissing) { Your application is missing all of the header data in @reportParams.allHeadersMissingPercentage% of @reportParams.regimeShortForm API requests.}
 
 @if(reportParams.hasErrors) {Fix all of the errors @if(reportParams.hasWarnings){and check the advisories }shown in this report.}
 @if(reportParams.hasWarnings && !reportParams.hasErrors) {Check the advisories shown in this report.}

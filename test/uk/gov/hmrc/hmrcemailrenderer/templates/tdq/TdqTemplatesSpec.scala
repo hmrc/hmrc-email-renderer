@@ -105,7 +105,9 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       "fromDate"        -> "22 September 2019",
       "toDate"          -> "22 October 2019",
       "applicationName" -> "MTD VAT Test Application",
-      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "regimeLongForm"  -> "VAT (Making Tax Digital)",
+      "regimeShortForm" -> "VAT (MTD)",
     )
 
     "be the same for text and html content" in {
@@ -142,6 +144,31 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val template = findTemplate("tdq_fph_report_heuristically_compliant")
       template.subject.f(baseParams) mustEqual "Fraud prevention headers for MTD VAT Test Application"
     }
+
+    "include the regime" when {
+      "the email is for VAT" in {
+        val email = renderedEmail("tdq_fph_report_heuristically_compliant", baseParams)
+
+        email must include("Fraud prevention headers report for VAT (Making Tax Digital)")
+        email must include(
+          "Our logs show that all of the fraud prevention headers submitted for <b>MTD VAT Test Application</b> to VAT (MTD) APIs"
+        )
+      }
+
+      "the email is for ITSA" in {
+        val params = baseParams + (
+          "regimeLongForm"  -> "Income Tax (Making Tax Digital)",
+          "regimeShortForm" -> "Income Tax (MTD)",
+        )
+
+        val email = renderedEmail("tdq_fph_report_heuristically_compliant", params)
+
+        email must include("Fraud prevention headers report for Income Tax (Making Tax Digital)")
+        email must include(
+          "Our logs show that all of the fraud prevention headers submitted for <b>MTD VAT Test Application</b> to Income Tax (MTD) APIs"
+        )
+      }
+    }
   }
 
   "tdq_fph_report_non_compliant" should {
@@ -152,6 +179,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       "toDate"                            -> "22 October 2019",
       "applicationName"                   -> "MTD VAT Test Application",
       "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "regimeLongForm"                    -> "VAT (Making Tax Digital)",
+      "regimeShortForm"                   -> "VAT (MTD)",
       "allHeadersMissingPercentage"       -> "10",
       "invalidConnectionMethodPercentage" -> "4",
       "relatesToMultipleVersions"         -> "true",
@@ -173,7 +202,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
         "invalidConnectionMethodCount"      -> "40"
       )
       renderedEmail("tdq_fph_report_non_compliant", params) must include(
-        "Your application has an invalid connection method in 40 requests (4% of all requests).")
+        "Your application has an invalid connection method in 40 requests (4% of all VAT (MTD) API requests).")
     }
     "not include optional content when there are no requests with invalid connection method" in {
       val params = baseParams + ("invalidConnectionMethodPercentage" -> "0")
@@ -184,7 +213,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     "include optional content when a percentage of requests have all headers missing" in {
       val params = baseParams + ("allHeadersMissingPercentage" -> "10")
       renderedEmail("tdq_fph_report_non_compliant", params) must include(
-        "Your application is missing all of the header data in 10% of requests.")
+        "Your application is missing all of the header data in 10% of VAT (MTD) API requests.")
     }
     "not include optional content when there are no invalid connection methods" in {
       val params = baseParams + ("allHeadersMissingPercentage" -> "0")
@@ -253,6 +282,57 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       email mustNot include("You need to consider warnings")
       email mustNot include("You need to correct errors")
       email mustNot include("You need to correct errors and consider warnings")
+    }
+
+    "include the regime" when {
+      "the email is for VAT" in {
+        val params = baseParams + (
+          "invalidConnectionMethodPercentage" -> "4",
+          "invalidConnectionMethodCount"      -> "40",
+          "allHeadersMissingPercentage"       -> "10",
+        )
+        val email = renderedEmail("tdq_fph_report_non_compliant", params)
+
+        email must include("Fraud prevention headers report for VAT (Making Tax Digital)")
+        email must include(
+          "Our logs show that the fraud prevention headers submitted for <b>MTD VAT Test Application</b> to VAT (MTD) APIs"
+        )
+        email must include(
+          "Submitting header data for VAT (MTD) APIs is required by law"
+        )
+        email must include(
+          "Your application is missing all of the header data in 10% of VAT (MTD) API requests."
+        )
+        email must include(
+          "Your application has an invalid connection method in 40 requests (4% of all VAT (MTD) API requests)."
+        )
+      }
+
+      "the email is for ITSA" in {
+        val params = baseParams + (
+          "regimeLongForm"                    -> "Income Tax (Making Tax Digital)",
+          "regimeShortForm"                   -> "Income Tax (MTD)",
+          "invalidConnectionMethodPercentage" -> "4",
+          "invalidConnectionMethodCount"      -> "40",
+          "allHeadersMissingPercentage"       -> "10",
+        )
+
+        val email = renderedEmail("tdq_fph_report_non_compliant", params)
+
+        email must include("Fraud prevention headers report for Income Tax (Making Tax Digital)")
+        email must include(
+          "Our logs show that the fraud prevention headers submitted for <b>MTD VAT Test Application</b> to Income Tax (MTD) APIs"
+        )
+        email must include(
+          "Submitting header data for Income Tax (MTD) APIs is required by law"
+        )
+        email must include(
+          "Your application is missing all of the header data in 10% of Income Tax (MTD) API requests."
+        )
+        email must include(
+          "Your application has an invalid connection method in 40 requests (4% of all Income Tax (MTD) API requests)."
+        )
+      }
     }
   }
 
