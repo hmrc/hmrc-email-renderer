@@ -9,4 +9,4 @@ We have sent a secure message to your business tax account inbox with full detai
 
 Make sure your @regimeName(params) bill is covered by another payment method.
 
-From HMRC Direct Debit Team
+From HMRC Direct Debit team
