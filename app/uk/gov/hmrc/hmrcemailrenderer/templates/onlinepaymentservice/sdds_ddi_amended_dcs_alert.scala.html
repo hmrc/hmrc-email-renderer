@@ -17,13 +17,13 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Return: Direct Debit amended") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Direct Debit: confirmation of details") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
     <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit has been amended.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">We have sent a secure message to your business tax account inbox with full details.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
 
 }

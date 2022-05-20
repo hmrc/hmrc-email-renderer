@@ -1,5 +1,5 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
-@(params: Map[String, Any])@regimeName(params) Return: Direct Debit cancelled
+@(params: Map[String, Any])@regimeName(params) Direct Debit: cancelled
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
@@ -7,6 +7,6 @@ Your Direct Debit has been cancelled.
 
 We have sent a secure message to your business tax account inbox with full details.
 
-Make sure your @regimeName(params) Return bill is covered by another payment method.
+Make sure your @regimeName(params) bill is covered by another payment method.
 
-From HMRC Direct Debit Team
+From HMRC Direct Debit team

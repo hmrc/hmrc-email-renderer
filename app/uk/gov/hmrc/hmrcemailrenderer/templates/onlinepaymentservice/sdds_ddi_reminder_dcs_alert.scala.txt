@@ -1,10 +1,10 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
-@(params: Map[String, Any])@regimeName(params) Return Direct Debit: reminder of payment collection
+@(params: Map[String, Any])@regimeName(params) Direct Debit: advance notice of payment
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
-You have a Direct Debit set up to pay your @regimeName(params) Return.  This is a reminder we will collect payment shortly.
+You have a Direct Debit set up to pay your @regimeName(params).  This is a reminder we will collect payment shortly.
 
 We have sent a secure message to your business tax account inbox with full details.
 
-From HMRC Direct Debit Team
+From HMRC Direct Debit team
