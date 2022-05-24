@@ -11,7 +11,7 @@ This email confirms that you @{params("eori")} have disabled your single underta
 
 This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.
 
-This is effective from @{params("effectiveDate")}
+This is effective from @{params("effectiveDate")}.
 
 If you need further information
 
