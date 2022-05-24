@@ -47,7 +47,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Your new tax calculation is ready")
       htmlContent must include("Dear")
       htmlContent must include("Mrs John")
-      htmlContent must include("You can now view your latest tax calculation.")
+      htmlContent must include("Your latest tax calculation is now ready to view online.")
       htmlContent must include(
         "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.")
       htmlContent must include("For security reasons, we have not included a link with this email.")
@@ -84,7 +84,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mae’ch cyfrifiad treth newydd yn barod")
       htmlContent must include("Annwyl")
       htmlContent must include("Mrs John")
-      htmlContent must include("Gallwch nawr fwrw golwg dros eich cyfrifiad treth diweddaraf.")
+      htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
       htmlContent must include(
         "Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEM sy’n rhad ac am ddim.")
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
@@ -123,7 +123,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Your new tax calculation is ready")
       htmlContent must include("Dear")
       htmlContent must include("Mrs John")
-      htmlContent must include("You can now view your latest tax calculation.")
+      htmlContent must include("Your latest tax calculation is now ready to view online.")
       htmlContent must include(
         "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.")
       htmlContent must include("For security reasons, we have not included a link with this email.")
@@ -160,7 +160,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mae’ch cyfrifiad treth newydd yn barod")
       htmlContent must include("Annwyl")
       htmlContent must include("Mrs John")
-      htmlContent must include("Gallwch nawr fwrw golwg dros eich cyfrifiad treth diweddaraf.")
+      htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
       htmlContent must include(
         "Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEM sy’n rhad ac am ddim.")
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")

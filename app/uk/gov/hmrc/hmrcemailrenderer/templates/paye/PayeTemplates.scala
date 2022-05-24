@@ -45,7 +45,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "You have a new message from HMRC",
+      subject = "Your new tax calculation from HMRC is ready",
       plainTemplate = txt.newMessageAlert_P800.f,
       htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
@@ -54,7 +54,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
       plainTemplate = txt.newMessageAlert_P800_cy.f,
       htmlTemplate = html.newMessageAlert_P800_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -64,7 +64,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800_D2",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "You have a new message from HMRC",
+      subject = "Your new tax calculation from HMRC is ready",
       plainTemplate = txt.newMessageAlert_P800.f,
       htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
@@ -74,7 +74,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800_D2_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
       plainTemplate = txt.newMessageAlert_P800_cy.f,
       htmlTemplate = html.newMessageAlert_P800_cy.f,
       priority = Some(MessagePriority.Standard)
