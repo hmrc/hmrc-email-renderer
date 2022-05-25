@@ -16,6 +16,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From the VAT Error Correction Team
+From the VAT Error Correction team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
