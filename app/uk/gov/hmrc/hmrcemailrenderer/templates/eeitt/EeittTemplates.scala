@@ -1699,6 +1699,24 @@ object EeittTemplates {
       plainTemplate = txt.psa1Confirmation.f,
       htmlTemplate = html.psa1Confirmation.f,
       priority = Some(MessagePriority.Standard)
-    )
+    ),
+    MessageTemplate.create(
+      templateId = "vat652_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Notification of errors in VAT returns - form received",
+      plainTemplate = txt.vat652Confirmation.f,
+      htmlTemplate = html.vat652Confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vat652_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Notification of errors in VAT returns",
+      plainTemplate = txt.psa1Code.f,
+      htmlTemplate = html.psa1Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
   )
 }
