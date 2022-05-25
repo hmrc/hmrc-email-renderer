@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+You have notified HMRC of errors in VAT returns
+
+Dear @params("customerName")
+
+We have received your form notifying us of errors in your VAT returns.
+
+Your submission reference is: @params("submissionReference")
+
+@params.get("para1")
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the VAT Error Correction team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
