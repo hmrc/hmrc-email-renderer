@@ -7,8 +7,6 @@ You can now report cross-border arrangements.
 
 Your MDR ID is: @{params("mdrID")}
 
-What happens next
-
 Print or save a copy of this email for your records.
 
 How to make a report 
