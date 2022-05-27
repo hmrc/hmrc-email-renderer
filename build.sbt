@@ -22,7 +22,7 @@ def oneForkedJvmPerTest(tests: Seq[TestDefinition]): Seq[Group] =
   }
 
 lazy val microservice = Project(appName, file("."))
-  .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtDistributablesPlugin, SbtArtifactory)
+  .enablePlugins(play.sbt.PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtDistributablesPlugin)
   .settings(majorVersion := 2)
   .settings(playSettings: _*)
   .settings(scalaSettings: _*)
