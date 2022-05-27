@@ -1,10 +1,10 @@
-import uk.gov.hmrc.ExternalService
+import sbt.Tests.{ Group, SubProcess }
+import sbt._
 import uk.gov.hmrc.DefaultBuildSettings._
+import uk.gov.hmrc.ExternalService
 import uk.gov.hmrc.ServiceManagerPlugin.Keys.itDependenciesList
 import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin.publishingSettings
 import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
-import sbt.Tests.{ Group, SubProcess }
-import sbt._
 
 val appName = "hmrc-email-renderer"
 
