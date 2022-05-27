@@ -1,6 +1,5 @@
 import sbt._
 import play.sbt.PlayImport._
-import play.core.PlayVersion
 
 object MicroServiceBuild extends Build with MicroService {
 
