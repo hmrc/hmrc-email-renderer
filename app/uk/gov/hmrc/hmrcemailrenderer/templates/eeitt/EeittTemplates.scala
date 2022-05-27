@@ -1717,6 +1717,6 @@ object EeittTemplates {
       plainTemplate = txt.psa1Code.f,
       htmlTemplate = html.psa1Code.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 }

@@ -1,13 +1,5 @@
 import sbt._
 import play.sbt.PlayImport._
-import play.core.PlayVersion
-
-object MicroServiceBuild extends Build with MicroService {
-
-  val appName = "hmrc-email-renderer"
-
-  override lazy val appDependencies: Seq[ModuleID] = AppDependencies()
-}
 
 private object AppDependencies {
   def apply() = Seq(
