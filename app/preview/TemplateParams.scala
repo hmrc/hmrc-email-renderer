@@ -3011,6 +3011,18 @@ object TemplateParams2 {
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
       "undertakingRef"  -> "UID0001234"
+    ),
+    "disabled_undertaking_email_to_lead" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234",
+      "effectiveDate"   -> "27 January 2022"
+    ),
+    "disabled_undertaking_email_to_be" -> Map(
+      "eori"            -> "GB123456789010",
+      "undertakingName" -> "Test Undertaking",
+      "undertakingRef"  -> "UID0001234",
+      "effectiveDate"   -> "27 January 2022"
     )
   )
 }

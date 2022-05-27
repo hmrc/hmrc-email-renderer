@@ -1,0 +1,29 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "The undertaking you are part of has been disabled"){
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that single undertaking(@{params("eori")}) you are part of has been disabled:</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
+    @{params("undertakingRef")}</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}.</p>
+    <h2>If you need further information </h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC<br>
+
+}
