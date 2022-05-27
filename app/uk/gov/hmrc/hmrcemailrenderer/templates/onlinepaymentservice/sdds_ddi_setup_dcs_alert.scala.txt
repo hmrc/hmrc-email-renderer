@@ -1,5 +1,5 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
-@(params: Map[String, Any])@regimeName(params) Return: Direct Debit set up
+@(params: Map[String, Any])@regimeName(params) Direct Debit: confirmation of set up
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
@@ -7,4 +7,4 @@ Your Direct Debit has been set up.
 
 Go to your secure business tax account inbox to check your account details are correct.
 
-From HMRC Direct Debit Team
+From HMRC Direct Debit team

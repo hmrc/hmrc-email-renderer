@@ -17,13 +17,13 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Return Direct Debit: payment not collected") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Direct Debit: payment not collected") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit payment has not been collected.  We have sent a secure message to your business tax account inbox with full details.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your Direct Debit payment has not been collected. We have sent a secure message to your business tax account inbox with full details.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you pay your @regimeName(params) Return by another payment method.  You can pay either by bank transfer or by debit card or corporate credit card.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Make sure you pay your @regimeName(params) bill by another payment method. You can pay either by bank transfer, debit card, or corporate credit card.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
 
 }

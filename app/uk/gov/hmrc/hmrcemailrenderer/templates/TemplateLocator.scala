@@ -49,7 +49,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.lisa.LisaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.lostcredentials.LostCredentialsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mandate.MandateTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vat.MtdfbVatTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.offpayroll.OffPayrollTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.OnlinePaymentServiceTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.passcode.PasscodesTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.paye.PayeTemplates
@@ -118,7 +117,6 @@ trait TemplateLocator {
       "TAMC"                  -> TamcTemplates.templates,
       "TCS"                   -> TcsTemplates.templates,
       "Mandate"               -> MandateTemplates.templates,
-      "Off Payroll"           -> OffPayrollTemplates.templates,
       "Customs"               -> CustomsTemplates.templates,
       "Transaction Engine"    -> TransactionEngineTemplates.templates,
       "ATED"                  -> AtedTemplates.templates,

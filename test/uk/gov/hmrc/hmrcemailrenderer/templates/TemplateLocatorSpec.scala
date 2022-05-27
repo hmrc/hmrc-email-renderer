@@ -91,7 +91,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "TCS",
         "register-your-company",
         "Mandate",
-        "Off Payroll",
         "EMAC Helpdesk",
         "EMAC",
         "Customs",
@@ -494,7 +493,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "register_your_company_welcome_email",
         "register_your_company_register_vat_email",
         "register_your_company_register_paye_confirmation_new_tax_year",
+        "register_your_company_register_paye_confirmation_new_tax_year_v2",
         "register_your_company_register_paye_confirmation_current_tax_year",
+        "register_your_company_register_paye_confirmation_current_tax_year_v2",
         "investment_tax_relief_verification_email",
         "investment_tax_relief_confirmation_email",
         "investment_tax_relief_no_docs_confirmation_email",
@@ -506,7 +507,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "client_cancels_active_mandate",
         "agent_self_auth_activates_mandate",
         "agent_self_auth_deactivates_mandate",
-        "offpayroll_private_beta_invitation",
         "gg_userid_notification",
         "2SV_reset_confirmation",
         "password_change_confirmation",
@@ -834,7 +834,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "member_remove_themself_email_to_be",
         "promoted_themself_as_lead_email_to_lead",
         "removed_as_lead_email_to_previous_lead",
-        "telephone_payments_service"
+        "telephone_payments_service",
+        "disabled_undertaking_email_to_lead",
+        "disabled_undertaking_email_to_be"
       )
     }
   }

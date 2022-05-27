@@ -120,6 +120,24 @@ object EUSubsidyTemplates {
       plainTemplate = txt.removedAsLeadEmailToPreviousLead.f,
       htmlTemplate = html.removedAsLeadEmailToPreviousLead.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "disabled_undertaking_email_to_lead",
+      fromAddress = govUkTeamAddress,
+      service = EUSubsidy,
+      subject = "You have received a message from HMRC",
+      plainTemplate = txt.disabledUndertakingEmailToLead.f,
+      htmlTemplate = html.disabledUndertakingEmailToLead.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "disabled_undertaking_email_to_be",
+      fromAddress = govUkTeamAddress,
+      service = EUSubsidy,
+      subject = "You have received a message from HMRC",
+      plainTemplate = txt.disabledUndertakingEmailToBE.f,
+      htmlTemplate = html.disabledUndertakingEmailToBE.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 

@@ -17,13 +17,13 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Return Direct Debit: reminder of payment collection") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Direct Debit: advance notice of payment") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
-    <p style="margin: 0 0 30px; font-size: 19px;">You have a Direct Debit set up to pay your @regimeName(params) Return.  This is a reminder we will collect payment shortly.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You have a Direct Debit set up to pay your @regimeName(params). This is a reminder we will collect payment shortly.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">We have sent a secure message to your business tax account inbox with full details.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit Team</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
 
 }
