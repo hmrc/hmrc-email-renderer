@@ -1519,7 +1519,13 @@ object TemplateParams {
       "receivedDate" -> "20 April 2017",
       "identifier"   -> "12345",
       "subject"      -> "subject"
-    ),
+    )
+  )
+}
+object TemplateParams2 {
+
+  val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
+  val exampleParams = Map(
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",
@@ -1673,13 +1679,7 @@ object TemplateParams {
         ]""")).getBytes("UTF-8")),
       "specificQuestion" -> "I need some stuff.",
       "apiEmail"         -> "api-platform@example.com"
-    )
-  )
-}
-object TemplateParams2 {
-
-  val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
-  val exampleParams = Map(
+    ),
     "open_banking_payment_successful" -> Map(
       "taxType"    -> "Self Assessment",
       "reference"  -> "1234567890K",
