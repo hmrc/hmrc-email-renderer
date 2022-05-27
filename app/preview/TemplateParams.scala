@@ -1519,7 +1519,7 @@ object TemplateParams {
       "receivedDate" -> "20 April 2017",
       "identifier"   -> "12345",
       "subject"      -> "subject"
-    ),
+    )
   )
 }
 object TemplateParams2 {
