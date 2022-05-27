@@ -7,17 +7,13 @@ You can now report cross-border arrangements.
 
 Your MDR ID is: @{params("mdrID")}
 
-What happens next
-
-You can use your business tax account to give other people in your organisation access to the MDR service, if you are an organisation.
-
 Print or save a copy of this email for your records.
 
 How to make a report 
 
 To make a report:
 
-    search for ‘DAC6’ on GOV.UK
+    search for ‘MDR’ on GOV.UK
     sign in to the service
 
 For security reasons, we have not included a link to this service in this email.
