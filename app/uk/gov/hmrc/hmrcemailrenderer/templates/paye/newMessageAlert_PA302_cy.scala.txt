@@ -2,7 +2,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh = true)
 
-Gallwch nawr fwrw golwg dros eich cyfrifiad treth diweddaraf.
+Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.
 
 Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEM sy’n rhad ac am ddim.
 
