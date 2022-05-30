@@ -1692,7 +1692,15 @@ object TemplateParams2 {
       "cardNumber"              -> "1234",
       "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
-    "Face_to_face_payments_service" -> Map(
+    "face_to_face_payments_email_successful" -> Map(
+      "totalAmountPaid"         -> "1000.00",
+      "transactionReference"    -> "1234567890K",
+      "cardType"                -> "Visa Debit",
+      "cardNumber"              -> "1234",
+      "dateOfPayment"           ->  "05-04-2022",
+      "f2fPaymentItemsForEmail" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+    ),
+    "face_to_face_payments_email_unsuccessful" -> Map(
       "totalAmountPaid"         -> "1000.00",
       "transactionReference"    -> "1234567890K",
       "cardType"                -> "Visa Debit",
