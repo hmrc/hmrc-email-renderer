@@ -18,7 +18,7 @@
 
 @(params: Map[String, Any])
 
-@allItems = @{params("tpsPaymentItemsForEmail") match {
+@allItems = @{params("tpsPaymentItemsForEmailUnsuccessful") match {
     case items:String => Json.parse(items).as[List[JsObject]]
     case _ => List()
 }}

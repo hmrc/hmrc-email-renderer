@@ -1697,16 +1697,16 @@ object TemplateParams2 {
       "transactionReference"    -> "1234567890K",
       "cardType"                -> "Visa Debit",
       "cardNumber"              -> "1234",
-      "dateOfPayment"           ->  "31 December 2021",
-      "f2fPaymentItemsForEmail" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+      "dateOfPayment"           -> "31 December 2021",
+      "f2fPaymentItemsForEmailSuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "face_to_face_payments_email_unsuccessful" -> Map(
       "totalAmountPaid"         -> "1000.00",
       "transactionReference"    -> "1234567890K",
       "cardType"                -> "Visa Debit",
       "cardNumber"              -> "1234",
-      "dateOfPayment"           ->  "31 December 2021",
-      "f2fPaymentItemsForEmail" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+      "dateOfPayment"           -> "31 December 2021",
+      "f2fPaymentItemsForEmailUnsuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",

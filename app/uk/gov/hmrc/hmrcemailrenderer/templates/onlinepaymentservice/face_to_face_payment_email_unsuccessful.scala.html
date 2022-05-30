@@ -18,7 +18,7 @@
 
 @(params: Map[String, Any])
 
-@allItems = @{params("tpsPaymentItemsForEmail") match {
+@allItems = @{params("tpsPaymentItemsForEmailUnsuccessful") match {
 case items:String => Json.parse(items).as[List[JsObject]]
 case _ => List()
 }}
@@ -44,7 +44,7 @@ val amountOwed= (item \ "amountOwed").as[String]
 
 <p style="margin: 0 0 30px; font-size: 19px;">Your card payment to HMRC has not been made. No money has been taken from your account.</p>
 
-<p>
+
 <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
     <tbody>
     @for((taxType, amount, transactionFee, transactionNumber, taxReference) <- itemList) {
@@ -87,10 +87,12 @@ val amountOwed= (item \ "amountOwed").as[String]
     </tr>
     </tbody>
 </table>
-</p>
 
 
-<p style="margin: 0 0 30px; font-size: 19px;"><h2>If you still need to pay</h2></p>
+
+
+    <h2 style="margin: 0 0 30px; font-size: 19px;">If you still need to pay</h2>
+
 <p style="margin: 0 0 30px; font-size: 19px;">Phone the Payment Support Service on 0300 200 3835. This is available Monday to Friday, 8am to 6pm (closed on public holidays).</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue and Customs</p>

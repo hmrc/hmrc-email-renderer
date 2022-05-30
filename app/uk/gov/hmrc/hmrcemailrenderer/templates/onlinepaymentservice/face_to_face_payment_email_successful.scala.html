@@ -18,7 +18,7 @@
 
 @(params: Map[String, Any])
 
-@allItems = @{params("f2fPaymentItemsForEmail") match {
+@allItems = @{params("f2fPaymentItemsForEmailSuccessfu") match {
     case items:String => Json.parse(items).as[List[JsObject]]
     case _ => List()
 }}
@@ -44,7 +44,7 @@
 
         <p style="margin: 0 0 30px; font-size: 19px;">Your payment has been received by HMRC.</p>
 
-    <p>
+
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
             <tbody>
             @for((taxType, amount, transactionFee, transactionNumber, taxReference) <- itemList) {
@@ -87,11 +87,12 @@
             </tr>
             </tbody>
         </table>
-    </p>
+
 
     <p style="margin: 0 0 30px; font-size: 19px;">If you have an online tax account your payment will take 3 to 5 days to show in your account.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;"><h2>Why you got this email</h2></p>
+    <h2  style="margin: 0 0 30px; font-size: 19px;">Why you got this email</h2>
+
     <p style="margin: 0 0 30px; font-size: 19px;">You chose to receive payment confirmation by email.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">From HM Revenue and Customs</p>
