@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+You created a new single undertaking
+
+Dear Customer
+
+This email confirms that you @{params("eori")} have disabled your single undertaking:
+
+@{params("undertakingName")}
+@{params("undertakingRef")}
+
+This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.
+
+This is effective from @{params("effectiveDate")}.
+
+If you need further information
+
+Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+
+From HMRC
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
