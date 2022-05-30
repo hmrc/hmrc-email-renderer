@@ -83,7 +83,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_PA302",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "You have a new message from HMRC",
+      subject = "Your new tax calculation from HMRC is ready",
       plainTemplate = txt.newMessageAlert_PA302.f,
       htmlTemplate = html.newMessageAlert_PA302.f,
       priority = Some(MessagePriority.Standard)
@@ -92,7 +92,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_PA302_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -102,7 +102,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_PA302_D2",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "You have a new message from HMRC",
+      subject = "Your new tax calculation from HMRC is ready",
       plainTemplate = txt.newMessageAlert_PA302.f,
       htmlTemplate = html.newMessageAlert_PA302.f,
       priority = Some(MessagePriority.Standard)
@@ -112,7 +112,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_PA302_D2_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
