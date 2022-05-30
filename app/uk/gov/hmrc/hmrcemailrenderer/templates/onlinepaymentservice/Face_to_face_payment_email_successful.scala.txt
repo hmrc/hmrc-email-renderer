@@ -1,0 +1,82 @@
+@*
+* Copyright 2022 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
+
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
+
+@(params: Map[String, Any])
+
+@allItems = @{params("f2fPaymentItemsForEmail") match {
+    case items:String => Json.parse(items).as[List[JsObject]]
+    case _ => List()
+}}
+
+@itemList = @{ allItems.map( item => {
+
+        val taxType: String = (item \ "taxType").as[String]
+        val amount: String = (item \ "amount").as[String]
+        val transactionFee: String = (item \ "transactionFee").as[String]
+        val transactionNumber = (item \ "transactionNumber").as[String]
+        val taxReference= (item \ "taxReference").as[String]
+        val amountOwed= (item \ "amountOwed").as[String]
+        (taxType, amount, transactionFee, transactionNumber, taxReference, amountOwed)
+    })
+}
+
+
+    Dear Customer
+
+
+    Your payment has been received by HMRC.
+
+    @for((taxType, amount, transactionFee, transactionNumber, taxReference) <- itemList) {
+        Tax
+        @taxType
+
+
+        Tax Reference</th>
+        @taxReference
+
+        Payment reference
+        @transactionNumber
+
+        Amount
+        @amount
+
+
+        Card fee
+        @transactionFee
+    }
+        Card details</th>
+        Paid with @params("cardType"), ending in @params("cardNumber")
+
+        Transaction Reference
+       @params("transactionReference")
+
+       Total paid
+       £@params("totalAmountPaid")
+
+       Date
+       @params("dateOfPayment")
+
+    If you have an online tax account your payment will take 3 to 5 days to show in your account.
+
+    Why you got this email
+
+    You chose to receive payment confirmation by email.
+
+    From HM Revenue and Customs
+
+{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

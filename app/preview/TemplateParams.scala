@@ -1687,10 +1687,18 @@ object TemplateParams2 {
     ),
     "telephone_payments_service" -> Map(
       "totalAmountPaid"         -> "1000.00",
-      "transactionReference"    -> "12345FFF",
+      "taxReference"             -> "12345FFF",
       "cardType"                -> "Visa Debit",
       "cardNumber"              -> "1234",
       "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+    ),
+    "Face_to_face_payments_service" -> Map(
+      "totalAmountPaid"         -> "1000.00",
+      "transactionReference"    -> "1234567890K",
+      "cardType"                -> "Visa Debit",
+      "cardNumber"              -> "1234",
+      "dateOfPayment"           ->  "05-04-2022",
+      "f2fPaymentItemsForEmail" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",
