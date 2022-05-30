@@ -1697,7 +1697,7 @@ object TemplateParams2 {
       "transactionReference"    -> "1234567890K",
       "cardType"                -> "Visa Debit",
       "cardNumber"              -> "1234",
-      "dateOfPayment"           ->  "05-04-2022",
+      "dateOfPayment"           ->  "31 December 2021",
       "f2fPaymentItemsForEmail" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "face_to_face_payments_email_unsuccessful" -> Map(
@@ -1705,7 +1705,7 @@ object TemplateParams2 {
       "transactionReference"    -> "1234567890K",
       "cardType"                -> "Visa Debit",
       "cardNumber"              -> "1234",
-      "dateOfPayment"           ->  "05-04-2022",
+      "dateOfPayment"           ->  "31 December 2021",
       "f2fPaymentItemsForEmail" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "open_banking_payment_successful_cy" -> Map(
