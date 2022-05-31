@@ -52,7 +52,7 @@ Your card payment to HMRC has not been made. No money has been taken from your a
     }
 
     Tax Reference
-    @param("transactionReference")
+    @params("transactionReference")
 
 
     @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {

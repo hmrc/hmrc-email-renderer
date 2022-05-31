@@ -48,7 +48,7 @@
    }
 
    Tax Reference
-   @param("transactionReference")
+   @params("transactionReference")
 
 
    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
