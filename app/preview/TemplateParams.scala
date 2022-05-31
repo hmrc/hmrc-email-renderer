@@ -32,7 +32,6 @@ object TemplateParams {
     "recipientName_surname"        -> "Johnston",
     "recipientName_honours"        -> "PA"
   )
-
   val testServiceUpdate = "[Service Name]"
 
   val exampleParams = Map(
