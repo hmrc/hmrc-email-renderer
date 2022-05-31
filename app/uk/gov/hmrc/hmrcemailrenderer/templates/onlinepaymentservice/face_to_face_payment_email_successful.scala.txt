@@ -39,35 +39,38 @@
 
     Your payment has been received by HMRC.
 
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-        Tax
-        @taxType
+   Date
+   @params("dateOfPayment")
+
+   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+       Tax
+       @taxType
+   }
+
+   Tax Reference
+   @param("transactionReference")
 
 
-        Tax Reference</th>
-        @taxReference
-
+   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
         Payment reference
         @transactionNumber
 
         Amount
         @amount
 
+   }
 
-        Card fee
-        @transactionFee
-    }
-        Card details</th>
-        Paid with @params("cardType"), ending in @params("cardNumber")
+   Card type
+   Paid with @params("cardType"), ending in @params("cardNumber")
 
-        Transaction Reference
-       @params("transactionReference")
 
-       Total paid
-       £@params("totalAmountPaid")
+   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+       Card fee
+       @transactionFee
+   }
 
-       Date
-       @params("dateOfPayment")
+    Total paid
+    £@params("totalAmountPaid")
 
     If you have an online tax account your payment will take 3 to 5 days to show in your account.
 

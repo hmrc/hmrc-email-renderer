@@ -43,40 +43,37 @@ Dear Customer
 Your card payment to HMRC has not been made. No money has been taken from your account.
 
 
+    Date
+    @params("dateOfPayment")
+
     @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+       Tax
+       @taxType
+    }
 
-   Tax
-   @taxType
-
-   Tax Reference
-   @taxReference
-
-
-  Payment reference
-  @transactionNumber
+    Tax Reference
+    @param("transactionReference")
 
 
-  Amount
-  @amount
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+       Payment reference
+       @transactionNumber
+
+       Amount
+       @amount
+   }
+
+   Card type
+   Paid with @params("cardType"), ending in @params("cardNumber")
 
 
-  Card fee
-  @transactionFee
+   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+       Card fee
+       @transactionFee
+   }
 
-}
-  Card details
-  Paid with @params("cardType"), ending in @params("cardNumber")
-
-
-  Transaction Reference
-  @params("transactionReference")
-
-
-  Total paid
-  £@params("totalAmountPaid")
-
-  Date
-  @params("dateOfPayment")
+   Total paid
+   £@params("totalAmountPaid")
 
 
 If you still need to pay
@@ -87,5 +84,4 @@ Phone the Payment Support Service on 0300 200 3835. This is available Monday to 
 From HM Revenue and Customs
 
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
