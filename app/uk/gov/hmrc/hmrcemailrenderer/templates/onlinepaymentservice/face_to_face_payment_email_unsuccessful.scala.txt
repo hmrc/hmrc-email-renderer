@@ -62,9 +62,9 @@ Your card payment to HMRC has not been made. No money has been taken from your a
 
 
   Card fee
-  @transactionFee<
+  @transactionFee
 
-
+}
   Card details
   Paid with @params("cardType"), ending in @params("cardNumber")
 
