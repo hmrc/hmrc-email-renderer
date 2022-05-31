@@ -78,4 +78,4 @@
 
     From HM Revenue and Customs
 
-{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
