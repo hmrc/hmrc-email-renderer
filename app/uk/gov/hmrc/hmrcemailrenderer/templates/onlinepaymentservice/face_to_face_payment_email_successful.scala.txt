@@ -39,7 +39,7 @@
 
     Your payment has been received by HMRC.
 
-    @for((taxType, amount, transactionFee, transactionNumber, taxReference) <- itemList) {
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
         Tax
         @taxType
 

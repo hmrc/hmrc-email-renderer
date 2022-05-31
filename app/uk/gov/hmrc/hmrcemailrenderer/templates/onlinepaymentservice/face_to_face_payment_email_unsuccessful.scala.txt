@@ -43,7 +43,7 @@ Dear Customer
 Your card payment to HMRC has not been made. No money has been taken from your account.
 
 
-    @for((taxType, amount, transactionFee, transactionNumber, taxReference) <- itemList) {
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
 
    Tax
    @taxType
