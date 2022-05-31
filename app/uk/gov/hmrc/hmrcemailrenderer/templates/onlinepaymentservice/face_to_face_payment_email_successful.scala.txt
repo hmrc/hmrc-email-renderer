@@ -30,8 +30,7 @@
         val transactionFee: String = (item \ "transactionFee").as[String]
         val transactionNumber = (item \ "transactionNumber").as[String]
         val taxReference= (item \ "taxReference").as[String]
-        val amountOwed= (item \ "amountOwed").as[String]
-        (taxType, amount, transactionFee, transactionNumber, taxReference, amountOwed)
+        (taxType, amount, transactionFee, transactionNumber, taxReference)
     })
 }
 
