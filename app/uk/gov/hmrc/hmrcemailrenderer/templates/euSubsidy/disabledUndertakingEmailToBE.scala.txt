@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that the single undertaking(@{params("eori")}) you are part of has been disabled:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.
 

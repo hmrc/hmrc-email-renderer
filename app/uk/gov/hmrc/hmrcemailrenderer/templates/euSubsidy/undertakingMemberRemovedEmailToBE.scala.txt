@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that you (EORI: @{params("eori")}) have been removed from the single undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 This is effective from @{params("effectiveDate")}.
 

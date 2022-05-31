@@ -7,7 +7,6 @@ Dear Customer
 This email confirms (EORI: @{params("eori")}) that you have been asked to take over as undertaking administrator for the single undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 You must sign in to make yourself the undertaking administrator.
 
