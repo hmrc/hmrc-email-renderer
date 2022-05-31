@@ -1686,7 +1686,7 @@ object TemplateParams2 {
     ),
     "telephone_payments_service" -> Map(
       "totalAmountPaid"         -> "1000.00",
-      "taxReference"            -> "12345FFF",
+      "transactionReference"    -> "12345FFF",
       "cardType"                -> "Visa Debit",
       "cardNumber"              -> "1234",
       "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
