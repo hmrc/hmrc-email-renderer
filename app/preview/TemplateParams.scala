@@ -220,6 +220,14 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiChangedApplicationName" -> Map(
+      "previousApplicationName"   -> "Old Application Name",
+      "newApplicationName"        -> "New Application Name",
+      "changedDate"               -> "25 May 2022",
+      "changedTime"               -> "15:14",
+      "developerName"             -> "Bill Badger",
+      "requesterName"             -> "Bob Roberts"
+    ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
       "dateOfChange"    -> "28 October 2020",
