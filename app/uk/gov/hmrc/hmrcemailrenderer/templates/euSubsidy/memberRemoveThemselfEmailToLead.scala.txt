@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-A member has removed themselves from your single undertaking
+An undertaking member has removed themselves from your single undertaking
 
 Dear Customer
 

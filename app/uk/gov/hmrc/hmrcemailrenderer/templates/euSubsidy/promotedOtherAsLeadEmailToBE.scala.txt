@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-You have been asked to become undertaking administrator
+You are now undertaking administrator
 
 Dear Customer
 

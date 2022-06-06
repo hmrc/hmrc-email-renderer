@@ -12,6 +12,10 @@ This means you will no longer be able to record de minimis aid, unrelated to Cus
 
 This is effective from @{params("effectiveDate")}.
 
+The change does not take effect immediately and may take up to 24 hours to go through.
+
+This means you will still be in the undertaking until the change happens.
+
 If you need further information
 
 Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
