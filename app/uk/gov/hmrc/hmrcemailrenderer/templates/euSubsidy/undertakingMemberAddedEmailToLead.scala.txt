@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that you (EORI: @{params("eori")}) have added the following EORI: @{params("beEORI")} to a single undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 You must tell the undertaking member they have been added to the single undertaking.
 

@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that you (EORI: @{params("eori")}) are administrator for the single undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 It is now your responsibility to make sure all single undertaking details are correct and up to date.
 

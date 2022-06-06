@@ -18,9 +18,8 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You created a new single undertaking"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
-    @{params("undertakingRef")}</p>
-    <h2>Your responsibilities as the undertaking administrator for @{params("undertakingName")}</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>Your responsibilities as the undertaking administrator for @{params("undertakingName")}</b></p>
     <p style="margin: 0 0 30px; font-size: 19px;">Every 90 days you must check:</p>
     <ul style="margin: 0 0 30px; font-size: 19px;">
         <li>all undertaking details are correct and up to date</li>

@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 Your responsibilities as the undertaking administrator for @{params("undertakingName")}
 

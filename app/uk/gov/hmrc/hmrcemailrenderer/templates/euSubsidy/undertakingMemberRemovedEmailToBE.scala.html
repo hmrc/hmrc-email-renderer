@@ -18,10 +18,9 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have been removed from a single undertaking"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have been removed from the single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
-    @{params("undertakingRef")}</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
     <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}. </p>
-    <h2>You will no longer be able to claim Customs Duty waivers as part of this single undertaking.</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>You will no longer be able to claim Customs Duty waivers as part of this single undertaking.</b></p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you think you have been removed by mistake, contact the undertaking administrator. </p>
     <h2>If you need further information </h2>
     <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.</p>

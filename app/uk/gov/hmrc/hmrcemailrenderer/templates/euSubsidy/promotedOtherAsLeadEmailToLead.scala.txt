@@ -1,15 +1,14 @@
 @(params: Map[String, Any])
 
-You have promoted an undertaking member to become the new undertaking administrator (lead)
+Your status has changed and you are now an undertaking member
 
 Dear Customer
 
 This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
-You need to sign in, and agree to the terms and conditions, to complete the transfer.
+You need to sign in to complete the transfer.
 
 To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
 
