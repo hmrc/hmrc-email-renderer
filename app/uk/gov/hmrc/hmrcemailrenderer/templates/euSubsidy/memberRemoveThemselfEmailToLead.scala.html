@@ -15,11 +15,10 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A member has removed themselves from your single undertaking"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "An undertaking member has removed themselves from your single undertaking"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that (EORI: @{params("eori")}) has informed HMRC they want to leave the single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
-    @{params("undertakingRef")}</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
     <p style="margin: 0 0 30px; font-size: 19px;">You will no longer be required to record de minimis aid, unrelated to Customs Duty waivers.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}. </p>
     <h2>If you need further information </h2>

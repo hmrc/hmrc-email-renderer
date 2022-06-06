@@ -18,10 +18,9 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have asked to leave a single undertaking"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have informed HMRC that you will leave the single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
-    @{params("undertakingRef")}</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
     <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}. </p>
-    <h2>You will no longer be able to claim Customs Duty waivers as part of this undertaking. </h2>
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>You will no longer be able to claim Customs Duty waivers as part of this undertaking.</b></p>
     <p style="margin: 0 0 30px; font-size: 19px;">We have also informed the undertaking administrator of your decision. </p>
     <p style="margin: 0 0 30px; font-size: 19px;">The change does not take effect immediately and may take up to 24 hours to go through.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This means you will still be in the undertaking until the change happens.</p>

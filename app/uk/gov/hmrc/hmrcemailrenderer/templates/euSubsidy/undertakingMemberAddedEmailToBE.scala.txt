@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that you (EORI: @{params("eori")}) have been added to the following undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 You must provide information about your de minimis aid (less Customs Duty waivers), to the undertaking administrator.
 

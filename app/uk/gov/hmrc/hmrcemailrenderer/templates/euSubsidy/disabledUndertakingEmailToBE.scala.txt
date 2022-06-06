@@ -7,11 +7,14 @@ Dear Customer
 This email confirms that the single undertaking(@{params("eori")}) you are part of has been disabled:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.
 
 This is effective from @{params("effectiveDate")}.
+
+The change does not take effect immediately and may take up to 24 hours to go through.
+
+This means you will still be in the undertaking until the change happens.
 
 If you need further information
 

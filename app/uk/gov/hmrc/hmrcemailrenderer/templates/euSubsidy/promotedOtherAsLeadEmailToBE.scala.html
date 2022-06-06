@@ -15,15 +15,14 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have been asked to become undertaking administrator"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are now undertaking administrator"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms (EORI: @{params("eori")}) that you have been asked to take over as undertaking administrator for the single undertaking:
     </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}<br>
-    @{params("undertakingRef")}</p>
-    <h2>You must sign in to make yourself the undertaking administrator.</h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">To sign in, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.</p>
-    <h2>It will be your responsibility to make sure all undertaking details are correct and up to date.</h2>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>You must sign in to make yourself the undertaking administrator.</b></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>It will be your responsibility to make sure all undertaking details are correct and up to date.</b></p>
     <p style="margin: 0 0 30px; font-size: 19px;">If you think this is a mistake, please contact your undertaking administrator.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 }

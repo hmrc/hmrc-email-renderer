@@ -2952,54 +2952,45 @@ object TemplateParams2 {
     ),
     "create_undertaking_email_to_lead" -> Map(
       "eori"            -> "GB123456789012",
-      "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234"
+      "undertakingName" -> "Test Undertaking"
     ),
     "undertaking_member_added_email_to_be" -> Map(
       "eori"            -> "GB123456789010",
-      "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234"
+      "undertakingName" -> "Test Undertaking"
     ),
     "undertaking_member_added_email_to_lead" -> Map(
       "eori"            -> "GB123456789012",
       "beEORI"          -> "GB123456789010",
-      "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234"
+      "undertakingName" -> "Test Undertaking"
     ),
     "undertaking_member_removed_email_to_lead" -> Map(
       "eori"            -> "GB123456789012",
       "beEORI"          -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234",
       "effectiveDate"   -> "27 January 2022"
     ),
     "undertaking_member_removed_email_to_be" -> Map(
       "eori"            -> "GB123456789012",
       "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234",
       "effectiveDate"   -> "27 January 2022"
     ),
     "promoted_other_as_lead_email_to_be" -> Map(
       "eori"            -> "GB123456789010",
-      "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234"
+      "undertakingName" -> "Test Undertaking"
     ),
     "promoted_other_as_lead_email_to_lead" -> Map(
       "eori"            -> "GB123456789012",
       "beEORI"          -> "GB123456789010",
-      "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234"
+      "undertakingName" -> "Test Undertaking"
     ),
     "member_remove_themself_email_to_lead" -> Map(
       "eori"            -> "GB123456789012",
       "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234",
       "effectiveDate"   -> "27 January 2022"
     ),
     "member_remove_themself_email_to_be" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234",
       "effectiveDate"   -> "27 January 2022"
     ),
     "promoted_themself_as_lead_email_to_lead" -> Map(
@@ -3009,19 +3000,16 @@ object TemplateParams2 {
     ),
     "removed_as_lead_email_to_previous_lead" -> Map(
       "eori"            -> "GB123456789010",
-      "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234"
+      "undertakingName" -> "Test Undertaking"
     ),
     "disabled_undertaking_email_to_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234",
       "effectiveDate"   -> "27 January 2022"
     ),
     "disabled_undertaking_email_to_be" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
-      "undertakingRef"  -> "UID0001234",
       "effectiveDate"   -> "27 January 2022"
     )
   )

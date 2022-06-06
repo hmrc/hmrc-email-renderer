@@ -7,7 +7,6 @@ Dear Customer
 This email confirms that you (EORI: @{params("eori")}) are no longer the undertaking administrator for the single undertaking:
 
 @{params("undertakingName")}
-@{params("undertakingRef")}
 
 If you need further information
 
