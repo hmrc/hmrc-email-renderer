@@ -37,7 +37,7 @@
 
 
 
-Dear Customer
+Dear customer
 
 
 Your card payment to HMRC has not been made. No money has been taken from your account.
@@ -81,7 +81,7 @@ If you still need to pay
 Phone the Payment Support Service on 0300 200 3835. This is available Monday to Friday, 8am to 6pm (closed on public holidays).
 
 
-From HM Revenue and Customs
+From HMRC
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

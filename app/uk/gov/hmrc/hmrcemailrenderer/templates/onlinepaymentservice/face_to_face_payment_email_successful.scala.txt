@@ -34,7 +34,7 @@
 }
 
 
-    Dear Customer
+    Dear customer
 
 
     Your payment has been received by HMRC.
@@ -78,6 +78,6 @@
 
     You chose to receive payment confirmation by email.
 
-    From HM Revenue and Customs
+    From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
