@@ -164,6 +164,13 @@ class TemplatePrioritiesISpec
           "responsibleIndividualName" -> "responsibleIndividualName",
           "requesterName"             -> "requesterName"
         )),
+      (
+        "apiChangeOfApplicationName",
+        Map(
+          "previousApplicationName" -> "Old Application Name",
+          "newApplicationName"      -> "New Application Name",
+          "requesterName"           -> "Bob Roberts"
+        )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
