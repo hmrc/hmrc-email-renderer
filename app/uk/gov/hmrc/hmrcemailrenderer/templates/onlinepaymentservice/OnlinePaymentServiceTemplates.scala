@@ -27,7 +27,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "payment_successful",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Payment confirmation",
+      subject = "HMRC payment confirmation",
       plainTemplate = txt.payment_successful.f,
       htmlTemplate = html.payment_successful.f,
       priority = Some(MessagePriority.Urgent)
