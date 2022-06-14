@@ -134,6 +134,7 @@ class TemplatePrioritiesISpec
         "apiApplicationDeletedNotification",
         Map(
           "applicationName" -> "applicationName",
+          "applicationId"   -> "a4e14136-e283-4d79-be01-ebf230873285",
           "requestor"       -> "email@address.com"
         )),
       (
