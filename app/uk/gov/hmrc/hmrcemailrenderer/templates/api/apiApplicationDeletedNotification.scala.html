@@ -15,9 +15,9 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We deleted an application") {
-<p style="margin: 0 0 30px; font-size: 19px;">We deleted <strong>@{params("applicationName")}</strong> at the request of <strong>@{params("requestor")}</strong> who is an admin for this application.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have deleted your application") {
+<p style="margin: 0 0 30px; font-size: 19px;">The admin <strong>@{params("requestor")}</strong> requested that we delete <strong>@{params("applicationName")}</strong> from the HMRC Developer Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Application ID: <strong>@{params("applicationId")}</strong></p>
 <p style="margin: 0 0 30px; font-size: 19px;">This application cannot be restored.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
 }

@@ -161,6 +161,7 @@ object TemplateParams {
     ),
     "apiApplicationDeletedNotification" -> Map(
       "applicationName" -> "Test Application",
+      "applicationId"   -> "a4e14136-e283-4d79-be01-ebf230873285",
       "requestor"       -> "joe.bloggs@gmail.com"
     ),
     "apiDeveloperDeletedConfirmation" -> Map(

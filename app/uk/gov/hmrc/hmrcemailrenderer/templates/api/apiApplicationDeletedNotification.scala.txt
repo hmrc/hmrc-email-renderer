@@ -1,10 +1,10 @@
-@(params: Map[String, Any])We deleted an application
+@(params: Map[String, Any])We have deleted your application
 
-We deleted @{params("applicationName")} at the request of @{params("requestor")} who is an admin for this application.
+The admin @{params("requestor")} requested that we delete @{params("applicationName")} from the HMRC Developer Hub.
+
+Application ID: @{params("applicationId")}
 
 This application cannot be restored.
-
-Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 
 From HMRC Developer Hub
 
