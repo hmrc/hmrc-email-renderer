@@ -33,4 +33,5 @@ object CBCRNewTemplates {
       priority = Some(MessagePriority.Urgent)
     )
   )
+
 }
