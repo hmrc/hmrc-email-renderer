@@ -34,7 +34,7 @@
 }
 
 
-    Dear customer
+    Dear Customer
 
 
     Your payment has been received by HMRC.
@@ -42,32 +42,31 @@
    Date
    @params("dateOfPayment")
 
-   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-       Tax
-       @taxType
-   }
+ @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+   Tax
+   @taxType
+ }
 
    Tax Reference
    @params("transactionReference")
 
 
-   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-        Payment reference
-        @transactionNumber
+ @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+   Payment reference
+   @transactionNumber
 
-        Amount
-        @amount
-
-   }
+   Amount
+   @amount
+ }
 
    Card type
    Paid with @params("cardType"), ending in @params("cardNumber")
 
 
-   @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-       Card fee
-       @transactionFee
-   }
+ @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+   Card fee
+   @transactionFee
+ }
 
     Total paid
     £@params("totalAmountPaid")
@@ -78,6 +77,6 @@
 
     You chose to receive payment confirmation by email.
 
-    From HMRC
+    From From HM Revenue and Customs
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
