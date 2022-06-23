@@ -5,6 +5,6 @@
 
 Your Direct Debit payment has not been collected. We have sent a secure message to your business tax account inbox with full details.
 
-Make sure you pay your @regimeName(params) bill by another payment method. You can pay either by bank transfer, debit card, or corporate credit card.
+Make sure you pay your @regimeName(params) bill by another payment method. You can pay either by bank transfer, debit card or corporate credit card.
 
 From HMRC Direct Debit team
