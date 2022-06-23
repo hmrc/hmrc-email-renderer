@@ -5,11 +5,13 @@ Annwyl Gwsmer
 Mae'ch taliad wedi dod i law.
 
 Treth: @params("taxType")
-Cyfeirnod treth: @params("taxReference")
-Cyfeirnod y taliad: @params("paymentReference")
-Swm a dalwyd: @params("amountPaid")
+Cyfeirnod y taliad: @params("taxReference")
+Cyfeirnod Trafodyn: @params("paymentReference")
 @params.get("commission").map { commission =>
+Swm: @params("amountPaid")
 Ffi cerdyn: £@commission
+}.getOrElse {
+Swm a dalwyd: @params("amountPaid")
 }
 @params.get("totalPaid").map { totalPaid =>
 Cyfanswm a dalwyd: £@totalPaid

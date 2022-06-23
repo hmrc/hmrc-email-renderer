@@ -5,11 +5,13 @@ Dear Customer
 Your payment has been received by HMRC.
 
 Tax: @params("taxType")
-Tax reference: @params("taxReference")
-Payment reference: @params("paymentReference")
-Amount paid: @params("amountPaid")
+Payment reference: @params("taxReference")
+Transaction reference: @params("paymentReference")
 @params.get("commission").map { commission =>
+Amount: @params("amountPaid")
 Card fee (non-refundable): £@commission
+}.getOrElse {
+Amount paid: @params("amountPaid")
 }
 @params.get("totalPaid").map { totalPaid =>
 Total paid: £@totalPaid
