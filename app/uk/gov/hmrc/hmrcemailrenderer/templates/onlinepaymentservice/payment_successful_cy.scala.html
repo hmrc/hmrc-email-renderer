@@ -32,24 +32,28 @@
         </tr>
 
         <tr>
-            <th>Cyfeirnod treth </th>
+            <th>Cyfeirnod y taliad </th>
             <td>@params("taxReference")</td>
         </tr>
 
         <tr>
-            <th>Cyfeirnod y taliad</th>
+            <th>Cyfeirnod Trafodyn</th>
             <td>@params("paymentReference")</td>
-        </tr>
-
-        <tr>
-            <th>Swm a dalwyd</th>
-            <td>£@params("amountPaid")</td>
         </tr>
 
         @params.get("commission").map { commission =>
             <tr>
+                <th>Swm</th>
+                <td>£@params("amountPaid")</td>
+            </tr>
+            <tr>
                 <th>Ffi cerdyn</th>
                 <td>£@commission</td>
+            </tr>
+        }.getOrElse {
+            <tr>
+                <th>Swm a dalwyd</th>
+                <td>£@params("amountPaid")</td>
             </tr>
         }
 
