@@ -2205,6 +2205,7 @@ object TemplateParams2 {
       "pspName" -> "Jane Doe"
     ),
     "cbc_registration_successful_organisation" -> Map(
+      "name"  -> "Joe Bloggs",
       "cbcID" -> "XWCBC0000000058"
     ),
     "dac6_registration_successful" -> Map(
