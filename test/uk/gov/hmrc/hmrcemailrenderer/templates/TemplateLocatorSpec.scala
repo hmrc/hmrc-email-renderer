@@ -750,6 +750,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "customs_financials_historic_c79_certificate",
         "customs_financials_new_postponed_vat_notification",
         "customs_financials_requested_postponed_vat_notification",
+        "customs_financials_requested_for_standing_authorities",
         "cgtpd_email_verification",
         "cgtpd_email_verification_cy",
         "tdq_fph_report_non_compliant",
