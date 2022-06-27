@@ -32,24 +32,28 @@
         </tr>
 
         <tr>
-            <th>Tax reference</th>
+            <th>Payment reference</th>
             <td>@params("taxReference")</td>
         </tr>
 
         <tr>
-            <th>Payment reference</th>
+            <th>Transaction reference</th>
             <td>@params("paymentReference")</td>
-        </tr>
-
-        <tr>
-            <th>Amount paid</th>
-            <td>£@params("amountPaid")</td>
         </tr>
 
         @params.get("commission").map { commission =>
             <tr>
+                <th>Amount</th>
+                <td>£@params("amountPaid")</td>
+            </tr>
+            <tr>
                 <th>Card fee</th>
                 <td>£@commission</td>
+            </tr>
+        }.getOrElse {
+            <tr>
+                <th>Amount paid</th>
+                <td>£@params("amountPaid")</td>
             </tr>
         }
 
