@@ -1,8 +1,8 @@
 @(params: Map[String, Any])Changes made to application details
 
-@{params("requesterName")} changed the Developer Hub application @{params("fieldName")} from @{params("previousValue")} to @{params("newValue")}.
+@{params("requesterName")} has changed the Developer Hub application details for @{params("applicationName")}.  The @{params("fieldName")} has been changed from @{params("previousValue")} to @{params("newValue")}.
 
-If you did not expect this change, sign in to the Developer Hub and check the application name.
+If you did not expect this change, sign in to the Developer Hub and check the application @{params("fieldName")}.
 
 You can protect your account by changing your password and setting up 2-step verification.
 

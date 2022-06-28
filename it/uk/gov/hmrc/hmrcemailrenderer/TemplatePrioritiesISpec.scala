@@ -175,10 +175,11 @@ class TemplatePrioritiesISpec
       (
         "apiChangeOfApplicationDetails",
         Map(
-          "fieldName"     -> "Privacy Policy URL",
-          "previousValue" -> "https://example.com/old-privacy-policy",
-          "newValue"      -> "https://example.com/new-privacy-policy",
-          "requesterName" -> "Bob Roberts"
+          "applicationName" -> "Nexus 6",
+          "fieldName"       -> "privacy policy URL",
+          "previousValue"   -> "https://example.com/old-privacy-policy",
+          "newValue"        -> "https://example.com/new-privacy-policy",
+          "requesterName"   -> "Bob Roberts"
         )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),

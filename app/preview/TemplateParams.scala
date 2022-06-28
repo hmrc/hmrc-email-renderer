@@ -227,10 +227,11 @@ object TemplateParams {
       "requesterName"           -> "Bob Roberts"
     ),
     "apiChangeOfApplicationDetails" -> Map(
-      "fieldName"     -> "Privacy Policy URL",
-      "previousValue" -> "https://example.com/old-privacy-policy",
-      "newValue"      -> "https://example.com/new-privacy-policy",
-      "requesterName" -> "Bob Roberts"
+      "applicationName" -> "Nexus 6",
+      "fieldName"       -> "privacy policy URL",
+      "previousValue"   -> "https://example.com/old-privacy-policy",
+      "newValue"        -> "https://example.com/new-privacy-policy",
+      "requesterName"   -> "Bob Roberts"
     ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
