@@ -1787,22 +1787,27 @@ object TemplateParams2 {
       "recipientName_line1" -> "Colm Cavanagh"
     ),
     "sdds_ddi_setup_dcs_alert" -> Map(
+      "subject"             -> "subject",
       "recipientName_line1" -> "Joe Smith",
       "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_amended_dcs_alert" -> Map(
+      "subject"             -> "subject",
       "recipientName_line1" -> "Joe Smith",
       "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_cancelled_dcs_alert" -> Map(
+      "subject"             -> "subject",
       "recipientName_line1" -> "Joe Smith",
       "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_reminder_dcs_alert" -> Map(
+      "subject"             -> "subject",
       "recipientName_line1" -> "Joe Smith",
       "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
     "sdds_ddi_unpaid_dcs_alert" -> Map(
+      "subject"             -> "subject",
       "recipientName_line1" -> "Joe Smith",
       "sdds_regimeName"     -> "Soft Drinks Industry Levy"
     ),
