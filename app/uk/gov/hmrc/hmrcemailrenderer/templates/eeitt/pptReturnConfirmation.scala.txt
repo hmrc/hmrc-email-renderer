@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+
+Confirmation of your plastic packaging tax return
+
+Dear @params("customerName")
+
+This email confirms we have received a plastic packaging tax return from your organisation.
+
+Your reference is: @params("submissionReference")
+
+What happens next
+
+We aim to deal with your submission within 28 days.
+
+We may contact you if we need you to provide further evidence.
+
+Returns submitted after their quarterly due date can incur a penalty charge and interest.
+
+Contacting HMRC
+
+For your security HMRC will not send personal data by email.
+
+If you need to contact HMRC, search GOV.UK for the ‘enquire about Plastic Packaging Tax’ online form.
+
+From HMRC's Plastic Packaging Tax team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
