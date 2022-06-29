@@ -1735,6 +1735,6 @@ object EeittTemplates {
       plainTemplate = txt.pptRequestConfirmation.f,
       htmlTemplate = html.pptRequestConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    ),
+    )
   )
 }
