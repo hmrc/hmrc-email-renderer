@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Dear @{params("name")},
+Dear @{params("name")}
 
 You have registered for country-by-country (CBC).
 
@@ -17,13 +17,13 @@ How to make a report
 To make a report:
 
     search for ‘CBC’ on GOV.UK
-    sign into the service using your government gateway account
+    sign into the service using your Government Gateway account
 
 For security reasons, we have not included a link to this service in this email.
 
 You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.
 
-If you need more information, search ‘CBC’ on GOV.UK
+If you need more information, search ‘CBC’ on GOV.UK.
 
 From the HMRC CBC service
 
