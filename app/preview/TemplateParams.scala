@@ -2211,6 +2211,10 @@ object TemplateParams2 {
     "pods_psp_deregister_self" -> Map(
       "pspName" -> "Jane Doe"
     ),
+    "cbc_registration_successful_organisation" -> Map(
+      "name"  -> "Joe Bloggs",
+      "cbcID" -> "XWCBC0000000058"
+    ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
