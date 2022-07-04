@@ -1,0 +1,47 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Successful registration for CBC") {
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")}</p>
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">You have registered for country-by-country (CBC).</h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your CBC ID is: <span style="font-weight:bold">@{params("cbcID")}</span></p>
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">Why you got this email </h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can now use your business tax account to give other people in your organisation access to the CBC service.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Print or save a copy of this email for your records.</p>
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">How to make a report </h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">To make a report:</p>
+
+<ul style="list-style-type:disc">
+ <li style="font-size: 20px;">search for ‘CBC’ on GOV.UK</li>
+ <li style="font-size: 20px;">sign into the service using your Government Gateway account</li>
+</ul>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you need more information, search ‘CBC’ on GOV.UK.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From the HMRC CBC service</p>
+}
