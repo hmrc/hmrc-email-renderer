@@ -1,0 +1,27 @@
+@(params: Map[String, Any])The notification of import adjustment statements you requested are now available
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Requested list of accounts you have authority to use is now available
+
+Dear Customer
+
+Your requested list of accounts you have authority to use is available to download for the next 10 days.
+
+To access the list:
+
+Go to GOV.UK.
+
+Search for 'Set up or view an authority to use a deferment, guarantee or cash account'.
+
+Select 'view accounts you have a standing authority to use'.
+
+For security reasons, we have not included a link in this email.
+
+If you need help
+
+Phone HMRC on 0300 200 3701. Opening times 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From the Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

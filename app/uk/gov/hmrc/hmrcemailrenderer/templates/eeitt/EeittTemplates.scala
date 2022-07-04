@@ -1717,6 +1717,24 @@ object EeittTemplates {
       plainTemplate = txt.psa1Code.f,
       htmlTemplate = html.psa1Code.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_return_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your plastic packaging tax return",
+      plainTemplate = txt.pptReturnConfirmation.f,
+      htmlTemplate = html.pptReturnConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ppt_request_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your plastic packaging tax repayment request",
+      plainTemplate = txt.pptRequestConfirmation.f,
+      htmlTemplate = html.pptRequestConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

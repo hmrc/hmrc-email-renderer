@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+
+Confirmation of your plastic packaging tax repayment request
+
+Dear @params("customerName")
+
+This email confirms we have received a plastic packaging tax repayment request from your organisation.
+
+Your reference is: @params("submissionReference")
+
+What happens next
+
+We aim to deal with your request within 28 days.
+
+Payment will be sent to the nominated bank account. Please check your bank statement as no confirmation of payment will be sent.
+
+We may contact you if we need you to provide further information.
+
+Contacting HMRC
+
+For your security HMRC will not send personal data by email.
+
+If you need to contact HMRC, search GOV.UK for the ‘enquire about Plastic Packaging Tax’ online form.
+
+From HMRC's Plastic Packaging Tax team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

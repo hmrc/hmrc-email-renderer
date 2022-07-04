@@ -96,6 +96,15 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.requestedPostponedVATStatement.f,
       htmlTemplate = html.requestedPostponedVATStatement.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_for_standing_authorities",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "New requested Standing Authorities statement",
+      plainTemplate = txt.standingAuthoritiesStatement.f,
+      htmlTemplate = html.standingAuthoritiesStatement.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
