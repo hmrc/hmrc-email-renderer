@@ -152,47 +152,47 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     // Direct Debit generic SDDS templates
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_setup_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Direct Debit: set up",
+      subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_setup_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_setup_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_amended_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Direct Debit: amended",
+      subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_amended_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_amended_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_cancelled_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Direct Debit: cancelled",
+      subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_cancelled_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_cancelled_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_reminder_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Direct Debit: reminder of payment collection",
+      subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_reminder_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_reminder_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_unpaid_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Direct Debit: payment not collected",
+      subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_unpaid_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
