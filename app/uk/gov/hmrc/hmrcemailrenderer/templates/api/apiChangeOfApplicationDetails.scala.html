@@ -1,0 +1,28 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Changes made to application details") {
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("requesterName")} has changed the Developer Hub application details for @{params("applicationName")}.</p>
+<p style="margin: 0 0 10px; font-size: 19px;">The @{params("fieldName")} has been changed from:</p>
+<p style="margin: 0 0 10px; font-size: 19px;">@{params("previousValue")}</p>
+<p style="margin: 0 0 10px; font-size: 19px;">to</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("newValue")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you did not expect this change, sign in to the Developer Hub and check the application @{params("fieldName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can protect your account by changing your password and setting up 2-step verification.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Do not respond to this email. Replies to this email address are not monitored.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
+}

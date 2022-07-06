@@ -226,6 +226,13 @@ object TemplateParams {
       "newApplicationName"      -> "New Application Name",
       "requesterName"           -> "Bob Roberts"
     ),
+    "apiChangeOfApplicationDetails" -> Map(
+      "applicationName" -> "Nexus 6",
+      "fieldName"       -> "privacy policy URL",
+      "previousValue"   -> "https://example.com/old-privacy-policy",
+      "newValue"        -> "https://example.com/new-privacy-policy",
+      "requesterName"   -> "Bob Roberts"
+    ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
       "dateOfChange"    -> "28 October 2020",
@@ -2900,6 +2907,14 @@ object TemplateParams2 {
     ),
     "vat652_code" -> Map(
       "confirmationCode" -> "HGDY"
+    ),
+    "ppt_return_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ppt_request_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
