@@ -2,11 +2,9 @@
 
 Dear @{params("name")}
 
-You have registered for country-by-country (CBC).
+You have registered for country-by-country (CBC)
 
 Your CBC ID is: @{params("cbcID")}
-
-Why you got this email
 
 You can now use your business tax account to give other people in your organisation access to the CBC service.
 
