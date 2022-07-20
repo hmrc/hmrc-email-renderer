@@ -6,7 +6,7 @@ Your application reference number is: @params("referenceNumber")
 
 Please do not contact us about the application until after @params("contactDate").
 
-What happens next
+What happens next?
 
 You can still do payroll but you should:
 
