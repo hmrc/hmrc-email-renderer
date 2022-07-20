@@ -72,12 +72,28 @@ object RegisterYourCompanyTemplates {
       htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYearV2.f
     ),
     MessageTemplate.create(
+      templateId = "register_your_company_register_paye_confirmation_new_tax_year_v2_cy",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "'Register an employer for PAYE' - application received",
+      plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationNewTaxYearV2_cy.f,
+      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYearV2_cy.f
+    ),
+    MessageTemplate.create(
       templateId = "register_your_company_register_paye_confirmation_current_tax_year_v2",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "'Register an employer for PAYE' - application received",
       plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationV2.f,
       htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationV2.f
+    ),
+    MessageTemplate.create(
+      templateId = "register_your_company_register_paye_confirmation_current_tax_year_v2_cy",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "'Register an employer for PAYE' - application received",
+      plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationV2_cy.f,
+      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationV2_cy.f
     )
   )
 }
