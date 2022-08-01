@@ -1,8 +1,8 @@
 @(params: Map[String, Any])
 
-Dear @{params("name")}
+Successful registration for CBC
 
-You have registered for country-by-country (CBC)
+Dear @{params("name")}
 
 Your CBC ID is: @{params("cbcID")}
 
@@ -23,6 +23,6 @@ You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.
 
 If you need more information, search ‘CBC’ on GOV.UK.
 
-From the HMRC CBC service
+From the CBC service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
