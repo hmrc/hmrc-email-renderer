@@ -105,6 +105,11 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
         expectedPriority = MessagePriority.Urgent)
 
       validateTemplate(
+        templateId = "apiVerifyResponsibleIndividualUpdate",
+        expectedSubject = "Responsible individual verification",
+        expectedPriority = MessagePriority.Urgent)
+
+      validateTemplate(
         templateId = "apiResponsibleIndividualReminderToAdmin",
         expectedSubject = "Update about your request for production credentials",
         expectedPriority = MessagePriority.Standard

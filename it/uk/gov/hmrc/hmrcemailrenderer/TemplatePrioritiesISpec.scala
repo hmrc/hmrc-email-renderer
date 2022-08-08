@@ -159,6 +159,14 @@ class TemplatePrioritiesISpec
           "requesterName"             -> "requesterName"
         )),
       (
+        "apiVerifyResponsibleIndividualUpdate",
+        Map(
+          "applicationName"           -> "applicationName",
+          "developerHubLink"          -> "/developerHubLink",
+          "responsibleIndividualName" -> "responsibleIndividualName",
+          "requesterName"             -> "requesterName"
+        )),
+      (
         "apiResponsibleIndividualDeclined",
         Map(
           "applicationName"           -> "applicationName",

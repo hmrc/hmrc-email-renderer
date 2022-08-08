@@ -206,6 +206,12 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiVerifyResponsibleIndividualUpdate" -> Map(
+      "developerHubLink"          -> exampleLinkWithRandomId,
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs",
+      "requesterName"             -> "Bob Roberts"
+    ),
     "apiResponsibleIndividualReminderToAdmin" -> Map(
       "applicationName"           -> "Test Application",
       "responsibleIndividualName" -> "Joe Bloggs",

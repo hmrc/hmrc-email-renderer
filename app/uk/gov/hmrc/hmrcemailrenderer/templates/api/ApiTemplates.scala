@@ -220,6 +220,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiVerifyResponsibleIndividualUpdate",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Responsible individual verification",
+      plainTemplate = txt.apiVerifyResponsibleIndividualUpdate.f,
+      htmlTemplate = html.apiVerifyResponsibleIndividualUpdate.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiResponsibleIndividualReminderToAdmin",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
