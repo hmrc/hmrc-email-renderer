@@ -174,6 +174,13 @@ class TemplatePrioritiesISpec
           "requesterName"             -> "requesterName"
         )),
       (
+        "apiResponsibleIndividualNotChanged",
+        Map(
+          "applicationName"           -> "applicationName",
+          "responsibleIndividualName" -> "responsibleIndividualName",
+          "requesterName"             -> "requesterName"
+        )),
+      (
         "apiChangeOfApplicationName",
         Map(
           "previousApplicationName" -> "Old Application Name",

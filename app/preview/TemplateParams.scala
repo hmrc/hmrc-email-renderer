@@ -227,6 +227,11 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiResponsibleIndividualNotChanged" -> Map(
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs",
+      "requesterName"             -> "Bob Roberts"
+    ),
     "apiChangeOfApplicationName" -> Map(
       "previousApplicationName" -> "Old Application Name",
       "newApplicationName"      -> "New Application Name",

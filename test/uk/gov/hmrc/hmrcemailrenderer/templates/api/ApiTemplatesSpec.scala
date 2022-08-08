@@ -127,6 +127,12 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
       )
 
       validateTemplate(
+        templateId = "apiResponsibleIndividualNotChanged",
+        expectedSubject = "Important update about your application",
+        expectedPriority = MessagePriority.Urgent
+      )
+
+      validateTemplate(
         templateId = "apiChangeOfApplicationName",
         expectedSubject = "Changes made to application name",
         expectedPriority = MessagePriority.Urgent
