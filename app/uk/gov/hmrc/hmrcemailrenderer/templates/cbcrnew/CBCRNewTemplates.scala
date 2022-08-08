@@ -27,7 +27,7 @@ object CBCRNewTemplates {
       templateId = "cbc_registration_successful_organisation",
       fromAddress = govUkTeamAddress,
       service = CountryByCountryReportingNew,
-      subject = "You have registered for country-by-country (CBC)",
+      subject = "Successful registration for CBC",
       plainTemplate = txt.cbcRegistrationSuccessfulOrganisation.f,
       htmlTemplate = html.cbcRegistrationSuccessfulOrganisation.f,
       priority = Some(MessagePriority.Urgent)
