@@ -1714,8 +1714,8 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Confirm your email address - Notification of errors in VAT returns",
-      plainTemplate = txt.psa1Code.f,
-      htmlTemplate = html.psa1Code.f,
+      plainTemplate = txt.vat652Code.f,
+      htmlTemplate = html.vat652Code.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
