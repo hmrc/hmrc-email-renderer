@@ -239,6 +239,12 @@ object TemplateParams {
       "newValue"        -> "https://example.com/new-privacy-policy",
       "requesterName"   -> "Bob Roberts"
     ),
+    "apiChangeOfResponsibleIndividual" -> Map(
+      "applicationName"               -> "Nexus 6",
+      "previousResponsibleIndividual" -> "Donald Trump",
+      "newResponsibleIndividual"      -> "Joe Biden",
+      "requesterName"                 -> "Bob Roberts"
+    ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
       "dateOfChange"    -> "28 October 2020",

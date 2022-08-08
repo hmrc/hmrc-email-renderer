@@ -272,6 +272,15 @@ object ApiTemplates {
       plainTemplate = txt.apiChangeOfApplicationDetails.f,
       htmlTemplate = html.apiChangeOfApplicationDetails.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiChangeOfResponsibleIndividual",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Important information about your application",
+      plainTemplate = txt.apiChangeOfResponsibleIndividual.f,
+      htmlTemplate = html.apiChangeOfResponsibleIndividual.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
