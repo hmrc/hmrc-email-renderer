@@ -177,8 +177,7 @@ class TemplatePrioritiesISpec
         "apiResponsibleIndividualNotChanged",
         Map(
           "applicationName"           -> "applicationName",
-          "responsibleIndividualName" -> "responsibleIndividualName",
-          "requesterName"             -> "requesterName"
+          "responsibleIndividualName" -> "responsibleIndividualName"
         )),
       (
         "apiChangeOfApplicationName",

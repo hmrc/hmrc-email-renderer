@@ -1,7 +1,5 @@
 @(params: Map[String, Any])The responsible individual has not changed
 
-Dear @{params("requesterName")}
-
 @{params("responsibleIndividualName")} did not verify that they are responsible for @{params("applicationName")}.
 
 No changes were made to the responsible individual.
