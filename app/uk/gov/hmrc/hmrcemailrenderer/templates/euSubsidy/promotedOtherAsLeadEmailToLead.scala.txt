@@ -10,7 +10,7 @@ This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beE
 
 You need to sign in to complete the transfer.
 
-To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+To sign in, and for further guidance, search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
 
 Once the transfer is complete you will no longer be the undertaking administrator. You will need to keep the new undertaking administrator updated on your usage of de minimis aid, unrelated to Customs Duty waivers.
 
