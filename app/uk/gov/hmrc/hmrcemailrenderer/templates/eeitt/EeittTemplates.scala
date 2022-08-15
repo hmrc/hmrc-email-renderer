@@ -1753,6 +1753,6 @@ object EeittTemplates {
       plainTemplate = txt.ventureCapitalCode.f,
       htmlTemplate = html.ventureCapitalCode.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 }
