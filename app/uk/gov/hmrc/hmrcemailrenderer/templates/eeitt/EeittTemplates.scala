@@ -1735,6 +1735,24 @@ object EeittTemplates {
       plainTemplate = txt.pptRequestConfirmation.f,
       htmlTemplate = html.pptRequestConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "venture_capital_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Venture Capital Schemes application",
+      plainTemplate = txt.ventureCapitalConfirmation.f,
+      htmlTemplate = html.ventureCapitalConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "venture_capital_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Get advance assurance about a venture capital scheme",
+      plainTemplate = txt.ventureCapitalCode.f,
+      htmlTemplate = html.ventureCapitalCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
