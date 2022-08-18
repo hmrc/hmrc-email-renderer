@@ -1,0 +1,11 @@
+@(params: Map[String, Any])Gallwch ddechrau defnyddio grwpiau mynediad
+
+Annwyl @params("agencyName")
+
+Rydych wedi galluogi grwpiau mynediad yn eich cyfrif gwasanaethau asiant ac mae manylion eich cleientiaid bellach wedi’u prosesu. Nid oeddem yn gallu adfer pob un o’ch cyfeirnodau cleient, ond gallwch nodi’r rhain â llaw. I wneud hyn, dewiswch ‘Rheoli cleientiaid’ o dan ‘Rheoli’r cyfrif’.
+
+I greu grwpiau mynediad, mewngofnodwch i’ch cyfrif gwasanaethau asiant a dewiswch ‘Rheoli’r cyfrif’.
+
+Peidiwch ag ymateb i’r e-bost hwn – mae’n neges awtomatig oddi wrth gyfrif nad yw’n cael ei fonitro.
+
+Oddi wrth dîm Gwasanaethau Asiant CThEM

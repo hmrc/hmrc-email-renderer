@@ -105,6 +105,24 @@ object TemplateParams {
       "createdDate" -> "22 March 2021",
       "expiryDate"  -> "4 April 2021"
     ),
+    "agent_permissions_success" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_success_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_some_failed" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_some_failed_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_all_failed" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_all_failed_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"

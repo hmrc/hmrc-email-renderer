@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Ychwanegu cleientiaid i ddefnyddio grwpiau mynediad
+
+Annwyl @params("agencyName")
+
+Rydych wedi galluogi grwpiau mynediad yn eich cyfrif gwasanaethau asiant.
+
+Ni all ein system ddod o hyd i unrhyw gleientiaid sy’n gysylltiedig â’r cyfrif hwn. Mae angen i chi ychwanegu cleientiaid cyn y gallwch ddefnyddio grwpiau mynediad.
+
+I ychwanegu cleientiaid, mewngofnodwch i’ch cyfrif gwasanaethau asiant. Gallwch gopïo hen awdurdodiadau drosodd neu greu cais am awdurdodiad newydd.
+
+Peidiwch ag ymateb i’r e-bost hwn – mae’n neges awtomatig oddi wrth gyfrif nad yw’n cael ei fonitro.
+
+Oddi wrth dîm Gwasanaethau Asiant CThEM
