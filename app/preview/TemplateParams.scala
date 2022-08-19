@@ -224,6 +224,12 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiVerifyResponsibleIndividualUpdate" -> Map(
+      "developerHubLink"          -> exampleLinkWithRandomId,
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs",
+      "requesterName"             -> "Bob Roberts"
+    ),
     "apiResponsibleIndividualReminderToAdmin" -> Map(
       "applicationName"           -> "Test Application",
       "responsibleIndividualName" -> "Joe Bloggs",
@@ -239,6 +245,10 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiResponsibleIndividualNotChanged" -> Map(
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs"
+    ),
     "apiChangeOfApplicationName" -> Map(
       "previousApplicationName" -> "Old Application Name",
       "newApplicationName"      -> "New Application Name",
@@ -250,6 +260,12 @@ object TemplateParams {
       "previousValue"   -> "https://example.com/old-privacy-policy",
       "newValue"        -> "https://example.com/new-privacy-policy",
       "requesterName"   -> "Bob Roberts"
+    ),
+    "apiChangeOfResponsibleIndividual" -> Map(
+      "applicationName"               -> "Nexus 6",
+      "previousResponsibleIndividual" -> "Donald Trump",
+      "newResponsibleIndividual"      -> "Joe Biden",
+      "requesterName"                 -> "Bob Roberts"
     ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",

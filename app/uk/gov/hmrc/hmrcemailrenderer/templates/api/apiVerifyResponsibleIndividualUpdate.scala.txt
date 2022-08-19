@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Become responsible for a Developer Hub application
+
+Dear @{params("responsibleIndividualName")}
+
+@{params("requesterName")} wants to make you responsible for @{params("applicationName")} on the HMRC Developer Hub.
+
+Being responsible means ensuring that your software conforms to our terms of use.
+
+Select the link and tell us if you are responsible for @{params("applicationName")}. Do not forward this email to someone else.
+
+@{params("developerHubLink")}
+
+The link expires in 24 hours. After that, a team admin has to change the responsible individual again.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

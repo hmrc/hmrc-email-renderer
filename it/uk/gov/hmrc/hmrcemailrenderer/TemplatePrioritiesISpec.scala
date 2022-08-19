@@ -159,11 +159,25 @@ class TemplatePrioritiesISpec
           "requesterName"             -> "requesterName"
         )),
       (
+        "apiVerifyResponsibleIndividualUpdate",
+        Map(
+          "applicationName"           -> "applicationName",
+          "developerHubLink"          -> "/developerHubLink",
+          "responsibleIndividualName" -> "responsibleIndividualName",
+          "requesterName"             -> "requesterName"
+        )),
+      (
         "apiResponsibleIndividualDeclined",
         Map(
           "applicationName"           -> "applicationName",
           "responsibleIndividualName" -> "responsibleIndividualName",
           "requesterName"             -> "requesterName"
+        )),
+      (
+        "apiResponsibleIndividualNotChanged",
+        Map(
+          "applicationName"           -> "applicationName",
+          "responsibleIndividualName" -> "responsibleIndividualName"
         )),
       (
         "apiChangeOfApplicationName",
@@ -180,6 +194,14 @@ class TemplatePrioritiesISpec
           "previousValue"   -> "https://example.com/old-privacy-policy",
           "newValue"        -> "https://example.com/new-privacy-policy",
           "requesterName"   -> "Bob Roberts"
+        )),
+      (
+        "apiChangeOfResponsibleIndividual",
+        Map(
+          "applicationName"               -> "Nexus 6",
+          "previousResponsibleIndividual" -> "Donald Trump",
+          "newResponsibleIndividual"      -> "Joe Biden",
+          "requesterName"                 -> "Bob Roberts"
         )),
       ("apiDeveloperEmailVerification", Map("verificationLink" -> "/abc", "recipientName_forename" -> "Ms Jane Doe")),
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),

@@ -1,0 +1,26 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Become responsible for a Developer Hub application") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("responsibleIndividualName")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("requesterName")} wants to make you responsible for @{params("applicationName")} on the HMRC Developer Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Being responsible means ensuring that your software conforms to our terms of use.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Select the link and tell us if you are responsible for @{params("applicationName")}. Do not forward this email to someone else.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("developerHubLink")}" style="padding-bottom:10px;color:#005ea5;text-decoration:underline;">@{params("developerHubLink")}</a></p>
+<p style="margin: 0 0 30px; font-size: 19px;">The link expires in 24 hours. After that, a team admin has to change the responsible individual again.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
+}
