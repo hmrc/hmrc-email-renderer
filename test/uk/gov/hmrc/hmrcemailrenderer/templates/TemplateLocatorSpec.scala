@@ -145,6 +145,12 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "client_rejected_authorisation_request",
         "client_accepted_authorisation_request",
         "client_expired_authorisation_request",
+        "agent_permissions_success",
+        "agent_permissions_success_cy",
+        "agent_permissions_some_failed",
+        "agent_permissions_some_failed_cy",
+        "agent_permissions_all_failed",
+        "agent_permissions_all_failed_cy",
         "agent_services_account_created",
         "agent_services_account_created_cy",
         "agent_invitation_about_to_expire_single",
@@ -433,6 +439,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "qahc_code",
         "vat652_confirmation",
         "vat652_code",
+        "venture_capital_confirmation",
+        "venture_capital_code",
         "elcb_code",
         "elcb_code_cy",
         "elcb_confirmation",
@@ -863,13 +871,13 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
       )
     }
 
-    val templateLocator = new TemplateLocator {
+    val templateLocator: TemplateLocator = new TemplateLocator {
       override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
         messageTemplates(s"templateGroup-$i")
       }
     }
 
-    val templateLocatorWithWelsh = new TemplateLocator {
+    val templateLocatorWithWelsh: TemplateLocator = new TemplateLocator {
       val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
         messageTemplates(s"templateGroup-$i")
       }

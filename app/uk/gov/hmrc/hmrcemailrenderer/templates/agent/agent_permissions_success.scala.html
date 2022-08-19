@@ -1,0 +1,16 @@
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You can start using access groups", isWelsh=false) {
+
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @params("agencyName")</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">You have turned on access groups in your agent services account and your client details have now been processed.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Any access groups your organisation created in the past have been restored.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">To manage your access groups, sign in to your agent services account and select  'Manage account'.</p>
+
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email – it is an automatic message from an unmonitored account.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services team</p>
+
+}

@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Add clients to use access groups
+
+Dear @params("agencyName")
+
+You have turned on access groups in your agent services account.
+
+Our system cannot find any clients linked to this account. You need to add clients before you can use access groups.
+
+To add clients, sign in to your agent services account. You can copy across old authorisations or create a new authorisation request.
+
+Do not reply to this email – it is an automatic message from an unmonitored account.
+
+From HMRC Agent Services team

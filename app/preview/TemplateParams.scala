@@ -105,6 +105,24 @@ object TemplateParams {
       "createdDate" -> "22 March 2021",
       "expiryDate"  -> "4 April 2021"
     ),
+    "agent_permissions_success" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_success_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_some_failed" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_some_failed_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_all_failed" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_all_failed_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
@@ -2935,6 +2953,15 @@ object TemplateParams2 {
     ),
     "ppt_request_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "venture_capital_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "venture_capital_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "businessName"        -> "Acquisitions Incorporated",
+      "captionExpression"   -> "SEIS, EIS and VCT",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
