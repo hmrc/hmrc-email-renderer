@@ -1749,7 +1749,7 @@ object EeittTemplates {
       templateId = "venture_capital_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - Get advance assurance about a venture capital scheme",
+      subject = "Confirm your email address - Apply for Venture Capital Schemes (VCS) advance assurance",
       plainTemplate = txt.ventureCapitalCode.f,
       htmlTemplate = html.ventureCapitalCode.f,
       priority = Some(MessagePriority.Urgent)

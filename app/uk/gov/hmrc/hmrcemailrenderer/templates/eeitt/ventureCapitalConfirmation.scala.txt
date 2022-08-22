@@ -10,7 +10,7 @@ You applied for @params("captionExpression").
 
 Your submission reference is: @params("submissionReference")
 
-We aim to make a decision within 15 days.
+We aim to respond within 15 days.
 
 If we need more information, we will contact you using the details you provided.
 
@@ -18,6 +18,6 @@ Why you are receiving this email
 
 We send a confirmation email for all forms submitted online.
 
-From the HMRC Venture Capital team
+From the HMRC Venture Capital Reliefs team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
