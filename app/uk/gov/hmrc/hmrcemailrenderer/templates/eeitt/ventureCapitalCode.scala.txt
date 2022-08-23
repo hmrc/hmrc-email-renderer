@@ -5,7 +5,7 @@ Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘Get advance assurance about a venture capital scheme’ service on GOV.UK.
+You requested a code to continue with the ‘Apply for Venture Capital Schemes (VCS) advance assurance’ service on GOV.UK.
 
 Your code is: @params("confirmationCode")
 
@@ -17,6 +17,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From the HMRC Venture Capital team
+From the HMRC Venture Capital Reliefs team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
