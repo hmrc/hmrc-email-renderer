@@ -2964,6 +2964,20 @@ object TemplateParams2 {
       "captionExpression"   -> "Seed Enterprise Investment Scheme (SEIS), Enterprise Investment Scheme (EIS) and Investment from a Venture Capital Trust (VCT)",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "trusts_report_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "trusts_report_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "trusts_request_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "trusts_request_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,

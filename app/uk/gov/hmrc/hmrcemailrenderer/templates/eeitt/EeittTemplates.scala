@@ -1753,6 +1753,42 @@ object EeittTemplates {
       plainTemplate = txt.ventureCapitalCode.f,
       htmlTemplate = html.ventureCapitalCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_report_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your trust discrepancy report",
+      plainTemplate = txt.trustsReportConfirmation.f,
+      htmlTemplate = html.trustsReportConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_report_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report a discrepancy in a trust",
+      plainTemplate = txt.trustsReportCode.f,
+      htmlTemplate = html.trustsReportCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_request_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your trust data request",
+      plainTemplate = txt.trustsRequestConfirmation.f,
+      htmlTemplate = html.trustsRequestConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_request_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Make a data request about a trust",
+      plainTemplate = txt.trustsRequestCode.f,
+      htmlTemplate = html.trustsRequestCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
