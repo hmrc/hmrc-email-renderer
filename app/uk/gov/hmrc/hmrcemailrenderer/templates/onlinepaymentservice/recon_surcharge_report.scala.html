@@ -252,6 +252,64 @@
         <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance 210102014</td>
     </tr>
 </table>
+
+<h2>F2F payments via RCS</h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SDLT</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_sdlt").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">VAT</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_vat").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SA</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_sa").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">SAFE</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_safe").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">CT</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_ct").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PAYE</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_epaye").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">NTC</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_ntc").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">NPS/NIRS</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_nps").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td ></td>
+        <td ></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS F2F Credit Card Commission</td>
+    </tr>
+</table>
+
 <br>
 <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
     <tr style="font-weight:bold;text-align:center;">
