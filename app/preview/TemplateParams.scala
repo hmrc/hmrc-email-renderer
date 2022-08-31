@@ -1900,7 +1900,16 @@ object TemplateParams2 {
       "opsDesNoModsSurchargeReport_childBenefitRepayments" -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_vatOss"                 -> "1,10.0,2,20.0,3,30.0",
       "opsDesNoModsSurchargeReport_total"                  -> "8,80.0,16,160.0,22,240.0",
-      "opsDesJustModsSurchargeReport_mods"                 -> "1,10.0,2,20.0,3,30.0"
+      "opsDesJustModsSurchargeReport_mods"                 -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_sdlt"                         -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_vat"                          -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_sa"                           -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_safe"                         -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_ct"                           -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_epaye"                        -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_ntc"                          -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_nps"                          -> "1,10.0,2,20.0,3,30.0",
+      "f2fRcsSurchargeReport_total"                        -> "8,80.0,16,160.0,24,240.0"
     ),
     "recon_mods_finance_report" -> Map(
       "subject"                   -> "MODS Finance Report 27/09/2027",
