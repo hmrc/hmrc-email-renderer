@@ -23,6 +23,9 @@ class VatRegTemplatesComparisonSpec extends TemplateComparisonSpec with CommonPa
   val registrationTemplate = "mtdfb_vatreg_registration_received"
   val registrationEmailTemplate = "mtdfb_vatreg_registration_received_email"
   val registrationPostTemplate = "mtdfb_vatreg_registration_received_post"
+  val registrationTemplateWelsh = "mtdfb_vatreg_registration_received_cy"
+  val registrationEmailTemplateWelsh = "mtdfb_vatreg_registration_received_email_cy"
+  val registrationPostTemplateWelsh = "mtdfb_vatreg_registration_received_post_cy"
 
   val testName = "Joe Bloggs"
   val testRef = "VRS 1234 5678 9012"
