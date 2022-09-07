@@ -1850,7 +1850,7 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "recon_tps_report" -> Map(
-      "subject"           -> "Telephone Payment Service (TPS) and Face to Face (F2F) Finance report 22/01/1989",
+      "subject"           -> "Telephone Payment Service (TPS) and Face to Face (F2F) finance report 22/01/1989",
       "vatLegalTps"       -> "2,19400000,0,0,2,19400000",
       "shipleyTps"        -> "4,20744424,1,9886240,5,30630664",
       "debitCardFeeTps"   -> "3,0,0,0,3,0",
