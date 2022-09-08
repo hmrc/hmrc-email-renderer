@@ -1850,15 +1850,23 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "recon_tps_report" -> Map(
-      "subject"       -> "Telephone Payment System (TPS) Finance Report 22/01/1989",
-      "vatLegal"      -> "2,19400000,0,0,2,19400000",
-      "shipley"       -> "4,20744424,1,9886240,5,30630664",
-      "debitCardFee"  -> "3,0,0,0,3,0",
-      "vatAccount"    -> "1,9700000,0,0,1,9700000",
-      "nirs"          -> "1,9700000,0,0,1,9700000",
-      "commisionCard" -> "7,1344420,1,186240,8,1530660",
-      "total"         -> "10,70588846,1,10072480,11,80661326",
-      "cumbernauld"   -> "2,9700002,0,0,2,9700002"
+      "subject"           -> "Telephone Payment Service (TPS) and Face to Face (F2F) finance report 22/01/1989",
+      "vatLegalTps"       -> "2,19400000,0,0,2,19400000",
+      "shipleyTps"        -> "4,20744424,1,9886240,5,30630664",
+      "debitCardFeeTps"   -> "3,0,0,0,3,0",
+      "vatAccountTps"     -> "1,9700000,0,0,1,9700000",
+      "nirsTps"           -> "1,9700000,0,0,1,9700000",
+      "commissionCardTps" -> "7,1344420,1,186240,8,1530660",
+      "totalTps"          -> "10,70588846,1,10072480,11,80661326",
+      "cumbernauldTps"    -> "2,9700002,0,0,2,9700002",
+      "vatLegalF2f"       -> "2,19400000,0,0,2,19400000",
+      "shipleyF2f"        -> "4,20744424,1,9886240,5,30630664",
+      "debitCardFeeF2f"   -> "3,0,0,0,3,0",
+      "vatAccountF2f"     -> "1,9700000,0,0,1,9700000",
+      "nirsF2f"           -> "1,9700000,0,0,1,9700000",
+      "commissionCardF2f" -> "7,1344420,1,186240,8,1530660",
+      "totalF2f"          -> "10,70588846,1,10072480,11,80661326",
+      "cumbernauldF2f"    -> "2,9700002,0,0,2,9700002"
     ),
     "recon_tops_report" -> Map(
       "subject"         -> "ETMP Telephone Payment Service (TPS) Finance report 27 September 2027",
