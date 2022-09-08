@@ -253,6 +253,26 @@
     </tr>
 </table>
 
+<br>
+
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+  <tr style="font-weight:bold;text-align:center;">
+    <th></th>
+    <th>Corporate Debit Card Volume</th>
+    <th>Corporate Debit Card Commission Value</th>
+    <th>Credit Card Volume</th>
+    <th>Credit Card Commission Value</th>
+    <th>Grand Total Volume</th>
+    <th>Grand Total Commission Value</th>
+  </tr>
+  <tr>
+    <td style="font-weight:bold;">MODS</td>
+    @surcharge_recon_row(params("opsDesJustModsSurchargeReport_mods").toString.split(",").toArray)
+  </tr>
+</table>
+
+<br>
+
 <h2>F2F payments via RCS</h2>
 <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
     <tr style="font-weight:bold;text-align:center;">
@@ -310,22 +330,7 @@
     </tr>
 </table>
 
-<br>
-<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
-    <tr style="font-weight:bold;text-align:center;">
-        <th></th>
-        <th>Corporate Debit Card Volume</th>
-        <th>Corporate Debit Card Commission Value</th>
-        <th>Credit Card Volume</th>
-        <th>Credit Card Commission Value</th>
-        <th>Grand Total Volume</th>
-        <th>Grand Total Commission Value</th>
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">MODS</td>
-        @surcharge_recon_row(params("opsDesJustModsSurchargeReport_mods").toString.split(",").toArray)
-    </tr>
-</table>
+
 
 <p><STRONG>From HMRC Online Payments team</STRONG></p>
 
