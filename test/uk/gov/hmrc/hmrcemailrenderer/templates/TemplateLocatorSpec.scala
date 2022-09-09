@@ -358,6 +358,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "c118_section6_part4_application_confirmation",
         "c118_section6_part4_application_confirmation_cy",
         "cbc_registration_successful_organisation",
+        "cbc_file_upload_successful",
         "spbp_confirmation_submission",
         "tsp_application_confirmation",
         "gd_application_confirmation",

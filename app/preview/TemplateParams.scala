@@ -2271,6 +2271,11 @@ object TemplateParams2 {
       "name"  -> "Joe Bloggs",
       "cbcID" -> "XWCBC0000000058"
     ),
+    "cbc_file_upload_successful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27th January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC00012345671234567890123456789012345678901234567890123456789012345678901234567890"
+    ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"

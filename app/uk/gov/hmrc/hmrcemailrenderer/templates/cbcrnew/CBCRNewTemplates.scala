@@ -31,6 +31,16 @@ object CBCRNewTemplates {
       plainTemplate = txt.cbcRegistrationSuccessfulOrganisation.f,
       htmlTemplate = html.cbcRegistrationSuccessfulOrganisation.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    // FILEUPLOAD - FILE SENT FOR REVIEW
+    MessageTemplate.create(
+      templateId = "cbc_file_upload_successful",
+      fromAddress = govUkTeamAddress,
+      service = CountryByCountryReportingNew,
+      subject = "Country-by-country (CBC) file sent for review",
+      plainTemplate = txt.cbcFileUploadSuccessful.f,
+      htmlTemplate = html.cbcFileUploadSuccessful.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
