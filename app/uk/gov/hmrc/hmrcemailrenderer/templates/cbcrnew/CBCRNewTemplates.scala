@@ -41,6 +41,16 @@ object CBCRNewTemplates {
       plainTemplate = txt.cbcFileUploadSuccessful.f,
       htmlTemplate = html.cbcFileUploadSuccessful.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    // FILEUPLOAD - FILE NOT ACCEPTED
+    MessageTemplate.create(
+      templateId = "cbc_file_upload_unsuccessful",
+      fromAddress = govUkTeamAddress,
+      service = CountryByCountryReportingNew,
+      subject = "Country-by-country (CBC) file not accepted",
+      plainTemplate = txt.cbcFileUploadUnsuccessful.f,
+      htmlTemplate = html.cbcFileUploadUnsuccessful.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
