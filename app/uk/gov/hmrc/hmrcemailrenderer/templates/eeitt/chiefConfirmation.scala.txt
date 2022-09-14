@@ -6,7 +6,7 @@ Dear @params("customerName")
 
 We received your request to continue using CHIEF to make import declarations after the deadline of 30 September 2022.
 
-Our Decision
+Our decision
 
 @params.get("paragraph1") @params.get("date1")
 
