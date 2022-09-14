@@ -1789,6 +1789,24 @@ object EeittTemplates {
       plainTemplate = txt.trustsRequestCode.f,
       htmlTemplate = html.trustsRequestCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "chief_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request for an extension for using CHIEF to make import declarations",
+      plainTemplate = txt.chiefConfirmation.f,
+      htmlTemplate = html.chiefConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "chief_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Ask for an extension for using CHIEF to make import declarations",
+      plainTemplate = txt.chiefCode.f,
+      htmlTemplate = html.chiefCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
