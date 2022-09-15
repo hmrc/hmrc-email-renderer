@@ -1,0 +1,29 @@
+@(params: Map[String, Any])
+
+You asked for an extension for using CHIEF to make import declarations
+
+Dear @params("customerName")
+
+We received your request to continue using CHIEF to make import declarations after the deadline of 30 September 2022.
+
+Our decision
+
+@params.get("paragraph1") @params.get("date1")
+
+@params.get("paragraph2a") @params.get("date3") @params.get("paragraph2b")
+
+@params.get("paragraph3") @params.get("date2")
+
+@params.get("paragraph4")
+
+@params.get("paragraph5")
+
+Your submission reference is: @params("submissionReference")
+
+Why you are receiving this email
+
+We send a confirmation email for a form submitted online.
+
+From the @params("emailTeam")
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
