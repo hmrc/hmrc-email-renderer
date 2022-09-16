@@ -3015,7 +3015,7 @@ object TemplateParams2 {
       "date1"               -> "30 September 2022.",
       "paragraph4"          -> "This is because you told us Acquisitions Incorporated does not plan to move to using the Customs Declaration Service (CDS) in the future.",
       "paragraph5"          -> "We can only give an extension for using CHIEF to make import declarations if a business plans to move to using CDS.",
-      "emailTeam"           -> "Single Customs Platform team"
+      "emailTeam"           -> "the Single Customs Platform team"
     ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
