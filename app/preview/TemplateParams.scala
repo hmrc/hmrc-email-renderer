@@ -2285,7 +2285,7 @@ object TemplateParams2 {
       "contactName"   -> "Joe Bloggs",
       "dateSubmitted" -> "27 January 2012 at 2:29pm",
       "messageRefId"  -> "XACBC0000123778",
-      "cbcID"         -> "XWCBC0000000058"
+      "cbcId"         -> "XWCBC0000000058"
     ),
     "cbc_agent_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
