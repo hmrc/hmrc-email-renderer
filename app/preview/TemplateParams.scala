@@ -2293,6 +2293,18 @@ object TemplateParams2 {
       "dateSubmitted" -> "27 January 2012 at 2:29pm",
       "messageRefId"  -> "XACBC0000123778"
     ),
+    "cbc_agent_file_upload_successful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC0000123778",
+      "cbcId"         -> "XWCBC0000000058"
+    ),
+    "cbc_agent_file_upload_unsuccessful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC0000123778",
+      "cbcId"         -> "XWCBC0000000058"
+    ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
       "dac6ID" -> "XXDAC000012345"
