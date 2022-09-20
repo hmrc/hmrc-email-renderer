@@ -2015,6 +2015,18 @@ object TemplateParams2 {
       "name" -> "Joe Bloggs",
       "ref"  -> "VRS 1234 5678 9012"
     ),
+    "mtdfb_vatreg_registration_received_cy" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_email_cy" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_post_cy" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
     "pods_psa_invited" -> Map(
       "inviteeName" -> "Jane Doe",
       "schemeName"  -> "Some Pension Scheme",

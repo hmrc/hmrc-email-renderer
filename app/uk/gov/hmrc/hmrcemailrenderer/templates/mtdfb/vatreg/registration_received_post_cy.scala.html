@@ -1,0 +1,43 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch cais i gofrestru ar gyfer TAW wedi dod i law", isWelsh = true) {
+    <p style="margin: 0 0 30px; font-size: 19px;">Annwyl @params("name")</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px; font-weight: 700;">Cyfeirnod: @params("ref")</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">
+        Mae’ch cais wedi dod i law. Er mwyn i ni allu ei brosesu, mae angen i chi bostio llythyr eglurhaol atom ynghyd â chopïau o’ch dogfennau adnabod.
+        I gael gwybod sut i wneud hyn, mewngofnodwch i ‘Cofrestru ar gyfer TAW’ ar-lein a bwriwch olwg dros eich ceisiadau sydd ohoni.
+    </p>
+
+    <h2 style="margin: 0 0 30px; font-size: 19px;">Yr hyn sy’n digwydd nesaf</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">
+        Ar ôl i ni gael copïau o’ch dogfennau, byddwn yn ysgrifennu atoch gyda phenderfyniad ar eich cais. Mae hyn fel arfer yn cymryd oddeutu 30 diwrnod i ni.
+    </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Dylech aros nes i’ch cofrestriad TAW gael ei gadarnhau cyn:</p>
+
+    <ul>
+        <li style="font-size: 19px;">cael unrhyw feddalwedd</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">codi TAW ar gwsmeriaid</li>
+    </ul>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Dîm TAW CThEM</p>
+}
