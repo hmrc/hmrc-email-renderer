@@ -44,7 +44,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       val htmlContent = newMessageAlert
         .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
         .toString
-      htmlContent must include("Read your new HMRC online letter today")
+      htmlContent must include("You have a new letter online")
       htmlContent must include("Dear")
       htmlContent must include("Mrs John")
       htmlContent must include(
@@ -124,7 +124,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       val htmlContent = newMessageAlert
         .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
         .toString
-      htmlContent must include("Read your new HMRC online letter today")
+      htmlContent must include("You have a new letter online")
       htmlContent must include("Dear")
       htmlContent must include("Mrs John")
       htmlContent must include(
