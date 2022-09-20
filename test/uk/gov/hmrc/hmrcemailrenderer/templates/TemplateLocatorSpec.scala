@@ -360,7 +360,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "cbc_registration_successful_organisation",
         "cbc_file_upload_successful",
         "cbc_file_upload_unsuccessful",
-        "cbc_agent_file_upload_unsuccessful",
+        "cbc_agent_file_upload_successful",
         "cbc_agent_file_upload_unsuccessful",
         "spbp_confirmation_submission",
         "tsp_application_confirmation",
