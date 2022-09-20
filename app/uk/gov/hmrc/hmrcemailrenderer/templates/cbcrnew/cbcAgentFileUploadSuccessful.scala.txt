@@ -1,0 +1,32 @@
+@(params: Map[String, Any])
+
+Your client’s CBC file passed our checks and is being reviewed
+
+Dear @{params("contactName")}
+
+This file passed our automatic checks and was sent on @{params("dateSubmitted")}.
+
+Client CBC ID: @{params("cbcId")}
+
+MessageRefId: @{params("messageRefId")}
+
+We will contact you or your client by email or telephone if we have any questions about this report.
+
+Print or save a copy of this email for your records.
+
+
+How to make another report
+To make a report:
+    search for ‘CBC’ on GOV.UK
+    sign into the service using your Government Gateway account
+
+
+For security reasons, we have not included a link to the CBC service in this email.
+
+You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.
+
+If you need more information, search ‘CBC’ on GOV.UK.
+
+From the CBC service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

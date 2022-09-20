@@ -1,0 +1,30 @@
+@(params: Map[String, Any])
+
+Your client’s CBC file failed our checks
+
+Dear @{params("contactName")}
+
+The following file failed our automatic checks on @{params("dateSubmitted")}.
+
+Client CBC ID: @{params("cbcId")}
+
+MessageRefId: @{params("messageRefId")}
+
+We have not accepted the report.
+
+
+How to make a report
+To make a report:
+    search for ‘CBC’ on GOV.UK
+    sign into the service using your Government Gateway account
+
+
+For security reasons, we have not included a link to the CBC service in this email.
+
+You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.
+
+If you need more information, search ‘CBC’ on GOV.UK.
+
+From the CBC service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CountryByCountryReportingNew
 
@@ -50,6 +50,26 @@ object CBCRNewTemplates {
       subject = "Country-by-country (CBC) file not accepted",
       plainTemplate = txt.cbcFileUploadUnsuccessful.f,
       htmlTemplate = html.cbcFileUploadUnsuccessful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // FILEUPLOAD - AGENT FILE ACCEPTED
+    MessageTemplate.create(
+      templateId = "cbc_agent_file_upload_successful",
+      fromAddress = govUkTeamAddress,
+      service = CountryByCountryReportingNew,
+      subject = "Country-by-country (CBC) agent file accepted",
+      plainTemplate = txt.cbcAgentFileUploadSuccessful.f,
+      htmlTemplate = html.cbcAgentFileUploadSuccessful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // FILEUPLOAD - AGENT FILE NOT ACCEPTED
+    MessageTemplate.create(
+      templateId = "cbc_agent_file_upload_unsuccessful",
+      fromAddress = govUkTeamAddress,
+      service = CountryByCountryReportingNew,
+      subject = "Country-by-country (CBC) agent file not accepted",
+      plainTemplate = txt.cbcAgentFileUploadUnsuccessful.f,
+      htmlTemplate = html.cbcAgentFileUploadUnsuccessful.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
