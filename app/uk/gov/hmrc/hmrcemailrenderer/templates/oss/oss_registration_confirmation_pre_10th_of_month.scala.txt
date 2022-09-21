@@ -20,10 +20,6 @@ We will contact you if we need to check any information.
 
 We will contact you about how to use the new service to submit your first return and make payment by @params("lastDayOfMonthAfterCalendarQuarter").
 
-If you need to contact us
-
-Quote your UK VAT registration number: @params("reference")
-
 From the VAT One Stop Shop team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
