@@ -20,10 +20,12 @@ import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class OSSRegistrationConfirmationPre10thOfMonthSpec
-    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
   "OSS Registration Confirmation" should {
@@ -32,7 +34,6 @@ class OSSRegistrationConfirmationPre10thOfMonthSpec
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
       "startDate"                          -> "1 July 2021",
-      "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
       "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
     )
@@ -67,8 +68,6 @@ class OSSRegistrationConfirmationPre10thOfMonthSpec
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
         "We will contact you about how to use the new service to submit your first return and make payment by 31 October 2021.")
-      htmlContent should include("If you need to contact us")
-      htmlContent should include("Quote your UK VAT registration number: 123456789")
       htmlContent should include("From the VAT One Stop Shop team")
     }
 
@@ -90,8 +89,6 @@ class OSSRegistrationConfirmationPre10thOfMonthSpec
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include(
         "We will contact you about how to use the new service to submit your first return and make payment by 31 October 2021.")
-      txtContent should include("If you need to contact us")
-      txtContent should include("Quote your UK VAT registration number: 123456789")
       txtContent should include("From the VAT One Stop Shop team")
     }
   }
