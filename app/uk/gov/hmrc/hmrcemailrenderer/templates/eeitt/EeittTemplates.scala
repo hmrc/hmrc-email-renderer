@@ -1816,6 +1816,6 @@ object EeittTemplates {
       plainTemplate = txt.fprcConfirmation.f,
       htmlTemplate = html.fprcConfirmation.f,
       priority = Some(MessagePriority.Standard)
-    ),
+    )
   )
 }
