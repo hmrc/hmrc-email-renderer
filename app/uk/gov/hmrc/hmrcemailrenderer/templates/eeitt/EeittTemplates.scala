@@ -1816,6 +1816,15 @@ object EeittTemplates {
       plainTemplate = txt.fprcConfirmation.f,
       htmlTemplate = html.fprcConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "gbEORI_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Update GB EORI details - application received",
+      plainTemplate = txt.gbEORIConfirmation.f,
+      htmlTemplate = html.gbEORIConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

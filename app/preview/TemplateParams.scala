@@ -3047,6 +3047,10 @@ object TemplateParams2 {
       "para1"               -> "We aim to look at the information you have sent within 7 working days. If you do not hear from us within that timeframe, you can contact us using the contact details and reference on the letter we sent. The reference is CFSS followed by 7 numbers.",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "gbEORI_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,
