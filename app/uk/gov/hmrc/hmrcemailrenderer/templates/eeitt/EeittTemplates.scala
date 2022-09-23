@@ -1807,6 +1807,24 @@ object EeittTemplates {
       plainTemplate = txt.chiefCode.f,
       htmlTemplate = html.chiefCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "fprc_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received supporting details for your VAT repayment claim",
+      plainTemplate = txt.fprcConfirmation.f,
+      htmlTemplate = html.fprcConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "gbEORI_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Update GB EORI details - application received",
+      plainTemplate = txt.gbEORIConfirmation.f,
+      htmlTemplate = html.gbEORIConfirmation.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

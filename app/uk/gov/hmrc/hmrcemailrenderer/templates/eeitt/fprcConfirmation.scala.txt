@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You sent supporting details for your VAT repayment claim
+
+Dear @params("customerName")
+
+We have received details to support your VAT repayment claim for @params("businessName").
+
+We will contact you if we need further information. If we do not require further information, we will send you a decision notice to confirm we have completed our check.
+
+@params("para1")
+
+Your submission reference is: @params("submissionReference")
+
+Why you are receiving this email
+
+We send a confirmation email for a form sent online.
+
+From VAT First Period Repayment Claims team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
