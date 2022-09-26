@@ -19,7 +19,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("subject").toString) {
 
-<h2>Telephone payments via RCS</h2>
+<h2>Telephone payments via DAPI</h2>
 <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
     <tr style="font-weight:bold;text-align:center;">
         <th></th>
@@ -31,28 +31,12 @@
         <th>Grand Total Commission Value</th>
     </tr>
     <tr>
-        <td style="font-weight:bold;">SDLT</td>
-        @surcharge_recon_row(params("tpsRcsSurchargeReport_sdlt").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">VAT</td>
-        @surcharge_recon_row(params("tpsRcsSurchargeReport_vat").toString.split(",").toArray)
-    </tr>
-    <tr>
         <td style="font-weight:bold;">SA</td>
         @surcharge_recon_row(params("tpsRcsSurchargeReport_sa").toString.split(",").toArray)
     </tr>
     <tr>
-        <td style="font-weight:bold;">SAFE</td>
-        @surcharge_recon_row(params("tpsRcsSurchargeReport_safe").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">CT</td>
+        <td style="font-weight:bold;">COTAX</td>
         @surcharge_recon_row(params("tpsRcsSurchargeReport_ct").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">PAYE</td>
-        @surcharge_recon_row(params("tpsRcsSurchargeReport_epaye").toString.split(",").toArray)
     </tr>
     <tr>
         <td style="font-weight:bold;">NTC</td>
@@ -72,11 +56,40 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS TPS Credit Card Commission</td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree with 210102014 GL balance</td>
     </tr>
 </table>
 
-<h2>Online payments via RCS</h2>
+<h2>Face to Face payments via DAPI    </h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">F2F All HODS</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total</td>
+        @surcharge_recon_row(params("f2fRcsSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td ></td>
+        <td ></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree with 210102014 GL balance</td>
+    </tr>
+</table>
+
+<h2>Online payments via DAPI</h2>
 <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
     <tr style="font-weight:bold;text-align:center;">
         <th></th>
@@ -96,19 +109,7 @@
         @surcharge_recon_row(params("opsRcsSurchargeReport_cotax").toString.split(",").toArray)
     </tr>
     <tr>
-        <td style="font-weight:bold;">PAYE</td>
-        @surcharge_recon_row(params("opsRcsSurchargeReport_paye").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">MISC</td>
-        @surcharge_recon_row(params("opsRcsSurchargeReport_misc").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">SDLT</td>
-        @surcharge_recon_row(params("opsRcsSurchargeReport_sdlt").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">Total Shipley</td>
+        <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("opsRcsSurchargeReport_totalShipley").toString.split(",").toArray)
     </tr>
     <tr>
@@ -117,23 +118,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS OPS Credit Card Commission</td>
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">VAT</td>
-        @surcharge_recon_row(params("opsRcsSurchargeReport_vat").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">Total Cumbernauld</td>
-        @surcharge_recon_row(params("opsRcsSurchargeReport_totalCumbernauld").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Cumbernauld RCS OPS Credit Card Commission</td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree with 210102014 GL balance</td>
     </tr>
 </table>
 
@@ -149,24 +134,40 @@
         <th>Grand Total Commission Value</th>
     </tr>
     <tr>
+        <td style="font-weight:bold;">SDLT</td>
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_sdlt").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">VAT</td>
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_vat").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">ETMP (SAFE)</td>
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_safe").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PAYE</td>
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_epaye").toString.split(",").toArray)
+    </tr>
+    <tr>
         <td style="font-weight:bold;">P800</td>
-        @surcharge_recon_row(params("topsNoModsSurchargeReport_p800").toString.split(",").toArray)
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_p800").toString.split(",").toArray)
     </tr>
     <tr>
         <td style="font-weight:bold;">PNGR</td>
-        @surcharge_recon_row(params("topsNoModsSurchargeReport_pngr").toString.split(",").toArray)
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_pngr").toString.split(",").toArray)
     </tr>
     <tr>
         <td style="font-weight:bold;">FChB</td>
-        @surcharge_recon_row(params("topsNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_childBenefitRepayments").toString.split(","))
     </tr>
     <tr>
-        <td style="font-weight:bold;">ZPPT</td>
-        @surcharge_recon_row(params("topsNoModsSurchargeReport_ppt").toString.split(","))
+        <td style="font-weight:bold;">PPT</td>
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_ppt").toString.split(","))
     </tr>
     <tr>
         <td style="font-weight:bold;">Total</td>
-        @surcharge_recon_row(params("topsNoModsSurchargeReport_total").toString.split(",").toArray)
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_total").toString.split(",").toArray)
     </tr>
     <tr>
         <td></td>
@@ -175,7 +176,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance 210102014</td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">To agree with 210102014 GL balance </td>
     </tr>
 </table>
 <br>
@@ -195,6 +196,34 @@
     </tr>
 </table>
 
+<h2>Face to Face payments via DES </h2>
+<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
+    <tr style="font-weight:bold;text-align:center;">
+        <th></th>
+        <th>Corporate Debit Card Volume</th>
+        <th>Corporate Debit Card Commission Value</th>
+        <th>Credit Card Volume</th>
+        <th>Credit Card Commission Value</th>
+        <th>Grand Total Volume</th>
+        <th>Grand Total Commission Value</th>
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">F2F All HODS</td>
+        @surcharge_recon_row(params("f2fDesSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">Total</td>
+        @surcharge_recon_row(params("f2fDesSurchargeReport_total").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td ></td>
+        <td ></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree with 210102014 GL balance</td>
+    </tr>
+</table>
 
 <h2>Online payments via DES plus MODS</h2>
 <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
@@ -208,11 +237,27 @@
         <th>Grand Total Commission Value</th>
     </tr>
     <tr>
+        <td style="font-weight:bold;">SDLT</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_sdlt").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">VAT</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_vat").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PAYE</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_paye").toString.split(",").toArray)
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">ETMP (MISC)</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_misc").toString.split(",").toArray)
+    </tr>
+    <tr>
         <td style="font-weight:bold;">P800</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_p800").toString.split(",").toArray)
     </tr>
     <tr>
-        <td style="font-weight:bold;">SIMPLE ASSESSMENT</td>
+        <td style="font-weight:bold;">SIMPLE ASS.</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_simpleAssessment").toString.split(",").toArray)
     </tr>
     <tr>
@@ -228,16 +273,17 @@
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_cds").toString.split(",").toArray)
     </tr>
     <tr>
-        <td style="font-weight:bold;">ZPPT</td>
-        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_ppt").toString.split(","))
-    </tr>
-    <tr>
         <td style="font-weight:bold;">FChB</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_childBenefitRepayments").toString.split(","))
     </tr>
     <tr>
         <td style="font-weight:bold;">VOSS</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_vatOss").toString.split(","))
+    </tr>
+    <tr>
+        <td style="font-weight:bold;">PPT</td>
+        @surcharge_recon_row(params("opsDesNoModsSurchargeReport_ppt").toString.split(","))
+    </tr>
     <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("opsDesNoModsSurchargeReport_total").toString.split(",").toArray)
@@ -249,7 +295,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="1" style="font-weight:bold;font-size: 10px">*To agree ETMP BW report - GL Balance 210102014</td>
+        <td colspan="1" style="font-weight:bold;font-size: 10px">To agree with 210102014 GL balance</td>
     </tr>
 </table>
 
@@ -272,64 +318,6 @@
 </table>
 
 <br>
-
-<h2>F2F payments via RCS</h2>
-<table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align:center;font-size: 12px;c">
-    <tr style="font-weight:bold;text-align:center;">
-        <th></th>
-        <th>Corporate Debit Card Volume</th>
-        <th>Corporate Debit Card Commission Value</th>
-        <th>Credit Card Volume</th>
-        <th>Credit Card Commission Value</th>
-        <th>Grand Total Volume</th>
-        <th>Grand Total Commission Value</th>
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">SDLT</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_sdlt").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">VAT</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_vat").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">SA</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_sa").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">SAFE</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_safe").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">CT</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_ct").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">PAYE</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_epaye").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">NTC</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_ntc").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">NPS/NIRS</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_nps").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td style="font-weight:bold;">Total</td>
-        @surcharge_recon_row(params("f2fRcsSurchargeReport_total").toString.split(",").toArray)
-    </tr>
-    <tr>
-        <td ></td>
-        <td ></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="2" style="font-weight:bold;font-size: 10px">To agree Shipley RCS F2F Credit Card Commission</td>
-    </tr>
-</table>
-
 
 
 <p><STRONG>From HMRC Online Payments team</STRONG></p>
