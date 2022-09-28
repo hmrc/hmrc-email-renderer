@@ -15,8 +15,8 @@ We will contact you or your client by email or telephone if we have any question
 Print or save a copy of this email for your records.
 
 
-How to make another report
-To make a report:
+How to make a new report
+To make a new CBC report:
     search for ‘CBC’ on GOV.UK
     sign into the service using your Government Gateway account
 
