@@ -13,8 +13,8 @@ MessageRefId: @{params("messageRefId")}
 We have not accepted the report.
 
 
-How to make a report
-To make a report:
+How to make a new report
+To make a new CBC report:
     search for ‘CBC’ on GOV.UK
     sign into the service using your Government Gateway account
 
