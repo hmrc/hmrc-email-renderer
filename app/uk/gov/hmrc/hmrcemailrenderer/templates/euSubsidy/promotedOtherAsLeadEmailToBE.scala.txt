@@ -10,7 +10,7 @@ This email confirms (EORI: @{params("eori")}) that you have been asked to take o
 
 You must sign in to make yourself the undertaking administrator.
 
-To sign in, and for further guidance, search GOV.UK for 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland'.
+To sign in, and for further guidance, search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
 
 It will be your responsibility to make sure all undertaking details are correct and up to date.
 

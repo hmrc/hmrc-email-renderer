@@ -1714,8 +1714,8 @@ object EeittTemplates {
       fromAddress = govUkTeamAddress,
       service = Eeitt,
       subject = "Confirm your email address - Notification of errors in VAT returns",
-      plainTemplate = txt.psa1Code.f,
-      htmlTemplate = html.psa1Code.f,
+      plainTemplate = txt.vat652Code.f,
+      htmlTemplate = html.vat652Code.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -1734,6 +1734,96 @@ object EeittTemplates {
       subject = "Your plastic packaging tax repayment request",
       plainTemplate = txt.pptRequestConfirmation.f,
       htmlTemplate = html.pptRequestConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "venture_capital_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your Venture Capital Schemes application",
+      plainTemplate = txt.ventureCapitalConfirmation.f,
+      htmlTemplate = html.ventureCapitalConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "venture_capital_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for Venture Capital Schemes (VCS) advance assurance",
+      plainTemplate = txt.ventureCapitalCode.f,
+      htmlTemplate = html.ventureCapitalCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_report_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your trust discrepancy report",
+      plainTemplate = txt.trustsReportConfirmation.f,
+      htmlTemplate = html.trustsReportConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_report_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Report a discrepancy in a trust",
+      plainTemplate = txt.trustsReportCode.f,
+      htmlTemplate = html.trustsReportCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_request_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your trust data request",
+      plainTemplate = txt.trustsRequestConfirmation.f,
+      htmlTemplate = html.trustsRequestConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "trusts_request_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Make a data request about a trust",
+      plainTemplate = txt.trustsRequestCode.f,
+      htmlTemplate = html.trustsRequestCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "chief_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your request for an extension for using CHIEF to make import declarations",
+      plainTemplate = txt.chiefConfirmation.f,
+      htmlTemplate = html.chiefConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "chief_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Ask for an extension for using CHIEF to make import declarations",
+      plainTemplate = txt.chiefCode.f,
+      htmlTemplate = html.chiefCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "fprc_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received supporting details for your VAT repayment claim",
+      plainTemplate = txt.fprcConfirmation.f,
+      htmlTemplate = html.fprcConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "gbEORI_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Update GB EORI details - application received",
+      plainTemplate = txt.gbEORIConfirmation.f,
+      htmlTemplate = html.gbEORIConfirmation.f,
       priority = Some(MessagePriority.Standard)
     )
   )

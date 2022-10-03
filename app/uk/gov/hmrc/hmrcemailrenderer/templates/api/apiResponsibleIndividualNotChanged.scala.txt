@@ -1,0 +1,11 @@
+@(params: Map[String, Any])The responsible individual has not changed
+
+@{params("responsibleIndividualName")} did not verify that they are responsible for @{params("applicationName")}.
+
+No changes were made to the responsible individual.
+
+You can review and change the responsible individual's details again on the Developer Hub at any time.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

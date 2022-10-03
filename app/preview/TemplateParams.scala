@@ -105,6 +105,24 @@ object TemplateParams {
       "createdDate" -> "22 March 2021",
       "expiryDate"  -> "4 April 2021"
     ),
+    "agent_permissions_success" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_success_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_some_failed" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_some_failed_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_all_failed" -> Map(
+      "agencyName" -> "Agency"
+    ),
+    "agent_permissions_all_failed_cy" -> Map(
+      "agencyName" -> "Agency"
+    ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
       "developerHubTitle" -> "Developer Hub Title"
@@ -206,6 +224,12 @@ object TemplateParams {
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
     ),
+    "apiVerifyResponsibleIndividualUpdate" -> Map(
+      "developerHubLink"          -> exampleLinkWithRandomId,
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs",
+      "requesterName"             -> "Bob Roberts"
+    ),
     "apiResponsibleIndividualReminderToAdmin" -> Map(
       "applicationName"           -> "Test Application",
       "responsibleIndividualName" -> "Joe Bloggs",
@@ -220,6 +244,10 @@ object TemplateParams {
       "applicationName"           -> "Test Application",
       "responsibleIndividualName" -> "Joe Bloggs",
       "requesterName"             -> "Bob Roberts"
+    ),
+    "apiResponsibleIndividualNotChanged" -> Map(
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs"
     ),
     "apiChangeOfApplicationName" -> Map(
       "previousApplicationName" -> "Old Application Name",
@@ -237,6 +265,12 @@ object TemplateParams {
       "applicationName" -> "Nexus 6",
       "fieldName"       -> "privacy policy URL",
       "requesterName"   -> "Bob Roberts"
+    ),
+    "apiChangeOfResponsibleIndividual" -> Map(
+      "applicationName"               -> "Nexus 6",
+      "previousResponsibleIndividual" -> "Donald Trump",
+      "newResponsibleIndividual"      -> "Joe Biden",
+      "requesterName"                 -> "Bob Roberts"
     ),
     "ppnsCallbackUrlChangedNotification" -> Map(
       "applicationName" -> "Test Application",
@@ -749,22 +783,11 @@ object TemplateParams {
       "referenceNumber" -> "BRPY12345678910",
       "salutation"      -> "Dear Dave"
     ),
-    "register_your_company_register_paye_confirmation_current_tax_year_v2_cy" -> Map(
-      "companyName"     -> "ABC Logistics Ltd",
-      "referenceNumber" -> "BRPY12345678910",
-      "salutation"      -> "Annwyl Dave"
-    ),
     "register_your_company_register_paye_confirmation_new_tax_year_v2" -> Map(
       "companyName"     -> "ABC Logistics Ltd",
       "referenceNumber" -> "BRPY12345678910",
       "salutation"      -> "Dear Dave",
       "contactDate"     -> "17 May"
-    ),
-    "register_your_company_register_paye_confirmation_new_tax_year_v2_cy" -> Map(
-      "companyName"     -> "ABC Logistics Ltd",
-      "referenceNumber" -> "BRPY12345678910",
-      "salutation"      -> "Annwyl Dave",
-      "contactDate"     -> "17 Mai"
     ),
     "investment_tax_relief_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
@@ -1656,14 +1679,12 @@ object TemplateParams2 {
       "recipientName_line1"                -> "Joe Bloggs",
       "businessName"                       -> "Test Business",
       "startDate"                          -> "12 June 2021",
-      "reference"                          -> "123456789",
       "lastDayOfCalendarQuarter"           -> "30 September 2021",
       "lastDayOfMonthAfterCalendarQuarter" -> "31 October 2021"
     ),
     "oss_registration_confirmation_post_10th_of_month" -> Map(
       "recipientName_line1"                    -> "Joe Bloggs",
       "businessName"                           -> "Test Business",
-      "reference"                              -> "123456789",
       "lastDayOfCalendarQuarter"               -> "30 September 2021",
       "firstDayOfNextCalendarQuarter"          -> "1 October 2021",
       "startDate"                              -> "1 October 2021",
@@ -1832,15 +1853,23 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "recon_tps_report" -> Map(
-      "subject"       -> "Telephone Payment System (TPS) Finance Report 22/01/1989",
-      "vatLegal"      -> "2,19400000,0,0,2,19400000",
-      "shipley"       -> "4,20744424,1,9886240,5,30630664",
-      "debitCardFee"  -> "3,0,0,0,3,0",
-      "vatAccount"    -> "1,9700000,0,0,1,9700000",
-      "nirs"          -> "1,9700000,0,0,1,9700000",
-      "commisionCard" -> "7,1344420,1,186240,8,1530660",
-      "total"         -> "10,70588846,1,10072480,11,80661326",
-      "cumbernauld"   -> "2,9700002,0,0,2,9700002"
+      "subject"           -> "Telephone Payment Service (TPS) and Face to Face (F2F) finance report 22/01/1989",
+      "vatLegalTps"       -> "2,19400000,0,0,2,19400000",
+      "shipleyTps"        -> "4,20744424,1,9886240,5,30630664",
+      "debitCardFeeTps"   -> "3,0,0,0,3,0",
+      "vatAccountTps"     -> "1,9700000,0,0,1,9700000",
+      "nirsTps"           -> "1,9700000,0,0,1,9700000",
+      "commissionCardTps" -> "7,1344420,1,186240,8,1530660",
+      "totalTps"          -> "10,70588846,1,10072480,11,80661326",
+      "cumbernauldTps"    -> "2,9700002,0,0,2,9700002",
+      "vatLegalF2f"       -> "2,19400000,0,0,2,19400000",
+      "shipleyF2f"        -> "4,20744424,1,9886240,5,30630664",
+      "debitCardFeeF2f"   -> "3,0,0,0,3,0",
+      "vatAccountF2f"     -> "1,9700000,0,0,1,9700000",
+      "nirsF2f"           -> "1,9700000,0,0,1,9700000",
+      "commissionCardF2f" -> "7,1344420,1,186240,8,1530660",
+      "totalF2f"          -> "10,70588846,1,10072480,11,80661326",
+      "cumbernauldF2f"    -> "2,9700002,0,0,2,9700002"
     ),
     "recon_tops_report" -> Map(
       "subject"         -> "ETMP Telephone Payment Service (TPS) Finance report 27 September 2027",
@@ -1849,40 +1878,41 @@ object TemplateParams2 {
       "TOPS_ROW_TOTALS" -> "Totals,84,811842279,82,80,82,814443,84,811842279"
     ),
     "recon_surcharge_report" -> Map(
-      "subject"                                            -> "Surcharge report 27/09/2027",
-      "tpsRcsSurchargeReport_sdlt"                         -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_vat"                          -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_sa"                           -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_safe"                         -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_ct"                           -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_epaye"                        -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_ntc"                          -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_nps"                          -> "1,10.0,2,20.0,3,30.0",
-      "tpsRcsSurchargeReport_total"                        -> "8,80.0,16,160.0,24,240.0",
-      "opsRcsSurchargeReport_sa"                           -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_cotax"                        -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_paye"                         -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_misc"                         -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_sdlt"                         -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_totalShipley"                 -> "5,50.0,10,100.0,15,150.0",
-      "opsRcsSurchargeReport_vat"                          -> "1,10.0,2,20.0,3,30.0",
-      "opsRcsSurchargeReport_totalCumbernauld"             -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_p800"                     -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_pngr"                     -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_childBenefitRepayments"   -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_ppt"                      -> "1,10.0,2,20.0,3,30.0",
-      "topsNoModsSurchargeReport_total"                    -> "3,30.0,6,60.0,9,90.0",
-      "topsJustModsSurchargeReport_mods"                   -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_p800"                   -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_simpleAssessment"       -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_cgt"                    -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_pngr"                   -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_cds"                    -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_ppt"                    -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_childBenefitRepayments" -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_vatOss"                 -> "1,10.0,2,20.0,3,30.0",
-      "opsDesNoModsSurchargeReport_total"                  -> "8,80.0,16,160.0,22,240.0",
-      "opsDesJustModsSurchargeReport_mods"                 -> "1,10.0,2,20.0,3,30.0"
+      "subject"                                                 -> "Surcharge report 27/09/2027",
+      "tpsRcsSurchargeReport_sa"                                -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_ct"                                -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_ntc"                               -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_nps"                               -> "1,10.0,2,20.0,3,30.0",
+      "tpsRcsSurchargeReport_total"                             -> "8,80.0,16,160.0,24,240.0",
+      "f2fRcsSurchargeReport_total"                             -> "4,40.0,8,80.0,12,120.0",
+      "opsRcsSurchargeReport_sa"                                -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_cotax"                             -> "1,10.0,2,20.0,3,30.0",
+      "opsRcsSurchargeReport_totalShipley"                      -> "5,50.0,10,100.0,15,150.0",
+      "tpsTpsoCombineDesSurchargeReport_sdlt"                   -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_vat"                    -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_safe"                   -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_epaye"                  -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_p800"                   -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_pngr"                   -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_childBenefitRepayments" -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_ppt"                    -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_total"                  -> "3,30.0,6,60.0,9,90.0",
+      "topsJustModsSurchargeReport_mods"                        -> "1,10.0,2,20.0,3,30.0",
+      "f2fDesSurchargeReport_total"                             -> "4,40.0,8,80.0,12,120.0",
+      "opsDesNoModsSurchargeReport_paye"                        -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_misc"                        -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_sdlt"                        -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_vat"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_p800"                        -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_simpleAssessment"            -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cgt"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_pngr"                        -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_cds"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_ppt"                         -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_childBenefitRepayments"      -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_vatOss"                      -> "1,10.0,2,20.0,3,30.0",
+      "opsDesNoModsSurchargeReport_total"                       -> "8,80.0,16,160.0,22,240.0",
+      "opsDesJustModsSurchargeReport_mods"                      -> "1,10.0,2,20.0,3,30.0"
     ),
     "recon_mods_finance_report" -> Map(
       "subject"                   -> "MODS Finance Report 27/09/2027",
@@ -1977,6 +2007,18 @@ object TemplateParams2 {
       "ref"  -> "VRS 1234 5678 9012"
     ),
     "mtdfb_vatreg_registration_received_post" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_cy" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_email_cy" -> Map(
+      "name" -> "Joe Bloggs",
+      "ref"  -> "VRS 1234 5678 9012"
+    ),
+    "mtdfb_vatreg_registration_received_post_cy" -> Map(
       "name" -> "Joe Bloggs",
       "ref"  -> "VRS 1234 5678 9012"
     ),
@@ -2235,6 +2277,28 @@ object TemplateParams2 {
     "cbc_registration_successful_organisation" -> Map(
       "name"  -> "Joe Bloggs",
       "cbcID" -> "XWCBC0000000058"
+    ),
+    "cbc_file_upload_successful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC0000123778"
+    ),
+    "cbc_file_upload_unsuccessful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC0000123778"
+    ),
+    "cbc_agent_file_upload_successful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC0000123778",
+      "cbcId"         -> "XWCBC0000000058"
+    ),
+    "cbc_agent_file_upload_unsuccessful" -> Map(
+      "contactName"   -> "Joe Bloggs",
+      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "messageRefId"  -> "XACBC0000123778",
+      "cbcId"         -> "XWCBC0000000058"
     ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",
@@ -2934,6 +2998,51 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "ppt_request_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "venture_capital_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "venture_capital_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "businessName"        -> "Acquisitions Incorporated",
+      "captionExpression"   -> "Seed Enterprise Investment Scheme (SEIS), Enterprise Investment Scheme (EIS) and Investment from a Venture Capital Trust (VCT)",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "trusts_report_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "trusts_report_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "trusts_request_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "trusts_request_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "chief_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "chief_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "paragraph1"          -> "Acquisitions Incorporated cannot use CHIEF to make import declarations after the deadline of",
+      "date1"               -> "30 September 2022.",
+      "paragraph4"          -> "This is because you told us Acquisitions Incorporated does not plan to move to using the Customs Declaration Service (CDS) in the future.",
+      "paragraph5"          -> "We can only give an extension for using CHIEF to make import declarations if a business plans to move to using CDS.",
+      "emailTeam"           -> "the Single Customs Platform team"
+    ),
+    "fprc_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "businessName"        -> "Acquisitions Incorporated",
+      "para1"               -> "We aim to look at the information you have sent within 7 working days. If you do not hear from us within that timeframe, you can contact us using the contact details and reference on the letter we sent. The reference is CFSS followed by 7 numbers.",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "gbEORI_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),

@@ -145,6 +145,12 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "client_rejected_authorisation_request",
         "client_accepted_authorisation_request",
         "client_expired_authorisation_request",
+        "agent_permissions_success",
+        "agent_permissions_success_cy",
+        "agent_permissions_some_failed",
+        "agent_permissions_some_failed_cy",
+        "agent_permissions_all_failed",
+        "agent_permissions_all_failed_cy",
         "agent_services_account_created",
         "agent_services_account_created_cy",
         "agent_invitation_about_to_expire_single",
@@ -170,12 +176,15 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "apiRemovedClientSecretNotification",
         "apiApplicationToBeDeletedNotification",
         "apiVerifyResponsibleIndividual",
+        "apiVerifyResponsibleIndividualUpdate",
         "apiResponsibleIndividualReminderToAdmin",
         "apiResponsibleIndividualDidNotVerify",
         "apiResponsibleIndividualDeclined",
+        "apiResponsibleIndividualNotChanged",
         "apiChangeOfApplicationName",
         "apiChangeOfApplicationDetails",
         "apiChangeOfApplicationDetailsNoValue",
+        "apiChangeOfResponsibleIndividual",
         "changeOfEmailAddress",
         "changeOfEmailAddress_cy",
         "verifyEmailAddress",
@@ -350,6 +359,10 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "c118_section6_part4_application_confirmation",
         "c118_section6_part4_application_confirmation_cy",
         "cbc_registration_successful_organisation",
+        "cbc_file_upload_successful",
+        "cbc_file_upload_unsuccessful",
+        "cbc_agent_file_upload_successful",
+        "cbc_agent_file_upload_unsuccessful",
         "spbp_confirmation_submission",
         "tsp_application_confirmation",
         "gd_application_confirmation",
@@ -431,6 +444,16 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "qahc_code",
         "vat652_confirmation",
         "vat652_code",
+        "venture_capital_confirmation",
+        "venture_capital_code",
+        "trusts_report_code",
+        "trusts_report_confirmation",
+        "trusts_request_code",
+        "trusts_request_confirmation",
+        "chief_code",
+        "chief_confirmation",
+        "fprc_confirmation",
+        "gbEORI_confirmation",
         "elcb_code",
         "elcb_code_cy",
         "elcb_confirmation",
@@ -501,10 +524,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "register_your_company_register_vat_email",
         "register_your_company_register_paye_confirmation_new_tax_year",
         "register_your_company_register_paye_confirmation_new_tax_year_v2",
-        "register_your_company_register_paye_confirmation_new_tax_year_v2_cy",
         "register_your_company_register_paye_confirmation_current_tax_year",
         "register_your_company_register_paye_confirmation_current_tax_year_v2",
-        "register_your_company_register_paye_confirmation_current_tax_year_v2_cy",
         "investment_tax_relief_verification_email",
         "investment_tax_relief_confirmation_email",
         "investment_tax_relief_no_docs_confirmation_email",
@@ -719,6 +740,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "mtdfb_vatreg_registration_received",
         "mtdfb_vatreg_registration_received_email",
         "mtdfb_vatreg_registration_received_post",
+        "mtdfb_vatreg_registration_received_cy",
+        "mtdfb_vatreg_registration_received_email_cy",
+        "mtdfb_vatreg_registration_received_post_cy",
         "pods_scheme_register",
         "pods_racdac_scheme_register",
         "pods_psa_register",
@@ -863,13 +887,13 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
       )
     }
 
-    val templateLocator = new TemplateLocator {
+    val templateLocator: TemplateLocator = new TemplateLocator {
       override lazy val all: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
         messageTemplates(s"templateGroup-$i")
       }
     }
 
-    val templateLocatorWithWelsh = new TemplateLocator {
+    val templateLocatorWithWelsh: TemplateLocator = new TemplateLocator {
       val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
         messageTemplates(s"templateGroup-$i")
       }

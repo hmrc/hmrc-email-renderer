@@ -10,7 +10,7 @@ This email confirms that you (EORI: @{params("eori")}) have been added to the fo
 
 You must provide information about your de minimis aid (less Customs Duty waivers), to the undertaking administrator.
 
-Search 'Report and check de minimis aid if you claimed a waiver for goods brought into Northern Ireland' at www.gov.uk to:
+Search 'Report and manage your allowance for Customs Duty waiver claims' at www.gov.uk to:
 
 view your de minimis balance
 find further guidance

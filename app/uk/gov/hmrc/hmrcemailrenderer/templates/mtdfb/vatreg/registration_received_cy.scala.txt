@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Mae’ch cais i gofrestru ar gyfer TAW wedi dod i law
+
+Annwyl @params("name")
+
+Cyfeirnod: @params("ref")
+
+Mae’ch cais wedi dod i law a byddwn yn ysgrifennu atoch gyda phenderfyniad. Mae hyn fel arfer yn cymryd oddeutu 30 diwrnod.
+
+Dylech aros nes i’ch cofrestriad TAW gael ei gadarnhau cyn:
+- cael unrhyw feddalwedd
+- codi TAW ar gwsmeriaid
+
+Oddi wrth Dîm TAW CThEM
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -220,6 +220,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiVerifyResponsibleIndividualUpdate",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Responsible individual verification",
+      plainTemplate = txt.apiVerifyResponsibleIndividualUpdate.f,
+      htmlTemplate = html.apiVerifyResponsibleIndividualUpdate.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiResponsibleIndividualReminderToAdmin",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
@@ -247,6 +256,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualNotChanged",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Important update about your application",
+      plainTemplate = txt.apiResponsibleIndividualNotChanged.f,
+      htmlTemplate = html.apiResponsibleIndividualNotChanged.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiChangeOfApplicationName",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
@@ -272,7 +290,15 @@ object ApiTemplates {
       plainTemplate = txt.apiChangeOfApplicationDetailsNoValue.f,
       htmlTemplate = html.apiChangeOfApplicationDetailsNoValue.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiChangeOfResponsibleIndividual",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Important information about your application",
+      plainTemplate = txt.apiChangeOfResponsibleIndividual.f,
+      htmlTemplate = html.apiChangeOfResponsibleIndividual.f,
+      priority = Some(MessagePriority.Urgent)
     )
-
   )
 }

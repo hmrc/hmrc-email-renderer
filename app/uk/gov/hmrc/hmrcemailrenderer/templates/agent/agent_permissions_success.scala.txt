@@ -1,0 +1,13 @@
+@(params: Map[String, Any])You can start using access groups
+
+Dear @params("agencyName")
+
+You have turned on access groups in your agent services account and your client details have now been processed.
+
+Any access groups your organisation created in the past have been restored.
+
+To manage your access groups, sign in to your agent services account and select  'Manage account'.
+
+Do not reply to this email – it is an automatic message from an unmonitored account.
+
+From HMRC Agent Services team

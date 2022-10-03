@@ -24,6 +24,7 @@ object VatRegTemplates {
 
   val serviceName = "VAT Registration"
   val subject = "We’ve received your VAT registration application"
+  val subjectWelsh = "Mae’ch cais i gofrestru ar gyfer TAW wedi dod i law"
   val templatePrefix = "mtdfb_vatreg"
 
   val templates = Seq(
@@ -37,6 +38,15 @@ object VatRegTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = s"${templatePrefix}_registration_received_cy",
+      fromAddress = FromAddress.noReply(serviceName),
+      service = MTDfBVatRegistration,
+      subject = subjectWelsh,
+      plainTemplate = txt.registration_received_cy.f,
+      htmlTemplate = html.registration_received_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = s"${templatePrefix}_registration_received_email",
       fromAddress = FromAddress.noReply(serviceName),
       service = MTDfBVatRegistration,
@@ -46,12 +56,30 @@ object VatRegTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = s"${templatePrefix}_registration_received_email_cy",
+      fromAddress = FromAddress.noReply(serviceName),
+      service = MTDfBVatRegistration,
+      subject = subjectWelsh,
+      plainTemplate = txt.registration_received_email_cy.f,
+      htmlTemplate = html.registration_received_email_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = s"${templatePrefix}_registration_received_post",
       fromAddress = FromAddress.noReply(serviceName),
       service = MTDfBVatRegistration,
       subject = subject,
       plainTemplate = txt.registration_received_post.f,
       htmlTemplate = html.registration_received_post.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = s"${templatePrefix}_registration_received_post_cy",
+      fromAddress = FromAddress.noReply(serviceName),
+      service = MTDfBVatRegistration,
+      subject = subjectWelsh,
+      plainTemplate = txt.registration_received_post_cy.f,
+      htmlTemplate = html.registration_received_post_cy.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
