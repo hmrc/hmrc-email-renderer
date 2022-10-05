@@ -4,7 +4,7 @@
 
 Sign in to your Developer Hub account and go to application details to check the new @{params("fieldName")}.
 
-You can protect your account by changing your password and setting up 2-step verification.
+Protect your account by changing your password and setting up multi-factor authentication if you do not recognise this change.
 
 Do not respond to this email. Replies to this email address are not monitored.
 
