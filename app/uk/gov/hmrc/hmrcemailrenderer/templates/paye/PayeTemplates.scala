@@ -45,7 +45,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "Read your new HMRC online letter today",
+      subject = "Go online to read your new HMRC letter",
       plainTemplate = txt.newMessageAlert_P800.f,
       htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
@@ -64,7 +64,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800_D2",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "Read your new HMRC online letter today",
+      subject = "Go online to read your new HMRC letter",
       plainTemplate = txt.newMessageAlert_P800.f,
       htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
