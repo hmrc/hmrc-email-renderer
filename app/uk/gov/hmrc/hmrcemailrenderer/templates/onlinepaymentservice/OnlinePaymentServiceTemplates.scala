@@ -208,7 +208,7 @@ object OnlinePaymentServiceTemplates {
     ),
     MessageTemplate.create(
       templateId = "dd_email_verifcation",
-      fromAddress = FromAddress.noReply("VAT Direct Debit"),
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Verify your email address",
       plainTemplate = txt.dd_email_verifcation.f,
