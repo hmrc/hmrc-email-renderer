@@ -1,0 +1,76 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.partials.html.finance_recon_row
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, params("subject").toString) {
+  <table border="1px" width="100%" cellspacing="0px" cellpadding="2px" style="text-align: center;
+    font-size: 19px;
+    c">
+    <tr>
+      <th> </th>
+      <th>TPS & F2F Volumes</th>
+      <th>TPS & F2F Amount</th>
+      <th>Automated Payments Volumes</th>
+      <th>Automated Payments Amount</th>
+      <th>Total TPS, F2F and Automated Volumes</th>
+      <th>Total TPS, F2F and Automated Amount</th>
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Sundry Card Receipts</td>
+      @finance_recon_row(params("financeReport_sundry_card").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">VAT Distraint/Legal Costs</td>
+      @finance_recon_row(params("financeReport_sundry_vatLegal").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Debit Card Fee</td>
+      @finance_recon_row(params("financeReport_sundry_debitCard").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Commission Card</td>
+      @finance_recon_row(params("financeReport_sundry_commissionCard").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Sundry Card Sub-Total</td>
+      @finance_recon_row(params("financeReport_sundry_subTotal").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Child Benefits</td>
+      @finance_recon_row(params("financeReport_chb_card").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Debit Card Fee - Child Benefits</td>
+      @finance_recon_row(params("financeReport_chb_debitCard").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Commission Card - Child Benefits</td>
+      @finance_recon_row(params("financeReport_chb_commissionCard").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">CHB Sub-Total</td>
+      @finance_recon_row(params("financeReport_chb_subTotal").toString.split(",").toArray)
+    </tr>
+    <tr>
+      <td style="font-weight:bold;">Grand Total</td>
+      @finance_recon_row(params("financeReport_total").toString.split(",").toArray)
+    </tr>
+  </table>
+
+  <p><STRONG>From HMRC Online Payments team</STRONG></p>
+}

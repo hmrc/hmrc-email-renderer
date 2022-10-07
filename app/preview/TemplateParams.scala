@@ -1847,30 +1847,18 @@ object TemplateParams2 {
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "recon_tps_report" -> Map(
-      "subject"           -> "Telephone Payment Service (TPS) and Face to Face (F2F) finance report 22/01/1989",
-      "vatLegalTps"       -> "2,19400000,0,0,2,19400000",
-      "shipleyTps"        -> "4,20744424,1,9886240,5,30630664",
-      "debitCardFeeTps"   -> "3,0,0,0,3,0",
-      "vatAccountTps"     -> "1,9700000,0,0,1,9700000",
-      "nirsTps"           -> "1,9700000,0,0,1,9700000",
-      "commissionCardTps" -> "7,1344420,1,186240,8,1530660",
-      "totalTps"          -> "10,70588846,1,10072480,11,80661326",
-      "cumbernauldTps"    -> "2,9700002,0,0,2,9700002",
-      "vatLegalF2f"       -> "2,19400000,0,0,2,19400000",
-      "shipleyF2f"        -> "4,20744424,1,9886240,5,30630664",
-      "debitCardFeeF2f"   -> "3,0,0,0,3,0",
-      "vatAccountF2f"     -> "1,9700000,0,0,1,9700000",
-      "nirsF2f"           -> "1,9700000,0,0,1,9700000",
-      "commissionCardF2f" -> "7,1344420,1,186240,8,1530660",
-      "totalF2f"          -> "10,70588846,1,10072480,11,80661326",
-      "cumbernauldF2f"    -> "2,9700002,0,0,2,9700002"
-    ),
-    "recon_tops_report" -> Map(
-      "subject"         -> "ETMP Telephone Payment Service (TPS) Finance report 27 September 2027",
-      "TOPS_ROW_P800"   -> "P800,4,11842279,2,0,2,14443,4,11842279",
-      "TOPS_ROW_SA"     -> "SA,94,911842279,92,90,92,914443,94,911842279",
-      "TOPS_ROW_TOTALS" -> "Totals,84,811842279,82,80,82,814443,84,811842279"
+    "recon_finance_report" -> Map(
+      "subject"                             -> "Telephone Payment Service (TPS) and Face to Face (F2F) Payment Service finance report 22/01/1989",
+      "financeReport_sundry_card"           -> "4,2500.00,2,1200.00,6,3700.00",
+      "financeReport_sundry_vatLegal"       -> "1,500.00,0,0,1,500.00",
+      "financeReport_sundry_debitCard"      -> "4,25.05,1,11.25,5,36.30",
+      "financeReport_sundry_commissionCard" -> "1,10.00,0,0,1,10.00",
+      "financeReport_sundry_subTotal"       -> "5,3000.00,0,0,7,4200",
+      "financeReport_chb_card"              -> "1,200.21,0,0,1,200.21",
+      "financeReport_chb_debitCard"         -> "1,30.05,0,0,1,30.05",
+      "financeReport_chb_commissionCard"    -> "0,0,0,0,0,0",
+      "financeReport_chb_subTotal"          -> "1,230.05,0,0,1,230.03.05",
+      "financeReport_total"                 -> "6,3230.05,0,0,8,4430.05"
     ),
     "recon_surcharge_report" -> Map(
       "subject"                                                 -> "Surcharge report 27/09/2027",

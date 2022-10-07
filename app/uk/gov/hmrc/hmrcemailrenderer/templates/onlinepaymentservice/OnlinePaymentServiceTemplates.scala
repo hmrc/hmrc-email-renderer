@@ -215,23 +215,14 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.dd_email_verifcation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    //Recon tps
+    //Recon tps, f2f
     MessageTemplate.createWithDynamicSubject(
-      templateId = "recon_tps_report",
+      templateId = "recon_finance_report",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = _.apply("subject"),
-      plainTemplate = txt.recon_tps_report.f,
-      htmlTemplate = html.recon_tps_report.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "recon_tops_report",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = _.apply("subject"),
-      plainTemplate = txt.recon_tops_report.f,
-      htmlTemplate = html.recon_tops_report.f,
+      plainTemplate = txt.recon_finance_report.f,
+      htmlTemplate = html.recon_finance_report.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(

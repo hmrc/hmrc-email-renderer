@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+
+
+Sundry Card Receipts: @params("financeReport_sundry_card")
+VAT Distraint/Legal Costs: @params("financeReport_sundry_vatLegal")
+Debit Card Fee: @params("financeReport_sundry_debitCard")
+Commission Card: @params("financeReport_sundry_commissionCard")
+Sundry Card Sub-Total: @params("financeReport_sundry_subTotal")
+Child Benefits: @params("financeReport_chb_card")
+Debit Card Fee - Child Benefits: @params("financeReport_chb_debitCard")
+Commission Card - Child Benefits: @params("financeReport_chb_commissionCard")
+CHB Sub-Total: @params("financeReport_chb_subTotal")
+Grand Total: @params("financeReport_total")
