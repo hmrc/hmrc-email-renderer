@@ -53,7 +53,7 @@
 
 
             Tax Reference
-            >@params("transactionReference")
+            @params("transactionReference")
 
         @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
 
@@ -95,7 +95,7 @@
             @params("transactionSource")
 
             Date
-            @params("params("dateOfPayment")
+            @params("dateOfPayment")
 
            Time
            @params("time")
