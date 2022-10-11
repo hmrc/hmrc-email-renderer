@@ -1,0 +1,120 @@
+@*
+* Copyright 2022 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
+
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
+
+@(params: Map[String, Any])
+
+@allItems = @{params("f2fPaymentItemsForEmailUnsuccessful") match {
+    case items:String => Json.parse(items).as[List[JsObject]]
+    case _ => List()
+}}
+
+@itemList = @{ allItems.map( item => {
+
+    val taxType: String = (item \ "taxType").as[String]
+    val amount: String = (item \ "amount").as[String]
+    val transactionFee: String = (item \ "transactionFee").as[String]
+    val transactionNumber = (item \ "transactionNumber").as[String]
+    (taxType, amount, transactionFee, transactionNumber)
+    })
+}
+
+
+
+
+
+Dear customer
+
+
+Your card payment to HMRC has not been made. No money has been taken from your account.
+
+
+  Date
+      @params("dateOfPayment")</td>
+
+      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+          Tax
+          @taxType
+
+          Payment reference<
+          @transactionNumber
+      }
+      Tax Reference</th>
+      @params("transactionReference")
+
+      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+          Amount
+          @amount
+
+          Card fee
+          @transactionFee
+      }
+
+      Total
+      £@params("totalAmountPaid")
+
+      Card type
+      Paid with @params("cardType")
+
+      Card ending
+      ending in @params("cardNumber")
+
+      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+
+          Application ID
+          @applicationId
+
+          PAN sequence
+          @panSequence
+
+          Merchant ID
+          @merchantId</td>
+
+          Terminal ID
+          @terminalId</td>
+
+          Card verification method
+          @cardVerificationMethod
+
+          Authorisation</th>
+          @authorisation
+
+          Transaction source
+          @transactionSource
+      }
+
+      Date
+      @params("dateOfPayment")
+
+     @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+          Time
+          @time
+
+          Transaction type
+          @transactionType
+     }
+
+
+If you still need to pay
+
+Phone the Payment Support Service on 0300 200 3835. This is available Monday to Friday, 8am to 6pm (closed on public holidays).
+
+
+From From HM Revenue and Customs
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
