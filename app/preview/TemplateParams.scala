@@ -218,6 +218,12 @@ object TemplateParams {
       "timeSinceLastUse"        -> "11 months",
       "dateOfScheduledDeletion" -> "1 April 2025"
     ),
+    "apiProductionCredentialsRequestExpired" -> Map(
+      "applicationName" -> "Test Application"
+    ),
+    "apiProductionCredentialsRequestExpiryWarning" -> Map(
+      "applicationName" -> "Test Application"
+    ),
     "apiVerifyResponsibleIndividual" -> Map(
       "developerHubLink"          -> exampleLinkWithRandomId,
       "applicationName"           -> "Test Application",
