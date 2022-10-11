@@ -29,7 +29,16 @@
     val amount: String = (item \ "amount").as[String]
     val transactionFee: String = (item \ "transactionFee").as[String]
     val transactionNumber = (item \ "transactionNumber").as[String]
-    (taxType, amount, transactionFee, transactionNumber)
+    val applicationId = (item \ "applicationId").as[String]
+    val panSequence = (item \ "panSequence").as[String]
+    val merchantId = (item \ "merchantId").as[String]
+    val terminalId = (item \ "terminalId").as[String]
+    val cardVerificationMethod = (item \ "cardVerificationMethod").as[String]
+    val authorisation = (item \ "authorisation").as[String]
+    val transactionSource = (item \ "transactionSource").as[String]
+    val time = (item \ "time").as[String]
+    val transactionType = (item \ "transactionType").as[String]
+    (taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType)
     })
 }
 
