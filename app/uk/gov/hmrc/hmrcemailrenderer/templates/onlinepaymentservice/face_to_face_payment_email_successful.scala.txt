@@ -98,7 +98,7 @@
             @params("params("dateOfPayment")
 
            Time
-           @params("@time")
+           @params("time")
 
            Transaction type
            @params("transactionType")

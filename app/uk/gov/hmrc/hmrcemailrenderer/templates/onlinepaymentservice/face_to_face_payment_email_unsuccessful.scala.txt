@@ -102,7 +102,7 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               @params("params("dateOfPayment")
 
              Time
-             @params("@time")
+             @params("time")
 
              Transaction type
              @params("transactionType")
