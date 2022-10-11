@@ -29,7 +29,16 @@
         val amount: String = (item \ "amount").as[String]
         val transactionFee: String = (item \ "transactionFee").as[String]
         val transactionNumber = (item \ "transactionNumber").as[String]
-        (taxType, amount, transactionFee, transactionNumber)
+        val applicationId = (item \ "applicationId").as[String]
+        val panSequence = (item \ "panSequence").as[String]
+        val merchantId = (item \ "merchantId").as[String]
+        val terminalId = (item \ "terminalId").as[String]
+        val cardVerificationMethod = (item \ "cardVerificationMethod").as[String]
+        val authorisation = (item \ "authorisation").as[String]
+        val transactionSource = (item \ "transactionSource").as[String]
+        val time = (item \ "time").as[String]
+        val transactionType = (item \ "transactionType").as[String]
+        (taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType)
     })
 }
 
@@ -39,37 +48,70 @@
 
     Your payment has been received by HMRC.
 
-   Date
-   @params("dateOfPayment")
+    Date
+    @params("dateOfPayment")</td>
 
- @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-   Tax
-   @taxType
- }
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+        Tax
+        @taxType
 
-   Tax Reference
-   @params("transactionReference")
+        Payment reference<
+        @transactionNumber
+    }
+    Tax Reference</th>
+    @params("transactionReference")
 
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+        Amount
+        @amount
 
- @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-   Payment reference
-   @transactionNumber
-
-   Amount
-   @amount
- }
-
-   Card type
-   Paid with @params("cardType"), ending in @params("cardNumber")
-
-
- @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-   Card fee
-   @transactionFee
- }
+        Card fee
+        @transactionFee
+    }
 
     Total paid
     £@params("totalAmountPaid")
+
+    Card type
+    Paid with @params("cardType")
+
+    Card ending
+    ending in @params("cardNumber")
+
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+
+        Application ID
+        @applicationId
+
+        PAN sequence
+        @panSequence
+
+        Merchant ID
+        @merchantId</td>
+
+        Terminal ID
+        @terminalId</td>
+
+        Card verification method
+        @cardVerificationMethod
+
+        Authorisation</th>
+        @authorisation
+
+        Transaction source
+        @transactionSource
+    }
+
+    Date
+    @params("dateOfPayment")
+
+   @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+        Time
+        @time
+
+        Transaction type
+        @transactionType
+   }
 
     If you have an online tax account your payment will take 3 to 5 days to show in your account.
 

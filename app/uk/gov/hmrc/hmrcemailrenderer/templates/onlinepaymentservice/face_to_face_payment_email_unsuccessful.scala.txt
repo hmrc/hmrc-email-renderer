@@ -43,37 +43,70 @@ Dear customer
 Your card payment to HMRC has not been made. No money has been taken from your account.
 
 
-    Date
-    @params("dateOfPayment")
+  Date
+      @params("dateOfPayment")</td>
 
-  @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-    Tax
-    @taxType
-  }
+      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+          Tax
+          @taxType
 
-    Tax Reference
-    @params("transactionReference")
+          Payment reference<
+          @transactionNumber
+      }
+      Tax Reference</th>
+      @params("transactionReference")
 
+      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+          Amount
+          @amount
 
-  @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-    Payment reference
-    @transactionNumber
+          Card fee
+          @transactionFee
+      }
 
-    Amount
-    @amount
-  }
+      Total
+      £@params("totalAmountPaid")
 
-   Card type
-   Paid with @params("cardType"), ending in @params("cardNumber")
+      Card type
+      Paid with @params("cardType")
 
+      Card ending
+      ending in @params("cardNumber")
 
-  @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-       Card fee
-       @transactionFee
-  }
+      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
 
-   Total
-   £@params("totalAmountPaid")
+          Application ID
+          @applicationId
+
+          PAN sequence
+          @panSequence
+
+          Merchant ID
+          @merchantId</td>
+
+          Terminal ID
+          @terminalId</td>
+
+          Card verification method
+          @cardVerificationMethod
+
+          Authorisation</th>
+          @authorisation
+
+          Transaction source
+          @transactionSource
+      }
+
+      Date
+      @params("dateOfPayment")
+
+     @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+          Time
+          @time
+
+          Transaction type
+          @transactionType
+     }
 
 
 If you still need to pay

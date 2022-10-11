@@ -49,44 +49,92 @@
         <th>Date</th>
         <td>@params("dateOfPayment")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
     <tr>
         <th>Tax</th>
         <td>@taxType</td>
+    </tr>
+    <tr>
+        <th>Payment reference</th>
+        <td>@transactionNumber</td>
     </tr>
     }
     <tr>
         <th>Tax Reference</th>
         <td>@params("transactionReference")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-    <tr>
-        <th>Payment reference</th>
-        <td>@transactionNumber</td>
-    </tr>
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
     <tr>
         <th>Amount</th>
         <td>@amount</td>
     </tr>
-    }
-    <tr>
-        <th>Card type</th>
-        <td>Paid with @params("cardType"), ending in @params("cardNumber")</td>
-    </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
     <tr>
         <th>Card fee</th>
         <td>@transactionFee</td>
     </tr>
     }
-
     <tr>
         <th>Total</th>
         <td>£@params("totalAmountPaid")</td>
     </tr>
+    <tr>
+        <th>Card type</th>
+        <td>Paid with @params("cardType")</td>
+    </tr>
+    <tr>
+        <th>Card ending </th>
+        <td>ending in @params("cardNumber")</td>
+    </tr>
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+    <tr>
+        <th>Application ID</th>
+        <td>@applicationId</td>
+    </tr>
+    <tr>
+        <th>PAN sequence</th>
+        <td>@panSequence</td>
+    </tr>
+    <tr>
+        <th>Merchant ID</th>
+        <td>@merchantId</td>
+    </tr>
+    <tr>
+        <th>Terminal ID</th>
+        <td>@terminalId</td>
+    </tr>
+    <tr>
+        <th>Card verification method</th>
+        <td>@cardVerificationMethod</td>
+    </tr>
+    <tr>
+        <th>Authorisation</th>
+        <td>@authorisation</td>
+    </tr>
+    <tr>
+        <th>Transaction source</th>
+        <td>@transactionSource</td>
+    </tr>
+    }
+    <tr>
+        <th>Date</th>
+        <td>@params("dateOfPayment")</td>
+    </tr>
+    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+    <tr>
+        <th>Time</th>
+        <td>@time</td>
+    </tr>
+    <tr>
+        <th>Transaction type</th>
+        <td>@transactionType</td>
+    </tr>
+    }
+
+
 
     </tbody>
 </table>
+
 
 
 

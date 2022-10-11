@@ -1697,6 +1697,15 @@ object TemplateParams2 {
       "cardType"                          -> "Visa Debit",
       "cardNumber"                        -> "1234",
       "dateOfPayment"                     -> "31 December 2021",
+      "applicationId"                     -> "A0000000031010",
+      "panSequence"                       -> "56",
+      "merchantId"                        -> "***2710",
+      "terminalId"                        -> "***2074",
+      "cardVerificationMethod"            -> "PIN verified",
+      "authorisation"                     -> "12345",
+      "transactionSource"                 -> "Chip and PIN",
+      "time"                              -> " 5:30pm",
+      "transactionType"                   -> "Payment",
       "f2fPaymentItemsForEmailSuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "face_to_face_payment_email_unsuccessful" -> Map(
@@ -1705,6 +1714,15 @@ object TemplateParams2 {
       "cardType"                            -> "Visa Debit",
       "cardNumber"                          -> "1234",
       "dateOfPayment"                       -> "31 December 2021",
+      "applicationId"                       -> "A0000000031010",
+      "panSequence"                         -> "56",
+      "merchantId"                          -> "***2710",
+      "terminalId"                          -> "***2074",
+      "cardVerificationMethod"              -> "PIN verified",
+      "authorisation"                       -> "Declined",
+      "transactionSource"                   -> "Chip and PIN",
+      "time"                                -> " 5:30pm",
+      "transactionType"                     -> "Payment",
       "f2fPaymentItemsForEmailUnsuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "open_banking_payment_successful_cy" -> Map(
