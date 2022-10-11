@@ -29,16 +29,8 @@ case _ => List()
     val amount: String = (item \ "amount").as[String]
     val transactionFee: String = (item \ "transactionFee").as[String]
     val transactionNumber = (item \ "transactionNumber").as[String]
-    val applicationId = (item \ "applicationId").as[String]
-    val panSequence = (item \ "panSequence").as[String]
-    val merchantId = (item \ "merchantId").as[String]
-    val terminalId = (item \ "terminalId").as[String]
-    val cardVerificationMethod = (item \ "cardVerificationMethod").as[String]
-    val authorisation = (item \ "authorisation").as[String]
-    val transactionSource = (item \ "transactionSource").as[String]
-    val time = (item \ "time").as[String]
-    val transactionType = (item \ "transactionType").as[String]
-    (taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType)
+
+    (taxType, amount, transactionFee, transactionNumber)
     })
 }
 
@@ -58,7 +50,7 @@ case _ => List()
         <th>Date</th>
         <td>@params("dateOfPayment")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
     <tr>
         <th>Tax</th>
         <td>@taxType</td>
@@ -72,14 +64,15 @@ case _ => List()
         <th>Tax Reference</th>
         <td>@params("transactionReference")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
     <tr>
         <th>Amount</th>
         <td>@amount</td>
     </tr>
+
     <tr>
         <th>Card fee</th>
-        <td>@transactionFee</td>
+        <td>@params("transactionFee")</td>
     </tr>
     }
     <tr>
@@ -94,50 +87,48 @@ case _ => List()
         <th>Card ending </th>
         <td>ending in @params("cardNumber")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+
     <tr>
         <th>Application ID</th>
-        <td>@applicationId</td>
+        <td>@params("applicationId")</td>
     </tr>
     <tr>
         <th>PAN sequence</th>
-        <td>@panSequence</td>
+        <td>@params("panSequence")</td>
     </tr>
     <tr>
         <th>Merchant ID</th>
-        <td>@merchantId</td>
+        <td>@params("merchantId")</td>
     </tr>
     <tr>
         <th>Terminal ID</th>
-        <td>@terminalId</td>
+        <td>@params("terminalId")</td>
     </tr>
     <tr>
         <th>Card verification method</th>
-        <td>@cardVerificationMethod</td>
+        <td>@params("cardVerificationMethod")</td>
     </tr>
     <tr>
         <th>Authorisation</th>
-        <td>@authorisation</td>
+        <td>@params("authorisation")</td>
     </tr>
     <tr>
         <th>Transaction source</th>
-        <td>@transactionSource</td>
+        <td>@params("transactionSource")</td>
     </tr>
-    }
     <tr>
         <th>Date</th>
-        <td>@params("dateOfPayment")</td>
+        <td>@params("params("dateOfPayment")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
     <tr>
         <th>Time</th>
-        <td>@time</td>
+        <td>@params("@time")</td>
     </tr>
     <tr>
         <th>Transaction type</th>
-        <td>@transactionType</td>
+        <td>@params("transactionType")</td>
     </tr>
-    }
+
 
 
 

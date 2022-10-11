@@ -29,16 +29,7 @@
     val amount: String = (item \ "amount").as[String]
     val transactionFee: String = (item \ "transactionFee").as[String]
     val transactionNumber = (item \ "transactionNumber").as[String]
-    val applicationId = (item \ "applicationId").as[String]
-    val panSequence = (item \ "panSequence").as[String]
-    val merchantId = (item \ "merchantId").as[String]
-    val terminalId = (item \ "terminalId").as[String]
-    val cardVerificationMethod = (item \ "cardVerificationMethod").as[String]
-    val authorisation = (item \ "authorisation").as[String]
-    val transactionSource = (item \ "transactionSource").as[String]
-    val time = (item \ "time").as[String]
-    val transactionType = (item \ "transactionType").as[String]
-    (taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType)
+    (taxType, amount, transactionFee, transactionNumber)
     })
 }
 
@@ -53,69 +44,68 @@ Your card payment to HMRC has not been made. No money has been taken from your a
 
 
   Date
-      @params("dateOfPayment")</td>
+              @params("dateOfPayment")
+          @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
 
-      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
-          Tax
-          @taxType
+              Tax
+              @taxType
 
-          Payment reference<
-          @transactionNumber
-      }
-      Tax Reference</th>
-      @params("transactionReference")
+              Payment reference
+              @transactionNumber
 
-      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
-          Amount
-          @amount
+          }
 
-          Card fee
-          @transactionFee
-      }
 
-      Total
-      £@params("totalAmountPaid")
+              Tax Reference
+              >@params("transactionReference")
 
-      Card type
-      Paid with @params("cardType")
+          @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
 
-      Card ending
-      ending in @params("cardNumber")
+              Amount
+              @amount
 
-      @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
+              Card fee
+              @params("transactionFee")
+          }
 
-          Application ID
-          @applicationId
+              Total paid
+              £@params("totalAmountPaid")
 
-          PAN sequence
-          @panSequence
+              Card type
+              Paid with @params("cardType")
 
-          Merchant ID
-          @merchantId</td>
+              Card ending
+              ending in @params("cardNumber")
 
-          Terminal ID
-          @terminalId</td>
+              Application ID
+              @params("applicationId")
 
-          Card verification method
-          @cardVerificationMethod
+              PAN sequence
+              @params("panSequence")
 
-          Authorisation</th>
-          @authorisation
+              Merchant ID
+              @params("merchantId")
 
-          Transaction source
-          @transactionSource
-      }
+              Terminal ID
+              @params("terminalId")
 
-      Date
-      @params("dateOfPayment")
+              Card verification method
+              @params("cardVerificationMethod")
 
-     @for((taxType, amount, transactionFee, transactionNumber, applicationId, panSequence, merchantId, terminalId, cardVerificationMethod, authorisation, transactionSource, time, transactionType) <- itemList) {
-          Time
-          @time
+              Authorisation
+              @params("authorisation")
 
-          Transaction type
-          @transactionType
-     }
+              Transaction source
+              @params("transactionSource")
+
+              Date
+              @params("params("dateOfPayment")
+
+             Time
+             @params("@time")
+
+             Transaction type
+             @params("transactionType")
 
 
 If you still need to pay
