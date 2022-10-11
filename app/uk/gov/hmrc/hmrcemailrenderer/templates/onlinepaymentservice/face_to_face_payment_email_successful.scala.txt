@@ -61,7 +61,7 @@
             @amount
 
             Card fee
-            @params("transactionFee")
+            @transactionFee
         }
 
             Total paid

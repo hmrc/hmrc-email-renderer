@@ -65,7 +65,7 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               @amount
 
               Card fee
-              @params("transactionFee")
+              @transactionFee
           }
 
               Total paid
