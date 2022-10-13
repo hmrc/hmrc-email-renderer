@@ -251,6 +251,24 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.telephone_payments_service.f,
       htmlTemplate = html.telephone_payments_service.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "face_to_face_payment_email_successful",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Payment confirmation",
+      plainTemplate = txt.face_to_face_payment_email_successful.f,
+      htmlTemplate = html.face_to_face_payment_email_successful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "face_to_face_payment_email_unsuccessful",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Your payment to HMRC was unsuccessful",
+      plainTemplate = txt.face_to_face_payment_email_unsuccessful.f,
+      htmlTemplate = html.face_to_face_payment_email_unsuccessful.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
