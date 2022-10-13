@@ -110,7 +110,7 @@
 
     You chose to receive payment confirmation by email.
 
-    From From HM Revenue and Customs
+    From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 
