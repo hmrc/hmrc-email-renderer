@@ -202,6 +202,24 @@ object ApiTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiProductionCredentialsRequestExpired",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Production credentials request deleted",
+      plainTemplate = txt.apiProductionCredentialsRequestExpired.f,
+      htmlTemplate = html.apiProductionCredentialsRequestExpired.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiProductionCredentialsRequestExpiryWarning",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "About your request for production credentials",
+      plainTemplate = txt.apiProductionCredentialsRequestExpiryWarning.f,
+      htmlTemplate = html.apiProductionCredentialsRequestExpiryWarning.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "ppnsCallbackUrlChangedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
