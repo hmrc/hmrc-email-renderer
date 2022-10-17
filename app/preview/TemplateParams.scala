@@ -1756,9 +1756,9 @@ object TemplateParams2 {
       "cardVerificationMethod"            -> "PIN verified",
       "authorisation"                     -> "12345",
       "transactionSource"                 -> "Chip and PIN",
-      "time"                              -> " 5:30pm",
+      "time"                              -> "5:30pm",
       "transactionType"                   -> "Payment",
-      "f2fPaymentItemsForEmailSuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+      "f2fPaymentItemsForEmailSuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"192\",\"transactionFee\":\"100\",\"transactionNumber\":\"12345\"}]"
     ),
     "face_to_face_payment_email_unsuccessful" -> Map(
       "totalAmountPaid"                     -> "1000.00",
@@ -1773,9 +1773,9 @@ object TemplateParams2 {
       "cardVerificationMethod"              -> "PIN verified",
       "authorisation"                       -> "Declined",
       "transactionSource"                   -> "Chip and PIN",
-      "time"                                -> " 5:30pm",
+      "time"                                -> "5:30pm",
       "transactionType"                     -> "Payment",
-      "f2fPaymentItemsForEmailUnsuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+      "f2fPaymentItemsForEmailUnsuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"192\",\"transactionFee\":\"100\",\"transactionNumber\":\"12345\"}]"
     ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",

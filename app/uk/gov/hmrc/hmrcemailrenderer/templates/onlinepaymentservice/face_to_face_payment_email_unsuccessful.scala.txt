@@ -15,7 +15,7 @@
 *@
 
 @import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
-
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
 @allItems = @{params("f2fPaymentItemsForEmailUnsuccessful") match {
@@ -62,10 +62,10 @@ Your card payment to HMRC has not been made. No money has been taken from your a
           @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
 
               Amount
-              @amount
+              @formatAmountInPence(amount)
 
               Card fee
-              @transactionFee
+              @formatAmountInPence(transactionFee)
           }
 
               Total paid
