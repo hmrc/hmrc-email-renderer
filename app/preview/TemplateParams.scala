@@ -1744,7 +1744,7 @@ object TemplateParams2 {
       "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "face_to_face_payment_email_successful" -> Map(
-      "totalAmountPaid"        -> "1000.00",
+      "totalAmountInPence"     -> "100000",
       "transactionReference"   -> "1234567890K",
       "cardType"               -> "Visa Debit",
       "cardNumber"             -> "1234",
@@ -1764,7 +1764,7 @@ object TemplateParams2 {
       "transactionNumber"      -> "12345"
     ),
     "face_to_face_payment_email_unsuccessful" -> Map(
-      "totalAmountPaid"        -> "1000.00",
+      "totalAmountInPence"     -> "100000",
       "transactionReference"   -> "1234567890K",
       "cardType"               -> "Visa Debit",
       "cardNumber"             -> "1234",

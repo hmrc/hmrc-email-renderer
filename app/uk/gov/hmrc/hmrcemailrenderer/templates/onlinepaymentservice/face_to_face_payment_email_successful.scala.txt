@@ -56,7 +56,7 @@
 
 
             Total paid
-            £@params("totalAmountPaid")
+            £@formatAmountInPence(params("totalAmountInPence"))
 
             Card type
             Paid with @params("cardType")
