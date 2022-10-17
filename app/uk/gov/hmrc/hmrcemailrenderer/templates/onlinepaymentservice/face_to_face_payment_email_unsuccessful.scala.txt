@@ -23,15 +23,7 @@
     case _ => List()
 }}
 
-@itemList = @{ allItems.map( item => {
 
-    val taxType: String = (item \ "taxType").as[String]
-    val amount: String = (item \ "amount").as[String]
-    val transactionFee: String = (item \ "transactionFee").as[String]
-    val transactionNumber = (item \ "transactionNumber").as[String]
-    (taxType, amount, transactionFee, transactionNumber)
-    })
-}
 
 
 
@@ -43,30 +35,26 @@ Dear customer
 Your card payment to HMRC has not been made. No money has been taken from your account.
 
 
-  Date
+              Date
               @params("dateOfPayment")
-          @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+           Tax
+           @params("taxType")
 
-              Tax
-              @taxType
-
-              Payment reference
-              @transactionNumber
-
-          }
+           Payment reference
+           @params("transactionNumber")
 
 
-              Tax Reference
-              @params("transactionReference")
 
-          @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+            Tax Reference
+            @params("transactionReference")
 
-              Amount
-              @formatAmountInPence(amount)
 
-              Card fee
-              @formatAmountInPence(transactionFee)
-          }
+
+            Amount
+            @formatAmountInPence(params("amount"))
+
+          Card fee
+          @formatAmountInPence(params("transactionFee"))
 
               Total paid
               £@params("totalAmountPaid")

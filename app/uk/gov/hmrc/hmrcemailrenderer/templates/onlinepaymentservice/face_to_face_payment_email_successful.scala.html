@@ -23,15 +23,7 @@ case items:String => Json.parse(items).as[List[JsObject]]
 case _ => List()
 }}
 
-@itemList = @{ allItems.map( item => {
 
-    val taxType: String = (item \ "taxType").as[String]
-    val amount: String = (item \ "amount").as[String]
-    val transactionFee: String = (item \ "transactionFee").as[String]
-    val transactionNumber = (item \ "transactionNumber").as[String]
-    (taxType, amount, transactionFee, transactionNumber)
-    })
-}
 
 @singleItem = @{itemList.size == 1}
 
@@ -49,31 +41,31 @@ case _ => List()
         <th>Date</th>
         <td>@params("dateOfPayment")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
     <tr>
         <th>Tax</th>
-        <td>@taxType</td>
+        <td>@params("taxType")</td>
     </tr>
     <tr>
         <th>Payment reference</th>
-        <td>@transactionNumber</td>
+        <td>@params("transactionNumber")</td>
     </tr>
-    }
+
     <tr>
         <th>Tax Reference</th>
         <td>@params("transactionReference")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
     <tr>
         <th>Amount</th>
-        <td>@formatAmountInPence(amount)</td>
+        <td>@formatAmountInPence(params("amount"))</td>
     </tr>
 
     <tr>
         <th>Card fee</th>
-        <td>@formatAmountInPence(transactionFee)</td>
+        <td>@formatAmountInPence(params("transactionFee"))</td>
     </tr>
-    }
+
     <tr>
         <th>Total paid</th>
         <td>£@params("totalAmountPaid")</td>

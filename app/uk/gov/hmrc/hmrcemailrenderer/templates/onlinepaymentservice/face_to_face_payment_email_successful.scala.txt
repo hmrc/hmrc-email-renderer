@@ -23,15 +23,7 @@
     case _ => List()
 }}
 
-@itemList = @{ allItems.map( item => {
 
-        val taxType: String = (item \ "taxType").as[String]
-        val amount: String = (item \ "amount").as[String]
-        val transactionFee: String = (item \ "transactionFee").as[String]
-        val transactionNumber = (item \ "transactionNumber").as[String]
-        (taxType, amount, transactionFee, transactionNumber)
-    })
-}
 
 
     Dear Customer
@@ -41,28 +33,27 @@
 
             Date
             @params("dateOfPayment")
-        @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
 
             Tax
-            @taxType
+            @params("taxType")
 
             Payment reference
-            @transactionNumber
+            @params("transactionNumber")
 
-        }
 
 
             Tax Reference
             @params("transactionReference")
 
-        @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
 
             Amount
-            @formatAmountInPence(amount)
+            @formatAmountInPence(params("amount"))
 
             Card fee
-            @formatAmountInPence(transactionFee)
-        }
+            @formatAmountInPence(params("transactionFee"))
+
 
             Total paid
             £@params("totalAmountPaid")
