@@ -25,7 +25,7 @@ case _ => List()
 
 
 
-@singleItem = @{itemList.size == 1}
+
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your payment to HMRC was unsuccessful ") {
 
@@ -58,17 +58,17 @@ case _ => List()
 
     <tr>
         <th>Amount</th>
-        <td>@formatAmountInPence(params(amount))</td>
+        <td>@formatAmountInPence(params("amount"))</td>
     </tr>
 
     <tr>
         <th>Card fee</th>
-        <td>@formatAmountInPence(params(transactionFee))</td>
+        <td>@formatAmountInPence(params("transactionFee"))</td>
     </tr>
 
     <tr>
         <th>Total</th>
-        <td>£@formatAmountInPence(params(totalAmountInPence))</td>
+        <td>£@formatAmountInPence(params("totalAmountInPence"))</td>
     </tr>
     <tr>
         <th>Card type</th>
