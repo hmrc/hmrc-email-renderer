@@ -32,36 +32,12 @@ object RegisterYourCompanyTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = "register_your_company_welcome_email",
-      fromAddress = FromAddress.govUkTeamAddress,
-      service = RegisterYourCompany,
-      subject = "Access the ‘Register your company’ service",
-      plainTemplate = txt.registerYourCompanyWelcomeEmail.f,
-      htmlTemplate = html.registerYourCompanyWelcomeEmail.f
-    ),
-    MessageTemplate.create(
       templateId = "register_your_company_register_vat_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "Register for VAT online - new service",
       plainTemplate = txt.registerYourCompanyRegisterVATEmail.f,
       htmlTemplate = html.registerYourCompanyRegisterVATEmail.f
-    ),
-    MessageTemplate.create(
-      templateId = "register_your_company_register_paye_confirmation_new_tax_year",
-      fromAddress = FromAddress.govUkTeamAddress,
-      service = RegisterYourCompany,
-      subject = "'Register an employer for PAYE' - application received",
-      plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f,
-      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYear.f
-    ),
-    MessageTemplate.create(
-      templateId = "register_your_company_register_paye_confirmation_current_tax_year",
-      fromAddress = FromAddress.govUkTeamAddress,
-      service = RegisterYourCompany,
-      subject = "'Register an employer for PAYE' - application received",
-      plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmation.f,
-      htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmation.f
     ),
     MessageTemplate.create(
       templateId = "register_your_company_register_paye_confirmation_new_tax_year_v2",
