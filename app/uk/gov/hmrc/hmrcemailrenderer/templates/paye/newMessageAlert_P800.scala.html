@@ -15,15 +15,15 @@
  *@
 
 @(params: Map[String, Any])
-@title = @{"You have a new letter online"}
+@title = @{"Your new tax calculation is ready"}
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title, false) {
 <h1 style="margin: 0 0 30px; font-size: 29px;">@title</h1>
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
-<p style="margin: 0 0 30px; font-size: 19px;">We have just published your new income tax calculation letter to your secure online personal tax account.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Details in the letter will tell you how to pay HMRC or claim back any funds we may owe you.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">If you are due a refund, claiming online will mean you can have funds transferred directly to you within 5 working days.</p>
-<h2 id="How to read your online letter" style="margin: 0 0 30px; font-size: 24px;">How to read your online letter</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">To keep your personal information safe, we do not put a link to your online account in our emails to you.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Please log in now to HMRC online and go to your messages to read your full income tax calculation letter. Do this using your Government Gateway password and ID.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your latest tax calculation is now ready to view online.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link with this email.</p>
+<h2 id="How to read your online letter" style="margin: 0 0 30px; font-size: 24px;">Why you got this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You chose to get online tax letters instead of letters by post.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This means we send you an email to let you know when you have a new message.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC PAYE</p>
 }
