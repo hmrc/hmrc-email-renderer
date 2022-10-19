@@ -50,13 +50,10 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Your latest tax calculation is now ready to view online.")
       htmlContent must include(
         "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.")
-      htmlContent must include(
-        "For security reasons, we have not included a link with this email.")
+      htmlContent must include("For security reasons, we have not included a link with this email.")
       htmlContent must include("Why you got this email")
-      htmlContent must include(
-        "You chose to get online tax letters instead of letters by post.")
-      htmlContent must include(
-        "This means we send you an email to let you know when you have a new message.")
+      htmlContent must include("You chose to get online tax letters instead of letters by post.")
+      htmlContent must include("This means we send you an email to let you know when you have a new message.")
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
@@ -126,17 +123,15 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Your new tax calculation is ready")
       htmlContent must include("Dear")
       htmlContent must include("Mrs John")
-      htmlContent must include(
-        "Your latest tax calculation is now ready to view online.")
+      htmlContent must include("Your latest tax calculation is now ready to view online.")
       htmlContent must include(
         "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.")
-      htmlContent must include(
-        "For security reasons, we have not included a link with this email.")
+      htmlContent must include("For security reasons, we have not included a link with this email.")
       htmlContent must include("Why you got this email")
+      htmlContent must include("You chose to get online tax letters instead of letters by post.")
       htmlContent must include(
-        "You chose to get online tax letters instead of letters by post.")
-      htmlContent must include(
-        "This means we send you an email to let you know when you have a new message.")
+        "This means we send you an email to let you know when you have a new message." +
+          "")
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
