@@ -49,14 +49,14 @@
 
 
             Amount
-            @params(formatAmountInPence(amount))
+            @params(formatAmountInPence("amount"))
 
             Card fee
-            @params(formatAmountInPence(transactionFee))
+            @params(formatAmountInPence("transactionFee"))
 
 
             Total paid
-            £@params(formatAmountInPence(totalAmountInPence))
+            £@params(formatAmountInPence("totalAmountInPence"))
 
             Card type
             Paid with @params("cardType")
