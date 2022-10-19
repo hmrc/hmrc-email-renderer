@@ -51,13 +51,13 @@ Your card payment to HMRC has not been made. No money has been taken from your a
 
 
             Amount
-            formatAmountInPence(params(amount))
+            @params(formatAmountInPence(amount))
 
           Card fee
-          formatAmountInPence(params(transactionFee))
+          @params(formatAmountInPence(transactionFee))
 
               Total paid
-              £formatAmountInPence(params(totalAmountInPence))
+              £@params(formatAmountInPence(totalAmountInPence))
 
               Card type
               Paid with @params("cardType")
