@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.MTDfBVatRegistr
 object VatRegTemplates {
 
   val serviceName = "VAT Registration"
-  val subject = "We’ve received your VAT registration application"
+  val subject = "VAT registration application"
   val subjectWelsh = "Mae’ch cais i gofrestru ar gyfer TAW wedi dod i law"
   val templatePrefix = "mtdfb_vatreg"
 
