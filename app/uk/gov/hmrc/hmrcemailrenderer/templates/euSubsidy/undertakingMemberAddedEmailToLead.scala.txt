@@ -1,22 +1,23 @@
 @(params: Map[String, Any])
 
-You have added a member to your single undertaking
+You have added a business to your undertaking
 
-Dear Customer
+This email confirms that you, EORI number @{params("eori")}, have added a business to your undertaking.
 
-This email confirms that you (EORI: @{params("eori")}) have added the following EORI: @{params("beEORI")} to a single undertaking:
+The business must provide information about their non-customs subsidy payments to you as the undertaking administrator.
 
-@{params("undertakingName")}
+Your responsibilities as the undertaking administrator are as follows:
 
-You must tell the undertaking member they have been added to the single undertaking.
+At least once every 90 days, you must:
 
-As undertaking administrator it is your responsibility to make sure all single undertaking details are correct and kept up to date.
+report all non-customs subsidy payments your undertaking has received
+report if your undertaking hasn’t been awarded any non-customs subsidy payments
+check all undertaking details are correct and up to date
 
-If you need further information
+You can also use the online service to view a summary of customs and non-customs subsidy payments.
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search ‘Report and manage your allowance for Customs Duty waiver claims’ at www.gov.uk.
 
-From HMRC
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
