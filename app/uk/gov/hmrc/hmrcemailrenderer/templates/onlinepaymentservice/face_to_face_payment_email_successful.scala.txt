@@ -15,7 +15,7 @@
 *@
 
 @import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
-
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
 @allItems = @{params("f2fPaymentItemsForEmailSuccessful") match {
@@ -23,15 +23,7 @@
     case _ => List()
 }}
 
-@itemList = @{ allItems.map( item => {
 
-        val taxType: String = (item \ "taxType").as[String]
-        val amount: String = (item \ "amount").as[String]
-        val transactionFee: String = (item \ "transactionFee").as[String]
-        val transactionNumber = (item \ "transactionNumber").as[String]
-        (taxType, amount, transactionFee, transactionNumber)
-    })
-}
 
 
     Dear Customer
@@ -41,31 +33,30 @@
 
             Date
             @params("dateOfPayment")
-        @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
 
             Tax
-            @taxType
+            @params("taxType")
 
             Payment reference
-            @transactionNumber
+            @params("transactionNumber")
 
-        }
 
 
             Tax Reference
             @params("transactionReference")
 
-        @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
 
             Amount
-            @amount
+            @formatAmountInPence(params("amount").toString)
 
             Card fee
-            @transactionFee
-        }
+            @formatAmountInPence(params("transactionFee").toString)
+
 
             Total paid
-            £@params("totalAmountPaid")
+            £@formatAmountInPence(params("totalAmountInPence").toString)
 
             Card type
             Paid with @params("cardType")

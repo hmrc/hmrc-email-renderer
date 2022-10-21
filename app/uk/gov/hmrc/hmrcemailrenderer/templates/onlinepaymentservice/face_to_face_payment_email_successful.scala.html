@@ -15,7 +15,7 @@
 *@
 
 @import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
-
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
 @allItems = @{params("f2fPaymentItemsForEmailSuccessful") match {
@@ -23,17 +23,9 @@ case items:String => Json.parse(items).as[List[JsObject]]
 case _ => List()
 }}
 
-@itemList = @{ allItems.map( item => {
 
-    val taxType: String = (item \ "taxType").as[String]
-    val amount: String = (item \ "amount").as[String]
-    val transactionFee: String = (item \ "transactionFee").as[String]
-    val transactionNumber = (item \ "transactionNumber").as[String]
-    (taxType, amount, transactionFee, transactionNumber)
-    })
-}
 
-@singleItem = @{itemList.size == 1}
+
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC payment confirmation") {
 
@@ -49,34 +41,34 @@ case _ => List()
         <th>Date</th>
         <td>@params("dateOfPayment")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
     <tr>
         <th>Tax</th>
-        <td>@taxType</td>
+        <td>@params("taxType")</td>
     </tr>
     <tr>
         <th>Payment reference</th>
-        <td>@transactionNumber</td>
+        <td>@params("transactionNumber")</td>
     </tr>
-    }
+
     <tr>
         <th>Tax Reference</th>
         <td>@params("transactionReference")</td>
     </tr>
-    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+
     <tr>
         <th>Amount</th>
-        <td>@amount</td>
+        <td>@formatAmountInPence(params("amount").toString)</td>
     </tr>
 
     <tr>
         <th>Card fee</th>
-        <td>@transactionFee</td>
+        <td>@formatAmountInPence(params("transactionFee").toString)</td>
     </tr>
-    }
+
     <tr>
         <th>Total paid</th>
-        <td>£@params("totalAmountPaid")</td>
+        <td>£@formatAmountInPence(params("totalAmountInPence").toString)</td>
     </tr>
     <tr>
         <th>Card type</th>
