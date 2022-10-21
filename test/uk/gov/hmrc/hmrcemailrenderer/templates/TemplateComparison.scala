@@ -21,6 +21,8 @@ import org.scalatestplus.play.PlaySpec
 import play.twirl.api.{ HtmlFormat, TxtFormat }
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 
+import scala.collection.immutable.StringOps
+
 trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
   def compareContent(id: String, params: Map[String, String], isWelsh: Boolean = false)(
     getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
@@ -41,7 +43,7 @@ object TemplateContentNormalisation {
   )
 
   def text(content: TxtFormat.Appendable) = normaliseWhiteSpace(
-    content.body.lines.map(_.replaceAll("""^((\s*)- )""", "")).mkString(" ")
+    (content.body: StringOps).lines.map(_.replaceAll("""^((\s*)- )""", "")).mkString(" ")
   )
 
   def normaliseWhiteSpace(input: String) =

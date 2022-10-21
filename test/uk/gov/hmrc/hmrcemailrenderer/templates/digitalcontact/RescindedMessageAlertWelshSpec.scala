@@ -16,11 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import com.sun.xml.internal.bind.v2.TODO
-import org.scalatest.EitherValues
+import org.scalatest.{ EitherValues, Matchers, OptionValues, WordSpecLike }
 import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
 
 class RescindedMessageAlertWelshSpec
     extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
