@@ -38,11 +38,6 @@ case _ => List()
 <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
     <tbody>
     <tr>
-        <th>Date</th>
-        <td>@params("dateOfPayment")</td>
-    </tr>
-
-    <tr>
         <th>Tax</th>
         <td>@params("taxType")</td>
     </tr>
@@ -52,18 +47,18 @@ case _ => List()
     </tr>
 
     <tr>
-        <th>Tax Reference</th>
+        <th>Transaction reference</th>
         <td>@params("transactionReference")</td>
     </tr>
 
     <tr>
         <th>Amount</th>
-        <td>@formatAmountInPence(params("amount").toString)</td>
+        <td>£@formatAmountInPence(params("amount").toString)</td>
     </tr>
 
     <tr>
         <th>Card fee</th>
-        <td>@formatAmountInPence(params("transactionFee").toString)</td>
+        <td>£@formatAmountInPence(params("transactionFee").toString)</td>
     </tr>
 
     <tr>
@@ -72,7 +67,7 @@ case _ => List()
     </tr>
     <tr>
         <th>Card type</th>
-        <td>Paid with @params("cardType")</td>
+        <td>@params("cardType")</td>
     </tr>
     <tr>
         <th>Card ending </th>

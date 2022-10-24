@@ -31,10 +31,6 @@
 
     Your payment has been received by HMRC.
 
-            Date
-            @params("dateOfPayment")
-
-
             Tax
             @params("taxType")
 
@@ -43,7 +39,7 @@
 
 
 
-            Tax Reference
+            Transaction reference
             @params("transactionReference")
 
 
@@ -52,14 +48,14 @@
             @formatAmountInPence(params("amount").toString)
 
             Card fee
-            @formatAmountInPence(params("transactionFee").toString)
+            £@formatAmountInPence(params("transactionFee").toString)
 
 
             Total paid
-            £@formatAmountInPence(params("totalAmountInPence").toString)
+            ££@formatAmountInPence(params("totalAmountInPence").toString)
 
             Card type
-            Paid with @params("cardType")
+            @params("cardType")
 
             Card ending
             ending in @params("cardNumber")

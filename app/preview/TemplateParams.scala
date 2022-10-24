@@ -1745,9 +1745,9 @@ object TemplateParams2 {
     ),
     "face_to_face_payment_email_successful" -> Map(
       "totalAmountInPence"     -> "100000",
-      "transactionReference"   -> "1234567890K",
+      "transactionReference"   -> "4012637",
       "cardType"               -> "Visa Debit",
-      "cardNumber"             -> "1234",
+      "cardNumber"             -> "**** **** **** 1234",
       "dateOfPayment"          -> "31 December 2021",
       "applicationId"          -> "A0000000031010",
       "panSequence"            -> "56",
@@ -1761,13 +1761,13 @@ object TemplateParams2 {
       "taxType"                -> "Self Assessment",
       "amount"                 -> "192",
       "transactionFee"         -> "100",
-      "transactionNumber"      -> "12345"
+      "transactionNumber"      -> "1234567890K"
     ),
     "face_to_face_payment_email_unsuccessful" -> Map(
       "totalAmountInPence"     -> "100000",
-      "transactionReference"   -> "1234567890K",
+      "transactionReference"   -> "4012637",
       "cardType"               -> "Visa Debit",
-      "cardNumber"             -> "1234",
+      "cardNumber"             -> "**** **** **** 1234",
       "dateOfPayment"          -> "31 December 2021",
       "applicationId"          -> "A0000000031010",
       "panSequence"            -> "56",
@@ -1781,7 +1781,7 @@ object TemplateParams2 {
       "taxType"                -> "Self Assessment",
       "amount"                 -> "192",
       "transactionFee"         -> "100",
-      "transactionNumber"      -> "12345"
+      "transactionNumber"      -> "1234567890K"
     ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",
