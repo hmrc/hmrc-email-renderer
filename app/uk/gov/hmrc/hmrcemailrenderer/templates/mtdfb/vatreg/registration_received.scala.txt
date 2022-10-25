@@ -4,11 +4,11 @@ Dear @params("name")
 
 Reference number: @params("ref")
 
-We’ve received your application and will write to you with a decision. This usually takes about 30 days.
+We’ve received your application and we will write to you with a decision in about 30 days.
 
-You should wait until your VAT registration is confirmed before you:
-- get any software
-- charge customers for VAT
+You should wait until we confirm your VAT registration before you get software to follow the rules for ‘Making Tax Digital for VAT’.
+
+You cannot include VAT on your invoices until you get your VAT number. However, you can increase your prices to account for the VAT you’ll need to pay HMRC.
 
 From HMRC VAT team
 
