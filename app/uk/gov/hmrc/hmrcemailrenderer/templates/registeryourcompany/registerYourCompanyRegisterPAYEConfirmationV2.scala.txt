@@ -4,7 +4,7 @@
 
 Your application reference number is: @params("referenceNumber")
 
-What happens next
+What happens next?
 
 You will receive an email within 10 working days letting you know the outcome of your application.
 
