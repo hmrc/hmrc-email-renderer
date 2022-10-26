@@ -51,7 +51,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_register_paye_confirmation_new_tax_year_v2_cy",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "'Register an employer for PAYE' - application received",
+      subject = "'Cofrestru cyflogwr ar gyfer TWE – mae’r cais wedi dod i law",
       plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationNewTaxYearV2_cy.f,
       htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationNewTaxYearV2_cy.f
     ),
@@ -67,7 +67,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_register_paye_confirmation_current_tax_year_v2_cy",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "'Register an employer for PAYE' - application received",
+      subject = "'Cofrestru cyflogwr ar gyfer TWE – mae’r cais wedi dod i law",
       plainTemplate = txt.registerYourCompanyRegisterPAYEConfirmationV2_cy.f,
       htmlTemplate = html.registerYourCompanyRegisterPAYEConfirmationV2_cy.f
     )
