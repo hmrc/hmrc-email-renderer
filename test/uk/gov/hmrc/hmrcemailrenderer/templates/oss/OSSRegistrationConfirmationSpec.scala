@@ -30,11 +30,11 @@ class OSSRegistrationConfirmationSpec
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
-      "businessName"          -> "Test Business",
-      "periodOfFirstReturn"   -> "July to September 2021",
-      "firstDayOfNextPeriod"  -> "1 October 2021",
-      "commencementDate"      -> "12 June 2021",
-      "redirectLink"          -> "http://test.com/blah-blah"
+      "businessName"         -> "Test Business",
+      "periodOfFirstReturn"  -> "July to September 2021",
+      "firstDayOfNextPeriod" -> "1 October 2021",
+      "commencementDate"     -> "12 June 2021",
+      "redirectLink"         -> "http://test.com/blah-blah"
     )
     val template = templateLocator
       .templateGroups("OSS")
