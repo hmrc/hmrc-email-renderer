@@ -58,6 +58,6 @@ object OSSTemplates {
       plainTemplate = txt.oss_overdue_returns_email_confirmation.f,
       htmlTemplate = html.oss_overdue_returns_email_confirmation.f,
       priority = Some(MessagePriority.Background)
-    ),
+    )
   )
 }
