@@ -1677,11 +1677,11 @@ object TemplateParams2 {
       "deregisterDate" -> "6 June 2018"
     ),
     "oss_registration_confirmation" -> Map(
-      "businessName"      -> "Test Business",
-      "commencementDate"  -> "12 June 2021",
-      "firstReturnPeriod" -> "30 September 2021",
-      "firstReturnDate"   -> "31 October 2021",
-      "ossGuidanceLink"   -> "http://test.com/blah-blah"
+      "businessName"         -> "Test Business",
+      "periodOfFirstReturn"  -> "July to September 2021",
+      "firstDayOfNextPeriod" -> "1 October 2021",
+      "commencementDate"     -> "12 June 2021",
+      "redirectLink"         -> "http://test.com/blah-blah"
     ),
     "oss_returns_email_confirmation" -> Map(
       "recipientName_line1" -> "Joe Bloggs",
@@ -3077,11 +3077,11 @@ object TemplateParams2 {
     "new_message_alert_itsa"      -> newMessageAlert_Names,
     "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
     "oss_registration_confirmation" -> Map(
-      "businessName"      -> "Test Business",
-      "commencementDate"  -> "12 June 2021",
-      "firstReturnPeriod" -> "30 September 2021",
-      "firstReturnDate"   -> "31 October 2021",
-      "ossGuidanceLink"   -> "http://test.com/blah-blah"
+      "businessName"         -> "Test Business",
+      "periodOfFirstReturn"  -> "July to September 2021",
+      "firstDayOfNextPeriod" -> "1 October 2021",
+      "commencementDate"     -> "12 June 2021",
+      "redirectLink"         -> "http://test.com/blah-blah"
     ),
     "oss_returns_email_confirmation" -> Map(
       "recipientName_line1" -> "Joe Bloggs",

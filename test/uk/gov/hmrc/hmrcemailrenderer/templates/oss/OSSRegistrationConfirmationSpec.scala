@@ -30,11 +30,11 @@ class OSSRegistrationConfirmationSpec
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
-      "businessName"      -> "Test Business",
-      "commencementDate"  -> "1 July 2021",
-      "firstReturnPeriod" -> "30 September 2021",
-      "firstReturnDate"   -> "31 October 2021",
-      "ossGuidanceLink"   -> "http://test.com/blah-blah"
+      "businessName"         -> "Test Business",
+      "periodOfFirstReturn"  -> "July to September 2021",
+      "firstDayOfNextPeriod" -> "1 October 2021",
+      "commencementDate"     -> "12 June 2021",
+      "redirectLink"         -> "http://test.com/blah-blah"
     )
     val template = templateLocator
       .templateGroups("OSS")
@@ -58,7 +58,7 @@ class OSSRegistrationConfirmationSpec
         "You can now use this service to fill out quarterly returns for goods sold to consumers in the EU.")
       htmlContent should include("You can also pay any One Stop Shop VAT that you owe.")
       htmlContent should include(
-        "You can begin your 30 September 2021 return on 31 October 2021. Include any sales from 1 July 2021.")
+        "You can begin your July to September 2021 return on 1 October 2021. Include any sales from 12 June 2021.")
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
@@ -74,7 +74,7 @@ class OSSRegistrationConfirmationSpec
         "You can now use this service to fill out quarterly returns for goods sold to consumers in the EU.")
       txtContent should include("You can also pay any One Stop Shop VAT that you owe.")
       txtContent should include(
-        "You can begin your 30 September 2021 return on 31 October 2021. Include any sales from 1 July 2021.")
+        "You can begin your July to September 2021 return on 1 October 2021. Include any sales from 12 June 2021.")
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include("Read more information about http://test.com/blah-blah how to complete an OSS return.")
