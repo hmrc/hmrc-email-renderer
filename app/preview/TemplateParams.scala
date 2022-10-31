@@ -1677,6 +1677,7 @@ object TemplateParams2 {
       "deregisterDate" -> "6 June 2018"
     ),
     "oss_registration_confirmation" -> Map(
+      "recipientName_line1"  -> "Joe Bloggs",
       "businessName"         -> "Test Business",
       "periodOfFirstReturn"  -> "July to September 2021",
       "firstDayOfNextPeriod" -> "1 October 2021",
@@ -3077,6 +3078,7 @@ object TemplateParams2 {
     "new_message_alert_itsa"      -> newMessageAlert_Names,
     "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
     "oss_registration_confirmation" -> Map(
+      "recipientName_line1"  -> "Joe Bloggs",
       "businessName"         -> "Test Business",
       "periodOfFirstReturn"  -> "July to September 2021",
       "firstDayOfNextPeriod" -> "1 October 2021",

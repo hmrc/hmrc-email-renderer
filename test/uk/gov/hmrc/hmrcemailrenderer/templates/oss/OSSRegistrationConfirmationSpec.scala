@@ -30,6 +30,7 @@ class OSSRegistrationConfirmationSpec
   "OSS Registration Confirmation" should {
     val templateLocator = new TemplateLocator {}
     val params = commonParameters ++ Map(
+      "recipientName_line1"  -> "Joe Bloggs",
       "businessName"         -> "Test Business",
       "periodOfFirstReturn"  -> "July to September 2021",
       "firstDayOfNextPeriod" -> "1 October 2021",
@@ -52,6 +53,7 @@ class OSSRegistrationConfirmationSpec
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
+      htmlContent should include("Dear Joe Bloggs")
       htmlContent should include("You are registered for the One Stop Shop VAT scheme")
       htmlContent should include("We’ve received your registration for Test Business")
       htmlContent should include(
@@ -63,11 +65,13 @@ class OSSRegistrationConfirmationSpec
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
         "Read more information about <a href=\"http://test.com/blah-blah\" style=\"color: #005EA5;\"> how to complete an OSS return.</a>")
+      htmlContent should include("From the VAT One Stop Shop team")
     }
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
+      txtContent should include("Dear Joe Bloggs")
       txtContent should include("You are registered for the One Stop Shop VAT scheme")
       txtContent should include("We’ve received your registration for Test Business")
       txtContent should include(
@@ -78,6 +82,7 @@ class OSSRegistrationConfirmationSpec
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include("Read more information about http://test.com/blah-blah how to complete an OSS return.")
+      txtContent should include("From the VAT One Stop Shop team")
     }
   }
 }

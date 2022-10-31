@@ -16,6 +16,7 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered for the One Stop Shop VAT scheme") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
  <p style="margin: 0px 0 30px; font-size: 19px;">
      We’ve received your registration for @params("businessName").
  </p>
@@ -39,5 +40,9 @@
  <p style="margin: 0px 0 30px; font-size: 19px;">
      Read more information about <a href="@{params("redirectLink")}" style="color: #005EA5;"> how to complete an OSS return.</a>
  </p>
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
+    From the VAT One Stop Shop team
+</p>
 
 }
