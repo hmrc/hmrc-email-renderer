@@ -15,28 +15,21 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered to pay VAT to the EU on distance sales of goods from Northern Ireland") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are registered for the One Stop Shop VAT scheme") {
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
  <p style="margin: 0px 0 30px; font-size: 19px;">
-    HMRC has received the registration from @params("businessName").
+     We’ve received your registration for @params("businessName").
  </p>
 <p style="margin: 0px 0 30px; font-size: 19px;">
-    You need to charge VAT at the rate of the EU country where the goods are sent to.
+    You can now use this service to fill out quarterly returns for goods sold to consumers in the EU.
 </p>
- <p style="margin: 0px 0 30px; font-size: 19px;">
-     For each calendar quarter, you need to use the new One Stop Shop service to:
-   <ul>
-     <li style="font-size: 19px;">
-         complete a single return for eligible sales of goods to consumers in the EU
-     </li>
-     <li style="font-size: 19px;">
-         make a payment to HMRC of the total VAT due on eligible sales of goods to consumers in the EU
-     </li>
-   </ul>
- </p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You can also pay any One Stop Shop VAT that you owe.
+</p>
 <p style="margin: 0px 0 30px; font-size: 19px;">
-    Your first return will be for eligible sales starting from @params("startDate") to @params("lastDayOfCalendarQuarter").
+    You can begin your @params("periodOfFirstReturn") return on @params("firstDayOfNextPeriod"). Include any sales from @params("commencementDate").
 </p>
+
  <br>
  <h2 style="margin: 0 0 30px; font-size: 19px;">
     What happens next
@@ -45,9 +38,11 @@
     We will contact you if we need to check any information.
  </p>
  <p style="margin: 0px 0 30px; font-size: 19px;">
-     We will contact you about how to use the new service to submit your first return and make payment by @params("lastDayOfMonthAfterCalendarQuarter").
+     Read more information about <a href="@{params("redirectLink")}" style="color: #005EA5;"> how to complete an OSS return.</a>
  </p>
- <p style="margin: 0px 0 30px; font-size: 19px;">
+
+<p style="margin: 0px 0 30px; font-size: 19px;">
     From the VAT One Stop Shop team
- </p>
+</p>
+
 }

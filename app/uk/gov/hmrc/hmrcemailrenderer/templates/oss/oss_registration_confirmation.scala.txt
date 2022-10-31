@@ -1,0 +1,21 @@
+@(params: Map[String, Any])You are registered for the One Stop Shop VAT scheme
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+We’ve received your registration for @params("businessName").
+
+You can now use this service to fill out quarterly returns for goods sold to consumers in the EU.
+
+You can also pay any One Stop Shop VAT that you owe.
+
+You can begin your @params("periodOfFirstReturn") return on @params("firstDayOfNextPeriod"). Include any sales from @params("commencementDate").
+
+What happens next
+
+We will contact you if we need to check any information.
+
+Read more information about @params("redirectLink") how to complete an OSS return.
+
+From the VAT One Stop Shop team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
