@@ -1759,7 +1759,7 @@ object TemplateParams2 {
       "time"                   -> "5:30pm",
       "transactionType"        -> "Payment",
       "taxType"                -> "Self Assessment",
-      "amount"                 -> "192",
+      "amountInPence"          -> "192",
       "transactionFee"         -> "100",
       "transactionNumber"      -> "1234567890K"
     ),
@@ -1779,7 +1779,7 @@ object TemplateParams2 {
       "time"                   -> "5:30pm",
       "transactionType"        -> "Payment",
       "taxType"                -> "Self Assessment",
-      "amount"                 -> "192",
+      "amountInPence"          -> "192",
       "transactionFee"         -> "100",
       "transactionNumber"      -> "1234567890K"
     ),
