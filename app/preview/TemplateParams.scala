@@ -1752,7 +1752,7 @@ object TemplateParams2 {
       "transactionType"        -> "Payment",
       "taxType"                -> "Self Assessment",
       "amountInPence"          -> "192",
-      "transactionFee"         -> "100",
+      "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
     ),
     "face_to_face_payment_email_unsuccessful" -> Map(
@@ -1772,7 +1772,7 @@ object TemplateParams2 {
       "transactionType"        -> "Payment",
       "taxType"                -> "Self Assessment",
       "amountInPence"          -> "192",
-      "transactionFee"         -> "100",
+      "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
     ),
     "open_banking_payment_successful_cy" -> Map(
