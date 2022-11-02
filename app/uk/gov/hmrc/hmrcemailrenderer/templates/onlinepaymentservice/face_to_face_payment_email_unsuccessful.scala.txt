@@ -52,7 +52,7 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               @formatAmountInPence(params("amountInPence").toString)
 
               Card fee
-              £@formatAmountInPence(params("transactionFee").toString)
+              £@formatAmountInPence(params("transactionFeeInPence").toString)
 
 
               Total

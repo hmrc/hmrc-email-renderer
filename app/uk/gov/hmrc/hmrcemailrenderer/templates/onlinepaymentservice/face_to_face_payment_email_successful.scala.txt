@@ -48,7 +48,7 @@
             @formatAmountInPence(params("amountInPence").toString)
 
             Card fee
-            £@formatAmountInPence(params("transactionFee").toString)
+            £@formatAmountInPence(params("transactionFeeInPence").toString)
 
 
             Total paid
