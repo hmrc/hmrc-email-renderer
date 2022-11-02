@@ -18,6 +18,6 @@ Os bydd eich cais yn llwyddiannus, byddwn yn anfon y canlynol atoch:
 - llythyr gyda chyfeirnodau TWE a Swyddfa Gyfrifon cyn pen 5 diwrnod gwaith (bydd angen y rhain arnoch i anfon gwybodaeth am y gyflogres at CThEM)
 - cod cychwyn drwy’r post er mwyn i chi allu rheoli TWE y cwmni ar-lein
 
-Oddi wrth adran Ddigidol CThEM
+Oddi wrth dîm TWE CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
