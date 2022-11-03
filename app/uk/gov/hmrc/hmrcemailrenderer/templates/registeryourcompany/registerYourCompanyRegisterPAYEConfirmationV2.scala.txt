@@ -4,7 +4,7 @@
 
 Your application reference number is: @params("referenceNumber")
 
-What happens next
+What happens next?
 
 You will receive an email within 10 working days letting you know the outcome of your application.
 
@@ -13,6 +13,6 @@ If your application is successful, we will send you:
 - a letter with PAYE and Accounts Office reference numbers within 5 working days (you will need these to send payroll information to HMRC)
 - an activation code in the post so that you can manage the company’s PAYE online
 
-From HMRC Digital
+From HMRC PAYE team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

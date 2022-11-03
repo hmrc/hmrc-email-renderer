@@ -771,24 +771,27 @@ object TemplateParams {
     "register_your_company_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
-    "register_your_company_register_paye_confirmation_current_tax_year" -> Map(
-      "companyName"     -> "ABC Logistics Ltd",
-      "referenceNumber" -> "BRPY12345678910"
-    ),
-    "register_your_company_register_paye_confirmation_new_tax_year" -> Map(
-      "companyName"     -> "ABC Logistics Ltd",
-      "referenceNumber" -> "BRPY12345678910"
-    ),
     "register_your_company_register_paye_confirmation_current_tax_year_v2" -> Map(
       "companyName"     -> "ABC Logistics Ltd",
       "referenceNumber" -> "BRPY12345678910",
       "salutation"      -> "Dear Dave"
+    ),
+    "register_your_company_register_paye_confirmation_current_tax_year_v2_cy" -> Map(
+      "companyName"     -> "ABC Logistics Ltd",
+      "referenceNumber" -> "BRPY12345678910",
+      "salutation"      -> "Annwyl Dave"
     ),
     "register_your_company_register_paye_confirmation_new_tax_year_v2" -> Map(
       "companyName"     -> "ABC Logistics Ltd",
       "referenceNumber" -> "BRPY12345678910",
       "salutation"      -> "Dear Dave",
       "contactDate"     -> "17 May"
+    ),
+    "register_your_company_register_paye_confirmation_new_tax_year_v2_cy" -> Map(
+      "companyName"     -> "ABC Logistics Ltd",
+      "referenceNumber" -> "BRPY12345678910",
+      "salutation"      -> "Annwyl Dave",
+      "contactDate"     -> "17 Mai"
     ),
     "investment_tax_relief_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
