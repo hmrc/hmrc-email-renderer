@@ -124,11 +124,11 @@ object TemplateParams {
       "agencyName" -> "Agency"
     ),
     "agent_permissions_beta_participant_details" -> Map(
-      "arn" -> "TARN0000001",
-      "numClients" -> "103",
-      "contactName" -> "Bob De Builder",
-      "emailAddress" -> "bob@builders.com",
-      "telephoneNumber" -> "+44(0) 208 123 4567",
+      "arn"             -> "TARN0000001",
+      "numClients"      -> "103",
+      "contactName"     -> "Bob De Builder",
+      "emailAddress"    -> "bob@builders.com",
+      "telephoneNumber" -> "+44(0) 208 123 4567"
     ),
     "apiDeveloperEmailVerification" -> Map(
       "verificationLink"  -> exampleLinkWithRandomId,
