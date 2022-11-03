@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Cadarnhau’ch cyfeiriad e-bost
+
+Rydych yn cael yr e-bost hwn oherwydd eich bod wedi cofrestru i ddefnyddio’r gwasanaeth ‘Sefydlu cwmni cyfyngedig a chofrestru ar gyfer Treth Gorfforaeth’.
+
+I gadarnhau’ch cyfeiriad e-bost, cliciwch y cysylltiad hwn:
+
+@{params("verificationLink")}
+
+Bydd y cysylltiad hwn yn dod i ben ar ôl 3 diwrnod
+
+Os na fyddwch yn cadarnhau eich cyfeiriad e-bost cyn pen y cyfnod hwn, bydd yn rhaid i chi fewngofnodi i’r gwasanaeth eto a gofyn am gysylltiad newydd.
+
+Oddi wrth Gyllid a Thollau EF a Thŷ’r Cwmnïau
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
