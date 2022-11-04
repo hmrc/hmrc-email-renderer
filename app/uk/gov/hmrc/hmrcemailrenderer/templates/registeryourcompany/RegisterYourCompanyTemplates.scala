@@ -35,7 +35,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_verification_email_cy",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "Confirm your email address - Set up a limited company and register for Corporation Tax service",
+      subject = "Cadarnhewch eich cyfeiriad e-bost – y gwasanaeth Sefydlu cwmni cyfyngedig a chofrestru ar gyfer Treth Gorfforaeth",
       plainTemplate = txt.registerYourCompanyVerificationEmail_cy.f,
       htmlTemplate = html.registerYourCompanyVerificationEmail_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -52,7 +52,7 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_register_vat_email_cy",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "Register for VAT online - new service",
+      subject = "Cofrestrwch ar gyfer TAW ar-lein – gwasanaeth newydd",
       plainTemplate = txt.registerYourCompanyRegisterVATEmail_cy.f,
       htmlTemplate = html.registerYourCompanyRegisterVATEmail_cy.f
     ),

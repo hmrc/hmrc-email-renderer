@@ -85,7 +85,7 @@ class RegisterYourCompanyVerificationEmailSpec
         template.templateId shouldBe "register_your_company_verification_email_cy"
         template.service shouldBe RegisterYourCompany
         template.fromAddress(Map.empty) shouldBe FromAddress.govUkTeamAddress
-        template.subject(Map.empty) shouldBe "Confirm your email address - Set up a limited company and register for Corporation Tax service"
+        template.subject(Map.empty) shouldBe "Cadarnhewch eich cyfeiriad e-bost – y gwasanaeth Sefydlu cwmni cyfyngedig a chofrestru ar gyfer Treth Gorfforaeth"
         template.priority shouldBe Some(MessagePriority.Urgent)
       }
 

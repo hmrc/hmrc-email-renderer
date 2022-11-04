@@ -80,7 +80,7 @@ class RegisterYourCompanyRegisterVATEmailSpec
         template.templateId shouldBe "register_your_company_register_vat_email_cy"
         template.service shouldBe RegisterYourCompany
         template.fromAddress(Map.empty) shouldBe FromAddress.govUkTeamAddress
-        template.subject(Map.empty) shouldBe "Register for VAT online - new service"
+        template.subject(Map.empty) shouldBe "Cofrestrwch ar gyfer TAW ar-lein – gwasanaeth newydd"
         template.priority shouldBe None
       }
 
