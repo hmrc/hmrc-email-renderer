@@ -53,17 +53,17 @@ case _ => List()
 
     <tr>
         <th>Amount</th>
-        <td>£@formatAmountInPence(params("amountInPence").toString)</td>
+        <td>@formatAmountInPence(params("amountInPence").toString)</td>
     </tr>
 
     <tr>
         <th>Card fee</th>
-        <td>£@formatAmountInPence(params("transactionFeeInPence").toString)</td>
+        <td>@formatAmountInPence(params("transactionFeeInPence").toString)</td>
     </tr>
 
     <tr>
         <th>Total paid</th>
-        <td>£@formatAmountInPence(params("totalAmountInPence").toString)</td>
+        <td>@formatAmountInPence(params("totalAmountInPence").toString)</td>
     </tr>
     <tr>
         <th>Card type</th>
