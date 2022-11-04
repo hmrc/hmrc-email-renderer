@@ -35,7 +35,8 @@ object RegisterYourCompanyTemplates {
       templateId = "register_your_company_verification_email_cy",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
-      subject = "Cadarnhewch eich cyfeiriad e-bost – y gwasanaeth Sefydlu cwmni cyfyngedig a chofrestru ar gyfer Treth Gorfforaeth",
+      subject =
+        "Cadarnhewch eich cyfeiriad e-bost – y gwasanaeth Sefydlu cwmni cyfyngedig a chofrestru ar gyfer Treth Gorfforaeth",
       plainTemplate = txt.registerYourCompanyVerificationEmail_cy.f,
       htmlTemplate = html.registerYourCompanyVerificationEmail_cy.f,
       priority = Some(MessagePriority.Urgent)
