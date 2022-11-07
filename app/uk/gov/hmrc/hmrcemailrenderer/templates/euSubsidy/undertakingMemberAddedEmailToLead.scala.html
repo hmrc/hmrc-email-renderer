@@ -17,6 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have added a business to your undertaking"){
 
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you, EORI number @{params("eori")}, have added a business to your undertaking. </p>
     <p style="margin: 0 0 30px; font-size: 19px;"><b>The business must provide information about their non-customs subsidy payments to you as the undertaking administrator. </b></p>
     <p style="margin: 0 0 30px; font-size: 19px;">Your responsibilities as the undertaking administrator are as follows </p>

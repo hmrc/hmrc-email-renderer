@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+Dear Customer
+
 You have added a business to your undertaking
 
 This email confirms that you, EORI number @{params("eori")}, have added a business to your undertaking.

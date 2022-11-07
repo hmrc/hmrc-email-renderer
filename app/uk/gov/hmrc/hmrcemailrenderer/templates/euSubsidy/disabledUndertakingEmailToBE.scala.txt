@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+Dear Customer
+
 The undertaking you are part of has been deregistered
 
 This email confirms that the undertaking you are part of @{params("eori")} has been deregistered by the undertaking administrator.

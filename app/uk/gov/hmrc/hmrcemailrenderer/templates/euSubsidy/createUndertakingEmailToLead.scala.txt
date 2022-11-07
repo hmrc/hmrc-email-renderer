@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+Dear Customer
+
 You have created a new undertaking
 
 This email confirms that you have created an undertaking for EORI number @{params("eori")}

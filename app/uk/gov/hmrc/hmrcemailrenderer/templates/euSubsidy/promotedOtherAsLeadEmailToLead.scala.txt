@@ -1,8 +1,8 @@
 @(params: Map[String, Any])
 
-Your status has changed and you are now an undertaking member
-
 Dear Customer
+
+Your status has changed and you are now an undertaking member
 
 This email confirms (EORI: @{params("eori")}) have asked for EORI: @{params("beEORI")} to take over as undertaking administrator for the undertaking:
 

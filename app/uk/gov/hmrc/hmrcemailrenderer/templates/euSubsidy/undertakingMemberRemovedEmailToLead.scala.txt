@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+Dear Customer
+
 A business has been removed from your undertaking
 
 This email confirms you have removed EORI @{params("eori")} from your undertaking, with immediate effect.

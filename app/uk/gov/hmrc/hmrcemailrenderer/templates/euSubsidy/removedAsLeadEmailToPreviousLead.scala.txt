@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+Dear Customer
+
 Your undertaking has a new administrator
 
 This email confirms that EORI number @{params("eori")} is now the administrator for this undertaking.

@@ -1,8 +1,8 @@
 @(params: Map[String, Any])
 
-You are now undertaking administrator
-
 Dear Customer
+
+You are now undertaking administrator
 
 This email confirms (EORI: @{params("eori")}) that you have been asked to take over as undertaking administrator for the single undertaking:
 
