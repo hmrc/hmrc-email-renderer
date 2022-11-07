@@ -778,6 +778,9 @@ object TemplateParams {
     "register_your_company_verification_email" -> Map(
       "verificationLink" -> exampleLinkWithRandomId
     ),
+    "register_your_company_verification_email_cy" -> Map(
+      "verificationLink" -> exampleLinkWithRandomId
+    ),
     "register_your_company_register_paye_confirmation_current_tax_year_v2" -> Map(
       "companyName"     -> "ABC Logistics Ltd",
       "referenceNumber" -> "BRPY12345678910",

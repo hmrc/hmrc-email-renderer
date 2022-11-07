@@ -32,12 +32,30 @@ object RegisterYourCompanyTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "register_your_company_verification_email_cy",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject =
+        "Cadarnhewch eich cyfeiriad e-bost – y gwasanaeth Sefydlu cwmni cyfyngedig a chofrestru ar gyfer Treth Gorfforaeth",
+      plainTemplate = txt.registerYourCompanyVerificationEmail_cy.f,
+      htmlTemplate = html.registerYourCompanyVerificationEmail_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "register_your_company_register_vat_email",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,
       subject = "Register for VAT online - new service",
       plainTemplate = txt.registerYourCompanyRegisterVATEmail.f,
       htmlTemplate = html.registerYourCompanyRegisterVATEmail.f
+    ),
+    MessageTemplate.create(
+      templateId = "register_your_company_register_vat_email_cy",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "Cofrestrwch ar gyfer TAW ar-lein – gwasanaeth newydd",
+      plainTemplate = txt.registerYourCompanyRegisterVATEmail_cy.f,
+      htmlTemplate = html.registerYourCompanyRegisterVATEmail_cy.f
     ),
     MessageTemplate.create(
       templateId = "register_your_company_register_paye_confirmation_new_tax_year_v2",
