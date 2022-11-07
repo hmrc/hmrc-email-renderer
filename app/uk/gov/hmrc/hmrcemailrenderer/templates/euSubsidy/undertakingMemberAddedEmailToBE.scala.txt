@@ -1,37 +1,20 @@
 @(params: Map[String, Any])
 
-You are now a member of a single undertaking
+You have been added to an undertaking
 
-Dear Customer
+This email confirms that your business has been added to an undertaking, EORI number @{params("eori")}.
 
-This email confirms that you (EORI: @{params("eori")}) have been added to the following undertaking:
+All businesses need to be grouped in an 'undertaking’.
 
-@{params("undertakingName")}
+An undertaking could be a sole trader, a company, a partnership, or any combination of these.
 
-You must provide information about your de minimis aid (less Customs Duty waivers), to the undertaking administrator.
+You must provide information about your non-customs subsidy payments to the undertaking administrator.
 
-Search 'Report and manage your allowance for Customs Duty waiver claims' at www.gov.uk to:
+You can use the online service to view a summary of customs and non-customs subsidy payments.
 
-view your de minimis balance
-find further guidance
+Search ‘Report and manage your allowance for Customs Duty waiver claims’ at www.gov.uk.
 
-If you have questions about being added to this single undertaking, contact the undertaking administrator.
-
-From HMRC
-
-    You have been added to an undertaking
-
-    This email confirms that your business has been added to an undertaking, EORI number: @{params("eori")}
-
-    All businesses need to be grouped in an 'undertaking’.
-
-    An undertaking could be a sole trader, a company, a partnership, or any combination of these.
-
-    You must provide information about your non-customs subsidy payments to the undertaking administrator.
-
-    You can use the online service to view a summary of customs and non-customs subsidy payments.
-
-    Search ‘Report and manage your allowance for Customs Duty waiver claims’ at  www.gov.uk.
+ From Borders & Trade team
 
 --
 

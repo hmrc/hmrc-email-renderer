@@ -2,17 +2,19 @@
 
 You are now undertaking administrator
 
-This email confirms that you (EORI: @{params("eori")}) are now undertaking administrator.
+This email confirms that you, EORI @{params("eori")}, are now undertaking administrator.
 
-At least once every 90 days, you must:
+Every 90 days you must check:
 
-report all non-customs subsidy payments your undertaking has received
-report if your undertaking hasn’t been awarded any non-customs subsidy payments
-check all undertaking details are correct and up to date
+    report all non-customs subsidy payments your undertaking has received
+    report if your undertaking has not been awarded any non-customs subsidy payments
+    check all undertaking details are correct and up to date
 
 If you need further information
 
 Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
+
+From Borders & Trade team
 
 --
 

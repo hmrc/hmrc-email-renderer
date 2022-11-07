@@ -15,9 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You've got a message from HMRC"){
-
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>A business has left your undertaking </b></p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A business has left your undertaking"){
 
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that EORI number @{params("eori")} has left your undertaking. </p>
 
@@ -25,9 +23,11 @@
 
     <p style="margin: 0 0 30px; font-size: 19px;">Reported payments for this business will remain in your undertaking, and will continue to affect your remaining sector allowance. </p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">These reported payments will be removed only when the business joins or creates another undertaking. </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">These reported payments will only be removed when the business joins or creates another undertaking. </p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;"><b> If you need further information </b></p>
+    <h2>If you need further information </h2>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
 }

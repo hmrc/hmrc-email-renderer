@@ -2,7 +2,7 @@
 
 You have left an undertaking
 
-This email confirms you have left undertaking (EORI number @{params("eori")} with immediate effect.
+This email confirms you have left undertaking EORI number @{params("eori")} with immediate effect.
 
 We have also informed the undertaking administrator of your decision.
 
@@ -12,6 +12,7 @@ If you need further information
 
 Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
+From Borders & Trade team
 
 --
 

@@ -6,7 +6,7 @@ This email confirms that you, EORI number @{params("eori")}, have added a busine
 
 The business must provide information about their non-customs subsidy payments to you as the undertaking administrator.
 
-Your responsibilities as the undertaking administrator are as follows:
+Your responsibilities as the undertaking administrator are as follows
 
 At least once every 90 days, you must:
 

@@ -15,17 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You've got a message from HMRC"){
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>You have created a new undertaking</b></p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have created a new undertaking"){
     <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you have created an undertaking for EORI number @{params("eori")}. </p>
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>Your responsibilities as the undertaking administrator are as follows:</b></p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Every 90 days you must check:</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>Your responsibilities as the undertaking administrator are as follows. Every 90 days you must:</b></p>
+
     <ul style="margin: 0 0 30px; font-size: 19px;">
         <li>report all non-customs subsidy payments your undertaking has received</li>
-        <li>report if your undertaking hasn’t been awarded any non-customs subsidy payments</li>
+        <li>report if your undertaking has not been awarded any non-customs subsidy payments</li>
         <li>check all undertaking details are correct and up to date</li>
     </ul>
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>If you need further information</b></p>
+
+    <h2>If you need further information</h2>
+
     <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
 
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
 }

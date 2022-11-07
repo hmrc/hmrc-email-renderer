@@ -7,12 +7,13 @@ This email confirms that EORI number @{params("eori")} has left your undertaking
 You are no longer required to report their non-customs subsidies.
 
 Reported payments for this business will remain in your undertaking, and will continue to affect your remaining sector allowance.
-These reported payments will be removed only when the business joins or creates another undertaking.
+These reported payments will only be removed when the business joins or creates another undertaking.
 
 If you need further information
 
 Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
+From Borders & Trade team
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
