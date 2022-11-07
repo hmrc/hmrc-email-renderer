@@ -1,25 +1,24 @@
 @(params: Map[String, Any])
 
-You created a new single undertaking
-
 Dear Customer
 
-This email confirms that you (EORI: @{params("eori")}) have created the following single undertaking:
+You have created a new undertaking
 
-@{params("undertakingName")}
+This email confirms that you have created an undertaking for EORI number @{params("eori")}
 
-Your responsibilities as the undertaking administrator for @{params("undertakingName")}
+Your responsibilities as the undertaking administrator are as follows
 
 Every 90 days you must check:
 
-all undertaking details are correct and up to date
-any de minimis payments awarded by your single undertaking are reported
+report all non-customs subsidy payments your undertaking has received
+report if your undertaking has not been been awarded any non-customs subsidy payments
+check all undertaking details are correct and up to date
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
+From Borders & Trade team
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

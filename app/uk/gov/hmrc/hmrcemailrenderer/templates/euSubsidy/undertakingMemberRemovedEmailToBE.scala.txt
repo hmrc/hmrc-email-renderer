@@ -1,24 +1,21 @@
 @(params: Map[String, Any])
 
-You have been removed from a single undertaking
-
 Dear Customer
 
-This email confirms that you (EORI: @{params("eori")}) have been removed from the single undertaking:
+You have left an undertaking
 
-@{params("undertakingName")}
+This email confirms you have left undertaking EORI number @{params("eori")} with immediate effect.
 
-This is effective from @{params("effectiveDate")}.
+We have also informed the undertaking administrator of your decision.
 
-You will no longer be able to claim Customs Duty waivers as part of this single undertaking.
-
-If you think you have been removed by mistake, contact the undertaking administrator.
+If you wish to claim Customs Duty waivers in the future you will have to join another undertaking by being added to one, or create your own.
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
+From Borders & Trade team
+
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -15,17 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have asked to leave a single undertaking"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have left an undertaking"){
+
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have informed HMRC that you will leave the single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
-    <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}. </p>
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>You will no longer be able to claim Customs Duty waivers as part of this undertaking.</b></p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms you have left undertaking EORI number @{params("eori")} with immediate effect. </p>
+
     <p style="margin: 0 0 30px; font-size: 19px;">We have also informed the undertaking administrator of your decision. </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The change does not take effect immediately and may take up to 24 hours to go through.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This means you will still be in the undertaking until the change happens.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">If you wish to claim Customs Duty waivers in the future you will have to be a member of another undertaking, or create your own. </p>
-    <h2>If you need further information </h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> If you wish to claim Customs Duty waivers in the future you will have to join another undertaking by being added to one, or create your own. </p>
+
+    <h2>If you need further information</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
+
 }

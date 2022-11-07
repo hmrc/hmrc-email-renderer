@@ -15,13 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "An undertaking member has removed themselves from your single undertaking"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A business has left your undertaking"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that (EORI: @{params("eori")}) has informed HMRC they want to leave the single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
-    <p style="margin: 0 0 30px; font-size: 19px;">You will no longer be required to record de minimis aid, unrelated to Customs Duty waivers.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that EORI number @{params("eori")} has left your undertaking. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You are no longer required to report their non-customs subsidies. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Reported payments for this business will remain in your undertaking, and will continue to affect your remaining sector allowance. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">These reported payments will only be removed when the business joins or creates another undertaking. </p>
+
     <h2>If you need further information </h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
 }

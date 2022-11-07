@@ -15,14 +15,32 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have added a member to your single undertaking "){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have added a business to your undertaking"){
+
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have added the following EORI: @{params("beEORI")} to a single undertaking:
-    </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
-    <p style="margin: 0 0 30px; font-size: 19px;">You must tell the undertaking member they have been added to the single undertaking.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>As undertaking administrator it is your responsibility to make sure all single undertaking details are correct and kept up to date.</b></p>
-    <h2>If you need further information </h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you, EORI number @{params("eori")}, have added a business to your undertaking. </p>
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>The business must provide information about their non-customs subsidy payments to you as the undertaking administrator. </b></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your responsibilities as the undertaking administrator are as follows </p>
+
+
+    <p style="margin: 0 0 30px; font-size: 19px;">At least once every 90 days, you must: </p>
+
+    <ul style="margin: 0 0 30px; font-size: 19px;">
+        <li>report all non-customs subsidy payments your undertaking has received
+        </li>
+        <li>report if your undertaking hasn’t been awarded any non-customs subsidy payments
+        </li>
+        <li>check all undertaking details are correct and up to date
+        </li>
+    </ul>
+
+
+    <p style="margin: 0 0 30px; font-size: 19px;">You can also use the online service to view a summary of customs and non-customs subsidy payments. </p>
+
+    <h2>If you need further information</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
+
 }

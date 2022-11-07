@@ -1,26 +1,18 @@
 @(params: Map[String, Any])
 
-The undertaking you are part of has been disabled
-
 Dear Customer
 
-This email confirms that the single undertaking(@{params("eori")}) you are part of has been disabled:
+The undertaking you are part of has been deregistered
 
-@{params("undertakingName")}
+This email confirms that the undertaking you are part of @{params("eori")} has been deregistered by the undertaking administrator.
 
-This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.
-
-This is effective from @{params("effectiveDate")}.
-
-The change does not take effect immediately and may take up to 24 hours to go through.
-
-This means you will still be in the undertaking until the change happens.
+Reported payments for this business will be moved when you join an existing undertaking, or create a new one.
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
+
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -15,17 +15,21 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "An undertaking member has been removed from your single undertaking"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A business has been removed from your undertaking "){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have removed EORI: @{params("beEORI")} from the single undertaking:
-    </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
-    <p style="margin: 0 0 30px; font-size: 19px;">This will be effective from @{params("effectiveDate")}. </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The former member will no longer be able to claim Customs Duty waivers as part of this single undertaking. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms you have removed EORI @{params("eori")} from your undertaking, with immediate effect.</p>
+
     <p style="margin: 0 0 30px; font-size: 19px;">You must inform them they have been removed. </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This change does not take effect immediately and may take up to 24 hours to go through.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This means the former member will still be in the undertaking until the change happens.</p>
-    <h2>If you need further information </h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> Reported payments for this business will remain in your undertaking, and will continue to affect your remaining sector allowance. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">These reported payments will only be removed when the business joins or creates another undertaking. </p>
+
+    <h2>If you need further information</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
+
 }

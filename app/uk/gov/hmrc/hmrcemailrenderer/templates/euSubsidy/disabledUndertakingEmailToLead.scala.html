@@ -15,16 +15,14 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have disabled your single undertaking "){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "The undertaking you are part of has been deregistered"){
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you @{params("eori")} have disabled your single undertaking:</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")} </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This is effective from @{params("effectiveDate")}. </p>
-    <p style="margin: 0 0 30px; font-size: 19px;">The change does not take effect immediately and may take up to 24 hours to go through.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This means you will still be in the undertaking until the change happens.</p>
-    <h2>If you need further information </h2>
-    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC<br>
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that the undertaking you are part of, EORI number @{params("eori")}, has been deregistered. </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You will no longer have access to the payments you have previously reported. </p>
+    <h2>If you need further information</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
 
 }

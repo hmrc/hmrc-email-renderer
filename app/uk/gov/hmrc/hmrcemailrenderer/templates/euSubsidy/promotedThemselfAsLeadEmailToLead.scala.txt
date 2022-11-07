@@ -1,20 +1,23 @@
 @(params: Map[String, Any])
 
-You are now undertaking administrator
-
 Dear Customer
 
-This email confirms that you (EORI: @{params("eori")}) are administrator for the single undertaking:
+You are now undertaking administrator
 
-@{params("undertakingName")}
+This email confirms that you, EORI @{params("eori")}, are now undertaking administrator.
 
-It is now your responsibility to make sure all single undertaking details are correct and up to date.
+Every 90 days you must check:
+
+    report all non-customs subsidy payments your undertaking has received
+    report if your undertaking has not been awarded any non-customs subsidy payments
+    check all undertaking details are correct and up to date
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
+From Borders & Trade team
+
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

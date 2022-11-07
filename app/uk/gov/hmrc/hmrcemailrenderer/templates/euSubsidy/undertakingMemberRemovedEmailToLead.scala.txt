@@ -1,28 +1,21 @@
 @(params: Map[String, Any])
 
-An undertaking member has been removed from your single undertaking
-
 Dear Customer
 
-This email confirms that you (EORI: @{params("eori")}) have removed EORI: @{params("beEORI")} from the single undertaking
+A business has been removed from your undertaking
 
-@{params("undertakingName")}
-
-This will be effective from @{params("effectiveDate")}.
-
-The former member will no longer be able to claim Customs Duty waivers as part of this single undertaking.
+This email confirms you have removed EORI @{params("eori")} from your undertaking, with immediate effect.
 
 You must inform them they have been removed.
 
-This change does not take effect immediately and may take up to 24 hours to go through.
+ Reported payments for this business will remain in your undertaking, and will continue to affect your remaining sector allowance.
 
-This means the former member will still be in the undertaking until the change happens.
+These reported payments will only be removed when the business joins or creates another undertaking.
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

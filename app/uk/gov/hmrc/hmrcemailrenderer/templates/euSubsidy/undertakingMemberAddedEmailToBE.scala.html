@@ -15,23 +15,23 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You are now a member of a single undertaking "){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have been added to an undertaking"){
+
     <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that you (EORI: @{params("eori")}) have been added to the following undertaking:</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("undertakingName")}
+    <p style="margin: 0 0 30px; font-size: 19px;">This email confirms that your business has been added to an undertaking, EORI number @{params("eori")}. </p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;"><b>You must provide information about your de minimis aid (less Customs Duty waivers), to the undertaking administrator.</b>
-    </p>
+    <p style="margin: 0 0 30px; font-size: 19px;">All businesses need to be grouped in an 'undertaking’. </p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Search 'Report and manage your allowance for Customs Duty waiver claims' at <a href = "https://www.gov.uk">www.gov.uk</a> to:</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">An undertaking could be a sole trader, a company, a partnership, or any combination of these. </p>
 
-    <ul style="margin: 0 0 30px; font-size: 19px;">
-        <li>view your de minimis balance</li>
-        <li>find further guidance</li>
-    </ul>
+    <p style="margin: 0 0 30px; font-size: 19px;"><b>You must provide information about your non-customs subsidy payments to the undertaking administrator.</b></p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If you have questions about being added to this single undertaking, contact the undertaking administrator.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">You can use the online service to view a summary of customs and non-customs subsidy payments. </p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+    <h2>If you need further information</h2>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’. </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"> From Borders & Trade team </p>
 }

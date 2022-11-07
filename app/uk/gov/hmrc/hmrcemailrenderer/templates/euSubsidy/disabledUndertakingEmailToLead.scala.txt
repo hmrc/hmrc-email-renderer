@@ -1,26 +1,18 @@
 @(params: Map[String, Any])
 
-You created a new single undertaking
-
 Dear Customer
 
-This email confirms that you @{params("eori")} have disabled your single undertaking:
+The undertaking you are part of has been deregistered
 
-@{params("undertakingName")}
+This email confirms that the undertaking you are part of @{params("eori")} has been deregistered:
 
-This means you will no longer be able to record de minimis aid, unrelated to Customs Duty waivers, for this undertaking. It has been permanently disabled.
+You will no longer have access to the payments you have previously reported.
 
-This is effective from @{params("effectiveDate")}.
-
-The change does not take effect immediately and may take up to 24 hours to go through.
-
-This means you will still be in the undertaking until the change happens.
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+Search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

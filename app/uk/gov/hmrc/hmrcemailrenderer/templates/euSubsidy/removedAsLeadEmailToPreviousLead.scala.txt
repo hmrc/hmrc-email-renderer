@@ -1,18 +1,19 @@
 @(params: Map[String, Any])
 
-You have changed from undertaking administrator to undertaking member"
-
 Dear Customer
 
-This email confirms that you (EORI: @{params("eori")}) are no longer the undertaking administrator for the single undertaking:
+Your undertaking has a new administrator
 
-@{params("undertakingName")}
+This email confirms that EORI number @{params("eori")} is now the administrator for this undertaking.
+
+You will still be able to view a summary of customs and non-customs subsidy payments.
 
 If you need further information
 
-Search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+To sign in, and for further guidance, search GOV.UK for ‘Report and manage your allowance for Customs Duty waiver claims’.
 
-From HMRC
+If you think this is a mistake, please contact your undertaking administrator.
+
 --
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
