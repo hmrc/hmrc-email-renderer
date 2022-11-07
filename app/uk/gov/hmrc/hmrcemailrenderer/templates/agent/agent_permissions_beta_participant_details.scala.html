@@ -1,0 +1,27 @@
+@(params: Map[String,Any])
+
+@arn() = {@params("arn")}
+@numClients() = {@params("numClients")}
+@contactName() = {@params("contactName")}
+@contactEmail() = {@params("emailAddress")}
+@telephone_number() = {@params("telephoneNumber")}
+  
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title = "Agent interested in private beta") {
+
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Agent Reference Number: @arn</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Number of clients: @numClients </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact name: @contactName</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact email address: @contactEmail</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact telephone number: @telephone_number</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">
+        This agent is interested in joining the private beta of Granular Permissions for agent services accounts.
+    </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">
+        Please review the agent details. If their agent firm has 2 to 1,000 clients (inclusive) then add the agent to the private beta list.
+    </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">From HMRC Agent Services team</p>
+
+}

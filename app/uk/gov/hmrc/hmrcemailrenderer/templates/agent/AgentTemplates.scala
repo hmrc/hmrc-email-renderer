@@ -166,6 +166,15 @@ object AgentTemplates {
       plainTemplate = txt.agent_permissions_all_failed_cy.f,
       htmlTemplate = html.agent_permissions_all_failed_cy.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_permissions_beta_participant_details",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: access groups in your agent services account",
+      plainTemplate = txt.agent_permissions_beta_participant_details.f,
+      htmlTemplate = html.agent_permissions_beta_participant_details.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

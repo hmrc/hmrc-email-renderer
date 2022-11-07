@@ -1,0 +1,15 @@
+@(params: Map[String,Any])Agent interested in private beta
+
+Agent Reference Number: @params("arn")
+Number of clients: @params("numClients")
+Contact name: @params("contactName")
+Contact email address: @params("emailAddress")
+Contact telephone number: @params("telephoneNumber")
+
+This agent is interested in joining the private beta of Granular Permissions for agent services accounts.
+
+Please review the agent details. If their agent firm has 2 to 1,000 clients (inclusive) then add the agent to the private beta list.
+
+
+From HMRC Agent Services team
+

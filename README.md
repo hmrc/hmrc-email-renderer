@@ -86,6 +86,12 @@ See the [How to add a template](CONTRIBUTING.md#how-to-add-a-template) section t
 Templates can be fiddly to get right as they can ordinarily only be viewed by actually generating an email and sending it. To work around this you can preview templates **during development** by running the micro-service from sbt:
 
 ```bash
+# if you have already forked the repo pls run these git commands otherwise you will
+# get an error related to majorVersion below
+# java.lang.IllegalArgumentException: Invalid majorVersion: 2. You cannot request a major version of 2 if there are 
+no tags in the repository
+git remote add upstream git@github.com:hmrc/hmrc-email-renderer.git  
+git fetch upstream 
 cd $WORKSPACE/hmrc-email-renderer
 sbt -Dhttp.port=8950 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
 ```
