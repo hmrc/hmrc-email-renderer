@@ -1759,7 +1759,7 @@ object TemplateParams2 {
       "merchantId"             -> "***2710",
       "terminalId"             -> "***2074",
       "cardVerificationMethod" -> "PIN verified",
-      "authorisation"          -> "Declined",
+      "authorisation"          -> "D12345",
       "transactionSource"      -> "Chip and PIN",
       "time"                   -> "5:30pm",
       "transactionType"        -> "Payment",
