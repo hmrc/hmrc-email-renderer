@@ -549,9 +549,6 @@ class TemplatePrioritiesISpec
         "userName"  -> "John Smith",
         "loginDate" -> "07 November 2022",
         "loginTime" -> "09:17:01am"
-      ),
-      "apiDeveloperHubNewLoginNotificationNoValue" -> Map(
-        "userName" -> "John Smith"
       )
     )
 
@@ -570,7 +567,7 @@ class TemplatePrioritiesISpec
       ("newMessageAlert_SS300", Map("recipientName_forename" -> "Ms Jane Doe")), // DC-839: move from Background because of SA316
       ("newMessageAlert_SA300", Map("recipientName_forename" -> "Ms Jane Doe")), // DC-839: move from Background because of SA316
       ("newMessageAlert_SA309", Map("recipientName_forename" -> "Ms Jane Doe")), // DC-839: move from Background because of SA316
-      ("tax_estimate_message_alert", Map("fullName"          -> "myName")) // DC-839: move from Background because of SA316
+      ("tax_estimate_message_alert", Map("fullName"          -> "myName"))
     )
   }
 
