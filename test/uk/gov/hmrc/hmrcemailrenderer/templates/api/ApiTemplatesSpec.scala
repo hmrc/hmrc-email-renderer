@@ -166,6 +166,12 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
         templateId = "ppnsCallbackUrlChangedNotification",
         expectedSubject = "Changes made to Callback URL",
         expectedPriority = MessagePriority.Urgent)
+
+      validateTemplate(
+        templateId = "apiDeveloperHubNewLoginNotification",
+        expectedSubject = "New sign in to your account",
+        expectedPriority = MessagePriority.Urgent
+      )
     }
   }
 

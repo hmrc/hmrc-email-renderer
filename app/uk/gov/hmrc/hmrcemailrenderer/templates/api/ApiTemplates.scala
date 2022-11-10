@@ -308,6 +308,15 @@ object ApiTemplates {
       plainTemplate = txt.apiChangeOfResponsibleIndividual.f,
       htmlTemplate = html.apiChangeOfResponsibleIndividual.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiDeveloperHubNewLoginNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "New sign in to your account",
+      plainTemplate = txt.apiDeveloperHubNewLoginNotification.f,
+      htmlTemplate = html.apiDeveloperHubNewLoginNotification.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
