@@ -18,11 +18,12 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 
 import java.util.Base64
 
-import org.scalatest.{ Matchers, WordSpec }
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 import play.api.libs.json.Json.{ parse, stringify }
 import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.{ HeadersValidation, Problem, ValidConnectionMethodBase64EncodedDetails }
 
-class ValidConnectionMethodBase64EncodedDetailsSpec extends WordSpec with Matchers {
+class ValidConnectionMethodBase64EncodedDetailsSpec extends AnyWordSpec with Matchers {
 
   val requestCount = 100
 

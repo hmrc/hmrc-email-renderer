@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Tdq
-import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
+import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params._
 
 object TdqTemplates {
 
@@ -41,16 +41,25 @@ object TdqTemplates {
       plainTemplate = txt.tdqFphReportHeuristicallyCompliant.f,
       htmlTemplate = html.tdqFphReportHeuristicallyCompliant.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tdq_fph_self_serve_nudge",
+      fromAddress = FromAddress.noReply("HMRC fraud prevention"),
+      service = Tdq,
+      subject = extractSelfServeNudgeSubject,
+      plainTemplate = txt.tdqFphSelfServeNudge.f,
+      htmlTemplate = html.tdqFphSelfServeNudge.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 
-  private def extractSubject(params: Map[String, String]) =
+  private def extractSubject(params: Map[String, String]): String =
     params
       .get("applicationName")
       .map(appName => s"Fraud prevention headers for $appName")
       .getOrElse(throw new RuntimeException("Missing parameter applicationName"))
 
-  private def extractNonCompliantSubject(params: Map[String, String]) = {
+  private def extractNonCompliantSubject(params: Map[String, String]): String = {
     val reportParams = TdqFphReportParams(params)
 
     val verb =
@@ -66,5 +75,22 @@ object TdqTemplates {
       }
 
     s"$verb fraud prevention headers for ${reportParams.applicationName}"
+  }
+
+  def extractSelfServeNudgeSubject(params: Map[String, String]): String = {
+    val reportParams = TdqFphReportParams(params)
+    selfServeNudgeSubject(reportParams.status, reportParams.applicationName)
+  }
+
+  def selfServeNudgeSubject(status: Status, applicationName: String): String = {
+    val verb = status match {
+      case AllRequiredHeadersMissing     => "Submit"
+      case InvalidConnectionMethod       => "Submit"
+      case HeadersWithErrors             => "Fix"
+      case HeadersWithWarnings           => "Improve"
+      case HeadersHeuristicallyCompliant => ""
+    }
+
+    s"$verb fraud prevention headers for $applicationName".trim.capitalize
   }
 }

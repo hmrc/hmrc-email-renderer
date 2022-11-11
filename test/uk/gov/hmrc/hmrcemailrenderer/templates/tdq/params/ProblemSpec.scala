@@ -16,10 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params
 
-import org.scalatest.WordSpec
-import org.scalatest.Matchers
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class ProblemSpec extends WordSpec with Matchers {
+class ProblemSpec extends AnyWordSpec with Matchers {
 
   "Problem" should {
 

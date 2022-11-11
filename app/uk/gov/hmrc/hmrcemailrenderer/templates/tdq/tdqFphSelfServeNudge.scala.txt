@@ -1,0 +1,33 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
+@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
+@(params: Map[String, Any])
+@defining(TdqFphReportParams(params)) { reportParams =>@TdqTemplates.selfServeNudgeSubject(reportParams.status, reportParams.applicationName)
+
+Dear @reportParams.developerName
+@for(statusContent <- reportParams.statusContents) {
+@statusContent
+}
+
+What you need to do
+
+To @reportParams.actionContent, you need to:
+
+Log in to Developer Hub
+Go to View all applications
+Select your Production application
+On the left, select ‘Fraud prevention’
+
+You can now check your application at any time. We’ll no longer send detailed reports to you every month.
+
+You are required by law to submit header data for the VAT (MTD) and Income Tax Self Assessment (MTD) APIs. This includes all associated APIs and endpoints.
+
+Why you have received this email
+
+This email address is registered on Developer Hub for @reportParams.applicationName.
+
+If you're no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub. You need to have at least 1 contact for each application. You may need to add a new team member.
+
+From HMRC Transaction Monitoring Team
+}
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
