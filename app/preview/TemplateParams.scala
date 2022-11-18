@@ -3190,8 +3190,8 @@ object TemplateParams2 {
     ),
     "apiDeveloperHubNewLoginNotification" -> Map(
       "userName"  -> "John Smith",
-      "loginDate" -> "07 November 2022",
-      "loginTime" -> "09:17:01am"
+      "loginDate" -> "Monday 07 November 2022",
+      "loginTime" -> "09:17am"
     ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",

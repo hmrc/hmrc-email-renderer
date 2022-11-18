@@ -15,12 +15,12 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "New sign in to your account") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "New sign in to your Developer Hub account") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("userName")} </p>
 <p style="margin: 0 0 30px; font-size: 19px;">We noticed a new sign in to your Developer Hub account. </p>
-<p style="margin: 0 0 30px; font-size: 19px;">Date and time: @params("loginDate") at @params("loginTime") GMT</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Date and time: @params("loginDate") at @params("loginTime") UTC</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Ignore this email if you have just signed in.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Change your Developer Hub password if you don’t recognise this activity.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Change your Developer Hub password if you do not recognise this activity.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Check you have set up multi-factor authentication to better protect your account.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
 }
