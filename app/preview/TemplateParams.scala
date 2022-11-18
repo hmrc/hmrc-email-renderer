@@ -3188,6 +3188,11 @@ object TemplateParams2 {
       "undertakingName" -> "Test Undertaking",
       "effectiveDate"   -> "27 January 2022"
     ),
+    "apiDeveloperHubNewLoginNotification" -> Map(
+      "userName"  -> "John Smith",
+      "loginDate" -> "Monday 07 November 2022",
+      "loginTime" -> "09:17am"
+    ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
       "numClients"      -> "103",

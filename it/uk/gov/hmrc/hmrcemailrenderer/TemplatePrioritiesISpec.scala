@@ -544,7 +544,12 @@ class TemplatePrioritiesISpec
       ("mtdfb_vat_principal_sign_up_failure", Map.empty),
       ("mtdfb_vat_agent_sign_up_successful", Map("vatNumber" -> "123456782")),
       ("discounted_dining_payment_sent", Map("claimRefNo"    -> "1234")),
-      ("discounted_dining_payment_sent_cy", Map("claimRefNo" -> "1234"))
+      ("discounted_dining_payment_sent_cy", Map("claimRefNo" -> "1234")),
+      "apiDeveloperHubNewLoginNotification" -> Map(
+        "userName"  -> "John Smith",
+        "loginDate" -> "07 November 2022",
+        "loginTime" -> "09:17:01am"
+      )
     )
 
     val background = Table[String, Map[String, String]](
@@ -562,7 +567,7 @@ class TemplatePrioritiesISpec
       ("newMessageAlert_SS300", Map("recipientName_forename" -> "Ms Jane Doe")), // DC-839: move from Background because of SA316
       ("newMessageAlert_SA300", Map("recipientName_forename" -> "Ms Jane Doe")), // DC-839: move from Background because of SA316
       ("newMessageAlert_SA309", Map("recipientName_forename" -> "Ms Jane Doe")), // DC-839: move from Background because of SA316
-      ("tax_estimate_message_alert", Map("fullName"          -> "myName")) // DC-839: move from Background because of SA316
+      ("tax_estimate_message_alert", Map("fullName"          -> "myName"))
     )
   }
 
