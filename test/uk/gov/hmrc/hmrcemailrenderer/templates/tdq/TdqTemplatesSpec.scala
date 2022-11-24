@@ -19,6 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tdq
 import java.util.Base64
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import play.api.libs.json.Json.{ parse, stringify }
+import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params._
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
 class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
@@ -104,6 +105,9 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       "developerName"   -> "John Smith",
       "fromDate"        -> "22 September 2019",
       "toDate"          -> "22 October 2019",
+      "month"           -> "October",
+      "year"            -> "2019",
+      "status"          -> "HEADERS_HEURISTICALLY_COMPLIANT",
       "applicationName" -> "MTD VAT Test Application",
       "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "regimeLongForm"  -> "VAT (Making Tax Digital)",
@@ -177,6 +181,9 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       "developerName"                     -> "John Smith",
       "fromDate"                          -> "22 September 2019",
       "toDate"                            -> "22 October 2019",
+      "month"                             -> "October",
+      "year"                              -> "2019",
+      "status"                            -> "HEADERS_WITH_ERRORS",
       "applicationName"                   -> "MTD VAT Test Application",
       "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "regimeLongForm"                    -> "VAT (Making Tax Digital)",
@@ -285,6 +292,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
     }
 
     "include the regime" when {
+
       "the email is for VAT" in {
         val params = baseParams + (
           "invalidConnectionMethodPercentage" -> "4",
@@ -333,6 +341,77 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
           "Your application has an invalid connection method in 40 requests (4% of all Income Tax (MTD) API requests)."
         )
       }
+    }
+  }
+
+  "tdq_fph_self_serve_nudge" should {
+
+    val baseParams = commonParameters + (
+      "developerName"   -> "John Smith",
+      "fromDate"        -> "22 September 2019",
+      "toDate"          -> "22 October 2019",
+      "month"           -> "October",
+      "year"            -> "2019",
+      "status"          -> "HEADERS_WITH_ERRORS",
+      "applicationName" -> "MTD VAT Test Application",
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
+      "regimeLongForm"  -> "VAT (Making Tax Digital)",
+      "regimeShortForm" -> "VAT (MTD)",
+    )
+
+    "be the same for text and html content" in {
+      compareContent("tdq_fph_self_serve_nudge", baseParams)(tdqTemplate)
+    }
+
+    "contain subject with application name for missing headers" in {
+      val params = baseParams + ("status" -> AllRequiredHeadersMissing.name)
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(params) mustEqual "Submit fraud prevention headers for MTD VAT Test Application"
+    }
+
+    "contain subject with application name for invalid connection method" in {
+      val params = baseParams + ("status" -> InvalidConnectionMethod.name)
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(params) mustEqual "Submit fraud prevention headers for MTD VAT Test Application"
+    }
+
+    "contain subject with application name for headers with errors" in {
+      val params = baseParams + ("status" -> HeadersWithErrors.name)
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(params) mustEqual "Fix fraud prevention headers for MTD VAT Test Application"
+    }
+
+    "contain subject with application name for headers with advisories" in {
+      val params = baseParams + ("status" -> HeadersWithWarnings.name)
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(params) mustEqual "Improve fraud prevention headers for MTD VAT Test Application"
+    }
+
+    "contain subject with application name for heuristically compliant headers" in {
+      val params = baseParams + ("status" -> HeadersHeuristicallyCompliant.name)
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(params) mustEqual "Fraud prevention headers for MTD VAT Test Application"
+    }
+
+    "contain subject with application name" in {
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(baseParams) mustEqual "Fix fraud prevention headers for MTD VAT Test Application"
+    }
+
+    "include subject as the title" in {
+      renderedEmail("tdq_fph_self_serve_nudge", baseParams) must include(
+        "Fix fraud prevention headers for MTD VAT Test Application")
+    }
+
+    "include status contents" in {
+      val email = renderedEmail("tdq_fph_self_serve_nudge", baseParams)
+      email must include("Your application’s fraud prevention headers have errors.")
+      email must include(
+        "In production, so far in October 2019, MTD VAT Test Application does not meet the fraud prevention specification.")
+    }
+
+    "include action content" in {
+      renderedEmail("tdq_fph_self_serve_nudge", baseParams) must include("find out which errors you need to fix")
     }
   }
 

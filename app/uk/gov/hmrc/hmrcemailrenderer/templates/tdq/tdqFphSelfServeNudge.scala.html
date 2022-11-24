@@ -1,0 +1,70 @@
+@*
+* Copyright 2022 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.TdqFphReportParams
+@import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.TdqTemplates
+@(params: Map[String, Any])
+
+@defining(TdqFphReportParams(params)) { reportParams =>@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, TdqTemplates.selfServeNudgeSubject(reportParams.status, reportParams.applicationName)) {
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @reportParams.developerName</p>
+
+        @for(statusContent <- reportParams.statusContents) {
+            <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+                @statusContent
+            </p>
+        }
+
+        <h2>What you need to do</h2>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            To @reportParams.actionContent, you need to:
+        </p>
+
+        <ol>
+            <li style="font-size: 19px; line-height: 1.315789474;">
+                Log in to Developer Hub
+            </li>
+            <li style="font-size: 19px; line-height: 1.315789474;">
+                Go to View all applications
+            </li>
+            <li style="font-size: 19px; line-height: 1.315789474;">
+                Select your Production application
+            </li>
+            <li style="font-size: 19px; line-height: 1.315789474;">
+                On the left, select ‘Fraud prevention’
+            </li>
+        </ol>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            You can now check your application at any time. We’ll no longer send detailed reports to you every month.
+        </p>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            You are required by law to submit header data for the VAT (MTD) and Income Tax Self Assessment (MTD) APIs. This includes all associated APIs and endpoints.
+        </p>
+
+        <h2>Why you have received this email</h2>
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            This email address is registered on Developer Hub for @reportParams.applicationName.
+        </p>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+            If you're no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub. You need to have at least 1 contact for each application. You may need to add a new team member.
+        </p>
+
+        <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Transaction Monitoring Team</p>
+    }
+}
