@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+
+You have notified HMRC about your intention to make a research and development (R&D) tax claim
+
+Dear @params("customerName")
+
+We have received your notification about your intention to make an R&D tax claim for @params("companyName"). This is for the period of account 1 October 2020 to 21 July 2021.
+
+Your submission reference is: @params("submissionReference")
+
+If we need to contact you, we will use the details you provided.
+
+For security reasons, we have not included the details you submitted.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the HMRC R&D team
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
