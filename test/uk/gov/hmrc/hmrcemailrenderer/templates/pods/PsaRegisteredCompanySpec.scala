@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.pods
 
 import org.scalatest.{ EitherValues, Matchers, OptionValues, WordSpecLike }
-import preview.TemplateParams2
+import preview.{ TemplateParams2, TemplateParams3 }
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PODS
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader }
@@ -28,7 +28,9 @@ class PsaRegisteredCompanySpec
 
   "pods_psa_register_company" should {
 
-    val params = commonParameters ++ TemplateParams2.exampleParams.getOrElse("pods_psa_register_company", Map.empty)
+    val params = commonParameters ++ TemplateParams2.exampleParams
+      .getOrElse("pods_psa_register_company", Map.empty) ++ TemplateParams3.exampleParams
+      .getOrElse("pods_psa_register_company", Map.empty)
     val templateRegisterCompany: MessageTemplate = MessageTemplate.create(
       templateId = "pods_psa_register_company",
       fromAddress = "HMRC paperless norepoy@tax.service.gov.uk",

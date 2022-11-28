@@ -60,7 +60,10 @@ class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with Guice
       s"be able to render ${mt.templateId}" in {
 
         val parameters = TemplateParams.exampleParams
-          .getOrElse(mt.templateId, TemplateParams2.exampleParams.getOrElse(mt.templateId, Map.empty))
+          .getOrElse(
+            mt.templateId,
+            TemplateParams2.exampleParams
+              .getOrElse(mt.templateId, TemplateParams3.exampleParams.getOrElse(mt.templateId, Map.empty)))
 
         templateRenderer.render(mt.templateId, parameters) should not matchPattern {
           case Left(TemplateRenderFailure(reason)) =>
