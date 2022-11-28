@@ -1582,7 +1582,6 @@ object TemplateParams {
   )
 }
 object TemplateParams2 {
-
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
   val exampleParams = Map(
     "chargeable_return_submit" -> Map(
@@ -3213,7 +3212,11 @@ object TemplateParams2 {
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
       "effectiveDate"   -> "27 January 2022"
-    ),
+    )
+  )
+}
+object TemplateParams3 {
+  val exampleParams = Map(
     "apiDeveloperHubNewLoginNotification" -> Map(
       "userName"  -> "John Smith",
       "loginDate" -> "Monday 07 November 2022",
