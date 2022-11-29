@@ -15,17 +15,22 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have agreed to repay Self-Employment Income Support (SEISS) grant money"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
+
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params("customerName")</p>
+    Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We received your form confirming the SEISS grant or grants you agree to repay.</p>
+    You requested a code to continue with the ‘Notify HMRC about a research and development (R&D) tax claim’ service on GOV.UK.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will write to tell you the repayment amount and options available to you.
-</p>
-<h2>Why you are receiving this email</h2>
+    Your code is: @params("confirmationCode")</p>
+<h2>
+    What you need to do now</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for all forms submitted online.</p>
+    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From the Self-Employment Income Support team</p>
+    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Do not reply to this email.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From the HMRC R&D team</p>
 }

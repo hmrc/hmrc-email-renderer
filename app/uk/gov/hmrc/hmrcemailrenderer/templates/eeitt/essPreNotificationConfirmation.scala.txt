@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+
+We have received your notice about the use of a till system to reduce your tax bill
+
+Dear @params("customerName")
+
+We confirm we have received your notice about the use of a till system to reduce your tax bill.
+
+Your reference number: <b>@params("submissionReference")</b>
+
+You will need to complete a HMRC Disclosure form. This form will be available from 6 January until 28 February 2023.
+
+You will be able to use your reference number to access the Disclosure form.
+
+To find the Disclosure form, search GOV.UK for ‘Make a Disclosure about misusing your till system to reduce tax’.
+
+The Disclosure form contains further questions about your tax arrangements.
+
+Why you are receiving this email
+
+We send a confirmation email for a form submitted online.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

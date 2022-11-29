@@ -15,17 +15,23 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have agreed to repay Self-Employment Income Support (SEISS) grant money"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have notified HMRC about your intention to make a research and development (R&D) tax claim"){
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We received your form confirming the SEISS grant or grants you agree to repay.</p>
+    We have received your notification about your intention to make an R&D tax claim for @params("companyName"). This is for the period of account 1 October 2020 to 21 July 2021.
+</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will write to tell you the repayment amount and options available to you.
+    Your submission reference is: @params("submissionReference")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    If we need to contact you, we will use the details you provided.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    For security reasons, we have not included the details you submitted.
 </p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
     We send a confirmation email for all forms submitted online.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From the Self-Employment Income Support team</p>
+    From the HMRC R&D team
+</p>
 }

@@ -3102,6 +3102,21 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "essPreNotification_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "essPreNotification_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "rndNotification_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "rndNotification_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "companyName"         -> "Acquisitions Incorporated",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
     "newMessageAlert_P800"        -> newMessageAlert_Names,
     "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
     "newMessageAlert_PA302"       -> newMessageAlert_Names,

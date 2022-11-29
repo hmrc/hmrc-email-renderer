@@ -1533,7 +1533,7 @@ object EeittTemplates {
       templateId = "seiss_voluntary_disclosure_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Self Employment Income Support Scheme: Agreement to repay",
+      subject = "Self Employment Income Support Scheme: Agreement to repay grant money",
       plainTemplate = txt.seissVoluntaryDisclosureConfirmation.f,
       htmlTemplate = html.seissVoluntaryDisclosureConfirmation.f,
       priority = Some(MessagePriority.Standard)
@@ -1834,6 +1834,42 @@ object EeittTemplates {
       plainTemplate = txt.gbCancelEORIConfirmation.f,
       htmlTemplate = html.gbCancelEORIConfirmation.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "essPreNotification_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Your notification to HMRC about the use of a till system",
+      plainTemplate = txt.essPreNotificationConfirmation.f,
+      htmlTemplate = html.essPreNotificationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "essPreNotification_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Tell HMRC about using a till system to reduce your tax bill",
+      plainTemplate = txt.essPreNotificationCode.f,
+      htmlTemplate = html.essPreNotificationCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "rndNotification_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You have notified HMRC about a future R&D tax claim",
+      plainTemplate = txt.rndNotificationConfirmation.f,
+      htmlTemplate = html.rndNotificationConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "rndNotification_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Notify HMRC about a research and development tax claim",
+      plainTemplate = txt.rndNotificationCode.f,
+      htmlTemplate = html.rndNotificationCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
