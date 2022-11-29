@@ -1533,7 +1533,7 @@ object EeittTemplates {
       templateId = "seiss_voluntary_disclosure_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Self Employment Income Support Scheme: Agreement to repay",
+      subject = "Self Employment Income Support Scheme: Agreement to repay grant money",
       plainTemplate = txt.seissVoluntaryDisclosureConfirmation.f,
       htmlTemplate = html.seissVoluntaryDisclosureConfirmation.f,
       priority = Some(MessagePriority.Standard)
