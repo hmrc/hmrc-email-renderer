@@ -3217,7 +3217,11 @@ object TemplateParams2 {
     "removed_as_lead_email_to_previous_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking"
-    ),
+    )
+  )
+}
+object TemplateParams3 {
+  val exampleParams = Map(
     "disabled_undertaking_email_to_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
@@ -3227,11 +3231,7 @@ object TemplateParams2 {
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
       "effectiveDate"   -> "27 January 2022"
-    )
-  )
-}
-object TemplateParams3 {
-  val exampleParams = Map(
+    ),
     "apiDeveloperHubNewLoginNotification" -> Map(
       "userName"  -> "John Smith",
       "loginDate" -> "Monday 07 November 2022",
