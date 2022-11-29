@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-We have received your notice about the use of a till system to reduce your tax bill.
+We have received your notice about the use of a till system to reduce your tax bill
 
 Dear @params("customerName")
 
-We confirm we have received your notice about the use a till system to reduce your tax bill.
+We confirm we have received your notice about the use of a till system to reduce your tax bill.
 
 Your reference number: <b>@params("submissionReference")</b>
 
