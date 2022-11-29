@@ -1866,7 +1866,7 @@ object EeittTemplates {
       templateId = "rndNotification_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - Notify HMRC about a research and development (R&D) tax claim",
+      subject = "Confirm your email address - Notify HMRC about a research and development tax claim",
       plainTemplate = txt.rndNotificationCode.f,
       htmlTemplate = html.rndNotificationCode.f,
       priority = Some(MessagePriority.Urgent)
