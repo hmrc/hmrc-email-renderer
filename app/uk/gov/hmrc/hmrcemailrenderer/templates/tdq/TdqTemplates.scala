@@ -82,15 +82,7 @@ object TdqTemplates {
     selfServeNudgeSubject(reportParams.status, reportParams.applicationName)
   }
 
-  def selfServeNudgeSubject(status: Status, applicationName: String): String = {
-    val verb = status match {
-      case AllRequiredHeadersMissing     => "Submit"
-      case InvalidConnectionMethod       => "Submit"
-      case HeadersWithErrors             => "Fix"
-      case HeadersWithWarnings           => "Improve"
-      case HeadersHeuristicallyCompliant => ""
-    }
+  def selfServeNudgeSubject(status: Status, applicationName: String): String =
+    s"${status.subjectVerb} fraud prevention headers for $applicationName".trim.capitalize
 
-    s"$verb fraud prevention headers for $applicationName".trim.capitalize
-  }
 }

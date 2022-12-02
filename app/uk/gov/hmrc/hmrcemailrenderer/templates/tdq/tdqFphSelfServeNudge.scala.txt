@@ -10,7 +10,7 @@ Dear @reportParams.developerName
 
 What you need to do
 
-To @reportParams.actionContent, you need to:
+To @reportParams.status.action, you need to:
 
 Log in to Developer Hub
 Go to View all applications
