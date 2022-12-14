@@ -24,7 +24,17 @@ case _ => List()
 }}
 
 
+ @itemList = @{ allItems.map( item => {
 
+     val taxType: String = (item \ "taxType").as[String]
+     val amount: String = (item \ "amount").as[String]
+     val transactionFee: String = (item \ "transactionFee").as[String]
+     val transactionNumber = (item \ "transactionNumber").as[String]
+     (taxType, amount, transactionFee, transactionNumber)
+     })
+ }
+
+ @singleItem = @{itemList.size == 1}
 
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhad bod CThEF wedi cael y taliad") {
