@@ -12,4 +12,4 @@ Dylech aros nes i’ch cofrestriad TAW gael ei gadarnhau cyn:
 
 Oddi wrth Dîm TAW CThEM
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
