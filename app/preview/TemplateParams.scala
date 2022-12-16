@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package preview
 
 import java.util.{ Base64, UUID }
