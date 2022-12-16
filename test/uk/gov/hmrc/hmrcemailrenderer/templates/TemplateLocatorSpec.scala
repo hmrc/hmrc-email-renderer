@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2022 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -460,10 +460,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "gbCancelEORI_confirmation",
         "essPreNotification_code",
         "essPreNotification_confirmation",
-        "essDisclosure_code",
-        "essDisclosure_confirmation",
-        "mod_confirmation",
-        "mod_code",
         "rndNotification_code",
         "rndNotification_confirmation",
         "elcb_code",
@@ -883,8 +879,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "telephone_payments_service",
         "face_to_face_payment_email_successful",
         "face_to_face_payment_email_unsuccessful",
-        "face_to_face_payment_email_successful_cy",
-        "face_to_face_payment_email_unsuccessful_cy",
         "disabled_undertaking_email_to_lead",
         "disabled_undertaking_email_to_be"
       )
