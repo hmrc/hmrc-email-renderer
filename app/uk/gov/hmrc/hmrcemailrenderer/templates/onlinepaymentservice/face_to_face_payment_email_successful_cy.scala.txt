@@ -46,19 +46,14 @@
             Cyfeirnod y taliad
             @params("transactionNumber")
 
-
-
             Cyfeirnod y trafodyn
             @params("transactionReference")
-
-
 
             Swm
             @formatAmountInPence(params("amountInPence").toString)
 
             Ffi’r cerdyn
             @formatAmountInPence(params("transactionFeeInPence").toString)
-
 
             Cyfanswm a dalwyd
             @formatAmountInPence(params("totalAmountInPence").toString)
@@ -98,7 +93,6 @@
 
            Math o drafodyn
            @params("transactionType")
-
 
     Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.
 

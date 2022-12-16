@@ -1,4 +1,4 @@
-*
+@*
 * Copyright 2022 HM Revenue & Customs
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -47,19 +47,14 @@ Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does di
               Cyfeirnod y taliad
               @params("transactionNumber")
 
-
-
               Cyfeirnod y trafodyn
               @params("transactionReference")
-
-
 
               Swm
               @formatAmountInPence(params("amountInPence").toString)
 
               Ffi’r cerdyn
               @formatAmountInPence(params("transactionFeeInPence").toString)
-
 
               Cyfanswm
               @formatAmountInPence(params("totalAmountInPence").toString)

@@ -278,17 +278,16 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.face_to_face_payment_email_successful_cy.f,
       htmlTemplate = html.face_to_face_payment_email_successful_cy.f,
       priority = Some(MessagePriority.Urgent)
-  )
-  ,
-  MessageTemplate.create(
-    templateId = "face_to_face_payment_email_unsuccessful_cy",
-    fromAddress = FromAddress.noReply("HMRC Online Payments"),
-    service = ServiceIdentifier.OnlinePaymentService,
-    subject = "Roedd eich taliad i CThEF yn aflwyddiannus",
-    plainTemplate = txt.face_to_face_payment_email_unsuccessful_cy.f,
-    htmlTemplate = html.face_to_face_payment_email_unsuccessful_cy.f,
-    priority = Some(MessagePriority.Urgent)
-  )
+    ),
+    MessageTemplate.create(
+      templateId = "face_to_face_payment_email_unsuccessful_cy",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Roedd eich taliad i CThEF yn aflwyddiannus",
+      plainTemplate = txt.face_to_face_payment_email_unsuccessful_cy.f,
+      htmlTemplate = html.face_to_face_payment_email_unsuccessful_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    )
   )
 
   val cdsTemplates = List(
