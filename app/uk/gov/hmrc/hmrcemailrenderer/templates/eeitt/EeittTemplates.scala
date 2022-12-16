@@ -1854,6 +1854,24 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "essDisclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received a disclosure about Electronic Sales Suppression",
+      plainTemplate = txt.essDisclosureConfirmation.f,
+      htmlTemplate = html.essDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "essDisclosure_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Tell HMRC about the misuse of a till system to reduce tax",
+      plainTemplate = txt.essDisclosureCode.f,
+      htmlTemplate = html.essDisclosureCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "rndNotification_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,

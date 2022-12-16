@@ -15,29 +15,23 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted an Alternative Dispute Resolution (ADR) application to HMRC"){
-<p style="margin: 0 0 30px; font-size: 19px;">
-    Dear @params("customerName") </p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    Your submission reference is: <b>@params("submissionReference")</b></p>
-<h2>
-    What happens next</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    We will contact you within 30 days to confirm if you can use the service.
-</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    If we have not contacted you within this time, let us know by emailing
-    mailbox.adr&#64;hmrc.gov.uk</p>
-<p style="margin: 0 0 30px; font-size: 19px;">
-    If you prefer to phone, contact the Alternative Dispute Resolution team on 03000 538177 (8.30am to 5.00pm, Monday to Friday).
-</p>
-<h2>
-    Why you are receiving this email</h2>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
 
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send an automated confirmation for an application submitted online.</p>
+    Dear Customer</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You requested a code to continue with the ‘Tell HMRC about the misuse of a till system to reduce tax’ service on GOV.UK.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your code is: @params("confirmationCode")</p>
+<h2>
+    What you need to do now</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Do not reply to this email.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From HMRC Alternative Dispute Resolution team</p>
+    From HMRC</p>
+
 }
