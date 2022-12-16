@@ -346,4 +346,5 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     )
   )
+
 }

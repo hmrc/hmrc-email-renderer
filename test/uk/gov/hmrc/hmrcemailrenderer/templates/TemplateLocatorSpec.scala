@@ -913,4 +913,5 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
     }
   }
+
 }
