@@ -1,0 +1,29 @@
+@(params: Map[String, Any])
+
+We have received your disclosure about Electronic Sales Suppression
+
+Dear @params("customerName")
+
+We confirm that we have received your disclosure relating to Electronic Sales Suppression.
+
+Your reference number: <b>@params("submissionReference")</b>
+
+We will assess your disclosure. We aim to respond by letter within 3 months.
+
+Information about what to do if you do not agree with our assessment will be contained in the letter.
+
+About your disclosure
+
+We will review your disclosure against records we hold. If we accept it, we will send an assessment of tax owed.
+
+If we do not agree with the information you supplied, we will make our assessment using the information we hold.
+
+If you find errors in your records, you can let HMRC know by emailing isbccpesscompliance&#64;hmrc.gov.uk. Please include your reference number.
+
+Why you are receiving this email
+
+We send a confirmation email for a form submitted online.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

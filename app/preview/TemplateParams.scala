@@ -3244,39 +3244,12 @@ object TemplateParams3 {
       "emailAddress"    -> "bob@builders.com",
       "telephoneNumber" -> "+44(0) 208 123 4567"
     ),
-    "face_to_face_payment_email_successful_cy" -> Map(
-      "totalAmountPaid"                   -> "1000.00",
-      "transactionReference"              -> "1234567890K",
-      "cardType"                          -> "Visa Debit",
-      "cardNumber"                        -> "1234",
-      "dateOfPayment"                     -> "31 December 2021",
-      "applicationId"                     -> "A0000000031010",
-      "panSequence"                       -> "56",
-      "merchantId"                        -> "***2710",
-      "terminalId"                        -> "***2074",
-      "cardVerificationMethod"            -> "PIN verified",
-      "authorisation"                     -> "12345",
-      "transactionSource"                 -> "Chip and PIN",
-      "time"                              -> " 5:30pm",
-      "transactionType"                   -> "Payment",
-      "f2fPaymentItemsForEmailSuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+    "essDisclosure_code" -> Map(
+      "confirmationCode" -> "HGDY"
     ),
-    "face_to_face_payment_email_unsuccessful_cy" -> Map(
-      "totalAmountPaid"                     -> "1000.00",
-      "transactionReference"                -> "1234567890K",
-      "cardType"                            -> "Visa Debit",
-      "cardNumber"                          -> "1234",
-      "dateOfPayment"                       -> "31 December 2021",
-      "applicationId"                       -> "A0000000031010",
-      "panSequence"                         -> "56",
-      "merchantId"                          -> "***2710",
-      "terminalId"                          -> "***2074",
-      "cardVerificationMethod"              -> "PIN verified",
-      "authorisation"                       -> "Declined",
-      "transactionSource"                   -> "Chip and PIN",
-      "time"                                -> " 5:30pm",
-      "transactionType"                     -> "Payment",
-      "f2fPaymentItemsForEmailUnsuccessful" -> "[{\"taxType\":\"Self Assessment\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+    "essDisclosure_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     )
   )
 }
