@@ -1857,7 +1857,7 @@ object EeittTemplates {
       templateId = "essDisclosure_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC received a disclosure about electronic sales suppression",
+      subject = "HMRC received a disclosure about Electronic Sales Suppression",
       plainTemplate = txt.essDisclosureConfirmation.f,
       htmlTemplate = html.essDisclosureConfirmation.f,
       priority = Some(MessagePriority.Standard)

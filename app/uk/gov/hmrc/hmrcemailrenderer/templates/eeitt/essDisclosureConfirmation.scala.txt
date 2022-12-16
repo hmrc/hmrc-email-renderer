@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-We have received your disclosure about electronic sales suppression
+We have received your disclosure about Electronic Sales Suppression
 
 Dear @params("customerName")
 
-We confirm that we have received your disclosure relating to electronic sales suppression.
+We confirm that we have received your disclosure relating to Electronic Sales Suppression.
 
 Your reference number: <b>@params("submissionReference")</b>
 
