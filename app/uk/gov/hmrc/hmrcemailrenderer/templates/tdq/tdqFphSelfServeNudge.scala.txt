@@ -10,7 +10,7 @@ Dear @reportParams.developerName
 
 What you need to do
 
-To @reportParams.actionContent, you need to:
+To @reportParams.status.action, you need to:
 
 Log in to Developer Hub
 Go to View all applications
@@ -27,7 +27,7 @@ This email address is registered on Developer Hub for @reportParams.applicationN
 
 If you're no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub. You need to have at least 1 contact for each application. You may need to add a new team member.
 
-From HMRC Transaction Monitoring Team
+From HMRC Transaction Monitoring team
 }
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

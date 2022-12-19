@@ -363,6 +363,12 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       compareContent("tdq_fph_self_serve_nudge", baseParams)(tdqTemplate)
     }
 
+    "contain subject with application name for application with no requests" in {
+      val params = baseParams + ("status" -> NoRequests.name)
+      val template = findTemplate("tdq_fph_self_serve_nudge")
+      template.subject.f(params) mustEqual "Check fraud prevention headers for MTD VAT Test Application"
+    }
+
     "contain subject with application name for missing headers" in {
       val params = baseParams + ("status" -> AllRequiredHeadersMissing.name)
       val template = findTemplate("tdq_fph_self_serve_nudge")
@@ -403,15 +409,26 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
         "Fix fraud prevention headers for MTD VAT Test Application")
     }
 
-    "include status contents" in {
+    "include status contents for headers with errors" in {
       val email = renderedEmail("tdq_fph_self_serve_nudge", baseParams)
       email must include("Your application’s fraud prevention headers have errors.")
       email must include(
         "In production, so far in October 2019, MTD VAT Test Application does not meet the fraud prevention specification.")
     }
 
-    "include action content" in {
+    "include status contents for application with no requests" in {
+      val email = renderedEmail("tdq_fph_self_serve_nudge", baseParams + ("status" -> NoRequests.name))
+      email must include("MTD VAT Test Application hasn’t sent any requests so far in October 2019.")
+    }
+
+    "include action content for headers with errors" in {
       renderedEmail("tdq_fph_self_serve_nudge", baseParams) must include("find out which errors you need to fix")
+    }
+
+    "include action content for application with no requests" in {
+      renderedEmail("tdq_fph_self_serve_nudge", baseParams + ("status" -> NoRequests.name)) must include(
+        "check the status of your application"
+      )
     }
   }
 
