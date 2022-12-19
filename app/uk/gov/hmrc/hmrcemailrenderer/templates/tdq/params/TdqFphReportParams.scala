@@ -44,41 +44,8 @@ final case class TdqFphReportParams(
 
   def hasErrors: Boolean = extraDetails.exists(_.headerValidations.exists(_.errors.nonEmpty))
 
-  def statusContents: Seq[String] = status match {
-    case AllRequiredHeadersMissing =>
-      Seq(
-        "Your application has missing fraud prevention headers.",
-        s"In production, so far in $month $year, $applicationName does not meet the fraud prevention specification."
-      )
-    case InvalidConnectionMethod =>
-      Seq(
-        "Your application has an invalid connection method in some requests.",
-        s"In production, so far in $month $year, $applicationName does not meet the fraud prevention specification."
-      )
-    case HeadersWithErrors =>
-      Seq(
-        "Your application’s fraud prevention headers have errors.",
-        s"In production, so far in $month $year, $applicationName does not meet the fraud prevention specification."
-      )
-    case HeadersWithWarnings =>
-      Seq(
-        "Your application’s fraud prevention headers have advisories.",
-        s"In production, so far in $month $year, $applicationName has advisories that you need to review."
-      )
-    case HeadersHeuristicallyCompliant =>
-      Seq(
-        "Your application’s fraud prevention headers are correct.",
-        s"In production, so far in $month $year, $applicationName meets the fraud prevention specification."
-      )
-  }
+  def statusContents: Seq[String] = status.contents(applicationName, month, year)
 
-  val actionContent: String = status match {
-    case AllRequiredHeadersMissing     => "find out how to fix issues with your headers"
-    case InvalidConnectionMethod       => "find out how to fix issues with your headers"
-    case HeadersWithErrors             => "find out which errors you need to fix"
-    case HeadersWithWarnings           => "find out which advisories you need to review"
-    case HeadersHeuristicallyCompliant => "make sure your application keeps meeting the specification"
-  }
 }
 
 object TdqFphReportParams {
