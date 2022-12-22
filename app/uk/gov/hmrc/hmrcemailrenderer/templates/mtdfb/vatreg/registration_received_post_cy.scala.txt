@@ -4,15 +4,15 @@ Annwyl @params("name")
 
 Cyfeirnod: @params("ref")
 
-Mae’ch cais wedi dod i law. Er mwyn i ni allu ei brosesu, mae angen i chi bostio llythyr eglurhaol atom ynghyd â chopïau o’ch dogfennau adnabod. I gael gwybod sut i wneud hyn, mewngofnodwch i ‘Cofrestru ar gyfer TAW’ ar-lein a bwriwch olwg dros eich ceisiadau sydd ohoni.
+Er mwyn i ni allu ei brosesu, mae angen i chi bostio llythyr eglurhaol atom ynghyd â chopïau o’ch dogfennau adnabod. I gael gwybod sut i wneud hyn, mewngofnodwch i ‘Cofrestru ar gyfer TAW’ ar-lein a bwriwch olwg dros eich ceisiadau sydd ohoni.
 
 Yr hyn sy’n digwydd nesaf
 
 Ar ôl i ni gael copïau o’ch dogfennau, byddwn yn ysgrifennu atoch gyda phenderfyniad ar eich cais. Mae hyn fel arfer yn cymryd oddeutu 30 diwrnod i ni.
 
 Dylech aros nes i’ch cofrestriad TAW gael ei gadarnhau cyn:
-- cael unrhyw feddalwedd
-- codi TAW ar gwsmeriaid
+
+Ni allwch gynnwys TAW ar eich anfonebau hyd nes eich bod yn cael eich rhif TAW. Fodd bynnag, gallwch godi’ch prisiau i roi cyfrif am y TAW y bydd angen i chi ei thalu i CThEF
 
 Oddi wrth Dîm TAW CThEM
 
