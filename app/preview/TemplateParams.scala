@@ -3257,6 +3257,6 @@ object TemplateParams3 {
     ),
     "mod_code" -> Map(
       "confirmationCode" -> "HGDY"
-    ),
+    )
   )
 }
