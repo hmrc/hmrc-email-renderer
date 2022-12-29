@@ -1907,6 +1907,5 @@ object EeittTemplates {
       htmlTemplate = html.modCode.f,
       priority = Some(MessagePriority.Urgent)
     )
-
   )
 }
