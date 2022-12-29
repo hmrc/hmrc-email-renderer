@@ -3243,6 +3243,13 @@ object TemplateParams3 {
       "contactName"     -> "Bob De Builder",
       "emailAddress"    -> "bob@builders.com",
       "telephoneNumber" -> "+44(0) 208 123 4567"
+    ),
+    "essDisclosure_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "essDisclosure_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
     )
   )
 }
