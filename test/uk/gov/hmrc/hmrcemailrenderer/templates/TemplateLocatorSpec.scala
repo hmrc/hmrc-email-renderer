@@ -462,6 +462,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "essPreNotification_confirmation",
         "essDisclosure_code",
         "essDisclosure_confirmation",
+        "mod_confirmation",
+        "mod_code",
         "rndNotification_code",
         "rndNotification_confirmation",
         "elcb_code",

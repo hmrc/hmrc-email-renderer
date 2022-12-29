@@ -1888,6 +1888,24 @@ object EeittTemplates {
       plainTemplate = txt.rndNotificationCode.f,
       htmlTemplate = html.rndNotificationCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mod_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your UK Armed Forces customs declaration notification",
+      plainTemplate = txt.modConfirmation.f,
+      htmlTemplate = html.modConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "mod_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Notify HMRC about a UK Armed Forces customs declaration",
+      plainTemplate = txt.modCode.f,
+      htmlTemplate = html.modCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

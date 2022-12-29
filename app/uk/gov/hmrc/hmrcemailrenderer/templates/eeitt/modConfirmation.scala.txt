@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You notified HMRC about a UK armed forces customs declaration
+
+Dear @params("customerName")
+
+You provided information using the ‘You notified HMRC about a UK Armed Forces customs declaration’ service.
+
+Your submission reference is: <b>@params("submissionReference")</b>
+
+What you need to do now
+
+Download your form and send it by email to DSCOM CCT.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From HMRC Customs Declarations
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
