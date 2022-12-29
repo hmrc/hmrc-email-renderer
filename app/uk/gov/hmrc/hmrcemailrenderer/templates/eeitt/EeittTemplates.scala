@@ -1893,7 +1893,7 @@ object EeittTemplates {
       templateId = "mod_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "You notified HMRC about a UK armed forces customs declaration",
+      subject = "HMRC received your UK Armed Forces customs declaration notification",
       plainTemplate = txt.modConfirmation.f,
       htmlTemplate = html.modConfirmation.f,
       priority = Some(MessagePriority.Standard)
