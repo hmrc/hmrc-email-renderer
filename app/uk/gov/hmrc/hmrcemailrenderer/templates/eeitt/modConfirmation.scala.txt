@@ -4,7 +4,7 @@ You notified HMRC about a UK armed forces customs declaration
 
 Dear @params("customerName")
 
-You provided information using the ‘Notify HMRC about a UK Armed Forces customs declaration’ service.
+You provided information using the ‘You notified HMRC about a UK Armed Forces customs declaration’ service.
 
 Your submission reference is: <b>@params("submissionReference")</b>
 
