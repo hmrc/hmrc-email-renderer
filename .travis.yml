@@ -1,4 +1,4 @@
-
+sbt
 sudo: false
 language: scala
 scala:

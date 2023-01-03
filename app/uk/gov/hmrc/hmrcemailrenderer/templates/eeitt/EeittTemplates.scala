@@ -1854,6 +1854,24 @@ object EeittTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "essDisclosure_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received a disclosure about Electronic Sales Suppression",
+      plainTemplate = txt.essDisclosureConfirmation.f,
+      htmlTemplate = html.essDisclosureConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "essDisclosure_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Tell HMRC about the misuse of a till system to reduce tax",
+      plainTemplate = txt.essDisclosureCode.f,
+      htmlTemplate = html.essDisclosureCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "rndNotification_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
@@ -1869,6 +1887,24 @@ object EeittTemplates {
       subject = "Confirm your email address - Notify HMRC about a research and development tax claim",
       plainTemplate = txt.rndNotificationCode.f,
       htmlTemplate = html.rndNotificationCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mod_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your UK Armed Forces customs declaration notification",
+      plainTemplate = txt.modConfirmation.f,
+      htmlTemplate = html.modConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "mod_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Notify HMRC about a UK Armed Forces customs declaration",
+      plainTemplate = txt.modCode.f,
+      htmlTemplate = html.modCode.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
