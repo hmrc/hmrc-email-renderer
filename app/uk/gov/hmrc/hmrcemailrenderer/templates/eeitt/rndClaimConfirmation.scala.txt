@@ -10,7 +10,7 @@ We have received your supporting information for an R&D tax claim for @params("c
 
 Your submission reference is: @params("submissionReference")
 
-You must submit a CT600 Corporation Tax Return to claim the tax relief. We cannot process this form until you do.
+You must submit a CT600 Corporation Tax Return to claim the tax relief. We cannot process your supporting information until you do.
 
 If we need to contact you, we will use the details you provided.
 
