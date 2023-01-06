@@ -95,6 +95,6 @@ object EoriCommonComponentTemplates {
       subject = registration_success_subject_cy,
       plainTemplate = txt.eccRegistrationSuccessful_cy.f,
       htmlTemplate = html.eccRegistrationSuccessful_cy.f
-    ),
+    )
   )
 }
