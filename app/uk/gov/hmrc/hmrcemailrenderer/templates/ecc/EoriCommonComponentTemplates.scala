@@ -81,7 +81,7 @@ object EoriCommonComponentTemplates {
       htmlTemplate = html.eccRCMNotifications.f
     ),
     MessageTemplate.createWithDynamicSubject(
-      templateId = "customs_registration_successful",
+      templateId = "ecc_registration_successful",
       fromAddress = govUkTeamAddress,
       service = EoriCommonComponent,
       subject = registration_success_subject,
@@ -89,7 +89,7 @@ object EoriCommonComponentTemplates {
       htmlTemplate = html.eccRegistrationSuccessful.f
     ),
     MessageTemplate.createWithDynamicSubject(
-      templateId = "customs_registration_successful_cy",
+      templateId = "ecc_registration_successful_cy",
       fromAddress = govUkTeamAddress,
       service = EoriCommonComponent,
       subject = registration_success_subject_cy,

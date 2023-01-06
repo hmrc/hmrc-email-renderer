@@ -47,11 +47,11 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     }
 
     "include registration successful content" in {
-      compareContent("customs_registration_successful", registrationParams)(eoriCommonComponents)
+      compareContent("ecc_registration_successful", registrationParams)(eoriCommonComponents)
     }
 
     "include registration successful content in welsh" in {
-      compareContent("customs_registration_successful_cy", registrationParams, isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_registration_successful_cy", registrationParams, isWelsh = true)(eoriCommonComponents)
     }
 
     "include subscription not successful content" in {
@@ -74,11 +74,11 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     }
 
     "have matching content in the html and the text for customs_registration_successful" in {
-      compareContent("customs_registration_successful", commonParameters)(eoriCommonComponents)
+      compareContent("ecc_registration_successful", registrationParams)(eoriCommonComponents)
     }
 
     "have matching content in the html and the text for customs_registration_successful_cy" in {
-      compareContent("customs_registration_successful_cy", commonParameters, isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_registration_successful_cy", registrationParams, isWelsh = true)(eoriCommonComponents)
     }
 
     "have matching content in the html and the text for ecc_subscription_not_successful" in {
