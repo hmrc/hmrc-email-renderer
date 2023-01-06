@@ -32,10 +32,10 @@ object EoriCommonComponentTemplates {
       .map {
         case "HMRC-ATAR-ORG" => "Mae Dyfarniadau Tariffau Uwch a’r rhif EORI yn barod i’w defnyddio"
         case "HMRC-GVMS-ORG" => "Mae’r Gwasanaeth Symud Cerbydau Nwyddau a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-CTC-ORG" => "Mae’r System Gludo Gyfrifiadurol Newydd a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-SS-ORG" => "Mae’r Gwasanaeth Diogelwch yn y DU a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-CTS-ORG" => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
-        case _ => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn y DU a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-CTS-ORG"  => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
+        case _               => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
       }
       .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
 
