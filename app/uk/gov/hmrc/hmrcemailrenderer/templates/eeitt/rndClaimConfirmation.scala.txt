@@ -1,0 +1,26 @@
+
+
+@(params: Map[String, Any])
+
+We have received your supporting information for a research and development (R&D) tax claim
+
+Dear @params("customerName")
+
+We have received your supporting information for an R&D tax claim for @params("companyName"). This is for the accounting period 1 October 2020 to 21 July 2021.
+
+Your submission reference is: @params("submissionReference")
+
+You must submit a CT600 Corporation Tax Return to claim the tax relief. We cannot process your supporting information until you do.
+
+If we need to contact you, we will use the details you provided.
+
+For security reasons, we have not included the details you submitted.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the HMRC R&D team
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
