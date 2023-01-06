@@ -18,9 +18,9 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 
 @(params: Map[String, Any])
-@template_main(params, s"${applicationCompleteCY(params, "Application Complete")}") {
+@template_main(params, s"${applicationCompleteCY(params, "Application Complete")}", isWelsh=true) {
 
- <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params, isWelsh = true)</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params, isWelsh=true)</p>
 
  <br />
  <p style="margin: 0 0 30px; font-size: 24px;">Erbyn hyn, gallwch wneud y canlynol:</p>

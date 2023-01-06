@@ -90,7 +90,7 @@ object EoriCommonComponentTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "ecc_registration_successful_cy",
-      fromAddress = govUkTeamAddress,
+      fromAddress = govUkTeamAddressWelsh,
       service = EoriCommonComponent,
       subject = registration_success_subject_cy,
       plainTemplate = txt.eccRegistrationSuccessful_cy.f,

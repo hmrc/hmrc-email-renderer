@@ -2,7 +2,7 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 
-@(params: Map[String, Any]) @applicationComplete(params, "applicationComplete")
+@(params: Map[String, Any])@applicationComplete(params, "applicationComplete")
 @salutationFullName(params)
 
 You can now:
