@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -466,6 +466,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "mod_code",
         "rndNotification_code",
         "rndNotification_confirmation",
+        "rndClaim_code",
+        "rndClaim_confirmation",
         "elcb_code",
         "elcb_code_cy",
         "elcb_confirmation",

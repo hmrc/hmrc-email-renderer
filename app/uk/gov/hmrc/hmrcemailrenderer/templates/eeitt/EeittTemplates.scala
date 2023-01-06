@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1905,6 +1905,24 @@ object EeittTemplates {
       subject = "Confirm your email address - Notify HMRC about a UK Armed Forces customs declaration",
       plainTemplate = txt.modCode.f,
       htmlTemplate = html.modCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "rndClaim_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has your supporting information for an R&D tax claim",
+      plainTemplate = txt.rndClaimConfirmation.f,
+      htmlTemplate = html.rndClaimConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "rndClaim_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Support a research and development (R&D) tax claim",
+      plainTemplate = txt.rndClaimCode.f,
+      htmlTemplate = html.rndClaimCode.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
