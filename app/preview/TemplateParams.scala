@@ -2414,6 +2414,16 @@ object TemplateParams2 {
       "serviceName"            -> "Advance Tariff Rulings",
       "completionDate"         -> "22 March 2019"
     ),
+    "ecc_registration_successful" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-ATAR-ORG"
+    ),
+    "ecc_registration_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-ATAR-ORG"
+    ),
     "ecc_subscription_not_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
       "recipientOrgName"       -> "JJ Components",
