@@ -8,7 +8,7 @@ We confirm that we have received your disclosure relating to Electronic Sales Su
 
 Your reference number: <b>@params("submissionReference")</b>
 
-We will assess your disclosure. We aim to respond by letter within 3 months.
+We will assess your disclosure. We aim to respond by letter within 3 months. In some cases this may take longer.
 
 Information about what to do if you do not agree with our assessment will be contained in the letter.
 
