@@ -32,9 +32,13 @@ class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: Mess
 
   def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
+      logger.warn(s"RendererController: renderTemplate ${parse.json} $renderReq ${request.body}")
       templateRenderer.languageTemplateId(templateId, renderReq.email).map { tId =>
         templateRenderer.render(tId, renderReq.parameters) match {
-          case Right(rendered)            => Ok(Json.toJson(rendered))
+          case Right(rendered)            => {
+            logger.warn(s"RendererController: renderTemplate $rendered")
+            Ok(Json.toJson(rendered))
+          }
           case Left(MissingTemplateId(_)) => NotFound
           case Left(x @ TemplateRenderFailure(_)) =>
             logger.warn(s"Failed to render message, reason: ${x.reason}")
