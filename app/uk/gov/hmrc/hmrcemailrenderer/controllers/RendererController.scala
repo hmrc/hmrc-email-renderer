@@ -35,7 +35,7 @@ class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: Mess
       logger.warn(s"RendererController: renderTemplate ${parse.json} $renderReq ${request.body}")
       templateRenderer.languageTemplateId(templateId, renderReq.email).map { tId =>
         templateRenderer.render(tId, renderReq.parameters) match {
-          case Right(rendered)            => {
+          case Right(rendered) => {
             logger.warn(s"RendererController: renderTemplate $rendered")
             Ok(Json.toJson(rendered))
           }
