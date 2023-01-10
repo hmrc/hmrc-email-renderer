@@ -3265,6 +3265,13 @@ object TemplateParams3 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68",
       "companyName"         -> "Acquisitions Incorporated"
+    ),
+    "eis_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "eis_code" -> Map(
+      "confirmationCode" -> "HGDY"
     )
   )
 }
