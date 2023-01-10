@@ -1929,7 +1929,7 @@ object EeittTemplates {
       templateId = "eis_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "HMRC has your EIS compliance statement",
+      subject = "HMRC has your EIS1 compliance statement",
       plainTemplate = txt.eisConfirmation.f,
       htmlTemplate = html.eisConfirmation.f,
       priority = Some(MessagePriority.Standard)
