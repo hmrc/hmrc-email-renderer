@@ -3283,7 +3283,7 @@ object TemplateParams3 {
       "amountInPence" -> "192",
       "transactionFeeInPence" -> "100",
       "transactionNumber" -> "1234567890K"
-     ).
+     ),
     "essDisclosure_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
