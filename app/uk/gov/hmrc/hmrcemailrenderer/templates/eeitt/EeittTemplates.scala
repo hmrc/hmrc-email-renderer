@@ -1906,6 +1906,24 @@ object EeittTemplates {
       plainTemplate = txt.modCode.f,
       htmlTemplate = html.modCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "rndClaim_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has your supporting information for an R&D tax claim",
+      plainTemplate = txt.rndClaimConfirmation.f,
+      htmlTemplate = html.rndClaimConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "rndClaim_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Support a research and development (R&D) tax claim",
+      plainTemplate = txt.rndClaimCode.f,
+      htmlTemplate = html.rndClaimCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
