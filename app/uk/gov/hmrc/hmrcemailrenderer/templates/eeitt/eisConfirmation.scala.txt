@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+
+You submitted an Enterprise Investment Scheme (EIS1) compliance statement
+
+Dear @params("customerName")
+
+We have received your Enterprise Investment Scheme (EIS1) compliance statement.
+
+Your submission reference is: @params("submissionReference")
+
+If we need to contact you, we will use the details you provided.
+
+For security reasons, we have not included the details you submitted.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From HMRC Venture Capital team
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
