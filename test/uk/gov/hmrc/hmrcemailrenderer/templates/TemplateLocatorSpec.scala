@@ -449,6 +449,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "vat652_code",
         "venture_capital_confirmation",
         "venture_capital_code",
+        "eis_confirmation",
+        "eis_code",
         "trusts_report_code",
         "trusts_report_confirmation",
         "trusts_request_code",

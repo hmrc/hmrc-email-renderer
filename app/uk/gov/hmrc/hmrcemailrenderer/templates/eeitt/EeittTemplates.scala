@@ -1924,6 +1924,25 @@ object EeittTemplates {
       plainTemplate = txt.rndClaimCode.f,
       htmlTemplate = html.rndClaimCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "eis_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has your EIS1 compliance statement",
+      plainTemplate = txt.eisConfirmation.f,
+      htmlTemplate = html.eisConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "eis_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Submit an Enterprise Investment Scheme compliance statement (EIS1) to HMRC",
+      plainTemplate = txt.eisCode.f,
+      htmlTemplate = html.eisCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
