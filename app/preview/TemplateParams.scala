@@ -3272,6 +3272,46 @@ object TemplateParams3 {
     ),
     "eis_code" -> Map(
       "confirmationCode" -> "HGDY"
+    ),
+    "face_to_face_payment_email_successful_cy" -> Map(
+      "totalAmountInPence"     -> "100000",
+      "transactionReference"   -> "4012637",
+      "cardType"               -> "Visa Debit",
+      "cardNumber"             -> "**** **** **** 1234",
+      "dateOfPayment"          -> "31 December 2021",
+      "applicationId"          -> "A0000000031010",
+      "panSequence"            -> "56",
+      "merchantId"             -> "***2710",
+      "terminalId"             -> "***2074",
+      "cardVerificationMethod" -> "PIN verified",
+      "authorisation"          -> "D12345",
+      "transactionSource"      -> "Chip and PIN",
+      "time"                   -> "5:30pm",
+      "transactionType"        -> "Payment",
+      "taxType"                -> "Self Assessment",
+      "amountInPence"          -> "192",
+      "transactionFeeInPence"  -> "100",
+      "transactionNumber"      -> "1234567890K"
+    ),
+    "face_to_face_payment_email_unsuccessful_cy" -> Map(
+      "totalAmountInPence"     -> "100000",
+      "transactionReference"   -> "4012637",
+      "cardType"               -> "Visa Debit",
+      "cardNumber"             -> "**** **** **** 1234",
+      "dateOfPayment"          -> "31 December 2021",
+      "applicationId"          -> "A0000000031010",
+      "panSequence"            -> "56",
+      "merchantId"             -> "***2710",
+      "terminalId"             -> "***2074",
+      "cardVerificationMethod" -> "PIN verified",
+      "authorisation"          -> "Declined",
+      "transactionSource"      -> "Chip and PIN",
+      "time"                   -> "5:30pm",
+      "transactionType"        -> "Payment",
+      "taxType"                -> "Self Assessment",
+      "amountInPence"          -> "192",
+      "transactionFeeInPence"  -> "100",
+      "transactionNumber"      -> "1234567890K"
     )
   )
 }
