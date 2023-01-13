@@ -887,6 +887,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "telephone_payments_service",
         "face_to_face_payment_email_successful",
         "face_to_face_payment_email_unsuccessful",
+        "face_to_face_payment_email_successful_cy",
+        "face_to_face_payment_email_unsuccessful_cy",
         "disabled_undertaking_email_to_lead",
         "disabled_undertaking_email_to_be"
       )
