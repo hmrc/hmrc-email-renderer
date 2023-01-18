@@ -43,7 +43,8 @@ class TaxEstimateMessageAlertWelshSpec
         "Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd swm y dreth rydych yn ei thalu yn newid.")
       htmlContent should include(
         "Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:")
-      htmlContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
+      htmlContent should include(
+        "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2022 i 2023)")
       htmlContent should include("newidiodd eich swydd")
       htmlContent should include("newidiodd eich cyflog")
       htmlContent should include("newidiodd eich buddiannau cwmni, megis car cwmni")
