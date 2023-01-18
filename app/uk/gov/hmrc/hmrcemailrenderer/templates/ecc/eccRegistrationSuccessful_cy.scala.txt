@@ -1,0 +1,22 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
+
+@(params: Map[String, Any])@applicationCompleteCY(params, "application complete")
+
+@salutationFullName(params, isWelsh=true)
+
+Erbyn hyn, gallwch wneud y canlynol:
+- defnyddio’r gwasanaeth hwn
+- tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI
+- cael rhif EORI sy’n dechrau gydag XI
+
+Os ydych yn symud nwyddau i Ogledd Iwerddon neu oddi yno
+
+Os nad oes gennych rif EORI yn yr UE, bydd angen i chi gael rhif EORI sy’n dechrau gydag XI.
+
+I gael rhif EORI sy’n dechrau gydag XI, ewch i GOV.UK a chwilio am ‘get an EORI number’.
+
+Oddi wrth CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
