@@ -1,0 +1,42 @@
+@*
+ * Copyright 2022 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+
+@(params: Map[String, Any])
+@template_main(params, s"${applicationCompleteCY(params, "Application Complete")}", isWelsh=true) {
+
+ <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params, isWelsh=true)</p>
+
+ <br />
+ <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud y canlynol:</p>
+
+ <ul style="margin: 0 0 30px; font-size: 19px;">
+  <li style="margin: 0 0 30px; font-size: 19px;">defnyddio’r gwasanaeth hwn</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">cael rhif EORI sy’n dechrau gydag XI</li>
+
+ </ul>
+
+ <h2 style="margin: 0 0 30px; font-size: 19px;">Os ydych yn symud nwyddau i Ogledd Iwerddon neu oddi yno</h2>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">Os nad oes gennych rif EORI yn yr UE, bydd angen i chi gael rhif EORI sy’n dechrau gydag XI.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">I gael rhif EORI sy’n dechrau gydag XI, ewch i GOV.UK a chwilio am ‘get an EORI number’.</p>
+
+ <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
+}

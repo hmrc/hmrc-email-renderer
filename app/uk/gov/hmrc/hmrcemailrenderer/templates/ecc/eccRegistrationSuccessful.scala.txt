@@ -1,0 +1,21 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
+@import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
+
+@(params: Map[String, Any])@applicationComplete(params, "applicationComplete")
+@salutationFullName(params)
+
+You can now:
+- use this service
+- subscribe to other customs services using your EORI number
+- get an EORI number starting with XI
+
+If you move goods to or from Northern Ireland
+
+If you do not have an EU EORI number you will need to get an EORI number starting with XI.
+
+To get an EORI number starting with XI, search ‘get an EORI number’ on GOV.UK.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

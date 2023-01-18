@@ -829,6 +829,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "vat_declaration_confirmation",
         "ecc_subscription_successful",
         "ecc_subscription_successful_cy",
+        "ecc_registration_successful",
+        "ecc_registration_successful_cy",
         "ecc_subscription_not_successful",
         "ecc_subscription_not_successful_cy",
         "ecc_rcm_notifications",

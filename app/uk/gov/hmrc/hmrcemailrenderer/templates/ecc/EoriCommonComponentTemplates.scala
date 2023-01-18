@@ -21,6 +21,24 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.EoriCommonComponent
 
 object EoriCommonComponentTemplates {
+
+  private val registration_success_subject: Map[String, String] => String =
+    _.get("serviceName")
+      .map(name => s"Your subscription to $name and EORI number are ready to use.")
+      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+
+  private val registration_success_subject_cy: Map[String, String] => String =
+    _.get("enrolmentKey")
+      .map {
+        case "HMRC-ATAR-ORG" => "Mae Dyfarniadau Tariffau Uwch a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-GVMS-ORG" => "Mae’r Gwasanaeth Symud Cerbydau Nwyddau a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn y DU a’r rhif EORI yn barod i’w defnyddio"
+        case "HMRC-CTS-ORG"  => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
+        case _               => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
+      }
+      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "ecc_subscription_successful",
@@ -61,6 +79,22 @@ object EoriCommonComponentTemplates {
       subject = "ECC RCM Exception",
       plainTemplate = txt.eccRCMNotifications.f,
       htmlTemplate = html.eccRCMNotifications.f
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "ecc_registration_successful",
+      fromAddress = govUkTeamAddress,
+      service = EoriCommonComponent,
+      subject = registration_success_subject,
+      plainTemplate = txt.eccRegistrationSuccessful.f,
+      htmlTemplate = html.eccRegistrationSuccessful.f
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "ecc_registration_successful_cy",
+      fromAddress = govUkTeamAddressWelsh,
+      service = EoriCommonComponent,
+      subject = registration_success_subject_cy,
+      plainTemplate = txt.eccRegistrationSuccessful_cy.f,
+      htmlTemplate = html.eccRegistrationSuccessful_cy.f
     )
   )
 }
