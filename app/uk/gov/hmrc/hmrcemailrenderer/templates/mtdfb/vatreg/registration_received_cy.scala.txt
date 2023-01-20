@@ -4,7 +4,7 @@ Annwyl @params("name")
 
 Cyfeirnod: @params("ref")
 
-Mae’ch cais wedi dod i law a byddwn yn ysgrifennu atoch gyda phenderfyniad mewn tua 30 diwrnod.
+Mae’ch cais wedi dod i law a byddwn yn ysgrifennu atoch gyda phenderfyniad mewn tua 40 diwrnod.
 
 Dylech aros nes i ni gadarnhau eich cofrestriad TAW cyn i chi gael meddalwedd i ddilyn rheolau’r cynllun ‘Troi Treth yn Ddigidol ar gyfer TAW’.
 

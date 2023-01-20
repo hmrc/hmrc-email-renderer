@@ -4,7 +4,7 @@ Dear @params("name")
 
 Reference number: @params("ref")
 
-We’ve received your application and we will write to you with a decision in about 30 days.
+We’ve received your application and we will write to you with a decision in about 40 days.
 
 You should wait until we confirm your VAT registration before you get software to follow the rules for ‘Making Tax Digital for VAT’.
 
