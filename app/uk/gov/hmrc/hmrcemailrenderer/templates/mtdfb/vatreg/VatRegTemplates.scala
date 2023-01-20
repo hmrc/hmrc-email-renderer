@@ -47,24 +47,6 @@ object VatRegTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
-      templateId = s"${templatePrefix}_registration_received_email",
-      fromAddress = FromAddress.noReply(serviceName),
-      service = MTDfBVatRegistration,
-      subject = subject,
-      plainTemplate = txt.registration_received_email.f,
-      htmlTemplate = html.registration_received_email.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = s"${templatePrefix}_registration_received_email_cy",
-      fromAddress = FromAddress.noReply(serviceName),
-      service = MTDfBVatRegistration,
-      subject = subjectWelsh,
-      plainTemplate = txt.registration_received_email_cy.f,
-      htmlTemplate = html.registration_received_email_cy.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
       templateId = s"${templatePrefix}_registration_received_post",
       fromAddress = FromAddress.noReply(serviceName),
       service = MTDfBVatRegistration,

@@ -2028,19 +2028,11 @@ object TemplateParams2 {
       "name" -> "Joe Bloggs",
       "ref"  -> "VRS 1234 5678 9012"
     ),
-    "mtdfb_vatreg_registration_received_email" -> Map(
-      "name" -> "Joe Bloggs",
-      "ref"  -> "VRS 1234 5678 9012"
-    ),
     "mtdfb_vatreg_registration_received_post" -> Map(
       "name" -> "Joe Bloggs",
       "ref"  -> "VRS 1234 5678 9012"
     ),
     "mtdfb_vatreg_registration_received_cy" -> Map(
-      "name" -> "Joe Bloggs",
-      "ref"  -> "VRS 1234 5678 9012"
-    ),
-    "mtdfb_vatreg_registration_received_email_cy" -> Map(
       "name" -> "Joe Bloggs",
       "ref"  -> "VRS 1234 5678 9012"
     ),

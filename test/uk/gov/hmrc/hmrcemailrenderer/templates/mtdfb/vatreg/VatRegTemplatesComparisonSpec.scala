@@ -21,10 +21,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateCo
 class VatRegTemplatesComparisonSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
   val registrationTemplate = "mtdfb_vatreg_registration_received"
-  val registrationEmailTemplate = "mtdfb_vatreg_registration_received_email"
   val registrationPostTemplate = "mtdfb_vatreg_registration_received_post"
   val registrationTemplateWelsh = "mtdfb_vatreg_registration_received_cy"
-  val registrationEmailTemplateWelsh = "mtdfb_vatreg_registration_received_email_cy"
   val registrationPostTemplateWelsh = "mtdfb_vatreg_registration_received_post_cy"
 
   val testName = "Joe Bloggs"
@@ -42,11 +40,7 @@ class VatRegTemplatesComparisonSpec extends TemplateComparisonSpec with CommonPa
       compareContent(registrationTemplate, params)(templateContent)
     }
   }
-  "the registration received template for users who are emailing attachments" should {
-    "have the same content in Text and HTML formats" in {
-      compareContent(registrationEmailTemplate, params)(templateContent)
-    }
-  }
+
   "the registration received template for users who are posting attachments" should {
     "have the same content in Text and HTML formats" in {
       compareContent(registrationPostTemplate, params)(templateContent)
