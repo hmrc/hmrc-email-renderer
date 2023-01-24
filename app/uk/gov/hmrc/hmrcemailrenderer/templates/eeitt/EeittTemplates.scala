@@ -1943,6 +1943,44 @@ object EeittTemplates {
       plainTemplate = txt.eisCode.f,
       htmlTemplate = html.eisCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "seis_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has your SEIS1 compliance statement",
+      plainTemplate = txt.seisConfirmation.f,
+      htmlTemplate = html.seisConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "seis_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Submit a Seed Enterprise Investment Scheme compliance statement (SEIS1) to HMRC",
+      plainTemplate = txt.seisCode.f,
+      htmlTemplate = html.seisCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ca3822_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You applied for a certificate to confirm an employee will pay National Insurance while working abroad",
+      plainTemplate = txt.ca3822Confirmation.f,
+      htmlTemplate = html.ca3822Confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ca3822_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Apply for a certificate to confirm an employee will pay National Insurance while working abroad (CA3822)",
+      plainTemplate = txt.ca3822Code.f,
+      htmlTemplate = html.ca3822Code.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

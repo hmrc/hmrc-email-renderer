@@ -1,10 +1,10 @@
 @(params: Map[String, Any])
 
-You submitted an Enterprise Investment Scheme (EIS1) compliance statement
+You submitted a Seed Enterprise Investment Scheme (SEIS1) compliance statement
 
 Dear @params("customerName")
 
-We have received your Enterprise Investment Scheme (EIS1) compliance statement.
+We have received your Seed Enterprise Investment Scheme (SEIS1) compliance statement.
 
 Your submission reference is: @params("submissionReference")
 
