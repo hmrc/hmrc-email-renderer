@@ -6,7 +6,7 @@ Dear @params("customerName")
 
 We received your application to confirm an employee will pay National Insurance while working abroad (CA3822).
 
-We aim to write to you within 15 working days to confirm whether the employee will continue to be liable to pay UK National Insurance contributions while working abroad.
+We aim to write to you within 15 working days. We will confirm whether the employee will continue to be liable to pay UK National Insurance contributions while working abroad.
 
 If the employee has continuing liability we will send a certificate to confirm this. We will also send state healthcare cover certificates where relevant.
 
