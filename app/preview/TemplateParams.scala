@@ -224,6 +224,9 @@ object TemplateParams {
     "apiProductionCredentialsRequestExpiryWarning" -> Map(
       "applicationName" -> "Test Application"
     ),
+    "apiNewTermsOfUseInvitation" -> Map(
+      "applicationName" -> "Test Application"
+    ),
     "apiVerifyResponsibleIndividual" -> Map(
       "developerHubLink"          -> exampleLinkWithRandomId,
       "applicationName"           -> "Test Application",
