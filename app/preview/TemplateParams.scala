@@ -224,10 +224,6 @@ object TemplateParams {
     "apiProductionCredentialsRequestExpiryWarning" -> Map(
       "applicationName" -> "Test Application"
     ),
-    "apiNewTermsOfUseInvitation" -> Map(
-      "completeBy"      -> "31 March 2023",
-      "applicationName" -> "Test Application"
-    ),
     "apiVerifyResponsibleIndividual" -> Map(
       "developerHubLink"          -> exampleLinkWithRandomId,
       "applicationName"           -> "Test Application",
@@ -3232,6 +3228,10 @@ object TemplateParams3 {
       "userName"  -> "John Smith",
       "loginDate" -> "Monday 07 November 2022",
       "loginTime" -> "09:17am"
+    ),
+    "apiNewTermsOfUseInvitation" -> Map(
+      "completeBy"      -> "31 March 2023",
+      "applicationName" -> "Test Application"
     ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
