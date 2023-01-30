@@ -1,10 +1,10 @@
 @(params: Map[String, Any])Our terms of use have changed
 
-We have updated our terms of use for @{params("applicationName")} and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices.
+Dear Customer
 
-Sign in to your Developer Hub account to start answering the questions to agree to our terms of use.
+We have updated our terms of use, and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices.
 
-Agree to our terms of use in 60 days to keep using your application.
+Sign in to your Developer Hub account and agree to version 2 of the terms by @{params("completeBy")} to keep using @{params("applicationName")}.
 
 From HMRC Developer Hub
 

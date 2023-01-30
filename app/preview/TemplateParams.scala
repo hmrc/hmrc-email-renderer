@@ -225,6 +225,7 @@ object TemplateParams {
       "applicationName" -> "Test Application"
     ),
     "apiNewTermsOfUseInvitation" -> Map(
+      "completeBy"      -> "31 March 2023",
       "applicationName" -> "Test Application"
     ),
     "apiVerifyResponsibleIndividual" -> Map(

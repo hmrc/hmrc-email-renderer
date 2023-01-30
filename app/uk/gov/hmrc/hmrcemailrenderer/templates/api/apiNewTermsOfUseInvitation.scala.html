@@ -16,8 +16,8 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Our terms of use have changed") {
-<p style="margin: 0 0 30px; font-size: 19px;">We have updated our terms of use for @{params("applicationName")} and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Sign in to your Developer Hub account to start answering the questions to agree to our terms of use.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Agree to our terms of use in 60 days to keep using your application.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We have updated our terms of use, and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Sign in to your Developer Hub account and agree to version 2 of the terms by @{params("completeBy")} to keep using @{params("applicationName")}.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
 }
