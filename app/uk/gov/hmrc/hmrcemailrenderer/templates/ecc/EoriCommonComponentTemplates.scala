@@ -39,20 +39,39 @@ object EoriCommonComponentTemplates {
       }
       .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
 
+
+  private val subscription_success_subject: Map[String, String] => String =
+    _.get("serviceName")
+      .map(name => s"$name is ready to use")
+      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+
+
+  private val subscription_success_subject_cy: Map[String, String] => String =
+    _.get("enrolmentKey")
+      .map {
+        case "HMRC-ATAR-ORG" => "Mae’r Dyfarniadau Tariffau Uwch yn barod i’w defnyddio"
+        case "HMRC-GVMS-ORG" => "Mae’r Gwasanaeth Symud Cerbydau Nwyddau yn barod i’w defnyddio"
+        case "HMRC-CTC-ORG" => "Mae’r System Gludo Gyfrifiadurol Newydd yn barod i’w defnyddio"
+        case "HMRC-SS-ORG" => "Mae’r Gwasanaeth Diogelwch yn GB yn barod i’w defnyddio"
+        case "HMRC-CTS-ORG" => "Mae’r Gwasanaethau Masnachwyr Tollau yn barod i’w defnyddio"
+        case _ => "Mae’r Gwasanaeth Datganiadau Tollau yn barod i’w defnyddio"
+      }
+      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+
   val templates = Seq(
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "ecc_subscription_successful",
       fromAddress = govUkTeamAddress,
       service = EoriCommonComponent,
-      subject = "HMRC approved your service application",
+      subject = subscription_success_subject,
       plainTemplate = txt.eccSubscribeSuccessful.f,
       htmlTemplate = html.eccSubscribeSuccessful.f
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "ecc_subscription_successful_cy",
       fromAddress = govUkTeamAddressWelsh,
       service = EoriCommonComponent,
-      subject = "Mae CThEM wedi cymeradwyo’ch cais i’r gwasanaeth",
+      subject = subscription_success_subject_cy,
       plainTemplate = txt.eccSubscribeSuccessful_cy.f,
       htmlTemplate = html.eccSubscribeSuccessful_cy.f
     ),

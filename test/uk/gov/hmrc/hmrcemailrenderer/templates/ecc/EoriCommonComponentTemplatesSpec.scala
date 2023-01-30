@@ -29,6 +29,7 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     "recipientOrgName"       -> "JJ Components",
     "serviceName"            -> "Advance Tariff Rulings",
     "completionDate"         -> "22 March 2019",
+    "enrolmentKey"           -> "HMRC-ATAR-ORG",
   )
 
   private val registrationParams = commonParameters + (

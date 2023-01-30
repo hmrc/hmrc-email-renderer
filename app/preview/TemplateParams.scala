@@ -2396,15 +2396,15 @@ object TemplateParams2 {
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "enrolmentKey"           -> "HMRC-ATAR-ORG",
+      "serviceContent"         -> "You can now apply for an Advance Tariff Ruling."
     ),
-    "ecc_subscription_successful_ey" -> Map(
+    "ecc_subscription_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "enrolmentKey"           -> "HMRC-ATAR-ORG",
+      "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
     ),
     "ecc_subscription_not_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",

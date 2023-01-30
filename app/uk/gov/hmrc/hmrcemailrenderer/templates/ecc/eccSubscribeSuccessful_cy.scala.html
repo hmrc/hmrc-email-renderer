@@ -16,24 +16,30 @@
 
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
-@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
-
+@import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceNameCY
 @(params: Map[String, Any])
-@template_main(params, s"Rydych wedi llwyddo i wneud cais i gael mynediad at y gwasanaeth o’r enw ${serviceName(params, "gwasanaeth")}", isWelsh=true) {
+
+@check_the_service = @{
+ params.getOrElse("enrolmentKey", "") match {
+  case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch.</p>
+  case "HMRC-GVMS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch gael cyfeirnod symud nwyddau (GMR).</p>
+  case "HMRC-CTC-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch gyflwyno datganiadau ‘union transit’ trwy ddefnyddio’r System Gludo Gyfrifiadurol Newydd (NCTS).</p>
+  case "HMRC-SS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud datganiadau cryno wrth gyrraedd.</p>
+  case "HMRC-CTS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud y canlynol: <ul style="margin: 0 0 30px; font-size: 19px;">
+  <li style="margin: 0 0 30px; font-size: 19px;">gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio</li>
+  </ul></p>
+  case _ => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch ddefnyddio’r Gwasanaeth Datganiadau Tollau.</p>
+ }
+}
+
+@template_main(params, s"${serviceNameCY(params, "gwasanaeth")}", isWelsh=true) {
 
 <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params, isWelsh=true)</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Mae eich cais ar gyfer y gwasanaeth @serviceName(params) @forOrgName("dros", params) @onCompletionDate("ar", params) wedi bod yn llwyddiannus.</p>
+ @check_the_service
 
-<br />
-<h2 style="margin: 0 0 30px; font-size: 24px;">Os oes angen help arnoch</h2>
-
-<p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEM ar 0300 200 1900, rhwng 08:00 a 16:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc).</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">Gallwch hefyd ddod o hyd i ragor o wybodaeth am y pwnc hwn ar GOV.UK.</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.</p>
-
-<h2 style="margin: 0 0 30px; font-size: 24px;">Oddi wrth Dîm Cymorth Ymrestru CThEM</h2>
+ <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
 
 }
