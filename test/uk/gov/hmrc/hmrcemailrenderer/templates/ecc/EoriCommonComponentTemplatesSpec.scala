@@ -51,6 +51,26 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
       compareContent("ecc_subscription_successful", fullParams("HMRC-CTS-ORG"))(eoriCommonComponents)
     }
 
+    "include subscription successful content HMRC-GVMS-ORG" in {
+      compareContent("ecc_subscription_successful", fullParams("HMRC-GVMS-ORG"))(eoriCommonComponents)
+    }
+    "include subscription successful content HMRC-CTC-ORG" in {
+      compareContent("ecc_subscription_successful", fullParams("HMRC-CTC-ORG"))(eoriCommonComponents)
+    }
+    "include subscription successful content HMRC-SS-ORG" in {
+      compareContent("ecc_subscription_successful", fullParams("HMRC-SS-ORG"))(eoriCommonComponents)
+    }
+
+    "include subscription successful content HMRC-CTS-ORG in welsh" in {
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-CTS-ORG"), isWelsh = true)(eoriCommonComponents)
+    }
+    "include subscription successful content HMRC-SS-ORG in welsh" in {
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-SS-ORG"), isWelsh = true)(eoriCommonComponents)
+    }
+    "include subscription successful content HMRC-CTC-ORG in welsh" in {
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-CTC-ORG"), isWelsh = true)(eoriCommonComponents)
+    }
+
     "include subscription successful content in welsh" in {
       compareContent("ecc_subscription_successful_cy", fullParams("HMRC-GVMS-ORG"), isWelsh = true)(eoriCommonComponents)
     }

@@ -11,9 +11,9 @@
        case "HMRC-CTC-ORG" => "Erbyn hyn, gallwch gyflwyno datganiadau ‘union transit’ trwy ddefnyddio’r System Gludo Gyfrifiadurol Newydd (NCTS)."
        case "HMRC-SS-ORG" => "Erbyn hyn, gallwch wneud datganiadau cryno wrth gyrraedd."
        case "HMRC-CTS-ORG" => "Erbyn hyn, gallwch wneud y canlynol:" + "\n" +
-                                      "- gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)." + "\n" +
-                                      "- anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF." + "\n" +
-                                      "- rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio."
+                                      " - gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)" + "\n" +
+                                      " - anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF" + "\n" +
+                                      " - rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio"
 
        case _ => "Erbyn hyn, gallwch ddefnyddio’r Gwasanaeth Datganiadau Tollau."
       }
