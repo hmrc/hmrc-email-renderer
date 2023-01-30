@@ -3328,6 +3328,11 @@ object TemplateParams3 {
       "amountInPence"          -> "192",
       "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
+    ),
+    "ecl_registration_submitted" -> Map(
+      "name"                     -> "John Doe",
+      "eclRegistrationReference" -> "XMECL0000000001",
+      "dateDue"                  -> "30 September 2023"
     )
   )
 }
