@@ -24,13 +24,17 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
   private def eoriCommonComponents(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(ecc.EoriCommonComponentTemplates.templates)
 
-  private val fullParams = commonParameters + (
-    "recipientName_FullName" -> "Jane Jones",
-    "recipientOrgName"       -> "JJ Components",
-    "serviceName"            -> "Advance Tariff Rulings",
-    "completionDate"         -> "22 March 2019",
-    "enrolmentKey"           -> "HMRC-ATAR-ORG",
-  )
+  private def fullParams(enrolmentKey: String) = {
+    val fullParams = commonParameters + (
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName" -> "JJ Components",
+      "serviceName" -> "Advance Tariff Rulings",
+      "completionDate" -> "22 March 2019",
+      "enrolmentKey" -> enrolmentKey,
+    )
+    fullParams
+  }
+
 
   private val registrationParams = commonParameters + (
     "recipientName_FullName" -> "Jane Jones",
@@ -40,11 +44,15 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
   "Templates for which the text and html content are identical" should {
 
     "include subscription successful content" in {
-      compareContent("ecc_subscription_successful", fullParams)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful", fullParams("HMRC-ATAR-ORG"))(eoriCommonComponents)
+    }
+
+    "include subscription successful content HMRC-CTS-ORG" in {
+      compareContent("ecc_subscription_successful", fullParams("HMRC-CTS-ORG"))(eoriCommonComponents)
     }
 
     "include subscription successful content in welsh" in {
-      compareContent("ecc_subscription_successful_cy", fullParams, isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-GVMS-ORG"), isWelsh = true)(eoriCommonComponents)
     }
 
     "include registration successful content" in {
@@ -56,11 +64,11 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     }
 
     "include subscription not successful content" in {
-      compareContent("ecc_subscription_not_successful", fullParams)(eoriCommonComponents)
+      compareContent("ecc_subscription_not_successful", fullParams("HMRC-CTC-ORG"))(eoriCommonComponents)
     }
 
     "include subscription not successful content in welsh" in {
-      compareContent("ecc_subscription_not_successful_cy", fullParams, isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_subscription_not_successful_cy", fullParams("HMRC-SS-ORG"), isWelsh = true)(eoriCommonComponents)
     }
 
   }
