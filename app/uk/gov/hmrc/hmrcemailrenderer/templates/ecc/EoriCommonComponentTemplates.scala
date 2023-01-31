@@ -25,7 +25,7 @@ object EoriCommonComponentTemplates {
   private val registration_success_subject: Map[String, String] => String =
     _.get("serviceName")
       .map(name => s"Your subscription to $name and EORI number are ready to use.")
-      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+      .getOrElse("")
 
   private val registration_success_subject_cy: Map[String, String] => String =
     _.get("enrolmentKey")
@@ -37,12 +37,12 @@ object EoriCommonComponentTemplates {
         case "HMRC-CTS-ORG"  => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
         case _               => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
       }
-      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+      .getOrElse("")
 
   private val subscription_success_subject: Map[String, String] => String =
     _.get("serviceName")
       .map(name => s"$name is ready to use")
-      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+      .getOrElse("")
 
   private val subscription_success_subject_cy: Map[String, String] => String =
     _.get("enrolmentKey")
@@ -54,7 +54,7 @@ object EoriCommonComponentTemplates {
         case "HMRC-CTS-ORG"  => "Mae’r Gwasanaethau Masnachwyr Tollau yn barod i’w defnyddio"
         case _               => "Mae’r Gwasanaeth Datganiadau Tollau yn barod i’w defnyddio"
       }
-      .getOrElse(throw new RuntimeException("Missing parameter serviceName"))
+      .getOrElse("")
 
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
