@@ -15,7 +15,7 @@ When you complete your yearly return, you will need to tell us about:
 
     - the relevant accounting period for your organisation
     - your UK revenue for the relevant accounting period
-    - how long you carried out AML-regulated activities for during the financial year
+    - how long you carried out Anti-Money Laundering (AML) regulated activities during the financial year
     - the name, role, and contact details of the person in your organisation who is completing the return
 
 Why you got this email
@@ -24,6 +24,6 @@ This email address is registered as the email address we can use to contact you 
 
 Do not respond to this email.
 
-From HMRC Economic Crime Levy Team
+From HMRC Economic Crime Levy team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
