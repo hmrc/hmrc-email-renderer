@@ -1,3 +1,3 @@
-@(params: Map[String, Any])
+@(params: Map[String, Any], isWelsh: Boolean = false )
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
-@salutationFrom(params)
+@salutationFrom(params, isWelsh)

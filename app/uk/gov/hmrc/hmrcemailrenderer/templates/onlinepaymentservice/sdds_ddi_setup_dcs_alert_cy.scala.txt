@@ -1,0 +1,11 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
+@(params: Map[String, Any])Debyd Uniongyrchol @regimeName(params): cadarnhad o sefydlu 
+
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params, true)
+
+Mae’ch Debyd Uniongyrchol wedi’i sefydlu.
+
+Ewch i fewnflwch diogel eich cyfrif treth busnes i wirio bod manylion eich cyfrif yn gywir.
+
+Oddi wrth dîm Debyd Uniongyrchol CThEF
