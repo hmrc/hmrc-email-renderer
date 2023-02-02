@@ -180,6 +180,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "apiApplicationToBeDeletedNotification",
         "apiProductionCredentialsRequestExpired",
         "apiProductionCredentialsRequestExpiryWarning",
+        "apiNewTermsOfUseInvitation",
         "apiVerifyResponsibleIndividual",
         "apiVerifyResponsibleIndividualUpdate",
         "apiResponsibleIndividualReminderToAdmin",
