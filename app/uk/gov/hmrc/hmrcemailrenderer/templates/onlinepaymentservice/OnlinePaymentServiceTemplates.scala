@@ -242,7 +242,6 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
-
     // END Direct Debit generic SDDS templates
     MessageTemplate.createWithDynamicSubject(
       templateId = "passengers_payment_confirmation",
