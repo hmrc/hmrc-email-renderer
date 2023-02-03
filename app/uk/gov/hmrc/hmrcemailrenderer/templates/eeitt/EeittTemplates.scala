@@ -1986,7 +1986,7 @@ object EeittTemplates {
       templateId = "ho5_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "You applied for a certificate to confirm an employee will pay National Insurance while working abroad",
+      subject = "HMRC has received your RDCO return",
       plainTemplate = txt.ho5Confirmation.f,
       htmlTemplate = html.ho5Confirmation.f,
       priority = Some(MessagePriority.Standard)
