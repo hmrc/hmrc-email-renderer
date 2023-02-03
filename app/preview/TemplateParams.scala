@@ -2396,15 +2396,15 @@ object TemplateParams2 {
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "enrolmentKey"           -> "HMRC-ATAR-ORG",
+      "serviceContent"         -> "You can now apply for an Advance Tariff Ruling."
     ),
-    "ecc_subscription_successful_ey" -> Map(
+    "ecc_subscription_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "enrolmentKey"           -> "HMRC-ATAR-ORG",
+      "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
     ),
     "ecc_subscription_not_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
@@ -3214,6 +3214,36 @@ object TemplateParams2 {
 }
 object TemplateParams3 {
   val exampleParams = Map(
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-GVMS-ORG",
+      "serviceContent"         -> "Mae’r Gwasanaeth Symud Cerbydau Nwyddau yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-CTC-ORG",
+      "serviceContent"         -> "Mae’r System Gludo Gyfrifiadurol Newydd yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-SS-ORG",
+      "serviceContent"         -> "Mae’r Gwasanaeth Diogelwch yn GB yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-CTS-ORG",
+      "serviceContent"         -> "Mae’r Gwasanaethau Masnachwyr Tollau yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-CDS-ORG",
+      "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
+    ),
     "disabled_undertaking_email_to_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
