@@ -1999,6 +1999,6 @@ object EeittTemplates {
       plainTemplate = txt.ho5Code.f,
       htmlTemplate = html.ho5Code.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 }
