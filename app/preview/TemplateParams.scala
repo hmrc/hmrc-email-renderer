@@ -3294,7 +3294,7 @@ object TemplateParams3 {
       "confirmationCode" -> "HGDY"
     ),
     "ho5_confirmation" -> Map(
-      "customerName" -> "Hugh Mann",
+      "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "ho5_code" -> Map(

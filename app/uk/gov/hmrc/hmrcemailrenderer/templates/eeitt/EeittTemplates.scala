@@ -1995,8 +1995,7 @@ object EeittTemplates {
       templateId = "ho5_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject =
-        "Confirm your email address - Submit a return as a registered dealer in controlled oils (RDCO)",
+      subject = "Confirm your email address - Submit a return as a registered dealer in controlled oils (RDCO)",
       plainTemplate = txt.ho5Code.f,
       htmlTemplate = html.ho5Code.f,
       priority = Some(MessagePriority.Urgent)
