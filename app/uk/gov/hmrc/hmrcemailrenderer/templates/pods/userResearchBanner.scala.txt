@@ -2,7 +2,7 @@
 
 Managing Pension Schemes - user research
 
-The following user has indicated that they would like to take part in pensions schemes user research.
+A user has indicated they would like to take part in pensions schemes user research.
 
 Name: @{params("psaName").toString}
 
