@@ -1,0 +1,12 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
+@(params: Map[String, Any])Debyd Uniongyrchol @regimeName(params): wedi’i ganslo
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params, true)
+
+Mae’ch Debyd Uniongyrchol wedi’i ganslo.
+
+Rydym wedi anfon neges ddiogel i fewnflwch eich cyfrif treth busnes gyda manylion llawn.
+
+Gwnewch yn siŵr bod eich bil @regimeName(params) yn dod o dan ddull talu arall.
+
+Oddi wrth dîm Debyd Uniongyrchol CThEF

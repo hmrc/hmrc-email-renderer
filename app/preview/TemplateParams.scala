@@ -1861,31 +1861,6 @@ object TemplateParams2 {
     "ddi_08_alert_aa" -> Map(
       "recipientName_line1" -> "Colm Cavanagh"
     ),
-    "sdds_ddi_setup_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_amended_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_cancelled_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_reminder_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_unpaid_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
     "dd_email_verifcation" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
@@ -3362,6 +3337,56 @@ object TemplateParams3 {
       "amountInPence"          -> "192",
       "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
+    ),
+    "sdds_ddi_setup_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Setup",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_setup_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Setup(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_amended_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Amended",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_amended_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Amended(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_cancelled_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Cancelled",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_cancelled_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Cancelled(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_reminder_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Reminder",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_reminder_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Reminder(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_unpaid_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Unpaid",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_unpaid_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Unpaid(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
     ),
     "ecl_registration_submitted" -> Map(
       "name"                     -> "John Doe",

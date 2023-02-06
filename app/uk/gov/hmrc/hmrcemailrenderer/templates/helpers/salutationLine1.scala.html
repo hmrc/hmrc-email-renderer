@@ -14,8 +14,8 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])
+@(params: Map[String, Any], isWelsh: Boolean = false)
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">
-    @salutationFrom(params)
+    @salutationFrom(params, isWelsh)
 </p>

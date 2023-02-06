@@ -1,0 +1,10 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
+@(params: Map[String, Any])Debyd Uniongyrchol @regimeName(params): cadarnhad o fanylion
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params, true)
+
+Mae’ch Debyd Uniongyrchol wedi’i ddiwygio.
+
+Rydym wedi anfon neges ddiogel i fewnflwch eich cyfrif treth busnes gyda manylion llawn.
+
+Oddi wrth dîm Debyd Uniongyrchol CThEF
