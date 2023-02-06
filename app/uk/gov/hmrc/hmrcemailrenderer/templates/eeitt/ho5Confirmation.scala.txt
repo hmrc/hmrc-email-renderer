@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+We have received your return as a registered dealer in controlled oils
+
+Dear @params("customerName")
+
+We confirm we have received your return as a registered dealer in controlled oils.
+
+Your reference number: @params("submissionReference")
+
+Your return will now be processed.
+
+If we need to discuss your return, we will get in touch using the contact information we hold.
+
+Keep your details up-to-date
+
+You can email HMRC at morcexciseeast@@hmrc.gov.uk to update your details.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

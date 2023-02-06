@@ -1981,6 +1981,24 @@ object EeittTemplates {
       plainTemplate = txt.ca3822Code.f,
       htmlTemplate = html.ca3822Code.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ho5_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has received your RDCO return",
+      plainTemplate = txt.ho5Confirmation.f,
+      htmlTemplate = html.ho5Confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "ho5_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Submit a return as a registered dealer in controlled oils (RDCO)",
+      plainTemplate = txt.ho5Code.f,
+      htmlTemplate = html.ho5Code.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
