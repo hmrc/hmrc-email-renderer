@@ -1,0 +1,56 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Economic Crime Levy registration received") {
+
+    <div style="margin: 0 0 30px; font-size: 19px;">
+        <p>Dear @params("name")</p>
+
+        <p>We have received your registration for the Economic Crime Levy (ECL).</p>
+
+        <p>
+            Your ECL reference number is @params("eclRegistrationReference").
+        </p>
+
+        <p style="font-weight: bold;">What happens next</p>
+
+        <p>
+            You will need to complete a return and pay the levy on a yearly basis.
+            The next deadline for submitting a return and making a payment is @params("dateDue").
+            You will be charged interest if you make a late payment.
+        </p>
+
+        <p>When you complete your yearly return, you will need to tell us about:</p>
+
+        <ul style="margin: 0 0 30px; font-size: 19px;">
+            <li>the relevant accounting period for your organisation</li>
+            <li>your UK revenue for the relevant accounting period</li>
+            <li>how long you carried out Anti-Money Laundering (AML) regulated activities during the financial year</li>
+            <li>the name, role, and contact details of the person in your organisation who is completing the return</li>
+        </ul>
+
+        <p style="font-weight: bold;">Why you got this email</p>
+
+        <p>This email address is registered as the email address we can use to contact you about the ECL.</p>
+
+        <p>Do not respond to this email.</p>
+
+        <p>From HMRC Economic Crime Levy team</p>
+    </div>
+
+}

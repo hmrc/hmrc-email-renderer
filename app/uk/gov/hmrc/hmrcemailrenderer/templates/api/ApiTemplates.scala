@@ -220,6 +220,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiNewTermsOfUseInvitation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Agree to our new terms of use",
+      plainTemplate = txt.apiNewTermsOfUseInvitation.f,
+      htmlTemplate = html.apiNewTermsOfUseInvitation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "ppnsCallbackUrlChangedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,

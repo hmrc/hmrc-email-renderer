@@ -151,6 +151,12 @@ class TemplatePrioritiesISpec
           "supportUrl"      -> "supportUrl"
         )),
       (
+        "apiNewTermsOfUseInvitation",
+        Map(
+          "completeBy"      -> "31 March 2023",
+          "applicationName" -> "applicationName"
+        )),
+      (
         "apiVerifyResponsibleIndividual",
         Map(
           "applicationName"           -> "applicationName",

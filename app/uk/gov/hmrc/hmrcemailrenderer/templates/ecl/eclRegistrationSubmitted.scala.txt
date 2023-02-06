@@ -1,0 +1,29 @@
+@(params: Map[String, Any])
+Economic Crime Levy registration received
+
+Dear @params("name")
+
+We have received your registration for the Economic Crime Levy (ECL).
+
+Your ECL reference number is @params("eclRegistrationReference").
+
+What happens next
+
+You will need to complete a return and pay the levy on a yearly basis. The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+
+When you complete your yearly return, you will need to tell us about:
+
+    - the relevant accounting period for your organisation
+    - your UK revenue for the relevant accounting period
+    - how long you carried out Anti-Money Laundering (AML) regulated activities during the financial year
+    - the name, role, and contact details of the person in your organisation who is completing the return
+
+Why you got this email
+
+This email address is registered as the email address we can use to contact you about the ECL.
+
+Do not respond to this email.
+
+From HMRC Economic Crime Levy team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

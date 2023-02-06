@@ -79,6 +79,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
@@ -153,7 +154,8 @@ trait TemplateLocator {
       "OSS"                   -> OSSTemplates.templates,
       "HEC"                   -> HecTemplates.templates,
       "EU Subsidy"            -> EUSubsidyTemplates.templates,
-      "ITSA"                  -> ItsaTemplates.templates
+      "ITSA"                  -> ItsaTemplates.templates,
+      "ECL"                   -> EclTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

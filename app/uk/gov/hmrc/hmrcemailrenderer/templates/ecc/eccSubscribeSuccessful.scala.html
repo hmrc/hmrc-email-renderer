@@ -18,22 +18,29 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
 
+
 @(params: Map[String, Any])
-@template_main(params, s"You successfully applied to get access to ${serviceName(params, "a service")}") {
+@check_the_service = @{
+      params.getOrElse("enrolmentKey", "") match {
+       case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now apply for an Advance Tariff Ruling.</p>
+       case "HMRC-GVMS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now get a goods movement reference (GMR).</p>
+       case "HMRC-CTC-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now submit union transit declarations through NCTS.</p>
+       case "HMRC-SS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now make entry summary declarations.</p>
+       case "HMRC-CTS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now:<ul style="margin: 0 0 30px; font-size: 19px;">
+       <li style="margin: 0 0 30px; font-size: 19px;">apply for repayment of import duty and VAT (CHIEF)</li>
+       <li style="margin: 0 0 30px; font-size: 19px;">send documents for a customs check for declarations made in CHIEF</li>
+       <li style="margin: 0 0 30px; font-size: 19px;">tell HMRC about an underpayment of Customs Duty or import VAT</li>
+       </ul></p>
+       case _ => <p style="margin: 0 0 30px; font-size: 19px;">You can now use the Customs Declaration Service.</p>
+      }
+}
+@template_main(params,  s"${serviceName(params, "a service")}") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your @serviceName(params) application @forOrgName("for", params) @onCompletionDate("on", params)has been successful.</p>
+ @check_the_service
 
-<br />
-<h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>
+ <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Phone the enrolment support team on 0300 322 7067. This is available 8am to 6pm, Monday to Friday (closed bank holidays).</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">You can also find more information about this subject on GOV.UK.</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">For security reasons we have not included a link with this email.</p>
-
-<h2 style="margin: 0 0 30px; font-size: 24px;">From HMRC Enrolment Support Team</h2>
 
 }
