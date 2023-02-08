@@ -201,6 +201,15 @@ object PodsTemplates {
       plainTemplate = txt.psaAmended.f,
       htmlTemplate = html.psaAmended.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "pods_user_research_banner",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Managing Pension Schemes - user research",
+      plainTemplate = txt.userResearchBanner.f,
+      htmlTemplate = html.userResearchBanner.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

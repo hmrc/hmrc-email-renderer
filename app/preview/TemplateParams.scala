@@ -2020,6 +2020,12 @@ object TemplateParams2 {
       "schemeName"  -> "Some Pension Scheme",
       "expiryDate"  -> "20 July 1969"
     ),
+    "pods_user_research_banner" -> Map(
+      "psaName"    -> "Nigel Robert Smith",
+      "comOrgName" -> "CompanyTestName",
+      "psaId"      -> "1234567890",
+      "psaEmail"   -> "nigel@test.com"
+    ),
     "parcels_registration_confirmation" -> Map(
       "name"            -> "Joe Bloggs",
       "referenceNumber" -> "IM123456789A"
