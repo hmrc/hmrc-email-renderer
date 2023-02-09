@@ -2320,8 +2320,8 @@ object TemplateParams2 {
     ),
     "pods_event_report_submitted" -> Map(
       "schemeName"       -> "Smith Harper pension scheme",
-      "accountingPeriod" -> "1 April to 30 June 2020",
-      "dateSubmitted"    -> "2 July 2020 at 8:20pm",
+      "accountingPeriod" -> "2021-2022",
+      "dateSubmitted"    -> "5 January 2023 at 8:20pm",
       "hmrcEmail"        -> "pensions.administration@hmrc.gov.uk",
       "psaName"          -> "Jane Doe"
     ),
