@@ -7,7 +7,7 @@ Dear @{params("psaName").toString}
 This email confirms your Event Report submission:
 
 Scheme: @{params("schemeName").toString}
-Tax year: @{params("accountingPeriod").toString}
+Tax year: @{params("taxYear").toString}
 Date submitted: @{params("dateSubmitted").toString}
 
 What to do next
