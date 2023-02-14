@@ -1515,7 +1515,7 @@ object EeittTemplates {
       templateId = "nipbe_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "You told HMRC about a Northern Ireland business establishment",
+      subject = "You told HMRC about a specific purpose for an EORI number starting XI",
       plainTemplate = txt.nipbeConfirmation.f,
       htmlTemplate = html.nipbeConfirmation.f,
       priority = Some(MessagePriority.Standard)
