@@ -1,12 +1,10 @@
 @(params: Map[String, Any])
 
-We received evidence of your permanent business establishment
+You told us you are using an EORI number starting XI
 
 Dear @params("customerName")
 
-We will email within 10 working days to confirm if we have validated your Northern Ireland address using your evidence.
-
-If we do not accept this, the email will explain what you can do next.
+We will email you within 10 working days to confirm your records have been updated.
 
 Your submission reference is: @params("submissionReference")
 
