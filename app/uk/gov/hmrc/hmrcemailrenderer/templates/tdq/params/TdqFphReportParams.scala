@@ -20,55 +20,22 @@ final case class TdqFphReportParams(
   developerName: String,
   applicationName: String,
   applicationId: String,
-  fromDate: String,
-  toDate: String,
   month: String,
   year: Int,
-  status: Status,
-  regimeShortForm: String,
-  regimeLongForm: String,
-  allHeadersMissingPercentage: Int,
-  invalidConnectionMethodPercentage: Int,
-  allHeadersMissingCount: Int,
-  invalidConnectionMethodCount: Int,
-  relatesToMultipleVersions: Boolean,
-  extraDetails: Option[ValidConnectionMethodBase64EncodedDetails],
-  hasOtherConnectionMethods: Boolean
+  status: Status
 ) {
-
-  def hasAllHeadersMissing: Boolean = allHeadersMissingPercentage > 0
-
-  def hasInvalidConnectionMethod: Boolean = invalidConnectionMethodPercentage > 0
-
-  def hasWarnings: Boolean = extraDetails.exists(_.headerValidations.exists(_.warnings.nonEmpty))
-
-  def hasErrors: Boolean = extraDetails.exists(_.headerValidations.exists(_.errors.nonEmpty))
-
   def statusContents: Seq[String] = status.contents(applicationName, month, year)
-
 }
 
 object TdqFphReportParams {
 
   def apply(params: Map[String, Any]): TdqFphReportParams =
     TdqFphReportParams(
-      params("developerName").toString,
-      params("applicationName").toString,
-      params("applicationId").toString,
-      params("fromDate").toString,
-      params("toDate").toString,
-      params("month").toString,
-      params("year").toString.toInt,
-      Status.forName(params("status").toString),
-      params("regimeShortForm").toString,
-      params("regimeLongForm").toString,
-      params.get("allHeadersMissingPercentage").fold(0)(_.toString.toInt),
-      params.get("invalidConnectionMethodPercentage").fold(0)(_.toString.toInt),
-      params.get("allHeadersMissingCount").fold(0)(_.toString.toInt),
-      params.get("invalidConnectionMethodCount").fold(0)(_.toString.toInt),
-      params.get("relatesToMultipleVersions").fold(false)(_.toString.toBoolean),
-      params.get("extraDetails").map(details => ValidConnectionMethodBase64EncodedDetails.parse(details.toString)),
-      params.get("hasOtherConnectionMethods").fold(false)(_.toString.toBoolean)
+      developerName = params("developerName").toString,
+      applicationName = params("applicationName").toString,
+      applicationId = params("applicationId").toString,
+      month = params("month").toString,
+      year = params("year").toString.toInt,
+      status = Status.forName(params("status").toString)
     )
-
 }
