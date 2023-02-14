@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Managing Pension Schemes - user research
+
+A user has indicated they would like to take part in pensions schemes user research.
+
+Name: @{params("psaName").toString}
+
+Company/organisation name: @{params("comOrgName").toString}
+
+PSA ID: @{params("psaId").toString}
+
+Email: @{params("psaEmail").toString}
+
+From HMRC Pension Schemes Services

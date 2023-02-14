@@ -3,21 +3,25 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
 
-@(params: Map[String, Any])You successfully applied to get access to @serviceName(params, "a service")
+@(params: Map[String, Any])@serviceName(params, "a service")
+@check_the_service =@{
+      params.getOrElse("enrolmentKey", "") match {
+       case "HMRC-ATAR-ORG" => "You can now apply for an Advance Tariff Ruling."
+       case "HMRC-GVMS-ORG" => "You can now get a goods movement reference (GMR)."
+       case "HMRC-CTC-ORG" => "You can now submit union transit declarations through NCTS."
+       case "HMRC-SS-ORG" => "You can now make entry summary declarations."
+       case "HMRC-CTS-ORG" => "You can now:" + "\n" +
+                                      "- apply for repayment of import duty and VAT (CHIEF)" + "\n" +
+                                      "- send documents for a customs check for declarations made in CHIEF" + "\n" +
+                                      "- tell HMRC about an underpayment of Customs Duty or import VAT"
 
+       case _ => "You can now use the Customs Declaration Service."
+      }
+}
 @salutationFullName(params)
 
-Your @serviceName(params) application @forOrgName("for", params) @onCompletionDate("on", params)has been successful.
+@check_the_service
 
-
-If you need help
-
-Phone the enrolment support team on 0300 322 7067. This is available 8am to 6pm, Monday to Friday (closed bank holidays).
-
-You can also find more information about this subject on GOV.UK.
-
-For security reasons we have not included a link with this email.
-
-From HMRC Enrolment Support Team
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -118,4 +118,5 @@ object ServiceIdentifier {
   case object OSS extends ServiceIdentifier { override val name = "oss" }
   case object HEC extends ServiceIdentifier { override val name = "hec" }
   case object EUSubsidy extends ServiceIdentifier { override val name = "euSubsidy" }
+  case object EconomicCrimeLevy extends ServiceIdentifier { override val name = "ecl" }
 }

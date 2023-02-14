@@ -1,0 +1,10 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.SddsTemplateParameters.regimeName
+@(params: Map[String, Any])@regimeName(params) Direct Debit: payment not collected
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params, true)
+
+Nid yw’ch taliad Debyd Uniongyrchol wedi’i gasglu. Rydym wedi anfon neges ddiogel i fewnflwch eich cyfrif treth busnes gyda manylion llawn.
+
+Make sure you pay your @regimeName(params) drwy ddull talu arall. Gallwch dalu naill ai drwy drosglwyddiad banc neu drwy gerdyn debyd neu gerdyn credyd corfforaethol.
+
+Oddi wrth dîm Debyd Uniongyrchol CThEM

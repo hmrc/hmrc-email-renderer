@@ -130,7 +130,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "API Catalogue",
         "HEC",
         "EU Subsidy",
-        "ITSA"
+        "ITSA",
+        "ECL"
       )
     }
 
@@ -179,6 +180,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "apiApplicationToBeDeletedNotification",
         "apiProductionCredentialsRequestExpired",
         "apiProductionCredentialsRequestExpiryWarning",
+        "apiNewTermsOfUseInvitation",
         "apiVerifyResponsibleIndividual",
         "apiVerifyResponsibleIndividualUpdate",
         "apiResponsibleIndividualReminderToAdmin",
@@ -455,6 +457,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "seis_code",
         "ca3822_confirmation",
         "ca3822_code",
+        "ho5_confirmation",
+        "ho5_code",
         "trusts_report_code",
         "trusts_report_confirmation",
         "trusts_request_code",
@@ -734,6 +738,11 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "sdds_ddi_cancelled_dcs_alert",
         "sdds_ddi_reminder_dcs_alert",
         "sdds_ddi_unpaid_dcs_alert",
+        "sdds_ddi_setup_dcs_alert_cy",
+        "sdds_ddi_amended_dcs_alert_cy",
+        "sdds_ddi_cancelled_dcs_alert_cy",
+        "sdds_ddi_reminder_dcs_alert_cy",
+        "sdds_ddi_unpaid_dcs_alert_cy",
         "cds_ddi_setup_dcs_alert",
         "cds_ddi_amended_dcs_alert",
         "cds_ddi_cancelled_dcs_alert",
@@ -766,6 +775,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "pods_psa_register",
         "pods_psa_register_company",
         "pods_psa_invited",
+        "pods_user_research_banner",
         "pods_file_aft_return",
         "pods_aft_amended_return_decrease",
         "pods_aft_amended_return_no_change",
@@ -895,7 +905,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "face_to_face_payment_email_successful_cy",
         "face_to_face_payment_email_unsuccessful_cy",
         "disabled_undertaking_email_to_lead",
-        "disabled_undertaking_email_to_be"
+        "disabled_undertaking_email_to_be",
+        "ecl_registration_submitted"
       )
     }
   }

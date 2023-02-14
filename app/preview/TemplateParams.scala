@@ -1861,31 +1861,6 @@ object TemplateParams2 {
     "ddi_08_alert_aa" -> Map(
       "recipientName_line1" -> "Colm Cavanagh"
     ),
-    "sdds_ddi_setup_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_amended_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_cancelled_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_reminder_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
-    "sdds_ddi_unpaid_dcs_alert" -> Map(
-      "subject"             -> "subject",
-      "recipientName_line1" -> "Joe Smith",
-      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
-    ),
     "dd_email_verifcation" -> Map(
       "name"             -> "Joe",
       "verificationLink" -> exampleLinkWithRandomId
@@ -2044,6 +2019,12 @@ object TemplateParams2 {
       "inviteeName" -> "Jane Doe",
       "schemeName"  -> "Some Pension Scheme",
       "expiryDate"  -> "20 July 1969"
+    ),
+    "pods_user_research_banner" -> Map(
+      "psaName"    -> "Nigel Robert Smith",
+      "comOrgName" -> "CompanyTestName",
+      "psaId"      -> "1234567890",
+      "psaEmail"   -> "nigel@test.com"
     ),
     "parcels_registration_confirmation" -> Map(
       "name"            -> "Joe Bloggs",
@@ -2403,15 +2384,15 @@ object TemplateParams2 {
     ),
     "ecc_subscription_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "enrolmentKey"           -> "HMRC-ATAR-ORG",
+      "serviceContent"         -> "You can now apply for an Advance Tariff Ruling."
     ),
-    "ecc_subscription_successful_ey" -> Map(
+    "ecc_subscription_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "enrolmentKey"           -> "HMRC-ATAR-ORG",
+      "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
     ),
     "ecc_subscription_not_successful" -> Map(
       "recipientName_FullName" -> "Jane Jones",
@@ -3221,6 +3202,36 @@ object TemplateParams2 {
 }
 object TemplateParams3 {
   val exampleParams = Map(
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-GVMS-ORG",
+      "serviceContent"         -> "Mae’r Gwasanaeth Symud Cerbydau Nwyddau yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-CTC-ORG",
+      "serviceContent"         -> "Mae’r System Gludo Gyfrifiadurol Newydd yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-SS-ORG",
+      "serviceContent"         -> "Mae’r Gwasanaeth Diogelwch yn GB yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-CTS-ORG",
+      "serviceContent"         -> "Mae’r Gwasanaethau Masnachwyr Tollau yn barod i’w defnyddio"
+    ),
+    "ecc_subscription_successful_cy" -> Map(
+      "recipientName_FullName" -> "Jane Jones",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "enrolmentKey"           -> "HMRC-CDS-ORG",
+      "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
+    ),
     "disabled_undertaking_email_to_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
@@ -3235,6 +3246,10 @@ object TemplateParams3 {
       "userName"  -> "John Smith",
       "loginDate" -> "Monday 07 November 2022",
       "loginTime" -> "09:17am"
+    ),
+    "apiNewTermsOfUseInvitation" -> Map(
+      "completeBy"      -> "31 March 2023",
+      "applicationName" -> "Test Application"
     ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
@@ -3296,6 +3311,13 @@ object TemplateParams3 {
     "ca3822_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "ho5_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "ho5_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "face_to_face_payment_email_successful_cy" -> Map(
       "totalAmountInPence"     -> "100000",
       "transactionReference"   -> "4012637",
@@ -3335,6 +3357,61 @@ object TemplateParams3 {
       "amountInPence"          -> "192",
       "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
+    ),
+    "sdds_ddi_setup_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Setup",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_setup_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Setup(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_amended_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Amended",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_amended_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Amended(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_cancelled_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Cancelled",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_cancelled_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Cancelled(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_reminder_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Reminder",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_reminder_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Reminder(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "sdds_ddi_unpaid_dcs_alert" -> Map(
+      "subject"             -> "regime Direct Debit Unpaid",
+      "recipientName_line1" -> "Joe Smith",
+      "sdds_regimeName"     -> "Soft Drinks Industry Levy"
+    ),
+    "sdds_ddi_unpaid_dcs_alert_cy" -> Map(
+      "subject"             -> "regime Direct Debit Unpaid(Welsh)",
+      "recipientName_line1" -> "Cadfael Jones",
+      "sdds_regimeName"     -> "Ardoll y Diwydiant Diodydd Ysgafn"
+    ),
+    "ecl_registration_submitted" -> Map(
+      "name"                     -> "John Doe",
+      "eclRegistrationReference" -> "XMECL0000000001",
+      "dateDue"                  -> "30 September 2023"
     )
   )
 }

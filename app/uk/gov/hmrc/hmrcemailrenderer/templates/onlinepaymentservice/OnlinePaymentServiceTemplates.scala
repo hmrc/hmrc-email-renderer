@@ -162,12 +162,30 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
+      templateId = "sdds_ddi_setup_dcs_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.sdds_ddi_setup_dcs_alert_cy.f,
+      htmlTemplate = html.sdds_ddi_setup_dcs_alert_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_amended_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_amended_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_amended_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "sdds_ddi_amended_dcs_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.sdds_ddi_amended_dcs_alert_cy.f,
+      htmlTemplate = html.sdds_ddi_amended_dcs_alert_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
@@ -180,12 +198,30 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
+      templateId = "sdds_ddi_cancelled_dcs_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.sdds_ddi_cancelled_dcs_alert_cy.f,
+      htmlTemplate = html.sdds_ddi_cancelled_dcs_alert_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "sdds_ddi_reminder_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = _.apply("subject"),
       plainTemplate = txt.sdds_ddi_reminder_dcs_alert.f,
       htmlTemplate = html.sdds_ddi_reminder_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "sdds_ddi_reminder_dcs_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.sdds_ddi_reminder_dcs_alert_cy.f,
+      htmlTemplate = html.sdds_ddi_reminder_dcs_alert_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
@@ -197,6 +233,16 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.sdds_ddi_unpaid_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "sdds_ddi_unpaid_dcs_alert_cy",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = _.apply("subject"),
+      plainTemplate = txt.sdds_ddi_unpaid_dcs_alert_cy.f,
+      htmlTemplate = html.sdds_ddi_unpaid_dcs_alert_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // END Direct Debit generic SDDS templates
     MessageTemplate.createWithDynamicSubject(
       templateId = "passengers_payment_confirmation",
       fromAddress = "HMRC Online Service for Passengers <noreply@confirmation.tax.service.gov.uk>",
