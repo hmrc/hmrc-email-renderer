@@ -21,7 +21,6 @@ import java.util.Base64
 
 import org.apache.commons.codec.Charsets
 import play.api.libs.json._
-import uk.gov.hmrc.emailaddress.EmailAddress
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 
 case class RenderRequest(parameters: Map[String, String], email: Option[String])
