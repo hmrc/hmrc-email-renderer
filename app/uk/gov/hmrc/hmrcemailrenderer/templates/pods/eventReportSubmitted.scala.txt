@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+You have submitted an Event Report return
+
+Dear @{params("psaName").toString}
+
+This email confirms your Event Report submission:
+
+Scheme: @{params("schemeName").toString}
+Tax year: @{params("taxYear").toString}
+Date submitted: @{params("dateSubmitted").toString}
+
+What to do next
+
+Search for 'manage a registered pension scheme' on GOV.UK and then choose the online service.
+
+For security reasons, we have not included a link with this email.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

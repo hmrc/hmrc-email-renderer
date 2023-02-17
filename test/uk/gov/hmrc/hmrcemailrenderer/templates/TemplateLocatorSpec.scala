@@ -790,6 +790,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "pods_scheme_migration_confirmation",
         "pods_racdac_bulk_migration_confirmation",
         "pods_racdac_individual_migration_confirmation",
+        "pods_event_report_submitted",
         "ppnsCallbackUrlChangedNotification",
         "vat",
         "newMessageAlert_2WSM-question",

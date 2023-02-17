@@ -203,6 +203,15 @@ object PodsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "pods_event_report_submitted",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = "Event Report Submission",
+      plainTemplate = txt.eventReportSubmitted.f,
+      htmlTemplate = html.eventReportSubmitted.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "pods_user_research_banner",
       fromAddress = govUkTeamAddress,
       service = PODS,

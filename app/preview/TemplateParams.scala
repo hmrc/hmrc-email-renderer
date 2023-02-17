@@ -2299,6 +2299,13 @@ object TemplateParams2 {
     "pods_psp_deregister_self" -> Map(
       "pspName" -> "Jane Doe"
     ),
+    "pods_event_report_submitted" -> Map(
+      "schemeName"    -> "Smith Harper pension scheme",
+      "taxYear"       -> "2021-2022",
+      "dateSubmitted" -> "5 January 2023 at 8:20pm",
+      "hmrcEmail"     -> "pensions.administration@hmrc.gov.uk",
+      "psaName"       -> "Jane Doe"
+    ),
     "cbc_registration_successful_organisation" -> Map(
       "name"  -> "Joe Bloggs",
       "cbcID" -> "XWCBC0000000058"
