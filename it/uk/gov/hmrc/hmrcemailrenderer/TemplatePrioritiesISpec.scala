@@ -157,6 +157,11 @@ class TemplatePrioritiesISpec
           "applicationName" -> "applicationName"
         )),
       (
+        "apiNewTermsOfUseConfirmation",
+        Map(
+          "applicationName" -> "applicationName"
+        )),
+      (
         "apiVerifyResponsibleIndividual",
         Map(
           "applicationName"           -> "applicationName",
