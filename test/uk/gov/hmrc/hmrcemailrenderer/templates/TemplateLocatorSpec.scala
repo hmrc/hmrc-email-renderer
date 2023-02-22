@@ -814,8 +814,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "customs_financials_requested_for_standing_authorities",
         "cgtpd_email_verification",
         "cgtpd_email_verification_cy",
-        "tdq_fph_report_non_compliant",
-        "tdq_fph_report_heuristically_compliant",
         "tdq_fph_self_serve_nudge",
         "cgtpd_account_created",
         "cgtpd_account_created_cy",
