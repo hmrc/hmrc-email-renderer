@@ -3254,6 +3254,10 @@ object TemplateParams3 {
     "apiNewTermsOfUseConfirmation" -> Map(
       "applicationName" -> "Test Application"
     ),
+    "apiResponsibleIndividualDeclinedV2" -> Map(
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs"
+    ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
       "numClients"      -> "103",

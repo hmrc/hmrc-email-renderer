@@ -185,6 +185,12 @@ class TemplatePrioritiesISpec
           "requesterName"             -> "requesterName"
         )),
       (
+        "apiResponsibleIndividualDeclinedV2",
+        Map(
+          "applicationName"           -> "applicationName",
+          "responsibleIndividualName" -> "responsibleIndividualName"
+        )),
+      (
         "apiResponsibleIndividualNotChanged",
         Map(
           "applicationName"           -> "applicationName",

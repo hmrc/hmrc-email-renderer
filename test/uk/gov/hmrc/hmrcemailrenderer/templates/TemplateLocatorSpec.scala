@@ -187,6 +187,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "apiResponsibleIndividualReminderToAdmin",
         "apiResponsibleIndividualDidNotVerify",
         "apiResponsibleIndividualDeclined",
+        "apiResponsibleIndividualDeclinedV2",
         "apiResponsibleIndividualNotChanged",
         "apiChangeOfApplicationName",
         "apiChangeOfApplicationDetails",

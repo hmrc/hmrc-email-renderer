@@ -283,6 +283,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualDeclinedV2",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Change details for the responsible individual",
+      plainTemplate = txt.apiResponsibleIndividualDeclinedV2.f,
+      htmlTemplate = html.apiResponsibleIndividualDeclinedV2.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiResponsibleIndividualDidNotVerify",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
