@@ -16,7 +16,7 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Change the details for the responsible individual") {
-<p style="margin: 0 0 30px; font-size: 19px;">Dear customer</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">@{params("responsibleIndividualName")} has declined responsibility for @{params("applicationName")} or did not verify in 24 hours.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">We need someone in your organisation to verify that your software conforms to version 2 of our terms of use.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">You can change the responsible individual's details on the Developer Hub.</p>

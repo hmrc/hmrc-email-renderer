@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Change the details for the responsible individual
 
-Dear customer
+Dear Customer
 
 @{params("responsibleIndividualName")} has declined responsibility for @{params("applicationName")} or did not verify in 24 hours.
 
