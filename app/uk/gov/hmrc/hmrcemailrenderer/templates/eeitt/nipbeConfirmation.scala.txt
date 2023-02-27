@@ -1,16 +1,18 @@
 @(params: Map[String, Any])
 
-You told us you are using an EORI number starting XI
+@params("heading1")
 
 Dear @params("customerName")
 
-We will email you within 10 working days to confirm your records have been updated.
+@params("para1")
+
+@params("para2")
 
 Your submission reference is: @params("submissionReference")
 
 Why you are receiving this email
 
-We send a confirmation email for an application submitted online.
+@params("para3")
 
 From HMRC Customer Services Group
 
