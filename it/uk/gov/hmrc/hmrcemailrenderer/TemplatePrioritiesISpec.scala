@@ -157,6 +157,11 @@ class TemplatePrioritiesISpec
           "applicationName" -> "applicationName"
         )),
       (
+        "apiNewTermsOfUseConfirmation",
+        Map(
+          "applicationName" -> "applicationName"
+        )),
+      (
         "apiVerifyResponsibleIndividual",
         Map(
           "applicationName"           -> "applicationName",
@@ -178,6 +183,12 @@ class TemplatePrioritiesISpec
           "applicationName"           -> "applicationName",
           "responsibleIndividualName" -> "responsibleIndividualName",
           "requesterName"             -> "requesterName"
+        )),
+      (
+        "apiResponsibleIndividualDeclinedV2",
+        Map(
+          "applicationName"           -> "applicationName",
+          "responsibleIndividualName" -> "responsibleIndividualName"
         )),
       (
         "apiResponsibleIndividualNotChanged",

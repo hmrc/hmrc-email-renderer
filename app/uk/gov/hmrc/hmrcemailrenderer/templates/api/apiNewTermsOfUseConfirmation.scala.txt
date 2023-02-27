@@ -1,0 +1,9 @@
+@(params: Map[String, Any])Developer Hub terms of use update
+
+Dear Customer
+
+@{params("applicationName")} now conforms to version 2 of our terms of use.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

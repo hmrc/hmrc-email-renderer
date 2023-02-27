@@ -229,6 +229,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiNewTermsOfUseConfirmation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "You conform to version 2 of our terms of use",
+      plainTemplate = txt.apiNewTermsOfUseConfirmation.f,
+      htmlTemplate = html.apiNewTermsOfUseConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "ppnsCallbackUrlChangedNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
@@ -271,6 +280,15 @@ object ApiTemplates {
       subject = "Important update about your production credentials request",
       plainTemplate = txt.apiResponsibleIndividualDeclined.f,
       htmlTemplate = html.apiResponsibleIndividualDeclined.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiResponsibleIndividualDeclinedV2",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Change details for the responsible individual",
+      plainTemplate = txt.apiResponsibleIndividualDeclinedV2.f,
+      htmlTemplate = html.apiResponsibleIndividualDeclinedV2.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(

@@ -3251,6 +3251,13 @@ object TemplateParams3 {
       "completeBy"      -> "31 March 2023",
       "applicationName" -> "Test Application"
     ),
+    "apiNewTermsOfUseConfirmation" -> Map(
+      "applicationName" -> "Test Application"
+    ),
+    "apiResponsibleIndividualDeclinedV2" -> Map(
+      "applicationName"           -> "Test Application",
+      "responsibleIndividualName" -> "Joe Bloggs"
+    ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
       "numClients"      -> "103",

@@ -111,6 +111,11 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
         expectedPriority = MessagePriority.Urgent)
 
       validateTemplate(
+        templateId = "apiNewTermsOfUseConfirmation",
+        expectedSubject = "You conform to version 2 of our terms of use",
+        expectedPriority = MessagePriority.Urgent)
+
+      validateTemplate(
         templateId = "apiProductionCredentialsRequestExpiryWarning",
         expectedSubject = "About your request for production credentials",
         expectedPriority = MessagePriority.Standard
@@ -140,6 +145,12 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
       validateTemplate(
         templateId = "apiResponsibleIndividualDeclined",
         expectedSubject = "Important update about your production credentials request",
+        expectedPriority = MessagePriority.Urgent
+      )
+
+      validateTemplate(
+        templateId = "apiResponsibleIndividualDeclinedV2",
+        expectedSubject = "Change details for the responsible individual",
         expectedPriority = MessagePriority.Urgent
       )
 
