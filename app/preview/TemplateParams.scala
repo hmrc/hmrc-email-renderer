@@ -2932,8 +2932,13 @@ object TemplateParams2 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "nipbe_confirmation" -> Map(
+      "nipbeDySub"          -> "You told HMRC about a specific purpose for an EORI number starting XI",
+      "heading1"            -> "You told us you are using an EORI number starting XI",
       "customerName"        -> "Hugh Mann",
-      "submissionReference" -> "NC38-N2ZC-TH68"
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "para1"               -> "We will email you within 10 working days to confirm your records have been updated.",
+      "para2"               -> "",
+      "para3"               -> "We send a confirmation email for an application submitted online."
     ),
     "nipbe_confirmation_cy" -> Map(
       "customerName"        -> "Hugh Mann",

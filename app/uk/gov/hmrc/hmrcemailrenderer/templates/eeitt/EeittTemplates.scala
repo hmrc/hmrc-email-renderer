@@ -34,6 +34,9 @@ object EeittTemplates {
   private val getc118CDySub: Map[String, String] => String =
     _.getOrElse("c118DySub", "Your application for AEO status")
 
+  private val getNIPBEDySub: Map[String, String] => String =
+    _.getOrElse("nipbeDySub", "You told HMRC about a Northern Ireland business establishment")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "eeitt_submission_confirmation",
@@ -1511,11 +1514,11 @@ object EeittTemplates {
       htmlTemplate = html.xiEORIChangeConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    MessageTemplate.create(
+    MessageTemplate.createWithDynamicSubject(
       templateId = "nipbe_confirmation",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "You told HMRC about a specific purpose for an EORI number starting XI",
+      subject = getNIPBEDySub,
       plainTemplate = txt.nipbeConfirmation.f,
       htmlTemplate = html.nipbeConfirmation.f,
       priority = Some(MessagePriority.Standard)

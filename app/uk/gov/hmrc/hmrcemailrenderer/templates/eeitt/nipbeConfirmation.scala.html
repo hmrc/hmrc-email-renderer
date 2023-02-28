@@ -15,17 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You told us you are using an EORI number starting XI"){
-<p style="margin: 0 0 30px; font-size: 19px;">
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You told us you are using an EORI number starting XI", showHeading1 = false){
+<h1>@params("heading1")</h1><p style="margin: 0 0 30px; font-size: 19px;">
     Dear @params("customerName")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We will email you within 10 working days to confirm your records have been updated.
+    @params("para1")
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params("para2")
 </p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your submission reference is: <b>@params("submissionReference")</b></p>
 <h2>Why you are receiving this email</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    We send a confirmation email for an application submitted online.</p>
+    @params("para3")</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     From HMRC Customer Services Group</p>
 }
