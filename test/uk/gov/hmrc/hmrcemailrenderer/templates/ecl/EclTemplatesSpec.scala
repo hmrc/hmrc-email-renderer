@@ -44,7 +44,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "chargeReference" -> "XY007000075424",
         "fyStartYear" -> "2022",
         "fyEndYear" -> "2023",
-        "dateDue" -> "30 September 2023"
+        "datePaymentDue" -> "30 September 2023"
       )
 
       compareContent("ecl_return_submitted", returnSubmittedParams)(ecl)

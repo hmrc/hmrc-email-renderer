@@ -3433,7 +3433,7 @@ object TemplateParams3 {
       "chargeReference" -> "XY007000075424",
       "fyStartYear" -> "2022",
       "fyEndYear" -> "2023",
-      "dateDue" -> "30 September 2023"
+      "datePaymentDue" -> "30 September 2023"
     )
   )
 }
