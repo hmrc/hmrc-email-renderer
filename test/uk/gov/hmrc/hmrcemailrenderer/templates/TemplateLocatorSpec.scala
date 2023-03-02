@@ -906,7 +906,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "face_to_face_payment_email_unsuccessful_cy",
         "disabled_undertaking_email_to_lead",
         "disabled_undertaking_email_to_be",
-        "ecl_registration_submitted"
+        "ecl_registration_submitted",
+        "ecl_return_submitted"
       )
     }
   }
