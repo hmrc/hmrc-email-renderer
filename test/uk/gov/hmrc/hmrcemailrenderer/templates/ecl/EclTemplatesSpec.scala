@@ -27,9 +27,9 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
     "include registration submitted content" in {
       val registrationSubmittedParams = commonParameters + (
-        "name" -> "John Doe",
+        "name"                     -> "John Doe",
         "eclRegistrationReference" -> "XMECL0000000001",
-        "dateDue" -> "30 September 2023"
+        "dateDue"                  -> "30 September 2023"
       )
 
       compareContent("ecl_registration_submitted", registrationSubmittedParams)(ecl)
@@ -37,14 +37,14 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
     "include return submitted content" in {
       val returnSubmittedParams = commonParameters + (
-        "name" -> "John Doe",
-        "dateSubmitted" -> "1 September 2023",
+        "name"            -> "John Doe",
+        "dateSubmitted"   -> "1 September 2023",
         "periodStartDate" -> "1 April 2022",
-        "periodEndDate" -> "31 March 2023",
+        "periodEndDate"   -> "31 March 2023",
         "chargeReference" -> "XY007000075424",
-        "fyStartYear" -> "2022",
-        "fyEndYear" -> "2023",
-        "datePaymentDue" -> "30 September 2023"
+        "fyStartYear"     -> "2022",
+        "fyEndYear"       -> "2023",
+        "datePaymentDue"  -> "30 September 2023"
       )
 
       compareContent("ecl_return_submitted", returnSubmittedParams)(ecl)
