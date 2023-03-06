@@ -18,10 +18,11 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
-@allItems = @{params("f2fPaymentItemsForEmailUnsuccessful") match {
+@allItems = @{params("f2fPaymentItemsForEmailSuccessful") match {
 case items:String => Json.parse(items).as[List[JsObject]]
 case _ => List()
 }}
+
 
 @itemList = @{ allItems.map( item => {
 
@@ -35,11 +36,11 @@ val transactionNumber = (item \ "transactionNumber").as[String]
 
 @singleItem = @{itemList.size == 1}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Roedd eich taliad i CThEF yn aflwyddiannus ") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhad bod CThEF wedi cael y taliad") {
 
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl gwsmer</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does dim arian wedi’i dynnu o’ch cyfrif.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Mae’ch taliad wedi dod i law.</p>
 
 <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
     <tbody>
@@ -68,69 +69,17 @@ val transactionNumber = (item \ "transactionNumber").as[String]
     </tr>
 
     <tr>
-        <th>Cyfanswm</th>
+        <th>Cyfanswm a dalwyd</th>
         <td>@formatAmountInPence(params("totalAmountInPence").toString)</td>
-    </tr>
-    <tr>
-        <th>Math o gerdyn</th>
-        <td>@params("cardType")</td>
-    </tr>
-    <tr>
-        <th>Cerdyn yn gorffen </th>
-        <td>ending in @params("cardNumber")</td>
-    </tr>
-
-    <tr>
-        <th>ID y rhaglen</th>
-        <td>@params("applicationId")</td>
-    </tr>
-    @if(params.isDefinedAt("panSequence")) {
-        <tr>
-            <th>Dilyniant PAN</th>
-            <td>@params("panSequence")</td>
-        </tr>
-    }
-    <tr>
-        <th>ID y masnachwr</th>
-        <td>@params("merchantId")</td>
-    </tr>
-    @if(params.isDefinedAt("terminalId")) {
-        <tr>
-            <th>ID y derfynnell</th>
-            <td>@params("terminalId")</td>
-        </tr>
-    }
-    <tr>
-        <th>Dull dilysu’r cerdyn</th>
-        <td>@params("cardVerificationMethod")</td>
-    </tr>
-    <tr>
-        <th>Awdurdodiad</th>
-        <td>@params("authorisation")</td>
-    </tr>
-    <tr>
-        <th>Ffynhonnell y trafodyn</th>
-        <td>@params("transactionSource")</td>
-    </tr>
-    <tr>
-        <th>Dyddiad</th>
-        <td>@params("dateOfPayment")</td>
-    </tr>
-    <tr>
-        <th>Amser</th>
-        <td>@params("time")</td>
-    </tr>
-    <tr>
-        <th>Math o drafodyn</th>
-        <td>@params("transactionType")</td>
     </tr>
     </tbody>
 </table>
 
+<p style="margin: 30px 0 30px; font-size: 19px;">Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.</p>
 
-<h2 style="margin: 30px 0 30px; font-size: 19px;">Os oes dal angen i chi dalu</h2>
+<h2  style="margin: 0 0 30px; font-size: 19px;">Pam cawsoch yr e-bost hwn</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg ar 0300 200 1900. Ar agor rhwng 08:30 a 17:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc)</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Gwnaethoch ddewis cael cadarnhad o’r taliad drwy e-bost.</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
 

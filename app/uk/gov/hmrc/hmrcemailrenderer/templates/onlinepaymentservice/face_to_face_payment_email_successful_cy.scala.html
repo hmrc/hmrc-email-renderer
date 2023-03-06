@@ -85,10 +85,12 @@ val transactionNumber = (item \ "transactionNumber").as[String]
         <th>ID y rhaglen</th>
         <td>@params("applicationId")</td>
     </tr>
-    <tr>
-        <th>Dilyniant PAN</th>
-        <td>@params("panSequence")</td>
-    </tr>
+    @if(params.isDefinedAt("panSequence")) {
+        <tr>
+            <th>Dilyniant PAN</th>
+            <td>@params("panSequence")</td>
+        </tr>
+    }
     <tr>
         <th>ID y masnachwr</th>
         <td>@params("merchantId")</td>
@@ -130,6 +132,6 @@ val transactionNumber = (item \ "transactionNumber").as[String]
 
 <p style="margin: 0 0 30px; font-size: 19px;">Gwnaethoch ddewis cael cadarnhad o’r taliad drwy e-bost.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Cyllid a Thollau EF</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
 
 }

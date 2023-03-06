@@ -27,7 +27,7 @@ case _ => List()
 
 
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC payment confirmation") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Payment confirmation") {
 
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
 
@@ -78,10 +78,12 @@ case _ => List()
         <th>Application ID</th>
         <td>@params("applicationId")</td>
     </tr>
-    <tr>
-        <th>PAN sequence</th>
-        <td>@params("panSequence")</td>
-    </tr>
+    @if(params.isDefinedAt("panSequence")) {
+        <tr>
+            <th>PAN sequence</th>
+            <td>@params("panSequence")</td>
+        </tr>
+    }
     <tr>
         <th>Merchant ID</th>
         <td>@params("merchantId")</td>
