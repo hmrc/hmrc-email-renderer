@@ -1,0 +1,4 @@
+@(params: Map[String, Any])
+You have been added as a team member to @{params("applicationname")} within the API Hub, by @{params("creatorusername")}.
+To access the application you can login into the API HUB (url).
+From HMRC The API Hub
