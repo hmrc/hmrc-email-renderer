@@ -157,7 +157,7 @@ trait TemplateLocator {
       "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "ITSA"                  -> ItsaTemplates.templates,
       "ECL"                   -> EclTemplates.templates,
-      "HIPP"                  -> HippTemplates.templates,
+      "HIPP"                  -> HippTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
