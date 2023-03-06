@@ -18,13 +18,6 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
-@allItems = @{params("f2fPaymentItemsForEmailSuccessful") match {
-    case items:String => Json.parse(items).as[List[JsObject]]
-    case _ => List()
-}}
-
-
-
 
     Dear Customer
 

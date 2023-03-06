@@ -38,15 +38,11 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               Tax
               @params("taxType")
 
-              Payment reference
-              @params("transactionNumber")
-
-
-
               Date
               @params("dateOfPayment")
 
-
+              Transaction reference
+              @params("transactionReference")
 
               Amount
               @formatAmountInPence(params("amountInPence").toString)
