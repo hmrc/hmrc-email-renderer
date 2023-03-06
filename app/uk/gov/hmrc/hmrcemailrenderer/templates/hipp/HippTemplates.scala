@@ -40,6 +40,6 @@ object HippTemplates {
       plainTemplate = txt.RemoveTeamMember.f,
       htmlTemplate = html.RemoveTeamMember.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 }
