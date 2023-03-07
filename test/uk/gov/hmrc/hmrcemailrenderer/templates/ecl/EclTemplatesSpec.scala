@@ -23,16 +23,31 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
   private def ecl(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(EclTemplates.templates)
 
-  private val fullParams = commonParameters + (
-    "name"                     -> "John Doe",
-    "eclRegistrationReference" -> "XMECL0000000001",
-    "dateDue"                  -> "30 September 2023"
-  )
-
   "Templates for which the text and html content are identical" should {
 
     "include registration submitted content" in {
-      compareContent("ecl_registration_submitted", fullParams)(ecl)
+      val registrationSubmittedParams = commonParameters + (
+        "name"                     -> "John Doe",
+        "eclRegistrationReference" -> "XMECL0000000001",
+        "dateDue"                  -> "30 September 2023"
+      )
+
+      compareContent("ecl_registration_submitted", registrationSubmittedParams)(ecl)
+    }
+
+    "include return submitted content" in {
+      val returnSubmittedParams = commonParameters + (
+        "name"            -> "John Doe",
+        "dateSubmitted"   -> "1 September 2023",
+        "periodStartDate" -> "1 April 2022",
+        "periodEndDate"   -> "31 March 2023",
+        "chargeReference" -> "XY007000075424",
+        "fyStartYear"     -> "2022",
+        "fyEndYear"       -> "2023",
+        "datePaymentDue"  -> "30 September 2023"
+      )
+
+      compareContent("ecl_return_submitted", returnSubmittedParams)(ecl)
     }
 
   }
