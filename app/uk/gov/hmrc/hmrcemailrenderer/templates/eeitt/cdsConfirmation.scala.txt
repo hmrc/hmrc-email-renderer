@@ -13,13 +13,13 @@ We aim to respond to all queries within 24 hours. We aim to respond to urgent qu
 
 General enquiries about imports and exports
 
-To find ways of contacting HMRC about imports or exports, go to www.gov.uk and search 'customs international trade and excise enquiries'.
+To find ways of contacting HMRC about imports or exports, go to GOV.UK and search 'customs international trade and excise enquiries'.
 
 HMRC operates a 24/7 helpline.
 
 Telephone: 0300 322 9434
 
-From HMRC
+@params("emailTeam")
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
