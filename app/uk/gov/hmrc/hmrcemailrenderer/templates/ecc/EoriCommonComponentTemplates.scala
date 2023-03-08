@@ -47,7 +47,7 @@ object EoriCommonComponentTemplates {
   private val subscription_success_subject_cy: Map[String, String] => String =
     _.get("enrolmentKey")
       .map {
-        case "HMRC-ATAR-ORG" => "Mae’r Dyfarniadau Tariffau Uwch yn barod i’w defnyddio"
+        case "HMRC-ATAR-ORG" => "Mae’ch tanysgrifiad i Ddyfarniadau Uwch yn barod i’w ddefnyddio"
         case "HMRC-GVMS-ORG" => "Mae’r Gwasanaeth Symud Cerbydau Nwyddau yn barod i’w defnyddio"
         case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd yn barod i’w defnyddio"
         case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn GB yn barod i’w defnyddio"

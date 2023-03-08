@@ -6,7 +6,9 @@
 @(params: Map[String, Any])@serviceName(params, "a service")
 @check_the_service =@{
       params.getOrElse("enrolmentKey", "") match {
-       case "HMRC-ATAR-ORG" => "You can now apply for an Advance Tariff Ruling."
+       case "HMRC-ATAR-ORG" => "You can now apply for an:" + "\n" +
+                                      "- Advance Tariff Ruling" + "\n" +
+                                      "- Advance Valuation Ruling"
        case "HMRC-GVMS-ORG" => "You can now get a goods movement reference (GMR)."
        case "HMRC-CTC-ORG" => "You can now submit union transit declarations through NCTS."
        case "HMRC-SS-ORG" => "You can now make entry summary declarations."
@@ -14,7 +16,6 @@
                                       "- apply for repayment of import duty and VAT (CHIEF)" + "\n" +
                                       "- send documents for a customs check for declarations made in CHIEF" + "\n" +
                                       "- tell HMRC about an underpayment of Customs Duty or import VAT"
-
        case _ => "You can now use the Customs Declaration Service."
       }
 }
