@@ -18,15 +18,6 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
-@allItems = @{params("f2fPaymentItemsForEmailSuccessful") match {
-case items:String => Json.parse(items).as[List[JsObject]]
-case _ => List()
-}}
-
-
-
-
-
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Payment confirmation") {
 
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
@@ -64,57 +55,6 @@ case _ => List()
     <tr>
         <th>Total paid</th>
         <td>@formatAmountInPence(params("totalAmountInPence").toString)</td>
-    </tr>
-    <tr>
-        <th>Card type</th>
-        <td>@params("cardType")</td>
-    </tr>
-    <tr>
-        <th>Card ending </th>
-        <td>ending in @params("cardNumber")</td>
-    </tr>
-
-    <tr>
-        <th>Application ID</th>
-        <td>@params("applicationId")</td>
-    </tr>
-    @if(params.isDefinedAt("panSequence")) {
-        <tr>
-            <th>PAN sequence</th>
-            <td>@params("panSequence")</td>
-        </tr>
-    }
-    <tr>
-        <th>Merchant ID</th>
-        <td>@params("merchantId")</td>
-    </tr>
-    <tr>
-        <th>Terminal ID</th>
-        <td>@params("terminalId")</td>
-    </tr>
-    <tr>
-        <th>Card verification method</th>
-        <td>@params("cardVerificationMethod")</td>
-    </tr>
-    <tr>
-        <th>Authorisation</th>
-        <td>@params("authorisation")</td>
-    </tr>
-    <tr>
-        <th>Transaction source</th>
-        <td>@params("transactionSource")</td>
-    </tr>
-    <tr>
-        <th>Date</th>
-        <td>@params("dateOfPayment")</td>
-    </tr>
-    <tr>
-        <th>Time</th>
-        <td>@params("time")</td>
-    </tr>
-    <tr>
-        <th>Transaction type</th>
-        <td>@params("transactionType")</td>
     </tr>
 
 

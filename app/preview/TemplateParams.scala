@@ -1780,6 +1780,22 @@ object TemplateParams2 {
       "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
     ),
+    "face_to_face_payment_email_no_receipt_successful" -> Map(
+      "totalAmountInPence"    -> "100000",
+      "transactionReference"  -> "4012637",
+      "taxType"               -> "Self Assessment",
+      "amountInPence"         -> "192",
+      "transactionFeeInPence" -> "100",
+      "transactionNumber"     -> "1234567890K"
+    ),
+    "face_to_face_payment_email_no_receipt_unsuccessful" -> Map(
+      "totalAmountInPence"    -> "100000",
+      "transactionReference"  -> "4012637",
+      "dateOfPayment"         -> "31 December 2021",
+      "taxType"               -> "Self Assessment",
+      "amountInPence"         -> "192",
+      "transactionFeeInPence" -> "100"
+    ),
     "open_banking_payment_successful_cy" -> Map(
       "taxType"    -> "Self Assessment",
       "reference"  -> "1234567890K",
@@ -3369,6 +3385,23 @@ object TemplateParams3 {
       "amountInPence"          -> "192",
       "transactionFeeInPence"  -> "100",
       "transactionNumber"      -> "1234567890K"
+    ),
+    "face_to_face_payment_email_no_receipt_successful_cy" -> Map(
+      "totalAmountInPence"    -> "100000",
+      "transactionReference"  -> "4012637",
+      "dateOfPayment"         -> "31 December 2021",
+      "taxType"               -> "Self Assessment",
+      "amountInPence"         -> "192",
+      "transactionFeeInPence" -> "100",
+      "transactionNumber"     -> "1234567890K"
+    ),
+    "face_to_face_payment_email_no_receipt_unsuccessful_cy" -> Map(
+      "totalAmountInPence"    -> "100000",
+      "transactionReference"  -> "4012637",
+      "dateOfPayment"         -> "31 December 2021",
+      "taxType"               -> "Self Assessment",
+      "amountInPence"         -> "192",
+      "transactionFeeInPence" -> "100"
     ),
     "sdds_ddi_setup_dcs_alert" -> Map(
       "subject"             -> "regime Direct Debit Setup",
