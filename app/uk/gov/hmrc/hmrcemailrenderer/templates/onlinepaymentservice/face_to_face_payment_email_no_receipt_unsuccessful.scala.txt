@@ -38,8 +38,8 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               Tax
               @params("taxType")
 
-              Payment reference
-              @params("transactionNumber")
+              Date
+              @params("dateOfPayment")
 
               Transaction reference
               @params("transactionReference")
@@ -50,48 +50,9 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               Card fee
               @formatAmountInPence(params("transactionFeeInPence").toString)
 
+
               Total
               @formatAmountInPence(params("totalAmountInPence").toString)
-
-              Card type
-              @params("cardType")
-
-              Card ending
-              ending in @params("cardNumber")
-
-              Application ID
-              @params("applicationId")
-
-              @if(params.isDefinedAt("panSequence")) {
-              PAN sequence
-              @params("panSequence")
-              }
-
-              Merchant ID
-              @params("merchantId")
-
-              @if(params.isDefinedAt("terminalId")) {
-              Terminal ID
-              @params("terminalId")
-              }
-
-              Card verification method
-              @params("cardVerificationMethod")
-
-              Authorisation
-              @params("authorisation")
-
-              Transaction source
-              @params("transactionSource")
-
-              Date
-              @params("dateOfPayment")
-
-              Time
-              @params("time")
-
-              Transaction type
-              @params("transactionType")
 
 If you still need to pay
 

@@ -18,22 +18,6 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
 @(params: Map[String, Any])
 
-@allItems = @{params("f2fPaymentItemsForEmailUnsuccessful") match {
-    case items:String => Json.parse(items).as[List[JsObject]]
-    case _ => List()
-}}
-
-@itemList = @{ allItems.map( item => {
-
-     val taxType: String = (item \ "taxType").as[String]
-     val amount: String = (item \ "amount").as[String]
-     val transactionFee: String = (item \ "transactionFee").as[String]
-     val transactionNumber = (item \ "transactionNumber").as[String]
-     (taxType, amount, transactionFee, transactionNumber)
-     })
- }
-
-
 Annwyl gwsmer
 
 
@@ -43,8 +27,8 @@ Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does di
               Treth
               @params("taxType")
 
-              Cyfeirnod y taliad
-              @params("transactionNumber")
+              Dyddiad
+              @params("dateOfPayment")
 
               Cyfeirnod y trafodyn
               @params("transactionReference")
@@ -58,45 +42,6 @@ Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does di
               Cyfanswm
               @formatAmountInPence(params("totalAmountInPence").toString)
 
-              Math o gerdyn
-              @params("cardType")
-
-              Cerdyn yn gorffen
-              ending in @params("cardNumber")
-
-              ID y rhaglen
-              @params("applicationId")
-
-              @if(params.isDefinedAt("panSequence")) {
-              Dilyniant PAN
-              @params("panSequence")
-              }
-
-              ID y masnachwr
-              @params("merchantId")
-
-              @if(params.isDefinedAt("terminalId")) {
-              ID y derfynnell
-              @params("terminalId")
-              }
-
-              Dull dilysu’r cerdyn
-              @params("cardVerificationMethod")
-
-              Awdurdodiad
-              @params("authorisation")
-
-              Ffynhonnell y trafodyn
-              @params("transactionSource")
-
-              Dyddiad
-              @params("dateOfPayment")
-
-              Amser
-              @params("time")
-
-              Math o drafodyn
-              @params("transactionType")
 
 Os oes dal angen i chi dalu
 
