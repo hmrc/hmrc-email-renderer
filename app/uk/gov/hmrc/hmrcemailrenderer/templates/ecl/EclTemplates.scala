@@ -32,6 +32,15 @@ object EclTemplates {
       plainTemplate = txt.eclRegistrationSubmitted.f,
       htmlTemplate = html.eclRegistrationSubmitted.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_return_submitted",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "You submitted a return for the Economic Crime Levy",
+      plainTemplate = txt.eclReturnSubmitted.f,
+      htmlTemplate = html.eclReturnSubmitted.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
