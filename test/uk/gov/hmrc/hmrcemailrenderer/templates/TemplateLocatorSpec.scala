@@ -23,8 +23,8 @@ import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import org.scalatest.OptionValues
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{cf_enquiry_confirmation, cf_enquiry_confirmation_cy, contactFormsGroup}
-import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{raldGroup, rald_connection_removed, rald_connection_removed_cy}
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy, contactFormsGroup }
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed, rald_connection_removed_cy }
 
 class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with OptionValues with GuiceOneAppPerSuite {
 
@@ -64,7 +64,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
     }
 
     "enumerate all titles" in {
-      TemplateLocator.templateGroups.keys should contain only(
+      TemplateLocator.templateGroups.keys should contain only (
         "AEO MRA",
         "Agent",
         "API Platform",
@@ -137,7 +137,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
     }
 
     "enumerate all template identifiers" in {
-      TemplateLocator.all.map(_.templateId) should contain only(
+      TemplateLocator.all.map(_.templateId) should contain only (
         "aeo_mra_row_data_exchange_report",
         "email_verification_passcode",
         "email_verification_passcode_welsh",
