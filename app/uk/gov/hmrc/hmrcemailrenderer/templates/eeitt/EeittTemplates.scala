@@ -2002,6 +2002,25 @@ object EeittTemplates {
       plainTemplate = txt.ho5Code.f,
       htmlTemplate = html.ho5Code.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has received your query about using the Customs Declaration Service",
+      plainTemplate = txt.cdsConfirmation.f,
+      htmlTemplate = html.cdsConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject =
+        "Confirm your email address - Report a problem submitting a declaration using the Customs Declaration Service",
+      plainTemplate = txt.cdsCode.f,
+      htmlTemplate = html.cdsCode.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

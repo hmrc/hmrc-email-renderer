@@ -3346,6 +3346,14 @@ object TemplateParams3 {
     "ho5_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "cds_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "emailTeam"           -> "From HMRC CDS Operations"
+    ),
+    "cds_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "face_to_face_payment_email_successful_cy" -> Map(
       "totalAmountInPence"     -> "100000",
       "transactionReference"   -> "4012637",
