@@ -82,8 +82,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "open_banking_payment_successful_fdp_cy",
       fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
       service = ServiceIdentifier.OnlinePaymentService,
-      //todo rachel is getting welsh
-      subject = "",
+      subject = "Taliad CThEF wedi’i drefnu",
       plainTemplate = txt.open_banking_payment_successful_fdp_cy.f,
       htmlTemplate = html.open_banking_payment_successful_fdp_cy.f,
       priority = Some(MessagePriority.Urgent)
