@@ -131,7 +131,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "HEC",
         "EU Subsidy",
         "ITSA",
-        "ECL"
+        "ECL",
+        "HIPP"
       )
     }
 
@@ -913,6 +914,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "disabled_undertaking_email_to_lead",
         "disabled_undertaking_email_to_be",
         "ecl_registration_submitted",
+        "hipp_add_team_member_to_app_email",
+        "hipp_remove_team_member_from_app_email",
         "ecl_return_submitted"
       )
     }
