@@ -1,0 +1,25 @@
+
+@(params: Map[String, Any])
+
+We have received your query about using the Customs Declaration Service
+
+Dear @params("customerName")
+
+We confirm we have received your query about using the Customs Declaration Service.
+
+Your reference number: @params("submissionReference")
+
+We aim to respond to all queries within 24 hours. We aim to respond to urgent queries within 2 hours.
+
+General enquiries about imports and exports
+
+To find ways of contacting HMRC about imports or exports, go to GOV.UK and search 'customs international trade and excise enquiries'.
+
+HMRC operates a 24/7 helpline.
+
+Telephone: 0300 322 9434
+
+@params("emailTeam")
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
