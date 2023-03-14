@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Dear Customer
+
+Your payment has been scheduled.
+
+Tax: @params("taxType")
+Payment scheduled date: @params("paymentScheduledDate")
+Date payment set up: @params("datePaymentSetUp")
+Payment reference: @params("reference")
+Amount: @params("amountPaid")
+
+If you have an online tax account your payment will take 3 to 5 days to show in your account.
+
+Why you got this email
+
+You chose to receive an email about your payment
+
+From HMRC Online Payments
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

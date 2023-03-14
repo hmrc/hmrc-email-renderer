@@ -722,6 +722,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "cbcr_cbcid_regeneration",
         "open_banking_payment_successful",
         "open_banking_payment_successful_cy",
+        "open_banking_payment_successful_fdp",
+        "open_banking_payment_successful_fdp_cy",
         "payment_successful",
         "payment_successful_cy",
         "payment_successful_parcels",

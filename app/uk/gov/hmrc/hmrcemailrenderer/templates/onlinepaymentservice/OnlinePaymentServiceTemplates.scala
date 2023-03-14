@@ -68,6 +68,24 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.open_banking_payment_successful_cy.f,
       htmlTemplate = html.open_banking_payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent)
+    ), // Open Banking payment receipts fdp
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful_fdp",
+      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Payment scheduled",
+      plainTemplate = txt.open_banking_payment_successful_fdp.f,
+      htmlTemplate = html.open_banking_payment_successful_fdp.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "open_banking_payment_successful_fdp_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Taliad CThEF wedi’i drefnu",
+      plainTemplate = txt.open_banking_payment_successful_fdp_cy.f,
+      htmlTemplate = html.open_banking_payment_successful_fdp_cy.f,
+      priority = Some(MessagePriority.Urgent)
     ),
     // Direct Debit VAT templates
     MessageTemplate.create(
