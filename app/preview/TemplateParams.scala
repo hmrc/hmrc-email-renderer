@@ -1734,18 +1734,18 @@ object TemplateParams2 {
       "amountPaid" -> "123.45"
     ),
     "open_banking_payment_successful_fdp" -> Map(
-      "taxType"    -> "Self Assessment",
-      "paymentScheduledDate"    -> "22 October 2027",
-      "datePaymentSetUp"    -> "12 October 2027",
-      "reference"  -> "1234567890K",
-      "amountPaid" -> "123.45"
+      "taxType"              -> "Self Assessment",
+      "paymentScheduledDate" -> "22 October 2027",
+      "datePaymentSetUp"     -> "12 October 2027",
+      "reference"            -> "1234567890K",
+      "amountPaid"           -> "123.45"
     ),
     "open_banking_payment_successful_fdp_cy" -> Map(
-      "taxType"    -> "Self Assessment",
-      "paymentScheduledDate"    -> "22 October 2027",
-      "datePaymentSetUp"    -> "12 October 2027",
-      "reference"  -> "1234567890K",
-      "amountPaid" -> "123.45"
+      "taxType"              -> "Self Assessment",
+      "paymentScheduledDate" -> "22 October 2027",
+      "datePaymentSetUp"     -> "12 October 2027",
+      "reference"            -> "1234567890K",
+      "amountPaid"           -> "123.45"
     ),
     "telephone_payments_service" -> Map(
       "totalAmountPaid"         -> "1000.00",

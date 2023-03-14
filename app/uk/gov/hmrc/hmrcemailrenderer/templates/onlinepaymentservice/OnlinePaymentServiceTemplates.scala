@@ -68,7 +68,7 @@ object OnlinePaymentServiceTemplates {
       plainTemplate = txt.open_banking_payment_successful_cy.f,
       htmlTemplate = html.open_banking_payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent)
-    ),    // Open Banking payment receipts fdp
+    ), // Open Banking payment receipts fdp
     MessageTemplate.create(
       templateId = "open_banking_payment_successful_fdp",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
