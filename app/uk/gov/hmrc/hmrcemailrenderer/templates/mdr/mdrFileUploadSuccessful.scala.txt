@@ -21,6 +21,8 @@ You can email enquiries.aeoi@@hmrc.gov.uk for help.
 
 For more information, you can visit GOV.UK and search for ‘MDR’.
 
-From the HMRC MDR service
+If you’re unsure an email is from the MDR service:
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+    do not reply to it or click any links
+    report the suspicious email to HMRC - to find out how go to GOV.UK
+    and search for ‘Avoid and report internet scams and phishing’
