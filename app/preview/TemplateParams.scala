@@ -1736,11 +1736,6 @@ object TemplateParams2 {
       "specificQuestion" -> "I need some stuff.",
       "apiEmail"         -> "api-platform@example.com"
     ),
-    "open_banking_payment_successful" -> Map(
-      "taxType"    -> "Self Assessment",
-      "reference"  -> "1234567890K",
-      "amountPaid" -> "123.45"
-    ),
     "telephone_payments_service" -> Map(
       "totalAmountPaid"         -> "1000.00",
       "transactionReference"    -> "12345FFF",
@@ -3236,6 +3231,25 @@ object TemplateParams3 {
       "serviceName"            -> "Advance Tariff Rulings",
       "enrolmentKey"           -> "HMRC-GVMS-ORG",
       "serviceContent"         -> "Mae’r Gwasanaeth Symud Cerbydau Nwyddau yn barod i’w defnyddio"
+    ),
+    "open_banking_payment_successful" -> Map(
+      "taxType"    -> "Self Assessment",
+      "reference"  -> "1234567890K",
+      "amountPaid" -> "123.45"
+    ),
+    "open_banking_payment_successful_fdp" -> Map(
+      "taxType"              -> "Self Assessment",
+      "paymentScheduledDate" -> "22 October 2027",
+      "datePaymentSetUp"     -> "12 October 2027",
+      "reference"            -> "1234567890K",
+      "amountPaid"           -> "123.45"
+    ),
+    "open_banking_payment_successful_fdp_cy" -> Map(
+      "taxType"              -> "Self Assessment",
+      "paymentScheduledDate" -> "22 October 2027",
+      "datePaymentSetUp"     -> "12 October 2027",
+      "reference"            -> "1234567890K",
+      "amountPaid"           -> "123.45"
     ),
     "ecc_subscription_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",

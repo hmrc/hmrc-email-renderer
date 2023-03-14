@@ -1,0 +1,62 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydych wedi anfon taliad i CThEM") {
+
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl Cwsmer</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae’ch taliad wedi’i drefnu.</p>
+
+    <p>
+<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+    <tbody>
+
+        <tr>
+            <th>Treth</th>
+            <td>@params("taxType")</td>
+        </tr>
+        <tr>
+            <th>Dyddiad mae’r taliad wedi’i drefnu ar ei gyfer </th>
+            <td>@params("paymentScheduledDate")</td>
+        </tr>
+        <tr>
+            <th>Dyddiad trefnwyd y taliad</th>
+            <td>@params("datePaymentSetUp")</td>
+        </tr>
+        <tr>
+            <th>Cyfeirnod y taliad</th>
+            <td>@params("reference")</td>
+        </tr>
+
+        <tr>
+            <th>Swm</th>
+            <td>@params("amountPaid")</td>
+        </tr>
+
+    </tbody>
+</table>
+
+    </p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;"><h2>Pam cawsoch yr e-bost hwn</h2></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Gwnaethoch ddewis cael e-bost ynghylch eich taliad.</p>
+
+    <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Daliadau Ar-lein CThEF</p>
+
+}
