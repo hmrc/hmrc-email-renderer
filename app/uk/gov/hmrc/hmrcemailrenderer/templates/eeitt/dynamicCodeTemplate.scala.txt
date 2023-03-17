@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-@params("headingCode")
+@params("emailHeading")
 
 Dear Customer
 

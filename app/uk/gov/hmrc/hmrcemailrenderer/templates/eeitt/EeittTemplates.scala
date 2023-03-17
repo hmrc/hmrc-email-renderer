@@ -25,8 +25,17 @@ object EeittTemplates {
   private val getTorDySub: Map[String, String] => String =
     _.getOrElse("torDySub", "You applied for transfer of residence tax relief")
 
-  private val getConfDySub: Map[String, String] => String =
-    _.getOrElse("confDySub", "Confirm your email address")
+  private val getEmailSubjectCode: Map[String, String] => String =
+    _.getOrElse("emailSubjectCode", "Confirm your email address")
+
+  private val getEmailSubjectConfirmation: Map[String, String] => String =
+    _.getOrElse("emailSubjectConfirmation", "HMRC has received your submission")
+
+  private val getEmailSubjectCodeCy: Map[String, String] => String =
+    _.getOrElse("emailSubjectCodeCy", "Cadarnhau’ch cyfeiriad e-bost")
+
+  private val getEmailSubjectConfirmationCy: Map[String, String] => String =
+    _.getOrElse("emailSubjectConfirmationCy", "Mae CThEF wedi derbyn eich cyflwyniad")
 
   private val getQAHCDySub: Map[String, String] => String =
     _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
@@ -892,13 +901,40 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicSubject(
-      templateId = "confirmationCode_confirmation_submission",
+      templateId = "dynamicEmail_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = getConfDySub,
-      plainTemplate = txt.confirmationCodeTemplate.f,
-      htmlTemplate = html.confirmationCodeTemplate.f,
+      subject = getEmailSubjectCode,
+      plainTemplate = txt.dynamicCodeTemplate.f,
+      htmlTemplate = html.dynamicCodeTemplate.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dynamicEmail_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getEmailSubjectConfirmation,
+      plainTemplate = txt.dynamicConfirmationTemplate.f,
+      htmlTemplate = html.dynamicConfirmationTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dynamicEmail_code_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getEmailSubjectCodeCy,
+      plainTemplate = txt.dynamicCodeTemplate_cy.f,
+      htmlTemplate = html.dynamicCodeTemplate_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "dynamicEmail_confirmation_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getEmailSubjectConfirmationCy,
+      plainTemplate = txt.dynamicConfirmationTemplate_cy.f,
+      htmlTemplate = html.dynamicConfirmationTemplate_cy.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "civOffshore_code_submission",

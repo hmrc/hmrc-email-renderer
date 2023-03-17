@@ -4,7 +4,7 @@ Cadarnhau’ch cyfeiriad e-bost
 
 Annwyl Gwsmer
 
-Gwnaethoch ofyn am god er mwyn parhau â’r gwasanaeth ‘Rhowch wybod i CThEM bod eich sefydliad wedi rhoi’r gorau i fasnachu neu nad yw erioed wedi masnachu’ ar GOV.UK.
+Gwnaethoch ofyn am god er mwyn parhau â’r gwasanaeth ‘Rhowch wybod i CThEF bod eich sefydliad wedi rhoi’r gorau i fasnachu neu nad yw erioed wedi masnachu’ ar GOV.UK.
 
 Eich cod yw: @params("confirmationCode")
 
@@ -12,10 +12,10 @@ Yr hyn y mae angen i chi ei wneud nawr
 
 Ewch yn ôl i’r dudalen ‘Nodwch eich cod i gadarnhau’ch cyfeiriad e-bost’ yn y gwasanaeth i ddefnyddio’r cod hwn. Unwaith yn unig y gall y cod gael ei ddefnyddio.
 
-Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac na wnaethoch ofyn am y cod hwn, mae’n rhaid i chi gysylltu â CThEM.
+Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac na wnaethoch ofyn am y cod hwn, mae’n rhaid i chi gysylltu â CThEF.
 
 Peidiwch ag ateb yr e-bost hwn.
 
-Oddi wrth - Treth Gorfforaeth CThEM
+Oddi wrth - Treth Gorfforaeth CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

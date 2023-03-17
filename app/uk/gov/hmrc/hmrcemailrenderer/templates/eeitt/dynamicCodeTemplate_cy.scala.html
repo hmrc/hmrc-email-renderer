@@ -15,20 +15,24 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cyflwynwyd: C118 Adran 2 cais Gweithredwr Economaidd Awdurdodedig", isWelsh = true){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address", showHeading1 = false){
+<h1>
+    @params("emailHeading")</h1>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Annwyl Gwsmer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Mae rhan o’ch cais ar gyfer AEO, ffurflen C118 Adran 2 wedi dod i law.</p>
-<h2>Yr hyn y mae angen i chi ei wneud nesaf</h2>
+    Gwnaethoch ofyn am god er mwyn parhau â’r gwasanaeth ‘@params("emailFormName")’ ar GOV.UK.
+</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Mae’n rhaid i chi gyflwyno’r C117 a phob adran berthnasol o’r C118 o fewn 24 awr i gyflwyno’ch ffurflen gyntaf.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Os na fyddwch yn gwneud hyn, byddwn yn gwrthod eich cais.</p>
-<h2>Pam eich bod yn derbyn y neges e-bost hon</h2>
+    Eich cod yw: @params("confirmationCode")</p>
+<h2>
+    Yr hyn y mae angen i chi ei wneud nawr</h2>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Rydym yn anfon e-bost cadarnhau ar gyfer ceisiadau sydd wedi’u cyflwyno ar-lein.</p>
+    Ewch yn ôl i’r dudalen ‘Nodwch eich cod i gadarnhau’ch cyfeiriad e-bost’ yn y gwasanaeth i ddefnyddio’r cod hwn. Unwaith yn unig y gall y cod gael ei ddefnyddio.
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Os bydd angen i chi gysylltu â ni ynghylch eich cais, byddwch angen eich rhif EORI.</p>
+    Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac na wnaethoch ofyn am y cod hwn, mae’n rhaid i chi gysylltu â @params("emailContact")
 <p style="margin: 0 0 30px; font-size: 19px;">
-    Gan dîm AEO CThEF</p>
+    Peidiwch ag ateb yr e-bost hwn.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Oddi wrth - @params("emailTeam")</p>
 }
