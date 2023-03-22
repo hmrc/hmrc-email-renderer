@@ -7,9 +7,26 @@
 @salutationFullName(params, isWelsh=true)
 
 Erbyn hyn, gallwch wneud y canlynol:
+@if(params.getOrElse("serviceName", "") == "Cael rhif EORI"){
+- symud nwyddau i Brydain Fawr neu oddi yno
+- tanysgrifio i wasanaethau tollau
+- defnyddio’r Gwasanaeth Datganiadau Tollau
+- cael rhif EORI sy’n dechrau gydag XI
+
+Defnyddio’r Gwasanaeth Datganiadau Tollau
+
+Rydym wedi’ch tanysgrifio i’r Gwasanaeth Datganiadau Tollau Mae hyn yn golygu y gallwch chi wneud pethau fel:
+
+- cyflwyno datganiadau mewnforio ac allforio gan ddefnyddio’ch meddalwedd datganiad tollau
+- talu Tollau Tramor a TAW Mewnforio
+- cael eich datganiadau TAW mewnforio ohiriedig
+
+I gael rhagor o wybodaeth, chwiliwch am ‘Customs Declaration Service’ ar GOV.UK.
+} else {
 - defnyddio’r gwasanaeth hwn
 - tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI
 - cael rhif EORI sy’n dechrau gydag XI
+}
 
 Os ydych yn symud nwyddau i Ogledd Iwerddon neu oddi yno
 
