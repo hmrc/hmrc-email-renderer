@@ -21,7 +21,7 @@ We have subscribed you to the Customs Declaration Service. This means you can do
 - pay Customs Duty and import VAT
 - get your postponed import VAT statements
 
-For more information, search "Customs Declaration Service" on GOV.UK.
+For more information, search 'Customs Declaration Service' on GOV.UK.
 } else {
 - use this service
 - subscribe to other customs services using your EORI number

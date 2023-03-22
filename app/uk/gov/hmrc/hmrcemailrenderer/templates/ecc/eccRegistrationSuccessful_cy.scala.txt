@@ -21,7 +21,7 @@ Rydym wedi’ch tanysgrifio i’r Gwasanaeth Datganiadau Tollau Mae hyn yn golyg
 - talu Tollau Tramor a TAW Mewnforio
 - cael eich datganiadau TAW mewnforio ohiriedig
 
-I gael rhagor o wybodaeth, chwiliwch am ‘Customs Declaration Service’ ar GOV.UK.
+I gael rhagor o wybodaeth, chwiliwch am 'Customs Declaration Service' ar GOV.UK.
 } else {
 - defnyddio’r gwasanaeth hwn
 - tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI

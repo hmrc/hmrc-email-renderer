@@ -35,6 +35,17 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     fullParams
   }
 
+  private def fullParamsStandalone(serviceName: String) = {
+    val fullParams = commonParameters + (
+      "recipientName_FullName" -> "Jane Jones",
+      "recipientOrgName" -> "JJ Components",
+      "serviceName" -> serviceName,
+      "completionDate" -> "22 March 2019",
+      "enrolmentKey" -> "HMRC-CUS-ORG",
+    )
+    fullParams
+  }
+
   private val registrationParams = commonParameters + (
     "recipientName_FullName" -> "Jane Jones",
     "enrolmentKey"           -> "HMRC-ATAR-ORG"
@@ -73,6 +84,14 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     "include subscription successful content in welsh" in {
       compareContent("ecc_subscription_successful_cy", fullParams("HMRC-GVMS-ORG"), isWelsh = true)(
         eoriCommonComponents)
+    }
+
+    "include registration successful content for standalone journey" in {
+      compareContent("ecc_registration_successful", fullParamsStandalone("Get an EORI"))(eoriCommonComponents)
+    }
+
+    "include registration successful content in welsh for standalone journey" in {
+      compareContent("ecc_registration_successful_cy", fullParamsStandalone("Cael rhif EORI"), isWelsh = true)(eoriCommonComponents)
     }
 
     "include registration successful content" in {
