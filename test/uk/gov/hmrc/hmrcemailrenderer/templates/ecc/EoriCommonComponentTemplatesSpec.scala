@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.ecc
 
 import org.scalatestplus.play.OneAppPerSuite
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec, ecc}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec, ecc }
 
 class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
 
@@ -27,10 +27,10 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
   private def fullParams(enrolmentKey: String) = {
     val fullParams = commonParameters + (
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName" -> "JJ Components",
-      "serviceName" -> "Advance Tariff Rulings",
-      "completionDate" -> "22 March 2019",
-      "enrolmentKey" -> enrolmentKey,
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> "Advance Tariff Rulings",
+      "completionDate"         -> "22 March 2019",
+      "enrolmentKey"           -> enrolmentKey,
     )
     fullParams
   }
@@ -38,17 +38,17 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
   private def fullParamsStandalone(serviceName: String) = {
     val fullParams = commonParameters + (
       "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName" -> "JJ Components",
-      "serviceName" -> serviceName,
-      "completionDate" -> "22 March 2019",
-      "enrolmentKey" -> "HMRC-CUS-ORG",
+      "recipientOrgName"       -> "JJ Components",
+      "serviceName"            -> serviceName,
+      "completionDate"         -> "22 March 2019",
+      "enrolmentKey"           -> "HMRC-CUS-ORG",
     )
     fullParams
   }
 
   private val registrationParams = commonParameters + (
     "recipientName_FullName" -> "Jane Jones",
-    "enrolmentKey" -> "HMRC-ATAR-ORG"
+    "enrolmentKey"           -> "HMRC-ATAR-ORG"
   )
 
   "Templates for which the text and html content are identical" should {
@@ -72,31 +72,27 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     }
 
     "include subscription successful content HMRC-CTS-ORG in welsh" in {
-      compareContent("ecc_subscription_successful_cy",
-        fullParams("HMRC-CTS-ORG"), isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-CTS-ORG"), isWelsh = true)(eoriCommonComponents)
     }
     "include subscription successful content HMRC-SS-ORG in welsh" in {
-      compareContent("ecc_subscription_successful_cy",
-        fullParams("HMRC-SS-ORG"), isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-SS-ORG"), isWelsh = true)(eoriCommonComponents)
     }
     "include subscription successful content HMRC-CTC-ORG in welsh" in {
-      compareContent("ecc_subscription_successful_cy",
-        fullParams("HMRC-CTC-ORG"), isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-CTC-ORG"), isWelsh = true)(eoriCommonComponents)
     }
 
     "include subscription successful content in welsh" in {
-      compareContent("ecc_subscription_successful_cy",
-        fullParams("HMRC-GVMS-ORG"), isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_subscription_successful_cy", fullParams("HMRC-GVMS-ORG"), isWelsh = true)(
+        eoriCommonComponents)
     }
 
     "include registration successful content for standalone journey" in {
-      compareContent("ecc_registration_successful",
-        fullParamsStandalone("Get an EORI"))(eoriCommonComponents)
+      compareContent("ecc_registration_successful", fullParamsStandalone("Get an EORI"))(eoriCommonComponents)
     }
 
     "include registration successful content in welsh for standalone journey" in {
-      compareContent("ecc_registration_successful_cy",
-        fullParamsStandalone("Cael rhif EORI"), isWelsh = true)(eoriCommonComponents)
+      compareContent("ecc_registration_successful_cy", fullParamsStandalone("Cael rhif EORI"), isWelsh = true)(
+        eoriCommonComponents)
     }
 
     "include registration successful content" in {
