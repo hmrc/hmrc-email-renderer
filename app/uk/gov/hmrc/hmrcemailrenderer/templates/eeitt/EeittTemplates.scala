@@ -2071,9 +2071,45 @@ object EeittTemplates {
       templateId = "p626_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Confirm your email address - Apply for, amend or cancel a PAYE settlement agreemen",
+      subject = "Confirm your email address - Apply for, amend or cancel a PAYE settlement agreement",
       plainTemplate = txt.p626Code.f,
       htmlTemplate = html.p626Code.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "p11d_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You have submitted a P11D to HMRC",
+      plainTemplate = txt.p11dConfirmation.f,
+      htmlTemplate = html.p11dConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "p11d_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Tell HMRC about changes to P11D expenses and benefits",
+      plainTemplate = txt.p11dCode.f,
+      htmlTemplate = html.p11dCode.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "p11db_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You have submitted a P11D(b) to HMRC",
+      plainTemplate = txt.p11dbConfirmation.f,
+      htmlTemplate = html.p11dbConfirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "p11db_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Return of expenses and benefits - Employer declaration",
+      plainTemplate = txt.p11dbCode.f,
+      htmlTemplate = html.p11dbCode.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

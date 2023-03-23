@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+
+You have submitted a P11D(b) to HMRC
+
+Dear @params("customerName")
+
+We have received your P11D(b).
+
+Your submission reference is: @params("submissionReference")
+
+If we need to contact you, we will use the details you provided.
+
+For security reasons, we have not included the details you submitted.
+
+Why you are receiving this email
+
+We send a confirmation email for all forms submitted online.
+
+From the HMRC Benefits and Expenses team
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

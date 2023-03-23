@@ -3321,6 +3321,20 @@ object TemplateParams3 {
     "p626_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "p11d_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "p11d_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
+    "p11db_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "p11db_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "dynamicEmail_code" -> Map(
       "emailHeading"     -> "Confirm your email address",
       "emailSubjectCode" -> "Confirm your email address - GForm name",
