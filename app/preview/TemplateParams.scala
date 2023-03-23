@@ -3314,6 +3314,13 @@ object TemplateParams3 {
     "mod_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
+    "p626_confirmation" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68"
+    ),
+    "p626_code" -> Map(
+      "confirmationCode" -> "HGDY"
+    ),
     "dynamicEmail_code" -> Map(
       "emailHeading"     -> "Confirm your email address",
       "emailSubjectCode" -> "Confirm your email address - GForm name",
@@ -3323,10 +3330,10 @@ object TemplateParams3 {
       "emailTeam"        -> "Email Team"
     ),
     "dynamicEmail_confirmation" -> Map(
-      "heading1"                 -> "We have received your return as a registered dealer in controlled oils",
+      "heading1"                 -> "We have received your request to apply for, amend or cancel a PAYE settlement agreement",
       "heading2"                 -> "",
       "heading3"                 -> "",
-      "heading4"                 -> "Keep your details up-to-date",
+      "heading4"                 -> "",
       "heading5"                 -> "",
       "heading6"                 -> "",
       "heading7"                 -> "",
@@ -3338,10 +3345,10 @@ object TemplateParams3 {
       "heading13"                -> "",
       "heading14"                -> "",
       "heading15"                -> "",
-      "para1"                    -> "We confirm we have received your return as a registered dealer in controlled oils.",
-      "para2"                    -> "Your return will now be processed.",
-      "para3"                    -> "If we need to discuss your return, we will get in touch using the contact information we hold.",
-      "para4"                    -> "You can email HMRC at morcexciseeast@@hmrc.gov.uk to update your details.",
+      "para1"                    -> "We confirm we have received your request to apply for, amend or cancel a PAYE settlement agreement.",
+      "para2"                    -> "We will respond to PSA applications and amendments within 30 working days. We will send written confirmation to the address you supplied.",
+      "para3"                    -> "If you have consented to communication by email we will use the email address you supplied.",
+      "para4"                    -> "",
       "para5"                    -> "",
       "para6"                    -> "",
       "para7"                    -> "",
@@ -3355,8 +3362,8 @@ object TemplateParams3 {
       "para15"                   -> "",
       "customerName"             -> "Hugh Mann",
       "submissionReference"      -> "NC38-N2ZC-TH68",
-      "emailSubjectConfirmation" -> "Email Subject",
-      "emailTeam"                -> "From Email Team"
+      "emailSubjectConfirmation" -> "HMEC has received your request to apply for, amend or cancel a PAYE settlement agreement",
+      "emailTeam"                -> "From HMRC"
     ),
     "dynamicEmail_code_cy" -> Map(
       "emailHeading"     -> "Confirm your email address",

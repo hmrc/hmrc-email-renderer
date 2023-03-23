@@ -2057,6 +2057,24 @@ object EeittTemplates {
       plainTemplate = txt.cdsCode.f,
       htmlTemplate = html.cdsCode.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "p626_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC has received your request to apply for, amend or cancel a PAYE settlement agreement",
+      plainTemplate = txt.p626Confirmation.f,
+      htmlTemplate = html.p626Confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "p626_code",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Confirm your email address - Apply for, amend or cancel a PAYE settlement agreemen",
+      plainTemplate = txt.p626Code.f,
+      htmlTemplate = html.p626Code.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
