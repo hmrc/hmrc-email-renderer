@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+We have received your request to apply for, amend or cancel a PAYE settlement agreement
+
+Dear @params("customerName")
+
+We confirm we have received your request to apply for, amend or cancel a PAYE settlement agreement.
+
+Your submission reference is: @params("submissionReference")
+
+We will respond to PSA applications and amendments within 30 working days. We will send written confirmation to the address you supplied.
+
+If you have consented to communication by email we will use the email address you supplied.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
