@@ -8,6 +8,8 @@ Tax: @params("taxType")
 Payment reference: @params("reference")
 Amount: @params("amountPaid")
 
+Your payment will be complete once the money has left your bank account.
+
 If you have an online tax account your payment will take 3 to 5 days to show in your account.
 
 Why you got this email
