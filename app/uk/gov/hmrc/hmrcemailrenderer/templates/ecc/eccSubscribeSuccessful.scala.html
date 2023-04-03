@@ -22,10 +22,7 @@
 @(params: Map[String, Any])
 @check_the_service = @{
       params.getOrElse("enrolmentKey", "") match {
-       case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now apply for an:<ul style="margin: 0 0 30px; font-size: 19px;">
-       <li style="margin: 0 0 30px; font-size: 19px;">Advance Tariff Ruling</li>
-       <li style="margin: 0 0 30px; font-size: 19px;">Advance Valuation Ruling</li>
-       </ul></p>
+       case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now apply for an Advance Tariff Ruling.</p>
        case "HMRC-GVMS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now get a goods movement reference (GMR).</p>
        case "HMRC-CTC-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now submit union transit declarations through NCTS.</p>
        case "HMRC-SS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now make entry summary declarations.</p>
