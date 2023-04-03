@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Mae’ch manylion rhyddhad treth Ymchwil a Datblygu wedi dod i law CThEF
+Mae’ch manylion rhyddhad treth Ymchwil a Datblygu wedi dod i law CThEM
 
 Annwyl Gwsmer,
 
@@ -12,7 +12,7 @@ Rydym yn anfon e-bost cadarnhau ar gyfer ffurflenni sy’n cael eu cyflwyno ar-l
 
 Os bydd angen i chi gysylltu â ni ynghylch hyn, nodwch rif Cyfeirnod Unigryw Trethdalwr y Cwmni (UTR).
 
-Gan dîm Cymhellion a Rhyddhad CThEF
+Gan dîm Cymhellion a Rhyddhad CThEM
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

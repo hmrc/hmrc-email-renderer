@@ -14,6 +14,6 @@ Os bydd angen i chi gysylltu â ni am eich cofrestriad, byddwch angen eich Cyfei
 
 Diolch.
 
-Gan dîm Ecséis CThEF
+Gan dîm Ecséis CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

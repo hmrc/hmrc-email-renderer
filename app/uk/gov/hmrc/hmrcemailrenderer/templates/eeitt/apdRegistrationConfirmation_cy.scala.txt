@@ -4,7 +4,7 @@ Rydych wedi cyflwyno cofrestriad ar-lein
 
 Annwyl Gwsmer,
 
-Mae’ch cais i gofrestru ar gyfer Toll Teithwyr Awyr ar-lein wedi dod i law CThEF.
+Mae’ch cais i gofrestru ar gyfer Toll Teithwyr Awyr ar-lein wedi dod i law CThEM.
 
 Yr hyn y mae angen i chi ei wneud nesaf
 
@@ -16,6 +16,6 @@ Pam eich bod yn derbyn y neges e-bost hon
 
 Rydym yn anfon e-bost cadarnhau ar gyfer cofrestriad sy’n cael ei gyflwyno ar-lein.
 
-Gan dîm Ecséis CThEF
+Gan dîm Ecséis CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

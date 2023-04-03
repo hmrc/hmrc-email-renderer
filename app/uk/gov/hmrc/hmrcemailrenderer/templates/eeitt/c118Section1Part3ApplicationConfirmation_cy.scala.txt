@@ -18,7 +18,7 @@ Rydym yn anfon e-bost cadarnhau ar gyfer ceisiadau sydd wedi’u cyflwyno ar-lei
 
 Os bydd angen i chi gysylltu â ni ynghylch eich cais, byddwch angen eich rhif EORI.
 
-Gan dîm AEO CThEF
+Gan dîm AEO CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
 

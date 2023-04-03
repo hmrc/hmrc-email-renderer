@@ -12,6 +12,6 @@ Dyma neges e-bost i gadarnhau dirymiad ffurflen cyfyngiadau ar log corfforaethol
 
 Diolch.
 
-Gan Gyfyngiad Llog Corfforaethol CThEF
+Gan Gyfyngiad Llog Corfforaethol CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

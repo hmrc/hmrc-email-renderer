@@ -12,6 +12,6 @@ Dyma neges e-bost i gadarnhau cyflwyno’r ffurflen Toll Teithwyr Awyr.
 
 Diolch.
 
-Gan Doll Teithwyr Awyr CThEF
+Gan Doll Teithwyr Awyr CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

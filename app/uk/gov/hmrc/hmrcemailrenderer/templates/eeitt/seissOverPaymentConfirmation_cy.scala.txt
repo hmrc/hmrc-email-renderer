@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Gwnaethoch roi gwybod i CThEF am ddiwygiad i’ch Ffurflen Dreth all effeithio ar eich grant SEISS 4 neu grant SEISS 5.
+Gwnaethoch roi gwybod i CThEM am ddiwygiad i’ch Ffurflen Dreth all effeithio ar eich grant SEISS 4 neu grant SEISS 5.
 
 Annwyl @params("customerName")
 
@@ -14,6 +14,6 @@ Byddwn yn defnyddio’r wybodaeth a ddarparwyd gennych i ail-gyfrifo’ch cymhwy
 
 Byddwn yn ymateb mewn cysylltiad â gordaliadau SEISS 4 a SEISS 5 yn unig.
 
-Oddi wrth Gyfarwyddiaeth Gweinyddu Trethi - Cymhorthdal Incwm Hunangyflogaeth, CThEF
+Oddi wrth Gyfarwyddiaeth Gweinyddu Trethi - Cymhorthdal Incwm Hunangyflogaeth, CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

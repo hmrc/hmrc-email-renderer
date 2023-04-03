@@ -10,6 +10,6 @@ Pam y cawsoch yr e-bost hwn
 
 Gwnaethoch roi’r cyfeiriad e-bost cyswllt hwn wrth lenwi’ch ffurflen biodanwyddau.
 
-Gan Doll Tanwydd CThEF
+Gan Doll Tanwydd CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

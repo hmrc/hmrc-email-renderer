@@ -25,17 +25,8 @@ object EeittTemplates {
   private val getTorDySub: Map[String, String] => String =
     _.getOrElse("torDySub", "You applied for transfer of residence tax relief")
 
-  private val getEmailSubjectCode: Map[String, String] => String =
-    _.getOrElse("emailSubjectCode", "Confirm your email address")
-
-  private val getEmailSubjectConfirmation: Map[String, String] => String =
-    _.getOrElse("emailSubjectConfirmation", "HMRC has received your submission")
-
-  private val getEmailSubjectCodeCy: Map[String, String] => String =
-    _.getOrElse("emailSubjectCodeCy", "Cadarnhau’ch cyfeiriad e-bost")
-
-  private val getEmailSubjectConfirmationCy: Map[String, String] => String =
-    _.getOrElse("emailSubjectConfirmationCy", "Mae CThEF wedi derbyn eich cyflwyniad")
+  private val getConfDySub: Map[String, String] => String =
+    _.getOrElse("confDySub", "Confirm your email address")
 
   private val getQAHCDySub: Map[String, String] => String =
     _.getOrElse("qahcDySub", "You submitted accounting period information for a QAHC")
@@ -901,40 +892,13 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicSubject(
-      templateId = "dynamicEmail_code",
+      templateId = "confirmationCode_confirmation_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = getEmailSubjectCode,
-      plainTemplate = txt.dynamicCodeTemplate.f,
-      htmlTemplate = html.dynamicCodeTemplate.f,
+      subject = getConfDySub,
+      plainTemplate = txt.confirmationCodeTemplate.f,
+      htmlTemplate = html.confirmationCodeTemplate.f,
       priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "dynamicEmail_confirmation",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = getEmailSubjectConfirmation,
-      plainTemplate = txt.dynamicConfirmationTemplate.f,
-      htmlTemplate = html.dynamicConfirmationTemplate.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "dynamicEmail_code_cy",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = getEmailSubjectCodeCy,
-      plainTemplate = txt.dynamicCodeTemplate_cy.f,
-      htmlTemplate = html.dynamicCodeTemplate_cy.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.createWithDynamicSubject(
-      templateId = "dynamicEmail_confirmation_cy",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = getEmailSubjectConfirmationCy,
-      plainTemplate = txt.dynamicConfirmationTemplate_cy.f,
-      htmlTemplate = html.dynamicConfirmationTemplate_cy.f,
-      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "civOffshore_code_submission",
@@ -2056,60 +2020,6 @@ object EeittTemplates {
         "Confirm your email address - Report a problem submitting a declaration using the Customs Declaration Service",
       plainTemplate = txt.cdsCode.f,
       htmlTemplate = html.cdsCode.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "p626_confirmation",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "HMRC has received your request to apply for, amend or cancel a PAYE settlement agreement",
-      plainTemplate = txt.p626Confirmation.f,
-      htmlTemplate = html.p626Confirmation.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "p626_code",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "Confirm your email address - Apply for, amend or cancel a PAYE settlement agreement",
-      plainTemplate = txt.p626Code.f,
-      htmlTemplate = html.p626Code.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "p11d_confirmation",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "You have submitted a P11D to HMRC",
-      plainTemplate = txt.p11dConfirmation.f,
-      htmlTemplate = html.p11dConfirmation.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "p11d_code",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "Confirm your email address - Tell HMRC about changes to P11D expenses and benefits",
-      plainTemplate = txt.p11dCode.f,
-      htmlTemplate = html.p11dCode.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "p11db_confirmation",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "You have submitted a P11D(b) to HMRC",
-      plainTemplate = txt.p11dbConfirmation.f,
-      htmlTemplate = html.p11dbConfirmation.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "p11db_code",
-      fromAddress = govUkTeamAddress,
-      service = Eeitt,
-      subject = "Confirm your email address - Return of expenses and benefits - Employer declaration",
-      plainTemplate = txt.p11dbCode.f,
-      htmlTemplate = html.p11dbCode.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

@@ -20,6 +20,6 @@ Os bydd angen i chi gysylltu â ni ynghylch eich cais, nodwch eich rhif cofrestr
 
 Diolch.
 
-Gan Gynllun Treth Premiwm Yswiriant CThEF
+Gan Gynllun Treth Premiwm Yswiriant CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

@@ -14,6 +14,6 @@ Pam eich bod yn cael y neges e-bost hon
 
 Rydym yn anfon e-bost cadarnhau ar gyfer cais sy’n cael ei gyflwyno ar-lein.
 
-Gan CThEF
+Gan CThEM
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
