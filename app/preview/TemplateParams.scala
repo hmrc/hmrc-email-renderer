@@ -3600,8 +3600,7 @@ object TemplateParams3 {
       "datePaymentDue"  -> "30 September 2023"
     ),
     "ars_notification_template" -> Map(
-      "name" -> "Mr Fantastic",
-      "cake" -> "Victoria sponge"
+      "name" -> "Victoria sponge"
     )
   )
 }

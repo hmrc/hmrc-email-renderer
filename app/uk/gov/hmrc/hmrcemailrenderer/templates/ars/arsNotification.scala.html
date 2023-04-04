@@ -17,22 +17,21 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Advance Valuation Ruling application") {
 
+    @if(params.contains("name")){<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")},</p>}
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")},</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for submitting an Advance Valuation Ruling (AVR) application.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Thank you for submitting an Advance Valuation Ruling (AVR) application.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We aim to review your application within 30 days, but it may take up to 90 days from the date the application was accepted to receive a decision.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">We aim to review your application within 30 days, but it may take up to 90 days from the date the application was accepted to receive a decision.</p>
+    <strong style="margin: 0 0 30px; font-size: 19px;">What you can do next:</strong>
 
-<strong style="margin: 0 0 30px; font-size: 19px;">What you can do next:</strong>
+    <p style="margin: 0 0 30px; font-size: 19px;">Please note that email communication may not always be secure. If you choose to contact us by email, you accept the risks involved.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Please note that email communication may not always be secure. If you choose to contact us by email, you accept the risks involved.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link in this email.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link in this email.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We will contact you if we need any further information to process the application.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">We will contact you if we need any further information to process the application.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Thank you for your patience.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Thank you for your patience.</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">The Advance Valuation Ruling team</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">The Advance Valuation Ruling team</p>
 }

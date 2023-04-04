@@ -2,7 +2,7 @@
 
 Your Advance Valuation Ruling application
 
-Dear @{params("name")},
+@if(params.contains("name")){Dear @{params("name")},}
 
 Thank you for submitting an Advance Valuation Ruling (AVR) application.
 
