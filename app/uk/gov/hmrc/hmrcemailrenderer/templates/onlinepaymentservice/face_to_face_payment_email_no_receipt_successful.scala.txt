@@ -14,8 +14,8 @@
 * limitations under the License.
 *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
 @(params: Map[String, Any])
 
 
@@ -40,12 +40,13 @@
             Amount
             @formatAmountInPence(params("amountInPence").toString)
 
-            Card fee
-            @formatAmountInPence(params("transactionFeeInPence").toString)
+            @if(params.contains("transactionFeeInPence")) {
+                Card fee
+                @formatAmountInPence(params("transactionFeeInPence").toString)
 
-
-            Total paid
-            @formatAmountInPence(params("totalAmountInPence").toString)
+                Total paid
+                @formatAmountInPence(params("totalAmountInPence").toString)
+            }
 
 
     If you have an online tax account your payment will take 3 to 5 days to show in your account.

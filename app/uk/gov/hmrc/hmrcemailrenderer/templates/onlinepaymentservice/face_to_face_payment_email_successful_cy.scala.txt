@@ -14,25 +14,10 @@
 * limitations under the License.
 *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
 @(params: Map[String, Any])
 
-@allItems = @{params("f2fPaymentItemsForEmailSuccessful") match {
-    case items:String => Json.parse(items).as[List[JsObject]]
-    case _ => List()
-}}
-
-
- @itemList = @{ allItems.map( item => {
-
-         val taxType: String = (item \ "taxType").as[String]
-         val amount: String = (item \ "amount").as[String]
-         val transactionFee: String = (item \ "transactionFee").as[String]
-         val transactionNumber = (item \ "transactionNumber").as[String]
-         (taxType, amount, transactionFee, transactionNumber)
-     })
- }
 
     Annwyl gwsmer
 
@@ -51,11 +36,13 @@
             Swm
             @formatAmountInPence(params("amountInPence").toString)
 
-            Ffi’r cerdyn
-            @formatAmountInPence(params("transactionFeeInPence").toString)
+            @if(params.contains("transactionFeeInPence")) {
+                Ffi’r cerdyn
+                @formatAmountInPence(params("transactionFeeInPence").toString)
 
-            Cyfanswm a dalwyd
-            @formatAmountInPence(params("totalAmountInPence").toString)
+                Cyfanswm a dalwyd
+                @formatAmountInPence(params("totalAmountInPence").toString)
+            }
 
             Math o gerdyn
             @params("cardType")

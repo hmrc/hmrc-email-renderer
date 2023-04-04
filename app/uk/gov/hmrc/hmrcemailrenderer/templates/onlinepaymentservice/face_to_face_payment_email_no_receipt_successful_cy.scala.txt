@@ -14,8 +14,8 @@
 * limitations under the License.
 *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
 @(params: Map[String, Any])
 
 
@@ -36,11 +36,13 @@
             Swm
             @formatAmountInPence(params("amountInPence").toString)
 
-            Ffi’r cerdyn
-            @formatAmountInPence(params("transactionFeeInPence").toString)
+            @if(params.contains("transactionFeeInPence")) {
+                Ffi’r cerdyn
+                @formatAmountInPence(params("transactionFeeInPence").toString)
 
-            Cyfanswm a dalwyd
-            @formatAmountInPence(params("totalAmountInPence").toString)
+                Cyfanswm a dalwyd
+                @formatAmountInPence(params("totalAmountInPence").toString)
+            }
 
     Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.
 

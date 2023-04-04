@@ -14,26 +14,13 @@
 * limitations under the License.
 *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
 @(params: Map[String, Any])
-
-@allItems = @{params("f2fPaymentItemsForEmailUnsuccessful") match {
-    case items:String => Json.parse(items).as[List[JsObject]]
-    case _ => List()
-}}
-
-
-
-
-
-
 
 Dear customer
 
-
 Your card payment to HMRC has not been made. No money has been taken from your account.
-
 
               Tax
               @params("taxType")
@@ -47,11 +34,13 @@ Your card payment to HMRC has not been made. No money has been taken from your a
               Amount
               @formatAmountInPence(params("amountInPence").toString)
 
-              Card fee
-              @formatAmountInPence(params("transactionFeeInPence").toString)
+              @if(params.contains("transactionFeeInPence")) {
+                Card fee
+                @formatAmountInPence(params("transactionFeeInPence").toString)
 
-              Total
-              @formatAmountInPence(params("totalAmountInPence").toString)
+                Total
+                @formatAmountInPence(params("totalAmountInPence").toString)
+              }
 
               Card type
               @params("cardType")

@@ -14,8 +14,8 @@
 * limitations under the License.
 *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
 @(params: Map[String, Any])
 
 Annwyl gwsmer
@@ -36,12 +36,13 @@ Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does di
               Swm
               @formatAmountInPence(params("amountInPence").toString)
 
-              Ffi’r cerdyn
-              @formatAmountInPence(params("transactionFeeInPence").toString)
+              @if(params.contains("transactionFeeInPence")) {
+                Ffi’r cerdyn
+                @formatAmountInPence(params("transactionFeeInPence").toString)
 
-              Cyfanswm
-              @formatAmountInPence(params("totalAmountInPence").toString)
-
+                Cyfanswm
+                @formatAmountInPence(params("totalAmountInPence").toString)
+              }
 
 Os oes dal angen i chi dalu
 
