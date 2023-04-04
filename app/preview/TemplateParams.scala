@@ -3598,6 +3598,10 @@ object TemplateParams3 {
       "fyStartYear"     -> "2022",
       "fyEndYear"       -> "2023",
       "datePaymentDue"  -> "30 September 2023"
+    ),
+    "ars_notification_template" -> Map(
+      "name" -> "Mr Fantastic",
+      "cake" -> "Victoria sponge"
     )
   )
 }

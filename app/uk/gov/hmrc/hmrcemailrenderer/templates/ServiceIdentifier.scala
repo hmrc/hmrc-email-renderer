@@ -20,6 +20,7 @@ sealed trait ServiceIdentifier extends Product with Serializable {
   def name: String
 }
 object ServiceIdentifier {
+  case object AdvanceValuationRulingsService extends ServiceIdentifier { override val name = "ars" }
   case object AEOMRA extends ServiceIdentifier { override val name = "aeo-mra" }
   case object Agent extends ServiceIdentifier { override val name = "agent" }
   case object AgentOptInExclude extends ServiceIdentifier { override val name = "agent-optin-exclude" }

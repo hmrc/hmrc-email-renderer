@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Your Advance Valuation Ruling application
+
+Dear @{params("name")},
+
+Thank you for submitting an Advance Valuation Ruling (AVR) application.
+
+We aim to review your application within 30 days, but it may take up to 90 days from the date the application was accepted to receive a decision.
+
+What you can do next:
+
+Please note that email communication may not always be secure. If you choose to contact us by email, you accept the risks involved.
+
+For security reasons, we have not included a link in this email.
+
+We will contact you if we need any further information to process the application.
+
+Thank you for your patience.
+
+The Advance Valuation Ruling team
