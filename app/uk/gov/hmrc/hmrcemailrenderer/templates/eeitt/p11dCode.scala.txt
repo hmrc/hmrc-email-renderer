@@ -1,10 +1,11 @@
+
 @(params: Map[String, Any])
 
-@params("headingCode")
+Confirm your email address
 
 Dear Customer
 
-You requested a code to continue with the ‘@params("emailFormName")’ service on GOV.UK.
+You requested a code to continue with the ‘Tell HMRC about changes to P11D expenses and benefits’ service on GOV.UK.
 
 Your code is: @params("confirmationCode")
 
@@ -12,10 +13,10 @@ What you need to do now
 
 Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.
 
-If this email account is not shared, and you did not request this code you need to contact @params("emailContact")
+If this email account is not shared, and you did not request this code you need to contact HMRC.
 
 Do not reply to this email.
 
-From @params("emailTeam")
+From HMRC
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

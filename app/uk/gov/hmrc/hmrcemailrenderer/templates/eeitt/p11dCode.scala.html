@@ -15,14 +15,12 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address", showHeading1 = false){
-<h1>
-    @params("headingCode")</h1>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address"){
+
 <p style="margin: 0 0 30px; font-size: 19px;">
     Dear Customer</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    You requested a code to continue with the ‘@params("emailFormName")’ service on GOV.UK.
-</p>
+    You requested a code to continue with the ‘Tell HMRC about changes to P11D expenses and benefits’ service on GOV.UK.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Your code is: @params("confirmationCode")</p>
 <h2>
@@ -30,9 +28,9 @@
 <p style="margin: 0 0 30px; font-size: 19px;">
     Return to the ‘Enter your code to confirm your email address’ page in the service to use this code. The code can only be used once.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    If this email account is not shared, and you did not request this code you need to contact @params("emailContact").</p>
+    If this email account is not shared, and you did not request this code you need to contact HMRC.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
     Do not reply to this email.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">
-    From @params("emailTeam")</p>
+    From HMRC</p>
 }

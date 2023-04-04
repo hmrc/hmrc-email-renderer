@@ -1,0 +1,99 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC has received your submission", showHeading1 = false){
+<h1>@params("heading1")</h1>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params("customerName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para1")
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: <b>@params("submissionReference")</b></p>
+<h2>
+    @params.get("heading2")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para2")
+</p>
+<h2>
+    @params.get("heading3")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para3")
+</p>
+<h2>
+    @params.get("heading4")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para4")
+</p>
+<h2>
+    @params.get("heading5")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para5")
+</p>
+<h2>
+    @params.get("heading6")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para6")
+</p>
+<h2>
+    @params.get("heading7")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para7")
+</p>
+<h2>
+    @params.get("heading8")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para8")
+</p>
+<h2>
+    @params.get("heading9")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para9")
+</p>
+<h2>
+    @params.get("heading10")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para10")
+</p>
+<h2>
+    @params.get("heading11")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para11")
+</p>
+<h2>
+    @params.get("heading12")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para12")
+</p>
+<h2>
+    @params.get("heading13")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para13")
+</p>
+<h2>
+    @params.get("heading14")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para14")
+</p>
+<h2>
+    @params.get("heading15")</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("para15")
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params("emailTeam")</p>
+}

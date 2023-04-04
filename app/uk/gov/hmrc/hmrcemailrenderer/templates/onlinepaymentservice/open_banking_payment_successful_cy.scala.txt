@@ -8,6 +8,8 @@ Treth: @params("taxType")
 Cyfeirnod y taliad: @params("reference")
 Swm a dalwyd: @params("amountPaid")
 
+Bydd eich taliad wedi’i gwblhau ar ôl i’r arian adael eich cyfrif banc.
+
 Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.
 
 Pam y cawsoch yr e-bost hwn
