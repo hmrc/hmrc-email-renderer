@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Advance Valuation Ruling application") {
 
-    @if(params.contains("name")){<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("name")},</p>}
+    <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params.getOrElse("name", "applicant")},</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">Thank you for submitting an Advance Valuation Ruling (AVR) application.</p>
 
