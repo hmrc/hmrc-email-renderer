@@ -18,6 +18,35 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 
 @(params: Map[String, Any])
+
+@eoriOnly = @{
+if(params.getOrElse("serviceName", "") == "Cael rhif EORI"){
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li style="margin: 0 0 30px; font-size: 19px;">symud nwyddau i Brydain Fawr neu oddi yno</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">defnyddio’r Gwasanaeth Datganiadau Tollau</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">cael rhif EORI sy’n dechrau gydag XI</li>
+</ul>
+
+<h2 style="margin: 0 0 30px; font-size: 19px;">Defnyddio’r Gwasanaeth Datganiadau Tollau</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Rydym wedi’ch tanysgrifio i’r Gwasanaeth Datganiadau Tollau Mae hyn yn golygu y gallwch chi wneud pethau fel:</p>
+
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li style="margin: 0 0 30px; font-size: 19px;">cyflwyno datganiadau mewnforio ac allforio gan ddefnyddio’ch meddalwedd datganiad tollau</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">talu Tollau Tramor a TAW Mewnforio</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">cael eich datganiadau TAW mewnforio ohiriedig</li>
+</ul>
+
+<p style="margin: 0 0 30px; font-size: 19px;">I gael rhagor o wybodaeth, chwiliwch am 'Customs Declaration Service' ar GOV.UK.</p>
+} else {
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li style="margin: 0 0 30px; font-size: 19px;">defnyddio’r gwasanaeth hwn</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">cael rhif EORI sy’n dechrau gydag XI</li>
+</ul>
+}
+}
 @template_main(params, s"${applicationCompleteCY(params, "Application Complete")}", isWelsh=true) {
 
  <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params, isWelsh=true)</p>
@@ -25,12 +54,7 @@
  <br />
  <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud y canlynol:</p>
 
- <ul style="margin: 0 0 30px; font-size: 19px;">
-  <li style="margin: 0 0 30px; font-size: 19px;">defnyddio’r gwasanaeth hwn</li>
-  <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI</li>
-  <li style="margin: 0 0 30px; font-size: 19px;">cael rhif EORI sy’n dechrau gydag XI</li>
-
- </ul>
+@eoriOnly
 
  <h2 style="margin: 0 0 30px; font-size: 19px;">Os ydych yn symud nwyddau i Ogledd Iwerddon neu oddi yno</h2>
 

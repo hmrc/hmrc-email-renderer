@@ -24,20 +24,27 @@ object EoriCommonComponentTemplates {
 
   private val registration_success_subject: Map[String, String] => String =
     _.get("serviceName")
-      .map(name => s"Your subscription to $name and EORI number are ready to use.")
-      .getOrElse("")
-
-  private val registration_success_subject_cy: Map[String, String] => String =
-    _.get("enrolmentKey")
       .map {
-        case "HMRC-ATAR-ORG" => "Mae Dyfarniadau Tariffau Uwch a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-GVMS-ORG" => "Mae’r Gwasanaeth Symud Cerbydau Nwyddau a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn y DU a’r rhif EORI yn barod i’w defnyddio"
-        case "HMRC-CTS-ORG"  => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
-        case _               => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
+        case "Get an EORI" => "Your EORI number is ready to use"
+        case name          => s"Your subscription to $name and EORI number are ready to use."
       }
       .getOrElse("")
+
+  private val registration_success_subject_cy: Map[String, String] => String = { params =>
+    if (params.getOrElse("serviceName", "") == "Cael rhif EORI") "Mae’ch rhif EORI yn barod i’w ddefnyddio"
+    else
+      params
+        .get("enrolmentKey")
+        .map {
+          case "HMRC-ATAR-ORG" => "Mae Dyfarniadau Tariffau Uwch a’r rhif EORI yn barod i’w defnyddio"
+          case "HMRC-GVMS-ORG" => "Mae’r Gwasanaeth Symud Cerbydau Nwyddau a’r rhif EORI yn barod i’w defnyddio"
+          case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd a’r rhif EORI yn barod i’w defnyddio"
+          case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn y DU a’r rhif EORI yn barod i’w defnyddio"
+          case "HMRC-CTS-ORG"  => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
+          case _               => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
+        }
+        .getOrElse("")
+  }
 
   private val subscription_success_subject: Map[String, String] => String =
     _.get("serviceName")

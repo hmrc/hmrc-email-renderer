@@ -14,11 +14,11 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any], default: String = "")@params.get("enrolmentKey").map({
-case "HMRC-ATAR-ORG" => "Your subscription to Advance Tariff Rulings and EORI number are ready to use"
+@(params: Map[String, Any], default: String = "")@(if(params.getOrElse("serviceName", "") == "Get an EORI")"Your EORI number is ready to use" else params.get("enrolmentKey").map({
+case "HMRC-ATAR-ORG" => "Your subscription to advance rulings and EORI number are ready to use"
 case "HMRC-GVMS-ORG" => "Your subscription to the Goods Vehicle Movement Service and EORI number are ready to use"
 case "HMRC-CTC-ORG"  => "Your subscription to the New Computerised Transit System (NCTS) and EORI number are ready to use"
 case "HMRC-SS-ORG"   => "Your subscription to the Safety and Security GB service and EORI number are ready to use"
 case "HMRC-CTS-ORG"  => "Your subscription to Customs Trader Services and EORI number are ready to use"
-case _ => "Your subscription to the Customs Declaration Service and EORI number are ready to use"
-}).map(_.toString).filterNot(_.isEmpty).getOrElse(default)
+case _               => "Your subscription to the Customs Declaration Service and EORI number are ready to use"
+}).map(_.toString).filterNot(_.isEmpty).getOrElse(default))

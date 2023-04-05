@@ -17,18 +17,46 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html._
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @(params: Map[String, Any])
+
+@eoriOnly = @{
+if(params.getOrElse("serviceName", "") == "Get an EORI"){
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li style="margin: 0 0 30px; font-size: 19px;">move goods to or from Great Britain</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">subscribe to customs services</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">use the Customs Declaration Service</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
+</ul>
+
+<h2 style="margin: 0 0 30px; font-size: 19px;">Use the Customs Declaration Service</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">We have subscribed you to the Customs Declaration Service. This means you can do things like:</p>
+
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li style="margin: 0 0 30px; font-size: 19px;">submit import and export declarations using your customs declaration software</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">pay Customs Duty and import VAT</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">get your postponed import VAT statements</li>
+</ul>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search 'Customs Declaration Service' on GOV.UK.</p>
+} else {
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li style="margin: 0 0 30px; font-size: 19px;">use this service</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">subscribe to other customs services using your EORI number</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
+</ul>
+}
+}
+
+
 @template_main(params, s"${applicationComplete(params, "Application Complete")}") {
 
 <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
 
 <br />
+
 <p style="margin: 0 0 30px; font-size: 19px;">You can now:</p>
 
-  <ul style="margin: 0 0 30px; font-size: 19px;">
-   <li style="margin: 0 0 30px; font-size: 19px;">use this service</li>
-   <li style="margin: 0 0 30px; font-size: 19px;">subscribe to other customs services using your EORI number</li>
-   <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
-  </ul>
+@eoriOnly
 
 <h2 style="margin: 0 0 30px; font-size: 19px;">If you move goods to or from Northern Ireland</h2>
 
