@@ -18,7 +18,7 @@
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Debyd Uniongyrchol ${regimeName(params)}: rhybudd ymlaen llaw ynghylch taliad", isWelsh=true) {
-    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params, true)
 
     <p style="margin: 0 0 30px; font-size: 19px;">Mae gennych Ddebyd Uniongyrchol wedi’i sefydlu i dalu’ch @regimeName(params). Mae hwn yn nodyn atgoffa y byddwn yn casglu taliad cyn bo hir.</p>
 
