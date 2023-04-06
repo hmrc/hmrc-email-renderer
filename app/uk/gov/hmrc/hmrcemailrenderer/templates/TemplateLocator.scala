@@ -22,6 +22,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.agent.AgentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.api.ApiTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue.ApiCatalogueTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ars.ArsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ated.AtedTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ats.AtsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
@@ -97,6 +98,7 @@ trait TemplateLocator {
       "ATS"                   -> AtsTemplates.templates,
       "AWRS"                  -> AwrsTemplates.templates,
       "AMLS"                  -> AmlsTemplates.templates,
+      "ARS"                   -> ArsTemplates.templates,
       "BARS"                  -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
