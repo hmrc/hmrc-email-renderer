@@ -1,137 +1,124 @@
 @*
- * Copyright 2023 HM Revenue & Customs
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *@
+* Copyright 2023 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
 @import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+
 @(params: Map[String, Any])
-
-@allItems = @{params("f2fPaymentItemsForEmailUnsuccessful") match {
-case items:String => Json.parse(items).as[List[JsObject]]
-case _ => List()
-}}
-
-@itemList = @{ allItems.map( item => {
-
-val taxType: String = (item \ "taxType").as[String]
-val amount: String = (item \ "amount").as[String]
-val transactionFee: String = (item \ "transactionFee").as[String]
-val transactionNumber = (item \ "transactionNumber").as[String]
-(taxType, amount, transactionFee, transactionNumber)
-})
-}
-
-@singleItem = @{itemList.size == 1}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Roedd eich taliad i CThEF yn aflwyddiannus ") {
 
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl gwsmer</p>
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl gwsmer</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does dim arian wedi’i dynnu o’ch cyfrif.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does dim arian wedi’i dynnu o’ch cyfrif.</p>
 
-<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
-    <tbody>
-    <tr>
-        <th>Treth</th>
-        <td>@params("taxType")</td>
-    </tr>
-    <tr>
-        <th>Cyfeirnod y taliad</th>
-        <td>@params("transactionNumber")</td>
-    </tr>
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+        <tbody>
+            <tr>
+                <th>Treth</th>
+                <td>@params("taxType")</td>
+            </tr>
+            <tr>
+                <th>Cyfeirnod y taliad</th>
+                <td>@params("transactionNumber")</td>
+            </tr>
 
-    <tr>
-        <th>Cyfeirnod y trafodyn</th>
-        <td>@params("transactionReference")</td>
-    </tr>
+            <tr>
+                <th>Cyfeirnod y trafodyn</th>
+                <td>@params("transactionReference")</td>
+            </tr>
 
-    <tr>
-        <th>Swm</th>
-        <td>@formatAmountInPence(params("amountInPence").toString)</td>
-    </tr>
+            <tr>
+                <th>Swm</th>
+                <td>@formatAmountInPence(params("amountInPence").toString)</td>
+            </tr>
 
-    <tr>
-        <th>Ffi’r cerdyn</th>
-        <td>@formatAmountInPence(params("transactionFeeInPence").toString)</td>
-    </tr>
+            @{
+                if(params.contains("transactionFeeInPence")) {
+                        <tr>
+                        <th>Ffi’r cerdyn</th>
+                        <td>{formatAmountInPence(params("transactionFeeInPence").toString)}</td>
+                        </tr>
 
-    <tr>
-        <th>Cyfanswm</th>
-        <td>@formatAmountInPence(params("totalAmountInPence").toString)</td>
-    </tr>
-    <tr>
-        <th>Math o gerdyn</th>
-        <td>@params("cardType")</td>
-    </tr>
-    <tr>
-        <th>Cerdyn yn gorffen </th>
-        <td>ending in @params("cardNumber")</td>
-    </tr>
+                        <tr>
+                        <th>Cyfanswm</th>
+                        <td>{formatAmountInPence(params("totalAmountInPence").toString)}</td>
+                        </tr>
+                }
+            }
 
-    <tr>
-        <th>ID y rhaglen</th>
-        <td>@params("applicationId")</td>
-    </tr>
-    @if(params.isDefinedAt("panSequence")) {
-        <tr>
-            <th>Dilyniant PAN</th>
-            <td>@params("panSequence")</td>
-        </tr>
-    }
-    <tr>
-        <th>ID y masnachwr</th>
-        <td>@params("merchantId")</td>
-    </tr>
-    @if(params.isDefinedAt("terminalId")) {
-        <tr>
-            <th>ID y derfynnell</th>
-            <td>@params("terminalId")</td>
-        </tr>
-    }
-    <tr>
-        <th>Dull dilysu’r cerdyn</th>
-        <td>@params("cardVerificationMethod")</td>
-    </tr>
-    <tr>
-        <th>Awdurdodiad</th>
-        <td>@params("authorisation")</td>
-    </tr>
-    <tr>
-        <th>Ffynhonnell y trafodyn</th>
-        <td>@params("transactionSource")</td>
-    </tr>
-    <tr>
-        <th>Dyddiad</th>
-        <td>@params("dateOfPayment")</td>
-    </tr>
-    <tr>
-        <th>Amser</th>
-        <td>@params("time")</td>
-    </tr>
-    <tr>
-        <th>Math o drafodyn</th>
-        <td>@params("transactionType")</td>
-    </tr>
-    </tbody>
-</table>
+            <tr>
+                <th>Math o gerdyn</th>
+                <td>@params("cardType")</td>
+            </tr>
+            <tr>
+                <th>Cerdyn yn gorffen </th>
+                <td>ending in @params("cardNumber")</td>
+            </tr>
 
+            <tr>
+                <th>ID y rhaglen</th>
+                <td>@params("applicationId")</td>
+            </tr>
+            @if(params.isDefinedAt("panSequence")) {
+                <tr>
+                    <th>Dilyniant PAN</th>
+                    <td>@params("panSequence")</td>
+                </tr>
+            }
+            <tr>
+                <th>ID y masnachwr</th>
+                <td>@params("merchantId")</td>
+            </tr>
+            @if(params.isDefinedAt("terminalId")) {
+                <tr>
+                    <th>ID y derfynnell</th>
+                    <td>@params("terminalId")</td>
+                </tr>
+            }
+            <tr>
+                <th>Dull dilysu’r cerdyn</th>
+                <td>@params("cardVerificationMethod")</td>
+            </tr>
+            <tr>
+                <th>Awdurdodiad</th>
+                <td>@params("authorisation")</td>
+            </tr>
+            <tr>
+                <th>Ffynhonnell y trafodyn</th>
+                <td>@params("transactionSource")</td>
+            </tr>
+            <tr>
+                <th>Dyddiad</th>
+                <td>@params("dateOfPayment")</td>
+            </tr>
+            <tr>
+                <th>Amser</th>
+                <td>@params("time")</td>
+            </tr>
+            <tr>
+                <th>Math o drafodyn</th>
+                <td>@params("transactionType")</td>
+            </tr>
+        </tbody>
+    </table>
 
-<p style="margin: 30px 0 30px; font-size: 19px;"><h2>Os oes dal angen i chi dalu</h2></p>
+    <h2 style="margin: 30px 0 30px; font-size: 19px;">Os oes dal angen i chi dalu</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg ar 0300 200 1900. Ar agor rhwng 08:30 a 17:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc)</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg ar 0300 200 1900. Ar agor rhwng 08:30 a 17:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc)</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
 
 }
