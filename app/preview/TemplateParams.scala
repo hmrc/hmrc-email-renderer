@@ -3589,6 +3589,11 @@ object TemplateParams3 {
       "eclRegistrationReference" -> "XMECL0000000001",
       "dateDue"                  -> "30 September 2023"
     ),
+    "ecl_registration_submitted_private_beta" -> Map(
+      "name"                     -> "John Doe",
+      "eclRegistrationReference" -> "XMECL0000000001",
+      "dateDue"                  -> "30 September 2023"
+    ),
     "ecl_return_submitted" -> Map(
       "name"            -> "John Doe",
       "dateSubmitted"   -> "1 September 2023",
