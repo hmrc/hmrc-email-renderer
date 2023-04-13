@@ -24,6 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import org.scalatest.OptionValues
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy, contactFormsGroup }
+import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed, rald_connection_removed_cy }
 
 class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with OptionValues with GuiceOneAppPerSuite {
@@ -133,7 +134,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "EU Subsidy",
         "ITSA",
         "ECL",
-        "HIPP"
+        "HIPP",
+        FeedbackTemplates.id
       )
     }
 
@@ -929,7 +931,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ecl_registration_submitted",
         "hipp_add_team_member_to_app_email",
         "hipp_remove_team_member_from_app_email",
-        "ecl_return_submitted"
+        "ecl_return_submitted",
+        "feeback_answers_for_digital_persona"
       )
     }
   }

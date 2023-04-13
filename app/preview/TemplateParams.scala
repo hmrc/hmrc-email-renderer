@@ -3601,6 +3601,10 @@ object TemplateParams3 {
     ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
+    ),
+    "feeback_answers_for_digital_persona" -> Map(
+      "config"  -> "eyJuYW1lIjoidGVzdCIsImxhYmVsIjoiQVNNIHNhdGlzZmFjdGlvbiBzdXJ2ZXkiLCJxdWVzdGlvbnMiOlt7ImxhYmVsIjoiT24gYSBzY2FsZSBvZiAxIHRvIDEwIGhvdyB1c2VmdWwgd2FzIHRoZSBhdGEgb3BpbmlvbiBkYXRhPyIsInJhbmdlIjpbMCwxMF0sInR5cGUiOiJzbGlkZXIifSx7ImxhYmVsIjoiSG93IG11Y2ggZG8geW91IGFncmVlPyBUaGUgYW1vdW50IG9mIHRpbWUgaXQgdG9vayBmb3IgbXkgYmFnIHRvIGJlIGxvYWRlZC91bmxvYWRlZCB3YXMgcmVhc29uYWJsZSIsIm9wdGlvbnMiOlsiU3Ryb25nbHkgRGlzYWdyZWUiLCJTb21ld2hhdCBEaXNhZ3JlZSIsIk5laXRoZXIgQWdyZWUgbm9yIERpc2FncmVlIiwiU29tZXdoYXQgQWdyZWUiLCJTdHJvbmdseSBBZ3JlZSJdLCJ0eXBlIjoicmFkaW8ifSx7ImxhYmVsIjoiSXMgdGhlcmUgYW55IG90aGVyIHRoaW5nIHlvdSB3b3VsZCBsaWtlIHVzIHRvIGtub3c/Iiwib3B0aW9uYWwiOnRydWUsInR5cGUiOiJ0ZXh0QXJlYSJ9XSwiYWN0aXZlIjp7ImZyb20iOiIyMDIzLTAzLTAxVDAwOjAwOjAwWiIsInRvIjoiMjAyMy0wNC0wMVQwMDowMDowMFoifSwic2hvd09uY2UiOmZhbHNlLCJzaG93UmF0ZSI6MX0=",
+      "answers" -> "eyJuYW1lIjoidGVzdCIsImFuc3dlcnMiOlsiMiIsIjMiLCJIb3BlIHRoaXMgd29ya3MiXX0="
     )
   )
 }
