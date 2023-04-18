@@ -3597,7 +3597,8 @@ object TemplateParams3 {
       "chargeReference" -> "XY007000075424",
       "fyStartYear"     -> "2022",
       "fyEndYear"       -> "2023",
-      "datePaymentDue"  -> "30 September 2023"
+      "datePaymentDue"  -> "30 September 2023",
+      "amountDue"       -> "£10,000"
     ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
