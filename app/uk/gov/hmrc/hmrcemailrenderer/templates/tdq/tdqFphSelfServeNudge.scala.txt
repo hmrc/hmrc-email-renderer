@@ -17,7 +17,7 @@ Go to View all applications
 Select your Production application
 On the left, select ‘Fraud prevention’
 
-You can now check your application at any time. We’ll no longer send detailed reports to you every month.
+You can now check your application at any time.
 
 You are required by law to submit header data for the VAT (MTD) and Income Tax Self Assessment (MTD) APIs. This includes all associated APIs and endpoints.
 
