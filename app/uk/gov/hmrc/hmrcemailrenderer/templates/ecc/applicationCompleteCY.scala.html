@@ -14,7 +14,6 @@
  * limitations under the License.
  *@
 
-
 @(params: Map[String, Any], default: String = "")@(if(params.getOrElse("serviceName", "") == "Cael rhif EORI")"Mae’ch rhif EORI yn barod i’w ddefnyddio" else params.get("enrolmentKey").map({
 case "HMRC-ATAR-ORG" => "Mae’ch tanysgrifiad i ddyfarniadau tariffau uwch a’ch rhif EORI yn barod i’w defnyddio"
 case "HMRC-GVMS-ORG" => "Mae’ch tanysgrifiad i’r Gwasanaeth Symud Cerbydau Nwyddau a’ch rhif EORI yn barod i’w defnyddio"
