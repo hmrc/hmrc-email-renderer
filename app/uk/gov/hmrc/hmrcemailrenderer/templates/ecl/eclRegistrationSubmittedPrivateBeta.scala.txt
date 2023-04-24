@@ -26,7 +26,17 @@ When you complete your yearly return, you will need to tell us about:
 
 Why you got this email
 
-This email address is registered as the email address we can use to contact you about the ECL.
+@if(params("isPrimaryContact").toString.toBoolean) {
+This is the email address you provided when you registered.
+}
+
+@if(params.contains("secondContactEmail") && params("isPrimaryContact").toString.toBoolean) {
+We have also sent this email to @params("secondContactEmail") because you added them as a contact when you registered.
+}
+
+@if(!params("isPrimaryContact").toString.toBoolean) {
+We have sent you this email because you were added as a contact when someone in your organisation registered for the ECL.
+}
 
 Do not respond to this email.
 

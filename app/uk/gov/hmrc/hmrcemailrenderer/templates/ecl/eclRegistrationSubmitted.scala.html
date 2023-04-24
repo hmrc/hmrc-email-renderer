@@ -53,7 +53,17 @@
 
         <p style="font-weight: bold;">Why you got this email</p>
 
-        <p>This email address is registered as the email address we can use to contact you about the ECL.</p>
+        @if(params("isPrimaryContact").toString.toBoolean) {
+            <p>This is the email address you provided when you registered.</p>
+        }
+
+        @if(params.contains("secondContactEmail") && params("isPrimaryContact").toString.toBoolean) {
+            <p>We have also sent this email to @params("secondContactEmail") because you added them as a contact when you registered.</p>
+        }
+
+        @if(!params("isPrimaryContact").toString.toBoolean) {
+            <p>We have sent you this email because you were added as a contact when someone in your organisation registered for the ECL.</p>
+        }
 
         <p>Do not respond to this email.</p>
 

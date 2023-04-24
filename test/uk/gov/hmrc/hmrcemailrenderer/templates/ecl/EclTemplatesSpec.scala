@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ecl
 
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
 
 class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
@@ -29,7 +29,9 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
       val registrationSubmittedParams = commonParameters + (
         "name"                     -> "John Doe",
         "eclRegistrationReference" -> "XMECL0000000001",
-        "dateDue"                  -> "30 September 2023"
+        "dateDue"                  -> "30 September 2023",
+        "isPrimaryContact"         -> "true",
+        "secondContactEmail"       -> "joe.smith@test.com"
       )
 
       compareContent("ecl_registration_submitted", registrationSubmittedParams)(ecl)
@@ -39,7 +41,9 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
       val registrationSubmittedParams = commonParameters + (
         "name"                     -> "John Doe",
         "eclRegistrationReference" -> "XMECL0000000001",
-        "dateDue"                  -> "30 September 2023"
+        "dateDue"                  -> "30 September 2023",
+        "isPrimaryContact"         -> "true",
+        "secondContactEmail"       -> "joe.smith@test.com"
       )
 
       compareContent("ecl_registration_submitted_private_beta", registrationSubmittedParams)(ecl)

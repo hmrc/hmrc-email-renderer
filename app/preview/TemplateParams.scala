@@ -3587,12 +3587,16 @@ object TemplateParams3 {
     "ecl_registration_submitted" -> Map(
       "name"                     -> "John Doe",
       "eclRegistrationReference" -> "XMECL0000000001",
-      "dateDue"                  -> "30 September 2023"
+      "dateDue"                  -> "30 September 2023",
+      "isPrimaryContact"         -> "true",
+      "secondContactEmail"       -> "joe.smith@test.com"
     ),
     "ecl_registration_submitted_private_beta" -> Map(
       "name"                     -> "John Doe",
       "eclRegistrationReference" -> "XMECL0000000001",
-      "dateDue"                  -> "30 September 2023"
+      "dateDue"                  -> "30 September 2023",
+      "isPrimaryContact"         -> "true",
+      "secondContactEmail"       -> "joe.smith@test.com"
     ),
     "ecl_return_submitted" -> Map(
       "name"            -> "John Doe",
