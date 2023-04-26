@@ -28,18 +28,9 @@ object EclTemplates {
       templateId = "ecl_registration_submitted",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,
-      subject = "Economic Crime Levy registration submitted",
+      subject = "You have registered for the Economic Crime Levy",
       plainTemplate = txt.eclRegistrationSubmitted.f,
       htmlTemplate = html.eclRegistrationSubmitted.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "ecl_registration_submitted_private_beta",
-      fromAddress = FromAddress.noReply("Economic Crime Levy"),
-      service = EconomicCrimeLevy,
-      subject = "Economic Crime Levy registration submitted",
-      plainTemplate = txt.eclRegistrationSubmittedPrivateBeta.f,
-      htmlTemplate = html.eclRegistrationSubmittedPrivateBeta.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(

@@ -1,11 +1,12 @@
 @(params: Map[String, Any])
-Economic Crime Levy registration submitted
+You have registered for the Economic Crime Levy
 
 Dear @params("name")
 
-You have submitted a registration for the Economic Crime Levy (ECL).
+You have registered for the Economic Crime Levy (ECL).
 
-Your ECL reference number is @params("eclRegistrationReference"). Please save this for your records.
+ECL reference number @params("eclRegistrationReference")
+ECL registration date @params("eclRegistrationDate")
 
 What happens next
 
@@ -15,7 +16,11 @@ The next deadline for submitting a return and making a payment is @params("dateD
 
 How to submit a return
 
+@if(params("privateBetaEnabled").toString.toBoolean) {
+You cannot submit a return right now. You will be able to submit a return later.
+} else {
 You can submit a return by going to the Returns section of your ECL account.
+}
 
 When you complete your yearly return, you will need to tell us about:
 

@@ -16,11 +16,12 @@
 
 package preview
 
-import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ rald_connection_removed, rald_connection_removed_cy }
+
+import java.util.{ Base64, UUID }
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -3587,16 +3588,11 @@ object TemplateParams3 {
     "ecl_registration_submitted" -> Map(
       "name"                     -> "John Doe",
       "eclRegistrationReference" -> "XMECL0000000001",
+      "eclRegistrationDate"      -> "20 September 2023",
       "dateDue"                  -> "30 September 2023",
       "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com"
-    ),
-    "ecl_registration_submitted_private_beta" -> Map(
-      "name"                     -> "John Doe",
-      "eclRegistrationReference" -> "XMECL0000000001",
-      "dateDue"                  -> "30 September 2023",
-      "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com"
+      "secondContactEmail"       -> "joe.smith@test.com",
+      "privateBetaEnabled"       -> "true"
     ),
     "ecl_return_submitted" -> Map(
       "name"            -> "John Doe",

@@ -29,24 +29,14 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
       val registrationSubmittedParams = commonParameters + (
         "name"                     -> "John Doe",
         "eclRegistrationReference" -> "XMECL0000000001",
+        "eclRegistrationDate"      -> "20 September 2023",
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
-        "secondContactEmail"       -> "joe.smith@test.com"
+        "secondContactEmail"       -> "joe.smith@test.com",
+        "privateBetaEnabled"       -> "true"
       )
 
       compareContent("ecl_registration_submitted", registrationSubmittedParams)(ecl)
-    }
-
-    "include registration submitted private beta content" in {
-      val registrationSubmittedParams = commonParameters + (
-        "name"                     -> "John Doe",
-        "eclRegistrationReference" -> "XMECL0000000001",
-        "dateDue"                  -> "30 September 2023",
-        "isPrimaryContact"         -> "true",
-        "secondContactEmail"       -> "joe.smith@test.com"
-      )
-
-      compareContent("ecl_registration_submitted_private_beta", registrationSubmittedParams)(ecl)
     }
 
     "include return submitted content" in {
