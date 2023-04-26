@@ -26,7 +26,7 @@ sealed abstract class Status(val name: String, val subjectVerb: String, val acti
 
 case object NoRequests extends Status("NO_REQUESTS", "Check", "check the status of your application") {
   override def contents(applicationName: String, month: String, year: Int): Seq[String] = Seq(
-    s"$applicationName hasn’t sent any requests so far in $month $year."
+    s"$applicationName has not sent any requests so far in $month $year."
   )
 }
 
