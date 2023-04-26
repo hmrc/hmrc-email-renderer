@@ -16,65 +16,65 @@
 
 @(params: Map[String, Any])
 
-    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted a return for the Economic Crime Levy") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted a return for the Economic Crime Levy") {
 
-        <div style="margin: 0 0 30px;
+    <div style="margin: 0 0 30px;
+        font-size: 19px;">
+        <p>Dear @params("name")</p>
+
+        <p>
+            You have submitted a return for the Economic Crime Levy (ECL).
+        </p>
+
+        <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
             font-size: 19px;">
-            <p>Dear @params("name")</p>
+            <tbody>
 
-            <p>
-                You have submitted a return for the Economic Crime Levy (ECL).
-            </p>
+                <tr>
+                    <th>ECL return number</th>
+                    <td>@params("chargeReference")</td>
+                </tr>
 
-            <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
-                font-size: 19px;">
-                <tbody>
+                <tr>
+                    <th>ECL return submission date</th>
+                    <td>@params("dateSubmitted")</td>
+                </tr>
 
-                    <tr>
-                        <th>ECL return number</th>
-                        <td>@params("chargeReference")</td>
-                    </tr>
+                <tr>
+                    <th>Financial year</th>
+                    <td>@params("periodStartDate") to @params("periodEndDate")</td>
+                </tr>
 
-                    <tr>
-                        <th>ECL return submission date</th>
-                        <td>@params("dateSubmitted")</td>
-                    </tr>
+                <tr>
+                    <th>Amount you need to pay</th>
+                    <td>@params("amountDue")</td>
+                </tr>
 
-                    <tr>
-                        <th>Financial year</th>
-                        <td>@params("periodStartDate") to @params("periodEndDate")</td>
-                    </tr>
+            </tbody>
+        </table>
 
-                    <tr>
-                        <th>Amount you need to pay</th>
-                        <td>@params("amountDue")</td>
-                    </tr>
+        <p>
+            You must pay the levy by @params("datePaymentDue"). Your ECL return number must be used as a payment reference when you pay the levy.
+        </p>
 
-                </tbody>
-            </table>
+        <p>
+            You will be charged interest if you make a late payment.
+        </p>
 
-            <p>
-                You must pay the levy by @params("datePaymentDue"). Your ECL return number must be used as a payment reference when you pay the levy.
-            </p>
+        <p style="font-weight: bold;">How to pay the levy</p>
 
-            <p>
-                You will be charged interest if you make a late payment.
-            </p>
+        <p>You can pay the levy by going to the guidance on how to pay:</p>
 
-            <p style="font-weight: bold;">How to pay the levy</p>
+        <a href="https://www.gov.uk/guidance/pay-the-economic-crime-levy" style="color: #005EA5;">
+            https://www.gov.uk/guidance/pay-the-economic-crime-levy</a>
 
-            <p>You can pay the levy by going to the guidance on how to pay:</p>
+        <p style="font-weight: bold;">Why you got this email</p>
 
-            <a href="https://www.gov.uk/guidance/pay-the-economic-crime-levy" style="color: #005EA5;">
-                https://www.gov.uk/guidance/pay-the-economic-crime-levy</a>
+        <p>This is the email address you provided when you submitted your return.</p>
 
-            <p style="font-weight: bold;">Why you got this email</p>
+        <p>Do not respond to this email.</p>
 
-            <p>This is the email address you provided when you submitted your return.</p>
+        <p>From HMRC Economic Crime Levy team</p>
+    </div>
 
-            <p>Do not respond to this email.</p>
-
-            <p>From HMRC Economic Crime Levy team</p>
-        </div>
-
-    }
+}
