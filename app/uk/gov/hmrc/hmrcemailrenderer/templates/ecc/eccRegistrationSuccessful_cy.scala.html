@@ -19,8 +19,25 @@
 
 @(params: Map[String, Any])
 
-@eoriOnly = @{
-if(params.getOrElse("serviceName", "") == "Cael rhif EORI"){
+@dynamicSubscriptionContent = @{
+ params.getOrElse("enrolmentKey", "") match {
+  case "HMRC-ATAR-ORG" =>
+   <li style="margin: 0 0 30px; font-size: 19px;">gwneud cais am Ddyfarniad Tariffau Uwch</li>
+   <li style="margin: 0 0 30px; font-size: 19px;">Gwneud cais am Ddyfarniad Prisio Uwch</li>
+  case "HMRC-GVMS-ORG" => <li style="margin: 0 0 30px; font-size: 19px;">Cael cyfeirnod symud nwyddau</li>
+  case "HMRC-CTC-ORG" => <li style="margin: 0 0 30px; font-size: 19px;">cyflwyno datganiadau ‘Cludo yn yr Undeb’ trwy ddefnyddio’r System Gludo Gyfrifiadurol Newydd (NCTS)</li>
+  case "HMRC-SS-ORG" => <li style="margin: 0 0 30px; font-size: 19px;">gwneud datganiad cryno wrth gyrraedd</li>
+  case "HMRC-CTS-ORG" =>
+   <li style="margin: 0 0 30px; font-size: 19px;">gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)</li>
+   <li style="margin: 0 0 30px; font-size: 19px;">anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF</li>
+   <li style="margin: 0 0 30px; font-size: 19px;">rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio</li>
+
+  case _ => <li style="margin: 0 0 30px; font-size: 19px;">defnyddio’r Gwasanaeth Datganiadau Tollau</li>
+ }
+}
+
+@eoriOnly = {
+@if(params.getOrElse("serviceName", "") == "Cael rhif EORI"){
 <ul style="margin: 0 0 30px; font-size: 19px;">
  <li style="margin: 0 0 30px; font-size: 19px;">symud nwyddau i Brydain Fawr neu oddi yno</li>
  <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau</li>
@@ -41,8 +58,9 @@ if(params.getOrElse("serviceName", "") == "Cael rhif EORI"){
 <p style="margin: 0 0 30px; font-size: 19px;">I gael rhagor o wybodaeth, chwiliwch am 'Customs Declaration Service' ar GOV.UK.</p>
 } else {
 <ul style="margin: 0 0 30px; font-size: 19px;">
- <li style="margin: 0 0 30px; font-size: 19px;">defnyddio’r gwasanaeth hwn</li>
- <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau eraill gan ddefnyddio’ch rhif EORI</li>
+ @dynamicSubscriptionContent
+ <li style="margin: 0 0 30px; font-size: 19px;">symud nwyddau i Brydain Fawr neu oddi yno</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">tanysgrifio i wasanaethau tollau eraill</li>
  <li style="margin: 0 0 30px; font-size: 19px;">cael rhif EORI sy’n dechrau gydag XI</li>
 </ul>
 }

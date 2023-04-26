@@ -6,6 +6,23 @@
 
 @salutationFullName(params)
 
+@dynamicSubscriptionContent = @{
+ params.getOrElse("enrolmentKey", "")match{
+  case "HMRC-ATAR-ORG" =>
+                "- apply for an Advance Tariff Ruling" + "\n" +
+                "- apply for an Advance Valuation Ruling"
+  case "HMRC-GVMS-ORG" => "- get a goods movement reference (GMR)"
+  case "HMRC-CTC-ORG" => "- submit union transit declarations through NCTS"
+  case "HMRC-SS-ORG" => "- make entry summary declarations"
+  case "HMRC-CTS-ORG" =>
+               "- apply for repayment of import duty and VAT (CHIEF)" + "\n" +
+               "- send documents for a customs check for declarations made in CHIEF" + "\n" +
+               "- tell HMRC about an underpayment of Customs Duty or import VAT"
+
+  case _ =>  "- use the Customs Declaration Service"
+ }
+}
+
 You can now:
 @if(params.getOrElse("serviceName", "") == "Get an EORI"){
 - move goods to or from Great Britain
@@ -23,9 +40,11 @@ We have subscribed you to the Customs Declaration Service. This means you can do
 
 For more information, search 'Customs Declaration Service' on GOV.UK.
 } else {
-- use this service
-- subscribe to other customs services using your EORI number
+@dynamicSubscriptionContent
+- move goods to or from Great Britain
+- subscribe to other customs services
 - get an EORI number starting with XI
+
 }
 If you move goods to or from Northern Ireland
 
