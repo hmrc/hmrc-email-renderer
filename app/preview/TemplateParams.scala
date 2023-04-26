@@ -2104,102 +2104,6 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId,
       "name"             -> "Susan Bartlett"
     ),
-    "tdq_fph_report_non_compliant" -> Map(
-      "developerName"                     -> "John Smith",
-      "fromDate"                          -> "22 September 2019",
-      "toDate"                            -> "22 October 2019",
-      "month"                             -> "October",
-      "year"                              -> "2019",
-      "status"                            -> "ALL_REQUIRED_HEADERS_MISSING",
-      "regimeLongForm"                    -> "VAT (Making Tax Digital)",
-      "regimeShortForm"                   -> "VAT (MTD)",
-      "applicationName"                   -> "My Basic MTD App",
-      "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
-      "allHeadersMissingPercentage"       -> "5",
-      "invalidConnectionMethodPercentage" -> "23",
-      "allHeadersMissingCount"            -> "729",
-      "invalidConnectionMethodCount"      -> "3354",
-      "relatesToMultipleVersions"         -> "true",
-      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
-        parse("""
-        {
-          "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 10500,
-          "headerValidations": [
-            {
-              "headerOrHeaders": "gov-client-public-ip",
-              "errors": [
-                {
-                  "message": "Value is not an IP address",
-                  "percentage": 5,
-                  "count": 525
-                }, {
-                  "message": "Value is not a public IP address",
-                  "percentage": 10,
-                  "count": 1050
-                }
-              ],
-              "warnings": []
-            }, {
-              "headerOrHeaders": "gov-vendor-version",
-              "errors": [
-                {
-                  "message": "Value must be a key-value data structure",
-                  "percentage": 10,
-                  "count": 1075
-                }, {
-                  "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0,
-                  "count": 10
-                }
-              ],
-              "warnings": [
-                {
-                  "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10,
-                  "count": 107
-                }
-              ]
-            },
-            {
-              "headerOrHeaders": "gov-client-device-id",
-              "errors" : [],
-              "warnings": [
-                {
-                  "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17,
-                  "count": 1801
-                }, {
-                  "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22,
-                  "count": 2315
-                }
-              ]
-            }
-          ]
-        }
-        """)).getBytes("UTF-8"))
-    ),
-    "tdq_fph_report_heuristically_compliant" -> Map(
-      "developerName"             -> "John Smith",
-      "fromDate"                  -> "22 September 2019",
-      "toDate"                    -> "22 October 2019",
-      "month"                     -> "October",
-      "year"                      -> "2019",
-      "status"                    -> "ALL_REQUIRED_HEADERS_MISSING",
-      "regimeLongForm"            -> "VAT (Making Tax Digital)",
-      "regimeShortForm"           -> "VAT (MTD)",
-      "applicationName"           -> "My Well Behaved MTD App",
-      "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
-      "hasOtherConnectionMethods" -> "true",
-      "extraDetails"              -> Base64.getEncoder.encodeToString(stringify(parse("""
-        {
-          "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 10500,
-          "headerValidations": []
-        }
-        """)).getBytes("UTF-8"))
-    ),
     "tdq_fph_self_serve_nudge" -> Map(
       "developerName"             -> "John Smith",
       "fromDate"                  -> "22 September 2019",
@@ -2209,7 +2113,7 @@ object TemplateParams2 {
       "status"                    -> "HEADERS_WITH_ERRORS",
       "regimeLongForm"            -> "VAT (Making Tax Digital)",
       "regimeShortForm"           -> "VAT (MTD)",
-      "applicationName"           -> "My Well Behaved MTD App",
+      "applicationName"           -> "My Well Behaved App",
       "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "hasOtherConnectionMethods" -> "true",
       "extraDetails"              -> Base64.getEncoder.encodeToString(stringify(parse("""
