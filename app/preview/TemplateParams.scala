@@ -2365,12 +2365,12 @@ object TemplateParams2 {
     ),
     "mdr_file_upload_successful" -> Map(
       "contactName"  -> "Joe Bloggs",
-      "dateAndTime"  -> "2:29pm on 27th January 2012",
+      "dateAndTime"  -> "2:29pm on 27 January 2012",
       "messageRefId" -> "XAMDR00012345671234567890123456789012345678901234567890123456789012345678901234567890"
     ),
     "mdr_file_upload_unsuccessful" -> Map(
       "contactName"  -> "Joe Bloggs",
-      "dateAndTime"  -> "2:29pm on 27th January 2012",
+      "dateAndTime"  -> "2:29pm on 27 January 2012",
       "messageRefId" -> "XAMDR00012345671234567890123456789012345678901234567890123456789012345678901234567890"
     ),
     "dac6_new_disclosure_confirmation" -> Map(

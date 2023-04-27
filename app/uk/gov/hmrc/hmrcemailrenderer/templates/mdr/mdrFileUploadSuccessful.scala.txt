@@ -21,6 +21,8 @@ You can email aeoi.enquiries@@hmrc.gov.uk for help.
 
 For more information, you can visit GOV.UK and search for ‘MDR’.
 
+From the HMRC MDR Service
+
 If you’re unsure an email is from the MDR service:
 
     do not reply to it or click any links
