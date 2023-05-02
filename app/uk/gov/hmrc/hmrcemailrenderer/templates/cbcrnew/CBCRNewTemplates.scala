@@ -57,7 +57,7 @@ object CBCRNewTemplates {
       templateId = "cbc_agent_file_upload_successful",
       fromAddress = govUkTeamAddress,
       service = CountryByCountryReportingNew,
-      subject = "Country-by-country (CBC) file accepted",
+      subject = "Country-by-country (CBC) file is being reviewed",
       plainTemplate = txt.cbcAgentFileUploadSuccessful.f,
       htmlTemplate = html.cbcAgentFileUploadSuccessful.f,
       priority = Some(MessagePriority.Urgent)
