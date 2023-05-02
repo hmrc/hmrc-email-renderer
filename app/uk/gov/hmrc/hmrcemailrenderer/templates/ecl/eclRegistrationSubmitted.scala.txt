@@ -1,26 +1,47 @@
 @(params: Map[String, Any])
-Economic Crime Levy registration received
+You have registered for the Economic Crime Levy
 
 Dear @params("name")
 
-We have received your registration for the Economic Crime Levy (ECL).
+You have registered for the Economic Crime Levy (ECL).
 
-Your ECL reference number is @params("eclRegistrationReference").
+ECL reference number @params("eclRegistrationReference")
+ECL registration date @params("eclRegistrationDate")
 
 What happens next
 
-You will need to complete a return and pay the levy on a yearly basis. The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+You will need to complete a return and pay the levy on a yearly basis.
+
+The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+
+How to submit a return
+
+@if(params("privateBetaEnabled").toString.toBoolean) {
+You cannot submit a return right now. You will be able to submit a return later.
+} else {
+You can submit a return by going to the Returns section of your ECL account.
+}
 
 When you complete your yearly return, you will need to tell us about:
 
     - the relevant accounting period for your organisation
     - your UK revenue for the relevant accounting period
-    - how long you carried out Anti-Money Laundering (AML) regulated activities during the financial year
+    - how long you carried out anti-money laundering (AML) regulated activities during the financial year
     - the name, role, and contact details of the person in your organisation who is completing the return
 
 Why you got this email
 
-This email address is registered as the email address we can use to contact you about the ECL.
+@if(params("isPrimaryContact").toString.toBoolean) {
+This is the email address you provided when you registered.
+}
+
+@if(params.contains("secondContactEmail") && params("isPrimaryContact").toString.toBoolean) {
+We have also sent this email to @params("secondContactEmail") because you added them as a contact when you registered.
+}
+
+@if(!params("isPrimaryContact").toString.toBoolean) {
+We have sent you this email because you were added as a contact when someone in your organisation registered for the ECL.
+}
 
 Do not respond to this email.
 

@@ -28,7 +28,7 @@ object EclTemplates {
       templateId = "ecl_registration_submitted",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,
-      subject = "Economic Crime Levy registration received",
+      subject = "You have registered for the Economic Crime Levy",
       plainTemplate = txt.eclRegistrationSubmitted.f,
       htmlTemplate = html.eclRegistrationSubmitted.f,
       priority = Some(MessagePriority.Urgent)

@@ -98,7 +98,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
     "include status contents for application with no requests" in {
       val email = renderedEmail(baseParams + ("status" -> NoRequests.name))
-      email must include("MTD VAT Test Application hasn’t sent any requests so far in October 2019.")
+      email must include("MTD VAT Test Application has not sent any requests so far in October 2019.")
     }
 
     "include action content for headers with errors" in {
