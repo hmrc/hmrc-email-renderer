@@ -212,12 +212,12 @@ object TemplateParams {
       "applicationName"    -> "Tax Software"
     ),
     "apiApplicationToBeDeletedNotification" -> Map(
-      "userFirstName"           -> "Fred",
-      "userLastName"            -> "Bloggs",
-      "applicationName"         -> "Test Application",
-      "environmentName"         -> "Sandbox",
-      "timeSinceLastUse"        -> "11 months",
-      "dateOfScheduledDeletion" -> "1 April 2025"
+      "userFirstName"    -> "Fred",
+      "userLastName"     -> "Bloggs",
+      "applicationName"  -> "Test Application",
+      "environmentName"  -> "Sandbox",
+      "timeSinceLastUse" -> "11 months",
+      "daysToDeletion"   -> "30 days"
     ),
     "apiProductionCredentialsRequestExpired" -> Map(
       "applicationName" -> "Test Application"

@@ -2,7 +2,7 @@
 
 Dear @{params("userFirstName")} @{params("userLastName")}
 
-Your @{params("environmentName")} application @{params("applicationName")} has been inactive for more than @{params("timeSinceLastUse")} and will be deleted on @{params("dateOfScheduledDeletion")}.
+Your @{params("environmentName")} application @{params("applicationName")} has been inactive for more than @{params("timeSinceLastUse")} and will be deleted in @{params("daysToDeletion")}.
 
 To keep this application, use it to make an API call before the deletion date.
 
