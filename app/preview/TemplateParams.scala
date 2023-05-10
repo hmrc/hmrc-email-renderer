@@ -268,11 +268,6 @@ object TemplateParams {
       "newValue"        -> "new much better description of what the application is and does",
       "requesterName"   -> "Bob Roberts"
     ),
-    "apiChangeOfApplicationDetailsNoValue" -> Map(
-      "applicationName" -> "Nexus 6",
-      "fieldName"       -> "privacy policy URL",
-      "requesterName"   -> "Bob Roberts"
-    ),
     "apiChangeOfResponsibleIndividual" -> Map(
       "applicationName"               -> "Nexus 6",
       "previousResponsibleIndividual" -> "Donald Trump",
@@ -3202,6 +3197,11 @@ object TemplateParams3 {
     "apiResponsibleIndividualDeclinedV2" -> Map(
       "applicationName"           -> "Test Application",
       "responsibleIndividualName" -> "Joe Bloggs"
+    ),
+    "apiChangeOfApplicationDetailsNoValue" -> Map(
+      "applicationName" -> "Nexus 6",
+      "fieldName"       -> "privacy policy URL",
+      "requesterName"   -> "Bob Roberts"
     ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
