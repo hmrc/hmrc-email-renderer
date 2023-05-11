@@ -18,31 +18,49 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html._
 @(params: Map[String, Any])
 
-@eoriOnly = @{
-if(params.getOrElse("serviceName", "") == "Get an EORI"){
-<ul style="margin: 0 0 30px; font-size: 19px;">
- <li style="margin: 0 0 30px; font-size: 19px;">move goods to or from Great Britain</li>
- <li style="margin: 0 0 30px; font-size: 19px;">subscribe to customs services</li>
- <li style="margin: 0 0 30px; font-size: 19px;">use the Customs Declaration Service</li>
- <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
+@dynamicSubscriptionContent = @{
+ params.getOrElse("enrolmentKey", "") match {
+  case "HMRC-ATAR-ORG" =>
+                <li style="margin: 0 0 10px; font-size: 19px;">apply for an Advance Tariff Ruling</li>
+                <li style="margin: 0 0 10px; font-size: 19px;">apply for an Advance Valuation Ruling</li>
+  case "HMRC-GVMS-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">get a goods movement reference (GMR)</li>
+  case "HMRC-CTC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">submit union transit declarations through NCTS</li>
+  case "HMRC-SS-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">make entry summary declarations</li>
+  case "HMRC-CTS-ORG" =>
+                <li style="margin: 0 0 10px; font-size: 19px;">apply for repayment of import duty and VAT (CHIEF)</li>
+                <li style="margin: 0 0 10px; font-size: 19px;">send documents for a customs check for declarations made in CHIEF</li>
+                <li style="margin: 0 0 10px; font-size: 19px;">tell HMRC about an underpayment of Customs Duty or import VAT</li>
+
+  case _ => <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
+ }
+}
+
+@eoriOnly = {
+@if(params.getOrElse("serviceName", "") == "Get an EORI"){
+<ul style="margin: 0 0 10px; font-size: 19px;">
+ <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">subscribe to customs services</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">get an EORI number starting with XI</li>
 </ul>
 
 <h2 style="margin: 0 0 30px; font-size: 19px;">Use the Customs Declaration Service</h2>
 
 <p style="margin: 0 0 30px; font-size: 19px;">We have subscribed you to the Customs Declaration Service. This means you can do things like:</p>
 
-<ul style="margin: 0 0 30px; font-size: 19px;">
- <li style="margin: 0 0 30px; font-size: 19px;">submit import and export declarations using your customs declaration software</li>
- <li style="margin: 0 0 30px; font-size: 19px;">pay Customs Duty and import VAT</li>
- <li style="margin: 0 0 30px; font-size: 19px;">get your postponed import VAT statements</li>
+<ul style="margin: 0 0 10px; font-size: 19px;">
+ <li style="margin: 0 0 10px; font-size: 19px;">submit import and export declarations using your customs declaration software</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">pay Customs Duty and import VAT</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">get your postponed import VAT statements</li>
 </ul>
 
-<p style="margin: 0 0 30px; font-size: 19px;">For more information, search 'Customs Declaration Service' on GOV.UK.</p>
+<p style="margin: 0 0 10px; font-size: 19px;">For more information, search 'Customs Declaration Service' on GOV.UK.</p>
 } else {
-<ul style="margin: 0 0 30px; font-size: 19px;">
- <li style="margin: 0 0 30px; font-size: 19px;">use this service</li>
- <li style="margin: 0 0 30px; font-size: 19px;">subscribe to other customs services using your EORI number</li>
- <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
+<ul style="margin: 0 0 10px; font-size: 19px;">
+  @dynamicSubscriptionContent
+ <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">subscribe to other customs services</li>
+ <li style="margin: 0 0 10px; font-size: 19px;">get an EORI number starting with XI</li>
 </ul>
 }
 }
@@ -54,7 +72,7 @@ if(params.getOrElse("serviceName", "") == "Get an EORI"){
 
 <br />
 
-<p style="margin: 0 0 30px; font-size: 19px;">You can now:</p>
+<p style="margin: 0 0 10px; font-size: 19px;">You can now:</p>
 
 @eoriOnly
 

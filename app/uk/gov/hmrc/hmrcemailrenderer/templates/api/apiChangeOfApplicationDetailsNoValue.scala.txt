@@ -1,0 +1,13 @@
+@(params: Map[String, Any])Changes made to application details
+
+@{params("requesterName")} has changed the @{params("fieldName")} for @{params("applicationName")}.
+
+Sign in to your Developer Hub account and go to application details to check the new @{params("fieldName")}.
+
+Protect your account by changing your password and setting up multi-factor authentication if you do not recognise this change.
+
+Do not respond to this email. Replies to this email address are not monitored.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

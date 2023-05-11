@@ -16,11 +16,12 @@
 
 package preview
 
-import java.util.{ Base64, UUID }
 import play.api.libs.json.Json.{ parse, stringify }
 import preview.TemplateParams.newMessageAlert_Names
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ rald_connection_removed, rald_connection_removed_cy }
+
+import java.util.{ Base64, UUID }
 
 object TemplateParams {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
@@ -211,12 +212,12 @@ object TemplateParams {
       "applicationName"    -> "Tax Software"
     ),
     "apiApplicationToBeDeletedNotification" -> Map(
-      "userFirstName"           -> "Fred",
-      "userLastName"            -> "Bloggs",
-      "applicationName"         -> "Test Application",
-      "environmentName"         -> "Sandbox",
-      "timeSinceLastUse"        -> "11 months",
-      "dateOfScheduledDeletion" -> "1 April 2025"
+      "userFirstName"    -> "Fred",
+      "userLastName"     -> "Bloggs",
+      "applicationName"  -> "Test Application",
+      "environmentName"  -> "Sandbox",
+      "timeSinceLastUse" -> "11 months",
+      "daysToDeletion"   -> "30 days"
     ),
     "apiProductionCredentialsRequestExpired" -> Map(
       "applicationName" -> "Test Application"
@@ -262,9 +263,9 @@ object TemplateParams {
     ),
     "apiChangeOfApplicationDetails" -> Map(
       "applicationName" -> "Nexus 6",
-      "fieldName"       -> "privacy policy URL",
-      "previousValue"   -> "https://example.com/old-privacy-policy",
-      "newValue"        -> "https://example.com/new-privacy-policy",
+      "fieldName"       -> "application description",
+      "previousValue"   -> "old description of what the application is and does",
+      "newValue"        -> "new much better description of what the application is and does",
       "requesterName"   -> "Bob Roberts"
     ),
     "apiChangeOfResponsibleIndividual" -> Map(
@@ -2103,102 +2104,6 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId,
       "name"             -> "Susan Bartlett"
     ),
-    "tdq_fph_report_non_compliant" -> Map(
-      "developerName"                     -> "John Smith",
-      "fromDate"                          -> "22 September 2019",
-      "toDate"                            -> "22 October 2019",
-      "month"                             -> "October",
-      "year"                              -> "2019",
-      "status"                            -> "ALL_REQUIRED_HEADERS_MISSING",
-      "regimeLongForm"                    -> "VAT (Making Tax Digital)",
-      "regimeShortForm"                   -> "VAT (MTD)",
-      "applicationName"                   -> "My Basic MTD App",
-      "applicationId"                     -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
-      "allHeadersMissingPercentage"       -> "5",
-      "invalidConnectionMethodPercentage" -> "23",
-      "allHeadersMissingCount"            -> "729",
-      "invalidConnectionMethodCount"      -> "3354",
-      "relatesToMultipleVersions"         -> "true",
-      "extraDetails" -> Base64.getEncoder.encodeToString(stringify(
-        parse("""
-        {
-          "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 10500,
-          "headerValidations": [
-            {
-              "headerOrHeaders": "gov-client-public-ip",
-              "errors": [
-                {
-                  "message": "Value is not an IP address",
-                  "percentage": 5,
-                  "count": 525
-                }, {
-                  "message": "Value is not a public IP address",
-                  "percentage": 10,
-                  "count": 1050
-                }
-              ],
-              "warnings": []
-            }, {
-              "headerOrHeaders": "gov-vendor-version",
-              "errors": [
-                {
-                  "message": "Value must be a key-value data structure",
-                  "percentage": 10,
-                  "count": 1075
-                }, {
-                  "message": "At least 1 separator is percent encoded. Check ampersands and equal signs.",
-                  "percentage": 0,
-                  "count": 10
-                }
-              ],
-              "warnings": [
-                {
-                  "message": "For client server architectures, submit a version for the client and the server. For all other architectures, submit at least 1 version.",
-                  "percentage": 10,
-                  "count": 107
-                }
-              ]
-            },
-            {
-              "headerOrHeaders": "gov-client-device-id",
-              "errors" : [],
-              "warnings": [
-                {
-                  "message": "ID must be longer to ensure it is unique. It is best to use a UUID which is at least 128 bits or 32 hex characters long.",
-                  "percentage": 17,
-                  "count": 1801
-                }, {
-                  "message": "Contains an email address. User specific data must not be used to generate Device IDs.",
-                  "percentage": 22,
-                  "count": 2315
-                }
-              ]
-            }
-          ]
-        }
-        """)).getBytes("UTF-8"))
-    ),
-    "tdq_fph_report_heuristically_compliant" -> Map(
-      "developerName"             -> "John Smith",
-      "fromDate"                  -> "22 September 2019",
-      "toDate"                    -> "22 October 2019",
-      "month"                     -> "October",
-      "year"                      -> "2019",
-      "status"                    -> "ALL_REQUIRED_HEADERS_MISSING",
-      "regimeLongForm"            -> "VAT (Making Tax Digital)",
-      "regimeShortForm"           -> "VAT (MTD)",
-      "applicationName"           -> "My Well Behaved MTD App",
-      "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
-      "hasOtherConnectionMethods" -> "true",
-      "extraDetails"              -> Base64.getEncoder.encodeToString(stringify(parse("""
-        {
-          "connectionMethod": "WEB_APP_VIA_SERVER",
-          "requestCount": 10500,
-          "headerValidations": []
-        }
-        """)).getBytes("UTF-8"))
-    ),
     "tdq_fph_self_serve_nudge" -> Map(
       "developerName"             -> "John Smith",
       "fromDate"                  -> "22 September 2019",
@@ -2208,7 +2113,7 @@ object TemplateParams2 {
       "status"                    -> "HEADERS_WITH_ERRORS",
       "regimeLongForm"            -> "VAT (Making Tax Digital)",
       "regimeShortForm"           -> "VAT (MTD)",
-      "applicationName"           -> "My Well Behaved MTD App",
+      "applicationName"           -> "My Well Behaved App",
       "applicationId"             -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
       "hasOtherConnectionMethods" -> "true",
       "extraDetails"              -> Base64.getEncoder.encodeToString(stringify(parse("""
@@ -3293,6 +3198,11 @@ object TemplateParams3 {
       "applicationName"           -> "Test Application",
       "responsibleIndividualName" -> "Joe Bloggs"
     ),
+    "apiChangeOfApplicationDetailsNoValue" -> Map(
+      "applicationName" -> "Nexus 6",
+      "fieldName"       -> "privacy policy URL",
+      "requesterName"   -> "Bob Roberts"
+    ),
     "agent_permissions_beta_participant_details" -> Map(
       "arn"             -> "TARN0000001",
       "numClients"      -> "103",
@@ -3587,7 +3497,11 @@ object TemplateParams3 {
     "ecl_registration_submitted" -> Map(
       "name"                     -> "John Doe",
       "eclRegistrationReference" -> "XMECL0000000001",
-      "dateDue"                  -> "30 September 2023"
+      "eclRegistrationDate"      -> "20 September 2023",
+      "dateDue"                  -> "30 September 2023",
+      "isPrimaryContact"         -> "true",
+      "secondContactEmail"       -> "joe.smith@test.com",
+      "privateBetaEnabled"       -> "true"
     ),
     "ecl_return_submitted" -> Map(
       "name"            -> "John Doe",
@@ -3597,10 +3511,15 @@ object TemplateParams3 {
       "chargeReference" -> "XY007000075424",
       "fyStartYear"     -> "2022",
       "fyEndYear"       -> "2023",
-      "datePaymentDue"  -> "30 September 2023"
+      "datePaymentDue"  -> "30 September 2023",
+      "amountDue"       -> "£10,000"
     ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
+    ),
+    "feeback_answers_for_digital_persona" -> Map(
+      "config"  -> "eyJuYW1lIjoidGVzdCIsImxhYmVsIjoiQVNNIHNhdGlzZmFjdGlvbiBzdXJ2ZXkiLCJxdWVzdGlvbnMiOlt7ImxhYmVsIjoiT24gYSBzY2FsZSBvZiAxIHRvIDEwIGhvdyB1c2VmdWwgd2FzIHRoZSBhdGEgb3BpbmlvbiBkYXRhPyIsInJhbmdlIjpbMCwxMF0sInR5cGUiOiJzbGlkZXIifSx7ImxhYmVsIjoiSG93IG11Y2ggZG8geW91IGFncmVlPyBUaGUgYW1vdW50IG9mIHRpbWUgaXQgdG9vayBmb3IgbXkgYmFnIHRvIGJlIGxvYWRlZC91bmxvYWRlZCB3YXMgcmVhc29uYWJsZSIsIm9wdGlvbnMiOlsiU3Ryb25nbHkgRGlzYWdyZWUiLCJTb21ld2hhdCBEaXNhZ3JlZSIsIk5laXRoZXIgQWdyZWUgbm9yIERpc2FncmVlIiwiU29tZXdoYXQgQWdyZWUiLCJTdHJvbmdseSBBZ3JlZSJdLCJ0eXBlIjoicmFkaW8ifSx7ImxhYmVsIjoiSXMgdGhlcmUgYW55IG90aGVyIHRoaW5nIHlvdSB3b3VsZCBsaWtlIHVzIHRvIGtub3c/Iiwib3B0aW9uYWwiOnRydWUsInR5cGUiOiJ0ZXh0QXJlYSJ9XSwiYWN0aXZlIjp7ImZyb20iOiIyMDIzLTAzLTAxVDAwOjAwOjAwWiIsInRvIjoiMjAyMy0wNC0wMVQwMDowMDowMFoifSwic2hvd09uY2UiOmZhbHNlLCJzaG93UmF0ZSI6MX0=",
+      "answers" -> "eyJuYW1lIjoidGVzdCIsImFuc3dlcnMiOlsiMiIsIjMiLCJIb3BlIHRoaXMgd29ya3MiXX0="
     )
   )
 }

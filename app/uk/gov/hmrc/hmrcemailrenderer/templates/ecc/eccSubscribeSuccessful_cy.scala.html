@@ -21,16 +21,19 @@
 
 @check_the_service = @{
  params.getOrElse("enrolmentKey", "") match {
-  case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch.</p>
-  case "HMRC-GVMS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch gael cyfeirnod symud nwyddau (GMR).</p>
-  case "HMRC-CTC-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch gyflwyno datganiadau ‘union transit’ trwy ddefnyddio’r System Gludo Gyfrifiadurol Newydd (NCTS).</p>
-  case "HMRC-SS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud datganiadau cryno wrth gyrraedd.</p>
-  case "HMRC-CTS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch wneud y canlynol: <ul style="margin: 0 0 30px; font-size: 19px;">
-  <li style="margin: 0 0 30px; font-size: 19px;">gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)</li>
-  <li style="margin: 0 0 30px; font-size: 19px;">anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF</li>
-  <li style="margin: 0 0 30px; font-size: 19px;">rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio</li>
+  case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">Gallwch nawr wneud cais am y canlynol: <ul style="margin: 0 0 10px; font-size: 19px;">
+  <li style="margin: 0 0 10px; font-size: 19px;">Dyfarniad Tariffau Uwch</li>
+  <li style="margin: 0 0 10px; font-size: 19px;">Dyfarniad Prisio Uwch</li>
   </ul></p>
-  case _ => <p style="margin: 0 0 30px; font-size: 19px;">Erbyn hyn, gallwch ddefnyddio’r Gwasanaeth Datganiadau Tollau.</p>
+  case "HMRC-GVMS-ORG" => <p style="margin: 0 0 10px; font-size: 19px;">Erbyn hyn, gallwch gael cyfeirnod symud nwyddau (GMR).</p>
+  case "HMRC-CTC-ORG" => <p style="margin: 0 0 10px; font-size: 19px;">Erbyn hyn, gallwch gyflwyno datganiadau ‘union transit’ trwy ddefnyddio’r System Gludo Gyfrifiadurol Newydd (NCTS).</p>
+  case "HMRC-SS-ORG" => <p style="margin: 0 0 10px; font-size: 19px;">Erbyn hyn, gallwch wneud datganiadau cryno wrth gyrraedd.</p>
+  case "HMRC-CTS-ORG" => <p style="margin: 0 0 10px; font-size: 19px;">Erbyn hyn, gallwch wneud y canlynol: <ul style="margin: 0 0 30px; font-size: 19px;">
+  <li style="margin: 0 0 10px; font-size: 19px;">gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)</li>
+  <li style="margin: 0 0 10px; font-size: 19px;">anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF</li>
+  <li style="margin: 0 0 10px; font-size: 19px;">rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio</li>
+  </ul></p>
+  case _ => <p style="margin: 0 0 10px; font-size: 19px;">Erbyn hyn, gallwch ddefnyddio’r Gwasanaeth Datganiadau Tollau.</p>
  }
 }
 

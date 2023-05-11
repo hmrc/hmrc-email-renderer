@@ -10,16 +10,16 @@ Dear @reportParams.developerName
 
 What you need to do
 
-To @reportParams.status.action, you need to:
+To @reportParams.status.action, you need to follow these steps.
 
 Log in to Developer Hub
 Go to View all applications
 Select your Production application
 On the left, select ‘Fraud prevention’
 
-You can now check your application at any time. We’ll no longer send detailed reports to you every month.
+You can now check your application at any time.
 
-You are required by law to submit header data for the VAT (MTD) and Income Tax Self Assessment (MTD) APIs. This includes all associated APIs and endpoints.
+You are required by law to submit header data for the VAT (Making Tax Digital) and Income Tax Self Assessment (MTD) APIs. This includes all associated APIs and endpoints.
 
 Why you have received this email
 
