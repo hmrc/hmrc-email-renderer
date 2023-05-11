@@ -4,7 +4,7 @@ Annwyl @{params("name")}
 
 Eich rhif cyfrif Treth Enillion Cyfalaf ar eiddo yn y DU yw @{params("cgtReference")}.
 
-Bydd angen i chi rhoi’r rhif hwn i CThEM os bydd angen i chi drafod eich cyfrif.
+Bydd angen i chi rhoi’r rhif hwn i CThEF os bydd angen i chi drafod eich cyfrif.
 
 Defnyddiwch eich cyfrif i wneud y canlynol:
 
@@ -17,7 +17,7 @@ Ewch i GOV.UK a chwilio am ‘Report and pay Capital Gains Tax on UK property’
 
 Peidiwch ag ymateb i’r e-bost hwn.
 
-Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM
+Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEF
 
 --
 
