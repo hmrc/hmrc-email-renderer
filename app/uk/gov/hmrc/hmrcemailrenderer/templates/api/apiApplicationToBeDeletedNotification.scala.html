@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We’re deleting your application") {
  <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("userFirstName")} @{params("userLastName")}</p>
- <p style="margin: 0 0 30px; font-size: 19px;">Your <strong>@{params("environmentName")}</strong> application <strong>@{params("applicationName")}</strong> has been inactive for more than <strong>@{params("timeSinceLastUse")}</strong> and will be deleted on <strong>@{params("dateOfScheduledDeletion")}</strong>.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Your <strong>@{params("environmentName")}</strong> application <strong>@{params("applicationName")}</strong> has been inactive for more than <strong>@{params("timeSinceLastUse")}</strong> and will be deleted in <strong>@{params("daysToDeletion")}</strong>.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">To keep this application, use it to make an API call before the deletion date.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">If you do nothing, we will automatically delete this application.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">Do not reply to this email, this inbox is not monitored.</p>

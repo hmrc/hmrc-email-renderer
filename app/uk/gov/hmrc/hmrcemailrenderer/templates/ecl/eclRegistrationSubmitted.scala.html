@@ -16,37 +16,70 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Economic Crime Levy registration received") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have registered for the Economic Crime Levy") {
 
-    <div style="margin: 0 0 30px; font-size: 19px;">
+    <div style="margin: 0 0 30px;
+        font-size: 19px;">
         <p>Dear @params("name")</p>
 
-        <p>We have received your registration for the Economic Crime Levy (ECL).</p>
+        <p>You have registered for the Economic Crime Levy (ECL).</p>
 
-        <p>
-            Your ECL reference number is @params("eclRegistrationReference").
-        </p>
+        <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
+            font-size: 19px;">
+            <tbody>
+                <tr>
+                    <th>ECL reference number</th>
+                    <td>@params("eclRegistrationReference")</td>
+                </tr>
+
+                <tr>
+                    <th>ECL registration date</th>
+                    <td>@params("eclRegistrationDate")</td>
+                </tr>
+            </tbody>
+        </table>
 
         <p style="font-weight: bold;">What happens next</p>
 
         <p>
             You will need to complete a return and pay the levy on a yearly basis.
-            The next deadline for submitting a return and making a payment is @params("dateDue").
-            You will be charged interest if you make a late payment.
         </p>
+
+        <p>
+            The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+        </p>
+
+        <p style="font-weight: bold;">How to submit a return</p>
+
+        @if(params("privateBetaEnabled").toString.toBoolean) {
+            <p>You cannot submit a return right now. You will be able to submit a return later.</p>
+        } else {
+            <p>You can submit a return by going to the Returns section of your ECL account.</p>
+        }
 
         <p>When you complete your yearly return, you will need to tell us about:</p>
 
-        <ul style="margin: 0 0 30px; font-size: 19px;">
+        <ul style="margin: 0 0 30px;
+            font-size: 19px;">
             <li>the relevant accounting period for your organisation</li>
             <li>your UK revenue for the relevant accounting period</li>
-            <li>how long you carried out Anti-Money Laundering (AML) regulated activities during the financial year</li>
+            <li>how long you carried out anti-money laundering (AML) regulated activities during the financial year</li>
             <li>the name, role, and contact details of the person in your organisation who is completing the return</li>
         </ul>
 
         <p style="font-weight: bold;">Why you got this email</p>
 
-        <p>This email address is registered as the email address we can use to contact you about the ECL.</p>
+        @if(params("isPrimaryContact").toString.toBoolean) {
+            <p>This is the email address you provided when you registered.</p>
+        }
+
+        @if(params.contains("secondContactEmail") && params("isPrimaryContact").toString.toBoolean) {
+            <p>We have also sent this email to @params("secondContactEmail") because you added them as a contact when you registered.</p>
+        }
+
+        @if(!params("isPrimaryContact").toString.toBoolean) {
+            <p>We have sent you this email because you were added as a contact when someone in your organisation registered for the ECL.</p>
+        }
 
         <p>Do not respond to this email.</p>
 

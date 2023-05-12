@@ -207,9 +207,16 @@ class TemplatePrioritiesISpec
         "apiChangeOfApplicationDetails",
         Map(
           "applicationName" -> "Nexus 6",
+          "fieldName"       -> "application description",
+          "previousValue"   -> "old description of what the application is and does",
+          "newValue"        -> "new much better description of what the application is and does",
+          "requesterName"   -> "Bob Roberts"
+        )),
+      (
+        "apiChangeOfApplicationDetailsNoValue",
+        Map(
+          "applicationName" -> "Nexus 6",
           "fieldName"       -> "privacy policy URL",
-          "previousValue"   -> "https://example.com/old-privacy-policy",
-          "newValue"        -> "https://example.com/new-privacy-policy",
           "requesterName"   -> "Bob Roberts"
         )),
       (

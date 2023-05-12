@@ -1,8 +1,8 @@
-@(params: Map[String, Any])Mae CThEM wedi cael eich Ffurflen Dreth
+@(params: Map[String, Any])Mae CThEF wedi cael eich Ffurflen Dreth
 
 Annwyl @{params("name")}
 
-Rydych wedi anfon Ffurflen Dreth Enillion Cyfalaf ar eiddo yn y DU i CThEM.
+Rydych wedi anfon Ffurflen Dreth Enillion Cyfalaf ar eiddo yn y DU i CThEF.
 
 Yr hyn sy’n rhaid i chi ei wneud nesaf
 
@@ -14,7 +14,7 @@ Bydd angen i chi ddarparu manylion o’r Ffurflen Dreth hon yn eich Ffurflen Dre
 
 Peidiwch ag ymateb i’r e-bost hwn.
 
-Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEM
+Oddi wrth dîm Treth Enillion Cyfalaf ar eiddo yn y DU, CThEF
 
 --
 

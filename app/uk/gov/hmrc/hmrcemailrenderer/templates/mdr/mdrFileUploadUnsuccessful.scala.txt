@@ -11,19 +11,18 @@ You can view the errors when you log back into the service.
 
 What happens next
 
-We will contact you if we have any questions about the file you uploaded.
+You can try uploading a different file.
 
 For security reasons, we have not included a link to this service in this email.
 
 If you need help
 
-You can email enquiries.aeoi@@hmrc.gov.uk for help.
+You can email aeoi.enquiries@@hmrc.gov.uk for help.
 
 For more information, you can visit GOV.UK and search for ‘MDR’.
 
-If you’re unsure an email is from the MDR service:
+From the HMRC MDR service
 
-    do not reply to it or click any links
-    report the suspicious email to HMRC — to find out how go to GOV.UK
-    and search for 'Avoid and report internet scams and phishing'
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
 
