@@ -902,6 +902,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "oss_returns_email_confirmation",
         "oss_overdue_returns_email_confirmation",
         "oss_returns_email_confirmation_no_vat_owed",
+        "oss_registration_amendment_confirmation",
         "platformContact",
         "platformContactConfirmation",
         "pods_psa_amend",
