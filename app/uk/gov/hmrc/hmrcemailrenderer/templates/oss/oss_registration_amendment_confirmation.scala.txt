@@ -1,0 +1,9 @@
+@(params: Map[String, Any])One Stop Shop registration details updated
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+You successfully updated your One Stop Shop registration details on @params("amendmentDate").
+
+From the VAT One Stop Shop team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

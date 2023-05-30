@@ -58,6 +58,15 @@ object OSSTemplates {
       plainTemplate = txt.oss_overdue_returns_email_confirmation.f,
       htmlTemplate = html.oss_overdue_returns_email_confirmation.f,
       priority = Some(MessagePriority.Background)
+    ),
+    MessageTemplate.create(
+      templateId = "oss_registration_amendment_confirmation",
+      fromAddress = FromAddress.noReply("VAT One Stop Shop Team"),
+      service = OSS,
+      subject = "HMRC: One Stop Shop details updated",
+      plainTemplate = txt.oss_registration_amendment_confirmation.f,
+      htmlTemplate = html.oss_registration_amendment_confirmation.f,
+      priority = Some(MessagePriority.Background)
     )
   )
 }

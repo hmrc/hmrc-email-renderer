@@ -1714,6 +1714,10 @@ object TemplateParams2 {
       "period"              -> "1 July to 30 September 2021",
       "paymentDeadline"     -> "31 October 2021"
     ),
+    "oss_registration_amendment_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "amendmentDate"       -> "23 May 2023"
+    ),
     "platformContact" -> Map(
       "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
       "senderName"  -> "Alice Example",
@@ -3051,6 +3055,10 @@ object TemplateParams2 {
       "businessName"        -> "Test Business",
       "period"              -> "1 July to 30 September 2021",
       "paymentDeadline"     -> "31 October 2021"
+    ),
+    "oss_registration_amendment_confirmation" -> Map(
+      "recipientName_line1" -> "Joe Bloggs",
+      "amendmentDate"       -> "23 May 2023"
     ),
     "pods_psa_amend" -> Map(
       "psaName" -> "Jane Doe"
