@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ecl
 
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateComparisonSpec}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
 class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
