@@ -3522,6 +3522,15 @@ object TemplateParams3 {
       "datePaymentDue"  -> "30 September 2023",
       "amountDue"       -> "£10,000"
     ),
+    "ecl_nil_return_submitted" -> Map(
+      "name"            -> "John Doe",
+      "dateSubmitted"   -> "1 September 2023",
+      "periodStartDate" -> "1 April 2022",
+      "periodEndDate"   -> "31 March 2023",
+      "fyStartYear"     -> "2022",
+      "fyEndYear"       -> "2023",
+      "amountDue"       -> "£0"
+    ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
     ),
