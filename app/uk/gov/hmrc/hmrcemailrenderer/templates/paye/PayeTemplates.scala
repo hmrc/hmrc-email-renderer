@@ -45,7 +45,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "Your new tax calculation from HMRC is ready",
+      subject = "Read your new HMRC online letter today",
       plainTemplate = txt.newMessageAlert_P800.f,
       htmlTemplate = html.newMessageAlert_P800.f,
       priority = Some(MessagePriority.Standard)
