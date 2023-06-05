@@ -57,17 +57,22 @@
             You must pay the levy by @params("datePaymentDue"). Your ECL return number must be used as a payment reference when you pay the levy.
         </p>
 
+        @if(params("privateBetaEnabled").toString.toBoolean){
+            <p>You will be able to pay the levy from August 2023.</p>
+        }
         <p>
             You will be charged interest if you make a late payment.
         </p>
 
-        <p style="font-weight: bold;">How to pay the levy</p>
+       @if(!params("privateBetaEnabled").toString.toBoolean) {
+           <p style="font-weight: bold;">How to pay the levy</p>
 
-        <p>You can pay the levy by going to the guidance on how to pay:</p>
+           <p>You can pay the levy by going to the guidance on how to pay:</p>
 
-        <a href="https://www.gov.uk/guidance/pay-the-economic-crime-levy" style="color: #005EA5;">
-            https://www.gov.uk/guidance/pay-the-economic-crime-levy</a>
-
+           <a href="https://www.gov.uk/guidance/pay-the-economic-crime-levy" style="color: #005EA5;">
+           https://www.gov.uk/guidance/pay-the-economic-crime-levy
+           </a>
+       }
         <p style="font-weight: bold;">Why you got this email</p>
 
         <p>This is the email address you provided when you submitted your return.</p>
