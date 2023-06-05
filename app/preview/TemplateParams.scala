@@ -2275,7 +2275,8 @@ object TemplateParams2 {
     "mdr_file_upload_successful" -> Map(
       "contactName"  -> "Joe Bloggs",
       "dateAndTime"  -> "2:29pm on 27 January 2012",
-      "messageRefId" -> "XAMDR00012345671234567890123456789012345678901234567890123456789012345678901234567890"
+      "messageRefId" -> "XAMDR00012345671234567890123456789012345678901234567890123456789012345678901234567890",
+      "reportTypeMessage" -> "The file contains new information in one report."
     ),
     "mdr_file_upload_unsuccessful" -> Map(
       "contactName"  -> "Joe Bloggs",

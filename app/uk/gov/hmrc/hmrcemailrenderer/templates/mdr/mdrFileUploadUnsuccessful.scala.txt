@@ -3,23 +3,17 @@ Your file has failed checks for the Mandatory Disclosure Rules (MDR) service
 
 Dear @{params("contactName")}
 
-We received your file at @{params("dateAndTime")} with the following MessageRefId and it has failed the checks:
+Your file with the File ID (MessageRefId) @{params("messageRefId")} failed the MDR checks at @{params("dateAndTime")}.
 
-@{params("messageRefId")}
+You can check the errors in the MDR service and upload an updated XML file.
 
-You can view the errors when you log back into the service.
-
-What happens next
-
-You can try uploading a different file.
-
-For security reasons, we have not included a link to this service in this email.
+For security reasons, we have not included a link to the MDR service in this email.
 
 If you need help
 
-You can email aeoi.enquiries@@hmrc.gov.uk for help.
+Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
 
-For more information, you can visit GOV.UK and search for ‘MDR’.
+For more information on MDR, you can visit GOV.UK and search for ‘Mandatory Disclosure Rules’.
 
 From the HMRC MDR service
 
