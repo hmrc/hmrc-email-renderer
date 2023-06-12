@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-Your file has passed checks for the Mandatory Disclosure Rules (MDR) service
+File successfully sent for the Mandatory Disclosure Rules (MDR) service
 
 Dear @{params("contactName")}
 
