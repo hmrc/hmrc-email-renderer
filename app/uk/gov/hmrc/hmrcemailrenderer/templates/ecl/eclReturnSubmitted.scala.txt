@@ -12,6 +12,8 @@ Amount you need to pay @params("amountDue")
 
 You must pay the levy by @params("datePaymentDue"). Your ECL return number must be used as a payment reference when you pay the levy.
 
+You will not receive an email or notification from HMRC to remind you to make a payment.
+
 @if(params("privateBetaEnabled").toString.toBoolean){
 You will be able to pay the levy from August 2023.
 }

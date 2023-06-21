@@ -12,6 +12,8 @@ What happens next
 
 You will need to complete a return and pay the levy on a yearly basis.
 
+You will not receive an email or notification from HMRC to remind you to submit a return.
+
 The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
 
 How to submit a return
