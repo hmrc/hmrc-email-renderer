@@ -14,12 +14,13 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for the country-by-country (CBC) reporting service") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")},</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received the file for your client @{params("clientTradingName")} with the CBC ID @{params("cbcId")}. The file passed the CBC checks at @{params("dateSubmitted")}. Print or save a copy of this email for your records.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file passed the CBC checks at @{params("dateSubmitted")}. Print or save a copy of this email for your records.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is<br>‘@{params("messageRefId")}’.</p>
 

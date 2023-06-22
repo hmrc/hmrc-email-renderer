@@ -1,3 +1,4 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
 
 File failed checks for the country-by-country (CBC) reporting service
@@ -5,8 +6,7 @@ File failed checks for the country-by-country (CBC) reporting service
 
 Dear @{params("contactName")},
 
-
-We have not accepted the file for your client @{params("clientTradingName")} with the CBC ID @{params("cbcId")}. The file failed the CBC checks at @{params("dateSubmitted")}.
+We have not accepted the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file failed the CBC checks at @{params("dateSubmitted")}.
 
 For reference, the File ID (MessageRefId) is
 ‘@{params("messageRefId")}’.
