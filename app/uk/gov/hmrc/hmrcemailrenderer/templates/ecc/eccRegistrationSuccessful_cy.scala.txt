@@ -18,9 +18,7 @@
                "- gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)" + "\n" +
                "- anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF" + "\n" +
                "- anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF"
-  case "HMRC-ESC-ORG" => "- rhoi gwybod am a rheoli’ch lwfans ar gyfer hawliadau Ildio Toll Dramor" + "\n" +
-                         "- gwneud cais am Ddyfarniad Prisio Uwch"
-
+  case "HMRC-ESC-ORG" => "- rhoi gwybod am a rheoli’ch lwfans ar gyfer hawliadau Ildio Toll Dramor"
   case _ =>  "- defnyddio’r Gwasanaeth Datganiadau Tollau"
  }
 }
