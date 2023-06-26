@@ -8,7 +8,7 @@ Dear @{params("contactName")},
 We have received your file, which passed the CBC checks at @{params("dateSubmitted")}. Print or save a copy of this email for your records.
 
 For reference, the File ID (MessageRefId) is
-‘@{params("messageRefId")}‘.
+‘@{params("messageRefId")}’.
 
 For security reasons, we have not included a link to this service in this email.
 

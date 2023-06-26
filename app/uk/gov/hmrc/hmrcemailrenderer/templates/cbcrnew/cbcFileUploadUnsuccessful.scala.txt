@@ -9,7 +9,7 @@ Dear @{params("contactName")},
 Your file failed the CBC checks at @{params("dateSubmitted")}.
 
 For reference, the File ID (MessageRefId) is
-‘@{params("messageRefId")}‘.
+‘@{params("messageRefId")}’.
 
 You can check the errors in the CBC service and upload an updated XML file.
 
