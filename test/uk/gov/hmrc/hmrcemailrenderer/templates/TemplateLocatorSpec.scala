@@ -963,7 +963,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ecl_nil_return_submitted",
         "hipp_add_team_member_to_app_email",
         "hipp_remove_team_member_from_app_email",
-        "feeback_answers_for_digital_persona"
+        "feeback_answers_for_digital_persona",
+        "ecl_registration_received"
       )
     }
   }
