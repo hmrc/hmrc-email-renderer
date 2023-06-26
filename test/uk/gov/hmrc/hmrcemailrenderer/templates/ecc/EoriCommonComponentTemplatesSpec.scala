@@ -53,8 +53,8 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
 
   private val registrationParamsESC = commonParameters + (
     "recipientName_FullName" -> "Jane Jones",
-    "enrolmentKey" -> "HMRC-ESC-ORG",
-    "serviceName"  -> "Report and manage your allowance for Customs Duty waiver claims"
+    "enrolmentKey"           -> "HMRC-ESC-ORG",
+    "serviceName"            -> "Report and manage your allowance for Customs Duty waiver claims"
   )
 
   "Templates for which the text and html content are identical" should {
