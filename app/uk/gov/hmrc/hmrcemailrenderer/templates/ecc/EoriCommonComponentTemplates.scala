@@ -26,6 +26,8 @@ object EoriCommonComponentTemplates {
     _.get("serviceName")
       .map {
         case "Get an EORI" => "Your EORI number is ready to use"
+        case "Report and manage your allowance for Customs Duty waiver claims" =>
+          "Report and manage your allowance for Customs Duty Waiver claims is ready to use"
         case name          => s"Your subscription to $name and EORI number are ready to use."
       }
       .getOrElse("")
@@ -41,6 +43,7 @@ object EoriCommonComponentTemplates {
           case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd a’r rhif EORI yn barod i’w defnyddio"
           case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn y DU a’r rhif EORI yn barod i’w defnyddio"
           case "HMRC-CTS-ORG"  => "Mae Gwasanaethau Masnachwyr Tollau a’r rhif EORI yn barod i’w defnyddio"
+          case "HMRC-ESC-ORG"  => "Mae Rhoi gwybod am a rheoli’ch lwfans ar gyfer hawliadau Ildio Toll Dramor yn barod i’w ddefnyddio"
           case _               => "Mae’r Gwasanaeth Datganiadau Tollau a’r rhif EORI yn barod i’w defnyddio"
         }
         .getOrElse("")
@@ -59,6 +62,7 @@ object EoriCommonComponentTemplates {
         case "HMRC-CTC-ORG"  => "Mae’r System Gludo Gyfrifiadurol Newydd yn barod i’w defnyddio"
         case "HMRC-SS-ORG"   => "Mae’r Gwasanaeth Diogelwch yn GB yn barod i’w defnyddio"
         case "HMRC-CTS-ORG"  => "Mae’r Gwasanaethau Masnachwyr Tollau yn barod i’w defnyddio"
+        case "HMRC-ESC-ORG"  => "Mae Rhoi gwybod am a rheoli’ch lwfans ar gyfer hawliadau Ildio Toll Dramor yn barod i’w ddefnyddio"
         case _               => "Mae’r Gwasanaeth Datganiadau Tollau yn barod i’w defnyddio"
       }
       .getOrElse("")

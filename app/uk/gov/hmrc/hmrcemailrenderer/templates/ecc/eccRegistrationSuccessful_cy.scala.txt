@@ -10,7 +10,7 @@
  params.getOrElse("enrolmentKey", "")match{
   case "HMRC-ATAR-ORG" =>
                 "- gwneud cais am Ddyfarniad Tariffau Uwch" + "\n" +
-                "- Gwneud cais am Ddyfarniad Prisio Uwch"
+                "- gwneud cais am Ddyfarniad Prisio Uwch"
   case "HMRC-GVMS-ORG" => "- Cael cyfeirnod symud nwyddau"
   case "HMRC-CTC-ORG" => "- cyflwyno datganiadau ‘Cludo yn yr Undeb’ trwy ddefnyddio’r System Gludo Gyfrifiadurol Newydd (NCTS)"
   case "HMRC-SS-ORG" => "- gwneud datganiad cryno wrth gyrraedd"
@@ -18,6 +18,8 @@
                "- gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)" + "\n" +
                "- anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF" + "\n" +
                "- anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF"
+  case "HMRC-ESC-ORG" => "- rhoi gwybod am a rheoli’ch lwfans ar gyfer hawliadau Ildio Toll Dramor" + "\n" +
+                         "- gwneud cais am Ddyfarniad Prisio Uwch"
 
   case _ =>  "- defnyddio’r Gwasanaeth Datganiadau Tollau"
  }
