@@ -18,11 +18,7 @@ The next deadline for submitting a return and making a payment is @params("dateD
 
 How to submit a return
 
-@if(params("privateBetaEnabled").toString.toBoolean) {
-You cannot submit a return right now. You will be able to submit a return later.
-} else {
 You can submit a return by going to the Returns section of your ECL account.
-}
 
 When you complete your yearly return, you will need to tell us about:
 
