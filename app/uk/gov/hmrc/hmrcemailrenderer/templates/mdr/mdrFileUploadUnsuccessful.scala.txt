@@ -3,7 +3,9 @@ File failed checks for the Mandatory Disclosure Rules (MDR) service
 
 Dear @{params("contactName")},
 
-Your file with the File ID (MessageRefId) @{params("messageRefId")} failed the MDR checks at @{params("dateAndTime")}.
+Your file failed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}.
+
+For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
 
 You can check the errors in the MDR service and upload an updated XML file.
 

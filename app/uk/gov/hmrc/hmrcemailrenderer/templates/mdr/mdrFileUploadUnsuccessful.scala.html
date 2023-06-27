@@ -19,7 +19,9 @@
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")},</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your file with the File ID (MessageRefId) @{params("messageRefId")} failed the MDR checks at @{params("dateAndTime")}.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your file failed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is: @{params("messageRefId")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check the errors in the MDR service and upload an updated XML file.</p>
 

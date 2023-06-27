@@ -3,11 +3,13 @@ File successfully sent for the Mandatory Disclosure Rules (MDR) service
 
 Dear @{params("contactName")},
 
-We have received your file, which passed the MDR checks at @{params("dateAndTime")}. Print or save a copy of this email for your records.
+We have received your file, which passed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}. Print or save a copy of this email for your records.
 
-For reference, @{params("messageRefId")} is the file ID (MessageRefId). @{params("reportTypeMessage")}
+For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
 
-For security reasons, we have not included a link to this service in this email.
+@{params("reportTypeMessage")}
+
+For security reasons, we have not included a link to the MDR service in this email.
 
 What happens next
 
