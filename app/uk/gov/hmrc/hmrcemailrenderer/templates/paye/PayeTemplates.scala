@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
 import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates.{ defaultFromAddress, defaultFromAddressWelsh }
-import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.{ html, txt }
+//import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.{html, txt}
 
 object PayeTemplates {
 

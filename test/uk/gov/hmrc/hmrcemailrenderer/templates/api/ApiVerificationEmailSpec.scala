@@ -18,9 +18,11 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
-class ApiVerificationEmailSpec extends WordSpecLike with OptionValues with Matchers {
+class ApiVerificationEmailSpec extends AnyWordSpecLike with OptionValues with Matchers {
 
   val verificationLink = "http://verify.com"
   val developerHubTitle = "Developer Hub Title"

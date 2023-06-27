@@ -19,7 +19,6 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.oss
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
-import views.{ html, txt }
 
 object OSSTemplates {
   val templates = Seq(

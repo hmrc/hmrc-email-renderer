@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.controllers
 
 import com.google.inject.Inject
 import play.api.Logging
-import play.api.libs.json.Json
+import play.api.libs.json.{ JsValue, Json }
 import play.api.mvc._
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderRequest
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MissingTemplateId, TemplateRenderFailure }
@@ -30,7 +30,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)
     extends FrontendController(mcc) with Logging {
 
-  def renderTemplate(templateId: String) = Action.async(parse.json) { implicit request =>
+  def renderTemplate(templateId: String): Action[JsValue] = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
       templateRenderer.languageTemplateId(templateId, renderReq.email).map { tId =>
         templateRenderer.render(tId, renderReq.parameters) match {

@@ -38,7 +38,7 @@ object MessageTemplate {
     subject: String,
     plainTemplate: Body.Plain,
     htmlTemplate: Body.Html,
-    priority: Option[MessagePriority] = None) =
+    priority: Option[MessagePriority] = None): MessageTemplate =
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
@@ -56,7 +56,7 @@ object MessageTemplate {
     subject: Map[String, String] => String,
     plainTemplate: Body.Plain,
     htmlTemplate: Body.Html,
-    priority: Option[MessagePriority] = None) =
+    priority: Option[MessagePriority] = None): MessageTemplate =
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
@@ -74,7 +74,7 @@ object MessageTemplate {
     subject: String,
     plainTemplate: Body.Plain,
     htmlTemplate: Body.Html,
-    priority: Option[MessagePriority] = None) =
+    priority: Option[MessagePriority] = None): MessageTemplate =
     MessageTemplate(
       templateId,
       FromAddress(fromAddress),
@@ -87,7 +87,7 @@ object MessageTemplate {
 }
 
 case class Subject(f: Map[String, String] => String) {
-  def apply(p: Map[String, String]) = f(p)
+  def apply(p: Map[String, String]): String = f(p)
 }
 
 object Subject {

@@ -16,7 +16,7 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.model
 
-import net.bytebuddy.utility.JavaModule.Dispatcher.Enabled
+//import net.bytebuddy.utility.JavaModule.Dispatcher.Enabled
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import play.api.libs.json._

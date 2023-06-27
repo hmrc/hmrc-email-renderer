@@ -38,7 +38,7 @@ class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with Guice
       }
       val result = PreviewGroup.createPreviewGroup("Self Assessment", templates)
       result.name shouldBe "Self Assessment"
-      result.items should contain only (
+      result.items should contain.only(
         PreviewListItem("does not exist", "does not exist", MessagePriority.Standard, Map.empty),
         PreviewListItem("also does not exist", "also does not exist", MessagePriority.Standard, Map.empty)
       )
@@ -66,7 +66,7 @@ class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with Guice
               .getOrElse(mt.templateId, TemplateParams3.exampleParams.getOrElse(mt.templateId, Map.empty)))
 
         templateRenderer.render(mt.templateId, parameters) should not matchPattern {
-          case Left(TemplateRenderFailure(reason)) =>
+          case Left(TemplateRenderFailure(_)) =>
         }
       }
     }
