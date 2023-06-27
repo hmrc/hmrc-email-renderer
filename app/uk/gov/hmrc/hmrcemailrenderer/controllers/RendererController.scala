@@ -25,10 +25,11 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MissingTemplateId, TemplateRenderF
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendController
 
-import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.ExecutionContext
 
-class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)
-    extends FrontendController(mcc) with Logging {
+class RendererController @Inject()(templateRenderer: TemplateRenderer, mcc: MessagesControllerComponents)(
+  implicit ec: ExecutionContext
+) extends FrontendController(mcc) with Logging {
 
   def renderTemplate(templateId: String): Action[JsValue] = Action.async(parse.json) { implicit request =>
     withJsonBody[RenderRequest] { renderReq =>
