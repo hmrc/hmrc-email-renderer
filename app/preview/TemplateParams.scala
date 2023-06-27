@@ -3508,8 +3508,7 @@ object TemplateParams3 {
       "eclRegistrationDate"      -> "20 September 2023",
       "dateDue"                  -> "30 September 2023",
       "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com",
-      "privateBetaEnabled"       -> "true"
+      "secondContactEmail"       -> "joe.smith@test.com"
     ),
     "ecl_return_submitted" -> Map(
       "name"               -> "John Doe",
