@@ -1,15 +1,15 @@
 @(params: Map[String, Any])
 
-File failed checks for the country-by-country (CBC) reporting service
+File failed checks for the CBC reporting service
 
 
-Dear @{params("contactName")},
+Dear @{params("contactName")}
 
 
-Your file failed the CBC checks at @{params("dateSubmitted")}.
+Your file failed the country-by-country reporting checks at @{params("dateSubmitted")}.
 
-For reference, the File ID (MessageRefId) is
-‘@{params("messageRefId")}’.
+For reference, the File ID (MessageRefId) is:
+@{params("messageRefId")}
 
 You can check the errors in the CBC service and upload an updated XML file.
 
