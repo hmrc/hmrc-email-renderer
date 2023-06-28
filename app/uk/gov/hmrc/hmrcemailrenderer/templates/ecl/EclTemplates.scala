@@ -20,8 +20,6 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.EconomicCrimeLevy
 
-//import views.{ html, txt }
-
 object EclTemplates {
 
   val templates = Seq(
