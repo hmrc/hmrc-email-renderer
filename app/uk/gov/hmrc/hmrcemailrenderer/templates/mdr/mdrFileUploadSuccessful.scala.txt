@@ -1,7 +1,7 @@
 @(params: Map[String, Any])
 File successfully sent for the Mandatory Disclosure Rules (MDR) service
 
-Dear @{params("contactName")},
+Dear @{params("contactName")}
 
 We have received your file, which passed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}. Print or save a copy of this email for your records.
 

@@ -1,7 +1,7 @@
 @(params: Map[String, Any])
 File failed checks for the Mandatory Disclosure Rules (MDR) service
 
-Dear @{params("contactName")},
+Dear @{params("contactName")}
 
 Your file failed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}.
 
