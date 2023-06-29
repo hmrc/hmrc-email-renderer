@@ -51,6 +51,12 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     "enrolmentKey"           -> "HMRC-ATAR-ORG"
   )
 
+  private val registrationParamsESC = commonParameters + (
+    "recipientName_FullName" -> "Jane Jones",
+    "enrolmentKey"           -> "HMRC-ESC-ORG",
+    "serviceName"            -> "Report and manage your allowance for Customs Duty waiver claims"
+  )
+
   "Templates for which the text and html content are identical" should {
 
     "include subscription successful content" in {
@@ -128,6 +134,14 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
 
     "have matching content in the html and the text for customs_registration_successful_cy" in {
       compareContent("ecc_registration_successful_cy", registrationParams, isWelsh = true)(eoriCommonComponents)
+    }
+
+    "have matching content in the html and the text for customs_registration_successful ESC" in {
+      compareContent("ecc_registration_successful", registrationParamsESC)(eoriCommonComponents)
+    }
+
+    "have matching content in the html and the text for customs_registration_successful_cy ESC" in {
+      compareContent("ecc_registration_successful_cy", registrationParamsESC, isWelsh = true)(eoriCommonComponents)
     }
 
     "have matching content in the html and the text for ecc_subscription_not_successful" in {

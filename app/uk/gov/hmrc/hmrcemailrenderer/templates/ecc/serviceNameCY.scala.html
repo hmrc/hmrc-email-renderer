@@ -20,5 +20,6 @@
  case "HMRC-CTC-ORG"  => "Mae’ch tanysgrifiad i’r System Gludo Gyfrifiadurol Newydd (NCTS) yn barod i’w defnyddio"
  case "HMRC-SS-ORG"   => "Mae’ch tanysgrifiad i’r Gwasanaeth Diogelwch yn GB yn barod i’w defnyddio"
  case "HMRC-CTS-ORG"  => "Mae’ch tanysgrifiad i Wasanaethau Masnachwyr Tollau yn barod i’w defnyddio"
+ case "HMRC-ESC-ORG"  => "Mae eich tanysgrifiad yn barod i’w ddefnyddio"
  case _               => "Mae’ch tanysgrifiad i’r Gwasanaeth Datganiadau Tollau yn barod i’w defnyddio"
 }).map(_.toString).filterNot(_.isEmpty).getOrElse(default)

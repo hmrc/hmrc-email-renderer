@@ -20,5 +20,6 @@
  case "HMRC-CTC-ORG"  => "Your subscription to the New Computerised Transit System (NCTS) is ready to use"
  case "HMRC-SS-ORG"   => "Your subscription to the Safety and Security GB service is ready to use"
  case "HMRC-CTS-ORG"  => "Your subscription to Customs Trader Services is ready to use"
+ case "HMRC-ESC-ORG"  => "Your subscription is ready to use"
  case _ => "Your subscription to the Customs Declaration Service and EORI is ready to use"
 }).map(_.toString).filterNot(_.isEmpty).getOrElse(default)

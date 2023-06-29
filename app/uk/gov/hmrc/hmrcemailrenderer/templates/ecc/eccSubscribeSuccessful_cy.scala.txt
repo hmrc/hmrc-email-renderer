@@ -16,6 +16,7 @@
                                       " - gwneud cais am ad-daliad o dollau mewnforio a TAW (CHIEF)" + "\n" +
                                       " - anfon dogfennau i’w gwirio gan y tollau ar gyfer datganiadau a wneir drwy'r system CHIEF" + "\n" +
                                       " - rhoi gwybod i CThEF am dandaliad o ran Toll Dramor neu TAW mewnforio"
+       case "HMRC-ESC-ORG" => "Gallwch nawr rhoi gwybod am a rheoli’ch lwfans ar gyfer hawliadau Ildio Toll Dramor."
 
        case _ => "Erbyn hyn, gallwch ddefnyddio’r Gwasanaeth Datganiadau Tollau."
       }
