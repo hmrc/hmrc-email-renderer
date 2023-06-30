@@ -52,7 +52,7 @@ class EoriCommonComponentTemplatesSpec
     "enrolmentKey"           -> "HMRC-ATAR-ORG"
   )
 
-  private val registrationParamsESC = commonParameters + (
+  private val registrationParamsESC = commonParameters ++ Map(
     "recipientName_FullName" -> "Jane Jones",
     "enrolmentKey"           -> "HMRC-ESC-ORG",
     "serviceName"            -> "Report and manage your allowance for Customs Duty waiver claims"
