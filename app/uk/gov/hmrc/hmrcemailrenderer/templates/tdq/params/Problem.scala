@@ -65,16 +65,16 @@ object Problem {
         if (d < 10) {
           format(d) + prefixes.head
         } else {
-          d.toInt + prefixes.head
+          s"${d.toInt}${prefixes.head}"
         }
       } else {
         loop(d / thousand, prefixes.tail)
       }
 
     if (count < 0) {
-      "-" + loop(Math.abs(count), siPrefixes)
+      "-" + loop(Math.abs(count.toDouble), siPrefixes)
     } else {
-      loop(count, siPrefixes)
+      loop(count.toDouble, siPrefixes)
     }
   }
 }

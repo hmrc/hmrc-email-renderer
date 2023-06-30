@@ -16,11 +16,11 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.customs
 
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
 class CustomsTemplatesContentComparisonSpec
-    extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+    extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
 
   private def customsTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(CustomsTemplates.templates)
@@ -28,7 +28,7 @@ class CustomsTemplatesContentComparisonSpec
   "Templates for which the text and html content are identical" should {
 
     "include customs_registration_successful" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "recipientName_forename" -> "Forename",
         "recipientName_surname"  -> "Surname",
         "completionDate"         -> "17-06-2018"
@@ -38,7 +38,7 @@ class CustomsTemplatesContentComparisonSpec
     }
 
     "include customs_registration_not_successful" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "recipientName_forename" -> "Forename",
         "recipientName_surname"  -> "Surname"
       )
@@ -47,7 +47,7 @@ class CustomsTemplatesContentComparisonSpec
     }
 
     "include customs_migrate_successful" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "recipientName_forename" -> "Forename",
         "recipientName_surname"  -> "Surname",
         "completionDate"         -> "17-06-2018"
@@ -57,7 +57,7 @@ class CustomsTemplatesContentComparisonSpec
     }
 
     "include customs_migrate_not_successful" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "recipientName_forename" -> "Forename",
         "recipientName_surname"  -> "Surname"
       )

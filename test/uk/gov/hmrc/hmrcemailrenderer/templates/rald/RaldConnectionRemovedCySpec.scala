@@ -23,6 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
+import scala.annotation.nowarn
+
 /**
   * @author Yuriy Tumakha
   */
@@ -35,6 +37,7 @@ class RaldConnectionRemovedCySpec
     .find(_.templateId == rald_connection_removed_cy)
     .value
 
+  @nowarn("msg=discarded non-Unit value")
   private def verifyContent(content: String): Unit = {
     content should include("Rydym wedi derbyn eich cais")
     content should include("Annwyl David Jones")

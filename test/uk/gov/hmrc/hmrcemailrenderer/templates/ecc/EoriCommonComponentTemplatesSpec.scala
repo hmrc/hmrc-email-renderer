@@ -16,16 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.ecc
 
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec, ecc }
 
-class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class EoriCommonComponentTemplatesSpec
+    extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
 
   private def eoriCommonComponents(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(ecc.EoriCommonComponentTemplates.templates)
 
   private def fullParams(enrolmentKey: String) = {
-    val fullParams = commonParameters + (
+    val fullParams = commonParameters ++ Map(
       "recipientName_FullName" -> "Jane Jones",
       "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
@@ -36,7 +37,7 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
   }
 
   private def fullParamsStandalone(serviceName: String) = {
-    val fullParams = commonParameters + (
+    val fullParams = commonParameters ++ Map(
       "recipientName_FullName" -> "Jane Jones",
       "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> serviceName,
@@ -46,7 +47,7 @@ class EoriCommonComponentTemplatesSpec extends TemplateComparisonSpec with Commo
     fullParams
   }
 
-  private val registrationParams = commonParameters + (
+  private val registrationParams = commonParameters ++ Map(
     "recipientName_FullName" -> "Jane Jones",
     "enrolmentKey"           -> "HMRC-ATAR-ORG"
   )

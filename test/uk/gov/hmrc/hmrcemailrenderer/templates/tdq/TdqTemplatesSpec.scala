@@ -27,7 +27,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
   "TDQ / CMQ template tdq_fph_self_serve_nudge" should {
 
-    val baseParams = commonParameters + (
+    val baseParams = commonParameters ++ Map(
       "developerName"   -> "John Smith",
       "fromDate"        -> "22 September 2019",
       "toDate"          -> "22 October 2019",

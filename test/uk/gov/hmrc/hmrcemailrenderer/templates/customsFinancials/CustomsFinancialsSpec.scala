@@ -16,10 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.customsFinancials
 
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec, customsfinancials }
 
-class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForSpec with OneAppPerSuite {
+class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
 
   private def customsFinancialsTemplate(templateId: String): Option[(HtmlTemplate, TextTemplate)] =
     messageTemplateF(templateId)(customsfinancials.CustomsFinancialsTemplates.templates)
@@ -27,7 +27,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
   "Templates for which the text and html content are identical" should {
 
     "include Supplementary statement content" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "DefermentStatementType" -> "supplementary",
         "date"                   -> "15 June 2018",
         "DutyText"               -> "The total Duty and VAT owed will be collected by direct debit on or after"
@@ -36,7 +36,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     }
 
     "include Excise statement content" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "DefermentStatementType" -> "excise",
         "date"                   -> "29 June 2018",
         "DutyText"               -> "The total excise owed will be collected by direct debit on or before"
@@ -45,7 +45,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     }
 
     "include 4th week statement content" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "DefermentStatementType" -> "weekly",
         "PeriodIssueNumber"      -> "4",
         "date"                   -> "15 June 2018",
@@ -55,7 +55,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     }
 
     "include 1st week statement content" in {
-      val params = commonParameters + (
+      val params = commonParameters ++ Map(
         "DefermentStatementType" -> "weekly",
         "PeriodIssueNumber"      -> "1",
         "date"                   -> "15 June 2018",

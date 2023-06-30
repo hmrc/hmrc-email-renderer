@@ -20,7 +20,6 @@ import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
-import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.{ html, txt }
 
 class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
 

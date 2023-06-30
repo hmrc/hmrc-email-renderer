@@ -17,13 +17,14 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import junit.framework.TestCase
-import org.scalatest.{ Matchers, WordSpec }
-import org.scalatestplus.play._
+import org.scalatest.Assertion
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 import play.twirl.api.Html
 
-trait RenderedEmailSpec extends WordSpec with Matchers {
+trait RenderedEmailSpec extends AnyWordSpec with Matchers {
 
-  def assertRenderedBorderMatchesGivenColour(expectedColour: String) = {
+  def assertRenderedBorderMatchesGivenColour(expectedColour: String): Assertion = {
     val renderValues =
       Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> expectedColour)
 

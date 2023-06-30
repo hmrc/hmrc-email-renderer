@@ -26,7 +26,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
   "Templates for which the text and html content are identical" should {
 
     "include registration submitted content" in {
-      val registrationSubmittedParams = commonParameters + (
+      val registrationSubmittedParams = commonParameters ++ Map(
         "name"                     -> "John Doe",
         "eclRegistrationReference" -> "XMECL0000000001",
         "eclRegistrationDate"      -> "20 September 2023",
@@ -40,7 +40,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
     }
 
     "include return submitted content" in {
-      val returnSubmittedParams = commonParameters + (
+      val returnSubmittedParams = commonParameters ++ Map(
         "name"               -> "John Doe",
         "dateSubmitted"      -> "1 September 2023",
         "periodStartDate"    -> "1 April 2022",
@@ -57,7 +57,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
     }
 
     "include nil return submitted content" in {
-      val nilReturnSubmittedParams = commonParameters + (
+      val nilReturnSubmittedParams = commonParameters ++ Map(
         "name"            -> "John Doe",
         "dateSubmitted"   -> "1 September 2023",
         "periodStartDate" -> "1 April 2022",

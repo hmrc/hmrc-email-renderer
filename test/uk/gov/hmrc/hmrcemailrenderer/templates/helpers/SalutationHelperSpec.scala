@@ -16,11 +16,12 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.helpers
 
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
-
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 import uk.gov.hmrc.hmrcemailrenderer.templates.helpers.SalutationHelper._
 
-class SalutationHelperSpec extends WordSpecLike with Matchers with OptionValues {
+class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValues {
   "The salutation in English" should {
 
     "be Dear Customer when having no name" in {

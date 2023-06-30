@@ -16,9 +16,10 @@
 
 package uk.gov.hmrc.lingua
 
-import org.scalatest._
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class NameCaseSpec extends WordSpec with Matchers {
+class NameCaseSpec extends AnyWordSpec with Matchers {
 
   "NameCase nc" should {
     val properNames = List(

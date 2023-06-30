@@ -17,15 +17,14 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import org.jsoup.Jsoup
+import org.scalatest.Assertion
 import org.scalatestplus.play.PlaySpec
 import play.twirl.api.{ HtmlFormat, TxtFormat }
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 
-import scala.collection.immutable.StringOps
-
 trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
   def compareContent(id: String, params: Map[String, String], isWelsh: Boolean = false)(
-    getTemplates: String => Option[(HtmlTemplate, TextTemplate)]) =
+    getTemplates: String => Option[(HtmlTemplate, TextTemplate)]): Assertion =
     getTemplates(id) match {
       case Some((htmlTemplate, textTemplate)) =>
         val html = TemplateContentNormalisation.html(htmlTemplate(params))
@@ -38,15 +37,15 @@ trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
 
 object TemplateContentNormalisation {
 
-  def html(content: HtmlFormat.Appendable) = normaliseWhiteSpace(
+  def html(content: HtmlFormat.Appendable): String = normaliseWhiteSpace(
     Jsoup.parse(content.body).getElementsByTag("body").text()
   )
 
-  def text(content: TxtFormat.Appendable) = normaliseWhiteSpace(
-    (content.body: StringOps).lines.map(_.replaceAll("""^((\s*)- )""", "")).mkString(" ")
+  def text(content: TxtFormat.Appendable): String = normaliseWhiteSpace(
+    content.body.linesIterator.map(_.replaceAll("""^((\s*)- )""", "")).mkString(" ")
   )
 
-  def normaliseWhiteSpace(input: String) =
+  def normaliseWhiteSpace(input: String): String =
     input.replaceAll("""\s+""", " ")
 
 }

@@ -32,6 +32,8 @@ class TemplatePrioritiesISpec
     extends AnyWordSpec with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite
     with ScalaFutures with ResponseMatchers with ServerProvider with TableDrivenPropertyChecks {
 
+  System.setProperty("auditing.enabled", "false")
+
   "Rendered templates" should {
 
     implicit lazy val wsc: WSClient = app.injector.instanceOf[WSClient]

@@ -16,7 +16,6 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.fhdds
 
-import uk.gov.hmrc.hmrcemailrenderer.domain
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Fhdds

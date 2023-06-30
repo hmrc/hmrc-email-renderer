@@ -28,12 +28,13 @@ class VatRegTemplatesComparisonSpec extends TemplateComparisonSpec with CommonPa
   val testName = "Joe Bloggs"
   val testRef = "VRS 1234 5678 9012"
 
-  val params = commonParameters + (
+  val params = commonParameters ++ Map(
     "name" -> testName,
     "ref"  -> testRef
   )
 
-  def templateContent(id: String) = messageTemplateF(id)(VatRegTemplates.templates)
+  def templateContent(id: String): Option[(HtmlTemplate, TextTemplate)] =
+    messageTemplateF(id)(VatRegTemplates.templates)
 
   "The basic registration received template" should {
     "have the same content in Text and HTML formats" in {

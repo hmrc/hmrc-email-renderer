@@ -35,7 +35,6 @@ package uk.gov.hmrc.hmrcemailrenderer.services
 import org.scalatest.OptionValues
 import org.mockito.{ ArgumentCaptor, MockitoSugar }
 import org.mockito.ArgumentMatchers.{ any, anyString }
-import org.mockito.Mockito._
 import play.api.Configuration
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
 import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
@@ -49,7 +48,6 @@ import uk.gov.hmrc.play.audit.model.DataEvent
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{ ExecutionContext, Future }
-import play.api.test.Helpers.await
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
@@ -81,7 +79,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any()))
+      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(Language.English))
 
       override val templateRenderer =
@@ -110,7 +108,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
-      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any()))
+      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(Language.Welsh))
       override val templateRenderer =
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
@@ -141,7 +139,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
-      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any()))
+      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(Language.English))
 
       override val templateRenderer =
@@ -173,7 +171,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
 
       when(auditConnector.sendEvent(any[DataEvent])(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(AuditResult.Success))
-      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any()))
+      when(preferencesConnector.languageByEmail(anyString())(any[HeaderCarrier], any[ExecutionContext]))
         .thenReturn(Future.successful(Language.Welsh))
 
       override val templateRenderer =
