@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-File failed checks for the Mandatory Disclosure Rules (MDR) service
+File failed checks for the MDR service
 
 Dear @{params("contactName")}
 
