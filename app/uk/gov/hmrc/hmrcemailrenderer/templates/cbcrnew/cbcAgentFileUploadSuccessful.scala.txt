@@ -6,7 +6,9 @@ File successfully sent for the CBC reporting service
 
 Dear @{params("contactName")}
 
-We have received the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file passed the country-by-country reporting checks at @{params("dateSubmitted")}. Print or save a copy of this email for your records.
+We have received the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file passed the country-by-country reporting checks at @{params("dateSubmitted")}.
+
+Print or save a copy of this email for your records.
 
 For reference, the File ID (MessageRefId) is:
 @{params("messageRefId")}
