@@ -2240,25 +2240,27 @@ object TemplateParams2 {
     ),
     "cbc_file_upload_successful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "dateSubmitted" -> "11:14am on 20 March 2023",
       "messageRefId"  -> "XACBC0000123778"
     ),
     "cbc_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "dateSubmitted" -> "11:14am on 20 March 2023",
       "messageRefId"  -> "XACBC0000123778"
     ),
     "cbc_agent_file_upload_successful" -> Map(
-      "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
-      "messageRefId"  -> "XACBC0000123778",
-      "cbcId"         -> "XWCBC0000000058"
+      "contactName"       -> "Joe Bloggs",
+      "dateSubmitted"     -> "11:14am on 20 March 2023",
+      "messageRefId"      -> "XACBC0000123778",
+      "cbcId"             -> "XWCBC0000000058",
+      "clientTradingName" -> "ABC Ltd"
     ),
     "cbc_agent_file_upload_unsuccessful" -> Map(
-      "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
-      "messageRefId"  -> "XACBC0000123778",
-      "cbcId"         -> "XWCBC0000000058"
+      "contactName"       -> "Joe Bloggs",
+      "dateSubmitted"     -> "11:14am on 20 March 2023",
+      "messageRefId"      -> "XACBC0000123778",
+      "cbcId"             -> "XWCBC0000000058",
+      "clientTradingName" -> "ABC Ltd"
     ),
     "dac6_registration_successful" -> Map(
       "name"   -> "Joe Bloggs",

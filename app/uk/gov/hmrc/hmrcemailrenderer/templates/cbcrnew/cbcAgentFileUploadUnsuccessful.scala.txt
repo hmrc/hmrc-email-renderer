@@ -1,30 +1,29 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
 
-Your client’s CBC file failed our checks
+File failed checks for the CBC reporting service
+
 
 Dear @{params("contactName")}
 
-The following file failed our automatic checks on @{params("dateSubmitted")}.
+We have not accepted the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file failed the country-by-country reporting checks at @{params("dateSubmitted")}.
 
-Client CBC ID: @{params("cbcId")}
+For reference, the File ID (MessageRefId) is:
+@{params("messageRefId")}
 
-MessageRefId: @{params("messageRefId")}
+You can check the errors in the CBC service and upload an updated XML file.
 
-We have not accepted the report.
-
-
-How to make a new report
-To make a new CBC report:
-    search for ‘CBC’ on GOV.UK
-    sign into the service using your Government Gateway account
+For security reasons, we have not included a link to this service in this email.
 
 
-For security reasons, we have not included a link to the CBC service in this email.
+If you need help
 
-You can email aeoi.enquiries@@hmrc.gov.uk if you have any questions.
+Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
 
-If you need more information, search ‘CBC’ on GOV.UK.
+For more information on CBC, you can visit GOV.UK and search for ‘country-by-country reporting’.
 
-From the CBC service
+
+From the HMRC CBC service
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
