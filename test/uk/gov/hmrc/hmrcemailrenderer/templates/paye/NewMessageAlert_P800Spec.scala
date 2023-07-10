@@ -128,9 +128,7 @@ class NewMessageAlert_P800Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("For security reasons, we have not included a link with this email.")
       htmlContent must include("Why you got this email")
       htmlContent must include("You chose to get online tax letters instead of letters by post.")
-      htmlContent must include(
-        "This means we send you an email to let you know when you have a new message." +
-          "")
+      htmlContent must include("This means we send you an email to let you know when you have a new message.")
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
