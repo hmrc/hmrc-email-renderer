@@ -1,18 +1,18 @@
-@(params: Map[String, Any])You have a new letter online
+@(params: Map[String, Any])Your new tax calculation is ready
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-We have just published your new income tax calculation letter to your secure online personal tax account.
+Your latest tax calculation is now ready to view online.
 
-Details in the letter will tell you how to pay HMRC or claim back any funds we may owe you.
+Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.
 
-If you are due a refund, claiming online will mean you can have funds transferred directly to you within 5 working days.
+For security reasons, we have not included a link with this email.
 
-How to read your online letter
+Why you got this email
 
-To keep your personal information safe, we do not put a link to your online account in our emails to you.
+You chose to get online tax letters instead of letters by post.
 
-Please log in now to HMRC online and go to your messages to read your full income tax calculation letter. Do this using your Government Gateway password and ID.
+This means we send you an email to let you know when you have a new message.
 
 From HMRC PAYE
 
