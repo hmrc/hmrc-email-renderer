@@ -27,7 +27,7 @@ object HippTemplates {
       templateId = "hipp_add_team_member_to_app_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You’ve been added to an application in The API Hub",
+      subject = "You have been added to an application in The API Hub",
       plainTemplate = txt.AddTeamMember.f,
       htmlTemplate = html.AddTeamMember.f,
       priority = Some(MessagePriority.Urgent)
@@ -36,7 +36,7 @@ object HippTemplates {
       templateId = "hipp_remove_team_member_from_app_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You've been removed from an application in The API Hub",
+      subject = "You have been removed from an application in The API Hub",
       plainTemplate = txt.RemoveTeamMember.f,
       htmlTemplate = html.RemoveTeamMember.f,
       priority = Some(MessagePriority.Urgent)
