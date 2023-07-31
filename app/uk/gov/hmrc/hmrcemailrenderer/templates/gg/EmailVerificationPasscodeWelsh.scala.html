@@ -15,6 +15,7 @@
  *@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhau’ch cyfeiriad e-bost", isWelsh = true) {
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@params("page_title")</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Annwyl Gwsmer</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Gwnaethoch ofyn am god i gadarnhau’ch cyfeiriad e-bost.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Eich cod yw: <b>@params("passcode")</b></p>
