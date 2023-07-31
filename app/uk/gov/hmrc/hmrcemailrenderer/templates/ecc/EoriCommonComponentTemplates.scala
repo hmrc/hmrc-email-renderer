@@ -27,7 +27,7 @@ object EoriCommonComponentTemplates {
       .map {
         case "Get an EORI" => "Your EORI number is ready to use"
         case "Report and manage your allowance for Customs Duty waiver claims" =>
-          "Report and manage your allowance for Customs Duty Waiver claims is ready to use"
+          "Report and manage your allowance for Customs Duty waiver claims is ready to use"
         case name => s"Your subscription to $name and EORI number are ready to use."
       }
       .getOrElse("")
