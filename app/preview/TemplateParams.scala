@@ -3373,6 +3373,9 @@ object TemplateParams3 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "sdes_alert" -> Map(
+      "submissionCount" -> "15"
+    ),
     "seis_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
