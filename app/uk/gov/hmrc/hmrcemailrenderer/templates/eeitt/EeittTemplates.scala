@@ -1993,6 +1993,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "sdes_alert",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "You have unprocessed SDES items",
+      plainTemplate = txt.sdesAlert.f,
+      htmlTemplate = html.sdesAlert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "seis_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,

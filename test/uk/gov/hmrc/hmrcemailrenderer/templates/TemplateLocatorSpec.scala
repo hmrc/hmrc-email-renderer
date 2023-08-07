@@ -493,6 +493,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "eis_confirmation",
         "eis_code",
         "seis_confirmation",
+        "sdes_alert",
         "seis_code",
         "ca3822_confirmation",
         "ca3822_code",
