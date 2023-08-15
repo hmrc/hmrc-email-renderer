@@ -41,13 +41,13 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
     "include registration submitted content cy" in {
       val registrationSubmittedParams = commonParameters ++ Map(
-        "name" -> "John Doe",
+        "name"                     -> "John Doe",
         "eclRegistrationReference" -> "XMECL0000000001",
-        "eclRegistrationDate" -> "20 September 2023",
-        "dateDue" -> "30 September 2023",
-        "isPrimaryContact" -> "true",
-        "secondContactEmail" -> "joe.smith@test.com",
-        "privateBetaEnabled" -> "true"
+        "eclRegistrationDate"      -> "20 September 2023",
+        "dateDue"                  -> "30 September 2023",
+        "isPrimaryContact"         -> "true",
+        "secondContactEmail"       -> "joe.smith@test.com",
+        "privateBetaEnabled"       -> "true"
       )
 
       compareContent("ecl_registration_submitted_cy", registrationSubmittedParams, isWelsh = true)(ecl)
@@ -64,7 +64,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
     "include registration received content cy" in {
       val registrationSubmittedParams = commonParameters + (
         "name" -> "John Doe"
-        )
+      )
 
       compareContent("ecl_registration_received_cy", registrationSubmittedParams, isWelsh = true)(ecl)
     }
