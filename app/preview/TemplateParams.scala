@@ -3516,6 +3516,14 @@ object TemplateParams3 {
       "isPrimaryContact"         -> "true",
       "secondContactEmail"       -> "joe.smith@test.com"
     ),
+    "ecl_registration_submitted_cy" -> Map(
+      "name"                     -> "John Doe",
+      "eclRegistrationReference" -> "XMECL0000000001",
+      "eclRegistrationDate"      -> "20 September 2023",
+      "dateDue"                  -> "30 September 2023",
+      "isPrimaryContact"         -> "true",
+      "secondContactEmail"       -> "joe.smith@test.com"
+    ),
     "ecl_return_submitted" -> Map(
       "name"               -> "John Doe",
       "dateSubmitted"      -> "1 September 2023",
@@ -3545,6 +3553,9 @@ object TemplateParams3 {
       "answers" -> "eyJuYW1lIjoidGVzdCIsImFuc3dlcnMiOlsiMiIsIjMiLCJIb3BlIHRoaXMgd29ya3MiXX0="
     ),
     "ecl_registration_received" -> Map(
+      "name" -> "John Doe"
+    ),
+    "ecl_registration_received_cy" -> Map(
       "name" -> "John Doe"
     )
   )
