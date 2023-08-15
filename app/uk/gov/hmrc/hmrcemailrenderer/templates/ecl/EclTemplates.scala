@@ -33,12 +33,30 @@ object EclTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ecl_registration_submitted_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclRegistrationSubmitted_cy.f,
+      htmlTemplate = html.eclRegistrationSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ecl_registration_received",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,
       subject = "Your Economic Crime Levy registration has been received",
       plainTemplate = txt.eclRegistrationReceived.f,
       htmlTemplate = html.eclRegistrationReceived.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_registration_received_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Mae’ch cofrestriad ar gyfer yr Ardoll Troseddau Economaidd wedi dod i law",
+      plainTemplate = txt.eclRegistrationReceived_cy.f,
+      htmlTemplate = html.eclRegistrationReceived_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
