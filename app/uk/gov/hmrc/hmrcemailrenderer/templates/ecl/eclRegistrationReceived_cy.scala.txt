@@ -1,0 +1,39 @@
+@(params: Map[String, Any])
+Mae’ch cofrestriad ar gyfer yr Ardoll Troseddau Economaidd wedi dod i law
+
+Annwyl @params("name")
+
+Mae’r atebion ar gyfer eich cofrestriad ar gyfer yr Ardoll Troseddau Economaidd (ECL) wedi dod i law. Cadwch yr e-bost hwn ar gyfer eich cofnodion.
+
+Yr hyn sy’n digwydd nesaf
+
+Byddwn yn adolygu’ch atebion. Efallai y byddwn yn cysylltu â chi gan ddefnyddio’r manylion a roddwyd gennych os bydd angen rhagor o wybodaeth arnom.
+
+Byddwch yn cael eich cyfeirnod ECL mewn llythyr ar ôl i ni gyfateb eich manylion i’n cofnodion.
+
+Gallwch wedyn ychwanegu’r Ardoll Troseddau Economaidd at eich cyfrif treth busnes.
+
+Sut i gyflwyno datganiad
+
+Bydd angen i chi lenwi datganiad a thalu’r ardoll yn flynyddol.
+
+Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw 30 Medi 2023. Codir llog arnoch os ydych yn talu’n hwyr.
+
+Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i gyflwyno datganiad.
+
+Pan fyddwch yn llenwi’ch datganiad blynyddol, bydd angen i chi roi gwybod i ni am y canlynol:
+
+    - y cyfnodau cyfrifyddu perthnasol ar gyfer eich sefydliad
+    - eich refeniw yn y DU ar gyfer y cyfnodau cyfrifyddu perthnasol
+    - pa mor hir y gwnaethoch gynnal gweithgareddau a reoleiddir gan reoliadau gwrth-wyngalchu arian (AML) yn ystod y flwyddyn ariannol
+    - manylion cyswllt y person yn eich sefydliad sy’n llenwi’r datganiad
+
+Pam cawsoch yr e-bost hwn
+
+Dyma’r cyfeiriad e-bost sydd wedi’i gofrestru er mwyn i ni allu cysylltu â chi ynghylch yr ECL.
+
+Peidiwch ag ateb yr e-bost hwn.
+
+Oddi wrth tîm Ardoll Troseddau Economaidd CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
