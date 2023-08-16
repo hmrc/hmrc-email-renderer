@@ -1,0 +1,33 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Action Required: HMRC Application Rejected") {
+
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received an application to register for Self Assessment for your client @params("name"). </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We are unable to process your application because the personal details provided do not match our records.</p>
+
+    <h2 style="font-size: 24px;">WHAT TO DO NOW</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You will need to check or update your client’s personal details before resubmitting the form.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can ask HMRC to update your client’s personal details. Go to GOV.UK and search for “Tell HMRC about a change to your personal details” and look for “Change of name or address”. Changes may take up to 15 days to complete.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Alternatively, your client can update their personal details online immediately using their personal tax account. </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Digital</p>
+}

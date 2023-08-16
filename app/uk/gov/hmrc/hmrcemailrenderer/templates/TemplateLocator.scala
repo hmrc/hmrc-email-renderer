@@ -80,6 +80,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.dass.DASSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
@@ -103,6 +104,7 @@ trait TemplateLocator {
       "BARS"                  -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
+      "DASS"                  -> DASSTemplates.templates,
       "MDR"                   -> MdrTemplates.templates,
       "CBCR-NEW"              -> CBCRNewTemplates.templates,
       "Digital Tariffs"       -> DigitalTariffTemplates.templates,

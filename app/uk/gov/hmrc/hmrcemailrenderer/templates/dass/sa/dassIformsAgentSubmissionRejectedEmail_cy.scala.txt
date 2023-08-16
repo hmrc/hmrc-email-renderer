@@ -1,0 +1,16 @@
+@(params: Map[String, Any])
+
+Camau i’w cymryd: Cais i CThEF wedi’i wrthod
+
+Rydym wedi cael cais i gofrestru’ch cleient @params("name") ar gyfer Hunanasesiad.
+Ni allwn brosesu’ch cais oherwydd nid yw’r manylion personol rydych wedi’u rhoi yn cyd-fynd â’n cofnodion.
+
+YR HYN I’W WNEUD NAWR
+
+Bydd angen i chi wirio neu ddiweddaru manylion personol eich cleient cyn ail-gyflwyno’r ffurflen.
+Gallwch ofyn i CThEF ddiweddaru manylion personol eich cleient. Ewch i GOV.UK a chwilio am “Tell HMRC about a change to your personal details” ac yna “Change of name or address”. Gall newidiadau gymryd hyd at 15 diwrnod i’w cwblhau.
+Fel arall, gall eich cleient ddiweddaru ei fanylion personol ar-lein, ar unwaith, drwy ddefnyddio’i gyfrif treth personol.
+
+Oddi wrth Adran Ddigidol CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

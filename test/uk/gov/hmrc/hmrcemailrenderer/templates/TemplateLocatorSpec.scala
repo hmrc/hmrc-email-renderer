@@ -135,7 +135,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ITSA",
         "ECL",
         "HIPP",
-        FeedbackTemplates.id
+        FeedbackTemplates.id,
+        "DASS"
       )
     }
 
@@ -965,7 +966,11 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "hipp_add_team_member_to_app_email",
         "hipp_remove_team_member_from_app_email",
         "feeback_answers_for_digital_persona",
-        "ecl_registration_received"
+        "ecl_registration_received",
+        "iforms_submission_rejection_email_non_agent",
+        "iforms_submission_rejection_email_non_agent_cy",
+        "iforms_submission_rejection_email_agent",
+        "iforms_submission_rejection_email_agent_cy"
       )
     }
   }
