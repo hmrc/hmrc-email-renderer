@@ -138,7 +138,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ECL",
         "HIPP",
         "Penalty Reform",
-        FeedbackTemplates.id
+        FeedbackTemplates.id,
+        "DASS"
       )
     }
 
@@ -985,6 +986,11 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_LPi1",
         "newMessageAlert_LPi1_cy",
         "feeback_answers_for_digital_persona",
+        "ecl_registration_received",
+        "iforms_submission_rejection_email_non_agent",
+        "iforms_submission_rejection_email_non_agent_cy",
+        "iforms_submission_rejection_email_agent",
+        "iforms_submission_rejection_email_agent_cy",
         "ecl_registration_received",
         "ecl_registration_received_cy",
         "ecl_return_submitted_cy",

@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+
+Action Required: HMRC Application Rejected
+
+Dear @params("name"),
+
+We have received your application to register for Self Assessment.
+We are unable to process your application because the information you provided does not match our records.
+
+WHAT TO DO NOW
+
+You will need to check or update your personal details before resubmitting the form.
+You can check and update your personal details online using your personal tax account.
+If you don’t have a personal tax account, you can set one up at GOV.UK. On the GOV.UK website, search for PTA and look for “Personal tax account: sign in or set up”.
+
+From HMRC Digital
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
