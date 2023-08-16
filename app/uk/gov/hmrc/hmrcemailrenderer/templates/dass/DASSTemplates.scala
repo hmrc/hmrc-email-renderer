@@ -23,7 +23,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 object DASSTemplates {
 
   val templates = Seq(
-    //IForms Rejected
     MessageTemplate.create(
       templateId = "iforms_submission_rejection_email_non_agent",
       fromAddress = govUkTeamAddress,
