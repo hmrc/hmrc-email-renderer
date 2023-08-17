@@ -1,0 +1,18 @@
+@(params: Map[String, Any])You’ve got a new message from HMRC
+
+Dear Customer,
+
+You have a new message from HMRC.
+
+To view it, sign in to your HMRC online account.
+
+For security reasons, we have not included a link with this email.
+
+Why you got this email
+
+You chose to get paperless notifications.
+
+This means we send you an email when you have a new message in your account.
+
+From HMRC digital
+
