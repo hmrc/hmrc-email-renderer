@@ -1,6 +1,6 @@
 @(params: Map[String, Any])You’ve got a new message from HMRC
 
-Dear Customer,
+Dear Customer
 
 You have a new message from HMRC.
 
