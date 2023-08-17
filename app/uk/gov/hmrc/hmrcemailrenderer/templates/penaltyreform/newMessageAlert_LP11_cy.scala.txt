@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Mae gennych neges newydd oddi wrth CThEM
 
-Annwyl Gwsmer,
+Annwyl Gwsmer
 
 Mae gennych neges newydd oddi wrth CThEM.
 
