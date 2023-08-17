@@ -88,6 +88,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hipp.HippTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -161,6 +162,7 @@ trait TemplateLocator {
       "ITSA"                  -> ItsaTemplates.templates,
       "ECL"                   -> EclTemplates.templates,
       "HIPP"                  -> HippTemplates.templates,
+      "Penalty Reform"        -> PenReformTemplates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates
     )
 
