@@ -964,6 +964,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ecl_registration_submitted_cy",
         "ecl_return_submitted",
         "ecl_nil_return_submitted",
+        "ecl_amend_return_submitted",
         "hipp_add_team_member_to_app_email",
         "hipp_remove_team_member_from_app_email",
         "newMessageAlert_LPP4",
