@@ -2,22 +2,25 @@
 
 Dear @{params("helpeeFirstName")} @{params("helpeeLastName")}
 
-@{params("helperFirstName")} @{params("helperLastName")} has offered to become your Trusted Helper and help with your tax online.
+@{params("helperFirstName")} @{params("helperLastName")} has offered to be your trusted helper.
 
-Trusted Helper is an online service from HM Revenue and Customs (HMRC) which allows people to help their friends and family manage their tax affairs online.
+A trusted helper is someone you know like a friend or family member, who can help you with your tax online.
 
-Before you start
+This offer is available to accept online for 28 days.
 
-You’ll need your National Insurance number to hand.
+How to accept this offer of help
 
-You’ll also need to set up an account with GOV.UK Verify, if you don’t already have one.
+Visit the gov.uk website and search for ‘personal tax account’.
 
-Click on the link below to accept @{params("helperFirstName")}’s offer to help you.
+You will need to sign in with your Government Gateway password and ID to access your personal tax account.
 
-https://www.gov.uk/help-friends-family-tax
+If you do not have a Government Gateway, or a personal tax account
 
-You have 28 days to respond.
+To set up your personal tax account, visit the gov.uk website and search for ‘personal tax account’.
+
+You can register for a Government Gateway account when you set up your personal tax account.
 
 From HMRC Trusted Helper
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
