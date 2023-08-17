@@ -961,6 +961,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "disabled_undertaking_email_to_lead",
         "disabled_undertaking_email_to_be",
         "ecl_registration_submitted",
+        "ecl_registration_submitted_cy",
         "ecl_return_submitted",
         "ecl_nil_return_submitted",
         "hipp_add_team_member_to_app_email",
@@ -970,7 +971,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_LP11",
         "newMessageAlert_LP11_cy",
         "feeback_answers_for_digital_persona",
-        "ecl_registration_received"
+        "ecl_registration_received",
+        "ecl_registration_received_cy"
       )
     }
   }

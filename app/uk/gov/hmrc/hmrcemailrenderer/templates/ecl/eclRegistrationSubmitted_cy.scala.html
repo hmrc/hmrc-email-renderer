@@ -1,0 +1,89 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd", isWelsh=true) {
+
+    <div style="margin: 0 0 30px;
+        font-size: 19px;">
+        <p>Annwyl @params("name")</p>
+
+        <p>Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd (ECL).</p>
+
+        <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
+            font-size: 19px;">
+            <tbody>
+                <tr>
+                    <th>Cyfeirnod ECL</th>
+                    <td>@params("eclRegistrationReference")</td>
+                </tr>
+
+                <tr>
+                    <th>Dyddiad cofrestru ar gyfer yr ECL</th>
+                    <td>@params("eclRegistrationDate")</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="font-weight: bold;">Yr hyn sy’n digwydd nesaf</p>
+
+        <p>
+            Bydd angen i chi lenwi datganiad a thalu’r ardoll yn flynyddol.
+        </p>
+
+        <p>
+            Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i gyflwyno datganiad.
+        </p>
+
+        <p>
+            Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw @params("dateDue"). Codir llog arnoch os ydych yn talu’n hwyr.
+        </p>
+
+        <p style="font-weight: bold;">Sut i gyflwyno datganiad</p>
+
+        <p>Gallwch gyflwyno datganiad drwy’r adran ‘Datganiadau’ yn eich cyfrif ECL.</p>
+
+        <p>Pan fyddwch yn llenwi’ch datganiad blynyddol, bydd angen i chi roi gwybod i ni am y canlynol:</p>
+
+        <ul style="margin: 0 0 30px;
+            font-size: 19px;">
+            <li>y cyfnod cyfrifyddu perthnasol ar gyfer eich sefydliad</li>
+            <li>eich refeniw yn y DU ar gyfer y cyfnod cyfrifyddu perthnasol</li>
+            <li>pa mor hir y gwnaethoch gynnal gweithgareddau a reoleiddir gan reoliadau gwrth-wyngalchu arian (AML) yn ystod y flwyddyn ariannol</li>
+            <li>enw, rôl, a manylion cyswllt y person yn eich sefydliad sy’n llenwi’r datganiad</li>
+        </ul>
+
+        <p style="font-weight: bold;">Pam cawsoch yr e-bost hwn</p>
+
+        @if(params("isPrimaryContact").toString.toBoolean) {
+            <p>Dyma’r e-bost a roddwyd gennych pan wnaethoch gofrestru.</p>
+        }
+
+        @if(params.contains("secondContactEmail") && params("isPrimaryContact").toString.toBoolean) {
+            <p>Rydym hefyd wedi anfon yr e-bost hwn i @params("secondContactEmail"), gan eich bod wedi’i enwi fel cyswllt pan wnaethoch gofrestru.</p>
+        }
+
+        @if(!params("isPrimaryContact").toString.toBoolean) {
+            <p>Gwnaethom anfon yr e-bost hwn atoch oherwydd eich bod wedi cael eich nodi’n gyswllt pan wnaeth rhywun yn eich sefydliad gofrestru ar gyfer ECL.</p>
+        }
+
+        <p>Peidiwch ag ateb yr e-bost hwn.</p>
+
+        <p>Oddi wrth dîm Ardoll Troseddau Economaidd CThEF</p>
+    </div>
+
+}
