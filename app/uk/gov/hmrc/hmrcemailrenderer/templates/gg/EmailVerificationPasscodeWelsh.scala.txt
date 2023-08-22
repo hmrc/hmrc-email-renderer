@@ -1,7 +1,5 @@
 @(params: Map[String, Any])Cadarnhau’ch cyfeiriad e-bost
 
-@params("page_title")
-
 Annwyl Gwsmer
 
 Gwnaethoch ofyn am god i gadarnhau’ch cyfeiriad e-bost.

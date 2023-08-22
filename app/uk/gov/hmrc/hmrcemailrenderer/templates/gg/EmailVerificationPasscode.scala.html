@@ -15,7 +15,6 @@
  *@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address") {
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@params("page_title")</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear Customer</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You requested a code to confirm your email address.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your code is: <b>@params("passcode")</b></p>

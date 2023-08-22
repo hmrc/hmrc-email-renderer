@@ -1,7 +1,5 @@
 @(params: Map[String, Any])Confirm your email address
 
-@params("page_title")
-
 Dear Customer
 
 You requested a code to confirm your email address.
