@@ -23,3 +23,5 @@ This is the email address you provided when you submitted your return.
 Do not respond to this email.
 
 From HMRC Economic Crime Levy team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
