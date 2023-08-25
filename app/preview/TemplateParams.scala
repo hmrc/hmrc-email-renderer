@@ -3545,6 +3545,10 @@ object TemplateParams3 {
       "periodStartDate" -> "1 April 2022",
       "periodEndDate"   -> "31 March 2023"
     ),
+    "ecl_amend_registration_submitted" -> Map(
+      "name"          -> "John Doe",
+      "dateSubmitted" -> "31 March 2023"
+    ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
     ),
