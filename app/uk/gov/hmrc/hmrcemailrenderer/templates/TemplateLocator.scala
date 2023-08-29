@@ -89,6 +89,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hipp.HippTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -120,6 +122,7 @@ trait TemplateLocator {
       "PAYE"                  -> PayeTemplates.templates,
       raldGroup               -> RaldTemplates.templates,
       contactFormsGroup       -> ContactFormsTemplates.templates,
+      tctrGroup               -> TctrTemplates.tctrTemplates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
       "Self Assessment"       -> DigitalContactTemplates.templates,
       "TAMC"                  -> TamcTemplates.templates,
