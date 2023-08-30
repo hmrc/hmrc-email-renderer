@@ -592,6 +592,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         cf_enquiry_confirmation,
         cf_enquiry_confirmation_cy,
         tctr_submission_confirmation,
+        tctr_vacant_submission_confirmation,
         tctr_connection_removed,
         tctr_connection_removed_cy,
         "bars_alert",
