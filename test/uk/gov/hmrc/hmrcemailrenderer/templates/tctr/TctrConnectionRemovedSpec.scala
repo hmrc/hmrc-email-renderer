@@ -42,9 +42,10 @@ class TctrConnectionRemovedSpec
     content should include("We have received your request")
     content should include("Dear David Jones")
     content should include(
-      "Thank you for contacting us. This email is confirmation that you have asked us to remove your connection to a property.")
+      "Thank you for contacting us on 27 March 2022 at 4:33pm. This email is confirmation that you have asked us to remove your connection to a property.")
     content should include(
       "We will remove your details from our records. You should not receive any further letters from us about this property.")
+    content should include("Do not reply to this email.")
     content should include("From Valuation Office Agency - Tenure Cost and Trade Records service")
     content should include("Report the suspicious email to HMRC")
   }

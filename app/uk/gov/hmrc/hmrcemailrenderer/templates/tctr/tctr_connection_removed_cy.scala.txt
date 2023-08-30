@@ -2,16 +2,13 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params, isWelsh = true)
 
-Diolch am gysylltu â ni. Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo.
-
-Manylion
-
-Dyddiad: @params("submissionDate")
-Amser: @params("submissionTime")
+Diolch am gysylltu â ni ar @params("submissionDate") am @params("submissionTime"). Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo.
 
 Beth sy’n digwydd nesaf
 
 Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.
+
+Peidiwch ag ymateb i’r e-bost hwn.
 
 Oddi wrth Asiantaeth y Swyddfa Brisio
 

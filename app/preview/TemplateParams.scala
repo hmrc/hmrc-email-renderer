@@ -754,12 +754,12 @@ object TemplateParams {
       tctr_connection_removed -> Map(
         "recipientName_FullName" -> "David Jones",
         "submissionDate"         -> "27 March 2022",
-        "submissionTime"         -> "16:33"
+        "submissionTime"         -> "4:33pm"
       ),
       tctr_connection_removed_cy -> Map(
         "recipientName_FullName" -> "David Jones",
         "submissionDate"         -> "27 Mawrth 2022",
-        "submissionTime"         -> "16:33"
+        "submissionTime"         -> "4:33pm"
       ),
       "bars_alert" -> Map(
         "baRefNumber"   -> "BA : ba5090",

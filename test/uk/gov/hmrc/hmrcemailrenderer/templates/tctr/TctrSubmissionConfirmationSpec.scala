@@ -44,6 +44,7 @@ class TctrSubmissionConfirmationSpec
     content should include(
       "This email is confirmation that we have received your business trade and cost information form.")
     content should include("We may need to contact you to check some of the details you provided.")
+    content should include("Do not reply to this email.")
     content should include("From Valuation Office Agency - Tenure Cost and Trade Records service")
     content should include("Report the suspicious email to HMRC")
   }

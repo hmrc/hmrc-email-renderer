@@ -16,14 +16,12 @@
 
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydym wedi derbyn eich cais", isWelsh = true) {
-<div style="margin: 0 0 30px; font-size: 19px;">
-    <p>@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params, isWelsh = true)</p>
-    <p>Diolch am gysylltu â ni. Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo.</p>
-    <h2>Manylion</h2>
-    <p>Dyddiad: @params("submissionDate")<br/>
-       Amser: @params("submissionTime")</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params, isWelsh = true)</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Diolch am gysylltu â ni ar @params("submissionDate") am @params("submissionTime"). Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo.</p>
     <h2>Beth sy’n digwydd nesaf</h2>
-    <p>Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.</p>
-    <p>Oddi wrth Asiantaeth y Swyddfa Brisio</p>
-</div>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Peidiwch ag ymateb i’r e-bost hwn.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Asiantaeth y Swyddfa Brisio</p>
+
 }
