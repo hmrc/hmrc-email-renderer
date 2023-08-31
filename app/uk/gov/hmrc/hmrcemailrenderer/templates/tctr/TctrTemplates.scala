@@ -28,6 +28,7 @@ object TctrTemplates {
 
   val tctrGroup = "TCTR"
   val tctr_submission_confirmation = "tctr_submission_confirmation"
+  val tctr_vacant_submission_confirmation = "tctr_vacant_submission_confirmation"
   val tctr_connection_removed = "tctr_connection_removed"
   val tctr_connection_removed_cy = "tctr_connection_removed_cy"
 
@@ -39,6 +40,15 @@ object TctrTemplates {
       subject = "Valuation Office Agency: We have received your business trade and cost information",
       plainTemplate = txt.tctr_submission_confirmation.f,
       htmlTemplate = html.tctr_submission_confirmation.f,
+      priority = standardPriority
+    ),
+    MessageTemplate.create(
+      templateId = tctr_vacant_submission_confirmation,
+      fromAddress = fromNoReplyVOA,
+      service = TctrForms,
+      subject = "Valuation Office Agency: We have received your vacant property declaration",
+      plainTemplate = txt.tctr_vacant_submission_confirmation.f,
+      htmlTemplate = html.tctr_vacant_submission_confirmation.f,
       priority = standardPriority
     ),
     MessageTemplate.create(

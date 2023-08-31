@@ -751,6 +751,11 @@ object TemplateParams {
       tctr_submission_confirmation -> Map(
         "customerName" -> "John Doe"
       ),
+      tctr_vacant_submission_confirmation -> Map(
+        "recipientName_FullName" -> "David Jones",
+        "submissionDate"         -> "27 March 2022",
+        "submissionTime"         -> "4:33pm"
+      ),
       tctr_connection_removed -> Map(
         "recipientName_FullName" -> "David Jones",
         "submissionDate"         -> "27 March 2022",
