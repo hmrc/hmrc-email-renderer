@@ -51,7 +51,7 @@ class TctrVacantSubmissionConfirmationSpec
 
   tctr_vacant_submission_confirmation should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Valuation Office Agency: You have declared vacant property"
+      template.subject(Map.empty) shouldBe "Valuation Office Agency: We have received your vacant property declaration"
     }
 
     "render correct from address" in {
