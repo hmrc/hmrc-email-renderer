@@ -42,7 +42,7 @@ class TctrVacantSubmissionConfirmationSpec
     content should include("We have received your vacant property declaration")
     content should include("Dear David Jones")
     content should include(
-      "Thank you for contacting us on 27 March 2022 at 4:33pm. This email is confirmation that you have declared vacant property.")
+      "Thank you for contacting us on 27 March 2022 at 4:33pm. This email is confirmation that you have declared a vacant property.")
     content should include("We may need to contact you to check some of the details you provided.")
     content should include("Do not reply to this email.")
     content should include("From Valuation Office Agency - Tenure Cost and Trade Records service")
