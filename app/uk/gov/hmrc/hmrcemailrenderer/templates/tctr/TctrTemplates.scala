@@ -46,7 +46,7 @@ object TctrTemplates {
       templateId = tctr_vacant_submission_confirmation,
       fromAddress = fromNoReplyVOA,
       service = TctrForms,
-      subject = "Valuation Office Agency: You have declared vacant property",
+      subject = "Valuation Office Agency: We have received your vacant property declaration",
       plainTemplate = txt.tctr_vacant_submission_confirmation.f,
       htmlTemplate = html.tctr_vacant_submission_confirmation.f,
       priority = standardPriority

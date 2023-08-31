@@ -2,7 +2,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
 
-Thank you for contacting us on @params("submissionDate") at @params("submissionTime"). This email is confirmation that you have declared vacant property.
+Thank you for contacting us on @params("submissionDate") at @params("submissionTime"). This email is confirmation that you have declared a vacant property.
 
 What happens next
 
