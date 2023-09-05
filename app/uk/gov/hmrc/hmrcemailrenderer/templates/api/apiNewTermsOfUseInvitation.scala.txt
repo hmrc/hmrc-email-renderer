@@ -2,9 +2,15 @@
 
 Dear Customer
 
-We have updated our terms of use, and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices.
+To keep using your application @{params("applicationName")} and to ensure continued access to HMRC's API platform, you must review and accept version 2 of the terms of use by @{params("completeBy")}
 
-Sign in to your Developer Hub account and agree to version 2 of the terms by @{params("completeBy")} to keep using @{params("applicationName")}.
+We have updated our terms of use, and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices, and provide information such as:
+- The name and email address of a responsible individual in your organisation who is accountable for compliance with our terms of use
+- Details of your development and service management processes
+- A link to your software's terms and conditions and privacy policy
+- Evidence that your organisation is officially registered in your country
+
+You must sign in to your Developer Hub account and agree to version 2 of the terms by @{params("completeBy")} to keep using @{params("applicationName")}.
 
 From HMRC Developer Hub
 

@@ -17,7 +17,15 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Our terms of use have changed") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear Customer</p>
-<p style="margin: 0 0 30px; font-size: 19px;">We have updated our terms of use, and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Sign in to your Developer Hub account and agree to version 2 of the terms by @{params("completeBy")} to keep using @{params("applicationName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">To keep using your application @{params("applicationName")} and to ensure continued access to HMRC's API platform, you must review and accept version 2 of the terms of use by @{params("completeBy")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We have updated our terms of use, and the way you accept the terms of use has changed. This time, you need to answer questions about your organisation and development practices, and provide information such as:
+<ul>
+  <li style="margin: 0 0 30px; font-size: 19px;">The name and email address of a responsible individual in your organisation who is accountable for compliance with our terms of use</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">Details of your development and service management processes</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">A link to your software's terms and conditions and privacy policy</li>
+  <li style="margin: 0 0 30px; font-size: 19px;">Evidence that your organisation is officially registered in your country</li>
+</ul>
+</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You must sign in to your Developer Hub account and agree to version 2 of the terms by @{params("completeBy")} to keep using @{params("applicationName")}.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
 }
