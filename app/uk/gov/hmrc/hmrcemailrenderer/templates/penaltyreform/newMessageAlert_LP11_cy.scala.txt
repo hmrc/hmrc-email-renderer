@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Mae gennych neges newydd oddi wrth CThEM
+@(params: Map[String, Any])Mae gennych neges newydd oddi wrth CThEF
 
 Annwyl Gwsmer
 
