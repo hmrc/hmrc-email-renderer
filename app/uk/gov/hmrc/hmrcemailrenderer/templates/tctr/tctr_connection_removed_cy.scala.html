@@ -1,0 +1,27 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydym wedi derbyn eich cais", isWelsh = true) {
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationFullName(params, isWelsh = true)</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Diolch am gysylltu â ni ar @params("submissionDate") am @params("submissionTime"). Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo.</p>
+    <h2>Beth sy’n digwydd nesaf</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Peidiwch ag ymateb i’r e-bost hwn.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Asiantaeth y Swyddfa Brisio</p>
+
+}

@@ -100,6 +100,24 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
       compareContent("ecl_nil_return_submitted", nilReturnSubmittedParams)(ecl)
     }
 
-  }
+    "include amend registration submitted content" in {
+      val amendRegistrationSubmittedParams = commonParameters ++ Map(
+        "name"          -> "John Doe",
+        "dateSubmitted" -> "1 September 2023"
+      )
 
+      compareContent("ecl_amend_registration_submitted", amendRegistrationSubmittedParams)(ecl)
+    }
+
+    "include amend return submitted content" in {
+      val amendReturnSubmittedParams = commonParameters ++ Map(
+        "name"            -> "John Doe",
+        "dateSubmitted"   -> "1 September 2023",
+        "periodStartDate" -> "1 April 2022",
+        "periodEndDate"   -> "31 March 2023"
+      )
+
+      compareContent("ecl_amend_return_submitted", amendReturnSubmittedParams)(ecl)
+    }
+  }
 }

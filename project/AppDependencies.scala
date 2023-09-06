@@ -11,7 +11,6 @@ private object AppDependencies {
     "org.jsoup"              %  "jsoup"                       % "1.13.1"        % "test",
     "uk.gov.hmrc"            %% "bootstrap-test-play-28"      % "7.19.0"        % "test, it",
     "org.scalatestplus.play" %% "scalatestplus-play"          % "5.1.0"         % "test, it",
-    "uk.gov.hmrc"            %% "service-integration-test"    % "1.3.0-play-28" % "test, it",
     "org.pegdown"            %  "pegdown"                     % "1.6.0"         % "test, it",
     "org.mockito"            %  "mockito-core"                % "4.7.0"         % "test, it",
     "com.github.tomakehurst" %  "wiremock"                    % "2.27.2"        % "test, it",

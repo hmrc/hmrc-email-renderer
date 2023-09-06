@@ -21,6 +21,7 @@ import preview.TemplateParams.newMessageAlert_Names
 import preview.examples.GG
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ rald_connection_removed, rald_connection_removed_cy }
+import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates._
 
 import java.util.{ Base64, UUID }
 
@@ -746,6 +747,24 @@ object TemplateParams {
         "submissionTime"         -> "13:45",
         "nextStep" ->
           "Rydym yn ymateb i’r mwyafrif o ymholiadau o fewn ychydig ddyddiau. Fodd bynnag, gall ymholiadau cymhleth gymryd hyd at 28 diwrnod."
+      ),
+      tctr_submission_confirmation -> Map(
+        "customerName" -> "John Doe"
+      ),
+      tctr_vacant_submission_confirmation -> Map(
+        "recipientName_FullName" -> "David Jones",
+        "submissionDate"         -> "27 March 2022",
+        "submissionTime"         -> "4:33pm"
+      ),
+      tctr_connection_removed -> Map(
+        "recipientName_FullName" -> "David Jones",
+        "submissionDate"         -> "27 March 2022",
+        "submissionTime"         -> "4:33pm"
+      ),
+      tctr_connection_removed_cy -> Map(
+        "recipientName_FullName" -> "David Jones",
+        "submissionDate"         -> "27 Mawrth 2022",
+        "submissionTime"         -> "4:33pm"
       ),
       "bars_alert" -> Map(
         "baRefNumber"   -> "BA : ba5090",
@@ -3544,6 +3563,10 @@ object TemplateParams3 {
       "dateSubmitted"   -> "1 September 2023",
       "periodStartDate" -> "1 April 2022",
       "periodEndDate"   -> "31 March 2023"
+    ),
+    "ecl_amend_registration_submitted" -> Map(
+      "name"          -> "John Doe",
+      "dateSubmitted" -> "31 March 2023"
     ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"

@@ -1,0 +1,15 @@
+@(params: Map[String, Any])We have received your vacant property declaration
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
+
+Thank you for contacting us on @params("submissionDate") at @params("submissionTime"). This email is confirmation that you have declared a vacant property.
+
+What happens next
+
+We may need to contact you to check some of the details you provided.
+
+Do not reply to this email.
+
+From Valuation Office Agency - Tenure Cost and Trade Records service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
