@@ -16,18 +16,23 @@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Action Required: HMRC Application Rejected") {
 
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">The HMRC application for your client has been rejected</p>
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received an application to register for Self Assessment for your client @params("name"). </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear Agent,</p>
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We are unable to process your application because the personal details provided do not match our records.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"> We have received an application to register your client @params("name") for Self Assessment. </p>
 
-    <h2 style="font-size: 24px;">WHAT TO DO NOW</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We could not process the application because your client’s personal details do not match our records.</p>
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You will need to check or update your client’s personal details before resubmitting the form.</p>
+    <h2 style="font-size: 24px;">What to do next</h2>
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can ask HMRC to update your client’s personal details. Go to GOV.UK and search for “Tell HMRC about a change to your personal details” and look for “Change of name or address”. Changes may take up to 15 days to complete.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Check that you entered your client’s details correctly on the application.</p>
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Alternatively, your client can update their personal details online immediately using their personal tax account. </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you did, then your client should check and update their details on their personal tax account.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Once your client’s personal details have been updated, you can resubmit the application. </p>
 
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Digital</p>
 }

@@ -2,16 +2,18 @@
 
 Action Required: HMRC Application Rejected
 
+Your HMRC application has been rejected
+
 Dear @params("name"),
 
 We have received your application to register for Self Assessment.
-We are unable to process your application because the information you provided does not match our records.
+We could not process your application because your personal details do not match our records.
 
-WHAT TO DO NOW
+What to do next
 
-You will need to check or update your personal details before resubmitting the form.
-You can check and update your personal details online using your personal tax account.
-If you don’t have a personal tax account, you can set one up at GOV.UK. On the GOV.UK website, search for PTA and look for “Personal tax account: sign in or set up”.
+You need to check and update your details on your personal tax account before you can resubmit the application.
+
+If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.
 
 From HMRC Digital
 
