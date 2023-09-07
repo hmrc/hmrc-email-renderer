@@ -3568,6 +3568,10 @@ object TemplateParams3 {
       "name"          -> "John Doe",
       "dateSubmitted" -> "31 March 2023"
     ),
+    "ecl_amend_registration_submitted_cy" -> Map(
+      "name"          -> "John Doe",
+      "dateSubmitted" -> "31 March 2023"
+    ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
     ),
