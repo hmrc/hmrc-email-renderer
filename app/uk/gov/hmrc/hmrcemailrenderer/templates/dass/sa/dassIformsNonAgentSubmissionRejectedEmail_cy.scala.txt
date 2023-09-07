@@ -2,16 +2,18 @@
 
 Camau i’w cymryd: Cais i CThEF wedi’i wrthod
 
+Mae’ch cais i CThEF wedi’i wrthod
+
 Annwyl @params("name"),
 
 Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.
-Ni allwn brosesu’ch cais oherwydd nid yw’r wybodaeth rydych wedi’i rhoi yn cyd-fynd â’n cofnodion.
+Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.
 
-YR HYN I’W WNEUD NAWR
+Yr hyn i’w wneud nesaf
 
-Bydd angen i chi wirio neu ddiweddaru’ch manylion personol cyn ail-gyflwyno’r ffurflen.
-Gallwch wirio a diweddaru’ch manylion personol ar-lein gan ddefnyddio’ch cyfrif treth personol.
-Os nad oes gennych gyfrif treth personol, gallwch greu un ar GOV.UK. Ar wefan GOV.UK, chwiliwch am PTA ac yna “Personal tax account: sign in or set up”.
+Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.
+
+Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.
 
 Oddi wrth Adran Ddigidol CThEF
 

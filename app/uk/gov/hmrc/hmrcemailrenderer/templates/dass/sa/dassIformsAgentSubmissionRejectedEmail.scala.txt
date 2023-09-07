@@ -2,14 +2,23 @@
 
 Action Required: HMRC Application Rejected
 
-We have received an application to register for Self Assessment for your client @params("name").
-We are unable to process your application because the personal details provided do not match our records.
+The HMRC application for your client has been rejected
 
-WHAT TO DO NOW
+Dear Agent
 
-You will need to check or update your client’s personal details before resubmitting the form.
-You can ask HMRC to update your client’s personal details. Go to GOV.UK and search for “Tell HMRC about a change to your personal details” and look for “Change of name or address”. Changes may take up to 15 days to complete.
-Alternatively, your client can update their personal details online immediately using their personal tax account.
+We have received an application to register your client @params("name") for Self Assessment.
+
+We could not process the application because your client’s personal details do not match our records.
+
+What to do next
+
+Check that you entered your client’s details correctly on the application.
+
+If you did, then your client should check and update their details on their personal tax account.
+
+You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days.
+
+Once your client’s personal details have been updated, you can resubmit the application.
 
 From HMRC Digital
 
