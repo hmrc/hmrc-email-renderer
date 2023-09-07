@@ -36,7 +36,7 @@ object PenReformTemplates {
       templateId = "newMessageAlert_LPP4_cy",
       fromAddress = govUkTeamAddress,
       service = PenReform,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.newMessageAlert_LPP4_cy.f,
       htmlTemplate = html.newMessageAlert_LPP4_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -54,7 +54,7 @@ object PenReformTemplates {
       templateId = "newMessageAlert_LP11_cy",
       fromAddress = govUkTeamAddress,
       service = PenReform,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.newMessageAlert_LP11_cy.f,
       htmlTemplate = html.newMessageAlert_LP11_cy.f,
       priority = Some(MessagePriority.Standard)
