@@ -94,6 +94,15 @@ object EclTemplates {
       plainTemplate = txt.eclAmendRegistrationSubmitted.f,
       htmlTemplate = html.eclAmendRegistrationSubmitted.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_amend_registration_submitted_cy",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "Cofrestriad Ardoll Troseddau Economaidd wedi’i ddiwygio",
+      plainTemplate = txt.eclAmendRegistrationSubmitted_cy.f,
+      htmlTemplate = html.eclAmendRegistrationSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
