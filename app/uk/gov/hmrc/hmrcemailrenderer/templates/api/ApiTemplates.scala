@@ -223,7 +223,7 @@ object ApiTemplates {
       templateId = "apiNewTermsOfUseInvitation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "IMPORTANT: Agree to HMRC's new Developer Hub terms of use",
+      subject = "ACTION NEEDED: Agree to HMRC's new Developer Hub terms of use",
       plainTemplate = txt.apiNewTermsOfUseInvitation.f,
       htmlTemplate = html.apiNewTermsOfUseInvitation.f,
       priority = Some(MessagePriority.Urgent)
