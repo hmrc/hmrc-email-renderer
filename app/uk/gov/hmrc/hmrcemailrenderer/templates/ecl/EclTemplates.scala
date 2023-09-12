@@ -69,6 +69,15 @@ object EclTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ecl_amend_return_submitted_cy",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "Datganiad Ardoll Troseddau Economaidd wedi’i ddiwygio",
+      plainTemplate = txt.eclAmendReturnSubmitted_cy.f,
+      htmlTemplate = html.eclAmendReturnSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ecl_nil_return_submitted",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,

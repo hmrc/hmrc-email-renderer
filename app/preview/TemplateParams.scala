@@ -3564,6 +3564,12 @@ object TemplateParams3 {
       "periodStartDate" -> "1 April 2022",
       "periodEndDate"   -> "31 March 2023"
     ),
+    "ecl_amend_return_submitted_cy" -> Map(
+      "name"            -> "John Doe",
+      "dateSubmitted"   -> "1 September 2023",
+      "periodStartDate" -> "1 April 2022",
+      "periodEndDate"   -> "31 March 2023"
+    ),
     "ecl_amend_registration_submitted" -> Map(
       "name"          -> "John Doe",
       "dateSubmitted" -> "31 March 2023"

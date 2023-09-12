@@ -128,5 +128,16 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
       compareContent("ecl_amend_return_submitted", amendReturnSubmittedParams)(ecl)
     }
+
+    "include amend return submitted content in Welsh" in {
+      val amendReturnSubmittedParams = commonParameters ++ Map(
+        "name"            -> "John Doe",
+        "dateSubmitted"   -> "1 September 2023",
+        "periodStartDate" -> "1 April 2022",
+        "periodEndDate"   -> "31 March 2023"
+      )
+
+      compareContent("ecl_amend_return_submitted_cy", amendReturnSubmittedParams, isWelsh = true)(ecl)
+    }
   }
 }
