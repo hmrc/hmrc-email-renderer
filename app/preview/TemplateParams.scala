@@ -3212,7 +3212,7 @@ object TemplateParams3 {
       "loginTime" -> "09:17am"
     ),
     "apiNewTermsOfUseInvitation" -> Map(
-      "completeBy"      -> "31 March 2023",
+      "completeBy"      -> "31 October 2023",
       "applicationName" -> "Test Application"
     ),
     "apiNewTermsOfUseConfirmation" -> Map(
