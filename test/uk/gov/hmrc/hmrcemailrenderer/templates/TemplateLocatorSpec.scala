@@ -982,7 +982,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_LPi1_cy",
         "feeback_answers_for_digital_persona",
         "ecl_registration_received",
-        "ecl_registration_received_cy"
+        "ecl_registration_received_cy",
+        "ecl_return_submitted_cy",
+        "ecl_nil_return_submitted_cy",
       )
     }
   }

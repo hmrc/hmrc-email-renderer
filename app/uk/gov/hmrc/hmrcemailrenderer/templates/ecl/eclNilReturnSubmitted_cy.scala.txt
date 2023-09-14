@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+Rydych wedi cyflwyno datganiad ar gyfer yr Ardoll Troseddau Economaidd
+
+Annwyl @params("name")
+
+Rydych wedi cyflwyno datganiad ar gyfer yr Ardoll Troseddau Economaidd (ECL). Nid oes angen i chi dalu’r ardoll ar gyfer y flwyddyn ariannol hon.
+
+Dyddiad cyflwyno datganiad ECL @params("dateSubmitted")
+Blwyddyn ariannol @params("periodStartDate") i @params("periodEndDate")
+Y swm sydd angen i chi ei dalu @params("amountDue")
+
+Mae gwybodaeth am eich datganiad ar gael yn eich cyfrif ECL.
+
+Pam cawsoch yr e-bost hwn
+
+Hwn yw’r cyfeiriad e-bost a roddwyd gennych pan wnaethoch gyflwyno’ch datganiad.
+
+Peidiwch ag ymateb i’r e-bost hwn.
+
+Oddi wrth y Tîm Ardoll Troseddau Economaidd
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
