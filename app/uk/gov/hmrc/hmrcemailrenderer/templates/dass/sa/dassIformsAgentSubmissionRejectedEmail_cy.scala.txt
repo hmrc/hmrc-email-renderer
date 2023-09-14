@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod”
+Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod
 
 Annwyl Asiant
 

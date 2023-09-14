@@ -16,12 +16,12 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.dass.sa
 
-import org.scalatest.{ EitherValues, OptionValues }
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
+import org.scalatest.{EitherValues, OptionValues}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator.templateGroups
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress, TemplateLoader }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress, TemplateLoader}
 
 class IformsSubmissionRejectionNonAgentSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
@@ -46,18 +46,15 @@ class IformsSubmissionRejectionNonAgentSpec
 
         val htmlContent = template.htmlTemplate(commonParameters + ("name" -> "SomeName")).toString
 
-        htmlContent should include("Action Required: HMRC Application Rejected")
+        htmlContent should include("Your HMRC application has been rejected")
         htmlContent should include("Dear SomeName,")
         htmlContent should include("We have received your application to register for Self Assessment.")
         htmlContent should include(
-          "We are unable to process your application because the information you provided does not match our records.")
-        htmlContent should include("WHAT TO DO NOW")
+          "We could not process your application because your personal details do not match our records.")
+        htmlContent should include("What to do next")
         htmlContent should include(
-          "You will need to check or update your personal details before resubmitting the form.")
-        htmlContent should include(
-          "You can check and update your personal details online using your personal tax account.")
-        htmlContent should include(
-          """If you don’t have a personal tax account, you can set one up at GOV.UK. On the GOV.UK website, search for PTA and look for “Personal tax account: sign in or set up”.""")
+          "You need to check and update your details on your personal tax account before you can resubmit the application.")
+        htmlContent should include("If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
         htmlContent should include("From HMRC Digital")
       }
 
@@ -65,18 +62,14 @@ class IformsSubmissionRejectionNonAgentSpec
 
         val txtContent = template.plainTemplate(commonParameters + ("name" -> "SomeName")).toString
 
-        txtContent should include("Action Required: HMRC Application Rejected")
+        txtContent should include("Your HMRC application has been rejected")
         txtContent should include("Dear SomeName,")
         txtContent should include("We have received your application to register for Self Assessment.")
+        txtContent should include("We could not process your application because your personal details do not match our records.")
+        txtContent should include("What to do next")
         txtContent should include(
-          "We are unable to process your application because the information you provided does not match our records.")
-        txtContent should include("WHAT TO DO NOW")
-        txtContent should include(
-          "You will need to check or update your personal details before resubmitting the form.")
-        txtContent should include(
-          "You can check and update your personal details online using your personal tax account.")
-        txtContent should include(
-          """If you don’t have a personal tax account, you can set one up at GOV.UK. On the GOV.UK website, search for PTA and look for “Personal tax account: sign in or set up”.""")
+          "You need to check and update your details on your personal tax account before you can resubmit the application.")
+        txtContent should include("If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
         txtContent should include("From HMRC Digital")
       }
     }
@@ -98,18 +91,15 @@ class IformsSubmissionRejectionNonAgentSpec
 
         val htmlContent = template.htmlTemplate(commonParameters + ("name" -> "SomeName")).toString
 
-        htmlContent should include("Camau i’w cymryd: Cais i CThEF wedi’i wrthod")
+        htmlContent should include("Mae’ch cais i CThEF wedi’i wrthod")
         htmlContent should include("Annwyl SomeName,")
         htmlContent should include("Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.")
         htmlContent should include(
-          "Ni allwn brosesu’ch cais oherwydd nid yw’r wybodaeth rydych wedi’i rhoi yn cyd-fynd â’n cofnodion.")
-        htmlContent should include("YR HYN I’W WNEUD NAWR")
+          "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.")
+        htmlContent should include("Yr hyn i’w wneud nesaf")
         htmlContent should include(
-          "Bydd angen i chi wirio neu ddiweddaru’ch manylion personol cyn ail-gyflwyno’r ffurflen.")
-        htmlContent should include(
-          "Gallwch wirio a diweddaru’ch manylion personol ar-lein gan ddefnyddio’ch cyfrif treth personol.")
-        htmlContent should include(
-          """Os nad oes gennych gyfrif treth personol, gallwch greu un ar GOV.UK. Ar wefan GOV.UK, chwiliwch am PTA ac yna “Personal tax account: sign in or set up”.""")
+          "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.")
+        htmlContent should include("Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
         htmlContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
 
@@ -117,18 +107,15 @@ class IformsSubmissionRejectionNonAgentSpec
 
         val txtContent = template.plainTemplate(commonParameters + ("name" -> "SomeName")).toString
 
-        txtContent should include("Camau i’w cymryd: Cais i CThEF wedi’i wrthod")
+        txtContent should include("Mae’ch cais i CThEF wedi’i wrthod")
         txtContent should include("Annwyl SomeName,")
         txtContent should include("Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.")
         txtContent should include(
-          "Ni allwn brosesu’ch cais oherwydd nid yw’r wybodaeth rydych wedi’i rhoi yn cyd-fynd â’n cofnodion.")
-        txtContent should include("YR HYN I’W WNEUD NAWR")
+          "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.")
+        txtContent should include("Yr hyn i’w wneud nesaf")
         txtContent should include(
-          "Bydd angen i chi wirio neu ddiweddaru’ch manylion personol cyn ail-gyflwyno’r ffurflen.")
-        txtContent should include(
-          "Gallwch wirio a diweddaru’ch manylion personol ar-lein gan ddefnyddio’ch cyfrif treth personol.")
-        txtContent should include(
-          """Os nad oes gennych gyfrif treth personol, gallwch greu un ar GOV.UK. Ar wefan GOV.UK, chwiliwch am PTA ac yna “Personal tax account: sign in or set up”.""")
+          "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.")
+        txtContent should include("Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
         txtContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
     }
