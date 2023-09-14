@@ -18,10 +18,10 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.dass.sa
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
-import org.scalatest.{EitherValues, OptionValues}
+import org.scalatest.{ EitherValues, OptionValues }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator.templateGroups
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress, TemplateLoader}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress, TemplateLoader }
 
 class IformsSubmissionRejectionNonAgentSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
@@ -54,7 +54,8 @@ class IformsSubmissionRejectionNonAgentSpec
         htmlContent should include("What to do next")
         htmlContent should include(
           "You need to check and update your details on your personal tax account before you can resubmit the application.")
-        htmlContent should include("If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
+        htmlContent should include(
+          "If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
         htmlContent should include("From HMRC Digital")
       }
 
@@ -65,11 +66,13 @@ class IformsSubmissionRejectionNonAgentSpec
         txtContent should include("Your HMRC application has been rejected")
         txtContent should include("Dear SomeName,")
         txtContent should include("We have received your application to register for Self Assessment.")
-        txtContent should include("We could not process your application because your personal details do not match our records.")
+        txtContent should include(
+          "We could not process your application because your personal details do not match our records.")
         txtContent should include("What to do next")
         txtContent should include(
           "You need to check and update your details on your personal tax account before you can resubmit the application.")
-        txtContent should include("If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
+        txtContent should include(
+          "If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
         txtContent should include("From HMRC Digital")
       }
     }
@@ -99,7 +102,8 @@ class IformsSubmissionRejectionNonAgentSpec
         htmlContent should include("Yr hyn i’w wneud nesaf")
         htmlContent should include(
           "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.")
-        htmlContent should include("Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
+        htmlContent should include(
+          "Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
         htmlContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
 
@@ -115,7 +119,8 @@ class IformsSubmissionRejectionNonAgentSpec
         txtContent should include("Yr hyn i’w wneud nesaf")
         txtContent should include(
           "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.")
-        txtContent should include("Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
+        txtContent should include(
+          "Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
         txtContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
     }
