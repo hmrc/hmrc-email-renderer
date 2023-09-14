@@ -119,6 +119,14 @@ object TemplateParams {
       "agent_permissions_all_failed_cy" -> Map(
         "agencyName" -> "Agency"
       ),
+      "suspended_contact_details" -> Map(
+        "agencyName"      -> "Romel W",
+        "arn"             -> "TARN0000002",
+        "contactName"     -> "Bobb Di Builder",
+        "emailAddress"    -> "Rome@builders.com",
+        "telephoneNumber" -> "+44(0) 208 123 4567",
+        "description"     -> "This is where you add the details of issue"
+      ),
       "apiDeveloperEmailVerification" -> Map(
         "verificationLink"  -> exampleLinkWithRandomId,
         "developerHubTitle" -> "Developer Hub Title"
