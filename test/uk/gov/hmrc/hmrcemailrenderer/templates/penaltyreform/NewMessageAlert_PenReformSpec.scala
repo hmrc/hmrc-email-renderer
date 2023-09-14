@@ -96,15 +96,15 @@ class NewMessageAlert_PenReformSpec extends PlaySpec with CommonParamsForSpec {
     }
   }
 
-  "newMessageAlert_LP11" must {
+  "newMessageAlert_LPi1" must {
 
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
-      templateId = "newMessageAlert_LP11",
+      templateId = "newMessageAlert_LPi1",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = PenReform,
       subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.newMessageAlert_LP11.f,
-      htmlTemplate = html.newMessageAlert_LP11.f,
+      plainTemplate = txt.newMessageAlert_LPi1.f,
+      htmlTemplate = html.newMessageAlert_LPi1.f,
       priority = Some(MessagePriority.Standard)
     )
 
@@ -132,15 +132,15 @@ class NewMessageAlert_PenReformSpec extends PlaySpec with CommonParamsForSpec {
     }
   }
 
-  "newMessageAlert_LP11_cy welsh template" must {
+  "newMessageAlert_LPi1_cy welsh template" must {
 
     val newMessageAlert: MessageTemplate = MessageTemplate.create(
-      templateId = "newMessageAlert_LP11_cy",
+      templateId = "newMessageAlert_LPi1_cy",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = PenReform,
       subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.newMessageAlert_LP11_cy.f,
-      htmlTemplate = html.newMessageAlert_LP11_cy.f,
+      plainTemplate = txt.newMessageAlert_LPi1_cy.f,
+      htmlTemplate = html.newMessageAlert_LPi1_cy.f,
       priority = Some(MessagePriority.Standard)
     )
 
