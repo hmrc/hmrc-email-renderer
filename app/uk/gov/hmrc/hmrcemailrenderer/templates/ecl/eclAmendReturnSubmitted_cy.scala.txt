@@ -6,7 +6,7 @@ Annwyl @params("name")
 Rydym wedi cael eich atebion fel rhan o’ch datganiad diwygiedig ar gyfer Ardoll Troseddau Economaidd (ECL). Cadwch yr e-bost hwn ar gyfer eich cofnodion.
 
 Dyddiad diwygio datganiad ECL: @params("dateSubmitted")
-Blwyddyn ariannol: @params("periodStartDate") | @params("periodEndDate")
+Blwyddyn ariannol: @params("periodStartDate") i @params("periodEndDate")
 
 Yr hyn sy’n digwydd nesaf
 
