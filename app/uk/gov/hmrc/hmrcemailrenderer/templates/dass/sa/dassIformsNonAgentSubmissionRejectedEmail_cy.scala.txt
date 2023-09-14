@@ -1,7 +1,5 @@
 @(params: Map[String, Any])
 
-Camau i’w cymryd: Cais i CThEF wedi’i wrthod
-
 Mae’ch cais i CThEF wedi’i wrthod
 
 Annwyl @params("name"),

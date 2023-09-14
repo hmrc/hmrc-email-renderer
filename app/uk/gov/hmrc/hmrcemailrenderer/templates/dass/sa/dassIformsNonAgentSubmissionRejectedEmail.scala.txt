@@ -1,7 +1,5 @@
 @(params: Map[String, Any])
 
-Action Required: HMRC Application Rejected
-
 Your HMRC application has been rejected
 
 Dear @params("name"),

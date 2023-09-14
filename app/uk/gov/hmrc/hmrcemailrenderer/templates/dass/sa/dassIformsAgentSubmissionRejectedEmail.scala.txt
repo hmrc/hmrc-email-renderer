@@ -1,7 +1,5 @@
 @(params: Map[String, Any])
 
-Action Required: HMRC Application Rejected
-
 The HMRC application for your client has been rejected
 
 Dear Agent
