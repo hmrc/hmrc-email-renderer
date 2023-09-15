@@ -1614,6 +1614,15 @@ object TemplateParams2 {
       "applicationname" -> "Test-Hipp-App",
       "creatorusername" -> "Test-Hipp-Member"
     ),
+    "hipp_application_created" -> Map(
+      "applicationname" -> "Test-Hipp-App"
+    ),
+    "hipp_application_deleted" -> Map(
+      "applicationname" -> "Test-Hipp-App"
+    ),
+    "hipp_application_deleted_team" -> Map(
+      "applicationname" -> "Test-Hipp-App"
+    ),
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",

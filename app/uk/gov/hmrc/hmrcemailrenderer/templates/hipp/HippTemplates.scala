@@ -40,6 +40,33 @@ object HippTemplates {
       plainTemplate = txt.RemoveTeamMember.f,
       htmlTemplate = html.RemoveTeamMember.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_application_created",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "You have created an application in The API Hub",
+      plainTemplate = txt.ApplicationCreated.f,
+      htmlTemplate = html.ApplicationCreated.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_application_deleted",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "You have deleted an application from The API Hub",
+      plainTemplate = txt.ApplicationDeleted.f,
+      htmlTemplate = html.ApplicationDeleted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_application_deleted_team",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "Application deleted from The API Hub",
+      plainTemplate = txt.ApplicationDeletedTeam.f,
+      htmlTemplate = html.ApplicationDeletedTeam.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
