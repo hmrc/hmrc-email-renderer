@@ -69,6 +69,15 @@ object EclTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ecl_return_submitted_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi cyflwyno datganiad ar gyfer yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclReturnSubmitted_cy.f,
+      htmlTemplate = html.eclReturnSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ecl_amend_return_submitted_cy",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,
@@ -84,6 +93,15 @@ object EclTemplates {
       subject = "You submitted a return for the Economic Crime Levy",
       plainTemplate = txt.eclNilReturnSubmitted.f,
       htmlTemplate = html.eclNilReturnSubmitted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_nil_return_submitted_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi cyflwyno datganiad ar gyfer yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclNilReturnSubmitted_cy.f,
+      htmlTemplate = html.eclNilReturnSubmitted_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
