@@ -18,10 +18,10 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.dass.sa
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
-import org.scalatest.{EitherValues, OptionValues}
+import org.scalatest.{ EitherValues, OptionValues }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator.templateGroups
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress, TemplateLoader}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress, TemplateLoader }
 
 class IformsSubmissionRejectionAgentSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
