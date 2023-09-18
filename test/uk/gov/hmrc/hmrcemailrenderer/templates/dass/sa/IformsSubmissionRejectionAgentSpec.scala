@@ -18,10 +18,10 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.dass.sa
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
-import org.scalatest.{ EitherValues, OptionValues }
+import org.scalatest.{EitherValues, OptionValues}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator.templateGroups
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress, TemplateLoader }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress, TemplateLoader}
 
 class IformsSubmissionRejectionAgentSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
@@ -47,7 +47,7 @@ class IformsSubmissionRejectionAgentSpec
         val htmlContent = template.htmlTemplate(commonParameters + ("name" -> "FirstName LastNam")).toString
 
         htmlContent should include("The HMRC application for your client has been rejected")
-        htmlContent should include("Dear Agent,")
+        htmlContent should include("Dear Agent")
         htmlContent should include(
           "We have received an application to register your client FirstName LastNam for Self Assessment. ")
         htmlContent should include(
@@ -103,7 +103,7 @@ class IformsSubmissionRejectionAgentSpec
         val htmlContent = template.htmlTemplate(commonParameters + ("name" -> "FirstName LastNam")).toString
 
         htmlContent should include("Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod")
-        htmlContent should include("Annwyl Asiant,")
+        htmlContent should include("Annwyl Asiant")
         htmlContent should include(
           "Mae cais i gofrestru’ch cleient FirstName LastNam ar gyfer Hunanasesiad wedi dod i law.")
         htmlContent should include(
