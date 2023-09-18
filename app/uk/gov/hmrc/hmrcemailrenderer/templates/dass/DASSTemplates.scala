@@ -27,7 +27,7 @@ object DASSTemplates {
       templateId = "iforms_submission_rejection_email_non_agent",
       fromAddress = govUkTeamAddress,
       service = ServiceIdentifier.SelfAssessment,
-      subject = "Action Required: HMRC Application Rejected",
+      subject = "Your HMRC application has been rejected",
       plainTemplate = sa.txt.dassIformsNonAgentSubmissionRejectedEmail.f,
       htmlTemplate = sa.html.dassIformsNonAgentSubmissionRejectedEmail.f,
       priority = None
@@ -36,7 +36,7 @@ object DASSTemplates {
       templateId = "iforms_submission_rejection_email_non_agent_cy",
       fromAddress = govUkTeamAddress,
       service = ServiceIdentifier.SelfAssessment,
-      subject = "Camau i’w cymryd: Cais i CThEF wedi’i wrthod",
+      subject = "Mae’ch cais i CThEF wedi’i wrthod",
       plainTemplate = sa.txt.dassIformsNonAgentSubmissionRejectedEmail_cy.f,
       htmlTemplate = sa.html.dassIformsNonAgentSubmissionRejectedEmail_cy.f,
       priority = None
@@ -45,7 +45,7 @@ object DASSTemplates {
       templateId = "iforms_submission_rejection_email_agent",
       fromAddress = govUkTeamAddress,
       service = ServiceIdentifier.SelfAssessment,
-      subject = "Action Required: HMRC Application Rejected",
+      subject = "The HMRC application for your client has been rejected",
       plainTemplate = sa.txt.dassIformsAgentSubmissionRejectedEmail.f,
       htmlTemplate = sa.html.dassIformsAgentSubmissionRejectedEmail.f,
       priority = None
@@ -54,7 +54,7 @@ object DASSTemplates {
       templateId = "iforms_submission_rejection_email_agent_cy",
       fromAddress = govUkTeamAddress,
       service = ServiceIdentifier.SelfAssessment,
-      subject = "Camau i’w cymryd: Cais i CThEF wedi’i wrthod",
+      subject = "Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod",
       plainTemplate = sa.txt.dassIformsAgentSubmissionRejectedEmail_cy.f,
       htmlTemplate = sa.html.dassIformsAgentSubmissionRejectedEmail_cy.f,
       priority = None

@@ -38,7 +38,7 @@ class IformsSubmissionRejectionAgentSpec
         template.templateId shouldBe "iforms_submission_rejection_email_agent"
         template.service shouldBe SelfAssessment
         template.fromAddress(Map.empty) shouldBe FromAddress.govUkTeamAddress
-        template.subject(Map.empty) shouldBe "Action Required: HMRC Application Rejected"
+        template.subject(Map.empty) shouldBe "The HMRC application for your client has been rejected"
         template.priority shouldBe None
       }
 
@@ -94,7 +94,7 @@ class IformsSubmissionRejectionAgentSpec
         template.templateId shouldBe "iforms_submission_rejection_email_agent_cy"
         template.service shouldBe SelfAssessment
         template.fromAddress(Map.empty) shouldBe FromAddress.govUkTeamAddress
-        template.subject(Map.empty) shouldBe "Camau i’w cymryd: Cais i CThEF wedi’i wrthod"
+        template.subject(Map.empty) shouldBe "Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod"
         template.priority shouldBe None
       }
 
