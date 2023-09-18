@@ -2,7 +2,7 @@
 
 Mae’ch cais i CThEF wedi’i wrthod
 
-Annwyl @params("name"),
+Annwyl @params("name")
 
 Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.
 Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.

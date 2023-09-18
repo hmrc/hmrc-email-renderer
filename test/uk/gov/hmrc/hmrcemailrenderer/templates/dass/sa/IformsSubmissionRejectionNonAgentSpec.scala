@@ -18,10 +18,10 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.dass.sa
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
-import org.scalatest.{ EitherValues, OptionValues }
+import org.scalatest.{EitherValues, OptionValues}
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator.templateGroups
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress, TemplateLoader }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress, TemplateLoader}
 
 class IformsSubmissionRejectionNonAgentSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
@@ -47,7 +47,7 @@ class IformsSubmissionRejectionNonAgentSpec
         val htmlContent = template.htmlTemplate(commonParameters + ("name" -> "SomeName")).toString
 
         htmlContent should include("Your HMRC application has been rejected")
-        htmlContent should include("Dear SomeName,")
+        htmlContent should include("Dear SomeName")
         htmlContent should include("We have received your application to register for Self Assessment.")
         htmlContent should include(
           "We could not process your application because your personal details do not match our records.")
@@ -64,7 +64,7 @@ class IformsSubmissionRejectionNonAgentSpec
         val txtContent = template.plainTemplate(commonParameters + ("name" -> "SomeName")).toString
 
         txtContent should include("Your HMRC application has been rejected")
-        txtContent should include("Dear SomeName,")
+        txtContent should include("Dear SomeName")
         txtContent should include("We have received your application to register for Self Assessment.")
         txtContent should include(
           "We could not process your application because your personal details do not match our records.")
@@ -95,7 +95,7 @@ class IformsSubmissionRejectionNonAgentSpec
         val htmlContent = template.htmlTemplate(commonParameters + ("name" -> "SomeName")).toString
 
         htmlContent should include("Mae’ch cais i CThEF wedi’i wrthod")
-        htmlContent should include("Annwyl SomeName,")
+        htmlContent should include("Annwyl SomeName")
         htmlContent should include("Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.")
         htmlContent should include(
           "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.")
@@ -112,7 +112,7 @@ class IformsSubmissionRejectionNonAgentSpec
         val txtContent = template.plainTemplate(commonParameters + ("name" -> "SomeName")).toString
 
         txtContent should include("Mae’ch cais i CThEF wedi’i wrthod")
-        txtContent should include("Annwyl SomeName,")
+        txtContent should include("Annwyl SomeName")
         txtContent should include("Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.")
         txtContent should include(
           "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.")

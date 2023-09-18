@@ -2,7 +2,7 @@
 
 Your HMRC application has been rejected
 
-Dear @params("name"),
+Dear @params("name")
 
 We have received your application to register for Self Assessment.
 We could not process your application because your personal details do not match our records.
