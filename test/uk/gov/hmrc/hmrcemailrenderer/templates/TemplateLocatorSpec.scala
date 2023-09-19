@@ -23,10 +23,10 @@ import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.services._
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
-import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy, contactFormsGroup }
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.raldGroup
-import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates._
+import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed, rald_connection_removed_cy }
+import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 
 class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with OptionValues with GuiceOneAppPerSuite {
 
@@ -299,8 +299,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "cds_ddi_setup_dcs_alert",
         "cds_ddi_unpaid_dcs_alert",
         "cet_email_confirmation",
-        "cf_enquiry_confirmation",
-        "cf_enquiry_confirmation_cy",
+        cf_enquiry_confirmation,
+        cf_enquiry_confirmation_cy,
         "cgtpd_account_created",
         "cgtpd_account_created_cy",
         "cgtpd_email_verification",
@@ -720,8 +720,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "qahc_code",
         "qahc_confirmation",
         "rald_alert",
-        "rald_connection_removed",
-        "rald_connection_removed_cy",
+        rald_connection_removed,
+        rald_connection_removed_cy,
         "rald_not_connected",
         "rald_submission_confirmation",
         "randd_confirmation_submission",
