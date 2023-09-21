@@ -34,8 +34,10 @@ object AmountFormatter extends Logging {
 
   def formatAmount(amount: String): String = formatter.format(toDouble(amount))
   def formatAmountInPence(amountInPence: String): String = formatter.format(toDouble(amountInPence) / 100)
-  def formatAmountInPenceGdsFormat(amountInPence: String): String = formatter.format(toDouble(amountInPence) / 100)
-    .replace(".00", "")
+  def formatAmountInPenceGdsFormat(amountInPence: String): String =
+    formatter
+      .format(toDouble(amountInPence) / 100)
+      .replace(".00", "")
 
   private def toDouble(s: String): Double =
     Try(s.toDouble)
