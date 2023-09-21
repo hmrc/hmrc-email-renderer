@@ -14,7 +14,7 @@
  * limitations under the License.
  *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPenceGdsFormat
 
 @(params: Map[String, Any])
 
@@ -42,18 +42,18 @@
 
             <tr>
                 <th>Amount</th>
-                <td>@formatAmountInPence(params("amountInPence").toString)</td>
+                <td>@formatAmountInPenceGdsFormat(params("amountInPence").toString)</td>
             </tr>
 
             @{
                 if(params.contains("transactionFeeInPence")) {
                         <tr>
                         <th>Card fee</th>
-                        <td>{formatAmountInPence(params("transactionFeeInPence").toString)}</td>
+                        <td>{formatAmountInPenceGdsFormat(params("transactionFeeInPence").toString)}</td>
                         </tr>
                         <tr>
                         <th>Total paid</th>
-                        <td>{formatAmountInPence(params("totalAmountInPence").toString)}</td>
+                        <td>{formatAmountInPenceGdsFormat(params("totalAmountInPence").toString)}</td>
                         </tr>
                 }
             }
