@@ -3626,6 +3626,18 @@ object TemplateParams3 {
     "ecl_registration_received" -> Map(
       "name" -> "John Doe"
     ),
+    "iforms_submission_rejection_email_non_agent" -> Map(
+      "name" -> "John"
+    ),
+    "iforms_submission_rejection_email_non_agent_cy" -> Map(
+      "name" -> "John"
+    ),
+    "iforms_submission_rejection_email_agent" -> Map(
+      "name" -> "John Doe"
+    ),
+    "iforms_submission_rejection_email_agent_cy" -> Map(
+      "name" -> "John Doe"
+    ),
     "ecl_registration_received_cy" -> Map(
       "name" -> "John Doe"
     )
