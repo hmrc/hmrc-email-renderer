@@ -1,0 +1,21 @@
+@(params: Map[String, Any])Requested duty deferment statements
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
+
+We have sent you a message about the duty deferment statements you requested. To read it:
+
+Go to GOV.UK.
+
+Search for ‘Get copies of your duty deferment statements’ and sign in.
+
+Go to your messages.
+
+For security reasons, we have not included a link in this email.
+
+If you need help
+
+You can phone HMRC on 03000 594 243. Lines are open 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From the Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

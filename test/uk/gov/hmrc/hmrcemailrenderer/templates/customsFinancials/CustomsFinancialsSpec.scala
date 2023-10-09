@@ -96,6 +96,31 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
         customsFinancialsTemplate)
     }
 
+    "have matching content in customs_financials_requested_duty_deferment_not_found" in {
+      val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
+
+      compareContent("customs_financials_requested_duty_deferment_not_found", params)(customsFinancialsTemplate)
+    }
+
+    "have matching content in customs_financials_requested_c79_certificate_not_found" in {
+      val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
+
+      compareContent("customs_financials_requested_c79_certificate_not_found", params)(customsFinancialsTemplate)
+    }
+
+    "have matching content in customs_financials_requested_postponed_import_vat_statements_not_found" in {
+      val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
+
+      compareContent("customs_financials_requested_postponed_import_vat_statements_not_found", params)(customsFinancialsTemplate)
+    }
+
+    "have matching content in customs_financials_requested_notification_adjustment_statements_not_found" in {
+      val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
+
+      compareContent("customs_financials_requested_notification_adjustment_statements_not_found", params)(customsFinancialsTemplate)
+    }
+
   }
 
 }
+
