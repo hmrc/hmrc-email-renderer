@@ -111,13 +111,15 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "have matching content in customs_financials_requested_postponed_import_vat_statements_not_found" in {
       val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
 
-      compareContent("customs_financials_requested_postponed_import_vat_statements_not_found", params)(customsFinancialsTemplate)
+      compareContent("customs_financials_requested_postponed_import_vat_statements_not_found", params)(
+        customsFinancialsTemplate)
     }
 
     "have matching content in customs_financials_requested_notification_adjustment_statements_not_found" in {
       val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
 
-      compareContent("customs_financials_requested_notification_adjustment_statements_not_found", params)(customsFinancialsTemplate)
+      compareContent("customs_financials_requested_notification_adjustment_statements_not_found", params)(
+        customsFinancialsTemplate)
     }
 
   }
