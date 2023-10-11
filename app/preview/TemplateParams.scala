@@ -3640,6 +3640,18 @@ object TemplateParams3 {
     ),
     "ecl_registration_received_cy" -> Map(
       "name" -> "John Doe"
+    ),
+    "customs_financials_requested_duty_deferment_not_found" -> Map(
+      "recipientName_FullName" -> "ABC ltd"
+    ),
+    "customs_financials_requested_c79_certificate_not_found" -> Map(
+      "recipientName_FullName" -> "ABC ltd"
+    ),
+    "customs_financials_requested_postponed_import_vat_statements_not_found" -> Map(
+      "recipientName_FullName" -> "ABC ltd"
+    ),
+    "customs_financials_requested_notification_adjustment_statements_not_found" -> Map(
+      "recipientName_FullName" -> "ABC ltd"
     )
   )
 }
