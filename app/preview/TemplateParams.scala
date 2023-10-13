@@ -3563,8 +3563,7 @@ object TemplateParams3 {
       "fyStartYear"        -> "2022",
       "fyEndYear"          -> "2023",
       "datePaymentDue"     -> "30 September 2023",
-      "amountDue"          -> "£10,000",
-      "privateBetaEnabled" -> "true"
+      "amountDue"          -> "£10,000"
     ),
     "ecl_return_submitted_cy" -> Map(
       "name"               -> "John Doe",
@@ -3575,8 +3574,7 @@ object TemplateParams3 {
       "fyStartYear"        -> "2022",
       "fyEndYear"          -> "2023",
       "datePaymentDue"     -> "30 Medi 2023",
-      "amountDue"          -> "£10,000",
-      "privateBetaEnabled" -> "true"
+      "amountDue"          -> "£10,000"
     ),
     "ecl_nil_return_submitted" -> Map(
       "name"            -> "John Doe",

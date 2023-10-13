@@ -14,16 +14,12 @@ Mae’n rhaid i chi dalu’r ardoll erbyn @params("datePaymentDue"). Mae’n rha
 
 Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i dalu.
 
-@if(params("privateBetaEnabled").toString.toBoolean){
-Byddwch yn gallu talu’r ardoll o fis Awst 2023.
-}
 Codir llog arnoch os ydych yn talu’n hwyr.
-@if(!params("privateBetaEnabled").toString.toBoolean) {
+
 Sut i dalu’r ardoll
 
 Gallwch dalu’r ardoll drwy fynd i’r arweiniad ar sut i dalu:
 https://www.gov.uk/guidance/pay-your-economic-crime-levy
-}
 
 Pam cawsoch yr e-bost hwn
 

@@ -32,8 +32,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "eclRegistrationDate"      -> "20 September 2023",
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
-        "secondContactEmail"       -> "joe.smith@test.com",
-        "privateBetaEnabled"       -> "true"
+        "secondContactEmail"       -> "joe.smith@test.com"
       )
 
       compareContent("ecl_registration_submitted", registrationSubmittedParams)(ecl)
@@ -46,8 +45,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "eclRegistrationDate"      -> "20 September 2023",
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
-        "secondContactEmail"       -> "joe.smith@test.com",
-        "privateBetaEnabled"       -> "true"
+        "secondContactEmail"       -> "joe.smith@test.com"
       )
 
       compareContent("ecl_registration_submitted_cy", registrationSubmittedParams, isWelsh = true)(ecl)
@@ -79,8 +77,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "fyStartYear"        -> "2022",
         "fyEndYear"          -> "2023",
         "datePaymentDue"     -> "30 September 2023",
-        "amountDue"          -> "£10,000",
-        "privateBetaEnabled" -> "true"
+        "amountDue"          -> "£10,000"
       )
 
       compareContent("ecl_return_submitted", returnSubmittedParams)(ecl)
@@ -96,8 +93,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "fyStartYear"        -> "2022",
         "fyEndYear"          -> "2023",
         "datePaymentDue"     -> "30 Medi 2023",
-        "amountDue"          -> "£10,000",
-        "privateBetaEnabled" -> "true"
+        "amountDue"          -> "£10,000"
       )
 
       compareContent("ecl_return_submitted_cy", returnSubmittedParams, isWelsh = true)(ecl)

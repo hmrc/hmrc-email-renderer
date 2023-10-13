@@ -61,22 +61,18 @@
             Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i dalu.
         </p>
 
-        @if(params("privateBetaEnabled").toString.toBoolean){
-            <p>Byddwch yn gallu talu’r ardoll o fis Awst 2023.</p>
-        }
         <p>
             Codir llog arnoch os ydych yn talu’n hwyr.
         </p>
 
-        @if(!params("privateBetaEnabled").toString.toBoolean) {
-            <p style="font-weight: bold;">Sut i dalu’r ardoll</p>
+        <p style="font-weight: bold;">Sut i dalu’r ardoll</p>
 
-            <p>Gallwch dalu’r ardoll drwy fynd i’r arweiniad ar sut i dalu:</p>
+        <p>Gallwch dalu’r ardoll drwy fynd i’r arweiniad ar sut i dalu:</p>
 
-            <a href="https://www.gov.uk/guidance/pay-your-economic-crime-levy" style="color: #005EA5;">
-                https://www.gov.uk/guidance/pay-your-economic-crime-levy
-            </a>
-        }
+        <a href="https://www.gov.uk/guidance/pay-your-economic-crime-levy" style="color: #005EA5;">
+            https://www.gov.uk/guidance/pay-your-economic-crime-levy
+        </a>
+
         <p style="font-weight: bold;">Pam cawsoch yr e-bost hwn</p>
 
         <p>Hwn yw’r cyfeiriad e-bost a roddwyd gennych pan wnaethoch gyflwyno’ch datganiad.</p>
