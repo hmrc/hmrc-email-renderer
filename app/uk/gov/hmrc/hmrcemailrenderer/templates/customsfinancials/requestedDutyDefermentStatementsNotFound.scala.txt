@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Requested duty deferment statements
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
 We have sent you a message about the duty deferment statements you requested. To read it:
 
