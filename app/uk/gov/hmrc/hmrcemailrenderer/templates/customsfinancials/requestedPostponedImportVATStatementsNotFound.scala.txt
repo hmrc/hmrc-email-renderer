@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Requested postponed import VAT statements
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
 We have sent you a message about the postponed import VAT statements you requested. To read it:
 
