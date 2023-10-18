@@ -42,21 +42,21 @@ object PenReformTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_LPi1",
+      templateId = "newMessageAlert_LPI1",
       fromAddress = govUkTeamAddress,
       service = PenReform,
       subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.newMessageAlert_LPi1.f,
-      htmlTemplate = html.newMessageAlert_LPi1.f,
+      plainTemplate = txt.newMessageAlert_LPI1.f,
+      htmlTemplate = html.newMessageAlert_LPI1.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_LPi1_cy",
+      templateId = "newMessageAlert_LPI1_cy",
       fromAddress = govUkTeamAddress,
       service = PenReform,
       subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.newMessageAlert_LPi1_cy.f,
-      htmlTemplate = html.newMessageAlert_LPi1_cy.f,
+      plainTemplate = txt.newMessageAlert_LPI1_cy.f,
+      htmlTemplate = html.newMessageAlert_LPI1_cy.f,
       priority = Some(MessagePriority.Standard)
     )
   )
