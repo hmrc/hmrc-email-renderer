@@ -61,22 +61,18 @@
             You will not receive an email or notification from HMRC to remind you to make a payment.
         </p>
 
-        @if(params("privateBetaEnabled").toString.toBoolean){
-            <p>You will be able to pay the levy from August 2023.</p>
-        }
         <p>
             You will be charged interest if you make a late payment.
         </p>
 
-       @if(!params("privateBetaEnabled").toString.toBoolean) {
-           <p style="font-weight: bold;">How to pay the levy</p>
+        <p style="font-weight: bold;">How to pay the levy</p>
 
-           <p>You can pay the levy by going to the guidance on how to pay:</p>
+        <p>You can pay the levy by going to the guidance on how to pay:</p>
 
-           <a href="https://www.gov.uk/guidance/pay-your-economic-crime-levy" style="color: #005EA5;">
+        <a href="https://www.gov.uk/guidance/pay-your-economic-crime-levy" style="color: #005EA5;">
            https://www.gov.uk/guidance/pay-your-economic-crime-levy
-           </a>
-       }
+        </a>
+
         <p style="font-weight: bold;">Why you got this email</p>
 
         <p>This is the email address you provided when you submitted your return.</p>

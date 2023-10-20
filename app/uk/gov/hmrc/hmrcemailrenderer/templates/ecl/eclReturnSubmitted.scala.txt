@@ -14,16 +14,12 @@ You must pay the levy by @params("datePaymentDue"). Your ECL return number must 
 
 You will not receive an email or notification from HMRC to remind you to make a payment.
 
-@if(params("privateBetaEnabled").toString.toBoolean){
-You will be able to pay the levy from August 2023.
-}
 You will be charged interest if you make a late payment.
-@if(!params("privateBetaEnabled").toString.toBoolean) {
+
 How to pay the levy
 
 You can pay the levy by going to the guidance on how to pay:
 https://www.gov.uk/guidance/pay-your-economic-crime-levy
-}
 
 Why you got this email
 
