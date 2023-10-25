@@ -32,11 +32,14 @@ You can now:
 
 Get your EORI number
 
-For security reasons, we cannot send EORI numbers by email. You can get your number by following these steps:
+For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
 
-- Go to https://www.gov.uk/eori/apply-for-eori
-- Select the link that says ‘check the status of an application you’ve already made’. This link is near the bottom of the page.
-- Enter your Government Gateway user ID and password.
+- Go to GOV.UK and search for, "Get an EORI".
+- Click the link that says, "Get an EORI number".
+- On the Get an EORI number page, click the link that says, "This guide is also available in Welsh (Cymraeg.)"
+- On the Cael rhif EORI page, click the link that reads, "Gwneud cais am rif EORI"
+- On the Gwneud cais am rif EORI page, click the link that says, "wirio statws cais rydych eisoes wedi'i wneud". You'll find this link near the end of the page.
+- Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.
 
 About the Customs Declaration Service
 
@@ -49,11 +52,15 @@ For more information, search ‘Customs Declaration Service’ on GOV.UK.
 
 Get your EORI number
 
-For security reasons, we cannot send EORI numbers by email. You can get your number by following these steps:
+For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
 
-- Go to https://www.gov.uk/eori/apply-for-eori
-- Select the link that says ‘check the status of an application you’ve already made’. This link is near the bottom of the page.
-- Enter your Government Gateway user ID and password.
+- Go to GOV.UK and search for, "Get an EORI".
+- Click the link that says, "Get an EORI number".
+- On the Get an EORI number page, click the link that says, "This guide is also available in Welsh (Cymraeg.)"
+- On the Cael rhif EORI page, click the link that reads, "Gwneud cais am rif EORI"
+- On the Gwneud cais am rif EORI page, click the link that says, "wirio statws cais rydych eisoes wedi'i wneud". You'll find this link near the end of the page.
+- Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.
+
 
 }
 

@@ -32,11 +32,14 @@ Erbyn hyn, gallwch wneud y canlynol:
 
 Cael eich rhif EORI
 
-Am resymau diogelwch, ni allwn anfon rhifau EORI drwy e-bost. Gallwch gael eich rhif drwy ddilyn y camau hyn:
+Am resymau diogelwch, ni allwn anfon rhifau EORI drwy e-bost. Gallwch gael eich rhif EORI drwy ddilyn y camau canlynol:
 
-- Ewch i www.gov.uk/cael-rhif-eori/gwneud-cais-am-eori
-- Dewiswch y cysylltiad sy’n nodi ‘gwirio statws cais rydych eisoes wedi’i wneud’. Mae’r cysylltiad hwn yn agos at waelod y dudalen.
-- Nodwch eich Dynodydd Defnyddiwr (ID) a chyfrinair ar gyfer Porth y Llywodraeth.
+- Ewch i GOV.UK a chwilio am, "Get an EORI".
+- Cliciwch ar y cysylltiad ar y dudalen sy’n nodi "Get an EORI number".
+- Ar y dudalen "Get an EORI number", gwasgwch y cysylltiad sy'n nodi "This guide is also available in Welsh (Cymraeg)."
+- Ar y dudalen "Cael rhif EORI", cliciwch ar y cysylltiad sy’n nodi "Gwneud cais am rif EORI"
+- Ar y dudalen "Gwneud cais am rif EORI", cliciwch ar y cysylltiad sy'n nodi sut i "wirio statws cais rydych eisoes wedi'i wneud". Gallwch ddod o hyd i'r cysylltiad hwn yn agos at waelod y dudalen.
+- Gellir toglo i’r Gymraeg drwy bwyso’r botwm ar frig y dudalen. Mewngofnodwch gan ddefnyddio’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth.
 
 Defnyddio’r Gwasanaeth Datganiadau Tollau
 
@@ -49,11 +52,14 @@ I gael rhagor o wybodaeth, chwiliwch am ‘Customs Declaration Service’ ar GOV
 
 Cael eich rhif EORI
 
-Am resymau diogelwch, ni allwn anfon rhifau EORI drwy e-bost. Gallwch gael eich rhif drwy ddilyn y camau hyn:
+Am resymau diogelwch, ni allwn anfon rhifau EORI drwy e-bost. Gallwch gael eich rhif EORI drwy ddilyn y camau canlynol:
 
-- Ewch i www.gov.uk/cael-rhif-eori/gwneud-cais-am-eori
-- Dewiswch y cysylltiad sy’n nodi ‘gwirio statws cais rydych eisoes wedi’i wneud’. Mae’r cysylltiad hwn yn agos at waelod y dudalen.
-- Nodwch eich Dynodydd Defnyddiwr (ID) a chyfrinair ar gyfer Porth y Llywodraeth.
+- Ewch i GOV.UK a chwilio am, "Get an EORI".
+- Cliciwch ar y cysylltiad ar y dudalen sy’n nodi "Get an EORI number".
+- Ar y dudalen "Get an EORI number", gwasgwch y cysylltiad sy'n nodi "This guide is also available in Welsh (Cymraeg)."
+- Ar y dudalen "Cael rhif EORI", cliciwch ar y cysylltiad sy’n nodi "Gwneud cais am rif EORI"
+- Ar y dudalen "Gwneud cais am rif EORI", cliciwch ar y cysylltiad sy'n nodi sut i "wirio statws cais rydych eisoes wedi'i wneud". Gallwch ddod o hyd i'r cysylltiad hwn yn agos at waelod y dudalen.
+- Gellir toglo i’r Gymraeg drwy bwyso’r botwm ar frig y dudalen. Mewngofnodwch gan ddefnyddio’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth.
 
 }
 
