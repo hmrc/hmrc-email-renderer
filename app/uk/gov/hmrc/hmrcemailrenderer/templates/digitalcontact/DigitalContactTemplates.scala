@@ -29,7 +29,7 @@ object DigitalContactTemplates {
   val defaultWelshFrom = FromAddress.noReply("")
 
   val templatesToMapToNewMessageAlert = Seq(
-    "R002A",
+    "R002",
     "SA251",
     "SA326D",
     "SA328D",
