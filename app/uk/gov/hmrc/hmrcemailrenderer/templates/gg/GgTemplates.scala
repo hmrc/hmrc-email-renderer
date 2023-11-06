@@ -24,31 +24,6 @@ object GgTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "gg_userid_notification",
-      fromAddress = FromAddress.noReply("Government Gateway service"),
-      service = GovernmentGateway,
-      subject = "Government Gateway User ID",
-      plainTemplate = txt.ggUserIdNotificationEmail.f,
-      htmlTemplate = html.ggUserIdNotificationEmail.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "2SV_reset_confirmation",
-      fromAddress = FromAddress.noReply("Government Gateway service"),
-      service = GovernmentGateway,
-      subject = "2Sv reset confirmation",
-      plainTemplate = txt.TwoSvResetConfirmation.f,
-      htmlTemplate = html.TwoSvResetConfirmation.f
-    ),
-    MessageTemplate.create(
-      templateId = "password_change_confirmation",
-      fromAddress = FromAddress.noReply("Government Gateway service"),
-      service = SecurityConsole,
-      subject = "Password change confirmation",
-      plainTemplate = txt.PasswordChangeConfirmation.f,
-      htmlTemplate = html.PasswordChangeConfirmation.f
-    ),
-    MessageTemplate.create(
       templateId = "email_verification_passcode",
       fromAddress = FromAddress.noReply("Government Gateway service"),
       service = GovernmentGateway,
