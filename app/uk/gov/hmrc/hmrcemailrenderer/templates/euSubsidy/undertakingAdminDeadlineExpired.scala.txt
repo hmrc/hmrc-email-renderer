@@ -2,7 +2,7 @@
 
 Dear Customer
 
-Your deadline for reporting any non-customs subsidy payments, or no payments, passed on (DEADLINE: @{params("deadline")}).
+Your deadline for submitting a report of any non-customs subsidy payments or no payments, passed on (DEADLINE: @{params("deadline")}).
 
 You will not be able to claim further Customs Duty waivers until you have submitted a report, which must be done at least once every 90 days.
 
