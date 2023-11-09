@@ -974,6 +974,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "tspDeReg_confirmation_submission",
         "tsp_application_confirmation",
         "twoWayMessageUpdate",
+        "undertaking_admin_deadline_expired",
+        "undertaking_admin_deadline_reminder",
         "undertaking_member_added_email_to_be",
         "undertaking_member_added_email_to_lead",
         "undertaking_member_removed_email_to_be",
