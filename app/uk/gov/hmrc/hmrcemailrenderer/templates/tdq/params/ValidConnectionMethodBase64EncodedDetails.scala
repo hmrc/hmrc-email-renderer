@@ -20,11 +20,7 @@ import play.api.libs.json.{ Json, Reads }
 
 import java.util.Base64
 
-final case class ValidConnectionMethodBase64EncodedDetails(
-  connectionMethod: String,
-  requestCount: Int,
-  headerValidations: Set[HeadersValidation]
-) {
+final case class ValidConnectionMethodBase64EncodedDetails(connectionMethod: String, requestCount: Int) {
 
   private val prettyConnectionMethods: Map[String, String] = Map(
     "MOBILE_APP_DIRECT"      -> "Mobile application direct",
