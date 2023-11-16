@@ -145,7 +145,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
 
     "enumerate all template identifiers" in {
       TemplateLocator.all.map(_.templateId) should contain.only(
-        "2SV_reset_confirmation",
         "adr_code",
         "adr_code_cy",
         "adr_confirmation_submission",
@@ -512,7 +511,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "gd95_return_confirmation_cy",
         "gd_application_confirmation",
         "generic_access_invitation_template_id",
-        "gg_userid_notification",
         "gmp_access_invitation_template_id",
         "gmp_bulk_upload_processed",
         "gmp_bulk_upload_received",
@@ -676,7 +674,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "p626_confirmation",
         "parcels_registration_confirmation",
         "passengers_payment_confirmation",
-        "password_change_confirmation",
         "payment_successful",
         "payment_successful_cy",
         "payment_successful_parcels",

@@ -867,16 +867,6 @@ object TemplateParams {
         "service"   -> testServiceUpdate,
         "recipient" -> "Mrs Agent"
       ),
-      "gg_userid_notification" -> Map(
-        "user_id"   -> "914657894302",
-        "full_name" -> "Joe Bloggs"
-      ),
-      "2SV_reset_confirmation" -> Map(
-        "full_name" -> "Joe Bloggs"
-      ),
-      "password_change_confirmation" -> Map(
-        "full_name" -> "Joe Bloggs"
-      ),
       "customs_registration_successful" -> Map(
         "recipientName_FullName" -> "Alex Smith",
         "recipientOrgName"       -> "SHD Fashion House",
