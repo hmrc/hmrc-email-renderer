@@ -3394,7 +3394,8 @@ object TemplateParams3 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "sdes_alert" -> Map(
-      "submissionCount" -> "15"
+      "newItemCount" -> "2",
+      "total"        -> "15"
     ),
     "seis_code" -> Map(
       "confirmationCode" -> "HGDY"
