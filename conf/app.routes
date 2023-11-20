@@ -1,2 +1,3 @@
 # microservice specific routes
+
 POST        /templates/:templateId             uk.gov.hmrc.hmrcemailrenderer.controllers.RendererController.renderTemplate(templateId)
