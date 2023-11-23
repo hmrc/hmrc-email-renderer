@@ -21,7 +21,7 @@ import java.util.Base64
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import play.api.libs.json.Json.{ parse, stringify }
-import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.{ HeadersValidation, Problem, ValidConnectionMethodBase64EncodedDetails }
+import uk.gov.hmrc.hmrcemailrenderer.templates.tdq.params.ValidConnectionMethodBase64EncodedDetails
 
 class ValidConnectionMethodBase64EncodedDetailsSpec extends AnyWordSpec with Matchers {
 
@@ -30,23 +30,12 @@ class ValidConnectionMethodBase64EncodedDetailsSpec extends AnyWordSpec with Mat
   "Details" should {
 
     "have connection method in the same format as the specification" in {
-      val details = ValidConnectionMethodBase64EncodedDetails("WEB_APP_VIA_SERVER", requestCount, Set.empty)
+      val details = ValidConnectionMethodBase64EncodedDetails("WEB_APP_VIA_SERVER", requestCount)
       details.prettyConnectionMethod shouldBe "Web application via server"
     }
   }
 
   "Extra details" should {
-
-    "have a single header in the same format as the specification" in {
-      val validation = HeadersValidation("gov-client-public-ip", Set.empty, Set.empty)
-      validation.prettyHeaderOrHeaders shouldBe "Gov-Client-Public-IP"
-    }
-
-    "have multiple headers in the same format as the specification" in {
-      val validation =
-        HeadersValidation("gov-vendor-forwarded, gov-vendor-public-ip, gov-client-public-ip", Set.empty, Set.empty)
-      validation.prettyHeaderOrHeaders shouldBe "Gov-Vendor-Forwarded, Gov-Vendor-Public-IP, Gov-Client-Public-IP"
-    }
 
     "deserialise from a base64 encoded string" in {
 
@@ -86,14 +75,7 @@ class ValidConnectionMethodBase64EncodedDetailsSpec extends AnyWordSpec with Mat
 
       result shouldBe ValidConnectionMethodBase64EncodedDetails(
         connectionMethod = "MOBILE_APP_DIRECT",
-        requestCount = requestCount,
-        headerValidations = Set(
-          HeadersValidation(
-            headerOrHeaders = "gov-client-timezone",
-            errors = Set(Problem("Some error", percentage = errorPercentage, count = errorCount)),
-            warnings = Set(Problem("Some warning", percentage = warningPercentage, count = warningCount))
-          )
-        )
+        requestCount = requestCount
       )
     }
   }
