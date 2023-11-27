@@ -3521,17 +3521,25 @@ object TemplateParams3 {
       "name"                     -> "John Doe",
       "eclRegistrationReference" -> "XMECL0000000001",
       "eclRegistrationDate"      -> "20 September 2023",
-      "dateDue"                  -> "30 September 2023",
+      "dateDue"                  -> "30 September 2024",
       "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com"
+      "secondContactEmail"       -> "joe.smith@test.com",
+      "liableForCurrentFY"       -> "true",
+      "liableForPreviousFY"      -> "true",
+      "previousFY"               -> "2022",
+      "currentFY"                -> "2023"
     ),
     "ecl_registration_submitted_cy" -> Map(
       "name"                     -> "John Doe",
       "eclRegistrationReference" -> "XMECL0000000001",
       "eclRegistrationDate"      -> "20 September 2023",
-      "dateDue"                  -> "30 September 2023",
+      "dateDue"                  -> "30 September 2024",
       "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com"
+      "secondContactEmail"       -> "joe.smith@test.com",
+      "liableForCurrentFY"       -> "true",
+      "liableForPreviousFY"      -> "true",
+      "previousFY"               -> "2022",
+      "currentFY"                -> "2023"
     ),
     "ecl_return_submitted" -> Map(
       "name"            -> "John Doe",

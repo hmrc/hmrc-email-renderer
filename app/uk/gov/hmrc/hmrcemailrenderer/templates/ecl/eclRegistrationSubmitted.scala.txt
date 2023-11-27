@@ -14,7 +14,14 @@ You will need to complete a return and pay the levy on a yearly basis.
 
 You will not receive an email or notification from HMRC to remind you to submit a return.
 
-The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+@if(params("liableForCurrentFY").toString.toBoolean) {
+    The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+}
+
+@if(params("liableForPreviousFY").toString.toBoolean) {
+   You need to submit a return for the @params("previousFY").toString to @params("currentFY").toString financial year as soon as possible.
+   The return will show as overdue because it's in the previous financial year.
+}
 
 How to submit a return
 
