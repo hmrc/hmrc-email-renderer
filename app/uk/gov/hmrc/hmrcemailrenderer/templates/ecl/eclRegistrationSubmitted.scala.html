@@ -50,12 +50,18 @@
         </p>
 
         @if(params("liableForCurrentFY").toString.toBoolean) {
-            <p>The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.</p>
+            <p>
+                The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+            </p>
         }
 
         @if(params("liableForPreviousFY").toString.toBoolean) {
-            <p>You need to submit a return for the @params("previousFY").toString to @params("currentFY").toString financial year as soon as possible.</p>
-            <p>The return will show as overdue because it's in the previous financial year.</p>
+            <p>
+                You need to submit a return for the @params("previousFY").toString to @params("currentFY").toString financial year as soon as possible.
+            </p>
+            <p>
+                The return will show as overdue because it's in the previous financial year.
+            </p>
         }
         <p style="font-weight: bold;">How to submit a return</p>
 
