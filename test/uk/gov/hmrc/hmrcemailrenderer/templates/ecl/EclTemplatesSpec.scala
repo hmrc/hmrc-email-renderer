@@ -32,7 +32,11 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "eclRegistrationDate"      -> "20 September 2023",
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
-        "secondContactEmail"       -> "joe.smith@test.com"
+        "secondContactEmail"       -> "joe.smith@test.com",
+        "liableForCurrentFY"       -> "true",
+        "liableForPreviousFY"      -> "true",
+        "previousFY"               -> "2022",
+        "currentFY"                -> "2023"
       )
 
       compareContent("ecl_registration_submitted", registrationSubmittedParams)(ecl)
@@ -45,7 +49,11 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "eclRegistrationDate"      -> "20 September 2023",
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
-        "secondContactEmail"       -> "joe.smith@test.com"
+        "secondContactEmail"       -> "joe.smith@test.com",
+        "liableForCurrentFY"       -> "true",
+        "liableForPreviousFY"      -> "true",
+        "previousFY"               -> "2022",
+        "currentFY"                -> "2023"
       )
 
       compareContent("ecl_registration_submitted_cy", registrationSubmittedParams, isWelsh = true)(ecl)
