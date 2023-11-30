@@ -50,11 +50,10 @@ class AtsAnnualTaxReturnWelshSpec
       htmlContent should include("Annwyl Mr Johnston")
       htmlContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       htmlContent should include(
-        "Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
+        "Erbyn hyn, gallwch gael at eich Crynodeb Treth Blynyddol ar-lein. Mae’n dangos sut y gwnaeth y llywodraeth wario’ch Treth Incwm a’ch cyfraniadau Yswiriant Gwladol.")
+      htmlContent should include("Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol")
       htmlContent should include(
-        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
-      htmlContent should include(
-        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
+        "Mewngofnodwch i CThEF ar-lein gan ddefnyddio’ch dynodydd defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, a dewis ‘Bwrw golwg dros eich Crynodeb Treth Blynyddol’")
       htmlContent should include(
         "Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.")
       htmlContent should include("Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEM")
@@ -72,11 +71,10 @@ class AtsAnnualTaxReturnWelshSpec
       txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       txtContent should include(
-        "Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
+        "Erbyn hyn, gallwch gael at eich Crynodeb Treth Blynyddol ar-lein. Mae’n dangos sut y gwnaeth y llywodraeth wario’ch Treth Incwm a’ch cyfraniadau Yswiriant Gwladol.")
+      txtContent should include("Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol")
       txtContent should include(
-        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
-      txtContent should include(
-        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
+        "Mewngofnodwch i CThEF ar-lein gan ddefnyddio’ch dynodydd defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, a dewis ‘Bwrw golwg dros eich Crynodeb Treth Blynyddol’")
       txtContent should include(
         "Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.")
       txtContent should include("Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEM")
