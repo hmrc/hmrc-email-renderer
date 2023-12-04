@@ -36,8 +36,8 @@ class AtsAnnualTaxReturnWelshSpec
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject" in {
-      val taxYearFrom = LocalDate.now().getYear - 2
-      val taxYearTo = LocalDate.now().getYear - 1
+      val taxYearFrom = LocalDate.now().getYear - 1
+      val taxYearTo = LocalDate.now().getYear
       template.subject(Map.empty) shouldBe (s"Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod")
       template.fromAddress(Map.empty) shouldBe "CThEM – Eich Crynodeb Treth Blynyddol <noreply@tax.service.gov.uk>"
     }
