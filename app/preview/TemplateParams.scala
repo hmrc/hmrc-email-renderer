@@ -3524,8 +3524,6 @@ object TemplateParams3 {
       "dateDue"                  -> "30 September 2024",
       "isPrimaryContact"         -> "true",
       "secondContactEmail"       -> "joe.smith@test.com",
-      "liableForCurrentFY"       -> "true",
-      "liableForPreviousFY"      -> "true",
       "previousFY"               -> "2022",
       "currentFY"                -> "2023"
     ),
@@ -3536,8 +3534,6 @@ object TemplateParams3 {
       "dateDue"                  -> "30 September 2024",
       "isPrimaryContact"         -> "true",
       "secondContactEmail"       -> "joe.smith@test.com",
-      "liableForCurrentFY"       -> "true",
-      "liableForPreviousFY"      -> "true",
       "previousFY"               -> "2022",
       "currentFY"                -> "2023"
     ),

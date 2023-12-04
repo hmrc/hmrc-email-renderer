@@ -33,8 +33,6 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
         "secondContactEmail"       -> "joe.smith@test.com",
-        "liableForCurrentFY"       -> "true",
-        "liableForPreviousFY"      -> "true",
         "previousFY"               -> "2022",
         "currentFY"                -> "2023"
       )
@@ -50,8 +48,6 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
         "dateDue"                  -> "30 September 2023",
         "isPrimaryContact"         -> "true",
         "secondContactEmail"       -> "joe.smith@test.com",
-        "liableForCurrentFY"       -> "true",
-        "liableForPreviousFY"      -> "true",
         "previousFY"               -> "2022",
         "currentFY"                -> "2023"
       )
