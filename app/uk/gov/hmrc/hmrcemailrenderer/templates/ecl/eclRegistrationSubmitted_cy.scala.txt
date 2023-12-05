@@ -15,15 +15,13 @@ Bydd angen i chi lenwi datganiad a thalu’r ardoll yn flynyddol.
 Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i gyflwyno datganiad.
 
 @if(params.contains("currentFY")) {
-    Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw @params("dateDue"). Codir llog arnoch os ydych yn talu’n hwyr.
+Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw @params("dateDue"). Codir llog arnoch os ydych yn talu’n hwyr.
 }
 
-@if(params.contains("previousFY")) {
-    @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
-        Bydd angen i chi gyflwyno Ffurflen Dreth ar gyfer blwyddyn ariannol @previousFY i @(previousFY + 1) cyn gynted â phosibl.
-        Bydd y Ffurflen Dreth yn ymddangos fel hwyr oherwydd ei bod yn y flwyddyn ariannol flaenorol.
-    }
-}
+@if(params.contains("previousFY")) { @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
+Bydd angen i chi gyflwyno Ffurflen Dreth ar gyfer blwyddyn ariannol @previousFY i @(previousFY + 1) cyn gynted â phosibl.
+Bydd y Ffurflen Dreth yn ymddangos fel hwyr oherwydd ei bod yn y flwyddyn ariannol flaenorol.
+}}
 
 Sut i gyflwyno datganiad
 
