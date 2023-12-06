@@ -35,11 +35,9 @@ Get your EORI number
 For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
 
 - Go to GOV.UK and search for, 'Get an EORI'.
-- Select the link that says, 'Get an EORI number'.
-- On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'
-- On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'
-- On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.
-- Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.
+- Click the link that says, 'Apply for EORI'.
+- On the Apply for EORI page, click the link that says, 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.
+- Sign in using your Government Gateway user ID and password.
 
 About the Customs Declaration Service
 
@@ -55,11 +53,9 @@ Get your EORI number
 For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
 
 - Go to GOV.UK and search for, 'Get an EORI'.
-- Select the link that says, 'Get an EORI number'.
-- On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'
-- On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'
-- On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.
-- Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.
+- Click the link that says, 'Apply for EORI'.
+- On the Apply for EORI page, click the link that says, 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.
+- Sign in using your Government Gateway user ID and password.
 
 
 
