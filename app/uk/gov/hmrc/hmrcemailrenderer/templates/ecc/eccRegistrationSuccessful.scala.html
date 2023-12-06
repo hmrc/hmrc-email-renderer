@@ -31,7 +31,7 @@
                 <li style="margin: 0 0 10px; font-size: 19px;">send documents for a customs check for declarations made in CHIEF</li>
                 <li style="margin: 0 0 10px; font-size: 19px;">tell HMRC about an underpayment of Customs Duty or import VAT</li>
 
-  case "HMRC-ESC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">report and manage your allowance for Customs Duty Waiver claims</li>
+  case "HMRC-ESC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">report and manage your allowance for Customs Duty waiver claims</li>
   case _ => <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
  }
 }
@@ -42,31 +42,45 @@
  <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
  <li style="margin: 0 0 10px; font-size: 19px;">subscribe to customs services</li>
  <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
-
- <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
-
 </ul>
 
-<h2 style="margin: 0 0 30px; font-size: 19px;">Use the Customs Declaration Service</h2>
+<h2 style="margin: 30px 0 30px; font-size: 19px;">Get your EORI number</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">We have subscribed you to the Customs Declaration Service. This means you can do things like:</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:</p>
 
-<ul style="margin: 0 0 10px; font-size: 19px;">
- <li style="margin: 0 0 10px; font-size: 19px;">submit import and export declarations using your customs declaration software</li>
- <li style="margin: 0 0 10px; font-size: 19px;">pay Customs Duty and import VAT</li>
- <li style="margin: 0 0 10px; font-size: 19px;">get your postponed import VAT statements</li>
-</ul>
+<ol style="margin: 0 0 10px; font-size: 19px;">
+        <li style="margin: 0 0 10px; font-size: 19px;">Go to GOV.UK and search for, 'Get an EORI'.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">Select the link that says, 'Get an EORI number'.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.</li>
+</ol>
 
-<p style="margin: 0 0 10px; font-size: 19px;">For more information, search 'Customs Declaration Service' on GOV.UK.</p>
+<h2 style="margin: 30px 0 30px; font-size: 19px;">About the Customs Declaration Service</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">We have subscribed you to the Customs Declaration Service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search ‘Customs Declaration Service’ on GOV.UK.</p>
 } else {
 <ul style="margin: 0 0 10px; font-size: 19px;">
   @dynamicSubscriptionContent
  <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
  <li style="margin: 0 0 10px; font-size: 19px;">subscribe to other customs services</li>
-
- <li style="margin: 0 0 30px; font-size: 19px;">get an EORI number starting with XI</li>
-
 </ul>
+
+<h2 style="margin: 30px 0 30px; font-size: 19px;">Get your EORI number</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:</p>
+
+<ol style="margin: 0 0 10px; font-size: 19px;">
+    <li style="margin: 0 0 10px; font-size: 19px;">Go to GOV.UK and search for, 'Get an EORI'.</li>
+    <li style="margin: 0 0 10px; font-size: 19px;">Select the link that says, 'Get an EORI number'.</li>
+    <li style="margin: 0 0 10px; font-size: 19px;">On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'</li>
+    <li style="margin: 0 0 10px; font-size: 19px;">On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'</li>
+    <li style="margin: 0 0 10px; font-size: 19px;">On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.</li>
+    <li style="margin: 0 0 10px; font-size: 19px;">Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.</li>
+</ol>
+
 }
 }
 
@@ -81,11 +95,7 @@
 
 @eoriOnly
 
-<h2 style="margin: 0 0 30px; font-size: 19px;">If you move goods to or from Northern Ireland</h2>
-
-<p style="margin: 0 0 30px; font-size: 19px;">If you do not have an EU EORI number you will need to get an EORI number starting with XI.</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">To get an EORI number starting with XI, search ‘get an EORI number’ on GOV.UK.</p>
+<br />
 
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 

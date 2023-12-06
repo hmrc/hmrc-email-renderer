@@ -14,8 +14,9 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your 2SV has been reset successfully") {
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("full_name"),</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your 2SV has been reset successfully.</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Government Gateway</p>
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have deleted an application from The API Hub"){
+<p style="margin: 0 0 30px; font-size: 19px;">You have deleted @params("applicationname") from The API Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This application has been removed from The API Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC The API Hub</p>
 }

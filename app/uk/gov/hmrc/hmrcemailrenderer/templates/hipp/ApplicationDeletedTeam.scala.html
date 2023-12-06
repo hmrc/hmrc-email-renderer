@@ -14,8 +14,10 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your Government Gateway ID password has now been successfully changed") {
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @params("full_name"),</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your Government Gateway ID password has now been successfully changed</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Government Gateway</p>
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Application deleted from The API Hub"){
+<p style="margin: 0 0 30px; font-size: 19px;">The application @params("applicationname") has been deleted from The API Hub, all application details have been permanently deleted.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Any associated credentials will no longer work.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This application cannot be restored.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC The API Hub</p>
 }

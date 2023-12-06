@@ -33,12 +33,30 @@ object EclTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ecl_registration_submitted_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclRegistrationSubmitted_cy.f,
+      htmlTemplate = html.eclRegistrationSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ecl_registration_received",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,
       subject = "Your Economic Crime Levy registration has been received",
       plainTemplate = txt.eclRegistrationReceived.f,
       htmlTemplate = html.eclRegistrationReceived.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_registration_received_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Mae’ch cofrestriad ar gyfer yr Ardoll Troseddau Economaidd wedi dod i law",
+      plainTemplate = txt.eclRegistrationReceived_cy.f,
+      htmlTemplate = html.eclRegistrationReceived_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
@@ -51,12 +69,66 @@ object EclTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "ecl_return_submitted_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi cyflwyno datganiad ar gyfer yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclReturnSubmitted_cy.f,
+      htmlTemplate = html.eclReturnSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_amend_return_submitted_cy",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "Datganiad Ardoll Troseddau Economaidd wedi’i ddiwygio",
+      plainTemplate = txt.eclAmendReturnSubmitted_cy.f,
+      htmlTemplate = html.eclAmendReturnSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "ecl_nil_return_submitted",
       fromAddress = FromAddress.noReply("Economic Crime Levy"),
       service = EconomicCrimeLevy,
       subject = "You submitted a return for the Economic Crime Levy",
       plainTemplate = txt.eclNilReturnSubmitted.f,
       htmlTemplate = html.eclNilReturnSubmitted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_nil_return_submitted_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi cyflwyno datganiad ar gyfer yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclNilReturnSubmitted_cy.f,
+      htmlTemplate = html.eclNilReturnSubmitted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_amend_return_submitted",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "You amended a return for the Economic Crime Levy",
+      plainTemplate = txt.eclAmendReturnSubmitted.f,
+      htmlTemplate = html.eclAmendReturnSubmitted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_amend_registration_submitted",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "You amended a registration for the Economic Crime Levy",
+      plainTemplate = txt.eclAmendRegistrationSubmitted.f,
+      htmlTemplate = html.eclAmendRegistrationSubmitted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_amend_registration_submitted_cy",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "Cofrestriad Ardoll Troseddau Economaidd wedi’i ddiwygio",
+      plainTemplate = txt.eclAmendRegistrationSubmitted_cy.f,
+      htmlTemplate = html.eclAmendRegistrationSubmitted_cy.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

@@ -1,0 +1,37 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod", isWelsh = true) {
+
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Annwyl Asiant</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"> Mae cais i gofrestru’ch cleient @params("name") ar gyfer Hunanasesiad wedi dod i law. </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Nid oeddem yn gallu prosesu’r cais oherwydd nad yw manylion personol eich cleient yn cyd-fynd â’n cofnodion. </p>
+
+    <h2 style="font-size: 24px;">Yr hyn i’w wneud nesaf </h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Gwiriwch eich bod wedi nodi manylion eich cleient yn gywir ar y cais.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Os felly, dylai’ch cleient wirio a diweddaru ei fanylion ar ei gyfrif treth personol.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Gallwch hefyd ofyn i CThEF ddiweddaru manylion eich cleient. Ar wefan GOV.UK, chwiliwch am ‘change personal details’ ac ewch i’r dudalen ‘Tell HMRC about a change to your personal details’. Gallai hyn gymryd hyd at 15 diwrnod.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Ar ôl i fanylion personol eich cleient gael eu diweddaru, gallwch ailgyflwyno’r cais. </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Adran Ddigidol CThEF</p>
+}

@@ -28,29 +28,40 @@ Erbyn hyn, gallwch wneud y canlynol:
 - symud nwyddau i Brydain Fawr neu oddi yno
 - tanysgrifio i wasanaethau tollau
 - defnyddio’r Gwasanaeth Datganiadau Tollau
-- cael rhif EORI sy’n dechrau gydag XI
 
-Defnyddio’r Gwasanaeth Datganiadau Tollau
 
-Rydym wedi’ch tanysgrifio i’r Gwasanaeth Datganiadau Tollau Mae hyn yn golygu y gallwch chi wneud pethau fel:
+Cael eich rhif EORI
 
-- cyflwyno datganiadau mewnforio ac allforio gan ddefnyddio’ch meddalwedd datganiad tollau
-- talu Tollau Tramor a TAW Mewnforio
-- cael eich datganiadau TAW mewnforio ohiriedig
+Am resymau diogelwch, ni allwn anfon rhifau EORI drwy e-bost. Gallwch gael eich rhif EORI drwy ddilyn y camau canlynol:
 
-I gael rhagor o wybodaeth, chwiliwch am 'Customs Declaration Service' ar GOV.UK.
+- Ewch i GOV.UK a chwilio am, 'Get an EORI'.
+- Dewiswch y cysylltiad ar y dudalen sy'n nodi 'Get an EORI number'.
+- Ar y dudalen 'Get an EORI number', dewiswch y cysylltiad sy'n nodi 'This guide is also available in Welsh (Cymraeg).'
+- Ar y dudalen 'Cael rhif EORI', dewiswch y cysylltiad sy'n nodi 'Gwneud cais am rif EORI'
+- Ar y dudalen 'Gwneud cais am rif EORI', dewiswch y cysylltiad sy'n nodi sut i 'wirio statws cais rydych eisoes wedi'i wneud'. Gallwch ddod o hyd i'r cysylltiad hwn yn agos at waelod y dudalen.
+- Gellir toglo i'r Gymraeg drwy bwyso'r botwm ar frig y dudalen. Mewngofnodwch gan ddefnyddio'ch Dynodydd Defnyddiwr (ID) a'ch cyfrinair ar gyfer Porth y Llywodraeth.
+
+Defnyddio'r Gwasanaeth Datganiadau Tollau
+
+Rydym wedi’ch tanysgrifio i’r Gwasanaeth Datganiadau Tollau.
+I gael rhagor o wybodaeth, chwiliwch am ‘Customs Declaration Service’ ar GOV.UK.
 } else {
 @dynamicSubscriptionContent
 - symud nwyddau i Brydain Fawr neu oddi yno
 - tanysgrifio i wasanaethau tollau eraill
-- cael rhif EORI sy’n dechrau gydag XI
+
+Cael eich rhif EORI
+
+Am resymau diogelwch, ni allwn anfon rhifau EORI drwy e-bost. Gallwch gael eich rhif EORI drwy ddilyn y camau canlynol:
+
+- Ewch i GOV.UK a chwilio am, 'Get an EORI'.
+- Dewiswch y cysylltiad ar y dudalen sy'n nodi 'Get an EORI number'.
+- Ar y dudalen 'Get an EORI number', dewiswch y cysylltiad sy'n nodi 'This guide is also available in Welsh (Cymraeg).'
+- Ar y dudalen 'Cael rhif EORI', dewiswch y cysylltiad sy'n nodi 'Gwneud cais am rif EORI'
+- Ar y dudalen 'Gwneud cais am rif EORI', dewiswch y cysylltiad sy'n nodi sut i 'wirio statws cais rydych eisoes wedi'i wneud'. Gallwch ddod o hyd i'r cysylltiad hwn yn agos at waelod y dudalen.
+- Gellir toglo i'r Gymraeg drwy bwyso'r botwm ar frig y dudalen. Mewngofnodwch gan ddefnyddio'ch Dynodydd Defnyddiwr (ID) a'ch cyfrinair ar gyfer Porth y Llywodraeth.
+
 }
-
-Os ydych yn symud nwyddau i Ogledd Iwerddon neu oddi yno
-
-Os nad oes gennych rif EORI yn yr UE, bydd angen i chi gael rhif EORI sy’n dechrau gydag XI.
-
-I gael rhif EORI sy’n dechrau gydag XI, ewch i GOV.UK a chwilio am ‘get an EORI number’.
 
 Oddi wrth CThEF
 

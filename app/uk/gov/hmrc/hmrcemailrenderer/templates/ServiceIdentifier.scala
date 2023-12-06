@@ -56,6 +56,7 @@ object ServiceIdentifier {
   case object RegisterYourCompany extends ServiceIdentifier { override val name = "register-your-company" }
   case object RentalAndLeaseDetails extends ServiceIdentifier { override val name = "rald" }
   case object ContactForms extends ServiceIdentifier { override val name = "voa-contact-forms" }
+  case object TctrForms extends ServiceIdentifier { override val name = "voa-tctr" }
   case object SecurityConsole extends ServiceIdentifier { override val name = "security-console" }
   case object SelfAssessment extends ServiceIdentifier { override val name = "sa" }
   case object TaxAdvantagedVentureCapital extends ServiceIdentifier { override val name = "tavc" }
@@ -121,6 +122,7 @@ object ServiceIdentifier {
   case object EUSubsidy extends ServiceIdentifier { override val name = "euSubsidy" }
   case object EconomicCrimeLevy extends ServiceIdentifier { override val name = "ecl" }
   case object Hipp extends ServiceIdentifier { override val name = "hipp" }
+  case object PenReform extends ServiceIdentifier { override val name = "penaltyReform" }
 
   case object Feedback extends ServiceIdentifier { override val name = "feedback" }
 }

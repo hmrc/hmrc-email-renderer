@@ -80,6 +80,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.seiss.SeissTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.dass.DASSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
@@ -88,6 +89,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hipp.HippTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -103,6 +107,7 @@ trait TemplateLocator {
       "BARS"                  -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
+      "DASS"                  -> DASSTemplates.templates,
       "MDR"                   -> MdrTemplates.templates,
       "CBCR-NEW"              -> CBCRNewTemplates.templates,
       "Digital Tariffs"       -> DigitalTariffTemplates.templates,
@@ -119,6 +124,7 @@ trait TemplateLocator {
       "PAYE"                  -> PayeTemplates.templates,
       raldGroup               -> RaldTemplates.templates,
       contactFormsGroup       -> ContactFormsTemplates.templates,
+      tctrGroup               -> TctrTemplates.tctrTemplates,
       "register-your-company" -> RegisterYourCompanyTemplates.templates,
       "Self Assessment"       -> DigitalContactTemplates.templates,
       "TAMC"                  -> TamcTemplates.templates,
@@ -161,6 +167,7 @@ trait TemplateLocator {
       "ITSA"                  -> ItsaTemplates.templates,
       "ECL"                   -> EclTemplates.templates,
       "HIPP"                  -> HippTemplates.templates,
+      "Penalty Reform"        -> PenReformTemplates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates
     )
 

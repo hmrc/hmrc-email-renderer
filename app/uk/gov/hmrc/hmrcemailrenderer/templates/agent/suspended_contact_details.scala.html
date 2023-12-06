@@ -1,0 +1,41 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agencyName() = {@params("agencyName")}
+@agencyArn() = {@params("arn")}
+@agentContactName() = {@params("contactName")}
+@agentEmailAddress() = {@params("emailAddress")}
+@agentTelephoneNumber() = {@params("telephoneNumber")}
+@agentDescription() = {@params("description")}
+
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Agent contact about account suspension") {
+
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 0px 0;">Agent name: @agencyName()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 0px 0;">Agent reference number: @agencyArn()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 0px 0;">Contact name: @agentContactName()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 0px 0;">Contact email address: @agentEmailAddress()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Contact telephone number: @agentTelephoneNumber()</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">This agent has given the following details about the suspension of their agent services account:</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@agentDescription()</p>
+
+    <p style="margin: 0 0 30px;
+        font-size: 19px;">From HMRC Agent Services team</p>
+}

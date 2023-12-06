@@ -14,7 +14,7 @@
 * limitations under the License.
 *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPenceGdsFormat
 
 @(params: Map[String, Any])
 
@@ -32,14 +32,14 @@ Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does di
               @params("transactionReference")
 
               Swm
-              @formatAmountInPence(params("amountInPence").toString)
+              @formatAmountInPenceGdsFormat(params("amountInPence").toString)
 
               @if(params.contains("transactionFeeInPence")) {
                 Ffi’r cerdyn
-                @formatAmountInPence(params("transactionFeeInPence").toString)
+                @formatAmountInPenceGdsFormat(params("transactionFeeInPence").toString)
 
                 Cyfanswm
-                @formatAmountInPence(params("totalAmountInPence").toString)
+                @formatAmountInPenceGdsFormat(params("totalAmountInPence").toString)
               }
 
               Math o gerdyn

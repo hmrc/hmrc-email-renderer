@@ -15,15 +15,16 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Someone’s offered to become your Trusted Helper") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Someone’s offered to be your Trusted Helper") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("helpeeFirstName")} @{params("helpeeLastName")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">@{params("helperFirstName")} @{params("helperLastName")} has offered to become your Trusted Helper and help with your tax online.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Trusted Helper is an online service from HM Revenue and Customs (HMRC) which allows people to help their friends and family manage their tax affairs online.</p>
-<h2 id="before-you-start" style="margin: 0 0 30px; font-size: 24px;">Before you start</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">You’ll need your National Insurance number to hand.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You’ll also need to set up an account with GOV.UK Verify, if you don’t already have one.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Click on the link below to accept @{params("helperFirstName")}’s offer to help you.</p>
-<p style="margin: 0 0 30px; font-size: 19px;"><a href="https://www.gov.uk/help-friends-family-tax" style="color: #005EA5;">https://www.gov.uk/help-friends-family-tax</a></p>
-<p style="margin: 0 0 30px; font-size: 19px;">You have 28 days to respond.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("helperFirstName")} @{params("helperLastName")} has offered to be your trusted helper.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">A trusted helper is someone like a friend or family member, who can help with tax online.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This request is available to accept online for 28 days.</p>
+<h2 id="how-to-accept" style="margin: 0 0 30px; font-size: 24px;">How to accept this offer of help</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Visit the gov.uk website and search for ‘personal tax account’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You will need to sign in with your Government Gateway password and ID to access your personal tax account.</p>
+<h3 id="no-goverment-gateway" style="margin: 0 0 30px; font-size: 20px;">If you do not have a Government Gateway, or a personal tax account</h3>
+<p style="margin: 0 0 30px; font-size: 19px;">To set up your personal tax account, visit the gov.uk website and search for ‘personal tax account’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can register for a Government Gateway account when you set up your personal tax account.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Trusted Helper</p>
 }
