@@ -993,7 +993,11 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "vishing_code_submission",
         "vishing_code_submission_cy",
         "xiEORI_change_confirmation",
-        "xiEORI_confirmation"
+        "xiEORI_confirmation",
+        "hipp_production_access_approved_email",
+        "hipp_production_access_rejected_email",
+        "hipp_new_production_access_request_email",
+        "hipp_production_access_request_submitted_email"
       )
     }
   }

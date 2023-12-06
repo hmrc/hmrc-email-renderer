@@ -1596,6 +1596,22 @@ object TemplateParams {
 object TemplateParams2 {
   val exampleLinkWithRandomId = s"http://host:8080/your/link/${UUID.randomUUID}"
   val exampleParams = Map(
+    "hipp_production_access_approved_email" -> Map(
+      "applicationname"      -> "Test-Hipp-App",
+      "apispecificationname" -> "Test-Hipp-Api"
+    ),
+    "hipp_production_access_rejected_email" -> Map(
+      "applicationname"      -> "Test-Hipp-App",
+      "apispecificationname" -> "Test-Hipp-Api"
+    ),
+    "hipp_new_production_access_request_email" -> Map(
+      "applicationname"      -> "Test-Hipp-App",
+      "apispecificationname" -> "Test-Hipp-Api"
+    ),
+    "hipp_production_access_request_submitted_email" -> Map(
+      "applicationname"      -> "Test-Hipp-App",
+      "apispecificationname" -> "Test-Hipp-Api"
+    ),
     "hipp_add_team_member_to_app_email" -> Map(
       "applicationname" -> "Test-Hipp-App",
       "creatorusername" -> "Test-Hipp-Member"
