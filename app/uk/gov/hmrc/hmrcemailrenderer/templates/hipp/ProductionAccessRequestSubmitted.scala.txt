@@ -1,4 +1,4 @@
 @(params: Map[String, Any])
-Your request for your application, @{params("applicationname")} to access the @{params("apispecificationname")} in the Production environment has been successfully submitted for review.
+Your request for your application @{params("applicationname")} to access the @{params("apispecificationname")} in the production environment has been successfully submitted for review.
 To access the request, visit /api-hub on the MDTP admin network.
 From HMRC The API Hub
