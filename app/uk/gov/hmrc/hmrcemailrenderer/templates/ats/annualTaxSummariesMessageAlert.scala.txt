@@ -4,11 +4,13 @@
 
 Thank you for completing your Self Assessment tax return.
 
-You can now access your Annual Tax Summary online. It’s an illustration of how the Government spent your Income Tax and National Insurance contributions.
+You can now access your Annual Tax Summary online. It shows an illustration of how the Government spent your Income Tax and National Insurance contributions.
 
 How to view your Annual Tax Summary
 
-Sign in to HMRC online with your Government Gateway password and ID, and select ‘View your Annual Tax Summary’.
+Sign in to HMRC online services using the Government Gateway password and ID that you use for Self Assessment online, and select ‘View your Annual Tax Summary’.
+
+For Business Tax Account holders, select Self Assessment and then ‘more details about your Self Assessment returns and payments’, then select ‘find out how your tax is spent’.
 
 Tax summaries are for information only so there’s no need to take any further action.
 
