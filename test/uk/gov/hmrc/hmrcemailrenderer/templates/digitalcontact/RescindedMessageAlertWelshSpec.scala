@@ -50,10 +50,10 @@ class RescindedMessageAlertWelshSpec
       htmlContent should include(
         "Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.")
       htmlContent should include("Oddi wrth Adran Ddigidol CThEM")
-      htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+      htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent should include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
 
     "render correct text content" in {
@@ -67,10 +67,10 @@ class RescindedMessageAlertWelshSpec
       txtContent should include(
         "Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.")
       txtContent should include("Oddi wrth Adran Ddigidol CThEM")
-      txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+      txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       txtContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       txtContent should include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 }
