@@ -46,7 +46,7 @@ class RaldConnectionRemovedCySpec
     content should include(
       "Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.")
     content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
-    content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM")
+    content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }
 
   rald_connection_removed_cy should {

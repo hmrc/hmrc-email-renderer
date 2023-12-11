@@ -91,10 +91,10 @@ class NewMessageAlert_ITSASpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include(
         "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif.")
       htmlContent must include("Oddi wrth adran Ddigidol CThEM")
-      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 

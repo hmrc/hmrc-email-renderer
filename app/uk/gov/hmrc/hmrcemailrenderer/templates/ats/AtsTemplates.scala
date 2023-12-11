@@ -41,7 +41,7 @@ object AtsTemplates {
     ),
     MessageTemplate.create(
       templateId = "annual_tax_summaries_message_alert_cy",
-      fromAddress = FromAddress.noReply("CThEM – Eich Crynodeb Treth Blynyddol"),
+      fromAddress = FromAddress.noReply("CThEF – Eich Crynodeb Treth Blynyddol"),
       service = AnnualTaxSummary,
       subject = ats_year_for_subject_welsh,
       plainTemplate = txt.annualTaxSummariesMessageAlert_cy.f,

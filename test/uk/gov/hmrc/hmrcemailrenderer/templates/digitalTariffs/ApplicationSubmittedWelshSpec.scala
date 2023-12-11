@@ -78,10 +78,10 @@ class ApplicationSubmittedWelshSpec
         "I wirio statws eich cais, neu i gael gwybodaeth am samplau, ewch i GOV.UK a chwilio am ‘Apply for an Advanced Tariff Ruling (ATaR)’.")
       txtContent should include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad yn yr e-bost hwn.")
       txtContent should include("Oddi wrth y Gwasanaeth Dosbarthu Tariffau")
-      txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+      txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       txtContent should include("- Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       txtContent should include(
-        "- Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "- Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 

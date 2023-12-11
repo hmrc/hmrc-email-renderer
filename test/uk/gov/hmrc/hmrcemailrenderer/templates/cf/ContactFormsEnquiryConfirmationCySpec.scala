@@ -45,7 +45,7 @@ class ContactFormsEnquiryConfirmationCySpec
     content should include(
       "Rydym yn ymateb i’r mwyafrif o ymholiadau o fewn ychydig ddyddiau. Fodd bynnag, gall ymholiadau cymhleth gymryd hyd at 28 diwrnod.")
     content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
-    content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM")
+    content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }
 
   cf_enquiry_confirmation_cy should {
