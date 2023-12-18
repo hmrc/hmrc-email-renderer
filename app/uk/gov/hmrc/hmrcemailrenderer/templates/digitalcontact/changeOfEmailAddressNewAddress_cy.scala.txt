@@ -14,6 +14,6 @@ Pam y cawsoch yr e-bost hwn
 
 Rydych wedi dewis newid eich cyfeiriad e-bost ar gyfer cyfathrebu drwy ddull electronig
 
-Oddi wrth Adran Ddigidol CThEM
+Oddi wrth Adran Ddigidol CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

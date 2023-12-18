@@ -35,8 +35,8 @@ class VerificationReminderWelshSpec
 
     val template = templateLocator.templateGroups("Self Assessment").find(_.templateId == "verificationReminder_cy").get
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Cyfathrebu drwy ddull electronig CThEM: cwblhau’r broses fewngofnodi"
-      template.fromAddress(Map.empty) shouldBe "CThEM Digidol <noreply@tax.service.gov.uk>"
+      template.subject(Map.empty) shouldBe "Cyfathrebu drwy ddull electronig CThEF: cwblhau’r broses fewngofnodi"
+      template.fromAddress(Map.empty) shouldBe "CThEF Digidol <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -54,7 +54,7 @@ class VerificationReminderWelshSpec
       htmlContent should include(
         "Rydym yn gwneud i chi ddilysu’ch cyfeiriad e-bost er mwyn helpu i gadw’ch manylion yn ddiogel."
       )
-      htmlContent should include("Oddi wrth adran Ddigidol CThEM")
+      htmlContent should include("Oddi wrth adran Ddigidol CThEF")
     }
 
     "render correct text content" in {
@@ -72,7 +72,7 @@ class VerificationReminderWelshSpec
       txtContent should include(
         "Rydym yn gwneud i chi ddilysu’ch cyfeiriad e-bost er mwyn helpu i gadw’ch manylion yn ddiogel."
       )
-      txtContent should include("Oddi wrth adran Ddigidol CThEM")
+      txtContent should include("Oddi wrth adran Ddigidol CThEF")
     }
 
   }

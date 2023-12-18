@@ -1,10 +1,10 @@
-@(params: Map[String, Any])Mae gennych neges newydd oddi wrth CThEM
+@(params: Map[String, Any])Mae gennych neges newydd oddi wrth CThEF
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
-Mae gennych neges newydd oddi wrth CThEM am Hunanasesiad.
+Mae gennych neges newydd oddi wrth CThEF am Hunanasesiad.
 
-I’w gweld, mewngofnodwch i’ch cyfrif CThEM ar-lein.
+I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.
 
 Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
 
@@ -14,6 +14,6 @@ Dewisoch i gael hysbysiadau di-bapur yn hytrach na lythyrau drwy’r post.
 
 Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif.
 
-Oddi wrth Hunanasesiad CThEM
+Oddi wrth Hunanasesiad CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

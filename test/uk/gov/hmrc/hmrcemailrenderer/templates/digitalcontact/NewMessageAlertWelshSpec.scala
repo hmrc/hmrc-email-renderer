@@ -33,18 +33,18 @@ class NewMessageAlertWelshSpec
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject and fromAddress" in {
-      template.subject(Map.empty) shouldBe ("Hysbysiadau di-bapur CThEM: neges newydd")
-      template.fromAddress(Map.empty) shouldBe "CThEM Digidol <noreply@tax.service.gov.uk>"
+      template.subject(Map.empty) shouldBe ("Hysbysiadau di-bapur CThEF: neges newydd")
+      template.fromAddress(Map.empty) shouldBe "CThEF Digidol <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include("Ewch i hafan GOV.UK")
-      htmlContent should include("Mae gennych neges newydd oddi wrth CThEM</h1>")
+      htmlContent should include("Mae gennych neges newydd oddi wrth CThEF</h1>")
       htmlContent should include("Annwyl Mr Johnston")
-      htmlContent should include("Mae gennych neges newydd oddi wrth CThEM am Hunanasesiad.")
-      htmlContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEM ar-lein.")
+      htmlContent should include("Mae gennych neges newydd oddi wrth CThEF am Hunanasesiad.")
+      htmlContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
       htmlContent should include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       htmlContent should include("Pam y cawsoch yr e-bost hwn")
       htmlContent should include("Dewisoch i gael hysbysiadau di-bapur yn hytrach na lythyrau drwy’r post.")
@@ -59,10 +59,10 @@ class NewMessageAlertWelshSpec
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-      txtContent should include("Mae gennych neges newydd oddi wrth CThEM")
+      txtContent should include("Mae gennych neges newydd oddi wrth CThEF")
       txtContent should include("Annwyl Mr Johnston")
-      txtContent should include("Mae gennych neges newydd oddi wrth CThEM am Hunanasesiad.")
-      txtContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEM ar-lein.")
+      txtContent should include("Mae gennych neges newydd oddi wrth CThEF am Hunanasesiad.")
+      txtContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
       txtContent should include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       txtContent should include("Pam y cawsoch yr e-bost hwn")
       txtContent should include("Dewisoch i gael hysbysiadau di-bapur yn hytrach na lythyrau drwy’r post.")
