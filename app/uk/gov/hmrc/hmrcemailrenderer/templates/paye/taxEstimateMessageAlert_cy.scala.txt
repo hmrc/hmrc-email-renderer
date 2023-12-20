@@ -35,7 +35,7 @@ Rydych wedi dewis cael diweddariadau drwy e-bost yn hytrach na chael llythyrau d
 
 Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.
 
-Oddi wrth CThEM: Gwirio’ch Treth Incwm
+Oddi wrth CThEF: Gwirio’ch Treth Incwm
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

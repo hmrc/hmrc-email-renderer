@@ -35,7 +35,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsa_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsa_cy.f,
       htmlTemplate = html.new_message_alert_itsa_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -53,7 +53,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsaqu1_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsaqu1_cy.f,
       htmlTemplate = html.new_message_alert_itsaqu1_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -71,7 +71,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsaqu2_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsaqu2_cy.f,
       htmlTemplate = html.new_message_alert_itsaqu2_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -89,7 +89,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsaeops1_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsaeops1_cy.f,
       htmlTemplate = html.new_message_alert_itsaeops1_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -107,7 +107,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsaeops2_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsaeops2_cy.f,
       htmlTemplate = html.new_message_alert_itsaeops2_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -125,7 +125,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsaeopsf_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsaeopsf_cy.f,
       htmlTemplate = html.new_message_alert_itsaeopsf_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -143,7 +143,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsapoa1-1_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsapoa1_1_cy.f,
       htmlTemplate = html.new_message_alert_itsapoa1_1_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -161,7 +161,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsapoa1-2_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsapoa1_2_cy.f,
       htmlTemplate = html.new_message_alert_itsapoa1_2_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -179,7 +179,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsapoa2-1_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsapoa2_1_cy.f,
       htmlTemplate = html.new_message_alert_itsapoa2_1_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -197,7 +197,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsapoa2-2_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsapoa2_2_cy.f,
       htmlTemplate = html.new_message_alert_itsapoa2_2_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -215,7 +215,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsafd1_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsafd1_cy.f,
       htmlTemplate = html.new_message_alert_itsafd1_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -233,7 +233,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsafd2_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsafd2_cy.f,
       htmlTemplate = html.new_message_alert_itsafd2_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -251,7 +251,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsafd3_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsafd3_cy.f,
       htmlTemplate = html.new_message_alert_itsafd3_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -269,7 +269,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsapoa-cn_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsapoa_cn_cy.f,
       htmlTemplate = html.new_message_alert_itsapoa_cn.f,
       priority = Some(MessagePriority.Standard)
@@ -287,7 +287,7 @@ object ItsaTemplates {
       templateId = "new_message_alert_itsauc1_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsauc1_cy.f,
       htmlTemplate = html.new_message_alert_itsauc1_cy.f,
       priority = Some(MessagePriority.Standard)

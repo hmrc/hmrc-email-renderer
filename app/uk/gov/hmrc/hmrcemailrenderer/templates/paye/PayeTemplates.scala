@@ -34,7 +34,7 @@ object PayeTemplates {
     ),
     MessageTemplate.create(
       templateId = "tax_estimate_message_alert_cy",
-      fromAddress = FromAddress.noReply("CThEM – Gwasanaeth Gwirio eich Treth Incwm"),
+      fromAddress = FromAddress.noReply("CThEF – Gwasanaeth Gwirio eich Treth Incwm"),
       service = PayAsYouEarn,
       subject = "Gwirio newid i’ch cod TWE ar-lein",
       plainTemplate = txt.taxEstimateMessageAlert_cy.f,
@@ -53,7 +53,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
       plainTemplate = txt.newMessageAlert_P800_cy.f,
       htmlTemplate = html.newMessageAlert_P800_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -73,7 +73,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_P800_D2_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
       plainTemplate = txt.newMessageAlert_P800_cy.f,
       htmlTemplate = html.newMessageAlert_P800_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -91,7 +91,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_PA302_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -111,7 +111,7 @@ object PayeTemplates {
       templateId = "newMessageAlert_PA302_D2_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
-      subject = "Mae’ch cyfrifiad treth newydd gan CThEM yn barod",
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
