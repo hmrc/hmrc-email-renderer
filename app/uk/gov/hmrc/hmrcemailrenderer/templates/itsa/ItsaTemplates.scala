@@ -271,7 +271,7 @@ object ItsaTemplates {
       service = Itsa,
       subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsapoa_cn_cy.f,
-      htmlTemplate = html.new_message_alert_itsapoa_cn.f,
+      htmlTemplate = html.new_message_alert_itsapoa_cn_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(

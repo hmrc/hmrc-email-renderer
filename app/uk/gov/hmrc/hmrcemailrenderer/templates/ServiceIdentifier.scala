@@ -50,6 +50,7 @@ object ServiceIdentifier {
   case object GuaranteedMinimumPension extends ServiceIdentifier { override val name = "gmp" }
   case object Generic extends ServiceIdentifier { override val name = "generic" }
   case object Itsa extends ServiceIdentifier { override val name = "itsa" }
+  case object Ioss extends ServiceIdentifier { override val name = "ioss" }
   case object InheritanceTax extends ServiceIdentifier { override val name = "iht" }
   case object PayAsYouEarn extends ServiceIdentifier { override val name = "paye" }
   case object PensionSchemesforPractitioners extends ServiceIdentifier { override val name = "pp" }
