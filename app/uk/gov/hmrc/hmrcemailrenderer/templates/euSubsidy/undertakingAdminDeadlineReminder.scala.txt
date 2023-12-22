@@ -2,11 +2,13 @@
 
 Dear Customer
 
-You must submit a report of any non-customs subsidy payments, or no payments, by (DEADLINE: @{params("deadline")}).
+Your report on non-customs subsidy payments, or no payments, is due soon.
+
+You must submit your report within 14 days, from the date of this email.
 
 This must be done at least once every 90 days. These payments are from government and public authorities.
 
-You will not be able to claim further Customs Duty waivers if you have not submitted a report by (DEADLINE: @{params("deadline")}).
+You will not be able to claim further Customs Duty waivers if you have not submitted a report within your current 90-day deadline.
 
 Submitting a report
 
