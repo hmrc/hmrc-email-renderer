@@ -139,7 +139,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "HIPP",
         "Penalty Reform",
         FeedbackTemplates.id,
-        "DASS"
+        "DASS",
+        "IOSS"
       )
     }
 
@@ -997,7 +998,35 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "hipp_production_access_approved_email",
         "hipp_production_access_rejected_email",
         "hipp_new_production_access_request_email",
-        "hipp_production_access_request_submitted_email"
+        "hipp_production_access_request_submitted_email",
+        "new_message_alert_ioss",
+        "new_message_alert_ioss_cy",
+        "new_message_alert_m01_ioss",
+        "new_message_alert_m01_ioss_cy",
+        "new_message_alert_m01a_ioss",
+        "new_message_alert_m01a_ioss_cy",
+        "new_message_alert_m02_ioss",
+        "new_message_alert_m02_ioss_cy",
+        "new_message_alert_m02a_ioss",
+        "new_message_alert_m02a_ioss_cy",
+        "new_message_alert_m04_ioss",
+        "new_message_alert_m04_ioss_cy",
+        "new_message_alert_m05_ioss",
+        "new_message_alert_m05_ioss_cy",
+        "new_message_alert_m05a_ioss",
+        "new_message_alert_m05a_ioss_cy",
+        "new_message_alert_m06_ioss",
+        "new_message_alert_m06_ioss_cy",
+        "new_message_alert_m06a_ioss",
+        "new_message_alert_m06a_ioss_cy",
+        "new_message_alert_m07_ioss",
+        "new_message_alert_m07_ioss_cy",
+        "new_message_alert_m07a_ioss",
+        "new_message_alert_m07a_ioss_cy",
+        "new_message_alert_m08_ioss",
+        "new_message_alert_m08_ioss_cy",
+        "new_message_alert_m08a_ioss",
+        "new_message_alert_m08a_ioss_cy"
       )
     }
   }

@@ -89,6 +89,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hipp.HippTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ioss.IossTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
@@ -165,6 +166,7 @@ trait TemplateLocator {
       "HEC"                   -> HecTemplates.templates,
       "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "ITSA"                  -> ItsaTemplates.templates,
+      "IOSS"                  -> IossTemplates.templates,
       "ECL"                   -> EclTemplates.templates,
       "HIPP"                  -> HippTemplates.templates,
       "Penalty Reform"        -> PenReformTemplates.templates,
