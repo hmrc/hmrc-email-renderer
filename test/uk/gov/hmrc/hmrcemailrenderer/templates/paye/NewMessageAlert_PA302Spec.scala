@@ -91,10 +91,10 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include(
         "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.")
       htmlContent must include("Oddi wrth adran TWE CThEF")
-      htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
-      htmlContent must include("Do not reply to it or click on any links")
+      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+      htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 
@@ -166,10 +166,10 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include(
         "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.")
       htmlContent must include("Oddi wrth adran TWE CThEF")
-      htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
-      htmlContent must include("Do not reply to it or click on any links")
+      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+      htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 
