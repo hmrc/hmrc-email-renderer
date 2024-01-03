@@ -3621,7 +3621,14 @@ object TemplateParams3 {
       "answers" -> "eyJuYW1lIjoidGVzdCIsImFuc3dlcnMiOlsiMiIsIjMiLCJIb3BlIHRoaXMgd29ya3MiXX0="
     ),
     "ecl_registration_received" -> Map(
-      "name" -> "John Doe"
+      "name"                     -> "John Doe",
+      "eclRegistrationReference" -> "XMECL0000000001",
+      "eclRegistrationDate"      -> "20 September 2023",
+      "dateDue"                  -> "30 September 2024",
+      "isPrimaryContact"         -> "true",
+      "secondContactEmail"       -> "joe.smith@test.com",
+      "previousFY"               -> "2022",
+      "currentFY"                -> "2023"
     ),
     "iforms_submission_rejection_email_non_agent" -> Map(
       "name" -> "John"
@@ -3636,7 +3643,14 @@ object TemplateParams3 {
       "name" -> "John Doe"
     ),
     "ecl_registration_received_cy" -> Map(
-      "name" -> "John Doe"
+      "name"                     -> "John Doe",
+      "eclRegistrationReference" -> "XMECL0000000001",
+      "eclRegistrationDate"      -> "20 Medi 2023",
+      "dateDue"                  -> "30 Medi 2024",
+      "isPrimaryContact"         -> "true",
+      "secondContactEmail"       -> "joe.smith@test.com",
+      "previousFY"               -> "2022",
+      "currentFY"                -> "2023"
     ),
     "customs_financials_requested_duty_deferment_not_found" -> Map(
       "recipientName_FullName" -> "ABC ltd"

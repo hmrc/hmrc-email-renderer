@@ -46,9 +46,22 @@
             You will need to complete a return and pay the levy on a yearly basis.
         </p>
 
-        <p>
-            The next deadline for submitting a return and making a payment is 30 September 2023. You will be charged interest if you make a late payment.
-        </p>
+        @if(params.contains("currentFY")) {
+            <p>
+                The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+            </p>
+        }
+
+        @if(params.contains("previousFY")) {
+            @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
+                <p>
+                    You need to submit a return for the @previousFY to @(previousFY + 1) financial year as soon as possible.
+                </p>
+                <p>
+                    The return will show as overdue because it's in the previous financial year.
+                </p>
+            }
+        }
 
         <p>
             You will not receive an email or notification from HMRC to remind you to submit a return.
