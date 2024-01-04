@@ -3622,11 +3622,7 @@ object TemplateParams3 {
     ),
     "ecl_registration_received" -> Map(
       "name"                     -> "John Doe",
-      "eclRegistrationReference" -> "XMECL0000000001",
-      "eclRegistrationDate"      -> "20 September 2023",
       "dateDue"                  -> "30 September 2024",
-      "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com",
       "previousFY"               -> "2022",
       "currentFY"                -> "2023"
     ),
@@ -3644,11 +3640,7 @@ object TemplateParams3 {
     ),
     "ecl_registration_received_cy" -> Map(
       "name"                     -> "John Doe",
-      "eclRegistrationReference" -> "XMECL0000000001",
-      "eclRegistrationDate"      -> "20 Medi 2023",
       "dateDue"                  -> "30 Medi 2024",
-      "isPrimaryContact"         -> "true",
-      "secondContactEmail"       -> "joe.smith@test.com",
       "previousFY"               -> "2022",
       "currentFY"                -> "2023"
     ),
