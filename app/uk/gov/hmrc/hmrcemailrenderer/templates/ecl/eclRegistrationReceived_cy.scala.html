@@ -26,7 +26,7 @@
             Mae’r atebion ar gyfer eich cofrestriad ar gyfer yr Ardoll Troseddau Economaidd (ECL) wedi dod i law. Cadwch yr e-bost hwn ar gyfer eich cofnodion.
         </p>
 
-        <p style="font-weight: bold;">Yr hyn sy’n digwydd nesaf</p>
+        <h2 class="govuk-heading-l">Yr hyn sy’n digwydd nesaf</h2>
 
         <p>
             Byddwn yn adolygu’ch atebion. Efallai y byddwn yn cysylltu â chi gan ddefnyddio’r manylion a roddwyd gennych os bydd angen rhagor o wybodaeth arnom. Bydd y broses hon yn cymryd hyd at 15 diwrnod gwaith.
@@ -40,15 +40,28 @@
             Gallwch wedyn ychwanegu’r Ardoll Troseddau Economaidd at eich cyfrif treth busnes.
         </p>
 
-        <p style="font-weight: bold;">Sut i gyflwyno datganiad</p>
+        <h2 class="govuk-heading-l">Sut i gyflwyno datganiad</h2>
 
         <p>
             Bydd angen i chi lenwi datganiad a thalu’r ardoll yn flynyddol.
         </p>
 
-        <p>
-            Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw 30 Medi 2023. Codir llog arnoch os ydych yn talu’n hwyr.
-        </p>
+        @if(params.contains("currentFY")) {
+            <p>
+                Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw @params("dateDue"). Codir llog arnoch os ydych yn talu’n hwyr.
+            </p>
+        }
+
+        @if(params.contains("previousFY")) {
+            @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
+                <p>
+                    Bydd angen i chi gyflwyno Ffurflen Dreth ar gyfer blwyddyn ariannol @previousFY i @(previousFY + 1) cyn gynted â phosibl.
+                </p>
+                <p>
+                    Bydd y Ffurflen Dreth yn ymddangos fel hwyr oherwydd ei bod yn y flwyddyn ariannol flaenorol.
+                </p>
+            }
+        }
 
         <p>
             Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i gyflwyno datganiad.
@@ -66,7 +79,7 @@
             <li>manylion cyswllt y person yn eich sefydliad sy’n llenwi’r datganiad</li>
         </ul>
 
-        <p style="font-weight: bold;">Pam cawsoch yr e-bost hwn</p>
+        <h2 class="govuk-heading-l">Pam cawsoch yr e-bost hwn</h2>
 
         <p>
             Dyma’r cyfeiriad e-bost sydd wedi’i gofrestru er mwyn i ni allu cysylltu â chi ynghylch yr ECL.
