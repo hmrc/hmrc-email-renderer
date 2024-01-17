@@ -3398,8 +3398,8 @@ object TemplateParams3 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "sdes_alert" -> Map(
-      "newItemCount" -> "2",
-      "total"        -> "15"
+      "heading"   -> "You have unprocessed SDES items",
+      "paragraph" -> "There are 2 new envelopes and a total of 15 unprocessed SDES envelopes. You can view these under 'Sdes Submissions' in your EEITT dashboard."
     ),
     "seis_code" -> Map(
       "confirmationCode" -> "HGDY"
