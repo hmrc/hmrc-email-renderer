@@ -298,6 +298,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "cds_ddi_reminder_dcs_alert",
         "cds_ddi_setup_dcs_alert",
         "cds_ddi_unpaid_dcs_alert",
+        "cds_ddi_reinstated_dcs_alert",
         "cet_email_confirmation",
         cf_enquiry_confirmation,
         cf_enquiry_confirmation_cy,
