@@ -2,7 +2,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
-We were not able to collect your Direct Debit payment.
+We were unable to collect your Direct Debit payment.
 
 We have sent you a secure message. To read it:
 
