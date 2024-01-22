@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Your client’s CBC file passed our checks and is being reviewed
+File successfully sent for the CBC reporting service
 
 Dear @{params("contactName")}
 
