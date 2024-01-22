@@ -16,10 +16,10 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.tcs
 
-import org.scalatestplus.play.OneAppPerSuite
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
 
-class TcsTemplatesSpec extends TemplateComparisonSpec with OneAppPerSuite with CommonParamsForSpec {
+class TcsTemplatesSpec extends TemplateComparisonSpec with GuiceOneAppPerSuite with CommonParamsForSpec {
 
   def tcsTemplate(templateId: String) =
     messageTemplateF(templateId)(TcsTemplates.templates)

@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+
+Dear Customer
+
+Your deadline for submitting a report of any non-customs subsidy payments or no payments, has passed.
+
+You will not be able to claim further Customs Duty waivers until you have submitted a report, which must be done at least once every 90 days.
+
+These payments can include grants and loans from government and public authorities. You should check if these were provided as de minimis state aid.
+
+Submitting a report
+
+To submit a report of a payment or a non-payment, search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+
+After submitting a report it may take up to 24 hours before you can continue to claim any further Customs Duty waivers that you may be entitled to.
+
+From Borders & Trade team
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

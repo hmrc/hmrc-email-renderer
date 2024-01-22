@@ -17,10 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatest.{ Matchers, WordSpec }
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiPasswordChangedConfirmationEmailSpec extends WordSpec with Matchers {
+class ApiPasswordChangedConfirmationEmailSpec extends AnyWordSpec with Matchers {
 
   val developerHubTitle = "Developer Hub Title"
 

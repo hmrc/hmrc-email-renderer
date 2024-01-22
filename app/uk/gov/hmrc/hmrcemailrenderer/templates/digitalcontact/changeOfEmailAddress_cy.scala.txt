@@ -8,6 +8,6 @@ Nawr, mae’n rhaid i chi ddilysu’ch cyfeiriad e-bost newydd. Rydym wedi anfon
 
 Hyd nes eich bod yn dilysu’ch cyfeiriad e-bost newydd, bydd eich dogfennau cyfathrebu drwy ddull electronig yn cael eu hanfon yma.
 
-Oddi wrth Adran Ddigidol CThEM
+Oddi wrth Adran Ddigidol CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

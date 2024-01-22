@@ -29,6 +29,9 @@ import org.scalatest.matchers.should.Matchers
 class RendererControllerISpec
     extends AnyWordSpec with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite
     with ScalaFutures with ResponseMatchers with ServerProvider {
+
+  System.setProperty("auditing.enabled", "false")
+
   "POST /templates/:templateId" should {
     "return 200 and yield the rendered template data when supplied a valid templateId thats not defined in WelshTemplatesByLangPreference" in {
       val params = Map(

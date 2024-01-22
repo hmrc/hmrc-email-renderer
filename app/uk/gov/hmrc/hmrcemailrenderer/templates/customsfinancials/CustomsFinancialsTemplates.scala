@@ -105,6 +105,42 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.standingAuthoritiesStatement.f,
       htmlTemplate = html.standingAuthoritiesStatement.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_duty_deferment_not_found",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested duty deferment statements",
+      plainTemplate = txt.requestedDutyDefermentStatementsNotFound.f,
+      htmlTemplate = html.requestedDutyDefermentStatementsNotFound.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_c79_certificate_not_found",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested import VAT certificates (C79)",
+      plainTemplate = txt.requestedC79CertificateNotFound.f,
+      htmlTemplate = html.requestedC79CertificateNotFound.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_postponed_import_vat_statements_not_found",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested postponed import VAT statements",
+      plainTemplate = txt.requestedPostponedImportVATStatementsNotFound.f,
+      htmlTemplate = html.requestedPostponedImportVATStatementsNotFound.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_notification_adjustment_statements_not_found",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested notification of adjustment statements",
+      plainTemplate = txt.requestedNotificationAdjustmentStatementsNotFound.f,
+      htmlTemplate = html.requestedNotificationAdjustmentStatementsNotFound.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

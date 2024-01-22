@@ -14,54 +14,57 @@
  * limitations under the License.
  *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPenceGdsFormat
+
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Roedd eich taliad i CThEF yn aflwyddiannus ") {
 
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl gwsmer</p>
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl gwsmer</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does dim arian wedi’i dynnu o’ch cyfrif.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Nid yw’r taliad drwy ddefnyddio’ch cerdyn wedi’i gyflwyno i CThEF. Does dim arian wedi’i dynnu o’ch cyfrif.</p>
 
-<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
-    <tbody>
-    <tr>
-        <th>Treth</th>
-        <td>@params("taxType")</td>
-    </tr>
-    <tr>
-        <th>Dyddiad</th>
-        <td>@params("dateOfPayment")</td>
-    </tr>
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+        <tbody>
+            <tr>
+                <th>Treth</th>
+                <td>@params("taxType")</td>
+            </tr>
+            <tr>
+                <th>Dyddiad</th>
+                <td>@params("dateOfPayment")</td>
+            </tr>
 
-    <tr>
-        <th>Cyfeirnod y trafodyn</th>
-        <td>@params("transactionReference")</td>
-    </tr>
+            <tr>
+                <th>Cyfeirnod y trafodyn</th>
+                <td>@params("transactionReference")</td>
+            </tr>
 
-    <tr>
-        <th>Swm</th>
-        <td>@formatAmountInPence(params("amountInPence").toString)</td>
-    </tr>
+            <tr>
+                <th>Swm</th>
+                <td>@formatAmountInPenceGdsFormat(params("amountInPence").toString)</td>
+            </tr>
 
-    <tr>
-        <th>Ffi’r cerdyn</th>
-        <td>@formatAmountInPence(params("transactionFeeInPence").toString)</td>
-    </tr>
+            @{
+                if(params.contains("transactionFeeInPence")) {
+                        <tr>
+                        <th>Ffi’r cerdyn</th>
+                        <td>{formatAmountInPenceGdsFormat(params("transactionFeeInPence").toString)}</td>
+                        </tr>
 
-    <tr>
-        <th>Cyfanswm</th>
-        <td>@formatAmountInPence(params("totalAmountInPence").toString)</td>
-    </tr>
-    </tbody>
-</table>
+                        <tr>
+                        <th>Cyfanswm</th>
+                        <td>{formatAmountInPenceGdsFormat(params("totalAmountInPence").toString)}</td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
 
+    <h2 style="margin: 30px 0 30px; font-size: 19px;">Os oes dal angen i chi dalu</h2>
 
-<p style="margin: 30px 0 30px; font-size: 19px;"><h2>Os oes dal angen i chi dalu</h2></p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg ar 0300 200 1900. Ar agor rhwng 08:30 a 17:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc)</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Ffoniwch Wasanaeth Cwsmeriaid Cymraeg ar 0300 200 1900. Ar agor rhwng 08:30 a 17:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc)</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF</p>
 
 }

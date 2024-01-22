@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Mae gennych neges newydd oddi wrth CThEF
+
+Annwyl Gwsmer
+
+Mae gennych neges newydd oddi wrth CThEF.
+
+I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.
+
+Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
+
+Pam y cawsoch yr e-bost hwn
+
+Gwnaethoch ddewis cael hysbysiadau di-bapur.
+
+Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif.
+
+Oddi wrth adran Ddigidol CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

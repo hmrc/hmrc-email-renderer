@@ -2,13 +2,15 @@
 
 Dear Customer
 
-You have left an undertaking
+You have been removed from an undertaking
 
-This email confirms you have left undertaking EORI number @{params("eori")} with immediate effect.
+This email confirms that you, EORI number @{params("eori")}, have been removed from an undertaking.
 
-We have also informed the undertaking administrator of your decision.
+Reported payments for this business will remain in your undertaking, and will continue to affect your remaining sector allowance.
 
-If you wish to claim Customs Duty waivers in the future you will have to join another undertaking by being added to one, or create your own.
+These reported payments will be removed only when the business joins or creates another undertaking.
+
+If you think you have been removed by mistake, contact the undertaking administrator.
 
 If you need further information
 

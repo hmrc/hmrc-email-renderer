@@ -17,36 +17,37 @@
 package preview
 
 import com.google.inject.Inject
+
 import javax.inject.Singleton
-import play.api.mvc.{ Action, MessagesControllerComponents }
+import play.api.mvc.{ Action, AnyContent, MessagesControllerComponents }
 import play.twirl.api.Html
 import play.utils.UriEncoding
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
-import uk.gov.hmrc.play.bootstrap.controller.FrontendController
+import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendController
 
 @Singleton
 class PreviewController @Inject()(mcc: MessagesControllerComponents, preview: Preview) extends FrontendController(mcc) {
 
-  def previewHome = Action {
+  def previewHome: Action[AnyContent] = Action {
     Ok(views.html.previews(previewGroups))
   }
 
-  def previewHtml(templateId: String) = Action { implicit request =>
+  def previewHtml(templateId: String): Action[AnyContent] = Action { implicit request =>
     Ok(views.html.previewHtml(Html(preview.html(templateId, flattenParameterValues(request.queryString)))))
   }
 
-  def previewText(templateId: String) = Action { implicit request =>
+  def previewText(templateId: String): Action[AnyContent] = Action { implicit request =>
     Ok(views.txt.previewText(preview.plain(templateId, flattenParameterValues(request.queryString))))
   }
 
-  def previewSource(templateId: String) = Action { implicit request =>
+  def previewSource(templateId: String): Action[AnyContent] = Action { implicit request =>
     Ok(views.txt.previewText(preview.html(templateId, flattenParameterValues(request.queryString))))
   }
 
-  private lazy val previewGroups: Stream[PreviewGroup] =
-    TemplateLocator.templateGroups.toStream.map {
+  private lazy val previewGroups: LazyList[PreviewGroup] =
+    TemplateLocator.templateGroups.to(LazyList).map {
       case (identifier, templates) =>
         PreviewGroup.createPreviewGroup(identifier, templates)
     }
@@ -57,7 +58,7 @@ class PreviewController @Inject()(mcc: MessagesControllerComponents, preview: Pr
 
 final case class PreviewGroup private (name: String, items: Seq[PreviewListItem])
 object PreviewGroup {
-  def createPreviewGroup(title: String, templates: Seq[MessageTemplate]) =
+  def createPreviewGroup(title: String, templates: Seq[MessageTemplate]): PreviewGroup =
     PreviewGroup(
       title,
       templates.map { template =>
@@ -79,8 +80,9 @@ final case class PreviewListItem(
   priority: MessagePriority,
   params: Map[String, String]) {
   lazy val queryString: String =
-    if (params.isEmpty) ""
-    else {
+    if (params.isEmpty) {
+      ""
+    } else {
       val flattened = params.map(t => s"${t._1}=${UriEncoding.encodePathSegment(t._2, "UTF-8")}").mkString("&")
       s"?$flattened"
     }

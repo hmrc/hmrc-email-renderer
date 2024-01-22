@@ -16,13 +16,15 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.oss
 
-import org.scalatest.{ EitherValues, Matchers, OptionValues, WordSpecLike }
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
+import org.scalatest.{ EitherValues, OptionValues }
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.OSS
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 
 class OSSReturnsEmailConfirmationNoVatOwedSpec
-    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
   "OSS Returns Email Confirmation No VAT Owed" should {

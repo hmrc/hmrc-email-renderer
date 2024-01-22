@@ -1,0 +1,12 @@
+@(params: Map[String, Any])HMRC Duty Deferred: Direct Debit reinstated
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+Your Direct Debit has been reinstated.
+
+We have sent you a secure message. To read it:
+
+1. Go to GOV.UK.
+2. Search for ‘Set up a Direct Debit for a duty deferment account on the Customs Declaration Service’ and sign in.
+
+From HMRC Direct Debit team

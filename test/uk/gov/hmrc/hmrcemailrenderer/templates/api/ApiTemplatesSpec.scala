@@ -17,13 +17,15 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import org.scalatestplus.play.OneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
+import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 
-class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with OneAppPerSuite {
+class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues with GuiceOneAppPerSuite {
 
   "The API templates" should {
 
@@ -107,8 +109,9 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
 
       validateTemplate(
         templateId = "apiNewTermsOfUseInvitation",
-        expectedSubject = "Agree to our new terms of use",
-        expectedPriority = MessagePriority.Urgent)
+        expectedSubject = "ACTION NEEDED: Agree to HMRC's new Developer Hub terms of use",
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiNewTermsOfUseConfirmation",
@@ -168,6 +171,12 @@ class ApiTemplatesSpec extends WordSpecLike with Matchers with OptionValues with
 
       validateTemplate(
         templateId = "apiChangeOfApplicationDetails",
+        expectedSubject = "Changes made to application details",
+        expectedPriority = MessagePriority.Urgent
+      )
+
+      validateTemplate(
+        templateId = "apiChangeOfApplicationDetailsNoValue",
         expectedSubject = "Changes made to application details",
         expectedPriority = MessagePriority.Urgent
       )

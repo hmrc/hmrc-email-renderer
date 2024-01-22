@@ -14,62 +14,59 @@
  * limitations under the License.
  *@
 
-@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
-@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPence
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.AmountFormatter.formatAmountInPenceGdsFormat
+
 @(params: Map[String, Any])
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Payment confirmation") {
 
-<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
+    <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
 
+    <p style="margin: 0 0 30px; font-size: 19px;">Your payment has been received by HMRC.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your payment has been received by HMRC.</p>
+    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+        <tbody>
+            <tr>
+                <th>Tax</th>
+                <td>@params("taxType")</td>
+            </tr>
+            <tr>
+                <th>Payment reference</th>
+                <td>@params("transactionNumber")</td>
+            </tr>
 
+            <tr>
+                <th>Transaction reference</th>
+                <td>@params("transactionReference")</td>
+            </tr>
 
-<table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
-    <tbody>
-    <tr>
-        <th>Tax</th>
-        <td>@params("taxType")</td>
-    </tr>
-    <tr>
-        <th>Payment reference</th>
-        <td>@params("transactionNumber")</td>
-    </tr>
+            <tr>
+                <th>Amount</th>
+                <td>@formatAmountInPenceGdsFormat(params("amountInPence").toString)</td>
+            </tr>
 
-    <tr>
-        <th>Transaction reference</th>
-        <td>@params("transactionReference")</td>
-    </tr>
+            @{
+                if(params.contains("transactionFeeInPence")) {
+                        <tr>
+                        <th>Card fee</th>
+                        <td>{formatAmountInPenceGdsFormat(params("transactionFeeInPence").toString)}</td>
+                        </tr>
+                        <tr>
+                        <th>Total paid</th>
+                        <td>{formatAmountInPenceGdsFormat(params("totalAmountInPence").toString)}</td>
+                        </tr>
+                }
+            }
 
-    <tr>
-        <th>Amount</th>
-        <td>@formatAmountInPence(params("amountInPence").toString)</td>
-    </tr>
+        </tbody>
+    </table>
 
-    <tr>
-        <th>Card fee</th>
-        <td>@formatAmountInPence(params("transactionFeeInPence").toString)</td>
-    </tr>
+    <p style="margin: 30px 0 30px; font-size: 19px;">If you have an online tax account your payment will take 3 to 5 days to show in your account.</p>
 
-    <tr>
-        <th>Total paid</th>
-        <td>@formatAmountInPence(params("totalAmountInPence").toString)</td>
-    </tr>
+    <h2 style="margin: 0 0 30px; font-size: 19px;">Why you got this email</h2>
 
+    <p style="margin: 0 0 30px; font-size: 19px;">You chose to receive payment confirmation by email.</p>
 
-
-
-    </tbody>
-</table>
-
-
-<p style="margin: 30px 0 30px; font-size: 19px;">If you have an online tax account your payment will take 3 to 5 days to show in your account.</p>
-
-<p  style="margin: 0 0 30px; font-size: 19px;"><h2>Why you got this email</h2></p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">You chose to receive payment confirmation by email.</p>
-
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 
 }

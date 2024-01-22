@@ -8,7 +8,7 @@ Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd
 
 Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:
 
-- rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2023 i 2024)
+- rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2024 i 2025)
 - newidiodd eich swydd
 - newidiodd eich cyflog
 - newidiodd eich buddiannau cwmni, megis car cwmni
@@ -35,7 +35,7 @@ Rydych wedi dewis cael diweddariadau drwy e-bost yn hytrach na chael llythyrau d
 
 Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.
 
-Oddi wrth CThEM: Gwirio’ch Treth Incwm
+Oddi wrth CThEF: Gwirio’ch Treth Incwm
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

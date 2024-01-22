@@ -223,7 +223,7 @@ object ApiTemplates {
       templateId = "apiNewTermsOfUseInvitation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "Agree to our new terms of use",
+      subject = "ACTION NEEDED: Agree to HMRC's new Developer Hub terms of use",
       plainTemplate = txt.apiNewTermsOfUseInvitation.f,
       htmlTemplate = html.apiNewTermsOfUseInvitation.f,
       priority = Some(MessagePriority.Urgent)
@@ -325,6 +325,15 @@ object ApiTemplates {
       subject = "Changes made to application details",
       plainTemplate = txt.apiChangeOfApplicationDetails.f,
       htmlTemplate = html.apiChangeOfApplicationDetails.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiChangeOfApplicationDetailsNoValue",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Changes made to application details",
+      plainTemplate = txt.apiChangeOfApplicationDetailsNoValue.f,
+      htmlTemplate = html.apiChangeOfApplicationDetailsNoValue.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(

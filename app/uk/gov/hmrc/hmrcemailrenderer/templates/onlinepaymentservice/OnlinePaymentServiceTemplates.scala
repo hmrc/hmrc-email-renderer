@@ -368,7 +368,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "cds_ddi_amended_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Duty Deferred Direct Debit: confirmation of details",
+      subject = "HMRC Duty Deferred: Direct Debit amended",
       plainTemplate = txt.cds_ddi_amended_dcs_alert.f,
       htmlTemplate = html.cds_ddi_amended_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
@@ -386,7 +386,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "cds_ddi_reminder_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Duty Deferred Direct Debit: advance notice of payment",
+      subject = "HMRC Duty Deferred Direct Debit: reminder of payment collection",
       plainTemplate = txt.cds_ddi_reminder_dcs_alert.f,
       htmlTemplate = html.cds_ddi_reminder_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
@@ -404,9 +404,18 @@ object OnlinePaymentServiceTemplates {
       templateId = "cds_ddi_not_acceptable_dcs_alert",
       fromAddress = FromAddress.noReply("HMRC Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Duty Deferred Direct Debit: instruction cannot be used",
+      subject = "HMRC Duty Deferred: Direct Debit instruction cannot be used",
       plainTemplate = txt.cds_ddi_not_acceptable_dcs_alert.f,
       htmlTemplate = html.cds_ddi_not_acceptable_dcs_alert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "cds_ddi_reinstated_dcs_alert",
+      fromAddress = FromAddress.noReply("HMRC Direct Debit"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "HMRC Duty Deferred: Direct Debit reinstated",
+      plainTemplate = txt.cds_ddi_reinstated_dcs_alert.f,
+      htmlTemplate = html.cds_ddi_reinstated_dcs_alert.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(

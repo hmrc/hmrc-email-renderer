@@ -175,6 +175,15 @@ object AgentTemplates {
       plainTemplate = txt.agent_permissions_beta_participant_details.f,
       htmlTemplate = html.agent_permissions_beta_participant_details.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "suspended_contact_details",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Agent contact about account suspension",
+      plainTemplate = txt.suspended_contact_details.f,
+      htmlTemplate = html.suspended_contact_details.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

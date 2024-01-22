@@ -16,9 +16,11 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.agent
 
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
-class DateFormatterSpec extends WordSpecLike with Matchers with OptionValues {
+class DateFormatterSpec extends AnyWordSpecLike with Matchers with OptionValues {
 
   val formatter = DateFormatter
 

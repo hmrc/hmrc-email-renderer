@@ -1,0 +1,5 @@
+@(params: Map[String, Any])
+The application @{params("applicationname")} has been deleted from The API Hub, all application details have been permanently deleted.
+Any associated credentials will no longer work.
+This application cannot be restored.
+From HMRC The API Hub

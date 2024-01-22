@@ -1,29 +1,24 @@
 @(params: Map[String, Any])
-Your file has failed checks for the Mandatory Disclosure Rules (MDR) service
+File failed checks for the MDR service
 
 Dear @{params("contactName")}
 
-We received your file at @{params("dateAndTime")} with the following MessageRefId and it has failed the checks:
+Your file failed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}.
 
-@{params("messageRefId")}
+For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
 
-You can view the errors when you log back into the service.
+You can check the errors in the MDR service and upload an updated XML file.
 
-What happens next
-
-We will contact you if we have any questions about the file you uploaded.
-
-For security reasons, we have not included a link to this service in this email.
+For security reasons, we have not included a link to the MDR service in this email.
 
 If you need help
 
-You can email enquiries.aeoi@@hmrc.gov.uk for help.
+Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
 
-For more information, you can visit GOV.UK and search for ‘MDR’.
+For more information on MDR, you can visit GOV.UK and search for ‘Mandatory Disclosure Rules’.
 
-If you’re unsure an email is from the MDR service:
+From the HMRC MDR service
 
-    do not reply to it or click any links
-    report the suspicious email to HMRC — to find out how go to GOV.UK
-    and search for ‘Avoid and report internet scams and phishing’
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
 

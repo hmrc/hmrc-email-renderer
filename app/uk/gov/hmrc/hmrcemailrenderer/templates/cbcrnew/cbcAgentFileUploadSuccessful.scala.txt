@@ -1,3 +1,4 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
 
 File successfully sent for the CBC reporting service
@@ -21,5 +22,6 @@ We will contact you or your client if we have any questions about this report.
 
 
 From the HMRC CBC service
+
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

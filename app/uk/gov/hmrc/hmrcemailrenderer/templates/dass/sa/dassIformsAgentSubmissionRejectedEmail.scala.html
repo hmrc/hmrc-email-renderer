@@ -1,0 +1,37 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "The HMRC application for your client has been rejected") {
+
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear Agent</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;"> We have received an application to register your client @params("name") for Self Assessment. </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We could not process the application because your client’s personal details do not match our records.</p>
+
+    <h2 style="font-size: 24px;">What to do next</h2>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Check that you entered your client’s details correctly on the application.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you did, then your client should check and update their details on their personal tax account.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days.</p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Once your client’s personal details have been updated, you can resubmit the application. </p>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Digital</p>
+}

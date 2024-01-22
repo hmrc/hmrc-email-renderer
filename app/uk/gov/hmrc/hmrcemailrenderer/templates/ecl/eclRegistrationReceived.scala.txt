@@ -1,0 +1,46 @@
+@(params: Map[String, Any])
+Your Economic Crime Levy registration has been received
+
+Dear @params("name")
+
+We have received your answers as part of your registration for the Economic Crime Levy (ECL). Please save this email for your records.
+
+What happens next
+
+We will review your answers. We may contact you using the details you provided if we need any more information. This process will take up to 15 working days.
+
+You will receive a letter with your ECL reference number after we have matched your details to our records.
+
+You can then add the Economic Crime Levy to your business tax account.
+
+How to submit a return
+
+You will need to complete a return and pay the levy on a yearly basis.
+
+@if(params.contains("currentFY")) {
+The next deadline for submitting a return and making a payment is @params("dateDue"). You will be charged interest if you make a late payment.
+}
+
+@if(params.contains("previousFY")) { @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
+You need to submit a return for the @previousFY to @(previousFY + 1) financial year as soon as possible.
+The return will show as overdue because it's in the previous financial year.
+}}
+
+You will not receive an email or notification from HMRC to remind you to submit a return.
+
+When you complete your yearly return, you will need to tell us about:
+
+    - the relevant accounting periods for your organisation
+    - your UK revenue for the relevant accounting periods
+    - how long you carried out anti-money laundering (AML) regulated activities during the financial year
+    - the contact details of the person in your organisation who is completing the return
+
+Why you got this email
+
+This email address is registered as the email address we can use to contact you about the ECL.
+
+Do not respond to this email.
+
+From HMRC Economic Crime Levy team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

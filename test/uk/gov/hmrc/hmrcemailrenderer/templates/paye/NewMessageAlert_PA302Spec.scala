@@ -20,7 +20,6 @@ import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.PayAsYouEarn
-import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.{ html, txt }
 
 class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
 
@@ -66,14 +65,14 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       templateId = "newMessageAlert_PA302_cy",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = PayAsYouEarn,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
     )
 
     "include correct subject" in {
-      newMessageAlert.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEM"
+      newMessageAlert.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEF"
     }
 
     "include htmlTemplate body and footer" in {
@@ -85,17 +84,17 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
       htmlContent must include(
-        "Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEM sy’n rhad ac am ddim.")
+        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim.")
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.")
       htmlContent must include(
         "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.")
-      htmlContent must include("Oddi wrth adran TWE CThEM")
-      htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
-      htmlContent must include("Do not reply to it or click on any links")
+      htmlContent must include("Oddi wrth adran TWE CThEF")
+      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+      htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 
@@ -141,14 +140,14 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       templateId = "newMessageAlert_PA302_D2_cy",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = PayAsYouEarn,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
     )
 
     "include correct subject" in {
-      newMessageAlert.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEM"
+      newMessageAlert.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEF"
     }
 
     "include htmlTemplate body and footer" in {
@@ -160,17 +159,17 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
       htmlContent must include(
-        "Mewngofnodwch i CThEM ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEM sy’n rhad ac am ddim.")
+        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim.")
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.")
       htmlContent must include(
         "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.")
-      htmlContent must include("Oddi wrth adran TWE CThEM")
-      htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
-      htmlContent must include("Do not reply to it or click on any links")
+      htmlContent must include("Oddi wrth adran TWE CThEF")
+      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+      htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 

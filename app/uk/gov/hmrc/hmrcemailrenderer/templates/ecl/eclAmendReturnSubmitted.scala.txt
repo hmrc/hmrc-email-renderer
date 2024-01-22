@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+You amended a return for the Economic Crime Levy
+
+Dear @params("name")
+
+We have received your answers as part of your request to amend a return for the Economic Crime Levy (ECL). Please save this email for your records.
+
+ECL return amendment request date: @params("dateSubmitted")
+Financial year: @params("periodStartDate") to @params("periodEndDate")
+
+What happens next
+
+We will review your answers. We may contact you using the details you provided if we need any more information. This process will take 15 working days.
+
+We will send you a letter once we've amended your return. You will not be able to view these changes until after you've received this letter.
+
+You can find out how to pay the levy by going to GOV.UK and searching for ‘Economic Crime Levy’.
+
+Why you got this email
+
+This is the email address you provided when you submitted your return.
+
+Do not respond to this email.
+
+From HMRC Economic Crime Levy team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

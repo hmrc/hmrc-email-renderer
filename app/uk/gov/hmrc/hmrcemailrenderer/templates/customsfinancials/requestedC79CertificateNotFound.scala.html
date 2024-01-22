@@ -1,0 +1,47 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@title = @{"Requested import VAT certificates (C79)"}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title) {
+
+<p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
+</p>
+
+<div style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">
+
+    <p>We have sent you a message about the import VAT certificates (C79) you requested. To read it:</p>
+
+    <ol>
+        <li>Go to GOV.UK.</li>
+        <li>Search for ‘Check how to get your import VAT certificate (C79)’ and sign in.</li>
+        <li>Go to your messages.</li>
+    </ol>
+
+    <p>For security reasons, we have not included a link in this email.</p>
+
+    <h4>If you need help</h4>
+
+    <p>You can phone HMRC on 0300 322 9434. </br>
+    Lines are open 8am to 6pm, Monday to Friday (closed bank holidays).</p>
+
+    <p>From the Customs Declaration Service</p>
+
+</div>
+
+}
