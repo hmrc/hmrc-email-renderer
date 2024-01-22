@@ -1,46 +1,37 @@
 @*
- * Copyright 2023 HM Revenue & Customs
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *@
+* Copyright 2024 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your CBC file passed our automatic checks and is being reviewed") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for the CBC reporting service") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">The following file passed our automatic checks and was sent on @{params("dateSubmitted")}.</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">MessageRefId: @{params("messageRefId")}</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We will contact you if we have any questions about your report.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received your file, which passed the country-by-country reporting checks on @{params("dateSubmitted")}.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Print or save a copy of this email for your records.</p>
 
-<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 0px 0;">How to make another report </h2>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is: @{params("messageRefId")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0px 0;">To make a report:</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">The file contains new information for the reporting period.</p>
 
-<ul style="list-style-type:disc">
- <li style="font-size: 20px;">search for ‘CBC’ on GOV.UK</li>
- <li style="font-size: 20px;">sign into the service using your Government Gateway account</li>
-</ul>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 60px 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">What happens next</h2>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 60px 0;">We will contact you if we have any questions about your report.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you need more information, search ‘CBC’ on GOV.UK.</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From the CBC service</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 60px 0;">From the HMRC CBC service</p>
 }
