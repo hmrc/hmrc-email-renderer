@@ -138,6 +138,24 @@ object EUSubsidyTemplates {
       plainTemplate = txt.disabledUndertakingEmailToBE.f,
       htmlTemplate = html.disabledUndertakingEmailToBE.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "undertaking_admin_deadline_reminder",
+      fromAddress = govUkTeamAddress,
+      service = EUSubsidy,
+      subject = "You have received a message from HMRC",
+      plainTemplate = txt.undertakingAdminDeadlineReminder.f,
+      htmlTemplate = html.undertakingAdminDeadlineReminder.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "undertaking_admin_deadline_expired",
+      fromAddress = govUkTeamAddress,
+      service = EUSubsidy,
+      subject = "You have received a message from HMRC",
+      plainTemplate = txt.undertakingAdminDeadlineExpired.f,
+      htmlTemplate = html.undertakingAdminDeadlineExpired.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 

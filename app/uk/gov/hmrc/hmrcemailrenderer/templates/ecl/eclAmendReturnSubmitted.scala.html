@@ -1,0 +1,75 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You amended a return for the Economic Crime Levy") {
+
+
+    <div style="margin: 0 0 30px;
+        font-size: 19px;">
+        <p>Dear @params("name")</p>
+
+        <p>
+            We have received your answers as part of your request to amend a return for the Economic Crime Levy (ECL). Please save this email for your records.
+        </p>
+
+
+        <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
+            font-size: 19px;">
+            <tbody>
+
+                <tr>
+                    <th>ECL return amendment request date:</th>
+                    <td>@params("dateSubmitted")</td>
+                </tr>
+
+                <tr>
+                    <th>Financial year:</th>
+                    <td>@params("periodStartDate") to @params("periodEndDate")</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="font-weight: bold;">What happens next</p>
+
+        <p>
+            We will review your answers. We may contact you using the details you provided if we need any more information. This process will take 15 working days.
+        </p>
+
+        <p>
+            We will send you a letter once we've amended your return. You will not be able to view these changes until after you've received this letter.
+        </p>
+
+        <p>
+            You can find out how to pay the levy by going to GOV.UK and searching for ‘Economic Crime Levy’.
+        </p>
+
+        <p style="font-weight: bold;">Why you got this email</p>
+
+        <p>
+            This is the email address you provided when you submitted your return.
+        </p>
+
+        <p>
+            Do not respond to this email.
+        </p>
+
+        <p>
+            From HMRC Economic Crime Levy team
+        </p>
+    </div>
+}

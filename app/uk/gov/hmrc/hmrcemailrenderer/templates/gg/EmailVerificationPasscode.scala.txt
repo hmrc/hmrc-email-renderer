@@ -14,6 +14,6 @@ If this email account is not shared and you did not request this code, you need 
 
 Do not reply to this email.
 
-From the @params("team_name") team
+From the @params("team_name")
 
 

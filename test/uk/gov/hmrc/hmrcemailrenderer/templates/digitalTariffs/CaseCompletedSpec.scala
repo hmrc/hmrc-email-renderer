@@ -18,10 +18,12 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalTariffs
 
 import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class CaseCompletedSpec
-    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
   "case_completed" should {

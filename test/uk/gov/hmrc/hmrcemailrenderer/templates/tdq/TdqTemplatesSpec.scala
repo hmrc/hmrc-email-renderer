@@ -27,17 +27,13 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
 
   "TDQ / CMQ template tdq_fph_self_serve_nudge" should {
 
-    val baseParams = commonParameters + (
+    val baseParams = commonParameters ++ Map(
       "developerName"   -> "John Smith",
-      "fromDate"        -> "22 September 2019",
-      "toDate"          -> "22 October 2019",
       "month"           -> "October",
       "year"            -> "2019",
       "status"          -> "HEADERS_WITH_ERRORS",
       "applicationName" -> "MTD VAT Test Application",
-      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff",
-      "regimeLongForm"  -> "VAT (Making Tax Digital)",
-      "regimeShortForm" -> "VAT (MTD)",
+      "applicationId"   -> "c190e3a0-cf8e-402d-ae37-2ec4a54bffff"
     )
 
     "be the same for text and html content" in {
@@ -93,12 +89,12 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val email = renderedEmail(baseParams)
       email must include("Your application’s fraud prevention headers have errors.")
       email must include(
-        "In production, so far in October 2019, MTD VAT Test Application does not meet the fraud prevention specification.")
+        "In production, in October 2019, MTD VAT Test Application does not meet the fraud prevention specification.")
     }
 
     "include status contents for application with no requests" in {
       val email = renderedEmail(baseParams + ("status" -> NoRequests.name))
-      email must include("MTD VAT Test Application hasn’t sent any requests so far in October 2019.")
+      email must include("MTD VAT Test Application has not sent any requests in October 2019.")
     }
 
     "include action content for headers with errors" in {

@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+You amended a registration for the Economic Crime Levy
+
+Dear @params("name")
+
+We have received your answers as part of your request to amend your registration for the Economic Crime Levy (ECL). Please save this email for your records.
+
+ECL registration amendment request date: @params("dateSubmitted")
+
+What happens next
+
+We will review your answers. We may contact you using the details you provided if we need any more information. This process will take up to 15 working days.
+
+We will send you a letter once we've amended your registration details.
+
+Why you got this email
+
+This email address is registered as the email address we can use to contact you about the ECL.
+
+Do not respond to this email.
+
+From HMRC Economic Crime Levy team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

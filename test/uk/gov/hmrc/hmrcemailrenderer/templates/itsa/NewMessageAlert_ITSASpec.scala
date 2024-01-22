@@ -66,35 +66,35 @@ class NewMessageAlert_ITSASpec extends PlaySpec with CommonParamsForSpec {
       templateId = "newMessageAlert_P800_cy",
       fromAddress = "HMRC@tax.service.gov.uk",
       service = Itsa,
-      subject = "Mae gennych neges newydd oddi wrth CThEM",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.new_message_alert_itsa_cy.f,
       htmlTemplate = html.new_message_alert_itsa_cy.f,
       priority = Some(MessagePriority.Standard)
     )
 
     "include correct subject" in {
-      newMessageAlert.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEM"
+      newMessageAlert.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEF"
     }
 
     "include htmlTemplate body and footer" in {
       val htmlContent = newMessageAlert
         .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
         .toString
-      htmlContent must include("Mae gennych neges newydd oddi wrth CThEM")
+      htmlContent must include("Mae gennych neges newydd oddi wrth CThEF")
       htmlContent must include("Annwyl")
       htmlContent must include("Mrs John")
-      htmlContent must include("Mae gennych neges newydd oddi wrth CThEM.")
-      htmlContent must include("I’w gweld, mewngofnodwch i’ch cyfrif CThEM ar-lein.")
+      htmlContent must include("Mae gennych neges newydd oddi wrth CThEF.")
+      htmlContent must include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
       htmlContent must include(
         "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif.")
-      htmlContent must include("Oddi wrth adran Ddigidol CThEM")
-      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+      htmlContent must include("Oddi wrth adran Ddigidol CThEF")
+      htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 

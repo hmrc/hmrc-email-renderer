@@ -16,10 +16,8 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.controllers.model
 
-//import com.ning.http.util.Base64
 import java.util.Base64
 
-import org.apache.commons.codec.Charsets
 import play.api.libs.json._
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 
@@ -38,7 +36,7 @@ case class RenderResult(
   priority: Option[MessagePriority])
 
 object RenderResult {
-  private def base64Encoded(value: String) = Base64.getEncoder.encodeToString(value.getBytes(Charsets.UTF_8))
+  private def base64Encoded(value: String) = Base64.getEncoder.encodeToString(value.getBytes("UTF-8"))
 
   implicit val writes = Writes[RenderResult] { (toRender: RenderResult) =>
     Json.obj(

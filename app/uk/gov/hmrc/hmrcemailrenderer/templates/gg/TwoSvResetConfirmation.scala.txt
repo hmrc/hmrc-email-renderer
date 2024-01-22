@@ -1,9 +1,0 @@
-@(params: Map[String, Any])Your 2SV has been reset successfully
-
-Dear @params("full_name"),
-
-Your 2SV has been reset successfully.
-
-From HMRC Government Gateway
-
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

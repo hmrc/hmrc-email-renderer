@@ -1,13 +1,13 @@
-@(params: Map[String, Any])HMRC Duty Deferred Direct Debit: instruction cannot be used
+@(params: Map[String, Any])HMRC Duty Deferred: Direct Debit instruction cannot be used
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
-Your Direct Debit instruction was not set up successfully.
+Your bank has told us we cannot collect payments using this Direct Debit instruction.
 
 We have sent you a secure message. To read it:
 
 1. Go to GOV.UK.
-2. Search for 'Set up a Direct Debit for a duty deferment account on the Customs Declaration Service' and sign in.
+2. Search for ‘Set up a Direct Debit for a duty deferment account on the Customs Declaration Service’ and sign in.
 
-If you want to carry on using your duty deferment account or you have outstanding charges to pay, you will need to set up a new Direct Debit instruction.
+If you have outstanding charges to pay, you will need to pay them immediately. If you want to continue to use your duty deferment account, you will need to set up a new Direct Debit instruction.
 
-From HMRC Direct Debit Team
+From HMRC Direct Debit team

@@ -23,6 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
+import scala.annotation.nowarn
+
 /**
   * @author Yuriy Tumakha
   */
@@ -35,6 +37,7 @@ class RaldConnectionRemovedCySpec
     .find(_.templateId == rald_connection_removed_cy)
     .value
 
+  @nowarn("msg=discarded non-Unit value")
   private def verifyContent(content: String): Unit = {
     content should include("Rydym wedi derbyn eich cais")
     content should include("Annwyl David Jones")
@@ -43,7 +46,7 @@ class RaldConnectionRemovedCySpec
     content should include(
       "Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.")
     content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
-    content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM")
+    content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }
 
   rald_connection_removed_cy should {

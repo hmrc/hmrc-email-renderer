@@ -22,7 +22,10 @@
 @(params: Map[String, Any])
 @check_the_service = @{
       params.getOrElse("enrolmentKey", "") match {
-       case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now apply for an Advance Tariff Ruling.</p>
+       case "HMRC-ATAR-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now apply for an:<ul style="margin: 0 0 30px; font-size: 19px;">
+       <li style="margin: 0 0 30px; font-size: 19px;">Advance Tariff Ruling</li>
+       <li style="margin: 0 0 30px; font-size: 19px;">Advance Valuation Ruling</li>
+       </ul></p>
        case "HMRC-GVMS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now get a goods movement reference (GMR).</p>
        case "HMRC-CTC-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now submit union transit declarations through NCTS.</p>
        case "HMRC-SS-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now make entry summary declarations.</p>
@@ -31,6 +34,7 @@
        <li style="margin: 0 0 30px; font-size: 19px;">send documents for a customs check for declarations made in CHIEF</li>
        <li style="margin: 0 0 30px; font-size: 19px;">tell HMRC about an underpayment of Customs Duty or import VAT</li>
        </ul></p>
+       case "HMRC-ESC-ORG" => <p style="margin: 0 0 30px; font-size: 19px;">You can now report and manage your allowance for Customs Duty waiver claims.</p>
        case _ => <p style="margin: 0 0 30px; font-size: 19px;">You can now use the Customs Declaration Service.</p>
       }
 }

@@ -1,0 +1,18 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.model.questionAndAnswers
+@import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.model.RadioQuestion
+
+@(params: Map[String, Any]) "Digital Persona feedback results"
+
+Feedback Results
+
+  @for( (index, question, answer) <- questionAndAnswers(params)){
+     question @index: @question.label
+     answer: @{ question match {
+                case rq : RadioQuestion => rq.options(Integer.parseInt(answer))
+                case _ => answer
+              }
+            }
+  }
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+

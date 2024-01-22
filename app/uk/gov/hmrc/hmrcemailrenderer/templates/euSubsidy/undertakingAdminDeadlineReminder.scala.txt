@@ -1,0 +1,20 @@
+@(params: Map[String, Any])
+
+Dear Customer
+
+Your report on non-customs subsidy payments, or no payments, is due soon.
+
+You must submit your report within 14 days from the date of this email.
+
+This must be done at least once every 90 days. These payments are from government and public authorities.
+
+You will not be able to claim further Customs Duty waivers if you have not submitted a report within your current 90-day deadline.
+
+Submitting a report
+
+To submit a report of a payment or a non-payment, search GOV.UK for 'Report and manage your allowance for Customs Duty waiver claims'.
+
+From Borders & Trade team
+--
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

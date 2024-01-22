@@ -4,16 +4,18 @@
 
 Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.
 
-Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.
+Erbyn hyn, gallwch gael at eich Crynodeb Treth Blynyddol ar-lein. Mae’n dangos sut y gwnaeth y llywodraeth wario’ch Treth Incwm a’ch cyfraniadau Yswiriant Gwladol.
 
-Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.
+Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol
 
-Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.
+Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair ar gyfer Porth y Llywodraeth yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘bwrw golwg dros eich Crynodeb Treth Blynyddol’.
 
-Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.
+Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch ‘Hunanasesiad’ ac yna ‘rhagor o fanylion am eich Ffurflenni Treth a’ch taliadau Hunanasesiad’, ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.
+
+Mae crynodebau treth er gwybodaeth yn unig, felly nid oes angen cymryd unrhyw gamau pellach.
 
 Myrtle Lloyd
 
-Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEM
+Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

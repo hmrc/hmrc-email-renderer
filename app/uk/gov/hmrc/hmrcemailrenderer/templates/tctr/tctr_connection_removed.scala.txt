@@ -1,0 +1,15 @@
+@(params: Map[String, Any])We have received your request
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationFullName(params)
+
+Thank you for contacting us on @params("submissionDate") at @params("submissionTime"). This email is confirmation that you have asked us to remove your connection to a property.
+
+What happens next
+
+We will remove your details from our records. You should not receive any further letters from us about this property.
+
+Do not reply to this email.
+
+From Valuation Office Agency - Tenure Cost and Trade Records service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

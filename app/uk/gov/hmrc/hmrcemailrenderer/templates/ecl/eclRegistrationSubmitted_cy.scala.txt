@@ -1,0 +1,55 @@
+@(params: Map[String, Any])
+Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd
+
+Annwyl @params("name")
+
+Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd (ECL).
+
+Cyfeirnod ECL @params("eclRegistrationReference")
+Dyddiad cofrestru ar gyfer yr ECL @params("eclRegistrationDate")
+
+Yr hyn sy’n digwydd nesaf
+
+Bydd angen i chi lenwi datganiad a thalu’r ardoll yn flynyddol.
+
+Ni fyddwch yn cael e-bost na hysbysiad oddi wrth CThEF i’ch atgoffa i gyflwyno datganiad.
+
+@if(params.contains("currentFY")) {
+Y dyddiad cau nesaf ar gyfer cyflwyno datganiad a gwneud taliad yw @params("dateDue"). Codir llog arnoch os ydych yn talu’n hwyr.
+}
+
+@if(params.contains("previousFY")) { @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
+Bydd angen i chi gyflwyno Ffurflen Dreth ar gyfer blwyddyn ariannol @previousFY i @(previousFY + 1) cyn gynted â phosibl.
+Bydd y Ffurflen Dreth yn ymddangos fel hwyr oherwydd ei bod yn y flwyddyn ariannol flaenorol.
+}}
+
+Sut i gyflwyno datganiad
+
+Gallwch gyflwyno datganiad drwy’r adran ‘Datganiadau’ yn eich cyfrif ECL.
+
+Pan fyddwch yn llenwi’ch datganiad blynyddol, bydd angen i chi roi gwybod i ni am y canlynol:
+
+    - y cyfnod cyfrifyddu perthnasol ar gyfer eich sefydliad
+    - eich refeniw yn y DU ar gyfer y cyfnod cyfrifyddu perthnasol
+    - pa mor hir y gwnaethoch gynnal gweithgareddau a reoleiddir gan reoliadau gwrth-wyngalchu arian (AML) yn ystod y flwyddyn ariannol
+    - enw, rôl, a manylion cyswllt y person yn eich sefydliad sy’n llenwi’r datganiad
+
+Pam cawsoch yr e-bost hwn
+
+@if(params("isPrimaryContact").toString.toBoolean) {
+Dyma’r e-bost a roddwyd gennych pan wnaethoch gofrestru.
+}
+
+@if(params.contains("secondContactEmail") && params("isPrimaryContact").toString.toBoolean) {
+Rydym hefyd wedi anfon yr e-bost hwn i @params("secondContactEmail"), gan eich bod wedi’i enwi fel cyswllt pan wnaethoch gofrestru.
+}
+
+@if(!params("isPrimaryContact").toString.toBoolean) {
+Gwnaethom anfon yr e-bost hwn atoch oherwydd eich bod wedi cael eich nodi’n gyswllt pan wnaeth rhywun yn eich sefydliad gofrestru ar gyfer ECL.
+}
+
+Peidiwch ag ateb yr e-bost hwn.
+
+Oddi wrth dîm Ardoll Troseddau Economaidd CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

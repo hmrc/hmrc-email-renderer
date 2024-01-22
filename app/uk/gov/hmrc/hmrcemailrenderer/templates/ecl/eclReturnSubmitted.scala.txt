@@ -8,14 +8,21 @@ You have submitted a return for the Economic Crime Levy (ECL).
 ECL return number @params("chargeReference")
 ECL return submission date @params("dateSubmitted")
 Financial year @params("periodStartDate") to @params("periodEndDate")
+Amount you need to pay @params("amountDue")
 
-You must pay the levy for the @params("fyStartYear")/@params("fyEndYear") financial year by @params("datePaymentDue"). Your ECL return number can be used as a payment reference when you pay the levy.
+You must pay the levy by @params("datePaymentDue"). Your ECL return number must be used as a payment reference when you pay the levy.
+
+You will not receive an email or notification from HMRC to remind you to make a payment.
 
 You will be charged interest if you make a late payment.
 
+How to pay the levy
+
+To make a payment, sign in to your Economic Crime Levy account.
+
 Why you got this email
 
-This email address is registered as the email address we can use to contact you about the ECL.
+This is the email address you provided when you submitted your return.
 
 Do not respond to this email.
 
