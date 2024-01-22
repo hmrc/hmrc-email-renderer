@@ -2331,23 +2331,24 @@ object TemplateParams2 {
     ),
     "cbc_file_upload_successful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "dateSubmitted" -> "2:29pm on 27 January 2012",
       "messageRefId"  -> "XACBC0000123778"
     ),
     "cbc_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "dateSubmitted" -> "2:29pm on 27 January 2012",
       "messageRefId"  -> "XACBC0000123778"
     ),
     "cbc_agent_file_upload_successful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "dateSubmitted" -> "2:29pm on 27 January 2012",
       "messageRefId"  -> "XACBC0000123778",
-      "cbcId"         -> "XWCBC0000000058"
+      "cbcId"         -> "XWCBC0000000058",
+      "tradingName"   -> "Joes Boutique Ltd"
     ),
     "cbc_agent_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "dateSubmitted" -> "27 January 2012 at 2:29pm",
+      "dateSubmitted" -> "2:29pm on 27 January 2012",
       "messageRefId"  -> "XACBC0000123778",
       "cbcId"         -> "XWCBC0000000058"
     ),
