@@ -642,6 +642,9 @@ object TemplateParams {
         "received_at" -> "31 December 2017",
         "cbcrId"      -> "XGCBC0000000001"
       ),
+      "crs_fatca_registration_successful" -> Map(
+        "name"   -> "Joe Bloggs",
+      ),
       "agent_mapping_invitation_template_id" -> Map(
         "name"             -> "Mr Joe Bloggs",
         "verificationLink" -> exampleLinkWithRandomId

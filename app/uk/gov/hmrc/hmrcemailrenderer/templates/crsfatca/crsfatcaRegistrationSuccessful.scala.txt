@@ -1,0 +1,26 @@
+@(params: Map[String, Any])
+You have registered for CRS and FATCA reporting
+
+Dear @{params("name")}
+
+You have successfully registered for CRS and FATCA reporting.
+
+To find your CRS and FATCA user ID, sign in to the service. For security reasons, we have not included a link to this service in this email.
+
+Print or save a copy of this email for your records.
+
+How to make a report
+
+To make a report:
+
+    search for ‘CRS and FATCA’ on GOV.UK
+    sign into the service
+    add a financial institution
+
+You can email aeoi.enquiries@@hmrc.gov.uk for help.
+
+For more information, search GOV.UK for ‘CRS and FATCA’.
+
+From the HMRC CRS and FATCA service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
