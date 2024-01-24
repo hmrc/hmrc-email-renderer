@@ -19,7 +19,7 @@ case _ => List()
 @isEUJourney = @{params("TRAVELLINGFROM").toString().equalsIgnoreCase("EU Only")}
 
 @itemList = @{ allItems.map( item => {
-    val commodityDescription = (item \ "commodityDescription").as[String]toLowerCase
+    val commodityDescription = (item \ "commodityDescription").as[String].toLowerCase
     val volume = item \ "volume"
     val quantity = item \ "quantity"
     val weight = item \ "weight"

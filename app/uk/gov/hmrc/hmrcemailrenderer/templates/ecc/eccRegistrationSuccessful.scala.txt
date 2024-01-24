@@ -6,32 +6,64 @@
 
 @salutationFullName(params)
 
+@dynamicSubscriptionContent = @{
+ params.getOrElse("enrolmentKey", "")match{
+  case "HMRC-ATAR-ORG" =>
+                "- apply for an Advance Tariff Ruling" + "\n" +
+                "- apply for an Advance Valuation Ruling"
+  case "HMRC-GVMS-ORG" => "- get a goods movement reference (GMR)"
+  case "HMRC-CTC-ORG" => "- submit union transit declarations through NCTS"
+  case "HMRC-SS-ORG" => "- make entry summary declarations"
+  case "HMRC-CTS-ORG" =>
+               "- apply for repayment of import duty and VAT (CHIEF)" + "\n" +
+               "- send documents for a customs check for declarations made in CHIEF" + "\n" +
+               "- tell HMRC about an underpayment of Customs Duty or import VAT"
+  case "HMRC-ESC-ORG" => "- report and manage your allowance for Customs Duty waiver claims"
+  case _ =>  "- use the Customs Declaration Service"
+ }
+}
+
 You can now:
 @if(params.getOrElse("serviceName", "") == "Get an EORI"){
 - move goods to or from Great Britain
 - subscribe to customs services
 - use the Customs Declaration Service
-- get an EORI number starting with XI
 
-Use the Customs Declaration Service
 
-We have subscribed you to the Customs Declaration Service. This means you can do things like:
+Get your EORI number
 
-- submit import and export declarations using your customs declaration software
-- pay Customs Duty and import VAT
-- get your postponed import VAT statements
+For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
 
-For more information, search 'Customs Declaration Service' on GOV.UK.
+- Go to GOV.UK and search for, 'Get an EORI'.
+- Select the link that says, 'Get an EORI number'.
+- On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'
+- On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'
+- On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.
+- Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.
+
+About the Customs Declaration Service
+
+We have subscribed you to the Customs Declaration Service.
+For more information, search ‘Customs Declaration Service’ on GOV.UK.
 } else {
-- use this service
-- subscribe to other customs services using your EORI number
-- get an EORI number starting with XI
+@dynamicSubscriptionContent
+- move goods to or from Great Britain
+- subscribe to other customs services
+
+Get your EORI number
+
+For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
+
+- Go to GOV.UK and search for, 'Get an EORI'.
+- Select the link that says, 'Get an EORI number'.
+- On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'
+- On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'
+- On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.
+- Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.
+
+
+
 }
-If you move goods to or from Northern Ireland
-
-If you do not have an EU EORI number you will need to get an EORI number starting with XI.
-
-To get an EORI number starting with XI, search ‘get an EORI number’ on GOV.UK.
 
 From HMRC
 

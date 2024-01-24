@@ -32,6 +32,8 @@ class TemplatePrioritiesISpec
     extends AnyWordSpec with Matchers with OptionValues with WsScalaTestClient with GuiceOneServerPerSuite
     with ScalaFutures with ResponseMatchers with ServerProvider with TableDrivenPropertyChecks {
 
+  System.setProperty("auditing.enabled", "false")
+
   "Rendered templates" should {
 
     implicit lazy val wsc: WSClient = app.injector.instanceOf[WSClient]
@@ -207,9 +209,16 @@ class TemplatePrioritiesISpec
         "apiChangeOfApplicationDetails",
         Map(
           "applicationName" -> "Nexus 6",
+          "fieldName"       -> "application description",
+          "previousValue"   -> "old description of what the application is and does",
+          "newValue"        -> "new much better description of what the application is and does",
+          "requesterName"   -> "Bob Roberts"
+        )),
+      (
+        "apiChangeOfApplicationDetailsNoValue",
+        Map(
+          "applicationName" -> "Nexus 6",
           "fieldName"       -> "privacy policy URL",
-          "previousValue"   -> "https://example.com/old-privacy-policy",
-          "newValue"        -> "https://example.com/new-privacy-policy",
           "requesterName"   -> "Bob Roberts"
         )),
       (

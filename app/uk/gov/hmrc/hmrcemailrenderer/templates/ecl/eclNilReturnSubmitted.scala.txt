@@ -1,0 +1,22 @@
+@(params: Map[String, Any])
+You submitted a return for the Economic Crime Levy
+
+Dear @params("name")
+
+You have submitted a return for the Economic Crime Levy (ECL). You do not need to pay the levy for this financial year.
+
+ECL return submission date @params("dateSubmitted")
+Financial year @params("periodStartDate") to @params("periodEndDate")
+Amount you need to pay @params("amountDue")
+
+You can find information about your return in your ECL account.
+
+Why you got this email
+
+This is the email address you provided when you submitted your return.
+
+Do not respond to this email.
+
+From HMRC Economic Crime Levy team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

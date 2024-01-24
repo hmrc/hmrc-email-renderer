@@ -1,28 +1,21 @@
 @(params: Map[String, Any])
-Your file has passed checks for the Mandatory Disclosure Rules (MDR) service
+File successfully sent for the MDR service
 
 Dear @{params("contactName")}
 
-We received your file at @{params("dateAndTime")} with the following MessageRefId and it has passed the checks:
+We have received your file, which passed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}. Print or save a copy of this email for your records.
 
-@{params("messageRefId")}
+For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
+
+@{params("reportTypeMessage")}
+
+For security reasons, we have not included a link to the MDR service in this email.
 
 What happens next
 
-We will contact you if we have any questions about the file you uploaded.
+We will contact you if we have any questions about your report.
 
-Print or save a copy of this email for your records.
 
-For security reasons, we have not included a link to this service in this email.
+From the HMRC MDR service
 
-If you need help
-
-You can email enquiries.aeoi@@hmrc.gov.uk for help.
-
-For more information, you can visit GOV.UK and search for ‘MDR’.
-
-If you’re unsure an email is from the MDR service:
-
-    do not reply to it or click any links
-    report the suspicious email to HMRC — to find out how go to GOV.UK
-    and search for ‘Avoid and report internet scams and phishing’
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -18,7 +18,6 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.aeo
 
 import java.util.Base64
 import play.api.libs.json._
-import java.nio.charset.StandardCharsets
 import java.time.format.DateTimeFormatter
 import java.time.{ Instant, ZoneId, ZoneOffset }
 

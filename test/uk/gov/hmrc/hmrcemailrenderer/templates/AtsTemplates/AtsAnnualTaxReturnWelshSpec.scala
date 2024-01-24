@@ -20,10 +20,12 @@ import org.joda.time.LocalDate
 import org.scalatest.EitherValues
 import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class AtsAnnualTaxReturnWelshSpec
-    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
   "annual_tax_summaries_message_alert_cy" should {
@@ -37,7 +39,7 @@ class AtsAnnualTaxReturnWelshSpec
       val taxYearFrom = LocalDate.now().getYear - 2
       val taxYearTo = LocalDate.now().getYear - 1
       template.subject(Map.empty) shouldBe (s"Mae’ch Crynodeb Treth Blynyddol ar gyfer $taxYearFrom i $taxYearTo bellach yn barod")
-      template.fromAddress(Map.empty) shouldBe "CThEM – Eich Crynodeb Treth Blynyddol <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "CThEF – Eich Crynodeb Treth Blynyddol <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -48,19 +50,20 @@ class AtsAnnualTaxReturnWelshSpec
       htmlContent should include("Annwyl Mr Johnston")
       htmlContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       htmlContent should include(
-        "Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
+        "Erbyn hyn, gallwch gael at eich Crynodeb Treth Blynyddol ar-lein. Mae’n dangos sut y gwnaeth y llywodraeth wario’ch Treth Incwm a’ch cyfraniadau Yswiriant Gwladol.")
+      htmlContent should include("Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol")
       htmlContent should include(
-        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
+        "Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair ar gyfer Porth y Llywodraeth yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘bwrw golwg dros eich Crynodeb Treth Blynyddol’.")
       htmlContent should include(
-        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
+        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch ‘Hunanasesiad’ ac yna ‘rhagor o fanylion am eich Ffurflenni Treth a’ch taliadau Hunanasesiad’, ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
       htmlContent should include(
-        "Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.")
-      htmlContent should include("Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEM")
-      htmlContent should include("I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEM ar-lein.")
-      htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+        "Mae crynodebau treth er gwybodaeth yn unig, felly nid oes angen cymryd unrhyw gamau pellach.")
+      htmlContent should include("Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEF")
+      htmlContent should include("I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEF ar-lein.")
+      htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent should include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
 
     "render correct text content" in {
@@ -70,23 +73,24 @@ class AtsAnnualTaxReturnWelshSpec
       txtContent should include("Annwyl Mr Johnston")
       txtContent should include("Diolch am lenwi’ch Ffurflen Dreth Hunanasesiad.")
       txtContent should include(
-        "Mae’ch Crynodeb Treth Blynyddol ar-lein erbyn hyn. Mae’n dangos faint o dreth a chyfraniadau Yswiriant Gwladol a dalwyd gennych a sut mae’r llywodraeth yn eu gwario.")
+        "Erbyn hyn, gallwch gael at eich Crynodeb Treth Blynyddol ar-lein. Mae’n dangos sut y gwnaeth y llywodraeth wario’ch Treth Incwm a’ch cyfraniadau Yswiriant Gwladol.")
+      txtContent should include("Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol")
       txtContent should include(
-        "Gallwch ddod o hyd i’ch crynodeb drwy fewngofnodi i’ch cyfrif treth personol gan ddefnyddio’r Dynodydd Defnyddiwr (ID) Porth y Llywodraeth a’r Cyfrinair a ddefnyddioch i ymrestru ar gyfer Hunanasesiad ar-lein, dewis Hunanasesiad ac yna dewis ‘gweld sut y caiff eich treth ei gwario’.")
+        "Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair ar gyfer Porth y Llywodraeth yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘bwrw golwg dros eich Crynodeb Treth Blynyddol’.")
       txtContent should include(
-        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch Hunanasesiad ac yna ‘rhagor o fanylion ynghylch eich Ffurflen Dreth a’ch taliadau Hunanasesiad’ ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
+        "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch ‘Hunanasesiad’ ac yna ‘rhagor o fanylion am eich Ffurflenni Treth a’ch taliadau Hunanasesiad’, ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’.")
       txtContent should include(
-        "Mae crynodebau treth er gwybodaeth yn unig felly nid oes angen cymryd unrhyw gamau pellach.")
-      txtContent should include("Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEM")
+        "Mae crynodebau treth er gwybodaeth yn unig, felly nid oes angen cymryd unrhyw gamau pellach.")
+      txtContent should include("Cyfarwyddwr Cyffredinol Gwasanaethau i Gwsmeriaid CThEF")
 
       //TODO This text is commented becuase "To manage your paperless notifications - sign in to your HMRC online account." is missing in english version just on txt and not on HTML version
       // not sure which one is right. referer to DC-2251 for updates
 
-      //  txtContent should include("I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEM ar-lein.")
-      txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEM:")
+      //  txtContent should include("I reoli’ch hysbysiadau di-bapur - mewngofnodwch i’ch cyfrif CThEF ar-lein.")
+      txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       txtContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       txtContent should include(
-        "Rhowch wybod i CThEM am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
     }
   }
 

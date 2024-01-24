@@ -17,9 +17,8 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.seiss
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
-import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.{ govUkTeamAddress, noReply }
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ Eeitt, Seiss }
-import uk.gov.hmrc.hmrcemailrenderer.templates.eeitt.{ html, txt }
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.noReply
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Seiss
 
 object SeissTemplates {
 

@@ -2,14 +2,14 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh=true)
 
-Anfonodd CThEM e-bost hysbysu a neges ar-lein atoch ar 19 February 2019.
+Anfonodd CThEF e-bost hysbysu a neges ar-lein atoch ar 19 February 2019.
 
 Anfonom hon atoch yn rhy gynnar mewn camgymeriad, ac mae’n flin gennym am y camgymeriad.
 
-Rydym bellach wedi dileu’r neges anghywir o’ch cyfrif CThEM.
+Rydym bellach wedi dileu’r neges anghywir o’ch cyfrif CThEF.
 
 Byddwch yn cael e-bost hysbysu a neges newydd yn fuan ar ôl i’r flwyddyn dreth newydd ddechrau ar 6 Ebrill.
 
-Oddi wrth Adran Ddigidol CThEM
+Oddi wrth Adran Ddigidol CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

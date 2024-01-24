@@ -18,10 +18,12 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
 import org.scalatest.EitherValues
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
-import org.scalatest.{ Matchers, OptionValues, WordSpecLike }
+import org.scalatest.OptionValues
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class TaxEstimateMessageAlertWelshSpec
-    extends WordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
     with CommonParamsForSpec {
 
   "tax_estimate_message_alert_cy" should {
@@ -31,7 +33,7 @@ class TaxEstimateMessageAlertWelshSpec
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe ("Gwirio newid i’ch cod TWE ar-lein")
-      template.fromAddress(Map.empty) shouldBe "CThEM – Gwasanaeth Gwirio eich Treth Incwm <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "CThEF – Gwasanaeth Gwirio eich Treth Incwm <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -60,7 +62,7 @@ class TaxEstimateMessageAlertWelshSpec
       htmlContent should include(
         "Rydych wedi dewis cael diweddariadau drwy e-bost yn hytrach na chael llythyrau drwy’r post.")
       htmlContent should include("Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.")
-      htmlContent should include("Oddi wrth CThEM: Gwirio’ch Treth Incwm")
+      htmlContent should include("Oddi wrth CThEF: Gwirio’ch Treth Incwm")
     }
 
     "render correct text content" in {
@@ -88,7 +90,7 @@ class TaxEstimateMessageAlertWelshSpec
       txtContent should include(
         "Rydych wedi dewis cael diweddariadau drwy e-bost yn hytrach na chael llythyrau drwy’r post.")
       txtContent should include("Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.")
-      txtContent should include("Oddi wrth CThEM: Gwirio’ch Treth Incwm")
+      txtContent should include("Oddi wrth CThEF: Gwirio’ch Treth Incwm")
     }
   }
 

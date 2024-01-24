@@ -16,24 +16,17 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.connectors
 
-import com.google.inject.AbstractModule
-import net.codingwell.scalaguice.ScalaModule
-import org.mockito.ArgumentMatchers.{ any, anyString, eq => eqTo }
-import org.mockito.Mockito.when
+import org.mockito.ArgumentMatchers.{ any, eq => eqTo }
 import org.mockito.MockitoSugar
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import play.api.Application
-import play.api.inject.guice.GuiceApplicationBuilder
 import uk.gov.hmrc.crypto.{ ApplicationCrypto, PlainText }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.http.{ HeaderCarrier, HttpClient, HttpReads }
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
-import uk.gov.hmrc.http.HttpClient
 import org.scalatest.OptionValues
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.Future
-import play.api.test.Helpers.await
+import scala.concurrent.{ ExecutionContext, Future }
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
@@ -43,13 +36,22 @@ class PreferencesConnectorSpec
 
   "PreferencesConnector language by email" should {
     "return English if preference returns English" in new TestCase {
-      when(httpClient.GET[Language](eqTo(url), any(), any())(any(), any(), any()))
+      when(
+        httpClient.GET[Language](eqTo(url), any[Seq[(String, String)]], any[Seq[(String, String)]])(
+          any[HttpReads[Language]],
+          any[HeaderCarrier],
+          any[ExecutionContext]))
         .thenReturn(Future.successful(Language.English))
+
       // await(preferencesConnector.languageByEmail(email)) shouldBe (Language.English)
       preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.English)
     }
     "return Welsh if preference returns Welsh" in new TestCase {
-      when(httpClient.GET[Language](eqTo(url), any(), any())(any(), any(), any()))
+      when(
+        httpClient.GET[Language](eqTo(url), any[Seq[(String, String)]], any[Seq[(String, String)]])(
+          any[HttpReads[Language]],
+          any[HeaderCarrier],
+          any[ExecutionContext]))
         .thenReturn(Future.successful(Language.Welsh))
       //await(preferencesConnector.languageByEmail(email)) shouldBe (Language.Welsh)
       preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.Welsh)

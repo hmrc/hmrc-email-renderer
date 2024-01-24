@@ -27,7 +27,7 @@ object HippTemplates {
       templateId = "hipp_add_team_member_to_app_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You’ve been added to an application in The API Hub",
+      subject = "You have been added to an application in The API Hub",
       plainTemplate = txt.AddTeamMember.f,
       htmlTemplate = html.AddTeamMember.f,
       priority = Some(MessagePriority.Urgent)
@@ -36,9 +36,72 @@ object HippTemplates {
       templateId = "hipp_remove_team_member_from_app_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You've been removed from an application in The API Hub",
+      subject = "You have been removed from an application in The API Hub",
       plainTemplate = txt.RemoveTeamMember.f,
       htmlTemplate = html.RemoveTeamMember.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_application_created",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "You have created an application in The API Hub",
+      plainTemplate = txt.ApplicationCreated.f,
+      htmlTemplate = html.ApplicationCreated.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_application_deleted",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "You have deleted an application from The API Hub",
+      plainTemplate = txt.ApplicationDeleted.f,
+      htmlTemplate = html.ApplicationDeleted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_application_deleted_team",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "Application deleted from The API Hub",
+      plainTemplate = txt.ApplicationDeletedTeam.f,
+      htmlTemplate = html.ApplicationDeletedTeam.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_production_access_approved_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "Your production access request has been approved",
+      plainTemplate = txt.ProductionAccessRequestApproved.f,
+      htmlTemplate = html.ProductionAccessRequestApproved.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_production_access_rejected_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "Your production access request has been rejected",
+      plainTemplate = txt.ProductionAccessRequestRejected.f,
+      htmlTemplate = html.ProductionAccessRequestRejected.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_new_production_access_request_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "A new production access request has been submitted for your review",
+      plainTemplate = txt.NewProductionAccessRequest.f,
+      htmlTemplate = html.NewProductionAccessRequest.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_production_access_request_submitted_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "Your production access request was successfully submitted",
+      plainTemplate = txt.ProductionAccessRequestSubmitted.f,
+      htmlTemplate = html.ProductionAccessRequestSubmitted.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

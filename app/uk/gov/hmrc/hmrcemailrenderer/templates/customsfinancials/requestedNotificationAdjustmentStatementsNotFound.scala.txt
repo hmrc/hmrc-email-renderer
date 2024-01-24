@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Requested notification of adjustment statements
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+We have sent you a message about the notification of adjustment statements you requested. To read it:
+
+Go to GOV.UK.
+
+Search for ‘Get your import VAT and duty adjustment statements’ and sign in.
+
+Go to your messages.
+
+For security reasons, we have not included a link in this email.
+
+From the Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

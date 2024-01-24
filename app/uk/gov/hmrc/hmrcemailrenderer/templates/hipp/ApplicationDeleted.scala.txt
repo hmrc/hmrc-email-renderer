@@ -1,0 +1,4 @@
+@(params: Map[String, Any])
+You have deleted @{params("applicationname")} from The API Hub.
+This application has been removed from The API Hub.
+From HMRC The API Hub

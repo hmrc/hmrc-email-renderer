@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+
+Mae’ch cais i CThEF wedi’i wrthod
+
+Annwyl @params("name")
+
+Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.
+Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.
+
+Yr hyn i’w wneud nesaf
+
+Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.
+
+Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.
+
+Oddi wrth Adran Ddigidol CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

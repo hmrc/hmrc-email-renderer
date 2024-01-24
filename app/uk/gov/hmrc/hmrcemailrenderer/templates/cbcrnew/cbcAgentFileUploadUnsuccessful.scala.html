@@ -14,33 +14,25 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your client’s CBC file failed our checks") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File failed checks for the CBC reporting service") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">The following file failed our automatic checks on @{params("dateSubmitted")}.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have not accepted the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file failed the country-by-country reporting checks at @{params("dateSubmitted")}.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Client CBC ID: @{params("cbcId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is:<br>@{params("messageRefId")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">MessageRefId: @{params("messageRefId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check the errors in the CBC service and upload an updated XML file.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have not accepted the report.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
 
-<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 0px 0;">How to make a new report </h2>
+<h2 style="margin: 60px 0 30px; font-size: 24px;">If you need help</h2>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0px 0;">To make a new CBC report:</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Email aeoi.enquiries@@hmrc.gov.uk for help with this service.</p>
 
-<ul style="list-style-type:disc">
- <li style="font-size: 20px;">search for ‘CBC’ on GOV.UK</li>
- <li style="font-size: 20px;">sign into the service using your Government Gateway account</li>
-</ul>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information on CBC, you can visit GOV.UK and search for ‘country-by-country reporting’.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 60px 0 30px 0;">For security reasons, we have not included a link to the CBC service in this email.</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can email enquiries.aeoi@@hmrc.gov.uk if you have any questions.</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you need more information, search ‘CBC’ on GOV.UK.</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From the CBC service</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 60px 0 30px 0;">From the HMRC CBC service</p>
 }

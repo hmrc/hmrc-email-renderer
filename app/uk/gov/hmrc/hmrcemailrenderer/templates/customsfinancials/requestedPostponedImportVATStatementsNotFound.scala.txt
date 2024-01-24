@@ -1,0 +1,21 @@
+@(params: Map[String, Any])Requested postponed import VAT statements
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+We have sent you a message about the postponed import VAT statements you requested. To read it:
+
+Go to GOV.UK.
+
+Search for ‘Get your postponed import VAT statement’ and sign in.
+
+Go to your messages.
+
+For security reasons, we have not included a link in this email.
+
+If you need help
+
+You can phone HMRC on 0300 322 9434. Lines are open 8am to 6pm, Monday to Friday (closed bank holidays).
+
+From the Customs Declaration Service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

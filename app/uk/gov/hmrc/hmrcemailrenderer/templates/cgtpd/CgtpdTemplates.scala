@@ -72,7 +72,7 @@ object CgtpdTemplates {
       templateId = "cgtpd_submission_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Cgtpd,
-      subject = "Mae CThEM wedi cael eich Ffurflen Dreth",
+      subject = "Mae CThEF wedi cael eich Ffurflen Dreth",
       plainTemplate = txt.cgtpdSubmissionConfirmation_cy.f,
       htmlTemplate = html.cgtpdSubmissionConfirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
