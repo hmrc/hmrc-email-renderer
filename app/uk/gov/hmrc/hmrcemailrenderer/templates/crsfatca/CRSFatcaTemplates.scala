@@ -31,7 +31,7 @@ object CRSFatcaTemplates {
       plainTemplate = txt.crsfatcaRegistrationSuccessful.f,
       htmlTemplate = html.crsfatcaRegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
-    ),
+    )
   )
 
 }
