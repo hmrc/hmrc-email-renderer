@@ -13,9 +13,9 @@ How to make a report
 
 To make a report:
 
-    search for ‘CRS and FATCA’ on GOV.UK
-    sign into the service
-    add a financial institution
+    - search for ‘CRS and FATCA’ on GOV.UK
+    - sign in to the service
+    - add a financial institution
 
 You can email aeoi.enquiries@@hmrc.gov.uk for help.
 
