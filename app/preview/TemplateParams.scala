@@ -2265,7 +2265,8 @@ object TemplateParams2 {
     "cbc_file_upload_successful" -> Map(
       "contactName"   -> "Joe Bloggs",
       "dateSubmitted" -> "11:14am on 20 March 2023",
-      "messageRefId"  -> "XACBC0000123778"
+      "messageRefId"  -> "XACBC0000123778",
+      "reportType" -> "Corrections for an existing report"
     ),
     "cbc_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
@@ -2277,7 +2278,8 @@ object TemplateParams2 {
       "dateSubmitted"     -> "11:14am on 20 March 2023",
       "messageRefId"      -> "XACBC0000123778",
       "cbcId"             -> "XWCBC0000000058",
-      "clientTradingName" -> "ABC Ltd"
+      "clientTradingName" -> "ABC Ltd",
+      "reportType"         -> "Corrections for an existing report"
     ),
     "cbc_agent_file_upload_unsuccessful" -> Map(
       "contactName"       -> "Joe Bloggs",

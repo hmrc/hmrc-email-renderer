@@ -11,7 +11,7 @@ Print or save a copy of this email for your records.
 
 For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
 
-The file contains new information for the reporting period.
+The file contains @params("reportType").
 
 For security reasons, we have not included a link to this service in this email.
 
