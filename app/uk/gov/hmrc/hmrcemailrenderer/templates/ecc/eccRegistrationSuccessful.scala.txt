@@ -32,11 +32,11 @@ You can now:
 
 Get your EORI number
 
-For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
+For security reasons, we cannot send EORI numbers by email. You can get your EORI number by following these steps.
 
-- Go to GOV.UK and search for, 'Get an EORI'.
-- Click the link that says, 'Apply for EORI'.
-- On the Apply for EORI page, click the link that says, 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.
+- Go to GOV.UK and search for 'Get an EORI'.
+- Select the link that says 'Apply for EORI'.
+- On the Apply for EORI page, select the link that says 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.
 - Sign in using your Government Gateway user ID and password.
 
 About the Customs Declaration Service
@@ -50,11 +50,11 @@ For more information, search ‘Customs Declaration Service’ on GOV.UK.
 
 Get your EORI number
 
-For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:
+For security reasons, we cannot send EORI numbers by email. You can get your EORI number by following these steps.
 
-- Go to GOV.UK and search for, 'Get an EORI'.
-- Click the link that says, 'Get an EORI number'.
-- On the Get an EORI number page, click the link that says, 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.
+- Go to GOV.UK and search for 'Get an EORI'.
+- Select the link that says 'Get an EORI number'.
+- On the Get an EORI number page, select the link that says 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.
 - Sign in using your Government Gateway user ID and password.
 
 
