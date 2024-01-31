@@ -15,8 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have unprocessed SDES items"){
-
-<p style="margin: 0 0 30px; font-size: 19px;">There are @params("newItemCount") new envelopes and a total of @params("total") unprocessed SDES envelopes. You can view these under 'Sdes Submissions' in your EEITT dashboard.</p>
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have unprocessed SDES items", showHeading1 = false){
+<h1>@params("heading")</h1>
+<p style="margin: 0 0 30px; font-size: 19px;">@params("paragraph")</p>
 }
