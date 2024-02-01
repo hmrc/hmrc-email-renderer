@@ -29,6 +29,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.CBCRNewTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.crsfatca.CRSFatcaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.customs.CustomsTemplates
@@ -137,6 +138,7 @@ trait TemplateLocator {
       "LifetimeISA"           -> LisaTemplates.templates,
       "ITR"                   -> ItrTemplates.templates,
       "CBCR"                  -> CBCRTemplates.templates,
+      "CRSFATCA"              -> CRSFatcaTemplates.templates,
       "OnlinePaymentService"  -> OnlinePaymentServiceTemplates.templates,
       "EEITT"                 -> EeittTemplates.templates,
       "HTS"                   -> HtsTemplates.templates,

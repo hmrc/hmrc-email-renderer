@@ -642,6 +642,9 @@ object TemplateParams {
         "received_at" -> "31 December 2017",
         "cbcrId"      -> "XGCBC0000000001"
       ),
+      "crs_fatca_registration_successful" -> Map(
+        "name" -> "Joe Bloggs"
+      ),
       "agent_mapping_invitation_template_id" -> Map(
         "name"             -> "Mr Joe Bloggs",
         "verificationLink" -> exampleLinkWithRandomId
@@ -3400,8 +3403,8 @@ object TemplateParams3 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "sdes_alert" -> Map(
-      "newItemCount" -> "2",
-      "total"        -> "15"
+      "heading"   -> "You have unprocessed SDES items",
+      "paragraph" -> "There are 2 new envelopes and a total of 15 unprocessed SDES envelopes. You can view these under 'Sdes Submissions' in your EEITT dashboard."
     ),
     "seis_code" -> Map(
       "confirmationCode" -> "HGDY"
