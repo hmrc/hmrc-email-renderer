@@ -1,5 +1,5 @@
 @*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2024 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,67 +19,63 @@
 @(params: Map[String, Any])
 
 @dynamicSubscriptionContent = @{
- params.getOrElse("enrolmentKey", "") match {
-  case "HMRC-ATAR-ORG" =>
-                <li style="margin: 0 0 10px; font-size: 19px;">apply for an Advance Tariff Ruling</li>
-                <li style="margin: 0 0 10px; font-size: 19px;">apply for an Advance Valuation Ruling</li>
-  case "HMRC-GVMS-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">get a goods movement reference (GMR)</li>
-  case "HMRC-CTC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">submit union transit declarations through NCTS</li>
-  case "HMRC-SS-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">make entry summary declarations</li>
-  case "HMRC-CTS-ORG" =>
-                <li style="margin: 0 0 10px; font-size: 19px;">apply for repayment of import duty and VAT (CHIEF)</li>
-                <li style="margin: 0 0 10px; font-size: 19px;">send documents for a customs check for declarations made in CHIEF</li>
-                <li style="margin: 0 0 10px; font-size: 19px;">tell HMRC about an underpayment of Customs Duty or import VAT</li>
+    params.getOrElse("enrolmentKey", "") match {
+        case "HMRC-ATAR-ORG" =>
+            <li style="margin: 0 0 10px; font-size: 19px;">apply for an Advance Tariff Ruling</li>
+            <li style="margin: 0 0 10px; font-size: 19px;">apply for an Advance Valuation Ruling</li>
+        case "HMRC-GVMS-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">get a goods movement reference (GMR)</li>
+        case "HMRC-CTC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">submit union transit declarations through NCTS</li>
+        case "HMRC-SS-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">make entry summary declarations</li>
+        case "HMRC-CTS-ORG" =>
+            <li style="margin: 0 0 10px; font-size: 19px;">apply for repayment of import duty and VAT (CHIEF)</li>
+            <li style="margin: 0 0 10px; font-size: 19px;">send documents for a customs check for declarations made in CHIEF</li>
+            <li style="margin: 0 0 10px; font-size: 19px;">tell HMRC about an underpayment of Customs Duty or import VAT</li>
 
-  case "HMRC-ESC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">report and manage your allowance for Customs Duty waiver claims</li>
-  case _ => <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
- }
+        case "HMRC-ESC-ORG" => <li style="margin: 0 0 10px; font-size: 19px;">report and manage your allowance for Customs Duty waiver claims</li>
+        case _ => <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
+    }
 }
 
 @eoriOnly = {
 @if(params.getOrElse("serviceName", "") == "Get an EORI"){
-<ul style="margin: 0 0 10px; font-size: 19px;">
- <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
- <li style="margin: 0 0 10px; font-size: 19px;">subscribe to customs services</li>
- <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
-</ul>
+    <ul style="margin: 0 0 10px; font-size: 19px;">
+        <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">subscribe to customs services</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">use the Customs Declaration Service</li>
+    </ul>
 
-<h2 style="margin: 30px 0 30px; font-size: 19px;">Get your EORI number</h2>
+    <h2 style="margin: 30px 0 30px; font-size: 19px;">Get your EORI number</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we cannot send EORI numbers by email. You can get your EORI number by following these steps.</p>
 
-<ol style="margin: 0 0 10px; font-size: 19px;">
-        <li style="margin: 0 0 10px; font-size: 19px;">Go to GOV.UK and search for, 'Get an EORI'.</li>
-        <li style="margin: 0 0 10px; font-size: 19px;">Select the link that says, 'Get an EORI number'.</li>
-        <li style="margin: 0 0 10px; font-size: 19px;">On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'</li>
-        <li style="margin: 0 0 10px; font-size: 19px;">On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'</li>
-        <li style="margin: 0 0 10px; font-size: 19px;">On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.</li>
-        <li style="margin: 0 0 10px; font-size: 19px;">Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.</li>
-</ol>
+    <ol style="margin: 0 0 10px; font-size: 19px;">
+        <li style="margin: 0 0 10px; font-size: 19px;">Go to GOV.UK and search for 'Get an EORI'.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">Select the link that says 'Apply for EORI'.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">On the Apply for EORI page, select the link that says 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">Sign in using your Government Gateway user ID and password.</li>
+    </ol>
 
-<h2 style="margin: 30px 0 30px; font-size: 19px;">About the Customs Declaration Service</h2>
+    <h2 style="margin: 30px 0 30px; font-size: 19px;">About the Customs Declaration Service</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">We have subscribed you to the Customs Declaration Service.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">For more information, search ‘Customs Declaration Service’ on GOV.UK.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We have subscribed you to the Customs Declaration Service.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">For more information, search ‘Customs Declaration Service’ on GOV.UK.</p>
 } else {
-<ul style="margin: 0 0 10px; font-size: 19px;">
-  @dynamicSubscriptionContent
- <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
- <li style="margin: 0 0 10px; font-size: 19px;">subscribe to other customs services</li>
-</ul>
+    <ul style="margin: 0 0 10px; font-size: 19px;">
+        @dynamicSubscriptionContent
+        <li style="margin: 0 0 10px; font-size: 19px;">move goods to or from Great Britain</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">subscribe to other customs services</li>
+    </ul>
 
-<h2 style="margin: 30px 0 30px; font-size: 19px;">Get your EORI number</h2>
+    <h2 style="margin: 30px 0 30px; font-size: 19px;">Get your EORI number</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we cannot send EORI numbers by email. You can obtain your EORI number by following these steps:</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we cannot send EORI numbers by email. You can get your EORI number by following these steps.</p>
 
-<ol style="margin: 0 0 10px; font-size: 19px;">
-    <li style="margin: 0 0 10px; font-size: 19px;">Go to GOV.UK and search for, 'Get an EORI'.</li>
-    <li style="margin: 0 0 10px; font-size: 19px;">Select the link that says, 'Get an EORI number'.</li>
-    <li style="margin: 0 0 10px; font-size: 19px;">On the Get an EORI number page, select the link that says, 'This guide is also available in Welsh (Cymraeg.)'</li>
-    <li style="margin: 0 0 10px; font-size: 19px;">On the Cael rhif EORI page, select the link that reads, 'Gwneud cais am rif EORI'</li>
-    <li style="margin: 0 0 10px; font-size: 19px;">On the Gwneud cais am rif EORI page, select the link that says, 'wirio statws cais rydych eisoes wedi'i wneud'. You'll find this link near the end of the page.</li>
-    <li style="margin: 0 0 10px; font-size: 19px;">Toggle to Welsh using the Cymraeg button near the start of the page. Sign in using your Government Gateway user ID and password.</li>
-</ol>
+    <ol style="margin: 0 0 10px; font-size: 19px;">
+        <li style="margin: 0 0 10px; font-size: 19px;">Go to GOV.UK and search for 'Get an EORI'.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">Select the link that says 'Get an EORI number'.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">On the Get an EORI number page, select the link that says 'Check the status of an application you’ve already made'. You’ll find this link near the end of the page.</li>
+        <li style="margin: 0 0 10px; font-size: 19px;">Sign in using your Government Gateway user ID and password.</li>
+    </ol>
 
 }
 }
@@ -87,16 +83,16 @@
 
 @template_main(params, s"${applicationComplete(params, "Application Complete")}") {
 
-<p style="margin: 0 0 10px; font-size: 19px;">@salutationFullName(params)</p>
+    <p style="margin: 0 0 10px; font-size: 19px;">@salutationFullName(params)</p>
 
-<br />
+    <br />
 
-<p style="margin: 0 0 10px; font-size: 19px;">You can now:</p>
+    <p style="margin: 0 0 10px; font-size: 19px;">You can now:</p>
 
-@eoriOnly
+    @eoriOnly
 
-<br />
+    <br />
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">From HMRC</p>
 
 }
