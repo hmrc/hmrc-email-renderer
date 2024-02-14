@@ -29,12 +29,12 @@ class apiAddedDeveloperAsCollaboratorConfirmationSpec extends AnyWordSpec with M
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "applicationName"      -> applicationName,
-    "article"              -> article,
-    "role"                 -> role,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5"
+    "applicationName"           -> applicationName,
+    "article"                   -> article,
+    "role"                      -> role,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5"
   )
 
   "htmlView" should {

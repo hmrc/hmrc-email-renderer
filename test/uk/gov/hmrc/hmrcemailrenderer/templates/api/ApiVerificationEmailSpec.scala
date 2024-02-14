@@ -28,12 +28,12 @@ class ApiVerificationEmailSpec extends AnyWordSpecLike with OptionValues with Ma
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "recipientName_title"   -> "Mr",
-    "recipientName_surname" -> "Smith",
-    "verificationLink"      -> verificationLink,
-    "staticAssetUrlPrefix"  -> "http://uri",
-    "staticAssetVersion"    -> "v1",
-    "borderColour"          -> "#005EA5"
+    "recipientName_title"       -> "Mr",
+    "recipientName_surname"     -> "Smith",
+    "verificationLink"          -> verificationLink,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5"
   )
 
   "htmlView" should {

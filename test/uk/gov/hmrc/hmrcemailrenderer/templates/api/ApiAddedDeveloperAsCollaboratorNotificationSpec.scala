@@ -29,12 +29,12 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends AnyWordSpec with M
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "email"                -> email,
-    "applicationName"      -> applicationName,
-    "role"                 -> role,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5"
+    "email"                     -> email,
+    "applicationName"           -> applicationName,
+    "role"                      -> role,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5"
   )
 
   "htmlView" should {

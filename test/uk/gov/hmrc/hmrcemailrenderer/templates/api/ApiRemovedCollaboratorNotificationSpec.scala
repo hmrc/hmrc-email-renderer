@@ -28,11 +28,12 @@ class ApiRemovedCollaboratorNotificationSpec extends AnyWordSpec with Matchers {
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "email"                -> email,
-    "applicationName"      -> applicationName,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5")
+    "email"                     -> email,
+    "applicationName"           -> applicationName,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5"
+  )
 
   "htmlView" should {
     "render as" in new TestCase {
