@@ -26,7 +26,7 @@ trait RenderedEmailSpec extends AnyWordSpec with Matchers {
 
   def assertRenderedBorderMatchesGivenColour(expectedColour: String): Assertion = {
     val renderValues =
-      Map("staticAssetUrlPrefix" -> "http://uri", "staticAssetVersion" -> "v1", "borderColour" -> expectedColour)
+      Map("staticAssetUrlPrefix" -> "http://uri", "staticHmrcFrontendVersion" -> "v1", "borderColour" -> expectedColour)
 
     val result = helpers.html.template_main.render(renderValues, "Test", true, None, true, false, Html("<html></html>"))
 
