@@ -62,7 +62,7 @@ class TctrConnectionRemovedCySpec
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
-      htmlContent should include("Cyllid a Thollau EM")
+      htmlContent should include("Cyllid a Thollau EF")
       verifyContent(htmlContent)
     }
 

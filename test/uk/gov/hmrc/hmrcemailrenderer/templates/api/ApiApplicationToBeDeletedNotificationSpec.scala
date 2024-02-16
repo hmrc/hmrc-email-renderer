@@ -31,15 +31,15 @@ class ApiApplicationToBeDeletedNotificationSpec extends AnyWordSpecLike with Mat
   val daysToDeletion = "30 days"
 
   val templateParams = Map(
-    "userFirstName"        -> userFirstName,
-    "userLastName"         -> userLastName,
-    "applicationName"      -> applicationName,
-    "environmentName"      -> environmentName,
-    "timeSinceLastUse"     -> timeSinceLastUse,
-    "daysToDeletion"       -> daysToDeletion,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5"
+    "userFirstName"             -> userFirstName,
+    "userLastName"              -> userLastName,
+    "applicationName"           -> applicationName,
+    "environmentName"           -> environmentName,
+    "timeSinceLastUse"          -> timeSinceLastUse,
+    "daysToDeletion"            -> daysToDeletion,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5"
   )
 
   "htmlView" should {

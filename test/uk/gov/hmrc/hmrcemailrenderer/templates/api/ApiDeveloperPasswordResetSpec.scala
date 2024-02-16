@@ -27,10 +27,10 @@ class ApiDeveloperPasswordResetSpec extends AnyWordSpec with Matchers {
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "resetPasswordLink"    -> resetPasswordLink,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5")
+    "resetPasswordLink"         -> resetPasswordLink,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5")
 
   "htmlView" should {
     "render as" in new TestCase {

@@ -25,14 +25,14 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.apicatalogue
 class PlatformContactSpec extends AnyWordSpecLike with OptionValues with Matchers {
 
   val templateParams = Map(
-    "apiTitle"             -> "Corporation Tax",
-    "senderName"           -> "Joe Bloggs",
-    "senderEmail"          -> "joe.bloggs@example.com",
-    "contactReasons"       -> "Test contact reason one|Test contact reason two|Test contact reason three",
-    "specificQuestion"     -> "How many engineers does it to change a light bulb?",
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5"
+    "apiTitle"                  -> "Corporation Tax",
+    "senderName"                -> "Joe Bloggs",
+    "senderEmail"               -> "joe.bloggs@example.com",
+    "contactReasons"            -> "Test contact reason one|Test contact reason two|Test contact reason three",
+    "specificQuestion"          -> "How many engineers does it to change a light bulb?",
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5"
   )
 
   val paragraphWithInlineCss = "<p style=\"margin: 0 0 30px; font-size: 19px;\">"

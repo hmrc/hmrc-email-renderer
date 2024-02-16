@@ -28,10 +28,10 @@ class ApiRemovedCollaboratorConfirmationSpec extends AnyWordSpecLike with Matche
   val developerHubTitle = "Developer Hub Title"
 
   val templateParams = Map(
-    "applicationName"      -> applicationName,
-    "staticAssetUrlPrefix" -> "http://uri",
-    "staticAssetVersion"   -> "v1",
-    "borderColour"         -> "#005EA5")
+    "applicationName"           -> applicationName,
+    "staticAssetUrlPrefix"      -> "http://uri",
+    "staticHmrcFrontendVersion" -> "v1",
+    "borderColour"              -> "#005EA5")
 
   "htmlView" should {
     "render as" in new TestCase {
