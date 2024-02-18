@@ -7,4 +7,4 @@ Nid yw’ch taliad Debyd Uniongyrchol wedi’i gasglu. Rydym wedi anfon neges dd
 
 Make sure you pay your @regimeName(params) drwy ddull talu arall. Gallwch dalu naill ai drwy drosglwyddiad banc neu drwy gerdyn debyd neu gerdyn credyd corfforaethol.
 
-Oddi wrth dîm Debyd Uniongyrchol CThEM
+Oddi wrth dîm Debyd Uniongyrchol CThEF

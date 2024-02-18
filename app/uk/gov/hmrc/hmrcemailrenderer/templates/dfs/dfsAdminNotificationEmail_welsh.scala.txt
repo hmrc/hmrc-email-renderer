@@ -3,10 +3,10 @@
 Annwyl gydweithiwr,
 
 Mae cyflwyniadau wedi’u parcio yn y dangosfwrdd gweinyddu Budd-dal Plant sydd angen eu hadolygu.
-I fwrw golwg ar y cyflwyniadau, mewngofnodwch i’ch cyfrif gweinyddu Budd-dal Plant CThEM.
+I fwrw golwg ar y cyflwyniadau, mewngofnodwch i’ch cyfrif gweinyddu Budd-dal Plant CThEF.
 Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
 Adolygwch gyflwyniadau wedi’u parcio cyn pen 5 diwrnod o’r e-bost cyntaf. Cewch hysbysiad e-bost bob dydd mae cyflwyniad yn aros.
  
-Oddi wrth dîm gweinyddu Budd-dal Plant CThEM
+Oddi wrth dîm gweinyddu Budd-dal Plant CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

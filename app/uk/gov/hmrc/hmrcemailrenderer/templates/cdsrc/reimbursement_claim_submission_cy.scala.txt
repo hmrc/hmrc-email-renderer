@@ -15,7 +15,7 @@ Swm eich hawliad yw: £@params("claimAmount")
 
 Yr hyn sy’n digwydd nesaf
 
-Bydd CThEM yn adolygu’ch cais a byddwn yn gwneud pob ymdrech i anfon e-bost neu i ysgrifennu llythyr atoch am y canlyniad cyn pen 30 diwrnod gwaith unwaith y byddwn wedi cael dogfennau dilys i ategu’ch hawliad. Byddwn yn cysylltu â chi naill ai i:
+Bydd CThEF yn adolygu’ch cais a byddwn yn gwneud pob ymdrech i anfon e-bost neu i ysgrifennu llythyr atoch am y canlyniad cyn pen 30 diwrnod gwaith unwaith y byddwn wedi cael dogfennau dilys i ategu’ch hawliad. Byddwn yn cysylltu â chi naill ai i:
 
     - cadarnhau’ch hawliad a’ch trosglwyddiad banc
     - gofyn am fwy o wybodaeth
@@ -23,10 +23,10 @@ Bydd CThEM yn adolygu’ch cais a byddwn yn gwneud pob ymdrech i anfon e-bost ne
 
 Argraffwch neu cadwch gopi o’r e-bost hwn ar gyfer eich cofnodion.
 
-I gael help, gallwch ffonio Tîm Cymorth CDS CThEM ar 0300 322 9434. Ar agor o ddydd Llun i ddydd Gwener, 08:00 tan 22:00 (ar gau ar wyliau banc), dydd Sadwrn a dydd Sul, 08:00 tan 16:00.
+I gael help, gallwch ffonio Tîm Cymorth CDS CThEF ar 0300 322 9434. Ar agor o ddydd Llun i ddydd Gwener, 08:00 tan 22:00 (ar gau ar wyliau banc), dydd Sadwrn a dydd Sul, 08:00 tan 16:00.
 
 I gael rhagor o fanylion cyswllt, chwiliwch ar GOV.UK am ‘import and exports: general enquiries’.
 
-Oddi wrth Dîm Cymorth CDS CThEM
+Oddi wrth Dîm Cymorth CDS CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

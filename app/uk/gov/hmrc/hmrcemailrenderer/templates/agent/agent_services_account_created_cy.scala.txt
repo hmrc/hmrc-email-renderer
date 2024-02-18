@@ -2,7 +2,7 @@
 
 Annwyl @params("agencyName")
 
-Rydych wedi creu cyfrif gwasanaethau asiant CThEM ar gyfer @params("agencyName").
+Rydych wedi creu cyfrif gwasanaethau asiant CThEF ar gyfer @params("agencyName").
 
 Cyfeirnod eich cyfrif yw @params("arn")
 

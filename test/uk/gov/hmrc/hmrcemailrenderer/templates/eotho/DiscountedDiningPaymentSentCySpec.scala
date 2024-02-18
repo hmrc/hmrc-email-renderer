@@ -33,7 +33,7 @@ class DiscountedDiningPaymentSentCySpec
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names ++ Map("claimRefNo" -> "1234")
 
     "render correct subject and fromAddress" in {
-      template.subject(Map.empty) shouldBe ("Mae CThEM wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan")
+      template.subject(Map.empty) shouldBe ("Mae CThEF wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan")
       template.fromAddress(Map.empty) shouldBe "Cynllun Bwyta Allan i Helpu Allan <noreply@tax.service.gov.uk>"
     }
 

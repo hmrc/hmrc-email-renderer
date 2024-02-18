@@ -38,7 +38,7 @@ object EothoTemplates {
       templateId = "discounted_dining_payment_sent_cy",
       fromAddress = eothoFromAddressWelsh,
       service = EOTHO,
-      subject = "Mae CThEM wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan",
+      subject = "Mae CThEF wedi anfon taliad ar gyfer y Cynllun Bwyta Allan i Helpu Allan",
       plainTemplate = txt.discountedDiningPaymentSent_cy.f,
       htmlTemplate = html.discountedDiningPaymentSent_cy.f,
       priority = Some(MessagePriority.Urgent)

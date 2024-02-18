@@ -2,7 +2,7 @@
 
 Annwyl @{params("name")},
 
-Mae’ch cais am ad-daliad treth wedi dod i law Cyllid a Thollau EM (CThEM).
+Mae’ch cais am ad-daliad treth wedi dod i law Cyllid a Thollau EF (CThEF).
 
 Eich cyfeirnod yw @{params("submissionReference")}.
 
@@ -14,7 +14,7 @@ Fel arfer, byddwch yn cael ateb cyn pen 35 diwrnod.
  
 Yn gywir,
  
-Cyllid a Thollau EM
+Cyllid a Thollau EF
 
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

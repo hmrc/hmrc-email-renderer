@@ -52,9 +52,9 @@ object DigitalTariffTemplates {
     ),
     MessageTemplate.create(
       templateId = "digital_tariffs_application_submitted_cy",
-      fromAddress = FromAddress.noReply("Tîm Dosbarthu Tariffau CThEM"),
+      fromAddress = FromAddress.noReply("Tîm Dosbarthu Tariffau CThEF"),
       service = BTIApplicationService,
-      subject = "Mae’ch cais am Ddyfarniad Tariffau Uwch (ATaR) wedi dod i law CThEM",
+      subject = "Mae’ch cais am Ddyfarniad Tariffau Uwch (ATaR) wedi dod i law CThEF",
       plainTemplate = txt.applicationSubmitted_cy.f,
       htmlTemplate = html.applicationSubmitted_cy.f,
       priority = Some(MessagePriority.Background)

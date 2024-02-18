@@ -88,9 +88,9 @@ object AgentTemplates {
     ),
     MessageTemplate.create(
       templateId = "agent_services_account_created_cy",
-      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEM"),
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
       service = Agent,
-      subject = "Cyfrif gwasanaethau asiant CThEM wedi’i greu",
+      subject = "Cyfrif gwasanaethau asiant CThEF wedi’i greu",
       plainTemplate = txt.agent_services_account_created_cy.f,
       htmlTemplate = html.agent_services_account_created_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -126,7 +126,7 @@ object AgentTemplates {
       templateId = "agent_permissions_success_cy",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = "CThEM: grwpiau mynediad yn eich cyfrif gwasanaethau asiant",
+      subject = "CThEF: grwpiau mynediad yn eich cyfrif gwasanaethau asiant",
       plainTemplate = txt.agent_permissions_success_cy.f,
       htmlTemplate = html.agent_permissions_success_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -144,7 +144,7 @@ object AgentTemplates {
       templateId = "agent_permissions_some_failed_cy",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = "CThEM: grwpiau mynediad yn eich cyfrif gwasanaethau asiant",
+      subject = "CThEF: grwpiau mynediad yn eich cyfrif gwasanaethau asiant",
       plainTemplate = txt.agent_permissions_some_failed_cy.f,
       htmlTemplate = html.agent_permissions_some_failed_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -162,7 +162,7 @@ object AgentTemplates {
       templateId = "agent_permissions_all_failed_cy",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = "CThEM: grwpiau mynediad yn eich cyfrif gwasanaethau asiant",
+      subject = "CThEF: grwpiau mynediad yn eich cyfrif gwasanaethau asiant",
       plainTemplate = txt.agent_permissions_all_failed_cy.f,
       htmlTemplate = html.agent_permissions_all_failed_cy.f,
       priority = Some(MessagePriority.Standard)

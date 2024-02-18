@@ -14,6 +14,6 @@ Dylech aros nes i ni gadarnhau eich cofrestriad TAW cyn i chi gael meddalwedd i 
 
 Ni allwch gynnwys TAW ar eich anfonebau hyd nes eich bod yn cael eich rhif TAW. Fodd bynnag, gallwch godi’ch prisiau i roi cyfrif am y TAW y bydd angen i chi ei thalu i CThEF
 
-Oddi wrth Dîm TAW CThEM
+Oddi wrth Dîm TAW CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

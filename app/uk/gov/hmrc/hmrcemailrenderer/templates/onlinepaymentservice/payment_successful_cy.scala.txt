@@ -23,6 +23,6 @@ Pam y cawsoch yr e-bost hwn
 
 Gwnaethoch ddewis cael cadarnhad o daliad drwy e-bost.
 
-O Daliadau Ar-lein CThEM
+O Daliadau Ar-lein CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

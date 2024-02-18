@@ -11,7 +11,7 @@ Rydym wedi gwirio’ch hawliad a gallwn gadarnhau ein bod wrthi’n prosesu’ch
 
 Mae hyn yn golygu y gallwch nawr ddisgwyl eich taliad cyn pen 3 diwrnod gwaith i’r e-bost hwn.
 
-Mae ein llinellau ffôn yn brysur iawn ar hyn o bryd felly peidiwch â ffonio CThEM am eich taliad cyn i’r 3 diwrnod gwaith nesaf fynd heibio.  Am ragor o gyngor, gallwch ddefnyddio ein harweiniad ar GOV.UK, siarad â’ch asiant treth, os oes gennych un, neu ddefnyddio ein gwasanaeth sgwrs dros y we.
+Mae ein llinellau ffôn yn brysur iawn ar hyn o bryd felly peidiwch â ffonio CThEF am eich taliad cyn i’r 3 diwrnod gwaith nesaf fynd heibio.  Am ragor o gyngor, gallwch ddefnyddio ein harweiniad ar GOV.UK, siarad â’ch asiant treth, os oes gennych un, neu ddefnyddio ein gwasanaeth sgwrs dros y we.
 
 Rhowch wybod am eich grant os ydych yn hawlio Credyd Cynhwysol
 
@@ -19,7 +19,7 @@ Os ydych yn hawlio Credyd Cynhwysol, mae’n rhaid i chi fewngofnodi i’ch cyfr
 
 Gair ynghylch sgamiau
 
-@Html("Rydym yn ymwybodol bod nifer yr e-byst, galwadau a negeseuon testun sy’n sgamio wedi cynyddu. Os bydd rhywun yn cysylltu â chi, gan honni ei fod yn gweithio i CThEM a chan ddweud bod modd hawlio cymorth ariannol neu fod ad-daliad treth yn ddyledus, a’i fod yn gofyn i chi glicio ar gysylltiad, neu roi gwybodaeth megis eich enw neu fanylion eich cerdyn credyd neu’ch banc, peidiwch ag ymateb. Gallwch anfon e-byst amheus sy’n honni eu bod yn dod oddi wrth CThEM i gwasanaeth.cymraeg@hmrc.gov.uk neu phishing@hmrc.gov.uk, ac anfonwch negeseuon testun i 60599.")
+@Html("Rydym yn ymwybodol bod nifer yr e-byst, galwadau a negeseuon testun sy’n sgamio wedi cynyddu. Os bydd rhywun yn cysylltu â chi, gan honni ei fod yn gweithio i CThEF a chan ddweud bod modd hawlio cymorth ariannol neu fod ad-daliad treth yn ddyledus, a’i fod yn gofyn i chi glicio ar gysylltiad, neu roi gwybodaeth megis eich enw neu fanylion eich cerdyn credyd neu’ch banc, peidiwch ag ymateb. Gallwch anfon e-byst amheus sy’n honni eu bod yn dod oddi wrth CThEF i gwasanaeth.cymraeg@hmrc.gov.uk neu phishing@hmrc.gov.uk, ac anfonwch negeseuon testun i 60599.")
 
 Oddi wrth y tîm Cymhorthdal Incwm Hunangyflogaeth
 

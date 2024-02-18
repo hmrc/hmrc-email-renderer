@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Gwnaethoch gŵyn ynghylch CThEM
+Gwnaethoch gŵyn ynghylch CThEF
 
 Annwyl @{params("name")}
 

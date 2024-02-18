@@ -213,7 +213,7 @@ object EeittTemplates {
       templateId = "apd_registration_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae’ch cofrestriad ar gyfer Toll Teithwyr Awyr wedi dod i law CThEM",
+      subject = "Mae’ch cofrestriad ar gyfer Toll Teithwyr Awyr wedi dod i law CThEF",
       plainTemplate = txt.apdRegistrationConfirmation_cy.f,
       htmlTemplate = html.apdRegistrationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -385,7 +385,7 @@ object EeittTemplates {
       templateId = "c117_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c117ApplicationConfirmation_cy.f,
       htmlTemplate = html.c117ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -412,7 +412,7 @@ object EeittTemplates {
       templateId = "c118_section1_part1_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section1Part1ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section1Part1ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -430,7 +430,7 @@ object EeittTemplates {
       templateId = "c118_section1_part2_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section1Part2ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section1Part2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -448,7 +448,7 @@ object EeittTemplates {
       templateId = "c118_section1_part3_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section1Part3ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section1Part3ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -466,7 +466,7 @@ object EeittTemplates {
       templateId = "c118_section2_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section2ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -484,7 +484,7 @@ object EeittTemplates {
       templateId = "c118_section3_part1_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section3Part1ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section3Part1ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -502,7 +502,7 @@ object EeittTemplates {
       templateId = "c118_section3_part2_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section3Part2ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section3Part2ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -520,7 +520,7 @@ object EeittTemplates {
       templateId = "c118_section4_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section4ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section4ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -538,7 +538,7 @@ object EeittTemplates {
       templateId = "c118_section5_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section5ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section5ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -556,7 +556,7 @@ object EeittTemplates {
       templateId = "c118_section6_part1_application_confirmation_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
-      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEM",
+      subject = "Mae rhan o’ch cais AEO wedi dod i law CThEF",
       plainTemplate = txt.c118Section6Part1ApplicationConfirmation_cy.f,
       htmlTemplate = html.c118Section6Part1ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
