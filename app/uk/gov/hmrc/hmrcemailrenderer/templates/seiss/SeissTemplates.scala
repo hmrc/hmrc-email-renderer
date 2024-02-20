@@ -38,7 +38,7 @@ object SeissTemplates {
       templateId = "seiss_processing_grant_cy",
       fromAddress = seissFromAddressWelsh,
       service = Seiss,
-      subject = "Mae CThEM yn prosesu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
+      subject = "Mae CThEF yn prosesu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
       plainTemplate = txt.seissProcessingGrant_cy.f,
       htmlTemplate = html.seissProcessingGrant_cy.f,
       priority = Some(MessagePriority.Background)
@@ -56,7 +56,7 @@ object SeissTemplates {
       templateId = "seiss_payment_failed_cy",
       fromAddress = seissFromAddressWelsh,
       service = Seiss,
-      subject = "Mae angen mwy o fanylion ar CThEM i dalu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
+      subject = "Mae angen mwy o fanylion ar CThEF i dalu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
       plainTemplate = txt.seissPaymentFailure_cy.f,
       htmlTemplate = html.seissPaymentFailure_cy.f,
       priority = Some(MessagePriority.Background)

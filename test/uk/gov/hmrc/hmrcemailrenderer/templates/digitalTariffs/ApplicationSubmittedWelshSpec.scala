@@ -35,7 +35,7 @@ class ApplicationSubmittedWelshSpec
       .get
 
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe ("Mae’ch cais am Ddyfarniad Tariffau Uwch (ATaR) wedi dod i law CThEM")
+      template.subject(Map.empty) shouldBe ("Mae’ch cais am Ddyfarniad Tariffau Uwch (ATaR) wedi dod i law CThEF")
     }
 
     "render correct html content" in {

@@ -34,9 +34,9 @@ object OnlinePaymentServiceTemplates {
     ),
     MessageTemplate.create(
       templateId = "payment_successful_cy",
-      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Cadarnhad gan CThEM o daliad",
+      subject = "Cadarnhad gan CThEF o daliad",
       plainTemplate = txt.payment_successful_cy.f,
       htmlTemplate = html.payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -62,9 +62,9 @@ object OnlinePaymentServiceTemplates {
     ),
     MessageTemplate.create(
       templateId = "open_banking_payment_successful_cy",
-      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Rydych wedi anfon taliad i CThEM",
+      subject = "Rydych wedi anfon taliad i CThEF",
       plainTemplate = txt.open_banking_payment_successful_cy.f,
       htmlTemplate = html.open_banking_payment_successful_cy.f,
       priority = Some(MessagePriority.Urgent)
@@ -80,7 +80,7 @@ object OnlinePaymentServiceTemplates {
     ),
     MessageTemplate.create(
       templateId = "open_banking_payment_successful_fdp_cy",
-      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEM"),
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "Taliad CThEF wedi’i drefnu",
       plainTemplate = txt.open_banking_payment_successful_fdp_cy.f,

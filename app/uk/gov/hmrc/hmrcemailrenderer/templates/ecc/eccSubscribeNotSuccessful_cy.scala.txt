@@ -11,12 +11,12 @@ Mae eich cais ar gyfer y gwasanaeth @serviceName(params) @forOrgName("dros", par
 
 Os oes angen help arnoch
 
-Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEM ar 0300 200 1900, rhwng 08:00 a 16:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc).
+Ffoniwch Wasanaeth Cwsmeriaid Cymraeg CThEF ar 0300 200 1900, rhwng 08:00 a 16:00 o ddydd Llun i ddydd Gwener (ar gau ar wyliau banc).
 
 Gallwch hefyd ddod o hyd i ragor o wybodaeth am y pwnc hwn ar GOV.UK.
 
 Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
 
-Oddi wrth Dîm Cymorth Ymrestru CThEM
+Oddi wrth Dîm Cymorth Ymrestru CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

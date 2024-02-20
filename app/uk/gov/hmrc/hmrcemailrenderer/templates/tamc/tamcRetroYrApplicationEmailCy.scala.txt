@@ -6,12 +6,12 @@ Yr hyn sy'n digwydd nesaf
 
 Os yw'ch partner yn talu treth trwy TWE, byddwn yn anfon siec drwy'r post at eich partner, yn seiliedig ar eich cais. Am unrhyw flynyddoedd nad oeddech yn gymwys, mae'n bosibl eich bod heb dalu digon a bod arnoch dreth.
 
-Os yw eich partner yn llenwi Ffurflen Dreth Hunanasesiad, byddwn yn anfon siec drwy'r post neu'n didynnu'r swm o'i fil treth nesaf (mae hyn yn dibynnu ar y dewis y mae wedi'i gofrestru gyda CThEM).
+Os yw eich partner yn llenwi Ffurflen Dreth Hunanasesiad, byddwn yn anfon siec drwy'r post neu'n didynnu'r swm o'i fil treth nesaf (mae hyn yn dibynnu ar y dewis y mae wedi'i gofrestru gyda CThEF).
 
 Nid oes angen i chi gysylltu â ni.
 
 Gallwch roi gwybod i ni am unrhyw newidiadau i'ch amgylchiadau yn https://www.gov.uk/marriage-allowance-guide/if-your-circumstances-change.
 
-Gan Lwfans Priodasol CThEM
+Gan Lwfans Priodasol CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

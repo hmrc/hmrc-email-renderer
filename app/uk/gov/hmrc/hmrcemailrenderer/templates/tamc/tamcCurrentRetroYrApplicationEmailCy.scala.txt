@@ -16,12 +16,12 @@ Flynyddoedd treth cynharach
 
 Os yw eich partner yn talu treth trwy TWE, anfonwn siec ato drwy'r post ar gyfer bob blwyddyn dreth yr ydych yn gymwys ar ei chyfer.
 
-Os yw eich partner yn llenwi Ffurflen Dreth Hunanasesiad, byddwn yn anfon siec drwy'r post neu'n didynnu'r swm o'i fil treth nesaf (mae hyn yn dibynnu ar y dewis y mae wedi'i gofrestru gyda CThEM).
+Os yw eich partner yn llenwi Ffurflen Dreth Hunanasesiad, byddwn yn anfon siec drwy'r post neu'n didynnu'r swm o'i fil treth nesaf (mae hyn yn dibynnu ar y dewis y mae wedi'i gofrestru gyda CThEF).
 
 Nid oes angen i chi gysylltu â ni.
 
 Gallwch roi gwybod i ni am unrhyw newidiadau i'ch amgylchiadau yn https://www.gov.uk/marriage-allowance-guide/if-your-circumstances-change.
 
-Gan Lwfans Priodasol CThEM
+Gan Lwfans Priodasol CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
