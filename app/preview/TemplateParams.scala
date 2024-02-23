@@ -3602,13 +3602,23 @@ object TemplateParams3 {
       "name"            -> "John Doe",
       "dateSubmitted"   -> "1 September 2023",
       "periodStartDate" -> "1 April 2022",
-      "periodEndDate"   -> "31 March 2023"
+      "periodEndDate"   -> "31 March 2023",
+      "addressLine1"    -> "testLine1",
+      "addressLine2"    -> "testLine2",
+      "addressLine3"    -> "testLine3",
+      "addressLine4"    -> "testLine4",
+      "containsAddress" -> "true"
     ),
     "ecl_amend_return_submitted_cy" -> Map(
       "name"            -> "John Doe",
       "dateSubmitted"   -> "1 September 2023",
       "periodStartDate" -> "1 April 2022",
-      "periodEndDate"   -> "31 March 2023"
+      "periodEndDate"   -> "31 March 2023",
+      "addressLine1"    -> "testLine1",
+      "addressLine2"    -> "testLine2",
+      "addressLine3"    -> "testLine3",
+      "addressLine4"    -> "testLine4",
+      "containsAddress" -> "true"
     ),
     "ecl_amend_registration_submitted" -> Map(
       "name"          -> "John Doe",
