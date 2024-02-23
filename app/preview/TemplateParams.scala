@@ -3611,12 +3611,22 @@ object TemplateParams3 {
       "periodEndDate"   -> "31 March 2023"
     ),
     "ecl_amend_registration_submitted" -> Map(
-      "name"          -> "John Doe",
-      "dateSubmitted" -> "31 March 2023"
+      "name"            -> "John Doe",
+      "dateSubmitted"   -> "31 March 2023",
+      "addressLine1"    -> "testLine1",
+      "addressLine2"    -> "testLine2",
+      "addressLine3"    -> "testLine3",
+      "addressLine4"    -> "testLine4",
+      "containsAddress" -> "true"
     ),
     "ecl_amend_registration_submitted_cy" -> Map(
-      "name"          -> "John Doe",
-      "dateSubmitted" -> "31 March 2023"
+      "name"            -> "John Doe",
+      "dateSubmitted"   -> "31 March 2023",
+      "addressLine1"    -> "testLine1",
+      "addressLine2"    -> "testLine2",
+      "addressLine3"    -> "testLine3",
+      "addressLine4"    -> "testLine4",
+      "containsAddress" -> "true"
     ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"

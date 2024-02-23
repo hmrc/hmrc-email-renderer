@@ -13,6 +13,15 @@ We will review your answers. We may contact you using the details you provided i
 
 We will send you a letter once we've amended your registration details.
 
+@if(params.contains("containsAddress")) {
+We will send the letter to:
+
+@if(params.contains("addressLine1")){@params("addressLine1")}
+@if(params.contains("addressLine2")){@params("addressLine2")}
+@if(params.contains("addressLine3")){@params("addressLine3")}
+@if(params.contains("addressLine4")){@params("addressLine4")}
+}
+
 Why you got this email
 
 This email address is registered as the email address we can use to contact you about the ECL.

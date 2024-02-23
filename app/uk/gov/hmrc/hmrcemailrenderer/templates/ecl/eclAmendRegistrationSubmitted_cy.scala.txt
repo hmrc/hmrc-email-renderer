@@ -3,16 +3,24 @@ Cais am ddiwygiad i gofrestriad yr Ardoll Troseddau Economaidd
 
 Annwyl @params("name")
 
-Rydym wedi cael eich atebion fel rhan o’ch cofrestriad diwygiedig ar gyfer Ardoll Troseddau Economaidd (ECL). Cadwch yr e-bost hwn ar gyfer eich cofnodion.
+Rydym wedi cael eich atebion fel rhan o’ch cais i ddiwygio’ch cofrestriad ar gyfer yr Ardoll Troseddau Economaidd (ECL). Cadwch yr e-bost hwn ar gyfer eich cofnodion.
 
-Dyddiad diwygio’r cofrestriad ECL: @params("dateSubmitted")
+Dyddiad cais i ddiwygio’r cofrestriad ECL: @params("dateSubmitted")
 
 Yr hyn sy’n digwydd nesaf
 
-Byddwn yn adolygu’ch atebion. Os oes angen rhagor o wybodaeth arnom mae’n bosibl byddwn yn cysylltu â chi drwy ddefnyddio’r manylion yr ydych wedi eu rhoi. Bydd y broses hon yn cymryd 15 diwrnod gwaith.
+Byddwn yn adolygu’ch atebion. Os oes angen rhagor o wybodaeth arnom, mae’n bosibl y byddwn yn cysylltu â chi drwy ddefnyddio’r manylion yr ydych wedi eu rhoi. Bydd y broses hon yn cymryd hyd at 15 diwrnod gwaith.
 
-Byddwn yn anfon llythyr atoch ar ôl i ni ddiwygio’ch manylion cofrestru. Ni fyddwch yn gallu bwrw golwg dros y newidiadau hyn nes eich bod wedi cael y llythyr hwn.
+Byddwn yn anfon llythyr atoch ar ôl i ni ddiwygio’ch manylion cofrestru.
 
+@if(params.contains("containsAddress")) {
+Byddwn yn anfon llythyr at:
+
+@if(params.contains("addressLine1")){@params("addressLine1")}
+@if(params.contains("addressLine2")){@params("addressLine2")}
+@if(params.contains("addressLine3")){@params("addressLine3")}
+@if(params.contains("addressLine4")){@params("addressLine4")}
+}
 Pam cawsoch yr e-bost hwn
 
 Mae’r cyfeiriad e-bost hwn wedi’i gofrestru fel y cyfeiriad e-bost gallwn ei ddefnyddio i gysylltu â chi ynghylch ECL.
