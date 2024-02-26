@@ -47,6 +47,15 @@
             We will send you a letter once we've amended your registration details.
         </p>
 
+        @if(params.contains("containsAddress")) {
+            <p>We will send the letter to:</p>
+            <p> @if(params.contains("addressLine1")){@params("addressLine1") <br>}
+                @if(params.contains("addressLine2")){@params("addressLine2") <br>}
+                @if(params.contains("addressLine3")){@params("addressLine3") <br>}
+                @if(params.contains("addressLine4")){@params("addressLine4") <br>}
+            </p>
+        }
+
         <p style="font-weight: bold;">Why you got this email</p>
 
         <p>

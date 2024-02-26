@@ -131,7 +131,7 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
       compareContent("ecl_nil_return_submitted_cy", nilReturnSubmittedParams, isWelsh = true)(ecl)
     }
 
-    "include amend registration submitted content" in {
+    "include amend registration submitted content when no address is present" in {
       val amendRegistrationSubmittedParams = commonParameters ++ Map(
         "name"          -> "John Doe",
         "dateSubmitted" -> "1 September 2023"
@@ -140,10 +140,38 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
       compareContent("ecl_amend_registration_submitted", amendRegistrationSubmittedParams)(ecl)
     }
 
-    "include amend registration submitted content in Welsh" in {
+    "include amend registration submitted content when no address is present in Welsh" in {
       val amendRegistrationSubmittedParams = commonParameters ++ Map(
         "name"          -> "John Doe",
         "dateSubmitted" -> "1 September 2023"
+      )
+
+      compareContent("ecl_amend_registration_submitted_cy", amendRegistrationSubmittedParams, isWelsh = true)(ecl)
+    }
+
+    "include amend registration submitted content when an address is present" in {
+      val amendRegistrationSubmittedParams = commonParameters ++ Map(
+        "name"            -> "John Doe",
+        "dateSubmitted"   -> "1 September 2023",
+        "addressLine1"    -> "testLine1",
+        "addressLine2"    -> "testLine2",
+        "addressLine3"    -> "testLine3",
+        "addressLine4"    -> "testLine4",
+        "containsAddress" -> "true"
+      )
+
+      compareContent("ecl_amend_registration_submitted", amendRegistrationSubmittedParams)(ecl)
+    }
+
+    "include amend registration submitted content when an address is present in Welsh" in {
+      val amendRegistrationSubmittedParams = commonParameters ++ Map(
+        "name"            -> "John Doe",
+        "dateSubmitted"   -> "1 September 2023",
+        "addressLine1"    -> "testLine1",
+        "addressLine2"    -> "testLine2",
+        "addressLine3"    -> "testLine3",
+        "addressLine4"    -> "testLine4",
+        "containsAddress" -> "true"
       )
 
       compareContent("ecl_amend_registration_submitted_cy", amendRegistrationSubmittedParams, isWelsh = true)(ecl)
