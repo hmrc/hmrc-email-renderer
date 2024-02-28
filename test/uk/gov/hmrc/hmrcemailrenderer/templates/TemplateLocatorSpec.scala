@@ -469,6 +469,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ecl_registration_submitted_cy",
         "ecl_return_submitted",
         "ecl_return_submitted_cy",
+        "ecl_deregistration_requested",
+        "ecl_deregistration_requested_cy",
         "eeitt_ce930_confirmation",
         "eeitt_ce930_confirmation_cy",
         "eeitt_ho930_confirmation",

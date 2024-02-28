@@ -130,6 +130,24 @@ object EclTemplates {
       plainTemplate = txt.eclAmendRegistrationSubmitted_cy.f,
       htmlTemplate = html.eclAmendRegistrationSubmitted_cy.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_deregistration_requested",
+      fromAddress = FromAddress.noReply("Economic Crime Levy"),
+      service = EconomicCrimeLevy,
+      subject = "You have requested to deregister from the Economic Crime Levy",
+      plainTemplate = txt.eclDeregistrationRequested.f,
+      htmlTemplate = html.eclDeregistrationRequested.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "ecl_deregistration_requested_cy",
+      fromAddress = FromAddress.noReply("Ardoll Troseddau Economaidd"),
+      service = EconomicCrimeLevy,
+      subject = "Rydych wedi gwneud cais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd",
+      plainTemplate = txt.eclDeregistrationRequested_cy.f,
+      htmlTemplate = html.eclDeregistrationRequested_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

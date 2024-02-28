@@ -1,0 +1,78 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydych wedi gwneud cais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd", isWelsh = true) {
+
+    <div style="margin: 0 0 30px;
+        font-size: 19px;">
+        <p>Annwyl @params("name")</p>
+
+        <p>
+            Rydym wedi cael eich atebion fel rhan o’ch cais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd (ECL). Cadwch yr e-bost hwn ar gyfer eich cofnodion.
+        </p>
+
+
+        <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
+            font-size: 19px;">
+            <tbody>
+                <tr>
+                    <th>Cyfeirnod ECL:</th>
+                    <td>@params("eclReferenceNumber")</td>
+                </tr>
+
+                <tr>
+                    <th>Dyddiad y cais i ddadgofrestru rhag ECL:</th>
+                    <td>@params("dateSubmitted")</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h2>Yr hyn sy’n digwydd nesaf</h2>
+
+        <p>
+            Byddwn yn adolygu’ch atebion. Os oes angen rhagor o wybodaeth arnom, mae’n bosibl y byddwn yn cysylltu â chi drwy ddefnyddio’r manylion a roddwyd gennych. Bydd y broses hon yn cymryd hyd at 15 diwrnod gwaith.
+        </p>
+        <p>
+            Byddwn yn anfon llythyr atoch ar ôl i ni orffen y broses o’ch datgofrestru.
+        </p>
+
+        <p>Byddwn yn anfon llythyr at:</p>
+        <p> @params("addressLine1") <br>
+            @if(params.contains("addressLine2")){@params("addressLine2") <br>}
+            @if(params.contains("addressLine3")){@params("addressLine3") <br>}
+            @if(params.contains("addressLine4")){@params("addressLine4") <br>}
+        </p>
+
+        <p>Gallwch fewngofnodi i’ch cyfrif ECL o hyd i weld y datganiadau a gyflwynwyd gennych a’ch hanes talu.</p>
+
+        <h2>Pam cawsoch yr e-bost hwn</h2>
+
+        <p>
+            Dyma’r cyfeiriad e-bost a ddarparwyd gennych pan wnaethoch gais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd.
+        </p>
+
+        <p>
+            Peidiwch ag ymateb i’r e-bost hwn.
+        </p>
+
+        <p>
+            Oddi wrth y Tîm Ardoll Troseddau Economaidd
+        </p>
+    </div>
+}

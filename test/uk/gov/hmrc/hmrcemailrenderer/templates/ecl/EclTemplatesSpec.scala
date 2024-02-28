@@ -198,5 +198,34 @@ class EclTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec {
 
       compareContent("ecl_amend_return_submitted_cy", amendReturnSubmittedParams, isWelsh = true)(ecl)
     }
+
+    "include deregistration requested content" in {
+      val amendRegistrationSubmittedParams = commonParameters ++ Map(
+        "name"               -> "John Doe",
+        "dateSubmitted"      -> "28 February 2024",
+        "addressLine1"       -> "testLine1",
+        "addressLine2"       -> "testLine2",
+        "addressLine3"       -> "testLine3",
+        "addressLine4"       -> "testLine4",
+        "eclReferenceNumber" -> "XMECL0000000001"
+      )
+
+      compareContent("ecl_amend_registration_submitted", amendRegistrationSubmittedParams)(ecl)
+    }
+
+    "include deregistration requested content in Welsh" in {
+      val amendRegistrationSubmittedParams = commonParameters ++ Map(
+        "name"               -> "John Doe",
+        "dateSubmitted"      -> "28 February 2024",
+        "addressLine1"       -> "testLine1",
+        "addressLine2"       -> "testLine2",
+        "addressLine3"       -> "testLine3",
+        "addressLine4"       -> "testLine4",
+        "eclReferenceNumber" -> "XMECL0000000001"
+      )
+
+      compareContent("ecl_amend_registration_submitted_cy", amendRegistrationSubmittedParams, isWelsh = true)(ecl)
+    }
+
   }
 }
