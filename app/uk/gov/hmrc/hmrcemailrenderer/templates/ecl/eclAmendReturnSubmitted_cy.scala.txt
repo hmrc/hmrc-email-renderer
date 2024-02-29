@@ -10,9 +10,18 @@ Blwyddyn ariannol: @params("periodStartDate") i @params("periodEndDate")
 
 Yr hyn sy’n digwydd nesaf
 
-Byddwn yn adolygu’ch atebion. Os oes angen rhagor o wybodaeth arnom mae’n bosibl byddwn yn cysylltu â chi drwy ddefnyddio’r manylion yr ydych wedi eu rhoi. Bydd y broses hon yn cymryd 15 diwrnod gwaith.
+Byddwn yn adolygu’ch atebion. Os oes angen rhagor o wybodaeth arnom, mae’n bosibl y byddwn yn cysylltu â chi drwy ddefnyddio’r manylion a roddwyd gennych. Bydd y broses hon yn cymryd hyd at 15 diwrnod gwaith.
 
 Byddwn yn anfon llythyr atoch ar ôl i ni ddiwygio’ch datganiad. Ni fyddwch yn gallu bwrw golwg dros y newidiadau hyn nes eich bod wedi cael y llythyr hwn.
+
+@if(params.contains("containsAddress")) {
+Byddwn yn anfon llythyr at:
+
+@if(params.contains("addressLine1")){@params("addressLine1")}
+@if(params.contains("addressLine2")){@params("addressLine2")}
+@if(params.contains("addressLine3")){@params("addressLine3")}
+@if(params.contains("addressLine4")){@params("addressLine4")}
+}
 
 Gallwch dalu’r ardoll drwy fynd i’r arweiniad ar sut i dalu:
 https://www.gov.uk/guidance/pay-the-economic-crime-levy

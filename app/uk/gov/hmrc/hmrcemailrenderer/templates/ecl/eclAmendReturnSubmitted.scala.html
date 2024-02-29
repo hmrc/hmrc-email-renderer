@@ -44,21 +44,30 @@
             </tbody>
         </table>
 
-        <p style="font-weight: bold;">What happens next</p>
+        <h2>What happens next</h2>
 
         <p>
-            We will review your answers. We may contact you using the details you provided if we need any more information. This process will take 15 working days.
+            We will review your answers. We may contact you using the details you provided if we need any more information. This process will take up to 15 working days.
         </p>
 
         <p>
             We will send you a letter once we've amended your return. You will not be able to view these changes until after you've received this letter.
         </p>
 
+        @if(params.contains("containsAddress")) {
+            <p>We will send the letter to:</p>
+            <p> @if(params.contains("addressLine1")) {@params("addressLine1") <br>}
+                @if(params.contains("addressLine2")) {@params("addressLine2") <br>}
+                @if(params.contains("addressLine3")) {@params("addressLine3") <br>}
+                @if(params.contains("addressLine4")) {@params("addressLine4") <br>}
+            </p>
+        }
+
         <p>
             You can find out how to pay the levy by going to GOV.UK and searching for ‘Economic Crime Levy’.
         </p>
 
-        <p style="font-weight: bold;">Why you got this email</p>
+        <h2>Why you got this email</h2>
 
         <p>
             This is the email address you provided when you submitted your return.
