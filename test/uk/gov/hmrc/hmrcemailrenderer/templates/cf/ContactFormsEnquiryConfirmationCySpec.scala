@@ -23,8 +23,6 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation_cy, contactFormsGroup }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-import scala.annotation.nowarn
-
 /**
   * @author Yuriy Tumakha
   */
@@ -37,7 +35,6 @@ class ContactFormsEnquiryConfirmationCySpec
     .find(_.templateId == cf_enquiry_confirmation_cy)
     .value
 
-  @nowarn("msg=discarded non-Unit value")
   private def verifyContent(content: String): Unit = {
     content should include("Rydym wedi derbyn eich ymholiad")
     content should include("Annwyl David Jones")

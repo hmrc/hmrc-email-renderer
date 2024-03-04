@@ -23,8 +23,6 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.{ tctrGroup, tctr_vacant_submission_confirmation }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-import scala.annotation.nowarn
-
 /**
   * @author Yuriy Tumakha
   */
@@ -37,7 +35,6 @@ class TctrVacantSubmissionConfirmationSpec
     .find(_.templateId == tctr_vacant_submission_confirmation)
     .value
 
-  @nowarn("msg=discarded non-Unit value")
   private def verifyContent(content: String): Unit = {
     content should include("We have received your vacant property declaration")
     content should include("Dear David Jones")
