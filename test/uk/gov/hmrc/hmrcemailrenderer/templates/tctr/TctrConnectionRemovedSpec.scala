@@ -23,8 +23,6 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.{ tctrGroup, tctr_connection_removed }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-import scala.annotation.nowarn
-
 /**
   * @author Yuriy Tumakha
   */
@@ -37,7 +35,6 @@ class TctrConnectionRemovedSpec
     .find(_.templateId == tctr_connection_removed)
     .value
 
-  @nowarn("msg=discarded non-Unit value")
   private def verifyContent(content: String): Unit = {
     content should include("We have received your request")
     content should include("Dear David Jones")

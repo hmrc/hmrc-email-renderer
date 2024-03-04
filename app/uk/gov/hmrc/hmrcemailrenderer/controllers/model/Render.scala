@@ -24,7 +24,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessagePriority.MessagePriority
 case class RenderRequest(parameters: Map[String, String], email: Option[String])
 
 object RenderRequest {
-  implicit val reads = Json.reads[RenderRequest]
+  implicit val reads: Reads[RenderRequest] = Json.reads[RenderRequest]
 }
 
 case class RenderResult(
@@ -38,7 +38,7 @@ case class RenderResult(
 object RenderResult {
   private def base64Encoded(value: String) = Base64.getEncoder.encodeToString(value.getBytes("UTF-8"))
 
-  implicit val writes = Writes[RenderResult] { (toRender: RenderResult) =>
+  implicit val writes: Writes[RenderResult] = Writes[RenderResult] { (toRender: RenderResult) =>
     Json.obj(
       "plain"       -> base64Encoded(toRender.plain),
       "html"        -> base64Encoded(toRender.html),

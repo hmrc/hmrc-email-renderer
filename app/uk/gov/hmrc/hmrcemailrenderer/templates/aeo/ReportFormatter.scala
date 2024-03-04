@@ -30,7 +30,7 @@ object ReportFormatter {
     dateTime: Instant
   )
 
-  implicit val rowReads = Json.reads[Row]
+  implicit val rowReads: Reads[Row] = Json.reads[Row]
 
   def timeFormat(dateTime: Instant): String =
     DateTimeFormatter.RFC_1123_DATE_TIME
