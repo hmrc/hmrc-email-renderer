@@ -29,13 +29,13 @@ case object Language extends Enum[Language] {
 
   case object Welsh extends Language("cy")
 
-  implicit val languageReads = Reads[Language] { js =>
+  implicit val languageReads: Reads[Language] = Reads[Language] { js =>
     js match {
       case JsString(value) => JsSuccess(Language.withNameInsensitiveOption(value).getOrElse(Language.English))
       case _               => JsSuccess(Language.English)
     }
   }
-  implicit val languageWrites = new Writes[Language] {
+  implicit val languageWrites: Writes[Language] = new Writes[Language] {
     override def writes(e: Language): JsValue = JsString(e.entryName)
   }
 }

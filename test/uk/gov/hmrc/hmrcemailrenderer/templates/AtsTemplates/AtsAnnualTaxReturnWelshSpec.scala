@@ -16,13 +16,14 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.AtsTemplates
 
-import org.joda.time.LocalDate
 import org.scalatest.EitherValues
 import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 import org.scalatest.OptionValues
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
+
+import java.time.LocalDate
 
 class AtsAnnualTaxReturnWelshSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader

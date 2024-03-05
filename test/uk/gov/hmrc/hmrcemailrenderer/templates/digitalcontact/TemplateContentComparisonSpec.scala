@@ -16,11 +16,12 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
-import org.joda.time.LocalDate
-import org.joda.time.format.DateTimeFormat
 import org.scalatestplus.play.PlaySpec
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec }
+
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class TemplateContentComparisonSpec
     extends PlaySpec with TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
@@ -83,7 +84,7 @@ class TemplateContentComparisonSpec
       val params = Map(
         "verificationLink"         -> "/some/link",
         "daysAgo"                  -> "3",
-        "verificationLinkSentDate" -> DateTimeFormat.forPattern("YYYY-MM-dd").print(new LocalDate())
+        "verificationLinkSentDate" -> DateTimeFormatter.ofPattern("YYYY-MM-dd").format(LocalDate.now())
       ) ++ commonParamsWithName
 
       compareContent("verificationReminder", params)(digitalContactTemplate)
