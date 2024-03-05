@@ -3638,6 +3638,24 @@ object TemplateParams3 {
       "addressLine4"    -> "testLine4",
       "containsAddress" -> "true"
     ),
+    "ecl_deregistration_requested" -> Map(
+      "name"               -> "John Doe",
+      "dateSubmitted"      -> "28 February 2024",
+      "addressLine1"       -> "testLine1",
+      "addressLine2"       -> "testLine2",
+      "addressLine3"       -> "testLine3",
+      "addressLine4"       -> "testLine4",
+      "eclReferenceNumber" -> "XMECL0000000001"
+    ),
+    "ecl_deregistration_requested_cy" -> Map(
+      "name"               -> "John Doe",
+      "dateSubmitted"      -> "28 February 2024",
+      "addressLine1"       -> "testLine1",
+      "addressLine2"       -> "testLine2",
+      "addressLine3"       -> "testLine3",
+      "addressLine4"       -> "testLine4",
+      "eclReferenceNumber" -> "XMECL0000000001"
+    ),
     "ars_notification_template" -> Map(
       "name" -> "Victoria sponge"
     ),

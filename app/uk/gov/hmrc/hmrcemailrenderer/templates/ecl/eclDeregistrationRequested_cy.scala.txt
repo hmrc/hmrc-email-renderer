@@ -1,0 +1,35 @@
+@(params: Map[String, Any])
+Rydych wedi gwneud cais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd
+
+Annwyl @params("name")
+
+Rydym wedi cael eich atebion fel rhan o’ch cais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd (ECL). Cadwch yr e-bost hwn ar gyfer eich cofnodion.
+
+Cyfeirnod ECL: @params("eclReferenceNumber")
+
+Dyddiad y cais i ddadgofrestru rhag ECL: @params("dateSubmitted")
+
+Yr hyn sy’n digwydd nesaf
+
+Byddwn yn adolygu’ch atebion. Os oes angen rhagor o wybodaeth arnom, mae’n bosibl y byddwn yn cysylltu â chi drwy ddefnyddio’r manylion a roddwyd gennych. Bydd y broses hon yn cymryd hyd at 15 diwrnod gwaith.
+
+Byddwn yn anfon llythyr atoch ar ôl i ni orffen y broses o’ch datgofrestru.
+
+Byddwn yn anfon llythyr at:
+
+@params("addressLine1")
+@if(params.contains("addressLine2")){@params("addressLine2")}
+@if(params.contains("addressLine3")){@params("addressLine3")}
+@if(params.contains("addressLine4")){@params("addressLine4")}
+
+Gallwch fewngofnodi i’ch cyfrif ECL o hyd i weld y datganiadau a gyflwynwyd gennych a’ch hanes talu.
+
+Pam cawsoch yr e-bost hwn
+
+Dyma’r cyfeiriad e-bost a ddarparwyd gennych pan wnaethoch gais i ddatgofrestru rhag yr Ardoll Troseddau Economaidd.
+
+Peidiwch ag ymateb i’r e-bost hwn.
+
+Oddi wrth y Tîm Ardoll Troseddau Economaidd
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
