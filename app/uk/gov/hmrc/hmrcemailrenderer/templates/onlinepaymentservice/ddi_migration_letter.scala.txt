@@ -11,7 +11,7 @@ There is no need to take any action.
 
 You currently pay by Direct Debit. From @DateFormatter.formatDate(params("TRANSFERDATE").toString) we will transfer your Direct Debit to a new reference @params("DDIREFERENCE").
 
-The Service User name will change from HMRC e VAT to HMRC E VAT DDS. Your new service user number will be @params("NEWSUN").
+The service username will change from HMRC e VAT to HMRC E VAT DDS. Your new service user number will be @params("NEWSUN").
 
 Your bank statement may show a final payment under your old reference and a first payment under the new reference.
 
