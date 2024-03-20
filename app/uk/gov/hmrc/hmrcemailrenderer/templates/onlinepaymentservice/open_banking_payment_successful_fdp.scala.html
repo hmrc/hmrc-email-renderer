@@ -15,7 +15,7 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Payment scheduled") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC payment scheduled") {
 
     <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Dear Customer</p>
 
@@ -44,7 +44,7 @@
 
         <tr>
             <th>Amount</th>
-            <td>@params("amountPaid")</td>
+            <td>&pound;@params("amountPaid")</td>
         </tr>
 
     </tbody>
@@ -52,9 +52,9 @@
 
     </p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">Your payment will be complete once the money has left your bank account.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">On your scheduled payment date, check the payment has left your bank account. You are responsible for making sure this payment reaches HMRC.</p>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">If you have an online tax account your payment will take 3 to 5 days to show in your account.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">If you have an online tax account, your payment will take 3 to 5 days to show in your account.</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;"><h2>Why you got this email</h2></p>
     <p style="margin: 0 0 30px; font-size: 19px;">You chose to receive an email about your payment.</p>
