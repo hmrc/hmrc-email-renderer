@@ -746,6 +746,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "register_your_company_register_paye_confirmation_new_tax_year_v2_cy",
         "register_your_company_register_vat_email",
         "register_your_company_register_vat_email_cy",
+        "register_your_company_register_vat_email_v2",
+        "register_your_company_register_vat_email_v2_cy",
         "register_your_company_verification_email",
         "register_your_company_verification_email_cy",
         "reimbursement_claim_submission",

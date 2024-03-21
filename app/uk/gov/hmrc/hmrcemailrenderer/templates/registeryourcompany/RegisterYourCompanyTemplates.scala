@@ -58,6 +58,22 @@ object RegisterYourCompanyTemplates {
       htmlTemplate = html.registerYourCompanyRegisterVATEmail_cy.f
     ),
     MessageTemplate.create(
+      templateId = "register_your_company_register_vat_email_v2",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "Register for VAT online - new service",
+      plainTemplate = txt.registerYourCompanyRegisterVATEmailV2.f,
+      htmlTemplate = html.registerYourCompanyRegisterVATEmailV2.f
+    ),
+    MessageTemplate.create(
+      templateId = "register_your_company_register_vat_email_v2_cy",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = RegisterYourCompany,
+      subject = "Cofrestrwch ar gyfer TAW ar-lein – gwasanaeth newydd",
+      plainTemplate = txt.registerYourCompanyRegisterVATEmailV2_cy.f,
+      htmlTemplate = html.registerYourCompanyRegisterVATEmailV2_cy.f
+    ),
+    MessageTemplate.create(
       templateId = "register_your_company_register_paye_confirmation_new_tax_year_v2",
       fromAddress = FromAddress.govUkTeamAddress,
       service = RegisterYourCompany,

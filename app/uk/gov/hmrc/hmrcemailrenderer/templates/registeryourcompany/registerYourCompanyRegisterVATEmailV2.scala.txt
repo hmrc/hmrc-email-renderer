@@ -1,0 +1,14 @@
+@(params: Map[String, Any])You can now register for VAT online
+
+You must register as soon as your VAT taxable turnover:
+
+  is more than £@params("vatThreshold") for any 12-month period
+  is more than £@params("vatThreshold") for a single 30-day period
+
+You can still register voluntarily if the company's VAT taxable turnover is less than £@params("vatThreshold") a year.
+
+To access the service, use the link you received previously in the 'Register your company' welcome email
+
+From HMRC VAT
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
