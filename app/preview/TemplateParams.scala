@@ -799,6 +799,12 @@ object TemplateParams {
       "register_your_company_verification_email_cy" -> Map(
         "verificationLink" -> exampleLinkWithRandomId
       ),
+      "register_your_company_register_vat_email_v2" -> Map(
+        "vatThreshold" -> "85,000"
+      ),
+      "register_your_company_register_vat_email_v2_cy" -> Map(
+        "vatThreshold" -> "85,000"
+      ),
       "register_your_company_register_paye_confirmation_current_tax_year_v2" -> Map(
         "companyName"     -> "ABC Logistics Ltd",
         "referenceNumber" -> "BRPY12345678910",

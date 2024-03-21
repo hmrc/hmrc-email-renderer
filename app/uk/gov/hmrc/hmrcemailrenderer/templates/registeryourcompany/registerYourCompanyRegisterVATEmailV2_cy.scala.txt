@@ -1,0 +1,14 @@
+@(params: Map[String, Any])Gallwch nawr gofrestru ar gyfer TAW ar-lein
+
+Mae’n rhaid i chi gofrestru cyn gynted ag y bydd eich trosiant trethadwy TAW:
+
+  yn fwy nag £@params("vatThreshold") am unrhyw gyfnod o 12 mis
+  yn fwy nag £@params("vatThreshold") am un cyfnod o 30 diwrnod
+
+Gallwch gofrestru’n wirfoddol o hyd os yw trosiant trethadwy TAW y cwmni yn llai nag £@params("vatThreshold") y flwyddyn.
+
+I gael mynediad at y gwasanaeth, defnyddiwch y cysylltiad a gawsoch yn flaenorol yn yr e-bost croeso wrth i chi gofrestru’ch cwmni
+
+Oddi wrth adran TAW CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

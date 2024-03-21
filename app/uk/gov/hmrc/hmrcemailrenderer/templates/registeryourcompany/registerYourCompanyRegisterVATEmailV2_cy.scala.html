@@ -1,0 +1,28 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Gallwch nawr gofrestru ar gyfer TAW ar-lein") {
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae’n rhaid i chi gofrestru cyn gynted ag y bydd eich trosiant trethadwy TAW:</p>
+    <ul style="margin: 0 0 30px; font-size: 19px;">
+        <li>yn fwy nag £@params("vatThreshold") am unrhyw gyfnod o 12 mis</li>
+        <li>yn fwy nag £@params("vatThreshold") am un cyfnod o 30 diwrnod</li>
+    </ul>
+
+    <p style="margin:30px 0 30px; font-size: 19px;">Gallwch gofrestru’n wirfoddol o hyd os yw trosiant trethadwy TAW y cwmni yn llai nag £@params("vatThreshold") y flwyddyn.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">I gael mynediad at y gwasanaeth, defnyddiwch y cysylltiad a gawsoch yn flaenorol yn yr e-bost croeso wrth i chi gofrestru’ch cwmni</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth adran TAW CThEF</p>
+}
