@@ -73,7 +73,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "open_banking_payment_successful_fdp",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Payment scheduled",
+      subject = "HMRC payment scheduled",
       plainTemplate = txt.open_banking_payment_successful_fdp.f,
       htmlTemplate = html.open_banking_payment_successful_fdp.f,
       priority = Some(MessagePriority.Urgent)
@@ -82,7 +82,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "open_banking_payment_successful_fdp_cy",
       fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "Taliad CThEF wedi’i drefnu",
+      subject = "Taliad i CThEF wedi’i drefnu",
       plainTemplate = txt.open_banking_payment_successful_fdp_cy.f,
       htmlTemplate = html.open_banking_payment_successful_fdp_cy.f,
       priority = Some(MessagePriority.Urgent)

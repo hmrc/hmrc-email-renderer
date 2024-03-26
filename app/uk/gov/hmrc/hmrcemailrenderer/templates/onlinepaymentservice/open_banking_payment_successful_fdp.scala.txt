@@ -8,11 +8,11 @@ Tax: @params("taxType")
 Payment scheduled date: @params("paymentScheduledDate")
 Date payment set up: @params("datePaymentSetUp")
 Payment reference: @params("reference")
-Amount: @params("amountPaid")
+Amount: &pound;@params("amountPaid")
 
-Your payment will be complete once the money has left your bank account.
+On your scheduled payment date, check the payment has left your bank account. You are responsible for making sure this payment reaches HMRC.
 
-If you have an online tax account your payment will take 3 to 5 days to show in your account.
+If you have an online tax account, your payment will take 3 to 5 days to show in your account.
 
 Why you got this email
 
