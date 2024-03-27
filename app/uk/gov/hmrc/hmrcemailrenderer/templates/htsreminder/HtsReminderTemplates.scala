@@ -21,8 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.HelpToSave
 
 object HtsReminderTemplates {
-
-  val templates = Seq(
+  val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = "hts_reminder_email",
       fromAddress = FromAddress.noReply("Help to Save"),
