@@ -3,7 +3,6 @@
 @import java.util.Calendar
 @import uk.gov.hmrc.hmrcemailrenderer.templates.agent.DateFormatter
 
-
 Dear @{params("name")}
 Remember to save this @{params("month")}
 
@@ -14,7 +13,9 @@ Remember, you can get a bonus of 50p for every pound you save.
 How to sign in to your account
 
 Use the HMRC app to sign in to your account. The free app is available on the App Store for iOS or the Google Play Store for Android.
-You can also sign in to your account by searching GOV.UK for ‘Help to Save’. You will need your Government Gateway ID and password.
+You can also sign in to your account by searching GOV.UK for ‘Help to Save’.
+
+To sign in, you'll need the HMRC online username and password you used to create your Help to Save account.
 
 Why you got this email
 
