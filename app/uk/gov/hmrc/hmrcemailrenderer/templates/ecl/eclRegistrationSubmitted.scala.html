@@ -58,10 +58,7 @@
         @if(params.contains("previousFY")) {
             @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
                 <p>
-                    You need to submit a return for the @previousFY to @(previousFY + 1) financial year as soon as possible.
-                </p>
-                <p>
-                    The return will show as overdue because it's in the previous financial year.
+                    You need to submit a return for any previous financial years as soon as possible. They will show as overdue.
                 </p>
             }
         }
