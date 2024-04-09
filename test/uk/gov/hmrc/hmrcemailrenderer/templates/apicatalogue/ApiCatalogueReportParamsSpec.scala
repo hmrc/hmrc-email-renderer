@@ -62,7 +62,8 @@ class ApiCatalogueReportParamsSpec extends AnyWordSpecLike with OptionValues wit
       ApiCatalogueReportParams.getQuestions(paramsWithReasons) shouldBe List(
         "Test contact reason one",
         "Test contact reason two",
-        "Test contact reason three")
+        "Test contact reason three"
+      )
 
     }
 

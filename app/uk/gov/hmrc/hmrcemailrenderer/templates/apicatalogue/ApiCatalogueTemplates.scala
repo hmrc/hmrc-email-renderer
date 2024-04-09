@@ -20,8 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiCatalogue
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
-/**
-  * Templates used by the API Catalogue.
+/** Templates used by the API Catalogue.
   */
 object ApiCatalogueTemplates {
   val templates = Seq(

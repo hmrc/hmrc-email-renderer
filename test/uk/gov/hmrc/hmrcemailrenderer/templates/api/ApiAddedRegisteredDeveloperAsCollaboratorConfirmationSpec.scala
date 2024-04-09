@@ -32,7 +32,8 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends AnyWordS
     "role"                      -> role,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
-    "borderColour"              -> "#005EA5")
+    "borderColour"              -> "#005EA5"
+  )
 
   "htmlView" should {
     "render as" in new TestCase {
@@ -40,12 +41,15 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends AnyWordS
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
-          " rights over <strong>" + applicationName + "</strong>.</p>")
+          " rights over <strong>" + applicationName + "</strong>.</p>"
+      )
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC " +
-          "Developer Hub to access the application.</p>")
+          "Developer Hub to access the application.</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">For security reasons, we have not included a link with this email.</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">For security reasons, we have not included a link with this email.</p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
@@ -53,9 +57,11 @@ class ApiAddedRegisteredDeveloperAsCollaboratorConfirmationSpec extends AnyWordS
       val renderedHtml = api.html.apiAddedRegisteredDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC " +
-          developerHubTitle + " to access the application.</p>")
+          developerHubTitle + " to access the application.</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 

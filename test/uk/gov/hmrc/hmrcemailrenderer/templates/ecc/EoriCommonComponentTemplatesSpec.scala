@@ -31,7 +31,7 @@ class EoriCommonComponentTemplatesSpec
       "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> "Advance Tariff Rulings",
       "completionDate"         -> "22 March 2019",
-      "enrolmentKey"           -> enrolmentKey,
+      "enrolmentKey"           -> enrolmentKey
     )
     fullParams
   }
@@ -42,7 +42,7 @@ class EoriCommonComponentTemplatesSpec
       "recipientOrgName"       -> "JJ Components",
       "serviceName"            -> serviceName,
       "completionDate"         -> "22 March 2019",
-      "enrolmentKey"           -> "HMRC-CUS-ORG",
+      "enrolmentKey"           -> "HMRC-CUS-ORG"
     )
     fullParams
   }
@@ -90,7 +90,8 @@ class EoriCommonComponentTemplatesSpec
 
     "include subscription successful content in welsh" in {
       compareContent("ecc_subscription_successful_cy", fullParams("HMRC-GVMS-ORG"), isWelsh = true)(
-        eoriCommonComponents)
+        eoriCommonComponents
+      )
     }
 
     "include registration successful content for standalone journey" in {
@@ -99,7 +100,8 @@ class EoriCommonComponentTemplatesSpec
 
     "include registration successful content in welsh for standalone journey" in {
       compareContent("ecc_registration_successful_cy", fullParamsStandalone("Cael rhif EORI"), isWelsh = true)(
-        eoriCommonComponents)
+        eoriCommonComponents
+      )
     }
 
     "include registration successful content" in {
@@ -116,7 +118,8 @@ class EoriCommonComponentTemplatesSpec
 
     "include subscription not successful content in welsh" in {
       compareContent("ecc_subscription_not_successful_cy", fullParams("HMRC-SS-ORG"), isWelsh = true)(
-        eoriCommonComponents)
+        eoriCommonComponents
+      )
     }
   }
 

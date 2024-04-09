@@ -37,39 +37,48 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
 
       validateTemplate(
         templateId = "apiDeveloperChangedPasswordConfirmation",
-        expectedSubject = "You have reset your password")
+        expectedSubject = "You have reset your password"
+      )
 
       validateTemplate(
         templateId = "apiAddedRegisteredDeveloperAsCollaboratorConfirmation",
-        expectedSubject = "You have been added to an application")
+        expectedSubject = "You have been added to an application"
+      )
 
       validateTemplate(
         templateId = "apiAddedUnregisteredDeveloperAsCollaboratorConfirmation",
-        expectedSubject = "You have been added to an application")
+        expectedSubject = "You have been added to an application"
+      )
 
       validateTemplate(
         templateId = "apiAddedDeveloperAsCollaboratorConfirmation",
-        expectedSubject = "You have been added to an application")
+        expectedSubject = "You have been added to an application"
+      )
 
       validateTemplate(
         templateId = "apiAddedDeveloperAsCollaboratorNotification",
-        expectedSubject = "A team member has been added to your application")
+        expectedSubject = "A team member has been added to your application"
+      )
 
       validateTemplate(
         templateId = "apiRemovedCollaboratorConfirmation",
-        expectedSubject = "You have been removed from an application")
+        expectedSubject = "You have been removed from an application"
+      )
 
       validateTemplate(
         templateId = "apiRemovedCollaboratorNotification",
-        expectedSubject = "A team member has been removed from your application")
+        expectedSubject = "A team member has been removed from your application"
+      )
 
       validateTemplate(
         templateId = "apiApplicationApprovedGatekeeperConfirmation",
-        expectedSubject = "Application check passed")
+        expectedSubject = "Application check passed"
+      )
 
       validateTemplate(
         templateId = "apiApplicationApprovedAdminConfirmation",
-        expectedSubject = "Application check passed: Verify your email address")
+        expectedSubject = "Application check passed: Verify your email address"
+      )
 
       validateTemplate(templateId = "apiApplicationApprovedNotification", expectedSubject = "Application check passed")
 
@@ -79,27 +88,32 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
 
       validateTemplate(
         templateId = "apiApplicationRejectedNotification",
-        expectedSubject = "Production credentials request unsuccessful")
+        expectedSubject = "Production credentials request unsuccessful"
+      )
 
       validateTemplate(
         templateId = "apiStatusChangedNotification",
         expectedSubject = "API Status Changed",
-        expectedPriority = MessagePriority.Standard)
+        expectedPriority = MessagePriority.Standard
+      )
 
       validateTemplate(
         templateId = "apiAddedClientSecretNotification",
         expectedSubject = "Client Secret Added",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiRemovedClientSecretNotification",
         expectedSubject = "Client Secret Removed",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiApplicationToBeDeletedNotification",
         expectedSubject = "We’re deleting your application",
-        expectedPriority = MessagePriority.Standard)
+        expectedPriority = MessagePriority.Standard
+      )
 
       validateTemplate(
         templateId = "apiProductionCredentialsRequestExpired",
@@ -116,7 +130,8 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       validateTemplate(
         templateId = "apiNewTermsOfUseConfirmation",
         expectedSubject = "You conform to version 2 of our terms of use",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiProductionCredentialsRequestExpiryWarning",
@@ -127,12 +142,14 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       validateTemplate(
         templateId = "apiVerifyResponsibleIndividual",
         expectedSubject = "Responsible individual verification",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiVerifyResponsibleIndividualUpdate",
         expectedSubject = "Responsible individual verification",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiResponsibleIndividualReminderToAdmin",
@@ -143,7 +160,8 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       validateTemplate(
         templateId = "apiResponsibleIndividualDidNotVerify",
         expectedSubject = "Production credentials request declined",
-        expectedPriority = MessagePriority.Standard)
+        expectedPriority = MessagePriority.Standard
+      )
 
       validateTemplate(
         templateId = "apiResponsibleIndividualDeclined",
@@ -190,7 +208,8 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       validateTemplate(
         templateId = "ppnsCallbackUrlChangedNotification",
         expectedSubject = "Changes made to Callback URL",
-        expectedPriority = MessagePriority.Urgent)
+        expectedPriority = MessagePriority.Urgent
+      )
 
       validateTemplate(
         templateId = "apiDeveloperHubNewLoginNotification",
@@ -206,16 +225,18 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
   def validateTemplate(
     templateId: String,
     expectedSubject: String,
-    expectedPriority: MessagePriority = MessagePriority.Urgent) = {
+    expectedPriority: MessagePriority = MessagePriority.Urgent
+  ) = {
     val template = findTemplate(templateId)
     val subject: (Map[String, String]) => String = template.subject.f
     template.fromAddress.apply(Map.empty) should be("HMRC Developer Hub <noreply@tax.service.gov.uk>")
     template.fromAddress.apply(Map("developerHubTitle" -> "test account")) should be(
-      "HMRC test account <noreply@tax.service.gov.uk>")
+      "HMRC test account <noreply@tax.service.gov.uk>"
+    )
     template.service should be(ApiDeveloperHub)
     subject(Map.empty) should be(expectedSubject)
-    template.plainTemplate should not be (null)
-    template.htmlTemplate should not be (null)
+    template.plainTemplate should not be null
+    template.htmlTemplate should not be null
     template.priority.get should be(expectedPriority)
   }
 }

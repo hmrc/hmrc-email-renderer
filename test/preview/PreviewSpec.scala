@@ -19,7 +19,7 @@ package preview
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import org.mockito.{ MockitoSugar }
+import org.mockito.MockitoSugar
 import org.mockito.Mockito
 import org.mockito.ArgumentMatchers.{ any, anyString }
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure }
@@ -63,7 +63,8 @@ class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with Guice
           .getOrElse(
             mt.templateId,
             TemplateParams2.exampleParams
-              .getOrElse(mt.templateId, TemplateParams3.exampleParams.getOrElse(mt.templateId, Map.empty)))
+              .getOrElse(mt.templateId, TemplateParams3.exampleParams.getOrElse(mt.templateId, Map.empty))
+          )
 
         templateRenderer.render(mt.templateId, parameters) should not matchPattern {
           case Left(TemplateRenderFailure(_)) =>

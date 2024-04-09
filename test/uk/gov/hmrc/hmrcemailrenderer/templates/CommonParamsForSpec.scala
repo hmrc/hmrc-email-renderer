@@ -18,8 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 
 trait CommonParamsForSpec {
 
-  val commonParameters: Map[String, String] = {
+  val commonParameters: Map[String, String] =
     Map("staticHmrcFrontendVersion" -> "version", "staticAssetUrlPrefix" -> "prefix", "borderColour" -> "#005EA5")
-  }
 
 }

@@ -1060,8 +1060,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
       val allEnglish: Seq[MessageTemplate] = (1 to 5) flatMap { i =>
         messageTemplates(s"templateGroup-$i")
       }
-      override lazy val all: Seq[MessageTemplate] = allEnglish ++ allEnglish.map(t =>
-        t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
+      override lazy val all: Seq[MessageTemplate] =
+        allEnglish ++ allEnglish.map(t => t.copy(templateId = s"${t.templateId}${TemplateLocator.WELSH_SUFFIX}"))
     }
   }
 

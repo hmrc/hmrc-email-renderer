@@ -41,9 +41,9 @@ object AmountFormatter extends Logging {
 
   private def toDouble(s: String): Double =
     Try(s.toDouble)
-      .recover {
-        case NonFatal(e) => logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0D
+      .recover { case NonFatal(e) =>
+        logger.warn(s"Amount formatter number parse exception: ${e.getMessage}"); 0d
       }
-      .getOrElse(0D)
+      .getOrElse(0d)
 
 }

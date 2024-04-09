@@ -26,13 +26,12 @@ object SalutationHelper {
     param.map { value =>
       val buffer = scala.collection.mutable.ArrayBuffer.empty[Char]
       buffer ++= value.toString
-      buffer.zipWithIndex.map {
-        case (char, idx) =>
-          if (idx == 0 || !buffer(idx - 1).isLetter) {
-            char.toUpper
-          } else {
-            char.toLower
-          }
+      buffer.zipWithIndex.map { case (char, idx) =>
+        if (idx == 0 || !buffer(idx - 1).isLetter) {
+          char.toUpper
+        } else {
+          char.toLower
+        }
       }.mkString
     }
 

@@ -68,7 +68,8 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
   "Email notifications " should {
     "have matching content in the html and the text for requested duty deferment statements" in {
       compareContent("customs_financials_requested_duty_deferment_statement", commonParameters)(
-        customsFinancialsTemplate)
+        customsFinancialsTemplate
+      )
     }
 
     "have matching content in the html and the text for import adjustment statements" in {
@@ -93,7 +94,8 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
 
     "have matching content in the html and the text for requested postponed VAT statements" in {
       compareContent("customs_financials_requested_postponed_vat_notification", commonParameters)(
-        customsFinancialsTemplate)
+        customsFinancialsTemplate
+      )
     }
 
     "have matching content in customs_financials_requested_duty_deferment_not_found" in {
@@ -112,14 +114,16 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
 
       compareContent("customs_financials_requested_postponed_import_vat_statements_not_found", params)(
-        customsFinancialsTemplate)
+        customsFinancialsTemplate
+      )
     }
 
     "have matching content in customs_financials_requested_notification_adjustment_statements_not_found" in {
       val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
 
       compareContent("customs_financials_requested_notification_adjustment_statements_not_found", params)(
-        customsFinancialsTemplate)
+        customsFinancialsTemplate
+      )
     }
 
   }

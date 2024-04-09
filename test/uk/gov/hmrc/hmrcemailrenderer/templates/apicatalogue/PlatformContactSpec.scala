@@ -44,23 +44,28 @@ class PlatformContactSpec extends AnyWordSpecLike with OptionValues with Matcher
       renderedHtml.contentType should include("text/html")
 
       renderedHtml.body should include(
-        s"<title>Information request about " + s"${templateParams.get("apiTitle").get}</title>")
+        s"<title>Information request about " + s"${templateParams.get("apiTitle").get}</title>"
+      )
 
       renderedHtml.body should include(paragraphWithInlineCss + "Dear platform team</p>")
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "We have received an information request about " + s"${templateParams.get("apiTitle").get} on the API catalogue.</p>")
+        paragraphWithInlineCss + "We have received an information request about " + s"${templateParams.get("apiTitle").get} on the API catalogue.</p>"
+      )
 
       renderedHtml.body should include(paragraphWithInlineCss + "Here is a summary.</p>")
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "<strong>Name</strong>: " + s"${templateParams.get("senderName").get}</p>")
+        paragraphWithInlineCss + "<strong>Name</strong>: " + s"${templateParams.get("senderName").get}</p>"
+      )
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "<strong>Email</strong>: " + s"${templateParams.get("senderEmail").get}</p>")
+        paragraphWithInlineCss + "<strong>Email</strong>: " + s"${templateParams.get("senderEmail").get}</p>"
+      )
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "<strong>Why do you need to contact the API team?</strong></p>")
+        paragraphWithInlineCss + "<strong>Why do you need to contact the API team?</strong></p>"
+      )
 
       renderedHtml.body should include(paragraphWithInlineCss + "Test contact reason one</p>")
       renderedHtml.body should include(paragraphWithInlineCss + "Test contact reason two</p>")
@@ -71,7 +76,8 @@ class PlatformContactSpec extends AnyWordSpecLike with OptionValues with Matcher
       renderedHtml.body should include(paragraphWithInlineCss + s"${templateParams.get("specificQuestion").get}</p>")
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + s"You should reply to ${templateParams.get("senderEmail").get} in 7 days.</p>")
+        paragraphWithInlineCss + s"You should reply to ${templateParams.get("senderEmail").get} in 7 days.</p>"
+      )
 
       renderedHtml.body should include(paragraphWithInlineCss + "From HMRC API catalogue</p>")
     }
@@ -87,7 +93,8 @@ class PlatformContactSpec extends AnyWordSpecLike with OptionValues with Matcher
       renderedTxt.body should include("Dear platform team")
 
       renderedTxt.body should include(
-        "We have received an information request about " + s"${templateParams.get("apiTitle").get} on the API catalogue.")
+        "We have received an information request about " + s"${templateParams.get("apiTitle").get} on the API catalogue."
+      )
 
       renderedTxt.body should include("Here is a summary.")
 

@@ -23,8 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation_cy, contactFormsGroup }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-/**
-  * @author Yuriy Tumakha
+/** @author
+  *   Yuriy Tumakha
   */
 class ContactFormsEnquiryConfirmationCySpec
     extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
@@ -40,7 +40,8 @@ class ContactFormsEnquiryConfirmationCySpec
     content should include("Annwyl David Jones")
     content should include("Diolch am gysylltu â ni. Mae’r e-bost hwn yn gadarnhad ein bod wedi derbyn eich ymholiad.")
     content should include(
-      "Rydym yn ymateb i’r mwyafrif o ymholiadau o fewn ychydig ddyddiau. Fodd bynnag, gall ymholiadau cymhleth gymryd hyd at 28 diwrnod.")
+      "Rydym yn ymateb i’r mwyafrif o ymholiadau o fewn ychydig ddyddiau. Fodd bynnag, gall ymholiadau cymhleth gymryd hyd at 28 diwrnod."
+    )
     content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
     content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }

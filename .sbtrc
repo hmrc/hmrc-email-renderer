@@ -1,1 +1,1 @@
-alias fmt=;scalafmt;test:scalafmt;it:scalafmt
+alias fmt=;scalafmt ; Test/scalafmt; it/Test/scalafmt

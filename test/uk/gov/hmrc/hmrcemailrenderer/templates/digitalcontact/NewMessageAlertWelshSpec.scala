@@ -33,7 +33,7 @@ class NewMessageAlertWelshSpec
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names
 
     "render correct subject and fromAddress" in {
-      template.subject(Map.empty) shouldBe ("Hysbysiadau di-bapur CThEF: neges newydd")
+      template.subject(Map.empty) shouldBe "Hysbysiadau di-bapur CThEF: neges newydd"
       template.fromAddress(Map.empty) shouldBe "CThEF Digidol <noreply@tax.service.gov.uk>"
     }
 
@@ -49,11 +49,13 @@ class NewMessageAlertWelshSpec
       htmlContent should include("Pam y cawsoch yr e-bost hwn")
       htmlContent should include("Dewisoch i gael hysbysiadau di-bapur yn hytrach na lythyrau drwy’r post.")
       htmlContent should include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif.")
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif."
+      )
       htmlContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent should include(
-        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’"
+      )
     }
 
     "render correct text content" in {
@@ -67,11 +69,13 @@ class NewMessageAlertWelshSpec
       txtContent should include("Pam y cawsoch yr e-bost hwn")
       txtContent should include("Dewisoch i gael hysbysiadau di-bapur yn hytrach na lythyrau drwy’r post.")
       txtContent should include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif.")
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif."
+      )
       txtContent should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       txtContent should include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       txtContent should include(
-        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’"
+      )
     }
   }
 }

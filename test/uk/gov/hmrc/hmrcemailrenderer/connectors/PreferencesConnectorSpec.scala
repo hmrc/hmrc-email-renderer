@@ -40,7 +40,9 @@ class PreferencesConnectorSpec
         httpClient.GET[Language](eqTo(url), any[Seq[(String, String)]], any[Seq[(String, String)]])(
           any[HttpReads[Language]],
           any[HeaderCarrier],
-          any[ExecutionContext]))
+          any[ExecutionContext]
+        )
+      )
         .thenReturn(Future.successful(Language.English))
 
       // await(preferencesConnector.languageByEmail(email)) shouldBe (Language.English)
@@ -51,9 +53,11 @@ class PreferencesConnectorSpec
         httpClient.GET[Language](eqTo(url), any[Seq[(String, String)]], any[Seq[(String, String)]])(
           any[HttpReads[Language]],
           any[HeaderCarrier],
-          any[ExecutionContext]))
+          any[ExecutionContext]
+        )
+      )
         .thenReturn(Future.successful(Language.Welsh))
-      //await(preferencesConnector.languageByEmail(email)) shouldBe (Language.Welsh)
+      // await(preferencesConnector.languageByEmail(email)) shouldBe (Language.Welsh)
       preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.Welsh)
     }
   }

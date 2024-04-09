@@ -50,12 +50,15 @@ class IformsSubmissionRejectionNonAgentSpec
         htmlContent should include("Dear SomeName")
         htmlContent should include("We have received your application to register for Self Assessment.")
         htmlContent should include(
-          "We could not process your application because your personal details do not match our records.")
+          "We could not process your application because your personal details do not match our records."
+        )
         htmlContent should include("What to do next")
         htmlContent should include(
-          "You need to check and update your details on your personal tax account before you can resubmit the application.")
+          "You need to check and update your details on your personal tax account before you can resubmit the application."
+        )
         htmlContent should include(
-          "If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
+          "If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’."
+        )
         htmlContent should include("From HMRC Digital")
       }
 
@@ -67,12 +70,15 @@ class IformsSubmissionRejectionNonAgentSpec
         txtContent should include("Dear SomeName")
         txtContent should include("We have received your application to register for Self Assessment.")
         txtContent should include(
-          "We could not process your application because your personal details do not match our records.")
+          "We could not process your application because your personal details do not match our records."
+        )
         txtContent should include("What to do next")
         txtContent should include(
-          "You need to check and update your details on your personal tax account before you can resubmit the application.")
+          "You need to check and update your details on your personal tax account before you can resubmit the application."
+        )
         txtContent should include(
-          "If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’.")
+          "If you do not have a personal tax account, you can set one up. On the GOV.UK website, search ‘PTA’ and find the page ‘Personal tax account: sign in or set up’."
+        )
         txtContent should include("From HMRC Digital")
       }
     }
@@ -98,12 +104,15 @@ class IformsSubmissionRejectionNonAgentSpec
         htmlContent should include("Annwyl SomeName")
         htmlContent should include("Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.")
         htmlContent should include(
-          "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.")
+          "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion."
+        )
         htmlContent should include("Yr hyn i’w wneud nesaf")
         htmlContent should include(
-          "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.")
+          "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais."
+        )
         htmlContent should include(
-          "Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
+          "Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’."
+        )
         htmlContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
 
@@ -115,12 +124,15 @@ class IformsSubmissionRejectionNonAgentSpec
         txtContent should include("Annwyl SomeName")
         txtContent should include("Mae’ch cais i gofrestru ar gyfer Hunanasesiad wedi dod i law.")
         txtContent should include(
-          "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion.")
+          "Nid oeddem yn gallu prosesu’ch cais oherwydd nad yw’ch manylion personol yn cyd-fynd â’n cofnodion."
+        )
         txtContent should include("Yr hyn i’w wneud nesaf")
         txtContent should include(
-          "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais.")
+          "Mae angen i chi wirio a diweddaru’ch manylion ar eich cyfrif treth personol cyn i chi allu ailgyflwyno’r cais."
+        )
         txtContent should include(
-          "Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’.")
+          "Os nad oes gennych gyfrif treth personol, gallwch drefnu un. Ar wefan GOV.UK, chwiliwch am ‘PTA’ ac ewch i’r dudalen ‘Personal tax account: sign in or set up’."
+        )
         txtContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
     }

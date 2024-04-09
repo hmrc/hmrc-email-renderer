@@ -30,6 +30,7 @@ object LostCredentialsTemplates {
       plainTemplate = txt.lostCredentialsRetrieveUseridNotificationEmail.f,
       htmlTemplate = html.lostCredentialsRetrieveUseridNotificationEmail.f,
       priority = Some(MessagePriority.Urgent)
-    ))
+    )
+  )
 
 }

@@ -43,14 +43,17 @@ class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends AnyWor
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been given " + role +
-          " rights over <strong>" + applicationName + "</strong>.</p>")
+          " rights over <strong>" + applicationName + "</strong>.</p>"
+      )
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
-          "Developer Hub, click on the link below.</p>")
+          "Developer Hub, click on the link below.</p>"
+      )
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" +
           developerHubLink + "\" style=\"color: #005EA5;\">" +
-          developerHubLink + "</a></p>")
+          developerHubLink + "</a></p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
@@ -58,9 +61,11 @@ class ApiAddedUnregisteredDeveloperAsCollaboratorConfirmationSpec extends AnyWor
       val renderedHtml = api.html.apiAddedUnregisteredDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">To register with the HMRC " +
-          developerHubTitle + ", click on the link below.</p>")
+          developerHubTitle + ", click on the link below.</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 

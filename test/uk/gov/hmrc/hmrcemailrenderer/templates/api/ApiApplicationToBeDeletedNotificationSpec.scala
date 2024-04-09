@@ -66,7 +66,8 @@ class ApiApplicationToBeDeletedNotificationSpec extends AnyWordSpecLike with Mat
       renderedTxt.body should include(s"Dear $userFirstName $userLastName")
       renderedTxt.body should include(
         s"Your $environmentName application $applicationName " +
-          s"has been inactive for more than $timeSinceLastUse and will be deleted in $daysToDeletion.")
+          s"has been inactive for more than $timeSinceLastUse and will be deleted in $daysToDeletion."
+      )
       renderedTxt.body should include("From HMRC Developer Hub")
     }
 

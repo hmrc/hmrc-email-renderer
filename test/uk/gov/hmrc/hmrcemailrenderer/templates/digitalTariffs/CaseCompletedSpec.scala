@@ -41,22 +41,26 @@ class CaseCompletedSpec
       .get
 
     "render correct subject" in {
-      template.subject(Map("reference" -> "ATaR REFERENCE")) shouldBe ("Issued: Advance Tariff Ruling for ATaR REFERENCE")
+      template.subject(Map("reference" -> "ATaR REFERENCE")) shouldBe "Issued: Advance Tariff Ruling for ATaR REFERENCE"
     }
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include(
-        "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME")
+        "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME"
+      )
       htmlContent should include("Dear Full Name")
       htmlContent should include(
-        "I have made a decision on your Advance Tariff Ruling (ATaR) application dated 20 December 2020. You can see your ruling certificate online in your ATaR account.")
+        "I have made a decision on your Advance Tariff Ruling (ATaR) application dated 20 December 2020. You can see your ruling certificate online in your ATaR account."
+      )
       htmlContent should include(
-        "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.")
+        "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website."
+      )
       htmlContent should include("How to view your ruling for GOODS NAME")
       htmlContent should include(
-        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
+        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'."
+      )
       htmlContent should include("In your account you will be able to:")
       htmlContent should include("print or download your ruling certificate")
       htmlContent should include("find out how I made this decision")
@@ -70,15 +74,19 @@ class CaseCompletedSpec
       val txtContent = template.plainTemplate(params).toString
 
       txtContent should include(
-        "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME")
+        "We have issued your Advance Tariff Ruling for application ATaR REFERENCE for GOODS NAME"
+      )
       txtContent should include("Dear Full Name")
       txtContent should include(
-        "I have made a decision on your Advance Tariff Ruling (ATaR) application dated 20 December 2020. You can see your ruling certificate online in your ATaR account.")
+        "I have made a decision on your Advance Tariff Ruling (ATaR) application dated 20 December 2020. You can see your ruling certificate online in your ATaR account."
+      )
       txtContent should include(
-        "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website.")
+        "The information from your ruling not marked as confidential has been published as an ATaR on the 'Search for Advance Tariff Rulings' website."
+      )
       txtContent should include("How to view your ruling for GOODS NAME")
       txtContent should include(
-        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'.")
+        "You can sign in to your Advance Tariff Rulings account by going to GOV.UK and searching for 'Advance Tariff Ruling'."
+      )
       txtContent should include("In your account you will be able to:")
       txtContent should include("print or download your ruling certificate")
       txtContent should include("find out how I made this decision")
@@ -89,7 +97,8 @@ class CaseCompletedSpec
       txtContent should include("If you’re unsure an email is from HMRC:")
       txtContent should include("- Do not reply to it or click on any links")
       txtContent should include(
-        "- Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "- Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'"
+      )
     }
   }
 

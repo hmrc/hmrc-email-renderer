@@ -41,17 +41,20 @@ class ApiVerificationEmailSpec extends AnyWordSpecLike with OptionValues with Ma
       val renderedHtml = api.html.verificationEmail.render(templateParams)
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Click on the link below to verify your email address:</p>"
+      )
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"" + verificationLink +
-          "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>")
+          "\" style=\"color: #005EA5;\">" + verificationLink + "</a></p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.verificationEmail.render(templateParamsPlus)
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 

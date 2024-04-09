@@ -89,7 +89,8 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val email = renderedEmail(baseParams)
       email must include("Your application’s fraud prevention headers have errors.")
       email must include(
-        "In production, in October 2019, MTD VAT Test Application does not meet the fraud prevention specification.")
+        "In production, in October 2019, MTD VAT Test Application does not meet the fraud prevention specification."
+      )
     }
 
     "include status contents for application with no requests" in {

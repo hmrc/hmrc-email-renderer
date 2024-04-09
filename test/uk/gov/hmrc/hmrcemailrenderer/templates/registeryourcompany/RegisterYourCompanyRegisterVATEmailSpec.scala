@@ -49,9 +49,11 @@ class RegisterYourCompanyRegisterVATEmailSpec
         htmlContent should include("is more than £85,000 for any 12-month period")
         htmlContent should include("is more than £85,000 for a single 30-day period")
         htmlContent should include(
-          "You can still register voluntarily if the company's VAT taxable turnover is less than £85,000 a year.")
+          "You can still register voluntarily if the company's VAT taxable turnover is less than £85,000 a year."
+        )
         htmlContent should include(
-          "To access the service, use the link you received previously in the 'Register your company' welcome email")
+          "To access the service, use the link you received previously in the 'Register your company' welcome email"
+        )
         htmlContent should include("From HMRC VAT")
       }
 
@@ -64,9 +66,11 @@ class RegisterYourCompanyRegisterVATEmailSpec
         txtContent should include("is more than £85,000 for any 12-month period")
         txtContent should include("is more than £85,000 for a single 30-day period")
         txtContent should include(
-          "You can still register voluntarily if the company's VAT taxable turnover is less than £85,000 a year.")
+          "You can still register voluntarily if the company's VAT taxable turnover is less than £85,000 a year."
+        )
         txtContent should include(
-          "To access the service, use the link you received previously in the 'Register your company' welcome email")
+          "To access the service, use the link you received previously in the 'Register your company' welcome email"
+        )
         txtContent should include("From HMRC VAT")
       }
     }
@@ -93,9 +97,11 @@ class RegisterYourCompanyRegisterVATEmailSpec
         htmlContent should include("yn fwy nag £85,000 am unrhyw gyfnod o 12 mis")
         htmlContent should include("yn fwy nag £85,000 am un cyfnod o 30 diwrnod")
         htmlContent should include(
-          "Gallwch gofrestru’n wirfoddol o hyd os yw trosiant trethadwy TAW y cwmni yn llai nag £85,000 y flwyddyn.")
+          "Gallwch gofrestru’n wirfoddol o hyd os yw trosiant trethadwy TAW y cwmni yn llai nag £85,000 y flwyddyn."
+        )
         htmlContent should include(
-          "I gael mynediad at y gwasanaeth, defnyddiwch y cysylltiad a gawsoch yn flaenorol yn yr e-bost croeso wrth i chi gofrestru’ch cwmni")
+          "I gael mynediad at y gwasanaeth, defnyddiwch y cysylltiad a gawsoch yn flaenorol yn yr e-bost croeso wrth i chi gofrestru’ch cwmni"
+        )
         htmlContent should include("Oddi wrth adran TAW CThEF")
       }
 
@@ -108,9 +114,11 @@ class RegisterYourCompanyRegisterVATEmailSpec
         txtContent should include("yn fwy nag £85,000 am unrhyw gyfnod o 12 mis")
         txtContent should include("yn fwy nag £85,000 am un cyfnod o 30 diwrnod")
         txtContent should include(
-          "Gallwch gofrestru’n wirfoddol o hyd os yw trosiant trethadwy TAW y cwmni yn llai nag £85,000 y flwyddyn.")
+          "Gallwch gofrestru’n wirfoddol o hyd os yw trosiant trethadwy TAW y cwmni yn llai nag £85,000 y flwyddyn."
+        )
         txtContent should include(
-          "I gael mynediad at y gwasanaeth, defnyddiwch y cysylltiad a gawsoch yn flaenorol yn yr e-bost croeso wrth i chi gofrestru’ch cwmni")
+          "I gael mynediad at y gwasanaeth, defnyddiwch y cysylltiad a gawsoch yn flaenorol yn yr e-bost croeso wrth i chi gofrestru’ch cwmni"
+        )
         txtContent should include("Oddi wrth adran TAW CThEF")
       }
     }

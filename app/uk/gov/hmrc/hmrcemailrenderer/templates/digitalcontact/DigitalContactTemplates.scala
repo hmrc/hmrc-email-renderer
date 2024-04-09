@@ -25,7 +25,7 @@ object DigitalContactTemplates {
 
   val defaultFromAddressWelsh = FromAddress.noReply("CThEF Digidol")
 
-  //TODO: waiting for welsh translation
+  // TODO: waiting for welsh translation
   val defaultWelshFrom = FromAddress.noReply("")
 
   val templatesToMapToNewMessageAlert = Seq(

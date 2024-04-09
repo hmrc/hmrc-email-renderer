@@ -16,9 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.gg
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ GovernmentGateway }
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.GovernmentGateway
 
 object GgTemplates {
 

@@ -49,17 +49,22 @@ class IformsSubmissionRejectionAgentSpec
         htmlContent should include("The HMRC application for your client has been rejected")
         htmlContent should include("Dear Agent")
         htmlContent should include(
-          "We have received an application to register your client FirstName LastNam for Self Assessment. ")
+          "We have received an application to register your client FirstName LastNam for Self Assessment. "
+        )
         htmlContent should include(
-          "We could not process the application because your client’s personal details do not match our records.")
+          "We could not process the application because your client’s personal details do not match our records."
+        )
         htmlContent should include("What to do next")
         htmlContent should include("Check that you entered your client’s details correctly on the application.")
         htmlContent should include(
-          "If you did, then your client should check and update their details on their personal tax account.")
+          "If you did, then your client should check and update their details on their personal tax account."
+        )
         htmlContent should include(
-          "You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days.")
+          "You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days."
+        )
         htmlContent should include(
-          "Once your client’s personal details have been updated, you can resubmit the application. ")
+          "Once your client’s personal details have been updated, you can resubmit the application. "
+        )
         htmlContent should include("From HMRC Digital")
       }
 
@@ -70,17 +75,22 @@ class IformsSubmissionRejectionAgentSpec
         txtContent should include("The HMRC application for your client has been rejected")
         txtContent should include("Dear Agent")
         txtContent should include(
-          "We have received an application to register your client FirstName LastName for Self Assessment.")
+          "We have received an application to register your client FirstName LastName for Self Assessment."
+        )
         txtContent should include(
-          "We could not process the application because your client’s personal details do not match our records.")
+          "We could not process the application because your client’s personal details do not match our records."
+        )
         txtContent should include("What to do next")
         txtContent should include("Check that you entered your client’s details correctly on the application.")
         txtContent should include(
-          "If you did, then your client should check and update their details on their personal tax account.")
+          "If you did, then your client should check and update their details on their personal tax account."
+        )
         txtContent should include(
-          "You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days.")
+          "You can also ask HMRC to update your client’s details. On the GOV.UK website, search for ‘change personal details’ and find the page ‘Tell HMRC about a change to your personal details’. This may take up to 15 days."
+        )
         txtContent should include(
-          "Once your client’s personal details have been updated, you can resubmit the application.")
+          "Once your client’s personal details have been updated, you can resubmit the application."
+        )
         txtContent should include("From HMRC Digital")
       }
     }
@@ -105,17 +115,22 @@ class IformsSubmissionRejectionAgentSpec
         htmlContent should include("Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod")
         htmlContent should include("Annwyl Asiant")
         htmlContent should include(
-          "Mae cais i gofrestru’ch cleient FirstName LastNam ar gyfer Hunanasesiad wedi dod i law.")
+          "Mae cais i gofrestru’ch cleient FirstName LastNam ar gyfer Hunanasesiad wedi dod i law."
+        )
         htmlContent should include(
-          "Nid oeddem yn gallu prosesu’r cais oherwydd nad yw manylion personol eich cleient yn cyd-fynd â’n cofnodion. ")
+          "Nid oeddem yn gallu prosesu’r cais oherwydd nad yw manylion personol eich cleient yn cyd-fynd â’n cofnodion. "
+        )
         htmlContent should include("Yr hyn i’w wneud nesaf")
         htmlContent should include("Gwiriwch eich bod wedi nodi manylion eich cleient yn gywir ar y cais.")
         htmlContent should include(
-          "Os felly, dylai’ch cleient wirio a diweddaru ei fanylion ar ei gyfrif treth personol.")
+          "Os felly, dylai’ch cleient wirio a diweddaru ei fanylion ar ei gyfrif treth personol."
+        )
         htmlContent should include(
-          "Gallwch hefyd ofyn i CThEF ddiweddaru manylion eich cleient. Ar wefan GOV.UK, chwiliwch am ‘change personal details’ ac ewch i’r dudalen ‘Tell HMRC about a change to your personal details’. Gallai hyn gymryd hyd at 15 diwrnod.")
+          "Gallwch hefyd ofyn i CThEF ddiweddaru manylion eich cleient. Ar wefan GOV.UK, chwiliwch am ‘change personal details’ ac ewch i’r dudalen ‘Tell HMRC about a change to your personal details’. Gallai hyn gymryd hyd at 15 diwrnod."
+        )
         htmlContent should include(
-          "Ar ôl i fanylion personol eich cleient gael eu diweddaru, gallwch ailgyflwyno’r cais.")
+          "Ar ôl i fanylion personol eich cleient gael eu diweddaru, gallwch ailgyflwyno’r cais."
+        )
         htmlContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
 
@@ -126,17 +141,22 @@ class IformsSubmissionRejectionAgentSpec
         txtContent should include("Mae’r cais i CThEF ar gyfer eich cleient wedi’i wrthod")
         txtContent should include("Annwyl Asiant")
         txtContent should include(
-          "Mae cais i gofrestru’ch cleient FirstName LastNam ar gyfer Hunanasesiad wedi dod i law.")
+          "Mae cais i gofrestru’ch cleient FirstName LastNam ar gyfer Hunanasesiad wedi dod i law."
+        )
         txtContent should include(
-          "Nid oeddem yn gallu prosesu’r cais oherwydd nad yw manylion personol eich cleient yn cyd-fynd â’n cofnodion.")
+          "Nid oeddem yn gallu prosesu’r cais oherwydd nad yw manylion personol eich cleient yn cyd-fynd â’n cofnodion."
+        )
         txtContent should include("Yr hyn i’w wneud nesaf")
         txtContent should include("Gwiriwch eich bod wedi nodi manylion eich cleient yn gywir ar y cais.")
         txtContent should include(
-          "Os felly, dylai’ch cleient wirio a diweddaru ei fanylion ar ei gyfrif treth personol.")
+          "Os felly, dylai’ch cleient wirio a diweddaru ei fanylion ar ei gyfrif treth personol."
+        )
         txtContent should include(
-          "Gallwch hefyd ofyn i CThEF ddiweddaru manylion eich cleient. Ar wefan GOV.UK, chwiliwch am ‘change personal details’ ac ewch i’r dudalen ‘Tell HMRC about a change to your personal details’. Gallai hyn gymryd hyd at 15 diwrnod.")
+          "Gallwch hefyd ofyn i CThEF ddiweddaru manylion eich cleient. Ar wefan GOV.UK, chwiliwch am ‘change personal details’ ac ewch i’r dudalen ‘Tell HMRC about a change to your personal details’. Gallai hyn gymryd hyd at 15 diwrnod."
+        )
         txtContent should include(
-          "Ar ôl i fanylion personol eich cleient gael eu diweddaru, gallwch ailgyflwyno’r cais.")
+          "Ar ôl i fanylion personol eich cleient gael eu diweddaru, gallwch ailgyflwyno’r cais."
+        )
         txtContent should include("Oddi wrth Adran Ddigidol CThEF")
       }
     }

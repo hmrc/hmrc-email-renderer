@@ -33,14 +33,15 @@ class DiscountedDiningPaymentSentSpec
     val params = commonParameters ++ TemplateParams.newMessageAlert_Names ++ Map("claimRefNo" -> "1234")
 
     "render correct subject and fromAddress" in {
-      template.subject(Map.empty) shouldBe ("HMRC has sent a payment for the Eat Out to Help Out Scheme")
+      template.subject(Map.empty) shouldBe "HMRC has sent a payment for the Eat Out to Help Out Scheme"
       template.fromAddress(Map.empty) shouldBe "Eat Out to Help Out Scheme <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
       htmlContent should include(
-        "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered.")
+        "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered."
+      )
       htmlContent should include("The payment will reach the account in 3 to 5 working days.")
       htmlContent should include("Eat Out to Help Out Scheme")
     }
@@ -48,7 +49,8 @@ class DiscountedDiningPaymentSentSpec
     "render correct text content" in {
       val htmlContent = template.plainTemplate(params).toString
       htmlContent should include(
-        "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered.")
+        "We have now checked your claim 1234, and sent a payment to the account details provided when the business was registered."
+      )
       htmlContent should include("The payment will reach the account in 3 to 5 working days.")
       htmlContent should include("Eat Out to Help Out Scheme")
     }

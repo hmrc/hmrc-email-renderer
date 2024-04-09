@@ -20,8 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ApiDeveloperHub
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
-/**
-  * Templates used by the API Platform.
+/** Templates used by the API Platform.
   */
 object ApiTemplates {
   private def extractFromAddress(params: Map[String, String]): String = {

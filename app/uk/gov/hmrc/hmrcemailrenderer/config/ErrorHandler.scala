@@ -24,12 +24,13 @@ import preview.views.html.error_template
 import com.google.inject.{ Inject, Singleton }
 
 @Singleton
-class ErrorHandler @Inject()(
+class ErrorHandler @Inject() (
   val messagesApi: MessagesApi,
   view: error_template
 ) extends FrontendErrorHandler with I18nSupport {
 
-  override def standardErrorTemplate(pageTitle: String, heading: String, message: String)(
-    implicit rh: Request[_]): Html =
+  override def standardErrorTemplate(pageTitle: String, heading: String, message: String)(implicit
+    rh: Request[_]
+  ): Html =
     view(pageTitle, heading, message)
 }

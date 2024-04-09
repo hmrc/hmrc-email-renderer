@@ -54,7 +54,8 @@ class RendererControllerISpec
       implicit lazy val wsc: WSClient = app.injector.instanceOf[WSClient]
 
       wsUrl(s"/templates/nonExistentTemplateId").post(Json.obj("parameters" -> Map.empty[String, String])) should have(
-        status(404))
+        status(404)
+      )
     }
 
     "return 400 and indicate the first point of failure when the parameters for the template are not supplied and its not in WelshTemplatesByLangPreference" in {

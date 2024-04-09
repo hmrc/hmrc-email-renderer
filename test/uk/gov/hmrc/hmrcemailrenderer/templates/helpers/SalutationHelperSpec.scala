@@ -41,7 +41,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be Dear Customer when having empty title" in {
-      salutationFrom(Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey")) shouldBe "Dear Customer"
+      salutationFrom(
+        Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey")
+      ) shouldBe "Dear Customer"
     }
 
     "be Dear Customer when having empty surname" in {
@@ -49,11 +51,15 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be respected when having apostrophied surname" in {
-      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "O'maLLey")) shouldBe "Dear Mr O'Malley"
+      salutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_surname" -> "O'maLLey")
+      ) shouldBe "Dear Mr O'Malley"
     }
 
     "be respected when having hyphenated surname" in {
-      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER-PriCE")) shouldBe "Dear Mr Fisher-Price"
+      salutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER-PriCE")
+      ) shouldBe "Dear Mr Fisher-Price"
     }
 
     "be respected when having name.title name.surname	Dear [name.title] [name.surname]" in {
@@ -65,7 +71,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
         Map(
           "recipientName_title"   -> "MR",
           "recipientName_surname" -> "FISHER",
-          "recipientName_line1"   -> "something else")) shouldBe "Dear Mr Fisher"
+          "recipientName_line1"   -> "something else"
+        )
+      ) shouldBe "Dear Mr Fisher"
     }
 
     "be line1 when title and forname are not provided" in {
@@ -73,17 +81,15 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be respected when having name.title name.forename name.surname	Dear [name.title] [name.forename] [name.surname]" in {
-      salutationFrom(Map(
-        "recipientName_title"    -> "MR",
-        "recipientName_forename" -> "GEOFF",
-        "recipientName_surname"  -> "FISHER")) shouldBe "Dear Mr Fisher"
+      salutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER")
+      ) shouldBe "Dear Mr Fisher"
     }
 
     "be respected when having name.forename name.surname name.honours	Dear [name.forename] [name.surname] [name.honours]" in {
-      salutationFrom(Map(
-        "recipientName_forename" -> "GEOFF",
-        "recipientName_surname"  -> "FISHER",
-        "recipientName_honours"  -> "LLB")) shouldBe "Dear Customer"
+      salutationFrom(
+        Map("recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")
+      ) shouldBe "Dear Customer"
     }
 
     "be respected when having name.forename name.secondForename name.surname name.honours	Dear [name.forename] [name.secondForename] [name.surname] [name.honours]" in {
@@ -92,14 +98,15 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_forename"       -> "GEOFF",
           "recipientName_secondForename" -> "BOB",
           "recipientName_surname"        -> "FISHER",
-          "recipientName_honours"        -> "LLB")) shouldBe "Dear Customer"
+          "recipientName_honours"        -> "LLB"
+        )
+      ) shouldBe "Dear Customer"
     }
 
     "be respected when having name.title name.surname name.honours	Dear [name.title] [name.surname] [name.honours]" in {
-      salutationFrom(Map(
-        "recipientName_title"   -> "MR",
-        "recipientName_surname" -> "FISHER",
-        "recipientName_honours" -> "LLB")) shouldBe "Dear Mr Fisher"
+      salutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")
+      ) shouldBe "Dear Mr Fisher"
     }
 
     "be respected when having name.title name.forename name.surname name.honours	Dear [name.title] [name.forename] [name.surname] [name.honours]" in {
@@ -108,7 +115,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_title"    -> "MR",
           "recipientName_forename" -> "GEOFF",
           "recipientName_surname"  -> "FISHER",
-          "recipientName_honours"  -> "LLB")) shouldBe "Dear Mr Fisher"
+          "recipientName_honours"  -> "LLB"
+        )
+      ) shouldBe "Dear Mr Fisher"
     }
 
     "be respected when having name.title name.forename name.secondForename name.surname	Dear [name.title] [name.forename] [name.secondForename] [name.surname]" in {
@@ -117,7 +126,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_title"          -> "MR",
           "recipientName_forename"       -> "GEOFF",
           "recipientName_secondForename" -> "BOB",
-          "recipientName_surname"        -> "FISHER")) shouldBe "Dear Mr Fisher"
+          "recipientName_surname"        -> "FISHER"
+        )
+      ) shouldBe "Dear Mr Fisher"
     }
 
     "be respected when having name.title name.forename name.secondForename name.surname name.honours	Dear [name.title] [name.forename] [name.secondForename] [name.surname] [name.honours]" in {
@@ -128,7 +139,8 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_secondForename" -> "BOB",
           "recipientName_surname"        -> "FISHER",
           "recipientName_honours"        -> "LLB"
-        )) shouldBe "Dear Mr Fisher"
+        )
+      ) shouldBe "Dear Mr Fisher"
     }
   }
 
@@ -142,7 +154,10 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be Annwyl Customer when having name.title and name.forename only" in {
-      salutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF"), isWelsh = true) shouldBe "Annwyl Gwsmer"
+      salutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF"),
+        isWelsh = true
+      ) shouldBe "Annwyl Gwsmer"
     }
 
     "be Annwyl Customer when name.surname only" in {
@@ -150,7 +165,10 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be Annwyl Customer when having empty title" in {
-      salutationFrom(Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey"), true) shouldBe "Annwyl Gwsmer"
+      salutationFrom(
+        Map("recipientName_title" -> "   ", "recipientName_surname" -> "O'maLLey"),
+        true
+      ) shouldBe "Annwyl Gwsmer"
     }
 
     "be Dear Customer when having empty surname" in {
@@ -169,7 +187,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be Dear Customer when having name.title and name.forename only" in {
-      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF")) shouldBe "Dear Customer"
+      informalSalutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF")
+      ) shouldBe "Dear Customer"
     }
 
     "be Dear Customer when having name.title and name.surname only" in {
@@ -177,37 +197,45 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
     }
 
     "be Dear Customer when having empty forname" in {
-      informalSalutationFrom(Map("recipientName_forename" -> "", "recipientName_surname" -> "O'maLLey")) shouldBe "Dear Customer"
+      informalSalutationFrom(
+        Map("recipientName_forename" -> "", "recipientName_surname" -> "O'maLLey")
+      ) shouldBe "Dear Customer"
     }
 
     "be Dear Customer when having empty surname" in {
-      informalSalutationFrom(Map("recipientName_forename" -> "PAT", "recipientName_surname" -> "")) shouldBe "Dear Customer"
+      informalSalutationFrom(
+        Map("recipientName_forename" -> "PAT", "recipientName_surname" -> "")
+      ) shouldBe "Dear Customer"
     }
 
     "be respected when having apostrophied surname" in {
-      informalSalutationFrom(Map("recipientName_forename" -> "PAT", "recipientName_surname" -> "O'maLLey")) shouldBe "Dear Pat O'Malley"
+      informalSalutationFrom(
+        Map("recipientName_forename" -> "PAT", "recipientName_surname" -> "O'maLLey")
+      ) shouldBe "Dear Pat O'Malley"
     }
 
     "be respected when having hyphenated surname" in {
-      informalSalutationFrom(Map("recipientName_forename" -> "COLIN", "recipientName_surname" -> "FISHER-PriCE")) shouldBe "Dear Colin Fisher-Price"
+      informalSalutationFrom(
+        Map("recipientName_forename" -> "COLIN", "recipientName_surname" -> "FISHER-PriCE")
+      ) shouldBe "Dear Colin Fisher-Price"
     }
 
     "be respected when having name.title name.surname	Dear Customer" in {
-      informalSalutationFrom(Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER")) shouldBe "Dear Customer"
+      informalSalutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER")
+      ) shouldBe "Dear Customer"
     }
 
     "be respected when having name.title name.forename name.surname	Dear [name.title] [name.forename] [name.surname]" in {
-      informalSalutationFrom(Map(
-        "recipientName_title"    -> "MR",
-        "recipientName_forename" -> "GEOFF",
-        "recipientName_surname"  -> "FISHER")) shouldBe "Dear Geoff Fisher"
+      informalSalutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER")
+      ) shouldBe "Dear Geoff Fisher"
     }
 
     "be respected when having name.forename name.surname name.honours	Dear [name.forename] [name.surname] [name.honours]" in {
-      informalSalutationFrom(Map(
-        "recipientName_forename" -> "GEOFF",
-        "recipientName_surname"  -> "FISHER",
-        "recipientName_honours"  -> "LLB")) shouldBe "Dear Geoff Fisher"
+      informalSalutationFrom(
+        Map("recipientName_forename" -> "GEOFF", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")
+      ) shouldBe "Dear Geoff Fisher"
     }
 
     "be respected when having name.forename name.secondForename name.surname name.honours	Dear [name.forename] [name.secondForename] [name.surname] [name.honours]" in {
@@ -216,14 +244,15 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_forename"       -> "GEOFF",
           "recipientName_secondForename" -> "BOB",
           "recipientName_surname"        -> "FISHER",
-          "recipientName_honours"        -> "LLB")) shouldBe "Dear Geoff Fisher"
+          "recipientName_honours"        -> "LLB"
+        )
+      ) shouldBe "Dear Geoff Fisher"
     }
 
     "be respected when having name.title name.surname name.honours	Dear Customer" in {
-      informalSalutationFrom(Map(
-        "recipientName_title"   -> "MR",
-        "recipientName_surname" -> "FISHER",
-        "recipientName_honours" -> "LLB")) shouldBe "Dear Customer"
+      informalSalutationFrom(
+        Map("recipientName_title" -> "MR", "recipientName_surname" -> "FISHER", "recipientName_honours" -> "LLB")
+      ) shouldBe "Dear Customer"
     }
 
     "be respected when having name.title name.forename name.surname name.honours	Dear [name.title] [name.forename] [name.surname] [name.honours]" in {
@@ -232,7 +261,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_title"    -> "MR",
           "recipientName_forename" -> "GEOFF",
           "recipientName_surname"  -> "FISHER",
-          "recipientName_honours"  -> "LLB")) shouldBe "Dear Geoff Fisher"
+          "recipientName_honours"  -> "LLB"
+        )
+      ) shouldBe "Dear Geoff Fisher"
     }
 
     "be respected when having name.title name.forename name.secondForename name.surname	Dear [name.title] [name.forename] [name.secondForename] [name.surname]" in {
@@ -241,7 +272,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_title"          -> "MR",
           "recipientName_forename"       -> "GEOFF",
           "recipientName_secondForename" -> "BOB",
-          "recipientName_surname"        -> "FISHER")) shouldBe "Dear Geoff Fisher"
+          "recipientName_surname"        -> "FISHER"
+        )
+      ) shouldBe "Dear Geoff Fisher"
     }
 
     "be respected when having name.title name.forename name.secondForename name.surname name.honours	Dear [name.title] [name.forename] [name.secondForename] [name.surname] [name.honours]" in {
@@ -252,7 +285,8 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
           "recipientName_secondForename" -> "BOB",
           "recipientName_surname"        -> "FISHER",
           "recipientName_honours"        -> "LLB"
-        )) shouldBe "Dear Geoff Fisher"
+        )
+      ) shouldBe "Dear Geoff Fisher"
     }
   }
 
@@ -295,7 +329,9 @@ class SalutationHelperSpec extends AnyWordSpecLike with Matchers with OptionValu
         Map(
           "recipientName_forename" -> "ABCDEF",
           "recipientName_surname"  -> "ZXCVB",
-          "recipientName_FullName" -> "John DOE")) shouldBe "Dear John Doe"
+          "recipientName_FullName" -> "John DOE"
+        )
+      ) shouldBe "Dear John Doe"
     }
   }
 
