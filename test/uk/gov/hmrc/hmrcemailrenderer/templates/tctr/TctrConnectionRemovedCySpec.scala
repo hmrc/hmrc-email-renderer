@@ -23,8 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.{ tctrGroup, tctr_connection_removed_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-/**
-  * @author Yuriy Tumakha
+/** @author
+  *   Yuriy Tumakha
   */
 class TctrConnectionRemovedCySpec
     extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
@@ -39,9 +39,11 @@ class TctrConnectionRemovedCySpec
     content should include("Rydym wedi derbyn eich cais")
     content should include("Annwyl David Jones")
     content should include(
-      "Diolch am gysylltu â ni ar 27 Mawrth 2022 am 4:33pm. Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo.")
+      "Diolch am gysylltu â ni ar 27 Mawrth 2022 am 4:33pm. Mae’r e-bost hwn yn gadarnhad eich bod wedi gofyn i ni ddileu eich cysylltiad ag eiddo."
+    )
     content should include(
-      "Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.")
+      "Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn."
+    )
     content should include("Peidiwch ag ymateb i’r e-bost hwn.")
     content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
     content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")

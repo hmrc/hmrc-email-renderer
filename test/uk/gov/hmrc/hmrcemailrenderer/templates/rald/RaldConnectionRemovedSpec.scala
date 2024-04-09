@@ -23,8 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ raldGroup, rald_connection_removed }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-/**
-  * @author Yuriy Tumakha
+/** @author
+  *   Yuriy Tumakha
   */
 class RaldConnectionRemovedSpec
     extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
@@ -39,9 +39,11 @@ class RaldConnectionRemovedSpec
     content should include("We have received your request")
     content should include("Dear David Jones")
     content should include(
-      "Thank you for contacting us. This email is confirmation that you have asked us to remove your connection to a property.")
+      "Thank you for contacting us. This email is confirmation that you have asked us to remove your connection to a property."
+    )
     content should include(
-      "We will remove your details from our records. You should not receive any further letters from us about this property.")
+      "We will remove your details from our records. You should not receive any further letters from us about this property."
+    )
     content should include("From Valuation Office Agency")
     content should include("Report the suspicious email to HMRC")
   }

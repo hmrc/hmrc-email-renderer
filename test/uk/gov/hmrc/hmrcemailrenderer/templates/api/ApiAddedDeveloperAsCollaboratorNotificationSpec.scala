@@ -44,17 +44,20 @@ class ApiAddedDeveloperAsCollaboratorNotificationSpec extends AnyWordSpec with M
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
           "</strong> has been added to <strong>" + applicationName +
-          "</strong> by another admin.</p>")
+          "</strong> by another admin.</p>"
+      )
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">They now have " + role +
-          " rights over the application.</p>")
+          " rights over the application.</p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorNotification.render(templateParamsPlus)
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 

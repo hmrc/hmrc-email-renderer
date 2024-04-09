@@ -58,7 +58,8 @@ class OSSOverdueReturnsEmailConfirmationSpec
       htmlContent should include("You need to pay the return in full as soon as you can.")
       htmlContent should include(
         "If you submit late payments and returns, we may remove you from the scheme. " +
-          "More information about One Stop Shop return deadlines is available on GOV.UK.")
+          "More information about One Stop Shop return deadlines is available on GOV.UK."
+      )
       htmlContent should include("EU countries can charge you interest or penalties for late payments.")
       htmlContent should include("How to pay")
       htmlContent should include("Search GOV.UK for ‘Pay your OSS VAT Return’.")
@@ -77,7 +78,8 @@ class OSSOverdueReturnsEmailConfirmationSpec
       txtContent should include("You need to pay the return in full as soon as you can.")
       txtContent should include(
         "If you submit late payments and returns, we may remove you from the scheme. " +
-          "More information about One Stop Shop return deadlines is available on GOV.UK.")
+          "More information about One Stop Shop return deadlines is available on GOV.UK."
+      )
       txtContent should include("EU countries can charge you interest or penalties for late payments.")
       txtContent should include("How to pay")
       txtContent should include("Search GOV.UK for ‘Pay your OSS VAT Return’.")

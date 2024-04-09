@@ -34,7 +34,8 @@ class ApiPasswordChangedConfirmationEmailSpec extends AnyWordSpec with Matchers 
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">Your password for the HMRC " +
-          "Developer Hub has been reset.</p>")
+          "Developer Hub has been reset.</p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
@@ -42,9 +43,11 @@ class ApiPasswordChangedConfirmationEmailSpec extends AnyWordSpec with Matchers 
       val renderedHtml = api.html.passwordChangedConfirmationEmail.render(templateParamsPlus)
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">Your password for the HMRC " +
-          developerHubTitle + " has been reset.</p>")
+          developerHubTitle + " has been reset.</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 

@@ -25,9 +25,8 @@ import scala.concurrent.Future
 
 trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
 
-  /**
-    * Enables syntax like:
-    * <code>resource("/write/audit").post(validAuditRequest) should <b>have (status (204))</b></code>
+  /** Enables syntax like: <code>resource("/write/audit").post(validAuditRequest) should <b>have (status
+    * (204))</b></code>
     */
   def status(expected: Int) = new HavePropertyMatcher[Future[WSResponse], Int] {
     def apply(response: Future[WSResponse]) = HavePropertyMatchResult(
@@ -38,9 +37,8 @@ trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
     )
   }
 
-  /**
-    * Enables syntax like:
-    * <code>resource("/write/audit").post(validAuditRequest) should <b>have (body ("Invalid nino: !@£$%^&*^"))</b></code>
+  /** Enables syntax like: <code>resource("/write/audit").post(validAuditRequest) should <b>have (body ("Invalid nino:
+    * !@£$%^&*^"))</b></code>
     */
   def body(expected: String) = new HavePropertyMatcher[Future[WSResponse], String] {
     def apply(response: Future[WSResponse]) = HavePropertyMatchResult(
@@ -51,9 +49,8 @@ trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
     )
   }
 
-  /**
-    * Enables syntax like:
-    * <code>resource("/write/audit").post(validAuditRequest) should <b>have (jsonContent ("""{ "valid": true }"""))</b></code>
+  /** Enables syntax like: <code>resource("/write/audit").post(validAuditRequest) should <b>have (jsonContent ("""{
+    * "valid": true }"""))</b></code>
     */
   def jsonContent(expected: String) = new HavePropertyMatcher[Future[WSResponse], JsValue] {
     val expectedAsJson = Json.parse(expected)
@@ -67,10 +64,9 @@ trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
       )
   }
 
-  /**
-    * Checks if a property is defined and has a specific value
-    * Enables syntax like:
-    * <code>resource("/write/audit").post(validAuditRequest) should <b>have (jsonProperty (__ \ "valid", true))</b></code>
+  /** Checks if a property is defined and has a specific value Enables syntax like:
+    * <code>resource("/write/audit").post(validAuditRequest) should <b>have (jsonProperty (__ \ "valid",
+    * true))</b></code>
     */
   def jsonProperty[E](path: JsPath, expected: E)(implicit eReads: Reads[E]) =
     new HavePropertyMatcher[Future[WSResponse], String] {
@@ -85,10 +81,8 @@ trait ResponseMatchers extends ScalaFutures with IntegrationPatience {
       )
     }
 
-  /**
-    * Checks if a property is defined
-    * Enables syntax like:
-    * <code>resource("/write/audit").post(validAuditRequest) should <b>have (jsonProperty (__ \ "valid"))</b></code>
+  /** Checks if a property is defined Enables syntax like: <code>resource("/write/audit").post(validAuditRequest) should
+    * <b>have (jsonProperty (__ \ "valid"))</b></code>
     */
   def jsonProperty(path: JsPath) = new HavePropertyMatcher[Future[WSResponse], JsValue] {
     def apply(response: Future[WSResponse]) = HavePropertyMatchResult(

@@ -81,6 +81,7 @@ class NameCaseSpec extends AnyWordSpec with Matchers {
     badNamesMap.keys.foreach(name =>
       s"""fix "$name" to "${badNamesMap.get(name).get}" """ in {
         NameCase.nc(name) should be(badNamesMap.get(name).get)
-    })
+      }
+    )
   }
 }

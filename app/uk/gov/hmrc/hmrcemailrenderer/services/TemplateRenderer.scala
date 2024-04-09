@@ -33,11 +33,11 @@ import uk.gov.hmrc.play.audit.model.EventTypes.Succeeded
 import scala.concurrent.{ ExecutionContext, Future }
 import scala.util.{ Failure, Success, Try }
 
-class TemplateRenderer @Inject()(
+class TemplateRenderer @Inject() (
   configuration: Configuration,
   auditConnector: AuditConnector,
-  preferencesConnector: PreferencesConnector)
-    extends Logging {
+  preferencesConnector: PreferencesConnector
+) extends Logging {
 
   val locator: TemplateLocator = TemplateLocator
 
@@ -61,15 +61,14 @@ class TemplateRenderer @Inject()(
       template  <- locator.findTemplate(templateId).toRight[ErrorMessage](MissingTemplateId(templateId))
       plainText <- render(template.plainTemplate, allParams)
       htmlText  <- render(template.htmlTemplate, allParams)
-    } yield
-      RenderResult(
-        plainText,
-        htmlText,
-        template.fromAddress(allParams),
-        template.subject(allParams),
-        template.service.name,
-        template.priority
-      )
+    } yield RenderResult(
+      plainText,
+      htmlText,
+      template.fromAddress(allParams),
+      template.subject(allParams),
+      template.service.name,
+      template.priority
+    )
   }
 
   private def sendLanguageEvents(
@@ -77,7 +76,8 @@ class TemplateRenderer @Inject()(
     language: Language,
     originalTemplateId: String,
     selectedTemplateId: String,
-    description: String)(implicit ec: ExecutionContext): Future[AuditResult] = {
+    description: String
+  )(implicit ec: ExecutionContext): Future[AuditResult] = {
 
     val event = DataEvent(
       "hmrc-email-renderer",
@@ -95,16 +95,16 @@ class TemplateRenderer @Inject()(
     auditConnector.sendEvent(event) map { success =>
       logger.debug("Language event successfully audited")
       success
-    } recover {
-      case e @ AuditResult.Failure(msg, _) =>
-        logger.warn(s"Language event failed to audit: $msg")
-        e
+    } recover { case e @ AuditResult.Failure(msg, _) =>
+      logger.warn(s"Language event failed to audit: $msg")
+      e
     }
   }
 
-  def languageTemplateId(originalTemplateId: String, emailAddress: Option[String])(
-    implicit hc: HeaderCarrier,
-    ec: ExecutionContext): Future[String] = {
+  def languageTemplateId(originalTemplateId: String, emailAddress: Option[String])(implicit
+    hc: HeaderCarrier,
+    ec: ExecutionContext
+  ): Future[String] = {
 
     if (templatesByLangPreference.size <= 0) {
       logger.warn("WelshTemplatesByLangPreferences allowlist is empty")
@@ -113,19 +113,16 @@ class TemplateRenderer @Inject()(
     val result = for {
       email           <- emailAddress
       welshTemplateId <- templatesByLangPreference.get(originalTemplateId)
-    } yield {
-      preferencesConnector.languageByEmail(email).map { lang =>
-        val selectedTemplateId = lang match {
-          case English => originalTemplateId
-          case Welsh   => welshTemplateId
-        }
-        sendLanguageEvents(email, lang, originalTemplateId, selectedTemplateId, "Language preference found")
-        selectedTemplateId
-      } recover {
-        case e: Throwable =>
-          logger.error(s"Error retrieving language preference from preferences service: ${e.getMessage}")
-          originalTemplateId
+    } yield preferencesConnector.languageByEmail(email).map { lang =>
+      val selectedTemplateId = lang match {
+        case English => originalTemplateId
+        case Welsh   => welshTemplateId
       }
+      sendLanguageEvents(email, lang, originalTemplateId, selectedTemplateId, "Language preference found")
+      selectedTemplateId
+    } recover { case e: Throwable =>
+      logger.error(s"Error retrieving language preference from preferences service: ${e.getMessage}")
+      originalTemplateId
     }
     result match {
       case Some(templateId) => templateId
@@ -143,7 +140,8 @@ class TemplateRenderer @Inject()(
 
   private def render(
     template: Map[String, String] => Format[_]#Appendable,
-    params: Map[String, String]): Either[ErrorMessage, String] =
+    params: Map[String, String]
+  ): Either[ErrorMessage, String] =
     Try(template(params)) match {
       case Success(output) => Right(output.toString)
       case Failure(error)  => Left(TemplateRenderFailure(error.getMessage))

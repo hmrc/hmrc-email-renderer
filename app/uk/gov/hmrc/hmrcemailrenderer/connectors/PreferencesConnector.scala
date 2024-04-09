@@ -26,7 +26,7 @@ import uk.gov.hmrc.http.HttpReads.Implicits._
 
 import scala.concurrent.{ ExecutionContext, Future }
 @Singleton
-class PreferencesConnector @Inject()(servicesConfig: ServicesConfig, http: HttpClient, crypto: ApplicationCrypto) {
+class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: HttpClient, crypto: ApplicationCrypto) {
 
   object LanguagePreference {
     implicit val format: OFormat[LanguagePreference] = Json.format[LanguagePreference]

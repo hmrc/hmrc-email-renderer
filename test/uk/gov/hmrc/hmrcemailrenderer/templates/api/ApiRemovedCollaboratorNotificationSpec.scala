@@ -42,16 +42,19 @@ class ApiRemovedCollaboratorNotificationSpec extends AnyWordSpec with Matchers {
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>" + email +
           "</strong> has been removed from <strong>" + applicationName +
-          "</strong> by another admin.</p>")
+          "</strong> by another admin.</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">They can no longer access this application.</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">They can no longer access this application.</p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedHtml = api.html.apiRemovedCollaboratorNotification.render(templateParamsPlus)
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 

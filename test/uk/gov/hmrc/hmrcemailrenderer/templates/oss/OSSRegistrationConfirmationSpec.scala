@@ -57,14 +57,17 @@ class OSSRegistrationConfirmationSpec
       htmlContent should include("You are registered for the One Stop Shop VAT scheme")
       htmlContent should include("We’ve received your registration for Test Business")
       htmlContent should include(
-        "You can now use this service to fill out quarterly returns for goods sold to consumers in the EU.")
+        "You can now use this service to fill out quarterly returns for goods sold to consumers in the EU."
+      )
       htmlContent should include("You can also pay any One Stop Shop VAT that you owe.")
       htmlContent should include(
-        "You can begin your July to September 2021 return on 1 October 2021. Include any sales from 12 June 2021.")
+        "You can begin your July to September 2021 return on 1 October 2021. Include any sales from 12 June 2021."
+      )
       htmlContent should include("What happens next")
       htmlContent should include("We will contact you if we need to check any information.")
       htmlContent should include(
-        "Read more information about <a href=\"http://test.com/blah-blah\" style=\"color: #005EA5;\"> how to complete an OSS return.</a>")
+        "Read more information about <a href=\"http://test.com/blah-blah\" style=\"color: #005EA5;\"> how to complete an OSS return.</a>"
+      )
       htmlContent should include("From the VAT One Stop Shop team")
     }
 
@@ -75,10 +78,12 @@ class OSSRegistrationConfirmationSpec
       txtContent should include("You are registered for the One Stop Shop VAT scheme")
       txtContent should include("We’ve received your registration for Test Business")
       txtContent should include(
-        "You can now use this service to fill out quarterly returns for goods sold to consumers in the EU.")
+        "You can now use this service to fill out quarterly returns for goods sold to consumers in the EU."
+      )
       txtContent should include("You can also pay any One Stop Shop VAT that you owe.")
       txtContent should include(
-        "You can begin your July to September 2021 return on 1 October 2021. Include any sales from 12 June 2021.")
+        "You can begin your July to September 2021 return on 1 October 2021. Include any sales from 12 June 2021."
+      )
       txtContent should include("What happens next")
       txtContent should include("We will contact you if we need to check any information.")
       txtContent should include("Read more information about http://test.com/blah-blah how to complete an OSS return.")

@@ -41,8 +41,7 @@ object TemplateParams {
   val exampleParams: Map[String, Map[String, String]] = GG.exampleParams ++
     Map(
       "aeo_mra_row_data_exchange_report" -> Map(
-        "country_rows" -> Base64.getEncoder.encodeToString(stringify(
-          parse("""
+        "country_rows" -> Base64.getEncoder.encodeToString(stringify(parse("""
           [
             {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:16:49.938044Z"},
             {"sendingCountry": "JP", "receivingCountry": "GB", "status": "MRA-AEO data received", "dateTime": "2021-05-04T11:17:49.938044Z"},
@@ -509,60 +508,60 @@ object TemplateParams {
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "warningInformation"  -> "true",
-        "turnAroundTime"      -> "35 days"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "warningInformation" -> "true",
+        "turnAroundTime"     -> "35 days"
       ),
       "dfs_submission_success_generic_2015_welsh" -> Map(
         "subject"             -> "Test Subject",
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "warningInformation"  -> "true",
-        "turnAroundTime"      -> "35 days"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "warningInformation" -> "true",
+        "turnAroundTime"     -> "35 days"
       ),
       "dfs_submission_success_generic_2017" -> Map(
         "subject"             -> "Test Subject",
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "paragraphThree"      -> "Some extra content for paragraph three...",
-        "warningInformation"  -> "false",
-        "turnAroundTime"      -> "35 days"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "paragraphThree"     -> "Some extra content for paragraph three...",
+        "warningInformation" -> "false",
+        "turnAroundTime"     -> "35 days"
       ),
       "dfs_submission_success_generic_2017_welsh" -> Map(
         "subject"             -> "Test Subject",
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "paragraphThree"      -> "Some extra content for paragraph three...",
-        "warningInformation"  -> "false",
-        "turnAroundTime"      -> "35 days"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "paragraphThree"     -> "Some extra content for paragraph three...",
+        "warningInformation" -> "false",
+        "turnAroundTime"     -> "35 days"
       ),
       "dfs_submission_success_empty_turn_around_time_2015" -> Map(
         "subject"             -> "Test Subject",
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "warningInformation"  -> "true"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "warningInformation" -> "true"
       ),
       "dfs_submission_success_empty_turn_around_time_2015_welsh" -> Map(
         "subject"             -> "Test Subject",
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "warningInformation"  -> "true"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "warningInformation" -> "true"
       ),
       "dfs_submission_success_empty_turn_around_time_2020" -> Map(
         "subject"             -> "Test Subject",
@@ -570,11 +569,11 @@ object TemplateParams {
         "greeting"            -> "Mr Joe Bloggs",
         "confirmation"        -> "HM Revenue and Customs (HMRC) has received your claim for a tax refund",
         "submissionReference" -> "1234",
-        "paragraphOne"        -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
-        "paragraphTwo"        -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "paragraphThree"      -> "If you've asked us to write to you, we'll send you a letter within 15 working days",
-        "paragraphFour"       -> "Some extra content for paragraph four...",
-        "warningInformation"  -> "true"
+        "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
+        "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
+        "paragraphThree"     -> "If you've asked us to write to you, we'll send you a letter within 15 working days",
+        "paragraphFour"      -> "Some extra content for paragraph four...",
+        "warningInformation" -> "true"
       ),
       "dfs_admin_notification" -> Map.empty[String, String],
       "generic_access_invitation_template_id" -> Map(
@@ -749,7 +748,7 @@ object TemplateParams {
         "enquirySubject"         -> "Council Tax - My Council Tax bill",
         "submissionDate"         -> "28 January 2022",
         "submissionTime"         -> "13:45",
-        "nextStep"               -> "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
+        "nextStep" -> "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
       ),
       cf_enquiry_confirmation_cy -> Map(
         "recipientName_FullName" -> "David Jones",
@@ -1767,8 +1766,7 @@ object TemplateParams2 {
       "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
       "senderName"  -> "Alice Example",
       "senderEmail" -> "alice@example.com",
-      "contactReasons" -> Base64.getEncoder.encodeToString(
-        stringify(parse("""[
+      "contactReasons" -> Base64.getEncoder.encodeToString(stringify(parse("""[
           "I want to know if I can reuse this API",
           "I need more information, like schemas or examples"
         ]""")).getBytes("UTF-8")),
@@ -1778,8 +1776,7 @@ object TemplateParams2 {
       "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
       "senderName"  -> "Alice Example",
       "senderEmail" -> "alice@example.com",
-      "contactReasons" -> Base64.getEncoder.encodeToString(
-        stringify(parse("""[
+      "contactReasons" -> Base64.getEncoder.encodeToString(stringify(parse("""[
           "I want to know if I can reuse this API",
           "I need more information, like schemas or examples"
         ]""")).getBytes("UTF-8")),
@@ -1787,10 +1784,10 @@ object TemplateParams2 {
       "apiEmail"         -> "api-platform@example.com"
     ),
     "telephone_payments_service" -> Map(
-      "totalAmountPaid"         -> "1000.00",
-      "transactionReference"    -> "12345FFF",
-      "cardType"                -> "Visa Debit",
-      "cardNumber"              -> "1234",
+      "totalAmountPaid"      -> "1000.00",
+      "transactionReference" -> "12345FFF",
+      "cardType"             -> "Visa Debit",
+      "cardNumber"           -> "1234",
       "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
     "face_to_face_payment_email_successful" -> Map(
@@ -1875,7 +1872,8 @@ object TemplateParams2 {
       "taxReference" -> "1234 5678 90K",
       "amountPaid"   -> "123.45",
       "commission"   -> "2.55",
-      "totalPaid"    -> "126.00"),
+      "totalPaid"    -> "126.00"
+    ),
     "ddi_migration_letter" -> Map(
       "NAME"         -> "Customer",
       "ADDRESSLINE1" -> "15 Grand Avenue",
@@ -1935,7 +1933,7 @@ object TemplateParams2 {
       "verificationLink" -> exampleLinkWithRandomId
     ),
     "recon_finance_report" -> Map(
-      "subject"                             -> "Telephone Payment Service (TPS) and Face to Face (F2F) Payment Service finance report 22/01/1989",
+      "subject" -> "Telephone Payment Service (TPS) and Face to Face (F2F) Payment Service finance report 22/01/1989",
       "financeReport_sundry_card"           -> "4,2500.00,2,1200.00,6,3700.00",
       "financeReport_sundry_vatLegal"       -> "1,500.00,0,0,1,500.00",
       "financeReport_sundry_debitCard"      -> "4,25.05,1,11.25,5,36.30",
@@ -2119,7 +2117,7 @@ object TemplateParams2 {
       "TOTALCUSTOMSGBP" -> "£5.50",
       "TOTALVATGBP"     -> "£20.50",
       "TRAVELLINGFROM"  -> "Great Britain",
-      "AllITEMS"        -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"100\",\"goodsValue\":\"400.00\",\"valueCurrency\":\"EUR\",\"valueCurrencyName\":\"Euro (EUR)\",\"originCountry\":\"FR\",\"originCountryName\":\"France\",\"exchangeRate\":\"1.1577\",\"exchangeRateDate\":\"2021-03-09\",\"goodsValueGBP\":\"345.51\",\"VATRESClaimed\":false,\"exciseGBP\":\"80.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"85.10\",\"ukVATPaid\":false,\"ukExcisePaid\":false}]"
+      "AllITEMS" -> "[{\"commodityDescription\":\"Beer\",\"volume\":\"100\",\"goodsValue\":\"400.00\",\"valueCurrency\":\"EUR\",\"valueCurrencyName\":\"Euro (EUR)\",\"originCountry\":\"FR\",\"originCountryName\":\"France\",\"exchangeRate\":\"1.1577\",\"exchangeRateDate\":\"2021-03-09\",\"goodsValueGBP\":\"345.51\",\"VATRESClaimed\":false,\"exciseGBP\":\"80.00\",\"customsGBP\":\"0.00\",\"vatGBP\":\"85.10\",\"ukVATPaid\":false,\"ukExcisePaid\":false}]"
     ),
     "digital_tariffs_advice_request" -> Map(
       "reference"             -> "REFERENCE",
@@ -2710,13 +2708,13 @@ object TemplateParams2 {
     ),
     "seiss_repay_submission" -> Map(
       "customerName" -> "Hugh Mann",
-      "miscText"     -> "When making the repayment, you must only use the bank details provided to repay the grant money. You must not use these bank details to make any other payment to HMRC.",
-      "emailTeam"    -> "the Self-Employment Income Support team"
+      "miscText" -> "When making the repayment, you must only use the bank details provided to repay the grant money. You must not use these bank details to make any other payment to HMRC.",
+      "emailTeam" -> "the Self-Employment Income Support team"
     ),
     "seiss_repay_submission_cy" -> Map(
       "customerName" -> "Hugh Mann",
-      "miscText"     -> "Wrth wneud yr ad-daliad, dim ond i ad-dalu arian grant y dylech ddefnyddio’r manylion banc hyn. Peidiwch â defnyddio’r manylion banc hyn i wneud unrhyw daliad arall i CThEM.",
-      "emailTeam"    -> "y tîm Cymhorthdal Incwm Hunangyflogaeth"
+      "miscText" -> "Wrth wneud yr ad-daliad, dim ond i ad-dalu arian grant y dylech ddefnyddio’r manylion banc hyn. Peidiwch â defnyddio’r manylion banc hyn i wneud unrhyw daliad arall i CThEM.",
+      "emailTeam" -> "y tîm Cymhorthdal Incwm Hunangyflogaeth"
     ),
     "vishing_code_submission" -> Map(
       "confirmationCode" -> "HGDY"
@@ -2794,7 +2792,7 @@ object TemplateParams2 {
       "para5"               -> "",
       "para6"               -> "",
       "para7"               -> "You can still use your URN to make further additions.",
-      "para8"               -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
+      "para8" -> "Select ‘start now’ from the GOV.UK page you used to start your original application. You can then confirm your email, then select ‘Make additions to an already approved application’."
     ),
     "c117_application_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
@@ -2930,8 +2928,8 @@ object TemplateParams2 {
       "notification"        -> "your notification",
       "companyName"         -> "Acquisitions Incorporated",
       "para1"               -> "You told us you do not currently have a Corporation Tax Unique Taxpayer Reference.",
-      "para2"               -> "If you are not currently waiting to receive this reference, you should register for Corporation Tax as soon as possible.",
-      "para3"               -> "Search GOV.UK for ‘Set up a limited company’, and go to step seven of the guide."
+      "para2" -> "If you are not currently waiting to receive this reference, you should register for Corporation Tax as soon as possible.",
+      "para3" -> "Search GOV.UK for ‘Set up a limited company’, and go to step seven of the guide."
     ),
     "creative_industries_code" -> Map(
       "confirmationCode" -> "HGDY"
@@ -2983,7 +2981,7 @@ object TemplateParams2 {
     "vat652_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68",
-      "para1"               -> "Once we have processed the form we will send you a letter acknowledging your disclosure."
+      "para1" -> "Once we have processed the form we will send you a letter acknowledging your disclosure."
     ),
     "vat652_code" -> Map(
       "confirmationCode" -> "HGDY"
@@ -3000,9 +2998,9 @@ object TemplateParams2 {
       "confirmationCode" -> "HGDY"
     ),
     "venture_capital_confirmation" -> Map(
-      "customerName"        -> "Hugh Mann",
-      "businessName"        -> "Acquisitions Incorporated",
-      "captionExpression"   -> "Seed Enterprise Investment Scheme (SEIS), Enterprise Investment Scheme (EIS) and Investment from a Venture Capital Trust (VCT)",
+      "customerName" -> "Hugh Mann",
+      "businessName" -> "Acquisitions Incorporated",
+      "captionExpression" -> "Seed Enterprise Investment Scheme (SEIS), Enterprise Investment Scheme (EIS) and Investment from a Venture Capital Trust (VCT)",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "trusts_report_code" -> Map(
@@ -3025,16 +3023,16 @@ object TemplateParams2 {
     "chief_confirmation" -> Map(
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68",
-      "paragraph1"          -> "Acquisitions Incorporated cannot use CHIEF to make import declarations after the deadline of",
-      "date1"               -> "30 September 2022.",
-      "paragraph4"          -> "This is because you told us Acquisitions Incorporated does not plan to move to using the Customs Declaration Service (CDS) in the future.",
-      "paragraph5"          -> "We can only give an extension for using CHIEF to make import declarations if a business plans to move to using CDS.",
-      "emailTeam"           -> "the Single Customs Platform team"
+      "paragraph1" -> "Acquisitions Incorporated cannot use CHIEF to make import declarations after the deadline of",
+      "date1"      -> "30 September 2022.",
+      "paragraph4" -> "This is because you told us Acquisitions Incorporated does not plan to move to using the Customs Declaration Service (CDS) in the future.",
+      "paragraph5" -> "We can only give an extension for using CHIEF to make import declarations if a business plans to move to using CDS.",
+      "emailTeam" -> "the Single Customs Platform team"
     ),
     "fprc_confirmation" -> Map(
-      "customerName"        -> "Hugh Mann",
-      "businessName"        -> "Acquisitions Incorporated",
-      "para1"               -> "We aim to look at the information you have sent within 7 working days. If you do not hear from us within that timeframe, you can contact us using the contact details and reference on the letter we sent. The reference is CFSS followed by 7 numbers.",
+      "customerName" -> "Hugh Mann",
+      "businessName" -> "Acquisitions Incorporated",
+      "para1" -> "We aim to look at the information you have sent within 7 working days. If you do not hear from us within that timeframe, you can contact us using the contact details and reference on the letter we sent. The reference is CFSS followed by 7 numbers.",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "gbEORI_confirmation" -> Map(
@@ -3300,40 +3298,40 @@ object TemplateParams3 {
       "emailTeam"        -> "Email Team"
     ),
     "dynamicEmail_confirmation" -> Map(
-      "heading1"                 -> "We have received your request to apply for, amend or cancel a PAYE settlement agreement",
-      "heading2"                 -> "",
-      "heading3"                 -> "",
-      "heading4"                 -> "",
-      "heading5"                 -> "",
-      "heading6"                 -> "",
-      "heading7"                 -> "",
-      "heading8"                 -> "",
-      "heading9"                 -> "",
-      "heading10"                -> "",
-      "heading11"                -> "",
-      "heading12"                -> "",
-      "heading13"                -> "",
-      "heading14"                -> "",
-      "heading15"                -> "",
-      "para1"                    -> "We confirm we have received your request to apply for, amend or cancel a PAYE settlement agreement.",
-      "para2"                    -> "We will respond to PSA applications and amendments within 30 working days. We will send written confirmation to the address you supplied.",
-      "para3"                    -> "If you have consented to communication by email we will use the email address you supplied.",
-      "para4"                    -> "",
-      "para5"                    -> "",
-      "para6"                    -> "",
-      "para7"                    -> "",
-      "para8"                    -> "",
-      "para9"                    -> "",
-      "para10"                   -> "",
-      "para11"                   -> "",
-      "para12"                   -> "",
-      "para13"                   -> "",
-      "para14"                   -> "",
-      "para15"                   -> "",
-      "customerName"             -> "Hugh Mann",
-      "submissionReference"      -> "NC38-N2ZC-TH68",
+      "heading1"  -> "We have received your request to apply for, amend or cancel a PAYE settlement agreement",
+      "heading2"  -> "",
+      "heading3"  -> "",
+      "heading4"  -> "",
+      "heading5"  -> "",
+      "heading6"  -> "",
+      "heading7"  -> "",
+      "heading8"  -> "",
+      "heading9"  -> "",
+      "heading10" -> "",
+      "heading11" -> "",
+      "heading12" -> "",
+      "heading13" -> "",
+      "heading14" -> "",
+      "heading15" -> "",
+      "para1" -> "We confirm we have received your request to apply for, amend or cancel a PAYE settlement agreement.",
+      "para2" -> "We will respond to PSA applications and amendments within 30 working days. We will send written confirmation to the address you supplied.",
+      "para3"        -> "If you have consented to communication by email we will use the email address you supplied.",
+      "para4"        -> "",
+      "para5"        -> "",
+      "para6"        -> "",
+      "para7"        -> "",
+      "para8"        -> "",
+      "para9"        -> "",
+      "para10"       -> "",
+      "para11"       -> "",
+      "para12"       -> "",
+      "para13"       -> "",
+      "para14"       -> "",
+      "para15"       -> "",
+      "customerName" -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
       "emailSubjectConfirmation" -> "HMEC has received your request to apply for, amend or cancel a PAYE settlement agreement",
-      "emailTeam"                -> "From HMRC"
+      "emailTeam" -> "From HMRC"
     ),
     "dynamicEmail_code_cy" -> Map(
       "emailHeading"     -> "Confirm your email address",
@@ -3344,36 +3342,36 @@ object TemplateParams3 {
       "emailTeam"        -> "Email Team"
     ),
     "dynamicEmail_confirmation_cy" -> Map(
-      "heading1"                 -> "We have received your return as a registered dealer in controlled oils",
-      "heading2"                 -> "",
-      "heading3"                 -> "",
-      "heading4"                 -> "Keep your details up-to-date",
-      "heading5"                 -> "",
-      "heading6"                 -> "",
-      "heading7"                 -> "",
-      "heading8"                 -> "",
-      "heading9"                 -> "",
-      "heading10"                -> "",
-      "heading11"                -> "",
-      "heading12"                -> "",
-      "heading13"                -> "",
-      "heading14"                -> "",
-      "heading15"                -> "",
-      "para1"                    -> "We confirm we have received your return as a registered dealer in controlled oils.",
-      "para2"                    -> "Your return will now be processed.",
-      "para3"                    -> "If we need to discuss your return, we will get in touch using the contact information we hold.",
-      "para4"                    -> "You can email HMRC at morcexciseeast@@hmrc.gov.uk to update your details.",
-      "para5"                    -> "",
-      "para6"                    -> "",
-      "para7"                    -> "",
-      "para8"                    -> "",
-      "para9"                    -> "",
-      "para10"                   -> "",
-      "para11"                   -> "",
-      "para12"                   -> "",
-      "para13"                   -> "",
-      "para14"                   -> "",
-      "para15"                   -> "",
+      "heading1"  -> "We have received your return as a registered dealer in controlled oils",
+      "heading2"  -> "",
+      "heading3"  -> "",
+      "heading4"  -> "Keep your details up-to-date",
+      "heading5"  -> "",
+      "heading6"  -> "",
+      "heading7"  -> "",
+      "heading8"  -> "",
+      "heading9"  -> "",
+      "heading10" -> "",
+      "heading11" -> "",
+      "heading12" -> "",
+      "heading13" -> "",
+      "heading14" -> "",
+      "heading15" -> "",
+      "para1"     -> "We confirm we have received your return as a registered dealer in controlled oils.",
+      "para2"     -> "Your return will now be processed.",
+      "para3"     -> "If we need to discuss your return, we will get in touch using the contact information we hold.",
+      "para4"     -> "You can email HMRC at morcexciseeast@@hmrc.gov.uk to update your details.",
+      "para5"     -> "",
+      "para6"     -> "",
+      "para7"     -> "",
+      "para8"     -> "",
+      "para9"     -> "",
+      "para10"    -> "",
+      "para11"    -> "",
+      "para12"    -> "",
+      "para13"    -> "",
+      "para14"    -> "",
+      "para15"    -> "",
       "customerName"             -> "Hugh Mann",
       "submissionReference"      -> "NC38-N2ZC-TH68",
       "emailSubjectConfirmation" -> "Email Subject",
@@ -3409,7 +3407,7 @@ object TemplateParams3 {
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
     "sdes_alert" -> Map(
-      "heading"   -> "You have unprocessed SDES items",
+      "heading" -> "You have unprocessed SDES items",
       "paragraph" -> "There are 2 new envelopes and a total of 15 unprocessed SDES envelopes. You can view these under 'Sdes Submissions' in your EEITT dashboard."
     ),
     "seis_code" -> Map(
@@ -3666,7 +3664,7 @@ object TemplateParams3 {
       "name" -> "Victoria sponge"
     ),
     "feeback_answers_for_digital_persona" -> Map(
-      "config"  -> "eyJuYW1lIjoidGVzdCIsImxhYmVsIjoiQVNNIHNhdGlzZmFjdGlvbiBzdXJ2ZXkiLCJxdWVzdGlvbnMiOlt7ImxhYmVsIjoiT24gYSBzY2FsZSBvZiAxIHRvIDEwIGhvdyB1c2VmdWwgd2FzIHRoZSBhdGEgb3BpbmlvbiBkYXRhPyIsInJhbmdlIjpbMCwxMF0sInR5cGUiOiJzbGlkZXIifSx7ImxhYmVsIjoiSG93IG11Y2ggZG8geW91IGFncmVlPyBUaGUgYW1vdW50IG9mIHRpbWUgaXQgdG9vayBmb3IgbXkgYmFnIHRvIGJlIGxvYWRlZC91bmxvYWRlZCB3YXMgcmVhc29uYWJsZSIsIm9wdGlvbnMiOlsiU3Ryb25nbHkgRGlzYWdyZWUiLCJTb21ld2hhdCBEaXNhZ3JlZSIsIk5laXRoZXIgQWdyZWUgbm9yIERpc2FncmVlIiwiU29tZXdoYXQgQWdyZWUiLCJTdHJvbmdseSBBZ3JlZSJdLCJ0eXBlIjoicmFkaW8ifSx7ImxhYmVsIjoiSXMgdGhlcmUgYW55IG90aGVyIHRoaW5nIHlvdSB3b3VsZCBsaWtlIHVzIHRvIGtub3c/Iiwib3B0aW9uYWwiOnRydWUsInR5cGUiOiJ0ZXh0QXJlYSJ9XSwiYWN0aXZlIjp7ImZyb20iOiIyMDIzLTAzLTAxVDAwOjAwOjAwWiIsInRvIjoiMjAyMy0wNC0wMVQwMDowMDowMFoifSwic2hvd09uY2UiOmZhbHNlLCJzaG93UmF0ZSI6MX0=",
+      "config" -> "eyJuYW1lIjoidGVzdCIsImxhYmVsIjoiQVNNIHNhdGlzZmFjdGlvbiBzdXJ2ZXkiLCJxdWVzdGlvbnMiOlt7ImxhYmVsIjoiT24gYSBzY2FsZSBvZiAxIHRvIDEwIGhvdyB1c2VmdWwgd2FzIHRoZSBhdGEgb3BpbmlvbiBkYXRhPyIsInJhbmdlIjpbMCwxMF0sInR5cGUiOiJzbGlkZXIifSx7ImxhYmVsIjoiSG93IG11Y2ggZG8geW91IGFncmVlPyBUaGUgYW1vdW50IG9mIHRpbWUgaXQgdG9vayBmb3IgbXkgYmFnIHRvIGJlIGxvYWRlZC91bmxvYWRlZCB3YXMgcmVhc29uYWJsZSIsIm9wdGlvbnMiOlsiU3Ryb25nbHkgRGlzYWdyZWUiLCJTb21ld2hhdCBEaXNhZ3JlZSIsIk5laXRoZXIgQWdyZWUgbm9yIERpc2FncmVlIiwiU29tZXdoYXQgQWdyZWUiLCJTdHJvbmdseSBBZ3JlZSJdLCJ0eXBlIjoicmFkaW8ifSx7ImxhYmVsIjoiSXMgdGhlcmUgYW55IG90aGVyIHRoaW5nIHlvdSB3b3VsZCBsaWtlIHVzIHRvIGtub3c/Iiwib3B0aW9uYWwiOnRydWUsInR5cGUiOiJ0ZXh0QXJlYSJ9XSwiYWN0aXZlIjp7ImZyb20iOiIyMDIzLTAzLTAxVDAwOjAwOjAwWiIsInRvIjoiMjAyMy0wNC0wMVQwMDowMDowMFoifSwic2hvd09uY2UiOmZhbHNlLCJzaG93UmF0ZSI6MX0=",
       "answers" -> "eyJuYW1lIjoidGVzdCIsImFuc3dlcnMiOlsiMiIsIjMiLCJIb3BlIHRoaXMgd29ya3MiXX0="
     ),
     "ecl_registration_received" -> Map(

@@ -44,23 +44,28 @@ class PsaRegisteredCompanySpec
     )
 
     "have the correct subject" in {
-      templateRegisterCompany.subject(params) shouldBe s"${params("psaName")} has registered as a pension scheme administrator"
+      templateRegisterCompany
+        .subject(params) shouldBe s"${params("psaName")} has registered as a pension scheme administrator"
     }
 
     "have the correct body content" in {
 
-      templateRegisterCompany.subject(params) shouldBe s"${params("psaName")} has registered as a pension scheme administrator"
+      templateRegisterCompany
+        .subject(params) shouldBe s"${params("psaName")} has registered as a pension scheme administrator"
       val htmlContent = templateRegisterCompany.htmlTemplate(params).toString
       htmlContent should include("Pension scheme administrator registration successful")
       htmlContent should include(s"Dear ${params("psaName")}")
       htmlContent should include(
-        s"You have successfully registered ${params("psaName")} as a pension scheme administrator on the Managing Pension Schemes service.")
+        s"You have successfully registered ${params("psaName")} as a pension scheme administrator on the Managing Pension Schemes service."
+      )
       htmlContent should include(s"The administrator ID for ${params("psaName")} has not changed.")
       htmlContent should include(
         "The pension scheme administrator can now manage pension schemes by applying to register a new pension scheme. " +
-          "To do this search for ‘apply to register a pension scheme’ on GOV.UK and then choose to use the online service.")
+          "To do this search for ‘apply to register a pension scheme’ on GOV.UK and then choose to use the online service."
+      )
       htmlContent should include(
-        "They can also be invited to be a pension scheme administrator for an existing pension scheme.")
+        "They can also be invited to be a pension scheme administrator for an existing pension scheme."
+      )
       htmlContent should include("For security reasons, we have not included a link with this email.")
       htmlContent should include("From HMRC Pension Schemes Services")
     }

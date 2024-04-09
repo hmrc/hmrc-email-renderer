@@ -30,7 +30,8 @@ class ApiDeveloperPasswordResetSpec extends AnyWordSpec with Matchers {
     "resetPasswordLink"         -> resetPasswordLink,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
-    "borderColour"              -> "#005EA5")
+    "borderColour"              -> "#005EA5"
+  )
 
   "htmlView" should {
     "render as" in new TestCase {
@@ -38,11 +39,13 @@ class ApiDeveloperPasswordResetSpec extends AnyWordSpec with Matchers {
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">" +
-          "Click on the link below to reset your password for the HMRC Developer Hub.</p>")
+          "Click on the link below to reset your password for the HMRC Developer Hub.</p>"
+      )
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">" +
           "<a href=\"" + resetPasswordLink + "\" style=\"color: #005EA5;\">" +
-          resetPasswordLink + "</a> </p>")
+          resetPasswordLink + "</a> </p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
@@ -50,9 +53,11 @@ class ApiDeveloperPasswordResetSpec extends AnyWordSpec with Matchers {
       val renderedHtml = api.html.passwordResetEmail.render(templateParamsPlus)
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">" +
-          "Click on the link below to reset your password for the HMRC " + developerHubTitle + ".</p>")
+          "Click on the link below to reset your password for the HMRC " + developerHubTitle + ".</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 
@@ -68,7 +73,8 @@ class ApiDeveloperPasswordResetSpec extends AnyWordSpec with Matchers {
       val templateParamsPlus = templateParams + ("developerHubTitle" -> developerHubTitle)
       val renderedTxt = api.txt.passwordResetEmail.render(templateParamsPlus)
       renderedTxt.body should include(
-        "Click on the link below to reset your password for the HMRC " + developerHubTitle + ".")
+        "Click on the link below to reset your password for the HMRC " + developerHubTitle + "."
+      )
       renderedTxt.body should include("From HMRC " + developerHubTitle)
     }
   }

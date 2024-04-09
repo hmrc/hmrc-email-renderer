@@ -62,7 +62,11 @@ case object HeadersWithWarnings
 }
 
 case object HeadersHeuristicallyCompliant
-    extends Status("HEADERS_HEURISTICALLY_COMPLIANT", "", "make sure your application keeps meeting the specification") {
+    extends Status(
+      "HEADERS_HEURISTICALLY_COMPLIANT",
+      "",
+      "make sure your application keeps meeting the specification"
+    ) {
   override def contents(applicationName: String, month: String, year: Int): Seq[String] = Seq(
     "Your application’s fraud prevention headers are correct.",
     s"In production, in $month $year, $applicationName meets the fraud prevention specification."

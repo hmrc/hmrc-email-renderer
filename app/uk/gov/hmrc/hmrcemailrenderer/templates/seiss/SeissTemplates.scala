@@ -56,7 +56,8 @@ object SeissTemplates {
       templateId = "seiss_payment_failed_cy",
       fromAddress = seissFromAddressWelsh,
       service = Seiss,
-      subject = "Mae angen mwy o fanylion ar CThEF i dalu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
+      subject =
+        "Mae angen mwy o fanylion ar CThEF i dalu’ch grant ar gyfer y Cynllun Cymhorthdal Incwm Hunangyflogaeth",
       plainTemplate = txt.seissPaymentFailure_cy.f,
       htmlTemplate = html.seissPaymentFailure_cy.f,
       priority = Some(MessagePriority.Background)

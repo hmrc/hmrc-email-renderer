@@ -45,7 +45,8 @@ class NewMessageAlert_SA309Spec
       templateSA309.subject(commonParameters) shouldBe "You've got a new message from HMRC"
       val htmlContent = templateSA309.htmlTemplate(commonParameters).toString
       htmlContent should include(
-        "You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January")
+        "You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January"
+      )
       htmlContent should include("To view it, sign in to your HMRC online account")
     }
 
@@ -58,7 +59,8 @@ class NewMessageAlert_SA309Spec
         "recipientName_title"          -> "Lord",
         "recipientName_secondForename" -> "Montogmery",
         "recipientName_surname"        -> "Windsor",
-        "recipientName_honours"        -> "Viscount")
+        "recipientName_honours"        -> "Viscount"
+      )
       val htmlContent = templateSA309.htmlTemplate(commonParameters ++ nameData).toString
       htmlContent should include("Dear Lord Windsor")
       htmlContent shouldNot include("Customer")

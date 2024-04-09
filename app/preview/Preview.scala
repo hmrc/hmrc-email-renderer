@@ -21,7 +21,7 @@ import uk.gov.hmrc.hmrcemailrenderer.controllers.model.RenderResult
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ ErrorMessage, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 
-class Preview @Inject()(renderer: TemplateRenderer) {
+class Preview @Inject() (renderer: TemplateRenderer) {
   type RenderedResult = Either[ErrorMessage, RenderResult]
 
   def html(templateId: String, parameters: Map[String, String]): String =
@@ -30,8 +30,8 @@ class Preview @Inject()(renderer: TemplateRenderer) {
   def plain(templateId: String, parameters: Map[String, String]): String =
     extractPlainText.orElse(handleErrors)(renderer.render(templateId, parameters))
 
-  private val extractHtml: PartialFunction[RenderedResult, String] = {
-    case Right(RenderResult(_, html, _, _, _, _)) => html
+  private val extractHtml: PartialFunction[RenderedResult, String] = { case Right(RenderResult(_, html, _, _, _, _)) =>
+    html
   }
 
   private val extractPlainText: PartialFunction[RenderedResult, String] = {

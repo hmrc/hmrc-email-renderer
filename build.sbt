@@ -35,4 +35,10 @@ lazy val it = Project(id = "it", base = file("it"))
   .dependsOn(microservice % "test->test") // the "test->test" allows reusing test code and test dependencies
   .settings(libraryDependencies ++= appDependencies ++ AppDependencies.it)
 
-addCommandAlias("fmt", "scalafmt ; test:scalafmt ; it/test:scalafmt")
+Test / test := (Test / test)
+  .dependsOn(scalafmtCheckAll)
+  .value
+
+it / test := (it / Test / test)
+  .dependsOn(scalafmtCheckAll, it/scalafmtCheckAll)
+  .value

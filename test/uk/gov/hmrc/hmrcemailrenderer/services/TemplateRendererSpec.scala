@@ -86,7 +86,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-          override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+          override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
         }
       templateRenderer.languageTemplateId(templateId, Some("test@test.com")).futureValue shouldBe templateId
       verify(auditConnector)
@@ -114,7 +114,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-          override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+          override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
         }
 
       templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")).futureValue shouldBe welshTemplateId
@@ -146,7 +146,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-          override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+          override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
         }
 
       templateRenderer.languageTemplateId(engTemplateId, Some("test@test.com")).futureValue shouldBe engTemplateId
@@ -178,7 +178,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-          override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+          override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
         }
 
       templateRenderer.languageTemplateId(templateId, Some("test@test.com")).futureValue shouldBe templateId
@@ -208,7 +208,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-          override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+          override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
         }
 
       templateRenderer.languageTemplateId(templateId, None).futureValue shouldBe templateId
@@ -237,7 +237,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
           override val locator = locatorMock
           override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-          override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+          override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
         }
 
       templateRenderer.languageTemplateId(engTemplateId, None).futureValue shouldBe engTemplateId
@@ -273,7 +273,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
     val templateRenderer = new TemplateRenderer(configuration, auditConnector, preferencesConnector) {
       override val locator = locatorMock
       override lazy val templatesByLangPreference: Map[String, String] = Map(engTemplateId -> welshTemplateId)
-      override lazy val commonParameters: Map[String, String] = Map("commonKey"            -> "commonValue")
+      override lazy val commonParameters: Map[String, String] = Map("commonKey" -> "commonValue")
     }
 
     val validTemplate = MessageTemplate.create(

@@ -50,13 +50,16 @@ class PlatformContactConfirmationSpec extends AnyWordSpecLike with OptionValues 
       renderedHtml.body should include(s"<strong>API</strong>: ${templateParams.get("apiTitle").get}</p>")
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "<strong>Name</strong>: " + s"${templateParams.get("senderName").get}</p>")
+        paragraphWithInlineCss + "<strong>Name</strong>: " + s"${templateParams.get("senderName").get}</p>"
+      )
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "<strong>Email</strong>: " + s"${templateParams.get("senderEmail").get}</p>")
+        paragraphWithInlineCss + "<strong>Email</strong>: " + s"${templateParams.get("senderEmail").get}</p>"
+      )
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + "<strong>Why do you need to contact the API team?</strong></p>")
+        paragraphWithInlineCss + "<strong>Why do you need to contact the API team?</strong></p>"
+      )
 
       renderedHtml.body should include(paragraphWithInlineCss + "Test contact reason one</p>")
       renderedHtml.body should include(paragraphWithInlineCss + "Test contact reason two</p>")
@@ -67,7 +70,8 @@ class PlatformContactConfirmationSpec extends AnyWordSpecLike with OptionValues 
       renderedHtml.body should include(paragraphWithInlineCss + s"${templateParams.get("specificQuestion").get}</p>")
 
       renderedHtml.body should include(
-        paragraphWithInlineCss + s"<strong>Sent to:</strong> ${templateParams.get("apiEmail").get}</p>")
+        paragraphWithInlineCss + s"<strong>Sent to:</strong> ${templateParams.get("apiEmail").get}</p>"
+      )
 
       renderedHtml.body should include(paragraphWithInlineCss + s"You should get a reply in 7 days.</p>")
 

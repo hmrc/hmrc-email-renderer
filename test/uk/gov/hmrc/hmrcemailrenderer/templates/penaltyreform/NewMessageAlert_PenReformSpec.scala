@@ -55,7 +55,8 @@ class NewMessageAlert_PenReformSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'"
+      )
     }
   }
 
@@ -87,12 +88,14 @@ class NewMessageAlert_PenReformSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
       htmlContent must include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif.")
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif."
+      )
       htmlContent must include("Oddi wrth adran Ddigidol CThEF")
       htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’"
+      )
     }
   }
 
@@ -128,7 +131,8 @@ class NewMessageAlert_PenReformSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'"
+      )
     }
   }
 
@@ -160,12 +164,14 @@ class NewMessageAlert_PenReformSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
       htmlContent must include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif.")
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif."
+      )
       htmlContent must include("Oddi wrth adran Ddigidol CThEF")
       htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’"
+      )
     }
   }
 

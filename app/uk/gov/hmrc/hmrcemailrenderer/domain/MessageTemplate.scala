@@ -28,7 +28,8 @@ case class MessageTemplate(
   subject: Subject,
   plainTemplate: Body.Plain,
   htmlTemplate: Body.Html,
-  priority: Option[MessagePriority])
+  priority: Option[MessagePriority]
+)
 object MessageTemplate {
 
   def create(
@@ -38,7 +39,8 @@ object MessageTemplate {
     subject: String,
     plainTemplate: Body.Plain,
     htmlTemplate: Body.Html,
-    priority: Option[MessagePriority] = None): MessageTemplate =
+    priority: Option[MessagePriority] = None
+  ): MessageTemplate =
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
@@ -56,7 +58,8 @@ object MessageTemplate {
     subject: Map[String, String] => String,
     plainTemplate: Body.Plain,
     htmlTemplate: Body.Html,
-    priority: Option[MessagePriority] = None): MessageTemplate =
+    priority: Option[MessagePriority] = None
+  ): MessageTemplate =
     MessageTemplate(
       templateId,
       FromAddress(_ => fromAddress),
@@ -74,7 +77,8 @@ object MessageTemplate {
     subject: String,
     plainTemplate: Body.Plain,
     htmlTemplate: Body.Html,
-    priority: Option[MessagePriority] = None): MessageTemplate =
+    priority: Option[MessagePriority] = None
+  ): MessageTemplate =
     MessageTemplate(
       templateId,
       FromAddress(fromAddress),

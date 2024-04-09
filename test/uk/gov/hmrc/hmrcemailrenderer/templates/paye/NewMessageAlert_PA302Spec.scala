@@ -47,7 +47,8 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("Your latest tax calculation is now ready to view online.")
       htmlContent must include(
-        "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.")
+        "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app."
+      )
       htmlContent must include("For security reasons, we have not included a link with this email.")
       htmlContent must include("Why you got this email")
       htmlContent must include("You chose to get online tax letters instead of letters by post.")
@@ -55,7 +56,8 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'"
+      )
     }
   }
 
@@ -84,17 +86,20 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
       htmlContent must include(
-        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim.")
+        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim."
+      )
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.")
       htmlContent must include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.")
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd."
+      )
       htmlContent must include("Oddi wrth adran TWE CThEF")
       htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’"
+      )
     }
   }
 
@@ -122,7 +127,8 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("Your latest tax calculation is now ready to view online.")
       htmlContent must include(
-        "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.")
+        "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app."
+      )
       htmlContent must include("For security reasons, we have not included a link with this email.")
       htmlContent must include("Why you got this email")
       htmlContent must include("You chose to get online tax letters instead of letters by post.")
@@ -130,7 +136,8 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
-        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'")
+        "Report the suspicious email to HMRC - to find out how, go to GOV.UK and search for 'Avoid and report internet scams and phishing'"
+      )
     }
   }
 
@@ -159,17 +166,20 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
       htmlContent must include(
-        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim.")
+        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim."
+      )
       htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
       htmlContent must include("Pam y cawsoch yr e-bost hwn")
       htmlContent must include("Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.")
       htmlContent must include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.")
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd."
+      )
       htmlContent must include("Oddi wrth adran TWE CThEF")
       htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
-        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’")
+        "Rhowch wybod i CThEF am yr e-bost amheus - er mwyn gweld sut, ewch i GOV.UK a chwilio am ‘gwe-rwydo a sgamiau’"
+      )
     }
   }
 

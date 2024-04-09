@@ -26,13 +26,12 @@ object ModsTemplates {
       templateId = "mods_import_declaration",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Import declaration"
         } else {
           "Declaration for commercial goods you bring into Great Britain"
-        }
-      },
+        },
       plainTemplate = txt.mods_import_declaration.f,
       htmlTemplate = html.mods_import_declaration.f,
       priority = Some(MessagePriority.Standard)
@@ -41,13 +40,12 @@ object ModsTemplates {
       templateId = "mods_amend_import_declaration",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Updated import declaration"
         } else {
           "Updated declaration for commercial goods you bring into Great Britain"
-        }
-      },
+        },
       plainTemplate = txt.mods_amend_import_declaration.f,
       htmlTemplate = html.mods_amend_import_declaration.f,
       priority = Some(MessagePriority.Standard)
@@ -56,13 +54,12 @@ object ModsTemplates {
       templateId = "mods_import_declaration_cy",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Datganiad mewnforio"
         } else {
           "Datganiad ar gyfer nwyddau masnachol yr ydych yn dod â nhw i Brydain Fawr"
-        }
-      },
+        },
       plainTemplate = txt.mods_import_declaration_cy.f,
       htmlTemplate = html.mods_import_declaration_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -71,13 +68,12 @@ object ModsTemplates {
       templateId = "mods_amend_import_declaration_cy",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Datganiad mewnforio"
         } else {
           "Datganiad wedi’i ddiweddaru ar gyfer nwyddau masnachol yr ydych yn dod â nhw i Brydain Fawr"
-        }
-      },
+        },
       plainTemplate = txt.mods_amend_import_declaration_cy.f,
       htmlTemplate = html.mods_amend_import_declaration_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -86,13 +82,12 @@ object ModsTemplates {
       templateId = "mods_export_declaration",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Export declaration"
         } else {
           "Declaration for commercial goods you take out of Great Britain"
-        }
-      },
+        },
       plainTemplate = txt.mods_export_declaration.f,
       htmlTemplate = html.mods_export_declaration.f,
       priority = Some(MessagePriority.Standard)
@@ -101,13 +96,12 @@ object ModsTemplates {
       templateId = "mods_amend_export_declaration",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Updated export declaration"
         } else {
           "Updated declaration for commercial goods you take out of Great Britain"
-        }
-      },
+        },
       plainTemplate = txt.mods_amend_export_declaration.f,
       htmlTemplate = html.mods_amend_export_declaration.f,
       priority = Some(MessagePriority.Standard)
@@ -116,13 +110,12 @@ object ModsTemplates {
       templateId = "mods_export_declaration_cy",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Datganiad allforio"
         } else {
           "Datganiad ar gyfer nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr"
-        }
-      },
+        },
       plainTemplate = txt.mods_export_declaration_cy.f,
       htmlTemplate = html.mods_export_declaration_cy.f,
       priority = Some(MessagePriority.Standard)
@@ -131,13 +124,12 @@ object ModsTemplates {
       templateId = "mods_amend_export_declaration_cy",
       fromAddress = transactionEngineAddress,
       service = MODS,
-      subject = params => {
+      subject = params =>
         if (params("emailTo") == "BorderForce") {
           s"${params("surname")} - ${params("declarationReference")} - Datganiad allforio"
         } else {
           "Datganiad wedi’i ddiweddaru ar gyfer nwyddau masnachol yr ydych yn mynd â nhw allan o Brydain Fawr"
-        }
-      },
+        },
       plainTemplate = txt.mods_amend_export_declaration_cy.f,
       htmlTemplate = html.mods_amend_export_declaration_cy.f,
       priority = Some(MessagePriority.Standard)

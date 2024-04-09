@@ -23,8 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.{ tctrGroup, tctr_submission_confirmation }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-/**
-  * @author Yuriy Tumakha
+/** @author
+  *   Yuriy Tumakha
   */
 class TctrSubmissionConfirmationSpec
     extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
@@ -39,7 +39,8 @@ class TctrSubmissionConfirmationSpec
     content should include("We have received your business trade and cost information")
     content should include("Dear John Doe")
     content should include(
-      "This email is confirmation that we have received your business trade and cost information form.")
+      "This email is confirmation that we have received your business trade and cost information form."
+    )
     content should include("We may need to contact you to check some of the details you provided.")
     content should include("Do not reply to this email.")
     content should include("From Valuation Office Agency - Tenure Cost and Trade Records service")
@@ -48,7 +49,9 @@ class TctrSubmissionConfirmationSpec
 
   tctr_submission_confirmation should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Valuation Office Agency: We have received your business trade and cost information"
+      template.subject(
+        Map.empty
+      ) shouldBe "Valuation Office Agency: We have received your business trade and cost information"
     }
 
     "render correct from address" in {

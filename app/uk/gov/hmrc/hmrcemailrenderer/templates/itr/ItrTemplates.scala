@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.itr
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ InvestmentTaxRelief }
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.InvestmentTaxRelief
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object ItrTemplates {

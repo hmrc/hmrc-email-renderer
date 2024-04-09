@@ -279,7 +279,7 @@ object OnlinePaymentServiceTemplates {
       htmlTemplate = html.dd_email_verifcation.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    //Recon tps, f2f
+    // Recon tps, f2f
     MessageTemplate.createWithDynamicSubject(
       templateId = "recon_finance_report",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),

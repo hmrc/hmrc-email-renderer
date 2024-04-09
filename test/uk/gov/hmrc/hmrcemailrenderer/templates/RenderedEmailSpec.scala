@@ -31,9 +31,11 @@ trait RenderedEmailSpec extends AnyWordSpec with Matchers {
     val result = helpers.html.template_main.render(renderValues, "Test", true, None, true, false, Html("<html></html>"))
 
     result.body should include(
-      "<td width=\"30\" style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColour)
+      "<td width=\"30\" style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColour
+    )
     result.body should include(
-      "<td style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColour)
+      "<td style=\"font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px " + expectedColour
+    )
     result.contentType should include("text/html")
   }
 

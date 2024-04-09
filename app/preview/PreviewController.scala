@@ -28,7 +28,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateLocator
 import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendController
 
 @Singleton
-class PreviewController @Inject()(mcc: MessagesControllerComponents, preview: Preview) extends FrontendController(mcc) {
+class PreviewController @Inject() (mcc: MessagesControllerComponents, preview: Preview)
+    extends FrontendController(mcc) {
 
   def previewHome: Action[AnyContent] = Action {
     Ok(views.html.previews(previewGroups))
@@ -47,9 +48,8 @@ class PreviewController @Inject()(mcc: MessagesControllerComponents, preview: Pr
   }
 
   private lazy val previewGroups: LazyList[PreviewGroup] =
-    TemplateLocator.templateGroups.to(LazyList).map {
-      case (identifier, templates) =>
-        PreviewGroup.createPreviewGroup(identifier, templates)
+    TemplateLocator.templateGroups.to(LazyList).map { case (identifier, templates) =>
+      PreviewGroup.createPreviewGroup(identifier, templates)
     }
 
   private def flattenParameterValues(qs: Map[String, Seq[String]]): Map[String, String] = qs.map(t => (t._1, t._2.head))
@@ -78,7 +78,8 @@ final case class PreviewListItem(
   templateId: String,
   subject: String,
   priority: MessagePriority,
-  params: Map[String, String]) {
+  params: Map[String, String]
+) {
   lazy val queryString: String =
     if (params.isEmpty) {
       ""

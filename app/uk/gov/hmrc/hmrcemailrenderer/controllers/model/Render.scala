@@ -33,7 +33,8 @@ case class RenderResult(
   fromAddress: String,
   subject: String,
   service: String,
-  priority: Option[MessagePriority])
+  priority: Option[MessagePriority]
+)
 
 object RenderResult {
   private def base64Encoded(value: String) = Base64.getEncoder.encodeToString(value.getBytes("UTF-8"))

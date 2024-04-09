@@ -66,7 +66,8 @@ object model {
     questions: Seq[Question],
     active: DateSpan,
     showOnce: Boolean = true,
-    showRate: Double = 1)
+    showRate: Double = 1
+  )
 
   case class Answers(name: String, answers: Seq[String])
 

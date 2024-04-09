@@ -54,8 +54,8 @@ object DateFormatter extends Logging {
 
   private def formatDay(day: String): String =
     Try(day.toInt.toString)
-      .recover {
-        case NonFatal(e) => logger.warn(s"Day parse exception: ${e.getMessage}"); day
+      .recover { case NonFatal(e) =>
+        logger.warn(s"Day parse exception: ${e.getMessage}"); day
       }
       .getOrElse(day)
 

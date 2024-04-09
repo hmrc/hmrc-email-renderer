@@ -30,5 +30,6 @@ object LisaTemplates {
       plainTemplate = txt.applicationSubmitted.f,
       htmlTemplate = html.applicationSubmitted.f,
       priority = Some(MessagePriority.Urgent)
-    ))
+    )
+  )
 }

@@ -308,7 +308,7 @@ object EeittTemplates {
       htmlTemplate = html.gd95ReturnConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
-    //GD94 Template deleted from gForms repo
+    // GD94 Template deleted from gForms repo
     MessageTemplate.create(
       templateId = "gd94_return_confirmation",
       fromAddress = govUkTeamAddress,
@@ -615,7 +615,7 @@ object EeittTemplates {
       htmlTemplate = html.c118Section6Part4ApplicationConfirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
-    //TSP Form shuttered
+    // TSP Form shuttered
     MessageTemplate.create(
       templateId = "tsp_application_confirmation",
       fromAddress = govUkTeamAddress,
@@ -661,7 +661,7 @@ object EeittTemplates {
       htmlTemplate = html.corporateSelfReportingSubmissionConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    //Cash dec template outdated - split into NI and GB
+    // Cash dec template outdated - split into NI and GB
     MessageTemplate.create(
       templateId = "cash_declaration",
       fromAddress = govUkTeamAddress,
@@ -817,7 +817,7 @@ object EeittTemplates {
       htmlTemplate = html.ccg1Confirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    //TSP DeReg Shuttered
+    // TSP DeReg Shuttered
     MessageTemplate.create(
       templateId = "tspDeReg_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -827,7 +827,7 @@ object EeittTemplates {
       htmlTemplate = html.tspDeRegConfirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
-    //TSP Chief Shuttered
+    // TSP Chief Shuttered
     MessageTemplate.create(
       templateId = "tspCHIEF_confirmation_submission",
       fromAddress = govUkTeamAddress,
@@ -1104,7 +1104,7 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      //SEISS Child Shuttered
+      // SEISS Child Shuttered
       templateId = "seiss_new_child_submission",
       fromAddress = govUkTeamAddress,
       service = Eeitt,

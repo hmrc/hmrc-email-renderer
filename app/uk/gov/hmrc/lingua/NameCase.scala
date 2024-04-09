@@ -351,15 +351,15 @@ object NameCase {
     "MSc"
   )
 
-  val firstLetters = raw"\b(\w)".r //# Uppercase first letter of every word.
-  val quoteS = raw"'(\w)\b".r //# Uppercase first letter of every word.
+  val firstLetters = raw"\b(\w)".r // # Uppercase first letter of every word.
+  val quoteS = raw"'(\w)\b".r // # Uppercase first letter of every word.
 
   def nc(name: String): String = {
     var s = name.toLowerCase()
-    //# Uppercase first letter of every word.
+    // # Uppercase first letter of every word.
     s = raw"\b(\w)".r.replaceAllIn(s, _.toString.toUpperCase)
 
-    //# Uppercase first letter of every word.
+    // # Uppercase first letter of every word.
     s = raw"'(\w)\b".r.replaceAllIn(s, _.toString.toLowerCase)
 
     // # Name case Mcs and Macs - taken straight from NameParse.pm incl. comments.
@@ -403,7 +403,7 @@ object NameCase {
     s = raw"(\bMacmurdo)".r.replaceAllIn(s, "MacMurdo")
 
     // Arabic
-    //s = raw"(\bAl +\b)".r.replaceAllIn(s, "al ")
+    // s = raw"(\bAl +\b)".r.replaceAllIn(s, "al ")
     // Welsh
     s = raw"(\bAp +\b)".r.replaceAllIn(s, "ap ")
     s = raw"( Von +\b)".r.replaceAllIn(s, " von ")
@@ -436,9 +436,7 @@ object NameCase {
     // la French or La Spanish - keep  Spanish version
     s = raw"( La +\b)".r.replaceAllIn(s, " La ")
 
-    POST_NOMINAL_INITIALS.foreach(
-      n => s = s.replaceFirst(raw"(?i)\b$n" + " *$", s"$n")
-    )
+    POST_NOMINAL_INITIALS.foreach(n => s = s.replaceFirst(raw"(?i)\b$n" + " *$", s"$n"))
 
     s = raw"( Of +\b)".r.replaceAllIn(s, " of ")
 

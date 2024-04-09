@@ -23,8 +23,8 @@ import preview.TemplateParams
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, contactFormsGroup }
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLocator }
 
-/**
-  * @author Yuriy Tumakha
+/** @author
+  *   Yuriy Tumakha
   */
 class ContactFormsEnquiryConfirmationSpec
     extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
@@ -51,9 +51,11 @@ class ContactFormsEnquiryConfirmationSpec
       htmlContent should include("We have received your enquiry")
       htmlContent should include("Dear David Jones")
       htmlContent should include(
-        "Thank you for contacting us. This email is confirmation that we have received your enquiry.")
+        "Thank you for contacting us. This email is confirmation that we have received your enquiry."
+      )
       htmlContent should include(
-        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days.")
+        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
+      )
       htmlContent should include("From Valuation Office Agency")
       htmlContent should include("Report the suspicious email to HMRC")
     }
@@ -64,9 +66,11 @@ class ContactFormsEnquiryConfirmationSpec
       txtContent should include("We have received your enquiry")
       txtContent should include("Dear David Jones")
       txtContent should include(
-        "Thank you for contacting us. This email is confirmation that we have received your enquiry.")
+        "Thank you for contacting us. This email is confirmation that we have received your enquiry."
+      )
       txtContent should include(
-        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days.")
+        "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
+      )
       txtContent should include("From Valuation Office Agency")
       txtContent should include("Report the suspicious email to HMRC")
     }

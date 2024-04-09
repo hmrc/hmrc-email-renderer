@@ -43,7 +43,8 @@ class apiAddedDeveloperAsCollaboratorConfirmationSpec extends AnyWordSpec with M
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">You are now " + article + " " + role +
-          " on " + applicationName + ".</p>")
+          " on " + applicationName + ".</p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
     }
     "render with developerHubTitle" in new TestCase {
@@ -51,9 +52,11 @@ class apiAddedDeveloperAsCollaboratorConfirmationSpec extends AnyWordSpec with M
       val renderedHtml = api.html.apiAddedDeveloperAsCollaboratorConfirmation.render(templateParamsPlus)
       renderedHtml.body should include(
         "<p style=\"margin: 0 0 30px; font-size: 19px;\">You are now " + article + " " + role +
-          " on " + applicationName + ".</p>")
+          " on " + applicationName + ".</p>"
+      )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>")
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC " + developerHubTitle + "</p>"
+      )
     }
   }
 
