@@ -22,7 +22,7 @@
         font-size: 19px;">
         <p>Dear @params("name")</p>
 
-        <p>You have registered for the Economic Crime Levy (ECL).</p>
+        <h2 class="govuk-heading-l">You have registered for the Economic Crime Levy (ECL).</h2>
 
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
             font-size: 19px;">
@@ -39,7 +39,7 @@
             </tbody>
         </table>
 
-        <p style="font-weight: bold;">What happens next</p>
+        <h2 class="govuk-heading-l">What happens next</h2>
 
         <p>
             You will need to complete a return and pay the levy on a yearly basis.
@@ -63,7 +63,7 @@
             }
         }
 
-        <p style="font-weight: bold;">How to submit a return</p>
+        <h2 class="govuk-heading-l">How to submit a return</h2>
 
         <p>You can submit a return by going to the Returns section of your ECL account.</p>
 
@@ -77,7 +77,7 @@
             <li>the name, role, and contact details of the person in your organisation who is completing the return</li>
         </ul>
 
-        <p style="font-weight: bold;">Why you got this email</p>
+        <h2 class="govuk-heading-l">Why you got this email</h2>
 
         @if(params("isPrimaryContact").toString.toBoolean) {
             <p>This is the email address you provided when you registered.</p>
