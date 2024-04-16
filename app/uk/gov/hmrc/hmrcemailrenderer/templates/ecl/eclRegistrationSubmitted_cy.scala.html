@@ -22,7 +22,7 @@
         font-size: 19px;">
         <p>Annwyl @params("name")</p>
 
-        <p>Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd (ECL).</p>
+        <h2 class="govuk-heading-l">Rydych wedi cofrestru ar gyfer yr Ardoll Troseddau Economaidd (ECL).</h2>
 
         <table width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
             font-size: 19px;">
@@ -39,7 +39,7 @@
             </tbody>
         </table>
 
-        <p style="font-weight: bold;">Yr hyn sy’n digwydd nesaf</p>
+        <h2 class="govuk-heading-l">Yr hyn sy’n digwydd nesaf</h2>
 
         <p>
             Bydd angen i chi lenwi datganiad a thalu’r ardoll yn flynyddol.
@@ -58,16 +58,12 @@
         @if(params.contains("previousFY")) {
             @params.get("previousFY").map(_.toString.toInt).map { previousFY =>
             <p>
-                Bydd angen i chi gyflwyno Ffurflen Dreth ar gyfer blwyddyn ariannol @previousFY i @(previousFY + 1) cyn gynted â phosibl.
-            </p>
-            <p>
-                Bydd y Ffurflen Dreth yn ymddangos fel hwyr oherwydd ei bod yn y flwyddyn ariannol flaenorol.
+                Mae angen i chi gyflwyno Ffurflen Dreth ar gyfer unrhyw flynyddoedd ariannol blaenorol cyn gynted â phosibl. Byddant yn dangos fel hwyr.
             </p>
             }
         }
 
-
-        <p style="font-weight: bold;">Sut i gyflwyno datganiad</p>
+        <h2 class="govuk-heading-l">Sut i gyflwyno datganiad</h2>
 
         <p>Gallwch gyflwyno datganiad drwy’r adran ‘Datganiadau’ yn eich cyfrif ECL.</p>
 
@@ -81,7 +77,7 @@
             <li>enw, rôl, a manylion cyswllt y person yn eich sefydliad sy’n llenwi’r datganiad</li>
         </ul>
 
-        <p style="font-weight: bold;">Pam cawsoch yr e-bost hwn</p>
+        <h2 class="govuk-heading-l">Pam cawsoch yr e-bost hwn</h2>
 
         @if(params("isPrimaryContact").toString.toBoolean) {
             <p>Dyma’r e-bost a roddwyd gennych pan wnaethoch gofrestru.</p>
