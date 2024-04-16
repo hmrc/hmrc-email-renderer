@@ -33,7 +33,7 @@ class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: Http
   }
 
   def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier, ec: ExecutionContext): Future[Language] = {
-    val encryptedEmail = new String(crypto.QueryParameterCrypto.encrypt(PlainText(emailAddress)).toBase64)
+    val encryptedEmail: String = new String(crypto.QueryParameterCrypto.encrypt(PlainText(emailAddress)).toBase64)
     val url = servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail"
     http.GET[Language](url)
   }
