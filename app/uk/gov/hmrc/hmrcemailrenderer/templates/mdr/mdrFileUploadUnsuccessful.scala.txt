@@ -14,7 +14,6 @@ For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
 For security reasons, we have not included a link to the MDR service in this email.
 
 If you need help
-
 Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
 
 For more information on MDR, you can visit GOV.UK and search for ‘Mandatory Disclosure Rules’.
