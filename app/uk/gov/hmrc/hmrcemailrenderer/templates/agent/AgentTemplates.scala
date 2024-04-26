@@ -184,6 +184,15 @@ object AgentTemplates {
       plainTemplate = txt.suspended_contact_details.f,
       htmlTemplate = html.suspended_contact_details.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "entity_check_notification",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "HMRC: Agent entity check failure report",
+      plainTemplate = txt.entity_check_notification.f,
+      htmlTemplate = html.entity_check_notification.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

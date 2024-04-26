@@ -3708,6 +3708,13 @@ object TemplateParams3 {
     ),
     "undertaking_admin_deadline_expired" -> Map(
       "deadline" -> "23 November 2023"
+    ),
+    "entity_check_notification" -> Map(
+      "arn"          -> "XARN000034892",
+      "utr"          -> "489021408",
+      "agencyName"   -> "Test Agent",
+      "failedChecks" -> "Agent (individual) is deceased | Agent is present on the 'Refuse to Deal With' list",
+      "dateTime"     -> "26 April 2024 08:34am"
     )
   )
 }
