@@ -1,18 +1,19 @@
 @(params: Map[String, Any])
-File failed checks for the MDR service
+There is a problem with your file for MDR
 
 Dear @{params("contactName")}
 
-Your file failed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}.
+There is a problem with the file you tried to send at @{params("dateAndTime")} for the Mandatory Disclosure Rules (MDR) service.
+
+You must send another version. Late reports may result in a penalty.
+
+You can check any errors or problems in the MDR service and upload an updated XML file.
 
 For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
-
-You can check the errors in the MDR service and upload an updated XML file.
 
 For security reasons, we have not included a link to the MDR service in this email.
 
 If you need help
-
 Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
 
 For more information on MDR, you can visit GOV.UK and search for ‘Mandatory Disclosure Rules’.

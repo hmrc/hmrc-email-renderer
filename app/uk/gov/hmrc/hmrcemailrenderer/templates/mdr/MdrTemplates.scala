@@ -55,7 +55,7 @@ object MdrTemplates {
       templateId = "mdr_file_upload_unsuccessful",
       fromAddress = FromAddress.noReply("MDR@notifications.service.gov.uk"),
       service = MDR,
-      subject = "Your file has failed checks for MDR",
+      subject = "There is a problem with your file for MDR",
       plainTemplate = txt.mdrFileUploadUnsuccessful.f,
       htmlTemplate = html.mdrFileUploadUnsuccessful.f,
       priority = Some(MessagePriority.Urgent)

@@ -15,15 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File failed checks for the MDR service") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There is a problem with your file for MDR") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your file failed the Mandatory Disclosure Rules checks at @{params("dateAndTime")}.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">There is a problem with the file you tried to send at @{params("dateAndTime")} for the Mandatory Disclosure Rules (MDR) service.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You must send another version. Late reports may result in a penalty.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check any errors or problems in the MDR service and upload an updated XML file.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is: @{params("messageRefId")}</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check the errors in the MDR service and upload an updated XML file.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to the MDR service in this email.</p>
 
