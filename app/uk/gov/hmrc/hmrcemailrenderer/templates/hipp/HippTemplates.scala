@@ -28,8 +28,17 @@ object HippTemplates {
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
       subject = "You have been added to an application in The API Hub",
-      plainTemplate = txt.AddTeamMember.f,
-      htmlTemplate = html.AddTeamMember.f,
+      plainTemplate = txt.AddTeamMemberToApp.f,
+      htmlTemplate = html.AddTeamMemberToApp.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_add_team_member_to_team_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "You have been added to a team in the API Hub",
+      plainTemplate = txt.AddTeamMemberToTeam.f,
+      htmlTemplate = html.AddTeamMemberToTeam.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
