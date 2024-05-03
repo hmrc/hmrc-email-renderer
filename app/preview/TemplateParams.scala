@@ -1624,6 +1624,9 @@ object TemplateParams2 {
       "applicationname" -> "Test-Hipp-App",
       "creatorusername" -> "Test-Hipp-Member"
     ),
+    "hipp_add_team_member_to_team_email" -> Map(
+      "teamname" -> "Test-Hipp-Team"
+    ),
     "hipp_remove_team_member_from_app_email" -> Map(
       "applicationname" -> "Test-Hipp-App",
       "creatorusername" -> "Test-Hipp-Member"

@@ -526,6 +526,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "hec_tax_check_code",
         "hec_tax_check_code_cy",
         "hipp_add_team_member_to_app_email",
+        "hipp_add_team_member_to_team_email",
         "hipp_application_created",
         "hipp_application_deleted",
         "hipp_application_deleted_team",

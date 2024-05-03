@@ -14,7 +14,7 @@ If you are unsure on how to make the Pull Request please have a look at the [MDT
 2. Decide what is the most suitable priority for the template. See our [Volumes and priority recommendations](#volumes-and-priority-recommendations)
 3. Fork this repository and make the necessary code changes. See [How to add a template](#how-to-add-a-template)
 4. Verify that your template looks right when rendered - use the [preview mode](/README.md#preview-mode)
-5. Run the tests locally with `sbt fmt clean test it:test`
+5. Run the tests locally with `sbt fmt clean test it/test`
 6. Submit a Pull Request and [let the Digital Contact team know](#i-have-created-a-pull-request---now-what)
 
 ### I have created a pull request - now what?
