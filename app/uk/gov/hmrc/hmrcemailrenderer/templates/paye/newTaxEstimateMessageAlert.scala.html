@@ -14,13 +14,16 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have a tax code change") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("fullName")}</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Your PAYE Income Tax records have recently changed, which means the amount of tax you pay will change.</p>
 <p style="margin: 0 0 0px; font-size: 19px;">For security reasons we do not give the full details here, but it could be because:</p>
 <ul>
-    <li>we have now calculated your tax code for the next tax year (tax year 2024 to 2025)</li>
+    @if(TemplateUtils.isP2TemplateAnnual) {
+        <li>we have now calculated your tax code for the next tax year (tax year 2024 to 2025)</li>
+    }
     <li>your job changed</li>
     <li>your pay changed</li>
     <li>your company benefits, such as a company car changed</li>

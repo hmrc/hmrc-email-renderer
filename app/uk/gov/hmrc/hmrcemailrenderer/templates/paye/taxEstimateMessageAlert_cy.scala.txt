@@ -1,4 +1,4 @@
-
+@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils
 @(params: Map[String, Any])Mae’ch cod treth wedi newid
 
 
@@ -8,7 +8,9 @@ Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd
 
 Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:
 
+@if(TemplateUtils.isP2TemplateAnnual) {
 - rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2024 i 2025)
+}
 - newidiodd eich swydd
 - newidiodd eich cyflog
 - newidiodd eich buddiannau cwmni, megis car cwmni
