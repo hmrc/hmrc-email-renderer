@@ -48,6 +48,8 @@ class TaxEstimateMessageAlertSpec
       )
       if (TemplateUtils.isP2TemplateAnnual) {
         htmlContent should include("we have now calculated your tax code for the next tax year")
+      } else {
+        htmlContent should not include "we have now calculated your tax code for the next tax year"
       }
       htmlContent should include("your job changed")
       htmlContent should include("your pay changed")
@@ -84,6 +86,8 @@ class TaxEstimateMessageAlertSpec
       )
       if (TemplateUtils.isP2TemplateAnnual) {
         txtContent should include("we have now calculated your tax code for the next tax year")
+      } else {
+        txtContent should not include "we have now calculated your tax code for the next tax year"
       }
       txtContent should include("your job changed")
       txtContent should include("your pay changed")

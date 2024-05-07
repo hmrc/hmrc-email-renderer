@@ -49,6 +49,8 @@ class TaxEstimateMessageAlertWelshSpec
       )
       if (TemplateUtils.isP2TemplateAnnual) {
         htmlContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
+      } else {
+        htmlContent should not include "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf"
       }
       htmlContent should include("newidiodd eich swydd")
       htmlContent should include("newidiodd eich cyflog")
@@ -85,6 +87,8 @@ class TaxEstimateMessageAlertWelshSpec
       )
       if (TemplateUtils.isP2TemplateAnnual) {
         txtContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
+      } else {
+        txtContent should not include "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf"
       }
       txtContent should include("newidiodd eich swydd")
       txtContent should include("newidiodd eich cyflog")
