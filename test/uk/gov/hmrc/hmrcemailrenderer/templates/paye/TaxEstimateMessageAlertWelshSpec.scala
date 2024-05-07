@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 
 import org.scalatest.EitherValues
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator, TemplateUtils }
 import org.scalatest.OptionValues
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
@@ -47,7 +47,11 @@ class TaxEstimateMessageAlertWelshSpec
       htmlContent should include(
         "Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:"
       )
-      htmlContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
+      if (TemplateUtils.isP2TemplateAnnual) {
+        htmlContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
+      } else {
+        htmlContent should not include "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf"
+      }
       htmlContent should include("newidiodd eich swydd")
       htmlContent should include("newidiodd eich cyflog")
       htmlContent should include("newidiodd eich buddiannau cwmni, megis car cwmni")
@@ -81,6 +85,11 @@ class TaxEstimateMessageAlertWelshSpec
       txtContent should include(
         "Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:"
       )
+      if (TemplateUtils.isP2TemplateAnnual) {
+        txtContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
+      } else {
+        txtContent should not include "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf"
+      }
       txtContent should include("newidiodd eich swydd")
       txtContent should include("newidiodd eich cyflog")
       txtContent should include("newidiodd eich buddiannau cwmni, megis car cwmni")
