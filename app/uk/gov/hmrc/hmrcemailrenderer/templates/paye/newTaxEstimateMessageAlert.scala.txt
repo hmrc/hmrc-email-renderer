@@ -10,8 +10,7 @@ For security reasons we do not give the full details here, but it could be becau
 
 @if(TemplateUtils.isP2TemplateAnnual) {
 - we have now calculated your tax code for the next tax year (tax year 2024 to 2025)
-}
-- your job changed
+}- your job changed
 - your pay changed
 - your company benefits, such as a company car changed
 - your pension changed
