@@ -2268,6 +2268,12 @@ object TemplateParams2 {
       "hmrcEmail"     -> "pensions.administration@hmrc.gov.uk",
       "psaName"       -> "Jane Doe"
     ),
+    "pods_pension_scheme_return_submitted" -> Map(
+      "schemeName"     -> "Smith Harper pension scheme",
+      "periodOfReturn" -> "7 April 2025 to 6 April 2026",
+      "dateSubmitted"  -> "2 April 2025 at 8:20pm",
+      "psaName"        -> "Jane Doe"
+    ),
     "cbc_registration_successful_organisation" -> Map(
       "name"  -> "Joe Bloggs",
       "cbcID" -> "XWCBC0000000058"
