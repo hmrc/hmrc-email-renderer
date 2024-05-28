@@ -1,0 +1,26 @@
+@(params: Map[String, Any])
+
+You have submitted a pension scheme return
+
+Dear @{params("psaName").toString}
+
+You have submitted a pension scheme return for @{params("schemeName").toString}.
+
+Period of return: @{params("periodOfReturn").toString}
+Date submitted: @{params("dateSubmitted").toString}
+
+What happens next
+
+HMRC may contact you to confirm the details of your return.
+
+You can sign into ‘Managing Pension Schemes’ to update this return within the next 6 years.
+
+You will receive a confirmation email when you make updates.
+
+Why you are receiving this email
+
+We send a confirmation email for submitted returns.
+
+From HMRC Pension Schemes Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
