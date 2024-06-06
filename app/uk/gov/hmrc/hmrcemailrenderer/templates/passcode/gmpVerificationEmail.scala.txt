@@ -16,7 +16,7 @@ You’ll receive results from the service in real time.
 
 Before you start
 
-You’ll need your Government Gateway details to sign in.
+You’ll need to sign in using your existing HMRC online details.
 
 Click on the link below to access the service.
 
