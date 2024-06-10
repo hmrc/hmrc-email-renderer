@@ -4,13 +4,11 @@ Your reference: @{params("fileUploadReference")}
 
 The GMP checker calculation you submitted on @{params("uploadDate")} is now ready.
 
-Go to the GMP checker to view it. You’ll need to sign in using the same Government Gateway details you used to submit the calculation.
+Go to the GMP checker to view it. Use your existing sign in details for this service.
 
 For security reasons, we have not included a link with this email.
 
 Your results will be deleted after 30 days.
-
-So that you know this email is genuine, the last three digits of your ID are @{params("userId")}.
 
 From HMRC GMP checker
 
