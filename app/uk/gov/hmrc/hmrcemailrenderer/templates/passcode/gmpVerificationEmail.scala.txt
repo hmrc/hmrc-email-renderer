@@ -2,9 +2,9 @@
 
 Dear Pension Scheme Administrator
 
-You registered your interest in using the GMP checker. This service is now available to use.
+You told us you'd like to use our Guaranteed Minimum Pension (GMP) checker. You can now use the service.
 
-You’ll be able to use the GMP checker when a pension scheme member:
+You can use the GMP checker when a pension scheme member:
 
 leaves the scheme
 
@@ -12,17 +12,13 @@ divorces
 
 transfers
 
-You’ll receive results from the service in real time.
+You’ll get results from the service in real time.
 
 Before you start
 
-You’ll need to sign in using your existing HMRC online details.
+Go to GOV.UK and search for 'GMP checker'. Sign in with your existing HMRC online details. If you do not have sign in details you can create them.
 
-Click on the link below to access the service.
-
-@{params("verificationLink")}
-
-Don’t delete this email, as you’ll need to use this link each time you want to access the service.
+For security reasons, we have not included a link with this email.
 
 From HMRC GMP checker
 
