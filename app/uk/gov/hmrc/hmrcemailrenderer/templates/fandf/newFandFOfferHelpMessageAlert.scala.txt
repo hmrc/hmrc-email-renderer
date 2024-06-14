@@ -2,23 +2,23 @@
 
 Dear @{params("helpeeFirstName")} @{params("helpeeLastName")}
 
-@{params("helperFirstName")} @{params("helperLastName")} has offered to be your trusted helper.
+@{params("helperFirstName")} @{params("helperLastName")} has offered to be your trusted helper
 
-A trusted helper is someone you know like a friend or family member, who can help you with your tax online.
+A trusted helper is someone like a friend or family member, who can help with tax online.
 
-This offer is available to accept online for 28 days.
+This request is available to accept online for 28 days.
 
 How to accept this offer of help
 
 Visit the gov.uk website and search for ‘personal tax account’.
 
-You will need to sign in with your Government Gateway password and ID to access your personal tax account.
+You will need to sign in with your HMRC online services user ID and password to access your personal tax account.
 
-If you do not have a Government Gateway, or a personal tax account
+If you do not have a HMRC online services, or personal tax account
 
 To set up your personal tax account, visit the gov.uk website and search for ‘personal tax account’.
 
-You can register for a Government Gateway account when you set up your personal tax account.
+You can register for a HMRC online services account when you set up your personal tax account.
 
 From HMRC Trusted Helper
 
