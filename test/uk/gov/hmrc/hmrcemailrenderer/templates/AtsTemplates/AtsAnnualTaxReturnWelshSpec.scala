@@ -57,7 +57,7 @@ class AtsAnnualTaxReturnWelshSpec
       )
       htmlContent should include("Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol")
       htmlContent should include(
-        "Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair ar gyfer Porth y Llywodraeth yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘bwrw golwg dros eich Crynodeb Treth Blynyddol’."
+        "Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘Bwrw golwg dros eich Crynodeb Treth Blynyddol’."
       )
       htmlContent should include(
         "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch ‘Hunanasesiad’ ac yna ‘rhagor o fanylion am eich Ffurflenni Treth a’ch taliadau Hunanasesiad’, ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’."
@@ -85,7 +85,7 @@ class AtsAnnualTaxReturnWelshSpec
       )
       txtContent should include("Sut i fwrw golwg dros eich Crynodeb Treth Blynyddol")
       txtContent should include(
-        "Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair ar gyfer Porth y Llywodraeth yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘bwrw golwg dros eich Crynodeb Treth Blynyddol’."
+        "Mewngofnodwch i wasanaethau ar-lein CThEF gan ddefnyddio’r Dynodydd Defnyddiwr (ID) a’r cyfrinair yr ydych yn ei ddefnyddio ar gyfer Hunanasesiad ar-lein. Ar ôl mewngofnodi, dewiswch ‘Bwrw golwg dros eich Crynodeb Treth Blynyddol’."
       )
       txtContent should include(
         "Ar gyfer y rhai sydd â Chyfrif Treth Busnes, dewiswch ‘Hunanasesiad’ ac yna ‘rhagor o fanylion am eich Ffurflenni Treth a’ch taliadau Hunanasesiad’, ac yna dewiswch ‘gweld sut y caiff eich treth ei gwario’."

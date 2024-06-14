@@ -8,7 +8,7 @@ You can now access your Annual Tax Summary online. It shows an illustration of h
 
 How to view your Annual Tax Summary
 
-Sign in to HMRC online services using the Government Gateway password and ID that you use for Self Assessment online, and select ‘View your Annual Tax Summary’.
+Sign in to HMRC online services using the user ID and password that you use for Self Assessment online, and select ‘View your Annual Tax Summary’.
 
 For Business Tax Account holders, select Self Assessment and then ‘more details about your Self Assessment returns and payments’, then select ‘find out how your tax is spent’.
 
