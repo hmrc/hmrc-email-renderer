@@ -46,12 +46,30 @@ object FandFTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
+      templateId = "fandf_ask_help_notification_cy",
+      fromAddress = trustedHelpersTeamAddress,
+      service = FriendsAndFamily,
+      subject = ask_help_subject(_),
+      plainTemplate = txt.newFandFAskHelpMessageAlertCy.f,
+      htmlTemplate = html.newFandFAskHelpMessageAlertCy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "fandf_offer_help_notification",
       fromAddress = trustedHelpersTeamAddress,
       service = FriendsAndFamily,
       subject = offer_help_subject(_),
       plainTemplate = txt.newFandFOfferHelpMessageAlert.f,
       htmlTemplate = html.newFandFOfferHelpMessageAlert.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "fandf_offer_help_notification_cy",
+      fromAddress = trustedHelpersTeamAddress,
+      service = FriendsAndFamily,
+      subject = offer_help_subject(_),
+      plainTemplate = txt.newFandFOfferHelpMessageAlertCy.f,
+      htmlTemplate = html.newFandFOfferHelpMessageAlertCy.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
