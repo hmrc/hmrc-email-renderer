@@ -17,6 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your production access request was successfully submitted"){
  <p style="margin: 0 0 30px; font-size: 19px;">Your request for your application @params("applicationname") to access the @params("apispecificationname") in the production environment has been successfully submitted for review.</p>
- <p style="margin: 0 0 30px; font-size: 19px;">To access the request, visit /api-hub on the MDTP admin network.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">To access the application, visit /api-hub on the MDTP admin network.</p>
+ <p style="margin: 0 0 30px; font-size: 19px;">Please note that if you are granted production access to this API, you may still need to generate production credentials if you have not done so already. Find more details on the 'Environments and credentials' page of your application.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC The API Hub</p>
 }
