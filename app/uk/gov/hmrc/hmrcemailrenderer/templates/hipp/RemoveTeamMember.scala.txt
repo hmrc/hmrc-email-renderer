@@ -1,4 +1,4 @@
 @(params: Map[String, Any])
-You have been removed from @{params("applicationname")} within The API Hub, by @{params("creatorusername")}.
-You will no longer have access to @{params("applicationname")}. If you need to access this application, you will need to be added as a team member again. To access The API Hub, visit /api-hub on the MDTP admin network.
-From HMRC The API Hub
+You have been removed from @{params("applicationname")} within The Integration Hub, by @{params("creatorusername")}.
+You will no longer have access to @{params("applicationname")}. If you need to access this application, you will need to be added as a team member again. To access The Integration Hub, visit /api-hub on the MDTP admin network.
+From HMRC The Integration Hub

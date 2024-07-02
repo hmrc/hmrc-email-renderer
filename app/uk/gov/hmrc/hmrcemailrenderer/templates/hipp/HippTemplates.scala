@@ -27,7 +27,7 @@ object HippTemplates {
       templateId = "hipp_add_team_member_to_app_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You have been added to an application in The API Hub",
+      subject = "You have been added to an application in The Integration Hub",
       plainTemplate = txt.AddTeamMemberToApp.f,
       htmlTemplate = html.AddTeamMemberToApp.f,
       priority = Some(MessagePriority.Urgent)
@@ -36,7 +36,7 @@ object HippTemplates {
       templateId = "hipp_add_team_member_to_team_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You have been added to a team in the API Hub",
+      subject = "You have been added to a team in the Integration Hub",
       plainTemplate = txt.AddTeamMemberToTeam.f,
       htmlTemplate = html.AddTeamMemberToTeam.f,
       priority = Some(MessagePriority.Urgent)
@@ -45,7 +45,7 @@ object HippTemplates {
       templateId = "hipp_remove_team_member_from_app_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You have been removed from an application in The API Hub",
+      subject = "You have been removed from an application in The Integration Hub",
       plainTemplate = txt.RemoveTeamMember.f,
       htmlTemplate = html.RemoveTeamMember.f,
       priority = Some(MessagePriority.Urgent)
@@ -54,7 +54,7 @@ object HippTemplates {
       templateId = "hipp_application_created",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You have created an application in The API Hub",
+      subject = "You have created an application in The Integration Hub",
       plainTemplate = txt.ApplicationCreated.f,
       htmlTemplate = html.ApplicationCreated.f,
       priority = Some(MessagePriority.Urgent)
@@ -63,7 +63,7 @@ object HippTemplates {
       templateId = "hipp_application_deleted",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You have deleted an application from The API Hub",
+      subject = "You have deleted an application from The Integration Hub",
       plainTemplate = txt.ApplicationDeleted.f,
       htmlTemplate = html.ApplicationDeleted.f,
       priority = Some(MessagePriority.Urgent)
@@ -72,7 +72,7 @@ object HippTemplates {
       templateId = "hipp_application_deleted_team",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "Application deleted from The API Hub",
+      subject = "Application deleted from The Integration Hub",
       plainTemplate = txt.ApplicationDeletedTeam.f,
       htmlTemplate = html.ApplicationDeletedTeam.f,
       priority = Some(MessagePriority.Urgent)
