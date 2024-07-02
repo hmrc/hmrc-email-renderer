@@ -1,4 +1,4 @@
 @(params: Map[String, Any])
-You have created @{params("applicationname")} in The API Hub.
+You have created @{params("applicationname")} in The Integration Hub.
 To access the application, visit /api-hub on the MDTP admin network.
-From HMRC The API Hub
+From HMRC The Integration Hub
