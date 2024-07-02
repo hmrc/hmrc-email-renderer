@@ -698,6 +698,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "pods_confirmation",
         "pods_event_report_submitted",
         "pods_pension_scheme_return_submitted",
+        "pods_pension_scheme_return_sipp_submitted",
         "pods_file_aft_return",
         "pods_psa_amend",
         "pods_psa_deauthorise_psp",
