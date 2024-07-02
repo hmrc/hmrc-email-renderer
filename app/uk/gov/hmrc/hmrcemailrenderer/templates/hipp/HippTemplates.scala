@@ -36,7 +36,7 @@ object HippTemplates {
       templateId = "hipp_add_team_member_to_team_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "You have been added to a team in the Integration Hub",
+      subject = "You have been added to a team in The Integration Hub",
       plainTemplate = txt.AddTeamMemberToTeam.f,
       htmlTemplate = html.AddTeamMemberToTeam.f,
       priority = Some(MessagePriority.Urgent)
