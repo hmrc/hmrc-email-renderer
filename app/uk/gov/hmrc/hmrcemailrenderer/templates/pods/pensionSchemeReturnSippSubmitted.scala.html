@@ -1,0 +1,39 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have submitted a pension scheme return") {
+
+<p style="margin:0 0 30px; font-size: 20px">Dear @{params("psaName").toString}</p>
+
+<p style="margin:0 0 30px; font-size: 20px">
+ Scheme name: @{params("schemeName").toString}
+ <br>Date submitted: @{params("dateSubmitted").toString}
+</p>
+
+<p style="font-weight: bold; font-size: 20px">What happens next</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">HMRC may contact you to confirm the details of your return. You will receive an email notification when an update is available.</p>
+
+<p style="margin:0 0 30px; font-size: 20px">You can sign into ‘Managing Pension Schemes’ to update this return within the next 6 years.</p>
+
+<p style="font-weight: bold; font-size: 20px">Why you are receiving this email</p>
+
+<p style="margin:0 0 30px; font-size: 20px">We send a confirmation email for submitted returns.</p>
+
+<p style="margin:0 0 30px; font-size: 20px">From HMRC Pension Schemes Services</p>
+}

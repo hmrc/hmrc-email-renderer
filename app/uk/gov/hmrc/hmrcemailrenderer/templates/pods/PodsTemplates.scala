@@ -228,6 +228,15 @@ object PodsTemplates {
       plainTemplate = txt.pensionSchemeReturnSubmitted.f,
       htmlTemplate = html.pensionSchemeReturnSubmitted.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "pods_pension_scheme_return_sipp_submitted",
+      fromAddress = govUkTeamAddress,
+      service = PODS,
+      subject = params => s"Submitted: Pension scheme return for ${params("periodOfReturn")}",
+      plainTemplate = txt.pensionSchemeReturnSippSubmitted.f,
+      htmlTemplate = html.pensionSchemeReturnSippSubmitted.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
