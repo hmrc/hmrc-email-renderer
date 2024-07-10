@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Mae rhywun wedi gofyn i chi fod yn gynorthwyydd dibynadwy iddynt
+
+Annwyl @{params("helperFirstName")} @{params("helperLastName")}
+
+Mae @{params("helpeeFirstName")} @{params("helpeeLastName")} wedi gofyn i chi fod yn gynorthwyydd dibynadwy iddynt
+
+Cynorthwyydd dibynadwy yw rhywun fel ffrind neu aelod o’r teulu a all helpu gyda threth ar-lein.
+
+Mae’r cais hwn ar gael i’w dderbyn ar-lein am 28 diwrnod.
+
+Sut i dderbyn y cais hwn am help
+
+Ewch i wefan gov.uk a chwilio am ‘personal tax account’. Ewch i’r dudalen briodol a dewiswch yr opsiwn Cymraeg
+
+Bydd angen i chi mewngofnodi gan ddefnyddio’ch ID Defnyddiwr a’ch cyfrinair ar gyfer gwasanaethau ar-lein CThEF er mwyn cael mynediad at eich cyfrif treth personol.
+
+Os nad oes gennych gyfrif gwasanaethau ar-lein CThEF neu gyfrif treth personol
+
+I greu eich cyfrif treth personol, ewch i wefan gov.uk a chwilio am ‘personal tax account’. Ewch i’r dudalen briodol a dewiswch yr opsiwn Cymraeg.
+
+Gallwch gofrestru ar gyfer cyfrif gwasanaethau ar-lein CThEF pan ydych yn creu’ch cyfrif treth personol.
+
+Oddi wrth Gynorthwyydd Dibynadwy CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

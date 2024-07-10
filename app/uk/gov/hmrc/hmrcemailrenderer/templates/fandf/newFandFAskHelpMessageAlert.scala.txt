@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Someone’s asked if you’ll become their Trusted Helper
+@(params: Map[String, Any])Someone’s asked you to be their trusted helper
 
 Dear @{params("helperFirstName")} @{params("helperLastName")}
 
@@ -12,13 +12,13 @@ How to accept this request for help
 
 Visit the gov.uk website and search for ‘personal tax account’.
 
-You will need to sign in with your Government Gateway password and ID to access your personal tax account.
+You will need to sign in with your HMRC online services user ID and password to access your personal tax account.
 
-If you do not have a Government Gateway, or a personal tax account
+If you do not have an HMRC online services, or personal tax account
 
 To set up your personal tax account, visit the gov.uk website and search for ‘personal tax account’.
 
-You can register for a Government Gateway account when you set up your personal tax account.
+You can register for an HMRC online services account when you set up your personal tax account.
 
 From HMRC Trusted Helper
 

@@ -683,7 +683,19 @@ object TemplateParams {
         "helpeeLastName"  -> "Densmore",
         "helpeeFirstName" -> "John"
       ),
+      "fandf_ask_help_notification_cy" -> Map(
+        "helperLastName"  -> "Bloggs",
+        "helperFirstName" -> "Joe",
+        "helpeeLastName"  -> "Densmore",
+        "helpeeFirstName" -> "John"
+      ),
       "fandf_offer_help_notification" -> Map(
+        "helperLastName"  -> "Bloggs",
+        "helperFirstName" -> "Joe",
+        "helpeeLastName"  -> "Densmore",
+        "helpeeFirstName" -> "John"
+      ),
+      "fandf_offer_help_notification_cy" -> Map(
         "helperLastName"  -> "Bloggs",
         "helperFirstName" -> "Joe",
         "helpeeLastName"  -> "Densmore",
