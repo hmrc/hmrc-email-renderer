@@ -112,6 +112,24 @@ object HippTemplates {
       plainTemplate = txt.ProductionAccessRequestSubmitted.f,
       htmlTemplate = html.ProductionAccessRequestSubmitted.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_api_ownership_added_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "There has been a change of API ownership",
+      plainTemplate = txt.ApiOwnershipAdded.f,
+      htmlTemplate = html.ApiOwnershipAdded.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_api_ownership_removed_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "There has been a change of API ownership",
+      plainTemplate = txt.ApiOwnershipRemoved.f,
+      htmlTemplate = html.ApiOwnershipRemoved.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

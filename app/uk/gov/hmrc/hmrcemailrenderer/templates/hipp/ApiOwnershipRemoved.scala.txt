@@ -1,0 +1,5 @@
+@(params: Map[String, Any])
+Your team @params("teamname") is no longer the owner of @params("apispecificationname"). The team @params("otherteamname") is now the new owner of this API.
+To view this change, visit /api-hub on the MDTP admin network.
+If this is an error, please follow the Get Support link on the Hub.
+From HMRC The Integration Hub

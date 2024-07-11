@@ -1652,6 +1652,15 @@ object TemplateParams2 {
     "hipp_application_deleted_team" -> Map(
       "applicationname" -> "Test-Hipp-App"
     ),
+    "hipp_api_ownership_added_email" -> Map(
+      "teamname"             -> "My Team",
+      "apispecificationname" -> "API Name"
+    ),
+    "hipp_api_ownership_removed_email" -> Map(
+      "teamname"             -> "My Team",
+      "otherteamname"        -> "New API Team",
+      "apispecificationname" -> "API Name"
+    ),
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",
