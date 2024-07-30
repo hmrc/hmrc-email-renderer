@@ -22,6 +22,7 @@ import play.twirl.api.Html
 import uk.gov.hmrc.play.bootstrap.frontend.http.FrontendErrorHandler
 import preview.views.html.error_template
 import com.google.inject.{ Inject, Singleton }
+import scala.concurrent.Future
 
 @Singleton
 class ErrorHandler @Inject() (
@@ -30,7 +31,7 @@ class ErrorHandler @Inject() (
 ) extends FrontendErrorHandler with I18nSupport {
 
   override def standardErrorTemplate(pageTitle: String, heading: String, message: String)(implicit
-    rh: Request[_]
-  ): Html =
-    view(pageTitle, heading, message)
+    rh: Request[?]
+  ): Future[Html] =
+    Future.successful(view(pageTitle, heading, message))
 }

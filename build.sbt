@@ -3,8 +3,8 @@ import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
 
 val appName = "hmrc-email-renderer"
 
-ThisBuild / majorVersion := 2
-ThisBuild / scalaVersion := "2.13.12"
+ThisBuild / majorVersion := 3
+ThisBuild / scalaVersion := "3.4.2"
 
 val appDependencies: Seq[ModuleID] = AppDependencies()
 

@@ -20,7 +20,7 @@ Ewch â’r datganiad wedi’i ddiweddaru hwn a’r derbyniadau prynu ar gyfer y
 
 Dyddiad y datganiad
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Manylion y nwyddau
 

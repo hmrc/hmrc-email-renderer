@@ -46,7 +46,7 @@
             </tr>
 
             @{
-                if(params.contains("transactionFeeInPence")) {
+                if(params.contains("transactionFeeInPence")){
                         <tr>
                         <th>Card fee</th>
                         <td>{formatAmountInPenceGdsFormat(params("transactionFeeInPence").toString)}</td>

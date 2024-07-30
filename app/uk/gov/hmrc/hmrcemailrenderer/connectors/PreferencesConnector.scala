@@ -20,13 +20,15 @@ import com.google.inject.{ Inject, Singleton }
 import play.api.libs.json.{ Json, OFormat }
 import uk.gov.hmrc.crypto.{ ApplicationCrypto, PlainText }
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.{ HeaderCarrier, HttpClient }
+import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.http.client.HttpClientV2
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 import uk.gov.hmrc.http.HttpReads.Implicits._
 
 import scala.concurrent.{ ExecutionContext, Future }
+import java.net.URI
 @Singleton
-class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: HttpClient, crypto: ApplicationCrypto) {
+class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: HttpClientV2, crypto: ApplicationCrypto) {
 
   object LanguagePreference {
     implicit val format: OFormat[LanguagePreference] = Json.format[LanguagePreference]
@@ -34,8 +36,10 @@ class PreferencesConnector @Inject() (servicesConfig: ServicesConfig, http: Http
 
   def languageByEmail(emailAddress: String)(implicit hc: HeaderCarrier, ec: ExecutionContext): Future[Language] = {
     val encryptedEmail = new String(crypto.QueryParameterCrypto.encrypt(PlainText(emailAddress)).toBase64)
-    val url = servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail"
-    http.GET[Language](url)
+    val url = new URI(servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail").toURL
+    http
+      .get(url)
+      .execute[Language]
   }
 }
 

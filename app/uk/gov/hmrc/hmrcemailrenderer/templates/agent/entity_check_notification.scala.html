@@ -23,9 +23,9 @@
     <p style="font-size: 19px; margin: 0 0 30px;">Agent Reference Number: @params("arn")</p>
     <p style="font-size: 19px; margin: 0 0 30px;">Unique Taxpayer Reference: @params("utr")</p>
     <p style="font-size: 19px; margin: 0 0 30px;">Agent name: @params("agencyName")</p>
-    <p style="font-size: 19px; margin: 0 0 15px;">Check@{if(failedChecks.length > 1) "s" else ""} failed: </p>
+    <p style="font-size: 19px; margin: 0 0 15px;">Check@{if(failedChecks().length > 1) "s" else ""} failed: </p>
     <ul style="font-size: 19px; margin: 0 0 30px;">
-        @for(failedCheck <- failedChecks){ <li>@failedCheck</li> }
+        @for(failedCheck <- failedChecks()){ <li>@failedCheck</li> }
     </ul>
     <p style="font-size: 19px; margin: 0 0 30px;">Date and time of check: @params("dateTime")</p>
     <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Agent Services team</p>

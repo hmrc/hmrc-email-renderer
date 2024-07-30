@@ -46,7 +46,7 @@
             </tr>
 
             @{
-                if(params.contains("transactionFeeInPence")) {
+                if(params.contains("transactionFeeInPence")){
                         <tr>
                         <th>Ffi’r cerdyn</th>
                         <td>{formatAmountInPenceGdsFormat(params("transactionFeeInPence").toString)}</td>
@@ -56,6 +56,9 @@
                         <th>Cyfanswm a dalwyd</th>
                         <td>{formatAmountInPenceGdsFormat(params("totalAmountInPence").toString)}</td>
                         </tr>
+                }
+                else{
+                    <tr/>
                 }
             }
 

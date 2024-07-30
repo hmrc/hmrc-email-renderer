@@ -26,11 +26,11 @@
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, title = "Agent interested in private beta") {
 
 
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Agent Reference Number: @arn</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Number of clients: @numClients </p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact name: @contactName</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact email address: @contactEmail</p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact telephone number: @telephone_number</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Agent Reference Number: @arn()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Number of clients: @numClients() </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact name: @contactName()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact email address: @contactEmail()</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0;">Contact telephone number: @telephone_number()</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin-bottom: 20px;">
         This agent is interested in joining the private beta of Granular Permissions for agent services accounts.
     </p>

@@ -20,7 +20,7 @@ Take this updated declaration and the purchase receipts for the goods with you w
 
 Date of declaration
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Details of the goods
 

@@ -27,7 +27,7 @@ You need to carry proof your goods were made in the EU if they have a total valu
 
 Date of declaration
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Details of the goods
 

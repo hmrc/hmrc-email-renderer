@@ -27,7 +27,7 @@ Mae’n rhaid i chi gario tystiolaeth sy’n dangos y cafodd eich nwyddau eu gwn
 
 Dyddiad y datganiad
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Manylion y nwyddau
 

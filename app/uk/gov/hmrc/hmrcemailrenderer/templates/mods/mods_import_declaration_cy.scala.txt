@@ -27,7 +27,7 @@ Os ydych yn dod â nwyddau a gynhyrchwyd yn yr UE gyda chi y mae cyfanswm eu gwe
 
 Dyddiad y datganiad
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Manylion y nwyddau
 

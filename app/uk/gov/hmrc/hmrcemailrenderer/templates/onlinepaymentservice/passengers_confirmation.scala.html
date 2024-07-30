@@ -37,7 +37,7 @@ val commodityDescription = (item \ "commodityDescription").as[String].toLowerCas
 val volume = item \ "volume"
 val quantity = item \ "quantity"
 val weight = item \ "weight"
-val volOrQuantityOrWeight = if (quantity.isDefined) quantity.as[String]  else if (weight.isDefined) {BigDecimal(weight.as[String]).setScale(2,RoundingMode.apply(2)) + "g of "} else (volume.as[String] + " litres")
+val volOrQuantityOrWeight = if (quantity.isDefined) quantity.as[String]  else if (weight.isDefined) {BigDecimal(weight.as[String]).setScale(2,RoundingMode.apply(2)).toString + "g of "} else (volume.as[String] + " litres")
 val itemDesc = s"$volOrQuantityOrWeight $commodityDescription"
 
 val goodsValue = (item \ "goodsValue").as[String]
