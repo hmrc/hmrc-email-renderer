@@ -18,13 +18,7 @@ lazy val microservice = Project(appName, file("."))
   .settings(defaultSettings(): _*)
   .settings(
     libraryDependencies ++= appDependencies,
-    retrieveManaged := true,
-    scalacOptions ++= Seq(
-      // Silence unused warnings on Play `routes` and `twirl` files
-      "-Wconf:cat=unused-imports&src=.*routes.*:s",
-      "-Wconf:cat=unused-privates&src=.*routes.*:s",
-      "-Wconf:src=twirl/.*:s"
-    )
+    retrieveManaged := true
   )
   .settings(resolvers += Resolver.jcenterRepo)
   .settings(routesGenerator := InjectedRoutesGenerator)

@@ -19,14 +19,15 @@ package preview
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import org.mockito.MockitoSugar
 import org.mockito.Mockito
+import org.mockito.Mockito.when
 import org.mockito.ArgumentMatchers.{ any, anyString }
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ Body, MessagePriority, MessageTemplate, MissingTemplateId, TemplateRenderFailure }
 import uk.gov.hmrc.hmrcemailrenderer.services.TemplateRenderer
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ ServiceIdentifier, TemplateLocator }
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.OptionValues
+import org.scalatestplus.mockito.MockitoSugar
 
 class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with GuiceOneAppPerSuite with MockitoSugar {
 
@@ -56,7 +57,7 @@ class PreviewSpec extends AnyWordSpec with Matchers with OptionValues with Guice
 
     val templateRenderer = app.injector.instanceOf[TemplateRenderer]
 
-    forAll(Table.apply("templateId", allTemplates: _*)) { mt: MessageTemplate =>
+    forAll(Table.apply("templateId", allTemplates: _*)) { (mt: MessageTemplate) =>
       s"be able to render ${mt.templateId}" in {
 
         val parameters = TemplateParams.exampleParams

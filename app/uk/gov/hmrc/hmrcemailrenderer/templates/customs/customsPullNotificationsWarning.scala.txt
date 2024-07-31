@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 @grid = @{
-    val warnings = Stream.from(0).takeWhile(i => params.get(s"clientId_$i").isDefined).toList
+    val warnings = LazyList.from(0).takeWhile(i => params.get(s"clientId_$i").isDefined).toList
     warnings.map { i =>
         val clientId = params(s"clientId_$i")
         val notificationTotal = params(s"notificationTotal_$i")

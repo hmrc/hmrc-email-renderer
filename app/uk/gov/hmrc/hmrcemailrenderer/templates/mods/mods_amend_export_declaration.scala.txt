@@ -1,6 +1,6 @@
 @(params: Map[String, Any])You added goods to your declaration
 @goodsGrid = @{
-  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  val goods = LazyList.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val country = params(s"goodsDestination_$i")

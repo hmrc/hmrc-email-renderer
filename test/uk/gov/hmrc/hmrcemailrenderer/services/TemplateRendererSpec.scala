@@ -33,7 +33,8 @@
 package uk.gov.hmrc.hmrcemailrenderer.services
 
 import org.scalatest.OptionValues
-import org.mockito.{ ArgumentCaptor, MockitoSugar }
+import org.mockito.ArgumentCaptor
+import org.mockito.Mockito.{ verify, when }
 import org.mockito.ArgumentMatchers.{ any, anyString }
 import play.api.Configuration
 import uk.gov.hmrc.hmrcemailrenderer.connectors.PreferencesConnector
@@ -51,6 +52,7 @@ import scala.concurrent.{ ExecutionContext, Future }
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
+import org.scalatestplus.mockito.MockitoSugar
 
 class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues with MockitoSugar with ScalaFutures {
   "The template renderer" should {
