@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 
 @goodsGrid = @{
-  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  val goods = LazyList.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val country = params.get(s"goodsCountry_$i")
@@ -47,7 +47,7 @@
 
     <h2>Dyddiad y datganiad</h2>
 
-    <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration") + "." }</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@{params("dateOfDeclaration").toString}.</p>
 
     <h2>Manylion y nwyddau</h2>
 

@@ -5,7 +5,7 @@ Agent entity check failure report
 Agent reference number: @params("arn")
 Unique Taxpayer Reference: @params("utr")
 Agent name: @params("agencyName")
-Check@{if(failedChecks.length > 1) "s" else ""} failed: @params("failedChecks")
+Check@{if(failedChecks().length > 1) "s" else ""} failed: @params("failedChecks")
 Date / time of check: @params("dateTime")
 
 From HMRC Agent Services Team

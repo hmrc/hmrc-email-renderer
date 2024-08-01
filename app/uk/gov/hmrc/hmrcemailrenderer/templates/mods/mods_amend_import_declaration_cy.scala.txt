@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Rydych wedi ychwanegu nwyddau at eich datganiad
 @goodsGrid = @{
-  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  val goods = LazyList.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val country = params.get(s"goodsCountry_$i")
@@ -27,7 +27,7 @@ Mae’n rhaid i chi gario tystiolaeth sy’n dangos y cafodd eich nwyddau eu gwn
 
 Dyddiad y datganiad
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Manylion y nwyddau
 

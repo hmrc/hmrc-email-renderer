@@ -14,9 +14,10 @@
  * limitations under the License.
  *@
 
+@import play.api.mvc.RequestHeader
 @this()
 
-@(pageTitle: String, heading: String, message: String)(implicit request: Request[_], messages: Messages)
+@(pageTitle: String, heading: String, message: String)(implicit request: RequestHeader, messages: Messages)
 
 <html>
 <title>@pageTitle</title>

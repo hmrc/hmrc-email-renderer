@@ -3,11 +3,11 @@
 OPSROWS:
 @{params.filter(_._1.startsWith("MODS_ROW_OPS")).map { row =>
         val cells = row._2.toString.split(",").toList
-        row._2 + "\n"}
+        row._2.toString + "\n"}
 }
 
 TOPSROWS:
 @{params.filter(_._1.startsWith("MODS_ROW_TOPS")).map { row =>
         val cells = row._2.toString.split(",").toList
-        row._2 + "\n"}
+        row._2.toString + "\n"}
 }

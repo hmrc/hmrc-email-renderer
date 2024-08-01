@@ -3,7 +3,7 @@
 @(params: Map[String, Any])
 
 @breakdown = @{
-  val indices = Stream.from(0).takeWhile(i => params.get(s"CHARGETYPE_$i").isDefined).toList
+  val indices = LazyList.from(0).takeWhile(i => params.get(s"CHARGETYPE_$i").isDefined).toList
   indices.map { i =>
     val chargeType = params(s"CHARGETYPE_$i")
     val period = params(s"PERIOD_$i")

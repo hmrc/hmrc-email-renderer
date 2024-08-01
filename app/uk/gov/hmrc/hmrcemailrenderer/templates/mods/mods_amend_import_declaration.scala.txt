@@ -1,6 +1,6 @@
 @(params: Map[String, Any])You added goods to your declaration
 @goodsGrid = @{
-  val goods = Stream.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
+  val goods = LazyList.from(0).takeWhile(i => params.get(s"goodsCategory_$i").isDefined).toList
   goods.map { i =>
     val category = params(s"goodsCategory_$i")
     val country = params.get(s"goodsCountry_$i")
@@ -27,7 +27,7 @@ You need to carry proof your goods were made in the EU if they have a total valu
 
 Date of declaration
 
-@{params("dateOfDeclaration") + "." }
+@{params("dateOfDeclaration").toString}.
 
 Details of the goods
 

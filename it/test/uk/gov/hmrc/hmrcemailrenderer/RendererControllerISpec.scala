@@ -22,6 +22,7 @@ import org.scalatestplus.play.guice.GuiceOneServerPerSuite
 import org.scalatestplus.play.{ ServerProvider, WsScalaTestClient }
 import play.api.libs.json._
 import play.api.libs.ws.WSClient
+import play.api.libs.ws.writeableOf_JsValue
 import uk.gov.hmrc.play.http.test.ResponseMatchers
 import org.scalatest.OptionValues
 import org.scalatest.matchers.should.Matchers

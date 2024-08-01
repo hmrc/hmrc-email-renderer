@@ -139,7 +139,7 @@ class TemplateRenderer @Inject() (
   }
 
   private def render(
-    template: Map[String, String] => Format[_]#Appendable,
+    template: Map[String, String] => Format[?]#Appendable,
     params: Map[String, String]
   ): Either[ErrorMessage, String] =
     Try(template(params)) match {
