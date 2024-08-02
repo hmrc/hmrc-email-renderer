@@ -1,0 +1,5 @@
+@(params: Map[String, Any])
+You have been removed as a team member from @{params("teamname")} within the Integration Hub.
+You will no longer have access to @{params("teamname")}.
+To access The Integration Hub, visit /api-hub on the MDTP admin network.
+From HMRC The Integration Hub

@@ -1661,6 +1661,9 @@ object TemplateParams2 {
       "otherteamname"        -> "New API Team",
       "apispecificationname" -> "API Name"
     ),
+    "hipp_remove_member_from_team_member" -> Map(
+      "teamname" -> "Test-Hipp-Team"
+    ),
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",
