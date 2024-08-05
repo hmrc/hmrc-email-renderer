@@ -130,6 +130,15 @@ object HippTemplates {
       plainTemplate = txt.ApiOwnershipRemoved.f,
       htmlTemplate = html.ApiOwnershipRemoved.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_remove_member_from_team_member",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "You have been removed from a team on the Integration Hub",
+      plainTemplate = txt.RemoveMemberFromTeam.f,
+      htmlTemplate = html.RemoveMemberFromTeam.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

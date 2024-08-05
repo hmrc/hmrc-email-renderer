@@ -535,6 +535,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "hipp_remove_team_member_from_app_email",
         "hipp_api_ownership_added_email",
         "hipp_api_ownership_removed_email",
+        "hipp_remove_member_from_team_member",
         "ho10_confirmation_submission",
         "ho10_confirmation_submission_cy",
         "ho5_code",
