@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
 Your request for your application @{params("applicationname")} to access the @{params("apispecificationname")} in the production environment has been successfully submitted for review.
-To access the application, visit /api-hub on the MDTP admin network.
+To access the application, visit /integration-hub on the MDTP admin network.
 Please note that if you are granted production access to this API, you may still need to generate production credentials if you have not done so already. Find more details on the 'Environments and credentials' page of your application.
 From HMRC The Integration Hub
