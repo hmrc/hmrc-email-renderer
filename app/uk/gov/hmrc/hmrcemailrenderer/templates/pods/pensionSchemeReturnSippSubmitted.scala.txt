@@ -1,5 +1,7 @@
 @(params: Map[String, Any])
 
+You have submitted a Pension Scheme Return
+
 Dear @{params("psaName").toString}
 
 Scheme name: @{params("schemeName").toString}
@@ -8,9 +10,11 @@ Date submitted: @{params("dateSubmitted").toString}
 
 What happens next
 
-HMRC may contact you to confirm the details of your return. You will receive an email notification when an update is available.
+HMRC may contact you to confirm the details of your return.
 
 You can sign in to ‘Managing Pension Schemes’ to update this return within the next 6 years.
+
+You will receive a confirmation email when you make updates.
 
 Why you are receiving this email
 

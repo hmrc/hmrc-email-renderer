@@ -16,22 +16,25 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have submitted a pension scheme return") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have submitted a Pension Scheme Return") {
 
 <p style="margin:0 0 30px; font-size: 20px">Dear @{params("psaName").toString}</p>
 
-<p style="margin:0 0 30px; font-size: 20px">
- Scheme name: @{params("schemeName").toString}
- <br>Date submitted: @{params("dateSubmitted").toString}
+<p style="margin:0 0 30px; font-size: 20px">Scheme name: @{params("schemeName").toString}</p>
+
+<p style="margin:0 0 30px; font-size: 20px">Period of return: ${params("periodOfReturn").toString}</p>
+
+<p style="margin:0 0 30px; font-size: 20px">Date submitted: @{params("dateSubmitted").toString}</p>
+
+<h2>What happens next</h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">
+ HMRC may contact you to confirm the details of your return.<br />
+ You can sign in to ‘Managing Pension Schemes’ to update this return within the next 6 years.<br />
+ You will receive a confirmation email when you make updates.
 </p>
 
-<p style="font-weight: bold; font-size: 20px">What happens next</p>
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">HMRC may contact you to confirm the details of your return. You will receive an email notification when an update is available.</p>
-
-<p style="margin:0 0 30px; font-size: 20px">You can sign into ‘Managing Pension Schemes’ to update this return within the next 6 years.</p>
-
-<p style="font-weight: bold; font-size: 20px">Why you are receiving this email</p>
+<h2>Why you are receiving this email</h2>
 
 <p style="margin:0 0 30px; font-size: 20px">We send a confirmation email for submitted returns.</p>
 
