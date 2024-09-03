@@ -139,6 +139,24 @@ object HippTemplates {
       plainTemplate = txt.RemoveMemberFromTeam.f,
       htmlTemplate = html.RemoveMemberFromTeam.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_notify_application_new_owning_team",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "There has been a change of application ownership",
+      plainTemplate = txt.NotifyApplicationNewOwningTeam.f,
+      htmlTemplate = html.NotifyApplicationNewOwningTeam.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_notify_application_old_owning_team",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "There has been a change of application ownership",
+      plainTemplate = txt.NotifyApplicationOldOwningTeam.f,
+      htmlTemplate = html.NotifyApplicationOldOwningTeam.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
