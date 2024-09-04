@@ -233,7 +233,7 @@ object PodsTemplates {
       templateId = "pods_pension_scheme_return_sipp_submitted",
       fromAddress = govUkTeamAddress,
       service = PODS,
-      subject = params => s"Submitted: Pension scheme return for ${params("periodOfReturn")}",
+      subject = params => s"Submitted: Pension scheme return",
       plainTemplate = txt.pensionSchemeReturnSippSubmitted.f,
       htmlTemplate = html.pensionSchemeReturnSippSubmitted.f,
       priority = Some(MessagePriority.Standard)
