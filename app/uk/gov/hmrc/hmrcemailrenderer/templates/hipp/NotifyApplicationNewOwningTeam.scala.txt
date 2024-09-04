@@ -1,0 +1,5 @@
+@(params: Map[String, Any])
+Your team @{params("teamname")} is the new owner of @{params("applicationname")}.
+To view this change, visit /integration-hub on the MDTP admin network.
+If this is an error, please follow the Get Support link on the Hub.
+From HMRC The Integration Hub

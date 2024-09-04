@@ -1664,6 +1664,15 @@ object TemplateParams2 {
     "hipp_remove_member_from_team_member" -> Map(
       "teamname" -> "Test-Hipp-Team"
     ),
+    "hipp_notify_application_new_owning_team" -> Map(
+      "teamname"        -> "Test-Hipp-Team",
+      "applicationname" -> "Test-Hipp-Application"
+    ),
+    "hipp_notify_application_old_owning_team" -> Map(
+      "teamname"        -> "Test-Hipp-Team",
+      "oldteamname"     -> "Old Test-Hipp-Team",
+      "applicationname" -> "Test-Hipp-Application"
+    ),
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",
