@@ -16,13 +16,13 @@
 
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have submitted a Pension Scheme Return") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have submitted a pension scheme return") {
 
 <p style="margin:0 0 30px; font-size: 20px">Dear @{params("psaName").toString}</p>
 
 <p style="margin:0 0 30px; font-size: 20px">Scheme name: @{params("schemeName").toString}</p>
 
-<p style="margin:0 0 30px; font-size: 20px">Period of return: ${params("periodOfReturn").toString}</p>
+<p style="margin:0 0 30px; font-size: 20px">Period of return: @{params("periodOfReturn").toString}</p>
 
 <p style="margin:0 0 30px; font-size: 20px">Date submitted: @{params("dateSubmitted").toString}</p>
 
