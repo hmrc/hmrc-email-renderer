@@ -67,6 +67,7 @@ class TemplateRenderer @Inject() (
       template.fromAddress(allParams),
       template.subject(allParams),
       template.service.name,
+      templateId,
       template.priority
     )
   }
@@ -83,7 +84,7 @@ class TemplateRenderer @Inject() (
       "hmrc-email-renderer",
       auditType = Succeeded,
       tags = Map("transactionName" -> "Template Language"),
-      detail = templatesByLangPreference ++ Map(
+      detail = Map(
         "email"              -> email,
         "originalTemplateId" -> originalTemplateId,
         "selectedTemplateId" -> selectedTemplateId,

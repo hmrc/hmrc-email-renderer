@@ -33,6 +33,7 @@ case class RenderResult(
   fromAddress: String,
   subject: String,
   service: String,
+  templateId: String,
   priority: Option[MessagePriority]
 )
 
@@ -45,7 +46,8 @@ object RenderResult {
       "html"        -> base64Encoded(toRender.html),
       "fromAddress" -> toRender.fromAddress,
       "subject"     -> toRender.subject,
-      "service"     -> toRender.service
+      "service"     -> toRender.service,
+      "templateId"  -> toRender.templateId
     ) ++ toRender.priority.fold(Json.obj()) { priority =>
       Json.obj("priority" -> priority.toString)
     }
