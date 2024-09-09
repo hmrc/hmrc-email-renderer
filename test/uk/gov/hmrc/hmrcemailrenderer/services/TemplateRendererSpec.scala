@@ -289,8 +289,8 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         subject = "a subject",
         plain = "Test template with parameter value: VALUE using common parameters: commonValue",
         html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
-        templateId,
-        priority = Some(MessagePriority.Urgent)
+        priority = Some(MessagePriority.Urgent),
+        templateId = Some(templateId)
       )
     implicit val headerCarrier: HeaderCarrier = new HeaderCarrier()
 

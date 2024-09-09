@@ -31,7 +31,15 @@ class RenderResultSpec extends AnyWordSpecLike with Matchers with OptionValues {
     "have the plain and html fields Base64 encoded when rendered as JSON" in {
       val result =
         Json.toJson(
-          RenderResult("Some Plain Text", "<p>Some HTML</p>", "fromAddress", "subject", "service", "template_cy", None)
+          RenderResult(
+            "Some Plain Text",
+            "<p>Some HTML</p>",
+            "fromAddress",
+            "subject",
+            "service",
+            None,
+            Some("template_cy")
+          )
         )
 
       (result \ "plain").as[String] shouldBe "U29tZSBQbGFpbiBUZXh0"
@@ -39,7 +47,7 @@ class RenderResultSpec extends AnyWordSpecLike with Matchers with OptionValues {
       (result \ "html").as[String] shouldBe "PHA+U29tZSBIVE1MPC9wPg=="
       decode((result \ "html").as[String]) shouldBe "<p>Some HTML</p>"
       (result \ "priority").asOpt[String] shouldBe None
-      (result \ "templateId").as[String] shouldBe "template_cy"
+      (result \ "templateId").asOpt[String] shouldBe Some("template_cy")
     }
   }
 }

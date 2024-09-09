@@ -67,8 +67,8 @@ class TemplateRenderer @Inject() (
       template.fromAddress(allParams),
       template.subject(allParams),
       template.service.name,
-      templateId,
-      template.priority
+      template.priority,
+      Some(templateId)
     )
   }
 
