@@ -4,4 +4,3 @@ Mae’r cofnod y gofynnoch amdano, sy’n cynnwys eich data TGP, yn barod i’w 
 I gael mynediad at eich ffeil, ewch i GOV.UK a chwilio am ‘Trader Goods Profile’. Mewngofnodwch, a byddwch yn gweld hysbysiad ar frig eich hafan Proffil Nwyddau Masnachwyr.
 Bydd y ffeil ar gael tan @params("expiredDate").
 I gael mynediad at y ffeil eto, gweler y cysylltiad sydd ar waelod eich cofnodion nwyddau.
-}
