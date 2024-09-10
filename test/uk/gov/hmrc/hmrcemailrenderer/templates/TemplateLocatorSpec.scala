@@ -1046,7 +1046,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "new_message_alert_m08_ioss_cy",
         "new_message_alert_m08a_ioss",
         "new_message_alert_m08a_ioss_cy",
-        "tgp_download_record_notification_email"
+        "tgp_download_record_notification_email",
+        "tgp_download_record_notification_email_cy"
       )
     }
   }

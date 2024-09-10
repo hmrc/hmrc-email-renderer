@@ -3766,6 +3766,9 @@ object TemplateParams3 {
     ),
     "tgp_download_record_notification_email" -> Map(
       "expiredDate" -> "18 August 2024"
+    ),
+    "tgp_download_record_notification_email_cy" -> Map(
+      "expiredDate" -> "18 Awst 2024"
     )
   )
 }
