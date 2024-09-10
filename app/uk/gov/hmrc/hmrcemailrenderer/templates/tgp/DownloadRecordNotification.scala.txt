@@ -1,0 +1,6 @@
+@(params: Map[String, Any])
+Dear customer
+The record of your TGP data that you asked for is ready to download.
+To get your file, go to GOV.UK and search for Trader Goods Profile. Log in and you will have a notification at the top of your Trader Goods Profile homepage.
+The file will be available until @params("expiredDate").
+To get the file again, you can find a link at the bottom of your goods records.

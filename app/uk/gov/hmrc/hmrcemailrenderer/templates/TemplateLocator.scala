@@ -94,6 +94,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ioss.IossTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
+import uk.gov.hmrc.hmrcemailrenderer.templates.tgp.TgpTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -172,6 +173,7 @@ trait TemplateLocator {
       "ECL"                   -> EclTemplates.templates,
       "HIPP"                  -> HippTemplates.templates,
       "Penalty Reform"        -> PenReformTemplates.templates,
+      "TGP"                   -> TgpTemplates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates
     )
 
