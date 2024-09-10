@@ -31,6 +31,15 @@ object TgpTemplates {
       plainTemplate = txt.DownloadRecordNotification.f,
       htmlTemplate = html.DownloadRecordNotification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tgp_download_record_notification_email_cy",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Tgp,
+      subject = "Mae’r ffeil sy'n cynnwys cofnodion eich Proffil Nwyddau Masnachwr yn barod i’w lawrlwytho",
+      plainTemplate = txt.DownloadRecordNotification_cy.f,
+      htmlTemplate = html.DownloadRecordNotification_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
