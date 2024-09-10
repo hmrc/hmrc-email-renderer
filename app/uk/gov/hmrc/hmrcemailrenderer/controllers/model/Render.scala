@@ -33,7 +33,8 @@ case class RenderResult(
   fromAddress: String,
   subject: String,
   service: String,
-  priority: Option[MessagePriority]
+  priority: Option[MessagePriority],
+  templateId: Option[String]
 )
 
 object RenderResult {
@@ -48,6 +49,8 @@ object RenderResult {
       "service"     -> toRender.service
     ) ++ toRender.priority.fold(Json.obj()) { priority =>
       Json.obj("priority" -> priority.toString)
+    } ++ toRender.templateId.fold(Json.obj()) { templateId =>
+      Json.obj("templateId" -> templateId)
     }
   }
 }

@@ -30,12 +30,13 @@ class Preview @Inject() (renderer: TemplateRenderer) {
   def plain(templateId: String, parameters: Map[String, String]): String =
     extractPlainText.orElse(handleErrors)(renderer.render(templateId, parameters))
 
-  private val extractHtml: PartialFunction[RenderedResult, String] = { case Right(RenderResult(_, html, _, _, _, _)) =>
-    html
+  private val extractHtml: PartialFunction[RenderedResult, String] = {
+    case Right(RenderResult(_, html, _, _, _, _, _)) =>
+      html
   }
 
   private val extractPlainText: PartialFunction[RenderedResult, String] = {
-    case Right(RenderResult(plain, _, _, _, _, _)) => plain
+    case Right(RenderResult(plain, _, _, _, _, _, _)) => plain
   }
 
   private val handleErrors: PartialFunction[RenderedResult, String] = {

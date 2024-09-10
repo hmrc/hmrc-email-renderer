@@ -58,7 +58,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
   "The template renderer" should {
     "render an existing template using the common parameters" in new TestCase {
       when(locatorMock.findTemplate(templateId)).thenReturn(Some(validTemplate))
-      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Right(validRenderedResult)
+      templateRenderer.render(templateId, Map("KEY" -> "VALUE")) shouldBe Right(validRenderedResult(templateId))
     }
 
     "return None if the template is not found" in new TestCase {
@@ -100,8 +100,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         "description"        -> "Defaulting to English",
         "originalTemplateId" -> templateId,
         "selectedTemplateId" -> templateId,
-        "language"           -> "English",
-        "engTemplateId"      -> "welshTemplateId"
+        "language"           -> "English"
       )
     }
 
@@ -131,8 +130,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         "description"        -> "Language preference found",
         "originalTemplateId" -> engTemplateId,
         "selectedTemplateId" -> welshTemplateId,
-        "language"           -> "Welsh",
-        "engTemplateId"      -> "welshTemplateId"
+        "language"           -> "Welsh"
       )
     }
 
@@ -163,8 +161,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         "description"        -> "Language preference found",
         "originalTemplateId" -> engTemplateId,
         "selectedTemplateId" -> engTemplateId,
-        "language"           -> "English",
-        "engTemplateId"      -> "welshTemplateId"
+        "language"           -> "English"
       )
     }
 
@@ -195,8 +192,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         "description"        -> "Defaulting to English",
         "originalTemplateId" -> templateId,
         "selectedTemplateId" -> templateId,
-        "language"           -> "English",
-        "engTemplateId"      -> "welshTemplateId"
+        "language"           -> "English"
       )
     }
 
@@ -225,8 +221,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         "description"        -> "Defaulting to English",
         "originalTemplateId" -> templateId,
         "selectedTemplateId" -> templateId,
-        "language"           -> "English",
-        "engTemplateId"      -> "welshTemplateId"
+        "language"           -> "English"
       )
     }
 
@@ -254,8 +249,7 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
         "description"        -> "Defaulting to English",
         "originalTemplateId" -> engTemplateId,
         "selectedTemplateId" -> engTemplateId,
-        "language"           -> "English",
-        "engTemplateId"      -> "welshTemplateId"
+        "language"           -> "English"
       )
     }
   }
@@ -288,14 +282,16 @@ class TemplateRendererSpec extends AnyWordSpec with Matchers with OptionValues w
       Some(MessagePriority.Urgent)
     )
 
-    val validRenderedResult = RenderResult(
-      fromAddress = "from@test",
-      service = "sa",
-      subject = "a subject",
-      plain = "Test template with parameter value: VALUE using common parameters: commonValue",
-      html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
-      priority = Some(MessagePriority.Urgent)
-    )
+    val validRenderedResult = (templateId: String) =>
+      RenderResult(
+        fromAddress = "from@test",
+        service = "sa",
+        subject = "a subject",
+        plain = "Test template with parameter value: VALUE using common parameters: commonValue",
+        html = "<p>Test template with parameter value: VALUE using common parameters: commonValue</p>",
+        priority = Some(MessagePriority.Urgent),
+        templateId = Some(templateId)
+      )
     implicit val headerCarrier: HeaderCarrier = new HeaderCarrier()
 
     object LocalConfig {
