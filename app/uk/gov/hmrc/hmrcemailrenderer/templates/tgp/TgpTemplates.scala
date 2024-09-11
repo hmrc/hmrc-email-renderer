@@ -30,7 +30,7 @@ object TgpTemplates {
       subject = "Your Trader Goods Profile records file is ready to download",
       plainTemplate = txt.DownloadRecordNotification.f,
       htmlTemplate = html.DownloadRecordNotification.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "tgp_download_record_notification_email_cy",
@@ -39,7 +39,7 @@ object TgpTemplates {
       subject = "Mae’r ffeil sy'n cynnwys cofnodion eich Proffil Nwyddau Masnachwr yn barod i’w lawrlwytho",
       plainTemplate = txt.DownloadRecordNotification_cy.f,
       htmlTemplate = html.DownloadRecordNotification_cy.f,
-      priority = Some(MessagePriority.Urgent)
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
