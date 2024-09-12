@@ -144,7 +144,7 @@ object PayeTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "daily_tax_estimate_message_alert_cy",
+      templateId = "annual_tax_estimate_message_alert_cy",
       fromAddress = defaultFromAddressWelsh,
       service = PayAsYouEarn,
       subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
