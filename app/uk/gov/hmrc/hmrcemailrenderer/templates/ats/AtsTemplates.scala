@@ -22,7 +22,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.AnnualTaxSummar
 
 import java.time.LocalDate
 
-object AtsTemplates  {
+object AtsTemplates {
 
   val taxYearFrom = LocalDate.now().getYear - 1
   val taxYearTo = LocalDate.now().getYear
