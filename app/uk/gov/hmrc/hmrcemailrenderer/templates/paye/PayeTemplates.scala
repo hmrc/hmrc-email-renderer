@@ -115,6 +115,42 @@ object PayeTemplates {
       plainTemplate = txt.newMessageAlert_PA302_cy.f,
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "daily_tax_estimate_message_alert",
+      fromAddress = defaultFromAddress,
+      service = PayAsYouEarn,
+      subject = "Your new tax calculation from HMRC is ready",
+      plainTemplate = txt.daily_tax_estimate_message_alert.f,
+      htmlTemplate = html.daily_tax_estimate_message_alert.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "daily_tax_estimate_message_alert_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = PayAsYouEarn,
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
+      plainTemplate = txt.daily_tax_estimate_message_alert_cy.f,
+      htmlTemplate = html.daily_tax_estimate_message_alert_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "annual_tax_estimate_message_alert",
+      fromAddress = defaultFromAddress,
+      service = PayAsYouEarn,
+      subject = "Your new tax calculation from HMRC is ready",
+      plainTemplate = txt.annual_tax_estimate_message_alert.f,
+      htmlTemplate = html.annual_tax_estimate_message_alert.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "annual_tax_estimate_message_alert_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = PayAsYouEarn,
+      subject = "Mae’ch cyfrifiad treth newydd gan CThEF yn barod",
+      plainTemplate = txt.annual_tax_estimate_message_alert_cy.f,
+      htmlTemplate = html.annual_tax_estimate_message_alert_cy.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

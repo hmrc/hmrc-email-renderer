@@ -1,0 +1,42 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils
+@(params: Map[String, Any])You have a tax code change
+
+
+Dear @{params("fullName")}
+
+Your PAYE Income Tax records have recently changed, which means the amount of tax you pay will change.
+
+For security reasons we do not give the full details here, but it could be because:
+
+
+- we have now calculated your tax code for the next tax year (tax year 2024 to 2025)
+- your job changed
+- your pay changed
+- your company benefits, such as a company car changed
+- your pension changed
+
+
+How to check your details to make sure you pay the right amount of tax
+
+Search GOV.UK for ‘personal tax account’, sign in and go to the ‘Pay As You Earn (PAYE)’ section.
+
+If you sign in using a business tax account, you may be able to use it to access your personal tax account.
+
+
+If you do not have a personal tax account
+
+You need to set one up before you can see your tax code change.
+
+Search GOV.UK for ‘Personal tax account: sign in or set up’.
+
+
+Why you got this email
+
+You have chosen to receive email updates instead of letters by post.
+
+For security reasons we have not included any links in this email.
+
+From HMRC Check your Income Tax
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1,0 +1,39 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’ch cod treth wedi newid", isWelsh = true) {
+<p style="margin: 0 0 30px; font-size: 19px;">Annwyl @{params("fullName")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd swm y dreth rydych yn ei thalu yn newid.</p>
+<p style="margin: 0 0 0px; font-size: 19px;">Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:</p>
+<ul>
+    <li>rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2024 i 2025)</li>
+    <li>newidiodd eich swydd</li>
+    <li>newidiodd eich cyflog</li>
+    <li>newidiodd eich buddiannau cwmni, megis car cwmni</li>
+    <li>newidiodd eich pensiwn</li></ul>
+<p style="margin: 30px 0 30px; font-size: 19px;"><strong>Sut i wirio’ch cofnodion i wneud yn siŵr eich bod yn talu’r swm cywir o dreth</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Chwiliwch am ‘personal tax account’ ar GOV.UK, mewngofnodwch ac ewch i’r adran ‘Talu Wrth Ennill (TWE)’.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Os ydych yn mewngofnodi gan ddefnyddio cyfrif treth busnes, mae’n bosibl y gallwch ei ddefnyddio i gael mynediad at eich cyfrif treth personol.</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Os nad oes cyfrif treth personol gennych</strong></p>
+<p style="margin: 0 0 30px; font-size: 19px;">Mae angen i chi greu un cyn y gallwch weld y newid i’ch cod treth.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Chwiliwch am ‘Personal tax account: sign in or set up’ ar GOV.UK.</p>
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Pam y cawsoch yr e-bost hwn</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Rydych wedi dewis cael diweddariadau drwy e-bost yn hytrach na chael llythyrau drwy’r post.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF: Gwirio’ch Treth Incwm</p>
+}
