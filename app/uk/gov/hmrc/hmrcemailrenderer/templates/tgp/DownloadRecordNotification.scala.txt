@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+Dear customer
+Your records file that you asked for is ready to download.
+To get your file:
+1. Go to GOV.UK
+2. Search for 'Trader Goods Profile'
+3. Log in to your profile
+4. Select the new notification on your homepage.
+The file will be available until @params("expiredDate").
+To get the file again, you can find a link on your goods records page.
+From the Trader Goods Profile team

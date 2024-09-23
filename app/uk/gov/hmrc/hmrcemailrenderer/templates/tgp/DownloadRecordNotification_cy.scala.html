@@ -1,0 +1,30 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae’r ffeil sy’n cynnwys cofnodion eich Proffil Nwyddau Masnachwr (TGP) yn barod i’w lawrlwytho", showHeading1 = false) {
+    <p style="margin: 0 0 30px; font-size: 19px;">Annwyl gwsmer</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Mae’r ffeil y gofynnoch amdano, sy’n cynnwys eich cofnodion TGP, yn barod i’w lawrlwytho.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Er mwyn cael mynediad at eich ffeil:</p>
+    <ol>
+        <li style="margin: 0 0 30px; font-size: 19px;">Ewch i GOV.UK</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Chwiliwch am ‘Trader Goods Profile’</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Mewngofnodwch i’ch proffil</li>
+        <li style="margin: 0 0 30px; font-size: 19px;">Dewiswch yr hysbysiad newydd sy’n ymddangos ar eich hafan.</li>
+    </ol>
+    <p style="margin: 0 0 30px; font-size: 19px;">Bydd y ffeil ar gael ta @params("expiredDate").</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">I gael mynediad at y ffeil eto, gweler y cysylltiad sydd ar eich tudalen Cofnodion Nwyddau.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Y Tîm Proffil Nwyddau Masnachwyr</p>
+}
