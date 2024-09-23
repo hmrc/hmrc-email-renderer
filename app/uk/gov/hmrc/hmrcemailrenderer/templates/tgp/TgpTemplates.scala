@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package tgp
+package uk.gov.hmrc.hmrcemailrenderer.templates.tgp
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
