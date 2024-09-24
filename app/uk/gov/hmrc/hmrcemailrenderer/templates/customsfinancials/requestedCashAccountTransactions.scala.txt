@@ -4,11 +4,11 @@
 
 Your requested cash account transactions are availble to view and download for the next 10 days.
 
-To access your statements:
+To access your transactions:
 
 Go to GOV.UK.
 
-Search for 'Use a cash account for Customs Declaration'.
+Search for 'Use a cash account for Customs Declaration Service declarations'.
 
 For security reasons, we have not included a link in this email.
 
