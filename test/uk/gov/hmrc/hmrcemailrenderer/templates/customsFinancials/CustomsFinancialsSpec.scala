@@ -126,6 +126,13 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       )
     }
 
+    "have matching content in customs_financials_requested_cash_account_transactions" in {
+      val params = commonParameters ++ Map("recipientName_FullName" -> "ABC ltd")
+
+      compareContent("customs_financials_requested_cash_account_transactions", params)(
+        customsFinancialsTemplate
+      )
+    }
   }
 
 }
