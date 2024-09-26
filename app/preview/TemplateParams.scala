@@ -3767,6 +3767,9 @@ object TemplateParams3 {
     "customs_financials_requested_notification_adjustment_statements_not_found" -> Map(
       "recipientName_FullName" -> "ABC ltd"
     ),
+    "customs_financials_requested_cash_account_transactions" -> Map(
+      "recipientName_FullName" -> "ABC ltd"
+    ),
     "undertaking_admin_deadline_reminder" -> Map(
       "deadline" -> "23 November 2023"
     ),

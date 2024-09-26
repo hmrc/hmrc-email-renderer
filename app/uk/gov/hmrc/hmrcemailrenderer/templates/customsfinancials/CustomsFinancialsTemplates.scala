@@ -141,6 +141,15 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.requestedNotificationAdjustmentStatementsNotFound.f,
       htmlTemplate = html.requestedNotificationAdjustmentStatementsNotFound.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_requested_cash_account_transactions",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Requested cash account transactions are now available",
+      plainTemplate = txt.requestedCashAccountTransactions.f,
+      htmlTemplate = html.requestedCashAccountTransactions.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
