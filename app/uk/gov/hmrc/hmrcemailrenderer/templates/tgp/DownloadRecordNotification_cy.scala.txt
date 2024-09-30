@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+Annwyl gwsmer
+Mae’r ffeil y gofynnoch amdano, sy’n cynnwys eich cofnodion TGP, yn barod i’w lawrlwytho.
+Er mwyn cael mynediad at eich ffeil:
+1. Ewch i GOV.UK
+2. Chwiliwch am ‘Trader Goods Profile’
+3. Mewngofnodwch i’ch proffil
+4. Dewiswch yr hysbysiad newydd sy’n ymddangos ar eich hafan.
+Bydd y ffeil ar gael ta @params("expiredDate").
+I gael mynediad at y ffeil eto, gweler y cysylltiad sydd ar eich tudalen Cofnodion Nwyddau.
+Y Tîm Proffil Nwyddau Masnachwyr

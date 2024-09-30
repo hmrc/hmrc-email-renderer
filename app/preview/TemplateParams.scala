@@ -3782,6 +3782,12 @@ object TemplateParams3 {
       "agencyName"   -> "Test Agent",
       "failedChecks" -> "Agent (individual) is deceased | Agent is present on the 'Refuse to Deal With' list",
       "dateTime"     -> "26 April 2024 08:34am"
+    ),
+    "tgp_download_record_notification_email" -> Map(
+      "expiredDate" -> "18 August 2024"
+    ),
+    "tgp_download_record_notification_email_cy" -> Map(
+      "expiredDate" -> "18 Awst 2024"
     )
   )
 }
