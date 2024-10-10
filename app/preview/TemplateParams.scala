@@ -3776,6 +3776,10 @@ object TemplateParams3 {
     "undertaking_admin_deadline_expired" -> Map(
       "deadline" -> "23 November 2023"
     ),
+    "dprs_registration_submitted" -> Map(
+      "name"   -> "Homer Simpson",
+      "dprsId" -> "XLDPI0023000377"
+    ),
     "entity_check_notification" -> Map(
       "arn"          -> "XARN000034892",
       "utr"          -> "489021408",
