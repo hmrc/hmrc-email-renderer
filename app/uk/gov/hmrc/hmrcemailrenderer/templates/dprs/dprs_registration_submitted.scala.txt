@@ -1,0 +1,19 @@
+@(params: Map[String, Any])You have registered for digital platform reporting
+
+Dear @{params("name")}
+
+You have successfully registered for digital platform reporting.
+
+Your digital platform reporting user ID is @params("dprsId")
+
+What you need to do next
+
+To send submissions, you must add a platform operator. Go to GOV.UK and search for 'Report information of sellers using your digital platform'.
+
+For security reasons, we have not included a link to this service in this email.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+From the HMRC Digital Platform Reporting team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

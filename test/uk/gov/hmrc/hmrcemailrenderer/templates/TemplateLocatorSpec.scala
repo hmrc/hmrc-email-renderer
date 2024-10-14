@@ -142,6 +142,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         FeedbackTemplates.id,
         "DASS",
         "IOSS",
+        "DPRS",
         "TGP"
       )
     }
@@ -443,6 +444,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "discounted_dining_payment_sent_cy",
         "disposal_return_submit",
         "dmsdoc_notification",
+        "dprs_registration_submitted",
         "dst_registration_accepted",
         "dst_registration_received",
         "duty_deferment_account_amend_confirmation",

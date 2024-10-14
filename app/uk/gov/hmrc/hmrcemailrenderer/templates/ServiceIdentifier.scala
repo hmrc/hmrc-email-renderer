@@ -127,6 +127,7 @@ object ServiceIdentifier {
   case object Hipp extends ServiceIdentifier { override val name = "hipp" }
   case object PenReform extends ServiceIdentifier { override val name = "penaltyReform" }
   case object Tgp extends ServiceIdentifier { override val name = "tgp" }
+  case object DigitalPlatformReporting extends ServiceIdentifier { override val name = "dprs" }
 
   case object Feedback extends ServiceIdentifier { override val name = "feedback" }
 }
