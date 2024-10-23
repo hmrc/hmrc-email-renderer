@@ -1,0 +1,32 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have added a reporting notification") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("userPrimaryContactName")}</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You have successfully added a reporting notification for @{params("poBusinessName")} in the digital platform reporting service.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">What you need to do next</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">If required, you can now submit reports for this platform operator. Go to GOV.UK and search for 'reporting rules for digital platforms'.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link to this service in this email.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search GOV.UK for 'reporting rules for digital platforms'.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Digital Platform Reporting team</p>
+}

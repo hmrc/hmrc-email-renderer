@@ -30,6 +30,78 @@ object DprsTemplates {
       plainTemplate = txt.dprs_registration_submitted.f,
       htmlTemplate = html.dprs_registration_submitted.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_added_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "You have added a platform operator in the digital platform reporting service",
+      plainTemplate = txt.dprs_added_platform_operator.f,
+      htmlTemplate = html.dprs_added_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_added_as_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "You have been added as a platform operator in the digital platform reporting service",
+      plainTemplate = txt.dprs_added_as_platform_operator.f,
+      htmlTemplate = html.dprs_added_as_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_removed_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "You have removed a platform operator from the digital platform reporting service",
+      plainTemplate = txt.dprs_removed_platform_operator.f,
+      htmlTemplate = html.dprs_removed_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_removed_as_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "You have been removed as a platform operator from the digital platform reporting service",
+      plainTemplate = txt.dprs_removed_as_platform_operator.f,
+      htmlTemplate = html.dprs_removed_as_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_updated_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "You have updated the details for a platform operator in the digital platform reporting service",
+      plainTemplate = txt.dprs_updated_platform_operator.f,
+      htmlTemplate = html.dprs_updated_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_updated_as_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Your platform operator details have been updated in the digital platform reporting service",
+      plainTemplate = txt.dprs_updated_as_platform_operator.f,
+      htmlTemplate = html.dprs_updated_as_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_added_reporting_notification",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "You have added a reporting notification in the digital platform reporting service",
+      plainTemplate = txt.dprs_added_reporting_notification.f,
+      htmlTemplate = html.dprs_added_reporting_notification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_added_reporting_notification_for_you",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "A reporting notification has been added for you in the digital platform reporting service",
+      plainTemplate = txt.dprs_added_reporting_notification_for_you.f,
+      htmlTemplate = html.dprs_added_reporting_notification_for_you.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

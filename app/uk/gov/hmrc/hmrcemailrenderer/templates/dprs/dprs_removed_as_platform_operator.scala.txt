@@ -1,0 +1,26 @@
+@(params: Map[String, Any])You have been removed as a platform operator
+
+Dear @{params("poPrimaryContactName")}
+
+@{params("poBusinessName")} with platform operator ID @{params("poId")} has been removed as a platform operator from the digital platform reporting service. This was done by @{params("userBusinessName")}.
+
+You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.
+
+If the reporting rules still apply to you
+
+If the reporting rules still apply to you, you must tell HMRC if you are a reporting platform operator or an excluded platform operator. You need to register first to do this. Go to GOV.UK and search for 'reporting rules for digital platforms' to register for the service.
+
+You may have to pay a penalty if you do not tell HMRC by the deadline.
+
+If the reporting rules do not apply to you
+
+You do not need to do anything.
+
+For security reasons, we have not included a link to this service in this email.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+
+From the HMRC Digital Platform Reporting team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

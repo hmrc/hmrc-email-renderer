@@ -1,0 +1,49 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A reporting notification has been added for you") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("poPrimaryContactName")}</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">The following reporting notification has been added for you in the digital platform reporting service.</p>
+<ul style="margin: 0 0 30px; font-size: 19px;">
+ <li>You are @{if(isReportingPO) { "a reporting"} else { "an excluded" }} platform operator for the @{params("reportablePeriodYear")} reportable period.</li>
+@if(isReportingPO){ @if(isExtendedDD){
+ <li>You have taken the extended time limit for due diligence on pre-existing sellers.</li>
+}
+ <li>@{if(isActiveSellerDD) { "You are carrying out due diligence on active sellers only."} else { "You are carrying out due diligence on all sellers." }}</li>
+}
+</ul>
+
+<p style="margin: 0 0 30px; font-size: 19px;">This notification was added by @{params("userBusinessName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">It will automatically carry over each year until it is updated. If you need to update it, contact @{params("userBusinessName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">What happens next</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You do not need to do anything.</p>
+@if(isReportingPO) {
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("userBusinessName")} can now submit digital platform reports for you.</p>
+}
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search GOV.UK for 'reporting rules for digital platforms'.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Digital Platform Reporting team</p>
+}
+
+@isReportingPO = @{params("isReportingPO").toString.toBoolean}
+@isExtendedDD = @{params("isExtendedDueDiligence").toString.toBoolean}
+@isActiveSellerDD = @{params("isActiveSellerDueDiligence").toString.toBoolean}

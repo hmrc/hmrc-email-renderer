@@ -3780,6 +3780,50 @@ object TemplateParams3 {
       "name"   -> "Homer Simpson",
       "dprsId" -> "XLDPI0023000377"
     ),
+    "dprs_added_platform_operator" -> Map(
+      "userPrimaryContactName" -> "Ashley Smith",
+      "poBusinessName"         -> "Vinted",
+      "poId"                   -> "PO12345678"
+    ),
+    "dprs_added_as_platform_operator" -> Map(
+      "poPrimaryContactName" -> "Tim Vinted",
+      "userBusinessName"     -> "Smith Advisory Services",
+      "poId"                 -> "PO12345678",
+      "poBusinessName"       -> "Vinted"
+    ),
+    "dprs_removed_platform_operator" -> Map(
+      "userPrimaryContactName" -> "Ashley Smith",
+      "poBusinessName"         -> "Vinted",
+      "poId"                   -> "PO12345678"
+    ),
+    "dprs_removed_as_platform_operator" -> Map(
+      "poPrimaryContactName" -> "Tim Vinted",
+      "userBusinessName"     -> "Smith Advisory Services",
+      "poId"                 -> "PO12345678",
+      "poBusinessName"       -> "Vinted"
+    ),
+    "dprs_updated_platform_operator" -> Map(
+      "userPrimaryContactName" -> "Ashley Smith",
+      "poBusinessName"         -> "Vinted"
+    ),
+    "dprs_updated_as_platform_operator" -> Map(
+      "poPrimaryContactName" -> "Tim Vinted",
+      "userBusinessName"     -> "Smith Advisory Services",
+      "poBusinessName"       -> "Vinted"
+    ),
+    "dprs_added_reporting_notification" -> Map(
+      "userPrimaryContactName" -> "Ashley Smith",
+      "poBusinessName"         -> "Vinted"
+    ),
+    "dprs_added_reporting_notification_for_you" -> Map(
+      "poPrimaryContactName"       -> "Tim Vinted",
+      "isReportingPO"              -> "true",
+      "reportablePeriodYear"       -> "2024",
+      "userBusinessName"           -> "Smith Advisory Services",
+      "poBusinessName"             -> "Vinted",
+      "isExtendedDueDiligence"     -> "true",
+      "isActiveSellerDueDiligence" -> "true"
+    ),
     "entity_check_notification" -> Map(
       "arn"          -> "XARN000034892",
       "utr"          -> "489021408",

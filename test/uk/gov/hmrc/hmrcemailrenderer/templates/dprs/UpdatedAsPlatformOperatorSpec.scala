@@ -22,37 +22,44 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalPlatformReporting
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress }
 
-class RegistrationSubmittedSpec extends PlaySpec with CommonParamsForSpec {
+class UpdatedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
 
-  "dprs_registration_submitted" must {
+  "dprs_updated_as_platform_operator" must {
     val underTest = MessageTemplate.create(
-      templateId = "dprs_registration_submitted",
+      templateId = "dprs_updated_as_platform_operator",
       fromAddress = govUkTeamAddress,
       service = DigitalPlatformReporting,
-      subject = "Successful registration for digital platform reporting",
-      plainTemplate = txt.dprs_registration_submitted.f,
-      htmlTemplate = html.dprs_registration_submitted.f,
+      subject = "Your platform operator details have been updated in the digital platform reporting service",
+      plainTemplate = txt.dprs_updated_as_platform_operator.f,
+      htmlTemplate = html.dprs_updated_as_platform_operator.f,
       priority = Some(MessagePriority.Urgent)
     )
 
     "include correct subject" in {
-      underTest.subject(commonParameters) mustBe "Successful registration for digital platform reporting"
+      underTest.subject(
+        commonParameters
+      ) mustBe "Your platform operator details have been updated in the digital platform reporting service"
     }
 
     "include htmlTemplate body and footer" in {
       val htmlContent = underTest
-        .htmlTemplate(commonParameters ++ Map("name" -> "Homer Simpson", "dprsId" -> "XLDPI0023000377"))
+        .htmlTemplate(
+          commonParameters ++ Map(
+            "poPrimaryContactName" -> "Tim Vinted",
+            "userBusinessName"     -> "Smith Advisory Services",
+            "poBusinessName"       -> "Vinted"
+          )
+        )
         .toString
-      htmlContent must include("You have registered for digital platform reporting")
+      htmlContent must include("Your platform operator details have been updated")
       htmlContent must include("Dear")
-      htmlContent must include("Homer Simpson")
-      htmlContent must include("You have successfully registered for digital platform reporting.")
-      htmlContent must include("Your digital platform reporting user ID is XLDPI0023000377")
-      htmlContent must include("What you need to do next")
-      htmlContent must include("To send submissions, you must add a platform operator.")
-      htmlContent must include("Go to GOV.UK and search for 'Report information of sellers")
-      htmlContent must include("using your digital platform'")
-      htmlContent must include("For security reasons, we have not included a link to this service in this email.")
+      htmlContent must include("Tim Vinted")
+      htmlContent must include(
+        "The details for Vinted have been updated in the digital platform reporting service. This was done by Smith Advisory Services."
+      )
+      htmlContent must include("You are receiving this email because you are listed as a contact for Vinted.")
+      htmlContent must include("What happens next")
+      htmlContent must include("You do not need to do anything.")
       htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
       htmlContent must include("From the HMRC Digital Platform Reporting team")
     }

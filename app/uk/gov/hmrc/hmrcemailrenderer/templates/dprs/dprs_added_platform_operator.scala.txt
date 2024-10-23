@@ -1,0 +1,20 @@
+@(params: Map[String, Any])You have added a platform operator
+
+Dear @{params("userPrimaryContactName")}
+
+You have successfully added @{params("poBusinessName")} as a platform operator in the digital platform reporting service.
+
+The platform operator ID is @{params("poId")}.
+
+What you need to do next
+
+To submit reports for this platform operator, you must add a reporting notification for them. Go to GOV.UK and search for 'reporting rules for digital platforms'.
+
+For security reasons, we have not included a link to this service in this email.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+
+From the HMRC Digital Platform Reporting team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

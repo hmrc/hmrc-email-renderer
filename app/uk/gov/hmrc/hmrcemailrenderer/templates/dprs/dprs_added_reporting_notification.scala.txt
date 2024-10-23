@@ -1,0 +1,18 @@
+@(params: Map[String, Any])You have added a reporting notification
+
+Dear @{params("userPrimaryContactName")}
+
+You have successfully added a reporting notification for @{params("poBusinessName")} in the digital platform reporting service.
+
+What you need to do next
+
+If required, you can now submit reports for this platform operator. Go to GOV.UK and search for 'reporting rules for digital platforms'.
+
+For security reasons, we have not included a link to this service in this email.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+
+From the HMRC Digital Platform Reporting team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
