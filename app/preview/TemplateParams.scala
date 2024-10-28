@@ -64,6 +64,14 @@ object TemplateParams {
         "tradingName"  -> "ABC Accountants Ltd",
         "receivedDate" -> "20190214"
       ),
+      "cir_email_verification_code" -> Map(
+        "team_name"         -> "CIR",
+        "verification_code" -> "ABCDEF"
+      ),
+      "cir_email_verification_code_welsh" -> Map(
+        "team_name"         -> "CIR",
+        "verification_code" -> "ABCDEF"
+      ),
       "client_rejected_authorisation_request" -> Map(
         "agencyName" -> "Agent 1",
         "clientName" -> "Client 2",
@@ -1751,6 +1759,14 @@ object TemplateParams2 {
     ),
     "cir_appointment_confirmation" -> Map(
       "" -> ""
+    ),
+    "cir_email_verification_code" -> Map(
+      "team_name"         -> "CIR",
+      "verification_code" -> "ABCDEG"
+    ),
+    "cir_email_verification_code_welsh" -> Map(
+      "team_name"         -> "CIR",
+      "verification_code" -> "ABCDEG"
     ),
     "eeitt_ce930_confirmation" -> Map(
       "" -> ""
@@ -3498,6 +3514,14 @@ object TemplateParams3 {
     ),
     "cds_code" -> Map(
       "confirmationCode" -> "HGDY"
+    ),
+    "cir_email_verification_code" -> Map(
+      "team_name"         -> "CIR",
+      "verification_code" -> "ABCDEH"
+    ),
+    "cir_email_verification_code_welsh" -> Map(
+      "team_name"         -> "CIR",
+      "verification_code" -> "ABCDEH"
     ),
     "face_to_face_payment_email_successful_cy" -> Map(
       "totalAmountInPence"     -> "100000",

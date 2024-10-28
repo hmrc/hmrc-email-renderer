@@ -1,0 +1,31 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhau’ch cyfeiriad e-bost", isWelsh = true) {
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Annwyl Gwsmer</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydych wedi gofyn am god i wirio eich
+      Cyfeiriad e-bost.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Eich cod yw:
+      <b>@params("verification_code")</b>
+    </p>
+    <p style="font-weight: bold; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Yr hyn y mae’n rhaid i chi ei wneud nawr</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dychwelwch at y gwasanaeth i ddefnyddio’r cod hwn. Dim ond unwaith y gellir defnyddio’r cod. </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac ni wnaethoch ofyn am y cod hwn, mae’n rhaid i chi gysylltu â CThEF.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Peidiwch ag ymateb i’r e-bost hwn. </p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Gan y HMRC.</p>
+
+
+}

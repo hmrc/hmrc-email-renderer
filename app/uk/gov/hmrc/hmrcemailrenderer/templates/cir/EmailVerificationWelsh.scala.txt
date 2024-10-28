@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Cadarnhau’ch cyfeiriad e-bost
+
+Annwyl Gwsmer
+
+Rydych wedi gofyn am god i wirio eich Cyfeiriad e-bost.
+
+Eich cod yw: @params("verification_code")
+
+Yr hyn y mae’n rhaid i chi ei wneud nawr
+
+Dychwelwch at y gwasanaeth i ddefnyddio’r cod hwn. Dim ond unwaith y gellir defnyddio’r cod.
+
+Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac ni wnaethoch ofyn am y cod hwn, mae’n rhaid i chi gysylltu â CThEF.
+
+Peidiwch ag ymateb i’r e-bost hwn.
+
+Gan y HMRC.
