@@ -452,6 +452,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "dynamicEmail_code",
         "dynamicEmail_code_cy",
         "dynamicEmail_confirmation",
+        "fullyDynamicEmail_confirmation",
         "dynamicEmail_confirmation_cy",
         "eat_out_help_out_confirmation",
         "ecc_rcm_notifications",
