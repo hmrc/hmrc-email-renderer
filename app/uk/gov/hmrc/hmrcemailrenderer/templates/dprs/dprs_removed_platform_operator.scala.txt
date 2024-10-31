@@ -1,0 +1,25 @@
+@(params: Map[String, Any])You have removed a platform operator
+
+Dear @{params("userPrimaryContactName")}
+
+You have successfully removed @{params("poBusinessName")} as a platform operator from the digital platform reporting service.
+
+You can no longer:
+
+    - send reports for this platform operator ID @{params("poId")}
+    - access or change details for this platform operator ID @{params("poId")}
+
+What happens next
+
+You do not need to take any further action.
+
+If you need to start reporting for this platform operator again, you can add them to the service again. Go to GOV.UK and search for 'reporting rules for digital platforms'.
+
+For security reasons, we have not included a link to this service in this email.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+
+From the HMRC Digital Platform Reporting team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

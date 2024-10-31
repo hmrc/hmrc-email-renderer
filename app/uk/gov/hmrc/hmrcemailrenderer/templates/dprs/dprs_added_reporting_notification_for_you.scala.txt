@@ -1,0 +1,34 @@
+@(params: Map[String, Any])A reporting notification has been added for you
+
+Dear @{params("poPrimaryContactName")}
+
+The following reporting notification has been added for you in the digital platform reporting service.
+
+    - You are @{if(isReportingPO) { "a reporting"} else { "an excluded" }} platform operator for the @{params("reportablePeriodYear")} reportable period.
+@if(isReportingPO){ @if(isExtendedDD){
+    - You have taken the extended time limit for due diligence on pre-existing sellers.
+  }
+    - @{if(isActiveSellerDD) { "You are carrying out due diligence on active sellers only."} else { "You are carrying out due diligence on all sellers." }}
+}
+This notification was added by @{params("userBusinessName")}.
+
+It will automatically carry over each year until it is updated. If you need to update it, contact @{params("userBusinessName")}.
+
+You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.
+
+What happens next
+
+You do not need to do anything.
+@if(isReportingPO) {
+@{params("userBusinessName")} can now submit digital platform reports for you.
+}
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+
+From the HMRC Digital Platform Reporting team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
+@isReportingPO = @{params("isReportingPO").toString.toBoolean}
+@isExtendedDD = @{params("isExtendedDueDiligence").toString.toBoolean}
+@isActiveSellerDD = @{params("isActiveSellerDueDiligence").toString.toBoolean}

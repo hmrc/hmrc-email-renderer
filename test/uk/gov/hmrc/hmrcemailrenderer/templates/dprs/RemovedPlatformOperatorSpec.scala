@@ -22,36 +22,50 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalPlatformReporting
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress }
 
-class RegistrationSubmittedSpec extends PlaySpec with CommonParamsForSpec {
+class RemovedPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
 
-  "dprs_registration_submitted" must {
+  "dprs_removed_platform_operator" must {
     val underTest = MessageTemplate.create(
-      templateId = "dprs_registration_submitted",
+      templateId = "dprs_removed_platform_operator",
       fromAddress = govUkTeamAddress,
       service = DigitalPlatformReporting,
-      subject = "Successful registration for digital platform reporting",
-      plainTemplate = txt.dprs_registration_submitted.f,
-      htmlTemplate = html.dprs_registration_submitted.f,
+      subject = "You have removed a platform operator from the digital platform reporting service",
+      plainTemplate = txt.dprs_removed_platform_operator.f,
+      htmlTemplate = html.dprs_removed_platform_operator.f,
       priority = Some(MessagePriority.Urgent)
     )
 
     "include correct subject" in {
-      underTest.subject(commonParameters) mustBe "Successful registration for digital platform reporting"
+      underTest.subject(
+        commonParameters
+      ) mustBe "You have removed a platform operator from the digital platform reporting service"
     }
 
     "include htmlTemplate body and footer" in {
       val htmlContent = underTest
-        .htmlTemplate(commonParameters ++ Map("name" -> "Homer Simpson", "dprsId" -> "XLDPI0023000377"))
+        .htmlTemplate(
+          commonParameters ++ Map(
+            "userPrimaryContactName" -> "Ashley Smith",
+            "poBusinessName"         -> "Vinted",
+            "poId"                   -> "PO12345678"
+          )
+        )
         .toString
-      htmlContent must include("You have registered for digital platform reporting")
+      htmlContent must include("You have removed a platform operator")
       htmlContent must include("Dear")
-      htmlContent must include("Homer Simpson")
-      htmlContent must include("You have successfully registered for digital platform reporting.")
-      htmlContent must include("Your digital platform reporting user ID is XLDPI0023000377")
-      htmlContent must include("What you need to do next")
-      htmlContent must include("To send submissions, you must add a platform operator.")
-      htmlContent must include("Go to GOV.UK and search for 'Report information of sellers")
-      htmlContent must include("using your digital platform'")
+      htmlContent must include("Ashley Smith")
+      htmlContent must include(
+        "You have successfully removed Vinted as a platform operator from the digital platform reporting service."
+      )
+      htmlContent must include("You can no longer:")
+      htmlContent must include("send reports for this platform operator ID PO12345678")
+      htmlContent must include("access or change details for this platform operator ID PO12345678")
+      htmlContent must include("What happens next")
+      htmlContent must include("You do not need to take any further action.")
+      htmlContent must include(
+        "If you need to start reporting for this platform operator again, you can add them to the service again."
+      )
+      htmlContent must include("Go to GOV.UK and search for 'reporting rules for digital platforms'.")
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
       htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
       htmlContent must include("From the HMRC Digital Platform Reporting team")
