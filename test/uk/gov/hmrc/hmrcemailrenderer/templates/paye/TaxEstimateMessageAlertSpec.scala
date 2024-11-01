@@ -65,9 +65,9 @@ class TaxEstimateMessageAlertSpec
       htmlContent should include("If you do not have a personal tax account")
       htmlContent should include("You need to set one up before you can see your tax code change.")
       htmlContent should include("Search GOV.UK for ‘Personal tax account: sign in or set up’.")
-      htmlContent should include("Why you got this email")
+      htmlContent should include("Why you're receiving this email")
       htmlContent should include(
-        "You got this email because you've chosen to receive email updates instead of letters by post."
+        "You're receiving this email because you chose to receive email updates instead of letters by post."
       )
       htmlContent should include("For security reasons we have not included any links in this email.")
       htmlContent should include("From HMRC Check your Income Tax")
@@ -103,8 +103,10 @@ class TaxEstimateMessageAlertSpec
       txtContent should include("If you do not have a personal tax account")
       txtContent should include("You need to set one up before you can see your tax code change.")
       txtContent should include("Search GOV.UK for ‘Personal tax account: sign in or set up’.")
-      txtContent should include("Why you got this email")
-      txtContent should include("You have chosen to receive email updates instead of letters by post.")
+      txtContent should include("Why you're receiving this email")
+      txtContent should include(
+        "You're receiving this email because you chose to receive email updates instead of letters by post."
+      )
       txtContent should include("For security reasons we have not included any links in this email.")
       txtContent should include("From HMRC Check your Income Tax")
     }
