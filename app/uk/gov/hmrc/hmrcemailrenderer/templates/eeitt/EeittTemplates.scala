@@ -919,6 +919,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.createWithDynamicSubject(
+      templateId = "fullyDynamicEmail_confirmation",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = getEmailSubjectConfirmation,
+      plainTemplate = txt.fullyDynamicConfirmationTemplate.f,
+      htmlTemplate = html.fullyDynamicConfirmationTemplate.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "dynamicEmail_code_cy",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
