@@ -2,13 +2,11 @@
 
 Dear @{params("poPrimaryContactName")}
 
-The details for @{params("poBusinessName")} have been updated in the digital platform reporting service. This was done by @{params("userBusinessName")}.
+The details for @{params("poBusinessName")} have been updated in the digital platform reporting service.
 
-You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.
+Why you are receiving this email
 
-What happens next
-
-You do not need to do anything.
+You are listed as a contact for @{params("poBusinessName")}.
 
 For more information, search GOV.UK for 'reporting rules for digital platforms'.
 

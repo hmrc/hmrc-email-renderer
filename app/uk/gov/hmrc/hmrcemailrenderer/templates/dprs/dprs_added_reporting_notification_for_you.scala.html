@@ -19,7 +19,7 @@
 
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("poPrimaryContactName")}</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">The following reporting notification has been added for you in the digital platform reporting service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">The following reporting notification has been added for @{params("poBusinessName")} in the digital platform reporting service.</p>
 <ul style="margin: 0 0 30px; font-size: 19px;">
  <li>You are @{if(isReportingPO) { "a reporting"} else { "an excluded" }} platform operator for the @{params("reportablePeriodYear")} reportable period.</li>
 @if(isReportingPO){ @if(isExtendedDD){
@@ -29,16 +29,11 @@
 }
 </ul>
 
-<p style="margin: 0 0 30px; font-size: 19px;">This notification was added by @{params("userBusinessName")}.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">It will automatically carry over each year until it is updated. If you need to update it, contact @{params("userBusinessName")}.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">This notification will automatically carry over each year until it is updated.</p>
 
-<h2 style="margin: 0 0 30px; font-size: 24px;">What happens next</h2>
+<h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You are listed as a contact for @{params("poBusinessName")}.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">You do not need to do anything.</p>
-@if(isReportingPO) {
-<p style="margin: 0 0 30px; font-size: 19px;">@{params("userBusinessName")} can now submit digital platform reports for you.</p>
-}
 <p style="margin: 0 0 30px; font-size: 19px;">For more information, search GOV.UK for 'reporting rules for digital platforms'.</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Digital Platform Reporting team</p>

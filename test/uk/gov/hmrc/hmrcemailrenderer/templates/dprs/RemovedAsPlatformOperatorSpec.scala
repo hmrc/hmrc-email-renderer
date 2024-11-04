@@ -46,7 +46,6 @@ class RemovedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
         .htmlTemplate(
           commonParameters ++ Map(
             "poPrimaryContactName" -> "Tim Vinted",
-            "userBusinessName"     -> "Smith Advisory Services",
             "poId"                 -> "PO12345678",
             "poBusinessName"       -> "Vinted"
           )
@@ -57,8 +56,8 @@ class RemovedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Tim Vinted")
       htmlContent must include("Vinted with platform operator ID PO12345678 has been removed as ")
       htmlContent must include("a platform operator from the digital platform reporting service.")
-      htmlContent must include("This was done by Smith Advisory Services.")
-      htmlContent must include("You are receiving this email because you are listed as a contact for Vinted.")
+      htmlContent must include("Why you are receiving this email")
+      htmlContent must include("You are listed as a contact for Vinted.")
       htmlContent must include("If the reporting rules still apply to you")
       htmlContent must include("If the reporting rules still apply to you, you must tell HMRC if you are")
       htmlContent must include("a reporting platform operator or an excluded platform operator.")
