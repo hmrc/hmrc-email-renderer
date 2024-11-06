@@ -2,17 +2,13 @@
 
 Dear @{params("poPrimaryContactName")}
 
-@{params("poBusinessName")} has been added as a platform operator in the digital platform reporting service. This was done by @{params("userBusinessName")}.
+@{params("poBusinessName")} has been added as a platform operator in the digital platform reporting service.
 
 Your platform operator ID is @{params("poId")}.
 
-You are receiving this email because you have been added as a contact for @{params("poBusinessName")}.
+Why you are receiving this email
 
-What happens next
-
-You do not need to do anything.
-
-@{params("userBusinessName")} can now submit digital platform reports for you.
+You have been added as a contact for @{params("poBusinessName")}.
 
 For more information, search GOV.UK for 'reporting rules for digital platforms'.
 

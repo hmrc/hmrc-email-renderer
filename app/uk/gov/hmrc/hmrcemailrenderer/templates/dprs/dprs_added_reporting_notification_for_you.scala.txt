@@ -2,7 +2,7 @@
 
 Dear @{params("poPrimaryContactName")}
 
-The following reporting notification has been added for you in the digital platform reporting service.
+The following reporting notification has been added for @{params("poBusinessName")} in the digital platform reporting service.
 
     - You are @{if(isReportingPO) { "a reporting"} else { "an excluded" }} platform operator for the @{params("reportablePeriodYear")} reportable period.
 @if(isReportingPO){ @if(isExtendedDD){
@@ -10,18 +10,12 @@ The following reporting notification has been added for you in the digital platf
   }
     - @{if(isActiveSellerDD) { "You are carrying out due diligence on active sellers only."} else { "You are carrying out due diligence on all sellers." }}
 }
-This notification was added by @{params("userBusinessName")}.
+This notification will automatically carry over each year until it is updated.
 
-It will automatically carry over each year until it is updated. If you need to update it, contact @{params("userBusinessName")}.
+Why you are receiving this email
 
-You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.
+You are listed as a contact for @{params("poBusinessName")}.
 
-What happens next
-
-You do not need to do anything.
-@if(isReportingPO) {
-@{params("userBusinessName")} can now submit digital platform reports for you.
-}
 For more information, search GOV.UK for 'reporting rules for digital platforms'.
 
 

@@ -2,9 +2,11 @@
 
 Dear @{params("poPrimaryContactName")}
 
-@{params("poBusinessName")} with platform operator ID @{params("poId")} has been removed as a platform operator from the digital platform reporting service. This was done by @{params("userBusinessName")}.
+@{params("poBusinessName")} with platform operator ID @{params("poId")} has been removed as a platform operator from the digital platform reporting service.
 
-You are receiving this email because you are listed as a contact for @{params("poBusinessName")}.
+Why you are receiving this email
+
+You are listed as a contact for @{params("poBusinessName")}.
 
 If the reporting rules still apply to you
 

@@ -46,7 +46,6 @@ class UpdatedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
         .htmlTemplate(
           commonParameters ++ Map(
             "poPrimaryContactName" -> "Tim Vinted",
-            "userBusinessName"     -> "Smith Advisory Services",
             "poBusinessName"       -> "Vinted"
           )
         )
@@ -55,11 +54,10 @@ class UpdatedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Dear")
       htmlContent must include("Tim Vinted")
       htmlContent must include(
-        "The details for Vinted have been updated in the digital platform reporting service. This was done by Smith Advisory Services."
+        "The details for Vinted have been updated in the digital platform reporting service."
       )
-      htmlContent must include("You are receiving this email because you are listed as a contact for Vinted.")
-      htmlContent must include("What happens next")
-      htmlContent must include("You do not need to do anything.")
+      htmlContent must include("Why you are receiving this email")
+      htmlContent must include("You are listed as a contact for Vinted.")
       htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
       htmlContent must include("From the HMRC Digital Platform Reporting team")
     }

@@ -46,7 +46,6 @@ class AddedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
         .htmlTemplate(
           commonParameters ++ Map(
             "poPrimaryContactName" -> "Tim Vinted",
-            "userBusinessName"     -> "Smith Advisory Services",
             "poId"                 -> "PO12345678",
             "poBusinessName"       -> "Vinted"
           )
@@ -58,12 +57,9 @@ class AddedAsPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include(
         "Vinted has been added as a platform operator in the digital platform reporting service."
       )
-      htmlContent must include("This was done by Smith Advisory Services.")
       htmlContent must include("Your platform operator ID is PO12345678.")
-      htmlContent must include("You are receiving this email because you have been added as a contact for Vinted.")
-      htmlContent must include("What happens next")
-      htmlContent must include("You do not need to do anything.")
-      htmlContent must include("Smith Advisory Services can now submit digital platform reports for you.")
+      htmlContent must include("Why you are receiving this email")
+      htmlContent must include("You have been added as a contact for Vinted.")
       htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
       htmlContent must include("From the HMRC Digital Platform Reporting team")
     }

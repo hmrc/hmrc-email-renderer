@@ -3758,7 +3758,6 @@ object TemplateParams3 {
     ),
     "dprs_added_as_platform_operator" -> Map(
       "poPrimaryContactName" -> "Tim Vinted",
-      "userBusinessName"     -> "Smith Advisory Services",
       "poId"                 -> "PO12345678",
       "poBusinessName"       -> "Vinted"
     ),
@@ -3769,7 +3768,6 @@ object TemplateParams3 {
     ),
     "dprs_removed_as_platform_operator" -> Map(
       "poPrimaryContactName" -> "Tim Vinted",
-      "userBusinessName"     -> "Smith Advisory Services",
       "poId"                 -> "PO12345678",
       "poBusinessName"       -> "Vinted"
     ),
@@ -3779,7 +3777,6 @@ object TemplateParams3 {
     ),
     "dprs_updated_as_platform_operator" -> Map(
       "poPrimaryContactName" -> "Tim Vinted",
-      "userBusinessName"     -> "Smith Advisory Services",
       "poBusinessName"       -> "Vinted"
     ),
     "dprs_added_reporting_notification" -> Map(
@@ -3790,7 +3787,6 @@ object TemplateParams3 {
       "poPrimaryContactName"       -> "Tim Vinted",
       "isReportingPO"              -> "true",
       "reportablePeriodYear"       -> "2024",
-      "userBusinessName"           -> "Smith Advisory Services",
       "poBusinessName"             -> "Vinted",
       "isExtendedDueDiligence"     -> "true",
       "isActiveSellerDueDiligence" -> "true"
