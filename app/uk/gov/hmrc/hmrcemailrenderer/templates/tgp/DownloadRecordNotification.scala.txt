@@ -7,5 +7,4 @@ To get your file:
 3. Log in to your profile
 4. Select the new notification on your homepage.
 The file will be available until @params("expiredDate").
-To get the file again, you can find a link on your goods records page.
-From the Trader Goods Profile team
+To get the file again, you can find a link on your homepage.From the Trader Goods Profile team

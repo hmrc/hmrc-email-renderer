@@ -7,5 +7,5 @@ Er mwyn cael mynediad at eich ffeil:
 3. Mewngofnodwch i’ch proffil
 4. Dewiswch yr hysbysiad newydd sy’n ymddangos ar eich hafan.
 Bydd y ffeil ar gael ta @params("expiredDate").
-I gael mynediad at y ffeil eto, gweler y cysylltiad sydd ar eich tudalen Cofnodion Nwyddau.
+I gael mynediad at y ffeil eto, gweler y cysylltiad sydd ar eich Hafan.
 Y Tîm Proffil Nwyddau Masnachwyr
