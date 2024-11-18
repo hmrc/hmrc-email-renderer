@@ -571,7 +571,7 @@ object TemplateParams {
         "submissionReference" -> "1234",
         "paragraphOne" -> "If you’re entitled to a refund we will send you a revised tax calculation and pay you what you’re owed",
         "paragraphTwo"       -> "If you’re not entitled to a refund we will write and explain the reason why",
-        "paragraphThree"     -> "If you've asked us to write to you, we’ll send you a letter within 15 working days",
+        "paragraphThree"     -> "If you’ve asked us to write to you, we’ll send you a letter within 15 working days",
         "paragraphFour"      -> "Some extra content for paragraph four...",
         "warningInformation" -> "true"
       ),
