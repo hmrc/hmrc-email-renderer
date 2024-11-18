@@ -7,7 +7,7 @@ Here is your new country-by-country ID, which replaces the one you created for p
 
 What happens next?
 
-You'll need to sign into the reporting service at the following address to validate your new country-by-country ID:
+You’ll need to sign into the reporting service at the following address to validate your new country-by-country ID:
 https://www.tax.service.gov.uk/country-by-country-reporting-private-beta-1/report/upload-form
 
 Make sure you keep the ID safe, as you must use it from now on each time you send a country-by-country report.

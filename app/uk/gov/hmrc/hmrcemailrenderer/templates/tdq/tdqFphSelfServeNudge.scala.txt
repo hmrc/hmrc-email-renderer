@@ -25,7 +25,7 @@ Why you have received this email
 
 This email address is registered on Developer Hub for @reportParams.applicationName.
 
-If you're no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub. You need to have at least 1 contact for each application. You may need to add a new team member.
+If you’re no longer working on @reportParams.applicationName, an application admin needs to remove you from the team on Developer Hub. You need to have at least 1 contact for each application. You may need to add a new team member.
 
 From HMRC Transaction Monitoring team
 }

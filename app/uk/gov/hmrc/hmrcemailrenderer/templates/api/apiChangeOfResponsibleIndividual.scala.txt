@@ -4,7 +4,7 @@
 
 If you did not make this change, sign in to your Developer Hub account or check with an application admin.
 
-Team admins can change the responsible individual's details again at any time.
+Team admins can change the responsible individual’s details again at any time.
 
 From HMRC Developer Hub
 

@@ -1,4 +1,4 @@
-@(params: Map[String, Any])You've got a new message from HMRC
+@(params: Map[String, Any])You’ve got a new message from HMRC
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You have a new message from HMRC to let you know the deadline for completing a paper tax return has now passed so you will need to do your self assessment online by 31 January.

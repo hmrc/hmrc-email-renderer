@@ -6,7 +6,7 @@ Dear @{params("requesterName")}
 
 The responsible individual has 10 working days from today to verify. After that, we will decline your request for production credentials.
 
-Check or update the responsible individual's details on the Developer Hub and request production credentials again. Or speak to the person you nominated and ask them to verify.
+Check or update the responsible individual’s details on the Developer Hub and request production credentials again. Or speak to the person you nominated and ask them to verify.
 
 From HMRC Developer Hub
 

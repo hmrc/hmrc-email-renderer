@@ -1,8 +1,8 @@
-@(params: Map[String, Any])You've submitted a document to HMRC for @params("service_name")
+@(params: Map[String, Any])You’ve submitted a document to HMRC for @params("service_name")
 
 Dear @params("full_name"),
 
-We've received a document that you've submitted and it's been processed successfully.
+We’ve received a document that you’ve submitted and it's been processed successfully.
 
 The ID for this submission is @params("correlation_id").
 

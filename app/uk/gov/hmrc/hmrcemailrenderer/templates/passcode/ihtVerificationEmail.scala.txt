@@ -1,10 +1,10 @@
-@(params: Map[String, Any])Start using HMRC's Inheritance Tax online service
+@(params: Map[String, Any])Start using HMRC’s Inheritance Tax online service
 
 Dear @{params("name")}
 
 The Inheritance Tax online service is now available to use. This is a new service that is still in development and can be used by people in England and Wales to begin with. 
 
-If you're an agent who's completing this on behalf of an individual, you should continue to use the current paper forms to tell HMRC about someone's estate.
+If you’re an agent who's completing this on behalf of an individual, you should continue to use the current paper forms to tell HMRC about someone's estate.
 
 Before you start
 

@@ -1,11 +1,11 @@
 @(params: Map[String, Any])Thank you for registering your interest in government childcare offers.
 
 Apply now for 30 hours free childcare and Tax-Free Childcare
-If you haven't applied already, you'll need an eligibility code to get a 30 hours free childcare place - apply now to get your code so you can book your child's place for the Summer term.
+If you haven't applied already, you’ll need an eligibility code to get a 30 hours free childcare place - apply now to get your code so you can book your child's place for the Summer term.
 
  To apply go to: www.childcare-support.tax.service.gov.uk/par/app/applynow
 
-If you're already using 30 hours, don't forget you'll need to confirm you're still eligible every 3 months to keep getting 30 hours free childcare. You can do this through your childcare account.
+If you’re already using 30 hours, don't forget you’ll need to confirm you’re still eligible every 3 months to keep getting 30 hours free childcare. You can do this through your childcare account.
 
 Tax-Free Childcare
 You may also be eligible for Tax-Free Childcare. For every £8 that you pay into an online childcare account, the government will pay in £2, up to a maximum of £2,000 per child per year (or £4,00 for disabled children). You can then use this to pay for childcare.
