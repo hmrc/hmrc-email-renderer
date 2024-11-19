@@ -10,7 +10,7 @@ This is an important message. To view it:
 
 2. Go to Messages.
 
-3. Click on Making Tax Digital for VAT.
+3. Click on VAT messages.
 
 For security reasons we have not included a link with this email.
 
