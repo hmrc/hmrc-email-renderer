@@ -19,7 +19,7 @@ What happens next
 
 @if(params.isDefinedAt("paragraphFour")) {@{params("paragraphFour")}.}
 
-@if(params("warningInformation").equals("true")) {If we need any further details, well contact you by letter or phone.
+@if(params("warningInformation").equals("true")) {If we need any further details, we’ll contact you by letter or phone.
 
 We may ask you to sign into a service to provide more details, but we will not ask for your personal details by email.} 
 
