@@ -5,7 +5,7 @@ Hello @{params("name")}
 
 You want us to use this email address to contact you about your Help to Save account.
 
-Before we can start using this email address, you'll need to verify it.
+Before we can start using this email address, you’ll need to verify it.
 
 How to verify your email address
 
@@ -13,7 +13,7 @@ Please click the link below within the next 30 minutes to verify your email addr
 
 @{params("verificationLink")}
 
-After 30 minutes this link will expire and you'll need to start again.
+After 30 minutes this link will expire and you’ll need to start again.
 
 From Help to Save team
 

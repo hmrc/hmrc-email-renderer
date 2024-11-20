@@ -9,11 +9,11 @@ Dear @{params("name")}
     }
     }
 
-You can use the following digital signature as a receipt for the country-by-country report you've sent:
+You can use the following digital signature as a receipt for the country-by-country report you’ve sent:
 @{params("hash")}
 
 What happens next
 
-We'll check the information in the report and contact you if there are any issues.
+We’ll check the information in the report and contact you if there are any issues.
 
 From HMRC Country-by-Country Reporting

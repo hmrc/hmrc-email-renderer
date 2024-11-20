@@ -2,7 +2,7 @@
 
 We deleted your account from the HMRC Developer Hub.
 
-If you want to access applications in the future, you'll need to register for a new Developer Hub Account.
+If you want to access applications in the future, you’ll need to register for a new Developer Hub Account.
 
 Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 

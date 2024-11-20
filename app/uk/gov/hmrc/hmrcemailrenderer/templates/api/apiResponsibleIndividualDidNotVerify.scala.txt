@@ -4,7 +4,7 @@ Dear @{params("requesterName")}
 
 We have declined your request for production credentials because @{params("responsibleIndividualName")} did not verify that @{params("applicationName")} conforms to our terms of use.
 
-You can review and change the responsible individual's details on the Developer Hub and request production credentials again.
+You can review and change the responsible individual’s details on the Developer Hub and request production credentials again.
 
 From HMRC Developer Hub
 

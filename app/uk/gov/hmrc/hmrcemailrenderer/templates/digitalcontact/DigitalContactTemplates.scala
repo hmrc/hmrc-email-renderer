@@ -156,7 +156,7 @@ object DigitalContactTemplates {
       templateId = "penaltyChargeApologies",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "You've got a new message from HMRC",
+      subject = "You’ve got a new message from HMRC",
       plainTemplate = txt.penaltyChargeApologies.f,
       htmlTemplate = html.penaltyChargeApologies.f,
       priority = Some(MessagePriority.Urgent)
@@ -190,7 +190,7 @@ object DigitalContactTemplates {
       templateId = "newMessageAlert_SA309",
       fromAddress = defaultFromAddress,
       service = SelfAssessment,
-      subject = "You've got a new message from HMRC",
+      subject = "You’ve got a new message from HMRC",
       plainTemplate = txt.newMessageAlertSA309.f,
       htmlTemplate = html.newMessageAlertSA309.f
     ),

@@ -7,7 +7,7 @@ We have received your application for State Pension top up (Class 3A).
 Your reference is @{params("submissionReference")}.
 
 We’ll send a payment letter to you in the post with information on payment options for the State Pension top up scheme (Class 3A).
-If we need any further details, we'll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won't ask for your personal details by email.
+If we need any further details, we’ll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won’t ask for your personal details by email.
  
 You will normally receive a response within 10 working days.
  

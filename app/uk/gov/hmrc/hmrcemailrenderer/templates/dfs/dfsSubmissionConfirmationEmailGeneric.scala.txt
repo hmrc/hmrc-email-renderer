@@ -9,7 +9,7 @@ Your reference is @{params("submissionReference")}.
 
 @if(params.isDefinedAt("paragraphOne")) {@{params("paragraphOne")}.}
 @if(params.isDefinedAt("paragraphTwo")) {@{params("paragraphTwo")}.}
-@if(params("warningInformation").equals("true")) {If we need any further details, we'll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won't ask for your personal details by email.} 
+@if(params("warningInformation").equals("true")) {If we need any further details, we’ll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won’t ask for your personal details by email.} 
 @if(params.isDefinedAt("turnAroundTime")) {You’ll normally receive a response within @{params("turnAroundTime")}.}
 
 Yours sincerely,

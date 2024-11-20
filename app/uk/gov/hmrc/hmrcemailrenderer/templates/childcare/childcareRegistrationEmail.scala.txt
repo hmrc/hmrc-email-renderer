@@ -1,6 +1,6 @@
 @(params: Map[String, Any])You told us you’re interested in childcare support schemes launching in 2017
 
-We'll email you when they’re available with details of how to apply.
+We’ll email you when they’re available with details of how to apply.
 
 From the Childcare Service, HM Government
 

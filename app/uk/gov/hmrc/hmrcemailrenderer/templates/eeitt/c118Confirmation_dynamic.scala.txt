@@ -19,6 +19,6 @@ Contacting HMRC
 For your security HMRC will not send personal data by email.
 You can contact HMRC about your AEO application by calling the telephone helpline on 0300 322 9451. You will need to quote your EORI number.
 
-From HMRC's AEO Team
+From HMRC’s AEO Team
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
 

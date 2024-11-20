@@ -4,7 +4,7 @@ Dear @{params("name")}
 
 Thanks for agreeing to help develop Making Tax Digital.
 
-This email contains a link to the prototype you've agreed to test: adding existing Self Assessment clients to an Agent Services account.
+This email contains a link to the prototype you’ve agreed to test: adding existing Self Assessment clients to an Agent Services account.
 
 Click on this unique link to access the service. Don't give it to anyone else.
 

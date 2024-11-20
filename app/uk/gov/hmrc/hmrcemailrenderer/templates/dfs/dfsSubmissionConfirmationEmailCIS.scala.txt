@@ -2,11 +2,11 @@
 
 Dear @{params("name")},
 
-We've received your application to register as a sub-contractor in the construction industry.
+We’ve received your application to register as a sub-contractor in the construction industry.
 
 Your reference is @{params("submissionReference")}.
 
-We'll write to you about your request and let you know if it has been accepted. If we need any further details, we'll contact you by letter or phone. We'll never ask you for your details by email.
+We’ll write to you about your request and let you know if it has been accepted. If we need any further details, we’ll contact you by letter or phone. We’ll never ask you for your details by email.
  
 You’ll normally receive a response within 35 days.
  

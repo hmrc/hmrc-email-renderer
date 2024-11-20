@@ -2,6 +2,6 @@
 
 Thank you for registering your interest in Tax-Free Childcare
 
-You'll get an email when Tax-Free Childcare becomes available. You'll then be invited to apply online. There is no need to contact us.
+You’ll get an email when Tax-Free Childcare becomes available. You’ll then be invited to apply online. There is no need to contact us.
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

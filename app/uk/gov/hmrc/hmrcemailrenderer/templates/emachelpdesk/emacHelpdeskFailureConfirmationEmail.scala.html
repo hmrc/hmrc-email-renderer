@@ -14,9 +14,9 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"You've submitted a document to HMRC for ${params("service_name")}") {
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"You’ve submitted a document to HMRC for ${params("service_name")}") {
     <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("full_name"),</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">We've received a document that you've submitted, however the submission wasn't successfully processed.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">We’ve received a document that you’ve submitted, however the submission wasn't successfully processed.</p>
     <p style="margin: 0 0 30px; font-size: 19px;">The ID for this submission is @params("correlation_id").</p>
     <p style="margin: 0 0 30px; font-size: 19px;">This is an automated email that's been resent because of your enquiry about @params("service_name").</p>
     <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Services and Enrolments helpdesk</p>

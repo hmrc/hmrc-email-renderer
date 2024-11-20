@@ -16,6 +16,6 @@ If this email account is not shared, and you did not request this code you need 
 
 Do not reply to this email.
 
-From HMRC's Plastic Packaging Tax team
+From HMRC’s Plastic Packaging Tax team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

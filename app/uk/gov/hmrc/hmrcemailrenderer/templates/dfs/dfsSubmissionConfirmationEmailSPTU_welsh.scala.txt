@@ -7,7 +7,7 @@ Mae’ch cais i ychwanegu at Bensiwn y Wladwriaeth (Dosbarth 3A) wedi dod i law.
 Eich cyfeirnod yw @{params("submissionReference")}.
 
 yddwn yn anfon llythyr talu atoch yn y post gyda gwybodaeth am opsiynau talu tuag at y cynllun i ychwanegu at Bensiwn y Wladwriaeth (Dosbarth 3A).
-If we need any further details, we'll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won't ask for your personal details by email.
+If we need any further details, we’ll contact you by letter or phone. We may ask you to sign in to a service to provide more details but we won’t ask for your personal details by email.
  
 You will normally receive a response within 10 working days.
  

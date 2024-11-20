@@ -15,7 +15,7 @@ How to sign in to your account
 Use the HMRC app to sign in to your account. The free app is available on the App Store for iOS or the Google Play Store for Android.
 You can also sign in to your account by searching GOV.UK for ‘Help to Save’.
 
-To sign in, you'll need the HMRC online username and password you used to create your Help to Save account.
+To sign in, you’ll need the HMRC online username and password you used to create your Help to Save account.
 
 Why you got this email
 

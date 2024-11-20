@@ -6,7 +6,7 @@ Dear Customer
 
 We need someone in your organisation to verify that your software conforms to version 2 of our terms of use.
 
-You can change the responsible individual's details on the Developer Hub.
+You can change the responsible individual’s details on the Developer Hub.
 
 From HMRC Developer Hub
 

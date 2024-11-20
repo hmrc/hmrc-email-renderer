@@ -27,7 +27,7 @@ object EmacHelpdeskTemplates {
       templateId = "emac_helpdesk_failure_confirmation_email",
       fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
       service = EmacHelpdesk,
-      subject = "You've submitted a document to HMRC",
+      subject = "You’ve submitted a document to HMRC",
       plainTemplate = txt.emacHelpdeskFailureConfirmationEmail.f,
       htmlTemplate = html.emacHelpdeskFailureConfirmationEmail.f,
       priority = Some(MessagePriority.Urgent)
@@ -36,7 +36,7 @@ object EmacHelpdeskTemplates {
       templateId = "emac_helpdesk_successful_confirmation_email",
       fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
       service = EmacHelpdesk,
-      subject = "You've submitted a document to HMRC",
+      subject = "You’ve submitted a document to HMRC",
       plainTemplate = txt.emacHelpdeskSuccessfulConfirmationEmail.f,
       htmlTemplate = html.emacHelpdeskSuccessfulConfirmationEmail.f,
       priority = Some(MessagePriority.Urgent)

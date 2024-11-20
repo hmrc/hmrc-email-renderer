@@ -123,7 +123,7 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
 
       validateTemplate(
         templateId = "apiNewTermsOfUseInvitation",
-        expectedSubject = "ACTION NEEDED: Agree to HMRC's new Developer Hub terms of use",
+        expectedSubject = "ACTION NEEDED: Agree to HMRC’s new Developer Hub terms of use",
         expectedPriority = MessagePriority.Urgent
       )
 

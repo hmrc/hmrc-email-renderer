@@ -6,7 +6,7 @@ Your registration for the Soft Drinks Levy is complete.
 
 Your reference number is @params.get("sdilNumber").
 
-You'll need to keep this for your records.
+You’ll need to keep this for your records.
 
 Why you got this email
 
