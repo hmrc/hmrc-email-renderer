@@ -9,3 +9,4 @@ To get your file:
 The file will be available until @params("expiredDate").
 To get the file again, you can find a link on your homepage.
 From the Trader Goods Profile team
+
