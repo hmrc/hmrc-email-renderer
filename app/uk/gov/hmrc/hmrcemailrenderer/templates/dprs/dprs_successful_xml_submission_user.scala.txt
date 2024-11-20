@@ -1,0 +1,23 @@
+@(params: Map[String, Any])File successfully sent for digital platform reporting
+
+Dear @{params("userPrimaryContactName")}
+
+We have received a file for @{params("poBusinessName")} with the platform operator ID @{params("poId")}. The file passed the reporting business rules checks at @{params("checksCompletedDateTime")}. This is for the reportable period ending 31 December @{params("reportingPeriod")}.
+
+Print or save a copy of this email for your records.
+
+For reference, the file name is:
+@{params("fileName")}
+
+What happens next
+
+We will contact you if we have any questions about this report.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+From HMRC Digital Platform Reporting
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

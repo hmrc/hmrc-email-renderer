@@ -102,6 +102,42 @@ object DprsTemplates {
       plainTemplate = txt.dprs_added_reporting_notification_for_you.f,
       htmlTemplate = html.dprs_added_reporting_notification_for_you.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_successful_xml_submission_user",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "File successfully sent for digital platform reporting",
+      plainTemplate = txt.dprs_successful_xml_submission_user.f,
+      htmlTemplate = html.dprs_successful_xml_submission_user.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_successful_xml_submission_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "File successfully sent for digital platform reporting",
+      plainTemplate = txt.dprs_successful_xml_submission_platform_operator.f,
+      htmlTemplate = html.dprs_successful_xml_submission_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_failed_xml_submission_user",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "There is a problem with your file for digital platform reporting",
+      plainTemplate = txt.dprs_failed_xml_submission_user.f,
+      htmlTemplate = html.dprs_failed_xml_submission_user.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_failed_xml_submission_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "There is a problem with the file submitted for you for digital platform reporting",
+      plainTemplate = txt.dprs_failed_xml_submission_platform_operator.f,
+      htmlTemplate = html.dprs_failed_xml_submission_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

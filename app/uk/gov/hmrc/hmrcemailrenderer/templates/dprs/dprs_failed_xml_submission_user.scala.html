@@ -1,0 +1,42 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There is a problem with your file for digital platform reporting") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("userPrimaryContactName")}</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">There is a problem with the file you submitted at @{params("checksCompletedDateTime")} for the platform operator @{params("poBusinessName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can check the errors in the online service and upload an updated XML file. The error details are only available for 28 days.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For reference, the file name is:
+ <br>@{params("fileName")}
+</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">What you need to do next</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You must send another report. Not sending another report on time may result in a penalty for the platform operator.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Email aeoi.enquiries@@hmrc.gov.uk for help with file submissions for this service.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search GOV.UK for 'reporting rules for digital platforms'.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link to this service in this email.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Platform Reporting</p>
+}
