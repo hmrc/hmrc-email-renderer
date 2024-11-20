@@ -1,0 +1,33 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There is a problem with the file submitted for you for digital platform reporting") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("poPrimaryContactName")}</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">There is a problem with the file submitted at @{params("checksCompletedDateTime")} for @{params("poBusinessName")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">A correct submission must be made on time otherwise @{params("poBusinessName")} may receive a penalty.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Contact the person or team that submitted this for you.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search GOV.UK for 'reporting rules for digital platforms'.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link to this service in this email.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Platform Reporting</p>
+}

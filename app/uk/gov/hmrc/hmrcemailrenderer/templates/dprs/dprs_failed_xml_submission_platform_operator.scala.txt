@@ -1,0 +1,20 @@
+@(params: Map[String, Any])There is a problem with the file submitted for you for digital platform reporting
+
+Dear @{params("poPrimaryContactName")}
+
+There is a problem with the file submitted at @{params("checksCompletedDateTime")} for @{params("poBusinessName")}.
+
+A correct submission must be made on time otherwise @{params("poBusinessName")} may receive a penalty.
+
+If you need help
+
+Contact the person or team that submitted this for you.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+From HMRC Digital Platform Reporting
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

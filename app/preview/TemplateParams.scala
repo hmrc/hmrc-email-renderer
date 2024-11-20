@@ -3791,6 +3791,33 @@ object TemplateParams3 {
       "isExtendedDueDiligence"     -> "true",
       "isActiveSellerDueDiligence" -> "true"
     ),
+    "dprs_successful_xml_submission_user" -> Map(
+      "userPrimaryContactName"  -> "Ashley Smith",
+      "poBusinessName"          -> "Vinted",
+      "poId"                    -> "PO12345678",
+      "checksCompletedDateTime" -> "9:15am on 25 January 2024",
+      "reportingPeriod"         -> "2024",
+      "fileName"                -> "some-file-name.xml"
+    ),
+    "dprs_successful_xml_submission_platform_operator" -> Map(
+      "poPrimaryContactName"    -> "Tim Vinted",
+      "poBusinessName"          -> "Vinted",
+      "poId"                    -> "PO12345678",
+      "checksCompletedDateTime" -> "9:15am on 25 January 2024",
+      "reportingPeriod"         -> "2024",
+      "fileName"                -> "some-file-name.xml"
+    ),
+    "dprs_failed_xml_submission_user" -> Map(
+      "userPrimaryContactName"  -> "Ashley Smith",
+      "poBusinessName"          -> "Vinted",
+      "checksCompletedDateTime" -> "9:15am on 25 January 2024",
+      "fileName"                -> "some-file-name.xml"
+    ),
+    "dprs_failed_xml_submission_platform_operator" -> Map(
+      "poPrimaryContactName"    -> "Tim Vinted",
+      "poBusinessName"          -> "Vinted",
+      "checksCompletedDateTime" -> "9:15am on 25 January 2024"
+    ),
     "entity_check_notification" -> Map(
       "arn"          -> "XARN000034892",
       "utr"          -> "489021408",

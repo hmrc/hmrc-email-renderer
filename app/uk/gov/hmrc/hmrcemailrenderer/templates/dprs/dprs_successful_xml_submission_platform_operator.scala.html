@@ -1,0 +1,36 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for digital platform reporting") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("poPrimaryContactName")}</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">We have received a file for @{params("poBusinessName")} with the platform operator ID @{params("poId")}. The file passed the reporting business rules checks at @{params("checksCompletedDateTime")}. This is for the reportable period ending 31 December @{params("reportingPeriod")}.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Print or save a copy of this email for your records.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For reference, the file name is:
+ <br>@{params("fileName")}
+</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">What happens next</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">We may contact you if we have any questions about this report.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For more information, search GOV.UK for 'reporting rules for digital platforms'.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link to this service in this email.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Digital Platform Reporting</p>
+}

@@ -1,0 +1,28 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
+@(params: Map[String, Any])There is a problem with your file for digital platform reporting
+
+Dear @{params("userPrimaryContactName")}
+
+There is a problem with the file you submitted at @{params("checksCompletedDateTime")} for the platform operator @{params("poBusinessName")}.
+
+You can check the errors in the online service and upload an updated XML file. The error details are only available for 28 days.
+
+For reference, the file name is:
+@{params("fileName")}
+
+What you need to do next
+
+You must send another report. Not sending another report on time may result in a penalty for the platform operator.
+
+If you need help
+
+Email aeoi.enquiries@@hmrc.gov.uk for help with file submissions for this service.
+
+For more information, search GOV.UK for 'reporting rules for digital platforms'.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+From HMRC Digital Platform Reporting
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
