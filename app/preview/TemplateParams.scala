@@ -677,18 +677,6 @@ object TemplateParams {
       "tax_estimate_message_alert_cy" -> Map(
         "fullName" -> "Mr Joe Bloggs"
       ),
-      "daily_tax_estimate_message_alert" -> Map(
-        "fullName" -> "Mr Joe Bloggs"
-      ),
-      "daily_tax_estimate_message_alert_cy" -> Map(
-        "fullName" -> "Mr Joe Bloggs"
-      ),
-      "annual_tax_estimate_message_alert" -> Map(
-        "fullName" -> "Mr Joe Bloggs"
-      ),
-      "annual_tax_estimate_message_alert_cy" -> Map(
-        "fullName" -> "Mr Joe Bloggs"
-      ),
       "fandf_ask_help_notification" -> Map(
         "helperLastName"  -> "Bloggs",
         "helperFirstName" -> "Joe",
@@ -3118,20 +3106,16 @@ object TemplateParams2 {
       "companyName"         -> "Acquisitions Incorporated",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
-    "newMessageAlert_P800"                 -> newMessageAlert_Names,
-    "newMessageAlert_P800_cy"              -> newMessageAlert_Names,
-    "newMessageAlert_PA302"                -> newMessageAlert_Names,
-    "newMessageAlert_PA302_cy"             -> newMessageAlert_Names,
-    "newMessageAlert_P800_D2"              -> newMessageAlert_Names,
-    "newMessageAlert_P800_D2_cy"           -> newMessageAlert_Names,
-    "newMessageAlert_PA302_D2"             -> newMessageAlert_Names,
-    "newMessageAlert_PA302_D2_cy"          -> newMessageAlert_Names,
-    "new_message_alert_itsa"               -> newMessageAlert_Names,
-    "new_message_alert_itsa_cy"            -> newMessageAlert_Names,
-    "annual_tax_estimate_message_alert"    -> newMessageAlert_Names,
-    "annual_tax_estimate_message_alert_cy" -> newMessageAlert_Names,
-    "daily_tax_estimate_message_alert"     -> newMessageAlert_Names,
-    "daily_tax_estimate_message_alert_cy"  -> newMessageAlert_Names,
+    "newMessageAlert_P800"        -> newMessageAlert_Names,
+    "newMessageAlert_P800_cy"     -> newMessageAlert_Names,
+    "newMessageAlert_PA302"       -> newMessageAlert_Names,
+    "newMessageAlert_PA302_cy"    -> newMessageAlert_Names,
+    "newMessageAlert_P800_D2"     -> newMessageAlert_Names,
+    "newMessageAlert_P800_D2_cy"  -> newMessageAlert_Names,
+    "newMessageAlert_PA302_D2"    -> newMessageAlert_Names,
+    "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
+    "new_message_alert_itsa"      -> newMessageAlert_Names,
+    "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
     "oss_registration_confirmation" -> Map(
       "recipientName_line1"  -> "Joe Bloggs",
       "businessName"         -> "Test Business",
