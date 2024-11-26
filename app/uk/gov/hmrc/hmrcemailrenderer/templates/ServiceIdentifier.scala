@@ -36,6 +36,7 @@ object ServiceIdentifier {
   case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
   case object Charities extends ServiceIdentifier { override val name = "charities" }
   case object Childcare extends ServiceIdentifier { override val name = "cc" }
+  case object CIPInsightsAndReputation extends ServiceIdentifier { override val name = "cir" }
   case object CompanyAccountsTaxOnline extends ServiceIdentifier { override val name = "cato" }
   case object CorporationTax extends ServiceIdentifier { override val name = "ct" }
   case object CountryByCountryReportingNew extends ServiceIdentifier { override val name = "cbcr_new" }

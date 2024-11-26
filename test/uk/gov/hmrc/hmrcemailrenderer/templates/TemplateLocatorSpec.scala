@@ -143,7 +143,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "DASS",
         "IOSS",
         "DPRS",
-        "TGP"
+        "TGP",
+        "CIR"
       )
     }
 
@@ -334,6 +335,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "childcare_taxfree_england_B",
         "cir_appointment_confirmation",
         "cir_appointment_confirmation_cy",
+        "cir_email_verification_code",
+        "cir_email_verification_code_welsh",
         "cir_return_confirmation",
         "cir_return_confirmation_cy",
         "cir_revocation_confirmation",
