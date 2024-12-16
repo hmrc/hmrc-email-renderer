@@ -17,14 +17,17 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae rhywun wedi gofyn i chi fod yn gynorthwyydd dibynadwy iddynt") {
 <p style="margin: 0 0 30px; font-size: 19px;">Annwyl @{params("helperFirstName")} @{params("helperLastName")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Mae @{params("helpeeFirstName")} @{params("helpeeLastName")} wedi gofyn i chi fod yn gynorthwyydd dibynadwy iddynt</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Cynorthwyydd dibynadwy yw rhywun fel ffrind neu aelod o’r teulu a all helpu gyda threth ar-lein.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Mae’r cais hwn ar gael i’w dderbyn ar-lein am 28 diwrnod.</p>
-<h2 id="how-to-accept" style="margin: 0 0 30px; font-size: 24px;">Sut i dderbyn y cais hwn am help</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">Ewch i wefan gov.uk a chwilio am ‘personal tax account’. Ewch i’r dudalen briodol a dewiswch yr opsiwn Cymraeg.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Bydd angen i chi mewngofnodi gan ddefnyddio’ch ID Defnyddiwr a’ch cyfrinair ar gyfer gwasanaethau ar-lein CThEF er mwyn cael mynediad at eich cyfrif treth personol.</p>
-<h3 id="no-goverment-gateway" style="margin: 0 0 30px; font-size: 20px;">Os nad oes gennych gyfrif gwasanaethau ar-lein CThEF neu gyfrif treth personol</h3>
-<p style="margin: 0 0 30px; font-size: 19px;">I greu eich cyfrif treth personol, ewch i wefan gov.uk a chwilio am ‘personal tax account’. Ewch i’r dudalen briodol a dewiswch yr opsiwn Cymraeg.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Gallwch gofrestru ar gyfer cyfrif gwasanaethau ar-lein CThEF pan ydych yn creu’ch cyfrif treth personol.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Mae @{params("helpeeFirstName")} @{params("helpeeLastName")} wedi gofyn i chi am help gyda threth ar-lein.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Gelwir hyn yn fod yn ‘gynorthwyydd dibynadwy’</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Mae gennych 28 diwrnod i dderbyn y cais hwn.</p>
+<h2 id="what-to-do-next" style="margin: 0 0 30px; font-size: 24px;">Yr hyn i’w wneud nesaf</h2>
+
+<ol>
+ <li style="margin: 0 0 30px; font-size: 19px;">I gael rhagor o wybodaeth, chwiliwch am ‘trusted helper’ ar GOV.UK.</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">Cliciwch ar ‘Help friends or family with their tax’ a dewiswch yr opsiwn Cymraeg.</li>
+ <li style="margin: 0 0 30px; font-size: 19px;">Mewngofnodwch i’r gwasanaeth ar gyfer cynorthwywyr dibynadwy os hoffech dderbyn y cais hwn.</li>
+</ol>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Os nad oes gennych fanylion mewngofnodi eisoes, byddwch yn gallu eu creu.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Gynorthwyydd Dibynadwy CThEF</p>
 }

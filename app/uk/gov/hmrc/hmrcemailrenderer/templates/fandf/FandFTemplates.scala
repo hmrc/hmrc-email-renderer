@@ -27,13 +27,13 @@ object FandFTemplates {
     params
       .get("helpeeFirstName")
       .flatMap(fname => params.get("helpeeLastName").map(lname => s"$fname $lname "))
-      .getOrElse("Someone ") + "would like your help with tax online"
+      .getOrElse("Someone ") + "has asked you to be their trusted helper"
 
   private def offer_help_subject(params: Map[String, String]) =
     params
       .get("helperFirstName")
       .flatMap(fname => params.get("helperLastName").map(lname => s"$fname $lname "))
-      .getOrElse("Someone ") + "wants to help you with your tax online"
+      .getOrElse("Someone ") + "has offered to be your trusted helper"
 
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
