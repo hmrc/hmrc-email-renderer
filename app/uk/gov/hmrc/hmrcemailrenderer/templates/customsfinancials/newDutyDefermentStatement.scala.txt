@@ -1,19 +1,11 @@
-@(params: Map[String, Any])@statementType = @{params.get("DefermentStatementType").map(_.toString.toLowerCase).map{st => st match {
-                             case "supplementary" | "excise" => st + " "
-                             case _ => ""
-                           }}.getOrElse("")}@ddtitle = @{"duty deferment " + statementType + "statement"}New @ddtitle
+@(params: Map[String, Any])New @statementTypeDescription
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-You have a new @{ddtitle}.
-
-@showExtra = @{
-  val ddst = params.get("DefermentStatementType").getOrElse("Unknown")
-  ddst == "supplementary" || ddst == "excise" || (ddst == "weekly" && params.get("PeriodIssueNumber").getOrElse("0") == "4")
-}
+You have a new @statementTypeDescription.
 
 @if(showExtra) {
-@{params.get("DutyText").getOrElse("")} @{params.get("date").getOrElse("")}.
+@{params.getOrElse("DutyText", "")} @{params.getOrElse("date", "")}.
 
 If you owe over £20 million you must make a CHAPS payment to HMRC. Call 03000 594 243 if you need help making a CHAPS payment.
 }
@@ -29,4 +21,13 @@ Phone HMRC on 0300 059 4243. Opening times 9am to 12pm and 2pm to 4pm, Monday to
 
 From the Customs Declaration Service
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}@statementType = @{ params.getOrElse("DefermentStatementType", "Unknown").toString.toLowerCase }@descriptionInfix = @{
+  statementType match {
+    case "supplementary" | "excise" => statementType + " "
+    case "dd1920" => "excise "
+    case _ => ""
+  }
+}@statementTypeDescription = @{"duty deferment " + descriptionInfix + "statement"}@showExtra = @{
+  val typesWithExtraText = List("supplementary", "excise", "dd1920", "dd1720")
+  typesWithExtraText.contains(statementType) || (statementType == "weekly" && params.getOrElse("PeriodIssueNumber", "0") == "4")
+}
