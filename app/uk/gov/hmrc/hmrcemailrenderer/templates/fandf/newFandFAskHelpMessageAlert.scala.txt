@@ -1,24 +1,20 @@
-@(params: Map[String, Any])Someone’s asked you to be their trusted helper
+@(params: Map[String, Any])Someone has asked you to be their trusted helper
 
 Dear @{params("helperFirstName")} @{params("helperLastName")}
 
-@{params("helpeeFirstName")} @{params("helpeeLastName")} has asked you to be their trusted helper.
+@{params("helpeeFirstName")} @{params("helpeeLastName")} has asked you to help with their tax online.
 
-A trusted helper is someone like a friend or family member, who can help with tax online.
+This is called being a ‘trusted helper’.
 
-This request is available to accept online for 28 days.
+You have 28 days to accept this request.
 
-How to accept this request for help
+What to do next
 
-Visit the gov.uk website and search for ‘personal tax account’.
+To find out more, search for ‘trusted helper’ on GOV.UK.
+Select ‘Help friends or family with their tax’.
+Sign in to the trusted helper service if you want to accept this request.
 
-You will need to sign in with your HMRC online services user ID and password to access your personal tax account.
-
-If you do not have an HMRC online services, or personal tax account
-
-To set up your personal tax account, visit the gov.uk website and search for ‘personal tax account’.
-
-You can register for an HMRC online services account when you set up your personal tax account.
+If you do not already have sign in details, you’ll be able to create them.
 
 From HMRC Trusted Helper
 
