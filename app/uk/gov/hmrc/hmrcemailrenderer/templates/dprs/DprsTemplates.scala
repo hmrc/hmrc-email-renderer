@@ -138,6 +138,60 @@ object DprsTemplates {
       plainTemplate = txt.dprs_failed_xml_submission_platform_operator.f,
       htmlTemplate = html.dprs_failed_xml_submission_platform_operator.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_add_assumed_reporting_user",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Assumed reporting details submitted for digital platform reporting",
+      plainTemplate = txt.dprs_add_assumed_reporting_user.f,
+      htmlTemplate = html.dprs_add_assumed_reporting_user.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_add_assumed_reporting_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Assumed reporting details submitted for you for digital platform reporting",
+      plainTemplate = txt.dprs_add_assumed_reporting_platform_operator.f,
+      htmlTemplate = html.dprs_add_assumed_reporting_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_update_assumed_reporting_user",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Assumed reporting details submitted for digital platform reporting",
+      plainTemplate = txt.dprs_update_assumed_reporting_user.f,
+      htmlTemplate = html.dprs_update_assumed_reporting_user.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_update_assumed_reporting_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Assumed reporting details submitted for you for digital platform reporting",
+      plainTemplate = txt.dprs_update_assumed_reporting_platform_operator.f,
+      htmlTemplate = html.dprs_update_assumed_reporting_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_delete_assumed_reporting_user",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Assumed reporting details deleted for digital platform reporting",
+      plainTemplate = txt.dprs_delete_assumed_reporting_user.f,
+      htmlTemplate = html.dprs_delete_assumed_reporting_user.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dprs_delete_assumed_reporting_platform_operator",
+      fromAddress = govUkTeamAddress,
+      service = DigitalPlatformReporting,
+      subject = "Assumed reporting details deleted for you for digital platform reporting",
+      plainTemplate = txt.dprs_delete_assumed_reporting_platform_operator.f,
+      htmlTemplate = html.dprs_delete_assumed_reporting_platform_operator.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
