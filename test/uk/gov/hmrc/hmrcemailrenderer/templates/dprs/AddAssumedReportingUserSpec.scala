@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.dprs
 
 import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalPlatformReporting
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress }
 
 class AddAssumedReportingUserSpec extends PlaySpec with CommonParamsForSpec {
 
@@ -56,7 +56,9 @@ class AddAssumedReportingUserSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Assumed reporting details submitted for digital platform reporting")
       htmlContent must include("Dear")
       htmlContent must include("Ashley Smith")
-      htmlContent must include("You have successfully added details for assumed reporting at 9:15am on 25 January 2024.")
+      htmlContent must include(
+        "You have successfully added details for assumed reporting at 9:15am on 25 January 2024."
+      )
       htmlContent must include("Assuming PO will send reports on behalf of Vinted for the 2024 reportable period.")
       htmlContent must include("What happens next")
       htmlContent must include("We will contact you if we have any questions.")

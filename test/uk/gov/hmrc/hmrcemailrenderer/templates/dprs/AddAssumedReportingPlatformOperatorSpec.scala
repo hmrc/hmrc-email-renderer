@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.dprs
 
 import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalPlatformReporting
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress }
 
 class AddAssumedReportingPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
 

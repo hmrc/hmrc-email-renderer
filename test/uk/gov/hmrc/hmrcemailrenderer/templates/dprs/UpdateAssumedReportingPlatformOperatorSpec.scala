@@ -17,10 +17,10 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.dprs
 
 import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.DigitalPlatformReporting
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, FromAddress}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, FromAddress }
 
 class UpdateAssumedReportingPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
 
@@ -45,11 +45,11 @@ class UpdateAssumedReportingPlatformOperatorSpec extends PlaySpec with CommonPar
       val htmlContent = underTest
         .htmlTemplate(
           commonParameters ++ Map(
-            "poPrimaryContactName" -> "Tim Vinted",
-            "checksCompletedDateTime" -> "9:15am on 25 January 2024",
+            "poPrimaryContactName"     -> "Tim Vinted",
+            "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
             "assumingPlatformOperator" -> "Assuming PO",
-            "poBusinessName" -> "Vinted",
-            "reportingPeriod" -> "2024"
+            "poBusinessName"           -> "Vinted",
+            "reportingPeriod"          -> "2024"
           )
         )
         .toString
