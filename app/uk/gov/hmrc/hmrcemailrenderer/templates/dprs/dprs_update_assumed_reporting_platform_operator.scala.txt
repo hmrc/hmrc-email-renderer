@@ -1,0 +1,20 @@
+@(params: Map[String, Any])Assumed reporting details submitted for you for digital platform reporting
+
+Dear @{params("poPrimaryContactName")}
+
+Assumed reporting details have been updated for you at @{params("checksCompletedDateTime")}. @{params("assumingPlatformOperator")} will send reports on behalf of @{params("poBusinessName")} for the @{params("reportingPeriod")} reportable period.
+
+If this is not correct, contact the person or team that submitted this for you.
+
+What happens next
+
+We may contact you if we have any questions.
+
+For more information, search GOV.UK for ‘reporting rules for digital platforms’.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+From HMRC Digital Platform Reporting
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

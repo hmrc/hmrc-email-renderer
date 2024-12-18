@@ -3802,6 +3802,48 @@ object TemplateParams3 {
       "poBusinessName"          -> "Vinted",
       "checksCompletedDateTime" -> "9:15am on 25 January 2024"
     ),
+    "dprs_add_assumed_reporting_user" -> Map(
+      "userPrimaryContactName"   -> "Ashley Smith",
+      "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
+      "assumingPlatformOperator" -> "Assuming PO",
+      "poBusinessName"           -> "Vinted",
+      "reportingPeriod"          -> "2024"
+    ),
+    "dprs_add_assumed_reporting_platform_operator" -> Map(
+      "poPrimaryContactName"     -> "Tim Vinted",
+      "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
+      "assumingPlatformOperator" -> "Assuming PO",
+      "poBusinessName"           -> "Vinted",
+      "reportingPeriod"          -> "2024"
+    ),
+    "dprs_update_assumed_reporting_user" -> Map(
+      "userPrimaryContactName"   -> "Ashley Smith",
+      "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
+      "assumingPlatformOperator" -> "Assuming PO",
+      "poBusinessName"           -> "Vinted",
+      "reportingPeriod"          -> "2024"
+    ),
+    "dprs_update_assumed_reporting_platform_operator" -> Map(
+      "poPrimaryContactName"     -> "Tim Vinted",
+      "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
+      "assumingPlatformOperator" -> "Assuming PO",
+      "poBusinessName"           -> "Vinted",
+      "reportingPeriod"          -> "2024"
+    ),
+    "dprs_delete_assumed_reporting_user" -> Map(
+      "userPrimaryContactName"   -> "Ashley Smith",
+      "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
+      "assumingPlatformOperator" -> "Assuming PO",
+      "poBusinessName"           -> "Vinted",
+      "reportingPeriod"          -> "2024"
+    ),
+    "dprs_delete_assumed_reporting_platform_operator" -> Map(
+      "poPrimaryContactName"     -> "Tim Vinted",
+      "checksCompletedDateTime"  -> "9:15am on 25 January 2024",
+      "assumingPlatformOperator" -> "Assuming PO",
+      "poBusinessName"           -> "Vinted",
+      "reportingPeriod"          -> "2024"
+    ),
     "entity_check_notification" -> Map(
       "arn"          -> "XARN000034892",
       "utr"          -> "489021408",

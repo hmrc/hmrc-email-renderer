@@ -1,0 +1,18 @@
+@(params: Map[String, Any])Assumed reporting details submitted for digital platform reporting
+
+Dear @{params("userPrimaryContactName")}
+
+You have successfully added details for assumed reporting at @{params("checksCompletedDateTime")}. @{params("assumingPlatformOperator")} will send reports on behalf of @{params("poBusinessName")} for the @{params("reportingPeriod")} reportable period.
+
+What happens next
+
+We will contact you if we have any questions.
+
+For more information, search GOV.UK for ‘reporting rules for digital platforms’.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+From HMRC Digital Platform Reporting
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
