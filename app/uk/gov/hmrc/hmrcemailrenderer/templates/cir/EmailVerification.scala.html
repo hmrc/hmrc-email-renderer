@@ -14,18 +14,18 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Confirm your email address") {
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Verify your email address") {
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear Customer</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You requested a code to verify your
       email address.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your code is:
       <b>@params("verification_code")</b>
     </p>
-    <p style="font-weight: bold; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">What you need to do now</p>
+    <h2 style="; margin: 0 0 30px 0;">What you need to do now</h2>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Return to the service to use this code. The code can only be used once. </p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If this email account is not shared and you did not request this code, you need to contact HMRC.</p>
     <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Do not reply to this email. </p>
-    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC</p>
 
 
 }

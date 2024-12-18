@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Cadarnhau’ch cyfeiriad e-bost
+@(params: Map[String, Any])Gwirio’ch cyfeiriad e-bost
 
 Annwyl Gwsmer
 
@@ -14,4 +14,4 @@ Os nad yw’r cyfrif e-bost hwn yn cael ei rannu, ac ni wnaethoch ofyn am y cod 
 
 Peidiwch ag ymateb i’r e-bost hwn.
 
-Gan y HMRC.
+Gan y HMRC

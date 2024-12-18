@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Confirm your email address
+@(params: Map[String, Any])Verify your email address
 
 Dear Customer
 
@@ -14,4 +14,4 @@ If this email account is not shared and you did not request this code, you need 
 
 Do not reply to this email.
 
-From HMRC.
+From HMRC
