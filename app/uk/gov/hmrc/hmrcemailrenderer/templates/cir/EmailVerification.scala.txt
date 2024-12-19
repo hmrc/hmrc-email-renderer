@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Verify your email address
+
+Dear Customer
+
+You requested a code to verify your email address.
+
+Your code is: @params("verification_code")
+
+What you need to do now
+
+Return to the service to use this code. The code can only be used once.
+
+If this email account is not shared and you did not request this code, you need to contact HMRC.
+
+Do not reply to this email.
+
+From HMRC
