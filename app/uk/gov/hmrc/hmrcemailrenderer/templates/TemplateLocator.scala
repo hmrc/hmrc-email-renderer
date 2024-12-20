@@ -29,6 +29,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.awrs.AwrsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.bars.BarsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcr.CBCRTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.CBCRNewTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.cir.CirTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.crsfatca.CRSFatcaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cds.cdsTestTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.childcare.ChildcareTemplates
@@ -110,6 +111,7 @@ trait TemplateLocator {
       "ARS"                   -> ArsTemplates.templates,
       "BARS"                  -> BarsTemplates.templates,
       "Childcare"             -> ChildcareTemplates.templates,
+      "CIR"                   -> CirTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
       "DASS"                  -> DASSTemplates.templates,
       "MDR"                   -> MdrTemplates.templates,
