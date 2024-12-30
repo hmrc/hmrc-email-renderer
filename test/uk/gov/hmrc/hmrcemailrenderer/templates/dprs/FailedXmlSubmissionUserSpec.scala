@@ -68,7 +68,7 @@ class FailedXmlSubmissionUserSpec extends PlaySpec with CommonParamsForSpec {
       )
       htmlContent must include("If you need help")
       htmlContent must include("Email aeoi.enquiries@hmrc.gov.uk for help with file submissions for this service.")
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
+      htmlContent must include("For more information, search GOV.UK for 'manage your digital platform reporting'.")
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
       htmlContent must include("From HMRC Digital Platform Reporting")
     }

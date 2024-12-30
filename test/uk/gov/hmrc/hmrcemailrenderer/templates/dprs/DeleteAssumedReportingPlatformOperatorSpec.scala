@@ -61,7 +61,9 @@ class DeleteAssumedReportingPlatformOperatorSpec extends PlaySpec with CommonPar
       htmlContent must include("If this is not correct, contact the person or team that submitted this for you.")
       htmlContent must include("What happens next")
       htmlContent must include("We may contact you if we have any questions.")
-      htmlContent must include("For more information, search GOV.UK for ‘reporting rules for digital platforms’.")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
       htmlContent must include("From HMRC Digital Platform Reporting")
     }

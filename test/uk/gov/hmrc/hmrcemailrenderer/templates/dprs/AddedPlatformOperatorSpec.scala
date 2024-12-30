@@ -62,10 +62,12 @@ class AddedPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include(
         "To submit reports for this platform operator, you must add a reporting notification for them."
       )
-      htmlContent must include("Go to GOV.UK and search for 'reporting rules for digital platforms'.")
+      htmlContent must include("Go to GOV.UK and search for 'manage your digital platform reporting'.")
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
-      htmlContent must include("From the HMRC Digital Platform Reporting team")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
+      htmlContent must include("From HMRC Digital Platform Reporting")
     }
   }
 }

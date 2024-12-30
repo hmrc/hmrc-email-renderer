@@ -13,13 +13,13 @@ What happens next
 
 You do not need to take any further action.
 
-If you need to start reporting for this platform operator again, you can add them to the service again. Go to GOV.UK and search for 'reporting rules for digital platforms'.
+If you need to start reporting for this platform operator again, you can add them to the service again. Go to GOV.UK and search for 'manage your digital platform reporting'.
 
 For security reasons, we have not included a link to this service in this email.
 
-For more information, search GOV.UK for 'reporting rules for digital platforms'.
+For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'.
 
 
-From the HMRC Digital Platform Reporting team
+From HMRC Digital Platform Reporting
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

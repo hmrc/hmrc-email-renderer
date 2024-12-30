@@ -65,7 +65,7 @@ class SuccessfulXmlSubmissionUserSpec extends PlaySpec with CommonParamsForSpec 
       htmlContent must include("some-file-name.xml")
       htmlContent must include("What happens next")
       htmlContent must include("We will contact you if we have any questions about this report.")
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
+      htmlContent must include("For more information, search GOV.UK for 'manage your digital platform reporting'.")
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
       htmlContent must include("From HMRC Digital Platform Reporting")
     }

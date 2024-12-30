@@ -10,7 +10,7 @@ You are listed as a contact for @{params("poBusinessName")}.
 
 If the reporting rules still apply to you
 
-If the reporting rules still apply to you, you must tell HMRC if you are a reporting platform operator or an excluded platform operator. You need to register first to do this. Go to GOV.UK and search for 'reporting rules for digital platforms' to register for the service.
+If the reporting rules still apply to you, you must tell HMRC if you are a reporting platform operator or an excluded platform operator. You need to register first to do this. Go to GOV.UK and search for 'register to carry out digital platform reporting' to register for the service.
 
 You may have to pay a penalty if you do not tell HMRC by the deadline.
 
@@ -20,9 +20,9 @@ You do not need to do anything.
 
 For security reasons, we have not included a link to this service in this email.
 
-For more information, search GOV.UK for 'reporting rules for digital platforms'.
+For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'.
 
 
-From the HMRC Digital Platform Reporting team
+From HMRC Digital Platform Reporting
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
