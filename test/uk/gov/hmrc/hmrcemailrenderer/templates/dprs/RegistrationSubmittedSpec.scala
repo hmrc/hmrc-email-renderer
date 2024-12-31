@@ -47,10 +47,15 @@ class RegistrationSubmittedSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Dear")
       htmlContent must include("Homer Simpson")
       htmlContent must include("You have successfully registered for digital platform reporting.")
-      htmlContent must include("Your digital platform reporting user ID is XLDPI0023000377")
+      htmlContent must include("Your digital platform reporting user ID is XLDPI0023000377.")
+      htmlContent must include(
+        "Keep a record of this ID. We will ask you for it if you contact us or need to recover your account."
+      )
       htmlContent must include("What you need to do next")
       htmlContent must include("To send submissions, you must add a platform operator.")
-      htmlContent must include("Go to GOV.UK and search for 'manage your digital platform reporting'.")
+      htmlContent must include(
+        "Go to GOV.UK and search for 'manage your digital platform reporting' to access this service."
+      )
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
       htmlContent must include(
         "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
