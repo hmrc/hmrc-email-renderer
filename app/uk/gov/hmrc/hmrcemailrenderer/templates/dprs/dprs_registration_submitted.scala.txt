@@ -4,7 +4,7 @@ Dear @{params("name")}
 
 You have successfully registered for digital platform reporting.
 
-Your digital platform reporting user ID is @params("dprsId").
+Your registration ID is @params("dprsId").
 
 Keep a record of this ID. We will ask you for it if you contact us or need to recover your account.
 

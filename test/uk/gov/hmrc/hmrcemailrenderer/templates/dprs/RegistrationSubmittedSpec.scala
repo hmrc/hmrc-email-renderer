@@ -47,7 +47,7 @@ class RegistrationSubmittedSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Dear")
       htmlContent must include("Homer Simpson")
       htmlContent must include("You have successfully registered for digital platform reporting.")
-      htmlContent must include("Your digital platform reporting user ID is XLDPI0023000377.")
+      htmlContent must include("Your registration ID is XLDPI0023000377.")
       htmlContent must include(
         "Keep a record of this ID. We will ask you for it if you contact us or need to recover your account."
       )
