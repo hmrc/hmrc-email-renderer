@@ -58,11 +58,16 @@ class AddedPlatformOperatorSpec extends PlaySpec with CommonParamsForSpec {
         "You have successfully added Vinted as a platform operator in the digital platform reporting service."
       )
       htmlContent must include("The platform operator ID is PO12345678.")
+      htmlContent must include(
+        "Keep a record of this ID. You need to include it in every file you send to HMRC for this platform operator."
+      )
       htmlContent must include("What you need to do next")
       htmlContent must include(
         "To submit reports for this platform operator, you must add a reporting notification for them."
       )
-      htmlContent must include("Go to GOV.UK and search for 'manage your digital platform reporting'.")
+      htmlContent must include(
+        "Go to GOV.UK and search for 'manage your digital platform reporting' to access this service."
+      )
       htmlContent must include("For security reasons, we have not included a link to this service in this email.")
       htmlContent must include(
         "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."

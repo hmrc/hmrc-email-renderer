@@ -6,9 +6,11 @@ You have successfully added @{params("poBusinessName")} as a platform operator i
 
 The platform operator ID is @{params("poId")}.
 
+Keep a record of this ID. You need to include it in every file you send to HMRC for this platform operator.
+
 What you need to do next
 
-To submit reports for this platform operator, you must add a reporting notification for them. Go to GOV.UK and search for 'manage your digital platform reporting'.
+To submit reports for this platform operator, you must add a reporting notification for them. Go to GOV.UK and search for 'manage your digital platform reporting' to access this service.
 
 For security reasons, we have not included a link to this service in this email.
 
