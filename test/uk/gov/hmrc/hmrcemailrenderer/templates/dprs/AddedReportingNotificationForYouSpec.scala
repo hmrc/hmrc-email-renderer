@@ -68,8 +68,10 @@ class AddedReportingNotificationForYouSpec extends PlaySpec with CommonParamsFor
       htmlContent must include("Why you are receiving this email")
       htmlContent must include("You are listed as a contact for Vinted.")
 
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
-      htmlContent must include("From the HMRC Digital Platform Reporting team")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
+      htmlContent must include("From HMRC Digital Platform Reporting")
     }
 
     "render template correctly when isReportingPO is false and isExtendedDueDiligence, isActiveSellerDueDiligence are true" in {
@@ -99,8 +101,10 @@ class AddedReportingNotificationForYouSpec extends PlaySpec with CommonParamsFor
       htmlContent must include("Why you are receiving this email")
       htmlContent must include("You are listed as a contact for Vinted.")
 
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
-      htmlContent must include("From the HMRC Digital Platform Reporting team")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
+      htmlContent must include("From HMRC Digital Platform Reporting")
     }
 
     "render template correctly when isReportingPO=true, isExtendedDueDiligence=false, isActiveSellerDueDiligence=true" in {
@@ -130,8 +134,10 @@ class AddedReportingNotificationForYouSpec extends PlaySpec with CommonParamsFor
       htmlContent must include("Why you are receiving this email")
       htmlContent must include("You are listed as a contact for Vinted.")
 
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
-      htmlContent must include("From the HMRC Digital Platform Reporting team")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
+      htmlContent must include("From HMRC Digital Platform Reporting")
     }
 
     "render template correctly when isReportingPO=true, isExtendedDueDiligence=true, isActiveSellerDueDiligence=false" in {
@@ -161,8 +167,10 @@ class AddedReportingNotificationForYouSpec extends PlaySpec with CommonParamsFor
       htmlContent must include("Why you are receiving this email")
       htmlContent must include("You are listed as a contact for Vinted.")
 
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
-      htmlContent must include("From the HMRC Digital Platform Reporting team")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
+      htmlContent must include("From HMRC Digital Platform Reporting")
     }
 
     "render template correctly when isReportingPO=true, isExtendedDueDiligence=false, isActiveSellerDueDiligence=false" in {
@@ -192,8 +200,10 @@ class AddedReportingNotificationForYouSpec extends PlaySpec with CommonParamsFor
       htmlContent must include("Why you are receiving this email")
       htmlContent must include("You are listed as a contact for Vinted.")
 
-      htmlContent must include("For more information, search GOV.UK for 'reporting rules for digital platforms'.")
-      htmlContent must include("From the HMRC Digital Platform Reporting team")
+      htmlContent must include(
+        "For more information, search GOV.UK for 'check if you need to carry out digital platform reporting'."
+      )
+      htmlContent must include("From HMRC Digital Platform Reporting")
     }
   }
 }
