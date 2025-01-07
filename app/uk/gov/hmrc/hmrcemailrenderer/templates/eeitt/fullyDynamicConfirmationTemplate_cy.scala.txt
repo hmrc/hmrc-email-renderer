@@ -1,0 +1,84 @@
+
+@(params: Map[String, Any])
+
+@params.get("heading1")
+
+@params.get("para1") <b>@params.get("bold1")
+
+@params.get("heading2")
+
+@params.get("para2") <b>@params.get("bold2")
+
+@params.get("heading3")
+
+@params.get("para3") <b>@params.get("bold3")
+
+@params.get("heading4")
+
+@params.get("para4") <b>@params.get("bold4")
+
+@params.get("heading5")
+
+@params.get("para5") <b>@params.get("bold5")
+
+@params.get("heading6")
+
+@params.get("para6") <b>@params.get("bold6")
+
+@params.get("heading7")
+
+@params.get("para7") <b>@params.get("bold7")
+
+@params.get("heading8")
+
+@params.get("para8") <b>@params.get("bold8")
+
+@params.get("heading9")
+
+@params.get("para9") <b>@params.get("bold9")
+
+@params.get("heading10")
+
+@params.get("para10") <b>@params.get("bold10")
+
+@params.get("heading11")
+
+@params.get("para11") <b>@params.get("bold11")
+
+@params.get("heading12")
+
+@params.get("para12") <b>@params.get("bold12")
+
+@params.get("heading13")
+
+@params.get("para13") <b>@params.get("bold13")
+
+@params.get("heading14")
+
+@params.get("para14") <b>@params.get("bold14")
+
+@params.get("heading15")
+
+@params.get("para15") <b>@params.get("bold15")
+
+@params.get("heading16")
+
+@params.get("para16") <b>@params.get("bold16")
+
+@params.get("heading17")
+
+@params.get("para17") <b>@params.get("bold17")
+
+@params.get("heading18")
+
+@params.get("para18") <b>@params.get("bold18")
+
+@params.get("heading19")
+
+@params.get("para19") <b>@params.get("bold19")
+
+@params.get("heading20")
+
+@params.get("para20") <b>@params.get("bold20")
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
