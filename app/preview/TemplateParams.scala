@@ -3392,6 +3392,27 @@ object TemplateParams3 {
       "bold11" -> "197391827182917",
       "emailSubjectConfirmation" -> "You have notified HMRC of VAT owed on goods moved to Northern Ireland"
     ),
+    "fullyDynamicEmail_confirmation_cy" -> Map(
+      "heading3"  -> "What you need to do next",
+      "heading10" -> "Why you are receiving this email",
+      "para1"     -> "Dear Hugh Mann",
+      "para2"  -> "We have received your notification about the amount of VAT owed on goods moved to Northern Ireland.",
+      "para3"  -> "If you have already paid, you do not need to do anything.",
+      "para4"  -> "If you have not yet paid the VAT you owe, do this as soon as possible.",
+      "para5"  -> "1. Go to GOV.UK",
+      "para6"  -> "2. Search for ‘Pay taxes, penalties or enquiry settlements’",
+      "para7"  -> "3. Follow the payment instructions on the page, using the payment details in this email.",
+      "para8"  -> "Your payment reference:",
+      "para9"  -> "Payment amount: £400",
+      "para10" -> "We send a confirmation email for all forms submitted online.",
+      "para11" -> "If you need to contact us, quote the form submission reference number: ",
+      "para12" -> "If we need to contact you, we will use the details you provided.",
+      "para13" -> "For security reasons, we have not included the details you submitted.",
+      "para14" -> "From HMRC Customer Services Group",
+      "bold8"  -> "XVC129182918273",
+      "bold11" -> "197391827182917",
+      "emailSubjectConfirmation" -> "You have notified HMRC of VAT owed on goods moved to Northern Ireland"
+    ),
     "dynamicEmail_code_cy" -> Map(
       "emailHeading"     -> "Confirm your email address",
       "emailSubjectCode" -> "Confirm your email address - GForm name",

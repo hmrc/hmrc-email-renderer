@@ -18,4 +18,4 @@ Peidiwch ag ateb yr e-bost hwn.
 
 Oddi wrth - @params("emailTeam")
 
-@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
