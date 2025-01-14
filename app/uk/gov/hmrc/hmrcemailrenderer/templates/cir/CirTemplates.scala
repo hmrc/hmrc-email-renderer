@@ -22,21 +22,23 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CIPInsightsAndR
 
 object CirTemplates {
 
+  private val fromAddress: String = FromAddress.noReply("HMRC Email Verification service")
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "cir_email_verification_code",
-      fromAddress = FromAddress.noReply("CIP Insights and Reputation"),
+      fromAddress = fromAddress,
       service = CIPInsightsAndReputation,
-      subject = "Your email confirmation code",
+      subject = "Your email verification code",
       plainTemplate = txt.EmailVerification.f,
       htmlTemplate = html.EmailVerification.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "cir_email_verification_code_welsh",
-      fromAddress = FromAddress.noReply("CIP Insights and Reputation"),
+      fromAddress = fromAddress,
       service = CIPInsightsAndReputation,
-      subject = "Eich cod gwirio e-bost",
+      subject = "Eich cod dilysu e-bost",
       plainTemplate = txt.EmailVerificationWelsh.f,
       htmlTemplate = html.EmailVerificationWelsh.f,
       priority = Some(MessagePriority.Urgent)
