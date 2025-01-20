@@ -7,7 +7,7 @@ Your Direct Debit has been cancelled.
 We have sent you a secure message. To read it:
 
 1. Go to GOV.UK.
-2. Search for ‘Set up a Direct Debit for a duty deferment account on the Customs Declaration Service’ and sign in.
+2. Search for ‘Manage your import duties and VAT accounts’ and sign in.
 
 If you have outstanding charges to pay, you will need to pay them immediately. If you want to continue to use your duty deferment account, you will need to set up a new Direct Debit instruction.
 
