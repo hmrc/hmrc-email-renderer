@@ -1,7 +1,9 @@
-@(params: Map[String, Any])HMRC Duty Deferred Direct Debit: reminder of payment collection
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.CdsDdiTemplateParameters._
+
+@(params: Map[String, Any])@regimeName(params) Direct Debit: reminder of payment collection
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
-You have a Direct Debit set up to pay your duty deferment account balance. This is a reminder we will collect payment shortly.
+You have a Direct Debit set up to pay your @{`toPayYour...`(params)}. This is a reminder we will collect payment shortly.
 
 We have sent you a secure message. To read it:
 

@@ -14,12 +14,14 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.CdsDdiTemplateParameters._
+
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Duty Deferred Direct Debit: confirmation of instruction") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)} Direct Debit: confirmation of instruction") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
-    <p style="margin: 0 0 30px; font-size: 19px;">A Direct Debit is active on your duty deferment account.</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">@ddiSetUpMessage(params)</p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">We have sent you a secure message. To read it:</p>
 

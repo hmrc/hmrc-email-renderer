@@ -3556,6 +3556,34 @@ object TemplateParams3 {
       "amountInPence"         -> "192",
       "transactionFeeInPence" -> "100"
     ),
+    "cds_ddi_amended_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
+    "cds_ddi_cancelled_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
+    "cds_ddi_not_acceptable_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
+    "cds_ddi_reinstated_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
+    "cds_ddi_reminder_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
+    "cds_ddi_setup_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
+    "cds_ddi_unpaid_dcs_alert" -> Map(
+      "recipientName_line1" -> "Joe Smith",
+      "cds_regime"          -> "CDS"
+    ),
     "sdds_ddi_setup_dcs_alert" -> Map(
       "subject"             -> "regime Direct Debit Setup",
       "recipientName_line1" -> "Joe Smith",

@@ -14,9 +14,11 @@
  * limitations under the License.
  *@
 
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.CdsDdiTemplateParameters._
+
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "HMRC Duty Deferred: Direct Debit instruction cannot be used") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"${regimeName(params)}: Direct Debit instruction cannot be used") {
     @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutationLine1(params)
 
     <p style="margin: 0 0 30px; font-size: 19px;">Your bank has told us we cannot collect payments using this Direct Debit instruction.</p>
@@ -29,7 +31,7 @@
     </ol>
 
     <p style="margin: 0 0 30px; font-size: 19px;">
-        If you have outstanding charges to pay, you will need to pay them immediately. If you want to continue to use your duty deferment account, you will need to set up a new Direct Debit instruction.
+        If you have outstanding charges to pay, you will need to pay them immediately. If you want to continue to @{`ifYouWantToContinueTo...`(params)}, you will need to set up a new Direct Debit instruction.
     </p>
 
     <p style="margin: 0 0 30px; font-size: 19px;">From HMRC Direct Debit team</p>
