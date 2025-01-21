@@ -1,8 +1,10 @@
-@(params: Map[String, Any])HMRC Duty Deferred Direct Debit: confirmation of instruction
+@import uk.gov.hmrc.hmrcemailrenderer.templates.onlinepaymentservice.CdsDdiTemplateParameters._
+
+@(params: Map[String, Any])@regimeName(params) Direct Debit: confirmation of instruction
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
 
-A Direct Debit is active on your duty deferment account.
+@ddiSetUpMessage(params)
 
 We have sent you a secure message. To read it:
 
