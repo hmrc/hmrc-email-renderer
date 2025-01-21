@@ -32,9 +32,6 @@ object CdsDdiTemplateParameters {
 
     case object Brvt extends CdsRegime
 
-    case object Reds extends CdsRegime
-
-    case object Vat908 extends CdsRegime
   }
 
   private val regimeKey: String = "cds_regime"
@@ -44,30 +41,28 @@ object CdsDdiTemplateParameters {
       .get(regimeKey)
       .map { value =>
         value.toString.toLowerCase match {
-          case "cds"    => Cds
-          case "atwd"   => Atwd
-          case "extp"   => Extp
-          case "exts"   => Exts
-          case "brvt"   => Brvt
-          case "reds"   => Reds
-          case "vat908" => Vat908
-          case other    => sys.error(s"Unknown CDS regime: $other")
+          case "cds"  => Cds
+          case "atwd" => Atwd
+          case "extp" => Extp
+          case "exts" => Exts
+          case "brvt" => Brvt
+          case other  => sys.error(s"Unknown CDS regime: $other")
         }
       }
       .getOrElse(Cds)
 
   def isDutyDeferment(fromParams: Map[String, Any]): Boolean =
     regime(fromParams) match {
-      case Cds | Atwd | Reds | Vat908 => true
-      case Extp | Exts | Brvt         => false
+      case Cds | Atwd         => true
+      case Extp | Exts | Brvt => false
     }
 
   def regimeName(fromParams: Map[String, Any]): String =
     regime(fromParams) match {
-      case Cds | Atwd | Reds | Vat908 => "HMRC Duty Deferred"
-      case Extp                       => "Tobacco Products Duty (TP7)"
-      case Exts                       => "Export Tax Shops"
-      case Brvt                       => "Beer Duty VAT (EX46)"
+      case Cds | Atwd => "HMRC Duty Deferred"
+      case Extp       => "Tobacco Products Duty (TP7)"
+      case Exts       => "Export Tax Shops"
+      case Brvt       => "Beer Duty VAT (EX46)"
     }
 
   def `ifYouWantToContinueTo...`(formParams: Map[String, Any]): String =
@@ -75,10 +70,10 @@ object CdsDdiTemplateParameters {
 
   def `toPayYour...`(formParams: Map[String, Any]): String =
     regime(formParams) match {
-      case Cds | Atwd | Reds | Vat908 => "duty deferment account balance"
-      case Extp                       => "Tobacco Products Duty return"
-      case Exts                       => "Export Tax Shops return"
-      case Brvt                       => "Beer Duty VAT return"
+      case Cds | Atwd => "duty deferment account balance"
+      case Extp       => "Tobacco Products Duty return"
+      case Exts       => "Export Tax Shops return"
+      case Brvt       => "Beer Duty VAT return"
     }
 
   def ddiSetUpMessage(formParams: Map[String, Any]): String =
