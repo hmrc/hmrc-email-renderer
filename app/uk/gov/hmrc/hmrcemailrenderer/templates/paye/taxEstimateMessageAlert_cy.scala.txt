@@ -10,8 +10,7 @@ Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai 
 
 @if(TemplateUtils.isP2TemplateAnnual) {
 - rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth 2024 i 2025)
-}
-- newidiodd eich swydd
+}- newidiodd eich swydd
 - newidiodd eich cyflog
 - newidiodd eich buddiannau cwmni, megis car cwmni
 - newidiodd eich pensiwn
