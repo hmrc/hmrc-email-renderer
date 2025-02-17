@@ -1,0 +1,33 @@
+@(params: Map[String, Any])
+
+You submitted a cash declaration online
+
+Dear @params("customerName")
+
+HMRC received your declaration of carrying a cash amount of £10,000 or more into or out of the Great Britain.
+
+This includes the equivalent of £10,000 in other currencies.
+
+Your submission reference is: @params("submissionReference")
+
+What you need to do next
+
+You will need this submission reference when you travel as it confirms you have made a declaration. You should print this email, or have it on your phone to show customs officials if they ask.
+
+Your cash declaration
+
+Currency / Amount of currency in all cash types
+
+@params.get("currencyName1") / @params.get("currencyAmount1")
+
+@params.get("uploadDocText")
+
+For security reasons, we have not included any other details you submitted.
+
+Why you are receiving this email
+
+We send a confirmation email for a declaration submitted online.
+
+From HMRC Cash Declarations
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

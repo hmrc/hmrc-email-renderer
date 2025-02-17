@@ -2610,6 +2610,21 @@ object TemplateParams2 {
       "customerName"        -> "Hugh Mann",
       "submissionReference" -> "NC38-N2ZC-TH68"
     ),
+    "cash_declaration_GB_Currency" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "currencyName1"       -> "British Pound - GBP",
+      "currencyName2"       -> "Bosnia and Herzegovina Convertible Mark - BAM",
+      "currencyName3"       -> "Sao Tome and Principe Dobra - STD",
+      "currencyName4"       -> "United Arab Emirates Dirham - AED",
+      "currencyName5"       -> "Brazil Real - BRL",
+      "currencyAmount1"     -> "99,999,999.99",
+      "currencyAmount2"     -> "2,000,000.00",
+      "currencyAmount3"     -> "3000",
+      "currencyAmount4"     -> "4,000,000",
+      "currencyAmount5"     -> "5,000,000.00",
+      "uploadDocText"       -> "You also uploaded a document telling HMRC about smaller values in other currencies."
+    ),
     "cashDecUK_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),

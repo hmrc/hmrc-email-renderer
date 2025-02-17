@@ -1,0 +1,80 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You submitted a cash declaration online"){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Dear @params("customerName") </p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    HMRC received your declaration of carrying a cash amount of £10,000 or more into or out of Great Britain.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    This includes the equivalent of £10,000 in other currencies.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Your submission reference is: @params("submissionReference")</p>
+<h2>
+    What you need to do next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    You will need this submission reference when you travel as it confirms you have made a declaration. You should print this email, or have it on your phone to show customs officials if they ask.</p>
+<h2>
+    Your cash declaration </h2>
+
+<table border="1" width="100%" cellspacing="0" cellpadding="2px" style="text-align: center;
+            font-size: 19px;">
+    <tbody>
+
+    <tr>
+        <th style="width: 75%;">Currency</th>
+        <th style="width: 25%;">Amount of currency in all cash types</th>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName1")</td>
+        <td>@params.get("currencyAmount1")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName2")</td>
+        <td>@params.get("currencyAmount2")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName3")</td>
+        <td>@params.get("currencyAmount3")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName4")</td>
+        <td>@params.get("currencyAmount4")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName5")</td>
+        <td>@params.get("currencyAmount5")</td>
+    </tr>
+
+    </tbody>
+</table>
+<br>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("uploadDocText")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    For security reasons, we have not included any other details you submitted.</p>
+<h2>Why you are receiving this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    We send a confirmation email for a declaration submitted online.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    From HMRC Cash Declarations</p>
+}

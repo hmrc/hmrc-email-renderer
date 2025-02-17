@@ -275,6 +275,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "cash_declaration",
         "cash_declaration_EU",
         "cash_declaration_UK",
+        "cash_declaration_GB_Currency",
         "cato_access_invitation_template_id",
         "cbc_agent_file_upload_successful",
         "cbc_agent_file_upload_unsuccessful",
