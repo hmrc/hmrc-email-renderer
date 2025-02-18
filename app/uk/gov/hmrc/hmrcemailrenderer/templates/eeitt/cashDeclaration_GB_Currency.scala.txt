@@ -16,7 +16,9 @@ You will need this submission reference when you travel as it confirms you have 
 
 Your cash declaration
 
-Currency / Amount of currency in all cash types
+Currency / Total
+
+You declared the following currencies to HMRC. The total includes all types of cash declared for that currency.
 
 @params.get("currencyName1") / @params.get("currencyAmount1")
 
