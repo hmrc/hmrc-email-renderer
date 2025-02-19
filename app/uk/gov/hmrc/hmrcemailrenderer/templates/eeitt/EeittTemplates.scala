@@ -699,6 +699,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cash_declaration_GB_Currency",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "HMRC received your cash declaration",
+      plainTemplate = txt.cashDeclaration_GB_Currency.f,
+      htmlTemplate = html.cashDeclaration_GB_Currency.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "cashDecUK_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
