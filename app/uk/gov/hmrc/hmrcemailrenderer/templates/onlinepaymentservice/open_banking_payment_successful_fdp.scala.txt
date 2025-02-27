@@ -8,7 +8,7 @@ Tax: @params("taxType")
 Payment scheduled date: @params("paymentScheduledDate")
 Date payment set up: @params("datePaymentSetUp")
 Payment reference: @params("reference")
-Amount: &pound;@params("amountPaid")
+Amount: @params("amountPaid")
 
 On your scheduled payment date, check the payment has left your bank account. You are responsible for making sure this payment reaches HMRC.
 
