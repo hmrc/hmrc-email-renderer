@@ -257,6 +257,20 @@ class TemplatePrioritiesISpec
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
       (
+        "apiAddedMemberToOrganisationConfirmation",
+        Map(
+          "article"          -> "a",
+          "role"             -> "member",
+          "organisationName" -> "Organisation Name"
+        )
+      ),
+      (
+        "apiRemovedMemberFromOrganisationConfirmation",
+        Map(
+          "organisationName" -> "Organisation Name"
+        )
+      ),
+      (
         "transactionEngineHMRCSASA100Success",
         Map("identifier" -> "1234567890", "receivedDate" -> "01/01/01", "subject" -> "subject")
       ),

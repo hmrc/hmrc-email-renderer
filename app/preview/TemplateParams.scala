@@ -284,6 +284,14 @@ object TemplateParams {
         "newResponsibleIndividual"      -> "Joe Biden",
         "requesterName"                 -> "Bob Roberts"
       ),
+      "apiAddedMemberToOrganisationConfirmation" -> Map(
+        "article"          -> "a",
+        "role"             -> "member",
+        "organisationName" -> "Test Organisation"
+      ),
+      "apiRemovedMemberFromOrganisationConfirmation" -> Map(
+        "organisationName" -> "Test Organisation"
+      ),
       "ppnsCallbackUrlChangedNotification" -> Map(
         "applicationName" -> "Test Application",
         "dateOfChange"    -> "28 October 2020",

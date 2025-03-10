@@ -216,6 +216,16 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
         expectedSubject = "New sign in to your account",
         expectedPriority = MessagePriority.Urgent
       )
+
+      validateTemplate(
+        templateId = "apiAddedMemberToOrganisationConfirmation",
+        expectedSubject = "You have been added to an organisation"
+      )
+
+      validateTemplate(
+        templateId = "apiRemovedMemberFromOrganisationConfirmation",
+        expectedSubject = "You have been removed from an organisation"
+      )
     }
   }
 
