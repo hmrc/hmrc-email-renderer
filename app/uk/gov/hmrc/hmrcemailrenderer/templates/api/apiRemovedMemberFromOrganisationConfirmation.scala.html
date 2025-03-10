@@ -1,0 +1,23 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have been removed from an organisation") {
+<p style="margin: 0 0 30px; font-size: 19px;">You’ve been removed from <strong>@{params("organisationName")}</strong> on the HMRC Developer Hub.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can no longer access this organisation.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Manage the emails you receive from us in your Developer Hub account under 'email preferences'.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Developer Hub</p>
+}
