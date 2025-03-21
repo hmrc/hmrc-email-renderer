@@ -21,7 +21,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.CustomsFinancia
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 
 object CustomsFinancialsTemplates {
-  val templates = Seq(
+
+  val customsFinancialsChangeEmailAddress = "customs_financials_change_email_address"
+
+  val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       // TODO rename to customs_financials_new_duty_deferment_statement
       templateId = "customs_financials_new_statement_notification",
@@ -149,6 +152,15 @@ object CustomsFinancialsTemplates {
       subject = "Requested cash account transactions are now available",
       plainTemplate = txt.requestedCashAccountTransactions.f,
       htmlTemplate = html.requestedCashAccountTransactions.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = customsFinancialsChangeEmailAddress,
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Primary email address change",
+      plainTemplate = txt.ChangeOfPrimaryEmailAddress.f,
+      htmlTemplate = html.ChangeOfPrimaryEmailAddress.f,
       priority = Some(MessagePriority.Standard)
     )
   )
