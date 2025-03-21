@@ -22,6 +22,7 @@ import preview.examples.GG
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.{ cf_enquiry_confirmation, cf_enquiry_confirmation_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.{ rald_connection_removed, rald_connection_removed_cy }
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates._
+import uk.gov.hmrc.hmrcemailrenderer.templates.customsfinancials.CustomsFinancialsTemplates.customsFinancialsChangeEmailAddress
 
 import java.util.{ Base64, UUID }
 
@@ -3820,6 +3821,9 @@ object TemplateParams3 {
     ),
     "customs_financials_requested_cash_account_transactions" -> Map(
       "recipientName_FullName" -> "ABC ltd"
+    ),
+    customsFinancialsChangeEmailAddress -> Map(
+      "emailAddress" -> "tony@abcltd.com"
     ),
     "undertaking_admin_deadline_reminder" -> Map(
       "deadline" -> "23 November 2023"

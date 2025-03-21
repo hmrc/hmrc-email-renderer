@@ -17,6 +17,9 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.customsFinancials
 
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
+import preview.TemplateParams
+import preview.TemplateParams2
+import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.cf_enquiry_confirmation
 import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateComparisonSpec, customsfinancials }
 
 class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForSpec with GuiceOneAppPerSuite {
@@ -120,6 +123,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     }
 
     "include change primary email address content" in {
+
       val params = commonParameters ++ Map("emailAddress" -> "abc@test.com")
 
       val (htmlContent, _) = generateContent("customs_financials_change_email_address", params)
@@ -259,7 +263,9 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     }
 
     "have matching content in customs_financials_change_email_address" in {
-      compareContent("customs_financials_change_email_address", commonParameters)(customsFinancialsTemplate)
+      val params = commonParameters ++ Map("emailAddress" -> "abc@test.com")
+
+      compareContent("customs_financials_change_email_address", params)(customsFinancialsTemplate)
     }
   }
 
