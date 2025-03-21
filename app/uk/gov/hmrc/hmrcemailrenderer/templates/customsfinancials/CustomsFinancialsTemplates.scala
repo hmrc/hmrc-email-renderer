@@ -150,6 +150,15 @@ object CustomsFinancialsTemplates {
       plainTemplate = txt.requestedCashAccountTransactions.f,
       htmlTemplate = html.requestedCashAccountTransactions.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "customs_financials_change_email",
+      fromAddress = govUkTeamAddress,
+      service = CustomsFinancials,
+      subject = "Primary email address change",
+      plainTemplate = txt.ChangeOfPrimaryEmailAddress.f,
+      htmlTemplate = html.ChangeOfPrimaryEmailAddress.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

@@ -118,6 +118,19 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       htmlContent must not include "The total Duty and VAT owed will be collected by direct debit on or after 15 June 2018."
       htmlContent must not include "If you owe over £20 million you must make a CHAPS payment to HMRC."
     }
+
+    "include change primary email address content" in {
+      val params = commonParameters ++ Map("emailAddress" -> "abc@test.com")
+
+      val (htmlContent, _) = generateContent("customs_financials_change_email", params)
+
+      htmlContent must include("You’ve changed your email address")
+      htmlContent must include(
+        "Your primary email address for Customs Declaration Service notifications has been changed."
+      )
+      htmlContent must include("You will no longer receive notifications to abc@test.com.")
+      htmlContent must include("From the Customs Declaration Service")
+    }
   }
 
   "Email notifications " should {
@@ -243,6 +256,10 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       compareContent("customs_financials_requested_cash_account_transactions", params)(
         customsFinancialsTemplate
       )
+    }
+
+    "have matching content in customs_financials_change_email" in {
+      compareContent("customs_financials_change_email", commonParameters)(customsFinancialsTemplate)
     }
   }
 
