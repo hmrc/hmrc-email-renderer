@@ -152,7 +152,7 @@ object CustomsFinancialsTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "customs_financials_change_email",
+      templateId = "customs_financials_change_email_address",
       fromAddress = govUkTeamAddress,
       service = CustomsFinancials,
       subject = "Primary email address change",

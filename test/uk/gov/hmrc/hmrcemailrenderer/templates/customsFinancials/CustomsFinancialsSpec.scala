@@ -122,7 +122,7 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
     "include change primary email address content" in {
       val params = commonParameters ++ Map("emailAddress" -> "abc@test.com")
 
-      val (htmlContent, _) = generateContent("customs_financials_change_email", params)
+      val (htmlContent, _) = generateContent("customs_financials_change_email_address", params)
 
       htmlContent must include("You’ve changed your email address")
       htmlContent must include(
@@ -258,8 +258,8 @@ class CustomsFinancialsSpec extends TemplateComparisonSpec with CommonParamsForS
       )
     }
 
-    "have matching content in customs_financials_change_email" in {
-      compareContent("customs_financials_change_email", commonParameters)(customsFinancialsTemplate)
+    "have matching content in customs_financials_change_email_address" in {
+      compareContent("customs_financials_change_email_address", commonParameters)(customsFinancialsTemplate)
     }
   }
 
