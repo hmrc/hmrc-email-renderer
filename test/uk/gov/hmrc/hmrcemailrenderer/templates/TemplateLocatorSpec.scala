@@ -388,6 +388,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "customs_financials_requested_postponed_import_vat_statements_not_found",
         "customs_financials_requested_notification_adjustment_statements_not_found",
         "customs_financials_requested_cash_account_transactions",
+        "customs_financials_change_email",
         "customs_migrate_not_successful",
         "customs_migrate_successful",
         "customs_payment_required",
