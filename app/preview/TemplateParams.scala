@@ -1635,19 +1635,23 @@ object TemplateParams2 {
   val exampleParams = Map(
     "hipp_production_access_approved_email" -> Map(
       "applicationname"      -> "Test-Hipp-App",
-      "apispecificationname" -> "Test-Hipp-Api"
+      "apispecificationname" -> "Test-Hipp-Api",
+      "environmentname"      -> "Test-Hipp-Env"
     ),
     "hipp_production_access_rejected_email" -> Map(
       "applicationname"      -> "Test-Hipp-App",
-      "apispecificationname" -> "Test-Hipp-Api"
+      "apispecificationname" -> "Test-Hipp-Api",
+      "environmentname"      -> "Test-Hipp-Env"
     ),
     "hipp_new_production_access_request_email" -> Map(
       "applicationname"      -> "Test-Hipp-App",
-      "apispecificationname" -> "Test-Hipp-Api"
+      "apispecificationname" -> "Test-Hipp-Api",
+      "environmentname"      -> "Test-Hipp-Env"
     ),
     "hipp_production_access_request_submitted_email" -> Map(
       "applicationname"      -> "Test-Hipp-App",
-      "apispecificationname" -> "Test-Hipp-Api"
+      "apispecificationname" -> "Test-Hipp-Api",
+      "environmentname"      -> "Test-Hipp-Env"
     ),
     "hipp_add_team_member_to_app_email" -> Map(
       "applicationname" -> "Test-Hipp-App",

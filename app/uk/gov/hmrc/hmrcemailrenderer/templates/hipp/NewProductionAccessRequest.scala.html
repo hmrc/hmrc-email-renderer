@@ -15,8 +15,8 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A new production access request has been submitted for your review"){
- <p style="margin: 0 0 30px; font-size: 19px;">A request was submitted for the application @params("applicationname") to access the @params("apispecificationname") in the production environment.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A new access request has been submitted for your review"){
+ <p style="margin: 0 0 30px; font-size: 19px;">A request was submitted for the application @params("applicationname") to access the @params("apispecificationname") in the @params("environmentname") environment.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">To access the application, visit /integration-hub on the MDTP admin network.</p>
  <p style="margin: 0 0 30px; font-size: 19px;">From HMRC The Integration Hub</p>
 }
