@@ -81,7 +81,7 @@ object HippTemplates {
       templateId = "hipp_production_access_approved_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "Your production access request has been approved",
+      subject = "Your access request has been approved",
       plainTemplate = txt.ProductionAccessRequestApproved.f,
       htmlTemplate = html.ProductionAccessRequestApproved.f,
       priority = Some(MessagePriority.Urgent)
@@ -90,7 +90,7 @@ object HippTemplates {
       templateId = "hipp_production_access_rejected_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "Your production access request has been rejected",
+      subject = "Your access request has been rejected",
       plainTemplate = txt.ProductionAccessRequestRejected.f,
       htmlTemplate = html.ProductionAccessRequestRejected.f,
       priority = Some(MessagePriority.Urgent)
@@ -99,7 +99,7 @@ object HippTemplates {
       templateId = "hipp_new_production_access_request_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "A new production access request has been submitted for your review",
+      subject = "A new access request has been submitted for your review",
       plainTemplate = txt.NewProductionAccessRequest.f,
       htmlTemplate = html.NewProductionAccessRequest.f,
       priority = Some(MessagePriority.Urgent)
@@ -108,7 +108,7 @@ object HippTemplates {
       templateId = "hipp_production_access_request_submitted_email",
       fromAddress = FromAddress.noReply("Do not reply"),
       service = Hipp,
-      subject = "Your production access request was successfully submitted",
+      subject = "Your access request was successfully submitted",
       plainTemplate = txt.ProductionAccessRequestSubmitted.f,
       htmlTemplate = html.ProductionAccessRequestSubmitted.f,
       priority = Some(MessagePriority.Urgent)
