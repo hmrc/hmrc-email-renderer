@@ -81,8 +81,8 @@ object TemplateParams {
       "client_accepted_authorisation_request" -> Map(
         "agencyName"     -> "Agent 1",
         "clientName"     -> "Client 2",
-        "service"        -> "Your client Client 2 has authorised you to manage their Income Tax.",
-        "additionalInfo" -> "You now have 4 months to sign Client 2 up to Making Tax Digital for Income Tax."
+        "service"        -> "manage their Making Tax Digital for Income Tax.",
+        "additionalInfo" -> "You must now sign Client 2 up to Making Tax Digital for Income Tax."
       ),
       "client_expired_authorisation_request" -> Map(
         "agencyName" -> "Agent 1",
