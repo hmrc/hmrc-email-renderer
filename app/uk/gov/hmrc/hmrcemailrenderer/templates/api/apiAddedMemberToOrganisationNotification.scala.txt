@@ -1,0 +1,11 @@
+@(params: Map[String, Any])User added to your organisation in the HMRC Developer Hub
+
+This user has been added to the @{params("organisationName")} organisation.
+
+Email address: @{params("emailAddress")}
+
+Role: @{params("role")}
+
+HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

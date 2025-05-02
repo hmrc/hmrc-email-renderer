@@ -272,9 +272,25 @@ class TemplatePrioritiesISpec
         )
       ),
       (
+        "apiAddedMemberToOrganisationNotification",
+        Map(
+          "organisationName" -> "Organisation Name",
+          "emailAddress"     -> "test.person@hmrc.gov.uk",
+          "role"             -> "Admin"
+        )
+      ),
+      (
         "apiRemovedMemberFromOrganisationConfirmation",
         Map(
           "organisationName" -> "Organisation Name"
+        )
+      ),
+      (
+        "apiRemovedMemberFromOrganisationNotification",
+        Map(
+          "organisationName" -> "Organisation Name",
+          "emailAddress"     -> "test.person@hmrc.gov.uk",
+          "role"             -> "Admin"
         )
       ),
       (

@@ -294,8 +294,18 @@ object TemplateParams {
         "developerHubLink" -> exampleLinkWithRandomId,
         "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
       ),
+      "apiAddedMemberToOrganisationNotification" -> Map(
+        "organisationName" -> "Test Organisation",
+        "emailAddress"     -> "test.person@hmrc.gov.uk",
+        "role"             -> "Admin"
+      ),
       "apiRemovedMemberFromOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation"
+      ),
+      "apiRemovedMemberFromOrganisationNotification" -> Map(
+        "organisationName" -> "Test Organisation",
+        "emailAddress"     -> "test.person@hmrc.gov.uk",
+        "role"             -> "Admin"
       ),
       "ppnsCallbackUrlChangedNotification" -> Map(
         "applicationName" -> "Test Application",

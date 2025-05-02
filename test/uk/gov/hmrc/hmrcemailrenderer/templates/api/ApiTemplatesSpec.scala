@@ -228,8 +228,18 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       )
 
       validateTemplate(
+        templateId = "apiAddedMemberToOrganisationNotification",
+        expectedSubject = "User added to your organisation in the HMRC Developer Hub"
+      )
+
+      validateTemplate(
         templateId = "apiRemovedMemberFromOrganisationConfirmation",
         expectedSubject = "You've been removed from an organisation in the HMRC Developer Hub"
+      )
+
+      validateTemplate(
+        templateId = "apiRemovedMemberFromOrganisationNotification",
+        expectedSubject = "User removed from your organisation in the HMRC Developer Hub"
       )
     }
   }

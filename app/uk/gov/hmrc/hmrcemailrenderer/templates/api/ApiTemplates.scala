@@ -255,12 +255,30 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedMemberToOrganisationNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "User added to your organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiAddedMemberToOrganisationNotification.f,
+      htmlTemplate = html.apiAddedMemberToOrganisationNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiRemovedMemberFromOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
       subject = "You've been removed from an organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiRemovedMemberFromOrganisationConfirmation.f,
       htmlTemplate = html.apiRemovedMemberFromOrganisationConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiRemovedMemberFromOrganisationNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "User removed from your organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiRemovedMemberFromOrganisationNotification.f,
+      htmlTemplate = html.apiRemovedMemberFromOrganisationNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
