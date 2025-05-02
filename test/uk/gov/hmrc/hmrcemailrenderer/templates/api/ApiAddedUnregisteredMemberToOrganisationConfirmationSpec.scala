@@ -41,8 +41,12 @@ class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSp
       renderedHtml.body should include(
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has added you to their organisation.</p>"
       )
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">You must create an account to access the organisation in the Developer Hub:</p>")
-      renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"$developerHubLink\" style=\"color: #005EA5;\">$developerHubLink</a></p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You must create an account to access the organisation in the Developer Hub:</p>"
+      )
+      renderedHtml.body should include(
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"$developerHubLink\" style=\"color: #005EA5;\">$developerHubLink</a></p>"
+      )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
     }
   }
