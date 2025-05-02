@@ -3332,11 +3332,6 @@ object TemplateParams3 {
       "undertakingName" -> "Test Undertaking",
       "effectiveDate"   -> "27 January 2022"
     ),
-    "apiDeveloperHubNewLoginNotification" -> Map(
-      "userName"  -> "John Smith",
-      "loginDate" -> "Monday 07 November 2022",
-      "loginTime" -> "09:17am"
-    ),
     "apiNewTermsOfUseInvitation" -> Map(
       "completeBy"      -> "31 October 2023",
       "applicationName" -> "Test Application"

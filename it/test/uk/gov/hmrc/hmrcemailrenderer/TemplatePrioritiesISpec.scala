@@ -738,12 +738,7 @@ class TemplatePrioritiesISpec
       ("mtdfb_vat_principal_sign_up_failure", Map.empty),
       ("mtdfb_vat_agent_sign_up_successful", Map("vatNumber" -> "123456782")),
       ("discounted_dining_payment_sent", Map("claimRefNo" -> "1234")),
-      ("discounted_dining_payment_sent_cy", Map("claimRefNo" -> "1234")),
-      "apiDeveloperHubNewLoginNotification" -> Map(
-        "userName"  -> "John Smith",
-        "loginDate" -> "07 November 2022",
-        "loginTime" -> "09:17:01am"
-      )
+      ("discounted_dining_payment_sent_cy", Map("claimRefNo" -> "1234"))
     )
 
     val background = Table[String, Map[String, String]](

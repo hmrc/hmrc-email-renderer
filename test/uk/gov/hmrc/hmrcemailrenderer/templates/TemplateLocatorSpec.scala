@@ -210,7 +210,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "apiDeveloperChangedPasswordConfirmation",
         "apiDeveloperDeletedConfirmation",
         "apiDeveloperEmailVerification",
-        "apiDeveloperHubNewLoginNotification",
         "apiDeveloperPasswordReset",
         "apiNewTermsOfUseConfirmation",
         "apiNewTermsOfUseInvitation",

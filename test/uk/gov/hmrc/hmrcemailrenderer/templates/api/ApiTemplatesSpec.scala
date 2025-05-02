@@ -212,12 +212,6 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       )
 
       validateTemplate(
-        templateId = "apiDeveloperHubNewLoginNotification",
-        expectedSubject = "New sign in to your account",
-        expectedPriority = MessagePriority.Urgent
-      )
-
-      validateTemplate(
         templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
         expectedSubject = "You've been added to an organisation in the HMRC Developer Hub"
       )
