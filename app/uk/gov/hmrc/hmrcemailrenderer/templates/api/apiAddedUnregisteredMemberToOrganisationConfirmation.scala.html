@@ -1,0 +1,25 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have been added to an organisation in the HMRC Developer Hub") {
+<p style="margin: 0 0 30px; font-size: 19px;">@{params("organisationName")} has added you to their organisation.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You must create an account to access the organisation in the Developer Hub:</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><a href="@{params("developerHubLink")}" style="color: #005EA5;">@{params("developerHubLink")}</a></p>
+<h2>How to get help</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Contact an admin at @{params("organisationName")} if you have questions about your access.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">HMRC Developer Hub</p>
+}

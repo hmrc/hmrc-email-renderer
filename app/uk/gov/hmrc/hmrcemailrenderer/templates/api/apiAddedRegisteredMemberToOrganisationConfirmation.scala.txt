@@ -1,0 +1,13 @@
+@(params: Map[String, Any])You have been added to an organisation in the HMRC Developer Hub
+
+@{params("organisationName")} has added you to their organisation.
+
+Sign in to the HMRC Developer Hub for access.
+
+How to get help
+
+Contact an admin at @{params("organisationName")} if you have questions about your access.
+
+HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

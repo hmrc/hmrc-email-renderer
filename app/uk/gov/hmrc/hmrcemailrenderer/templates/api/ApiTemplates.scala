@@ -237,12 +237,21 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
-      templateId = "apiAddedMemberToOrganisationConfirmation",
+      templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "You have been added to an organisation",
-      plainTemplate = txt.apiAddedMemberToOrganisationConfirmation.f,
-      htmlTemplate = html.apiAddedMemberToOrganisationConfirmation.f,
+      subject = "You have been added to an organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiAddedRegisteredMemberToOrganisationConfirmation.f,
+      htmlTemplate = html.apiAddedRegisteredMemberToOrganisationConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedUnregisteredMemberToOrganisationConfirmation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "You have been added to an organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiAddedUnregisteredMemberToOrganisationConfirmation.f,
+      htmlTemplate = html.apiAddedUnregisteredMemberToOrganisationConfirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(

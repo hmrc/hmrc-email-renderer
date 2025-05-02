@@ -285,10 +285,12 @@ object TemplateParams {
         "newResponsibleIndividual"      -> "Joe Biden",
         "requesterName"                 -> "Bob Roberts"
       ),
-      "apiAddedMemberToOrganisationConfirmation" -> Map(
-        "article"          -> "a",
-        "role"             -> "member",
+      "apiAddedRegisteredMemberToOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation"
+      ),
+      "apiAddedUnregisteredMemberToOrganisationConfirmation" -> Map(
+        "organisationName" -> "Test Organisation",
+        "developerHubLink" -> exampleLinkWithRandomId
       ),
       "apiRemovedMemberFromOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation"

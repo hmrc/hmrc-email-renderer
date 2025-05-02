@@ -21,16 +21,12 @@ import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class apiAddedMemberToOrganisationConfirmationSpec extends AnyWordSpec with Matchers {
+class apiAddedRegisteredMemberToOrganisationConfirmationSpec extends AnyWordSpec with Matchers {
 
   val organisationName = "Organisation Name"
-  val role = "member"
-  val article = "a"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
-    "article"                   -> article,
-    "role"                      -> role,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
     "borderColour"              -> "#005EA5"
@@ -38,22 +34,23 @@ class apiAddedMemberToOrganisationConfirmationSpec extends AnyWordSpec with Matc
 
   "htmlView" should {
     "render as" in new TestCase {
-      val renderedHtml = api.html.apiAddedMemberToOrganisationConfirmation.render(templateParams)
+      val renderedHtml = api.html.apiAddedRegisteredMemberToOrganisationConfirmation.render(templateParams)
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You are now " + article + " " + role +
-          " of " + organisationName + ".</p>"
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has added you to their organisation.</p>"
       )
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">Sign in to the HMRC Developer Hub for access.</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
     }
   }
 
   "textView" should {
     "render as" in new TestCase {
-      val renderedTxt = api.txt.apiAddedMemberToOrganisationConfirmation.render(templateParams)
+      val renderedTxt = api.txt.apiAddedRegisteredMemberToOrganisationConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include("You are now " + article + " " + role + " of " + organisationName + ".")
-      renderedTxt.body should include("From HMRC Developer Hub")
+      renderedTxt.body should include(s"$organisationName has added you to their organisation.")
+      renderedTxt.body should include("Sign in to the HMRC Developer Hub for access.")
+      renderedTxt.body should include("HMRC Developer Hub")
     }
   }
 }
