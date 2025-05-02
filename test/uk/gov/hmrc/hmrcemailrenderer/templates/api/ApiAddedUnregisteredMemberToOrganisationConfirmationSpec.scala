@@ -25,10 +25,12 @@ class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSp
 
   val organisationName = "Organisation Name"
   val developerHubLink = "https://www.developer.service.hmrc.gov.uk/developer/registration"
+  val sdstEmailAddress = "SDSTeam@hmrc.gov.uk"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
     "developerHubLink"          -> developerHubLink,
+    "sdstEmailAddress"          -> sdstEmailAddress,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
     "borderColour"              -> "#005EA5"

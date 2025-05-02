@@ -219,17 +219,17 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
 
       validateTemplate(
         templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
-        expectedSubject = "You have been added to an organisation in the HMRC Developer Hub"
+        expectedSubject = "You've been added to an organisation in the HMRC Developer Hub"
       )
 
       validateTemplate(
         templateId = "apiAddedUnregisteredMemberToOrganisationConfirmation",
-        expectedSubject = "You have been added to an organisation in the HMRC Developer Hub"
+        expectedSubject = "You've been added to an organisation in the HMRC Developer Hub"
       )
 
       validateTemplate(
         templateId = "apiRemovedMemberFromOrganisationConfirmation",
-        expectedSubject = "You have been removed from an organisation"
+        expectedSubject = "You've been removed from an organisation in the HMRC Developer Hub"
       )
     }
   }

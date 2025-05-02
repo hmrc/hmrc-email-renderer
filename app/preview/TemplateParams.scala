@@ -286,11 +286,13 @@ object TemplateParams {
         "requesterName"                 -> "Bob Roberts"
       ),
       "apiAddedRegisteredMemberToOrganisationConfirmation" -> Map(
-        "organisationName" -> "Test Organisation"
+        "organisationName" -> "Test Organisation",
+        "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
       ),
       "apiAddedUnregisteredMemberToOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation",
-        "developerHubLink" -> exampleLinkWithRandomId
+        "developerHubLink" -> exampleLinkWithRandomId,
+        "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
       ),
       "apiRemovedMemberFromOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation"

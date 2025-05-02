@@ -38,13 +38,12 @@ class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike w
       val renderedHtml = api.html.apiRemovedMemberFromOrganisationConfirmation.render(templateParams)
       renderedHtml.contentType should include("text/html")
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You’ve been removed from <strong>" +
-          organisationName + "</strong> on the HMRC Developer Hub.</p>"
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has removed you from their organisation.</p>"
       )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You can no longer access this organisation.</p>"
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You no longer have access to their Production applications.</p>"
       )
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">From HMRC Developer Hub</p>")
+      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
     }
   }
 
@@ -52,12 +51,10 @@ class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike w
     "render as" in new TestCase {
       val renderedTxt = api.txt.apiRemovedMemberFromOrganisationConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include(
-        "You’ve been removed from " + organisationName +
-          " on the HMRC Developer Hub."
-      )
-      renderedTxt.body should include("You can no longer access this organisation.")
-      renderedTxt.body should include("From HMRC Developer Hub")
+      renderedTxt.body should include("You've been removed from an organisation in the HMRC Developer Hub")
+      renderedTxt.body should include(s"$organisationName has removed you from their organisation.")
+      renderedTxt.body should include("You no longer have access to their Production applications.")
+      renderedTxt.body should include("HMRC Developer Hub")
     }
   }
 }

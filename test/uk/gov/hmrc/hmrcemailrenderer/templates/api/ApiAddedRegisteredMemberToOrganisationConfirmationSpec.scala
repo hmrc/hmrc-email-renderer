@@ -24,9 +24,11 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.api
 class apiAddedRegisteredMemberToOrganisationConfirmationSpec extends AnyWordSpec with Matchers {
 
   val organisationName = "Organisation Name"
+  val sdstEmailAddress = "SDSTeam@hmrc.gov.uk"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
+    "sdstEmailAddress"          -> sdstEmailAddress,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
     "borderColour"              -> "#005EA5"

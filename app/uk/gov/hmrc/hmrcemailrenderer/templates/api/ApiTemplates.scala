@@ -240,7 +240,7 @@ object ApiTemplates {
       templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "You have been added to an organisation in the HMRC Developer Hub",
+      subject = "You've been added to an organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiAddedRegisteredMemberToOrganisationConfirmation.f,
       htmlTemplate = html.apiAddedRegisteredMemberToOrganisationConfirmation.f,
       priority = Some(MessagePriority.Urgent)
@@ -249,7 +249,7 @@ object ApiTemplates {
       templateId = "apiAddedUnregisteredMemberToOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "You have been added to an organisation in the HMRC Developer Hub",
+      subject = "You've been added to an organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiAddedUnregisteredMemberToOrganisationConfirmation.f,
       htmlTemplate = html.apiAddedUnregisteredMemberToOrganisationConfirmation.f,
       priority = Some(MessagePriority.Urgent)
@@ -258,7 +258,7 @@ object ApiTemplates {
       templateId = "apiRemovedMemberFromOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "You have been removed from an organisation",
+      subject = "You've been removed from an organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiRemovedMemberFromOrganisationConfirmation.f,
       htmlTemplate = html.apiRemovedMemberFromOrganisationConfirmation.f,
       priority = Some(MessagePriority.Urgent)
