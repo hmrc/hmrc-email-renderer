@@ -24,8 +24,8 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.api
 class apiAddedMemberToOrganisationNotificationSpec extends AnyWordSpec with Matchers {
 
   val organisationName = "Organisation Name"
-  val emailAddress     = "test.user@example.com"
-  val role             = "Admin"
+  val emailAddress = "test.user@example.com"
+  val role = "Admin"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
@@ -44,7 +44,9 @@ class apiAddedMemberToOrganisationNotificationSpec extends AnyWordSpec with Matc
       renderedHtml.body should include(
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">This user has been added to the $organisationName organisation.</p>"
       )
-      renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Email address: $emailAddress</p>")
+      renderedHtml.body should include(
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Email address: $emailAddress</p>"
+      )
       renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Role: $role</p>")
     }
   }

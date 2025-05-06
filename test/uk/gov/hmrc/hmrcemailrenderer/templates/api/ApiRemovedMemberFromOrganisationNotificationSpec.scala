@@ -25,8 +25,8 @@ import org.scalatest.wordspec.AnyWordSpecLike
 class ApiRemovedMemberFromOrganisationNotificationSpec extends AnyWordSpecLike with Matchers with OptionValues {
 
   val organisationName = "Organisation Name"
-  val emailAddress     = "test.user@example.com"
-  val role             = "Admin"
+  val emailAddress = "test.user@example.com"
+  val role = "Admin"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
@@ -45,9 +45,13 @@ class ApiRemovedMemberFromOrganisationNotificationSpec extends AnyWordSpecLike w
       renderedHtml.body should include(
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">This user has been removed from the $organisationName organisation.</p>"
       )
-      renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Email address: $emailAddress</p>")
+      renderedHtml.body should include(
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Email address: $emailAddress</p>"
+      )
       renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Role: $role</p>")
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">They no longer have access to your organisation's Production applications.</p>")
+      renderedHtml.body should include(
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">They no longer have access to your organisation's Production applications.</p>"
+      )
     }
   }
 
