@@ -37,6 +37,7 @@ class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike w
     "render as" in new TestCase {
       val renderedHtml = api.html.apiRemovedMemberFromOrganisationConfirmation.render(templateParams)
       renderedHtml.contentType should include("text/html")
+      renderedHtml.body should include("You&#x27;ve been removed from an organisation in the HMRC Developer Hub")
       renderedHtml.body should include(
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has removed you from their organisation.</p>"
       )

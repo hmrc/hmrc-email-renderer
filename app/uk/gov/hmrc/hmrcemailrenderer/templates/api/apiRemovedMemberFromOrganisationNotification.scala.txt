@@ -6,7 +6,7 @@ Email address: @{params("emailAddress")}
 
 Role: @{params("role")}
 
-They no longer have access to your organisation's Production applications
+They no longer have access to your organisation's Production applications.
 
 HMRC Developer Hub
 
