@@ -24,12 +24,10 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.api
 class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSpec with Matchers {
 
   val organisationName = "Organisation Name"
-  val developerHubLink = "https://www.developer.service.hmrc.gov.uk/developer/registration"
   val sdstEmailAddress = "SDSTeam@hmrc.gov.uk"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
-    "developerHubLink"          -> developerHubLink,
     "sdstEmailAddress"          -> sdstEmailAddress,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
@@ -44,10 +42,13 @@ class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSp
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has added you to their organisation.</p>"
       )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You must create an account to access the organisation in the Developer Hub:</p>"
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Follow these steps to register for a Developer Hub account and access the organisation.</p>"
       )
       renderedHtml.body should include(
-        s"<p style=\"margin: 0 0 30px; font-size: 19px;\"><a href=\"$developerHubLink\" style=\"color: #005EA5;\">$developerHubLink</a></p>"
+        s"<li style=\"margin: 0 0 30px; font-size: 19px;\">Open a browser and search for 'HMRC Developer Hub'.</li>"
+      )
+      renderedHtml.body should include(
+        s"<li style=\"margin: 0 0 30px; font-size: 19px;\">On the homepage select 'Get an account' to register.</li>"
       )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
     }
@@ -58,8 +59,11 @@ class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSp
       val renderedTxt = api.txt.apiAddedUnregisteredMemberToOrganisationConfirmation.render(templateParams)
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include(s"$organisationName has added you to their organisation.")
-      renderedTxt.body should include("You must create an account to access the organisation in the Developer Hub:")
-      renderedTxt.body should include(s"$developerHubLink")
+      renderedTxt.body should include(
+        "Follow these steps to register for a Developer Hub account and access the organisation."
+      )
+      renderedTxt.body should include("1. Open a browser and search for 'HMRC Developer Hub'.")
+      renderedTxt.body should include("2. On the homepage select 'Get an account' to register.")
       renderedTxt.body should include("HMRC Developer Hub")
     }
   }

@@ -291,7 +291,6 @@ object TemplateParams {
       ),
       "apiAddedUnregisteredMemberToOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation",
-        "developerHubLink" -> exampleLinkWithRandomId,
         "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
       ),
       "apiAddedMemberToOrganisationNotification" -> Map(

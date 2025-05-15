@@ -267,7 +267,6 @@ class TemplatePrioritiesISpec
         "apiAddedUnregisteredMemberToOrganisationConfirmation",
         Map(
           "organisationName" -> "Organisation Name",
-          "developerHubLink" -> "/developerHubLink",
           "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
         )
       ),
