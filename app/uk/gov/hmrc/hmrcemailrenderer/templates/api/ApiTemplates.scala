@@ -237,21 +237,48 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
-      templateId = "apiAddedMemberToOrganisationConfirmation",
+      templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "You have been added to an organisation",
-      plainTemplate = txt.apiAddedMemberToOrganisationConfirmation.f,
-      htmlTemplate = html.apiAddedMemberToOrganisationConfirmation.f,
+      subject = "You've been added to an organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiAddedRegisteredMemberToOrganisationConfirmation.f,
+      htmlTemplate = html.apiAddedRegisteredMemberToOrganisationConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedUnregisteredMemberToOrganisationConfirmation",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "You've been added to an organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiAddedUnregisteredMemberToOrganisationConfirmation.f,
+      htmlTemplate = html.apiAddedUnregisteredMemberToOrganisationConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiAddedMemberToOrganisationNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "User added to your organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiAddedMemberToOrganisationNotification.f,
+      htmlTemplate = html.apiAddedMemberToOrganisationNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiRemovedMemberFromOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "You have been removed from an organisation",
+      subject = "You've been removed from an organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiRemovedMemberFromOrganisationConfirmation.f,
       htmlTemplate = html.apiRemovedMemberFromOrganisationConfirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiRemovedMemberFromOrganisationNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "User removed from your organisation in the HMRC Developer Hub",
+      plainTemplate = txt.apiRemovedMemberFromOrganisationNotification.f,
+      htmlTemplate = html.apiRemovedMemberFromOrganisationNotification.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
@@ -360,15 +387,6 @@ object ApiTemplates {
       subject = "Important information about your application",
       plainTemplate = txt.apiChangeOfResponsibleIndividual.f,
       htmlTemplate = html.apiChangeOfResponsibleIndividual.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.createWithDynamicFromAddress(
-      templateId = "apiDeveloperHubNewLoginNotification",
-      fromAddress = extractFromAddress,
-      service = ApiDeveloperHub,
-      subject = "New sign in to your account",
-      plainTemplate = txt.apiDeveloperHubNewLoginNotification.f,
-      htmlTemplate = html.apiDeveloperHubNewLoginNotification.f,
       priority = Some(MessagePriority.Urgent)
     )
   )

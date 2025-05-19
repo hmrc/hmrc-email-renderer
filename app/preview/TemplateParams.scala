@@ -285,13 +285,26 @@ object TemplateParams {
         "newResponsibleIndividual"      -> "Joe Biden",
         "requesterName"                 -> "Bob Roberts"
       ),
-      "apiAddedMemberToOrganisationConfirmation" -> Map(
-        "article"          -> "a",
-        "role"             -> "member",
-        "organisationName" -> "Test Organisation"
+      "apiAddedRegisteredMemberToOrganisationConfirmation" -> Map(
+        "organisationName" -> "Test Organisation",
+        "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
+      ),
+      "apiAddedUnregisteredMemberToOrganisationConfirmation" -> Map(
+        "organisationName" -> "Test Organisation",
+        "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
+      ),
+      "apiAddedMemberToOrganisationNotification" -> Map(
+        "organisationName" -> "Test Organisation",
+        "emailAddress"     -> "test.person@hmrc.gov.uk",
+        "role"             -> "Admin"
       ),
       "apiRemovedMemberFromOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation"
+      ),
+      "apiRemovedMemberFromOrganisationNotification" -> Map(
+        "organisationName" -> "Test Organisation",
+        "emailAddress"     -> "test.person@hmrc.gov.uk",
+        "role"             -> "Admin"
       ),
       "ppnsCallbackUrlChangedNotification" -> Map(
         "applicationName" -> "Test Application",
@@ -3317,11 +3330,6 @@ object TemplateParams3 {
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking",
       "effectiveDate"   -> "27 January 2022"
-    ),
-    "apiDeveloperHubNewLoginNotification" -> Map(
-      "userName"  -> "John Smith",
-      "loginDate" -> "Monday 07 November 2022",
-      "loginTime" -> "09:17am"
     ),
     "apiNewTermsOfUseInvitation" -> Map(
       "completeBy"      -> "31 October 2023",

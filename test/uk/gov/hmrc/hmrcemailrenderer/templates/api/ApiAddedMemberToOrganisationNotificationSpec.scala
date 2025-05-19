@@ -17,17 +17,20 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api
 
 import junit.framework.TestCase
-import uk.gov.hmrc.hmrcemailrenderer.templates.api
-import org.scalatest.OptionValues
 import org.scalatest.matchers.should.Matchers
-import org.scalatest.wordspec.AnyWordSpecLike
+import org.scalatest.wordspec.AnyWordSpec
+import uk.gov.hmrc.hmrcemailrenderer.templates.api
 
-class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike with Matchers with OptionValues {
+class apiAddedMemberToOrganisationNotificationSpec extends AnyWordSpec with Matchers {
 
   val organisationName = "Organisation Name"
+  val emailAddress = "test.user@example.com"
+  val role = "Admin"
 
   val templateParams = Map(
     "organisationName"          -> organisationName,
+    "emailAddress"              -> emailAddress,
+    "role"                      -> role,
     "staticAssetUrlPrefix"      -> "http://uri",
     "staticHmrcFrontendVersion" -> "v1",
     "borderColour"              -> "#005EA5"
@@ -35,27 +38,27 @@ class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike w
 
   "htmlView" should {
     "render as" in new TestCase {
-      val renderedHtml = api.html.apiRemovedMemberFromOrganisationConfirmation.render(templateParams)
+      val renderedHtml = api.html.apiAddedMemberToOrganisationNotification.render(templateParams)
       renderedHtml.contentType should include("text/html")
-      renderedHtml.body should include("You&#x27;ve been removed from an organisation in the HMRC Developer Hub")
+      renderedHtml.body should include("User added to your organisation in the HMRC Developer Hub")
       renderedHtml.body should include(
-        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has removed you from their organisation.</p>"
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">This user has been added to the $organisationName organisation.</p>"
       )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You no longer have access to their Production applications.</p>"
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Email address: $emailAddress</p>"
       )
-      renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
+      renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Role: $role</p>")
     }
   }
 
   "textView" should {
     "render as" in new TestCase {
-      val renderedTxt = api.txt.apiRemovedMemberFromOrganisationConfirmation.render(templateParams)
+      val renderedTxt = api.txt.apiAddedMemberToOrganisationNotification.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include("You've been removed from an organisation in the HMRC Developer Hub")
-      renderedTxt.body should include(s"$organisationName has removed you from their organisation.")
-      renderedTxt.body should include("You no longer have access to their Production applications.")
-      renderedTxt.body should include("HMRC Developer Hub")
+      renderedTxt.body should include("User added to your organisation in the HMRC Developer Hub")
+      renderedTxt.body should include(s"This user has been added to the $organisationName organisation.")
+      renderedTxt.body should include(s"Email address: $emailAddress")
+      renderedTxt.body should include(s"Role: $role")
     }
   }
 }

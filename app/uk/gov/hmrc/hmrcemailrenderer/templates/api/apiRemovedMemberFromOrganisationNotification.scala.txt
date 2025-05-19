@@ -1,0 +1,13 @@
+@(params: Map[String, Any])User removed from your organisation in the HMRC Developer Hub
+
+This user has been removed from the @{params("organisationName")} organisation.
+
+Email address: @{params("emailAddress")}
+
+Role: @{params("role")}
+
+They no longer have access to your organisation's Production applications.
+
+HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

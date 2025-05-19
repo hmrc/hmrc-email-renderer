@@ -15,10 +15,10 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You've been removed from an organisation in the HMRC Developer Hub") {
-<p style="margin: 0 0 30px; font-size: 19px;">@{params("organisationName")} has removed you from their organisation.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You no longer have access to their Production applications.</p>
-<h2>How to get help</h2>
-<p style="margin: 0 0 30px; font-size: 19px;">Contact an admin at @{params("organisationName")} if you have questions about being removed from this organisation.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "User removed from your organisation in the HMRC Developer Hub") {
+<p style="margin: 0 0 30px; font-size: 19px;">This user has been removed from the @{params("organisationName")} organisation.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Email address: @{params("emailAddress")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Role: @{params("role")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">They no longer have access to your organisation's Production applications.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">HMRC Developer Hub</p>
 }

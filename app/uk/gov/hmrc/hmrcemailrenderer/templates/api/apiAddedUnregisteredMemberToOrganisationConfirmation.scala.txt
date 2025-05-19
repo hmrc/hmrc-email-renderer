@@ -1,0 +1,19 @@
+@(params: Map[String, Any])You've been added to an organisation in the HMRC Developer Hub
+
+@{params("organisationName")} has added you to their organisation.
+
+Follow these steps to register for a Developer Hub account and access the organisation.
+
+  1. Open a browser and search for 'HMRC Developer Hub'.
+
+  2. On the homepage select 'Get an account' to register.
+
+How to get help
+
+Contact an admin at @{params("organisationName")} if you have questions about your access.
+
+Or email @{params("sdstEmailAddress")} if you need help signing in to the Developer Hub.
+
+HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

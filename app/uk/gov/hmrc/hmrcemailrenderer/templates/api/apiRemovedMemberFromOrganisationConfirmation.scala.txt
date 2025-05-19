@@ -1,11 +1,13 @@
-@(params: Map[String, Any])You have been removed from an organisation
+@(params: Map[String, Any])You've been removed from an organisation in the HMRC Developer Hub
 
-You’ve been removed from @{params("organisationName")} on the HMRC Developer Hub.
+@{params("organisationName")} has removed you from their organisation.
 
-You can no longer access this organisation.
+You no longer have access to their Production applications.
 
-Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
+How to get help
 
-From HMRC Developer Hub
+Contact an admin at @{params("organisationName")} if you have questions about being removed from this organisation.
+
+HMRC Developer Hub
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
