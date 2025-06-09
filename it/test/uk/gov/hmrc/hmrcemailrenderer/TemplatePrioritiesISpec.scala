@@ -63,7 +63,7 @@ class TemplatePrioritiesISpec
         val response = wsUrl(s"/templates/$templateId").post(Json.obj("parameters" -> params))
         response should have(
           status(200),
-          jsonProperty(__ \ "priority", "background")
+          jsonProperty(__ \ "priority", "urgent")
         )
       }
     }
