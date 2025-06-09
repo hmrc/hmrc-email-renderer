@@ -217,7 +217,7 @@ object DigitalContactTemplates {
       subject = "File your Self Assessment return",
       plainTemplate = txt.newMessageAlertSA316_A.f,
       htmlTemplate = html.newMessageAlertSA316_A.f,
-      priority = Some(MessagePriority.Background)
+      priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "dc-1462-test-message",
