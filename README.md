@@ -1,48 +1,67 @@
-# hmrc-email-renderer for MMCA-3476
-***
+# HMRC Email Renderer
 
-[![Build Status](https://travis-ci.org/hmrc/hmrc-email-renderer.svg)](https://travis-ci.org/hmrc/hmrc-email-renderer) [ ![Download](https://api.bintray.com/packages/hmrc/releases/hmrc-email-renderer/images/download.svg) ](https://bintray.com/hmrc/releases/hmrc-email-renderer/_latestVersion)
+# Overview
+Renders parameterised email body content in either HTML or plain text given a template.
 
-## Run the tests and sbt fmt before raising a PR
-
-Ensure you have service-manager python environment setup:
-
-`source ../servicemanager/bin/activate`
-
-Format:
-
-`sbt fmt`
-
-Then run the tests and coverage report:
-
-`sbt clean coverage test coverageReport`
-
-If your build fails due to poor testing coverage, *DO NOT* lower the test coverage, instead inspect the generated report located here on your local repo: `/target/scala-2.12/scoverage-report/index.html`
-
-Manages the rendering of parameterised email using templates. 
-
-## Before requesting to merge your PR, please ensure that you have re-based with main
-| **Note: Before sending a pull request with template changes, please look at our [guidelines](/CONTRIBUTING.md).** |
-| --- |
+- [Digital Contact Runbook](https://confluence.tools.tax.service.gov.uk/display/DCT/Digital+Contact+Runbook)
+- [Digital Contact Confluence home page](https://confluence.tools.tax.service.gov.uk/pages/viewpage.action?spaceKey=DCT&title=Digital+Contact)
+- [Digital Contact Slack channel - #team-digital-contact](https://hmrcdigital.slack.com/archives/C0J85LC3W)
 
 
-## How to deal with pull requests for transactional email templates
-| **DC Team Note: Before accepting a PR and merging, please ensure you read through the following [acceptance criteria](https://confluence.tools.tax.service.gov.uk/display/DCT/Pull+request+acceptance+criteria).** |
-| --- |
+# Integration
+If you're not a member of the Digital Contact team and you need to add or edit a template, typically you will fork this repo.
+Please see detailed information in `CONTRIBUTING.md`.
 
-| **Follow these instructions: [How to deal with pull requests for transactional email templates](https://confluence.tools.tax.service.gov.uk/display/DCT/How+to+deal+with+pull+requests+for+transactional+email+templates)** |
-| --- |
+## Preview Mode
+Templates can be challenging as they can ordinarily only be viewed by actually generating an email and sending it. To work around this you can preview templates **during development** by running the micro-service from sbt:
 
-## API
+```bash
+# if you have already forked the repo pls run these git commands otherwise you will
+# get an error related to majorVersion below
+# java.lang.IllegalArgumentException: Invalid majorVersion: 2. You cannot request a major version of 2 if there are no tags in the repository
+git remote add upstream git@github.com:hmrc/hmrc-email-renderer.git  
+git fetch upstream 
+cd $WORKSPACE/hmrc-email-renderer
+sbt -Dhttp.port=8950 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
+```
 
-| Path                         | Supported Methods | Description  |
-| ---------------------------- | ----------------  | ------------ |
-| ```/templates/:templateId``` | POST              | Renders the email template for the given template Id [More...](#post-templatestemplateId) |
+You should be able to list all the templates available for preview from [http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview).
+
+Note that to render logos correctly the assets frontend also needs to be started using `ASSETS_FRONTEND` service manager profile.
+
+## Quick Preview
+Alternatively, you can do a preview of emails by starting the service using service-manager to preview the source, snapshot or release versions of the micro-service. Start both the `ASSETS_FRONTEND` and `HMRC_EMAIL_RENDERER` profiles.
+
+Templates can then be previewed from
+[http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview)
+
+## Handling Templates based on Language preference
+If we want to make a template to work based on preference.
+We have to add this to configuration in following place
+
+[https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf](https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf)
+
+key should be an english templateId and value should be a Welsh templateId
+
+The `preferences` service is queried to look up the language preference - *English* or *Welsh* and the appropriate template is selected.
+
+
+## Template Pull Requests
+Follow these instructions: [How to deal with pull requests for transactional email templates](https://confluence.tools.tax.service.gov.uk/display/DCT/How+to+deal+with+pull+requests+for+transactional+email+templates)
+
+
+# Developer Information
+
+## API Endpoints
+The Digital Contact `email` service calls `hmrc-email-renderer` with a template name in the URL path.
+
+| Path                     | Supported Methods  | Description                                                                               |
+|--------------------------|--------------------|-------------------------------------------------------------------------------------------|
+| `/templates/:templateId` | POST               | Renders the email template for the given template Id [More...](#post-templatestemplateId) |
 
 
 ### POST /templates/:templateId
-
-Renders the email template for the  given template Id and returns the rendered template details.
+Renders the email template for the given template Id and returns the rendered template details.
 
 Example request body - parameters with String type key and values.
 
@@ -81,53 +100,17 @@ See the [How to add a template](CONTRIBUTING.md#how-to-add-a-template) section t
 }
  ```
 
-### Preview Mode
 
-Templates can be fiddly to get right as they can ordinarily only be viewed by actually generating an email and sending it. To work around this you can preview templates **during development** by running the micro-service from sbt:
 
+## SBT Tasks
 ```bash
-# if you have already forked the repo pls run these git commands otherwise you will
-# get an error related to majorVersion below
-# java.lang.IllegalArgumentException: Invalid majorVersion: 2. You cannot request a major version of 2 if there are 
-no tags in the repository
-git remote add upstream git@github.com:hmrc/hmrc-email-renderer.git  
-git fetch upstream 
-cd $WORKSPACE/hmrc-email-renderer
-sbt -Dhttp.port=8950 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
+# Format the code
+sbt fmt
+
+# Run the tests and a coverage report
+sbt clean coverage test coverageReport
 ```
-
-You should be able to list all the templates available for preview from [http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview).
-
-Note that to render logos correctly the assets frontend also needs to be started using
-
-```bash
-sm --start ASSETS_FRONTEND -f
-```
-
-#### Quick Preview
-Alternatively, you can do a preview of emails by starting the service using `sm` to preview the source, snapshot or release versions of the micro-service.
-
-```bash
-sm --start ASSETS_FRONTEND -r
-sm --start HMRC_EMAIL_RENDERER [-f|-r]
-```
-
-Again, list the templates can then be previewed from
-
-[http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview)
-
-### Handling Templates based on Language preference
-If we want to make a template to work based on preference. 
-
-We have to add this to configuration in following place
-
-[https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf](https://github.com/hmrc/app-config-base/blob/master/hmrc-email-renderer.conf)
-
-key should be an english templateId and value should be a Welsh templateId
-
-We make a call to preferences service to see whether language is set to *English* or *Welsh*, if *Welsh* we return welsh template otherwise english.
 
 
 ### License
-
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html")
