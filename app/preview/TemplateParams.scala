@@ -3267,6 +3267,12 @@ object TemplateParams2 {
     "removed_as_lead_email_to_previous_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking"
+    ),
+    "ioss_netp_email_declaration_code" -> Map(
+      "intermediary_name"           -> "The Test Company",
+      "recipientName_line1"         -> "Mr Joe Bloggs",
+      "activation_code"             -> "ABCDEF",
+      "activation_code_expiry_date" -> "25 July 2025"
     )
   )
 }
@@ -3968,6 +3974,12 @@ object TemplateParams3 {
     ),
     "tgp_download_record_notification_email_cy" -> Map(
       "expiredDate" -> "18 Awst 2024"
+    ),
+    "ioss_netp_email_declaration_code" -> Map(
+      "intermediary_name"           -> "The Test Company",
+      "recipientName_line1"         -> "Mr Joe Bloggs",
+      "activation_code"             -> "ABCDEF",
+      "activation_code_expiry_date" -> "25 July 2025"
     )
   )
 }

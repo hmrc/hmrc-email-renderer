@@ -93,6 +93,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hipp.HippTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ioss.IossTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.iossNetp.IossNetpTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
@@ -178,6 +179,7 @@ trait TemplateLocator {
       "Penalty Reform"        -> PenReformTemplates.templates,
       "TGP"                   -> TgpTemplates.templates,
       "DPRS"                  -> DprsTemplates.templates,
+      "IOSS NETP"             -> IossNetpTemplates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates
     )
 

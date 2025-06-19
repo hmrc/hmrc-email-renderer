@@ -1,0 +1,47 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Request from " + {params("intermediary_name")} + " to add you to the Import One Stop Shop VAT service") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        @params("intermediary_name") has added your business as a client to their Import One Stop Shop VAT scheme.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        Activation code: <strong>@{params("activation_code")}</strong>
+    </p>
+    <h2 style="margin: 0px 0 30px; font-size: 19px;">
+        What happens next
+    </h2>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        @params("intermediary_name") will send you a link to follow to confirm this request.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        Use the activation code to confirm your details and registration to the scheme.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        The link and code will expire on @params("activation_code_expiry_date").
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        If you do not agree to the declaration by then, your intermediary will need to register you again.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        If you believe this is an error, contact HMRC.
+    </p>
+    <p style="margin: 0px 0 30px; font-size: 19px;">
+        From the VAT Import One Stop Shop team
+    </p>
+}
