@@ -1640,6 +1640,12 @@ object TemplateParams {
         "receivedDate" -> "20 April 2017",
         "identifier"   -> "12345",
         "subject"      -> "subject"
+      ),
+      "ioss_netp_email_declaration_code" -> Map(
+        "intermediary_name"           -> "The Test Company",
+        "recipientName_line1"         -> "Joe Bloggs",
+        "activation_code"             -> "ABCDEF",
+        "activation_code_expiry_date" -> "25 July 2025"
       )
     )
 }
@@ -3974,12 +3980,6 @@ object TemplateParams3 {
     ),
     "tgp_download_record_notification_email_cy" -> Map(
       "expiredDate" -> "18 Awst 2024"
-    ),
-    "ioss_netp_email_declaration_code" -> Map(
-      "intermediary_name"           -> "The Test Company",
-      "recipientName_line1"         -> "Mr Joe Bloggs",
-      "activation_code"             -> "ABCDEF",
-      "activation_code_expiry_date" -> "25 July 2025"
     )
   )
 }

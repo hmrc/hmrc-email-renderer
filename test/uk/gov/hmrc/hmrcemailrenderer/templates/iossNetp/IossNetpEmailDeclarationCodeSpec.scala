@@ -56,40 +56,38 @@ class IossNetpEmailDeclarationCodeSpec
     "render correct HTML content" in {
       val htmlContent: String = template.htmlTemplate(params).toString
 
-      htmlContent should include("Request from Test Company Name to add you to the Import One Stop Shop VAT service")
-      htmlContent should include("Joe Bloggs")
+      htmlContent should include(intermediaryName + " wants to register you to the VAT Import One Stop Shop scheme")
+      htmlContent should include("Dear " + contactName)
       htmlContent should include(
-        "Test Company Name has added your business as a client to their Import One Stop Shop VAT scheme."
+        intermediaryName + " has registered your business to their VAT Import One Stop Shop scheme."
       )
-      htmlContent should include("Activation code: <strong>" + activationCode + "</strong>")
+      htmlContent should include(
+        "They will send you a link to follow, where you must use this code to confirm your registration: <strong>" + activationCode + "</strong>"
+      )
       htmlContent should include("What happens next")
-      htmlContent should include("Test Company Name will send you a link to follow to confirm this request.")
-      htmlContent should include("Use the activation code to confirm your details and registration to the scheme.")
-      htmlContent should include("The link and code will expire on " + activationCodeExpiryDate + ".")
       htmlContent should include(
-        "If you do not agree to the declaration by then, your intermediary will need to register you again."
+        "The link and code will expire on " + activationCodeExpiryDate + ". If you do not confirm by then, " + intermediaryName + " will need to register you again."
       )
-      htmlContent should include("If you believe this is an error, contact HMRC.")
+      htmlContent should include("If you think this is an error, contact HMRC.")
       htmlContent should include("From the VAT Import One Stop Shop team")
     }
 
     "render correct text content" in {
       val textContent: String = template.plainTemplate(params).toString
 
-      textContent should include("Request from Test Company Name to add you to the Import One Stop Shop VAT service")
-      textContent should include("Joe Bloggs")
+      textContent should include(intermediaryName + " wants to register you to the VAT Import One Stop Shop scheme")
+      textContent should include("Dear " + contactName)
       textContent should include(
-        "Test Company Name has added your business as a client to their Import One Stop Shop VAT scheme."
+        intermediaryName + " has registered your business to their VAT Import One Stop Shop scheme."
       )
-      textContent should include("Activation code: " + activationCode)
+      textContent should include(
+        "They will send you a link to follow, where you must use this code to confirm your registration: " + activationCode
+      )
       textContent should include("What happens next")
-      textContent should include("Test Company Name will send you a link to follow to confirm this request.")
-      textContent should include("Use the activation code to confirm your details and registration to the scheme.")
-      textContent should include("The link and code will expire on " + activationCodeExpiryDate + ".")
       textContent should include(
-        "If you do not agree to the declaration by then, your intermediary will need to register you again."
+        "The link and code will expire on " + activationCodeExpiryDate + ". If you do not confirm by then, " + intermediaryName + " will need to register you again."
       )
-      textContent should include("If you believe this is an error, contact HMRC.")
+      textContent should include("If you think this is an error, contact HMRC.")
       textContent should include("From the VAT Import One Stop Shop team")
     }
   }
