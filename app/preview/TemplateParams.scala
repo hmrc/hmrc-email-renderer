@@ -1640,6 +1640,12 @@ object TemplateParams {
         "receivedDate" -> "20 April 2017",
         "identifier"   -> "12345",
         "subject"      -> "subject"
+      ),
+      "ioss_netp_email_declaration_code" -> Map(
+        "intermediary_name"           -> "The Test Company",
+        "recipientName_line1"         -> "Joe Bloggs",
+        "activation_code"             -> "ABCDEF",
+        "activation_code_expiry_date" -> "25 July 2025"
       )
     )
 }
@@ -3267,6 +3273,12 @@ object TemplateParams2 {
     "removed_as_lead_email_to_previous_lead" -> Map(
       "eori"            -> "GB123456789010",
       "undertakingName" -> "Test Undertaking"
+    ),
+    "ioss_netp_email_declaration_code" -> Map(
+      "intermediary_name"           -> "The Test Company",
+      "recipientName_line1"         -> "Mr Joe Bloggs",
+      "activation_code"             -> "ABCDEF",
+      "activation_code_expiry_date" -> "25 July 2025"
     )
   )
 }

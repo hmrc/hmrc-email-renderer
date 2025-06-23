@@ -144,7 +144,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "IOSS",
         "DPRS",
         "TGP",
-        "CIR"
+        "CIR",
+        "IOSS NETP"
       )
     }
 
@@ -591,6 +592,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ioss_confirmation_cy",
         "ioss_dereg_code",
         "ioss_dereg_confirmation",
+        "ioss_netp_email_declaration_code",
         "ipr1_code",
         "ipr1_confirmation_submission",
         "ipr2_code",

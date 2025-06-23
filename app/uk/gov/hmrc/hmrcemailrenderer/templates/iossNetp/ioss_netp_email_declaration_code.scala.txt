@@ -1,0 +1,18 @@
+@(params: Map[String, Any])@params("intermediary_name") wants to register you to the VAT Import One Stop Shop scheme
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutationLine1(params)
+
+@params("intermediary_name") has registered your business to their VAT Import One Stop Shop scheme.
+
+They will send you a link to follow, where you must use this code to confirm your registration: @params("activation_code")
+
+What happens next
+
+The link and code will expire on @params("activation_code_expiry_date"). If you do not confirm by then, @params("intermediary_name") will need to register you again.
+
+If you think this is an error, contact HMRC.
+
+From the VAT Import One Stop Shop team
+
+
+
