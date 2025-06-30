@@ -19,8 +19,9 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.tre
 import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TradeReportingExtracts
+import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 
-class TreReportAvailableSpec extends PlaySpec {
+class TreReportAvailableSpec extends PlaySpec with CommonParamsForSpec {
 
   val treReportAvailable: MessageTemplate = MessageTemplate.create(
     templateId = "tre_report_available",
@@ -40,11 +41,11 @@ class TreReportAvailableSpec extends PlaySpec {
   "tre_report_available" must {
 
     "include correct subject" in {
-      treReportAvailable.subject(params) mustBe "Your CDS report is ready to download"
+      treReportAvailable.subject(commonParameters) mustBe "Your CDS report is ready to download"
     }
 
     "include htmlTemplate body and footer" in {
-      val htmlContent = treReportAvailable.htmlTemplate(params).toString
+      val htmlContent = treReportAvailable.htmlTemplate(commonParameters ++ params).toString
       htmlContent must include("Dear Jane Smith")
       htmlContent must include("Your CDS report ABC123456 that you requested is now ready to download.")
       htmlContent must include("How to get your report")
@@ -57,7 +58,7 @@ class TreReportAvailableSpec extends PlaySpec {
     }
 
     "use default customer name when customerName param is missing" in {
-      val paramsWithoutName = Map("reportRequestId" -> "ABC123456")
+      val paramsWithoutName = commonParameters ++ Map("reportRequestId" -> "ABC123456")
       val htmlContent = treReportAvailable.htmlTemplate(paramsWithoutName).toString
       htmlContent must include("Dear Customer")
       htmlContent must include("Your CDS report ABC123456 that you requested is now ready to download.")

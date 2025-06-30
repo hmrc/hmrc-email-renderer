@@ -145,7 +145,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "DPRS",
         "TGP",
         "CIR",
-        "IOSS NETP"
+        "IOSS NETP",
+        "TRE"
       )
     }
 
