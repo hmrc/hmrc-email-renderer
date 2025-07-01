@@ -145,7 +145,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "DPRS",
         "TGP",
         "CIR",
-        "IOSS NETP"
+        "IOSS NETP",
+        "TRE"
       )
     }
 
@@ -1017,6 +1018,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "transactionEngineIRPAYEUPDATESuccess",
         "transactionEngineIRSDLTLTRFailure",
         "transactionEngineIRSDLTLTRSuccess",
+        "tre_report_available",
         "trusts_report_code",
         "trusts_report_confirmation",
         "trusts_request_code",
