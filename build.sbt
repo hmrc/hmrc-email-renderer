@@ -13,14 +13,13 @@ lazy val playSettings: Seq[Setting[_]] = Seq.empty
 lazy val microservice = Project(appName, file("."))
   .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)
   .disablePlugins(JUnitXmlReportPlugin) //Required to prevent https://github.com/scalatest/scalatest/issues/1427
-  .settings(playSettings: _*)
-  .settings(scalaSettings: _*)
-  .settings(defaultSettings(): _*)
+  .settings(playSettings *)
+  .settings(scalaSettings *)
+  .settings(defaultSettings() *)
   .settings(
     libraryDependencies ++= appDependencies,
     retrieveManaged := true
   )
-  .settings(resolvers += Resolver.jcenterRepo)
   .settings(routesGenerator := InjectedRoutesGenerator)
   .settings(ScoverageSettings())
 
