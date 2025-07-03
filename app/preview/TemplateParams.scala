@@ -3984,6 +3984,9 @@ object TemplateParams3 {
     "tre_report_available" -> Map(
       "customerName"    -> "John Doe",
       "reportRequestId" -> "XXXXX678"
+    ),
+    "tre_report_available_non_verified" -> Map(
+      "reportRequestId" -> "XXXXX678"
     )
   )
 }
