@@ -15,15 +15,16 @@
  */
 
 import sbt.Keys.parallelExecution
-import sbt._
+import sbt.*
 import scoverage.ScoverageKeys
 
 object ScoverageSettings {
-  def apply(): Seq[Def.Setting[_ >: String with Double with Boolean]] =
-    Seq( // Semicolon-separated list of regexes matching classes to exclude
-      ScoverageKeys.coverageExcludedPackages := "<empty>;.*Reverse.*;.*(config|testonly).*;.*(BuildInfo|Routes).*",
-      ScoverageKeys.coverageMinimumStmtTotal := 93.00,
-      ScoverageKeys.coverageFailOnMinimum := false,
+  def apply(): Seq[Def.Setting[? >: String & Double & Boolean]] =
+    Seq(
+      //preview.TemplateParams package is excluded until method too large error is fixed
+      ScoverageKeys.coverageExcludedPackages := "<empty>;.*Reverse.*;.*(config|testonly).*;.*(BuildInfo|Routes).*;preview.TemplateParams.*;preview.views.*;.*\\$anon.*",
+      ScoverageKeys.coverageMinimumStmtTotal := 87.60,
+      ScoverageKeys.coverageFailOnMinimum := true,
       ScoverageKeys.coverageHighlighting := true,
       ConfigKey.configurationToKey(Test) / parallelExecution := false
     )
