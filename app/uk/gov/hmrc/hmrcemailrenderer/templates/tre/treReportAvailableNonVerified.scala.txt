@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Dear customer
+
+CDS report @{params("reportRequestId")} is now ready to download.
+
+How to get this report
+
+1. Go to GOV.UK.
+
+2. Search for 'Trade Reporting Extracts'.
+
+3. Log in to your account.
+
+4. Select 'Available to download' in the reports section of your dashboard.
+
+The report is available for 30 days to anyone with access to the account that requested it. If that's not you, please speak to the person who made the request.
+
+From the HMRC Trade Reporting Extracts team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

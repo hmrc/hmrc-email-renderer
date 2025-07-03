@@ -1019,6 +1019,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "transactionEngineIRSDLTLTRFailure",
         "transactionEngineIRSDLTLTRSuccess",
         "tre_report_available",
+        "tre_report_available_non_verified",
         "trusts_report_code",
         "trusts_report_confirmation",
         "trusts_request_code",
