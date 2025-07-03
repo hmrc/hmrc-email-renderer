@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.api.tre
 
 import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TradeReportingExtracts
 
@@ -53,7 +53,9 @@ class TreReportAvailableNonVerifiedSpec extends PlaySpec with CommonParamsForSpe
       htmlContent must include("Search for 'Trade Reporting Extracts'.")
       htmlContent must include("Log in to your account.")
       htmlContent must include("Select 'Available to download' in the reports section of your dashboard.")
-      htmlContent must include("The report is available for 30 days to anyone with access to the account that requested it.")
+      htmlContent must include(
+        "The report is available for 30 days to anyone with access to the account that requested it."
+      )
       htmlContent must include("From the HMRC Trade Reporting Extracts team")
     }
   }
