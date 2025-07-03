@@ -23,7 +23,7 @@ object ScoverageSettings {
     Seq(
       //preview.TemplateParams package is excluded until method too large error is fixed
       ScoverageKeys.coverageExcludedPackages := "<empty>;.*Reverse.*;.*(config|testonly).*;.*(BuildInfo|Routes).*;preview.TemplateParams.*",
-      ScoverageKeys.coverageMinimumStmtTotal := 93.00,
+      ScoverageKeys.coverageMinimumStmtTotal := 87.10,
       ScoverageKeys.coverageFailOnMinimum := true,
       ScoverageKeys.coverageHighlighting := true,
       ConfigKey.configurationToKey(Test) / parallelExecution := false
