@@ -84,7 +84,7 @@ class TemplateContentComparisonSpec
       val params = Map(
         "verificationLink"         -> "/some/link",
         "daysAgo"                  -> "3",
-        "verificationLinkSentDate" -> DateTimeFormatter.ofPattern("YYYY-MM-dd").format(LocalDate.now())
+        "verificationLinkSentDate" -> DateTimeFormatter.ofPattern("yyyy-MM-dd").format(LocalDate.now())
       ) ++ commonParamsWithName
 
       compareContent("verificationReminder", params)(digitalContactTemplate)

@@ -20,8 +20,9 @@ import scoverage.ScoverageKeys
 
 object ScoverageSettings {
   def apply(): Seq[Def.Setting[? >: String & Double & Boolean]] =
-    Seq( // Semicolon-separated list of regexes matching classes to exclude
-      ScoverageKeys.coverageExcludedPackages := "<empty>;.*Reverse.*;.*(config|testonly).*;.*(BuildInfo|Routes).*",
+    Seq(
+      //preview.TemplateParams package is excluded until method too large error is fixed
+      ScoverageKeys.coverageExcludedPackages := "<empty>;.*Reverse.*;.*(config|testonly).*;.*(BuildInfo|Routes).*;preview.TemplateParams.*",
       ScoverageKeys.coverageMinimumStmtTotal := 93.00,
       ScoverageKeys.coverageFailOnMinimum := true,
       ScoverageKeys.coverageHighlighting := true,
