@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hmrcemailrenderer.templates.api.tre
+package uk.gov.hmrc.hmrcemailrenderer.templates.tre
 
 import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
