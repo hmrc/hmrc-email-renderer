@@ -30,6 +30,15 @@ object treTemplates {
       plainTemplate = txt.treReportAvailable.f,
       htmlTemplate = html.treReportAvailable.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tre_report_available_non_verified",
+      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      service = TradeReportingExtracts,
+      subject = "A CDS report is ready to download",
+      plainTemplate = txt.treReportAvailableNonVerified.f,
+      htmlTemplate = html.treReportAvailableNonVerified.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
