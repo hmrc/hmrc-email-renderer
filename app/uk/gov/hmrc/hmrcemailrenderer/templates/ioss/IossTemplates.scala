@@ -273,6 +273,15 @@ object IossTemplates {
       plainTemplate = txt.new_message_alert_m08a_ioss_cy.f,
       htmlTemplate = html.new_message_alert_m08a_ioss_cy.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "new_message_alert_gioss",
+      fromAddress = govUkTeamAddress,
+      service = Ioss,
+      subject = "You have a new message from HMRC",
+      plainTemplate = txt.new_message_alert_gioss.f,
+      htmlTemplate = html.new_message_alert_gioss.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
