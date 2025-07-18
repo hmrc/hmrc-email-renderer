@@ -3987,6 +3987,17 @@ object TemplateParams3 {
     ),
     "tre_report_available_non_verified" -> Map(
       "reportRequestId" -> "XXXXX678"
+    ),
+    "ngr_registration_successful" -> Map(
+      "firstName" -> "Jim",
+      "lastName"  -> "Ferguson",
+      "reference" -> "123ABC"
+    ),
+    "ngr_add_property_request_sent" -> Map(
+      "firstName"         -> "Jim",
+      "lastName"          -> "Ferguson",
+      "reference"         -> "123ABC",
+      "postcodeFirstPart" -> "BS15"
     )
   )
 }

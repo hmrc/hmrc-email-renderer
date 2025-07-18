@@ -146,7 +146,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "TGP",
         "CIR",
         "IOSS NETP",
-        "TRE"
+        "TRE",
+        "NGR"
       )
     }
 
@@ -1084,7 +1085,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "new_message_alert_m08a_ioss",
         "new_message_alert_m08a_ioss_cy",
         "tgp_download_record_notification_email",
-        "tgp_download_record_notification_email_cy"
+        "tgp_download_record_notification_email_cy",
+        "ngr_registration_successful",
+        "ngr_add_property_request_sent"
       )
     }
   }

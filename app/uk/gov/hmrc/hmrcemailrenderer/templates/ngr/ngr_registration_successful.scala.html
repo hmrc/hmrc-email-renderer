@@ -1,0 +1,36 @@
+@*
+ * Copyright 2025 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Manage your business rates valuation – registration successful"){
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("firstName")} @{params("lastName")}</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You have registered for the manage your business rates valuation service.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your reference is @{params("reference")}. You will need this if you have a problem signing in to the service.</p>
+
+    <h2>What happens next</h2>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Use your username ID details next time you sign in to this service.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From 1 April 2026, you must tell us within 60 days if you become the ratepayer of a property. You can do this by adding your property to your account.</p>
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you were the ratepayer before 1 April 2026 and have made changes to your property, rent or lease, you need to add your property to your account to report these changes.</p>
+
+    <h2>How to sign in to the service</h2>
+    <ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+        <li>Go to GOV.UK and search 'HMRC online services'</li>
+        <li>Sign in using your details for the manage your business rates valuation service</li>
+    </ol>
+
+    <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC on behalf of the Valuation Officer</p>
+}

@@ -94,6 +94,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.hipp.HippTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.feedback.FeedbackTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ioss.IossTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.iossNetp.IossNetpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.ngr.NgrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
@@ -182,7 +183,8 @@ trait TemplateLocator {
       "DPRS"                  -> DprsTemplates.templates,
       "IOSS NETP"             -> IossNetpTemplates.templates,
       "TRE"                   -> treTemplates.templates,
-      FeedbackTemplates.id    -> FeedbackTemplates.templates
+      FeedbackTemplates.id    -> FeedbackTemplates.templates,
+      "NGR"                   -> NgrTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

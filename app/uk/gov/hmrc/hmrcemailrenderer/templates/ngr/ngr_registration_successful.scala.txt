@@ -1,0 +1,25 @@
+@(params: Map[String, Any])
+Manage your business rates valuation – registration successful
+
+Dear @{params("firstName")} @{params("lastName")}
+
+You have registered for the manage your business rates valuation service.
+
+Your reference is @{params("reference")}. You will need this if you have a problem signing in to the service.
+
+What happens next
+
+Use your username ID details next time you sign in to this service.
+
+From 1 April 2026, you must tell us within 60 days if you become the ratepayer of a property. You can do this by adding your property to your account.
+
+If you were the ratepayer before 1 April 2026 and have made changes to your property, rent or lease, you need to add your property to your account to report these changes.
+
+How to sign in to the service
+
+1. Go to GOV.UK and search 'HMRC online services'
+2. Sign in using your details for the manage your business rates valuation service
+
+From HMRC on behalf of the Valuation Officer
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
