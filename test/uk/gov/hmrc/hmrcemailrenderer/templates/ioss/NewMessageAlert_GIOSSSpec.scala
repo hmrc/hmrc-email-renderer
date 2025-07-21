@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.ioss
 
 import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Ioss
 
