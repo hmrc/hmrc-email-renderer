@@ -1,0 +1,24 @@
+@(params: Map[String, Any])
+Add a property request sent
+
+Dear @{params("firstName")} @{params("lastName")}
+
+You have sent us a request to add a property on the manage your business rates valuation service.
+
+First part of property postcode: @{params("postcodeFirstPart")}
+Your reference: @{params("reference")}
+
+To see the property you have asked us to add, sign in to the service.
+
+What happens next
+
+We can usually give you a decision on your request to add a property within 15 working days. We will email you with our decision.
+
+How to sign in to the service
+
+1. Go to GOV.UK and search 'HMRC online services'
+2. Sign in using your details for the manage your business rates valuation service
+
+From HMRC on behalf of the Valuation Officer
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
