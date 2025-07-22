@@ -1,0 +1,11 @@
+@(params: Map[String, Any])You have a new message from HMRC
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+We have sent you a message about your VAT Import One Stop Shop registration.
+
+To view it, sign in to your Import One Stop Shop account.
+
+For security reasons, we have not included a link with this email.
+
+From the VAT Import One Stop Shop team
+
