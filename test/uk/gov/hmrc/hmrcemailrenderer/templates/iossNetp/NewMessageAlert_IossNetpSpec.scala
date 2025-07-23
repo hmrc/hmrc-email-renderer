@@ -48,7 +48,7 @@ class NewMessageAlert_IossNetpSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mrs John")
       htmlContent must include("We have sent you a message about your VAT Import One Stop Shop registration.")
       htmlContent must include("To view it, sign in to your Import One Stop Shop account.")
-      htmlContent must include("For security reasons, we have not included a link with this email.")
+      htmlContent must include("For security reasons, we have not included a link in this email.")
       htmlContent must include("From the VAT Import One Stop Shop team")
     }
   }
