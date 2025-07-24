@@ -22,7 +22,23 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+<style>
+    .govuk-logo {
+      font-family: "GDS Transport", Arial, sans-serif;
+      font-weight: bold;
+      font-size: 2rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
 
+    .govuk-dot {
+      width: 14px;
+      height: 14px;
+    }
+
+</style>
     <title>@title</title>
   </head>
   <body style="background-color: #DEE0E2; margin: 0; padding: 0;">
@@ -30,9 +46,9 @@
       <table id="body" cellspacing="0" cellpadding="0" style="margin: 30px auto; max-width: 600px;">
         <tr id="header">
   <td style="font-family: Helvetica, Arial, sans-serif;">
-    <table width="100%" cellspacing="0" cellpadding="0" style="background: #000000;">
+    <table width="100%" cellspacing="0" cellpadding="0" style="background: #005EA5;">
       <tr>
-          <td width="30" style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px #@{params("borderColour")};">
+          <td width="30" style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; #@{params("borderColour")};">
           @if(isWelsh) {
           <a href="https://www.gov.uk/" title="Ewch i hafan GOV.UK" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">
               <img src="@{params("staticAssetUrlPrefix")}@{params("staticHmrcFrontendVersion")}/govuk/images/govuk-logotype-tudor-crown.png" width="30" alt="" style="margin: 6px 6px 0 20px;">
@@ -44,11 +60,20 @@
           </a>
           }
           </td>
-          <td style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px #@{params("borderColour")};">
+          <td style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; #@{params("borderColour")};">
           @if(isWelsh) {
           <a href="https://www.gov.uk/" title="Ewch i hafan GOV.UK" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">GOV.UK</a>
           } else {
-          <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">GOV.UK</a>
+          <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">
+
+              <h1 class="govuk-logo">
+                  GOV
+                  <svg class="govuk-dot" ...>
+                      <circle cx="5" cy="5" r="5" fill="#00fff7" />
+                  </svg>
+                  UK
+              </h1>
+          </a>
           }
           </td>
       </tr>
