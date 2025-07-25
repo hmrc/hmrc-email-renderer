@@ -31,6 +31,15 @@ object IossNetpTemplates {
       plainTemplate = txt.ioss_netp_email_declaration_code.f,
       htmlTemplate = html.ioss_netp_email_declaration_code.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "new_message_alert_ioss_netp",
+      fromAddress = FromAddress.govUkTeamAddress,
+      service = IossNetp,
+      subject = "You have a new message from HMRC",
+      plainTemplate = txt.new_message_alert_ioss_netp.f,
+      htmlTemplate = html.new_message_alert_ioss_netp.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
