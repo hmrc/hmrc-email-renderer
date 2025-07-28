@@ -1,3 +1,5 @@
 # microservice specific routes
 
 POST        /templates/:templateId             uk.gov.hmrc.hmrcemailrenderer.controllers.RendererController.renderTemplate(templateId)
+
+GET  /assets/*file      controllers.Assets.at(path="/public", file)
