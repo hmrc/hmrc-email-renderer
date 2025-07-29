@@ -2,4 +2,4 @@
 
 POST        /templates/:templateId             uk.gov.hmrc.hmrcemailrenderer.controllers.RendererController.renderTemplate(templateId)
 
-GET         /email-renderer/assets/*file                      controllers.Assets.at(path="/public", file)
+GET         /hmrc-email-renderer/assets/*file                      controllers.Assets.at(path="/public", file)
