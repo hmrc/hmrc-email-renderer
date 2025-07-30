@@ -27,7 +27,7 @@ lazy val it = Project(id = "it", base = file("it"))
   .enablePlugins(PlayScala, ScalafmtPlugin)
   .dependsOn(microservice % "test->test") // the "test->test" allows reusing test code and test dependencies
   .settings(libraryDependencies ++= appDependencies ++ AppDependencies.it)
-
+Compile / unmanagedResourceDirectories += baseDirectory.value / "public"
 Test / test := (Test / test)
   .dependsOn(scalafmtCheckAll)
   .value
