@@ -22,7 +22,27 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+      <style>
+      .govuk-logo {
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 32px;
+      color: white;
+      background-color: #1d70b8;
+        padding: 0 0 0 0;
 
+      }
+
+      .govuk-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #00fff7;
+      border-radius: 50%;
+      margin: 0 5px;
+      vertical-align: middle;
+      }
+      </style>
     <title>@title</title>
   </head>
   <body style="background-color: #DEE0E2; margin: 0; padding: 0;">
@@ -30,27 +50,36 @@
       <table id="body" cellspacing="0" cellpadding="0" style="margin: 30px auto; max-width: 600px;">
         <tr id="header">
   <td style="font-family: Helvetica, Arial, sans-serif;">
-    <table width="100%" cellspacing="0" cellpadding="0" style="background: #000000;">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #1d70b8;">
       <tr>
-          <td width="30" style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px #@{params("borderColour")};">
+          <td align="left" style="padding-left:10px;display:flex;">
           @if(isWelsh) {
-          <a href="https://www.gov.uk/" title="Ewch i hafan GOV.UK" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">
-              <img src="@{params("staticAssetUrlPrefix")}@{params("staticHmrcFrontendVersion")}/govuk/images/govuk-logotype-tudor-crown.png" width="30" alt="" style="margin: 6px 6px 0 20px;">
-          </a>
+              <a href="https://www.gov.uk" title="Ewch i hafan GOV.UK" style="display: flex; align-items: center; text-decoration: none;">
 
+                  <img
+                          src="https://designnotes.blog.gov.uk/wp-content/themes/gds-blogs/build/node_modules/govuk-frontend/dist/govuk/assets/rebrand/images/govuk-icon-180.png"
+                          alt="GOV.UK"
+                          width="60"
+                  />
+                  <span class="govuk-logo">
+                  GOV<span class="govuk-dot"></span>UK
+              </span>
+              </a>
           } else {
-          <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">
-              <img src="@{params("staticAssetUrlPrefix")}@{params("staticHmrcFrontendVersion")}/govuk/images/govuk-logotype-tudor-crown.png" width="30" alt="" style="margin: 6px 6px 0 20px;">
-          </a>
+              <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" style="display: flex; align-items: center; text-decoration: none;">
+
+                  <img
+                          src="https://designnotes.blog.gov.uk/wp-content/themes/gds-blogs/build/node_modules/govuk-frontend/dist/govuk/assets/rebrand/images/govuk-icon-180.png"
+                          alt="GOV.UK"
+                          width="60"
+                  />
+                  <span class="govuk-logo">
+                  GOV<span class="govuk-dot"></span>UK
+              </span>
+              </a>
           }
           </td>
-          <td style="font-family: Helvetica, Arial, sans-serif; padding: 4px 0; border-bottom: solid 10px #@{params("borderColour")};">
-          @if(isWelsh) {
-          <a href="https://www.gov.uk/" title="Ewch i hafan GOV.UK" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">GOV.UK</a>
-          } else {
-          <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" style="font-size: 30px; font-weight: bold; text-decoration: none; color: #FFFFFF;">GOV.UK</a>
-          }
-          </td>
+
       </tr>
     </table>
   </td>
