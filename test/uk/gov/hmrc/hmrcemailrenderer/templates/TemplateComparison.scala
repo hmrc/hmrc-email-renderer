@@ -30,7 +30,7 @@ trait TemplateComparisonSpec extends PlaySpec with TemplateLoader {
       case Some((htmlTemplate, textTemplate)) =>
         val html = TemplateContentNormalisation.html(htmlTemplate(params))
         val text = TemplateContentNormalisation.text(textTemplate(params))
-        html mustEqual s"GOV.UK ${if (isWelsh) "Cyllid a Thollau EF" else "HM Revenue & Customs"} $text"
+        html mustEqual s"GOVUK ${if (isWelsh) "Cyllid a Thollau EF" else "HM Revenue & Customs"} $text"
 
       case _ => fail(s"could not locate template with id $id")
     }
