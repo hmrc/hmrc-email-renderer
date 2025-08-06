@@ -45,14 +45,17 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
         .toString
       htmlContent must include("Your new tax calculation is ready")
       htmlContent must include("Mrs John")
-      htmlContent must include("Your latest tax calculation is now ready to view online.")
-      htmlContent must include(
-        "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app."
-      )
-      htmlContent must include("For security reasons, we have not included a link with this email.")
+      htmlContent must include("Your tax calculation is now ready to access online.")
+      htmlContent must include("How to view your tax calculation")
+      htmlContent must include("<li>Visit GOV.UK and search for ‘personal tax account’.</li>")
+      htmlContent must include("<li>Select ‘personal tax account: sign in or set up‘.</li>")
+      htmlContent must include("<li>Sign in and check your messages.</li>")
+      htmlContent must include("You can also access your tax calculation on the HMRC app.")
       htmlContent must include("Why you got this email")
       htmlContent must include("You chose to get online tax letters instead of letters by post.")
-      htmlContent must include("This means we send you an email to let you know when you have a new message.")
+      htmlContent must include(
+        "This means we send you an email to let you know when you have a new message in your personal tax account."
+      )
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
@@ -84,17 +87,20 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mae’ch cyfrifiad treth newydd yn barod")
       htmlContent must include("Annwyl")
       htmlContent must include("Mrs John")
-      htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
+      htmlContent must include("Mae’ch cyfrifiad treth nawr yn barod i chi ar-lein.")
+      htmlContent must include("Sut i weld eich cyfrifiad treth")
+      htmlContent must include("<li>Ewch i GOV.UK a chwilio am ‘personal tax account’.</li>")
       htmlContent must include(
-        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim."
+        "<li>Dewiswch ‘Personal tax account: sign in or set up’, ac yna dewis yr opsiwn Cymraeg.</li>"
       )
-      htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
-      htmlContent must include("Pam y cawsoch yr e-bost hwn")
-      htmlContent must include("Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.")
+      htmlContent must include("<li>Mewngofnodwch a gwirio’ch negeseuon.</li>")
+      htmlContent must include("Gallwch hefyd gael mynediad at eich cyfrifiad treth yn ap CThEF.")
+      htmlContent must include("Pam cawsoch chi’r e-bost hwn")
+      htmlContent must include("Gwnaethoch ddewis i gael llythyrau treth ar-lein yn hytrach na llythyrau drwy’r post.")
       htmlContent must include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd."
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif treth personol."
       )
-      htmlContent must include("Oddi wrth adran TWE CThEF")
+      htmlContent must include("Oddi wrth dîm TWE CThEF")
       htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(
@@ -125,14 +131,17 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
         .toString
       htmlContent must include("Your new tax calculation is ready")
       htmlContent must include("Mrs John")
-      htmlContent must include("Your latest tax calculation is now ready to view online.")
-      htmlContent must include(
-        "Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app."
-      )
-      htmlContent must include("For security reasons, we have not included a link with this email.")
+      htmlContent must include("Your tax calculation is now ready to access online.")
+      htmlContent must include("How to view your tax calculation")
+      htmlContent must include("<li>Visit GOV.UK and search for ‘personal tax account’.</li>")
+      htmlContent must include("<li>Select ‘personal tax account: sign in or set up‘.</li>")
+      htmlContent must include("<li>Sign in and check your messages.</li>")
+      htmlContent must include("You can also access your tax calculation on the HMRC app.")
       htmlContent must include("Why you got this email")
       htmlContent must include("You chose to get online tax letters instead of letters by post.")
-      htmlContent must include("This means we send you an email to let you know when you have a new message.")
+      htmlContent must include(
+        "This means we send you an email to let you know when you have a new message in your personal tax account."
+      )
       htmlContent must include("If you&#8217;re unsure an email is from HMRC:")
       htmlContent must include("Do not reply to it or click on any links")
       htmlContent must include(
@@ -164,17 +173,20 @@ class NewMessageAlert_PA302Spec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Mae’ch cyfrifiad treth newydd yn barod")
       htmlContent must include("Annwyl")
       htmlContent must include("Mrs John")
-      htmlContent must include("Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.")
+      htmlContent must include("Mae’ch cyfrifiad treth nawr yn barod i chi ar-lein.")
+      htmlContent must include("Sut i weld eich cyfrifiad treth")
+      htmlContent must include("<li>Ewch i GOV.UK a chwilio am ‘personal tax account’.</li>")
       htmlContent must include(
-        "Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim."
+        "<li>Dewiswch ‘Personal tax account: sign in or set up’, ac yna dewis yr opsiwn Cymraeg.</li>"
       )
-      htmlContent must include("Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.")
-      htmlContent must include("Pam y cawsoch yr e-bost hwn")
-      htmlContent must include("Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.")
+      htmlContent must include("<li>Mewngofnodwch a gwirio’ch negeseuon.</li>")
+      htmlContent must include("Gallwch hefyd gael mynediad at eich cyfrifiad treth yn ap CThEF.")
+      htmlContent must include("Pam cawsoch chi’r e-bost hwn")
+      htmlContent must include("Gwnaethoch ddewis i gael llythyrau treth ar-lein yn hytrach na llythyrau drwy’r post.")
       htmlContent must include(
-        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd."
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif treth personol."
       )
-      htmlContent must include("Oddi wrth adran TWE CThEF")
+      htmlContent must include("Oddi wrth dîm TWE CThEF")
       htmlContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
       htmlContent must include("Peidiwch ag ymateb iddo na chlicio ar unrhyw gysylltiadau")
       htmlContent must include(

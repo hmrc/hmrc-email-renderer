@@ -2,18 +2,25 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params, isWelsh = true)
 
-Mae’ch cyfrifiad treth diweddaraf nawr yn barod i chi fwrw golwg drosto ar-lein.
+Mae’ch cyfrifiad treth nawr yn barod i chi ar-lein.
 
-Mewngofnodwch i CThEF ar-lein gyda’ch Dynodydd Defnyddiwr (ID) a’ch cyfrinair ar gyfer Porth y Llywodraeth, ac ewch i’ch negeseuon. Neu lawrlwythwch ap CThEF sy’n rhad ac am ddim.
+Sut i weld eich cyfrifiad treth
 
-Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn.
+  1. Ewch i GOV.UK a chwilio am ‘personal tax account’.
 
-Pam y cawsoch yr e-bost hwn
+  2. Dewiswch ‘Personal tax account: sign in or set up’, ac yna dewis yr opsiwn Cymraeg.
 
-Gwnaethoch ddewis cael llythyrau treth ar-lein yn lle llythyrau drwy’r post.
+  3. Mewngofnodwch a gwirio’ch negeseuon.
 
-Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi pan fydd gennych neges newydd.
+Gallwch hefyd gael mynediad at eich cyfrifiad treth yn ap CThEF.
 
-Oddi wrth adran TWE CThEF
+
+Pam cawsoch chi’r e-bost hwn
+
+Gwnaethoch ddewis i gael llythyrau treth ar-lein yn hytrach na llythyrau drwy’r post.
+
+Mae hyn yn golygu ein bod yn anfon e-bost atoch er mwyn rhoi gwybod i chi fod gennych neges newydd yn eich cyfrif treth personol.
+
+Oddi wrth dîm TWE CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
