@@ -2,17 +2,24 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-Your latest tax calculation is now ready to view online.
+Your tax calculation is now ready to access online.
 
-Sign in to HMRC online with your Government Gateway password and ID, and go to your messages. Or download the free HMRC app.
+How to view your tax calculation
 
-For security reasons, we have not included a link with this email.
+  1. Visit GOV.UK and search for ‘personal tax account’.
+
+  2. Select ‘personal tax account: sign in or set up‘.
+
+  3. Sign in and check your messages.
+
+You can also access your tax calculation on the HMRC app.
+
 
 Why you got this email
 
 You chose to get online tax letters instead of letters by post.
 
-This means we send you an email to let you know when you have a new message.
+This means we send you an email to let you know when you have a new message in your personal tax account.
 
 From HMRC PAYE
 
