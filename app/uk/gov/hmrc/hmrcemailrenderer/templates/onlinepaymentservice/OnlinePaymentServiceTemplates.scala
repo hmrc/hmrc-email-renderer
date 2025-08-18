@@ -89,24 +89,6 @@ object OnlinePaymentServiceTemplates {
     ),
     // Direct Debit VAT templates
     MessageTemplate.create(
-      templateId = "ddi_advance_notice",
-      fromAddress = FromAddress.noReply("VAT Direct Debit"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "VAT Return Direct Debit: Advance notice of your payment",
-      plainTemplate = txt.ddi_advance_notice.f,
-      htmlTemplate = html.ddi_advance_notice.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
-      templateId = "ddi_migration_letter",
-      fromAddress = FromAddress.noReply("VAT Direct Debit"),
-      service = ServiceIdentifier.OnlinePaymentService,
-      subject = "VAT Return Direct Debit: important information",
-      plainTemplate = txt.ddi_migration_letter.f,
-      htmlTemplate = html.ddi_migration_letter.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    MessageTemplate.create(
       templateId = "ddi_setup_dcs_alert",
       fromAddress = FromAddress.noReply("VAT Direct Debit"),
       service = ServiceIdentifier.OnlinePaymentService,
