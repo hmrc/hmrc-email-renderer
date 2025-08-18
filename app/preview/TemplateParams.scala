@@ -1958,42 +1958,6 @@ object TemplateParams2 {
       "commission"   -> "2.55",
       "totalPaid"    -> "126.00"
     ),
-    "ddi_migration_letter" -> Map(
-      "NAME"         -> "Customer",
-      "ADDRESSLINE1" -> "15 Grand Avenue",
-      "ADDRESSLINE2" -> "Floor 104",
-      "ADDRESSLINE3" -> "Capital City",
-      "ADDRESSLINE4" -> "",
-      "ADDRESSLINE5" -> "",
-      "POSTCODE"     -> "MZ1 1AA",
-      "COUNTRY"      -> "United Kingdom",
-      "REGIME"       -> "VATC",
-      "OLDSUN"       -> "123456",
-      "NEWSUN"       -> "448610",
-      "TRANSFERDATE" -> "20180501",
-      "DDIREFERENCE" -> "123456789",
-      "OLDSUNNAME"   -> "HMRC eVAT",
-      "NEWSUNNAME"   -> "HMRC E VAT DDS",
-      "PHONENUMBER"  -> "0300 200 3700"
-    ),
-    "ddi_advance_notice" -> Map(
-      "NAME"           -> "Customer",
-      "DDIREFERENCE"   -> "123456789",
-      "REGIME"         -> "VATC",
-      "AMOUNT"         -> "1215003.18",
-      "COLLECTIONDATE" -> "20180501",
-      "NEWSUNNAME"     -> "HMRC E VAT DDS",
-      "PHONENUMBER"    -> "0300 200 3700",
-      "CHARGETYPE_0"   -> "VAT Return",
-      "PERIOD_0"       -> "0118",
-      "AMOUNT_0"       -> "5001.43",
-      "CHARGETYPE_1"   -> "VAT Return",
-      "PERIOD_1"       -> "0418",
-      "AMOUNT_1"       -> "4049.57",
-      "CHARGETYPE_2"   -> "VAT Return",
-      "PERIOD_2"       -> "0718",
-      "AMOUNT_2"       -> "5952"
-    ),
     "ddi_setup_dcs_alert" -> Map(
       "recipientName_line1" -> "Joe Smith"
     ),
