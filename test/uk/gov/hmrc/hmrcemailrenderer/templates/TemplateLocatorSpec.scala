@@ -1086,6 +1086,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "new_message_alert_ioss_netp",
         "tgp_download_record_notification_email",
         "tgp_download_record_notification_email_cy",
+        "tgp_download_record_failure_notification_email",
+        "tgp_download_record_failure_notification_email_cy",
         "ngr_registration_successful",
         "ngr_add_property_request_sent"
       )
