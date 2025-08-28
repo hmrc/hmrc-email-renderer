@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+Dear customer
+There's been a problem which means we cannot get your file ready for download.
+You need to request the TGP records file again.
+How to request a TGP records file:
+1. Search GOV.UK for 'Trader Goods Profile'.
+2. Log in to your profile.
+3. Select 'Request a new TGP records file' and follow the instructions.
+From the Trader Goods Profile team
