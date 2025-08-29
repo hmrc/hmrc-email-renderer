@@ -2337,6 +2337,7 @@ object TemplateParams2 {
     ),
     "cbc_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
+      "OrgName"       -> "ABC Ltd",
       "dateSubmitted" -> "11:14am on 20 March 2023",
       "messageRefId"  -> "XACBC0000123778"
     ),

@@ -6,7 +6,12 @@ File failed checks for the CBC reporting service
 
 Dear @{params("contactName")}
 
-We have not accepted the file for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}. The file failed the country-by-country reporting checks at @{params("dateSubmitted")}.
+There is a problem with the file you tried to send for your @{forClientTradingName(params)} with the CBC ID @{params("cbcId")}.
+The file failed the country-by-country reporting checks at @{params("dateSubmitted")}.
+
+You must send another version. Not sending another report on time may result in a penalty for your client.
+
+You can check the errors in the country-by-country reporting service and upload an updated XML file.
 
 For reference, the File ID (MessageRefId) is:
 @{params("messageRefId")}
@@ -18,7 +23,8 @@ For security reasons, we have not included a link to this service in this email.
 
 If you need help
 
-Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
+Email your HMRC Customer Compliance Manager or
+msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help with this service.
 
 For more information on CBC, you can visit GOV.UK and search for ‘country-by-country reporting’.
 

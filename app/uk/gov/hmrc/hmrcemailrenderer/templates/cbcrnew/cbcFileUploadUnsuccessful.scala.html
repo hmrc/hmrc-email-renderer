@@ -15,23 +15,28 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File failed checks for the CBC reporting service") {
+@displayOrgName(name: String) = @{
+  name.split(" ")
+}
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There is a problem with your file for CBC") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your file failed the country-by-country reporting checks at @{params("dateSubmitted")}.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">There is a problem with the file you tried to send for @{params("OrgName")} at @{params("dateSubmitted")} for country-by-country reporting.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is:<br>@{params("messageRefId")}</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You must send another version. Not sending another report on time may result in a penalty.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check the errors in the CBC service and upload an updated XML file.</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check the errors in the country-by-country reporting service and upload an updated XML file.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is:<br>@{params("messageRefId")}</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
 
 <h2 style="margin: 60px 0 30px; font-size: 24px;">If you need help</h2>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Email aeoi.enquiries@@hmrc.gov.uk for help with this service.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Email your HMRC Customer Compliance Manager or msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help with this service.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information on CBC, you can visit GOV.UK and search for ‘country-by-country reporting’.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information on CBC, you can visit GOV.UK and search for ‘country-by-country reporting’.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 60px 0 30px 0;">From the HMRC CBC service</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 60px 0 30px 0;">From the HMRC CBC service</p>
 }

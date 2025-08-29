@@ -1,12 +1,12 @@
 @(params: Map[String, Any])
 
-Successful registration for CBC
+You have registered for country-by-country reporting
 
 Dear @{params("name")}
 
-Your CBC ID is: @{params("cbcID")}
+You have successfully registered for country-by-country reporting.
 
-You can now use your business tax account to give other people in your organisation access to the CBC service.
+To find your CBC user ID, sign in to the service. For security reasons, we have not included a link to this service in this email.
 
 Print or save a copy of this email for your records.
 
@@ -14,14 +14,14 @@ How to make a report
 
 To make a report:
 
-    search for ‘CBC’ on GOV.UK
-    sign into the service using your Government Gateway account
+search for ‘country-by-country reporting’ on GOV.UK
+sign into the service
 
-For security reasons, we have not included a link to this service in this email.
+You can email your HMRC Customer Compliance Manager or
+msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help.
 
-You can email aeoi.enquiries@@hmrc.gov.uk if you have any questions.
+For more information, search GOV.UK for ‘country-by-country reporting’.
 
-If you need more information, search ‘CBC’ on GOV.UK.
 
 From the CBC service
 
