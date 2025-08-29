@@ -50,13 +50,13 @@ class TreReportAvailableNonVerifiedSpec extends PlaySpec with CommonParamsForSpe
       htmlContent must include("CDS report ABC123456 is now ready to download.")
       htmlContent must include("How to get this report")
       htmlContent must include("Go to GOV.UK.")
-      htmlContent must include("Search for 'Trade Reporting Extracts'.")
+      htmlContent must include("Search for 'Get customs declaration data for imports and exports'.")
       htmlContent must include("Log in to your account.")
       htmlContent must include("Select 'Available to download' in the reports section of your dashboard.")
       htmlContent must include(
         "The report is available for 30 days to anyone with access to the account that requested it."
       )
-      htmlContent must include("From the HMRC Trade Reporting Extracts team")
+      htmlContent must include("From the HMRC Customs declaration data team")
     }
   }
 }
