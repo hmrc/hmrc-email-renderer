@@ -23,6 +23,6 @@ msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help.
 For more information, search GOV.UK for ‘country-by-country reporting’.
 
 
-From the CBC service
+From the HMRC CBC service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
