@@ -8,7 +8,7 @@ How to get your report
 
 1. Go to GOV.UK.
 
-2. Search for ‘Trade Reporting Extracts’.
+2. Search for 'Get customs declaration data for imports and exports'.
 
 3. Log in to your account.
 
@@ -16,6 +16,6 @@ How to get your report
 
 You have 30 days to download your report. After this, you’ll need to request a new report if you still need it.
 
-From the HMRC Trade Reporting Extracts team
+From the HMRC Customs declaration data team
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
