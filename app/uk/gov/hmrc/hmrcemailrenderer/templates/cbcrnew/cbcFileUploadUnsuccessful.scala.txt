@@ -1,24 +1,26 @@
 @(params: Map[String, Any])
 
-File failed checks for the CBC reporting service
+There is a problem with your file for CBC
 
 
 Dear @{params("contactName")}
 
 
-Your file failed the country-by-country reporting checks at @{params("dateSubmitted")}.
+There is a problem with the file you tried to send for @{params("OrgName")}  at at @{params("dateSubmitted")} for country-by-country reporting.
+
+You must send another version. Not sending another report on time may result in a penalty.
+
+You can check the errors in the country-by-country reporting service and upload an updated XML file.
 
 For reference, the File ID (MessageRefId) is:
 @{params("messageRefId")}
-
-You can check the errors in the CBC service and upload an updated XML file.
 
 For security reasons, we have not included a link to this service in this email.
 
 
 If you need help
 
-Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
+Email your HMRC Customer Compliance Manager or msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help with this service.
 
 For more information on CBC, you can visit GOV.UK and search for ‘country-by-country reporting’.
 
