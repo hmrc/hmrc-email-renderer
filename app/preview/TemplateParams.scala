@@ -2336,10 +2336,10 @@ object TemplateParams2 {
       "reportType"    -> "The file contains corrections for an existing report."
     ),
     "cbc_file_upload_unsuccessful" -> Map(
-      "contactName"   -> "Joe Bloggs",
-      "clientTradingName"       -> "ABC Ltd",
-      "dateSubmitted" -> "11:14am on 20 March 2023",
-      "messageRefId"  -> "XACBC0000123778"
+      "contactName"       -> "Joe Bloggs",
+      "clientTradingName" -> "ABC Ltd",
+      "dateSubmitted"     -> "11:14am on 20 March 2023",
+      "messageRefId"      -> "XACBC0000123778"
     ),
     "cbc_agent_file_upload_successful" -> Map(
       "contactName"       -> "Joe Bloggs",
