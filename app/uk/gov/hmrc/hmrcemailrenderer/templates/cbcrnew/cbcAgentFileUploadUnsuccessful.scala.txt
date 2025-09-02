@@ -16,8 +16,6 @@ You can check the errors in the country-by-country reporting service and upload 
 For reference, the File ID (MessageRefId) is:
 @{params("messageRefId")}
 
-You can check the errors in the CBC service and upload an updated XML file.
-
 For security reasons, we have not included a link to this service in this email.
 
 
