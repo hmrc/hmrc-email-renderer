@@ -40,6 +40,24 @@ object TgpTemplates {
       plainTemplate = txt.DownloadRecordNotification_cy.f,
       htmlTemplate = html.DownloadRecordNotification_cy.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tgp_download_record_failure_notification_email",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Tgp,
+      subject = "We could not get your Trader Goods Profile (TGP) file ready for download",
+      plainTemplate = txt.DownloadRecordFailureNotification.f,
+      htmlTemplate = html.DownloadRecordFailureNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tgp_download_record_failure_notification_email_cy",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Tgp,
+      subject = "Ni oedd modd i ni gael eich ffeil Proffil Nwyddau Masnachwyr (TGP) yn barod i’w lawrlwytho",
+      plainTemplate = txt.DownloadRecordFailureNotification_cy.f,
+      htmlTemplate = html.DownloadRecordFailureNotification_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

@@ -3946,6 +3946,12 @@ object TemplateParams3 {
     "tgp_download_record_notification_email_cy" -> Map(
       "expiredDate" -> "18 Awst 2024"
     ),
+    "tgp_download_record_failure_notification_email" -> Map(
+      "expiredDate" -> "18 August 2024"
+    ),
+    "tgp_download_record_failure_notification_email_cy" -> Map(
+      "expiredDate" -> "18 Awst 2024"
+    ),
     "tre_report_available" -> Map(
       "customerName"    -> "John Doe",
       "reportRequestId" -> "XXXXX678"

@@ -1,0 +1,9 @@
+@(params: Map[String, Any])
+Annwyl gwsmer
+Mae problem wedi codi sy’n golygu na allwn baratoi eich ffeil i’w lawrlwytho.
+Bydd angen i chi wneud cais am y ffeil cofnodion TGP eto.
+Sut i wneud cais am ffeil cofnodion TGP
+1. Chwiliwch GOV.UK am ‘Trader Goods Profile’.
+2. Mewngofnodwch i’ch proffil.
+3. Dewiswch ‘Gwneud cais am ffeil cofnodion TGP newydd’ a dilynwch y cyfarwyddiadau.
+Y Tîm Proffil Nwyddau Masnachwyr
