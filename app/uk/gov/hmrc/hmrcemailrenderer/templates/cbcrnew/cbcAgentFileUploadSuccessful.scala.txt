@@ -1,15 +1,18 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
 
-File successfully sent for the CBC reporting service
+File successfully sent for CBC
 
 Dear @{params("contactName")}
 
-We have received the file for your client @params("clientTradingName") with the CBC ID @{params("cbcId")}. The file passed the country-by-country reporting checks at @{params("dateSubmitted")}
+We have received the file for your client @params("clientTradingName") with the CBC ID @{params("cbcId")}.
+The file passed the country-by-country reporting checks at @{params("dateSubmitted")}
+This is for the reporting period @params("startPeriod") to @params("endPeriod").
 
 Print or save a copy of this email for your records.
 
-For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
+For reference, the File ID (MessageRefId) is:
+@{params("messageRefId")}
 
 @params("reportType")
 

@@ -1,14 +1,17 @@
 @(params: Map[String, Any])
 
-File successfully sent for the CBC reporting service
+File successfully sent for CBC
 
 Dear @{params("contactName")}
 
-We have received your file, which passed the country-by-country reporting checks at @{params("dateSubmitted")}
+We have received your file for @{params("orgName")}, which passed the
+country-by-country reporting checks at @{params("dateSubmitted")}.
+This is for the reporting period @{params("startPeriod")} to @{params("endPeriod")}.
 
 Print or save a copy of this email for your records.
 
-For reference, the File ID (MessageRefId) is: @{params("messageRefId")}
+For reference, the File ID (MessageRefId) is:
+@{params("messageRefId")}
 
 @params("reportType")
 

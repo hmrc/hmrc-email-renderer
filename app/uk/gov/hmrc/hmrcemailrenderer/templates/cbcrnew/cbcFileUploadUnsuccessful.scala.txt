@@ -6,7 +6,7 @@ There is a problem with your file for CBC
 Dear @{params("contactName")}
 
 
-There is a problem with the file you tried to send for @{params("clientTradingName")}  at at @{params("dateSubmitted")} for country-by-country reporting.
+There is a problem with the file you tried to send for @{params("orgName")}  at at @{params("dateSubmitted")} for country-by-country reporting.
 
 You must send another version. Not sending another report on time may result in a penalty.
 
