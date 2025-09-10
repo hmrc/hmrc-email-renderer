@@ -15,24 +15,24 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for the CBC reporting service") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for CBC") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received your file, which passed the country-by-country reporting checks at @{params("dateSubmitted")}.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received your file for @{params("orgName")}, which passed the country-by-country reporting checks at @{params("dateSubmitted")}. This is for the reporting period @{params("startPeriod")} to @{params("endPeriod")}.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Print or save a copy of this email for your records.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Print or save a copy of this email for your records.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is: @{params("messageRefId")}</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, the File ID (MessageRefId) is: <br/>@{params("messageRefId")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">@params("reportType")</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">@params("reportType")</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
 
 <h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">What happens next</h2>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 60px 0;">We will contact you if we have any questions about your report.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 60px 0;">We will contact you if we have any questions about your report.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 60px 0;">From the HMRC CBC service</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 60px 0;">From the HMRC CBC service</p>
 
 }

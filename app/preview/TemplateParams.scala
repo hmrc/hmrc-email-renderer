@@ -2331,13 +2331,16 @@ object TemplateParams2 {
     ),
     "cbc_file_upload_successful" -> Map(
       "contactName"   -> "Joe Bloggs",
+      "orgName"       -> "ABC Ltd",
       "dateSubmitted" -> "11:14am on 20 March 2023",
       "messageRefId"  -> "XACBC0000123778",
-      "reportType"    -> "The file contains corrections for an existing report."
+      "reportType"    -> "The file contains new information for the reporting period.",
+      "endPeriod"     -> "31 December 2023",
+      "startPeriod"   -> "1 January 2023"
     ),
     "cbc_file_upload_unsuccessful" -> Map(
       "contactName"   -> "Joe Bloggs",
-      "OrgName"       -> "ABC Ltd",
+      "orgName"       -> "ABC Ltd",
       "dateSubmitted" -> "11:14am on 20 March 2023",
       "messageRefId"  -> "XACBC0000123778"
     ),
@@ -2347,7 +2350,9 @@ object TemplateParams2 {
       "messageRefId"      -> "XACBC0000123778",
       "cbcId"             -> "XWCBC0000000058",
       "clientTradingName" -> "ABC Ltd",
-      "reportType"        -> "The file contains corrections for an existing report."
+      "reportType"        -> "The file contains new information for the reporting period.",
+      "endPeriod"         -> "31 December 2023",
+      "startPeriod"       -> "1 January 2023"
     ),
     "cbc_agent_file_upload_unsuccessful" -> Map(
       "contactName"       -> "Joe Bloggs",
