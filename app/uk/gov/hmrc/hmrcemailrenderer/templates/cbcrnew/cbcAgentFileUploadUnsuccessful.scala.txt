@@ -1,7 +1,7 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.cbcrnew.html._
 @(params: Map[String, Any])
 
-File failed checks for the CBC reporting service
+There is a problem with your file for CBC
 
 
 Dear @{params("contactName")}

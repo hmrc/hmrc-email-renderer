@@ -6,7 +6,7 @@ File successfully sent for CBC
 Dear @{params("contactName")}
 
 We have received the file for your client @params("clientTradingName") with the CBC ID @{params("cbcId")}.
-The file passed the country-by-country reporting checks at @{params("dateSubmitted")}
+The file passed the country-by-country reporting checks at @{params("dateSubmitted")}.
 This is for the reporting period @params("startPeriod") to @params("endPeriod").
 
 Print or save a copy of this email for your records.
