@@ -2,14 +2,13 @@ import sbt.*
 import play.sbt.PlayImport.*
 
 private object AppDependencies {
-  private val bootstrapVersion = "9.18.0"
+  private val bootstrapVersion = "9.19.0"
 
   def apply(): Seq[ModuleID] = Seq(
     ws,
     "uk.gov.hmrc"            %% "bootstrap-frontend-play-30"  % bootstrapVersion,
     "uk.gov.hmrc"            %% "domain-play-30"              % "10.0.0",
     "net.codingwell"         %% "scala-guice"                 % "6.0.0",
-    "com.beachape"           %% "enumeratum"                  % "1.7.4",
     "org.jsoup"              %  "jsoup"                       % "1.13.1"         % Test,
     "uk.gov.hmrc"            %% "bootstrap-test-play-30"      % bootstrapVersion % Test,
     "org.scalatestplus.play" %% "scalatestplus-play"          % "7.0.1"          % Test,
