@@ -1,4 +1,4 @@
-import uk.gov.hmrc.DefaultBuildSettings._
+import uk.gov.hmrc.DefaultBuildSettings.*
 import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
 
 val appName = "hmrc-email-renderer"
@@ -8,7 +8,7 @@ ThisBuild / scalaVersion := "3.4.2"
 
 val appDependencies: Seq[ModuleID] = AppDependencies()
 
-lazy val playSettings: Seq[Setting[_]] = Seq.empty
+lazy val playSettings: Seq[Setting[?]] = Seq.empty
 
 lazy val microservice = Project(appName, file("."))
   .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)

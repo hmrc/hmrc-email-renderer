@@ -16,26 +16,18 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.model
 
-import enumeratum.{ Enum, EnumEntry }
 import play.api.libs.json._
 
-sealed abstract class Language(override val entryName: String) extends EnumEntry
+sealed abstract class Language(val entryName: String)
 
-case object Language extends Enum[Language] {
-
-  val values = findValues
-
+object Language {
   case object English extends Language("en")
 
   case object Welsh extends Language("cy")
 
-  implicit val languageReads: Reads[Language] = Reads[Language] { js =>
-    js match {
-      case JsString(value) => JsSuccess(Language.withNameInsensitiveOption(value).getOrElse(Language.English))
-      case _               => JsSuccess(Language.English)
-    }
+  implicit val languageReads: Reads[Language] = Reads[Language] {
+    case JsString(value) if value.toLowerCase == "cy" => JsSuccess(Welsh)
+    case _                                            => JsSuccess(English)
   }
-  implicit val languageWrites: Writes[Language] = new Writes[Language] {
-    override def writes(e: Language): JsValue = JsString(e.entryName)
-  }
+  implicit val languageWrites: Writes[Language] = (e: Language) => JsString(e.entryName)
 }
