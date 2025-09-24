@@ -46,7 +46,7 @@ Transaction reference</th>
 @params("transactionReference")
 
 
-If you have an online tax account your payment will take 3 to 5 days to show in your account.
+Your payment can take up to 5 days to show in your online tax account.
 
 Why you got this email
 You chose to receive an email about your payment.

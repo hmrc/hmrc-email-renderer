@@ -17,7 +17,7 @@ Swm a dalwyd: @params("amountPaid")
 Cyfanswm a dalwyd: £@totalPaid
 }
 
-Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.
+Gall eich taliad gymryd hyd at 5 diwrnod ymddangos yn eich cyfrif treth ar-lein.
 
 Pam y cawsoch yr e-bost hwn
 

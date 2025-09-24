@@ -12,7 +12,7 @@ Swm a dalwyd: @params("amountPaid")
 
 Ar eich dyddiad talu sydd wedi’i drefnu, gwiriwch fod y taliad wedi gadael eich cyfrif banc. Chi sy’n gyfrifol am wneud yn siŵr bod y taliad hwn yn cyrraedd CThEF.
 
-Os oes gennych gyfrif treth ar-lein, bydd eich taliad yn cymryd 3 i 5 diwrnod i ymddangos yn eich cyfrif.
+Gall eich taliad gymryd hyd at 5 diwrnod ymddangos yn eich cyfrif treth ar-lein.
 
 Pam cawsoch yr e-bost hwn
 
