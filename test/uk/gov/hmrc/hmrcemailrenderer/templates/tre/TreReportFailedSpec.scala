@@ -30,7 +30,7 @@ class TreReportFailedSpec extends PlaySpec with CommonParamsForSpec {
     "include htmlTemplate body and footer" in {
       val htmlContent = treReportFaield.htmlTemplate(commonParameters ++ params).toString
       htmlContent must include("Dear customer")
-      htmlContent must include("We could not complete the CSD report XXXXX678 because of an error.")
+      htmlContent must include("We could not complete the CDS report XXXXX678 because of an error.")
       htmlContent must include("What you need to do next")
       htmlContent must include("Go to GOV.UK.")
       htmlContent must include("Search for 'Get customs declaration data for imports and exports'.")
