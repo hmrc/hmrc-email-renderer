@@ -34,7 +34,6 @@ class TreReportAvailableSpec extends PlaySpec with CommonParamsForSpec {
   )
 
   val params: Map[String, String] = Map(
-    "customerName"    -> "Jane Smith",
     "reportRequestId" -> "ABC123456"
   )
 
@@ -46,7 +45,7 @@ class TreReportAvailableSpec extends PlaySpec with CommonParamsForSpec {
 
     "include htmlTemplate body and footer" in {
       val htmlContent = treReportAvailable.htmlTemplate(commonParameters ++ params).toString
-      htmlContent must include("Dear Jane Smith")
+      htmlContent must include("Dear customer")
       htmlContent must include("Your CDS report ABC123456 that you requested is now ready to download.")
       htmlContent must include("How to get your report")
       htmlContent must include("Go to GOV.UK.")
@@ -57,11 +56,5 @@ class TreReportAvailableSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("From the HMRC Customs declaration data team")
     }
 
-    "use default customer name when customerName param is missing" in {
-      val paramsWithoutName = commonParameters ++ Map("reportRequestId" -> "ABC123456")
-      val htmlContent = treReportAvailable.htmlTemplate(paramsWithoutName).toString
-      htmlContent must include("Dear Customer")
-      htmlContent must include("Your CDS report ABC123456 that you requested is now ready to download.")
-    }
   }
 }

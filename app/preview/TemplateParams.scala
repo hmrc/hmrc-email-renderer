@@ -3958,10 +3958,15 @@ object TemplateParams3 {
       "expiredDate" -> "18 Awst 2024"
     ),
     "tre_report_available" -> Map(
-      "customerName"    -> "John Doe",
       "reportRequestId" -> "XXXXX678"
     ),
     "tre_report_available_non_verified" -> Map(
+      "reportRequestId" -> "XXXXX678"
+    ),
+    "tre_report_failed" -> Map(
+      "reportRequestId" -> "XXXXX678"
+    ),
+    "tre_report_failed_non_verified" -> Map(
       "reportRequestId" -> "XXXXX678"
     ),
     "ngr_registration_successful" -> Map(

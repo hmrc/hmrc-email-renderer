@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Dear customer
+
+We could not complete the CDS report [reference number with 5 redacted digits] because of an error.
+
+What you need to do next
+
+1. Go to GOV.UK.
+
+2. Search for 'Get customs declaration data for imports and exports'.
+
+3. Log in to your account.
+
+4. Select 'Requested reports' in the reports section of your dashboard to view details of the error.
+
+If you did not request this report, please speak to the person in your organisation who did.
+
+From the HMRC Customs declaration data team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

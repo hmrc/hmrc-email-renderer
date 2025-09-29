@@ -1,5 +1,5 @@
 @*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2025 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(
     params,
-    "Your Customs Declaration Service (CDS) report is ready to download"
+    "There is a problem with your Custom Declaration Service (CDS) report"
 ) {
 
     <p style="font-size: 16px; line-height: 1.315789474;">
@@ -26,20 +26,16 @@
     </p>
 
     <p style="font-size: 16px; line-height: 1.315789474;">
-        Your CDS report @{params("reportRequestId")} that you requested is now ready to download.
+        We could not complete the CDS report @{params("reportRequestId")} because of an error.
     </p>
 
-    <h2>How to get your report</h2>
+    <h2>What you need to do next</h2>
     <ol>
         <li style="font-size: 16px; line-height: 1.315789474;">Go to GOV.UK.</li>
         <li style="font-size: 16px; line-height: 1.315789474;">Search for 'Get customs declaration data for imports and exports'.</li>
         <li style="font-size: 16px; line-height: 1.315789474;">Log in to your account.</li>
-        <li style="font-size: 16px; line-height: 1.315789474;">Select 'Available to download' in the reports section of your dashboard.</li>
+        <li style="font-size: 16px; line-height: 1.315789474;">Select 'Requested reports' in the reports section of your dashboard to view details of the error.</li>
     </ol>
-
-    <p style="font-size: 16px; line-height: 1.315789474;">
-        You have 30 days to download your report. After this, you'll need to request a new report if you still need it.
-    </p>
 
     <p style="font-size: 16px; line-height: 1.315789474;">
         From the HMRC Customs declaration data team

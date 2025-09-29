@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Dear @{params.getOrElse("customerName", "Customer")}
+Dear customer
 
 Your CDS report @{params("reportRequestId")} that you requested is now ready to download.
 

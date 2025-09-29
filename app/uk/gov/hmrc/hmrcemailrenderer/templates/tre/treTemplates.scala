@@ -39,6 +39,24 @@ object treTemplates {
       plainTemplate = txt.treReportAvailableNonVerified.f,
       htmlTemplate = html.treReportAvailableNonVerified.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tre_report_failed",
+      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      service = TradeReportingExtracts,
+      subject = "There is a problem with your CDS report",
+      plainTemplate = txt.treReportFailed.f,
+      htmlTemplate = html.treReportFailed.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tre_report_failed_non_verified",
+      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      service = TradeReportingExtracts,
+      subject = "There is a problem with a CDS report",
+      plainTemplate = txt.treReportFailedNonVerified.f,
+      htmlTemplate = html.treReportFailedNonVerified.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
