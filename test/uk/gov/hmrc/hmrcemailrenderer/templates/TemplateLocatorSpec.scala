@@ -90,6 +90,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ATS",
         "AWRS",
         "GMP",
+        "PILLER2",
         raldGroup,
         contactFormsGroup,
         tctrGroup,
