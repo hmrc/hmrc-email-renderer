@@ -731,6 +731,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "pesm_code",
         "pesm_code_cy",
         "pesm_confirmation",
+        "piller2_submission",
         "platformContact",
         "platformContactConfirmation",
         "pods_aft_amended_return_decrease",

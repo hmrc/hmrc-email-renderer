@@ -22,6 +22,7 @@ sealed trait ServiceIdentifier extends Product with Serializable {
 object ServiceIdentifier {
   case object AdvanceValuationRulingsService extends ServiceIdentifier { override val name = "ars" }
   case object AEOMRA extends ServiceIdentifier { override val name = "aeo-mra" }
+  case object PILLER2 extends ServiceIdentifier { override val name = "piller2" }
   case object Agent extends ServiceIdentifier { override val name = "agent" }
   case object AgentOptInExclude extends ServiceIdentifier { override val name = "agent-optin-exclude" }
   case object AgentOptInRejoin extends ServiceIdentifier { override val name = "agent-optin-rejoin" }

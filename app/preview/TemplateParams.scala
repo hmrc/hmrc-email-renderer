@@ -41,6 +41,18 @@ object TemplateParams {
 
   val exampleParams: Map[String, Map[String, String]] = GG.exampleParams ++
     Map(
+      "piller2_submission" -> Map(
+        "submission_errors" -> Base64.getEncoder.encodeToString(stringify(parse("""
+          [
+            {"fieldName": "Field1", "fieldError": "Invalid value error"},
+            {"fieldName": "Field2", "fieldError": "Mandatory value not present"},
+            {"fieldName": "Field3", "fieldError": "Incorrect format"},
+            {"fieldName": "Field4", "fieldError": "Missing value"},
+            {"fieldName": "Field5", "fieldError": "Incorrect format"},
+            {"fieldName": "Field6", "fieldError": "Incorrect value"}
+          ]
+          """)).getBytes("UTF-8"))
+      ),
       "aeo_mra_row_data_exchange_report" -> Map(
         "country_rows" -> Base64.getEncoder.encodeToString(stringify(parse("""
           [

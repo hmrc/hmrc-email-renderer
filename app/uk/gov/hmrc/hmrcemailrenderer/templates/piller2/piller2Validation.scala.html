@@ -1,0 +1,47 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@import _root_.uk.gov.hmrc.hmrcemailrenderer.templates.piller2.ReportFormatter.parseRows
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Piller2 Validation page", showHeading1 = false) {
+
+<h2>Piller2 submission</h2>
+
+<h3>Test only content - non production</h3>
+<h3>This list covers the validation errors for Piller2 submission.</h3>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <td>Field Name</td>
+      <td>Validation Error</td>
+    </tr>
+  </thead>
+  <tbody>
+    @for(row <- parseRows(params("submission_errors").toString)) {
+    <tr>
+      <td>@row.fieldName</td>
+      <td>@row.fieldError</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<p>From MDTP Digital Support Team</p>
+
+}
