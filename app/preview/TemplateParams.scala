@@ -44,12 +44,8 @@ object TemplateParams {
       "piller2_submission" -> Map(
         "submission_errors" -> Base64.getEncoder.encodeToString(stringify(parse("""
           [
-            {"fieldName": "Field1", "fieldError": "Invalid value error"},
-            {"fieldName": "Field2", "fieldError": "Mandatory value not present"},
-            {"fieldName": "Field3", "fieldError": "Incorrect format"},
-            {"fieldName": "Field4", "fieldError": "Missing value"},
-            {"fieldName": "Field5", "fieldError": "Incorrect format"},
-            {"fieldName": "Field6", "fieldError": "Incorrect value"}
+            {"errorCode": "Piller2 error code 0001", "businessRuleName": "File Error", "errorLevel": "critical", "element": "File element", "description": "The referenced file error description"},
+            {"errorCode": "Piller2 error code 0002", "businessRuleName": "Empty element", "errorLevel": "file", "element": "n/a", "description": "The referenced element error description"}
           ]
           """)).getBytes("UTF-8"))
       ),

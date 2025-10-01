@@ -7,7 +7,7 @@ Multinational Top-up Tax/Domestic Top-up Tax (Test only content - non production
 This list covers the validation errors for Piller2 form validation.
 
 @for(row <- parseRows(params("submission_errors").toString)) {
-  @row.fieldName @row.fieldError }
+  @row.errorCode @row.businessRuleName }
 
 From MDTP Digital Support Team
 

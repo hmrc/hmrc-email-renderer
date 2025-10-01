@@ -28,15 +28,21 @@
 <table border="1" cellpadding="5" cellspacing="0">
   <thead>
     <tr>
-      <td>Field Name</td>
-      <td>Validation Error</td>
+      <td>Error Code</td>
+      <td>Business Rule Name</td>
+      <td>Error Level</td>
+      <td>Element</td>
+      <td>Description</td>
     </tr>
   </thead>
   <tbody>
     @for(row <- parseRows(params("submission_errors").toString)) {
     <tr>
-      <td>@row.fieldName</td>
-      <td>@row.fieldError</td>
+      <td>@row.errorCode</td>
+      <td>@row.businessRuleName</td>
+      <td>@row.errorLevel</td>
+      <td>@row.element</td>
+      <td>@row.description</td>
     </tr>
     }
   </tbody>

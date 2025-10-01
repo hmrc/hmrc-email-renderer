@@ -22,8 +22,11 @@ import play.api.libs.json._
 object ReportFormatter {
 
   final case class Row(
-    fieldName: String,
-    fieldError: String
+    errorCode: String,
+    businessRuleName: String,
+    errorLevel: String,
+    element: String,
+    description: String
   )
 
   implicit val rowReads: Reads[Row] = Json.reads[Row]
