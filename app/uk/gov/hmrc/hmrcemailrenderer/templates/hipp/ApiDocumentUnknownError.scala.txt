@@ -1,0 +1,4 @@
+@(params: Map[String, Any])
+A general error occurred when checking the supporting document '@{params("documentdescription")}' uploaded for @{params("apiname")}.
+Try again, or add a new document from the Supporting Documents page.
+From HMRC The Integration Hub

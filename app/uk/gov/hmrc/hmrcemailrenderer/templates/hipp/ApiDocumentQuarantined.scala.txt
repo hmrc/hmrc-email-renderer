@@ -1,0 +1,4 @@
+@(params: Map[String, Any])
+The supporting document '@{params("documentdescription")}' that was uploaded for @{params("apiname")} contained a virus and has been quarantined.
+Once you're sure your system is clean, add a new document from the Supporting Documents page.
+From HMRC The Integration Hub

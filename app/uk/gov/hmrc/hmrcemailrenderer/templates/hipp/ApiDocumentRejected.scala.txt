@@ -1,0 +1,4 @@
+@(params: Map[String, Any])
+The supporting document '@{params("documentdescription")}' that was uploaded for @{params("apiname")} was not in a format that the system recognised.
+Add a new document from the Supporting Documents page.
+From HMRC The Integration Hub
