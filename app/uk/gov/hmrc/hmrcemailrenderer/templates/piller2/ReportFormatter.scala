@@ -31,8 +31,7 @@ object ReportFormatter {
 
   implicit val rowReads: Reads[Row] = Json.reads[Row]
 
-  def parseRows(base64Rows: String): List[Row] = {
-    val decoded = new String(Base64.getDecoder().decode(base64Rows), "UTF-8")
+  def parseRows(decoded: String): List[Row] =
+    // val decoded = new String(Base64.getDecoder().decode(base64Rows), "UTF-8")
     Json.parse(decoded).as[List[Row]]
-  }
 }

@@ -42,12 +42,12 @@ object TemplateParams {
   val exampleParams: Map[String, Map[String, String]] = GG.exampleParams ++
     Map(
       "piller2_submission" -> Map(
-        "submission_errors" -> Base64.getEncoder.encodeToString(stringify(parse("""
+        "submission_errors" -> stringify(parse("""
           [
             {"errorCode": "Piller2 error code 0001", "businessRuleName": "File Error", "errorLevel": "critical", "element": "File element", "description": "The referenced file error description"},
             {"errorCode": "Piller2 error code 0002", "businessRuleName": "Empty element", "errorLevel": "file", "element": "n/a", "description": "The referenced element error description"}
           ]
-          """)).getBytes("UTF-8"))
+          """))
       ),
       "aeo_mra_row_data_exchange_report" -> Map(
         "country_rows" -> Base64.getEncoder.encodeToString(stringify(parse("""
