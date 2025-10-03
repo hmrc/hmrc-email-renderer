@@ -1713,6 +1713,18 @@ object TemplateParams2 {
       "oldteamname"     -> "Old Test-Hipp-Team",
       "applicationname" -> "Test-Hipp-Application"
     ),
+    "hipp_api_doc_rejected" -> Map(
+      "apiname"             -> "MyApi",
+      "documentdescription" -> "System Architecture Document v1.2"
+    ),
+    "hipp_api_doc_quarantined" -> Map(
+      "apiname"             -> "MyApi",
+      "documentdescription" -> "System Architecture Document v1.2"
+    ),
+    "hipp_api_doc_unknown_error" -> Map(
+      "apiname"             -> "MyApi",
+      "documentdescription" -> "System Architecture Document v1.2"
+    ),
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",

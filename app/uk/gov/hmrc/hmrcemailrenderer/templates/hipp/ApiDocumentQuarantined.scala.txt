@@ -1,0 +1,8 @@
+@(params: Map[String, Any])
+There was a virus in the document '@{params("documentdescription")}' uploaded for @{params("apiname")}. We have rejected the document.
+
+What to do next:
+1. Make sure your system is clear of the virus.
+2. Add a new document from the Supporting Documents page.
+
+From HMRC The Integration Hub

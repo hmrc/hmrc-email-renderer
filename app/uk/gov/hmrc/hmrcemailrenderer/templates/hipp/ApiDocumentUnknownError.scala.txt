@@ -1,0 +1,7 @@
+@(params: Map[String, Any])
+Something went wrong when processing '@{params("documentdescription")}' uploaded for @{params("apiname")}.
+
+What to do next:
+You can try uploading the same document again or upload a new one. You can do this on the Supporting Documents page.
+
+From HMRC The Integration Hub

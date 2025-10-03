@@ -157,6 +157,33 @@ object HippTemplates {
       plainTemplate = txt.NotifyApplicationOldOwningTeam.f,
       htmlTemplate = html.NotifyApplicationOldOwningTeam.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_api_doc_rejected",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "We have rejected your document",
+      plainTemplate = txt.ApiDocumentRejected.f,
+      htmlTemplate = html.ApiDocumentRejected.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_api_doc_quarantined",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "We have rejected your document",
+      plainTemplate = txt.ApiDocumentQuarantined.f,
+      htmlTemplate = html.ApiDocumentQuarantined.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_api_doc_unknown_error",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "There was an error with your document",
+      plainTemplate = txt.ApiDocumentUnknownError.f,
+      htmlTemplate = html.ApiDocumentUnknownError.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
