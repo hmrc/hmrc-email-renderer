@@ -11,7 +11,7 @@ class TreReportFailedNonVerifiedSpec extends PlaySpec with CommonParamsForSpec {
     templateId = "tre_report_failed_non_verified",
     fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk",
     service = TradeReportingExtracts,
-    subject = "There is a problem with your CDS report",
+    subject = "There is a problem with a CDS report",
     plainTemplate = txt.treReportFailedNonVerified.f,
     htmlTemplate = html.treReportFailedNonVerified.f,
     priority = Some(MessagePriority.Urgent)
@@ -24,7 +24,7 @@ class TreReportFailedNonVerifiedSpec extends PlaySpec with CommonParamsForSpec {
   "tre_report_failed_non_verified" must {
 
     "include correct subject" in {
-      treReportFaieldNonVerified.subject(commonParameters) mustBe "There is a problem with your CDS report"
+      treReportFaieldNonVerified.subject(commonParameters) mustBe "There is a problem with a CDS report"
     }
 
     "include htmlTemplate body and footer" in {
