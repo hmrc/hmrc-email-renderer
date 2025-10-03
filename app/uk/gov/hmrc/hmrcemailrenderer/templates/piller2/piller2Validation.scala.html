@@ -24,30 +24,6 @@
 
 <h3>Test only content - non production</h3>
 <h3>This list covers the validation errors for Piller2 submission.</h3>
-
-<table border="1" cellpadding="5" cellspacing="0">
-  <thead>
-    <tr>
-      <td>Error Code</td>
-      <td>Business Rule Name</td>
-      <td>Error Level</td>
-      <td>Element</td>
-      <td>Description</td>
-    </tr>
-  </thead>
-  <tbody>
-    @for(row <- parseRows(params("submission_errors").toString)) {
-    <tr>
-      <td>@row.errorCode</td>
-      <td>@row.businessRuleName</td>
-      <td>@row.errorLevel</td>
-      <td>@row.element</td>
-      <td>@row.description</td>
-    </tr>
-    }
-  </tbody>
-</table>
-
 <p>From MDTP Digital Support Team</p>
 
 }
