@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+@import _root_.uk.gov.hmrc.hmrcemailrenderer.templates.piller2.ReportFormatter.parseRows
+
+Multinational Top-up Tax/Domestic Top-up Tax (Test only content - non production)
+
+This list covers the validation errors for Piller2 form validation.
+
+Error Code, Business Rule Name, Error Level, Element Description
+
+@for(row <- parseRows(params("submission_errors").toString)) {
+  @row.errorCode @row.businessRuleName @row.errorLevel @row.element @row.description }
+
+From MDTP Digital Support Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
