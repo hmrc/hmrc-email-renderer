@@ -15,8 +15,9 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There was an error checking the document you uploaded") {
-<p style="margin: 0 0 30px; font-size: 19px;">A general error occurred when checking the supporting document '@{params("documentdescription")}' uploaded for @{params("apiname")}.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Try again, or add a new document from the Supporting Documents page.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There was an error with your document") {
+<p style="margin: 0 0 30px; font-size: 19px;">Something went wrong when processing '@{params("documentdescription")}' uploaded for @{params("apiname")}.</p>
+<h2>What to do next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">You can try uploading the same document again or upload a new one. You can do this on the Supporting Documents page.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC The Integration Hub</p>
 }

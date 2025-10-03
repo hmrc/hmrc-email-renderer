@@ -15,8 +15,9 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "The document you uploaded has been rejected") {
-<p style="margin: 0 0 30px; font-size: 19px;">The supporting document '@{params("documentdescription")}' that was uploaded for @{params("apiname")} was not in a format that the system recognised.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Add a new document from the Supporting Documents page.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have rejected your document") {
+<p style="margin: 0 0 30px; font-size: 19px;">The document '@{params("documentdescription")}' uploaded for @{params("apiname")} was in the wrong format.</p>
+<h2>What to do next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">Add a new document in the correct format from the Supporting Documents page. You can find a list of accepted formats on the document upload page.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC The Integration Hub</p>
 }

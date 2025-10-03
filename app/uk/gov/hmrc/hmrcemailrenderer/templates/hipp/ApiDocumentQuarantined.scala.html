@@ -15,8 +15,12 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "The document you uploaded has been quarantined") {
-<p style="margin: 0 0 30px; font-size: 19px;">The supporting document '@{params("documentdescription")}' that was uploaded for @{params("apiname")} contained a virus and has been quarantined.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Once you're sure your system is clean, add a new document from the Supporting Documents page.</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have rejected your document") {
+<p style="margin: 0 0 30px; font-size: 19px;">There was a virus in the document '@{params("documentdescription")}' uploaded for @{params("apiname")}. We have rejected the document.</p>
+<h2>What to do next</h2>
+<ol>
+    <li style="margin: 0 0 10px; font-size: 19px;">Make sure your system is clear of the virus.</li>
+    <li style="margin: 0 0 30px; font-size: 19px;">Add a new document from the Supporting Documents page.</li>
+</ol>
 <p style="margin: 0 0 30px; font-size: 19px;">From HMRC The Integration Hub</p>
 }
