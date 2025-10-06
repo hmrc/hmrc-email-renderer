@@ -133,5 +133,6 @@ object ServiceIdentifier {
   case object TradeReportingExtracts extends ServiceIdentifier { override val name = "tre" }
 
   case object Feedback extends ServiceIdentifier { override val name = "feedback" }
+  case object Pillar2 extends ServiceIdentifier { override val name = "pillar2" }
   case object NgrNotify extends ServiceIdentifier { override val name = "ngr-notify" }
 }

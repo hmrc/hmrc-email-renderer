@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Multinational Top-up Tax/Domestic Top-up Tax
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+@if(params("requestType") != "Below Threshold Notification") {
+This is confirmation that on @{params("confirmationDate")} at @{params("confirmationTime")} HM Revenue & Customs received your Pillar 2 @{params("requestType")} for the Accounting Period @{params("accountingPeriodStart")} to @{params("accountingPeriodEnd")}.
+
+If you have any queries, please email the Pillar 2 team at pillar2mailbox@@hmrc.gov.uk
+}
+
+@if(params("requestType") == "Below Threshold Notification") {
+Pillar 2 Top-up Taxes – Below-Threshold Notification
+
+You have submitted a Below-Threshold Notification on @{params("confirmationDate")}. This is effective from the start of the accounting period you selected, @{params("accountingPeriodStart")}.
+
+What happens next
+
+The Below-Threshold Notification satisfies your group's obligation to submit a UK Tax Return for the current and future accounting periods. HMRC will not expect to receive an information return while your group remains below-threshold. You must submit a UK Tax Return if your group meets the threshold conditions in the future.
+}
+
+From HMRC Pillar 2
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
