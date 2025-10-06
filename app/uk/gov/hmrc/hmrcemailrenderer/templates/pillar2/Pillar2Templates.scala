@@ -23,6 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.html
 import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.txt
 
 object Pillar2Templates {
+
   val templates = Seq(
     MessageTemplate.create(
       templateId = "pillar2_gir_submission_successful",
@@ -50,6 +51,15 @@ object Pillar2Templates {
       plainTemplate = txt.girSubmissionCriticalErrors.f,
       htmlTemplate = html.girSubmissionCriticalErrors.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "pillar2_confirmation_email",
+      fromAddress = FromAddress.noReply("HMRC Pillar 2"),
+      service = Pillar2,
+      subject = "Confirmation of Pillar 2 submission",
+      plainTemplate = txt.pillar2ConfirmationEmail.f,
+      htmlTemplate = html.pillar2ConfirmationEmail.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }

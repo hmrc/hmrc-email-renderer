@@ -104,6 +104,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2Templates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.tgp.TgpTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2Templates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tre.treTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.carf.CARFTemplates
 
@@ -191,6 +192,7 @@ trait TemplateLocator {
       "DPRS"                  -> DprsTemplates.templates,
       "IOSS NETP"             -> IossNetpTemplates.templates,
       "TRE"                   -> treTemplates.templates,
+      "Pillar 2"              -> Pillar2Templates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates,
       "NGR"                   -> NgrTemplates.templates,
       "AD"                    -> ADTemplates.templates,

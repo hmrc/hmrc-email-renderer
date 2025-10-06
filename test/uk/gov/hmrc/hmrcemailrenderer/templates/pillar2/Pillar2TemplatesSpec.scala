@@ -272,4 +272,141 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       txtContent must include("Failed Schema Validation")
     }
   }
+
+  "pillar2_confirmation_email" must {
+
+    val template: MessageTemplate = MessageTemplate.create(
+      templateId = "pillar2_confirmation_email",
+      fromAddress = "HMRC@tax.service.gov.uk",
+      service = Pillar2,
+      subject = "Confirmation of Pillar 2 submission",
+      plainTemplate = txt.pillar2ConfirmationEmail.f,
+      htmlTemplate = html.pillar2ConfirmationEmail.f,
+      priority = Some(MessagePriority.Standard)
+    )
+
+    val defaultTemplateParams: Map[String, String] = commonParameters ++ Map(
+      "confirmationDate"      -> "3 October 2025",
+      "confirmationTime"      -> "2:45pm",
+      "requestType"           -> "UK Tax Return",
+      "accountingPeriodStart" -> "1 April 2024",
+      "accountingPeriodEnd"   -> "31 March 2025"
+    )
+
+    val btnTemplateParams: Map[String, String] = commonParameters ++ Map(
+      "confirmationDate"      -> "25 October 2024",
+      "confirmationTime"      -> "10:30am",
+      "requestType"           -> "Below Threshold Notification",
+      "accountingPeriodStart" -> "10 October 2024",
+      "accountingPeriodEnd"   -> "9 October 2025"
+    )
+
+    "include correct subject" in {
+      template.subject(defaultTemplateParams) mustBe "Confirmation of Pillar 2 submission"
+    }
+
+    "include default content for non-BTN request types" in {
+      val htmlContent = template
+        .htmlTemplate(defaultTemplateParams)
+        .toString
+      htmlContent must include("UK Tax Return received - Pillar 2 Top-up Taxes")
+      htmlContent must include("Dear Customer")
+      htmlContent must include(
+        "We have received your UK Tax Return."
+      )
+      htmlContent must include(
+        "<strong>Accounting period:</strong> 1 April 2024 to 31 March 2025"
+      )
+      htmlContent must include(
+        "<strong>Received:</strong> 2:45pm on 3 October 2025"
+      )
+      htmlContent must include("If you have any queries, please email the Pillar 2 team at pillar2mailbox@hmrc.gov.uk")
+      htmlContent must not include "Pillar 2 Top-up Taxes – Below-Threshold Notification"
+      htmlContent must not include "What happens next"
+    }
+
+    "include plainTemplate body and footer for non-BTN request types" in {
+      val txtContent = template
+        .plainTemplate(defaultTemplateParams)
+        .toString
+      txtContent must include("UK Tax Return received - Pillar 2 Top-up Taxes")
+      txtContent must include("Dear Customer")
+      txtContent must include(
+        "We have received your UK Tax Return."
+      )
+      txtContent must include(
+        "Accounting period: 1 April 2024 to 31 March 2025"
+      )
+      txtContent must include(
+        "Received: 2:45pm on 3 October 2025"
+      )
+      txtContent must include("If you have any queries, please email the Pillar 2 team at pillar2mailbox@hmrc.gov.uk")
+      txtContent must not include "Pillar 2 Top-up Taxes – Below-Threshold Notification"
+    }
+
+    "include BTN-specific content for BTN request type" in {
+      val htmlContent = template
+        .htmlTemplate(btnTemplateParams)
+        .toString
+      htmlContent must include("Below-Threshold Notification (BTN) submission received - Pillar 2 Top-up Taxes")
+      htmlContent must include("Dear Customer")
+      htmlContent must include(
+        "We have received your BTN on 25 October 2024. This is effective from 10 October 2024, the start of the accounting period you selected."
+      )
+      htmlContent must include("What happens next")
+      htmlContent must include(
+        "The BTN satisfies your group's obligation to submit a UK Tax Return for the current and future accounting periods."
+      )
+      htmlContent must include(
+        "You do not need to send an information return while your group remains below-threshold."
+      )
+      htmlContent must include(
+        "You must submit a UK Tax Return if your group meets the threshold conditions in the future."
+      )
+      htmlContent must include("If you have any queries, please email the Pillar 2 team at pillar2mailbox@hmrc.gov.uk")
+      htmlContent must not include "This is confirmation that on"
+    }
+
+    "include BTN-specific content in plain text for BTN request type" in {
+      val txtContent = template
+        .plainTemplate(btnTemplateParams)
+        .toString
+      txtContent must include("Below-Threshold Notification (BTN) submission received - Pillar 2 Top-up Taxes")
+      txtContent must include("Dear Customer")
+      txtContent must include(
+        "We have received your BTN on 25 October 2024. This is effective from 10 October 2024, the start of the accounting period you selected."
+      )
+      txtContent must include("What happens next")
+      txtContent must include(
+        "The BTN satisfies your group's obligation to submit a UK Tax Return for the current and future accounting periods."
+      )
+      txtContent must include(
+        "You do not need to send an information return while your group remains below-threshold."
+      )
+      txtContent must include(
+        "You must submit a UK Tax Return if your group meets the threshold conditions in the future."
+      )
+      txtContent must include("If you have any queries, please email the Pillar 2 team at pillar2mailbox@hmrc.gov.uk")
+      txtContent must not include "This is confirmation that on"
+    }
+
+    "handle different request types correctly" in {
+      val overseasParams = defaultTemplateParams + ("requestType" -> "Overseas Return Notification")
+      val htmlContent = template
+        .htmlTemplate(overseasParams)
+        .toString
+      htmlContent must include("Overseas Return Notification")
+      htmlContent must not include "Below-Threshold Notification"
+    }
+
+    "handle amended request types correctly" in {
+      val amendedParams = defaultTemplateParams + ("requestType" -> "amended UK Tax Return")
+      val htmlContent = template
+        .htmlTemplate(amendedParams)
+        .toString
+      htmlContent must include("amended UK Tax Return")
+      htmlContent must not include "Below-Threshold Notification"
+    }
+  }
+
 }
