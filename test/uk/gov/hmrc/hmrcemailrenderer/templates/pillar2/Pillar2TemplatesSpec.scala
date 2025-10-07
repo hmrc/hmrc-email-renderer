@@ -59,7 +59,7 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       val htmlContent = template
         .htmlTemplate(defaultTemplateParams)
         .toString
-      htmlContent must include("Multinational Top-up Tax/Domestic Top-up Tax")
+      htmlContent must include("Pillar 2 Top-up Taxes")
       htmlContent must include("Dear Customer")
       htmlContent must include(
         "This is confirmation that on 3 October 2025 at 2:45pm HM Revenue & Customs received your Pillar 2 UK Tax Return for the Accounting Period 1 April 2024 to 31 March 2025."
@@ -73,7 +73,7 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       val txtContent = template
         .plainTemplate(defaultTemplateParams)
         .toString
-      txtContent must include("Multinational Top-up Tax/Domestic Top-up Tax")
+      txtContent must include("Pillar 2 Top-up Taxes")
       txtContent must include("Dear Customer")
       txtContent must include(
         "This is confirmation that on 3 October 2025 at 2:45pm HM Revenue & Customs received your Pillar 2 UK Tax Return for the Accounting Period 1 April 2024 to 31 March 2025."
@@ -86,9 +86,8 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       val htmlContent = template
         .htmlTemplate(btnTemplateParams)
         .toString
-      htmlContent must include("Multinational Top-up Tax/Domestic Top-up Tax")
+      htmlContent must include("Pillar 2 Top-up Taxes")
       htmlContent must include("Dear Customer")
-      htmlContent must include("Pillar 2 Top-up Taxes – Below-Threshold Notification")
       htmlContent must include(
         "You have submitted a Below-Threshold Notification on 25 October 2024. This is effective from the start of the accounting period you selected, 10 October 2024."
       )
@@ -102,17 +101,16 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include(
         "You must submit a UK Tax Return if your group meets the threshold conditions in the future."
       )
+      htmlContent must include("If you have any queries, please email the Pillar 2 team at pillar2mailbox@hmrc.gov.uk")
       htmlContent must not include "This is confirmation that on"
-      htmlContent must not include "If you have any queries, please email the Pillar 2 team"
     }
 
     "include BTN-specific content in plain text for BTN request type" in {
       val txtContent = template
         .plainTemplate(btnTemplateParams)
         .toString
-      txtContent must include("Multinational Top-up Tax/Domestic Top-up Tax")
+      txtContent must include("Pillar 2 Top-up Taxes")
       txtContent must include("Dear Customer")
-      txtContent must include("Pillar 2 Top-up Taxes – Below-Threshold Notification")
       txtContent must include(
         "You have submitted a Below-Threshold Notification on 25 October 2024. This is effective from the start of the accounting period you selected, 10 October 2024."
       )
@@ -126,8 +124,8 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       txtContent must include(
         "You must submit a UK Tax Return if your group meets the threshold conditions in the future."
       )
+      txtContent must include("If you have any queries, please email the Pillar 2 team at pillar2mailbox@hmrc.gov.uk")
       txtContent must not include "This is confirmation that on"
-      txtContent must not include "If you have any queries, please email the Pillar 2 team"
     }
 
     "handle different request types correctly" in {
