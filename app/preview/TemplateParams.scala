@@ -3991,6 +3991,13 @@ object TemplateParams3 {
       "lastName"          -> "Ferguson",
       "reference"         -> "123ABC",
       "postcodeFirstPart" -> "BS15"
+    ),
+    "pillar2_confirmation_email" -> Map(
+      "confirmationDate"      -> "3 October 2025",
+      "confirmationTime"      -> "2:45pm",
+      "requestType"           -> "UK Tax Return",
+      "accountingPeriodStart" -> "1 April 2024",
+      "accountingPeriodEnd"   -> "31 March 2025"
     )
   )
 }
