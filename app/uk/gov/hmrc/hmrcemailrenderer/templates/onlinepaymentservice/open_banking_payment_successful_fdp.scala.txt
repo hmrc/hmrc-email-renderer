@@ -12,7 +12,7 @@ Amount: @params("amountPaid")
 
 On your scheduled payment date, check the payment has left your bank account. You are responsible for making sure this payment reaches HMRC.
 
-If you have an online tax account, your payment will take 3 to 5 days to show in your account.
+Your payment can take up to 5 days to show in your online tax account.
 
 Why you got this email
 
