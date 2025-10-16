@@ -1,0 +1,13 @@
+@(params: Map[String, Any])
+
+Dear customer
+
+@{params.getOrElse("businessName", "A business")} has removed your third-party access to their customs declaration data. You can no longer request or download CDS reports on their behalf.
+
+This change only affects access to @{if(params.get("businessName").isDefined){"this"}else{"that"}} business.
+
+You do not need to take any action.
+
+From the HMRC Customs declaration data team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

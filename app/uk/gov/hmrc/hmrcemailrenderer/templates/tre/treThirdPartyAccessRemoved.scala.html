@@ -1,0 +1,43 @@
+@*
+ * Copyright 2025 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(
+params,
+s"Your third-party access to Customs Declaration Service (CDS) data for ${params.getOrElse("businessName", "a business")} has been removed"
+) {
+
+<p style="font-size: 16px; line-height: 1.315789474;">
+    Dear customer
+</p>
+
+<p style="font-size: 16px; line-height: 1.315789474;">
+    @{params.getOrElse("businessName", "A business")} has removed your third-party access to their customs declaration data. You can no longer request or download CDS reports on their behalf.
+</p>
+
+<p style="font-size: 16px; line-height: 1.315789474;">
+    This change only affects access to @{if(params.get("businessName").isDefined){"this"}else{"that"}} business.
+</p>
+
+<p style="font-size: 16px; line-height: 1.315789474;">
+    You do not need to take any action.
+</p>
+
+<p style="font-size: 16px; line-height: 1.315789474;">
+    From the HMRC Customs declaration data team
+</p>
+}
