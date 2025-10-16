@@ -37,7 +37,7 @@ object CBCRNewTemplates {
       templateId = "cbc_file_upload_successful",
       fromAddress = govUkTeamAddress,
       service = CountryByCountryReportingNew,
-      subject = "Your file has passed checks for CBC",
+      subject = "File passed checks for CBC",
       plainTemplate = txt.cbcFileUploadSuccessful.f,
       htmlTemplate = html.cbcFileUploadSuccessful.f,
       priority = Some(MessagePriority.Urgent)
@@ -47,7 +47,7 @@ object CBCRNewTemplates {
       templateId = "cbc_file_upload_unsuccessful",
       fromAddress = govUkTeamAddress,
       service = CountryByCountryReportingNew,
-      subject = "Your file has failed checks for CBC",
+      subject = "File failed checks for CBC",
       plainTemplate = txt.cbcFileUploadUnsuccessful.f,
       htmlTemplate = html.cbcFileUploadUnsuccessful.f,
       priority = Some(MessagePriority.Urgent)
@@ -57,7 +57,7 @@ object CBCRNewTemplates {
       templateId = "cbc_agent_file_upload_successful",
       fromAddress = govUkTeamAddress,
       service = CountryByCountryReportingNew,
-      subject = "Your client’s file has passed checks for CBC",
+      subject = "File passed checks for CBC",
       plainTemplate = txt.cbcAgentFileUploadSuccessful.f,
       htmlTemplate = html.cbcAgentFileUploadSuccessful.f,
       priority = Some(MessagePriority.Urgent)
@@ -67,7 +67,7 @@ object CBCRNewTemplates {
       templateId = "cbc_agent_file_upload_unsuccessful",
       fromAddress = govUkTeamAddress,
       service = CountryByCountryReportingNew,
-      subject = "Your client’s file has failed checks for CBC",
+      subject = "File failed checks for CBC",
       plainTemplate = txt.cbcAgentFileUploadUnsuccessful.f,
       htmlTemplate = html.cbcAgentFileUploadUnsuccessful.f,
       priority = Some(MessagePriority.Urgent)
