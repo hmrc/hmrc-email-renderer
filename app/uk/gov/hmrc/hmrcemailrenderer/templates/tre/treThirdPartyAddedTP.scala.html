@@ -1,0 +1,51 @@
+@*
+ * Copyright 2025 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(
+params,
+"You have third-party access to Custom Declaration Service (CDS) data"
+) {
+
+    <p style="font-size: 16px; line-height: 1.315789474;">
+        Dear customer
+    </p>
+
+    <p style="font-size: 16px; line-height: 1.315789474;">
+        A business has given you third-party access on our service. This means you can request and download CDS reports on their behalf.
+    </p>
+
+    <h2>How to access CDS data</h2>
+
+    <ol>
+        <li style="font-size: 16px; line-height: 1.315789474;">Go to GOV.UK.</li>
+        <li style="font-size: 16px; line-height: 1.315789474;">Search for 'Get customs declaration data for imports and exports'.</li>
+        <li style="font-size: 16px; line-height: 1.315789474;">Log in to your account. If you’re not subscribed to the CDS service, the ‘Request a report’ section on the guidance page shows the steps to set this up.</li>
+        <li style="font-size: 16px; line-height: 1.315789474;">Select ‘Businesses you have third-party access to’ in the view data access section of your dashboard to check the details of your access.</li>
+    </ol>
+
+    <h2>Why you are receiving this email</h2>
+
+    <p style="font-size: 16px; line-height: 1.315789474;">
+        A business gave us your EORI number when setting up third-party access to their CDS data.
+    </p>
+
+    <p style="font-size: 16px; line-height: 1.315789474;">
+        From the HMRC Customs declaration data team
+    </p>
+
+}
