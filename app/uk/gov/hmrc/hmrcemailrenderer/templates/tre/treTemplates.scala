@@ -57,6 +57,15 @@ object treTemplates {
       plainTemplate = txt.treReportFailedNonVerified.f,
       htmlTemplate = html.treReportFailedNonVerified.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tre_third_party_added_tp",
+      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      service = TradeReportingExtracts,
+      subject = "You have third-party access to CDS data",
+      plainTemplate = txt.treThirdPartyAddedTP.f,
+      htmlTemplate = html.treThirdPartyAddedTP.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 

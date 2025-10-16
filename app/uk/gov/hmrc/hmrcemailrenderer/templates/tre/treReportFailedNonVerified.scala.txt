@@ -2,7 +2,7 @@
 
 Dear customer
 
-We could not complete the CDS report [reference number with 5 redacted digits] because of an error.
+We could not complete the CDS report @{params("reportRequestId")} because of an error.
 
 What you need to do next
 
