@@ -17,7 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.tre
 
 import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{MessagePriority, MessageTemplate}
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TradeReportingExtracts
 
@@ -27,7 +27,8 @@ class TreThirdPartyAccessRemovedSpec extends PlaySpec with CommonParamsForSpec {
     templateId = "tre_third_party_access_removed",
     fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk>",
     service = TradeReportingExtracts,
-    subject = params => s"Your third-party access to CDS data for ${params.getOrElse("businessName", "a business")} has been removed",
+    subject = params =>
+      s"Your third-party access to CDS data for ${params.getOrElse("businessName", "a business")} has been removed",
     plainTemplate = txt.treThirdPartyAccessRemoved.f,
     htmlTemplate = html.treThirdPartyAccessRemoved.f,
     priority = Some(MessagePriority.Urgent)
@@ -40,17 +41,23 @@ class TreThirdPartyAccessRemovedSpec extends PlaySpec with CommonParamsForSpec {
   "tre_report_available" must {
 
     "include correct subject when businessName does not exist" in {
-      treReportAvailable.subject(commonParameters) mustBe "Your third-party access to CDS data for a business has been removed"
+      treReportAvailable.subject(
+        commonParameters
+      ) mustBe "Your third-party access to CDS data for a business has been removed"
     }
 
     "include correct subject when businessName does exist" in {
-      treReportAvailable.subject(commonParameters ++ params) mustBe "Your third-party access to CDS data for TestBusiness has been removed"
+      treReportAvailable.subject(
+        commonParameters ++ params
+      ) mustBe "Your third-party access to CDS data for TestBusiness has been removed"
     }
 
     "include correct htmlTemplate body and footer when businessName does exist" in {
       val htmlContent = treReportAvailable.htmlTemplate(commonParameters ++ params).toString
       htmlContent must include("Dear customer")
-      htmlContent must include("TestBusiness has removed your third-party access to their customs declaration data. You can no longer request or download CDS reports on their behalf.")
+      htmlContent must include(
+        "TestBusiness has removed your third-party access to their customs declaration data. You can no longer request or download CDS reports on their behalf."
+      )
       htmlContent must include("This change only affects access to this business.")
       htmlContent must include("You do not need to take any action.")
       htmlContent must include("From the HMRC Customs declaration data team")
@@ -59,7 +66,9 @@ class TreThirdPartyAccessRemovedSpec extends PlaySpec with CommonParamsForSpec {
     "include correct htmlTemplate body and footer when businessName does NOT exist" in {
       val htmlContent = treReportAvailable.htmlTemplate(commonParameters).toString
       htmlContent must include("Dear customer")
-      htmlContent must include("A business has removed your third-party access to their customs declaration data. You can no longer request or download CDS reports on their behalf.")
+      htmlContent must include(
+        "A business has removed your third-party access to their customs declaration data. You can no longer request or download CDS reports on their behalf."
+      )
       htmlContent must include("This change only affects access to that business.")
       htmlContent must include("You do not need to take any action.")
       htmlContent must include("From the HMRC Customs declaration data team")
