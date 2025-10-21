@@ -3981,6 +3981,9 @@ object TemplateParams3 {
     "tre_report_failed_non_verified" -> Map(
       "reportRequestId" -> "XXXXX678"
     ),
+    "tre_third_party_access_removed" -> Map(
+      "businessName" -> "TestBusiness"
+    ),
     "ngr_registration_successful" -> Map(
       "firstName" -> "Jim",
       "lastName"  -> "Ferguson",
