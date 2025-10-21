@@ -2639,6 +2639,21 @@ object TemplateParams2 {
       "currencyAmount5"     -> "5,000,000.00",
       "uploadDocText"       -> "You also uploaded a document telling HMRC about smaller values in other currencies."
     ),
+    "cash_declaration_GB_Currency_cy" -> Map(
+      "customerName"        -> "Hugh Mann",
+      "submissionReference" -> "NC38-N2ZC-TH68",
+      "currencyName1"       -> "Punt y Deyrnas Unedig - GBP",
+      "currencyName2"       -> "Marc Bosnia a Herzegovina - BAM",
+      "currencyName3"       -> "Dobra São Tomé a Príncipe - STD",
+      "currencyName4"       -> "Dirham yr Emiraethau Arabaidd Unedig - AED",
+      "currencyName5"       -> "Real Brasil - BRL",
+      "currencyAmount1"     -> "99,999,999.99",
+      "currencyAmount2"     -> "2,000,000.00",
+      "currencyAmount3"     -> "3000",
+      "currencyAmount4"     -> "4,000,000",
+      "currencyAmount5"     -> "5,000,000.00",
+      "uploadDocText" -> "Rydych chi hefyd wedi uwchlwytho dogfen sy’n rhoi gwybod i CThEF am werthoedd llai mewn arian cyfred eraill."
+    ),
     "cashDecUK_code" -> Map(
       "confirmationCode" -> "HGDY"
     ),
