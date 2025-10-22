@@ -1,0 +1,82 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydych wedi cyflwyno datganiad arian parod ar-lein", isWelsh = true){
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Annwyl @params("customerName") </p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Mae eich datganiad o ran cario swm o arian parod sydd gyfwerth â £10,000 neu fwy i mewn neu allan o Brydain Fawr wedi dod i law CThEF.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Cyfeirnod eich cyflwyniad yw: @params("submissionReference")</p>
+<h2>
+    Yr hyn y gallwch ei wneud nesaf</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Gwnewch nodyn o’ch cyfeirnod cyflwyno. Hefyd, gallwch argraffu’r e-bost hwn, neu ei gadw ar eich ffôn er mwyn ei ddangos i swyddogion tollau pe byddant yn gofyn.</p>
+<h2>
+    Eich datganiad arian parod</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Rydych wedi datgan yr arian cyfred canlynol i CThEF. Mae’r cyfanswm yn cynnwys pob math o arian parod sydd wedi’u datgan ar gyfer yr arian cyfred dan sylw.</p>
+
+
+<table border="1" width="100%" cellspacing="0" cellpadding="2px" style="text-align: left;
+            font-size: 19px;">
+    <tbody>
+
+    <tr>
+        <th style="width: 75%;">Arian cyfred</th>
+        <th style="width: 25%;">Cyfanswm</th>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName1")</td>
+        <td>@params.get("currencyAmount1")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName2")</td>
+        <td>@params.get("currencyAmount2")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName3")</td>
+        <td>@params.get("currencyAmount3")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName4")</td>
+        <td>@params.get("currencyAmount4")</td>
+    </tr>
+
+    <tr>
+        <td>@params.get("currencyName5")</td>
+        <td>@params.get("currencyAmount5")</td>
+    </tr>
+
+    </tbody>
+</table>
+<br>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    @params.get("uploadDocText")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Am resymau diogelwch, nid ydym wedi cynnwys y manylion a gyflwynwyd gennych.</p>
+<h2>Pam eich bod yn cael yr e-bost hwn</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Rydym yn anfon e-bost cadarnhau ar gyfer datganiad sy’n cael eu cyflwyno ar-lein.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">
+    Oddi wrth CThEF Cash Declarations</p>
+}

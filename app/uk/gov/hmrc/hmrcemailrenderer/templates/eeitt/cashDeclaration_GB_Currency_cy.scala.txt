@@ -1,0 +1,33 @@
+@(params: Map[String, Any])
+
+Rydych wedi cyflwyno datganiad arian parod ar-lein
+
+Annwyl @params("customerName")
+
+Gwnewch nodyn o’ch cyfeirnod cyflwyno. Hefyd, gallwch argraffu’r e-bost hwn, neu ei gadw ar eich ffôn er mwyn ei ddangos i swyddogion tollau pe byddant yn gofyn.
+
+Cyfeirnod eich cyflwyniad yw: @params("submissionReference")
+
+Yr hyn y gallwch ei wneud nesaf
+
+Gwnewch nodyn o’ch cyfeirnod cyflwyno. Hefyd, gallwch argraffu’r e-bost hwn, neu ei gadw ar eich ffôn er mwyn ei ddangos i swyddogion tollau pe byddant yn gofyn.
+
+Eich datganiad arian parod
+
+Arian cyfred / Cyfanswm
+
+Rydych wedi datgan yr arian cyfred canlynol i CThEF. Mae’r cyfanswm yn cynnwys pob math o arian parod sydd wedi’u datgan ar gyfer yr arian cyfred dan sylw.
+
+@params.get("currencyName1") / @params.get("currencyAmount1")
+
+@params.get("uploadDocText")
+
+Am resymau diogelwch, nid ydym wedi cynnwys y manylion a gyflwynwyd gennych.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost cadarnhau ar gyfer datganiad sy’n cael eu cyflwyno ar-lein.
+
+Oddi wrth CThEF Cash Declarations
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

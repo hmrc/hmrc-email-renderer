@@ -708,6 +708,15 @@ object EeittTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "cash_declaration_GB_Currency_cy",
+      fromAddress = govUkTeamAddress,
+      service = Eeitt,
+      subject = "Mae eich datganiad arian parod wedi dod i law CThEF",
+      plainTemplate = txt.cashDeclaration_GB_Currency_cy.f,
+      htmlTemplate = html.cashDeclaration_GB_Currency_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "cashDecUK_code",
       fromAddress = govUkTeamAddress,
       service = Eeitt,
