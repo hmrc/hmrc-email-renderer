@@ -41,6 +41,8 @@ lazy val it = Project(id = "it", base = file("it"))
     scalacOptions ++= List("-Wconf:msg=Flag.*repeatedly:s")
   )
 
+Test / scalacOptions ++= List("-Wconf:src=services/.*:s")
+
 Test / test := (Test / test)
   .dependsOn(scalafmtCheckAll)
   .value
