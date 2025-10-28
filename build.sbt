@@ -12,7 +12,7 @@ lazy val playSettings: Seq[Setting[?]] = Seq.empty
 
 lazy val microservice = Project(appName, file("."))
   .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)
-  .disablePlugins(JUnitXmlReportPlugin) //Required to prevent https://github.com/scalatest/scalatest/issues/1427
+  .disablePlugins(JUnitXmlReportPlugin) // Required to prevent https://github.com/scalatest/scalatest/issues/1427
   .settings(playSettings *)
   .settings(scalaSettings *)
   .settings(defaultSettings() *)
@@ -33,5 +33,5 @@ Test / test := (Test / test)
   .value
 
 it / test := (it / Test / test)
-  .dependsOn(scalafmtCheckAll, it/scalafmtCheckAll)
+  .dependsOn(scalafmtCheckAll, it / scalafmtCheckAll)
   .value

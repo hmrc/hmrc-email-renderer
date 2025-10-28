@@ -22,7 +22,6 @@ import scala.util.Try
 object DassTechRefreshFromAddress {
   private val config = ConfigFactory.load()
 
-
   private def get(path: String): Option[String] =
     Try(config.getString(path)).toOption.map(_.trim).filter(_.nonEmpty)
 
