@@ -19,15 +19,15 @@ package uk.gov.hmrc.hmrcemailrenderer.connectors
 import org.mockito.Mockito.*
 import org.mockito.ArgumentMatchers.any
 import org.scalatestplus.play.guice.GuiceOneAppPerSuite
-import uk.gov.hmrc.crypto.{ ApplicationCrypto, PlainText }
+import uk.gov.hmrc.crypto.PlainText
+import uk.gov.hmrc.play.bootstrap.frontend.filters.crypto.ApplicationCrypto
 import uk.gov.hmrc.hmrcemailrenderer.model.Language
-import uk.gov.hmrc.http.HeaderCarrier
+import uk.gov.hmrc.http.{ HeaderCarrier, HttpReads }
 import uk.gov.hmrc.http.client.HttpClientV2
 import uk.gov.hmrc.http.client.RequestBuilder
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 import org.scalatest.OptionValues
 
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{ ExecutionContext, Future }
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.matchers.should.Matchers
@@ -41,29 +41,34 @@ class PreferencesConnectorSpec
 
     "return English if preference returns English" in new TestCase {
       when(httpClient.get(any)(any)).thenReturn(requestBuilder)
-      when(requestBuilder.execute(any, any))
+      when(requestBuilder.execute(using any[HttpReads[Language]], any[ExecutionContext]))
         .thenReturn(Future.successful(Language.English))
+
       preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.English)
 
     }
 
     "return Welsh if preference returns Welsh" in new TestCase {
       when(httpClient.get(any)(any)).thenReturn(requestBuilder)
-      when(requestBuilder.execute(any, any)).thenReturn(Future.successful(Language.Welsh))
+      when(requestBuilder.execute(using any[HttpReads[Language]], any[ExecutionContext]))
+        .thenReturn(Future.successful(Language.Welsh))
+
       preferencesConnector.languageByEmail(email).futureValue shouldBe (Language.Welsh)
     }
   }
 
   trait TestCase {
     implicit val headerCarrier: HeaderCarrier = new HeaderCarrier()
+    implicit val ec: ExecutionContext = scala.concurrent.ExecutionContext.Implicits.global
 
-    val httpClient = mock[HttpClientV2]
-    val requestBuilder = mock[RequestBuilder]
-    val crypto = app.injector.instanceOf[ApplicationCrypto]
-    val servicesConfig = app.injector.instanceOf[ServicesConfig]
+    val httpClient: HttpClientV2 = mock[HttpClientV2]
+    val requestBuilder: RequestBuilder = mock[RequestBuilder]
+
+    val crypto: ApplicationCrypto = app.injector.instanceOf[ApplicationCrypto]
+    val servicesConfig: ServicesConfig = app.injector.instanceOf[ServicesConfig]
     val preferencesConnector = new PreferencesConnector(servicesConfig, httpClient, crypto)
     val email = "test@tetst.com"
     val encryptedEmail = new String(crypto.QueryParameterCrypto.encrypt(PlainText(email)).toBase64)
-    val url = servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail"
+    val url: String = servicesConfig.baseUrl("preferences") + s"/preferences/language/$encryptedEmail"
   }
 }

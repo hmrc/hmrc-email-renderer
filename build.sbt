@@ -4,7 +4,7 @@ import uk.gov.hmrc.versioning.SbtGitVersioning.autoImport.majorVersion
 val appName = "hmrc-email-renderer"
 
 ThisBuild / majorVersion := 3
-ThisBuild / scalaVersion := "3.4.2"
+ThisBuild / scalaVersion := "3.6.3"
 
 val appDependencies: Seq[ModuleID] = AppDependencies()
 
@@ -21,12 +21,27 @@ lazy val microservice = Project(appName, file("."))
     retrieveManaged := true
   )
   .settings(routesGenerator := InjectedRoutesGenerator)
+  .settings(
+    scalacOptions := scalacOptions.value.diff(Seq("-Wunused:all")),
+    scalacOptions += "-language:implicitConversions",
+    scalacOptions ++= List(
+      "-Wconf:msg=Flag.*repeatedly:s",
+      "-Wconf:src=routes/.*:s",
+      "-Wconf:src=templates/.*:s",
+      "-Wconf:src=preview/.*:s"
+    )
+  )
   .settings(ScoverageSettings())
 
 lazy val it = Project(id = "it", base = file("it"))
   .enablePlugins(PlayScala, ScalafmtPlugin)
   .dependsOn(microservice % "test->test") // the "test->test" allows reusing test code and test dependencies
-  .settings(libraryDependencies ++= appDependencies ++ AppDependencies.it)
+  .settings(
+    libraryDependencies ++= appDependencies ++ AppDependencies.it,
+    scalacOptions ++= List("-Wconf:msg=Flag.*repeatedly:s")
+  )
+
+Test / scalacOptions ++= List("-Wconf:src=services/.*:s")
 
 Test / test := (Test / test)
   .dependsOn(scalafmtCheckAll)
