@@ -83,6 +83,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cdsrc.cdsrcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactFormsGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.dass.DASSTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.DassTechRefreshTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dprs.DprsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
@@ -117,6 +118,7 @@ trait TemplateLocator {
       "CIR"                   -> CirTemplates.templates,
       "DAC6"                  -> Dac6Templates.templates,
       "DASS"                  -> DASSTemplates.templates,
+      "DASS Tech Refresh"     -> DassTechRefreshTemplates.templates,
       "MDR"                   -> MdrTemplates.templates,
       "CBCR-NEW"              -> CBCRNewTemplates.templates,
       "Digital Tariffs"       -> DigitalTariffTemplates.templates,

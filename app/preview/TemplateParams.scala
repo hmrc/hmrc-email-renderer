@@ -4009,6 +4009,10 @@ object TemplateParams3 {
       "lastName"          -> "Ferguson",
       "reference"         -> "123ABC",
       "postcodeFirstPart" -> "BS15"
+    ),
+    "dtr_cis_nil_monthly_return_org_success" -> Map(
+      "month" -> "September",
+      "year"  -> "2025"
     )
   )
 }
