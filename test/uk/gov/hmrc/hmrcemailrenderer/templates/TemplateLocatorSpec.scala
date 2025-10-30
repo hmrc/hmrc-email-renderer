@@ -120,6 +120,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "PODS",
         "vat",
         "Two way messaging",
+        "Pillar 2",
         "Parcels",
         "Customs Financials",
         "Cgtpd",

@@ -20,6 +20,7 @@ import org.scalatestplus.play.PlaySpec
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Pillar2
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 
 class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
 
@@ -27,7 +28,7 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
 
     val successTemplate: MessageTemplate = MessageTemplate.create(
       templateId = "pillar2_gir_submission_successful",
-      fromAddress = "pillar2@notifications.service.gov.uk",
+      fromAddress = FromAddress.noReply("pillar2"),
       service = Pillar2,
       subject = "GloBE Information Return (GIR) – Successful Submission",
       plainTemplate = txt.girSubmissionSuccessful.f,
@@ -79,7 +80,7 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
 
     val genericErrorsTemplate: MessageTemplate = MessageTemplate.create(
       templateId = "pillar2_gir_submission_generic_errors",
-      fromAddress = "pillar2@notifications.service.gov.uk",
+      fromAddress = FromAddress.noReply("pillar2"),
       service = Pillar2,
       subject = "GloBE Information Return (GIR) – Errors Identified. Please Re-submit",
       plainTemplate = txt.girSubmissionGenericErrors.f,
@@ -148,7 +149,7 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
 
     val criticalErrorsTemplate: MessageTemplate = MessageTemplate.create(
       templateId = "pillar2_gir_submission_critical_errors",
-      fromAddress = "pillar2@notifications.service.gov.uk",
+      fromAddress = FromAddress.noReply("pillar2"),
       service = Pillar2,
       subject =
         "GloBE Information Return (GIR) – Critical Schema or Business Rule failure. Please check and re-submit.",
