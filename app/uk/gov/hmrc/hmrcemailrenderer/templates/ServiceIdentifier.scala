@@ -134,4 +134,5 @@ object ServiceIdentifier {
 
   case object Feedback extends ServiceIdentifier { override val name = "feedback" }
   case object NgrNotify extends ServiceIdentifier { override val name = "ngr-notify" }
+  case object Pillar2 extends ServiceIdentifier { override val name = "pillar2" }
 }
