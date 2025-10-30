@@ -4009,6 +4009,68 @@ object TemplateParams3 {
       "lastName"          -> "Ferguson",
       "reference"         -> "123ABC",
       "postcodeFirstPart" -> "BS15"
+    ),
+    "pillar2_gir_submission_successful" -> Map(
+      "referenceId"           -> "REF123456789",
+      "pillar2Id"             -> "XMPLR0123456789",
+      "submissionDate"        -> "15/10/2025",
+      "submissionTime"        -> "14:35",
+      "accountingPeriodStart" -> "01/04/2024",
+      "accountingPeriodEnd"   -> "31/03/2025"
+    ),
+    "pillar2_gir_submission_generic_errors" -> Map(
+      "referenceId"           -> "REF987654321",
+      "pillar2Id"             -> "XMPLR9876543210",
+      "submissionDate"        -> "15/10/2025",
+      "submissionTime"        -> "15:20",
+      "accountingPeriodStart" -> "01/04/2024",
+      "accountingPeriodEnd"   -> "31/03/2025",
+      "errors" -> stringify(parse("""[
+        {
+          "errorCode": "Error Code 16",
+          "description": "The structure of the DocRefId is not in the correct format, as set out in the HMRC Pillar 2 Business Rules.",
+          "docRefIds": "GB2025FRPLRX1234, FR2023GBXPLR1234",
+          "count": "2"
+        },
+        {
+          "errorCode": "Error Code 21",
+          "description": "Where the DocTypeIndic is OECD2 or OECD3, the DocSpec element must contain a CorrDocRefId element.",
+          "docRefIds": "GB2025GB-PLRX123",
+          "count": "1"
+        },
+        {
+          "errorCode": "Error Code 35",
+          "description": "The MessageRefId must be unique and must not have been used in a previous message.",
+          "docRefIds": "GB2025PLRX456789",
+          "count": "1"
+        }
+      ]"""))
+    ),
+    "pillar2_gir_submission_critical_errors" -> Map(
+      "referenceId"    -> "REF555666777",
+      "pillar2Id"      -> "XMPLR5556667777",
+      "submissionDate" -> "15/10/2025",
+      "submissionTime" -> "16:45",
+      "errors" -> stringify(parse("""[
+        {
+          "errorCode": "Temp Pillar 2 Error Code 1",
+          "businessRuleName": "Failed Threat Scan",
+          "errorLevel": "DocRefId(s)",
+          "description": "Submissions must not include Prohibited Characters or Entity References in the MessageRefId or DocRefId. Submissions must not include Prohibited Characters, these have to be escaped using Entity References in all element values in the DPIBody."
+        },
+        {
+          "errorCode": "Temp Pillar 2 Error Code 2",
+          "businessRuleName": "Failed Schema Validation",
+          "errorLevel": "File",
+          "description": "The referenced file failed validation against the GIR XML Schema."
+        },
+        {
+          "errorCode": "Temp Pillar 2 Error Code 4",
+          "businessRuleName": "Test Data",
+          "errorLevel": "DocRefId(s)",
+          "description": "The referenced file contains one or more records with a DocTypeIndic value in the range OECD10-OECD13, indicating test data. As a result, the receiving Competent Authority cannot accept this file as a valid GIR file submission."
+        }
+      ]"""))
     )
   )
 }
