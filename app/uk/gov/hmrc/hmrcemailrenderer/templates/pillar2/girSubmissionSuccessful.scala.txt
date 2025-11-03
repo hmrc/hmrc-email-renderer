@@ -1,13 +1,16 @@
-@(params: Map[String, Any])GloBE Information Return (GIR) – Successful Submission
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
 
-Reference ID: @{params("referenceId")}
+@(params: Map[String, Any])Your GloBE Information Return (GIR) has been received
+
+GIR Reference ID: @{params("referenceId")}
 
 Pillar 2 ID: @{params("pillar2Id")}
 
-This is to confirm that HM Revenue and Customs received your GloBE Information Return on @{params("submissionDate")} at @{params("submissionTime")} for the accounting period @{params("accountingPeriodStart")} to @{params("accountingPeriodEnd")}.
+Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}
 
-If you have any queries, please contact the Pillar 2 team at:
-pillar2mailbox@@hmrc.gov.uk
+Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}
+
+If you have any queries you can contact the Pillar 2 team at pillar2mailbox@@hmrc.gov.uk
 
 From the HMRC Pillar 2 team
 

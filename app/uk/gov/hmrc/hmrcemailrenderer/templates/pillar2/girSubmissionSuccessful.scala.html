@@ -14,16 +14,20 @@
  * limitations under the License.
  *@
 
-@(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "GloBE Information Return (GIR) – Successful Submission") {
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Reference ID: @{params("referenceId")}</p>
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Your GloBE Information Return (GIR) has been received") {
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">GIR Reference ID: @{params("referenceId")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Pillar 2 ID: @{params("pillar2Id")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">This is to confirm that HM Revenue and Customs received your GloBE Information Return on @{params("submissionDate")} at @{params("submissionTime")} for the accounting period @{params("accountingPeriodStart")} to @{params("accountingPeriodEnd")}.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries, please contact the Pillar 2 team at: pillar2mailbox@@hmrc.gov.uk</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries you can contact the Pillar 2 team at pillar2mailbox@@hmrc.gov.uk</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 60px 0 30px 0;">From the HMRC Pillar 2 team</p>
 

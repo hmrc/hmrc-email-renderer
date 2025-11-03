@@ -15,24 +15,27 @@
  *@
 
 @import play.api.libs.json.{ Json, JsObject }
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
 
 @(params: Map[String, Any])
 
 @errorList = @{
-params("errors") match {
-case errors: String => Json.parse(errors).as[List[JsObject]]
-case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
-case _ => List()
-}
+    params("errors") match {
+        case errors: String => Json.parse(errors).as[List[JsObject]]
+        case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
+        case _ => List()
+    }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "GloBE Information Return (GIR) – Critical Schema or Business Rule failure. Please check and re-submit.") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Critical Schema or Business Rule failure - GloBE Information Return (GIR)") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Reference ID: @{params("referenceId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">GIR Reference ID: @{params("referenceId")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Pillar 2 ID: @{params("pillar2Id")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your GloBE Information Return submitted on @{params("submissionDate")} at @{params("submissionTime")} has not been processed because it failed one of the following business rules:</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Your GIR has not been processed because it failed one of the following business rules:</p>
 
 <ul style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0; padding-left: 20px;">
     <li style="margin-bottom: 10px;">50005: Failed threat scan – the file contains prohibited characters or invalid entity references</li>
@@ -41,9 +44,9 @@ case _ => List()
     <li style="margin-bottom: 10px;">Temporary Error Code 3: Empty Elements – the file format is incorrect at either file or record level.</li>
 </ul>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Please correct these errors and re-submit your return as soon as possible.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You must correct these errors and re-submit your return as soon as possible.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries regarding these errors, please contact your software provider.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries regarding these errors you should contact your software provider.</p>
 
 <table width="100%" cellspacing="0" cellpadding="10px" style="text-align:left; font-size: 19px; border-collapse: collapse; margin: 30px 0;">
     <thead>

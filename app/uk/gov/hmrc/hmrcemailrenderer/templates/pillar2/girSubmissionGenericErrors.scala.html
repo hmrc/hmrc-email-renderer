@@ -15,30 +15,31 @@
  *@
 
 @import play.api.libs.json.{ Json, JsObject }
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
 
 @(params: Map[String, Any])
 
 @errorList = @{
-params("errors") match {
-case errors: String => Json.parse(errors).as[List[JsObject]]
-case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
-case _ => List()
-}
+    params("errors") match {
+        case errors: String => Json.parse(errors).as[List[JsObject]]
+        case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
+        case _ => List()
+    }
 }
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "GloBE Information Return (GIR) – Errors Identified. Please Re-submit") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Errors identified in GloBE Information Return (GIR)") {
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Reference ID: @{params("referenceId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">GIR Reference ID: @{params("referenceId")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Pillar 2 ID: @{params("pillar2Id")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">This is to confirm that HM Revenue and Customs received your GloBE Information Return on @{params("submissionDate")} at @{params("submissionTime")} for the accounting period @{params("accountingPeriodStart")} to @{params("accountingPeriodEnd")}.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">However, validation of this return has identified the errors listed below.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Please correct these errors and re-submit your return as soon as possible.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received your GIR submission and identified the following errors. You must correct these errors and re-submit your return as soon as possible.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries regarding these errors, please contact your software provider.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries regarding these errors you should contact your software provider.</p>
 
 <table width="100%" cellspacing="0" cellpadding="10px" style="text-align:left; font-size: 19px; border-collapse: collapse; margin: 30px 0;">
     <thead>
