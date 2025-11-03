@@ -1,0 +1,17 @@
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
+
+@(params: Map[String, Any])Your GloBE Information Return (GIR) has been received
+
+GIR Reference ID: @{params("referenceId")}
+
+Pillar 2 ID: @{params("pillar2Id")}
+
+Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}
+
+Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}
+
+If you have any queries you can contact the Pillar 2 team at pillar2mailbox@@hmrc.gov.uk
+
+From the HMRC Pillar 2 team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

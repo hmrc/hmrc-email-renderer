@@ -1,0 +1,44 @@
+@import play.api.libs.json.{ Json, JsObject }
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
+
+@(params: Map[String, Any])
+
+@errorList = @{
+  params("errors") match {
+    case errors: String => Json.parse(errors).as[List[JsObject]]
+    case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
+    case _ => List()
+  }
+}
+
+Critical Schema or Business Rule failure - GloBE Information Return (GIR)
+
+GIR Reference ID: @{params("referenceId")}
+
+Pillar 2 ID: @{params("pillar2Id")}
+
+Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}
+
+Your GIR has not been processed because it failed one of the following business rules:
+
+- 50005: Failed threat scan – the file contains prohibited characters or invalid entity references
+- 50007: Failed Schema Validation – the file failed validation against the OECD GIR XML Schema
+- 50010: Test data – the file has 'DocTypeIndic' values in the range OECD10-OECD13
+- Temporary Error Code 3: Empty Elements – the file format is incorrect at either file or record level.
+
+You must correct these errors and re-submit your return as soon as possible.
+
+If you have any queries regarding these errors you should contact your software provider.
+
+CRITICAL ERRORS IDENTIFIED:
+@for(error <- errorList) {
+Error Code: @{(error \ "errorCode").as[String]}
+Business Rule Name: @{(error \ "businessRuleName").as[String]}
+Error Level: @{(error \ "errorLevel").as[String]}
+Description: @{(error \ "description").as[String]}
+---
+}
+
+From the HMRC Pillar 2 team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

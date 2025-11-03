@@ -1,0 +1,67 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import play.api.libs.json.{ Json, JsObject }
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
+
+@(params: Map[String, Any])
+
+@errorList = @{
+    params("errors") match {
+        case errors: String => Json.parse(errors).as[List[JsObject]]
+        case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
+        case _ => List()
+    }
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Errors identified in GloBE Information Return (GIR)") {
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">GIR Reference ID: @{params("referenceId")}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Pillar 2 ID: @{params("pillar2Id")}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received your GIR submission and identified the following errors. You must correct these errors and re-submit your return as soon as possible.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">If you have any queries regarding these errors you should contact your software provider.</p>
+
+<table width="100%" cellspacing="0" cellpadding="10px" style="text-align:left; font-size: 19px; border-collapse: collapse; margin: 30px 0;">
+    <thead>
+    <tr style="background-color: #005ea5; color: #ffffff;">
+        <th style="border: 1px solid #bfc1c3; padding: 10px;">Error Code</th>
+        <th style="border: 1px solid #bfc1c3; padding: 10px;">Description</th>
+        <th style="border: 1px solid #bfc1c3; padding: 10px;">DocRefId in Error</th>
+        <th style="border: 1px solid #bfc1c3; padding: 10px;">Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(error <- errorList) {
+    <tr>
+        <td style="border: 1px solid #bfc1c3; padding: 10px;">@{(error \ "errorCode").as[String]}</td>
+        <td style="border: 1px solid #bfc1c3; padding: 10px;">@{(error \ "description").as[String]}</td>
+        <td style="border: 1px solid #bfc1c3; padding: 10px;">@{(error \ "docRefIds").asOpt[String].getOrElse("")}</td>
+        <td style="border: 1px solid #bfc1c3; padding: 10px;">@{(error \ "count").as[String]}</td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 60px 0 30px 0;">From the HMRC Pillar 2 team</p>
+
+}

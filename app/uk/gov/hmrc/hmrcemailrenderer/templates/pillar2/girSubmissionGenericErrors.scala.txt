@@ -1,0 +1,39 @@
+@import play.api.libs.json.{ Json, JsObject }
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
+
+@(params: Map[String, Any])
+
+@errorList = @{
+  params("errors") match {
+    case errors: String => Json.parse(errors).as[List[JsObject]]
+    case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
+    case _ => List()
+  }
+}
+
+Errors identified in GloBE Information Return (GIR)
+
+GIR Reference ID: @{params("referenceId")}
+
+Pillar 2 ID: @{params("pillar2Id")}
+
+Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}
+
+Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}
+
+We have received your GIR submission and identified the following errors. You must correct these errors and re-submit your return as soon as possible.
+
+If you have any queries regarding these errors you should contact your software provider.
+
+ERRORS IDENTIFIED:
+@for(error <- errorList) {
+Error Code: @{(error \ "errorCode").as[String]}
+Description: @{(error \ "description").as[String]}
+DocRefId in Error: @{(error \ "docRefIds").asOpt[String].getOrElse("")}
+Count: @{(error \ "count").as[String]}
+---
+}
+
+From the HMRC Pillar 2 team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
