@@ -25,7 +25,7 @@ class TreReportFailedSpec extends PlaySpec with CommonParamsForSpec {
 
   val treReportFaield: MessageTemplate = MessageTemplate.create(
     templateId = "tre_report_failed",
-    fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk",
+    fromAddress = "Get customs data for import and export declarations <noreply@confirmation.tax.service.gov.uk",
     service = TradeReportingExtracts,
     subject = "There is a problem with your CDS report",
     plainTemplate = txt.treReportFailed.f,

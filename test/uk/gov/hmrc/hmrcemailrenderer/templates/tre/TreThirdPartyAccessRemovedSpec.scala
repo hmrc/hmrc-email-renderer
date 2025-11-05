@@ -25,7 +25,7 @@ class TreThirdPartyAccessRemovedSpec extends PlaySpec with CommonParamsForSpec {
 
   val treReportAvailable: MessageTemplate = MessageTemplate.createWithDynamicSubject(
     templateId = "tre_third_party_access_removed",
-    fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk>",
+    fromAddress = "Get customs data for import and export declarations <noreply@confirmation.tax.service.gov.uk>",
     service = TradeReportingExtracts,
     subject = params =>
       s"Your third-party access to CDS data for ${params.getOrElse("businessName", "a business")} has been removed",

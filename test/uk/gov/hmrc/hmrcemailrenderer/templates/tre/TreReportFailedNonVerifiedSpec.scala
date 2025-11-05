@@ -25,7 +25,7 @@ class TreReportFailedNonVerifiedSpec extends PlaySpec with CommonParamsForSpec {
 
   val treReportFaieldNonVerified: MessageTemplate = MessageTemplate.create(
     templateId = "tre_report_failed_non_verified",
-    fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk",
+    fromAddress = "Get customs data for import and export declarations <noreply@confirmation.tax.service.gov.uk",
     service = TradeReportingExtracts,
     subject = "There is a problem with a CDS report",
     plainTemplate = txt.treReportFailedNonVerified.f,

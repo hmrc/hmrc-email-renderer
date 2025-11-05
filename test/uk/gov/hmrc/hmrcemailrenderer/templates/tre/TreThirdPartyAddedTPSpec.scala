@@ -25,7 +25,7 @@ class TreThirdPartyAddedTPSpec extends PlaySpec with CommonParamsForSpec {
 
   val treThirdPartyAddedTP: MessageTemplate = MessageTemplate.create(
     templateId = "tre_third_party_added_tp",
-    fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+    fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
     service = TradeReportingExtracts,
     subject = "You have third-party access to CDS data",
     plainTemplate = txt.treThirdPartyAddedTP.f,

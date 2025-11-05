@@ -25,7 +25,7 @@ class TreReportAvailableNonVerifiedSpec extends PlaySpec with CommonParamsForSpe
 
   val treReportAvailableNonVerified: MessageTemplate = MessageTemplate.create(
     templateId = "tre_report_available_non_verified",
-    fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk>",
+    fromAddress = "Get customs data for import and export declarations <noreply@confirmation.tax.service.gov.uk>",
     service = TradeReportingExtracts,
     subject = "A Customs Declaration Service (CDS) report is ready to download",
     plainTemplate = txt.treReportAvailableNonVerified.f,
