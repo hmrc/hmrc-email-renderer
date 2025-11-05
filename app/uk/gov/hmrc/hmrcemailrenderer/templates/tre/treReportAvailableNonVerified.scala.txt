@@ -8,7 +8,7 @@ How to get this report
 
 1. Go to GOV.UK.
 
-2. Search for 'Get customs declaration data for imports and exports'.
+2. Search for 'Get customs data for import and export declarations'.
 
 3. Log in to your account.
 

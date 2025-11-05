@@ -25,7 +25,7 @@ class TreReportAvailableSpec extends PlaySpec with CommonParamsForSpec {
 
   val treReportAvailable: MessageTemplate = MessageTemplate.create(
     templateId = "tre_report_available",
-    fromAddress = "Trade Reporting Extracts <noreply@confirmation.tax.service.gov.uk>",
+    fromAddress = "Get customs data for import and export declarations <noreply@confirmation.tax.service.gov.uk>",
     service = TradeReportingExtracts,
     subject = "Your CDS report is ready to download",
     plainTemplate = txt.treReportAvailable.f,
@@ -49,7 +49,7 @@ class TreReportAvailableSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("Your CDS report ABC123456 that you requested is now ready to download.")
       htmlContent must include("How to get your report")
       htmlContent must include("Go to GOV.UK.")
-      htmlContent must include("Search for 'Get customs declaration data for imports and exports'.")
+      htmlContent must include("Search for 'Get customs data for import and export declarations'.")
       htmlContent must include("Log in to your account.")
       htmlContent must include("Select 'Available to download' in the reports section of your dashboard.")
       htmlContent must include("You have 30 days to download your report.")

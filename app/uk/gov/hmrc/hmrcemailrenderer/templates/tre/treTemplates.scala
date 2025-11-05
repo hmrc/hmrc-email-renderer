@@ -24,7 +24,7 @@ object treTemplates {
   val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = "tre_report_available",
-      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
       service = TradeReportingExtracts,
       subject = "Your CDS report is ready to download",
       plainTemplate = txt.treReportAvailable.f,
@@ -33,7 +33,7 @@ object treTemplates {
     ),
     MessageTemplate.create(
       templateId = "tre_report_available_non_verified",
-      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
       service = TradeReportingExtracts,
       subject = "A CDS report is ready to download",
       plainTemplate = txt.treReportAvailableNonVerified.f,
@@ -42,7 +42,7 @@ object treTemplates {
     ),
     MessageTemplate.create(
       templateId = "tre_report_failed",
-      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
       service = TradeReportingExtracts,
       subject = "There is a problem with your CDS report",
       plainTemplate = txt.treReportFailed.f,
@@ -51,7 +51,7 @@ object treTemplates {
     ),
     MessageTemplate.create(
       templateId = "tre_report_failed_non_verified",
-      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
       service = TradeReportingExtracts,
       subject = "There is a problem with a CDS report",
       plainTemplate = txt.treReportFailedNonVerified.f,
@@ -60,7 +60,7 @@ object treTemplates {
     ),
     MessageTemplate.create(
       templateId = "tre_third_party_added_tp",
-      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
       service = TradeReportingExtracts,
       subject = "You have third-party access to CDS data",
       plainTemplate = txt.treThirdPartyAddedTP.f,
@@ -69,7 +69,7 @@ object treTemplates {
     ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "tre_third_party_access_removed",
-      fromAddress = FromAddress.noReply("Trade Reporting Extracts"),
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
       service = TradeReportingExtracts,
       subject = params =>
         s"Your third-party access to CDS data for ${params.getOrElse("businessName", "a business")} has been removed",
