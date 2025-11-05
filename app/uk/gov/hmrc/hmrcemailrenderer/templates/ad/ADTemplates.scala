@@ -23,21 +23,21 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.Itsa
 object ADTemplates {
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "new_message_alert_ad",
+      templateId = "newMessageAlert_AD",
       fromAddress = govUkTeamAddress,
       service = Itsa,
       subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.new_message_alert_ad.f,
-      htmlTemplate = html.new_message_alert_ad.f,
+      plainTemplate = txt.newMessageAlert_AD.f,
+      htmlTemplate = html.newMessageAlert_AD.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "new_message_alert_ad_cy",
+      templateId = "newMessageAlert_AD_cy",
       fromAddress = govUkTeamAddress,
       service = Itsa,
       subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.new_message_alert_ad_cy.f,
-      htmlTemplate = html.new_message_alert_ad_cy.f,
+      plainTemplate = txt.newMessageAlert_AD_cy.f,
+      htmlTemplate = html.newMessageAlert_AD_cy.f,
       priority = Some(MessagePriority.Standard)
     )
   )
