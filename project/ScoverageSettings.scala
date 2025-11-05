@@ -21,7 +21,7 @@ import scoverage.ScoverageKeys
 object ScoverageSettings {
   def apply(): Seq[Def.Setting[? >: String & Double & Boolean]] =
     Seq(
-      //preview.TemplateParams package is excluded until method too large error is fixed
+      // preview.TemplateParams package is excluded until method too large error is fixed
       ScoverageKeys.coverageExcludedPackages := "<empty>;.*Reverse.*;.*(config|testonly).*;.*(BuildInfo|Routes).*;preview.TemplateParams.*;preview.views.*;.*\\$anon.*",
       ScoverageKeys.coverageMinimumStmtTotal := 85,
       ScoverageKeys.coverageFailOnMinimum := true,
