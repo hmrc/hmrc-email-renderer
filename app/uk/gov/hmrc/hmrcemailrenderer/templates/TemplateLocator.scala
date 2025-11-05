@@ -17,6 +17,7 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.ad.ADTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.aeo.AEOMRATemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.agent.AgentTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.amls.AmlsTemplates
@@ -186,7 +187,8 @@ trait TemplateLocator {
       "IOSS NETP"             -> IossNetpTemplates.templates,
       "TRE"                   -> treTemplates.templates,
       FeedbackTemplates.id    -> FeedbackTemplates.templates,
-      "NGR"                   -> NgrTemplates.templates
+      "NGR"                   -> NgrTemplates.templates,
+      "AD"                    -> ADTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq
