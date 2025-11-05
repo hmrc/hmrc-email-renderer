@@ -51,7 +51,7 @@ class TreThirdPartyAddedTPSpec extends PlaySpec with CommonParamsForSpec {
       )
       htmlContent must include("How to access CDS data")
       htmlContent must include("Go to GOV.UK.")
-      htmlContent must include("Search for 'Get customs declaration data for imports and exports'.")
+      htmlContent must include("Search for 'Get customs data for import and export declarations'.")
       htmlContent must include(
         "Log in to your account. If you’re not subscribed to the CDS service, the ‘Request a report’ section on the guidance page shows the steps to set this up."
       )

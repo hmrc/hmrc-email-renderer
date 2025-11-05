@@ -49,7 +49,7 @@ class TreReportFailedSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("We could not complete the CDS report XXXXX678 because of an error.")
       htmlContent must include("What you need to do next")
       htmlContent must include("Go to GOV.UK.")
-      htmlContent must include("Search for 'Get customs declaration data for imports and exports'.")
+      htmlContent must include("Search for 'Get customs data for import and export declarations'.")
       htmlContent must include("Log in to your account.")
       htmlContent must include(
         "Select 'Requested reports' in the reports section of your dashboard to view details of the error."
