@@ -148,7 +148,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "CIR",
         "IOSS NETP",
         "TRE",
-        "NGR"
+        "NGR",
+        "AD"
       )
     }
 
@@ -674,6 +675,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_VRT12B",
         "newMessageAlert_VRT14B",
         "newMessageAlert_cy",
+        "newMessageAlert_AD",
+        "newMessageAlert_AD_cy",
         "new_message_alert_itsa",
         "new_message_alert_itsa_cy",
         "new_message_alert_itsaeops1",
