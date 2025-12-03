@@ -26,4 +26,5 @@ object TemplateUtils {
     now.isAfter(startDate) && now.isBefore(endDate)
   }
 
+  def currentYear: Int = LocalDate.now.getYear
 }
