@@ -31,8 +31,13 @@ class TemplateUtilsSpec extends PlaySpec {
         || (currentDate.getMonthValue == 3)
         || (currentDate.getMonthValue == 4 && currentDate.getDayOfMonth <= 5)
       ) {
-        TemplateUtils.isP2TemplateAnnual mustBe true
+        println("======== inside true1 =======")
+        TemplateUtils.isP2TemplateAnnual mustBe {
+          println("======== inside true =======")
+          true
+        }
       } else {
+        println("======== inside false =======")
         TemplateUtils.isP2TemplateAnnual mustBe false
       }
     }
@@ -41,7 +46,7 @@ class TemplateUtilsSpec extends PlaySpec {
   "currentYear" should {
     "return the correct value of year" in {
       val currentYearValue = TemplateUtils.currentYear
-
+      println("====== yesr is ========" + currentYearValue)
       currentYearValue must be > 0
       currentYearValue.toString.length must be >= 4
     }
