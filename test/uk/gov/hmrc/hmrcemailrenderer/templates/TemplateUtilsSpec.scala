@@ -23,7 +23,7 @@ import java.time.LocalDate
 class TemplateUtilsSpec extends PlaySpec {
 
   "isP2TemplateAnnual" should {
-    "return true when current date is between February and April 5th () otherwise return false" in {
+    "return true when current date is between February and April 5th (April 5th included) otherwise return false" in {
       val currentDate = LocalDate.now()
 
       if (
@@ -31,13 +31,8 @@ class TemplateUtilsSpec extends PlaySpec {
         || (currentDate.getMonthValue == 3)
         || (currentDate.getMonthValue == 4 && currentDate.getDayOfMonth <= 5)
       ) {
-        println("======== inside true1 =======")
-        TemplateUtils.isP2TemplateAnnual mustBe {
-          println("======== inside true =======")
-          true
-        }
+        TemplateUtils.isP2TemplateAnnual mustBe true
       } else {
-        println("======== inside false =======")
         TemplateUtils.isP2TemplateAnnual mustBe false
       }
     }
@@ -46,7 +41,7 @@ class TemplateUtilsSpec extends PlaySpec {
   "currentYear" should {
     "return the correct value of year" in {
       val currentYearValue = TemplateUtils.currentYear
-      println("====== yesr is ========" + currentYearValue)
+
       currentYearValue must be > 0
       currentYearValue.toString.length must be >= 4
     }
