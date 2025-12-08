@@ -1,4 +1,6 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils
+@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils.currentYear
+
 @(params: Map[String, Any]) You have a tax code change
 
 
@@ -9,7 +11,7 @@ Your PAYE Income Tax records have recently changed, which means the amount of ta
 For security reasons we do not give the full details here, but it could be because:
 
 @if(TemplateUtils.isP2TemplateAnnual) {
-- we have now calculated your tax code for the next tax year (tax year 2025 to 2026)
+- we have now calculated your tax code for the next tax year (tax year @currentYear to @{currentYear+1})
 }- your job changed
 - your pay changed
 - your company benefits, such as a company car changed
