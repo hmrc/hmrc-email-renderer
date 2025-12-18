@@ -3999,6 +3999,9 @@ object TemplateParams3 {
     "tre_third_party_access_removed" -> Map(
       "businessName" -> "TestBusiness"
     ),
+    "tre_third_party_access_edited_tp" -> Map(
+      "businessName" -> "TestBusiness"
+    ),
     "ngr_registration_successful" -> Map(
       "firstName" -> "Jim",
       "lastName"  -> "Ferguson",

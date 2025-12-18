@@ -76,6 +76,16 @@ object treTemplates {
       plainTemplate = txt.treThirdPartyAccessRemoved.f,
       htmlTemplate = html.treThirdPartyAccessRemoved.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "tre_third_party_access_edited_tp",
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
+      service = TradeReportingExtracts,
+      subject = params =>
+        s"Your third-party access to CDS data for ${params.getOrElse("businessName", "a business")} has been edited",
+      plainTemplate = txt.treThirdPartyAccessEditedTP.f,
+      htmlTemplate = html.treThirdPartyAccessEditedTP.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
