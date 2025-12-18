@@ -1,0 +1,23 @@
+@(params: Map[String, Any])
+
+Dear customer
+
+@{params.getOrElse("businessName", "A business")} has edited your third-party access to their customs declaration data.
+
+Your access to certain import and export data has been updated and any previous reports will no longer be available to view or download under ‘Available to download’. If you need to access import and export data for this business again, you will need to request a new report.
+
+View the change to access
+
+1. Go to GOV.UK.
+
+2. Search for 'Get customs data for import and export declarations'.
+
+3. Log in to your account.
+
+4.  Select ‘Businesses you have third party access to’ in the ‘View data access’ section of your dashboard to view details of the change.
+
+This change only affects access to @{if(params.get("businessName").isDefined){"this"}else{"that"}} business.
+
+From the HMRC Customs declaration data team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
