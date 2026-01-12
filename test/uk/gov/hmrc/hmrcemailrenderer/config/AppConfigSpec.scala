@@ -16,7 +16,9 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.config
 
+import play.api.Configuration
 import uk.gov.hmrc.hmrcemailrenderer.utils.SpecBase
+import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 
 class AppConfigSpec extends SpecBase {
 
@@ -26,15 +28,109 @@ class AppConfigSpec extends SpecBase {
     }
   }
 
-  "isDateTimeServiceEnabled" should {
-    "return correct value of feature flag" in {
-      appConfig.isFixedSystemDateEnabled must be(false)
+  "isFixedSystemDateEnabled" should {
+    "return correct value of feature flag" when {
+
+      "fixed system date is disabled" in {
+        appConfig.isFixedSystemDateEnabled must be(false)
+      }
+
+      "fixed system date feature config is absent" in {
+        val config = Configuration(
+          "unknown" -> "test"
+        )
+
+        val servicesConfigWithNoFeatureValue: ServicesConfig = new ServicesConfig(config)
+
+        val appConfig = applicationConfig(config, servicesConfigWithNoFeatureValue)
+
+        appConfig.isFixedSystemDateEnabled must be(false)
+      }
+
+      "fixed system date is enabled" in {
+        val config = Configuration(
+          "features.fixed-system-date.enabled" -> true
+        )
+
+        val servicesConfigWithFeatureEnabled: ServicesConfig = new ServicesConfig(config)
+
+        val appConfig = applicationConfig(config, servicesConfigWithFeatureEnabled)
+
+        appConfig.isFixedSystemDateEnabled must be(true)
+      }
     }
   }
 
-  "dateTimeServiceDateString" should {
-    "return correct value of fixed system date month" in {
-      appConfig.fixedSystemDateMonth must be(2)
+  "fixedSystemDateDay" should {
+    "return correct value of fixed system date day" when {
+      "config value is valid" in {
+        appConfig.fixedSystemDateDay must be(1)
+      }
+
+      "config value is invalid" in {
+        val config1 = Configuration(
+          "features.fixed-system-date.enabled" -> true,
+          "features.fixed-system-date.day"     -> "abc"
+        )
+
+        val config2 = Configuration(
+          "features.fixed-system-date.enabled" -> true,
+          "features.fixed-system-date.day"     -> 42
+        )
+
+        val config3 = Configuration(
+          "features.fixed-system-date.enabled" -> true,
+          "features.fixed-system-date.day"     -> 0
+        )
+
+        val servicesConfigWithInvalidDayValue: ServicesConfig = new ServicesConfig(config1)
+
+        val appConfig1: AppConfig = applicationConfig(config1, servicesConfigWithInvalidDayValue)
+        val appConfig2: AppConfig = applicationConfig(config2, servicesConfigWithInvalidDayValue)
+        val appConfig3: AppConfig = applicationConfig(config3, servicesConfigWithInvalidDayValue)
+
+        appConfig1.fixedSystemDateDay must be(1)
+        appConfig2.fixedSystemDateDay must be(1)
+        appConfig3.fixedSystemDateDay must be(1)
+      }
     }
   }
+
+  "fixedSystemDateMonth" should {
+    "return correct value of fixed system date month" when {
+      "config value is valid" in {
+        appConfig.fixedSystemDateMonth must be(2)
+      }
+
+      "config value is invalid" in {
+        val config1 = Configuration(
+          "features.fixed-system-date.enabled" -> true,
+          "features.fixed-system-date.month"   -> "abc"
+        )
+
+        val config2 = Configuration(
+          "features.fixed-system-date.enabled" -> true,
+          "features.fixed-system-date.day"     -> 14
+        )
+
+        val config3 = Configuration(
+          "features.fixed-system-date.enabled" -> true,
+          "features.fixed-system-date.day"     -> 0
+        )
+
+        val servicesConfigWithInvalidDayValue: ServicesConfig = new ServicesConfig(config1)
+
+        val appConfig1: AppConfig = applicationConfig(config1, servicesConfigWithInvalidDayValue)
+        val appConfig2: AppConfig = applicationConfig(config2, servicesConfigWithInvalidDayValue)
+        val appConfig3: AppConfig = applicationConfig(config3, servicesConfigWithInvalidDayValue)
+
+        appConfig1.fixedSystemDateMonth must be(2)
+        appConfig2.fixedSystemDateMonth must be(2)
+        appConfig3.fixedSystemDateMonth must be(2)
+      }
+    }
+  }
+
+  def applicationConfig(config: Configuration, servicesConfig: ServicesConfig): AppConfig =
+    new AppConfig(config, servicesConfig)
 }

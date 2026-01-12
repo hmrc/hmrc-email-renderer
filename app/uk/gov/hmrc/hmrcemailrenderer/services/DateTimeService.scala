@@ -26,10 +26,11 @@ class DateTimeService @Inject() (appConfig: AppConfig) {
 
   def systemDate(): LocalDate =
     if (appConfig.isFixedSystemDateEnabled) {
+      val fixedSysDateDay = appConfig.fixedSystemDateDay
       val fixedSysDateMonth = appConfig.fixedSystemDateMonth
       val currentDate = LocalDate.now()
 
-      LocalDate.of(currentDate.getYear, fixedSysDateMonth, 1)
+      LocalDate.of(currentDate.getYear, fixedSysDateMonth, fixedSysDateDay)
     } else {
       LocalDate.now()
     }

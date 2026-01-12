@@ -20,14 +20,33 @@ import play.api.Configuration
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 
 import javax.inject.{ Inject, Singleton }
+import scala.util.{ Failure, Success, Try }
 
 @Singleton
 class AppConfig @Inject() (config: Configuration, servicesConfig: ServicesConfig) {
 
   lazy val isFixedSystemDateEnabled: Boolean =
-    config.getOptional[Boolean]("features.enable-fixed-system-date").getOrElse(false)
+    config.getOptional[Boolean]("features.fixed-system-date.enabled").getOrElse(false)
 
-  lazy val fixedSystemDateMonth: Int = config.getOptional[Int]("features.fixed-system-date-month").getOrElse(2)
+  lazy val fixedSystemDateDay: Int = {
+    val defaultDayValue = 1
+
+    Try(config.getOptional[Int]("features.fixed-system-date.day")) match {
+      case Success(Some(value)) => if (value >= 1 && value <= 31) value else defaultDayValue
+      case Failure(_)           => defaultDayValue
+      case _                    => defaultDayValue
+    }
+  }
+
+  lazy val fixedSystemDateMonth: Int = {
+    val defaultMonthValue = 2
+
+    Try(config.getOptional[Int]("features.fixed-system-date.month")) match {
+      case Success(Some(value)) => if (value >= 1 && value <= 12) value else defaultMonthValue
+      case Failure(_)           => defaultMonthValue
+      case _                    => defaultMonthValue
+    }
+  }
 
   lazy val preferencesServiceBaseUrl: String = servicesConfig.baseUrl("preferences")
 }

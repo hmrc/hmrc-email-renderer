@@ -27,9 +27,26 @@ class DateTimeServiceSpec extends SpecBase {
 
   "systemDate" should {
 
+    "return current date when no config is provided" in {
+      val config = Configuration(
+        "unknown" -> "test"
+      )
+
+      val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
+
+      val currentDate: LocalDate = LocalDate.now()
+
+      val result: LocalDate = dateTimeService(config, configWithFlagDisabled).systemDate()
+
+      result mustBe an[LocalDate]
+
+      result.getMonth.getValue mustBe currentDate.getMonth.getValue
+      result.getDayOfMonth mustBe currentDate.getDayOfMonth
+    }
+
     "return current date when feature flag is disabled" in {
       val config = Configuration(
-        "features.enable-fixed-system-date" -> false
+        "features.fixed-system-date.enabled" -> false
       )
 
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
@@ -45,9 +62,12 @@ class DateTimeServiceSpec extends SpecBase {
     }
 
     "return  the customised date when feature flag is enabled and config values for date are present" in {
+      val dayValue = 4
+
       val config = Configuration(
-        "features.enable-fixed-system-date" -> true,
-        "features.fixed-system-date-month"  -> 3
+        "features.fixed-system-date.enabled" -> true,
+        "features.fixed-system-date.day"     -> 4,
+        "features.fixed-system-date.month"   -> 3
       )
 
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
@@ -58,13 +78,13 @@ class DateTimeServiceSpec extends SpecBase {
       result mustBe an[LocalDate]
 
       result.getMonth.getValue must be(3)
-      result.getDayOfMonth must be(1)
+      result.getDayOfMonth must be(dayValue)
       result.getYear mustBe currentDate.getYear
     }
 
     "return the customised default date when feature flag is enabled and config value for date is not present" in {
       val config = Configuration(
-        "features.enable-fixed-system-date" -> true
+        "features.fixed-system-date.enabled" -> true
       )
 
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
