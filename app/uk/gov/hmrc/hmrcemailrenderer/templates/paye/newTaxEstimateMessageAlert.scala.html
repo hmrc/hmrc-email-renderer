@@ -25,7 +25,7 @@
 <p style="margin: 0 0 0px; font-size: 19px;">For security reasons we do not give the full details here, but it could be because:</p>
 
 <ul>
-    @if(TemplateUtils.isP2TemplateAnnual) {
+    @if(TemplateUtils.isP2TemplateAnnual()) {
         <li>we have now calculated your tax code for the next tax year (tax year @currentYear to @{currentYear+1})</li>
     }
     <li>your job changed</li>

@@ -16,13 +16,25 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates
 
+import com.typesafe.config.ConfigFactory
+import play.api.Configuration
+import uk.gov.hmrc.hmrcemailrenderer.config.AppConfig
+import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
+
 import java.time.LocalDate
 
 object TemplateUtils {
-  def isP2TemplateAnnual: Boolean = {
+  val appConfig: AppConfig = {
+    val config: Configuration = Configuration(ConfigFactory.load())
+    new AppConfig(config, ServicesConfig(config))
+  }
+
+  def isP2TemplateAnnual(appConfig: AppConfig = appConfig): Boolean = {
     val now = LocalDate.now
+
     val startDate = java.time.LocalDate.of(now.getYear, 1, 31)
     val endDate = java.time.LocalDate.of(now.getYear, 4, 6)
+
     now.isAfter(startDate) && now.isBefore(endDate)
   }
 

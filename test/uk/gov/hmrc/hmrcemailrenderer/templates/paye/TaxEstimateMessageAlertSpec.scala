@@ -46,7 +46,7 @@ class TaxEstimateMessageAlertSpec
       htmlContent should include(
         "For security reasons we do not give the full details here, but it could be because:"
       )
-      if (TemplateUtils.isP2TemplateAnnual) {
+      if (TemplateUtils.isP2TemplateAnnual()) {
         htmlContent should include("we have now calculated your tax code for the next tax year")
       } else {
         htmlContent should not include "we have now calculated your tax code for the next tax year"
@@ -84,7 +84,7 @@ class TaxEstimateMessageAlertSpec
       txtContent should include(
         "For security reasons we do not give the full details here, but it could be because:"
       )
-      if (TemplateUtils.isP2TemplateAnnual) {
+      if (TemplateUtils.isP2TemplateAnnual()) {
         txtContent should include("we have now calculated your tax code for the next tax year")
       } else {
         txtContent should not include "we have now calculated your tax code for the next tax year"

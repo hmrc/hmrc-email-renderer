@@ -31,9 +31,9 @@ class TemplateUtilsSpec extends PlaySpec {
         || (currentDate.getMonthValue == 3)
         || (currentDate.getMonthValue == 4 && currentDate.getDayOfMonth <= 5)
       ) {
-        TemplateUtils.isP2TemplateAnnual mustBe true
+        TemplateUtils.isP2TemplateAnnual() mustBe true
       } else {
-        TemplateUtils.isP2TemplateAnnual mustBe false
+        TemplateUtils.isP2TemplateAnnual() mustBe false
       }
     }
   }
