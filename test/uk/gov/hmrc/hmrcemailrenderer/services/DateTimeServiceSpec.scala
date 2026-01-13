@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2026 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ class DateTimeServiceSpec extends SpecBase {
 
       val currentDate: LocalDate = LocalDate.now()
 
-      val result: LocalDate = dateTimeService(config, configWithFlagDisabled).systemDate()
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -53,7 +53,7 @@ class DateTimeServiceSpec extends SpecBase {
 
       val currentDate: LocalDate = LocalDate.now()
 
-      val result: LocalDate = dateTimeService(config, configWithFlagDisabled).systemDate()
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -73,7 +73,7 @@ class DateTimeServiceSpec extends SpecBase {
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
-      val result: LocalDate = dateTimeService(config, configWithFlagDisabled).systemDate()
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -90,7 +90,7 @@ class DateTimeServiceSpec extends SpecBase {
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
-      val result: LocalDate = dateTimeService(config, configWithFlagDisabled).systemDate()
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -100,8 +100,6 @@ class DateTimeServiceSpec extends SpecBase {
     }
   }
 
-  def dateTimeService(config: Configuration, servicesConfig: ServicesConfig): DateTimeService = {
-    val appConfig = new AppConfig(config, servicesConfig)
-    new DateTimeService(appConfig)
-  }
+  def applicationConfig(config: Configuration, servicesConfig: ServicesConfig): AppConfig =
+    new AppConfig(config, servicesConfig)
 }

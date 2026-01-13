@@ -31,8 +31,7 @@ object TemplateUtils {
   }
 
   def isP2TemplateAnnual(appConfig: AppConfig = appConfig): Boolean = {
-    val dateTimeService: DateTimeService = new DateTimeService(appConfig)
-    val systemDate: LocalDate = dateTimeService.systemDate()
+    val systemDate: LocalDate = DateTimeService.systemDate(appConfig)
 
     val now = LocalDate.now
 

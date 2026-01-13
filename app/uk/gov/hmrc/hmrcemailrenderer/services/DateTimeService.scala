@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2026 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +17,11 @@
 package uk.gov.hmrc.hmrcemailrenderer.services
 
 import uk.gov.hmrc.hmrcemailrenderer.config.AppConfig
-
 import java.time.LocalDate
-import javax.inject.{ Inject, Singleton }
 
-@Singleton
-class DateTimeService @Inject() (appConfig: AppConfig) {
+object DateTimeService {
 
-  def systemDate(): LocalDate =
+  def systemDate(appConfig: AppConfig): LocalDate =
     if (appConfig.isFixedSystemDateEnabled) {
       val fixedSysDateDay = appConfig.fixedSystemDateDay
       val fixedSysDateMonth = appConfig.fixedSystemDateMonth
