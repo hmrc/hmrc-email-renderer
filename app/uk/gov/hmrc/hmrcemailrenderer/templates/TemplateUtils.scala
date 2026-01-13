@@ -25,7 +25,7 @@ import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 import java.time.LocalDate
 
 object TemplateUtils {
-  val appConfig: AppConfig = {
+  private val appConfig: AppConfig = {
     val config: Configuration = Configuration(ConfigFactory.load())
     new AppConfig(config, ServicesConfig(config))
   }
