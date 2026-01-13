@@ -17,7 +17,6 @@
 package uk.gov.hmrc.hmrcemailrenderer.utils
 
 import org.scalatest.OptionValues
-//import org.scalatest.matchers.should.Matchers
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatestplus.mockito.MockitoSugar
