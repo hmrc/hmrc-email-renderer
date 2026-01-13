@@ -51,11 +51,14 @@ class TemplateUtilsSpec extends SpecBase {
     }
 
     "return false when fixed system date feature is enabled and date is not between Feb and 5th of April" in {
+      val day6th = 6
+      val month5 = 5
+
       val appConfigMock: AppConfig = mock[AppConfig]
 
       when(appConfigMock.isFixedSystemDateEnabled).thenReturn(true)
-      when(appConfigMock.fixedSystemDateDay).thenReturn(6)
-      when(appConfigMock.fixedSystemDateMonth).thenReturn(5)
+      when(appConfigMock.fixedSystemDateDay).thenReturn(day6th)
+      when(appConfigMock.fixedSystemDateMonth).thenReturn(month5)
 
       TemplateUtils.isP2TemplateAnnual(appConfigMock) mustBe false
     }
