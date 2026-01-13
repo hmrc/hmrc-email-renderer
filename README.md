@@ -111,6 +111,20 @@ sbt fmt
 sbt clean coverage test coverageReport
 ```
 
+## Features
+
+### Use of Fixed System Date to test templates' text on lower environments
+This feature could be used via DateTimeService
+
+Update below config value to true to enable the fixed system date.
+
+* features.fixed-system-date.enabled
+
+Specific values of day and month could also be provided by using below config values and would be used once the feature is enabled
+
+* features.fixed-system-date.day
+
+* features.fixed-system-date.month
 
 ### License
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html")
