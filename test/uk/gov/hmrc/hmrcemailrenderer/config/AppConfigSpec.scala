@@ -40,7 +40,7 @@ class AppConfigSpec extends SpecBase {
           "unknown" -> "test"
         )
 
-        val servicesConfigWithNoFeatureValue: ServicesConfig = new ServicesConfig(config)
+        val servicesConfigWithNoFeatureValue: ServicesConfig = ServicesConfig(config)
 
         val appConfig = applicationConfig(servicesConfigWithNoFeatureValue)
 
@@ -52,7 +52,7 @@ class AppConfigSpec extends SpecBase {
           "features.fixed-system-date.enabled" -> true
         )
 
-        val servicesConfigWithFeatureEnabled: ServicesConfig = new ServicesConfig(config)
+        val servicesConfigWithFeatureEnabled: ServicesConfig = ServicesConfig(config)
 
         val appConfig = applicationConfig(servicesConfigWithFeatureEnabled)
 
@@ -83,9 +83,9 @@ class AppConfigSpec extends SpecBase {
           "features.fixed-system-date.day"     -> 0
         )
 
-        val servicesConfigWithInvalidDayValue1: ServicesConfig = new ServicesConfig(config1)
-        val servicesConfigWithInvalidDayValue2: ServicesConfig = new ServicesConfig(config2)
-        val servicesConfigWithInvalidDayValue3: ServicesConfig = new ServicesConfig(config3)
+        val servicesConfigWithInvalidDayValue1: ServicesConfig = ServicesConfig(config1)
+        val servicesConfigWithInvalidDayValue2: ServicesConfig = ServicesConfig(config2)
+        val servicesConfigWithInvalidDayValue3: ServicesConfig = ServicesConfig(config3)
 
         val appConfig1: AppConfig = applicationConfig(servicesConfigWithInvalidDayValue1)
         val appConfig2: AppConfig = applicationConfig(servicesConfigWithInvalidDayValue2)
@@ -120,9 +120,9 @@ class AppConfigSpec extends SpecBase {
           "features.fixed-system-date.day"     -> 0
         )
 
-        val servicesConfigWithInvalidDayValue1: ServicesConfig = new ServicesConfig(config1)
-        val servicesConfigWithInvalidDayValue2: ServicesConfig = new ServicesConfig(config2)
-        val servicesConfigWithInvalidDayValue3: ServicesConfig = new ServicesConfig(config3)
+        val servicesConfigWithInvalidDayValue1: ServicesConfig = ServicesConfig(config1)
+        val servicesConfigWithInvalidDayValue2: ServicesConfig = ServicesConfig(config2)
+        val servicesConfigWithInvalidDayValue3: ServicesConfig = ServicesConfig(config3)
 
         val appConfig1: AppConfig = applicationConfig(servicesConfigWithInvalidDayValue1)
         val appConfig2: AppConfig = applicationConfig(servicesConfigWithInvalidDayValue2)
@@ -136,5 +136,5 @@ class AppConfigSpec extends SpecBase {
   }
 
   def applicationConfig(servicesConfig: ServicesConfig): AppConfig =
-    new AppConfig(servicesConfig)
+    AppConfig(servicesConfig)
 }

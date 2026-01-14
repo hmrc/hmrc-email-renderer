@@ -27,7 +27,7 @@ import java.time.LocalDate
 object TemplateUtils {
   private val appConfig: AppConfig = {
     val config: Configuration = Configuration(ConfigFactory.load())
-    new AppConfig(ServicesConfig(config))
+    AppConfig(ServicesConfig(config))
   }
 
   def isP2TemplateAnnual(appConfig: AppConfig = appConfig): Boolean = {

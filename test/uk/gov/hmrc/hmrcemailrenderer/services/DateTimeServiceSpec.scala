@@ -32,7 +32,7 @@ class DateTimeServiceSpec extends SpecBase {
         "unknown" -> "test"
       )
 
-      val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
+      val configWithFlagDisabled: ServicesConfig = ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
 
@@ -49,7 +49,7 @@ class DateTimeServiceSpec extends SpecBase {
         "features.fixed-system-date.enabled" -> false
       )
 
-      val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
+      val configWithFlagDisabled: ServicesConfig = ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
 
@@ -70,7 +70,7 @@ class DateTimeServiceSpec extends SpecBase {
         "features.fixed-system-date.month"   -> 3
       )
 
-      val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
+      val configWithFlagDisabled: ServicesConfig = ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
       val result: LocalDate = DateTimeService.systemDate(applicationConfig(configWithFlagDisabled))
@@ -87,7 +87,7 @@ class DateTimeServiceSpec extends SpecBase {
         "features.fixed-system-date.enabled" -> true
       )
 
-      val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
+      val configWithFlagDisabled: ServicesConfig = ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
       val result: LocalDate = DateTimeService.systemDate(applicationConfig(configWithFlagDisabled))
@@ -101,5 +101,5 @@ class DateTimeServiceSpec extends SpecBase {
   }
 
   def applicationConfig(servicesConfig: ServicesConfig): AppConfig =
-    new AppConfig(servicesConfig)
+    AppConfig(servicesConfig)
 }
