@@ -10,7 +10,7 @@ Mae’ch cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y bydd
 
 Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:
 
-@if(TemplateUtils.isP2TemplateAnnual) {
+@if(TemplateUtils.isP2TemplateAnnual()) {
 - rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf (blwyddyn dreth @currentYear i @{currentYear+1})
 }- newidiodd eich swydd
 - newidiodd eich cyflog

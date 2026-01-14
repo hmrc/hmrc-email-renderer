@@ -47,7 +47,7 @@ class TaxEstimateMessageAlertWelshSpec
       htmlContent should include(
         "Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:"
       )
-      if (TemplateUtils.isP2TemplateAnnual) {
+      if (TemplateUtils.isP2TemplateAnnual()) {
         htmlContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
       } else {
         htmlContent should not include "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf"
@@ -85,7 +85,7 @@ class TaxEstimateMessageAlertWelshSpec
       txtContent should include(
         "Oherwydd rhesymau diogelwch, nid ydym yn rhoi’r manylion llawn yma ond gallai fod oherwydd y canlynol:"
       )
-      if (TemplateUtils.isP2TemplateAnnual) {
+      if (TemplateUtils.isP2TemplateAnnual()) {
         txtContent should include("rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf")
       } else {
         txtContent should not include "rydym bellach wedi cyfrifo’ch cod treth ar gyfer y flwyddyn dreth nesaf"

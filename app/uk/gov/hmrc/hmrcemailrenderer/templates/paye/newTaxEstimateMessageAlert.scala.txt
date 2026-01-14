@@ -10,7 +10,7 @@ Your PAYE Income Tax records have recently changed, which means the amount of ta
 
 For security reasons we do not give the full details here, but it could be because:
 
-@if(TemplateUtils.isP2TemplateAnnual) {
+@if(TemplateUtils.isP2TemplateAnnual()) {
 - we have now calculated your tax code for the next tax year (tax year @currentYear to @{currentYear+1})
 }- your job changed
 - your pay changed
