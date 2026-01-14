@@ -114,7 +114,7 @@ sbt clean coverage test coverageReport
 ## Features
 
 ### Use of Fixed System Date to test templates' text on lower environments
-This feature could be used via DateTimeService
+This feature could be used via DateTimeService. When enabled, a fixed System date is returned otherwise current date is returned.
 
 Update below config value to true to enable the fixed system date.
 
