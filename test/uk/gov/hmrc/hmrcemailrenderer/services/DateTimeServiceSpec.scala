@@ -36,7 +36,7 @@ class DateTimeServiceSpec extends SpecBase {
 
       val currentDate: LocalDate = LocalDate.now()
 
-      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -53,7 +53,7 @@ class DateTimeServiceSpec extends SpecBase {
 
       val currentDate: LocalDate = LocalDate.now()
 
-      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -73,7 +73,7 @@ class DateTimeServiceSpec extends SpecBase {
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
-      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -90,7 +90,7 @@ class DateTimeServiceSpec extends SpecBase {
       val configWithFlagDisabled: ServicesConfig = new ServicesConfig(config)
 
       val currentDate: LocalDate = LocalDate.now()
-      val result: LocalDate = DateTimeService.systemDate(applicationConfig(config, configWithFlagDisabled))
+      val result: LocalDate = DateTimeService.systemDate(applicationConfig(configWithFlagDisabled))
 
       result mustBe an[LocalDate]
 
@@ -100,6 +100,6 @@ class DateTimeServiceSpec extends SpecBase {
     }
   }
 
-  def applicationConfig(config: Configuration, servicesConfig: ServicesConfig): AppConfig =
-    new AppConfig(config, servicesConfig)
+  def applicationConfig(servicesConfig: ServicesConfig): AppConfig =
+    new AppConfig(servicesConfig)
 }

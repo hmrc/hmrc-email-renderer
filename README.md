@@ -120,7 +120,9 @@ Update below config value to true to enable the fixed system date.
 
 * features.fixed-system-date.enabled
 
-Specific values of day and month could also be provided by using below config values and would be used once the feature is enabled
+Specific values of day and month could also be provided by using below config values and would be used once the feature is enabled.
+
+Default values for below has been provided
 
 * features.fixed-system-date.day
 
