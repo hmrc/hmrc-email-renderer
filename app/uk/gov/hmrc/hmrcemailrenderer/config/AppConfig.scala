@@ -24,12 +24,8 @@ import scala.util.{ Failure, Success, Try }
 @Singleton
 class AppConfig @Inject() (servicesConfig: ServicesConfig) {
 
-  lazy val isFixedSystemDateEnabled: Boolean = Try(
-    servicesConfig.getBoolean("features.fixed-system-date.enabled")
-  ) match {
-    case Success(value) => value
-    case Failure(_)     => false
-  }
+  lazy val isFixedSystemDateEnabled: Boolean =
+    Try(servicesConfig.getBoolean("features.fixed-system-date.enabled")).getOrElse(false)
 
   lazy val fixedSystemDateDay: Int = {
     val defaultDayValue = 1
