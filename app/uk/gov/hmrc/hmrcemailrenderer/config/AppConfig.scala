@@ -36,7 +36,7 @@ class AppConfig @Inject() (servicesConfig: ServicesConfig) {
 
   lazy val fixedSystemDateMonth: Int = {
     val defaultMonthValue = 2
-    val monthValue = Try(servicesConfig.getInt("features.fixed-system-date.month")).getOrElse(defaultMonthValue)
+    val monthValue: Int = Try(servicesConfig.getInt("features.fixed-system-date.month")).getOrElse(defaultMonthValue)
 
     if (monthValue >= 1 && monthValue <= 12) monthValue else defaultMonthValue
   }
