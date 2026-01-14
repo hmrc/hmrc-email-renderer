@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.config
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 
 import javax.inject.{ Inject, Singleton }
-import scala.util.{ Failure, Success, Try }
+import scala.util.Try
 
 @Singleton
 class AppConfig @Inject() (servicesConfig: ServicesConfig) {
@@ -29,20 +29,16 @@ class AppConfig @Inject() (servicesConfig: ServicesConfig) {
 
   lazy val fixedSystemDateDay: Int = {
     val defaultDayValue = 1
+    val dayValue: Int = Try(servicesConfig.getInt("features.fixed-system-date.day")).getOrElse(defaultDayValue)
 
-    Try(servicesConfig.getInt("features.fixed-system-date.day")) match {
-      case Success(value) => if (value >= 1 && value <= 31) value else defaultDayValue
-      case Failure(_)     => defaultDayValue
-    }
+    if (dayValue >= 1 && dayValue <= 31) dayValue else defaultDayValue
   }
 
   lazy val fixedSystemDateMonth: Int = {
     val defaultMonthValue = 2
+    val monthValue = Try(servicesConfig.getInt("features.fixed-system-date.month")).getOrElse(defaultMonthValue)
 
-    Try(servicesConfig.getInt("features.fixed-system-date.month")) match {
-      case Success(value) => if (value >= 1 && value <= 12) value else defaultMonthValue
-      case Failure(_)     => defaultMonthValue
-    }
+    if (monthValue >= 1 && monthValue <= 12) monthValue else defaultMonthValue
   }
 
   lazy val preferencesServiceBaseUrl: String = servicesConfig.baseUrl("preferences")
