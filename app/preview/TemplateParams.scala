@@ -4016,6 +4016,13 @@ object TemplateParams3 {
     "dtr_cis_nil_monthly_return_org_success" -> Map(
       "month" -> "September",
       "year"  -> "2025"
+    ),
+    "overseas_transfer_charge_confirm_transfer_submitted" -> Map(
+      "qtReference"       -> "QT123456",
+      "memberName"        -> "Trixie Mattel",
+      "submitter"         -> "Joe Bloggs",
+      "submissionDate"    -> "3 October 2025 at 3:00pm",
+      "pensionSchemeName" -> "Smith Harper Pension Scheme"
     )
   )
 }

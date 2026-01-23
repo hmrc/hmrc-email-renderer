@@ -1,0 +1,27 @@
+@(params: Map[String, Any])You’ve got a new message from HMRC
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Dear customer
+
+A Qualifying Recognised Overseas Pension Scheme (QROPS) transfer report has been submitted for your pension scheme.
+
+Transfer details
+
+QROPS transfer reference: @{params("qtReference")}
+
+Member name: @{params("memberName")}
+
+Submitted by: @{params("submitter")}
+
+Date submitted: @{params("submissionDate")}
+
+Pension scheme name: @{params("pensionSchemeName")}
+
+Why you are receiving this email
+
+We send email confirmation when a report of a transfer to a qualifying recognised overseas pension scheme (QROPS) is submitted on the Managing Pension Schemes service.
+
+From HMRC Report a transfer to a QROPS
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
