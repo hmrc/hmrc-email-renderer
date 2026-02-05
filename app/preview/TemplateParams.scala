@@ -286,12 +286,10 @@ object TemplateParams {
         "requesterName"                 -> "Bob Roberts"
       ),
       "apiAddedRegisteredMemberToOrganisationConfirmation" -> Map(
-        "organisationName" -> "Test Organisation",
-        "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
+        "organisationName" -> "Test Organisation"
       ),
       "apiAddedUnregisteredMemberToOrganisationConfirmation" -> Map(
-        "organisationName" -> "Test Organisation",
-        "sdstEmailAddress" -> "SDSTeam@hmrc.gov.uk"
+        "organisationName" -> "Test Organisation"
       ),
       "apiAddedMemberToOrganisationNotification" -> Map(
         "organisationName" -> "Test Organisation",
