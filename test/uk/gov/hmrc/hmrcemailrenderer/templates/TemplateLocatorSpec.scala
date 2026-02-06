@@ -150,7 +150,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "TRE",
         "NGR",
         "AD",
-        "LTAOATC"
+        "LTAOATC",
+        "Personal Tax"
       )
     }
 
@@ -678,6 +679,12 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_cy",
         "newMessageAlert_AD",
         "newMessageAlert_AD_cy",
+        "newMessageAlert_NIRef1",
+        "newMessageAlert_NIRef1_cy",
+        "newMessageAlert_NIRef2",
+        "newMessageAlert_NIRef2_cy",
+        "newMessageAlert_NIRef3",
+        "newMessageAlert_NIRef3_cy",
         "new_message_alert_itsa",
         "new_message_alert_itsa_cy",
         "new_message_alert_itsaeops1",
