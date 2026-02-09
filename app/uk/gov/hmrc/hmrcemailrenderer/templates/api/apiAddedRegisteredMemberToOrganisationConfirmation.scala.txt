@@ -8,7 +8,7 @@ How to get help
 
 Contact an admin at @{params("organisationName")} if you have questions about your access.
 
-Or email @{params("sdstEmailAddress")} if you need help signing in to the Developer Hub.
+Or create a support request on the Developer Hub if you need help signing in.
 
 HMRC Developer Hub
 
