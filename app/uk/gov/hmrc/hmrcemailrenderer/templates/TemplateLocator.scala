@@ -100,6 +100,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ltaoatc.LtaoatcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ngr.NgrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.niref.NIRefTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.penaltyreform.PenReformTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2Templates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.tgp.TgpTemplates
@@ -192,7 +193,8 @@ trait TemplateLocator {
       "NGR"                   -> NgrTemplates.templates,
       "AD"                    -> ADTemplates.templates,
       "LTAOATC"               -> LtaoatcTemplates.templates,
-      "Personal Tax"          -> NIRefTemplates.templates
+      "Personal Tax"          -> NIRefTemplates.templates,
+      "Pillar 2"              -> Pillar2Templates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

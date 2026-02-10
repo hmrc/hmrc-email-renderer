@@ -1,0 +1,48 @@
+@import play.api.libs.json.{ Json, JsObject }
+@import uk.gov.hmrc.hmrcemailrenderer.templates.pillar2.Pillar2DateTimes.*
+
+@(params: Map[String, Any])
+
+@errorList = @{
+  params("errors") match {
+    case errors: String => Json.parse(errors).as[List[JsObject]]
+    case errors: Seq[_] => errors.asInstanceOf[Seq[Map[String, String]]].map(m => Json.toJson(m).as[JsObject])
+    case _ => List()
+  }
+}
+
+Errors identified in GloBE Information Return (GIR)
+
+Pillar 2 ID: @{params("pillar2Id")}
+
+GIR Reference ID: @{params("referenceId")}
+
+Accounting period: @{ukAllNumericDateToUserFacing(params("accountingPeriodStart").toString)} to @{ukAllNumericDateToUserFacing(params("accountingPeriodEnd").toString)}
+
+Received: @{toTwelveHourUserFacing(params("submissionTime").toString)} on @{ukAllNumericDateToUserFacing(params("submissionDate").toString)}
+
+We have processed your GIR submission and identified the errors in the table below.
+
+What you need to do next
+
+You must correct these errors and re-submit your return before your submission deadline date.
+
+You may be charged penalties if you submit a return after your deadline date.
+
+You should contact your software provider if you need further guidance on how to correct these errors.
+
+Thank you.
+
+HM Revenue and Customs
+Customer Compliance Group
+
+ERRORS IDENTIFIED:
+@for(error <- errorList) {
+Error Code: @{(error \ "errorCode").as[String]}
+Description: @{(error \ "description").as[String]}
+DocRefId in Error: @{(error \ "docRefIds").asOpt[String].getOrElse("")}
+Count: @{(error \ "count").as[String]}
+---
+}
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

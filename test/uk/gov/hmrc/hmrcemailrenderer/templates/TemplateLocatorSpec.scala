@@ -151,7 +151,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "NGR",
         "AD",
         "LTAOATC",
-        "Personal Tax"
+        "Personal Tax",
+        "Pillar 2"
       )
     }
 
@@ -1112,7 +1113,10 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "tgp_download_record_failure_notification_email_cy",
         "ngr_registration_successful",
         "ngr_add_property_request_sent",
-        "overseas_transfer_charge_confirm_transfer_submitted"
+        "overseas_transfer_charge_confirm_transfer_submitted",
+        "pillar2_gir_submission_successful",
+        "pillar2_gir_submission_generic_errors",
+        "pillar2_gir_submission_critical_errors"
       )
     }
   }

@@ -136,4 +136,5 @@ object ServiceIdentifier {
   case object NgrNotify extends ServiceIdentifier { override val name = "ngr-notify" }
   case object LTAOATC extends ServiceIdentifier { override val name = "ltaoatc" }
   case object PersonalTax extends ServiceIdentifier { override val name = "personal-tax" }
+  case object Pillar2 extends ServiceIdentifier { override val name = "pillar2" }
 }
