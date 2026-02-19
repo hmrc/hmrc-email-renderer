@@ -105,6 +105,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tctr.TctrTemplates.tctrGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.tgp.TgpTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tre.treTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.carf.CARFTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -151,6 +152,7 @@ trait TemplateLocator {
       "LifetimeISA"           -> LisaTemplates.templates,
       "ITR"                   -> ItrTemplates.templates,
       "CBCR"                  -> CBCRTemplates.templates,
+      "CARF"                  -> CARFTemplates.templates,
       "CRSFATCA"              -> CRSFatcaTemplates.templates,
       "OnlinePaymentService"  -> OnlinePaymentServiceTemplates.templates,
       "EEITT"                 -> EeittTemplates.templates,

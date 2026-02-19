@@ -672,6 +672,10 @@ object TemplateParams {
       "crs_fatca_registration_successful" -> Map(
         "name" -> "Joe Bloggs"
       ),
+      "carf_registration_successful" -> Map(
+        "name"          -> "Ashley Smith",
+        "carfReference" -> "XXCAR0012345678"
+      ),
       "agent_mapping_invitation_template_id" -> Map(
         "name"             -> "Mr Joe Bloggs",
         "verificationLink" -> exampleLinkWithRandomId
