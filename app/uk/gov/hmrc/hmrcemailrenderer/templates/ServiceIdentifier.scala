@@ -34,6 +34,7 @@ object ServiceIdentifier {
   case object BTIApplicationService extends ServiceIdentifier { override val name = "binding-tariff-trader-frontend" }
   case object BTIAdviceService extends ServiceIdentifier { override val name = "binding-tariff-advice-frontend" }
   case object BusinessRates extends ServiceIdentifier { override val name = "bars" }
+  case object CARF extends ServiceIdentifier { override val name = "carf" }
   case object Charities extends ServiceIdentifier { override val name = "charities" }
   case object Childcare extends ServiceIdentifier { override val name = "cc" }
   case object CIPInsightsAndReputation extends ServiceIdentifier { override val name = "cir" }

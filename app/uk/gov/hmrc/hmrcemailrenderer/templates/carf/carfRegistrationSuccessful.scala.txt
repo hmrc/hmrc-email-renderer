@@ -1,0 +1,32 @@
+@(params: Map[String, Any])
+
+You have registered for cryptoasset reporting
+
+Dear @{params("name")}
+
+You have registered to send reports through the cryptoasset reporting framework service.
+
+@params.get("carfReference").map(id => s"For reference, your CARF user ID is:\n$id").getOrElse("To find your CARF user ID, sign in to the service.")
+
+For security reasons, we have not included a link to this service in this email.
+
+Print or save a copy of this email for your records.
+
+What you need to do next
+
+Search for ‘cryptoasset reporting framework’ on GOV.UK.
+Sign in to the service.
+Add a cryptoasset service provider, if you have not added one already.
+Upload an XML file to send a report.
+
+Why you are receiving this email
+
+We send a confirmation email to the contacts provided during online registration.
+
+You can email aeoi.enquiries@@hmrc.gov.uk for help.
+
+For more information, search GOV.UK for ‘cryptoasset reporting framework’.
+
+From the HMRC cryptoasset reporting framework service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
