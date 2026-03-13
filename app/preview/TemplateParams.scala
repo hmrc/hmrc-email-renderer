@@ -4087,6 +4087,13 @@ object TemplateParams3 {
             "description": "The referenced file contains one or more records with a DocTypeIndic value in the range OECD10-OECD13, indicating test data. As a result, the receiving Competent Authority cannot accept this file as a valid GIR file submission."
           }
         ]"""))
+    ),
+    "pillar2_confirmation_email" -> Map(
+      "confirmationDate"      -> "3 October 2025",
+      "confirmationTime"      -> "2:45pm",
+      "requestType"           -> "UK Tax Return",
+      "accountingPeriodStart" -> "1 April 2024",
+      "accountingPeriodEnd"   -> "31 March 2025"
     )
   )
 }

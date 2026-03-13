@@ -1,0 +1,26 @@
+@(params: Map[String, Any])
+@defining(
+  if (params("requestType").toString == "Below Threshold Notification")
+    "Below-Threshold Notification (BTN) submission received - Pillar 2 Top-up Taxes"
+  else
+    s"${params("requestType")} received - Pillar 2 Top-up Taxes"
+) { heading =>
+@heading
+ 
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+@if(params("requestType") == "Below Threshold Notification") {
+We have received your BTN on @{params("confirmationDate")}. This is effective from @{params("accountingPeriodStart")}, the start of the accounting period you selected.
+ 
+What happens next
+ 
+The BTN satisfies your group's obligation to submit a UK Tax Return for the current and future accounting periods. You do not need to send an information return while your group remains below-threshold. You must submit a UK Tax Return if your group meets the threshold conditions in the future.
+} else {
+We have received your @{params("requestType")}.
+ 
+Accounting period: @{params("accountingPeriodStart")} to @{params("accountingPeriodEnd")}
+Received: @{params("confirmationTime")} on @{params("confirmationDate")}
+}
+If you have any queries, please email the Pillar 2 team at pillar2mailbox@@hmrc.gov.uk
+ 
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+}
