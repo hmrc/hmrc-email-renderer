@@ -1727,6 +1727,9 @@ object TemplateParams2 {
       "apiname"             -> "MyApi",
       "documentdescription" -> "System Architecture Document v1.2"
     ),
+    "hipp_ai_assistant_feedback_received" -> Map(
+      "feedbacktype" -> "positive"
+    ),
     "chargeable_return_submit" -> Map(
       "first_name"   -> "FirstName",
       "last_name"    -> "SecondName",
