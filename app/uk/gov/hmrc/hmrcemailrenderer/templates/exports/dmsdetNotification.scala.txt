@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+MRN @params("mrn") has been detained
+
+Dear Declarant
+
+Your declaration has been detained under section 139 Customs and Excise Management Act 1979 pending further enquiries.
+
+Your declaration will appear with a status as ‘Declaration detained’. You don’t need to take any action at the moment, you will be notified if this changes and if action is needed.
+
+Why you got this email
+
+You chose to receive exports notifications about the Customs Declaration Service to this email address.
+
+Please note, these email notifications are only sent to this email address, which is the CDS registered email address. If you cannot deal with this declaration, you need to forward this email notification on to the right person.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

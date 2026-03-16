@@ -24,6 +24,15 @@ object ExportsTemplates {
 
   val templates = Seq(
     MessageTemplate.createWithDynamicSubject(
+      templateId = "dmsdet_notification",
+      fromAddress = FromAddress.noReply("HMRC CDS Exports Team"),
+      service = ServiceIdentifier.Exports,
+      subject = params => s"MRN ${params("mrn")} has been detained",
+      plainTemplate = txt.dmsdetNotification.f,
+      htmlTemplate = html.dmsdetNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "dmsdoc_notification",
       fromAddress = FromAddress.noReply("HMRC CDS Exports Team"),
       service = ServiceIdentifier.Exports,
