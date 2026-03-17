@@ -584,6 +584,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "hipp_api_doc_rejected",
         "hipp_api_doc_quarantined",
         "hipp_api_doc_unknown_error",
+        "hipp_ai_assistant_feedback_received",
         "ho10_confirmation_submission",
         "ho10_confirmation_submission_cy",
         "ho5_code",

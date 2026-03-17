@@ -184,6 +184,15 @@ object HippTemplates {
       plainTemplate = txt.ApiDocumentUnknownError.f,
       htmlTemplate = html.ApiDocumentUnknownError.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "hipp_ai_assistant_feedback_received",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = Hipp,
+      subject = "AI assistant feedback received",
+      plainTemplate = txt.NewAiFeedbackReceived.f,
+      htmlTemplate = html.NewAiFeedbackReceived.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

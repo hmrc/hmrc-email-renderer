@@ -1,0 +1,4 @@
+@(params: Map[String, Any])
+An Integration Hub user left some @{params("feedbacktype")} feedback while using the AI assistant.
+To view the feedback in context, visit the AI Conversation Explorer at https://admin.tax.service.gov.uk/integration-hub/admin/ai-conversations
+From HMRC The Integration Hub
