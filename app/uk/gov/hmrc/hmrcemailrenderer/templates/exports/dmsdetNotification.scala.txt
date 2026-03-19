@@ -1,18 +1,18 @@
 @(params: Map[String, Any])
-MRN @params("mrn") has been detained
+We have detained your goods for further inspection
 
-Dear Declarant
+Dear customer
 
-Your declaration has been detained under section 139 Customs and Excise Management Act 1979 pending further enquiries.
+Your export declaration, Movement Reference Number @params("mrn"), has been detained for further inspection under section 139 of the Customs and Excise Management Act 1979.
 
-Your declaration will appear with a status as ‘Declaration detained’. You don’t need to take any action at the moment, you will be notified if this changes and if any action is needed.
+Your export declaration in the Customs Declaration Service (CDS) will show as ‘Declaration detained’.
+
+You do not need to take any further action. We will notify you if we need more information.
 
 Why you got this email
 
-You chose to receive exports notifications about the Customs Declaration Service to this email address.
+You asked to receive export notifications from CDS at this email address.
 
-Please note, these email notifications are only sent to this email address, which is the CDS registered email address. If you cannot deal with this declaration, you need to forward this email notification on to the right person.
-
-From HMRC
+From HMRC CDS Exports
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

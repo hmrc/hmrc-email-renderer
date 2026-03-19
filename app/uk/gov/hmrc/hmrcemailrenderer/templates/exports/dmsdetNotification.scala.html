@@ -15,24 +15,20 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"MRN ${params("mrn")} has been detained"){
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "We have detained your goods for further inspection"){
 <div style="margin: 0 0 30px; font-size: 18px;">
-    <p>Dear Declarant</p>
+    <p>Dear customer</p>
 
-    <p>Your declaration has been detained under section 139 Customs and Excise Management Act 1979 pending further
-        enquiries.</p>
+    <p>Your export declaration, Movement Reference Number @params("mrn"), has been detained for further inspection under section 139 of the Customs and Excise Management Act 1979.</p>
 
-    <p>Your declaration will appear with a status as ‘Declaration detained’. You don’t need to take any action at the
-        moment, you will be notified if this changes and if any action is needed.</p>
+    <p>Your export declaration in the Customs Declaration Service (CDS) will show as ‘Declaration detained’.</p>
+
+    <p>You do not need to take any further action. We will notify you if we need more information.</p>
 
     <p style="font-weight: bold;">Why you got this email</p>
 
-    <p>You chose to receive exports notifications about the Customs Declaration Service to this email address.</p>
+    <p>You asked to receive export notifications from CDS at this email address.</p>
 
-    <p>Please note, these email notifications are only sent to this email address, which is the CDS registered email
-        address. If you cannot deal with this declaration, you need to forward this email notification on to the right
-        person.</p>
-
-    <p>From HMRC</p>
+    <p>From HMRC CDS Exports</p>
 </div>
 }

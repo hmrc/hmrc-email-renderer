@@ -27,7 +27,7 @@ object ExportsTemplates {
       templateId = "dmsdet_notification",
       fromAddress = FromAddress.noReply("HMRC CDS Exports Team"),
       service = ServiceIdentifier.Exports,
-      subject = params => s"MRN ${params("mrn")} has been detained",
+      subject = params => s"Your goods have been detained for further inspection",
       plainTemplate = txt.dmsdetNotification.f,
       htmlTemplate = html.dmsdetNotification.f,
       priority = Some(MessagePriority.Urgent)
