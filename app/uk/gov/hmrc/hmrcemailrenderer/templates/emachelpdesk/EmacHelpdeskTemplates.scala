@@ -40,6 +40,15 @@ object EmacHelpdeskTemplates {
       plainTemplate = txt.emacHelpdeskSuccessfulConfirmationEmail.f,
       htmlTemplate = html.emacHelpdeskSuccessfulConfirmationEmail.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_upload_failure",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file upload failure",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileUploadFailure.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileUploadFailure.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
