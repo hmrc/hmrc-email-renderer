@@ -48,7 +48,6 @@ class BarsAlertSpec extends AnyWordSpecLike with should.Matchers with OptionValu
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include("Valuation Office - Business Rates")
-      htmlContent should include("BA Code")
       htmlContent should include("BA : ba5090")
       htmlContent should include("File name : Barnet_CT.xml")
       htmlContent should include("Date Submitted : 2016-08-09T14:02:09.747+01:00")

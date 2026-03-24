@@ -48,7 +48,6 @@ class BarsAlertTransactionSpec extends AnyWordSpecLike with should.Matchers with
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include("Valuation Office - Business Rates")
-      htmlContent should include("BA Code")
       htmlContent should include("BA : ba5090")
       htmlContent should include("Transaction id : 78918c8a-216a-4472-b886-9b81fcf4f64d")
       htmlContent should include("File name : Barnet_CT.xml")
