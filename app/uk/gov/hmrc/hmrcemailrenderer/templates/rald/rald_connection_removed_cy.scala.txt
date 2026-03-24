@@ -13,6 +13,6 @@ Beth sy’n digwydd nesaf
 
 Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn.
 
-Oddi wrth Asiantaeth y Swyddfa Brisio
+Oddi wrth CThEF Swyddfa Brisio
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

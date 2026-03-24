@@ -1,4 +1,4 @@
-@(params: Map[String, Any]) Valuation Office Agency - Rent and lease details
+@(params: Map[String, Any]) Valuation Office - Rent and lease details
 
 @params("referenceNumber")
 

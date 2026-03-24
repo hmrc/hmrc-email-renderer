@@ -26,12 +26,12 @@ object RaldTemplates {
   val rald_connection_removed = "rald_connection_removed"
   val rald_connection_removed_cy = "rald_connection_removed_cy"
 
-  private val fromNoReplyVOA = FromAddress.noReply("Valuation Office Agency")
-  private val fromNoReplyVOA_cy = FromAddress.noReply("Asiantaeth y Swyddfa Brisio")
+  private val fromNoReplyVOA = FromAddress.noReply("HMRC Valuation Office")
+  private val fromNoReplyVOA_cy = FromAddress.noReply("CThEF Swyddfa Brisio")
   private val fromRALD = FromAddress.noReply("Rent and Lease Details")
   private val standardPriority = Some(MessagePriority.Standard)
 
-  val templates = Seq(
+  val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = "rald_alert",
       fromAddress = fromRALD,
@@ -53,7 +53,7 @@ object RaldTemplates {
       templateId = "rald_submission_confirmation",
       fromAddress = fromRALD,
       service = RentalAndLeaseDetails,
-      subject = "Valuation Office Agency received your form",
+      subject = "Valuation Office received your form",
       plainTemplate = txt.raldConfirmation.f,
       htmlTemplate = html.raldConfirmation.f,
       priority = standardPriority
@@ -62,7 +62,7 @@ object RaldTemplates {
       templateId = rald_connection_removed,
       fromAddress = fromNoReplyVOA,
       service = RentalAndLeaseDetails,
-      subject = "Valuation Office Agency: You have removed your connection to a property",
+      subject = "Valuation Office: You have removed your connection to a property",
       plainTemplate = txt.rald_connection_removed.f,
       htmlTemplate = html.rald_connection_removed.f,
       priority = standardPriority
@@ -71,7 +71,7 @@ object RaldTemplates {
       templateId = rald_connection_removed_cy,
       fromAddress = fromNoReplyVOA_cy,
       service = RentalAndLeaseDetails,
-      subject = "Asiantaeth y Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo",
+      subject = "Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo",
       plainTemplate = txt.rald_connection_removed_cy.f,
       htmlTemplate = html.rald_connection_removed_cy.f,
       priority = standardPriority

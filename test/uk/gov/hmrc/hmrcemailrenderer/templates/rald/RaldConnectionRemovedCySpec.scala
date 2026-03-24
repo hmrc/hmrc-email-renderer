@@ -44,17 +44,17 @@ class RaldConnectionRemovedCySpec
     content should include(
       "Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn."
     )
-    content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
+    content should include("Oddi wrth CThEF Swyddfa Brisio")
     content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }
 
   rald_connection_removed_cy should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Asiantaeth y Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo"
+      template.subject(Map.empty) shouldBe "Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Asiantaeth y Swyddfa Brisio <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "CThEF Swyddfa Brisio <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {

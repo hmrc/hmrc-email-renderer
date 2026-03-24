@@ -22,20 +22,20 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ContactForms
 
 object ContactFormsTemplates {
 
-  private val fromNoReplyVOA = FromAddress.noReply("Valuation Office Agency")
-  private val fromNoReplyVOA_cy = FromAddress.noReply("Asiantaeth y Swyddfa Brisio")
+  private val fromNoReplyVOA = FromAddress.noReply("HMRC Valuation Office")
+  private val fromNoReplyVOA_cy = FromAddress.noReply("CThEF Swyddfa Brisio")
   private val standardPriority = Some(MessagePriority.Standard)
 
   val contactFormsGroup = "Contact Forms"
   val cf_enquiry_confirmation = "cf_enquiry_confirmation"
   val cf_enquiry_confirmation_cy = "cf_enquiry_confirmation_cy"
 
-  val templates = Seq(
+  val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = cf_enquiry_confirmation,
       fromAddress = fromNoReplyVOA,
       service = ContactForms,
-      subject = "You have sent an enquiry to the Valuation Office Agency",
+      subject = "You have sent an enquiry to the Valuation Office",
       plainTemplate = txt.cf_enquiry_confirmation.f,
       htmlTemplate = html.cf_enquiry_confirmation.f,
       priority = standardPriority
@@ -44,7 +44,7 @@ object ContactFormsTemplates {
       templateId = cf_enquiry_confirmation_cy,
       fromAddress = fromNoReplyVOA_cy,
       service = ContactForms,
-      subject = "Rydych wedi anfon ymholiad at Asiantaeth y Swyddfa Brisio",
+      subject = "Rydych wedi anfon ymholiad at Swyddfa Brisio",
       plainTemplate = txt.cf_enquiry_confirmation_cy.f,
       htmlTemplate = html.cf_enquiry_confirmation_cy.f,
       priority = standardPriority

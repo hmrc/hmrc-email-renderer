@@ -45,17 +45,17 @@ class TctrConnectionRemovedSpec
       "We will remove your details from our records. You should not receive any further letters from us about this property."
     )
     content should include("Do not reply to this email.")
-    content should include("From Valuation Office Agency - Tenure Cost and Trade Records service")
+    content should include("From HMRC Valuation Office - Tenure Cost and Trade Records service")
     content should include("Report the suspicious email to HMRC")
   }
 
   tctr_connection_removed should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Valuation Office Agency: You have removed your connection to a property"
+      template.subject(Map.empty) shouldBe "Valuation Office: You have removed your connection to a property"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Valuation Office Agency <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "HMRC Valuation Office <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {

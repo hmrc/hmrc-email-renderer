@@ -42,17 +42,17 @@ class ContactFormsEnquiryConfirmationCySpec
     content should include(
       "Rydym yn ymateb i’r mwyafrif o ymholiadau o fewn ychydig ddyddiau. Fodd bynnag, gall ymholiadau cymhleth gymryd hyd at 28 diwrnod."
     )
-    content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
+    content should include("Oddi wrth CThEF Swyddfa Brisio")
     content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }
 
   cf_enquiry_confirmation_cy should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Rydych wedi anfon ymholiad at Asiantaeth y Swyddfa Brisio"
+      template.subject(Map.empty) shouldBe "Rydych wedi anfon ymholiad at Swyddfa Brisio"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Asiantaeth y Swyddfa Brisio <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "CThEF Swyddfa Brisio <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {

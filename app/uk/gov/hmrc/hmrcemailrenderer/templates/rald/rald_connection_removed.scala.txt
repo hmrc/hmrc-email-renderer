@@ -13,6 +13,6 @@ What happens next
 
 We will remove your details from our records. You should not receive any further letters from us about this property.
 
-From Valuation Office Agency
+From HMRC Valuation Office
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
