@@ -1,0 +1,18 @@
+@(params: Map[String, Any])
+We have detained your goods for further inspection
+
+Dear customer
+
+Your export declaration, Movement Reference Number @params("mrn"), has been detained for further inspection under section 139 of the Customs and Excise Management Act 1979.
+
+Your export declaration in the Customs Declaration Service (CDS) will show as ‘Declaration detained’.
+
+You do not need to take any further action. We will notify you if we need more information.
+
+Why you got this email
+
+You asked to receive export notifications from CDS at this email address.
+
+From HMRC CDS Exports
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

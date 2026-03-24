@@ -462,6 +462,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "discounted_dining_payment_sent_cy",
         "disposal_return_submit",
         "dmsdoc_notification",
+        "dmsdet_notification",
         "dprs_registration_submitted",
         "dprs_added_platform_operator",
         "dprs_added_as_platform_operator",
