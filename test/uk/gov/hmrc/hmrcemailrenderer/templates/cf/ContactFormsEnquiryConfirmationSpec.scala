@@ -27,7 +27,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
   *   Yuriy Tumakha
   */
 class ContactFormsEnquiryConfirmationSpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(cf_enquiry_confirmation)
   private val template = TemplateLocator
@@ -75,5 +75,3 @@ class ContactFormsEnquiryConfirmationSpec
       txtContent should include("Report the suspicious email to HMRC")
     }
   }
-
-}

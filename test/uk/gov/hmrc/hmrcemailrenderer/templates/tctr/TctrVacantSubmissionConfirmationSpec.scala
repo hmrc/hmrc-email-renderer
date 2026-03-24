@@ -27,7 +27,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
   *   Yuriy Tumakha
   */
 class TctrVacantSubmissionConfirmationSpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(tctr_vacant_submission_confirmation)
   private val template = TemplateLocator
@@ -69,5 +69,3 @@ class TctrVacantSubmissionConfirmationSpec
       verifyContent(txtContent)
     }
   }
-
-}

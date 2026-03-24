@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ContactForms
 
-object ContactFormsTemplates {
+object ContactFormsTemplates:
 
   private val fromNoReplyVOA = FromAddress.noReply("HMRC Valuation Office")
   private val fromNoReplyVOA_cy = FromAddress.noReply("CThEF Swyddfa Brisio")
@@ -50,5 +50,3 @@ object ContactFormsTemplates {
       priority = standardPriority
     )
   )
-
-}

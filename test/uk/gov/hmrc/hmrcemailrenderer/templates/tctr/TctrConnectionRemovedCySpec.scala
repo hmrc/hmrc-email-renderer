@@ -27,7 +27,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
   *   Yuriy Tumakha
   */
 class TctrConnectionRemovedCySpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(tctr_connection_removed_cy)
   private val template = TemplateLocator
@@ -71,5 +71,3 @@ class TctrConnectionRemovedCySpec
       verifyContent(txtContent)
     }
   }
-
-}

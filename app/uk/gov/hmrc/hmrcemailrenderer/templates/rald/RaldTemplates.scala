@@ -20,7 +20,7 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.RentalAndLeaseDetails
 
-object RaldTemplates {
+object RaldTemplates:
 
   val raldGroup = "RALD"
   val rald_connection_removed = "rald_connection_removed"
@@ -77,5 +77,3 @@ object RaldTemplates {
       priority = standardPriority
     )
   )
-
-}
