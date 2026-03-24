@@ -1,8 +1,7 @@
-@(params: Map[String, Any]) Valuation Office - Rent and lease details
+@(params: Map[String, Any])Valuation Office - Rent and lease details
 
 @params("referenceNumber")
 
 @params("postcode")
 
 @params("expiryDate")
-

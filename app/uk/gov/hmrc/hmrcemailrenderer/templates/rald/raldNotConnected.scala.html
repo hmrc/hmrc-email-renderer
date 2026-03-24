@@ -15,20 +15,17 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, ""){
-
-<h1>Rent and lease details - Not connected property</h1>
-
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rent and lease details - Not connected property"){
 <div style="margin: 0 0 30px; font-size: 19px;">
 
     <p><b>Reference number:</b> @params("referenceNumber")</p>
 
     @params.get("email").map { email =>
-        <b>Email address:</b> @email <br />
+        <p><b>Email address:</b> @email</p>
     }.getOrElse("")
 
     @params.get("phoneNumber").map { phoneNumber =>
-    <b>Phone number:</b> @phoneNumber <br />
+        <p><b>Phone number:</b> @phoneNumber</p>
     }.getOrElse("")
 
     <p>From HMRC Valuation Office - Rent and lease details service</p>

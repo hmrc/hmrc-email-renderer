@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Valuation Office - Business Rates
 
-@params("baRefNumber"),
+@params.getOrElse("baRefNumber", "No BA CODE"),
 @params("fileName"),
 @params("dateSubmitted"),
 @params("errorList")
