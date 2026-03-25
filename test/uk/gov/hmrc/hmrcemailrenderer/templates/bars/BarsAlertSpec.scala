@@ -51,8 +51,7 @@ class BarsAlertSpec extends AnyWordSpecLike with should.Matchers with OptionValu
       htmlContent should include("BA : ba5090")
       htmlContent should include("File name : Barnet_CT.xml")
       htmlContent should include("Date Submitted : 2016-08-09T14:02:09.747+01:00")
-      htmlContent should include("Errors")
-      htmlContent should include("Brap Brap")
+      htmlContent should include("Errors UNKNOWN_ERROR: Unable to process upload")
     }
 
     "render correct text content" in {
@@ -61,6 +60,6 @@ class BarsAlertSpec extends AnyWordSpecLike with should.Matchers with OptionValu
       txtContent should include("BA : ba5090")
       txtContent should include("File name : Barnet_CT.xml")
       txtContent should include("Date Submitted : 2016-08-09T14:02:09.747+01:00")
-      txtContent should include("Brap Brap")
+      txtContent should include("Errors UNKNOWN_ERROR: Unable to process upload")
     }
   }

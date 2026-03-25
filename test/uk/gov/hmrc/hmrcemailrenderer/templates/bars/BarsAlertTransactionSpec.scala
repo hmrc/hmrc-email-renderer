@@ -52,8 +52,7 @@ class BarsAlertTransactionSpec extends AnyWordSpecLike with should.Matchers with
       htmlContent should include("Transaction id : 78918c8a-216a-4472-b886-9b81fcf4f64d")
       htmlContent should include("File name : Barnet_CT.xml")
       htmlContent should include("Date Submitted : 2016-08-09T14:02:09.747+01:00")
-      htmlContent should include("Errors")
-      htmlContent should include("Brap Brap")
+      htmlContent should include("Errors UNKNOWN_ERROR: Unable to process upload")
     }
 
     "render correct text content" in {
@@ -63,6 +62,6 @@ class BarsAlertTransactionSpec extends AnyWordSpecLike with should.Matchers with
       txtContent should include("Transaction id : 78918c8a-216a-4472-b886-9b81fcf4f64d")
       txtContent should include("File name : Barnet_CT.xml")
       txtContent should include("Date Submitted : 2016-08-09T14:02:09.747+01:00")
-      txtContent should include("Brap Brap")
+      txtContent should include("Errors UNKNOWN_ERROR: Unable to process upload")
     }
   }
