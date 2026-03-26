@@ -27,7 +27,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
   *   Yuriy Tumakha
   */
 class ContactFormsEnquiryConfirmationSpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(cf_enquiry_confirmation)
   private val template = TemplateLocator
@@ -37,11 +37,11 @@ class ContactFormsEnquiryConfirmationSpec
 
   cf_enquiry_confirmation should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "You have sent an enquiry to the Valuation Office Agency"
+      template.subject(Map.empty) shouldBe "You have sent an enquiry to the Valuation Office"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Valuation Office Agency <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "HMRC Valuation Office <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -56,7 +56,7 @@ class ContactFormsEnquiryConfirmationSpec
       htmlContent should include(
         "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
       )
-      htmlContent should include("From Valuation Office Agency")
+      htmlContent should include("From HMRC Valuation Office")
       htmlContent should include("Report the suspicious email to HMRC")
     }
 
@@ -71,9 +71,7 @@ class ContactFormsEnquiryConfirmationSpec
       txtContent should include(
         "We usually respond to enquiries within a few days. However, complex enquiries can take up to 28 days."
       )
-      txtContent should include("From Valuation Office Agency")
+      txtContent should include("From HMRC Valuation Office")
       txtContent should include("Report the suspicious email to HMRC")
     }
   }
-
-}

@@ -26,8 +26,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
 /** @author
   *   Yuriy Tumakha
   */
-class RaldConnectionRemovedSpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+class RaldConnectionRemovedSpec extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(rald_connection_removed)
   private val template = TemplateLocator
@@ -44,17 +43,17 @@ class RaldConnectionRemovedSpec
     content should include(
       "We will remove your details from our records. You should not receive any further letters from us about this property."
     )
-    content should include("From Valuation Office Agency")
+    content should include("From HMRC Valuation Office")
     content should include("Report the suspicious email to HMRC")
   }
 
   rald_connection_removed should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Valuation Office Agency: You have removed your connection to a property"
+      template.subject(Map.empty) shouldBe "Valuation Office: You have removed your connection to a property"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Valuation Office Agency <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "HMRC Valuation Office <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -70,5 +69,3 @@ class RaldConnectionRemovedSpec
       verifyContent(txtContent)
     }
   }
-
-}

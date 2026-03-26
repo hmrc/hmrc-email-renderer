@@ -27,7 +27,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
   *   Yuriy Tumakha
   */
 class TctrSubmissionConfirmationSpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(tctr_submission_confirmation)
   private val template = TemplateLocator
@@ -43,7 +43,7 @@ class TctrSubmissionConfirmationSpec
     )
     content should include("We may need to contact you to check some of the details you provided.")
     content should include("Do not reply to this email.")
-    content should include("From Valuation Office Agency - Tenure Cost and Trade Records service")
+    content should include("From HMRC Valuation Office - Tenure Cost and Trade Records service")
     content should include("Report the suspicious email to HMRC")
   }
 
@@ -51,11 +51,11 @@ class TctrSubmissionConfirmationSpec
     "render correct subject" in {
       template.subject(
         Map.empty
-      ) shouldBe "Valuation Office Agency: We have received your business trade and cost information"
+      ) shouldBe "Valuation Office: We have received your business trade and cost information"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Valuation Office Agency <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "HMRC Valuation Office <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -71,5 +71,3 @@ class TctrSubmissionConfirmationSpec
       verifyContent(txtContent)
     }
   }
-
-}

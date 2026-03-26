@@ -27,7 +27,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLo
   *   Yuriy Tumakha
   */
 class TctrConnectionRemovedCySpec
-    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec {
+    extends AnyWordSpecLike with should.Matchers with OptionValues with CommonParamsForSpec:
 
   private val params = commonParameters ++ TemplateParams.exampleParams(tctr_connection_removed_cy)
   private val template = TemplateLocator
@@ -45,17 +45,17 @@ class TctrConnectionRemovedCySpec
       "Byddwn yn dileu eich manylion o’n cofnodion. Ni ddylech dderbyn unrhyw lythyrau pellach oddi wrthym am yr eiddo hwn."
     )
     content should include("Peidiwch ag ymateb i’r e-bost hwn.")
-    content should include("Oddi wrth Asiantaeth y Swyddfa Brisio")
+    content should include("Oddi wrth CThEF Swyddfa Brisio")
     content should include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF")
   }
 
   tctr_connection_removed_cy should {
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Asiantaeth y Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo"
+      template.subject(Map.empty) shouldBe "Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo"
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Asiantaeth y Swyddfa Brisio <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "CThEF Swyddfa Brisio <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {
@@ -71,5 +71,3 @@ class TctrConnectionRemovedCySpec
       verifyContent(txtContent)
     }
   }
-
-}

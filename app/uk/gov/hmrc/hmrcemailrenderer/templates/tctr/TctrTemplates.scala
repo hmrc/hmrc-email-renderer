@@ -20,10 +20,10 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.TctrForms
 
-object TctrTemplates {
+object TctrTemplates:
 
-  private val fromNoReplyVOA = FromAddress.noReply("Valuation Office Agency")
-  private val fromNoReplyVOA_cy = FromAddress.noReply("Asiantaeth y Swyddfa Brisio")
+  private val fromNoReplyVOA = FromAddress.noReply("HMRC Valuation Office")
+  private val fromNoReplyVOA_cy = FromAddress.noReply("CThEF Swyddfa Brisio")
   private val standardPriority = Some(MessagePriority.Standard)
 
   val tctrGroup = "TCTR"
@@ -37,7 +37,7 @@ object TctrTemplates {
       templateId = tctr_submission_confirmation,
       fromAddress = fromNoReplyVOA,
       service = TctrForms,
-      subject = "Valuation Office Agency: We have received your business trade and cost information",
+      subject = "Valuation Office: We have received your business trade and cost information",
       plainTemplate = txt.tctr_submission_confirmation.f,
       htmlTemplate = html.tctr_submission_confirmation.f,
       priority = standardPriority
@@ -46,7 +46,7 @@ object TctrTemplates {
       templateId = tctr_vacant_submission_confirmation,
       fromAddress = fromNoReplyVOA,
       service = TctrForms,
-      subject = "Valuation Office Agency: We have received your vacant property declaration",
+      subject = "Valuation Office: We have received your vacant property declaration",
       plainTemplate = txt.tctr_vacant_submission_confirmation.f,
       htmlTemplate = html.tctr_vacant_submission_confirmation.f,
       priority = standardPriority
@@ -55,7 +55,7 @@ object TctrTemplates {
       templateId = tctr_connection_removed,
       fromAddress = fromNoReplyVOA,
       service = TctrForms,
-      subject = "Valuation Office Agency: You have removed your connection to a property",
+      subject = "Valuation Office: You have removed your connection to a property",
       plainTemplate = txt.tctr_connection_removed.f,
       htmlTemplate = html.tctr_connection_removed.f,
       priority = standardPriority
@@ -64,11 +64,9 @@ object TctrTemplates {
       templateId = tctr_connection_removed_cy,
       fromAddress = fromNoReplyVOA_cy,
       service = TctrForms,
-      subject = "Asiantaeth y Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo",
+      subject = "Swyddfa Brisio: Rydych wedi dileu eich cysylltiad ag eiddo",
       plainTemplate = txt.tctr_connection_removed_cy.f,
       htmlTemplate = html.tctr_connection_removed_cy.f,
       priority = standardPriority
     )
   )
-
-}

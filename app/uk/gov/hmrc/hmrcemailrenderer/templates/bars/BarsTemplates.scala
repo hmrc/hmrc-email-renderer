@@ -20,27 +20,31 @@ import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.BusinessRates
 
-object BarsTemplates {
+object BarsTemplates:
+
+  private val fromBARS = FromAddress.noReply("Business Rates")
+  val barsGroup = "BARS"
+  val bars_alert = "bars_alert"
+  val bars_alert_transaction = "bars_alert_transaction"
 
   private val getBARefCode: Map[String, String] => String =
     _.getOrElse("baRefNumber", "No BA CODE")
 
-  val templates = Seq(
+  val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.createWithDynamicSubject(
-      templateId = "bars_alert",
-      fromAddress = FromAddress.noReply("Business Rates"),
+      templateId = bars_alert,
+      fromAddress = fromBARS,
       service = BusinessRates,
       subject = getBARefCode,
       plainTemplate = txt.bars.f,
       htmlTemplate = html.bars.f
     ),
     MessageTemplate.createWithDynamicSubject(
-      templateId = "bars_alert_transaction",
-      fromAddress = FromAddress.noReply("Business Rates"),
+      templateId = bars_alert_transaction,
+      fromAddress = fromBARS,
       service = BusinessRates,
       subject = getBARefCode,
       plainTemplate = txt.barsTransaction.f,
       htmlTemplate = html.barsTransaction.f
     )
   )
-}
