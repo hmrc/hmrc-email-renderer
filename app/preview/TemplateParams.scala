@@ -1784,6 +1784,14 @@ object TemplateParams2 {
       "full_name"      -> "Abed Nadir",
       "correlation_id" -> "HJ345HJ345HJ342N3H5JK4ITURY84783"
     ),
+    "emac_helpdesk_bulk_deenrolment_file_upload_failure" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "someFile.xml",
+      "uploadedDateTime" -> "16 March 2026",
+      "reference"        -> "1234567890",
+      "failureReason"    -> "File too large",
+      "failureMessage"   -> "File must not exceed the specified limit"
+    ),
     "emac_activation_code_not_received" -> Map(
       "serviceName" -> "Enrolment Team",
       "name"        -> "David Smith"

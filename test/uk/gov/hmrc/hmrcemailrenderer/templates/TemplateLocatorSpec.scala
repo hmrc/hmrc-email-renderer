@@ -528,6 +528,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "emac_activation_code_not_received",
         "emac_helpdesk_failure_confirmation_email",
         "emac_helpdesk_successful_confirmation_email",
+        "emac_helpdesk_bulk_deenrolment_file_upload_failure",
         "email_verification_passcode",
         "email_verification_passcode_welsh",
         "entity_check_notification",
