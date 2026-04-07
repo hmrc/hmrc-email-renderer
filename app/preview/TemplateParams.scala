@@ -1786,14 +1786,6 @@ object TemplateParams2 {
     ),
     "emac_helpdesk_bulk_deenrolment_file_upload_failure" -> Map(
       "requestorName"    -> "John Doe",
-      "fileName"         -> "someFile.xml",
-      "uploadedDateTime" -> "16 March 2026",
-      "reference"        -> "1234567890",
-      "failureReason"    -> "File too large",
-      "failureMessage"   -> "File must not exceed the specified limit"
-    ),
-    "emac_helpdesk_bulk_deenrolment_file_upload_failure" -> Map(
-      "requestorName"    -> "John Doe",
       "fileName"         -> "testFile1.csv",
       "uploadedDateTime" -> "20-02-2026 12:00",
       "reference"        -> "12345678-ab12-43cd-5ef7-123456ab",
