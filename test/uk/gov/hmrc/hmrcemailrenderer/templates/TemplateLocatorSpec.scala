@@ -1047,6 +1047,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "tre_third_party_added_tp",
         "tre_third_party_access_removed",
         "tre_third_party_access_edited_tp",
+        "tre_third_party_access_self_removed",
         "trusts_report_code",
         "trusts_report_confirmation",
         "trusts_request_code",
