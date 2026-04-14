@@ -1,0 +1,65 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@regimeType() = {@params("regimeType")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"There is a problem with your file for ${regimeType()}") {
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">There is a problem with the file you tried to send at @{params("submittedTime")} on @{params("submittedDate")}.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You must send another version. Not sending another report on time may result in a penalty for the financial institution.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>File ID (MessageRefId)</b></p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">@{params("messageRefId")}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>FI ID (SendingCompanyIN)</b></p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">@{params("sendingCompanyIN")}</p>
+
+@if(params("isCRSNilReport").equals("true")) {
+    <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Financial institution</b></p>
+} else {
+    <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Financial institution (ReportingFI Name)</b></p>
+}
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">@{params("reportingName")}</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Reporting period</b></p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">Ending @{params("reportingPeriod")}</p>
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 0 0 30px 0;">What you need to do next</h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">You can check the errors in the CRS and FATCA service and upload an updated XML file.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 0 0 30px 0;">Why you are receiving this email</h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">When a file fails checks, we send an email to the contacts provided for @{params("businessName")}.</p>
+
+<h2 style="line-height: 1.315789474; font-size: 24px; margin: 0 0 30px 0;">If you need help</h2>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Email aeoi.enquiries@@hmrc.gov.uk for help with this service.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information on @{params("regimeType")}, you can visit GOV.UK and search for ‘CRS and FATCA’.</p>
+
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From the HMRC CRS and FATCA service</p>
+}

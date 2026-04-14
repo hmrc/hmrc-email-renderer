@@ -31,6 +31,36 @@ object CRSFatcaTemplates {
       plainTemplate = txt.crsfatcaRegistrationSuccessful.f,
       htmlTemplate = html.crsfatcaRegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    // FILE UPLOAD - UNSUCCESSFUL
+    MessageTemplate.create(
+      templateId = "crs_fatca_upload_unsuccessful",
+      fromAddress = govUkTeamAddress,
+      service = CRSFATCA,
+      subject = "File failed checks for CRS and FATCA",
+      plainTemplate = txt.crsfatcaFileFailedChecks.f,
+      htmlTemplate = html.crsfatcaFileFailedChecks.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // FI FILE UPLOAD - SUCCESSFUL
+    MessageTemplate.create(
+      templateId = "crs_fatca_fi_upload_successful",
+      fromAddress = govUkTeamAddress,
+      service = CRSFATCA,
+      subject = "File passed checks for CRS and FATCA",
+      plainTemplate = txt.crsfatcaFIFileUploadSuccess.f,
+      htmlTemplate = html.crsfatcaFIFileUploadSuccess.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    // USER FILE UPLOAD - SUCCESSFUL
+    MessageTemplate.create(
+      templateId = "crs_fatca_user_upload_successful",
+      fromAddress = govUkTeamAddress,
+      service = CRSFATCA,
+      subject = "File passed checks for CRS and FATCA",
+      plainTemplate = txt.crsfatcaUserFileUploadSuccess.f,
+      htmlTemplate = html.crsfatcaUserFileUploadSuccess.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
