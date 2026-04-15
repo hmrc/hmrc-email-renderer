@@ -1,18 +1,20 @@
-@(params: Map[String, Any])Bulk de-enrolment file upload failure
+@(params: Map[String, Any])Bulk de-enrolment file upload has failed scanning
 
 Dear @params("requestorName"),
 
-Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has failed scanning by Upscan.
+Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has failed scanning. The ID for this submission is @params("reference").
 
-The ID for this submission is @params("reference").
-
-The error details returned by Upscan are provided below::
-
+The error details are provided below:
 Failure reason: @params("failureReason")
-
 Failure message: @params("failureMessage")
 
-This is an automated email that's been sent as a result of the above bulk de-enrolment file upload request.
+What you need to do next
+
+If you still need to process the file, then please make the necessary changes and reattempt the upload.
+
+Why you are receiving this email
+
+We sent you this because you attempted to upload a bulk de-enrolment file and it has failed scanning.
 
 From HMRC Services and Enrolments helpdesk
 
