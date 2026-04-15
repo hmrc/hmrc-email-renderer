@@ -15,9 +15,8 @@
  *@
 
 @(params: Map[String, Any])
-@regimeType() = {@params("regimeType")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"There is a problem with your file for ${regimeType()}") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "There is a problem with your file for CRS") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
@@ -27,19 +26,19 @@
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>File ID (MessageRefId)</b></p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">@{params("messageRefId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 20px;">@{params("messageRefId")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>FI ID (SendingCompanyIN)</b></p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">@{params("sendingCompanyIN")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 20px;">@{params("sendingCompanyIN")}</p>
 
-@if(params("isCRSNilReport").equals("true")) {
+@if(params("reportType").equals("Nil report")) {
     <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Financial institution</b></p>
+    <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 20px;">@{params("reportingName")}</p>
 } else {
     <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Financial institution (ReportingFI Name)</b></p>
+    <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 20px;">@{params("reportingFIName")}</p>
 }
-
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 20px;">@{params("reportingName")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Reporting period</b></p>
 
@@ -59,7 +58,7 @@
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Email aeoi.enquiries@@hmrc.gov.uk for help with this service.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information on @{params("regimeType")}, you can visit GOV.UK and search for ‘CRS and FATCA’.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information on CRS, you can visit GOV.UK and search for ‘CRS and FATCA’.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">From the HMRC CRS and FATCA service</p>
 }

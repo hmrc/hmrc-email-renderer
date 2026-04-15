@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-There is a problem with your file for @{params("regimeType")}
+There is a problem with your file for FATCA
 
 
 Dear @{params("contactName")}
@@ -12,13 +12,10 @@ You must send another version. Not sending another report on time may result in 
 
 File ID (MessageRefId)
     @{params("messageRefId")}
-
 FI ID (SendingCompanyIN)
     @{params("sendingCompanyIN")}
-
-@if(params("isCRSNilReport").equals("true")){Financial institution} else {Financial institution (ReportingFI Name)}
-    @{params("reportingName")}
-
+Financial institution (ReportingFI Name)
+    @{params("reportingFIName")}
 Reporting period
      Ending @{params("reportingPeriod")}
 
@@ -39,7 +36,7 @@ If you need help
 
 Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
 
-For more information on @{params("regimeType")}, you can visit GOV.UK and search for ‘CRS and FATCA’.
+For more information on FATCA, you can visit GOV.UK and search for ‘CRS and FATCA’.
 
 From the HMRC CRS and FATCA service
 

@@ -1,16 +1,16 @@
 @(params: Map[String, Any])
 
-File successfully sent for @{params("regimeType")}
+File successfully sent for CRS
 
 Dear @{params("contactName")}
 
-We have received a file for the financial institution @{params("reportingName")}. The file passed the @{params("regimeType")} reporting checks at @{params("submittedTime")} on @{params("submittedDate")}.
+We have received a file for the financial institution @{params("reportingName")}. The file passed the CRS reporting checks at @{params("submittedTime")} on @{params("submittedDate")}.
 
 File ID (MessageRefId)
     @{params("messageRefId")}
 FI ID (SendingCompanyIN)
     @{params("sendingCompanyIN")}
-@if(params("isCRSNilReport").equals("true")) {
+@if(params("reportType").equals("Nil report")) {
 Financial institution
     @{params("reportingName")}
 } else {
