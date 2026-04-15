@@ -18,17 +18,17 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.SelfAssessment
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ Pillar2, SelfAssessment }
 
 object DigitalContactTemplates {
-  val defaultFromAddress = FromAddress.noReply("HMRC digital")
+  val defaultFromAddress: String = FromAddress.noReply("HMRC digital")
 
-  val defaultFromAddressWelsh = FromAddress.noReply("CThEF Digidol")
+  val defaultFromAddressWelsh: String = FromAddress.noReply("CThEF Digidol")
 
   // TODO: waiting for welsh translation
-  val defaultWelshFrom = FromAddress.noReply("")
+  val defaultWelshFrom: String = FromAddress.noReply("")
 
-  val templatesToMapToNewMessageAlert = Seq(
+  private val templatesToMapToNewMessageAlert = Seq(
     "R002",
     "SA251",
     "SA326D",
@@ -54,7 +54,7 @@ object DigitalContactTemplates {
       )
     }
 
-  val templates = Seq(
+  val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = "verifyEmailAddress",
       fromAddress = defaultFromAddress,
@@ -209,6 +209,14 @@ object DigitalContactTemplates {
       subject = "Self Assessment reminders: new message",
       plainTemplate = txt.newMessageAlertSA300.f,
       htmlTemplate = html.newMessageAlertSA300.f
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_PL3",
+      fromAddress = defaultFromAddress,
+      service = Pillar2,
+      subject = "Subject",
+      plainTemplate = txt.newMessageAlert_PL3.f,
+      htmlTemplate = html.newMessageAlert_PL3.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA316",
