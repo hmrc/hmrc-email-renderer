@@ -1843,34 +1843,6 @@ object TemplateParams2 {
     "fhdds_submission_deregister" -> Map(
       "deregisterDate" -> "6 June 2018"
     ),
-    "oss_registration_confirmation" -> Map(
-      "recipientName_line1"  -> "Joe Bloggs",
-      "businessName"         -> "Test Business",
-      "periodOfFirstReturn"  -> "July to September 2021",
-      "firstDayOfNextPeriod" -> "1 October 2021",
-      "commencementDate"     -> "12 June 2021",
-      "redirectLink"         -> "http://test.com/blah-blah"
-    ),
-    "oss_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_returns_email_confirmation_no_vat_owed" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "period"              -> "1 July to 30 September 2021"
-    ),
-    "oss_overdue_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_registration_amendment_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "amendmentDate"       -> "23 May 2023"
-    ),
     "platformContact" -> Map(
       "apiTitle"    -> "Individuals Tax Relief for Kitten Ownership",
       "senderName"  -> "Alice Example",
@@ -3192,34 +3164,6 @@ object TemplateParams2 {
     "newMessageAlert_PA302_D2_cy" -> newMessageAlert_Names,
     "new_message_alert_itsa"      -> newMessageAlert_Names,
     "new_message_alert_itsa_cy"   -> newMessageAlert_Names,
-    "oss_registration_confirmation" -> Map(
-      "recipientName_line1"  -> "Joe Bloggs",
-      "businessName"         -> "Test Business",
-      "periodOfFirstReturn"  -> "July to September 2021",
-      "firstDayOfNextPeriod" -> "1 October 2021",
-      "commencementDate"     -> "12 June 2021",
-      "redirectLink"         -> "http://test.com/blah-blah"
-    ),
-    "oss_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_returns_email_confirmation_no_vat_owed" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "period"              -> "1 July to 30 September 2021"
-    ),
-    "oss_overdue_returns_email_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "businessName"        -> "Test Business",
-      "period"              -> "1 July to 30 September 2021",
-      "paymentDeadline"     -> "31 October 2021"
-    ),
-    "oss_registration_amendment_confirmation" -> Map(
-      "recipientName_line1" -> "Joe Bloggs",
-      "amendmentDate"       -> "23 May 2023"
-    ),
     "pods_psa_amend" -> Map(
       "psaName" -> "Jane Doe"
     ),
