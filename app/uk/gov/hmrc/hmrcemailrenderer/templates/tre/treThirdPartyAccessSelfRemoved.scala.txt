@@ -1,0 +1,11 @@
+@(params: Map[String, Any])
+
+Dear customer
+
+Your third-party has removed their access to your data. This means they can no longer request reports for your data using the ‘Get customs data for import and export declarations’ service. You do not need to take any action.
+
+Why are you receiving this email
+
+We send emails to notify you when there’s been a change to who can access your data.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

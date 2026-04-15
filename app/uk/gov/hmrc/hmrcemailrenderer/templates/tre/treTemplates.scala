@@ -86,6 +86,15 @@ object treTemplates {
       plainTemplate = txt.treThirdPartyAccessEditedTP.f,
       htmlTemplate = html.treThirdPartyAccessEditedTP.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "tre_third_party_access_self_removed",
+      fromAddress = FromAddress.noReply("Get customs data for import and export declarations"),
+      service = TradeReportingExtracts,
+      subject = "Your third-party has removed their access to your data",
+      plainTemplate = txt.treThirdPartyAccessSelfRemoved.f,
+      htmlTemplate = html.treThirdPartyAccessSelfRemoved.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
