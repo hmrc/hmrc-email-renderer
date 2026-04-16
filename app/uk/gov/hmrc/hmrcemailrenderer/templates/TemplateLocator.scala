@@ -89,7 +89,6 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.DassTechRefreshTe
 import uk.gov.hmrc.hmrcemailrenderer.templates.dprs.DprsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
-import uk.gov.hmrc.hmrcemailrenderer.templates.oss.OSSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.itsa.ItsaTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.mtdfb.vatreg.VatRegTemplates
@@ -180,7 +179,6 @@ trait TemplateLocator {
       "Eori Common Component" -> EoriCommonComponentTemplates.templates,
       "MODS"                  -> ModsTemplates.templates,
       "CDSRC"                 -> cdsrcTemplates.templates,
-      "OSS"                   -> OSSTemplates.templates,
       "HEC"                   -> HecTemplates.templates,
       "EU Subsidy"            -> EUSubsidyTemplates.templates,
       "ITSA"                  -> ItsaTemplates.templates,
