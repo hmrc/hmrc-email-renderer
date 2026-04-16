@@ -14,6 +14,6 @@ You chose to get paperless notifications.
 
 This means we send you an email when you have a new message in your account.
 
-From HMRC Digital
+From HMRC digital
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
