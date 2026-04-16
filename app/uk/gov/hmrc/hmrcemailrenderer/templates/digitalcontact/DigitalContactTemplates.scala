@@ -214,7 +214,7 @@ object DigitalContactTemplates {
       templateId = "newMessageAlert_PL3",
       fromAddress = defaultFromAddress,
       service = Pillar2,
-      subject = "Subject",
+      subject = "HMRC paperless notifications: new message",
       plainTemplate = txt.newMessageAlert_PL3.f,
       htmlTemplate = html.newMessageAlert_PL3.f
     ),
