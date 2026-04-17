@@ -211,12 +211,12 @@ object DigitalContactTemplates {
       htmlTemplate = html.newMessageAlertSA300.f
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_PL3",
+      templateId = "new_message_alert_PL3",
       fromAddress = defaultFromAddress,
       service = Pillar2,
       subject = "HMRC paperless notifications: new message",
-      plainTemplate = txt.newMessageAlert_PL3.f,
-      htmlTemplate = html.newMessageAlert_PL3.f
+      plainTemplate = txt.new_message_alert_PL3.f,
+      htmlTemplate = html.new_message_alert_PL3.f
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_SA316",
