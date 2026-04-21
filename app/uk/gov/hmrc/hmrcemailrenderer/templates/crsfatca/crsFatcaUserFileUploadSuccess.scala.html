@@ -15,12 +15,13 @@
  *@
 
 @(params: Map[String, Any])
+@regime = {@params("regime")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for CRS") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"File successfully sent for ${regime}") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received a file for the financial institution @{params("reportingName")}. The file passed the CRS reporting checks at @{params("submittedTime")} on @{params("submittedDate")}.</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">We have received a file for the financial institution @{params("reportingName")}. The file passed the @{params("regime")} reporting checks at @{params("submittedTime")} on @{params("submittedDate")}.</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>File ID (MessageRefId)</b></p>
 
@@ -30,7 +31,7 @@
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 22px;">@{params("sendingCompanyIN")}</p>
 
-@if(params("reportType").equals("Nil report")) {
+@if(params("regime").equals("CRS") && params("reportType").equals("Nil report")) {
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 0;"><b>Financial institution</b></p>
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 0 22px;">@{params("reportingName")}</p>
 } else {

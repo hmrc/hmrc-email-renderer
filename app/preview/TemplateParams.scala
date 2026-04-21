@@ -672,52 +672,32 @@ object TemplateParams {
       "crs_fatca_registration_successful" -> Map(
         "name" -> "Joe Bloggs"
       ),
-      "crs_file_upload_unsuccessful" -> Map(
+      "crs_fatca_file_upload_unsuccessful" -> Map(
+        "regime"           -> "CRS",
         "contactName"      -> "Ashley Smith",
         "submittedTime"    -> "11:25am",
         "submittedDate"    -> "20 May 2024",
         "messageRefId"     -> "ABCDE12345",
         "sendingCompanyIN" -> "1234567890",
-        "reportType"       -> "New information",
+        "reportType"       -> "Nil report",
         "reportingName"    -> "FI Name",
-        "reportingFIName"  -> "Reporting FI Name",
         "reportingPeriod"  -> "3 July 2023",
         "businessName"     -> "UserBusinessName"
       ),
-      "fatca_file_upload_unsuccessful" -> Map(
-        "contactName"      -> "Ashley Smith",
-        "submittedTime"    -> "11:25am",
-        "submittedDate"    -> "20 May 2024",
-        "messageRefId"     -> "ABCDE12345",
-        "sendingCompanyIN" -> "1234567890",
-        "reportType"       -> "New information",
-        "reportingName"    -> "FI Name",
-        "reportingFIName"  -> "Reporting FI Name",
-        "reportingPeriod"  -> "3 July 2023",
-        "businessName"     -> "UserBusinessName"
-      ),
-      "crs_fi_upload_successful" -> Map(
+      "crs_fatca_fi_upload_successful" -> Map(
+        "regime"          -> "FATCA",
         "contactName"     -> "Ashley Smith",
         "submittedTime"   -> "11:25am",
         "submittedDate"   -> "20 May 2024",
         "messageRefId"    -> "ABCDE12345",
         "reportingName"   -> "FI Name",
+        "reportingFIName" -> "reporting FI Name",
         "reportingPeriod" -> "3 July 2023",
         "businessName"    -> "UserBusinessName",
         "reportType"      -> "Nil report"
       ),
-      "fatca_fi_upload_successful" -> Map(
-        "contactName"     -> "Ashley Smith",
-        "submittedTime"   -> "11:25am",
-        "submittedDate"   -> "20 May 2024",
-        "messageRefId"    -> "ABCDE12345",
-        "reportingName"   -> "FI Name",
-        "reportingPeriod" -> "3 July 2023",
-        "businessName"    -> "UserBusinessName",
-        "reportType"      -> "New information",
-        "reportingFIName" -> "Reporting FI Name"
-      ),
-      "crs_user_upload_successful" -> Map(
+      "crs_fatca_user_upload_successful" -> Map(
+        "regime"           -> "FATCA",
         "contactName"      -> "Ashley Smith",
         "submittedTime"    -> "11:25am",
         "submittedDate"    -> "20 May 2024",
@@ -727,21 +707,8 @@ object TemplateParams {
         "reportingFIName"  -> "reporting FI Name",
         "reportingPeriod"  -> "3 July 2023",
         "businessName"     -> "UserBusinessName",
-        "reportType"       -> "New information",
-        "isFIUser"         -> "false"
-      ),
-      "fatca_user_upload_successful" -> Map(
-        "contactName"      -> "Ashley Smith",
-        "submittedTime"    -> "11:25am",
-        "submittedDate"    -> "20 May 2024",
-        "messageRefId"     -> "ABCDE12345",
-        "sendingCompanyIN" -> "1234567890",
-        "reportingName"    -> "FI Name",
-        "reportingFIName"  -> "reporting FI Name",
-        "reportingPeriod"  -> "3 July 2023",
-        "businessName"     -> "UserBusinessName",
-        "reportType"       -> "New information",
-        "isFIUser"         -> "false"
+        "reportType"       -> "Nil report",
+        "isFIUser"         -> "true"
       ),
       "carf_registration_successful" -> Map(
         "name"          -> "Ashley Smith",

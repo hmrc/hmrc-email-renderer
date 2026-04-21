@@ -32,64 +32,34 @@ object CRSFatcaTemplates {
       htmlTemplate = html.crsfatcaRegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    // CRS FILE UPLOAD - UNSUCCESSFUL
+    // CRS AND FATCA FILE UPLOAD - UNSUCCESSFUL
     MessageTemplate.create(
-      templateId = "crs_file_upload_unsuccessful",
+      templateId = "crs_fatca_file_upload_unsuccessful",
       fromAddress = govUkTeamAddress,
       service = CRSFATCA,
-      subject = "File failed checks for CRS",
-      plainTemplate = txt.crsFileFailedChecks.f,
-      htmlTemplate = html.crsFileFailedChecks.f,
+      subject = "File failed checks for CRS and FATCA",
+      plainTemplate = txt.crsFatcaFileFailedChecks.f,
+      htmlTemplate = html.crsFatcaFileFailedChecks.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    // FATCA FILE UPLOAD - UNSUCCESSFUL
+    // CRS and FATCA FI FILE UPLOAD - SUCCESSFUL
     MessageTemplate.create(
-      templateId = "fatca_file_upload_unsuccessful",
+      templateId = "crs_fatca_fi_upload_successful",
       fromAddress = govUkTeamAddress,
       service = CRSFATCA,
-      subject = "File failed checks for FATCA",
-      plainTemplate = txt.fatcaFileFailedChecks.f,
-      htmlTemplate = html.fatcaFileFailedChecks.f,
+      subject = "File passed checks for CRS and FATCA",
+      plainTemplate = txt.crsFatcaFIFileUploadSuccess.f,
+      htmlTemplate = html.crsFatcaFIFileUploadSuccess.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    // CRS FI FILE UPLOAD - SUCCESSFUL
+    // CRS and FATCA USER FILE UPLOAD - SUCCESSFUL
     MessageTemplate.create(
-      templateId = "crs_fi_upload_successful",
+      templateId = "crs_fatca_user_upload_successful",
       fromAddress = govUkTeamAddress,
       service = CRSFATCA,
-      subject = "File passed checks for CRS",
-      plainTemplate = txt.crsFIFileUploadSuccess.f,
-      htmlTemplate = html.crsFIFileUploadSuccess.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    // FATCA FI FILE UPLOAD - SUCCESSFUL
-    MessageTemplate.create(
-      templateId = "fatca_fi_upload_successful",
-      fromAddress = govUkTeamAddress,
-      service = CRSFATCA,
-      subject = "File passed checks for FATCA",
-      plainTemplate = txt.fatcaFIFileUploadSuccess.f,
-      htmlTemplate = html.fatcaFIFileUploadSuccess.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    // CRS USER FILE UPLOAD - SUCCESSFUL
-    MessageTemplate.create(
-      templateId = "crs_user_upload_successful",
-      fromAddress = govUkTeamAddress,
-      service = CRSFATCA,
-      subject = "File passed checks for CRS",
-      plainTemplate = txt.crsUserFileUploadSuccess.f,
-      htmlTemplate = html.crsUserFileUploadSuccess.f,
-      priority = Some(MessagePriority.Urgent)
-    ),
-    // FATCA USER FILE UPLOAD - SUCCESSFUL
-    MessageTemplate.create(
-      templateId = "fatca_user_upload_successful",
-      fromAddress = govUkTeamAddress,
-      service = CRSFATCA,
-      subject = "File passed checks for FATCA",
-      plainTemplate = txt.fatcaUserFileUploadSuccess.f,
-      htmlTemplate = html.fatcaUserFileUploadSuccess.f,
+      subject = "File passed checks for CRS and FATCA",
+      plainTemplate = txt.crsFatcaUserFileUploadSuccess.f,
+      htmlTemplate = html.crsFatcaUserFileUploadSuccess.f,
       priority = Some(MessagePriority.Urgent)
     )
   )
