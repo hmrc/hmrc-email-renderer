@@ -1,0 +1,45 @@
+@(params: Map[String, Any])
+
+There is a problem with your file for @{params("regime")}
+
+
+Dear @{params("contactName")}
+
+There is a problem with the file you tried to send at @{params("submittedTime")} on @{params("submittedDate")}.
+
+You must send another version. Not sending another report on time may result in a penalty for the financial institution.
+
+
+File ID (MessageRefId)
+    @{params("messageRefId")}
+FI ID (SendingCompanyIN)
+    @{params("sendingCompanyIN")}
+@if(params("regime").equals("CRS") && params("reportType").equals("Nil report")){Financial institution
+    @{params("reportingName")}} else {Financial institution (ReportingFI Name)
+    @{params("reportingFIName")}}
+Reporting period
+     Ending @{params("reportingPeriod")}
+
+
+What you need to do next
+
+You can check the errors in the CRS and FATCA service and upload an updated XML file.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+Why you are receiving this email
+
+When a file fails checks, we send an email to the contacts provided for @{params("businessName")}.
+
+
+If you need help
+
+Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
+
+For more information on @{params("regime")}, you can visit GOV.UK and search for ‘CRS and FATCA’.
+
+From the HMRC CRS and FATCA service
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

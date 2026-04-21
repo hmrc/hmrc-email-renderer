@@ -672,6 +672,44 @@ object TemplateParams {
       "crs_fatca_registration_successful" -> Map(
         "name" -> "Joe Bloggs"
       ),
+      "crs_fatca_file_upload_unsuccessful" -> Map(
+        "regime"           -> "CRS",
+        "contactName"      -> "Ashley Smith",
+        "submittedTime"    -> "11:25am",
+        "submittedDate"    -> "20 May 2024",
+        "messageRefId"     -> "ABCDE12345",
+        "sendingCompanyIN" -> "1234567890",
+        "reportType"       -> "Nil report",
+        "reportingName"    -> "FI Name",
+        "reportingPeriod"  -> "3 July 2023",
+        "businessName"     -> "UserBusinessName"
+      ),
+      "crs_fatca_fi_upload_successful" -> Map(
+        "regime"          -> "FATCA",
+        "contactName"     -> "Ashley Smith",
+        "submittedTime"   -> "11:25am",
+        "submittedDate"   -> "20 May 2024",
+        "messageRefId"    -> "ABCDE12345",
+        "reportingName"   -> "FI Name",
+        "reportingFIName" -> "reporting FI Name",
+        "reportingPeriod" -> "3 July 2023",
+        "businessName"    -> "UserBusinessName",
+        "reportType"      -> "Nil report"
+      ),
+      "crs_fatca_user_upload_successful" -> Map(
+        "regime"           -> "FATCA",
+        "contactName"      -> "Ashley Smith",
+        "submittedTime"    -> "11:25am",
+        "submittedDate"    -> "20 May 2024",
+        "messageRefId"     -> "ABCDE12345",
+        "sendingCompanyIN" -> "1234567890",
+        "reportingName"    -> "FI Name",
+        "reportingFIName"  -> "reporting FI Name",
+        "reportingPeriod"  -> "3 July 2023",
+        "businessName"     -> "UserBusinessName",
+        "reportType"       -> "Nil report",
+        "isFIUser"         -> "true"
+      ),
       "carf_registration_successful" -> Map(
         "name"          -> "Ashley Smith",
         "carfReference" -> "XXCAR0012345678"
