@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Bulk de-enrolment file uploaded successfully
+
+Dear @params("requestorName"),
+
+Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has been successfully scanned and is ready for approval. The ID for this submission is @params("reference").
+
+What you need to do next
+
+You will need to ensure that a second user with the necessary permission reviews and approves the uploaded file.
+
+If you do not do this within @params("fileExpiryDays") days of the upload, then the file will be automatically deleted.
+
+Why you are receiving this email
+
+We sent you this because you uploaded a bulk de-enrolment file and it has been successfully scanned and is ready for approval.
+
+From HMRC Services and Enrolments helpdesk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
