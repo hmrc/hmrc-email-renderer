@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-There is a problem with your file for @{params("regime")}
+There is a problem with your @{params("regime")} file
 
 
 Dear @{params("contactName")}
