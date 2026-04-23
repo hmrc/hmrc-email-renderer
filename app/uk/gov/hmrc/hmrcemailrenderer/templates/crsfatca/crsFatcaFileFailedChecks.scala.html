@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @regime = {@params("regime")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"There is a problem with your file for ${regime}") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"There is a problem with your ${regime} file") {
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("contactName")}</p>
 
