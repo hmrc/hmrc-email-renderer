@@ -2,9 +2,12 @@
 
 File successfully sent for @{params("regime")}
 
+
 Dear @{params("contactName")}
 
+
 We have received a file for the financial institution @{params("reportingName")}. The file passed the @{params("regime")} reporting checks at @{params("submittedTime")} on @{params("submittedDate")}.
+
 
 File ID (MessageRefId)
     @{params("messageRefId")}
@@ -18,21 +21,21 @@ Reporting period
 File information
     @{params("reportType")}
 
+
 Print or save a copy of this email for your records.
 
 For security reasons, we have not included a link to this service in this email.
+
 
 What happens next
 
 We will contact you if we have any questions about this report.
 
+
 Why you are receiving this email
 
-@if(params("isFIUser").equals("false")) {
-We send a confirmation email to the contacts provided for @{params("businessName")} and @{params("reportingName")}.
-} else {
-We send a confirmation email to the contacts provided for @{params("businessName")}.
-}
+@if(params("isFIUser").equals("false")) {We send a confirmation email to the contacts provided for @{params("businessName")} and @{params("reportingName")}.} else {We send a confirmation email to the contacts provided for @{params("businessName")}.}
+
 
 From the HMRC CRS and FATCA service
 
