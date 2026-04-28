@@ -695,6 +695,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_NIRef2_cy",
         "newMessageAlert_NIRef3",
         "newMessageAlert_NIRef3_cy",
+        "newMessageAlert_NIRef4",
+        "newMessageAlert_NIRef4_cy",
         "new_message_alert_itsa",
         "new_message_alert_itsa_cy",
         "new_message_alert_itsaeops1",

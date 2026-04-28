@@ -75,6 +75,24 @@ object NIRefTemplates {
       plainTemplate = txt.newMessageAlert_NIRef3_cy.f,
       htmlTemplate = html.newMessageAlert_NIRef3_cy.f,
       priority = Some(MessagePriority.Standard)
-    )
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_NIRef4",
+      fromAddress = govUkTeamAddress,
+      service = PersonalTax,
+      subject = "You’ve got a new message from HMRC",
+      plainTemplate = txt.newMessageAlert_NIRef4.f,
+      htmlTemplate = html.newMessageAlert_NIRef4.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_NIRef4_cy",
+      fromAddress = govUkTeamAddress,
+      service = PersonalTax,
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
+      plainTemplate = txt.newMessageAlert_NIRef4_cy.f,
+      htmlTemplate = html.newMessageAlert_NIRef4_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
   )
 }
