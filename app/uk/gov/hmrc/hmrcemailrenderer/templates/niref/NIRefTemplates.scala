@@ -93,6 +93,6 @@ object NIRefTemplates {
       plainTemplate = txt.newMessageAlert_NIRef4_cy.f,
       htmlTemplate = html.newMessageAlert_NIRef4_cy.f,
       priority = Some(MessagePriority.Standard)
-    ),
+    )
   )
 }
