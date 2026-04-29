@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Bulk de-enrolment file rejected by approver
+
+Dear @params("requestorName"),
+
+Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has been rejected by @params("approverName") (@params("approverEmail")). The ID for this submission is @params("reference").
+
+What you need to do next
+
+If you still need to process the file, then please make the necessary changes and reattempt the upload.
+
+Why you are receiving this email
+
+We sent you this because you uploaded a bulk de-enrolment file and it has been rejected by an approver user.
+
+From HMRC Services and Enrolments helpdesk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1837,6 +1837,14 @@ object TemplateParams2 {
       "reference"        -> "12345678-ab12-43cd-5ef7-123456ab",
       "fileExpiryDays"   -> "60"
     ),
+    "emac_helpdesk_bulk_deenrolment_file_rejected_by_approver" -> Map(
+      "requestorName"    -> "John Doe",
+      "fileName"         -> "testFile1.csv",
+      "uploadedDateTime" -> "20-02-2026 12:00",
+      "approverName"     -> "Jane Doe",
+      "approverEmail"    -> "Jane.Doe@test.com",
+      "reference"        -> "12345678-ab12-43cd-5ef7-123456ab"
+    ),
     "emac_activation_code_not_received" -> Map(
       "serviceName" -> "Enrolment Team",
       "name"        -> "David Smith"
