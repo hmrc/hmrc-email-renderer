@@ -98,6 +98,18 @@ object TemplateParams {
         "agencyName" -> "Agent 1",
         "arn"        -> "XARN 123 4567"
       ),
+      "agent_registration_success" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "ABC123456",
+        "businessName"   -> "Example Tax Advisers Ltd"
+      ),
+      "agent_registration_application_non_fixable_failure" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "HDJ2123F"
+      ),
+      "agent_registration_individual_non_fixable_failure" -> Map(
+        "individualName" -> "Abed Nadir"
+      ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",
         "numberOfInvitations" -> "22",

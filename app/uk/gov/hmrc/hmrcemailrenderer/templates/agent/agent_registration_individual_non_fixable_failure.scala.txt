@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Update: application outcome decision (agent services account)
+
+Dear @params("individualName")
+
+We have finished our checks on the information you provided.
+
+You need to sign in to see our decision.
+
+To sign in
+
+Use the original link sent to you by the applicant. We cannot include the link here for security reasons.
+
+If you no longer have the link, ask the applicant to send it to you again.
+
+When prompted use sign in details linked to your personal taxes, not your business taxes.
+
+Thank you
+
+HMRC Agent Services
