@@ -67,6 +67,15 @@ object EmacHelpdeskTemplates {
       plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileRejectedByApprover.f,
       htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileRejectedByApprover.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "emac_helpdesk_bulk_deenrolment_file_approved",
+      fromAddress = FromAddress.noReply("HMRC Services and Enrolments helpdesk"),
+      service = EmacHelpdesk,
+      subject = "Bulk de-enrolment file approved",
+      plainTemplate = txt.emacHelpdeskBulkDeenrolmentFileApproved.f,
+      htmlTemplate = html.emacHelpdeskBulkDeenrolmentFileApproved.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
