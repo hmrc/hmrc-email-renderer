@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Update: application @params("applicationRef") for an agent services account
+
+Dear @params("agentName")
+
+We have approved your application for an agent services account on behalf of @params("businessName").
+
+Your new agent services account
+
+To access your account:
+
+- go to GOV.UK
+- search for 'Sign in to your agent services account'
+- sign in with the agent details you used when you made the application
+
+Agent reference number
+
+You will find the agent reference number (ARN) at the top of the agent services account homepage.
+
+The ARN identifies @params("businessName") as a registered tax adviser with HMRC and is used to access agent services and act for clients where authorised.
+
+It is owned by the tax adviser, not an individual, and is sensitive data. Keep it secure and only share it with people who need it to do their job.
+
+Thank you
+
+HMRC Agent Services
