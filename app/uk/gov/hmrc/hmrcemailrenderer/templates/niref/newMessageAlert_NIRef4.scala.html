@@ -1,0 +1,35 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You’ve got a new message from HMRC") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.salutation(params)
+
+<p style="margin: 0 0 30px; font-size: 19px;">You have a new message from HMRC.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">To view it, sign in to your HMRC online account.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we have not included a link with this email.</p>
+
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Why you got this email</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You chose to get paperless notifications.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">This means we send you an email when you have a new message in your account.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC digital</p>
+
+}
