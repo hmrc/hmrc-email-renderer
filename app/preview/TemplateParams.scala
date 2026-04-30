@@ -1862,6 +1862,13 @@ object TemplateParams2 {
       "successfulRecordCount" -> "5",
       "failedRecordCount"     -> "3"
     ),
+    "emac_helpdesk_bulk_deenrolment_file_auto_deleted" -> Map(
+      "requestorName"         -> "John Doe",
+      "fileName"              -> "testFile1.csv",
+      "uploadedDateTime"      -> "20-02-2026 12:00",
+      "fileExpiryDays"        -> "8",
+      "reference"             -> "12345678-ab12-43cd-5ef7-123456ab"
+    ),
     "emac_activation_code_not_received" -> Map(
       "serviceName" -> "Enrolment Team",
       "name"        -> "David Smith"
