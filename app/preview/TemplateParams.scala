@@ -94,6 +94,12 @@ object TemplateParams {
         "agencyName" -> "Agent 1",
         "arn"        -> "XARN 123 4567"
       ),
+      "agent_services_subscription_complete" -> Map(
+        "agencyName"         -> "Agent 1",
+        "serviceName"        -> "PAYE/CIS",
+        "serviceSectionName" -> "Pay as you earn (PAYE)/Construction Industry Scheme (CIS)",
+        "agentCode"          -> "AB1234"
+      ),
       "agent_services_account_created_cy" -> Map(
         "agencyName" -> "Agent 1",
         "arn"        -> "XARN 123 4567"

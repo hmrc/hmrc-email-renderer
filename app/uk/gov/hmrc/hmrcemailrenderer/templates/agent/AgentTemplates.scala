@@ -86,6 +86,15 @@ object AgentTemplates {
       htmlTemplate = html.agent_services_account_created.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_complete",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"HMRC: Your ${params("serviceName")} agent code is ready",
+      plainTemplate = txt.agent_services_subscription_complete.f,
+      htmlTemplate = html.agent_services_subscription_complete.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "agent_services_account_created_cy",
       fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),

@@ -1,0 +1,36 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agencyName() = {@params("agencyName")}
+@serviceName() = {@params("serviceName")}
+@serviceSectionName() = {@params("serviceSectionName")}
+@agentCode() = {@params("agentCode")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Your ${params("serviceName")} agent code is ready") {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agencyName()</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">You can now view your code on your agent services account.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">You will find it under 'Tax services you can manage through this account' in the '@serviceSectionName()' section.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Your agent code is <strong>@agentCode()</strong></p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">We'll also send you a letter with your agent code for your records.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">This code is a sensitive piece of data and should be kept private. Only share it with people who genuinely need to know it.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Thank you</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services</p>
+
+}
