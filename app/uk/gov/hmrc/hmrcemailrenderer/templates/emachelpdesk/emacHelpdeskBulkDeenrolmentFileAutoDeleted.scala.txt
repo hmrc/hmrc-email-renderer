@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Bulk de-enrolment file automatically deleted
+
+Dear @params("requestorName"),
+
+Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has been automatically deleted as it has not been approved within the allowable @params("fileExpiryDays") day window since initial upload. The ID for this submission was @params("reference").
+
+What you need to do next
+
+If you still need to process the file records, then they will need to be submitted as part of a new bulk de-enrolment file upload.
+
+Why you are receiving this email
+
+We sent you this because you uploaded a bulk de-enrolment file and it has not been approved within the allowable @params("fileExpiryDays") day window since initial upload.
+
+From HMRC Services and Enrolments helpdesk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

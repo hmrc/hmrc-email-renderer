@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Bulk de-enrolment file approved
+
+Dear @params("requestorName"),
+
+Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has been approved by @params("approverName") (@params("approverEmail")). The ID for this submission is @params("reference").
+
+What you need to do next
+
+You do not need to take any further action. Once the file has been processed, an email will be sent to you and the approver that contains the processing result.
+
+Why you are receiving this email
+
+We sent you this because you uploaded a bulk de-enrolment file and it has been approved by an approver user.
+
+From HMRC Services and Enrolments helpdesk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
