@@ -75,7 +75,9 @@ class AgentServicesAccountCreatedSpec
       subscriptionCompleteTemplate.templateId shouldBe "agent_services_subscription_complete"
       subscriptionCompleteTemplate.service shouldBe Agent
       subscriptionCompleteTemplate.fromAddress(Map.empty) shouldBe FromAddress.noReply("HMRC Agent Services")
-      subscriptionCompleteTemplate.subject(subscriptionCompleteParams) shouldBe "HMRC: Your PAYE/CIS agent code is ready"
+      subscriptionCompleteTemplate.subject(
+        subscriptionCompleteParams
+      ) shouldBe "HMRC: Your PAYE/CIS agent code is ready"
       subscriptionCompleteTemplate.priority shouldBe Some(MessagePriority.Urgent)
     }
 
