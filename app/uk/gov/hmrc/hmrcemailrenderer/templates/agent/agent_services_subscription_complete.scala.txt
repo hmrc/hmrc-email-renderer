@@ -14,6 +14,6 @@ This code is a sensitive piece of data and should be kept private. Only share it
 
 Thank you
 
-From HMRC Agent Services
+HMRC Agent Services
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
