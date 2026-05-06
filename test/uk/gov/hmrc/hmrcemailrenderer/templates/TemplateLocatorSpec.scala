@@ -180,6 +180,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "agent_self_auth_deactivates_mandate",
         "agent_services_account_created",
         "agent_services_account_created_cy",
+        "agent_services_subscription_complete",
         "agent_subscription_invitation_template_id",
         "agents_access_invitation_template_id",
         "agents_opt_in_exclude_template_id",
