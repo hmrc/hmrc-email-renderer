@@ -1,0 +1,39 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agentName() = {@params("agentName")}
+@applicationRef() = {@params("applicationRef")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Update: application ${params("applicationRef")} for an agent services account") {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName()</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have finished our checks on your business, following your request for an agent services account.</p>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">To see the outcome of your application</h2>
+
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Search for 'Apply for an agent services account' on GOV.UK.</li>
+    <li>In the section <strong>How long this process takes</strong> select the link 'Check the progress of an existing application'.</li>
+    <li>Sign in with the agent details you used when you made the application.</li>
+</ol>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Thank you</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">HMRC Agent Services</p>
+
+}

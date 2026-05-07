@@ -1,0 +1,15 @@
+@(params: Map[String, Any])Update: application @params("applicationRef") for an agent services account
+
+Dear @params("agentName")
+
+We have finished our checks on your business, following your request for an agent services account.
+
+To see the outcome of your application
+
+1. Search for 'Apply for an agent services account' on GOV.UK.
+2. In the section How long this process takes select the link 'Check the progress of an existing application'.
+3. Sign in with the agent details you used when you made the application.
+
+Thank you
+
+HMRC Agent Services
