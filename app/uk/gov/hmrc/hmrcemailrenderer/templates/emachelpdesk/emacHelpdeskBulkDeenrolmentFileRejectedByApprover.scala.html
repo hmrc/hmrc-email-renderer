@@ -1,0 +1,25 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Bulk de-enrolment file rejected by approver") {
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("requestorName"),</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has been rejected by @params("approverName") (@params("approverEmail")). The ID for this submission is @params("reference").</p>
+<h2>What you need to do next</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">If you still need to process the file, then please make the necessary changes and reattempt the upload.</p>
+<h2>Why you are receiving this email</h2>
+<p style="margin: 0 0 30px; font-size: 19px;">We sent you this because you uploaded a bulk de-enrolment file and it has been rejected by an approver user.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC Services and Enrolments helpdesk</p>
+}

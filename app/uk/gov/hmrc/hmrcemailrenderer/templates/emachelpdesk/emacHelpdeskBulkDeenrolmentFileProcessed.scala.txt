@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Bulk de-enrolment file processed
+
+Dear @params("requestorName"),
+
+Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has been processed. The ID for this submission is @params("reference").
+
+The processing result is provided below:
+
+- Total record count: @params("totalRecordCount")
+- Processed successfully record count: @params("successfulRecordCount")
+- Failed processing record count: @params("failedRecordCount")
+
+What you need to do next
+
+If there are no failed records, then all requested records have been de-enrolled, and you do not need to take any further action.
+
+If there are any failed records, then please log in to the helpdesk to view them. If any failed records need to be corrected and resubmitted, this must be done as part of a new bulk de-enrolment file upload.
+
+Why you are receiving this email
+
+We sent you this because you uploaded a bulk de-enrolment file that has been approved and processed.
+
+From HMRC Services and Enrolments helpdesk
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
