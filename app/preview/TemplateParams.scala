@@ -110,6 +110,11 @@ object TemplateParams {
       "agent_registration_individual_non_fixable_failure" -> Map(
         "individualName" -> "Abed Nadir"
       ),
+      "agent_registration_application_submission_confirmation" -> Map(
+        "agentName"                 -> "Taylor Reed",
+        "applicationRef"            -> "ABC123456",
+        "applicationProcessingTime" -> "6 Weeks"
+      ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",
         "numberOfInvitations" -> "22",
