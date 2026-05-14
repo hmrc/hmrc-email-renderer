@@ -10,9 +10,13 @@ Your agent code is @params("agentCode")
 
 We'll also send you a letter with your agent code for your records.
 
+What you need to do next
+
 This code is a sensitive piece of data and should be kept private. Only share it with people who genuinely need to know it.
 
-Thank you
+Why you are receiving this email
+
+We send a confirmation email when a subscription is completed.
 
 HMRC Agent Services
 
