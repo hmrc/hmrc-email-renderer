@@ -12,6 +12,10 @@ Search for 'Apply for an agent services account' on GOV.UK.
 In the section How long this process takes select the link 'Check the progress of an existing application'.
 Sign in with the agent details you used when you made the application.
 
+Why you are receiving this email
+
+We send a confirmation email when you apply for an agent services account.
+
 Thank you
 
 HMRC Agent Services
