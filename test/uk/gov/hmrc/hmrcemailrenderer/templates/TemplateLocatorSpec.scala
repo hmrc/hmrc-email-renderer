@@ -152,7 +152,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "AD",
         "LTAOATC",
         "Personal Tax",
-        "Pillar 2"
+        "Pillar 2",
+        "LEPP"
       )
     }
 
@@ -1131,7 +1132,15 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "overseas_transfer_charge_confirm_transfer_submitted",
         "pillar2_gir_submission_successful",
         "pillar2_gir_submission_generic_errors",
-        "pillar2_gir_submission_critical_errors"
+        "pillar2_gir_submission_critical_errors",
+        "newMessageAlert_LEPP1",
+        "newMessageAlert_LEPP1_cy",
+        "newMessageAlert_LEPP2",
+        "newMessageAlert_LEPP2_cy",
+        "newMessageAlert_LEPP3",
+        "newMessageAlert_LEPP3_cy",
+        "newMessageAlert_LEPP4",
+        "newMessageAlert_LEPP4_cy"
       )
     }
   }
