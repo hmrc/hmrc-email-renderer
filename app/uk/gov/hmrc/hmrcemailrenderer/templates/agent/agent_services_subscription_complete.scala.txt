@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Your @params("serviceName") agent code is ready
+
+Dear @params("agencyName")
+
+You can now view your code on your agent services account.
+
+You will find it under 'Tax services you can manage through this account' in the '@params("serviceSectionName")' section.
+
+Your agent code is @params("agentCode")
+
+We'll also send you a letter with your agent code for your records.
+
+What you need to do next
+
+This code is a sensitive piece of data and should be kept private. Only share it with people who genuinely need to know it.
+
+Why you are receiving this email
+
+We send a confirmation email when a subscription is completed.
+
+HMRC Agent Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
