@@ -19,6 +19,8 @@ package uk.gov.hmrc.hmrcemailrenderer.templates
 sealed trait ServiceIdentifier extends Product with Serializable {
   def name: String
 }
+
+// scalastyle:off
 object ServiceIdentifier {
   case object AdvanceValuationRulingsService extends ServiceIdentifier { override val name = "ars" }
   case object AEOMRA extends ServiceIdentifier { override val name = "aeo-mra" }
@@ -138,4 +140,7 @@ object ServiceIdentifier {
   case object LTAOATC extends ServiceIdentifier { override val name = "ltaoatc" }
   case object PersonalTax extends ServiceIdentifier { override val name = "personal-tax" }
   case object Pillar2 extends ServiceIdentifier { override val name = "pillar2" }
+
+  case object PensionsAndSavings extends ServiceIdentifier { override val name = "pensions-and-savings" }
 }
+// scalastyle:on
