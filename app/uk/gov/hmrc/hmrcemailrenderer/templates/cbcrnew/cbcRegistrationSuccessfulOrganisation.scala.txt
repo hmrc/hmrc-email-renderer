@@ -6,22 +6,26 @@ Dear @{params("name")}
 
 You have successfully registered for country-by-country reporting.
 
-To find your CBC user ID, sign in to the service. For security reasons, we have not included a link to this service in this email.
+For reference, your CBC ID is:
+@{params("cbcID")}
+
+For security reasons, we have not included a link to this service in this email.
 
 Print or save a copy of this email for your records.
 
-How to make a report
+What you need to do next
 
-To make a report:
+1. Search for ‘country-by-country reporting’ on GOV.UK.
+2. sign in to the service
 
-search for ‘country-by-country reporting’ on GOV.UK
-sign in to the service
+Why you are receiving this email
+
+We send a confirmation email to the contacts provided during online registration.
 
 You can email your HMRC Customer Compliance Manager or
 msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help.
 
 For more information, search GOV.UK for ‘country-by-country reporting’.
-
 
 From the HMRC CBC service
 

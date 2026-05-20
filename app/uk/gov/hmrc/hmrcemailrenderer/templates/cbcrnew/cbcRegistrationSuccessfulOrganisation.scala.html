@@ -17,27 +17,30 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have registered for country-by-country reporting") {
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")}</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Dear @{params("name")}</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You have successfully registered for country-by-country reporting.</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You have successfully registered for country-by-country reporting.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">To find your CBC user ID, sign in to the service. For security reasons, we have not included a link to this service in this email.</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For reference, your CBC ID is: <br/>@{params("cbcID")}</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Print or save a copy of this email for your records.</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For security reasons, we have not included a link to this service in this email.</p>
 
-<h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">How to make a report </h2>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Print or save a copy of this email for your records.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">To make a report:</p>
+ <h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">What you need to do next</h2>
 
-<ul style="list-style-type:disc">
- <li style="font-size: 19px;">search for ‘country-by-country reporting’ on GOV.UK</li>
- <li style="font-size: 19px;">sign in to the service</li>
-</ul>
+ <ol style="list-style-type:decimal">
+  <li style="font-size: 19px;">Search for ‘country-by-country reporting’ on GOV.UK.</li>
+  <li style="font-size: 19px;">Read the guidance about how to send a country-by-country report.</li>
+ </ol>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can email your HMRC Customer Compliance Manager or <br/> msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help.</p>
+ <h2 style="line-height: 1.315789474; font-size: 24px; margin: 60px 0 30px 0;">Why you are receiving this email</h2>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information, search GOV.UK for ‘country-by-country reporting’.</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We send a confirmation email to the contacts provided during online registration.</p>
 
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can email your HMRC Customer Compliance Manager or <br/> msb.countrybycountryreportingmailbox@@hmrc.gov.uk for help.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From the HMRC CBC service</p>
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">For more information, search GOV.UK for ‘country-by-country reporting’.</p>
+ 
+ <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From the HMRC CBC service</p>
 }
