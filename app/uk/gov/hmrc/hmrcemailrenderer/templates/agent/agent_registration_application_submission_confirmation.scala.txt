@@ -14,7 +14,7 @@ Sign in with the agent details you used when you made the application.
 
 Why you are receiving this email
 
-We send a confirmation email when you apply for an agent services account.
+We send a confirmation email for applications submitted online.
 
 Thank you
 
