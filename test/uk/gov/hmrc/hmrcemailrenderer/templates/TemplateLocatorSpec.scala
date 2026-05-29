@@ -153,7 +153,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "LTAOATC",
         "Personal Tax",
         "Pillar 2",
-        "LEPP"
+        "LEPP",
+        "OLG"
       )
     }
 
@@ -1142,7 +1143,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_LEPP3",
         "newMessageAlert_LEPP3_cy",
         "newMessageAlert_LEPP4",
-        "newMessageAlert_LEPP4_cy"
+        "newMessageAlert_LEPP4_cy",
+        "one_login_setup_complete"
       )
     }
   }

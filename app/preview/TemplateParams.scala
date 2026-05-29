@@ -4152,6 +4152,7 @@ object TemplateParams3 {
       "requestType"           -> "UK Tax Return",
       "accountingPeriodStart" -> "1 April 2024",
       "accountingPeriodEnd"   -> "31 March 2025"
-    )
+    ),
+    "one_login_setup_complete" -> Map.empty
   )
 }

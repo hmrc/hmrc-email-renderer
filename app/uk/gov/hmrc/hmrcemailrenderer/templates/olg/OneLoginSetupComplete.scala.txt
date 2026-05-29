@@ -1,0 +1,25 @@
+@(params: Map[String, Any])You have changed the way you sign in to HMRC
+
+Dear Customer,
+
+You can now sign in to HMRC services using GOV.UK One Login.
+
+You only need one email address and password to sign in.
+
+You do not need to take any further action.
+
+Why you are receiving this email
+
+We are sending this email because you set up GOV.UK One Login to sign in to HMRC service.
+
+For security reasons, this email does not include a link to the service. This helps keep your sign in safe.
+
+Contact HMRC if you did not make this change
+
+Find contact details on GOV.UK.
+
+This is an automated email. Do not reply to it.
+
+From HMRC digital team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

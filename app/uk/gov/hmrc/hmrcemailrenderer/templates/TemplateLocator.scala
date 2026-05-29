@@ -107,6 +107,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.tgp.TgpTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tre.treTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.carf.CARFTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.lepp.LEPPTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.olg.OlgTemplates
 
 trait TemplateLocator {
   def templateGroups: Map[String, Seq[MessageTemplate]] =
@@ -198,7 +199,8 @@ trait TemplateLocator {
       "LTAOATC"               -> LtaoatcTemplates.templates,
       "Personal Tax"          -> NIRefTemplates.templates,
       "Pillar 2"              -> Pillar2Templates.templates,
-      "LEPP"                  -> LEPPTemplates.templates
+      "LEPP"                  -> LEPPTemplates.templates,
+      "OLG"                   -> OlgTemplates.templates
     )
 
   lazy val all: Seq[MessageTemplate] = templateGroups.values.flatten.toSeq

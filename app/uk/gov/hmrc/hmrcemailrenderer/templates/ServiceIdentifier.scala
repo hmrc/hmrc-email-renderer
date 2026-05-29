@@ -142,5 +142,6 @@ object ServiceIdentifier {
   case object Pillar2 extends ServiceIdentifier { override val name = "pillar2" }
 
   case object PensionsAndSavings extends ServiceIdentifier { override val name = "pensions-and-savings" }
+  case object OneLoginGateway extends ServiceIdentifier { override val name = "olg" }
 }
 // scalastyle:on
