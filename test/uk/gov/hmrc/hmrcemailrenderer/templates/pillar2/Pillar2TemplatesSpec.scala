@@ -79,6 +79,25 @@ class Pillar2TemplatesSpec extends PlaySpec with CommonParamsForSpec {
       txtContent must include("HM Revenue and Customs")
       txtContent must include("Customer Compliance Group")
     }
+
+    // Regression test (DC-7988 / PIL-2596). An accounting period ending on a date that falls
+    // in an ISO week belonging to the following calendar year (e.g. 31/12/2025) was previously
+    // rendered with the wrong year ("31 December 2026") because the date formatter used the
+    // week-based-year symbol (YYYY) instead of the calendar-year symbol (yyyy).
+    "render a year-end accounting period with the correct calendar year" in {
+      val yearEndParams = params ++ Map(
+        "accountingPeriodStart" -> "01/01/2025",
+        "accountingPeriodEnd"   -> "31/12/2025"
+      )
+
+      val htmlContent = successTemplate.htmlTemplate(yearEndParams).toString
+      htmlContent must include("Accounting period: 1 January 2025 to 31 December 2025")
+      htmlContent must not include "31 December 2026"
+
+      val txtContent = successTemplate.plainTemplate(yearEndParams).toString
+      txtContent must include("Accounting period: 1 January 2025 to 31 December 2025")
+      txtContent must not include "31 December 2026"
+    }
   }
 
   "GIR Generic Errors Template" must {

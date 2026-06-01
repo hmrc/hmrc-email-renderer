@@ -27,7 +27,7 @@ object Pillar2DateTimes {
         raw,
         DateTimeFormatter.ofPattern("dd/MM/yyyy")
       )
-      .format(DateTimeFormatter.ofPattern("d MMMM YYYY"))
+      .format(DateTimeFormatter.ofPattern("d MMMM yyyy"))
 
   def toTwelveHourUserFacing(raw: String): String =
     LocalTime.parse(raw).format(DateTimeFormatter.ofPattern("h:mma"))
