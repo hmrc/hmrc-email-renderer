@@ -16,7 +16,7 @@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have changed the way you sign in to HMRC") {
 <div style="margin: 0 0 30px; font-size: 19px;">
-    <p>Dear Customer,</p>
+    <p>Dear @{params.get("name").flatMap { case s: String if s.trim.nonEmpty => Some(s); case _ => None }.getOrElse("Customer")},</p>
     <p>You can now sign in to HMRC services using GOV.UK One Login.</p>
     <pß>You only need one email address and password to sign in.</pß>
     <p style="margin-bottom: 40px">You do not need to take any further action.</p>

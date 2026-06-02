@@ -1,6 +1,6 @@
 @(params: Map[String, Any])You have changed the way you sign in to HMRC
 
-Dear Customer,
+Dear @{params.get("name").collect { case s: String if s.trim.nonEmpty => s }.getOrElse("Customer")},
 
 You can now sign in to HMRC services using GOV.UK One Login.
 
