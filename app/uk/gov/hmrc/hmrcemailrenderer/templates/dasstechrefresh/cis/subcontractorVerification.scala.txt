@@ -1,0 +1,19 @@
+@(params: Map[String, Any])
+
+CIS Online submission received by HM Revenue and Customs
+
+Thank you for using CIS Online.
+
+Your verification request has been received by HM Revenue &amp; Customs (HMRC) and a response has been provided.
+
+If you require any further assistance please contact our Online Services Helpdesk.
+
+Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Years Day.
+
+Tel: 0845 60 55 999
+
+For customers who are deaf or hearing or speech impaired:  0845 366 7805 (Textphone)
+
+If you're calling from abroad please telephone: +44 161 930 8445
+
+To contact HMRC by email: helpdesk@@ir-efile.gov.uk

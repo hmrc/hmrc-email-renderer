@@ -31,6 +31,15 @@ object DassTechRefreshTemplates {
       plainTemplate = cis.txt.nilMonthlyReturnOrgSuccess.f,
       htmlTemplate = cis.html.nilMonthlyReturnOrgSuccess.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dtr_subcontractor_verification",
+      fromAddress = dtrEmailAddress,
+      service = ServiceIdentifier.ConstructionIndustryScheme,
+      subject = "CIS Online submission received by HM Revenue and Customs",
+      plainTemplate = cis.txt.subcontractorVerification.f,
+      htmlTemplate = cis.html.subcontractorVerification.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
