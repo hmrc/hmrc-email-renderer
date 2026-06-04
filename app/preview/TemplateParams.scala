@@ -3353,7 +3353,7 @@ object TemplateParams3 {
       "amountPaid" -> "£123.45"
     ),
     "open_banking_payment_successful_class3Ni_single" -> Map(
-      "taxType"      -> "Self Assessment",
+      "taxType"      -> "Voluntary Class 3 National Insurance",
       "reference"    -> "1234567890K",
       "amountPaid"   -> "£123.45",
       "numberOfRows" -> "1",
@@ -3362,7 +3362,7 @@ object TemplateParams3 {
       "totalAmount"  -> "£123.45"
     ),
     "open_banking_payment_successful_class3Ni_single_cy" -> Map(
-      "taxType"      -> "Self Assessment",
+      "taxType"      -> "Voluntary Class 3 National Insurance",
       "reference"    -> "1234567890K",
       "amountPaid"   -> "£123.45",
       "numberOfRows" -> "1",
@@ -3371,7 +3371,7 @@ object TemplateParams3 {
       "totalAmount"  -> "£123.45"
     ),
     "open_banking_payment_successful_class3Ni_multiple" -> Map(
-      "taxType"      -> "Self Assessment",
+      "taxType"      -> "Voluntary Class 3 National Insurance",
       "reference"    -> "1234567890K",
       "amountPaid"   -> "£123.45",
       "numberOfRows" -> "3",
@@ -3384,7 +3384,7 @@ object TemplateParams3 {
       "totalAmount"  -> "£370.35"
     ),
     "open_banking_payment_successful_class3Ni_multiple_cy" -> Map(
-      "taxType"      -> "Self Assessment",
+      "taxType"      -> "Voluntary Class 3 National Insurance",
       "reference"    -> "1234567890K",
       "amountPaid"   -> "£123.45",
       "numberOfRows" -> "3",
