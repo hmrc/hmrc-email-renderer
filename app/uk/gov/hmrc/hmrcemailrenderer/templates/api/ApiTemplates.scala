@@ -258,7 +258,7 @@ object ApiTemplates {
       templateId = "apiAddedMemberToOrganisationNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "User added to your organisation in the HMRC Developer Hub",
+      subject = "A user has been added to your organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiAddedMemberToOrganisationNotification.f,
       htmlTemplate = html.apiAddedMemberToOrganisationNotification.f,
       priority = Some(MessagePriority.Urgent)
@@ -276,7 +276,7 @@ object ApiTemplates {
       templateId = "apiRemovedMemberFromOrganisationNotification",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,
-      subject = "User removed from your organisation in the HMRC Developer Hub",
+      subject = "A user has been removed from your organisation in the HMRC Developer Hub",
       plainTemplate = txt.apiRemovedMemberFromOrganisationNotification.f,
       htmlTemplate = html.apiRemovedMemberFromOrganisationNotification.f,
       priority = Some(MessagePriority.Urgent)
