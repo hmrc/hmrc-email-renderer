@@ -45,7 +45,7 @@ class subcontractorVerificationSpec extends AnyWordSpec with Matchers {
       )
       html must include("If you require any further assistance please contact our Online Services Helpdesk.")
       html must include(
-        "Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Years Day."
+        "Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day."
       )
       html must include("Tel: 0845 60 55 999")
       html must include("For customers who are deaf or hearing or speech impaired:  0845 366 7805 (Textphone)")
