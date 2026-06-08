@@ -131,6 +131,15 @@ object AgentTemplates {
       htmlTemplate = html.agent_services_subscription_complete.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_fail",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"HMRC: Unable to generate ${params("serviceName")} agent code",
+      plainTemplate = txt.agent_services_subscription_fail.f,
+      htmlTemplate = html.agent_services_subscription_fail.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.create(
       templateId = "agent_services_account_created_cy",
       fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),

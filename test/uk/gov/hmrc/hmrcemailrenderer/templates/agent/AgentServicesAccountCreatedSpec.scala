@@ -33,11 +33,20 @@ class AgentServicesAccountCreatedSpec
     .find(_.templateId == "agent_services_subscription_complete")
     .get
 
+  private val subscriptionFailTemplate = templateGroups("Agent")
+    .find(_.templateId == "agent_services_subscription_fail")
+    .get
+
   private val subscriptionCompleteParams = commonParameters ++ Map(
     "agencyName"         -> "Test Agency",
     "serviceName"        -> "PAYE/CIS",
     "serviceSectionName" -> "Pay as you earn (PAYE)/Construction Industry Scheme (CIS)",
     "agentCode"          -> "AB1234"
+  )
+
+  private val subscriptionFailParams = commonParameters ++ Map(
+    "agencyName"  -> "Test Agency",
+    "serviceName" -> "PAYE/CIS"
   )
 
   private val accountCreatedParams = commonParameters ++ Map(
@@ -97,6 +106,30 @@ class AgentServicesAccountCreatedSpec
       txtContent should include("Your agent code is AB1234")
       txtContent should include("If you’re unsure an email is from HMRC")
       txtContent should not include "Your account reference number is"
+    }
+  }
+
+  "Rendering agent_services_subscription_fail" should {
+
+    "render service-specific meta information" in {
+      subscriptionFailTemplate.templateId shouldBe "agent_services_subscription_fail"
+      subscriptionFailTemplate.service shouldBe Agent
+      subscriptionFailTemplate.fromAddress(Map.empty) shouldBe FromAddress.noReply("HMRC Agent Services")
+      subscriptionFailTemplate.subject(
+        subscriptionFailParams
+      ) shouldBe "HMRC: Unable to generate PAYE/CIS agent code"
+      subscriptionFailTemplate.priority shouldBe Some(MessagePriority.Urgent)
+    }
+
+    "render the service-specific agent code in html and text content" in {
+      val htmlContent = subscriptionFailTemplate.htmlTemplate(subscriptionFailParams).toString
+      val txtContent = subscriptionFailTemplate.plainTemplate(subscriptionFailParams).toString
+
+      htmlContent should include("We cannot generate a PAYE/CIS agent code at the moment")
+      htmlContent should include("We’ve been unable to generate a PAYE/CIS agent code for you.")
+
+      txtContent should include("We cannot generate a PAYE/CIS agent code at the moment")
+      txtContent should include("We’ve been unable to generate a PAYE/CIS agent code for you.")
     }
   }
 }
