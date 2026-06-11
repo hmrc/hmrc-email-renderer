@@ -125,11 +125,11 @@ class AgentServicesAccountCreatedSpec
       val htmlContent = subscriptionFailTemplate.htmlTemplate(subscriptionFailParams).toString
       val txtContent = subscriptionFailTemplate.plainTemplate(subscriptionFailParams).toString
 
-      htmlContent should include("We cannot generate a PAYE/CIS agent code at the moment")
-      htmlContent should include("We’ve been unable to generate a PAYE/CIS agent code for you.")
+      htmlContent should include("We could not generate your PAYE/CIS agent code at the moment")
+      htmlContent should include("could not generate your PAYE/CIS agent code.")
 
-      txtContent should include("We cannot generate a PAYE/CIS agent code at the moment")
-      txtContent should include("We’ve been unable to generate a PAYE/CIS agent code for you.")
+      txtContent should include("We could not generate your PAYE/CIS agent code at the moment")
+      txtContent should include("We could not generate your PAYE/CIS agent code.")
     }
   }
 }
