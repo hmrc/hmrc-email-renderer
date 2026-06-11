@@ -2,7 +2,7 @@
 
 Dear @params("agencyName")
 
-We’ve been unable to generate a @params("serviceName") agent code for you.
+We could not generate your @params("serviceName") agent code.
 
 What you need to do next
 
@@ -14,6 +14,6 @@ Why you are receiving this email
 
 To inform you about the status of your agent code.
 
-HMRC Agent Services
+From HMRC Agent Services
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
