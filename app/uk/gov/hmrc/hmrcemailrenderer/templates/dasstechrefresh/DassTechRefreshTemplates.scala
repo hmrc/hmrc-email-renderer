@@ -36,7 +36,7 @@ object DassTechRefreshTemplates {
       templateId = "dtr_subcontractor_verification",
       fromAddress = dtrEmailAddress,
       service = ServiceIdentifier.ConstructionIndustryScheme,
-      subject = "CIS Online submission received by HM Revenue and Customs",
+      subject = "Verification request received by HMRC",
       plainTemplate = cis.txt.subcontractorVerification.f,
       htmlTemplate = cis.html.subcontractorVerification.f,
       priority = Some(MessagePriority.Urgent)

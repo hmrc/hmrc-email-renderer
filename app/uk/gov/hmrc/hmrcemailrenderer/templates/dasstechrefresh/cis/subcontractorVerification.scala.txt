@@ -1,19 +1,15 @@
 @(params: Map[String, Any])
 
-CIS Online submission received by HM Revenue and Customs
+Verification request received by HMRC
 
-Thank you for using CIS Online.
+Dear customer
 
-Your verification request has been received by HM Revenue &amp; Customs (HMRC) and a response has been provided.
+We have received your verification request. You can now view the results of this request by signing in to the Construction Industry Scheme (CIS) online service.
 
-If you require any further assistance please contact our Online Services Helpdesk.
+Contact HMRC if you have any questions about this verification request. To find the correct contact details, go to GOV.UK and search for CIS general enquiries.
 
-Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day.
+Why you are receiving this email
 
-Tel: 0845 60 55 999
+You recently submitted a verification request via the CIS online service and asked for confirmation to be sent to this email address.
 
-For customers who are deaf or hearing or speech impaired:  0845 366 7805 (Textphone)
-
-If you're calling from abroad please telephone: +44 161 930 8445
-
-To contact HMRC by email: helpdesk@@ir-efile.gov.uk
+From the Construction Industry Service team

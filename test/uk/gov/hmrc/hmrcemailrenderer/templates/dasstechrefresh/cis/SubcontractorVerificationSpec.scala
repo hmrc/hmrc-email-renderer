@@ -21,7 +21,7 @@ import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.cis.html.subcontractorVerification
 
-class subcontractorVerificationSpec extends AnyWordSpec with Matchers {
+class SubcontractorVerificationSpec extends AnyWordSpec with Matchers {
 
   private val config = ConfigFactory.load().getConfig("templates.config")
 
@@ -33,25 +33,39 @@ class subcontractorVerificationSpec extends AnyWordSpec with Matchers {
   private def render(params: Map[String, Any] = layoutParams): String =
     subcontractorVerification.render(params).body
 
+  private def oneLine(value: String): String =
+    value.stripMargin.replace("\n", " ")
+
   "subcontractorVerification.scala.html" should {
 
-    "render title and main copy" in {
+    "render the verification received email content" in {
       val html = render()
 
-      html must include("CIS Online submission received by HM Revenue and Customs")
-      html must include("Thank you for using CIS Online.")
+      html must include("Verification request received by HMRC")
+      html must include("Dear customer")
       html must include(
-        "Your verification request has been received by HM Revenue &amp; Customs (HMRC) and a response has been provided."
+        oneLine(
+          """We have received your verification request. You can now view the results of this request by
+            |signing in to the Construction Industry Scheme (CIS) online service."""
+        )
       )
-      html must include("If you require any further assistance please contact our Online Services Helpdesk.")
       html must include(
-        "Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day."
+        oneLine(
+          """Contact HMRC if you have any questions about this verification request. To find the correct
+            |contact details, go to GOV.UK and search for CIS general enquiries."""
+        )
       )
-      html must include("Tel: 0845 60 55 999")
-      html must include("For customers who are deaf or hearing or speech impaired:  0845 366 7805 (Textphone)")
-      html must include("If you're calling from abroad please telephone: +44 161 930 8445")
-      html must include("helpdesk@ir-efile.gov.uk")
-      html must not include "helpdesk@@ir-efile.gov.uk"
+      html must include("Why you are receiving this email")
+      html must include(
+        "You recently submitted a verification request via the CIS online service and asked for confirmation to be sent to this email address."
+      )
+      html must include("From the Construction Industry Service team")
+    }
+
+    "render the reason section as a heading" in {
+      val html = render()
+
+      html must include("""<h2 style="margin: 0 0 30px 0;">Why you are receiving this email</h2>""")
     }
 
     "fail clearly if required layout params are missing" in {
