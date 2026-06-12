@@ -1,0 +1,19 @@
+@(params: Map[String, Any])We could not generate your @params("serviceName") agent code at the moment
+
+Dear @params("agencyName")
+
+We could not generate your @params("serviceName") agent code.
+
+What you need to do next
+
+You must sign in to you agent services account and apply again.
+
+If you still cannot receive an agent code, you need to contact HMRC.
+
+Why you are receiving this email
+
+To inform you about the status of your agent code.
+
+From HMRC Agent Services
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

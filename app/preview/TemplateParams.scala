@@ -100,6 +100,10 @@ object TemplateParams {
         "serviceSectionName" -> "Pay as you earn (PAYE)/Construction Industry Scheme (CIS)",
         "agentCode"          -> "AB1234"
       ),
+      "agent_services_subscription_fail" -> Map(
+        "agencyName"  -> "Agent 1",
+        "serviceName" -> "PAYE/CIS"
+      ),
       "agent_services_account_created_cy" -> Map(
         "agencyName" -> "Agent 1",
         "arn"        -> "XARN 123 4567"
