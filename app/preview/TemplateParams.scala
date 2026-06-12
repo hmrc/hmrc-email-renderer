@@ -4125,6 +4125,9 @@ object TemplateParams3 {
       "month" -> "September",
       "year"  -> "2025"
     ),
+    "dtr_subcontractor_verification" -> Map(
+      "" -> ""
+    ),
     "overseas_transfer_charge_confirm_transfer_submitted" -> Map(
       "qtReference"       -> "QT123456",
       "memberName"        -> "Trixie Mattel",

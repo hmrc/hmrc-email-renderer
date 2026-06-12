@@ -1,0 +1,15 @@
+@(params: Map[String, Any])
+
+Verification request received by HMRC
+
+Dear customer
+
+We have received your verification request. You can now view the results of this request by signing in to the Construction Industry Scheme (CIS) online service.
+
+Contact HMRC if you have any questions about this verification request. To find the correct contact details, go to GOV.UK and search for CIS general enquiries.
+
+Why you are receiving this email
+
+You recently submitted a verification request via the CIS online service and asked for confirmation to be sent to this email address.
+
+From the Construction Industry Service team
