@@ -1,12 +1,30 @@
 @(params: Map[String, Any])
 
+@numberOfRows = @{
+	params.get("numberOfRows").map(_.toString.toInt).getOrElse(0)
+}
+
 Annwyl Gwsmer
 
 Mae'ch taliad wedi dod i law.
 
 Treth: @params("taxType")
 Cyfeirnod y taliad: @params("reference")
-Swm a dalwyd: @params("amountPaid")
+
+@if(numberOfRows == 1) {
+Blwyddyn dreth: @params("taxYear1")
+Swm: @params("amount1")
+} else if (numberOfRows > 1) {
+	Crynodeb o’r taliadau
+
+Blwyddyn dreth | Swm
+@for(index <- 1 to numberOfRows) {
+@params(s"taxYear$index") | @params(s"amount$index")
+	}
+Cyfanswm | @params("totalAmount")
+} else {
+Swm: @params("amountPaid")
+}
 
 Bydd eich taliad wedi’i gwblhau ar ôl i’r arian adael eich cyfrif banc.
 
