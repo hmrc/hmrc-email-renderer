@@ -1,0 +1,55 @@
+@import play.api.libs.json.{JsArray, JsDefined, JsLookupResult, JsObject, JsUndefined, JsValue, Json, JsBoolean}
+
+@(params: Map[String, Any])
+
+@allItems = @{params("tpsPaymentItemsForEmail") match {
+case items:String => Json.parse(items).as[List[JsObject]]
+case _ => List()
+}}
+
+@itemList = @{ allItems.map( item => {
+
+val taxType: String = (item \ "taxType").as[String]
+val amount: String = (item \ "amount").as[String]
+val transactionFee: String = (item \ "transactionFee").as[String]
+val transactionNumber = (item \ "transactionNumber").as[String]
+(taxType, amount, transactionFee, transactionNumber)
+})
+}
+
+@singleItem = @{itemList.size == 1}
+
+Annwyl Gwsmer
+
+@if(singleItem){
+Diolch am wneud taliad dros y ffôn. Mae’r taliad canlynol wedi dod i law CThEF.
+}
+
+@if(!singleItem){
+Thank you for making a telephone payment. The following payments have been received by HMRC.
+}
+
+Treth   Swm a dalwyd  Ffi trafodyn   Rhif trafodyn
+
+    @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
+    - Item: @taxType, £@amount, @transactionFee, @transactionNumber
+    }
+
+
+Cyfanswm a dalwyd
+£@params("totalAmountPaid")
+
+Manylion y cerdyn
+Talwyd gyda @params("cardType"), sy’n gorffen gyda @params("cardNumber")
+
+Cyfeirnod y trafodyn
+@params("transactionReference")
+
+Gall eich taliad gymryd hyd at 5 diwrnod i ymddangos yn eich cyfrif treth ar lein.
+
+Pam cawsoch chi’r e-bost hwn
+Gwnaethoch ddewis cael e-bost am eich taliad.
+
+Oddi wrth Gyllid a Thollau EF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

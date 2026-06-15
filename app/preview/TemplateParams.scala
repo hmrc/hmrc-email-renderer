@@ -1975,6 +1975,13 @@ object TemplateParams2 {
       "cardNumber"           -> "1234",
       "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
     ),
+    "telephone_payments_service_cy" -> Map(
+      "totalAmountPaid"      -> "1000.00",
+      "transactionReference" -> "12345FFF",
+      "cardType"             -> "Visa Debit",
+      "cardNumber"           -> "1234",
+      "tpsPaymentItemsForEmail" -> "[{\"taxType\":\"P800\",\"amount\":\"1.92\",\"transactionFee\":\"1.00\",\"transactionNumber\":\"12345\"}]"
+    ),
     "face_to_face_payment_email_successful" -> Map(
       "totalAmountInPence"     -> "100000",
       "transactionReference"   -> "4012637",
