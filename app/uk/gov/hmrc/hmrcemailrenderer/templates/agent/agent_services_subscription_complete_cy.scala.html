@@ -21,7 +21,7 @@
 @serviceSectionName() = {@params("serviceSectionName")}
 @agentCode() = {@params("agentCode")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Mae eich cod asiant ar gyfer @params("serviceName") yn barod") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Mae eich cod asiant ar gyfer ${params("serviceName")} yn barod") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agencyName()</p>
 
