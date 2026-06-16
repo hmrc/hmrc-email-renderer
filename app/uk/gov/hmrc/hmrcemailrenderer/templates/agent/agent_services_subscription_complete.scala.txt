@@ -16,7 +16,7 @@ This code is a sensitive piece of data and should be kept private. Only share it
 
 Why you are receiving this email
 
-We send a confirmation email when a subscription is completed.
+To inform you about the status of your code.
 
 HMRC Agent Services
 

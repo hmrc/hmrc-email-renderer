@@ -3354,7 +3354,51 @@ object TemplateParams3 {
     "open_banking_payment_successful" -> Map(
       "taxType"    -> "Self Assessment",
       "reference"  -> "1234567890K",
-      "amountPaid" -> "123.45"
+      "amountPaid" -> "£123.45"
+    ),
+    "open_banking_payment_successful_class3Ni_single" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "1",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "totalAmount"  -> "£123.45"
+    ),
+    "open_banking_payment_successful_class3Ni_single_cy" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "1",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "totalAmount"  -> "£123.45"
+    ),
+    "open_banking_payment_successful_class3Ni_multiple" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "3",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "taxYear2"     -> "2021 to 2022",
+      "amount2"      -> "£123.45",
+      "taxYear3"     -> "2022 to 2023",
+      "amount3"      -> "£123.45",
+      "totalAmount"  -> "£370.35"
+    ),
+    "open_banking_payment_successful_class3Ni_multiple_cy" -> Map(
+      "taxType"      -> "Voluntary Class 3 National Insurance",
+      "reference"    -> "1234567890K",
+      "amountPaid"   -> "£123.45",
+      "numberOfRows" -> "3",
+      "taxYear1"     -> "2020 to 2021",
+      "amount1"      -> "£123.45",
+      "taxYear2"     -> "2021 to 2022",
+      "amount2"      -> "£123.45",
+      "taxYear3"     -> "2022 to 2023",
+      "amount3"      -> "£123.45",
+      "totalAmount"  -> "£370.35"
     ),
     "open_banking_payment_successful_fdp" -> Map(
       "taxType"              -> "Self Assessment",
@@ -4080,6 +4124,9 @@ object TemplateParams3 {
     "dtr_cis_nil_monthly_return_org_success" -> Map(
       "month" -> "September",
       "year"  -> "2025"
+    ),
+    "dtr_subcontractor_verification" -> Map(
+      "" -> ""
     ),
     "overseas_transfer_charge_confirm_transfer_submitted" -> Map(
       "qtReference"       -> "QT123456",

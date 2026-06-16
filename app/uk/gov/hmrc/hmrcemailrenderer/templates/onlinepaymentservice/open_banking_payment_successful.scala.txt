@@ -1,12 +1,30 @@
 @(params: Map[String, Any])
 
+@numberOfRows = @{
+    params.get("numberOfRows").map(_.toString.toInt).getOrElse(0)
+}
+
 Dear Customer
 
-You have sent a payment to HMRC
+You have sent a payment to HMRC.
 
 Tax: @params("taxType")
 Payment reference: @params("reference")
+
+@if(numberOfRows == 1) {
+Tax year: @params("taxYear1")
+Amount: @params("amount1")
+} else if (numberOfRows > 1) {
+    Payment summary
+
+Tax year | Amount
+@for(index <- 1 to numberOfRows) {
+@params(s"taxYear$index") | @params(s"amount$index")
+    }
+Total | @params("totalAmount")
+} else {
 Amount: @params("amountPaid")
+}
 
 Your payment will be complete once the money has left your bank account.
 
@@ -14,7 +32,7 @@ Your payment can take up to 5 days to show in your online tax account.
 
 Why you got this email
 
-You chose to receive an email about your payment
+You chose to receive an email about your payment.
 
 From HMRC Online Payments
 

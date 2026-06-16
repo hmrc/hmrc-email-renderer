@@ -15,6 +15,11 @@
  *@
 
 @(params: Map[String, Any])
+
+@numberOfRows = @{
+    params.get("numberOfRows").map(_.toString.toInt).getOrElse(0)
+}
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydych wedi anfon taliad i CThEF") {
 
 <p style="font-size: 19px;line-height: 1.315789474;margin: 0 0 30px 0;">Annwyl Gwsmer</p>
@@ -35,17 +40,53 @@
             <td>@params("reference")</td>
         </tr>
 
+        @if(numberOfRows == 1) {
+        <tr>
+            <th>Blwyddyn dreth</th>
+            <td>@params("taxYear1")</td>
+        </tr>
+        <tr>
+            <th>Swm</th>
+            <td>@params("amount1")</td>
+        </tr>
+        } else if (numberOfRows > 1) {
+            <tr>
+                <td colspan="2">
+                    <p style="margin: 0 0 10px; font-size: 19px;"><h3>Crynodeb o’r taliadau</h3></p>
+
+                    <table width="100%" cellspacing="0" cellpadding="2px" style="text-align:left;font-size: 19px;">
+                        <tbody>
+                            <tr>
+                                <th>Blwyddyn dreth</th>
+                                <th>Swm</th>
+                            </tr>
+                            @for(index <- 1 to numberOfRows) {
+                            <tr>
+                                <td>@params(s"taxYear$index")</td>
+                                <td>@params(s"amount$index")</td>
+                            </tr>
+                            }
+                            <tr>
+                                <th>Cyfanswm</th>
+                                <td>@params("totalAmount")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        } else {
         <tr>
             <th>Swm</th>
             <td>@params("amountPaid")</td>
         </tr>
+        }
 
     </tbody>
 </table>
 
 </p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Bydd eich taliad wedi’i gwblhau ar ôl i’r arian adael eich cyfrif banc.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Bydd eich taliad wedi’i gwblhau ar ôl i'r arian adael eich cyfrif banc.</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">Gall eich taliad gymryd hyd at 5 diwrnod ymddangos yn eich cyfrif treth ar-lein.</p>
 

@@ -21,7 +21,7 @@ import org.scalatest.matchers.must.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.cis.html.nilMonthlyReturnOrgSuccess
 
-class nilMonthlyReturnOrgSuccessSpec extends AnyWordSpec with Matchers {
+class NilMonthlyReturnOrgSuccessSpec extends AnyWordSpec with Matchers {
   private val config = ConfigFactory.load().getConfig("templates.config")
 
   private val layoutParams: Map[String, Any] = Map(
