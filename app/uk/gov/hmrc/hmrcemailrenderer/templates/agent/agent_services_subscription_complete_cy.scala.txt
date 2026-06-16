@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Mae eich cod asiant ar gyfer @params("serviceName") yn barod
+
+Annwyl @params("agencyName")
+
+Gallwch nawr weld eich cod yn eich cyfrif gwasanaethau asiant.
+
+Cewch hyd iddo o dan 'Gwasanaethau treth y gallwch eu rheoli drwy’r cyfrif hwn', sydd yn yr adran '@params("serviceSectionName")'.
+
+Eich cod asiant yw @params("agentCode")
+
+Byddwn hefyd yn anfon llythyr atoch gyda'ch cod asiant ar gyfer eich cofnodion.
+
+Yr hyn y mae angen i chi ei wneud nesaf
+
+Mae'r cod hwn yn ddarn data sensitif, a dylid ei gadw yn breifat. Rhannwch y cod gyda phobl sydd wir angen ei wybod yn unig.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Er mwyn rhoi gwybod i chi ynghylch statws eich cod.
+
+Gwasanaethau Asiant CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
