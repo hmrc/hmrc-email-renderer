@@ -52,7 +52,7 @@ class SubcontractorVerificationSpec extends AnyWordSpec with Matchers {
       html must include(
         oneLine(
           """Contact HMRC if you have any questions about this verification request. To find the correct
-            |contact details, go to GOV.UK and search for CIS general enquiries."""
+            |contact details, go to GOV&#8203;.UK and search for CIS general enquiries."""
         )
       )
       html must include("Why you are receiving this email")
