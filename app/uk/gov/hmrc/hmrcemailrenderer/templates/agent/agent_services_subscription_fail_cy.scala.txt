@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Nid oedd modd i ni greu y cod asiant ar gyfer @params("serviceName") i chi.
+
+Annwyl @params("agencyName")
+
+id oedd modd i ni greu y cod asiant ar gyfer @params("serviceName") i chi.
+
+Yr hyn y mae angen i chi ei wneud nesaf
+
+Mae’n rhaid i chi fewngofnodi i’ch cyfrif gwasanaethau asiant a gwneud cais eto.
+
+Os ydych yn parhau i fethu cael cod asiant, mae angen i chi gysylltu â CThEF.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Er mwyn rhoi gwybod i chi ynghylch statws eich cod asiant.
+
+Gan Wasanaethau Asiant CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

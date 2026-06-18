@@ -94,6 +94,10 @@ object TemplateParams {
         "agencyName" -> "Agent 1",
         "arn"        -> "XARN 123 4567"
       ),
+      "agent_services_account_created_cy" -> Map(
+        "agencyName" -> "Agent 1",
+        "arn"        -> "XARN 123 4567"
+      ),
       "agent_services_subscription_complete" -> Map(
         "agencyName"         -> "Agent 1",
         "serviceName"        -> "PAYE/CIS",
@@ -104,9 +108,9 @@ object TemplateParams {
         "agencyName"  -> "Agent 1",
         "serviceName" -> "PAYE/CIS"
       ),
-      "agent_services_account_created_cy" -> Map(
-        "agencyName" -> "Agent 1",
-        "arn"        -> "XARN 123 4567"
+      "agent_services_subscription_fail_cy" -> Map(
+        "agencyName"  -> "Agent 1",
+        "serviceName" -> "TWE/CIS"
       ),
       "agent_registration_success" -> Map(
         "agentName"      -> "Taylor Reed",

@@ -117,7 +117,7 @@ class AgentServicesAccountCreatedSpec
       subscriptionFailTemplate.fromAddress(Map.empty) shouldBe FromAddress.noReply("HMRC Agent Services")
       subscriptionFailTemplate.subject(
         subscriptionFailParams
-      ) shouldBe "HMRC: Unable to generate PAYE/CIS agent code"
+      ) shouldBe "HMRC: We could not generate your PAYE/CIS agent code"
       subscriptionFailTemplate.priority shouldBe Some(MessagePriority.Urgent)
     }
 
