@@ -338,7 +338,7 @@ object OnlinePaymentServiceTemplates {
       templateId = "telephone_payments_service_cy",
       fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
-      subject = "HMRC Payment confirmation",
+      subject = "Cadarnhad gan CThEF o daliad",
       plainTemplate = txt.telephone_payments_service_cy.f,
       htmlTemplate = html.telephone_payments_service_cy.f,
       priority = Some(MessagePriority.Urgent)
