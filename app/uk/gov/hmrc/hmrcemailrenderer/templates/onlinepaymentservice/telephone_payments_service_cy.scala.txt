@@ -26,13 +26,13 @@ Diolch am wneud taliad dros y ffôn. Mae’r taliad canlynol wedi dod i law CThE
 }
 
 @if(!singleItem){
-Thank you for making a telephone payment. The following payments have been received by HMRC.
+Diolch am wneud taliad dros y ffôn. Mae’r taliadau canlynol wedi dod i law CThEF.
 }
 
 Treth   Swm a dalwyd  Ffi trafodyn   Rhif trafodyn
 
     @for((taxType, amount, transactionFee, transactionNumber) <- itemList) {
-    - Item: @taxType, £@amount, @transactionFee, @transactionNumber
+    - Eitem: @taxType, £@amount, @transactionFee, @transactionNumber
     }
 
 

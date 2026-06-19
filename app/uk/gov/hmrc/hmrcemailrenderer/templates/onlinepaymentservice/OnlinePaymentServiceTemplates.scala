@@ -336,7 +336,7 @@ object OnlinePaymentServiceTemplates {
     ),
     MessageTemplate.create(
       templateId = "telephone_payments_service_cy",
-      fromAddress = FromAddress.noReply("HMRC Online Payments"),
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
       service = ServiceIdentifier.OnlinePaymentService,
       subject = "HMRC Payment confirmation",
       plainTemplate = txt.telephone_payments_service_cy.f,
