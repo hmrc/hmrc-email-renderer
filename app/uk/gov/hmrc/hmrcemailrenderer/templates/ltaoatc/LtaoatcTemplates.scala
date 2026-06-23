@@ -26,7 +26,7 @@ object LtaoatcTemplates {
       templateId = "overseas_transfer_charge_confirm_transfer_submitted",
       fromAddress = FromAddress.noReply("Government Gateway service"),
       service = LTAOATC,
-      subject = "Government Gateway User ID",
+      subject = "Qualifying Recognised Overseas Pension Scheme (QROPS) transfer report submitted",
       plainTemplate = txt.overseasTransferChargeConfirmTransferSubmitted.f,
       htmlTemplate = html.overseasTransferChargeConfirmTransferSubmitted.f,
       priority = Some(MessagePriority.Standard)
