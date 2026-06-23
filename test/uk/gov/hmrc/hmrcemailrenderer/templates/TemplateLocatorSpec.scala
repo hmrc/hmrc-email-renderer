@@ -187,6 +187,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "agent_services_account_created",
         "agent_services_account_created_cy",
         "agent_services_subscription_complete",
+        "agent_services_subscription_complete_cy",
         "agent_services_subscription_fail",
         "agent_services_subscription_fail_cy",
         "agent_subscription_invitation_template_id",

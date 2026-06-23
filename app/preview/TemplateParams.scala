@@ -104,6 +104,12 @@ object TemplateParams {
         "serviceSectionName" -> "Pay as you earn (PAYE)/Construction Industry Scheme (CIS)",
         "agentCode"          -> "AB1234"
       ),
+      "agent_services_subscription_complete_cy" -> Map(
+        "agencyName"         -> "Agent 1",
+        "serviceName"        -> "TWE/CIS",
+        "serviceSectionName" -> "Talu wrth ennill (TWE)/Cynllun y Diwydiant Adeiladu (CIS)",
+        "agentCode"          -> "AB1234"
+      ),
       "agent_services_subscription_fail" -> Map(
         "agencyName"  -> "Agent 1",
         "serviceName" -> "PAYE/CIS"

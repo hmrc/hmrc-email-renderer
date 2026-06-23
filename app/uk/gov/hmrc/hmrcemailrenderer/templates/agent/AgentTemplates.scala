@@ -132,6 +132,15 @@ object AgentTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_services_subscription_complete_cy",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"CThEF: Mae eich cod asiant ar gyfer ${params("serviceName")} yn barod",
+      plainTemplate = txt.agent_services_subscription_complete_cy.f,
+      htmlTemplate = html.agent_services_subscription_complete_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "agent_services_subscription_fail",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
