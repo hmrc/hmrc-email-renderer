@@ -1,0 +1,21 @@
+@(params: Map[String, Any])Your unfinished application for an agent services account
+
+Dear @params("agentName")
+
+The business owner has now provided their details.
+
+You have until @params("applicationExpiryDate") to sign in and submit the application.
+
+Sign in to your application
+
+1. Go to GOV.UK and search for 'Apply for an agent services account'.
+2. In the section 'How long this process takes', select the link to check the progress of an existing application.
+3. Sign in with the agent details you used when you made the application.
+
+Why you are receiving this email
+
+We send a confirmation email when it's time to submit your application for an agent services account.
+
+Thank you
+
+HMRC Agent Services

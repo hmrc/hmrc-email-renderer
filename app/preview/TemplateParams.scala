@@ -129,6 +129,14 @@ object TemplateParams {
         "applicationRef"            -> "ABC123456",
         "applicationProcessingTime" -> "6 Weeks"
       ),
+      "agent_registration_application_ready_to_submit" -> Map(
+        "agentName"             -> "Taylor Reed",
+        "applicationExpiryDate" -> "29 August 2026"
+      ),
+      "agent_registration_application_ready_to_submit_sole_trader_not_business_owner" -> Map(
+        "agentName"             -> "Taylor Reed",
+        "applicationExpiryDate" -> "29 August 2026"
+      ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",
         "numberOfInvitations" -> "22",
