@@ -335,6 +335,15 @@ object OnlinePaymentServiceTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
+      templateId = "telephone_payments_service_cy",
+      fromAddress = FromAddress.noReply("O Daliadau Ar-lein CThEF"),
+      service = ServiceIdentifier.OnlinePaymentService,
+      subject = "Cadarnhad gan CThEF o daliad",
+      plainTemplate = txt.telephone_payments_service_cy.f,
+      htmlTemplate = html.telephone_payments_service_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "face_to_face_payment_email_successful",
       fromAddress = FromAddress.noReply("HMRC Online Payments"),
       service = ServiceIdentifier.OnlinePaymentService,

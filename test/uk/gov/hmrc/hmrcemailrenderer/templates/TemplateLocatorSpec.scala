@@ -930,6 +930,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "tctr_vacant_submission_confirmation",
         "tdq_fph_self_serve_nudge",
         "telephone_payments_service",
+        "telephone_payments_service_cy",
         "tor_code",
         "tor_confirmation",
         "tor_confirmation_dynamic",
