@@ -19,7 +19,7 @@
 @import uk.gov.hmrc.hmrcemailrenderer.templates.ecc.html.serviceName
 
 @(params: Map[String, Any])
-@template_main(params, s"You applied to get access to ${serviceName(params, "a service")}") {
+@template_main(params, s"You applied to get access to the ${serviceName(params, "a service")}") {
 
  <p style="margin: 0 0 30px; font-size: 19px;">@salutationFullName(params)</p>
 

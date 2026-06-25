@@ -2543,10 +2543,11 @@ object TemplateParams2 {
       "serviceContent"         -> "Erbyn hyn, gallwch wneud cais am Ddyfarniad Tariffau Uwch."
     ),
     "ecc_subscription_not_successful" -> Map(
-      "recipientName_FullName" -> "Jane Jones",
-      "recipientOrgName"       -> "JJ Components",
-      "serviceName"            -> "Advance Tariff Rulings",
-      "completionDate"         -> "22 March 2019"
+      "recipientName_FullName" -> "Harry Potter",
+      "recipientOrgName"       -> "Hogwarts Trains",
+      "serviceName"            -> "Customs Declaration Service",
+      "completionDate"         -> "17 June 2026",
+      "enrolmentKey"           -> "HMRC-CUS-ORG"
     ),
     "ecc_subscription_not_successful_cy" -> Map(
       "recipientName_FullName" -> "Jane Jones",
