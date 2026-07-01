@@ -1,5 +1,5 @@
 @(params: Map[String, Any])
-Valuation Office Agency – revaluations
+Valuation Office – revaluations
 
 Hello @params("name"),
 
@@ -9,6 +9,6 @@ We’ll send you an email when we have published any updates.
 
 You can unsubscribe if you do not want to receive any more emails about future revaluations.
 
-From Valuation Office Agency (VOA)
+From Valuation Office (VO)
 
  @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
