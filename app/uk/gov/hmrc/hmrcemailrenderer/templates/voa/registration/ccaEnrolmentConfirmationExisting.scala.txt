@@ -1,6 +1,6 @@
 @(params: Map[String, Any])
 
-Valuation Office Agency – check and challenge registration
+Valuation Office – check and challenge registration
 
 Dear @params("name"),
 
@@ -12,6 +12,10 @@ Your organisation is: @params("orgName")
 
 You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
 
-From Valuation Office Agency (VOA)
+Why you are receiving this email</h2>
+
+We send a confirmation email for applications submitted online
+
+From Valuation Office (VO)
 
  @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

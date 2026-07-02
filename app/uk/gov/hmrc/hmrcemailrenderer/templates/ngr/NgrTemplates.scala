@@ -22,7 +22,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.NgrNotify
 
 object NgrTemplates {
 
-  private val fromNoReplyVOA = FromAddress.noReply("Valuation Office Agency")
+  private val fromNoReplyVO = FromAddress.noReply("Valuation Office")
   private val standardPriority = Some(MessagePriority.Standard)
 
   val ngr_registration_successful = "ngr_registration_successful"
@@ -31,7 +31,7 @@ object NgrTemplates {
   val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = ngr_registration_successful,
-      fromAddress = fromNoReplyVOA,
+      fromAddress = fromNoReplyVO,
       service = NgrNotify,
       subject = "Manage your business rates valuation – registration successful",
       plainTemplate = txt.ngr_registration_successful.f,
@@ -40,7 +40,7 @@ object NgrTemplates {
     ),
     MessageTemplate.create(
       templateId = ngr_add_property_request_sent,
-      fromAddress = fromNoReplyVOA,
+      fromAddress = fromNoReplyVO,
       service = NgrNotify,
       subject = "Add a property request sent",
       plainTemplate = txt.ngr_add_property_request_sent.f,

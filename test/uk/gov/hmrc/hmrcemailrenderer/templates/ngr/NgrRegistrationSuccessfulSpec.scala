@@ -55,7 +55,7 @@ class NgrRegistrationSuccessfulSpec extends AnyWordSpecLike with Matchers with O
     }
 
     "render correct from address" in {
-      template.fromAddress(Map.empty) shouldBe "Valuation Office Agency <noreply@tax.service.gov.uk>"
+      template.fromAddress(Map.empty) shouldBe "Valuation Office <noreply@tax.service.gov.uk>"
     }
 
     "render correct html content" in {

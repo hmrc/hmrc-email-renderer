@@ -314,7 +314,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "crs_fatca_fi_upload_successful",
         "crs_fatca_user_upload_successful",
         "cc_registration_email",
-        "cca_appeals_submission_link",
         "cca_enrolment_confirmation",
         "cca_enrolment_confirmation_agent",
         "cca_enrolment_confirmation_individual",
