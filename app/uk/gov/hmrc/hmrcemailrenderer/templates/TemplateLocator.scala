@@ -63,6 +63,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.rald.RaldTemplates.raldGroup
 import uk.gov.hmrc.hmrcemailrenderer.templates.registeryourcompany.RegisterYourCompanyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.sdil.SdilTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.sdlt.SdltTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tamc.TamcTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.tcs.TcsTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.transactionengine.TransactionEngineTemplates
@@ -164,6 +165,7 @@ trait TemplateLocator {
       "Lost Credentials"      -> LostCredentialsTemplates.templates,
       "FHDDS"                 -> FhddsTemplates.templates,
       "SDIL"                  -> SdilTemplates.templates,
+      "SDLT"                  -> SdltTemplates.templates,
       "CCA"                   -> CCATemplates.templates,
       "CDS"                   -> cdsTestTemplates.templates,
       "MTDfB-VAT"             -> MtdfbVatTemplates.templates,

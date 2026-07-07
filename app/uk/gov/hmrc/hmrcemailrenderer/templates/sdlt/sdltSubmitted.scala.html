@@ -1,0 +1,42 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Stamp Taxes Online return submitted") {
+
+    <p>Thank you for using Stamp Taxes Online.</p>
+
+    <p>The Stamp Taxes Online Return for @{params("purchaserName").toString}, @{params("propertyAddress").toString}, @{params("utrn").toString} has been received.</p>
+
+<p>IMPORTANT: Please note this is an email confirming receipt of your online SDLT Return. It does not act as your electronic SDLT 5 certificate and will be rejected by all land registers, if used in the process of registering land.</p>
+
+    <p>For more information on how to pay please visit <a target="_blank" href="http://www.hmrc.gov.uk/howtopay">http://www.hmrc.gov.uk/howtopay</a></p>
+
+<p>If you require any further assistance please contact the HM Revenue & Customs Online Services Helpdesk.</p>
+
+    <p>Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day.</p>
+
+    <p>Tel: 0845 60 55 999</p>
+
+    <p>For customers who are deaf or hearing or speech impaired: 0845 366 7805 (Textphone)</p>
+
+    <p>If you're calling from abroad please telephone: +44 161 930 8445</p>
+
+    <p>To contact HMRC by email: <a href="mailto:helpdesk@@ir-efile.gov.uk">helpdesk@@ir-efile.gov.uk</a></p>
+
+<p>From HMRC Stamp Taxes Online</p>
+}

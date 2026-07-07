@@ -1,0 +1,27 @@
+@(params: Map[String, Any])
+
+Stamp Taxes Online return submitted
+
+Thank you for using Stamp Taxes Online.
+
+The Stamp Taxes Online Return for @{params("purchaserName").toString}, @{params("propertyAddress").toString}, @{params("utrn").toString} has been received.
+
+IMPORTANT: Please note this is an email confirming receipt of your online SDLT Return. It does not act as your electronic SDLT 5 certificate and will be rejected by all land registers, if used in the process of registering land.
+
+For more information on how to pay please visit http://www.hmrc.gov.uk/howtopay
+
+If you require any further assistance please contact the HM Revenue & Customs Online Services Helpdesk.
+
+Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day.
+
+Tel: 0845 60 55 999
+
+For customers who are deaf or hearing or speech impaired: 0845 366 7805 (Textphone)
+
+If you're calling from abroad please telephone: +44 161 930 8445
+
+To contact HMRC by email: helpdesk@@ir-efile.gov.uk
+
+From HMRC Stamp Taxes Online
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

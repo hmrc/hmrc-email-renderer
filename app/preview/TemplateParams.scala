@@ -2263,6 +2263,11 @@ object TemplateParams2 {
       "name"            -> "Joe Bloggs",
       "referenceNumber" -> "IM123456789A"
     ),
+    "sdlt_submission_confirmation" -> Map(
+      "purchaserName"   -> "John Doe",
+      "propertyAddress" -> "10 Kyn Avenue CR0 8LU",
+      "utrn"            -> "UTRN0113"
+    ),
     "digital_tariffs_case_completed" -> Map(
       "recipientName_line1" -> "FULL NAME",
       "reference"           -> "ATaR REFERENCE",
