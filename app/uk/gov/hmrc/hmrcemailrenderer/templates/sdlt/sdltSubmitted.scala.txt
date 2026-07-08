@@ -1,26 +1,33 @@
 @(params: Map[String, Any])
+Dear @{params("purchaserName").toString},
 
-Stamp Taxes Online return submitted
+HMRC has received the SDLT return for  @{params("purchaserName").toString}.
 
-Thank you for using Stamp Taxes Online.
+UTRN: @{params("utrn").toString}.
 
-The Stamp Taxes Online Return for @{params("purchaserName").toString}, @{params("propertyAddress").toString}, @{params("utrn").toString} has been received.
+What you need to do next
 
-IMPORTANT: Please note this is an email confirming receipt of your online SDLT Return. It does not act as your electronic SDLT 5 certificate and will be rejected by all land registers, if used in the process of registering land.
+You must:
 
-For more information on how to pay please visit http://www.hmrc.gov.uk/howtopay
+- login to the service and save your SDLT5 certificate (located within ‘Submitted returns’) - this is official evidence that your return has been successfully submitted
 
-If you require any further assistance please contact the HM Revenue & Customs Online Services Helpdesk.
+- send your SDLT5 to HM Land Registry when registering the land or property – if this return includes multiple interests, save your submitted return as a PDF and include this too
 
-Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day.
+- pay the SDLT due within 14 days of submission
 
-Tel: 0845 60 55 999
+For information on how to pay SDLT, search GOV.UK for: ‘Pay Stamp Duty Land Tax’.
 
-For customers who are deaf or hearing or speech impaired: 0845 366 7805 (Textphone)
+Why you are receiving this email
 
-If you're calling from abroad please telephone: +44 161 930 8445
+You chose to receive confirmation from HMRC once your return is successfully submitted.
 
-To contact HMRC by email: helpdesk@@ir-efile.gov.uk
+If you need to speak to someone about your return, contact the Stamp Taxes Helpline:
+
+Telephone: 0300 200 3510
+
+Outside UK: +44 1726 209 042
+
+Opening times: Monday to Friday, 8:30am to 5pm. Closed bank holidays.
 
 From HMRC Stamp Taxes Online
 

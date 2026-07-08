@@ -2265,7 +2265,6 @@ object TemplateParams2 {
     ),
     "sdlt_submission_confirmation" -> Map(
       "purchaserName"   -> "John Doe",
-      "propertyAddress" -> "10 Kyn Avenue CR0 8LU",
       "utrn"            -> "UTRN0113"
     ),
     "digital_tariffs_case_completed" -> Map(

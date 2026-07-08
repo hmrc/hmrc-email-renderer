@@ -18,25 +18,35 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Stamp Taxes Online return submitted") {
 
-    <p>Thank you for using Stamp Taxes Online.</p>
+    <p>Dear @{params("purchaserName").toString},</p>
 
-    <p>The Stamp Taxes Online Return for @{params("purchaserName").toString}, @{params("propertyAddress").toString}, @{params("utrn").toString} has been received.</p>
+    <p>HMRC has received the SDLT return for  @{params("purchaserName").toString}.</p>
 
-<p>IMPORTANT: Please note this is an email confirming receipt of your online SDLT Return. It does not act as your electronic SDLT 5 certificate and will be rejected by all land registers, if used in the process of registering land.</p>
+    <p>UTRN: @{params("utrn").toString}.</p>
 
-    <p>For more information on how to pay please visit <a target="_blank" href="http://www.hmrc.gov.uk/howtopay">http://www.hmrc.gov.uk/howtopay</a></p>
+    <h2>What you need to do next</h2>
 
-<p>If you require any further assistance please contact the HM Revenue & Customs Online Services Helpdesk.</p>
+    <p>You must: </p>
 
-    <p>Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day.</p>
+    <ul>
+        <li>login to the service and save your SDLT5 certificate (located within ‘Submitted returns’) - this is official evidence that your return has been successfully submitted</li>
+        <li>send your SDLT5 to HM Land Registry when registering the land or property – if this return includes multiple interests, save your submitted return as a PDF and include this too</li>
+        <li>pay the SDLT due within 14 days of submission</li>
+    </ul>
 
-    <p>Tel: 0845 60 55 999</p>
+    <p>For information on how to pay SDLT, search GOV.UK for: ‘Pay Stamp Duty Land Tax’.</p>
 
-    <p>For customers who are deaf or hearing or speech impaired: 0845 366 7805 (Textphone)</p>
+    <h2>Why you are receiving this email</h2>
 
-    <p>If you're calling from abroad please telephone: +44 161 930 8445</p>
+    <p>You chose to receive confirmation from HMRC once your return is successfully submitted.</p>
 
-    <p>To contact HMRC by email: <a href="mailto:helpdesk@@ir-efile.gov.uk">helpdesk@@ir-efile.gov.uk</a></p>
+    <p>If you need to speak to someone about your return, contact the Stamp Taxes Helpline:</p>
 
-<p>From HMRC Stamp Taxes Online</p>
+    <p>Telephone: 0300 200 3510</p>
+
+    <p>Outside UK: +44 1726 209 042</p>
+
+    <p>Opening times: Monday to Friday, 8:30am to 5pm. Closed bank holidays.</p>
+
+    <p>From HMRC Stamp Taxes Online</p>
 }
