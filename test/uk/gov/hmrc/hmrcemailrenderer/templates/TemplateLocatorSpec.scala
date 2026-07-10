@@ -316,7 +316,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "cca_enrolment_confirmation_agent",
         "cca_enrolment_confirmation_individual",
         "cca_enrolment_migration_confirmation",
-        "cca_revaluation_subscription_confirmation",
         "ccg1_confirmation_submission",
         "cdsEmailTemplate",
         "cdsTestTemplate",
