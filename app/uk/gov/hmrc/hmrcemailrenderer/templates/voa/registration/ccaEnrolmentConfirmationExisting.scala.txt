@@ -12,7 +12,7 @@ Your organisation is: @params("orgName")
 
 You will not need it to sign in to the check and challenge service – you should continue to use your Government Gateway details to sign in.
 
-Why you are receiving this email</h2>
+Why you are receiving this email
 
 We send a confirmation email for applications submitted online
 
