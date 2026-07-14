@@ -1,0 +1,34 @@
+@(params: Map[String, Any])
+Dear @{params("purchaserName").toString},
+
+HMRC has received the SDLT return for  @{params("purchaserName").toString}.
+
+UTRN: @{params("utrn").toString}.
+
+What you need to do next
+
+You must:
+
+- login to the service and save your SDLT5 certificate (located within ‘Submitted returns’) - this is official evidence that your return has been successfully submitted
+
+- send your SDLT5 to HM Land Registry when registering the land or property – if this return includes multiple interests, save your submitted return as a PDF and include this too
+
+- pay the SDLT due within 14 days of submission
+
+For information on how to pay SDLT, search GOV.UK for: ‘Pay Stamp Duty Land Tax’.
+
+Why you are receiving this email
+
+You chose to receive confirmation from HMRC once your return is successfully submitted.
+
+If you need to speak to someone about your return, contact the Stamp Taxes Helpline:
+
+Telephone: 0300 200 3510
+
+Outside UK: +44 1726 209 042
+
+Opening times: Monday to Friday, 8:30am to 5pm. Closed bank holidays.
+
+From HMRC Stamp Taxes Online
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
