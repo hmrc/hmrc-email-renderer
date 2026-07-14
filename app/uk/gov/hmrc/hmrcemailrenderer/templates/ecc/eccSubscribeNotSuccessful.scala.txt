@@ -8,6 +8,9 @@
 
 Your @serviceName(params) application @forOrgName("for", params) @onCompletionDate("on", params)has been unsuccessful.
 
+Why you are receiving this email
+
+We send a confirmation email when there's an update to your application.
 
 If you need help
 
