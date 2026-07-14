@@ -1,0 +1,26 @@
+@(params: Map[String, Any])Submitted: Senior Accounting Officer notification
+
+Dear @{params("recipientName")},
+
+@{params("companyName")} has submitted a notification confirming the Senior Accounting Officer (SAO) and the companies they are responsible for.
+
+Notification
+
+Date submitted: @{params("submittedDateTime")}
+Reference ID: @{params("referenceId")}
+
+What you need to do next
+
+You must now submit an SAO certificate.
+
+You can access the service by logging into your HMRC business tax account.
+
+Why you are receiving this email
+
+Your email address was given during registration. We send confirmation emails when a notification has been submitted.
+
+If you need support with your notification, contact your Customer Compliance Manager if you have one or email wmbc.saomailbox@@hmrc.gov.uk
+
+From HMRC SAO service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

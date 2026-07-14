@@ -1,0 +1,41 @@
+@*
+ * Copyright 2023 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Senior Accounting Officer notification") {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName"),</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">@params("companyName") has submitted a notification confirming the Senior Accounting Officer (SAO) and the companies they are responsible for.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">Notification</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Date submitted: @params("submittedDateTime")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Reference ID: @params("referenceId")</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">What you need to do next</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">You must now submit an SAO certificate.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You can access the service by logging into your HMRC business tax account.</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Your email address was given during registration. We send confirmation emails when a notification has been submitted.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">If you need support with your notification, contact your Customer Compliance Manager if you have one or email wmbc.saomailbox@@hmrc.gov.uk</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From HMRC SAO service</p>
+}

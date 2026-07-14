@@ -736,6 +736,43 @@ class TemplatePrioritiesISpec
       ("mtdfb_vat_agent_sign_up_successful", Map("vatNumber" -> "123456782")),
       ("discounted_dining_payment_sent", Map("claimRefNo" -> "1234")),
       ("discounted_dining_payment_sent_cy", Map("claimRefNo" -> "1234")),
+      (
+        "dsao_registration_confirmation",
+        Map(
+          "recipientName"     -> "Richard Wilson",
+          "companyName"       -> "ABC Ltd",
+          "submittedDateTime" -> "17 January 2025 at 11:45am",
+          "referenceId"       -> "SAOREG0123456789"
+        )
+      ),
+      (
+        "dsao_notification_confirmation",
+        Map(
+          "recipientName"     -> "Richard Wilson",
+          "companyName"       -> "ABC Ltd",
+          "submittedDateTime" -> "17 January 2025 at 11:45am",
+          "referenceId"       -> "SAONOT0123456789"
+        )
+      ),
+      (
+        "dsao_certificate_confirmation_for_submitter",
+        Map(
+          "recipientName"     -> "Richard Wilson",
+          "submitterName"     -> "Jane Smith",
+          "saoName"           -> "Richard Wilson",
+          "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+          "referenceId"       -> "SAOCER0123456789"
+        )
+      ),
+      (
+        "dsao_certificate_confirmation_for_sao",
+        Map(
+          "recipientName"     -> "Richard Wilson",
+          "companyName"       -> "ABC Ltd",
+          "submittedDateTime" -> "17 January 2025 at 11:45am",
+          "referenceId"       -> "SAOCER0123456789"
+        )
+      ),
       ("newMessageAlert_SA316", Map.empty)
     )
 

@@ -87,6 +87,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.cf.ContactFormsTemplates.contactF
 import uk.gov.hmrc.hmrcemailrenderer.templates.dass.DASSTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.DassTechRefreshTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.dprs.DprsTemplates
+import uk.gov.hmrc.hmrcemailrenderer.templates.dsao.DsaoTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.ecl.EclTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.euSubsidy.EUSubsidyTemplates
 import uk.gov.hmrc.hmrcemailrenderer.templates.hec.HecTemplates
@@ -190,6 +191,7 @@ trait TemplateLocator {
       "Penalty Reform"        -> PenReformTemplates.templates,
       "TGP"                   -> TgpTemplates.templates,
       "DPRS"                  -> DprsTemplates.templates,
+      "DSAO"                  -> DsaoTemplates.templates,
       "IOSS NETP"             -> IossNetpTemplates.templates,
       "TRE"                   -> treTemplates.templates,
       "Pillar 2"              -> Pillar2Templates.templates,
