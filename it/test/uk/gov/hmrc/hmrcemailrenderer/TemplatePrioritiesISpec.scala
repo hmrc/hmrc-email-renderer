@@ -768,7 +768,6 @@ class TemplatePrioritiesISpec
         "dsao_certificate_confirmation_for_sao",
         Map(
           "recipientName"     -> "Richard Wilson",
-          "companyName"       -> "ABC Ltd",
           "submittedDateTime" -> "17 January 2025 at 11:45am",
           "referenceId"       -> "SAOCER0123456789"
         )
