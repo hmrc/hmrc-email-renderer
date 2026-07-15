@@ -73,6 +73,30 @@ object TemplateParams {
         "team_name"         -> "CIR",
         "verification_code" -> "ABCDEF"
       ),
+      "dsao_registration_confirmation" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "companyName"       -> "ABC Ltd",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "referenceId"       -> "SAOREG0123456789"
+      ),
+      "dsao_notification_confirmation" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "companyName"       -> "ABC Ltd",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "referenceId"       -> "SAONOT0123456789"
+      ),
+      "dsao_certificate_confirmation_for_submitter" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "submitterName"     -> "Jane Smith",
+        "saoName"           -> "Richard Wilson",
+        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "referenceId"       -> "SAOCER0123456789"
+      ),
+      "dsao_certificate_confirmation_for_sao" -> Map(
+        "recipientName"     -> "Richard Wilson",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "referenceId"       -> "SAOCER0123456789"
+      ),
       "client_rejected_authorisation_request" -> Map(
         "agencyName" -> "Agent 1",
         "clientName" -> "Client 2",

@@ -134,6 +134,7 @@ object ServiceIdentifier {
   case object DigitalPlatformReporting extends ServiceIdentifier { override val name = "dprs" }
   case object IossNetp extends ServiceIdentifier { override val name = "ioss-netp" }
   case object TradeReportingExtracts extends ServiceIdentifier { override val name = "tre" }
+  case object SeniorAccountingOfficer extends ServiceIdentifier { override val name = "dsao" }
 
   case object Feedback extends ServiceIdentifier { override val name = "feedback" }
   case object NgrNotify extends ServiceIdentifier { override val name = "ngr-notify" }
