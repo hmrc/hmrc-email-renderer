@@ -41,6 +41,14 @@ object PayeTemplates {
       htmlTemplate = html.taxEstimateMessageAlert_cy.f
     ),
     MessageTemplate.create(
+      templateId = "daily_tax_estimate_message_alert",
+      fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
+      service = PayAsYouEarn,
+      subject = "Check your tax update online",
+      plainTemplate = txt.dailyTaxEstimateMessageAlert.f,
+      htmlTemplate = html.dailyTaxEstimateMessageAlert.f
+    ),
+    MessageTemplate.create(
       templateId = "newMessageAlert_P800",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
