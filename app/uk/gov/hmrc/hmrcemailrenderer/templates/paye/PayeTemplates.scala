@@ -44,7 +44,7 @@ object PayeTemplates {
       templateId = "annual_tax_estimate_message_alert",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "Check your tax update online",
+      subject = "Check your PAYE code change online",
       plainTemplate = txt.annualTaxEstimateMessageAlert.f,
       htmlTemplate = html.annualTaxEstimateMessageAlert.f
     ),

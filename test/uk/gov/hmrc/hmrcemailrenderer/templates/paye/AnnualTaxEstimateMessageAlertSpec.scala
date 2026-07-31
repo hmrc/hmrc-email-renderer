@@ -34,7 +34,7 @@ class AnnualTaxEstimateMessageAlertSpec
     val template = templateLocator.templateGroups("PAYE").find(_.templateId == "annual_tax_estimate_message_alert").get
 
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Check your tax update online"
+      template.subject(Map.empty) shouldBe "Check your PAYE code change online"
       template.fromAddress(Map.empty) shouldBe "HMRC digital <noreply@tax.service.gov.uk>"
     }
 
