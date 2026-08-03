@@ -30,7 +30,7 @@ class DailyTaxEstimateMessageAlertSpec
     val template = templateLocator.templateGroups("PAYE").find(_.templateId == "daily_tax_estimate_message_alert").get
 
     "render correct subject" in {
-      template.subject(Map.empty) shouldBe "Check your tax update online"
+      template.subject(Map.empty) shouldBe "Check your PAYE code change online"
       template.fromAddress(Map.empty) shouldBe "HMRC Check your Income Tax service <noreply@tax.service.gov.uk>"
     }
 
