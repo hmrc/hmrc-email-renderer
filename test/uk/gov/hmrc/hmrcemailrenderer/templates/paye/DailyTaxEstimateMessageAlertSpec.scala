@@ -26,7 +26,7 @@ class DailyTaxEstimateMessageAlertSpec
     with CommonParamsForSpec {
   "daily_tax_estimate_message_alert" should {
     val templateLocator = new TemplateLocator {}
-    val params = commonParameters ++ Map("fullName" -> "Some Person")
+    val params = commonParameters ++ Map("fullName" -> "Leslie Carter")
     val template = templateLocator.templateGroups("PAYE").find(_.templateId == "daily_tax_estimate_message_alert").get
 
     "render correct subject" in {
@@ -38,7 +38,7 @@ class DailyTaxEstimateMessageAlertSpec
       val htmlContent = template.htmlTemplate(params).toString
 
       htmlContent should include("Your tax code is changing")
-      htmlContent should include("Dear Some Person")
+      htmlContent should include("Dear Leslie Carter")
       htmlContent should include(
         "Your PAYE Income Tax records have recently changed, which means the amount of tax you pay may change."
       )
@@ -53,17 +53,18 @@ class DailyTaxEstimateMessageAlertSpec
       htmlContent should include(
         "If you sign in using a business tax account, you may be able to use it to access your personal tax account."
       )
-      htmlContent should include("Why you got this email")
+      htmlContent should include("Why you’re receiving this email")
       htmlContent should include(
-        "You got this email because you've chosen to receive email updates instead of letters by post."
+        "You’re receiving this email because you chose to receive email updates instead of letters by post."
       )
       htmlContent should include("For security reasons we have not included any links in this email.")
+      htmlContent should include("From HMRC Check your Income Tax")
     }
 
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
       txtContent should include("Your tax code is changing")
-      txtContent should include("Dear Some Person")
+      txtContent should include("Dear Leslie Carter")
       txtContent should include(
         "Your PAYE Income Tax records have recently changed, which means the amount of tax you pay may change."
       )
@@ -78,11 +79,12 @@ class DailyTaxEstimateMessageAlertSpec
       txtContent should include(
         "If you sign in using a business tax account, you may be able to use it to access your personal tax account."
       )
-      txtContent should include("Why you got this email")
+      txtContent should include("Why you’re receiving this email")
       txtContent should include(
-        "You got this email because you've chosen to receive email updates instead of letters by post."
+        "You’re receiving this email because you chose to receive email updates instead of letters by post."
       )
       txtContent should include("For security reasons we have not included any links in this email.")
+      txtContent should include("From HMRC Check your Income Tax")
     }
   }
 }
