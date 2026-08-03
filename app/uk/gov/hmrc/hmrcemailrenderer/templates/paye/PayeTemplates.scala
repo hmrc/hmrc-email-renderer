@@ -42,7 +42,7 @@ object PayeTemplates {
     ),
     MessageTemplate.create(
       templateId = "annual_tax_estimate_message_alert",
-      fromAddress = defaultFromAddress,
+      fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
       service = PayAsYouEarn,
       subject = "Check your PAYE code change online",
       plainTemplate = txt.annualTaxEstimateMessageAlert.f,
