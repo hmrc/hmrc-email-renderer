@@ -808,6 +808,10 @@ object TemplateParams {
       "tax_estimate_message_alert_cy" -> Map(
         "fullName" -> "Mr Joe Bloggs"
       ),
+      "annual_tax_estimate_message_alert" -> Map(
+        "fullName" -> "Leslie Carter",
+        "taxYear"  -> "2027"
+      ),
       "fandf_ask_help_notification" -> Map(
         "helperLastName"  -> "Bloggs",
         "helperFirstName" -> "Joe",
