@@ -14,13 +14,14 @@
  * limitations under the License.
  *@
 
-@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils.currentYear
-
 @(params: Map[String, Any])
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Your tax code will change from 6 April $currentYear") {
+@currentTaxYear = {@params("taxYear")}
+@nextTaxYear = {@(currentTaxYear.toString.toInt+1)}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Your tax code will change from 6 April ${currentTaxYear}") {
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @{params("fullName")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">We've calculated your Income Tax for the next tax year (6 April @currentYear to 5 April @{currentYear+1}). The amount of tax you pay may change.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We've calculated your Income Tax for the next tax year (6 April @currentTaxYear to 5 April @nextTaxYear). The amount of tax you pay may change.</p>
 <p style="margin: 0 0 30px; font-size: 19px;">For security reasons, we do not give full details here.</p>
 
 <h2 id="how-to-check-new-tax-details" style="margin: 0 0 30px; font-size: 24px;">How to check your new tax details</h2>

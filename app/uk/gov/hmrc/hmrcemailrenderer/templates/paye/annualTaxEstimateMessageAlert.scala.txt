@@ -1,12 +1,11 @@
-@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils
-@import uk.gov.hmrc.hmrcemailrenderer.templates.TemplateUtils.currentYear
-
-@(params: Map[String, Any])Your tax code will change from 6 April @currentYear
+@(params: Map[String, Any])Your tax code will change from 6 April @{params("taxYear")}
 
 
 Dear @{params("fullName")}
 
-We've calculated your Income Tax for the next tax year (6 April @currentYear to 5 April @{currentYear+1}). The amount of tax you pay may change.
+@defining(params("taxYear").toString.toInt + 1) { nextTaxYear =>
+We've calculated your Income Tax for the next tax year (6 April @{params("taxYear")} to 5 April @nextTaxYear). The amount of tax you pay may change.
+}
 
 For security reasons, we do not give full details here.
 

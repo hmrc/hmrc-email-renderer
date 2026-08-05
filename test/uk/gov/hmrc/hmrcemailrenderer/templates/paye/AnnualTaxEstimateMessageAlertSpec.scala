@@ -28,9 +28,8 @@ class AnnualTaxEstimateMessageAlertSpec
     with CommonParamsForSpec {
 
   "annual_tax_estimate_message_alert" should {
-    val currentYear = LocalDate.now().getYear
     val templateLocator = new TemplateLocator {}
-    val params = commonParameters ++ Map("fullName" -> "Leslie Carter")
+    val params = commonParameters ++ Map("fullName" -> "Leslie Carter", "taxYear" -> "2027")
     val template = templateLocator.templateGroups("PAYE").find(_.templateId == "annual_tax_estimate_message_alert").get
 
     "render correct subject" in {
@@ -41,11 +40,11 @@ class AnnualTaxEstimateMessageAlertSpec
     "render correct html content" in {
       val htmlContent = template.htmlTemplate(params).toString
 
-      htmlContent should include(s"Your tax code will change from 6 April $currentYear")
+      htmlContent should include(s"Your tax code will change from 6 April 2027")
       htmlContent should include("Dear Leslie Carter")
       htmlContent should include(
         s"We've calculated your Income Tax for the next tax year (" +
-          s"6 April $currentYear to 5 April ${currentYear + 1}). The amount of tax you pay may change."
+          "6 April 2027 to 5 April 2028). The amount of tax you pay may change."
       )
       htmlContent should include("For security reasons, we do not give full details here.")
       htmlContent should include("How to check your new tax details")
@@ -70,11 +69,11 @@ class AnnualTaxEstimateMessageAlertSpec
     "render correct text content" in {
       val txtContent = template.plainTemplate(params).toString
 
-      txtContent should include(s"Your tax code will change from 6 April $currentYear")
+      txtContent should include(s"Your tax code will change from 6 April 2027")
       txtContent should include("Dear Leslie Carter")
       txtContent should include(
         s"We've calculated your Income Tax for the next tax year (" +
-          s"6 April $currentYear to 5 April ${currentYear + 1}). The amount of tax you pay may change."
+          "6 April 2027 to 5 April 2028). The amount of tax you pay may change."
       )
       txtContent should include("For security reasons, we do not give full details here.")
       txtContent should include("How to check your new tax details")
