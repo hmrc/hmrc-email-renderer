@@ -19,7 +19,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.paye
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
 import org.scalatest.{ EitherValues, OptionValues }
-import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator, TemplateUtils }
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 
 import java.time.LocalDate
 
