@@ -1,0 +1,27 @@
+@(params: Map[String, Any])Your tax code is changing
+
+
+Dear @{params("fullName")}
+
+Your PAYE Income Tax records have recently changed, which means the amount of tax you pay may change.
+
+For security reasons we do not give the full details here. It could be because there's been changes to your job, pay, company benefits (like a company car) or pension.
+
+
+How to check you're paying the right amount of tax
+
+Sign in to your HMRC online account on GOV.UK or use the HMRC app. Go to the ‘Pay As You Earn (PAYE)’ section.
+
+If you sign in using a business tax account, you may be able to use it to access your personal tax account.
+
+
+Why you’re receiving this email
+
+You’re receiving this email because you chose to receive email updates instead of letters by post.
+
+For security reasons we have not included any links in this email.
+
+From HMRC Check your Income Tax
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
