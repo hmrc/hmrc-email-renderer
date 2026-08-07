@@ -929,6 +929,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "tax_estimate_message_alert",
         "tax_estimate_message_alert_cy",
         "daily_tax_estimate_message_alert",
+        "daily_tax_estimate_message_alert_cy",
         "annual_tax_estimate_message_alert",
         "tcs_renewal_confirmation",
         "tctr_connection_removed",

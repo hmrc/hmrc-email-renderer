@@ -49,6 +49,14 @@ object PayeTemplates {
       htmlTemplate = html.dailyTaxEstimateMessageAlert.f
     ),
     MessageTemplate.create(
+      templateId = "daily_tax_estimate_message_alert_cy",
+      fromAddress = FromAddress.noReply("CThEF – Gwasanaeth Gwirio eich Treth Incwm"),
+      service = PayAsYouEarn,
+      subject = "Gwiriwch eich diweddariad treth ar-lein",
+      plainTemplate = txt.dailyTaxEstimateMessageAlert_cy.f,
+      htmlTemplate = html.dailyTaxEstimateMessageAlert_cy.f
+    ),
+    MessageTemplate.create(
       templateId = "annual_tax_estimate_message_alert",
       fromAddress = FromAddress.noReply("HMRC Check your Income Tax service"),
       service = PayAsYouEarn,

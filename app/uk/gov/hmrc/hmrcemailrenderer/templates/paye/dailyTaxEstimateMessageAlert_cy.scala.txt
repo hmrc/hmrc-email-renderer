@@ -1,0 +1,27 @@
+@(params: Map[String, Any])Mae eich cod treth yn newid
+
+
+Annwyl @{params("fullName")}
+
+Mae eich cofnodion Treth Incwm TWE wedi newid yn ddiweddar, sy’n golygu y gall swm y dreth rydych yn ei thalu newid.
+
+Am resymau diogelwch, nid ydym yn rhoi’r manylion llawn yma. Gallai hyn fod oherwydd newidiadau i’ch swydd, eich cyflog, buddion cwmni (fel car cwmni) neu eich pensiwn.
+
+
+Sut i wirio eich bod yn talu’r swm cywir o dreth
+
+Mewngofnodwch i’ch cyfrif ar-lein CThEF ar GOV.UK neu defnyddiwch ap CThEF. Ewch i’r adran ‘Talu Wrth Ennill (TWE)’.
+
+Os ydych yn mewngofnodi gan ddefnyddio cyfrif treth busnes, mae’n bosibl y gallwch ei ddefnyddio i gael mynediad at eich cyfrif treth personol.
+
+
+Pam rydych yn cael yr e-bost hwn
+
+Rydych yn cael yr e-bost hwn oherwydd eich bod wedi dewis cael diweddariadau drwy e-bost yn hytrach na llythyrau drwy’r post.
+
+Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.
+
+Oddi wrth CThEF: Gwirio’ch Treth Incwm
+
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}

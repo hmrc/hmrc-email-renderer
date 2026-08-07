@@ -811,6 +811,9 @@ object TemplateParams {
       "daily_tax_estimate_message_alert" -> Map(
         "fullName" -> "Leslie Carter"
       ),
+      "daily_tax_estimate_message_alert_cy" -> Map(
+        "fullName" -> "Leslie Carter"
+      ),
       "annual_tax_estimate_message_alert" -> Map(
         "fullName" -> "Leslie Carter",
         "taxYear"  -> "2027"
