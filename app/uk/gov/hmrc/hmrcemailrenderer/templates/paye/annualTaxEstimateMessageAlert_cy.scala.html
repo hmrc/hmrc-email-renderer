@@ -1,0 +1,37 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@currentTaxYear = {@params("taxYear")}
+@nextTaxYear = {@(currentTaxYear.toString.toInt+1)}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Bydd eich cod treth yn newid o 6 Ebrill ${currentTaxYear}") {
+<p style="margin: 0 0 30px; font-size: 19px;">Annwyl @{params("fullName")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Rydym wedi cyfrifo eich Treth Incwm ar gyfer y flwyddyn dreth nesaf (6 Ebrill @currentTaxYear i 5 Ebrill @nextTaxYear). Gall swm y dreth rydych yn ei thalu newid.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Am resymau diogelwch, nid ydym yn rhoi manylion llawn yma.</p>
+
+<h2 id="how-to-check-new-tax-details" style="margin: 0 0 30px; font-size: 24px;">Sut i wirio eich manylion treth newydd</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Mewngofnodwch i’ch cyfrif ar-lein CThEF ar GOV.UK neu defnyddiwch ap CThEF. Ewch i’r adran ‘Talu Wrth Ennill (TWE)’.</p>
+<p style="margin: 30px 0 30px; font-size: 19px;">Os ydych yn mewngofnodi gan ddefnyddio cyfrif treth busnes, mae’n bosibl y gallwch ei ddefnyddio i gael mynediad at eich cyfrif treth personol.</p>
+
+<h2 id="why-you-got-this-email" style="margin: 0 0 30px; font-size: 24px;">Pam rydych yn cael yr e-bost hwn</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Rydych yn cael yr e-bost hwn oherwydd eich bod wedi dewis cael diweddariadau drwy e-bost yn hytrach na llythyrau drwy’r post.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Am resymau diogelwch, nid ydym wedi cynnwys unrhyw gysylltiadau yn yr e-bost hwn.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth CThEF: Gwirio’ch Treth Incwm</p>
+}
