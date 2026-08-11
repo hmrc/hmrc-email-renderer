@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ Pillar2, SelfAssessment }
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ ChildBenefit, Pillar2, SelfAssessment }
 
 object DigitalContactTemplates {
   val defaultFromAddress: String = FromAddress.noReply("HMRC digital")
@@ -253,6 +253,38 @@ object DigitalContactTemplates {
       plainTemplate = txt.digitalOptInConfirmation_cy.f,
       htmlTemplate = html.digitalOptInConfirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_CH(A)1700",
+      fromAddress = defaultFromAddress,
+      service = ChildBenefit,
+      subject = "HMRC paperless notifications: new message",
+      plainTemplate = txt.newMessageAlert.f,
+      htmlTemplate = html.newMessageAlert.f
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_CH(A)1708",
+      fromAddress = defaultFromAddress,
+      service = ChildBenefit,
+      subject = "HMRC paperless notifications: new message",
+      plainTemplate = txt.newMessageAlert.f,
+      htmlTemplate = html.newMessageAlert.f
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_CH(A)1700_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = ChildBenefit,
+      subject = "Hysbysiadau di-bapur CThEF: neges newydd",
+      plainTemplate = txt.newMessageAlert_cy.f,
+      htmlTemplate = html.newMessageAlert_cy.f
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_CH(A)1708_cy",
+      fromAddress = defaultFromAddressWelsh,
+      service = ChildBenefit,
+      subject = "Hysbysiadau di-bapur CThEF: neges newydd",
+      plainTemplate = txt.newMessageAlert_cy.f,
+      htmlTemplate = html.newMessageAlert_cy.f
     )
   ) ++ newMessageAlertTemplates
 }
