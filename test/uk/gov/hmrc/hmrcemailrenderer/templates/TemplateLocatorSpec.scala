@@ -156,7 +156,8 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "Personal Tax",
         "Pillar 2",
         "LEPP",
-        "OLG"
+        "OLG",
+        "Child Benefit"
       )
     }
 
