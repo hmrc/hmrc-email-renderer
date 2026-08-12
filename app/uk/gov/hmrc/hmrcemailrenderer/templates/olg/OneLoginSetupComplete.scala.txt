@@ -1,5 +1,7 @@
 @(params: Map[String, Any])You have changed the way you sign in to HMRC
 
+Dear Customer,
+
 From now on:
 
 - use GOV.UK One Login when you sign in to HMRC services
