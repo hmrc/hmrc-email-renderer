@@ -16,17 +16,34 @@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have changed the way you sign in to HMRC") {
 <div style="margin: 0 0 30px; font-size: 19px;">
-    <p>Dear @{params.get("name").flatMap { case s: String if s.trim.nonEmpty => Some(s); case _ => None }.getOrElse("Customer")},</p>
-    <p>You can now sign in to HMRC services using GOV.UK One Login.</p>
-    <pß>You only need one email address and password to sign in.</pß>
-    <p style="margin-bottom: 40px">You do not need to take any further action.</p>
-    <p style="margin-bottom: 30px"><strong>Why you are receiving this email</strong></p>
-    <p>We are sending this email because you set up GOV.UK One Login to sign in to HMRC service.</p>
-    <p style="margin-bottom: 40px">For security reasons, this email does not include a link to the service. This helps
-        keep your sign in safe.</p>
-    <p style="margin-bottom: 30px"><strong>Contact HMRC if you did not make this change</strong></p>
-    <p style="margin-bottom: 5px">Find contact details on GOV.UK.</p>
-    <p style="margin: 0 0 30px">This is an automated email. Do not reply to it.</p>
-    <p>From HMRC digital team</p>
+    <p>Dear Customer,</p>
+
+    <p>From now on:</p>
+    <ul style="margin-bottom: 40px">
+        <li>use GOV.UK One Login when you sign in to HMRC services</li>
+        <li>sign in using your email address @{params.get("obfuscatedEmail")} and password</li>
+        <li>do not use your Government Gateway user ID ending in @{params.get("ggIdEnding")}</li>
+    </ul>
+
+    <p><strong>You do not need to do anything else</strong></p>
+    <p style="margin-bottom: 40px">The change is complete. Continue to sign in to HMRC services using GOV.UK One Login.</p>
+
+    <p><strong>If you did not make this change</strong></p>
+    <p style="margin-bottom: 30px">If you do not recognise this change and cannot access your account, you will need to create a GOV.UK One Login.</p>
+
+    <p style="margin-bottom: 30px">To create a GOV.UK One Login:</p>
+
+    <ol style="margin-bottom: 30px">
+        <li>Go to GOV.UK.</li>
+        <li>Search for 'HMRC online services: sign in or set up an account'.</li>
+        <li>Select 'Sign in', then select 'Create new sign in details'.</li>
+    </ol>
+
+    <p style="margin-bottom: 30px">For security reasons, this email does not contain any links.</p>
+
+    <p style="margin-bottom: 30px">This is an automated email. Do not reply to it.</p>
+
+    <p>From HMRC</p>
+
 </div>
 }
