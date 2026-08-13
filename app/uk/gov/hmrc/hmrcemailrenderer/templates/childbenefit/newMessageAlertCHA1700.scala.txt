@@ -2,7 +2,7 @@
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
-You have a new message from HMRC about Self Assessment.
+You have a new message from HMRC.
 
 To view it, sign in to your HMRC online account.
 
@@ -10,10 +10,10 @@ For security reasons, we have not included a link with this email.
 
 Why you got this email
 
-You chose to get paperless notifications instead of letters by post.
+You chose to get paperless notifications.
 
-This means we send you an email to let you know you have a new message in your account.
+This means we send you an email when you have a new message in your account.
 
-From HMRC Self Assessment
+From HMRC digital
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
