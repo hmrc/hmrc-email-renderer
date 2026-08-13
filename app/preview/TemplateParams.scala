@@ -4264,6 +4264,10 @@ object TemplateParams3 {
       "accountingPeriodStart" -> "1 April 2024",
       "accountingPeriodEnd"   -> "31 March 2025"
     ),
-    "one_login_setup_complete" -> Map("name" -> "Mr John Smith")
+    "one_login_setup_complete" -> Map(
+      "obfuscatedEmail" -> "j***@example.com",
+      "ggIdEnding"      -> "1234"
+    )
   )
+
 }
