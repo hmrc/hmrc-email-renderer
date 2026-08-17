@@ -16,118 +16,189 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.childbenefit
 
-import org.scalatestplus.play.PlaySpec
-import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
-import uk.gov.hmrc.hmrcemailrenderer.templates.CommonParamsForSpec
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ChildBenefit
+import org.scalatest.{EitherValues, OptionValues}
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
+import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
 
-class ChildBenefitTemplatesSpec extends PlaySpec with CommonParamsForSpec {
+class ChildBenefitTemplatesSpec
+    extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
+    with CommonParamsForSpec {
 
-  "newMessageAlert_CH(A)1700" must {
+  val templateLocator: TemplateLocator = new TemplateLocator {}
 
-    val template = MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1700",
-      fromAddress = "HMRC@tax.service.gov.uk",
-      service = ChildBenefit,
-      subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.newMessageAlertCHA1700.f,
-      htmlTemplate = html.newMessageAlertCHA1700.f,
-      priority = Some(MessagePriority.Standard)
-    )
+  private def getTemplate(templateId: String): MessageTemplate =
+    templateLocator
+      .templateGroups("Child Benefit")
+      .find(_.templateId == templateId)
+      .value
 
-    "include correct subject" in {
-      template.subject(commonParameters) mustBe "You’ve got a new message from HMRC"
+  "newMessageAlert_CH(A)1700" should {
+
+    val template = getTemplate("newMessageAlert_CH(A)1700")
+
+    "render correct subject" in {
+      template.subject(Map.empty) shouldBe "You’ve got a new message from HMRC"
+      template.fromAddress(Map.empty) shouldBe "Gov.uk Team <noreply@tax.service.gov.uk>"
     }
 
-    "include correct body content" in {
-      val htmlContent = template
-        .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
-        .toString
-      htmlContent must include("You’ve got a new message from HMRC")
-      htmlContent must include("Dear")
-      htmlContent must include("Mrs John")
-      htmlContent must include("From HMRC digital")
-    }
-  }
+    "render correct html content" in {
+      val htmlContent = template.htmlTemplate(commonParameters).toString
 
-  "newMessageAlert_CH(A)1700_cy welsh template" must {
-
-    val template = MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1700_cy",
-      fromAddress = "HMRC@tax.service.gov.uk",
-      service = ChildBenefit,
-      subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.newMessageAlertCHA1700_cy.f,
-      htmlTemplate = html.newMessageAlertCHA1700_cy.f,
-      priority = Some(MessagePriority.Standard)
-    )
-
-    "include correct subject" in {
-      template.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEF"
+      htmlContent should include("You’ve got a new message from HMRC")
+      htmlContent should include("You have a new message from HMRC.")
+      htmlContent should include("To view it, sign in to your HMRC online account.")
+      htmlContent should include("For security reasons, we have not included a link with this email.")
+      htmlContent should include("Why you got this email")
+      htmlContent should include("You chose to get paperless notifications.")
+      htmlContent should include(
+        "This means we send you an email when you have a new message in your account."
+      )
+      htmlContent should include("From HMRC digital")
     }
 
-    "include correct body content" in {
-      val htmlContent = template
-        .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
-        .toString
-      htmlContent must include("Mae gennych neges newydd oddi wrth CThEF")
-      htmlContent must include("Annwyl")
-      htmlContent must include("Mrs John")
-      htmlContent must include("Oddi wrth adran Ddigidol CThEF")
+    "render correct text content" in {
+      val txtContent = template.plainTemplate(commonParameters).toString
+
+      txtContent should include("You’ve got a new message from HMRC")
+      txtContent should include("You have a new message from HMRC.")
+      txtContent should include("To view it, sign in to your HMRC online account.")
+      txtContent should include("For security reasons, we have not included a link with this email.")
+      txtContent should include("Why you got this email")
+      txtContent should include("You chose to get paperless notifications.")
+      txtContent should include(
+        "This means we send you an email when you have a new message in your account."
+      )
+      txtContent should include("From HMRC digital")
     }
   }
 
-  "newMessageAlert_CH(A)1708" must {
+  "newMessageAlert_CH(A)1700_cy" should {
 
-    val template = MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1708",
-      fromAddress = "HMRC@tax.service.gov.uk",
-      service = ChildBenefit,
-      subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.newMessageAlertCHA1708.f,
-      htmlTemplate = html.newMessageAlertCHA1708.f,
-      priority = Some(MessagePriority.Standard)
-    )
+    val template = getTemplate("newMessageAlert_CH(A)1700_cy")
 
-    "include correct subject" in {
-      template.subject(commonParameters) mustBe "You’ve got a new message from HMRC"
+    "render correct subject" in {
+      template.subject(Map.empty) shouldBe "Mae gennych neges newydd oddi wrth CThEF"
+      template.fromAddress(Map.empty) shouldBe "Gov.uk Team <noreply@tax.service.gov.uk>"
     }
 
-    "include correct body content" in {
-      val htmlContent = template
-        .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
-        .toString
-      htmlContent must include("You’ve got a new message from HMRC")
-      htmlContent must include("Dear")
-      htmlContent must include("Mrs John")
-      htmlContent must include("From HMRC digital")
+    "render correct html content" in {
+      val htmlContent = template.htmlTemplate(commonParameters).toString
+
+      htmlContent should include("Mae gennych neges newydd oddi wrth CThEF")
+      htmlContent should include("Mae gennych neges newydd oddi wrth CThEF.")
+      htmlContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
+      htmlContent should include(
+        "Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn."
+      )
+      htmlContent should include("Pam y cawsoch yr e-bost hwn")
+      htmlContent should include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
+      htmlContent should include(
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif."
+      )
+      htmlContent should include("Oddi wrth adran Ddigidol CThEF")
+    }
+
+    "render correct text content" in {
+      val txtContent = template.plainTemplate(commonParameters).toString
+
+      txtContent should include("Mae gennych neges newydd oddi wrth CThEF")
+      txtContent should include("Mae gennych neges newydd oddi wrth CThEF.")
+      txtContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
+      txtContent should include(
+        "Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn."
+      )
+      txtContent should include("Pam y cawsoch yr e-bost hwn")
+      txtContent should include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
+      txtContent should include(
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif."
+      )
+      txtContent should include("Oddi wrth adran Ddigidol CThEF")
     }
   }
 
-  "newMessageAlert_CH(A)1708_cy welsh template" must {
+  "newMessageAlert_CH(A)1708" should {
 
-    val template = MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1708_cy",
-      fromAddress = "HMRC@tax.service.gov.uk",
-      service = ChildBenefit,
-      subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.newMessageAlertCHA1708_cy.f,
-      htmlTemplate = html.newMessageAlertCHA1708_cy.f,
-      priority = Some(MessagePriority.Standard)
-    )
+    val template = getTemplate("newMessageAlert_CH(A)1708")
 
-    "include correct subject" in {
-      template.subject(commonParameters) mustBe "Mae gennych neges newydd oddi wrth CThEF"
+    "render correct subject" in {
+      template.subject(Map.empty) shouldBe "You’ve got a new message from HMRC"
+      template.fromAddress(Map.empty) shouldBe "Gov.uk Team <noreply@tax.service.gov.uk>"
     }
 
-    "include correct body content" in {
-      val htmlContent = template
-        .htmlTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
-        .toString
-      htmlContent must include("Mae gennych neges newydd oddi wrth CThEF")
-      htmlContent must include("Annwyl")
-      htmlContent must include("Mrs John")
-      htmlContent must include("Oddi wrth adran Ddigidol CThEF")
+    "render correct html content" in {
+      val htmlContent = template.htmlTemplate(commonParameters).toString
+
+      htmlContent should include("You’ve got a new message from HMRC")
+      htmlContent should include("You have a new message from HMRC.")
+      htmlContent should include("To view it, sign in to your HMRC online account.")
+      htmlContent should include("For security reasons, we have not included a link with this email.")
+      htmlContent should include("Why you got this email")
+      htmlContent should include("You chose to get paperless notifications.")
+      htmlContent should include(
+        "This means we send you an email when you have a new message in your account."
+      )
+      htmlContent should include("From HMRC digital")
+    }
+
+    "render correct text content" in {
+      val txtContent = template.plainTemplate(commonParameters).toString
+
+      txtContent should include("You’ve got a new message from HMRC")
+      txtContent should include("You have a new message from HMRC.")
+      txtContent should include("To view it, sign in to your HMRC online account.")
+      txtContent should include("For security reasons, we have not included a link with this email.")
+      txtContent should include("Why you got this email")
+      txtContent should include("You chose to get paperless notifications.")
+      txtContent should include(
+        "This means we send you an email when you have a new message in your account."
+      )
+      txtContent should include("From HMRC digital")
+    }
+  }
+
+  "newMessageAlert_CH(A)1708_cy" should {
+
+    val template = getTemplate("newMessageAlert_CH(A)1708_cy")
+
+    "render correct subject" in {
+      template.subject(Map.empty) shouldBe "Mae gennych neges newydd oddi wrth CThEF"
+      template.fromAddress(Map.empty) shouldBe "Gov.uk Team <noreply@tax.service.gov.uk>"
+    }
+
+    "render correct html content" in {
+      val htmlContent = template.htmlTemplate(commonParameters).toString
+
+      htmlContent should include("Mae gennych neges newydd oddi wrth CThEF")
+      htmlContent should include("Mae gennych neges newydd oddi wrth CThEF.")
+      htmlContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
+      htmlContent should include(
+        "Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn."
+      )
+      htmlContent should include("Pam y cawsoch yr e-bost hwn")
+      htmlContent should include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
+      htmlContent should include(
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif."
+      )
+      htmlContent should include("Oddi wrth adran Ddigidol CThEF")
+    }
+
+    "render correct text content" in {
+      val txtContent = template.plainTemplate(commonParameters).toString
+
+      txtContent should include("Mae gennych neges newydd oddi wrth CThEF")
+      txtContent should include("Mae gennych neges newydd oddi wrth CThEF.")
+      txtContent should include("I’w gweld, mewngofnodwch i’ch cyfrif CThEF ar-lein.")
+      txtContent should include(
+        "Am resymau diogelwch, nid ydym wedi cynnwys cysylltiad gyda’r e-bost hwn."
+      )
+      txtContent should include("Pam y cawsoch yr e-bost hwn")
+      txtContent should include("Gwnaethoch ddewis cael hysbysiadau di-bapur.")
+      txtContent should include(
+        "Mae hyn yn golygu ein bod yn anfon e-bost atoch pan fydd gennych neges newydd yn eich cyfrif."
+      )
+      txtContent should include("Oddi wrth adran Ddigidol CThEF")
     }
   }
 }

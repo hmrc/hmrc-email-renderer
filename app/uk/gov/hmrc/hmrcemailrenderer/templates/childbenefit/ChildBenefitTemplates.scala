@@ -16,43 +16,47 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.childbenefit
 
-import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
+import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.govUkTeamAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ChildBenefit
-import uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact.DigitalContactTemplates.{ defaultFromAddress, defaultFromAddressWelsh }
 
 object ChildBenefitTemplates {
   val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
       templateId = "newMessageAlert_CH(A)1700",
-      fromAddress = defaultFromAddress,
+      fromAddress = govUkTeamAddress,
       service = ChildBenefit,
-      subject = "HMRC paperless notifications: new message",
+      subject = "You’ve got a new message from HMRC",
       plainTemplate = txt.newMessageAlertCHA1700.f,
-      htmlTemplate = html.newMessageAlertCHA1700.f
+      htmlTemplate = html.newMessageAlertCHA1700.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_CH(A)1708",
-      fromAddress = defaultFromAddress,
+      fromAddress = govUkTeamAddress,
       service = ChildBenefit,
-      subject = "HMRC paperless notifications: new message",
+      subject = "You’ve got a new message from HMRC",
       plainTemplate = txt.newMessageAlertCHA1708.f,
-      htmlTemplate = html.newMessageAlertCHA1708.f
+      htmlTemplate = html.newMessageAlertCHA1708.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_CH(A)1700_cy",
-      fromAddress = defaultFromAddressWelsh,
+      fromAddress = govUkTeamAddress,
       service = ChildBenefit,
-      subject = "Hysbysiadau di-bapur CThEF: neges newydd",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.newMessageAlertCHA1700_cy.f,
-      htmlTemplate = html.newMessageAlertCHA1700_cy.f
+      htmlTemplate = html.newMessageAlertCHA1700_cy.f,
+      priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
       templateId = "newMessageAlert_CH(A)1708_cy",
-      fromAddress = defaultFromAddressWelsh,
+      fromAddress = govUkTeamAddress,
       service = ChildBenefit,
-      subject = "Hysbysiadau di-bapur CThEF: neges newydd",
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
       plainTemplate = txt.newMessageAlertCHA1708_cy.f,
-      htmlTemplate = html.newMessageAlertCHA1708_cy.f
+      htmlTemplate = html.newMessageAlertCHA1708_cy.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
