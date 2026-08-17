@@ -16,11 +16,11 @@
 
 package uk.gov.hmrc.hmrcemailrenderer.templates.childbenefit
 
-import org.scalatest.{EitherValues, OptionValues}
+import org.scalatest.{ EitherValues, OptionValues }
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpecLike
 import uk.gov.hmrc.hmrcemailrenderer.domain.MessageTemplate
-import uk.gov.hmrc.hmrcemailrenderer.templates.{CommonParamsForSpec, TemplateLoader, TemplateLocator}
+import uk.gov.hmrc.hmrcemailrenderer.templates.{ CommonParamsForSpec, TemplateLoader, TemplateLocator }
 
 class ChildBenefitTemplatesSpec
     extends AnyWordSpecLike with Matchers with OptionValues with EitherValues with TemplateLoader
