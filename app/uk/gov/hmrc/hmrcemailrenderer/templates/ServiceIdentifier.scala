@@ -146,5 +146,6 @@ object ServiceIdentifier {
   case object OneLoginGateway extends ServiceIdentifier { override val name = "olg" }
 
   case object ChildBenefit extends ServiceIdentifier { override val name = "cb" }
+  case object VPD extends ServiceIdentifier { override val name = "vaping-products-duty" }
 }
 // scalastyle:on
