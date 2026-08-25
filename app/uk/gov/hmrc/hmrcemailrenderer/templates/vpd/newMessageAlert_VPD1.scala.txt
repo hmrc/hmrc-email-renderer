@@ -1,4 +1,5 @@
 @(params: Map[String, Any])You’ve got a new message from HMRC
+
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
 
 You have a new message from HMRC.
