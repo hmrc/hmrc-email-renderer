@@ -58,7 +58,9 @@ class NewMessageAlert_VPD1Spec extends PlaySpec with CommonParamsForSpec {
     }
 
     "render text content" in {
-      val txtContent = newMessageAlert.plainTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs")).toString
+      val txtContent = newMessageAlert
+        .plainTemplate(commonParameters ++ Map("recipientName_surname" -> "John", "recipientName_title" -> "Mrs"))
+        .toString
 
       txtContent must include("You’ve got a new message from HMRC")
       txtContent must include("Mrs John")
