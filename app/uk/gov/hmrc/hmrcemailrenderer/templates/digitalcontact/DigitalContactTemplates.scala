@@ -18,7 +18,7 @@ package uk.gov.hmrc.hmrcemailrenderer.templates.digitalcontact
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
-import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ Pillar2, SelfAssessment }
+import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.{ ChildBenefit, Pillar2, SelfAssessment }
 
 object DigitalContactTemplates {
   val defaultFromAddress: String = FromAddress.noReply("HMRC digital")

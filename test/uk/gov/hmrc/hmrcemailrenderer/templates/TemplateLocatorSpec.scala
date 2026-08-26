@@ -105,7 +105,6 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "ATED",
         "LifetimeISA",
         "ITR",
-        //        "TAVC",
         "CBCR",
         "EEITT",
         "FHDDS",
@@ -156,7 +155,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "Personal Tax",
         "Pillar 2",
         "LEPP",
-        "OLG"
+        "OLG",
+        "Child Benefit",
+        "VPD"
       )
     }
 
@@ -1162,7 +1163,13 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_LEPP3_cy",
         "newMessageAlert_LEPP4",
         "newMessageAlert_LEPP4_cy",
-        "one_login_setup_complete"
+        "one_login_setup_complete",
+        "newMessageAlert_CH(A)1700",
+        "newMessageAlert_CH(A)1708",
+        "newMessageAlert_CH(A)1700_cy",
+        "newMessageAlert_CH(A)1708_cy",
+        "newMessageAlert_VPD1",
+        "newMessageAlert_VPD1_cy"
       )
     }
   }
