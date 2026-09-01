@@ -40,14 +40,16 @@ class apiAddedMemberToOrganisationNotificationSpec extends AnyWordSpec with Matc
     "render as" in new TestCase {
       val renderedHtml = api.html.apiAddedMemberToOrganisationNotification.render(templateParams)
       renderedHtml.contentType should include("text/html")
-      renderedHtml.body should include("User added to your organisation in the HMRC Developer Hub")
+      renderedHtml.body should include("A user has been added to your organisation in the HMRC Developer Hub")
       renderedHtml.body should include(
-        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">This user has been added to the $organisationName organisation.</p>"
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">A user has been added to $organisationName organisation.</p>"
       )
       renderedHtml.body should include(
-        s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Email address: $emailAddress</p>"
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>Email address:</strong> $emailAddress</p>"
       )
-      renderedHtml.body should include(s"<p style=\"margin: 0 0 30px; font-size: 19px;\">Role: $role</p>")
+      renderedHtml.body should include(
+        s"<p style=\"margin: 0 0 30px; font-size: 19px;\"><strong>Role:</strong> $role</p>"
+      )
     }
   }
 
@@ -55,8 +57,8 @@ class apiAddedMemberToOrganisationNotificationSpec extends AnyWordSpec with Matc
     "render as" in new TestCase {
       val renderedTxt = api.txt.apiAddedMemberToOrganisationNotification.render(templateParams)
       renderedTxt.contentType should include("text/plain")
-      renderedTxt.body should include("User added to your organisation in the HMRC Developer Hub")
-      renderedTxt.body should include(s"This user has been added to the $organisationName organisation.")
+      renderedTxt.body should include("A user has been added to your organisation in the HMRC Developer Hub")
+      renderedTxt.body should include(s"A user has been added to $organisationName organisation.")
       renderedTxt.body should include(s"Email address: $emailAddress")
       renderedTxt.body should include(s"Role: $role")
     }

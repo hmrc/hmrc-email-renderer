@@ -2,11 +2,11 @@
 
 @{params("organisationName")} has removed you from their organisation.
 
-You no longer have access to their Production applications.
+You no longer have access to the Production applications.
 
-How to get help
+Get help and support
 
-Contact an admin at @{params("organisationName")} if you have questions about being removed from this organisation.
+Contact an admin at @{params("organisationName")} if you have questions about this change.
 
 HMRC Developer Hub
 
