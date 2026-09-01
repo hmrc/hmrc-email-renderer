@@ -499,6 +499,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "dsao_notification_confirmation",
         "dsao_certificate_confirmation_for_submitter",
         "dsao_certificate_confirmation_for_sao",
+        "dsao_certificate_confirmation_for_sao_to_contacts",
         "dst_registration_accepted",
         "dst_registration_received",
         "dtr_cis_nil_monthly_return_org_success",

@@ -59,6 +59,15 @@ object DsaoTemplates {
       plainTemplate = txt.dsao_certificate_confirmation_for_sao.f,
       htmlTemplate = html.dsao_certificate_confirmation_for_sao.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dsao_certificate_confirmation_for_sao_to_contacts",
+      fromAddress = fromAddress,
+      service = SeniorAccountingOfficer,
+      subject = "Submitted: Senior Accounting Officer certificate",
+      plainTemplate = txt.dsao_certificate_confirmation_for_sao_to_contacts.f,
+      htmlTemplate = html.dsao_certificate_confirmation_for_sao_to_contacts.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }

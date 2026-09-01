@@ -772,6 +772,15 @@ class TemplatePrioritiesISpec
           "referenceId"       -> "SAOCER0123456789"
         )
       ),
+      (
+        "dsao_certificate_confirmation_for_sao_to_contacts",
+        Map(
+          "recipientName"     -> "Richard Wilson",
+          "saoName"           -> "Richard Wilson",
+          "submittedDateTime" -> "17 January 2025 at 11:45am",
+          "referenceId"       -> "SAOCER0123456789"
+        )
+      ),
       ("newMessageAlert_SA316", Map.empty)
     )
 

@@ -2,7 +2,7 @@
 
 Dear @{params("recipientName")}
 
-You have successfully submitted a certificate as the Senior Accounting Officer (SAO) confirming that the tax accounting information is complete and correct.
+@{params("saoName")} successfully submitted a certificate as the Senior Accounting Officer (SAO) confirming that the tax accounting information is complete and correct.
 
 Certificate
 

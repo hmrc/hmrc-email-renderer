@@ -11,7 +11,7 @@ Reference ID: @{params("referenceId")}
 
 Why are you receiving this email
 
-Your email address was given during registration or the notification submission. We send confirmation emails when a Senior Accounting Officer certificate has been submitted.
+Your email address was given during registration. We send confirmation emails when a Senior Accounting Officer certificate has been submitted.
 
 If you need support with your certificate, contact your Customer Compliance Manager if you have one or email wmbc.saomailbox@@hmrc.gov.uk
 
