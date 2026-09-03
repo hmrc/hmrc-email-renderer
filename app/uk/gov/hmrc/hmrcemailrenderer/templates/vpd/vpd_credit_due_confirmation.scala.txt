@@ -1,0 +1,30 @@
+@(params: Map[String, Any])Credit due on your Vaping Products Duty return
+
+Dear @{params("recipientName")},
+
+We received your @{params("returnPeriod")} Vaping Products Duty return on @{params("submissionDate")}.
+
+This return includes an adjustment to a previous Vaping Products Duty return.
+
+As a result of this adjustment, a credit of @{params("creditAmount")} is available to you.
+
+You can:
+
+use this credit to offset another Vaping Products Duty liability, or
+request a repayment.
+
+To manage this credit, sign in to your business tax account and access your Vaping Products Duty service.
+
+For more information, go to GOV.UK and search for "Vaping Products Duty repayments and credits".
+
+Why you are receiving this email
+
+We have sent you this email as an automatic confirmation that you have successfully completed a step within your Vaping Products Duty service and submitted information to HMRC.
+
+Please keep this email for your records.
+
+Do not reply to this email, as this mailbox is not monitored. If you need support or have any questions, please use the contact details available through your Business Tax Account.
+
+From HMRC Vaping Products Duty Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
