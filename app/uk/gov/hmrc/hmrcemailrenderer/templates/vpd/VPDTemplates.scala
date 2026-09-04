@@ -27,24 +27,6 @@ object VPDTemplates {
 
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "newMessageAlert_VPD1",
-      fromAddress = govUkTeamAddress,
-      service = VPD,
-      subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.newMessageAlert_VPD1.f,
-      htmlTemplate = html.newMessageAlert_VPD1.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
-      templateId = "newMessageAlert_VPD1_cy",
-      fromAddress = govUkTeamAddressWelsh,
-      service = VPD,
-      subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.newMessageAlert_VPD1_cy.f,
-      htmlTemplate = html.newMessageAlert_VPD1_cy.f,
-      priority = Some(MessagePriority.Standard)
-    ),
-    MessageTemplate.create(
       templateId = "vpd_duty_due_confirmation",
       fromAddress = vpdTeamAddress,
       service = VPD,
