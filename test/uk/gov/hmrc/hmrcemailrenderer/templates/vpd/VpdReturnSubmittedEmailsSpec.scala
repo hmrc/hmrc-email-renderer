@@ -33,12 +33,12 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
     val template: MessageTemplate = getTemplate("vpd_duty_due_confirmation")
 
     val params = commonParameters ++ Map(
-      "recipientName" -> "John Smith",
-      "returnPeriod" -> "October 2026",
-      "submissionDate" -> "3 November 2026",
+      "recipientName"   -> "John Smith",
+      "returnPeriod"    -> "October 2026",
+      "submissionDate"  -> "3 November 2026",
       "chargeReference" -> "VPD38270541977",
-      "amountDue" -> "£1,234.50",
-      "paymentDueDate" -> "15 November 2026"
+      "amountDue"       -> "£1,234.50",
+      "paymentDueDate"  -> "15 November 2026"
     )
 
     "render correct subject and fromAddress" in {
@@ -52,7 +52,9 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
       htmlContent must include("We received your October 2026 Vaping Products Duty return on 3 November 2026.")
       htmlContent must include("VPD38270541977")
       htmlContent must include("You need to pay £1,234.50 by 15 November 2026.")
-      htmlContent must include("If you have set up a Direct Debit, we will collect your payment automatically on 15 November 2026.")
+      htmlContent must include(
+        "If you have set up a Direct Debit, we will collect your payment automatically on 15 November 2026."
+      )
       htmlContent must include("If the amount due is more than £20 million, Direct Debit cannot be used.")
       htmlContent must include("Interest may be charged on payments received after 15 November 2026.")
       htmlContent must include("From HMRC Vaping Products Duty Team")
@@ -72,8 +74,8 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
     val template: MessageTemplate = getTemplate("vpd_nil_return_confirmation")
 
     val params = commonParameters ++ Map(
-      "recipientName" -> "John Smith",
-      "returnPeriod" -> "October 2026",
+      "recipientName"  -> "John Smith",
+      "returnPeriod"   -> "October 2026",
       "submissionDate" -> "3 November 2026"
     )
 
@@ -102,10 +104,10 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
     val template: MessageTemplate = getTemplate("vpd_credit_due_confirmation")
 
     val params = commonParameters ++ Map(
-      "recipientName" -> "John Smith",
-      "returnPeriod" -> "October 2026",
+      "recipientName"  -> "John Smith",
+      "returnPeriod"   -> "October 2026",
       "submissionDate" -> "3 November 2026",
-      "creditAmount" -> "£50"
+      "creditAmount"   -> "£50"
     )
 
     "render correct subject and fromAddress" in {
@@ -125,6 +127,116 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
       val txtContent = template.plainTemplate(params).toString
       txtContent must include("As a result of this adjustment, a credit of £50 is available to you.")
       txtContent must include("If you’re unsure an email is from HMRC:")
+    }
+  }
+
+  private val welshSubject = "Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio"
+
+  "vpd_duty_due_confirmation_cy" must {
+
+    val template: MessageTemplate = getTemplate("vpd_duty_due_confirmation_cy")
+
+    val params = commonParameters ++ Map(
+      "recipientName"   -> "John Smith",
+      "returnPeriod"    -> "October 2026",
+      "submissionDate"  -> "3 November 2026",
+      "chargeReference" -> "VPD38270541977",
+      "amountDue"       -> "£1,234.50",
+      "paymentDueDate"  -> "15 November 2026"
+    )
+
+    "render correct subject and fromAddress" in {
+      template.subject(commonParameters) mustBe welshSubject
+      template.fromAddress(Map.empty) mustBe "Tîm Toll Cynhyrchion Fepio CThEF <noreply@tax.service.gov.uk>"
+    }
+
+    "render htmlTemplate body" in {
+      val htmlContent = template.htmlTemplate(params).toString
+      htmlContent must include("Annwyl John Smith,")
+      htmlContent must include(
+        "Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer October 2026 i law ar 3 November 2026."
+      )
+      htmlContent must include("VPD38270541977")
+      htmlContent must include("Mae angen i chi dalu £1,234.50 erbyn 15 November 2026.")
+      htmlContent must include(
+        "Os ydych wedi sefydlu Debyd Uniongyrchol, byddwn yn casglu’ch taliad yn awtomatig ar 15 November 2026."
+      )
+      htmlContent must include(
+        "Os yw’r swm sy’n ddyledus yn fwy na £20 miliwn, ni all Debyd Uniongyrchol gael ei ddefnyddio."
+      )
+      htmlContent must include("Gellir codi llog ar daliadau sy’n dod i law ar ôl 15 November 2026.")
+      htmlContent must include("Oddi wrth Tîm Toll Cynhyrchion Fepio CThEF")
+    }
+
+    "render text content and footer" in {
+      val txtContent = template.plainTemplate(params).toString
+      txtContent must include("Annwyl John Smith,")
+      txtContent must include("Rhif cyfeirnod y tâl: VPD38270541977")
+      txtContent must include("Mae angen i chi dalu £1,234.50 erbyn 15 November 2026.")
+      txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+    }
+  }
+
+  "vpd_nil_return_confirmation_cy" must {
+
+    val template: MessageTemplate = getTemplate("vpd_nil_return_confirmation_cy")
+
+    val params = commonParameters ++ Map(
+      "recipientName"  -> "John Smith",
+      "returnPeriod"   -> "October 2026",
+      "submissionDate" -> "3 November 2026"
+    )
+
+    "render correct subject and fromAddress" in {
+      template.subject(commonParameters) mustBe welshSubject
+      template.fromAddress(Map.empty) mustBe "Tîm Toll Cynhyrchion Fepio CThEF <noreply@tax.service.gov.uk>"
+    }
+
+    "render htmlTemplate body" in {
+      val htmlContent = template.htmlTemplate(params).toString
+      htmlContent must include("Annwyl John Smith,")
+      htmlContent must include(
+        "Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer October 2026 i law ar 3 November 2026."
+      )
+      htmlContent must include("Does dim Toll Cynhyrchion Fepio i’w thalu ar gyfer y cyfnod hwn.")
+      htmlContent must include("Does dim credyd yn ddyledus i chi a does dim angen i chi wneud dim byd arall.")
+    }
+
+    "render text content and footer" in {
+      val txtContent = template.plainTemplate(params).toString
+      txtContent must include("Mae’ch datganiad wedi cael ei brosesu’n llwyddiannus.")
+      txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+    }
+  }
+
+  "vpd_credit_due_confirmation_cy" must {
+
+    val template: MessageTemplate = getTemplate("vpd_credit_due_confirmation_cy")
+
+    val params = commonParameters ++ Map(
+      "recipientName"  -> "John Smith",
+      "returnPeriod"   -> "October 2026",
+      "submissionDate" -> "3 November 2026",
+      "creditAmount"   -> "£50"
+    )
+
+    "render correct subject and fromAddress" in {
+      template.subject(commonParameters) mustBe welshSubject
+      template.fromAddress(Map.empty) mustBe "Tîm Toll Cynhyrchion Fepio CThEF <noreply@tax.service.gov.uk>"
+    }
+
+    "render htmlTemplate body" in {
+      val htmlContent = template.htmlTemplate(params).toString
+      htmlContent must include("Annwyl John Smith,")
+      htmlContent must include("O ganlyniad i’r addasiad, mae credyd o £50 ar gael i chi.")
+      htmlContent must include("defnyddio’r credyd hwn i wrthbwyso rhwymedigaeth Toll Cynhyrchion Fepio arall, neu")
+      htmlContent must include("gwneud cais am ad-daliad.")
+    }
+
+    "render text content and footer" in {
+      val txtContent = template.plainTemplate(params).toString
+      txtContent must include("O ganlyniad i’r addasiad, mae credyd o £50 ar gael i chi.")
+      txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
     }
   }
 }

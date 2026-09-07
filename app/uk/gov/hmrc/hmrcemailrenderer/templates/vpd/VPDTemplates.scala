@@ -24,6 +24,9 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.VPD
 object VPDTemplates {
 
   private val vpdTeamAddress: String = FromAddress.noReply("HMRC Vaping Products Duty Team")
+  private val vpdTeamAddressWelsh: String = FromAddress.noReply("Tîm Toll Cynhyrchion Fepio CThEF")
+  private val vpdWelshConfirmationSubject: String =
+    "Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio"
 
   val templates = Seq(
     MessageTemplate.create(
@@ -51,6 +54,33 @@ object VPDTemplates {
       subject = "Credit due on your Vaping Products Duty return",
       plainTemplate = txt.vpd_credit_due_confirmation.f,
       htmlTemplate = html.vpd_credit_due_confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_duty_due_confirmation_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_duty_due_confirmation_cy.f,
+      htmlTemplate = html.vpd_duty_due_confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_nil_return_confirmation_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_nil_return_confirmation_cy.f,
+      htmlTemplate = html.vpd_nil_return_confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_credit_due_confirmation_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_credit_due_confirmation_cy.f,
+      htmlTemplate = html.vpd_credit_due_confirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     )
   )

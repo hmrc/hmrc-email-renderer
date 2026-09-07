@@ -1,0 +1,31 @@
+@(params: Map[String, Any])Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio
+
+Annwyl @{params("recipientName")},
+
+Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer @{params("returnPeriod")} i law ar @{params("submissionDate")}.
+
+Rhif cyfeirnod y tâl: @{params("chargeReference")}
+
+Mae angen i chi dalu @{params("amountDue")} erbyn @{params("paymentDueDate")}.
+
+Os ydych wedi sefydlu Debyd Uniongyrchol, byddwn yn casglu’ch taliad yn awtomatig ar @{params("paymentDueDate")}.
+
+Os yw’r swm sy’n ddyledus yn fwy na £20 miliwn, ni all Debyd Uniongyrchol gael ei ddefnyddio. Mae’n rhaid i chi dalu drwy CHAPS neu drosglwyddiad banc cyn y dyddiad cau ar gyfer talu.
+
+I wneud eich taliad, defnyddiwch y cyfarwyddiadau talu sydd ar gael drwy’ch cyfrif treth busnes. Gallwch hefyd gyfeirio at yr arweiniad sydd wedi’i gyhoeddi ar GOV.UK drwy chwilio am "pay Vaping Products Duty".
+
+Os nad ydych wedi trefnu Debyd Uniongyrchol, gallwch wneud taliad drwy’r Gwasanaeth Talu Ar-lein. Gallwch ddod o hyd i’r gwasanaeth hwn yn yr adran ar gyfer bwrw golwg dros daliadau yn eich gwasanaeth Toll Fepio.
+
+Gellir codi llog ar daliadau sy’n dod i law ar ôl @{params("paymentDueDate")}.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym wedi anfon yr e-bost awtomatig hwn atoch i gadarnhau eich bod wedi cwblhau cam yn y gwasanaeth Toll Fepio yn llwyddiannus ac wedi cyflwyno gwybodaeth i CThEF.
+
+Cadwch yr e-bost hwn ar gyfer eich cofnodion.
+
+Peidiwch ag anfon ateb i’r cyfeiriad e-bost hwn, gan nad yw’n cael ei fonitro. Os oes angen cymorth arnoch neu os oes gennych unrhyw gwestiynau, defnyddiwch y manylion cyswllt sydd ar gael yn eich Cyfrif Treth Busnes.
+
+Oddi wrth Tîm Toll Cynhyrchion Fepio CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
