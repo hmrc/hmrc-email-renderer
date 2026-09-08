@@ -1,6 +1,6 @@
 @(params: Map[String, Any])You have changed the way you sign in to HMRC
 
-Dear Customer,
+Dear customer
 
 From now on:
 
@@ -27,5 +27,37 @@ For security reasons, this email does not contain any links.
 This is an automated email. Do not reply to it.
 
 From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
+@()Rydych wedi newid y ffordd rydych yn mewngofnodi i CThEF
+
+Annwyl gwsmer
+
+O hyn allan:
+
+- defnyddiwch GOV.UK One Login pan fyddwch yn mewngofnodi i wasanaethau CThEF
+- mewngofnodwch gan ddefnyddio’ch cyfeiriad e-bost @{params.get("obfuscatedEmail")} a chyfrinair
+- peidiwch â defnyddio’ch Dynodydd Defnyddiwr (ID) ar gyfer Porth y Llywodraeth sy’n gorffen â @{params.get("ggIdEnding")}
+
+Does dim rhaid i chi wneud unrhyw beth arall
+
+Mae’r newid wedi’i gwblhau. Parhau i fewngofnodi i wasanaethau CThEF gan ddefnyddio GOV.UK One Login.
+
+Os na wnaethoch wneud y newid hwn
+
+Os nad ydych yn adnabod y newid hwn ac na allwch gael mynediad at eich cyfrif, bydd angen i chi greu GOV.UK One Login.
+
+Er mwyn creu cyfrif GOV.UK One Login:
+
+1. Ewch i GOV.UK.
+2. Chwiliwch am ‘HMRC online services: sign in or set up an account’ ac yna dewis yr opsiwn Cymraeg ar y dudalen berthnasol.
+3. Dewiswch yr opsiwn ar gyfer mewngofnodi, yna dewiswch ‘Creu manylion mewngofnodi newydd’.
+
+Am resymau diogelwch, nid yw’r e-bost hwn yn cynnwys unrhyw gysylltiadau.
+
+E-bost awtomataidd yw hwn. Peidiwch ymateb iddo.
+
+Oddi wrth CThEF
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
