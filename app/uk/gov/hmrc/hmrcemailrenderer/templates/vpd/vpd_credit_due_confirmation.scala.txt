@@ -1,16 +1,16 @@
 @(params: Map[String, Any])Credit due on your Vaping Products Duty return
 
-Dear @{params("recipientName")},
+Dear @{params("recipientName")}
 
 We received your @{params("returnPeriod")} Vaping Products Duty return on @{params("submissionDate")}.
 
 This return includes an adjustment to a previous Vaping Products Duty return.
 
-As a result of this adjustment, a credit of @{params("creditAmount")} is available to you.
+As a result of this adjustment, you have @{params("creditAmount")} credit available.
 
 You can:
 
-use this credit to offset another Vaping Products Duty liability, or
+use this credit to offset another Vaping Products Duty liability
 request a repayment.
 
 To manage this credit, sign in to your business tax account and access your Vaping Products Duty service.

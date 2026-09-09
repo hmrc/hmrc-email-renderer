@@ -1,12 +1,12 @@
 @(params: Map[String, Any])Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio
 
-Annwyl @{params("recipientName")},
+Annwyl @{params("recipientName")}
 
 Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer @{params("returnPeriod")} i law ar @{params("submissionDate")}.
 
-Mae’ch datganiad wedi cael ei brosesu’n llwyddiannus.
+Rydym wedi prosesu eich dychweliad yn llwyddiannus.
 
-Does dim Toll Cynhyrchion Fepio i’w thalu ar gyfer y cyfnod hwn.
+Nid oes angen i chi dalu unrhyw Ddyletswydd ar Gynhyrchion Vapio ar gyfer y cyfnod hwn.
 
 Does dim credyd yn ddyledus i chi a does dim angen i chi wneud dim byd arall.
 

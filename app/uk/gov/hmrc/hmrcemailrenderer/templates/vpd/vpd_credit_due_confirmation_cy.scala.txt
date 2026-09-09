@@ -6,12 +6,12 @@ Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer @{params("returnPeriod")} i
 
 Mae’r datganiad hwn yn cynnwys addasiad i ddatganiad Toll Cynhyrchion Fepio blaenorol.
 
-O ganlyniad i’r addasiad, mae credyd o @{params("creditAmount")} ar gael i chi.
+O ganlyniad i'r addasiad hwn, mae gennych chi @{params("creditAmount")} Credyd ar gael.
 
 Gallwch wneud y canlynol:
 
-defnyddio’r credyd hwn i wrthbwyso rhwymedigaeth Toll Cynhyrchion Fepio arall, neu
-gwneud cais am ad-daliad.
+defnyddio’r credyd hwn i wrthbwyso rhwymedigaeth Toll Cynhyrchion Fepio arall
+gwneud cais am ad-daliad
 
 I reoli’r credyd hwn, mewngofnodwch i’ch cyfrif treth busnes ac ewch ati i gael mynediad at eich gwasanaeth Toll Cynhyrchion Fepio.
 

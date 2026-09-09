@@ -17,7 +17,7 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Payment due for your Vaping Products Duty return") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName"),</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName")</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">We received your @params("returnPeriod") Vaping Products Duty return on @params("submissionDate").</p>
 
@@ -27,13 +27,13 @@
 
 <p style="margin: 0 0 30px; font-size: 19px;">If you have set up a Direct Debit, we will collect your payment automatically on @params("paymentDueDate").</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">If the amount due is more than £20 million, Direct Debit cannot be used. You must pay by CHAPS or bank transfer before the payment deadline.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You cannot use Direct Debit for payments over £20 million.</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">To make your payment, please use the payment instructions available through your business tax account or the guidance published on GOV.UK and search for "pay Vaping Products Duty".</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">If you have not set up a Direct Debit, you can make a payment through the Online Payment Service in the View Payments section of your Vaping Duty service.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Interest may be charged on payments received after @params("paymentDueDate").</p>
+<p style="margin: 0 0 30px; font-size: 19px;">We may charge you interest on payments received after @params("paymentDueDate").</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
 

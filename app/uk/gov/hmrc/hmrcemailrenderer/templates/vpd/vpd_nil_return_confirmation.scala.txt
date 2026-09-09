@@ -1,12 +1,12 @@
 @(params: Map[String, Any])Your Vaping Products Duty return has been submitted
 
-Dear @{params("recipientName")},
+Dear @{params("recipientName")}
 
 We received your @{params("returnPeriod")} Vaping Products Duty return on @{params("submissionDate")}.
 
-Your return has been processed successfully.
+We have successfully processed your return.
 
-There is no Vaping Products Duty to pay for this period.
+You do not need to pay any Vaping Products Duty for this period.
 
 There is no credit due to you and no further action is required.
 
