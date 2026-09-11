@@ -16,7 +16,7 @@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "You have changed the way you sign in to HMRC") {
 <div style="margin: 0 0 30px; font-size: 19px;">
-    <p>Dear Customer,</p>
+    <p>Dear customer</p>
 
     <p>From now on:</p>
     <ul style="margin-bottom: 40px">
@@ -25,10 +25,10 @@
         <li>do not use your Government Gateway user ID ending in @{params.get("ggIdEnding")}</li>
     </ul>
 
-    <p><strong>You do not need to do anything else</strong></p>
+    <h2 style="font-size: 19px">You do not need to do anything else</h2>
     <p style="margin-bottom: 40px">The change is complete. Continue to sign in to HMRC services using GOV.UK One Login.</p>
 
-    <p><strong>If you did not make this change</strong></p>
+    <h2 style="font-size: 19px">If you did not make this change</h2>
     <p style="margin-bottom: 30px">If you do not recognise this change and cannot access your account, you will need to create a GOV.UK One Login.</p>
 
     <p style="margin-bottom: 30px">To create a GOV.UK One Login:</p>
@@ -45,5 +45,37 @@
 
     <p>From HMRC</p>
 
+    }
+    @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Rydych wedi newid y ffordd rydych yn mewngofnodi i CThEF", true, None, true, true) {
+    <p>Annwyl gwsmer</p>
+
+    <p>O hyn allan:</p>
+    <ul style="margin-bottom: 40px">
+        <li>defnyddiwch GOV.UK One Login pan fyddwch yn mewngofnodi i wasanaethau CThEF</li>
+        <li>mewngofnodwch gan ddefnyddio’ch cyfeiriad e-bost @{params.get("obfuscatedEmail")} a chyfrinair</li>
+        <li>peidiwch â defnyddio’ch Dynodydd Defnyddiwr (ID) ar gyfer Porth y Llywodraeth sy’n gorffen â @{params.get("ggIdEnding")}</li>
+    </ul>
+
+    <h2 style="font-size: 19px">Does dim rhaid i chi wneud unrhyw beth arall</h2>
+    <p style="margin-bottom: 40px">Mae’r newid wedi’i gwblhau. Parhau i fewngofnodi i wasanaethau CThEF gan ddefnyddio GOV.UK One Login.</p>
+
+    <h2 style="font-size: 19px">Os na wnaethoch wneud y newid hwn</h2>
+    <p style="margin-bottom: 30px">Os nad ydych yn adnabod y newid hwn ac na allwch gael mynediad at eich cyfrif, bydd angen i chi greu GOV.UK One Login.</p>
+
+    <p style="margin-bottom: 30px">Er mwyn creu cyfrif GOV.UK One Login:</p>
+
+    <ol style="margin-bottom: 30px">
+        <li>Ewch i GOV.UK.</li>
+        <li>Chwiliwch am ‘HMRC online services: sign in or set up an account’ ac yna dewis yr opsiwn Cymraeg ar y dudalen berthnasol.</li>
+        <li>Dewiswch yr opsiwn ar gyfer mewngofnodi, yna dewiswch ‘Creu manylion mewngofnodi newydd’.</li>
+    </ol>
+
+    <p style="margin-bottom: 30px">Am resymau diogelwch, nid yw’r e-bost hwn yn cynnwys unrhyw gysylltiadau.</p>
+
+    <p style="margin-bottom: 30px">E-bost awtomataidd yw hwn. Peidiwch ymateb iddo.</p>
+
+    <p>Oddi wrth CThEF</p>
+
 </div>
+
 }
