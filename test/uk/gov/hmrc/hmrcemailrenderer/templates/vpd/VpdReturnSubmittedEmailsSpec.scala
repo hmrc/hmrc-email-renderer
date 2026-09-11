@@ -48,21 +48,21 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
 
     "render htmlTemplate body" in {
       val htmlContent = template.htmlTemplate(params).toString
-      htmlContent must include("Dear John Smith,")
+      htmlContent must include("Dear John Smith")
       htmlContent must include("We received your October 2026 Vaping Products Duty return on 3 November 2026.")
       htmlContent must include("VPD38270541977")
       htmlContent must include("You need to pay £1,234.50 by 15 November 2026.")
       htmlContent must include(
         "If you have set up a Direct Debit, we will collect your payment automatically on 15 November 2026."
       )
-      htmlContent must include("If the amount due is more than £20 million, Direct Debit cannot be used.")
-      htmlContent must include("Interest may be charged on payments received after 15 November 2026.")
+      htmlContent must include("You cannot use Direct Debit for payments over £20 million.")
+      htmlContent must include("We may charge you interest on payments received after 15 November 2026.")
       htmlContent must include("From HMRC Vaping Products Duty Team")
     }
 
     "render text content and footer" in {
       val txtContent = template.plainTemplate(params).toString
-      txtContent must include("Dear John Smith,")
+      txtContent must include("Dear John Smith")
       txtContent must include("Charge reference number: VPD38270541977")
       txtContent must include("You need to pay £1,234.50 by 15 November 2026.")
       txtContent must include("If you’re unsure an email is from HMRC:")
@@ -86,15 +86,15 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
 
     "render htmlTemplate body" in {
       val htmlContent = template.htmlTemplate(params).toString
-      htmlContent must include("Dear John Smith,")
+      htmlContent must include("Dear John Smith")
       htmlContent must include("We received your October 2026 Vaping Products Duty return on 3 November 2026.")
-      htmlContent must include("There is no Vaping Products Duty to pay for this period.")
+      htmlContent must include("You do not need to pay any Vaping Products Duty for this period.")
       htmlContent must include("There is no credit due to you and no further action is required.")
     }
 
     "render text content and footer" in {
       val txtContent = template.plainTemplate(params).toString
-      txtContent must include("Your return has been processed successfully.")
+      txtContent must include("We have successfully processed your return.")
       txtContent must include("If you’re unsure an email is from HMRC:")
     }
   }
@@ -117,15 +117,15 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
 
     "render htmlTemplate body" in {
       val htmlContent = template.htmlTemplate(params).toString
-      htmlContent must include("Dear John Smith,")
-      htmlContent must include("As a result of this adjustment, a credit of £50 is available to you.")
-      htmlContent must include("use this credit to offset another Vaping Products Duty liability, or")
-      htmlContent must include("request a repayment.")
+      htmlContent must include("Dear John Smith")
+      htmlContent must include("As a result of this adjustment, you have £50 credit available.")
+      htmlContent must include("use this credit to offset another Vaping Products Duty liability")
+      htmlContent must include("request a repayment")
     }
 
     "render text content and footer" in {
       val txtContent = template.plainTemplate(params).toString
-      txtContent must include("As a result of this adjustment, a credit of £50 is available to you.")
+      txtContent must include("As a result of this adjustment, you have £50 credit available.")
       txtContent must include("If you’re unsure an email is from HMRC:")
     }
   }
@@ -152,7 +152,7 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
 
     "render htmlTemplate body" in {
       val htmlContent = template.htmlTemplate(params).toString
-      htmlContent must include("Annwyl John Smith,")
+      htmlContent must include("Annwyl John Smith")
       htmlContent must include(
         "Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer October 2026 i law ar 3 November 2026."
       )
@@ -162,15 +162,17 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
         "Os ydych wedi sefydlu Debyd Uniongyrchol, byddwn yn casglu’ch taliad yn awtomatig ar 15 November 2026."
       )
       htmlContent must include(
-        "Os yw’r swm sy’n ddyledus yn fwy na £20 miliwn, ni all Debyd Uniongyrchol gael ei ddefnyddio."
+        "Ni allwch ddefnyddio Debyd Uniongyrchol ar gyfer taliadau sy'n fwy na £20 miliwn."
       )
-      htmlContent must include("Gellir codi llog ar daliadau sy’n dod i law ar ôl 15 November 2026.")
+      htmlContent must include(
+        "Efallai y byddwn yn codi llog arnoch ar daliadau a dderbynnir ar ôl hynny 15 November 2026."
+      )
       htmlContent must include("Oddi wrth Tîm Toll Cynhyrchion Fepio CThEF")
     }
 
     "render text content and footer" in {
       val txtContent = template.plainTemplate(params).toString
-      txtContent must include("Annwyl John Smith,")
+      txtContent must include("Annwyl John Smith")
       txtContent must include("Rhif cyfeirnod y tâl: VPD38270541977")
       txtContent must include("Mae angen i chi dalu £1,234.50 erbyn 15 November 2026.")
       txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
@@ -194,17 +196,19 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
 
     "render htmlTemplate body" in {
       val htmlContent = template.htmlTemplate(params).toString
-      htmlContent must include("Annwyl John Smith,")
+      htmlContent must include("Annwyl John Smith")
       htmlContent must include(
         "Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer October 2026 i law ar 3 November 2026."
       )
-      htmlContent must include("Does dim Toll Cynhyrchion Fepio i’w thalu ar gyfer y cyfnod hwn.")
+      htmlContent must include(
+        "Nid oes angen i chi dalu unrhyw Ddyletswydd ar Gynhyrchion Vapio ar gyfer y cyfnod hwn."
+      )
       htmlContent must include("Does dim credyd yn ddyledus i chi a does dim angen i chi wneud dim byd arall.")
     }
 
     "render text content and footer" in {
       val txtContent = template.plainTemplate(params).toString
-      txtContent must include("Mae’ch datganiad wedi cael ei brosesu’n llwyddiannus.")
+      txtContent must include("Rydym wedi prosesu eich dychweliad yn llwyddiannus.")
       txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
     }
   }
@@ -227,15 +231,15 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
 
     "render htmlTemplate body" in {
       val htmlContent = template.htmlTemplate(params).toString
-      htmlContent must include("Annwyl John Smith,")
-      htmlContent must include("O ganlyniad i’r addasiad, mae credyd o £50 ar gael i chi.")
-      htmlContent must include("defnyddio’r credyd hwn i wrthbwyso rhwymedigaeth Toll Cynhyrchion Fepio arall, neu")
-      htmlContent must include("gwneud cais am ad-daliad.")
+      htmlContent must include("Annwyl John Smith")
+      htmlContent must include("O ganlyniad i'r addasiad hwn, mae gennych chi £50 Credyd ar gael.")
+      htmlContent must include("defnyddio’r credyd hwn i wrthbwyso rhwymedigaeth Toll Cynhyrchion Fepio arall")
+      htmlContent must include("gwneud cais am ad-daliad")
     }
 
     "render text content and footer" in {
       val txtContent = template.plainTemplate(params).toString
-      txtContent must include("O ganlyniad i’r addasiad, mae credyd o £50 ar gael i chi.")
+      txtContent must include("O ganlyniad i'r addasiad hwn, mae gennych chi £50 Credyd ar gael.")
       txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
     }
   }

@@ -1,6 +1,6 @@
 @(params: Map[String, Any])Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio
 
-Annwyl @{params("recipientName")},
+Annwyl @{params("recipientName")}
 
 Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer @{params("returnPeriod")} i law ar @{params("submissionDate")}.
 
