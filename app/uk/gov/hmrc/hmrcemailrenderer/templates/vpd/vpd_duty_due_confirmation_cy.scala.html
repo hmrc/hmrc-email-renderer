@@ -1,0 +1,48 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio", isWelsh = true) {
+
+<p style="margin: 0 0 30px; font-size: 19px;">Annwyl @params("recipientName")</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer @params("returnPeriod") i law ar @params("submissionDate").</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Rhif cyfeirnod y tâl:</strong> @params("chargeReference")</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Mae angen i chi dalu @params("amountDue") erbyn @params("paymentDueDate").</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Os ydych wedi sefydlu Debyd Uniongyrchol, byddwn yn casglu’ch taliad yn awtomatig ar @params("paymentDueDate").</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Ni allwch ddefnyddio Debyd Uniongyrchol ar gyfer taliadau sy'n fwy na £20 miliwn.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">I wneud eich taliad, defnyddiwch y cyfarwyddiadau talu sydd ar gael drwy’ch cyfrif treth busnes. Gallwch hefyd gyfeirio at yr arweiniad sydd wedi’i gyhoeddi ar GOV.UK drwy chwilio am "pay Vaping Products Duty".</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Os nad ydych wedi trefnu Debyd Uniongyrchol, gallwch wneud taliad drwy’r Gwasanaeth Talu Ar-lein. Gallwch ddod o hyd i’r gwasanaeth hwn yn yr adran ar gyfer bwrw golwg dros daliadau yn eich gwasanaeth Toll Fepio.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Efallai y byddwn yn codi llog arnoch ar daliadau a dderbynnir ar ôl hynny @params("paymentDueDate").</p>
+
+<h2 style="margin: 0 0 30px; font-size: 24px;">Pam eich bod yn cael yr e-bost hwn</h2>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Rydym wedi anfon yr e-bost awtomatig hwn atoch i gadarnhau eich bod wedi cwblhau cam yn y gwasanaeth Toll Fepio yn llwyddiannus ac wedi cyflwyno gwybodaeth i CThEF.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Cadwch yr e-bost hwn ar gyfer eich cofnodion.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Peidiwch ag anfon ateb i’r cyfeiriad e-bost hwn, gan nad yw’n cael ei fonitro. Os oes angen cymorth arnoch neu os oes gennych unrhyw gwestiynau, defnyddiwch y manylion cyswllt sydd ar gael yn eich Cyfrif Treth Busnes.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">Oddi wrth Tîm Toll Cynhyrchion Fepio CThEF</p>
+
+}

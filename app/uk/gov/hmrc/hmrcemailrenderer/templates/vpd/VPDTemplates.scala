@@ -17,27 +17,70 @@
 package uk.gov.hmrc.hmrcemailrenderer.templates.vpd
 
 import uk.gov.hmrc.hmrcemailrenderer.domain.{ MessagePriority, MessageTemplate }
+import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress
 import uk.gov.hmrc.hmrcemailrenderer.templates.FromAddress.{ govUkTeamAddress, govUkTeamAddressWelsh }
 import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.VPD
 
 object VPDTemplates {
+
+  private val vpdTeamAddress: String = FromAddress.noReply("HMRC Vaping Products Duty Team")
+  private val vpdTeamAddressWelsh: String = FromAddress.noReply("Tîm Toll Cynhyrchion Fepio CThEF")
+  private val vpdWelshConfirmationSubject: String =
+    "Cadarnhad eich bod wedi cyflwyno’ch Datganiad Toll Cynhyrchion Fepio"
+
   val templates = Seq(
     MessageTemplate.create(
-      templateId = "newMessageAlert_VPD1",
-      fromAddress = govUkTeamAddress,
+      templateId = "vpd_duty_due_confirmation",
+      fromAddress = vpdTeamAddress,
       service = VPD,
-      subject = "You’ve got a new message from HMRC",
-      plainTemplate = txt.newMessageAlert_VPD1.f,
-      htmlTemplate = html.newMessageAlert_VPD1.f,
+      subject = "Payment due for your Vaping Products Duty return",
+      plainTemplate = txt.vpd_duty_due_confirmation.f,
+      htmlTemplate = html.vpd_duty_due_confirmation.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_VPD1_cy",
-      fromAddress = govUkTeamAddressWelsh,
+      templateId = "vpd_nil_return_confirmation",
+      fromAddress = vpdTeamAddress,
       service = VPD,
-      subject = "Mae gennych neges newydd oddi wrth CThEF",
-      plainTemplate = txt.newMessageAlert_VPD1_cy.f,
-      htmlTemplate = html.newMessageAlert_VPD1_cy.f,
+      subject = "Your Vaping Products Duty return has been submitted",
+      plainTemplate = txt.vpd_nil_return_confirmation.f,
+      htmlTemplate = html.vpd_nil_return_confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_credit_due_confirmation",
+      fromAddress = vpdTeamAddress,
+      service = VPD,
+      subject = "Credit due on your Vaping Products Duty return",
+      plainTemplate = txt.vpd_credit_due_confirmation.f,
+      htmlTemplate = html.vpd_credit_due_confirmation.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_duty_due_confirmation_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_duty_due_confirmation_cy.f,
+      htmlTemplate = html.vpd_duty_due_confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_nil_return_confirmation_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_nil_return_confirmation_cy.f,
+      htmlTemplate = html.vpd_nil_return_confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_credit_due_confirmation_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_credit_due_confirmation_cy.f,
+      htmlTemplate = html.vpd_credit_due_confirmation_cy.f,
       priority = Some(MessagePriority.Standard)
     )
   )

@@ -1,0 +1,31 @@
+@(params: Map[String, Any])Payment due for your Vaping Products Duty return
+
+Dear @{params("recipientName")}
+
+We received your @{params("returnPeriod")} Vaping Products Duty return on @{params("submissionDate")}.
+
+Charge reference number: @{params("chargeReference")}
+
+You need to pay @{params("amountDue")} by @{params("paymentDueDate")}.
+
+If you have set up a Direct Debit, we will collect your payment automatically on @{params("paymentDueDate")}.
+
+You cannot use Direct Debit for payments over £20 million.
+
+To make your payment, please use the payment instructions available through your business tax account or the guidance published on GOV.UK and search for "pay Vaping Products Duty".
+
+If you have not set up a Direct Debit, you can make a payment through the Online Payment Service in the View Payments section of your Vaping Duty service.
+
+We may charge you interest on payments received after @{params("paymentDueDate")}.
+
+Why you are receiving this email
+
+We have sent you this email as an automatic confirmation that you have successfully completed a step within your Vaping Duty service and submitted information to HMRC.
+
+Please keep this email for your records.
+
+Do not reply to this email, as this mailbox is not monitored. If you need support or have any questions, please use the contact details available through your Business Tax Account.
+
+From HMRC Vaping Products Duty Team
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -1767,6 +1767,44 @@ object TemplateParams {
         "recipientName_line1"         -> "Joe Bloggs",
         "activation_code"             -> "ABCDEF",
         "activation_code_expiry_date" -> "25 July 2025"
+      ),
+      "vpd_duty_due_confirmation" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50",
+        "paymentDueDate"  -> "15 November 2026"
+      ),
+      "vpd_nil_return_confirmation" -> Map(
+        "recipientName"  -> "John Smith",
+        "returnPeriod"   -> "October 2026",
+        "submissionDate" -> "3 November 2026"
+      ),
+      "vpd_credit_due_confirmation" -> Map(
+        "recipientName"  -> "John Smith",
+        "returnPeriod"   -> "October 2026",
+        "submissionDate" -> "3 November 2026",
+        "creditAmount"   -> "£50"
+      ),
+      "vpd_duty_due_confirmation_cy" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50",
+        "paymentDueDate"  -> "15 November 2026"
+      ),
+      "vpd_nil_return_confirmation_cy" -> Map(
+        "recipientName"  -> "John Smith",
+        "returnPeriod"   -> "October 2026",
+        "submissionDate" -> "3 November 2026"
+      ),
+      "vpd_credit_due_confirmation_cy" -> Map(
+        "recipientName"  -> "John Smith",
+        "returnPeriod"   -> "October 2026",
+        "submissionDate" -> "3 November 2026",
+        "creditAmount"   -> "£50"
       )
     )
 }
