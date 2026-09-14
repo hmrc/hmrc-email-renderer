@@ -122,6 +122,24 @@ object AgentTemplates {
       htmlTemplate = html.agent_registration_application_submission_confirmation.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.create(
+      templateId = "agent_registration_application_ready_to_submit",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "Your unfinished application for an agent services account",
+      plainTemplate = txt.agent_registration_application_ready_to_submit.f,
+      htmlTemplate = html.agent_registration_application_ready_to_submit.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_registration_application_ready_to_submit_sole_trader_not_business_owner",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = "Your unfinished application for an agent services account",
+      plainTemplate = txt.agent_registration_application_ready_to_submit_sole_trader_not_business_owner.f,
+      htmlTemplate = html.agent_registration_application_ready_to_submit_sole_trader_not_business_owner.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "agent_services_subscription_complete",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
