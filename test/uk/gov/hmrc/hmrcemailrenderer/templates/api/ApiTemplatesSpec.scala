@@ -223,7 +223,7 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
 
       validateTemplate(
         templateId = "apiAddedMemberToOrganisationNotification",
-        expectedSubject = "User added to your organisation in the HMRC Developer Hub"
+        expectedSubject = "A user has been added to your organisation in the HMRC Developer Hub"
       )
 
       validateTemplate(
@@ -233,7 +233,7 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
 
       validateTemplate(
         templateId = "apiRemovedMemberFromOrganisationNotification",
-        expectedSubject = "User removed from your organisation in the HMRC Developer Hub"
+        expectedSubject = "A user has been removed from your organisation in the HMRC Developer Hub"
       )
     }
   }

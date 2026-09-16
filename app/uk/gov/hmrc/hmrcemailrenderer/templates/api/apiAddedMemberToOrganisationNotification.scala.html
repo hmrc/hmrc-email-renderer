@@ -15,9 +15,10 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "User added to your organisation in the HMRC Developer Hub") {
-<p style="margin: 0 0 30px; font-size: 19px;">This user has been added to the @{params("organisationName")} organisation.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Email address: @{params("emailAddress")}</p>
-<p style="margin: 0 0 30px; font-size: 19px;">Role: @{params("role")}</p>
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "A user has been added to your organisation in the HMRC Developer Hub") {
+<p style="margin: 0 0 30px; font-size: 19px;">A user has been added to @{params("organisationName")} organisation.</p>
+<h3>Details</h3>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Email address:</strong> @{params("emailAddress")}</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Role:</strong> @{params("role")}</p>
 <p style="margin: 0 0 30px; font-size: 19px;">HMRC Developer Hub</p>
 }
