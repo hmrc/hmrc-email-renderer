@@ -2212,6 +2212,7 @@ object TemplateParams2 {
       "tpsTpsoCombineDesSurchargeReport_pngr"                   -> "1,10.0,2,20.0,3,30.0",
       "tpsTpsoCombineDesSurchargeReport_childBenefitRepayments" -> "1,10.0,2,20.0,3,30.0",
       "tpsTpsoCombineDesSurchargeReport_ppt"                    -> "1,10.0,2,20.0,3,30.0",
+      "tpsTpsoCombineDesSurchargeReport_vatIossAndOss"          -> "1,10.0,2,20.0,3,30.0",
       "tpsTpsoCombineDesSurchargeReport_total"                  -> "3,30.0,6,60.0,9,90.0",
       "topsJustModsSurchargeReport_mods"                        -> "1,10.0,2,20.0,3,30.0",
       "f2fDesSurchargeReport_total"                             -> "4,40.0,8,80.0,12,120.0",

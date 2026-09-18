@@ -166,6 +166,10 @@
         @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_ppt").toString.split(","))
     </tr>
     <tr>
+        <td style="font-weight:bold;">IOSS/OSS</td>
+        @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_vatIossAndOss").toString.split(","))
+    </tr>
+    <tr>
         <td style="font-weight:bold;">Total</td>
         @surcharge_recon_row(params("tpsTpsoCombineDesSurchargeReport_total").toString.split(",").toArray)
     </tr>
