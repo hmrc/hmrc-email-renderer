@@ -39,5 +39,6 @@ object OlgTemplates {
       subject = "GOV.UK One Login is coming soon | Mae GOV.UK One Login yn dod yn fuan",
       plainTemplate = txt.OneLoginIsComingSoon.f,
       htmlTemplate = html.OneLoginIsComingSoon.f
+    )
   )
 }
