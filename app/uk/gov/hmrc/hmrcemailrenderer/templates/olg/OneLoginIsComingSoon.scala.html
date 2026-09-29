@@ -1,0 +1,79 @@
+@*
+* Copyright 2026 HM Revenue & Customs
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*@
+
+@(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "GOV.UK One Login is coming soon") {
+<div style="font-size: 19px;">
+    <p>Dear customer</p>
+
+    <p>GOV.UK One Login is replacing Government Gateway as the way to sign in to HMRC.</p>
+    <p>You are receiving this email because you currently use Government Gateway to access HMRC online services.</p>
+
+    <h2 style="font-size: 19px; margin-top:40px">What is GOV.UK One Login?</h2>
+    <p>GOV.UK One Login is a new, simple, and secure way to sign in to government services. It lets you:</p>
+
+    <ul>
+        <li>sign in with your email address instead of a user ID</li>
+        <li>use the same sign in details for different government services</li>
+        <li>prove your identity once</li>
+    </ul>
+
+    <h2 style="font-size: 19px; margin-top:40px">You do not need to do anything now</h2>
+
+    <p>Continue to sign in with your Government Gateway user ID as normal.</p>
+    <p>From March 2027, after you sign in to HMRC using Government Gateway, we'll tell you to change to GOV.UK One Login.</p>
+
+    <h2 style="font-size: 19px; margin-top:40px">Keep your information secure</h2>
+
+    <p>HMRC will never ask you to share your sign in details, or any financial information by email.</p>
+    <p>If you receive an email asking for this information, do not reply or click on any links.</p>
+
+    <p>From HMRC</p>
+
+</div>
+
+}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Mae GOV.UK One Login yn dod yn fuan", true, None, true, true) {
+
+<div style="font-size: 19px;">
+    <p>Annwyl gwsmer</p>
+
+    <p>Mae GOV.UK One Login yn disodli Porth y Llywodraeth fel y ffordd o fewngofnodi i CThEF.</p>
+    <p>Mae’r e-bost hwn wedi’i anfon atoch oherwydd eich bod yn defnyddio Porth y Llywodraeth i gael mynediad at wasanaethau ar-lein CThEF ar hyn o bryd.</p>
+
+    <h2 style="font-size: 19px; margin-top:40px">Beth yw GOV.UK One Login?</h2>
+    <p>Mae GOV.UK One Login yn ffordd newydd, syml a diogel o fewngofnodi i wasanaethau’r llywodraeth. Mae’n eich galluogi chi i wneud y canlynol:</p>
+
+    <ul>
+        <li>mewngofnodi gyda’ch cyfeiriad e-bost yn lle Dynodydd Defnyddiwr (ID)</li>
+        <li>defnyddio’r un manylion mewngofnodi ar gyfer gwahanol wasanaethau y llywodraeth</li>
+        <li>profi pwy ydych unwaith</li>
+    </ul>
+
+    <h2 style="font-size: 19px; margin-top:40px">Does dim angen i chi wneud dim byd ar hyn o bryd</h2>
+
+    <p>Dylech barhau i fewngofnodi gan ddefnyddio’ch Dynodydd Defnyddiwr (ID) ar gyfer Porth y Llywodraeth yn ôl yr arfer.</p>
+    <p>O fis Mawrth 2027 ymlaen, ar ôl i chi fewngofnodi i CThEF gan ddefnyddio Porth y Llywodraeth, byddwn yn rhoi gwybod i chi fod angen i chi newid i GOV.UK One Login.</p>
+
+    <h2 style="font-size: 19px; margin-top:40px">Cadw’ch gwybodaeth yn ddiogel</h2>
+
+    <p>Ni fydd CThEF byth yn gofyn i chi rannu’ch manylion mewngofnodi, nac unrhyw wybodaeth ariannol drwy e-bost.</p>
+    <p>Os byddwch yn cael e-bost yn gofyn i chi am yr wybodaeth hon, peidiwch ag ateb na chlicio ar unrhyw gysylltiadau.</p>
+
+    <p>Oddi wrth CThEF</p>
+</div>
+
+}
