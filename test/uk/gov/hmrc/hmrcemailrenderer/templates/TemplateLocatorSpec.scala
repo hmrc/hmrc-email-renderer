@@ -1165,6 +1165,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_LEPP4",
         "newMessageAlert_LEPP4_cy",
         "one_login_setup_complete",
+        "one_login_is_coming_soon",
         "newMessageAlert_CH(A)1700",
         "newMessageAlert_CH(A)1708",
         "newMessageAlert_CH(A)1700_cy",

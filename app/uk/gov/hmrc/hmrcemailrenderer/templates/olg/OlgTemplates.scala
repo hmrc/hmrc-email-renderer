@@ -31,6 +31,14 @@ object OlgTemplates {
         "You have changed the way you sign in to HMRC | Rydych wedi newid y ffordd rydych yn mewngofnodi i CThEF",
       plainTemplate = txt.OneLoginSetupComplete.f,
       htmlTemplate = html.OneLoginSetupComplete.f
+    ),
+    MessageTemplate.create(
+      templateId = "one_login_is_coming_soon",
+      fromAddress = FromAddress.noReply("Do not reply"),
+      service = OneLogin,
+      subject = "GOV.UK One Login is coming soon | Mae GOV.UK One Login yn dod yn fuan",
+      plainTemplate = txt.OneLoginIsComingSoon.f,
+      htmlTemplate = html.OneLoginIsComingSoon.f
     )
   )
 }

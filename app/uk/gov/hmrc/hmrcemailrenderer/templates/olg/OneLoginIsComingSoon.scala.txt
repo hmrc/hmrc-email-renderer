@@ -1,0 +1,57 @@
+@(params: Map[String, Any])GOV.UK One Login is coming soon
+
+Dear customer
+
+GOV.UK One Login is replacing Government Gateway as the way to sign in to HMRC.
+You are receiving this email because you currently use Government Gateway to access HMRC online services.
+
+What is GOV.UK One Login?
+
+GOV.UK One Login is a new, simple, and secure way to sign in to government services. It lets you:
+
+- sign in with your email address instead of a user ID
+- use the same sign in details for different government services
+- prove your identity once
+
+You do not need to do anything now
+
+Continue to sign in with your Government Gateway user ID as normal.
+From March 2027, after you sign in to HMRC using Government Gateway, we'll tell you to change to GOV.UK One Login.
+
+Keep your information secure
+
+HMRC will never ask you to share your sign in details, or any financial information by email.
+If you receive an email asking for this information, do not reply or click on any links.
+
+From HMRC
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
+@()Mae GOV.UK One Login yn dod yn fuan
+
+Annwyl gwsmer
+
+Mae GOV.UK One Login yn disodli Porth y Llywodraeth fel y ffordd o fewngofnodi i CThEF.
+Mae’r e-bost hwn wedi’i anfon atoch oherwydd eich bod yn defnyddio Porth y Llywodraeth i gael mynediad at wasanaethau ar-lein CThEF ar hyn o bryd.
+
+Beth yw GOV.UK One Login?
+
+Mae GOV.UK One Login yn ffordd newydd, syml a diogel o fewngofnodi i wasanaethau’r llywodraeth. Mae’n eich galluogi chi i wneud y canlynol:
+
+- mewngofnodi gyda’ch cyfeiriad e-bost yn lle Dynodydd Defnyddiwr (ID)
+- defnyddio’r un manylion mewngofnodi ar gyfer gwahanol wasanaethau y llywodraeth
+- profi pwy ydych unwaith
+
+Does dim angen i chi wneud dim byd ar hyn o bryd
+
+Dylech barhau i fewngofnodi gan ddefnyddio’ch Dynodydd Defnyddiwr (ID) ar gyfer Porth y Llywodraeth yn ôl yr arfer.
+O fis Mawrth 2027 ymlaen, ar ôl i chi fewngofnodi i CThEF gan ddefnyddio Porth y Llywodraeth, byddwn yn rhoi gwybod i chi fod angen i chi newid i GOV.UK One Login.
+
+Cadw’ch gwybodaeth yn ddiogel
+
+Ni fydd CThEF byth yn gofyn i chi rannu’ch manylion mewngofnodi, nac unrhyw wybodaeth ariannol drwy e-bost.
+Os byddwch yn cael e-bost yn gofyn i chi am yr wybodaeth hon, peidiwch ag ateb na chlicio ar unrhyw gysylltiadau.
+
+Oddi wrth CThEF
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
