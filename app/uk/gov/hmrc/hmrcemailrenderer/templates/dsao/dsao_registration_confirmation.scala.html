@@ -15,26 +15,30 @@
  *@
 
 @(params: Map[String, Any])
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Senior Accounting Officer registration") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Senior Accounting Officer registration submitted") {
 
 <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName"),</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">@params("companyName") has successfully registered to the Senior Accounting Officer (SAO) notification and certificate service.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@params("companyName") has successfully registered for the Senior Accounting Officer notification and certificate service.</p>
 
-<h2 style="margin: 0 0 30px; font-size: 24px;">Registration</h2>
+<h2 style="margin: 0 0 30px; font-size: 24px;">Submission details</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Date submitted:</strong> @params("submittedDateTime")<br><strong>Reference ID:</strong> @params("referenceId")</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Date:</strong> @params("submittedDateTime") UK time<br><strong>Reference number:</strong> @params("referenceId")</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">What you need to do next</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">You must now submit an SAO notification and certificate.</p>
-<p style="margin: 0 0 30px; font-size: 19px;">You can access the service by logging into your HMRC business tax account.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">You must now submit a notification and a certificate.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Sign in to your HMRC business tax account to access the service.</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your email address was given during registration. We send an email when a registration to the Digital SAO service has been submitted.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your email address was provided during registration. We send an email when a registration to the service has been submitted.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">If you need support with submitting a notification and certificate, contact your Customer Compliance Manager if you have one or email wmbc.saomailbox@@hmrc.gov.uk</p>
+<h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC SAO service</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you have a Customer Compliance Manager, contact them directly.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">If you do not have a Customer Compliance Manager, email wmbc.saomailbox@@hmrc.gov.uk</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Senior Accounting Officer notification and certificate service</p>
 }
