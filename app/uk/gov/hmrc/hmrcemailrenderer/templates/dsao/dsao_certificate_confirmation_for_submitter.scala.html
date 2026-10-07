@@ -17,19 +17,23 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Senior Accounting Officer certificate") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName")</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName"),</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">@params("submitterName") has successfully submitted a certificate on behalf of @params("saoName"), the Senior Accounting Officer (SAO), confirming that the tax accounting information is complete and correct.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@params("submitterName") has successfully submitted a certificate on behalf of [SAO name], the Senior Accounting Officer.</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Certificate</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Date submitted:</strong> @params("submittedDateTime")<br><strong>Reference ID:</strong> @params("referenceId")</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Date of submission:</strong> @params("submittedDateTime")<br><strong>Reference number:</strong> @params("referenceId")</p>
 
-<h2 style="margin: 0 0 30px; font-size: 24px;">Why are you receiving this email</h2>
+<h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your email address was given during registration. We send confirmation emails when a Senior Accounting Officer certificate has been submitted.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your email address was given during registration. We send confirmation emails when a certificate has been submitted.</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">If you need support with your certificate, contact your Customer Compliance Manager if you have one or email wmbc.saomailbox@@hmrc.gov.uk</p>
+<h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">From HMRC SAO service</p>
+<p style="margin: 0 0 30px; font-size: 19px;">If you have a Customer Compliance Manager, contact them directly.</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">If you do not have a Customer Compliance Manager, email wmbc.saomailbox@@hmrc.gov.uk</p>
+
+<p style="margin: 0 0 30px; font-size: 19px;">From the HMRC Senior Accounting Officer notification and certificate service</p>
 }
