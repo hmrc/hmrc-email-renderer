@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Submitted: Senior Accounting Officer certificate
+
+Dear @{params("recipientName")},
+
+@{params("submitterName")} has successfully submitted a certificate on behalf of you, the Senior Accounting Officer.
+
+Certificate
+
+Date of submission: @{params("submittedDateTime")}
+Reference number: @{params("referenceId")}
+
+Why you are receiving this email
+
+Your email address was given during certificate submission. We send confirmation emails when a certificate has been submitted.
+
+If you need help
+
+If you have a Customer Compliance Manager, contact them directly.
+
+If you do not have a Customer Compliance Manager, email wmbc.saomailbox@@hmrc.gov.uk
+
+From the HMRC Senior Accounting Officer notification and certificate service
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
+
