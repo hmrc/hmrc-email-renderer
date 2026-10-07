@@ -1,8 +1,8 @@
 @(params: Map[String, Any])Submitted: Senior Accounting Officer certificate
 
-Dear @{params("recipientName")},
+Dear @{params("contactName")},
 
-@{params("submitterName")} has successfully submitted a certificate on behalf of [SAO name], the Senior Accounting Officer.
+@{params("submitterName")} has successfully submitted a certificate on behalf of @{params("saoName")}, the Senior Accounting Officer.
 
 Certificate
 

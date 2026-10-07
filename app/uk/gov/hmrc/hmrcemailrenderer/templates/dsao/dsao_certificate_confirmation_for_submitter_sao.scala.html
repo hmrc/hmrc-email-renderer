@@ -17,13 +17,13 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Senior Accounting Officer certificate") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("recipientName"),</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("saoName"),</p>
 
 <p style="margin: 0 0 30px; font-size: 19px;">@params("submitterName") has successfully submitted a certificate on behalf of you, the Senior Accounting Officer.</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Certificate</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;"><strong>Date of submission:</strong>@params("submittedDateTime")<br><strong>Reference number:</strong>@params("referenceId")</p>
+<p style="margin: 0 0 30px; font-size: 19px;"><strong>Date of submission:</strong> @params("submittedDateTime")<br><strong>Reference number:</strong> @params("referenceId")</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
 
