@@ -94,7 +94,7 @@ object TemplateParams {
       ),
       "dsao_certificate_confirmation_for_submitter_sao" -> Map(
         "submitterName"     -> "Jane Smith",
-        "saoName"           -> "saoName",
+        "saoName"           -> "Richard Wilson",
         "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
         "referenceId"       -> "SAOCER0123456789"
       ),
@@ -104,7 +104,7 @@ object TemplateParams {
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_sao_to_contacts" -> Map(
-        "contactName"     -> "Richard Wilson",
+        "contactName"       -> "Richard Wilson",
         "saoName"           -> "Richard Wilson",
         "submittedDateTime" -> "17 January 2025 at 11:45am",
         "referenceId"       -> "SAOCER0123456789"
