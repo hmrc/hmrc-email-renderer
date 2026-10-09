@@ -1,5 +1,5 @@
 @*
- * Copyright 2026 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Submitted: Senior Accounting Officer certificate") {
 
-<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("contactName"),</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Dear @params("saoName"),</p>
 
-<p style="margin: 0 0 30px; font-size: 19px;">@{params("saoName")} successfully submitted a certificate as the Senior Accounting Officer.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">@params("submitterName") has successfully submitted a certificate on behalf of you, the Senior Accounting Officer.</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Certificate</h2>
 
@@ -27,7 +27,7 @@
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">Why you are receiving this email</h2>
 
-<p style="margin: 0 0 30px; font-size: 19px;">Your email address was given during registration. We send confirmation emails when a certificate has been submitted.</p>
+<p style="margin: 0 0 30px; font-size: 19px;">Your email address was given during certificate submission. We send confirmation emails when a certificate has been submitted.</p>
 
 <h2 style="margin: 0 0 30px; font-size: 24px;">If you need help</h2>
 
