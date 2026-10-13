@@ -49,9 +49,13 @@ class NilMonthlyReturnOrgSuccessCySpec extends AnyWordSpec with Matchers {
       html must include("Mae'ch datganiad misol ar gyfer Medi 2025 wedi dod i law Cyllid a Thollau EF (CT).")
       html must include("https://www.gov.uk/government/collections/talu-cthef-gwybodaeth-fanwl.cy")
       html must include("Os bydd angen unrhyw gymorth ychwanegol arnoch, cysylltwch â ni ar Online Services Helpdesk.")
-      html must include("Oriau agor 8.00 y.b. i 8.00 y.h., saith diwrnod yr wythnos. Ar gau ar Ddydd Nadolig, Gŵyl San Steffan a Dydd Calan")
+      html must include(
+        "Oriau agor 8.00 y.b. i 8.00 y.h., saith diwrnod yr wythnos. Ar gau ar Ddydd Nadolig, Gŵyl San Steffan a Dydd Calan"
+      )
       html must include("Rhif ffôn: 0845 60 55 999")
-      html must include("Ar gyfer cwsmeriaid sy'n fyddar neu sydd â nam ar eu clyw neu leferydd: 0845 366 7805 (Ffôn testun)")
+      html must include(
+        "Ar gyfer cwsmeriaid sy'n fyddar neu sydd â nam ar eu clyw neu leferydd: 0845 366 7805 (Ffôn testun)"
+      )
       html must include("Os ydych yn ffonio o dramor, ffoniwch: +44 161 930 8445")
       html must include("helpdesk@ir-efile.gov.uk")
       html must not include "helpdesk@@ir-efile.gov.uk"
