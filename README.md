@@ -22,7 +22,7 @@ Templates can be challenging as they can ordinarily only be viewed by actually g
 git remote add upstream git@github.com:hmrc/hmrc-email-renderer.git  
 git fetch upstream 
 cd $WORKSPACE/hmrc-email-renderer
-sbt -Dhttp.port=8950 -Dapplication.router=testOnlyDoNotUseInAppConf.Routes run
+sbt -Dhttp.port=8950 -Dplay.http.router=testOnlyDoNotUseInAppConf.Routes run
 ```
 
 You should be able to list all the templates available for preview from [http://localhost:8950/hmrc-email-renderer/test-only/preview](http://localhost:8950/hmrc-email-renderer/test-only/preview).
