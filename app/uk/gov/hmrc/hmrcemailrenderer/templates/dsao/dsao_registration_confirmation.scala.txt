@@ -1,26 +1,30 @@
-@(params: Map[String, Any])Senior Accounting Officer registration
+@(params: Map[String, Any])Senior Accounting Officer registration submitted
 
 Dear @{params("recipientName")},
 
-@{params("companyName")} has successfully registered to the Senior Accounting Officer (SAO) notification and certificate service.
+@{params("companyName")} has successfully registered for the Senior Accounting Officer notification and certificate service.
 
-Registration
+Submission details
 
-Date submitted: @{params("submittedDateTime")}
-Reference ID: @{params("referenceId")}
+Date: @{params("submittedDateTime")} UK time
+Reference number: @{params("referenceId")}
 
 What you need to do next
 
-You must now submit an SAO notification and certificate.
+You must now submit a notification and a certificate.
 
-You can access the service by logging into your HMRC business tax account.
+Sign in to your HMRC business tax account to access the service.
 
 Why you are receiving this email
 
-Your email address was given during registration. We send an email when a registration to the Digital SAO service has been submitted.
+Your email address was provided during registration. We send an email when a registration to the service has been submitted.
 
-If you need support with submitting a notification and certificate, contact your Customer Compliance Manager if you have one or email wmbc.saomailbox@@hmrc.gov.uk
+If you need help
 
-From HMRC SAO service
+If you have a Customer Compliance Manager, contact them directly.
+
+If you do not have a Customer Compliance Manager, email wmbc.saomailbox@@hmrc.gov.uk
+
+From the HMRC Senior Accounting Officer notification and certificate service
 
 @{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
