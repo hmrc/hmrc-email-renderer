@@ -42,7 +42,7 @@ class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike w
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has removed you from their organisation.</p>"
       )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You no longer have access to their Production applications.</p>"
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">You no longer have access to the Production applications.</p>"
       )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
     }
@@ -54,7 +54,7 @@ class ApiRemovedMemberFromOrganisationConfirmationSpec extends AnyWordSpecLike w
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include("You've been removed from an organisation in the HMRC Developer Hub")
       renderedTxt.body should include(s"$organisationName has removed you from their organisation.")
-      renderedTxt.body should include("You no longer have access to their Production applications.")
+      renderedTxt.body should include("You no longer have access to the Production applications.")
       renderedTxt.body should include("HMRC Developer Hub")
     }
   }

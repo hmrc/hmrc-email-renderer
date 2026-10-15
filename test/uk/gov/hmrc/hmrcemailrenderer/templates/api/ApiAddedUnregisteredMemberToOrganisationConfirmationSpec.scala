@@ -40,13 +40,13 @@ class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSp
         s"<p style=\"margin: 0 0 30px; font-size: 19px;\">$organisationName has added you to their organisation.</p>"
       )
       renderedHtml.body should include(
-        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Follow these steps to register for a Developer Hub account and access the organisation.</p>"
+        "<p style=\"margin: 0 0 30px; font-size: 19px;\">Complete the steps below to register for a Developer Hub account and access your organisation’s applications.</p>"
       )
       renderedHtml.body should include(
-        s"<li style=\"margin: 0 0 30px; font-size: 19px;\">Open a browser and search for 'HMRC Developer Hub'.</li>"
+        s"<li style=\"margin: 0 0 30px; font-size: 19px;\">Search online for ‘HMRC Developer Hub’.</li>"
       )
       renderedHtml.body should include(
-        s"<li style=\"margin: 0 0 30px; font-size: 19px;\">On the homepage select 'Get an account' to register.</li>"
+        s"<li style=\"margin: 0 0 30px; font-size: 19px;\">Click the <strong>Get an account</strong> button to register for a developer account.</li>"
       )
       renderedHtml.body should include("<p style=\"margin: 0 0 30px; font-size: 19px;\">HMRC Developer Hub</p>")
     }
@@ -58,10 +58,10 @@ class apiAddedUnregisteredMemberToOrganisationConfirmationSpec extends AnyWordSp
       renderedTxt.contentType should include("text/plain")
       renderedTxt.body should include(s"$organisationName has added you to their organisation.")
       renderedTxt.body should include(
-        "Follow these steps to register for a Developer Hub account and access the organisation."
+        "Complete the steps below to register for a Developer Hub account and access your organisation’s applications."
       )
-      renderedTxt.body should include("1. Open a browser and search for 'HMRC Developer Hub'.")
-      renderedTxt.body should include("2. On the homepage select 'Get an account' to register.")
+      renderedTxt.body should include("1. Search online for ‘HMRC Developer Hub’.")
+      renderedTxt.body should include("2. Click the Get an account button to register for a developer account.")
       renderedTxt.body should include("HMRC Developer Hub")
     }
   }

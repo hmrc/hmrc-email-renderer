@@ -1,8 +1,10 @@
-@(params: Map[String, Any])User removed from your organisation in the HMRC Developer Hub
+@(params: Map[String, Any])A user has been removed from your organisation in the HMRC Developer Hub
 
-This user has been removed from the @{params("organisationName")} organisation.
+A user has been removed from @{params("organisationName")} organisation.
 
 Email address: @{params("emailAddress")}
+
+Details:
 
 Role: @{params("role")}
 

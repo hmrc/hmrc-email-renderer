@@ -1,6 +1,8 @@
-@(params: Map[String, Any])User added to your organisation in the HMRC Developer Hub
+@(params: Map[String, Any])A user has been added to your organisation in the HMRC Developer Hub
 
-This user has been added to the @{params("organisationName")} organisation.
+A user has been added to @{params("organisationName")} organisation.
+
+Details
 
 Email address: @{params("emailAddress")}
 

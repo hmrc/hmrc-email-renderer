@@ -2,17 +2,17 @@
 
 @{params("organisationName")} has added you to their organisation.
 
-Follow these steps to register for a Developer Hub account and access the organisation.
+Complete the steps below to register for a Developer Hub account and access your organisation’s applications.
 
-  1. Open a browser and search for 'HMRC Developer Hub'.
+  1. Search online for ‘HMRC Developer Hub’.
 
-  2. On the homepage select 'Get an account' to register.
+  2. Click the Get an account button to register for a developer account.
 
-How to get help
+  3. Complete the form and click the Register button.
 
-Contact an admin at @{params("organisationName")} if you have questions about your access.
+Get help and support
 
-Or create a support request on the Developer Hub if you need help signing in.
+Contact an admin at @{params("organisationName")} if you have questions about your access. If you need help signing in, create a support request on the Developer Hub.
 
 HMRC Developer Hub
 
