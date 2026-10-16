@@ -237,6 +237,15 @@ object ApiTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicFromAddress(
+      templateId = "apiOrganisationApprovedNotification",
+      fromAddress = extractFromAddress,
+      service = ApiDeveloperHub,
+      subject = "Organisation registration approved",
+      plainTemplate = txt.apiOrganisationApprovedNotification.f,
+      htmlTemplate = html.apiOrganisationApprovedNotification.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicFromAddress(
       templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
       fromAddress = extractFromAddress,
       service = ApiDeveloperHub,

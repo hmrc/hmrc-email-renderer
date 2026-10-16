@@ -358,6 +358,9 @@ object TemplateParams {
         "newResponsibleIndividual"      -> "Joe Biden",
         "requesterName"                 -> "Bob Roberts"
       ),
+      "apiOrganisationApprovedNotification" -> Map(
+        "organisationName" -> "Test Organisation"
+      ),
       "apiAddedRegisteredMemberToOrganisationConfirmation" -> Map(
         "organisationName" -> "Test Organisation"
       ),
