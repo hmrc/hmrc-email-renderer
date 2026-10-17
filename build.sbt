@@ -31,7 +31,6 @@ lazy val microservice = Project(appName, file("."))
       "-Wconf:src=preview/.*:s"
     )
   )
-  .settings(PlayKeys.devSettings := Seq("pekko.http.parsing.max-uri-length" -> "16k"))
   .settings(ScoverageSettings())
 
 lazy val it = Project(id = "it", base = file("it"))
