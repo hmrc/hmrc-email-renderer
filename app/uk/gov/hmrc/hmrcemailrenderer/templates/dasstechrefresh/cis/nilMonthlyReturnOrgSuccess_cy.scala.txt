@@ -1,0 +1,21 @@
+@(params: Map[String, Any])
+
+Cyflwyniad CIS Ar-lein a ddaeth i law gan Gyllid a Thollau EF
+
+Diolch am ddefnyddio CIS Ar-lein.
+
+Mae'ch datganiad misol ar gyfer @params("month") @params("year") wedi dod i law Cyllid a Thollau EF (CT).
+
+I gael rhagor o wybodaeth am sut i dalu, ewch i https://www.gov.uk/government/collections/talu-cthef-gwybodaeth-fanwl.cy
+
+Os bydd angen unrhyw gymorth ychwanegol arnoch, cysylltwch â ni ar Online Services Helpdesk.
+
+Oriau agor 8.00 y.b. i 8.00 y.h., saith diwrnod yr wythnos. Ar gau ar Ddydd Nadolig, Gŵyl San Steffan a Dydd Calan
+
+Rhif ffôn: 0845 60 55 999
+
+Ar gyfer cwsmeriaid sy'n fyddar neu sydd â nam ar eu clyw neu leferydd: 0845 366 7805 (Ffôn testun)
+
+Os ydych yn ffonio o dramor, ffoniwch: +44 161 930 8445
+
+I gysylltu â CThEF drwy e-bost: helpdesk@@ir-efile.gov.uk
