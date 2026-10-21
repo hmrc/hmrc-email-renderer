@@ -2,7 +2,7 @@
 
 Your organisation registration @{params("organisationName")} check has been approved.  You can now sign in and manage your organisation.
 
-Manage the emails you receive from us in your Developer Hub account under 'email preferences'.
+You can manage the emails you receive from us in your Developer Hub account under 'email preferences'.
 
 From HMRC Developer Hub
 
