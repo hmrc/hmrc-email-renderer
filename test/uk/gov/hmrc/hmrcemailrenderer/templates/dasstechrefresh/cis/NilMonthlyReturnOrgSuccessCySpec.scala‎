@@ -1,0 +1,61 @@
+package uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.cis
+
+import com.typesafe.config.ConfigFactory
+import org.scalatest.matchers.must.Matchers
+import org.scalatest.wordspec.AnyWordSpec
+import uk.gov.hmrc.hmrcemailrenderer.templates.dasstechrefresh.cis.html.nilMonthlyReturnOrgSuccess_cy
+
+class NilMonthlyReturnOrgSuccessCySpec extends AnyWordSpec with Matchers {
+
+  private val config = ConfigFactory.load().getConfig("templates.config")
+
+  private val layoutParams: Map[String, Any] = Map(
+    "staticAssetUrlPrefix"      -> config.getString("staticAssetUrlPrefix"),
+    "staticHmrcFrontendVersion" -> config.getString("staticHmrcFrontendVersion")
+  )
+
+  private val baseParams: Map[String, Any] =
+    layoutParams ++ Map(
+      "month" -> "Medi",
+      "year"  -> "2025"
+    )
+
+  private def render(params: Map[String, Any] = baseParams): String =
+    nilMonthlyReturnOrgSuccess_cy.render(params).body
+
+  "nilMonthlyReturnOrgSuccess_cy.scala.html" should {
+
+    "render the Welsh title and main copy with month/year interpolation" in {
+      val html = render()
+
+      html must include("Mae’ch datganiad misol wedi dod i law CThEF")
+      html must include("Annwyl gwsmer")
+      html must include(
+        "Mae’ch datganiad misol ar gyfer Medi 2025 wedi dod i law. Gallwch weld manylion yr holl ddatganiadau a gyflwynwyd gennych drwy fewngofnodi i wasanaeth ar-lein Cynllun y Diwydiant Adeiladu (CIS)."
+      )
+      html must include(
+        "Cysylltwch â CThEF os oes gennych unrhyw gwestiynau am y datganiad misol hwn. I ddod o hyd i'r manylion cyswllt cywir, ewch i GOV.UK a chwiliwch am ‘CIS general enquiries'."
+      )
+      html must include("Pam eich bod yn cael yr e-bost hwn")
+      html must include(
+        "Yn ddiweddar, gwnaethoch gyflwyno cais am ddatganiad misol drwy wasanaeth ar-lein CIS a gofyn i gadarnhad gael ei anfon i'r cyfeiriad e-bost hwn."
+      )
+      html must include("Oddi wrth dîm Gwasanaeth y Diwydiant Adeiladu")
+    }
+
+    "interpolate different month/year values" in {
+      val html = render(baseParams.updated("month", "Hydref").updated("year", "2026"))
+
+      html must include(
+        "Mae’ch datganiad misol ar gyfer Hydref 2026 wedi dod i law. Gallwch weld manylion yr holl ddatganiadau a gyflwynwyd gennych drwy fewngofnodi i wasanaeth ar-lein Cynllun y Diwydiant Adeiladu (CIS)."
+      )
+    }
+
+    "fail clearly if required params are missing" in {
+      an[NoSuchElementException] must be thrownBy render(baseParams - "month")
+      an[NoSuchElementException] must be thrownBy render(baseParams - "year")
+      an[NoSuchElementException] must be thrownBy render(baseParams - "staticAssetUrlPrefix")
+      an[NoSuchElementException] must be thrownBy render(baseParams - "staticHmrcFrontendVersion")
+    }
+  }
+}

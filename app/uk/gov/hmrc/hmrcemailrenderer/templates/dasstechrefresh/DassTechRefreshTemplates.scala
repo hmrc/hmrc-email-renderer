@@ -27,7 +27,7 @@ object DassTechRefreshTemplates {
       templateId = "dtr_cis_nil_monthly_return_org_success",
       fromAddress = dtrEmailAddress,
       service = ServiceIdentifier.ConstructionIndustryScheme,
-      subject = "CIS Online submission received by HM Revenue and Customs",
+      subject = "Monthly return received by HMRC",
       plainTemplate = cis.txt.nilMonthlyReturnOrgSuccess.f,
       htmlTemplate = cis.html.nilMonthlyReturnOrgSuccess.f,
       priority = Some(MessagePriority.Urgent)

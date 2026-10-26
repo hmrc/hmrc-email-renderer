@@ -40,21 +40,42 @@ class NilMonthlyReturnOrgSuccessSpec extends AnyWordSpec with Matchers {
 
   "nilMonthlyReturnOrgSuccess.scala.html" should {
 
-    "render title and main copy with month/year interpolation" in {
+    "render the title and main copy with month/year interpolation" in {
       val html = render()
 
-      html must include("CIS Online submission received by HM Revenue and Customs")
-      html must include("Thank you for using CIS Online.")
-      html must include("Your monthly return for September 2025 has been received by HM Revenue &amp; Customs (HMRC).")
-      html must include("http://www.hmrc.gov.uk/payinghmrc/index.html")
-      html must include("Tel: 0845 60 55 999")
-      html must include("helpdesk@ir-efile.gov.uk")
+      html must include("Monthly return received by HMRC")
+      html must include("Dear customer")
+      html must include("We have received your monthly return for September 2025.")
+      html must include(
+        "You can view the details of all your submitted returns by signing in to the Construction Industry Scheme (CIS) online service."
+      )
+      html must include(
+        "Contact HMRC if you have any questions about this monthly return. To find the correct contact details, go to GOV"
+      )
+      html must include("Why you are receiving this email")
+      html must include(
+        "You recently submitted a monthly return via the CIS online service and asked for confirmation to be sent to this email address."
+      )
+      html must include("From the Construction Industry Service team")
+    }
+
+    "not include links or the old Helpdesk contact details" in {
+      val html = render()
+
+      html must not include "http://www.hmrc.gov.uk/payinghmrc/index.html"
+      html must not include "https://www.gov.uk/"
+      html must not include "helpdesk@ir-efile.gov.uk"
       html must not include "helpdesk@@ir-efile.gov.uk"
+      html must not include "0845 60 55 999"
+      html must not include "0845 366 7805"
+      html must not include "+44 161 930 8445"
+      html must not include "Opening hours"
     }
 
     "interpolate different month/year values" in {
       val html = render(baseParams.updated("month", "October").updated("year", "2026"))
-      html must include("Your monthly return for October 2026 has been received")
+
+      html must include("We have received your monthly return for October 2026.")
     }
 
     "fail clearly if required params are missing" in {
