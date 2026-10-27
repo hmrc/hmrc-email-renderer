@@ -69,6 +69,46 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
     }
   }
 
+  "vpd_duty_due_confirmation_no_due_date" must {
+
+    val template: MessageTemplate = getTemplate("vpd_duty_due_confirmation_no_due_date")
+
+    val params = commonParameters ++ Map(
+      "recipientName"   -> "John Smith",
+      "returnPeriod"    -> "October 2026",
+      "submissionDate"  -> "3 November 2026",
+      "chargeReference" -> "VPD38270541977",
+      "amountDue"       -> "£1,234.50"
+    )
+
+    "render correct subject and fromAddress" in {
+      template.subject(commonParameters) mustBe "Payment due for your Vaping Products Duty return"
+      template.fromAddress(Map.empty) mustBe "HMRC Vaping Products Duty Team <noreply@tax.service.gov.uk>"
+    }
+
+    "render htmlTemplate body" in {
+      val htmlContent = template.htmlTemplate(params).toString
+      htmlContent must include("Dear John Smith")
+      htmlContent must include("We received your October 2026 Vaping Products Duty return on 3 November 2026.")
+      htmlContent must include("VPD38270541977")
+      htmlContent must include("You need to pay £1,234.50.")
+      htmlContent must include(
+        "If you have set up a Direct Debit, we will collect your payment automatically."
+      )
+      htmlContent must include("You cannot use Direct Debit for payments over £20 million.")
+      htmlContent must include("We may charge you interest on payments received.")
+      htmlContent must include("From HMRC Vaping Products Duty Team")
+    }
+
+    "render text content and footer" in {
+      val txtContent = template.plainTemplate(params).toString
+      txtContent must include("Dear John Smith")
+      txtContent must include("Charge reference number: VPD38270541977")
+      txtContent must include("You need to pay £1,234.50.")
+      txtContent must include("If you’re unsure an email is from HMRC:")
+    }
+  }
+
   "vpd_nil_return_confirmation" must {
 
     val template: MessageTemplate = getTemplate("vpd_nil_return_confirmation")
@@ -175,6 +215,52 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
       txtContent must include("Annwyl John Smith")
       txtContent must include("Rhif cyfeirnod y tâl: VPD38270541977")
       txtContent must include("Mae angen i chi dalu £1,234.50 erbyn 15 November 2026.")
+      txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
+    }
+  }
+
+  "vpd_duty_due_confirmation_no_due_date_cy" must {
+
+    val template: MessageTemplate = getTemplate("vpd_duty_due_confirmation_no_due_date_cy")
+
+    val params = commonParameters ++ Map(
+      "recipientName"   -> "John Smith",
+      "returnPeriod"    -> "October 2026",
+      "submissionDate"  -> "3 November 2026",
+      "chargeReference" -> "VPD38270541977",
+      "amountDue"       -> "£1,234.50"
+    )
+
+    "render correct subject and fromAddress" in {
+      template.subject(commonParameters) mustBe welshSubject
+      template.fromAddress(Map.empty) mustBe "Tîm Toll Cynhyrchion Fepio CThEF <noreply@tax.service.gov.uk>"
+    }
+
+    "render htmlTemplate body" in {
+      val htmlContent = template.htmlTemplate(params).toString
+      htmlContent must include("Annwyl John Smith")
+      htmlContent must include(
+        "Daeth eich Datganiad Toll Cynhyrchion Fepio ar gyfer October 2026 i law ar 3 November 2026."
+      )
+      htmlContent must include("VPD38270541977")
+      htmlContent must include("Mae angen i chi dalu £1,234.50.")
+      htmlContent must include(
+        "Os ydych wedi sefydlu Debyd Uniongyrchol, byddwn yn casglu’ch taliad yn awtomatig."
+      )
+      htmlContent must include(
+        "Ni allwch ddefnyddio Debyd Uniongyrchol ar gyfer taliadau sy'n fwy na £20 miliwn."
+      )
+      htmlContent must include(
+        "Efallai y byddwn yn codi llog arnoch ar daliadau a dderbynnir."
+      )
+      htmlContent must include("Oddi wrth Tîm Toll Cynhyrchion Fepio CThEF")
+    }
+
+    "render text content and footer" in {
+      val txtContent = template.plainTemplate(params).toString
+      txtContent must include("Annwyl John Smith")
+      txtContent must include("Rhif cyfeirnod y tâl: VPD38270541977")
+      txtContent must include("Mae angen i chi dalu £1,234.50.")
       txtContent must include("Os nad ydych yn siŵr a yw e-bost wedi dod oddi wrth CThEF:")
     }
   }
