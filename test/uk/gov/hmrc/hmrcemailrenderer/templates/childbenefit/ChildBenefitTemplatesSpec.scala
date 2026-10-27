@@ -34,9 +34,9 @@ class ChildBenefitTemplatesSpec
       .find(_.templateId == templateId)
       .value
 
-  "newMessageAlert_CH(A)1700" should {
+  "newMessageAlert_CHA1700" should {
 
-    val template = getTemplate("newMessageAlert_CH(A)1700")
+    val template = getTemplate("newMessageAlert_CHA1700")
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe "You’ve got a new message from HMRC"
@@ -74,9 +74,9 @@ class ChildBenefitTemplatesSpec
     }
   }
 
-  "newMessageAlert_CH(A)1700_cy" should {
+  "newMessageAlert_CHA1700_cy" should {
 
-    val template = getTemplate("newMessageAlert_CH(A)1700_cy")
+    val template = getTemplate("newMessageAlert_CHA1700_cy")
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe "Mae gennych neges newydd oddi wrth CThEF"
@@ -118,9 +118,9 @@ class ChildBenefitTemplatesSpec
     }
   }
 
-  "newMessageAlert_CH(A)1708" should {
+  "newMessageAlert_CHA1708" should {
 
-    val template = getTemplate("newMessageAlert_CH(A)1708")
+    val template = getTemplate("newMessageAlert_CHA1708")
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe "You’ve got a new message from HMRC"
@@ -158,9 +158,9 @@ class ChildBenefitTemplatesSpec
     }
   }
 
-  "newMessageAlert_CH(A)1708_cy" should {
+  "newMessageAlert_CHA1708_cy" should {
 
-    val template = getTemplate("newMessageAlert_CH(A)1708_cy")
+    val template = getTemplate("newMessageAlert_CHA1708_cy")
 
     "render correct subject" in {
       template.subject(Map.empty) shouldBe "Mae gennych neges newydd oddi wrth CThEF"
