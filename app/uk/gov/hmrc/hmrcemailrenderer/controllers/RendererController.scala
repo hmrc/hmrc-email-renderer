@@ -35,14 +35,9 @@ class RendererController @Inject() (templateRenderer: TemplateRenderer, mcc: Mes
     withJsonBody[RenderRequest] { renderReq =>
       templateRenderer.languageTemplateId(templateId, renderReq.email).map { tId =>
         templateRenderer.render(tId, renderReq.parameters) match {
-          case Right(rendered)            =>
-            println("RIGHT")
-            Ok(Json.toJson(rendered))
-          case Left(MissingTemplateId(_)) =>
-            println("NOT FOUND")
-            NotFound
+          case Right(rendered)            => Ok(Json.toJson(rendered))
+          case Left(MissingTemplateId(_)) => NotFound
           case Left(x @ TemplateRenderFailure(_)) =>
-            println("FAILURE")
             logger.warn(s"Failed to render message, reason: ${x.reason}")
             BadRequest(Json.toJson(x))
         }
