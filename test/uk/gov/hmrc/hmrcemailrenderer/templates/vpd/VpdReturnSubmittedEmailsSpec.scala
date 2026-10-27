@@ -96,7 +96,7 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
         "If you have set up a Direct Debit, we will collect your payment automatically."
       )
       htmlContent must include("You cannot use Direct Debit for payments over £20 million.")
-      htmlContent must include("We may charge you interest on payments received.")
+      htmlContent must include("We may charge you interest on late payments.")
       htmlContent must include("From HMRC Vaping Products Duty Team")
     }
 
@@ -251,7 +251,7 @@ class VpdReturnSubmittedEmailsSpec extends PlaySpec with CommonParamsForSpec {
         "Ni allwch ddefnyddio Debyd Uniongyrchol ar gyfer taliadau sy'n fwy na £20 miliwn."
       )
       htmlContent must include(
-        "Efallai y byddwn yn codi llog arnoch ar daliadau a dderbynnir."
+        "Mae’n bosibl y byddwn yn codi llog arnoch am daliadau hwyr."
       )
       htmlContent must include("Oddi wrth Tîm Toll Cynhyrchion Fepio CThEF")
     }
