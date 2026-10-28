@@ -4236,7 +4236,14 @@ object TemplateParams3 {
       "month" -> "September",
       "year"  -> "2025"
     ),
+    "dtr_cis_nil_monthly_return_org_success_cy" -> Map(
+      "month" -> "Medi",
+      "year"  -> "2025"
+    ),
     "dtr_subcontractor_verification" -> Map(
+      "" -> ""
+    ),
+    "dtr_subcontractor_verification_cy" -> Map(
       "" -> ""
     ),
     "overseas_transfer_charge_confirm_transfer_submitted" -> Map(

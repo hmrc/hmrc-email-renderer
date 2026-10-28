@@ -40,6 +40,24 @@ object DassTechRefreshTemplates {
       plainTemplate = cis.txt.subcontractorVerification.f,
       htmlTemplate = cis.html.subcontractorVerification.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dtr_cis_nil_monthly_return_org_success_cy",
+      fromAddress = dtrEmailAddress,
+      service = ServiceIdentifier.ConstructionIndustryScheme,
+      subject = "Mae’ch datganiad misol wedi dod i law CThEF",
+      plainTemplate = cis.txt.nilMonthlyReturnOrgSuccess_cy.f,
+      htmlTemplate = cis.html.nilMonthlyReturnOrgSuccess_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "dtr_subcontractor_verification_cy",
+      fromAddress = dtrEmailAddress,
+      service = ServiceIdentifier.ConstructionIndustryScheme,
+      subject = "Cais am ddilysiad wedi'i ddod i law gan CThEF",
+      plainTemplate = cis.txt.subcontractorVerification_cy.f,
+      htmlTemplate = cis.html.subcontractorVerification_cy.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 }
