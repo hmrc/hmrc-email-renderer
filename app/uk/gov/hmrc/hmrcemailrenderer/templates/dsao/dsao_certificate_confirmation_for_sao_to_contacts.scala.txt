@@ -4,15 +4,14 @@ Dear @{params("contactName")},
 
 @{params("saoName")} successfully submitted a certificate as the Senior Accounting Officer.
 
-Certificate
+Submission details
 
-Date of submission: @{params("submittedDateTime")}
+Date: @{params("submittedDateTime")}
 Reference number: @{params("referenceId")}
 
 Why you are receiving this email
 
-Your email address was given during registration. We send confirmation emails when a certificate has been submitted.
-If you need help
+Your email address was provided during registration. We send confirmation emails when a certificate has been submitted.
 
 If you need help
 
