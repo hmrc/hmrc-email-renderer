@@ -1,0 +1,33 @@
+@(params: Map[String, Any])File successfully sent for cryptoasset reporting
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+We have received a file from @{params("userBusinessName")} for the cryptoasset reporting framework (CARF) service.
+
+The file passed our checks at @{params("dateTime")}.
+
+File ID (MessageRefId)
+@{params("fileId")}
+
+RCASP ID (SendingEntityIN)
+@{params("rcaspId")}
+
+Reporting cryptoasset service provider (RCASP Name)
+@{params("rcaspName")}
+
+File information
+@{params("reportType")}
+
+Keep a copy of this email for your records.
+
+For security reasons, we have not included a link to the CARF service in this email.
+
+What happens next
+We will contact the relevant person or team if we have any questions about this report.
+
+Why you are receiving this email
+We send a confirmation email to the contacts provided for this RCASP.
+
+From the HMRC Cryptoasset Reporting Framework (CARF) service.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
