@@ -39,6 +39,15 @@ object VPDTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
+      templateId = "vpd_duty_due_confirmation_no_due_date",
+      fromAddress = vpdTeamAddress,
+      service = VPD,
+      subject = "Payment due for your Vaping Products Duty return",
+      plainTemplate = txt.vpd_duty_due_confirmation_no_due_date.f,
+      htmlTemplate = html.vpd_duty_due_confirmation_no_due_date.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
       templateId = "vpd_nil_return_confirmation",
       fromAddress = vpdTeamAddress,
       service = VPD,
@@ -63,6 +72,15 @@ object VPDTemplates {
       subject = vpdWelshConfirmationSubject,
       plainTemplate = txt.vpd_duty_due_confirmation_cy.f,
       htmlTemplate = html.vpd_duty_due_confirmation_cy.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "vpd_duty_due_confirmation_no_due_date_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = vpdWelshConfirmationSubject,
+      plainTemplate = txt.vpd_duty_due_confirmation_no_due_date_cy.f,
+      htmlTemplate = html.vpd_duty_due_confirmation_no_due_date_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(

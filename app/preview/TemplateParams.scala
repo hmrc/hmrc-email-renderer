@@ -1782,6 +1782,13 @@ object TemplateParams {
         "amountDue"       -> "£1,234.50",
         "paymentDueDate"  -> "15 November 2026"
       ),
+      "vpd_duty_due_confirmation_no_due_date" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50"
+      ),
       "vpd_nil_return_confirmation" -> Map(
         "recipientName"  -> "John Smith",
         "returnPeriod"   -> "October 2026",
@@ -1800,6 +1807,13 @@ object TemplateParams {
         "chargeReference" -> "VPD38270541977",
         "amountDue"       -> "£1,234.50",
         "paymentDueDate"  -> "15 November 2026"
+      ),
+      "vpd_duty_due_confirmation_no_due_date_cy" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50"
       ),
       "vpd_nil_return_confirmation_cy" -> Map(
         "recipientName"  -> "John Smith",
