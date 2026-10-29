@@ -23,7 +23,7 @@ import uk.gov.hmrc.hmrcemailrenderer.templates.ServiceIdentifier.ChildBenefit
 object ChildBenefitTemplates {
   val templates: Seq[MessageTemplate] = Seq(
     MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1700",
+      templateId = "newMessageAlert_CHA1700",
       fromAddress = govUkTeamAddress,
       service = ChildBenefit,
       subject = "You’ve got a new message from HMRC",
@@ -32,7 +32,7 @@ object ChildBenefitTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1708",
+      templateId = "newMessageAlert_CHA1708",
       fromAddress = govUkTeamAddress,
       service = ChildBenefit,
       subject = "You’ve got a new message from HMRC",
@@ -41,7 +41,7 @@ object ChildBenefitTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1700_cy",
+      templateId = "newMessageAlert_CHA1700_cy",
       fromAddress = govUkTeamAddress,
       service = ChildBenefit,
       subject = "Mae gennych neges newydd oddi wrth CThEF",
@@ -50,7 +50,7 @@ object ChildBenefitTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_CH(A)1708_cy",
+      templateId = "newMessageAlert_CHA1708_cy",
       fromAddress = govUkTeamAddress,
       service = ChildBenefit,
       subject = "Mae gennych neges newydd oddi wrth CThEF",

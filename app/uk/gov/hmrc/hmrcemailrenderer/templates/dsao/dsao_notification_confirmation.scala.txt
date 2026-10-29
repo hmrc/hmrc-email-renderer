@@ -1,4 +1,4 @@
-@(params: Map[String, Any])Submitted: Senior Accounting Officer notification
+@(params: Map[String, Any])Senior Accounting Officer notification submitted
 
 Dear @{params("recipientName")},
 

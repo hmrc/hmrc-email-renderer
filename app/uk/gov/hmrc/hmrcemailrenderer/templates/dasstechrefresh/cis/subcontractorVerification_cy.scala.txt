@@ -1,0 +1,17 @@
+@(params: Map[String, Any])
+
+Cais am ddilysiad wedi'i ddod i law gan CThEF
+
+Annwyl gwsmer
+
+Mae'ch cais am ddilysiad wedi dod i law. Gallwch nawr bwrw golwg dros ganlyniadau'r cais hwn drwy fewngofnodi i wasanaeth ar-lein Cynllun y Diwydiant Adeiladu (CIS).
+
+Cysylltwch â CThEF os oes gennych unrhyw gwestiynau am y cais dilysu hwn. I ddod o hyd i'r manylion cyswllt cywir, ewch i GOV​.UK a chwilwch am 'CIS general enquiries'.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Yn ddiweddar, gwnaethoch gyflwyno cais am ddilysiad drwy wasanaeth ar-lein CIS a gofyn i gadarnhad gael ei anfon i'r cyfeiriad e-bost hwn.
+
+Oddi wrth dim Gwasanaeth y Diwydiant Adeiladu
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer_cy()}
