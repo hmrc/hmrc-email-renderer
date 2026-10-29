@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *@
- 
+
 @(params: Map[String, Any])
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "File successfully sent for cryptoasset reporting") {
 
@@ -23,13 +23,17 @@
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">The file passed our checks at @{params("dateTime")}.</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 10px 0;"><strong>File ID (MessageRefId)</strong><br>@{params("fileId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0;"><strong>File ID (MessageRefId)</strong></p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 10px 22px;">@{params("fileId")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 10px 0;"><strong>RCASP ID (SendingEntityIN)</strong><br>@{params("rcaspId")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0;"><strong>RCASP ID (SendingEntityIN)</strong></p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 10px 22px;">@{params("rcaspId")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 10px 0;"><strong>Reporting cryptoasset service provider (RCASP Name)</strong><br>@{params("rcaspName")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0;"><strong>RCASP (RCASP Name)</strong></p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 10px 22px;">@{params("rcaspName")}</p>
 
-<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;"><strong>File information</strong><br>@{params("reportType")}</p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0;"><strong>File information</strong></p>
+<p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 22px;">@{params("reportType")}</p>
 
 <p style="font-size: 20px; line-height: 1.315789474; margin: 0 0 30px 0;">Keep a copy of this email for your records.</p>
 
