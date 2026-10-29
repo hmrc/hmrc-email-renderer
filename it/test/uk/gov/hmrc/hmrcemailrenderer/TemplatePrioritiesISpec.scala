@@ -760,14 +760,14 @@ class TemplatePrioritiesISpec
           "contactName"       -> "Richard Wilson",
           "submitterName"     -> "Jane Smith",
           "saoName"           -> "Richard Wilson",
-          "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+          "submittedDateTime" -> "17 January 2025 at 11:45am",
           "referenceId"       -> "SAOCER0123456789"
         )
       ),
       "dsao_certificate_confirmation_for_submitter_sao" -> Map(
         "submitterName"     -> "Jane Smith",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "submittedDateTime" -> "17 January 2025 at 11:45am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       (

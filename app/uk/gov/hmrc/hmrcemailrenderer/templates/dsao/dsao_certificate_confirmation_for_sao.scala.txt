@@ -6,7 +6,7 @@ You have successfully submitted a certificate as the Senior Accounting Officer.
 
 Submission details
 
-Date: @{params("submittedDateTime")}
+Date: @{params("submittedDateTime")} UK time
 Reference number: @{params("referenceId")}
 
 Why you are receiving this email
