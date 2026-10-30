@@ -6,7 +6,7 @@ Dear @{params("contactName")},
 
 Submission details
 
-Date: @{params("submittedDateTime")}
+Date: @{params("submittedDateTime")} UK time
 Reference number: @{params("referenceId")}
 
 Why you are receiving this email
