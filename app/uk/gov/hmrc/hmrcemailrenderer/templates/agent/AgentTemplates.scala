@@ -123,6 +123,33 @@ object AgentTemplates {
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_registration_application_expiry_reminder",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      plainTemplate = txt.agent_registration_application_expiry_reminder.f,
+      htmlTemplate = html.agent_registration_application_expiry_reminder.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_registration_application_expired",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      plainTemplate = txt.agent_registration_application_expired.f,
+      htmlTemplate = html.agent_registration_application_expired.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
+      templateId = "agent_registration_application_deleted",
+      fromAddress = FromAddress.noReply("HMRC Agent Services"),
+      service = Agent,
+      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      plainTemplate = txt.agent_registration_application_deleted.f,
+      htmlTemplate = html.agent_registration_application_deleted.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.createWithDynamicSubject(
       templateId = "agent_services_subscription_complete",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
