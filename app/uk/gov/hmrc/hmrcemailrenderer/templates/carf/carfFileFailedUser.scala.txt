@@ -1,0 +1,40 @@
+@(params: Map[String, Any])There is a problem with your file for cryptoasset reporting
+
+Dear @{params("contactName")}
+
+There is a problem with the file you tried to send at @{params("dateTime")}.
+
+You must send another version. Not sending another report on time may result in a penalty for the reporting cryptoasset service provider (RCASP).
+
+
+File ID (MessageRefId)
+      @{params("fileId")}
+
+RCASP ID (SendingEntityIN)
+      @{params("rcaspId")}
+
+@{params("rcaspLabel")}
+      @{params("rcaspName")}
+
+
+What you need to do next
+
+You can check the errors in the service and send an updated XML file.
+
+For security reasons, we have not included a link to this service in this email.
+
+
+Why you are receiving this email
+
+When a file fails checks, we send an email to the contacts provided for @{params("userBusinessName")}.
+
+
+If you need help
+
+Email aeoi.enquiries@@hmrc.gov.uk for help with this service.
+
+For more information, you can visit GOV.UK and search for 'Cryptoasset Reporting Framework'.
+
+From the HMRC Cryptoasset Reporting Framework service.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}

@@ -30,7 +30,33 @@ object CARFTemplates {
       plainTemplate = txt.carfRegistrationSuccessful.f,
       htmlTemplate = html.carfRegistrationSuccessful.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "carf_file_passed_user",
+      fromAddress = govUkTeamAddress,
+      service = CARF,
+      subject = "File successfully sent for cryptoasset reporting",
+      plainTemplate = txt.carfFilePassedUser.f,
+      htmlTemplate = html.carfFilePassedUser.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "carf_file_passed_rcasp",
+      fromAddress = govUkTeamAddress,
+      service = CARF,
+      subject = "File successfully sent for cryptoasset reporting",
+      plainTemplate = txt.carfFilePassedRcasp.f,
+      htmlTemplate = html.carfFilePassedRcasp.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "carf_file_failed_user",
+      fromAddress = govUkTeamAddress,
+      service = CARF,
+      subject = "File failed checks for cryptoasset reporting",
+      plainTemplate = txt.carfFileFailedUser.f,
+      htmlTemplate = html.carfFileFailedUser.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
-
 }
