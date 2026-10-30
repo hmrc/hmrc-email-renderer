@@ -82,31 +82,31 @@ object TemplateParams {
       "dsao_notification_confirmation" -> Map(
         "recipientName"     -> "Richard Wilson",
         "companyName"       -> "ABC Ltd",
-        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "submittedDateTime" -> "22 March 2025 at 10:00am",
         "referenceId"       -> "SAONOT0123456789"
       ),
       "dsao_certificate_confirmation_for_submitter" -> Map(
         "contactName"       -> "Richard Wilson",
         "submitterName"     -> "Jane Smith",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_submitter_sao" -> Map(
         "submitterName"     -> "Jane Smith",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_sao" -> Map(
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_sao_to_contacts" -> Map(
         "contactName"       -> "Richard Wilson",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "client_rejected_authorisation_request" -> Map(
@@ -1782,6 +1782,13 @@ object TemplateParams {
         "amountDue"       -> "£1,234.50",
         "paymentDueDate"  -> "15 November 2026"
       ),
+      "vpd_duty_due_confirmation_no_due_date" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50"
+      ),
       "vpd_nil_return_confirmation" -> Map(
         "recipientName"  -> "John Smith",
         "returnPeriod"   -> "October 2026",
@@ -1800,6 +1807,13 @@ object TemplateParams {
         "chargeReference" -> "VPD38270541977",
         "amountDue"       -> "£1,234.50",
         "paymentDueDate"  -> "15 November 2026"
+      ),
+      "vpd_duty_due_confirmation_no_due_date_cy" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50"
       ),
       "vpd_nil_return_confirmation_cy" -> Map(
         "recipientName"  -> "John Smith",

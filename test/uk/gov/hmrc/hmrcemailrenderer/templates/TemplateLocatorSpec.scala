@@ -1174,9 +1174,11 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "newMessageAlert_CHA1700_cy",
         "newMessageAlert_CHA1708_cy",
         "vpd_duty_due_confirmation",
+        "vpd_duty_due_confirmation_no_due_date",
         "vpd_nil_return_confirmation",
         "vpd_credit_due_confirmation",
         "vpd_duty_due_confirmation_cy",
+        "vpd_duty_due_confirmation_no_due_date_cy",
         "vpd_nil_return_confirmation_cy",
         "vpd_credit_due_confirmation_cy"
       )
