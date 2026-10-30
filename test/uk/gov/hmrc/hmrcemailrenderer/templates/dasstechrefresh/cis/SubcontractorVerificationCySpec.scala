@@ -52,7 +52,7 @@ class SubcontractorVerificationCySpec extends AnyWordSpec with Matchers {
       html must include(
         oneLine(
           """Cysylltwch â CThEF os oes gennych unrhyw gwestiynau am y cais dilysu hwn. I ddod o hyd i'r manylion
-            |cyswllt cywir, ewch i GOV&#8203;.UK a chwilwch am 'CIS general enquiries'."""
+            |cyswllt cywir, ewch i GOV&#8203;.UK a chwiliwch am 'CIS general enquiries'."""
         )
       )
       html must include("Pam eich bod yn cael yr e-bost hwn")

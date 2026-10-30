@@ -1,12 +1,12 @@
 @(params: Map[String, Any])
 
-Mae’ch datganiad misol wedi dod i law CThEF
+Mae'ch datganiad misol wedi dod i law CThEF
 
 Annwyl gwsmer
 
-Mae’ch datganiad misol ar gyfer @params("month") @params("year") wedi dod i law. Gallwch weld manylion yr holl ddatganiadau a gyflwynwyd gennych drwy fewngofnodi i wasanaeth ar-lein Cynllun y Diwydiant Adeiladu (CIS).
+Mae'ch datganiad misol ar gyfer @params("month") @params("year") wedi dod i law. Gallwch weld manylion yr holl ddatganiadau a gyflwynwyd gennych drwy fewngofnodi i wasanaeth ar-lein Cynllun y Diwydiant Adeiladu (CIS).
 
-Cysylltwch â CThEF os oes gennych unrhyw gwestiynau am y datganiad misol hwn. I ddod o hyd i'r manylion cyswllt cywir, ewch i GOV.UK a chwiliwch am ‘CIS general enquiries'.
+Cysylltwch â CThEF os oes gennych unrhyw gwestiynau am y datganiad misol hwn. I ddod o hyd i'r manylion cyswllt cywir, ewch i GOV.UK a chwiliwch am 'CIS general enquiries'.
 
 Pam eich bod yn cael yr e-bost hwn
 
