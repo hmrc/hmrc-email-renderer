@@ -2,7 +2,7 @@
 
 Dear @params("requestorName"),
 
-Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has failed scanning. The ID for this submission is @params("reference").
+Your bulk de-enrolment file uploaded on @params("uploadedDateTime") has failed scanning. The ID for this submission is @params("reference").
 
 The error details are provided below:
 Failure reason: @params("failureReason")

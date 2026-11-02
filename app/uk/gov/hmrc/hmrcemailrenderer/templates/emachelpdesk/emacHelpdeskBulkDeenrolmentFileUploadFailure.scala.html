@@ -16,7 +16,7 @@
 
 @(params: Map[String, Any])@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Bulk de-enrolment file upload has failed scanning") {
     <p style="margin: 0 0 30px; font-size: 19px;">Dear @params("requestorName"),</p>
-    <p style="margin: 0 0 30px; font-size: 19px;">Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDateTime"), has failed scanning. The ID for this submission is @params("reference").</p>
+    <p style="margin: 0 0 30px; font-size: 19px;">Your bulk de-enrolment file uploaded on @params("uploadedDateTime") has failed scanning. The ID for this submission is @params("reference").</p>
     <p style="margin: 0 0 0; font-size: 19px;">The error details are provided below:</p>
     <p style="margin: 0 0 0; font-size: 19px;">Failure reason: @params("failureReason")</p>
     <p style="margin: 0 0 30px; font-size: 19px;">Failure message: @params("failureMessage")</p>
