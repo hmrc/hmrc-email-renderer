@@ -1,0 +1,27 @@
+@(params: Map[String, Any])Please check your Simple Assessment tax bill
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.salutation(params)
+
+Sign in to your online account to check how much Simple Assessment tax you need to pay.
+
+There is no other way to find out how much you owe, so we advise checking as soon as possible.
+
+Checking early will help you plan ahead and avoid last minute stress.
+
+What you need to do now:
+
+  1. Go to GOV.UK and search ‘online account’
+
+  2. Sign in
+
+  3. Select your PAYE account
+
+  4. Check your tax bill and messages
+
+
+You can also do this in the free HMRC app. Because you’ve chosen to receive tax letters online, we’ll e-mail you when there’s
+ something waiting for you in your online account.
+
+Yours sincerely.
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
