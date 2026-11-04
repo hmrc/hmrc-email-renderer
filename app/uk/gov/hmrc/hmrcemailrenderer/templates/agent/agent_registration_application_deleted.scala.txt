@@ -1,0 +1,18 @@
+@(params: Map[String, Any])Update to your agent services account application
+
+Dear @params("agentName")
+
+Your application @params("applicationRef") for an agent services account has been deleted. This has removed all the information you entered.
+
+If you still want to apply for an agent services account, you can sign in and make a new application.
+
+How to make a new application
+
+1. Go to GOV.UK and search for 'Apply for an agent services account'.
+2. On that page, select the 'Apply now' button.
+
+Why you are receiving this email
+
+We send an email when an application has been deleted.
+
+From HMRC Agent Services
