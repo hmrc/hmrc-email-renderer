@@ -787,6 +787,32 @@ object TemplateParams {
         "name"          -> "Ashley Smith",
         "carfReference" -> "XXCAR0012345678"
       ),
+      "carf_file_passed_user" -> Map(
+        "contactName" -> "Ashley Smith",
+        "rcaspName"   -> "RCASPName",
+        "fileId"      -> "CARFFILEID",
+        "rcaspId"     -> "1234567890",
+        "dateTime"    -> "11:14am on 1 March 2027",
+        "reportType"  -> "New information"
+      ),
+      "carf_file_passed_rcasp" -> Map(
+        "contactName"      -> "Ashley Smith",
+        "userBusinessName" -> "BusinessNameLtd",
+        "fileId"           -> "CARFFILEID",
+        "rcaspId"          -> "1234567890",
+        "rcaspName"        -> "RCASPName",
+        "dateTime"         -> "11:14am on 1 March 2027",
+        "reportType"       -> "New information"
+      ),
+      "carf_file_failed_user" -> Map(
+        "contactName"      -> "Ashley Smith",
+        "dateTime"         -> "11:25am on 1 March 2027",
+        "fileId"           -> "ABCDE12345",
+        "rcaspId"          -> "1234567890",
+        "rcaspLabel"       -> "RCASP (RCASP Name)",
+        "rcaspName"        -> "RCASPName",
+        "userBusinessName" -> "UserBusinessName"
+      ),
       "agent_mapping_invitation_template_id" -> Map(
         "name"             -> "Mr Joe Bloggs",
         "verificationLink" -> exampleLinkWithRandomId
