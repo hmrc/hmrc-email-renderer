@@ -42,8 +42,8 @@ object TdqTemplates {
 
   def selfServeNudgeSubject(status: Status, applicationName: String): String =
     if (status == HeadersHeuristicallyCompliant)
-      s"Fraud prevention headers validation successful for $applicationName".trim.capitalize
+      s"Fraud prevention header validation successful for $applicationName".trim.capitalize
     else
-      s"Fraud prevention headers validation issues identified for $applicationName".trim.capitalize
+      s"Fraud prevention header validation issues identified for $applicationName".trim.capitalize
 
 }

@@ -45,7 +45,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val template = findTemplate(templateName)
       template.subject.f(
         params
-      ) mustEqual "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+      ) mustEqual "Fraud prevention header validation issues identified for MTD VAT Test Application"
     }
 
     "contain subject with application name for missing headers" in {
@@ -53,7 +53,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val template = findTemplate(templateName)
       template.subject.f(
         params
-      ) mustEqual "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+      ) mustEqual "Fraud prevention header validation issues identified for MTD VAT Test Application"
     }
 
     "contain subject with application name for invalid connection method" in {
@@ -61,7 +61,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val template = findTemplate(templateName)
       template.subject.f(
         params
-      ) mustEqual "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+      ) mustEqual "Fraud prevention header validation issues identified for MTD VAT Test Application"
     }
 
     "contain subject with application name for headers with errors" in {
@@ -69,7 +69,7 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val template = findTemplate(templateName)
       template.subject.f(
         params
-      ) mustEqual "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+      ) mustEqual "Fraud prevention header validation issues identified for MTD VAT Test Application"
     }
 
     "contain subject with application name for headers with advisories" in {
@@ -77,25 +77,25 @@ class TdqTemplatesSpec extends TemplateComparisonSpec with CommonParamsForSpec w
       val template = findTemplate(templateName)
       template.subject.f(
         params
-      ) mustEqual "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+      ) mustEqual "Fraud prevention header validation issues identified for MTD VAT Test Application"
     }
 
     "contain subject with application name for heuristically compliant headers" in {
       val params = baseParams + ("status" -> HeadersHeuristicallyCompliant.name)
       val template = findTemplate(templateName)
-      template.subject.f(params) mustEqual "Fraud prevention headers validation successful for MTD VAT Test Application"
+      template.subject.f(params) mustEqual "Fraud prevention header validation successful for MTD VAT Test Application"
     }
 
     "contain subject with application name" in {
       val template = findTemplate(templateName)
       template.subject.f(
         baseParams
-      ) mustEqual "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+      ) mustEqual "Fraud prevention header validation issues identified for MTD VAT Test Application"
     }
 
     "include subject as the title" in {
       renderedEmail(baseParams) must include(
-        "Fraud prevention headers validation issues identified for MTD VAT Test Application"
+        "Fraud prevention header validation issues identified for MTD VAT Test Application"
       )
     }
 
