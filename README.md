@@ -9,7 +9,7 @@ Renders parameterised email body content in either HTML or plain text given a te
 
 
 # Integration
-If you're not a member of the Digital Contact team and you need to add or edit a template, typically you will fork this repo.
+If you're not a member of the amazing Digital Contact team and you need to add or edit a template, typically you will fork this repo.
 Please see detailed information in `CONTRIBUTING.md`.
 
 ## Preview Mode
