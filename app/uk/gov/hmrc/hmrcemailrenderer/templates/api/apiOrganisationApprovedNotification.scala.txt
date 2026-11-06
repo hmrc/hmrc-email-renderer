@@ -1,5 +1,7 @@
 @(params: Map[String, Any])Organisation registration approved
 
+Dear @{params("requesterName")}
+
 Your organisation registration @{params("organisationName")} check has been approved.  You can now sign in and manage your organisation.
 
 You can manage the emails you receive from us in your Developer Hub account under 'email preferences'.

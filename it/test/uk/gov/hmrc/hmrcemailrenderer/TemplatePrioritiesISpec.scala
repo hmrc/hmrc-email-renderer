@@ -259,6 +259,7 @@ class TemplatePrioritiesISpec
       (
         "apiOrganisationApprovedNotification",
         Map(
+          "requesterName"    -> "Bob Roberts",
           "organisationName" -> "Organisation Name"
         )
       ),

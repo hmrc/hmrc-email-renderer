@@ -359,6 +359,7 @@ object TemplateParams {
         "requesterName"                 -> "Bob Roberts"
       ),
       "apiOrganisationApprovedNotification" -> Map(
+        "requesterName"    -> "Bob Roberts",
         "organisationName" -> "Test Organisation"
       ),
       "apiAddedRegisteredMemberToOrganisationConfirmation" -> Map(
