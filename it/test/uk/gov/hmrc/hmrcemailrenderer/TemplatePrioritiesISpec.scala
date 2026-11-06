@@ -257,6 +257,13 @@ class TemplatePrioritiesISpec
       ("apiDeveloperChangedPasswordConfirmation", Map[String, String]()),
       ("apiDeveloperPasswordReset", Map("resetPasswordLink" -> "/reset")),
       (
+        "apiOrganisationApprovedNotification",
+        Map(
+          "requesterName"    -> "Bob Roberts",
+          "organisationName" -> "Organisation Name"
+        )
+      ),
+      (
         "apiAddedRegisteredMemberToOrganisationConfirmation",
         Map(
           "organisationName" -> "Organisation Name"

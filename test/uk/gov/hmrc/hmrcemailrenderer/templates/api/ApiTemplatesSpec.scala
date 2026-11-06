@@ -212,6 +212,11 @@ class ApiTemplatesSpec extends AnyWordSpecLike with Matchers with OptionValues w
       )
 
       validateTemplate(
+        templateId = "apiOrganisationApprovedNotification",
+        expectedSubject = "Organisation registration approved"
+      )
+
+      validateTemplate(
         templateId = "apiAddedRegisteredMemberToOrganisationConfirmation",
         expectedSubject = "You've been added to an organisation in the HMRC Developer Hub"
       )

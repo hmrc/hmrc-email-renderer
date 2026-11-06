@@ -1,0 +1,11 @@
+@(params: Map[String, Any])Organisation registration approved
+
+Dear @{params("requesterName")},
+
+You are receiving this email because your organisation registration for @{params("organisationName")} has been approved.  You can now sign in and manage your organisation.
+
+You can manage the emails you receive from us in your Developer Hub account under 'email preferences'.
+
+From HMRC Developer Hub
+
+@{uk.gov.hmrc.hmrcemailrenderer.templates.helpers.txt.template_footer()}
