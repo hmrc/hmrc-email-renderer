@@ -128,14 +128,13 @@ object PayeTemplates {
       htmlTemplate = html.newMessageAlert_PA302_cy.f,
       priority = Some(MessagePriority.Standard)
     ),
-    // DC-3393 Duplicate of newMessageAlert_PA302 template id - that is used for D2 nudge email
     MessageTemplate.create(
       templateId = "newMessageAlert_PA302_D2",
       fromAddress = defaultFromAddress,
       service = PayAsYouEarn,
-      subject = "Your new tax calculation from HMRC is ready",
-      plainTemplate = txt.newMessageAlert_PA302.f,
-      htmlTemplate = html.newMessageAlert_PA302.f,
+      subject = "Please check your Simple Assessment tax bill",
+      plainTemplate = txt.newMessageAlert_PA302_D2.f,
+      htmlTemplate = html.newMessageAlert_PA302_D2.f,
       priority = Some(MessagePriority.Standard)
     ),
     // DC-3393 Duplicate of newMessageAlert_PA302_cy template id - that is used for D1 nudge email
