@@ -6,7 +6,7 @@ Your bulk de-enrolment file @params("fileName"), uploaded on @params("uploadedDa
 
 What you need to do next
 
-If you still need to process the file, then please make the necessary changes and reattempt the upload.
+If you still need to process the file, you must make the necessary changes and reattempt the upload.
 
 Why you are receiving this email
 
