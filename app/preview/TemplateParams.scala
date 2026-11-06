@@ -82,31 +82,31 @@ object TemplateParams {
       "dsao_notification_confirmation" -> Map(
         "recipientName"     -> "Richard Wilson",
         "companyName"       -> "ABC Ltd",
-        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "submittedDateTime" -> "22 March 2025 at 10:00am",
         "referenceId"       -> "SAONOT0123456789"
       ),
       "dsao_certificate_confirmation_for_submitter" -> Map(
         "contactName"       -> "Richard Wilson",
         "submitterName"     -> "Jane Smith",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_submitter_sao" -> Map(
         "submitterName"     -> "Jane Smith",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am UK time",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_sao" -> Map(
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "dsao_certificate_confirmation_for_sao_to_contacts" -> Map(
         "contactName"       -> "Richard Wilson",
         "saoName"           -> "Richard Wilson",
-        "submittedDateTime" -> "17 January 2025 at 11:45am",
+        "submittedDateTime" -> "11 April 2025 at 10:00am",
         "referenceId"       -> "SAOCER0123456789"
       ),
       "client_rejected_authorisation_request" -> Map(
@@ -790,6 +790,32 @@ object TemplateParams {
       "carf_registration_successful" -> Map(
         "name"          -> "Ashley Smith",
         "carfReference" -> "XXCAR0012345678"
+      ),
+      "carf_file_passed_user" -> Map(
+        "contactName" -> "Ashley Smith",
+        "rcaspName"   -> "RCASPName",
+        "fileId"      -> "CARFFILEID",
+        "rcaspId"     -> "1234567890",
+        "dateTime"    -> "11:14am on 1 March 2027",
+        "reportType"  -> "New information"
+      ),
+      "carf_file_passed_rcasp" -> Map(
+        "contactName"      -> "Ashley Smith",
+        "userBusinessName" -> "BusinessNameLtd",
+        "fileId"           -> "CARFFILEID",
+        "rcaspId"          -> "1234567890",
+        "rcaspName"        -> "RCASPName",
+        "dateTime"         -> "11:14am on 1 March 2027",
+        "reportType"       -> "New information"
+      ),
+      "carf_file_failed_user" -> Map(
+        "contactName"      -> "Ashley Smith",
+        "dateTime"         -> "11:25am on 1 March 2027",
+        "fileId"           -> "ABCDE12345",
+        "rcaspId"          -> "1234567890",
+        "rcaspLabel"       -> "RCASP (RCASP Name)",
+        "rcaspName"        -> "RCASPName",
+        "userBusinessName" -> "UserBusinessName"
       ),
       "agent_mapping_invitation_template_id" -> Map(
         "name"             -> "Mr Joe Bloggs",
@@ -1786,6 +1812,13 @@ object TemplateParams {
         "amountDue"       -> "£1,234.50",
         "paymentDueDate"  -> "15 November 2026"
       ),
+      "vpd_duty_due_confirmation_no_due_date" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50"
+      ),
       "vpd_nil_return_confirmation" -> Map(
         "recipientName"  -> "John Smith",
         "returnPeriod"   -> "October 2026",
@@ -1804,6 +1837,13 @@ object TemplateParams {
         "chargeReference" -> "VPD38270541977",
         "amountDue"       -> "£1,234.50",
         "paymentDueDate"  -> "15 November 2026"
+      ),
+      "vpd_duty_due_confirmation_no_due_date_cy" -> Map(
+        "recipientName"   -> "John Smith",
+        "returnPeriod"    -> "October 2026",
+        "submissionDate"  -> "3 November 2026",
+        "chargeReference" -> "VPD38270541977",
+        "amountDue"       -> "£1,234.50"
       ),
       "vpd_nil_return_confirmation_cy" -> Map(
         "recipientName"  -> "John Smith",
@@ -4240,7 +4280,14 @@ object TemplateParams3 {
       "month" -> "September",
       "year"  -> "2025"
     ),
+    "dtr_cis_nil_monthly_return_org_success_cy" -> Map(
+      "month" -> "Medi",
+      "year"  -> "2025"
+    ),
     "dtr_subcontractor_verification" -> Map(
+      "" -> ""
+    ),
+    "dtr_subcontractor_verification_cy" -> Map(
       "" -> ""
     ),
     "overseas_transfer_charge_confirm_transfer_submitted" -> Map(

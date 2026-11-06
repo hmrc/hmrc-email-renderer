@@ -1,21 +1,15 @@
 @(params: Map[String, Any])
 
-CIS Online submission received by HM Revenue and Customs
+Monthly return received by HMRC
 
-Thank you for using CIS Online.
+Dear customer
 
-Your monthly return for @params("month") @params("year") has been received by HM Revenue &amp; Customs (HMRC).
+We have received your monthly return for @params("month") @params("year"). You can view the details of all your submitted returns by signing in to the Construction Industry Scheme (CIS) online service.
 
-For more information on how to pay please visit http://www.hmrc.gov.uk/payinghmrc/index.html
+Contact HMRC if you have any questions about this monthly return. To find the correct contact details, go to GOV.UK and search for CIS general enquiries.
 
-If you require any further assistance please contact our Online Services Helpdesk.
+Why you are receiving this email
 
-Opening hours 8.00 am to 8.00 pm, seven days a week. Closed Christmas Day, Boxing Day and New Year's Day.
+You recently submitted a monthly return via the CIS online service and asked for confirmation to be sent to this email address.
 
-Tel: 0845 60 55 999
-
-For customers who are deaf or hearing or speech impaired:  0845 366 7805 (Textphone)
-
-If you're calling from abroad please telephone: +44 161 930 8445
-
-To contact HMRC by email: helpdesk@@ir-efile.gov.uk
+From the Construction Industry Service team
