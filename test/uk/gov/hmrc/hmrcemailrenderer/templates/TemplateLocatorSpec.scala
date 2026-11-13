@@ -184,6 +184,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "agent_registration_individual_non_fixable_failure",
         "agent_registration_individual_non_fixable_failure_cy",
         "agent_registration_success",
+        "agent_registration_success_cy",
         "agent_registration_application_submission_confirmation",
         "agent_registration_application_submission_confirmation_cy",
         "agent_rejects_mandate",

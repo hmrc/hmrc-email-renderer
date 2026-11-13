@@ -159,6 +159,11 @@ object TemplateParams {
         "applicationRef" -> "ABC123456",
         "businessName"   -> "Example Tax Advisers Ltd"
       ),
+      "agent_registration_success_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "ABC123456",
+        "businessName"   -> "Example Tax Advisers Ltd"
+      ),
       "agent_registration_application_non_fixable_failure" -> Map(
         "agentName"      -> "Taylor Reed",
         "applicationRef" -> "HDJ2123F",

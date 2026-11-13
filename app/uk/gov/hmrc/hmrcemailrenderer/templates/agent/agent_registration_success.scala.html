@@ -20,21 +20,19 @@
 @applicationRef() = {@params("applicationRef")}
 @businessName() = {@params("businessName")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, s"Update: application ${params("applicationRef")} for an agent services account") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update to your agent services account application") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName()</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have approved your application for an agent services account on behalf of @businessName().</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have approved your application <strong>@applicationRef()</strong> for an agent services account on behalf of @businessName().</p>
 
-<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Your new agent services account</h2>
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">How to access your new agent services account</h2>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">To access your account:</p>
-
-<ul style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
-    <li>go to GOV.UK</li>
-    <li>search for 'Sign in to your agent services account'</li>
-    <li>sign in with the agent details you used when you made the application</li>
-</ul>
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Go to GOV.UK and search for 'Sign in to your agent services account'.</li>
+    <li>On that page, select the ‘Sign in now’ button.</li>
+    <li>Sign in with the agent details you used when you made the application.</li>
+</ol>
 
 <h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Agent reference number</h2>
 
@@ -44,7 +42,10 @@
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">It is owned by the tax adviser, not an individual, and is sensitive data. Keep it secure and only share it with people who need it to do their job.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Thank you</p>
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">HMRC Agent Services</p>
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Why you are receiving this email</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We send an email when we have approved your application.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services</p>
 
 }

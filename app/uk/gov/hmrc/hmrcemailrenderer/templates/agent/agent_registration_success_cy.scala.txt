@@ -1,0 +1,25 @@
+@(params: Map[String, Any])Diweddariad i’ch cais am gyfrif gwasanaethau asiant
+
+Annwyl @params("agentName")
+
+Rydym wedi cymeradwyo’ch cais @params("applicationRef") am gyfrif gwasanaethau asiant ar ran @params("businessName").
+
+Sut i gael mynediad at eich cyfrif gwasanaethau asiant newydd
+
+1. Ewch i GOV.UK a chwilio am ‘Mewngofnodi i’ch cyfrif gwasanaethau asiant’.
+2. Ar y dudalen honno, dewiswch y botwm ‘Mewngofnodi nawr’.
+3. Mewngofnodwch gan ddefnyddio’r manylion asiant a ddefnyddiwyd gennych pan wnaethoch ddechrau’r cais.
+
+Cyfeirnod yr asiant
+
+Fe welwch rif cyfeirnod yr asiant (ARN) ar frig hafan y cyfrif gwasanaethau asiant.
+
+Mae’r ARN yn nodi bod @params("businessName") yn ymgynghorydd treth cofrestredig gyda CThEF, ac fe’i defnyddir i gael mynediad at wasanaethau asiant ac i weithredu ar ran cleientiaid lle bo awdurdodiad i wneud hynny.
+
+Mae’n eiddo i’r ymgynghorydd treth, nid i unigolyn, ac mae’n ddata sensitif. Cadwch y data’n ddiogel a dim ond ei rannu â phobl sydd ei angen i wneud eu gwaith.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost pan fyddwn wedi cymeradwyo’ch cais.
+
+Oddi wrth Wasanaethau Asiant CThEF
