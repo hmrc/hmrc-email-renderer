@@ -1,0 +1,43 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@individualName() = {@params("individualName")}
+@applicationRef() = {@params("applicationRef")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Diweddariad i’ch cais am gyfrif gwasanaethau asiant", isWelsh=true) {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @individualName()</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym wedi gorffen gwirio’r wybodaeth a ddarparwyd gennych ar gyfer eich cais busnes <strong>@applicationRef()</strong> am gyfrif gwasanaethau asiant.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Mae angen i chi fewngofnodi i weld ein penderfyniad.</p>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Sut i fewngofnodi</h2>
+
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Defnyddiwch y cysylltiad gwreiddiol a anfonwyd atoch gan y person a wnaeth gais ar ran eich busnes. Os nad oes gennych y cysylltiad mwyach, gofynnwch i’r ymgeisydd ei anfon atoch eto.</li>
+    <li>Defnyddiwch y manylion mewngofnodi sy’n gysylltiedig â’ch trethi personol, nid eich trethi busnes.</li>
+</ol>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Pam eich bod yn cael yr e-bost hwn</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym yn anfon e-bost pan fyddwn wedi gwneud penderfyniad ynghylch cais eich busnes am gyfrif gwasanaethau asiant.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Wasanaethau Asiant CThEF</p>
+
+}

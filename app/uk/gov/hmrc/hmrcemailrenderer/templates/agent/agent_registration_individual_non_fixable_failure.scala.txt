@@ -1,19 +1,18 @@
-@(params: Map[String, Any])Update: application outcome decision (agent services account)
+@(params: Map[String, Any])Update to your agent services account application
 
 Dear @params("individualName")
 
-We have finished our checks on the information you provided.
+We have finished our checks on the information you provided for your business’s application @params("applicationRef") for an agent services account.
 
 You need to sign in to see our decision.
 
-To sign in
+How to sign in
 
-Use the original link sent to you by the applicant. We cannot include the link here for security reasons.
+1. Use the original link sent to you by the person who applied on behalf of your business. If you no longer have the link, ask them to send it to you again.
+2. Use the sign in details linked to your personal taxes, not your business taxes.
 
-If you no longer have the link, ask the applicant to send it to you again.
+Why you are receiving this email
 
-When prompted use sign in details linked to your personal taxes, not your business taxes.
+We send an email when we have made a decision about your business’s agent services account application.
 
-Thank you
-
-HMRC Agent Services
+From HMRC Agent Services

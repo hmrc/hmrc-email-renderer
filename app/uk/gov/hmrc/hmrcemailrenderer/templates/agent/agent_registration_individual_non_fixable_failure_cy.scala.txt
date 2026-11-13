@@ -1,0 +1,18 @@
+@(params: Map[String, Any])Diweddariad i’ch cais am gyfrif gwasanaethau asiant
+
+Annwyl @params("individualName")
+
+Rydym wedi gorffen gwirio’r wybodaeth a ddarparwyd gennych ar gyfer eich cais busnes @params("applicationRef") am gyfrif gwasanaethau asiant.
+
+Mae angen i chi fewngofnodi i weld ein penderfyniad.
+
+Sut i fewngofnodi
+
+1. Defnyddiwch y cysylltiad gwreiddiol a anfonwyd atoch gan y person a wnaeth gais ar ran eich busnes. Os nad oes gennych y cysylltiad mwyach, gofynnwch i’r ymgeisydd ei anfon atoch eto.
+2. Defnyddiwch y manylion mewngofnodi sy’n gysylltiedig â’ch trethi personol, nid eich trethi busnes.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost pan fyddwn wedi gwneud penderfyniad ynghylch cais eich busnes am gyfrif gwasanaethau asiant.
+
+Oddi wrth Wasanaethau Asiant CThEF

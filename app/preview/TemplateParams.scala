@@ -164,7 +164,12 @@ object TemplateParams {
         "applicationRef" -> "HDJ2123F"
       ),
       "agent_registration_individual_non_fixable_failure" -> Map(
-        "individualName" -> "Abed Nadir"
+        "individualName" -> "Abed Nadir",
+        "applicationRef" -> "HDJ2123F"
+      ),
+      "agent_registration_individual_non_fixable_failure_cy" -> Map(
+        "individualName" -> "Abed Nadir",
+        "applicationRef" -> "HDJ2123F"
       ),
       "agent_registration_application_submission_confirmation" -> Map(
         "agentName"                 -> "Taylor Reed",
