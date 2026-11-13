@@ -169,7 +169,11 @@ object TemplateParams {
       "agent_registration_application_submission_confirmation" -> Map(
         "agentName"                 -> "Taylor Reed",
         "applicationRef"            -> "ABC123456",
-        "applicationProcessingTime" -> "6 Weeks"
+        "applicationProcessingTime" -> "6 weeks"
+      ),
+      "agent_registration_application_submission_confirmation_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "ABC123456"
       ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",

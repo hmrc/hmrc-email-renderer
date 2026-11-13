@@ -1,0 +1,19 @@
+@(params: Map[String, Any])Diweddariad i’ch cais am gyfrif gwasanaethau asiant
+
+Annwyl @params("agentName")
+
+Rydych wedi ailgyflwyno’ch cais am gyfrif gwasanaethau asiant @params("applicationRef").
+
+Ar hyn o bryd, mae’n cymryd hyd at 6 wythnos i brosesu ceisiadau.
+
+Sut i wirio cynnydd eich cais
+
+1. Ewch i GOV.UK a chwilio am ‘Apply for an agent services account’.
+2. Yn yr adran ynghylch ‘How long this process takes’, dewiswch y cysylltiad i wirio cynnydd cais sy’n bodoli eisoes.
+3. Mewngofnodwch gan ddefnyddio’r manylion asiant a ddefnyddiwyd gennych pan wnaethoch ddechrau’r cais.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost cadarnhau ar gyfer ceisiadau sy’n cael eu cyflwyno ar-lein.
+
+Oddi wrth Wasanaethau Asiant CThEF

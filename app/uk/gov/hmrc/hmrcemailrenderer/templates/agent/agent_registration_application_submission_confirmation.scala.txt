@@ -1,21 +1,19 @@
-@(params: Map[String, Any])Update: application @params("applicationRef") for an agent services account
+@(params: Map[String, Any])Update to your agent services account application
 
 Dear @params("agentName")
 
-You have submitted your application for an agent services account.
+You have submitted your application for an agent services account @params("applicationRef").
 
 It is currently taking up to @params("applicationProcessingTime") to process applications.
 
-Check the progress of your application:
+How to check the progress of your application
 
-Search for 'Apply for an agent services account' on GOV.UK.
-In the section How long this process takes select the link 'Check the progress of an existing application'.
-Sign in with the agent details you used when you made the application.
+1. Go to GOV.UK and search for ‘Apply for an agent services account’.
+2. In the section ‘How long this process takes’ select the link to check the progress of an existing application.
+3. Sign in with the agent details you used when you started the application.
 
 Why you are receiving this email
 
 We send a confirmation email for applications submitted online.
 
-Thank you
-
-HMRC Agent Services
+From HMRC Agent Services
