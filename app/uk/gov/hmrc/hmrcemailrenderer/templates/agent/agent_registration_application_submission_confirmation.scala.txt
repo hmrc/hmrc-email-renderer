@@ -9,8 +9,8 @@ It is currently taking up to @params("applicationProcessingTime") to process app
 How to check the progress of your application
 
 1. Go to GOV.UK and search for ‘Apply for an agent services account’.
-2. In the section ‘How long this process takes’ select the link to check the progress of an existing application.
-3. Sign in with the agent details you used when you started the application.
+2. In the section ‘How long this process takes’ select the link 'Check the progress of an existing application'.
+3. Sign in with the agent details you used when you made the application.
 
 Why you are receiving this email
 

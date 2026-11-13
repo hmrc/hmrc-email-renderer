@@ -180,6 +180,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "agent_permissions_success",
         "agent_permissions_success_cy",
         "agent_registration_application_non_fixable_failure",
+        "agent_registration_application_non_fixable_failure_cy",
         "agent_registration_individual_non_fixable_failure",
         "agent_registration_individual_non_fixable_failure_cy",
         "agent_registration_success",

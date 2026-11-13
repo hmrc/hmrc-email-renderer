@@ -161,7 +161,13 @@ object TemplateParams {
       ),
       "agent_registration_application_non_fixable_failure" -> Map(
         "agentName"      -> "Taylor Reed",
-        "applicationRef" -> "HDJ2123F"
+        "applicationRef" -> "HDJ2123F",
+        "businessName"   -> "ABC Accountants"
+      ),
+      "agent_registration_application_non_fixable_failure_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "HDJ2123F",
+        "businessName"   -> "ABC Accountants"
       ),
       "agent_registration_individual_non_fixable_failure" -> Map(
         "individualName" -> "Abed Nadir",
