@@ -1184,7 +1184,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "vpd_duty_due_confirmation_cy",
         "vpd_duty_due_confirmation_no_due_date_cy",
         "vpd_nil_return_confirmation_cy",
-        "vpd_credit_due_confirmation_cy"
+        "vpd_credit_due_confirmation_cy",
+        "newMessageAlert_VPD_CA",
+        "newMessageAlert_VPD_CA_cy"
       )
     }
   }
