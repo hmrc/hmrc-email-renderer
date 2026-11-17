@@ -100,6 +100,24 @@ object VPDTemplates {
       plainTemplate = txt.vpd_credit_due_confirmation_cy.f,
       htmlTemplate = html.vpd_credit_due_confirmation_cy.f,
       priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_VPD_CA",
+      fromAddress = vpdTeamAddress,
+      service = VPD,
+      subject = "You’ve got a new message from HMRC",
+      plainTemplate = txt.newMessageAlert_VPD_CA.f,
+      htmlTemplate = html.newMessageAlert_VPD_CA.f,
+      priority = Some(MessagePriority.Standard)
+    ),
+    MessageTemplate.create(
+      templateId = "newMessageAlert_VPD_CA_cy",
+      fromAddress = vpdTeamAddressWelsh,
+      service = VPD,
+      subject = "Mae gennych neges newydd oddi wrth CThEF",
+      plainTemplate = txt.newMessageAlert_VPD_CA_cy.f,
+      htmlTemplate = html.newMessageAlert_VPD_CA_cy.f,
+      priority = Some(MessagePriority.Standard)
     )
   )
 }
