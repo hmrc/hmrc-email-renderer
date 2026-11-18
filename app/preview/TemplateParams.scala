@@ -159,17 +159,37 @@ object TemplateParams {
         "applicationRef" -> "ABC123456",
         "businessName"   -> "Example Tax Advisers Ltd"
       ),
+      "agent_registration_success_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "ABC123456",
+        "businessName"   -> "Example Tax Advisers Ltd"
+      ),
       "agent_registration_application_non_fixable_failure" -> Map(
         "agentName"      -> "Taylor Reed",
-        "applicationRef" -> "HDJ2123F"
+        "applicationRef" -> "HDJ2123F",
+        "businessName"   -> "ABC Accountants"
+      ),
+      "agent_registration_application_non_fixable_failure_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "HDJ2123F",
+        "businessName"   -> "ABC Accountants"
       ),
       "agent_registration_individual_non_fixable_failure" -> Map(
-        "individualName" -> "Abed Nadir"
+        "individualName" -> "Abed Nadir",
+        "applicationRef" -> "HDJ2123F"
+      ),
+      "agent_registration_individual_non_fixable_failure_cy" -> Map(
+        "individualName" -> "Abed Nadir",
+        "applicationRef" -> "HDJ2123F"
       ),
       "agent_registration_application_submission_confirmation" -> Map(
         "agentName"                 -> "Taylor Reed",
         "applicationRef"            -> "ABC123456",
-        "applicationProcessingTime" -> "6 Weeks"
+        "applicationProcessingTime" -> "6 weeks"
+      ),
+      "agent_registration_application_submission_confirmation_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "ABC123456"
       ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",

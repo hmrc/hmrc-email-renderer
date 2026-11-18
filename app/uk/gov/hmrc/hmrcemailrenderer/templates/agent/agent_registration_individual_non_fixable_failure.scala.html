@@ -17,24 +17,27 @@
 @(params: Map[String, Any])
 
 @individualName() = {@params("individualName")}
+@applicationRef() = {@params("applicationRef")}
 
-@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update: application outcome decision (agent services account)") {
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update to your agent services account application") {
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @individualName()</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">We have finished our checks on the information you provided.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have finished our checks on the information you provided for your business’s application <strong>@applicationRef()</strong> for an agent services account.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You need to sign in to see our decision.</p>
 
-<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">To sign in</h2>
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">How to sign in</h2>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Use the original link sent to you by the applicant. We cannot include the link here for security reasons.</p>
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Use the original link sent to you by the person who applied on behalf of your business. If you no longer have the link, ask them to send it to you again.</li>
+    <li>Use the sign in details linked to your personal taxes, not your business taxes.</li>
+</ol>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">If you no longer have the link, ask the applicant to send it to you again.</p>
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Why you are receiving this email</h2>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">When prompted use sign in details linked to your personal taxes, not your business taxes.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We send an email when we have made a decision about your business’s agent services account application.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Thank you</p>
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">HMRC Agent Services</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services</p>
 
 }

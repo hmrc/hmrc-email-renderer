@@ -1,0 +1,17 @@
+@(params: Map[String, Any])Diweddariad i’ch cais am gyfrif gwasanaethau asiant
+
+Annwyl @params("agentName")
+
+Rydym wedi gorffen ein gwiriadau ar eich busnes, yn dilyn eich cais @params("applicationRef") am gyfrif gwasanaethau asiant ar ran @params("businessName").
+
+Sut i weld canlyniad eich cais
+
+1. Ewch i GOV.UK a chwilio am ‘Apply for an agent services account’.
+2. Yn yr adran ynghylch ‘How long this process takes’, dewiswch y cysylltiad i wirio cynnydd cais sy’n bodoli eisoes.
+3. Mewngofnodwch gan ddefnyddio’r manylion asiant a ddefnyddiwyd gennych pan wnaethoch ddechrau’r cais.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost pan fyddwn wedi gwneud penderfyniad ynghylch eich cais.
+
+Oddi wrth Wasanaethau Asiant CThEF
