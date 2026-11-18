@@ -102,7 +102,7 @@ object VPDTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_VPD_CA",
+      templateId = "newMessageAlert_VPD-CA",
       fromAddress = vpdTeamAddress,
       service = VPD,
       subject = "You’ve got a new message from HMRC",
@@ -111,7 +111,7 @@ object VPDTemplates {
       priority = Some(MessagePriority.Standard)
     ),
     MessageTemplate.create(
-      templateId = "newMessageAlert_VPD_CA_cy",
+      templateId = "newMessageAlert_VPD-CA_cy",
       fromAddress = vpdTeamAddressWelsh,
       service = VPD,
       subject = "Mae gennych neges newydd oddi wrth CThEF",
