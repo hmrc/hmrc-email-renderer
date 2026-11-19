@@ -1,0 +1,43 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agentName() = {@params("agentName")}
+@applicationRef() = {@params("applicationRef")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update to your agent services account application") {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName()</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application <strong>@applicationRef()</strong> for an agent services account has been deleted. This has removed all the information you entered.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you still want to apply for an agent services account, you can sign in and make a new application.</p>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">How to make a new application</h2>
+
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Go to GOV.UK and search for 'Apply for an agent services account'.</li>
+    <li>On that page, select the 'Apply now' button.</li>
+</ol>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Why you are receiving this email</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We send an email when an application has been deleted.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">From HMRC Agent Services</p>
+
+}

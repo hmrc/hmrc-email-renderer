@@ -1,0 +1,23 @@
+@(params: Map[String, Any])Update to your agent services account application
+
+Dear @params("agentName")
+
+Your application @params("applicationRef") for an agent services account will expire on @params("expiryDate").
+
+If you still want to apply for an agent services account, complete all parts of your application and submit it before then.
+
+If you sign in after that date, you can delete the application and make a new one.
+
+If you do not delete this application, we will delete it on @params("deletionDate"). This will remove all the information you entered. You can still sign in and make a new application.
+
+How to sign in to your account
+
+1. Go to GOV.UK and search for 'Apply for an agent services account'.
+2. In the section How long this process takes select the link 'Check the progress of an existing application'.
+3. Sign in with the agent details you used when you made the application.
+
+Why you are receiving this email
+
+We send an email 10 days before an application is due to expire.
+
+From HMRC Agent Services
