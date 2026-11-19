@@ -26,8 +26,7 @@ For security reasons, we have not included a link to this service in this email.
 
 Why you are receiving this email
 
-When a file fails checks, we send an email to the contacts provided for @{params("userBusinessName")}.
-
+@if(params.contains("userBusinessName")) {When a file fails checks, we send an email to the contacts provided for @{params("userBusinessName")}.} else {When a file fails checks, we send an email to the contacts you provided.}
 
 If you need help
 

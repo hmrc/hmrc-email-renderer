@@ -2,7 +2,7 @@
 
 Dear @{params("contactName")}
 
-We have received a file from @{params("userBusinessName")} for the cryptoasset reporting framework (CARF) service.
+@if(params.contains("userBusinessName")) {We have received a file from @{params("userBusinessName")} for the cryptoasset reporting framework (CARF) service.} else {We have received a file for the reporting cryptoasset service provider (RCASP) @{params("rcaspName")} for the cryptoasset reporting framework (CARF) service.}
 
 The file passed our checks at @{params("dateTime")}.
 
