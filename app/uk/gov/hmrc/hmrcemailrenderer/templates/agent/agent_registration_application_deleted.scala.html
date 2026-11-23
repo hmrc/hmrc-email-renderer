@@ -16,14 +16,14 @@
 
 @(params: Map[String, Any])
 
-@agentName() = {@params("agentName")}
-@applicationRef() = {@params("applicationRef")}
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update to your agent services account application") {
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName()</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application <strong>@applicationRef()</strong> for an agent services account has been deleted. This has removed all the information you entered.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application <strong>@applicationRef</strong> for an agent services account has been deleted. This has removed all the information you entered.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you still want to apply for an agent services account, you can sign in and make a new application.</p>
 

@@ -16,19 +16,19 @@
 
 @(params: Map[String, Any])
 
-@agentName() = {@params("agentName")}
-@applicationRef() = {@params("applicationRef")}
-@deletionDate() = {@params("deletionDate")}
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
+@deletionDate = {@params("deletionDate")}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update to your agent services account application") {
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName()</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application <strong>@applicationRef()</strong> for an agent services account has expired.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your application <strong>@applicationRef</strong> for an agent services account has expired.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you still want to apply for an agent services account, you can delete this application and start a new one.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you do not delete this application, we will delete it on <strong>@deletionDate()</strong>. This will remove all the information you entered.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">If you do not delete this application, we will delete it on <strong>@deletionDate</strong>. This will remove all the information you entered.</p>
 
 <h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">How to delete your application and start a new one</h2>
 
