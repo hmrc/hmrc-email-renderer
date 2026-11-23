@@ -16,14 +16,14 @@
 
 @(params: Map[String, Any])
 
-@agentName() = {@params("agentName")}
-@applicationRef() = {@params("applicationRef")}
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Diweddariad i’ch cais am gyfrif gwasanaethau asiant", isWelsh=true) {
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agentName()</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agentName</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydych wedi ailgyflwyno’ch cais am gyfrif gwasanaethau asiant <strong>@applicationRef()</strong>.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydych wedi ailgyflwyno’ch cais am gyfrif gwasanaethau asiant <strong>@applicationRef</strong>.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Ar hyn o bryd, mae’n cymryd hyd at 6 wythnos i brosesu ceisiadau.</p>
 

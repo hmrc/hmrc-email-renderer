@@ -16,15 +16,15 @@
 
 @(params: Map[String, Any])
 
-@agentName() = {@params("agentName")}
-@applicationRef() = {@params("applicationRef")}
-@businessName() = {@params("businessName")}
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
+@businessName = {@params("businessName")}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Update to your agent services account application") {
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName()</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Dear @agentName</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have approved your application <strong>@applicationRef()</strong> for an agent services account on behalf of @businessName().</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We have approved your application <strong>@applicationRef</strong> for an agent services account on behalf of @businessName.</p>
 
 <h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">How to access your new agent services account</h2>
 
@@ -38,7 +38,7 @@
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">You will find the agent reference number (ARN) at the top of the agent services account homepage.</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">The ARN identifies @businessName() as a registered tax adviser with HMRC and is used to access agent services and act for clients where authorised.</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">The ARN identifies @businessName as a registered tax adviser with HMRC and is used to access agent services and act for clients where authorised.</p>
 
 <p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">It is owned by the tax adviser, not an individual, and is sensitive data. Keep it secure and only share it with people who need it to do their job.</p>
 

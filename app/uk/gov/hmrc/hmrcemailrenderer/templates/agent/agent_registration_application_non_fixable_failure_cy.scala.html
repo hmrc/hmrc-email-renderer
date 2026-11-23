@@ -16,15 +16,15 @@
 
 @(params: Map[String, Any])
 
-@agentName() = {@params("agentName")}
-@applicationRef() = {@params("applicationRef")}
-@businessName() = {@params("businessName")}
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
+@businessName = {@params("businessName")}
 
 @uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Diweddariad i’ch cais am gyfrif gwasanaethau asiant", isWelsh=true) {
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agentName()</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agentName</p>
 
-<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym wedi gorffen ein gwiriadau ar eich busnes, yn dilyn eich cais <strong>@applicationRef()</strong> am gyfrif gwasanaethau asiant ar ran @businessName().</p>
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym wedi gorffen ein gwiriadau ar eich busnes, yn dilyn eich cais <strong>@applicationRef</strong> am gyfrif gwasanaethau asiant ar ran @businessName.</p>
 
 <h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Sut i weld canlyniad eich cais</h2>
 
