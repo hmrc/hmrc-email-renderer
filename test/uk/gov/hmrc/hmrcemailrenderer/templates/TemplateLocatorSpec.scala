@@ -187,6 +187,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "agent_registration_success_cy",
         "agent_registration_application_submission_confirmation",
         "agent_registration_application_submission_confirmation_cy",
+        "agent_registration_application_expiry_reminder",
+        "agent_registration_application_expired",
+        "agent_registration_application_deleted",
         "agent_rejects_mandate",
         "agent_removes_mandate",
         "agent_self_auth_activates_mandate",
@@ -1188,7 +1191,9 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "vpd_duty_due_confirmation_cy",
         "vpd_duty_due_confirmation_no_due_date_cy",
         "vpd_nil_return_confirmation_cy",
-        "vpd_credit_due_confirmation_cy"
+        "vpd_credit_due_confirmation_cy",
+        "newMessageAlert_VPD-CA",
+        "newMessageAlert_VPD-CA_cy"
       )
     }
   }
