@@ -86,40 +86,76 @@ object AgentTemplates {
       htmlTemplate = html.agent_services_account_created.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.createWithDynamicSubject(
+    MessageTemplate.create(
       templateId = "agent_registration_success",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      subject = "Update to your agent services account application",
       plainTemplate = txt.agent_registration_success.f,
       htmlTemplate = html.agent_registration_success.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.createWithDynamicSubject(
+    MessageTemplate.create(
+      templateId = "agent_registration_success_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = "Diweddariad i’ch cais am gyfrif gwasanaethau asiant",
+      plainTemplate = txt.agent_registration_success_cy.f,
+      htmlTemplate = html.agent_registration_success_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "agent_registration_application_non_fixable_failure",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      subject = "Update to your agent services account application",
       plainTemplate = txt.agent_registration_application_non_fixable_failure.f,
       htmlTemplate = html.agent_registration_application_non_fixable_failure.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_registration_application_non_fixable_failure_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = "Diweddariad i’ch cais am gyfrif gwasanaethau asiant",
+      plainTemplate = txt.agent_registration_application_non_fixable_failure_cy.f,
+      htmlTemplate = html.agent_registration_application_non_fixable_failure_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.create(
       templateId = "agent_registration_individual_non_fixable_failure",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = "Update: application outcome decision (agent services account)",
+      subject = "Update to your agent services account application",
       plainTemplate = txt.agent_registration_individual_non_fixable_failure.f,
       htmlTemplate = html.agent_registration_individual_non_fixable_failure.f,
       priority = Some(MessagePriority.Urgent)
     ),
-    MessageTemplate.createWithDynamicSubject(
+    MessageTemplate.create(
+      templateId = "agent_registration_individual_non_fixable_failure_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = "Diweddariad i’ch cais am gyfrif gwasanaethau asiant",
+      plainTemplate = txt.agent_registration_individual_non_fixable_failure_cy.f,
+      htmlTemplate = html.agent_registration_individual_non_fixable_failure_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
       templateId = "agent_registration_application_submission_confirmation",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),
       service = Agent,
-      subject = params => s"Update: application ${params("applicationRef")} for an agent services account",
+      subject = "Update to your agent services account application",
       plainTemplate = txt.agent_registration_application_submission_confirmation.f,
       htmlTemplate = html.agent_registration_application_submission_confirmation.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "agent_registration_application_submission_confirmation_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = "Diweddariad i’ch cais am gyfrif gwasanaethau asiant",
+      plainTemplate = txt.agent_registration_application_submission_confirmation_cy.f,
+      htmlTemplate = html.agent_registration_application_submission_confirmation_cy.f,
       priority = Some(MessagePriority.Urgent)
     ),
     MessageTemplate.createWithDynamicSubject(

@@ -1,0 +1,51 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
+@businessName = {@params("businessName")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Diweddariad i’ch cais am gyfrif gwasanaethau asiant", isWelsh=true) {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agentName</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym wedi cymeradwyo’ch cais <strong>@applicationRef</strong> am gyfrif gwasanaethau asiant ar ran @businessName.</p>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Sut i gael mynediad at eich cyfrif gwasanaethau asiant newydd</h2>
+
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Ewch i GOV.UK a chwilio am ‘Mewngofnodi i’ch cyfrif gwasanaethau asiant’.</li>
+    <li>Ar y dudalen honno, dewiswch y botwm ‘Mewngofnodi nawr’.</li>
+    <li>Mewngofnodwch gan ddefnyddio’r manylion asiant a ddefnyddiwyd gennych pan wnaethoch ddechrau’r cais.</li>
+</ol>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Cyfeirnod yr asiant</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Fe welwch rif cyfeirnod yr asiant (ARN) ar frig hafan y cyfrif gwasanaethau asiant.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Mae’r ARN yn nodi bod @businessName yn ymgynghorydd treth cofrestredig gyda CThEF, ac fe’i defnyddir i gael mynediad at wasanaethau asiant ac i weithredu ar ran cleientiaid lle bo awdurdodiad i wneud hynny.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Mae’n eiddo i’r ymgynghorydd treth, nid i unigolyn, ac mae’n ddata sensitif. Cadwch y data’n ddiogel a dim ond ei rannu â phobl sydd ei angen i wneud eu gwaith.</p>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Pam eich bod yn cael yr e-bost hwn</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym yn anfon e-bost pan fyddwn wedi cymeradwyo’ch cais.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Wasanaethau Asiant CThEF</p>
+
+}
