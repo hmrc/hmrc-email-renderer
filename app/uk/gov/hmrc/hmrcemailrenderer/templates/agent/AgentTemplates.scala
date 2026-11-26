@@ -167,6 +167,15 @@ object AgentTemplates {
       htmlTemplate = html.agent_registration_application_expiry_reminder.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.create(
+      templateId = "agent_registration_application_expiry_reminder_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = "Diweddariad i’ch cais am gyfrif gwasanaethau asiant",
+      plainTemplate = txt.agent_registration_application_expiry_reminder_cy.f,
+      htmlTemplate = html.agent_registration_application_expiry_reminder_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "agent_registration_application_expired",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),

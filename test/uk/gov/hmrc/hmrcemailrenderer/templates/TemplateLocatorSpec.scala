@@ -188,6 +188,7 @@ class TemplateLocatorSpec extends AnyWordSpecLike with should.Matchers with Opti
         "agent_registration_application_submission_confirmation",
         "agent_registration_application_submission_confirmation_cy",
         "agent_registration_application_expiry_reminder",
+        "agent_registration_application_expiry_reminder_cy",
         "agent_registration_application_expired",
         "agent_registration_application_deleted",
         "agent_rejects_mandate",
