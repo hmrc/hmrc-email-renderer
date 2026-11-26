@@ -203,6 +203,15 @@ object AgentTemplates {
       htmlTemplate = html.agent_registration_application_deleted.f,
       priority = Some(MessagePriority.Urgent)
     ),
+    MessageTemplate.create(
+      templateId = "agent_registration_application_deleted_cy",
+      fromAddress = FromAddress.noReply("Gwasanaethau Asiant CThEF"),
+      service = Agent,
+      subject = "Diweddariad i’ch cais am gyfrif gwasanaethau asiant",
+      plainTemplate = txt.agent_registration_application_deleted_cy.f,
+      htmlTemplate = html.agent_registration_application_deleted_cy.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
     MessageTemplate.createWithDynamicSubject(
       templateId = "agent_services_subscription_complete",
       fromAddress = FromAddress.noReply("HMRC Agent Services"),

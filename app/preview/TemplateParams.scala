@@ -217,6 +217,10 @@ object TemplateParams {
         "agentName"      -> "Taylor Reed",
         "applicationRef" -> "PKKAHJD3K"
       ),
+      "agent_registration_application_deleted_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "PKKAHJD3K"
+      ),
       "agent_invitations_about_to_expire" -> Map(
         "agencyName"          -> "My Tax Agency",
         "numberOfInvitations" -> "22",

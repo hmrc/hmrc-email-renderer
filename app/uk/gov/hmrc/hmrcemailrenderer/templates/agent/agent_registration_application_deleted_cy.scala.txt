@@ -1,0 +1,18 @@
+@(params: Map[String, Any])Diweddariad i’ch cais am gyfrif gwasanaethau asiant
+
+Annwyl @params("agentName")
+
+Mae’ch cais @params("applicationRef") am gyfrif gwasanaethau asiant wedi cael ei ddileu. Mae hyn wedi dileu’r holl wybodaeth a nodwyd gennych.
+
+Os ydych am wneud cais am gyfrif gwasanaethau asiant o hyd, gallwch wneud cais newydd gan ddefnyddio’r manylion mewngofnodi a grëwyd gennych ar gyfer y cais hwn.
+
+Y ffordd o wneud cais newydd
+
+1. Ewch i GOV.UK a chwilio am ‘Apply for an agent services account’.
+2. Ar y dudalen honno, dewis y botwm ‘Apply now’.
+
+Pam eich bod yn cael yr e-bost hwn
+
+Rydym yn anfon e-bost pan fydd eich cais wedi cael ei ddileu.
+
+Oddi wrth Wasanaethau Asiant CThEF
