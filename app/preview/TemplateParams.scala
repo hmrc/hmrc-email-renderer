@@ -208,6 +208,11 @@ object TemplateParams {
         "applicationRef" -> "PKKAHJD3K",
         "deletionDate"   -> "19 November 2026"
       ),
+      "agent_registration_application_expired_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "PKKAHJD3K",
+        "deletionDate"   -> "19 Tachwedd 2026"
+      ),
       "agent_registration_application_deleted" -> Map(
         "agentName"      -> "Taylor Reed",
         "applicationRef" -> "PKKAHJD3K"

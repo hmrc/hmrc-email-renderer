@@ -1,0 +1,47 @@
+@*
+ * Copyright 2026 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@(params: Map[String, Any])
+
+@agentName = {@params("agentName")}
+@applicationRef = {@params("applicationRef")}
+@deletionDate = {@params("deletionDate")}
+
+@uk.gov.hmrc.hmrcemailrenderer.templates.helpers.html.template_main(params, "Diweddariad i’ch cais am gyfrif gwasanaethau asiant", isWelsh=true) {
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 15px 0;">Annwyl @agentName</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Ni allwch barhau i lenwi cais <strong>@applicationRef</strong> am gyfrif gwasanaethau asiant.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Os ydych am wneud cais am gyfrif gwasanaethau asiant o hyd, gallwch ddileu’r cais hwn a dechrau un newydd.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Os na fyddwch yn dileu’r cais hwn, byddwn yn ei ddileu erbyn <strong>@deletionDate</strong>. Bydd gwneud hyn yn dileu’r holl wybodaeth a nodwyd gennych.</p>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Y ffordd o ddileu eich cais, a dechrau un newydd</h2>
+
+<ol style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+    <li>Ewch i GOV.UK a chwilio am ‘Apply for an agent services account’.</li>
+    <li>Yn yr adran ynghylch pa mor hir y bydd y broses hon yn ei chymryd - dewis y cysylltiad i wirio cynnydd cais presennol.</li>
+    <li>Mewngofnodi gan ddefnyddio’r manylion asiant a ddefnyddiwyd gennych pan wnaethoch y cais.</li>
+</ol>
+
+<h2 style="font-size: 24px; line-height: 1.25; margin: 0 0 15px 0;">Pam eich bod yn cael yr e-bost hwn</h2>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Rydym yn anfon e-bost pan fydd y dyddiad cau ar gyfer cyflwyno’ch cais wedi mynd heibio.</p>
+
+<p style="font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Oddi wrth Wasanaethau Asiant CThEF</p>
+
+}
