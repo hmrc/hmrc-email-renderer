@@ -197,12 +197,27 @@ object TemplateParams {
         "expiryDate"     -> "15 October 2026",
         "deletionDate"   -> "29 November 2026"
       ),
+      "agent_registration_application_expiry_reminder_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "PKKAHJD3K",
+        "expiryDate"     -> "15 Hydref 2026",
+        "deletionDate"   -> "29 Tachwedd 2026"
+      ),
       "agent_registration_application_expired" -> Map(
         "agentName"      -> "Taylor Reed",
         "applicationRef" -> "PKKAHJD3K",
         "deletionDate"   -> "19 November 2026"
       ),
+      "agent_registration_application_expired_cy" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "PKKAHJD3K",
+        "deletionDate"   -> "19 Tachwedd 2026"
+      ),
       "agent_registration_application_deleted" -> Map(
+        "agentName"      -> "Taylor Reed",
+        "applicationRef" -> "PKKAHJD3K"
+      ),
+      "agent_registration_application_deleted_cy" -> Map(
         "agentName"      -> "Taylor Reed",
         "applicationRef" -> "PKKAHJD3K"
       ),
